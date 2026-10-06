@@ -20,7 +20,7 @@ Lạm phát hàng hóa: gần như đi ngang
 
 Điểm đầu tiên không phải hỏi “3,2% có cao không?”, mà hỏi **mức chênh so với điều thị trường đã phản ánh vào giá là bao nhiêu**. Cùng mức 3,2%, phản ứng sẽ khác nếu thị trường đã kỳ vọng 3,1% thay vì 2,8%.
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **2. Tách cấu phần lạm phát** tiếp nhận điểm tựa từ **1. Bối cảnh giả định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cập nhật hàm phản ứng của ngân hàng trung ương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **2. Tách cấu phần lạm phát** nối từ **1. Bối cảnh giả định** sang **3. Cập nhật hàm phản ứng của ngân hàng trung ương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Tách cấu phần lạm phát
 
@@ -41,7 +41,7 @@ Nếu bất ngờ chủ yếu đến từ cú tăng năng lượng tạm thời,
 
 Đọc thêm: [Macro Data Playbook](../04_economics/03_MACRO_DATA_PLAYBOOK.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **3. Cập nhật hàm phản ứng của ngân hàng trung ương** tiếp nhận điểm tựa từ **2. Tách cấu phần lạm phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lợi suất đầu ngắn của đường cong** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **3. Cập nhật hàm phản ứng của ngân hàng trung ương** nối từ **2. Tách cấu phần lạm phát** sang **4. Lợi suất đầu ngắn của đường cong**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Cập nhật hàm phản ứng của ngân hàng trung ương
 
@@ -66,7 +66,7 @@ CPI gây bất ngờ
 → Đường đi kỳ vọng của lãi suất chính sách
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **4. Lợi suất đầu ngắn của đường cong** tiếp nhận điểm tựa từ **3. Cập nhật hàm phản ứng của ngân hàng trung ương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Lợi suất đầu dài và phần bù kỳ hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **4. Lợi suất đầu ngắn của đường cong** nối từ **3. Cập nhật hàm phản ứng của ngân hàng trung ương** sang **5. Lợi suất đầu dài và phần bù kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Lợi suất đầu ngắn của đường cong
 
@@ -74,7 +74,7 @@ Lợi suất 2 năm thường nhạy với kỳ vọng về lãi suất chính s
 
 Nếu CPI cao hơn dự kiến nhưng lợi suất 2 năm gần như không phản ứng, có thể cú sốc đã được phản ánh trước hoặc cấu phần được xem là tạm thời.
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **5. Lợi suất đầu dài và phần bù kỳ hạn** tiếp nhận điểm tựa từ **4. Lợi suất đầu ngắn của đường cong** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Lợi suất thực và duration của cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **5. Lợi suất đầu dài và phần bù kỳ hạn** nối từ **4. Lợi suất đầu ngắn của đường cong** sang **6. Lợi suất thực và duration của cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Lợi suất đầu dài và phần bù kỳ hạn
 
@@ -90,7 +90,7 @@ Nếu thị trường cho rằng chính sách chặt hơn sẽ làm tăng trư�
 
 Đọc thêm: [Trái phiếu, lãi suất và tín dụng](../02_asset_classes/02_BONDS_RATES_AND_CREDIT.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **6. Lợi suất thực và duration của cổ phiếu** tiếp nhận điểm tựa từ **5. Lợi suất đầu dài và phần bù kỳ hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Kênh USD và tỷ giá địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **6. Lợi suất thực và duration của cổ phiếu** nối từ **5. Lợi suất đầu dài và phần bù kỳ hạn** sang **7. Kênh USD và tỷ giá địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Lợi suất thực và duration của cổ phiếu
 
@@ -105,7 +105,7 @@ Lợi suất thực tăng
 
 Điều này không có nghĩa cổ phiếu công nghệ luôn giảm khi lợi suất tăng. Nếu kỳ vọng lợi nhuận tăng nhanh hơn tác động của tỷ lệ chiết khấu, giá cổ phiếu vẫn có thể tăng. Luôn tách **tác động lợi nhuận** và **tác động hệ số định giá**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **7. Kênh USD và tỷ giá địa phương** tiếp nhận điểm tựa từ **6. Lợi suất thực và duration của cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Điều kiện tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **7. Kênh USD và tỷ giá địa phương** nối từ **6. Lợi suất thực và duration của cổ phiếu** sang **8. Điều kiện tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Kênh USD và tỷ giá địa phương
 
@@ -126,7 +126,7 @@ Với Việt Nam, USD mạnh có thể làm thu hẹp dư địa nới lỏng n�
 
 Đọc thêm: [Cú sốc liên thị trường](../06_markets_korea_vietnam/03_CROSS_MARKET_GLOBAL_SHOCKS.md).
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **8. Điều kiện tín dụng** tiếp nhận điểm tựa từ **7. Kênh USD và tỷ giá địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Lập bản đồ theo ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **8. Điều kiện tín dụng** nối từ **7. Kênh USD và tỷ giá địa phương** sang **9. Lập bản đồ theo ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Điều kiện tín dụng
 
@@ -142,7 +142,7 @@ Doanh nghiệp nhỏ phụ thuộc vốn vay
 
 Nếu lợi suất trái phiếu chính phủ tăng nhưng chênh lệch tín dụng chưa mở rộng, cú sốc có thể chủ yếu là rủi ro lãi suất. Nếu cả hai cùng tăng, điều kiện tài chính đang siết rộng hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **9. Lập bản đồ theo ngành** tiếp nhận điểm tựa từ **8. Điều kiện tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **9. Lập bản đồ theo ngành** nối từ **8. Điều kiện tín dụng** sang **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Lập bản đồ theo ngành
 
@@ -166,7 +166,7 @@ Dòng tiền ổn định nhưng thường có tính duration cao. Lợi suất 
 
 Nếu CPI cao do nhu cầu mạnh, doanh nghiệp hàng hóa có thể hưởng lợi. Nếu do cú sốc nguồn cung, các ngành sử dụng đầu vào lại chịu thiệt nhiều hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** tiếp nhận điểm tựa từ **9. Lập bản đồ theo ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Phân rã biến động định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** nối từ **9. Lập bản đồ theo ngành** sang **11. Phân rã biến động định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp
 
@@ -185,7 +185,7 @@ NHƯNG
 
 Cần lập bản đồ tiền tệ của doanh thu, chi phí, nợ và chính sách phòng vệ thay vì dùng khẩu quyết `KRW yếu = doanh nghiệp xuất khẩu tốt`.
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **11. Phân rã biến động định giá** tiếp nhận điểm tựa từ **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Mức phơi nhiễm ở cấp danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **11. Phân rã biến động định giá** nối từ **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** sang **12. Mức phơi nhiễm ở cấp danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Phân rã biến động định giá
 
@@ -201,7 +201,7 @@ Nếu EPS gần như không đổi nhưng P/E giảm từ 30x xuống 27x, biế
 
 Đọc thêm: [Định giá doanh nghiệp](../03_company_analysis/03_VALUATION_DCF_AND_MULTIPLES.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **12. Mức phơi nhiễm ở cấp danh mục** tiếp nhận điểm tựa từ **11. Phân rã biến động định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Thiết kế phòng vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **12. Mức phơi nhiễm ở cấp danh mục** nối từ **11. Phân rã biến động định giá** sang **13. Thiết kế phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Mức phơi nhiễm ở cấp danh mục
 
@@ -221,7 +221,7 @@ Thanh khoản
 
 Đọc thêm: [Phân bổ đa tài sản](../02_asset_classes/05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **13. Thiết kế phòng vệ** tiếp nhận điểm tựa từ **12. Mức phơi nhiễm ở cấp danh mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Quy mô vị thế theo kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **13. Thiết kế phòng vệ** nối từ **12. Mức phơi nhiễm ở cấp danh mục** sang **14. Quy mô vị thế theo kịch bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Thiết kế phòng vệ
 
@@ -236,7 +236,7 @@ Rủi ro FX → Forward FX / Tỷ lệ phòng vệ
 
 Dùng sai công cụ sẽ tạo rủi ro cơ sở (basis risk).
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **14. Quy mô vị thế theo kịch bản** tiếp nhận điểm tựa từ **13. Thiết kế phòng vệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Thực thi quanh sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **14. Quy mô vị thế theo kịch bản** nối từ **13. Thiết kế phòng vệ** sang **15. Thực thi quanh sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Quy mô vị thế theo kịch bản
 
@@ -252,7 +252,7 @@ Tiêu cực: 2Y +40bp, 10Y +35bp, USD +3%, credit spread +30bp
 
 Kiểm thử toàn danh mục theo các trạng thái này rồi mới quyết định quy mô.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **15. Thực thi quanh sự kiện** tiếp nhận điểm tựa từ **14. Quy mô vị thế theo kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Mua quyền chọn không chỉ cần đoán đúng hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **15. Thực thi quanh sự kiện** nối từ **14. Quy mô vị thế theo kịch bản** sang **16. Mua quyền chọn không chỉ cần đoán đúng hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Thực thi quanh sự kiện
 
@@ -262,7 +262,7 @@ Kế hoạch thực thi phải được xác định **trước** thời điểm
 
 Đọc thêm: [Thực thi và vi cấu trúc](../05_trading_derivatives/03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **16. Mua quyền chọn không chỉ cần đoán đúng hướng** tiếp nhận điểm tựa từ **15. Thực thi quanh sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Truyền dẫn riêng tới Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **16. Mua quyền chọn không chỉ cần đoán đúng hướng** nối từ **15. Thực thi quanh sự kiện** sang **17. Truyền dẫn riêng tới Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Mua quyền chọn không chỉ cần đoán đúng hướng
 
@@ -278,7 +278,7 @@ Chi phí thực thi
 
 Thị trường có thể giảm đúng hướng nhưng ít hơn mức biến động đã được định giá, khiến lợi nhuận quyền chọn thấp hơn kỳ vọng. Sau sự kiện, IV thường giảm nhanh.
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **17. Truyền dẫn riêng tới Hàn Quốc** tiếp nhận điểm tựa từ **16. Mua quyền chọn không chỉ cần đoán đúng hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Truyền dẫn riêng tới Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **17. Truyền dẫn riêng tới Hàn Quốc** nối từ **16. Mua quyền chọn không chỉ cần đoán đúng hướng** sang **18. Truyền dẫn riêng tới Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Truyền dẫn riêng tới Hàn Quốc
 
@@ -295,7 +295,7 @@ CPI Mỹ cao hơn dự kiến
 
 Nhưng nhóm bán dẫn vẫn có thể chống chịu nếu điều chỉnh dự báo lợi nhuận toàn cầu tiếp tục tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **18. Truyền dẫn riêng tới Việt Nam** tiếp nhận điểm tựa từ **17. Truyền dẫn riêng tới Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Thị trường đã phản ánh điều gì vào giá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **18. Truyền dẫn riêng tới Việt Nam** nối từ **17. Truyền dẫn riêng tới Hàn Quốc** sang **19. Thị trường đã phản ánh điều gì vào giá?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Truyền dẫn riêng tới Việt Nam
 
@@ -311,7 +311,7 @@ Lợi suất Mỹ / USD tăng
 
 Tuy nhiên chính sách tín dụng, lãi suất huy động, đầu tư công và lợi nhuận nội địa có thể chi phối về trung hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **19. Thị trường đã phản ánh điều gì vào giá?** tiếp nhận điểm tựa từ **18. Truyền dẫn riêng tới Việt Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Xác nhận liên thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **19. Thị trường đã phản ánh điều gì vào giá?** nối từ **18. Truyền dẫn riêng tới Việt Nam** sang **20. Xác nhận liên thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Thị trường đã phản ánh điều gì vào giá?
 
@@ -330,7 +330,7 @@ Mức biến động hàm ý của quyền chọn
 Vị thế USD
 ```
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **20. Xác nhận liên thị trường** tiếp nhận điểm tựa từ **19. Thị trường đã phản ánh điều gì vào giá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Phân rã sau sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **20. Xác nhận liên thị trường** nối từ **19. Thị trường đã phản ánh điều gì vào giá?** sang **21. Phân rã sau sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Xác nhận liên thị trường
 
@@ -338,7 +338,7 @@ Sau khi công bố, kiểm tra đồng thời lợi suất 2Y/10Y, lợi suất 
 
 Nếu các tín hiệu không khớp với câu chuyện ban đầu, cần hạ mức tin cậy thay vì ép dữ liệu vào một câu chuyện duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **21. Phân rã sau sự kiện** tiếp nhận điểm tựa từ **20. Xác nhận liên thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Điều kiện vô hiệu hóa luận điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **21. Phân rã sau sự kiện** nối từ **20. Xác nhận liên thị trường** sang **22. Điều kiện vô hiệu hóa luận điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Phân rã sau sự kiện
 
@@ -354,7 +354,7 @@ Chi phí thực thi có chấp nhận được không?
 Phòng vệ có hoạt động đúng mục tiêu không?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **22. Điều kiện vô hiệu hóa luận điểm** tiếp nhận điểm tựa từ **21. Phân rã sau sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Mẫu dùng lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **22. Điều kiện vô hiệu hóa luận điểm** nối từ **21. Phân rã sau sự kiện** sang **23. Mẫu dùng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Điều kiện vô hiệu hóa luận điểm
 
@@ -364,7 +364,7 @@ Luận điểm có thể bị vô hiệu nếu thị trường lao động suy y
 
 Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ chế cốt lõi thay đổi mới là điều quan trọng.
 
-> **Chuyển mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **23. Mẫu dùng lại** tiếp nhận điểm tựa từ **22. Điều kiện vô hiệu hóa luận điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **23. Mẫu dùng lại** nối từ **22. Điều kiện vô hiệu hóa luận điểm** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Mẫu dùng lại
 
@@ -389,7 +389,7 @@ Mẫu này gom toàn bộ chuỗi truyền dẫn thành một thứ tự thao t�
 16. Phân rã kết quả
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **Kết luận** gom các mảnh từ **23. Mẫu dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **Kết luận** tổng hợp từ **23. Mẫu dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

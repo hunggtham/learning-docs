@@ -19,7 +19,7 @@ Batching tăng thông lượng (throughput / 처리량) bằng amortizing fixed 
 
 Interactive các hệ thống (systems / 시스템들) ưu tiên tails; batch analytics ưu tiên aggregate thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Time/space và latency/throughput đều nói về việc đổi tài nguyên này lấy tài nguyên kia. **Consistency ↔ Availability/độ trễ (latency / 지연 시간)** đưa trade-off vào guarantee quan sát được: chờ quorum để giữ durability/consistency hay trả sớm với replica lag.
+> **Nối mạch:** Time/space và latency/throughput đều nói về việc đổi tài nguyên này lấy tài nguyên kia. **Consistency ↔ Availability/độ trễ (latency / 지연 시간)** đưa trade-off vào guarantee quan sát được: chờ quorum để giữ durability/consistency hay trả sớm với replica lag.
 
 ## Consistency ↔ Availability/độ trễ (latency / 지연 시간)
 
@@ -27,7 +27,7 @@ Synchronous quorum ghi (write / 쓰기) waits more replicas: stronger durability
 
 CAP/PACELC are formalized views of some phân tán (distributed / 분산) trade-offs; they are not slogans for all thiết kế (design / 설계).
 
-> **Chuyển mạch:** Khi consistency/availability đã được đặt thành guarantee của hệ thống phân tán, **Isolation ↔ tính đồng thời (concurrency / 동시성)** chuyển câu hỏi vào transaction và shared state. Cả hai đều yêu cầu nêu rõ anomaly nào chấp nhận được trước khi tối ưu throughput.
+> **Nối mạch:** Khi consistency/availability đã được đặt thành guarantee của hệ thống phân tán, **Isolation ↔ tính đồng thời (concurrency / 동시성)** chuyển câu hỏi vào transaction và shared state. Cả hai đều yêu cầu nêu rõ anomaly nào chấp nhận được trước khi tối ưu throughput.
 
 ## Isolation ↔ tính đồng thời (concurrency / 동시성)
 
@@ -37,7 +37,7 @@ OS coarse khóa (lock / 잠금) simpler tính đúng đắn (correctness / 정�
 
 Same mental cấu trúc (structure / 구조) at different layers.
 
-> **Chuyển mạch:** Isolation và concurrency cho thấy một guarantee có thể mua bằng lock, abort hoặc complexity. **Lớp trừu tượng (abstraction / 추상화) ↔ điều khiển (control / 제어)** tiếp tục bằng câu hỏi layer nào sở hữu invariant và khi nào abstraction phải bị xuyên qua để chẩn đoán.
+> **Nối mạch:** Isolation và concurrency cho thấy một guarantee có thể mua bằng lock, abort hoặc complexity. **Lớp trừu tượng (abstraction / 추상화) ↔ điều khiển (control / 제어)** tiếp tục bằng câu hỏi layer nào sở hữu invariant và khi nào abstraction phải bị xuyên qua để chẩn đoán.
 
 ## Lớp trừu tượng (abstraction / 추상화) ↔ điều khiển (control / 제어)
 
@@ -75,7 +75,7 @@ Static guarantees catch classes bugs earlier but require kiểu (type / 타입) 
 
 ## Optimize the real ràng buộc (constraint / 제약조건)
 
-> **Chuyển mạch:** Các cặp trade-off đã cung cấp vocabulary; phần **Optimize the real ràng buộc (constraint / 제약조건)** gom chúng thành quy trình quyết định: xác định SLO/invariant, đo bottleneck, rồi kiểm tra option dưới workload đại diện thay vì tối ưu một nhãn công nghệ.
+> **Nối mạch:** Các cặp trade-off đã cung cấp vocabulary; phần **Optimize the real ràng buộc (constraint / 제약조건)** gom chúng thành quy trình quyết định: xác định SLO/invariant, đo bottleneck, rồi kiểm tra option dưới workload đại diện thay vì tối ưu một nhãn công nghệ.
 
 First-principles sự đánh đổi (trade-off / 트레이드오프) tiến trình (process / 프로세스):
 

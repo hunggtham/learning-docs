@@ -20,7 +20,7 @@ ps -ef | grep java
 
 vì cách thứ hai có thể tự bắt cả tiến trình `grep` và mẫu tìm kiếm thường rộng hơn mức cần thiết.
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **PID và PPID** tiếp nhận điểm tựa từ **Chương trình khác tiến trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo tiến trình: fork/clone và exec** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **PID và PPID** nối từ **Chương trình khác tiến trình** sang **Tạo tiến trình: fork/clone và exec**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PID và PPID
 
@@ -33,7 +33,7 @@ pstree -p
 
 `PID` không phải danh tính vĩnh viễn. Sau khi tiến trình kết thúc, kernel có thể tái sử dụng số PID đó. Vì vậy trước khi `kill PID` trên môi trường vận hành (production / 운영 환경), nên xác minh PID hiện vẫn thuộc đúng tiến trình cần xử lý.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tạo tiến trình: fork/clone và exec** tiếp nhận điểm tựa từ **PID và PPID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tạo tiến trình: fork/clone và exec** nối từ **PID và PPID** sang **Luồng là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo tiến trình: `fork`/`clone` và `exec`
 
@@ -41,7 +41,7 @@ Mô hình Unix truyền thống thường được giải thích theo hai bướ
 
 Khi shell chạy một câu lệnh bên ngoài, nó phải tạo ngữ cảnh tiến trình, thiết lập môi trường và tệp (file / 파일) descriptor rồi thực thi chương trình đích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Luồng là gì?** tiếp nhận điểm tựa từ **Tạo tiến trình: fork/clone và exec** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ lập lịch và các trạng thái tiến trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Luồng là gì?** nối từ **Tạo tiến trình: fork/clone và exec** sang **Bộ lập lịch và các trạng thái tiến trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luồng là gì?
 
@@ -60,7 +60,7 @@ pidstat -t -p <PID> 1
 jcmd <PID> Thread.print
 ```
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Bộ lập lịch và các trạng thái tiến trình** tiếp nhận điểm tựa từ **Luồng là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tín hiệu: thông báo bất đồng bộ cho tiến trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Bộ lập lịch và các trạng thái tiến trình** nối từ **Luồng là gì?** sang **Tín hiệu: thông báo bất đồng bộ cho tiến trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ lập lịch và các trạng thái tiến trình
 
@@ -70,7 +70,7 @@ Tiến trình hoặc luồng không phải lúc nào cũng "đang chạy" dù v�
 
 `Z` là **tiến trình zombie**: tiến trình con đã kết thúc nhưng tiến trình cha chưa thu nhận trạng thái kết thúc. Zombie không tiếp tục chạy mã nghiệp vụ nhưng vẫn giữ một mục trong bảng tiến trình. Gửi `kill` trực tiếp cho zombie không xử lý nguyên nhân gốc; cần kiểm tra tiến trình cha và cơ chế thu hồi trạng thái (reaping).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tín hiệu: thông báo bất đồng bộ cho tiến trình** tiếp nhận điểm tựa từ **Bộ lập lịch và các trạng thái tiến trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SIGTERM, SIGKILL, SIGHUP, SIGINT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tín hiệu: thông báo bất đồng bộ cho tiến trình** nối từ **Bộ lập lịch và các trạng thái tiến trình** sang **SIGTERM, SIGKILL, SIGHUP, SIGINT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tín hiệu: thông báo bất đồng bộ cho tiến trình
 
@@ -90,7 +90,7 @@ gửi `SIGKILL`. Kernel không cho tiến trình bắt hoặc bỏ qua `SIGKILL`
 
 Trong vận hành thực tế, thứ tự hợp lý thường là: `SIGTERM` → chờ và xác minh → `SIGKILL` chỉ khi thật sự cần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **SIGTERM, SIGKILL, SIGHUP, SIGINT** tiếp nhận điểm tựa từ **Tín hiệu: thông báo bất đồng bộ cho tiến trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền gửi tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **SIGTERM, SIGKILL, SIGHUP, SIGINT** nối từ **Tín hiệu: thông báo bất đồng bộ cho tiến trình** sang **Quyền gửi tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `SIGTERM`, `SIGKILL`, `SIGHUP`, `SIGINT`
 
@@ -98,13 +98,13 @@ Trong vận hành thực tế, thứ tự hợp lý thường là: `SIGTERM` →
 
 Không nên giả định `kill -HUP` luôn có nghĩa "reload". Hãy đọc tài liệu của dịch vụ tương ứng.
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Quyền gửi tín hiệu** tiếp nhận điểm tựa từ **SIGTERM, SIGKILL, SIGHUP, SIGINT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiền cảnh, hậu cảnh và điều khiển tác vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Quyền gửi tín hiệu** nối từ **SIGTERM, SIGKILL, SIGHUP, SIGINT** sang **Tiền cảnh, hậu cảnh và điều khiển tác vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyền gửi tín hiệu
 
 Một tiến trình không thể tùy ý gửi tín hiệu (signal / 신호) tới mọi tiến trình khác. Kernel kiểm tra thông tin xác thực và capabilities. Đây là mối liên hệ trực tiếp với [Người dùng, nhóm và quyền truy cập](../03_identity/users_groups_permissions.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tiền cảnh, hậu cảnh và điều khiển tác vụ** tiếp nhận điểm tựa từ **Quyền gửi tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **nohup giải quyết gì và không giải quyết gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Tiền cảnh, hậu cảnh và điều khiển tác vụ** nối từ **Quyền gửi tín hiệu** sang **nohup giải quyết gì và không giải quyết gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiền cảnh, hậu cảnh và điều khiển tác vụ
 
@@ -119,7 +119,7 @@ jobs -l
 
 Mã tác vụ như `%1` là khái niệm cục bộ của shell, không phải `PID`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **nohup giải quyết gì và không giải quyết gì?** tiếp nhận điểm tựa từ **Tiền cảnh, hậu cảnh và điều khiển tác vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môi trường của tiến trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **nohup giải quyết gì và không giải quyết gì?** nối từ **Tiền cảnh, hậu cảnh và điều khiển tác vụ** sang **Môi trường của tiến trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `nohup` giải quyết gì và không giải quyết gì?
 
@@ -133,7 +133,7 @@ nohup java -jar app.jar >app.log 2>&1 &
 
 Với dịch vụ chạy lâu dài trên môi trường vận hành (production / 운영 환경), xem [Khởi động, systemd và dịch vụ](../05_system/systemd_boot_services.md).
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Môi trường của tiến trình** tiếp nhận điểm tựa từ **nohup giải quyết gì và không giải quyết gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Môi trường của tiến trình** nối từ **nohup giải quyết gì và không giải quyết gì?** sang **Giới hạn tài nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môi trường của tiến trình
 
@@ -147,7 +147,7 @@ tr '\0' '\n' < /proc/<PID>/environ
 
 Cần thận trọng vì môi trường có thể chứa bí mật như đơn vị từ (token / 토큰) hoặc mật khẩu. Không nên sao chép hoặc ghi toàn bộ ra nhật ký một cách vô thức.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Môi trường của tiến trình** đã nêu tiêu chí phân biệt, còn **Giới hạn tài nguyên** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tiến trình mồ côi và việc thu hồi trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Môi trường của tiến trình** đặt tiêu chí; **Giới hạn tài nguyên** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tiến trình mồ côi và việc thu hồi trạng thái** mở rộng hệ quả.
 
 ## Giới hạn tài nguyên
 
@@ -160,7 +160,7 @@ ulimit -a
 
 Giới hạn `ulimit` của shell tương tác không đảm bảo dịch vụ systemd có cùng giá trị. Systemd có các thiết lập riêng như `LimitNOFILE=`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Giới hạn tài nguyên** đã nêu tiêu chí phân biệt, còn **Tiến trình mồ côi và việc thu hồi trạng thái** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Giới hạn tài nguyên** đặt tiêu chí; **Tiến trình mồ côi và việc thu hồi trạng thái** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** mở rộng hệ quả.
 
 ## Tiến trình mồ côi và việc thu hồi trạng thái
 
@@ -168,7 +168,7 @@ Tiến trình cha có trách nhiệm thu nhận trạng thái kết thúc của 
 
 Trong vùng tên PID của bộ chứa (container / 컨테이너), vấn đề này càng rõ: tiến trình mang `PID 1` bên trong bộ chứa (container / 컨테이너) cần xử lý tín hiệu (signal / 신호) và thu hồi tiến trình con đúng cách.
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** tiếp nhận điểm tựa từ **Tiến trình mồ côi và việc thu hồi trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** nối từ **Tiến trình mồ côi và việc thu hồi trạng thái** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh
 
@@ -188,7 +188,7 @@ sudo ss -lntp | grep ':8080'
 curl -fsS -v http://127.0.0.1:8080/health
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình, luồng, tín hiệu và tác vụ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -196,7 +196,7 @@ Tiến trình là **ngữ cảnh khi đang chạy của một chương trình**:
 
 Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành các câu hỏi cụ thể: tiến trình có tồn tại không? đang ở trạng thái nào? các luồng đang làm gì? tệp (file / 파일) descriptor và socket ra sao? giới hạn tài nguyên thế nào? endpoint của dịch vụ có khỏe không?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình, luồng, tín hiệu và tác vụ**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -210,7 +210,7 @@ Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành
 
 **"Tiến trình tồn tại nghĩa là endpoint khỏe."** Cần xác minh thêm ở tầng ứng dụng và mạng.
 
-> **Chuyển mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tiến trình, luồng, tín hiệu và tác vụ**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

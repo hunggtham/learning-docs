@@ -19,7 +19,7 @@ Do đó cần luôn phân biệt bốn lớp thông tin:
 
 Sai lầm khoa học thường xuất hiện khi ta nhầm phần diễn giải với chính quan sát ban đầu.
 
-> **Chuyển mạch:** Observation chưa phải explanation; matter properties tiếp theo tách physical change khỏi chemical change để biết phép đo đang kiểm tra claim nào.
+> **Nối mạch:** Observation chưa phải explanation; matter properties tiếp theo tách physical change khỏi chemical change để biết phép đo đang kiểm tra claim nào.
 
 ## Tính chất của vật chất
 
@@ -31,7 +31,7 @@ Một **tính chất (property / 성질)** là đặc điểm dùng để mô t�
 
 Phân biệt này giúp ta biết đại lượng nào có thể dùng để nhận diện một chất. Khối lượng của một mẫu không nói chất đó là gì, nhưng khối lượng riêng có thể cung cấp manh mối.
 
-> **Chuyển mạch:** Ở chặng này của **Vật chất và phép đo**, **Tính chất vật lý và tính chất hóa học** tiếp nhận điểm tựa từ **Tính chất của vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật chất và phép đo**, **Tính chất vật lý và tính chất hóa học** nối từ **Tính chất của vật chất** sang **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính chất vật lý và tính chất hóa học
 
@@ -41,7 +41,7 @@ Phân biệt này giúp ta biết đại lượng nào có thể dùng để nh�
 
 Ví dụ, ethanol có nhiệt độ sôi khoảng `78 °C` là một tính chất vật lý. Khả năng ethanol cháy trong oxygen là một tính chất hóa học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp** tiếp nhận điểm tựa từ **Tính chất vật lý và tính chất hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái vật chất không chỉ là ba từ để học thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp** nối từ **Tính chất vật lý và tính chất hóa học** sang **Trạng thái vật chất không chỉ là ba từ để học thuộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp
 
@@ -57,7 +57,7 @@ Hỗn hợp có thể là **hỗn hợp đồng nhất (homogeneous mixture / �
 
 Điểm quan trọng là phân loại còn phụ thuộc vào thang quan sát. Sữa nhìn bằng mắt có vẻ đồng nhất, nhưng ở thang vi mô lại là một hệ keo (**colloidal system**).
 
-> **Chuyển mạch:** Trong **Vật chất và phép đo**, **Trạng thái vật chất không chỉ là ba từ để học thuộc** tiếp nhận điểm tựa từ **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng, thể tích và khối lượng riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật chất và phép đo**, **Trạng thái vật chất không chỉ là ba từ để học thuộc** nối từ **Chất tinh khiết, nguyên tố, hợp chất và hỗn hợp** sang **Khối lượng, thể tích và khối lượng riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái vật chất không chỉ là ba từ để học thuộc
 
@@ -67,7 +67,7 @@ Trong **chất rắn (solid / 고체)**, các hạt thường dao động quanh 
 
 Trạng thái không phải là bản sắc của chất. Nước vẫn là `H2O` khi ở dạng băng, nước lỏng hay hơi nước. Điều thay đổi là cách sắp xếp và phân bố năng lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Vật chất và phép đo**, **Khối lượng, thể tích và khối lượng riêng** tiếp nhận điểm tựa từ **Trạng thái vật chất không chỉ là ba từ để học thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ và nhiệt không phải cùng một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật chất và phép đo**, **Khối lượng, thể tích và khối lượng riêng** nối từ **Trạng thái vật chất không chỉ là ba từ để học thuộc** sang **Nhiệt độ và nhiệt không phải cùng một thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng, thể tích và khối lượng riêng
 
@@ -93,7 +93,7 @@ Ví dụ, một mẫu kim loại có khối lượng `54.0 g` và thể tích `2
 
 Giá trị này gần khối lượng riêng của aluminum ở điều kiện thường nên có thể là một manh mối nhận dạng. Tuy nhiên, không thể kết luận chỉ từ một phép đo vì nhiều vật liệu có thể có khối lượng riêng gần nhau và mọi phép đo đều có độ không đảm bảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Nhiệt độ và nhiệt không phải cùng một thứ** tiếp nhận điểm tựa từ **Khối lượng, thể tích và khối lượng riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mọi phép đo đều là sự so sánh với chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Nhiệt độ và nhiệt không phải cùng một thứ** nối từ **Khối lượng, thể tích và khối lượng riêng** sang **Mọi phép đo đều là sự so sánh với chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt độ và nhiệt không phải cùng một thứ
 
@@ -105,7 +105,7 @@ Một cốc nước `90 °C` có nhiệt độ cao hơn một bồn nước `40 
 
 Phân biệt này là nền tảng cho nhiệt hóa học và nhiệt động lực học.
 
-> **Chuyển mạch:** Trong **Vật chất và phép đo**, **Nhiệt độ và nhiệt không phải cùng một thứ** đã nêu tiêu chí phân biệt, còn **Mọi phép đo đều là sự so sánh với chuẩn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Số chính xác và số đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật chất và phép đo**, **Nhiệt độ và nhiệt không phải cùng một thứ** đặt tiêu chí; **Mọi phép đo đều là sự so sánh với chuẩn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Số chính xác và số đo** mở rộng hệ quả.
 
 ## Mọi phép đo đều là sự so sánh với chuẩn
 
@@ -123,7 +123,7 @@ Ví dụ, đổi `250 mL` sang lít:
 
 Đơn vị `mL` triệt tiêu, để lại `L`. Nếu đơn vị không triệt tiêu đúng, cách thiết lập phép đổi có thể sai.
 
-> **Chuyển mạch:** Ở chặng này của **Vật chất và phép đo**, **Mọi phép đo đều là sự so sánh với chuẩn** đã nêu tiêu chí phân biệt, còn **Số chính xác và số đo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tách hỗn hợp không giống phản ứng hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật chất và phép đo**, **Mọi phép đo đều là sự so sánh với chuẩn** đặt tiêu chí; **Số chính xác và số đo** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tách hỗn hợp không giống phản ứng hóa học** mở rộng hệ quả.
 
 ## Số chính xác và số đo
 
@@ -135,7 +135,7 @@ Nhưng nếu khối lượng được ghi là `12.34 g`, con số đó đến t�
 
 Phân biệt này ảnh hưởng trực tiếp tới cách dùng chữ số có nghĩa và lan truyền độ không đảm bảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Tách hỗn hợp không giống phản ứng hóa học** tiếp nhận điểm tựa từ **Số chính xác và số đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, **Tách hỗn hợp không giống phản ứng hóa học** nối từ **Số chính xác và số đo** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tách hỗn hợp không giống phản ứng hóa học
 
@@ -147,7 +147,7 @@ Nếu tách muối khỏi nước muối bằng bay hơi, NaCl không biến th�
 
 Ngược lại, điện phân nước tạo `H2` và `O2` từ `H2O`; bản sắc hóa học thay đổi nên đây là **biến đổi hóa học (chemical transformation)**.
 
-> **Chuyển mạch:** Trong **Vật chất và phép đo**, **Mô hình tư duy** gom các mảnh từ **Tách hỗn hợp không giống phản ứng hóa học** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật chất và phép đo**, **Mô hình tư duy** tổng hợp từ **Tách hỗn hợp không giống phản ứng hóa học** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -159,7 +159,7 @@ Hãy coi một mẫu vật chất như một hệ có ba lớp thông tin:
 
 Nhiều bài toán Hóa học thực chất là xác định hoặc chuyển đổi ba lớp thông tin này.
 
-> **Chuyển mạch:** Ở chặng này của **Vật chất và phép đo**, **Các hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật chất và phép đo**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -175,7 +175,7 @@ Không. Hệ keo và nhiều vật liệu composite có thể trông đồng nh�
 
 Trong nhiệt động lực học hiện đại, nhiệt là một **cách truyền năng lượng (mode of energy transfer)**, không phải một chất chứa bên trong vật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật chất và phép đo**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

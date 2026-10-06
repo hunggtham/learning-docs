@@ -10,7 +10,7 @@ Hàn Quốc vẫn ở trạng thái đình chiến với Triều Tiên sau Chi�
 
 Từ góc nhìn tư duy hệ thống, nghĩa vụ quân sự khác quân đội tình nguyện ở chỗ nó lấy một lượng lớn người từ dòng đời dân sự rồi đưa họ qua một thiết chế có lịch trình, thứ bậc và kỷ luật được chuẩn hoá cao. Sau khi hoàn thành phục vụ, họ quay lại đại học hoặc thị trường lao động. Vì vậy văn hoá quân đội không bị giới hạn trong doanh trại; trải nghiệm và từ vựng có thể lưu thông ngược trở lại xã hội.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **입대 và 전역: hai sự kiện chia dòng thời gian** tiếp nhận điểm tựa từ **Vì sao quân đội có vị trí lớn trong đời sống dân sự?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **입대 và 전역: hai sự kiện chia dòng thời gian** nối từ **Vì sao quân đội có vị trí lớn trong đời sống dân sự?** sang **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 입대 và 전역: hai sự kiện chia dòng thời gian
 
@@ -18,7 +18,7 @@ Từ góc nhìn tư duy hệ thống, nghĩa vụ quân sự khác quân đội 
 
 Điều này tạo một **đứt đoạn thời gian (temporal discontinuity / 시간적 단절)**. Hai người cùng năm sinh có thể tốt nghiệp khác năm vì thực hiện nghĩa vụ ở thời điểm khác nhau. Khi đọc hồ sơ nghề nghiệp, quan hệ cựu sinh viên hoặc dòng thời gian tuổi–sự nghiệp ở Hàn Quốc, cần nhớ rằng tuổi theo năm sinh không ánh xạ trực tiếp sang số năm kinh nghiệm làm việc.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập** tiếp nhận điểm tựa từ **입대 và 전역: hai sự kiện chia dòng thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **군대 말투 và dấu vết ngôn ngữ quân đội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập** nối từ **입대 và 전역: hai sự kiện chia dòng thời gian** sang **군대 말투 và dấu vết ngôn ngữ quân đội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập
 
@@ -26,7 +26,7 @@ Tổ chức quân đội sử dụng quân hàm, đơn vị và thâm niên rấ
 
 Một hệ thống cần thứ tự vì nhiệm vụ phải được phân công và chuỗi chỉ huy cần rõ. Vấn đề văn hoá xuất hiện khi quy tắc hữu ích trong môi trường chỉ huy rủi ro cao bị sao chép sang bối cảnh không cần mức chỉ huy nghiêm ngặt, chẳng hạn một nhóm sáng tạo trong văn phòng. Đây là dạng **rò rỉ bối cảnh (context leakage)**: giao thức đúng ở hệ thống A nhưng gây ma sát khi dùng ở hệ thống B.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군대 말투 và dấu vết ngôn ngữ quân đội** tiếp nhận điểm tựa từ **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **휴가, 외박 và giá trị của thời gian tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군대 말투 và dấu vết ngôn ngữ quân đội** nối từ **군번, 기수, 선임–후임: tổ chức bằng khoá và thứ tự gia nhập** sang **휴가, 외박 và giá trị của thời gian tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 군대 말투 và dấu vết ngôn ngữ quân đội
 
@@ -34,7 +34,7 @@ Lời nói trong quân đội thường nhấn mạnh tính rõ ràng, nhận bi
 
 Điểm quan trọng là ngôn ngữ ở đây là giao diện của quyền lực. Cùng nội dung “đã hiểu” có thể được mã hoá theo cách làm nổi bật chuỗi chỉ huy. Điều này nối trực tiếp với chương kính ngữ: ngữ pháp không đứng ngoài thiết chế.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **휴가, 외박 và giá trị của thời gian tự do** tiếp nhận điểm tựa từ **군대 말투 và dấu vết ngôn ngữ quân đội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **군필 và tín hiệu trong thị trường lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **휴가, 외박 và giá trị của thời gian tự do** nối từ **군대 말투 và dấu vết ngôn ngữ quân đội** sang **군필 và tín hiệu trong thị trường lao động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 휴가, 외박 và giá trị của thời gian tự do
 
@@ -42,7 +42,7 @@ Khi lịch hằng ngày bị kiểm soát mạnh, **휴가 (leave / kỳ nghỉ)
 
 Có thể hiểu bằng kinh tế học khan hiếm: nguồn lực càng hiếm thì giá trị biên càng cao. Vì vậy ngày nghỉ quân đội, quyền dùng điện thoại hoặc buổi thăm gặp có thể mang ý nghĩa cảm xúc lớn hơn giá trị vật chất của chúng.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군필 và tín hiệu trong thị trường lao động** tiếp nhận điểm tựa từ **휴가, 외박 và giá trị của thời gian tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **예비군 và vòng đời nghĩa vụ quân sự kéo dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군필 và tín hiệu trong thị trường lao động** nối từ **휴가, 외박 và giá trị của thời gian tự do** sang **예비군 và vòng đời nghĩa vụ quân sự kéo dài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 군필 và tín hiệu trong thị trường lao động
 
@@ -50,7 +50,7 @@ Có thể hiểu bằng kinh tế học khan hiếm: nguồn lực càng hiếm 
 
 Tuy nhiên không nên biến nó thành phán đoán về “độ trưởng thành” của cá nhân. Trạng thái phục vụ có thể phụ thuộc sức khoẻ, quốc tịch, phân loại pháp lý và nhiều yếu tố khác. Mô tả văn hoá không nên biến thành xếp hạng đạo đức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **예비군 và vòng đời nghĩa vụ quân sự kéo dài** tiếp nhận điểm tựa từ **군필 và tín hiệu trong thị trường lao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **군대와 남성성: nghĩa vụ quân sự và nam tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **예비군 và vòng đời nghĩa vụ quân sự kéo dài** nối từ **군필 và tín hiệu trong thị trường lao động** sang **군대와 남성성: nghĩa vụ quân sự và nam tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 예비군 và vòng đời nghĩa vụ quân sự kéo dài
 
@@ -74,7 +74,7 @@ trạng thái liên quan lực lượng dự bị
 
 Mỗi chuyển trạng thái có quy định pháp lý riêng. Vì quy định thay đổi, tài liệu văn hoá không nên đóng băng các con số thời gian phục vụ như sự thật vĩnh viễn; khi cần áp dụng thực tế phải kiểm tra Military Manpower Administration (`병무청`).
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군대와 남성성: nghĩa vụ quân sự và nam tính** tiếp nhận điểm tựa từ **예비군 và vòng đời nghĩa vụ quân sự kéo dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ nữ, quân đội và tranh luận về giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **군대와 남성성: nghĩa vụ quân sự và nam tính** nối từ **예비군 và vòng đời nghĩa vụ quân sự kéo dài** sang **Phụ nữ, quân đội và tranh luận về giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 군대와 남성성: nghĩa vụ quân sự và nam tính
 
@@ -82,7 +82,7 @@ Vì nghĩa vụ quân sự về lịch sử tập trung mạnh vào nam giới, 
 
 Nhưng từ đó suy ra “mọi đàn ông Hàn đều có cùng tính cách quân đội” là ngụy biện sinh thái. Thiết chế chung có thể tạo từ vựng chung nhưng không tạo tính cách giống hệt nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Phụ nữ, quân đội và tranh luận về giới** tiếp nhận điểm tựa từ **군대와 남성성: nghĩa vụ quân sự và nam tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-pop, người nổi tiếng và dòng thời gian quân sự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Phụ nữ, quân đội và tranh luận về giới** nối từ **군대와 남성성: nghĩa vụ quân sự và nam tính** sang **K-pop, người nổi tiếng và dòng thời gian quân sự**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phụ nữ, quân đội và tranh luận về giới
 
@@ -90,7 +90,7 @@ Vai trò của phụ nữ trong quân đội và các tranh luận rộng hơn v
 
 Điểm cần hiểu là khi một nghĩa vụ pháp lý được phân bố không đối xứng theo giới, nó dễ trở thành đầu vào của tranh luận về công bằng, chi phí sự nghiệp và quyền công dân. Tranh luận trực tuyến còn có thể làm xung đột nổi bật hơn vì nền tảng thưởng cho nội dung thu hút chú ý; do đó không nên coi bình luận cực đoan là đại diện toàn xã hội.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **K-pop, người nổi tiếng và dòng thời gian quân sự** tiếp nhận điểm tựa từ **Phụ nữ, quân đội và tranh luận về giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **K-pop, người nổi tiếng và dòng thời gian quân sự** nối từ **Phụ nữ, quân đội và tranh luận về giới** sang **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## K-pop, người nổi tiếng và dòng thời gian quân sự
 
@@ -98,7 +98,7 @@ Nghĩa vụ quân sự có độ hiển thị cao trong ngành giải trí vì v
 
 Đây là ví dụ rõ về một thiết chế công tác động lên ngành tư nhân. Nhóm lập kế hoạch phải xem thời điểm nhập ngũ gần như một **ràng buộc cứng (hard constraint)** trong lịch dự án.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **K-pop, người nổi tiếng và dòng thời gian quân sự** đã nêu tiêu chí phân biệt, còn **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **K-pop, người nổi tiếng và dòng thời gian quân sự** đặt tiêu chí; **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** mở rộng hệ quả.
 
 ## Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn
 
@@ -117,7 +117,7 @@ logic quan hệ Nho giáo
 
 Không nên biến một đầu vào thành toàn bộ lời giải.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn** đã nêu tiêu chí phân biệt, còn **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Trải nghiệm quân đội và văn hoá công sở: có liên hệ nhưng cần giới hạn** đặt tiêu chí; **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** mở rộng hệ quả.
 
 ## Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ
 
@@ -135,7 +135,7 @@ rời hệ dân sự
 
 Khả năng tái hội nhập phụ thuộc mức hỗ trợ của trường, công ty, gia đình và mạng bạn bè. Một hệ thống coi việc quay lại là “tự người đó phải xử lý” sẽ tạo ma sát lớn hơn hệ thống có thủ tục, tư vấn và lộ trình rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** tiếp nhận điểm tựa từ **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** nối từ **Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ** sang **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau
 
@@ -151,7 +151,7 @@ kỹ năng biến động nhanh: framework, công cụ, quy trình tuyển dụn
 
 Vì vậy nói “nghĩa vụ làm mất hai năm sự nghiệp” hoặc “quân đội rèn kỹ năng nên không mất gì” đều quá đơn giản. Tác động ròng phụ thuộc kỹ năng, thời điểm phục vụ và cách người đó tái học sau khi quay lại.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** xác định đầu vào; **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau** đặt đầu vào cho **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng**, rồi **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng
 
@@ -169,7 +169,7 @@ vấn đề là gì? → giả thuyết nào? → bằng chứng nào? → phư�
 
 Không giao thức nào luôn tốt hơn. Khi rủi ro tức thời cao, chuỗi chỉ huy rõ có giá trị. Khi bài toán mơ hồ cần sáng tạo, tranh luận ngang hàng có thể tốt hơn. Kỹ năng trưởng thành nằm ở việc nhận ra mình đang ở hệ thống nào thay vì mang một giao thức sang mọi nơi.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng** nêu điều cần giải thích; **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng** đặt vấn đề; **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** đối chiếu bằng chứng, rồi **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào
 
@@ -179,7 +179,7 @@ Từ `군대` dễ làm người ngoài tưởng mọi trải nghiệm tương t
 
 Vì vậy khi một người kể câu chuyện quân đội, nên hiểu nó trước hết là dữ liệu về đơn vị và trải nghiệm của người đó, không phải tự động là mô tả toàn hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** nêu điều cần giải thích; **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào** đặt vấn đề; **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** đối chiếu bằng chứng, rồi **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung
 
@@ -189,7 +189,7 @@ Một số quan hệ trở thành **liên kết mạnh (strong ties)**, tiếp t
 
 Điều này giúp giải thích vì sao câu chuyện quân đội có thể tạo chủ đề trò chuyện nhanh giữa hai người mới gặp mà không có nghĩa họ tự động trở thành bạn thân.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** tiếp nhận điểm tựa từ **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** nối từ **Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung** sang **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gia đình và người yêu cũng chịu chi phí của nghĩa vụ
 
@@ -199,7 +199,7 @@ Nghĩa vụ quân sự thường được phân tích như trải nghiệm của
 
 Nhìn theo cách này giúp tránh quan niệm rằng nghĩa vụ chỉ có “chi phí cá nhân” hoặc chỉ có “lợi ích huấn luyện”. Nó là một sự kiện vòng đời có tác động mạng.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp** tiếp nhận điểm tựa từ **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp** nối từ **Gia đình và người yêu cũng chịu chi phí của nghĩa vụ** sang **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp
 
@@ -216,7 +216,7 @@ Mục tiêu không nhất thiết là “phục vụ càng sớm/càng muộn c�
 
 Chi tiết pháp lý phải luôn kiểm tra theo nguồn hiện hành. Ở tầng văn hoá, điều cần hiểu là một thiết chế công có thể đi sâu vào cách cá nhân thiết kế toàn bộ lộ trình học–việc của mình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp** nêu điều cần giải thích; **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp** đặt vấn đề; **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung
 
@@ -224,13 +224,13 @@ Phim, chương trình giải trí, webtoon và meme thường dùng bối cảnh
 
 Nhưng truyền thông có **thiên lệch lựa chọn (selection effect)**: câu chuyện cực đoan, hài hước hoặc kịch tính được kể nhiều hơn ngày bình thường. Nếu chỉ học quân đội qua phim và meme, người xem có thể đánh giá quá cao tần suất của những tình huống hiếm nhưng đáng nhớ.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, các dấu vết trong **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, các dấu vết trong **Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Nghĩa vụ quân sự là một “đường hầm thiết chế” mà một phần lớn dân số nam đi qua trước khi trở lại xã hội dân sự. Đường hầm này không quyết định họ trở thành con người như thế nào, nhưng có thể để lại từ vựng, sự dịch chuyển dòng thời gian, mạng ký ức chung và chi phí tái hội nhập. Muốn hiểu tác động thật cần nhìn cả giai đoạn **trước phục vụ → trong phục vụ → quay lại trường/công việc**.
 
-> **Chuyển mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -254,13 +254,13 @@ Không hẳn. Mạng bạn bè, công nghệ, quy trình tuyển dụng và tr�
 
 Một số kỹ năng như kỷ luật, phối hợp hoặc chịu áp lực có thể chuyển giao trong một số bối cảnh, nhưng môi trường dân sự còn cần tự chủ, phản biện, chuyên môn và sáng tạo. Chuyển giao kỹ năng không tự động xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn tham khảo định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang **Nguồn tham khảo định hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 Đọc cùng [`05_education_exams_credentials.md`](05_education_exams_credentials.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md) và [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) để thấy nghĩa vụ quân sự chen vào dòng học tập, thâm niên, danh tính và bước chuyển sang công sở như thế nào.
 
-> **Chuyển mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn tham khảo định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Nghĩa vụ quân sự, quân đội và dấu vết của văn hoá phục vụ**, **Đọc tiếp** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

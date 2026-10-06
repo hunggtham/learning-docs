@@ -10,7 +10,7 @@
 
 **tectonic relief → monsoon/water → fertile plain + limited flat land → dense settlement → industrial agglomeration → cổng (port / 포트)/rail mạng (network / 네트워크) → regional/toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) role**.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Khung relief: từ Tibetan Plateau tới Pacific margin** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rìa kiến tạo và island arc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis đối lập nội lục cao–khô với rìa đông thấp–ẩm cần một bản đồ relief cụ thể để thấy các basin, plain và Pacific margin nối với nhau ra sao. **Khung relief: từ Tibetan Plateau tới Pacific margin** đặt nền địa hình trước khi đi vào rìa kiến tạo.
 
 ## Khung relief: từ Tibetan Plateau tới Pacific margin
 
@@ -20,7 +20,7 @@ Tibetan Plateau thường được gọi là “water tower” của châu Á v�
 
 Ở China, population và agriculture tập trung mạnh hơn ở phần eastern lowland so với interior arid/high terrain. Đây là trường hợp (case / 사례) điển hình của quan hệ (relation / 관계) giữa **relief + water + arable land** và settlement density.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Rìa kiến tạo và island arc** tiếp nhận điểm tựa từ **Khung relief: từ Tibetan Plateau tới Pacific margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon: nhịp mùa của water và economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Relief kết thúc ở rìa Thái Bình Dương, nơi hội tụ, hút chìm và island arc tạo địa hình, động đất và núi lửa đặc thù. **Rìa kiến tạo và island arc** giải thích nền động lực ấy, trước khi monsoon biến địa hình thành nhịp nước và kinh tế.
 
 ## Rìa kiến tạo và island arc
 
@@ -30,7 +30,7 @@ Nhưng active tectonics cũng tạo volcanic soil, geothermal potential, mountai
 
 Korean Peninsula ổn định hơn Japan về tectonic setting, nhưng “ổn định hơn” không có nghĩa không có earthquake rủi ro (risk / 위험). Regional planning vẫn cần seismic thiết kế (design / 설계) và cục bộ (local / 로컬) geology.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Monsoon: nhịp mùa của water và economy** tiếp nhận điểm tựa từ **Rìa kiến tạo và island arc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River basin, floodplain và nền nông nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rìa kiến tạo định hình núi, bờ biển và độ dốc; monsoon quyết định khi nào nước và nhiệt đi qua các địa hình đó. **Monsoon: nhịp mùa của water và economy** là cầu nối sang basin, floodplain và nền nông nghiệp phụ thuộc mùa.
 
 ## Monsoon: nhịp mùa của water và economy
 
@@ -40,7 +40,7 @@ Korean Peninsula ổn định hơn Japan về tectonic setting, nhưng “ổn �
 
 Một label “monsoon climate” không đủ; cần hỏi timing, nguồn (source / 소스) moisture, terrain và interannual variability.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **River basin, floodplain và nền nông nghiệp** tiếp nhận điểm tựa từ **Monsoon: nhịp mùa của water và economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Limited flat land và urban concentration ở Korea/Japan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon tạo dòng nước theo mùa, còn basin và floodplain gom nước, phù sa, dân cư và ruộng trồng vào những dải có thể khai thác. **Limited flat land và urban concentration ở Korea/Japan** tiếp theo cho thấy khi đồng bằng hiếm, dân cư và công nghiệp tập trung mạnh đến mức nào.
 
 ## River basin, floodplain và nền nông nghiệp
 
@@ -50,7 +50,7 @@ River điều khiển (control / 제어) trong lịch sử không chỉ là kỹ
 
 Trong hiện đại (modern / 현대적) geography, dam và reservoir thêm tầng (layer / 계층) mới: hydropower, flood điều khiển (control / 제어), điều hướng (navigation / 내비게이션) và sediment trapping tạo sự đánh đổi (trade-off / 트레이드오프) giữa upstream–downstream.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **River basin, floodplain và nền nông nghiệp** đã nêu tiêu chí phân biệt, còn **Limited flat land và urban concentration ở Korea/Japan** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Coastal truy cập (access / 접근) và industrialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đồng bằng hạn chế làm tăng giá trị của bờ biển, thung lũng và đất lấn; đô thị phải cân bằng mật độ, rủi ro và khả năng tiếp cận. **Coastal truy cập (access / 접근) và industrialization** giải thích vì sao công nghiệp Đông Á bám mạnh vào các dải ven biển.
 
 ## Limited flat land và urban concentration ở Korea/Japan
 
@@ -60,7 +60,7 @@ Khi land scarcity gặp high population density, vertical construction, transit-
 
 Đây là ví dụ tốt cho việc vật lý (physical / 물리적) geography không “quyết định” city form nhưng đặt ràng buộc (constraint / 제약조건) mạnh lên chi phí (cost / 비용) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Limited flat land và urban concentration ở Korea/Japan** đã nêu tiêu chí phân biệt, còn **Coastal truy cập (access / 접근) và industrialization** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cổng (port / 포트)–hinterland quan hệ (relation / 관계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ven biển cung cấp đất tiếp cận cảng, nhưng industrialization chỉ vận hành khi cảng nối được với nhà máy, rail, đường bộ và thị trường nội địa. **Cổng (port / 포트)–hinterland quan hệ (relation / 관계)** tiếp theo đọc chính giao diện đó.
 
 ## Coastal truy cập (access / 접근) và industrialization
 
@@ -68,7 +68,7 @@ East Asia có nhiều cổng (port / 포트) lớn, deep manufacturing cluster v
 
 Coastal corridor của China, metropolitan belts của Japan, Seoul Capital Area và Taiwan west-coast corridor đều cho thấy **mạng (network / 네트워크) economy** tập trung ở nơi land–sea vận chuyển (transport / 전송) và urban labor thị trường (market / 시장) giao nhau.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Cổng (port / 포트)–hinterland quan hệ (relation / 관계)** tiếp nhận điểm tựa từ **Coastal truy cập (access / 접근) và industrialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) và raw-material phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port–hinterland quyết định hàng hóa đi vào và ra khỏi vùng, nhưng các nhà máy còn phụ thuộc dầu, khí, quặng và nguyên liệu từ ngoài. **Năng lượng (energy / 에너지) và raw-material phụ thuộc (dependency / 의존성)** nối mạng ven biển với các tuyến cung ứng xa hơn.
 
 ## Cổng (port / 포트)–hinterland quan hệ (relation / 관계)
 
@@ -78,7 +78,7 @@ Busan có role lớn vì nằm trên southeast coast Korea và được nối v�
 
 Địa lý cảng là **nút (node / 노드) + corridor + hinterland**, không phải điểm rời trên coast.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Năng lượng (energy / 에너지) và raw-material phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Cổng (port / 포트)–hinterland quan hệ (relation / 관계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demographic chuyển tiếp (transition / 전이) và spatial polarization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phụ thuộc nguyên liệu và năng lượng tạo ra lợi thế công nghiệp nhưng cũng phơi bày rủi ro giá, tuyến biển và chuyển dịch công nghệ. **Demographic chuyển tiếp (transition / 전이) và spatial polarization** tiếp theo xem các vùng công nghiệp và đô thị phân bổ dân số, việc làm và già hóa ra sao.
 
 ## Năng lượng (energy / 에너지) và raw-material phụ thuộc (dependency / 의존성)
 
@@ -88,7 +88,7 @@ Oil, LNG, coal, iron ore và trọng yếu (critical / 중요) mineral đi qua c
 
 Điều này nối East Asia trực tiếp với [chokepoints and resources](../04_global_systems/02_geopolitics_chokepoints_resources.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Demographic chuyển tiếp (transition / 전이) và spatial polarization** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) và raw-material phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Seoul–Tokyo–Chinese megaregions: kích thước (size / 크기) khác centrality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi dân số già hóa và cơ hội tập trung theo vùng, quy mô dân số không còn đồng nghĩa với centrality hay quyền điều phối. **Seoul–Tokyo–Chinese megaregions: kích thước (size / 크기) khác centrality** chuyển từ nhân khẩu sang mạng đô thị lớn và vị trí trong khu vực.
 
 ## Demographic chuyển tiếp (transition / 전이) và spatial polarization
 
@@ -98,7 +98,7 @@ Do đó “national population decline” không đồng nghĩa mọi place shri
 
 Đây là trường hợp (case / 사례) điển hình của **quy mô (scale / 규모) tác động (effect / 효과)** trong population geography.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Seoul–Tokyo–Chinese megaregions: kích thước (size / 크기) khác centrality** tiếp nhận điểm tựa từ **Demographic chuyển tiếp (transition / 전이) và spatial polarization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam liên kết (connection / 연결) trong regional geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Megaregion được đọc bằng dòng người, vốn, hàng hóa, tri thức và chức năng điều phối chứ không chỉ bằng diện tích hay dân số. **Korea–Vietnam liên kết (connection / 연결) trong regional geography** áp dụng cách đọc mạng đó vào quan hệ gần gũi giữa Đông Á và Đông Nam Á.
 
 ## Seoul–Tokyo–Chinese megaregions: kích thước (size / 크기) khác centrality
 
@@ -108,7 +108,7 @@ Seoul Capital Area có national centralization mạnh; Tokyo là command/dịch 
 
 So sánh nên dựa trên hàm (function / 함수) và connectivity, không chỉ population ranking.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, sau nội dung của **Seoul–Tokyo–Chinese megaregions: kích thước (size / 크기) khác centrality**, **Korea–Vietnam liên kết (connection / 연결) trong regional geography** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Japan và island geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Liên kết Korea–Vietnam cho thấy regional geography không dừng ở biên giới quốc gia mà chạy qua cảng, chuỗi cung ứng, diaspora và chính sách. **Japan và island geography** tiếp theo đưa một trường hợp đảo vào cùng khung để xem biển vừa là cơ hội vừa là ràng buộc.
 
 ## Korea–Vietnam liên kết (connection / 연결) trong regional geography
 
@@ -116,7 +116,7 @@ Korea và Vietnam nằm trong hai regional hệ thống (system / 시스템) kh�
 
 Một electronics supply chuỗi (chain / 사슬) có thể nối R&D/firm coordination ở Korea với thành phần (component / 컴포넌트)/assembly cơ sở (base / 기반) tại Vietnam, qua cổng (port / 포트)/airport và supplier cluster. Đây là example rõ của **regional geography như mạng (network / 네트워크) giữa region**, không phải từng region tách biệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Japan và island geography** tiếp nhận điểm tựa từ **Korea–Vietnam liên kết (connection / 연결) trong regional geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **China: continental quy mô (scale / 규모) và nội bộ (internal / 내부) regional contrast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Địa lý đảo của Nhật cho thấy kết nối biển, núi và đất bằng khan hiếm có thể tạo công nghiệp tập trung nhưng cũng làm tăng phụ thuộc logistics. **China: continental quy mô (scale / 규모) và nội bộ (internal / 내부) regional contrast** chuyển sang tương phản trong một không gian lục địa rộng hơn.
 
 ## Japan và island geography
 
@@ -124,7 +124,7 @@ Japan là archipelago kéo dài theo latitude. Island arc tạo mountain terrain
 
 Settlement tập trung ở Pacific side urban corridor nơi flat land, industry và vận chuyển (transport / 전송) mạng (network / 네트워크) phát triển. Đây là chuỗi (chain / 사슬) từ vật lý (physical / 물리적) ràng buộc (constraint / 제약조건) tới economic concentration.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Japan và island geography** đã nêu tiêu chí phân biệt, còn **China: continental quy mô (scale / 규모) và nội bộ (internal / 내부) regional contrast** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Regional role và maritime–continental giao diện (interface / 인터페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Quy mô lục địa của Trung Quốc chứa nhiều khí hậu, basin, đô thị và mức kết nối khác nhau; không thể đọc như một vùng đồng nhất. **Regional role và maritime–continental giao diện (interface / 인터페이스)** tiếp theo đặt các tương phản nội bộ vào quan hệ giữa lục địa và biển.
 
 ## China: continental quy mô (scale / 규모) và nội bộ (internal / 내부) regional contrast
 
@@ -134,7 +134,7 @@ China có spatial diversity rất lớn; national average dễ che contrast gi�
 
 Một country-scale map không nên làm ta quên regional heterogeneity.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **China: continental quy mô (scale / 규모) và nội bộ (internal / 내부) regional contrast** đã nêu tiêu chí phân biệt, còn **Regional role và maritime–continental giao diện (interface / 인터페이스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vai trò vùng hình thành ở giao diện: nội lục cung cấp tài nguyên và thị trường, ven biển cung cấp cảng, vốn và kết nối quốc tế, còn corridor nối hai phía. **Dùng chung (common / 공통) misconceptions** tiếp theo kiểm tra những cách giản lược Đông Á thành một câu chuyện duy nhất.
 
 ## Regional role và maritime–continental giao diện (interface / 인터페이스)
 
@@ -142,7 +142,7 @@ East Asia vừa là continental edge vừa là western Pacific archipelago hệ 
 
 Regional role không đến từ một tài nguyên (resource / 자원) duy nhất mà từ **density of nodes and links**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Regional role và maritime–continental giao diện (interface / 인터페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về “Đông Á đồng nhất”, “ven biển luôn giàu” hay “đảo luôn bị cô lập”, ta có thể giữ lại chuỗi relief–monsoon–basin–coastal network–demography. **Mô hình tư duy** cô đọng chuỗi này để đọc các trường hợp quốc gia và vùng khác.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -152,7 +152,7 @@ Regional role không đến từ một tài nguyên (resource / 자원) duy nh�
 
 “High-tech economy làm geography mất ý nghĩa” sai vì semiconductor, battery, dữ liệu (data / 데이터) center và e-commerce đều phụ thuộc land, power, water, logistics và supplier proximity.
 
-> **Chuyển mạch:** Trong **Đông Á: từ rìa lục địa đến mạng công nghiệp ven biển**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi nội lục–rìa biển → kiến tạo–monsoon–basin → đồng bằng hạn chế–đô thị ven biển → cảng, năng lượng và raw materials → megaregion, Korea–Vietnam và tương phản lục địa–hải đảo. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để chọn nhánh Đông Nam Á, hệ thống toàn cầu hoặc atlas.
 
 ## Mô hình tư duy
 

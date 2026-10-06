@@ -20,7 +20,7 @@ Monte Carlo algorithms giới hạn thời gian chạy (runtime / 런타임) rõ
 
 Trong các hệ thống (systems / 시스템들), probabilistic dữ liệu (data / 데이터) structures như Bloom filter, HyperLogLog và Count-Min Sketch được dùng vì bộ nhớ (memory / 메모리) chính xác tuyệt đối có thể quá đắt.
 
-> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** tiếp nhận điểm tựa từ **Randomness không phải sự cẩu thả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online algorithms: quyết định trước khi thấy tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** nối từ **Randomness không phải sự cẩu thả** sang **Online algorithms: quyết định trước khi thấy tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Approximation: khi chính xác (exact / 정확한) optimum quá đắt
 
@@ -36,7 +36,7 @@ Heuristic là chiến lược (strategy / 전략) thực dụng nhưng có thể
 
 Trong kỹ thuật (engineering / 엔지니어링), heuristic hoàn toàn hợp lệ nếu đo được hành vi (behavior / 동작) trên tải công việc (workload / 워크로드). Điều cần tránh là gọi empirical success thành mathematical guarantee.
 
-> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Online algorithms: quyết định trước khi thấy tương lai** tiếp nhận điểm tựa từ **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Online algorithms: quyết định trước khi thấy tương lai** nối từ **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** sang **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Online algorithms: quyết định trước khi thấy tương lai
 
@@ -46,7 +46,7 @@ Nếu biết tương lai hoàn toàn, Belady's optimal thuật toán (algorithm 
 
 Competitive phân tích (analysis / 분석) so online thuật toán (algorithm / 알고리즘) với optimal offline thuật toán (algorithm / 알고리즘) biết toàn bộ tương lai. Một competitive ratio mô tả mức tệ nhất tương đối đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomized, approximation và online algorithms**, **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** tiếp nhận điểm tựa từ **Online algorithms: quyết định trước khi thấy tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** nối từ **Online algorithms: quyết định trước khi thấy tương lai** sang **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ
 
@@ -56,7 +56,7 @@ Ví dụ HyperLogLog ước lượng số distinct elements bằng statistical p
 
 Đây là điểm nối trực tiếp giữa algorithms, xác suất (probability / 확률), các hệ thống (systems / 시스템들) telemetry và large-scale dữ liệu (data / 데이터) processing.
 
-> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** nối từ **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** sang **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
@@ -64,7 +64,7 @@ Randomized backoff giảm xác suất (probability / 확률) nhiều clients th�
 
 Randomness ở đây không nhằm làm hệ thống khó đoán mà để giảm synchronization pathologies và adversarial alignment.
 
-> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** đã nêu tiêu chí phân biệt, còn **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** đặt tiêu chí; **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -72,7 +72,7 @@ Bảng băm (hash table / 해시 테이블) trung bình `O(1)` có thể bị de
 
 Nhưng pseudo-randomness cho hiệu năng (performance / 성능) khác cryptographic randomness. bảo mật (security / 보안) cần entropy và unpredictability mạnh hơn; không nên dùng PRNG thường cho keys/tokens.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomized, approximation và online algorithms**, **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **Dùng chung (common / 공통) Misconceptions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** đặt tiêu chí; **Dùng chung (common / 공통) Misconceptions** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,13 +82,13 @@ Nhưng pseudo-randomness cho hiệu năng (performance / 성능) khác cryptogra
 
 **“Online thuật toán (algorithm / 알고리즘) kém vì thiếu dữ liệu.”** Thiếu tương lai là ràng buộc (constraint / 제약조건) bản chất của nhiều các hệ thống (systems / 시스템들). Online phân tích (analysis / 분석) giúp biết giới hạn có thể đạt.
 
-> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi chính xác (exact / 정확한) deterministic computation không phù hợp các ràng buộc (constraints / 제약조건들), hỏi ba câu: randomness có phá cấu trúc (structure / 구조) xấu không, approximate answer có đủ không, và quyết định có buộc phải xảy ra trước khi biết tương lai không?
 
-> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

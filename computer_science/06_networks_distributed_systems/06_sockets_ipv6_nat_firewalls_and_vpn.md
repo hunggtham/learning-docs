@@ -12,7 +12,7 @@ Sau liên kết (connection / 연결), ứng dụng (application / 애플리케�
 
 Vì vậy ứng dụng (application / 애플리케이션) giao thức (protocol / 프로토콜) phải tự framing: length-prefix, delimiter hoặc structured giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Socket nối application với network stack; port định danh endpoint chứ không phải process, còn IPv6 mở rộng address model trước khi NAT/firewall/VPN thêm các lớp boundary.
+> **Nối mạch:** Socket nối application với network stack; port định danh endpoint chứ không phải process, còn IPv6 mở rộng address model trước khi NAT/firewall/VPN thêm các lớp boundary.
 
 ## Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID
 
@@ -20,7 +20,7 @@ Cổng (port / 포트) number thuộc vận chuyển (transport / 전송) endpoi
 
 TCP liên kết (connection / 연결) thường được định danh bởi 4-tuple nguồn (source / 소스) IP/cổng (port / 포트) + destination IP/cổng (port / 포트).
 
-> **Chuyển mạch:** Ở chặng này của **Sockets, IPv6, NAT, firewalls và VPN**, **Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID** xác định đầu vào; **IPv6 không chỉ là “nhiều địa chỉ hơn”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **NAT: rewrite addressing trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID** đặt đầu vào cho **IPv6 không chỉ là “nhiều địa chỉ hơn”**, rồi **NAT: rewrite addressing trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## IPv6 không chỉ là “nhiều địa chỉ hơn”
 
@@ -30,7 +30,7 @@ Address types gồm toàn cục (global / 전역) unicast, link-local, multicast
 
 IPv6 adoption không tự loại NAT ngay trong mọi triển khai (deployment / 배포), nhưng thiết kế end-to-end addressing ít phụ thuộc address scarcity hơn IPv4.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sockets, IPv6, NAT, firewalls và VPN**, **NAT: rewrite addressing trạng thái (state / 상태)** tiếp nhận điểm tựa từ **IPv6 không chỉ là “nhiều địa chỉ hơn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Firewall: chính sách (policy / 정책) enforcement trên traffic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **NAT: rewrite addressing trạng thái (state / 상태)** nối từ **IPv6 không chỉ là “nhiều địa chỉ hơn”** sang **Firewall: chính sách (policy / 정책) enforcement trên traffic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NAT: rewrite addressing trạng thái (state / 상태)
 
@@ -40,7 +40,7 @@ NAT tạo trạng thái (state / 상태) ánh xạ (mapping / 매핑) outbound t
 
 NAT không phải firewall về bản chất, dù bên tiêu thụ (consumer / 소비자) routers thường kết hợp hai chức năng.
 
-> **Chuyển mạch:** Trong **Sockets, IPv6, NAT, firewalls và VPN**, **Firewall: chính sách (policy / 정책) enforcement trên traffic** tiếp nhận điểm tựa từ **NAT: rewrite addressing trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **VPN: tạo secure overlay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Firewall: chính sách (policy / 정책) enforcement trên traffic** nối từ **NAT: rewrite addressing trạng thái (state / 상태)** sang **VPN: tạo secure overlay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Firewall: chính sách (policy / 정책) enforcement trên traffic
 
@@ -50,7 +50,7 @@ Layer-7 firewall/WAF có thể parse ứng dụng (application / 애플리케이
 
 Bảo mật (security / 보안) không nên dựa riêng “nằm sau NAT”; tường minh (explicit / 명시적) chính sách (policy / 정책) và authentication vẫn cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Sockets, IPv6, NAT, firewalls và VPN**, **VPN: tạo secure overlay** tiếp nhận điểm tựa từ **Firewall: chính sách (policy / 정책) enforcement trên traffic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MTU và fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **VPN: tạo secure overlay** nối từ **Firewall: chính sách (policy / 정책) enforcement trên traffic** sang **MTU và fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## VPN: tạo secure overlay
 
@@ -60,7 +60,7 @@ VPN có thể là remote-access hoặc site-to-site. Split tunneling gửi chỉ
 
 VPN bảo vệ traffic trên segment/tunnel đường dẫn (path / 경로) nhưng không biến endpoint compromised thành trustworthy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sockets, IPv6, NAT, firewalls và VPN**, **MTU và fragmentation** tiếp nhận điểm tựa từ **VPN: tạo secure overlay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Socket buffers và backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **MTU và fragmentation** nối từ **VPN: tạo secure overlay** sang **Socket buffers và backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MTU và fragmentation
 
@@ -68,7 +68,7 @@ Link có Maximum Transmission đơn vị (unit / 단위) (MTU). Packet lớn hơ
 
 Tunnel thêm headers làm effective payload MTU nhỏ hơn. Misconfigured MTU có thể gây symptom “một số site/yêu cầu (request / 요청) treo” rất khó gỡ lỗi (debug / 디버그).
 
-> **Chuyển mạch:** Trong **Sockets, IPv6, NAT, firewalls và VPN**, **Socket buffers và backpressure** tiếp nhận điểm tựa từ **MTU và fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Socket buffers và backpressure** nối từ **MTU và fragmentation** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socket buffers và backpressure
 
@@ -76,7 +76,7 @@ Kernel có send/receive buffers. `send()` thành công có thể chỉ nghĩa by
 
 Nếu peer/mạng (network / 네트워크) chậm, buffer đầy rồi writer khối (block / 블록)/return backpressure. Application-level hàng đợi (queue / 큐) không được grow vô hạn chỉ vì socket API tạm nhận được dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Sockets, IPv6, NAT, firewalls và VPN**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Socket buffers và backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Socket buffers và backpressure** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,13 +86,13 @@ Nếu peer/mạng (network / 네트워크) chậm, buffer đầy rồi writer kh
 
 **“VPN bảo mật mọi thứ.”** Nó bảo vệ tunnel traffic; endpoint malware, weak credentials và ứng dụng (application / 애플리케이션) vulnerabilities vẫn tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sockets, IPv6, NAT, firewalls và VPN**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Socket là cục bộ (local / 로컬) handle tới giao thức (protocol / 프로토콜) trạng thái (state / 상태); NAT/firewall/VPN là transformations/policies ở mạng (network / 네트워크) boundaries. gỡ lỗi (debug / 디버그) mạng (network / 네트워크) cần biết bytes đang ở tiến trình (process / 프로세스) buffer, kernel socket, packet đường dẫn (path / 경로) hay tunnel tầng (layer / 계층) nào.
 
-> **Chuyển mạch:** Trong **Sockets, IPv6, NAT, firewalls và VPN**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

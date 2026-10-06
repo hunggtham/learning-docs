@@ -10,13 +10,13 @@ Git mô hình (model / 모델) stores content-addressed objects: blobs, trees, c
 
 Lịch sử (history / 이력) therefore is DAG, not folders of diffs. Diff is computed between snapshots/trees. Understanding this explains why rebase creates new commits (new parents → new hashes) rather than “moves same lần ghi nhận (commit / 커밋)”.
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Content addressing** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) điều khiển (control / 제어) as lịch sử (history / 이력) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ thống dựng (build system / 빌드 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Content addressing** nối từ **Phiên bản (version / 버전) điều khiển (control / 제어) as lịch sử (history / 이력) đồ thị (graph / 그래프)** sang **Hệ thống dựng (build system / 빌드 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Content addressing
 
 Đối tượng (object / 객체) identifier derives from content/siêu dữ liệu (metadata / 메타데이터) format băm (hash / 해시). Same content can be deduplicated. băm (hash / 해시) định danh (identity / 식별자) helps integrity but Git băm (hash / 해시) ngữ nghĩa (semantics / 의미론)/phiên bản (version / 버전) depend hiện thực (implementation / 구현) era; don't treat lần ghi nhận (commit / 커밋) IDs as arbitrary crypto authentication without signed trust ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Hệ thống dựng (build system / 빌드 시스템)** tiếp nhận điểm tựa từ **Content addressing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compilation and linking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hệ thống dựng (build system / 빌드 시스템)** nối từ **Content addressing** sang **Compilation and linking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ thống dựng (build system / 빌드 시스템)
 
@@ -26,7 +26,7 @@ Make uses timestamps/rules; hiện đại (modern / 현대적) các hệ thống
 
 Undeclared phụ thuộc (dependency / 의존성) creates non-reproducible “works on my machine” hành vi (behavior / 동작) because bản dựng (build / 빌드) kết quả (result / 결과) depends hidden trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Compilation and linking** tiếp nhận điểm tựa từ **Hệ thống dựng (build system / 빌드 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trình quản lý gói (package manager / 패키지 관리자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Compilation and linking** nối từ **Hệ thống dựng (build system / 빌드 시스템)** sang **Trình quản lý gói (package manager / 패키지 관리자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compilation and linking
 
@@ -34,7 +34,7 @@ Compiled languages may go nguồn (source / 소스) → đối tượng (object 
 
 Managed ecosystems gói (package / 패키지) bytecode/classes and thời gian chạy (runtime / 런타임) resolves modules/dependencies differently, but same concept: names/references must resolve to compatible artifacts.
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Trình quản lý gói (package manager / 패키지 관리자)** tiếp nhận điểm tựa từ **Compilation and linking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trình quản lý gói (package manager / 패키지 관리자)** nối từ **Compilation and linking** sang **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trình quản lý gói (package manager / 패키지 관리자)
 
@@ -42,37 +42,37 @@ Trình quản lý gói (package manager / 패키지 관리자) solves phụ thu�
 
 Lockfile records chính xác (exact / 정확한) resolved versions/checksums to improve reproducibility. phiên bản (version / 버전) phạm vi (range / 범위) without khóa (lock / 잠금) means same manifest may install different phụ thuộc (dependency / 의존성) later.
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **Trình quản lý gói (package manager / 패키지 관리자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducible builds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)** nối từ **Trình quản lý gói (package manager / 패키지 관리자)** sang **Reproducible builds**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)
 
 Upgrade can compile but thất bại (fail / 실패) thời gian chạy (runtime / 런타임) due ngữ nghĩa (semantic / 의미적) changes; bản địa (native / 네이티브) thư viện (library / 라이브러리) may break ABI; Java thư viện (library / 라이브러리) may preserve nhị phân (binary / 이진) linkage but hành vi (behavior / 동작) changes. tính tương thích (compatibility / 호환성) has nguồn (source / 소스), nhị phân (binary / 이진), behavioral and data-format dimensions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Reproducible builds** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CI/CD chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reproducible builds** nối từ **Ngữ nghĩa (semantic / 의미적) and nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)** sang **CI/CD chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reproducible builds
 
 Same declared inputs should create bit-for-bit identical sản phẩm tạo ra (artifact / 산출물). Hidden timestamps, filesystem thứ tự (ordering / 순서), locale, phụ thuộc (dependency / 의존성) fetching and trình biên dịch (compiler / 컴파일러) versions can break. Reproducibility improves supply-chain xác minh (verification / 확인) and debugging.
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Reproducible builds** xác định đầu vào; **CI/CD chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Supply-chain bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reproducible builds** đặt đầu vào cho **CI/CD chuỗi xử lý (pipeline / 파이프라인)**, rồi **Supply-chain bảo mật (security / 보안)** mở rộng hệ quả.
 
 ## CI/CD chuỗi xử lý (pipeline / 파이프라인)
 
 CI automates bản dựng (build / 빌드)/kiểm thử (test / 테스트)/static checks on controlled môi trường (environment / 환경). CD packages and promotes artifacts. Best practice is bản dựng (build / 빌드) once, promote same immutable sản phẩm tạo ra (artifact / 산출물) through environments; rebuilding at môi trường vận hành (production / 운영 환경) can thay đổi (change / 변경) dependencies/toolchain.
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **CI/CD chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Supply-chain bảo mật (security / 보안)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CI/CD chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **Supply-chain bảo mật (security / 보안)**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Supply-chain bảo mật (security / 보안)
 
 Dependencies/bản dựng (build / 빌드) scripts execute mã (code / 코드) with nhà phát triển (developer / 개발자)/CI privileges. Pin/verify artifacts, protect publishing credentials, rà soát (review / 검토) transitive dependencies, sign/provenance artifacts and minimize untrusted bản dựng (build / 빌드) steps.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Supply-chain bảo mật (security / 보안)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Supply-chain bảo mật (security / 보안)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > nguồn (source / 소스) repository is a **đồ thị (graph / 그래프) of versions**; bản dựng (build / 빌드) is a **đồ thị (graph / 그래프) transformation** from declared inputs to immutable artifacts; trình quản lý gói (package manager / 패키지 관리자) is a **phụ thuộc (dependency / 의존성) solver + sản phẩm tạo ra (artifact / 산출물) fetcher**. Reproducibility requires no hidden inputs.
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,7 +82,7 @@ Dependencies/bản dựng (build / 빌드) scripts execute mã (code / 코드) w
 
 **“CI passing means deploy sản phẩm tạo ra (artifact / 산출물) identical everywhere.”** Only if sản phẩm tạo ra (artifact / 산출물) is preserved/promoted and môi trường (environment / 환경) contracts controlled.
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

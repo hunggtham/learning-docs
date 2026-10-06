@@ -22,7 +22,7 @@ Glucose không nhất thiết “đi thẳng tới ATP”. Nó có thể:
 
 Vì vậy metabolism nên nhìn như **mạng (network / 네트워크) có branch và phản hồi (feedback / 피드백)**, không phải conveyor belt một chiều.
 
-> **Chuyển mạch:** Metabolism là network có nhiều branch; catabolism giải phóng năng lượng, anabolism tiêu dùng năng lượng, và coupling nối hai flux qua ATP/redox carriers.
+> **Nối mạch:** Metabolism là network có nhiều branch; catabolism giải phóng năng lượng, anabolism tiêu dùng năng lượng, và coupling nối hai flux qua ATP/redox carriers.
 
 ## 2. Dị hóa (catabolism) và đồng hóa (anabolism) cần được nối bằng ghép năng lượng (energy coupling)
 
@@ -32,7 +32,7 @@ Hai chiều liên kết qua currency như ATP, NADH/NADPH và tiền chất (pre
 
 Nếu dị hóa chạy mà đồng hóa không dùng material, tài nguyên (resource / 자원) có thể tích tụ hoặc bị thải. Nếu đồng hóa chạy mà không có năng lượng (energy / 에너지) nguồn (source / 소스), tiến trình (process / 프로세스) dừng. Cell phải cân bằng flux theo nutrient và nhu cầu (demand).
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **3. Trạng thái oxy hóa (oxidation state): vì sao phân tử (molecule) giàu C–H thường là fuel tốt?** tiếp nhận điểm tựa từ **2. Dị hóa (catabolism) và đồng hóa (anabolism) cần được nối bằng ghép năng lượng (energy coupling)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Đường phân: bước đầu tách glucose trong cytosol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Trạng thái oxy hóa (oxidation state): vì sao phân tử (molecule) giàu C–H thường là fuel tốt?** nối từ **2. Dị hóa (catabolism) và đồng hóa (anabolism) cần được nối bằng ghép năng lượng (energy coupling)** sang **4. Đường phân: bước đầu tách glucose trong cytosol**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Trạng thái oxy hóa (oxidation state): vì sao phân tử (molecule) giàu C–H thường là fuel tốt?
 
@@ -42,7 +42,7 @@ Axit béo (fatty acid) có nhiều C–H bond nên năng lượng (energy / 에�
 
 Nhưng cell không “đốt” fuel như lửa. Nó chia oxidation thành nhiều enzyme-controlled step để capture năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **4. Đường phân: bước đầu tách glucose trong cytosol** tiếp nhận điểm tựa từ **3. Trạng thái oxy hóa (oxidation state): vì sao phân tử (molecule) giàu C–H thường là fuel tốt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đường phân là pathway cổ và linh hoạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Đường phân: bước đầu tách glucose trong cytosol** nối từ **3. Trạng thái oxy hóa (oxidation state): vì sao phân tử (molecule) giàu C–H thường là fuel tốt?** sang **5. Đường phân là pathway cổ và linh hoạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Đường phân: bước đầu tách glucose trong cytosol
 
@@ -66,7 +66,7 @@ Glucose + 2NAD^+ + 2ADP + 2P_i
 
 Tạo ATP bằng direct phosphate transfer gọi là **cơ chất (substrate)-level phosphorylation**.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **4. Đường phân: bước đầu tách glucose trong cytosol** xác định đầu vào; **5. Đường phân là pathway cổ và linh hoạt** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Pyruvate là ngã rẽ metabolic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Glycolysis tách glucose trong cytosol; tính cổ và linh hoạt của pathway dẫn tới **pyruvate như ngã rẽ metabolic**.
 
 ## 5. Đường phân là pathway cổ và linh hoạt
 
@@ -74,7 +74,7 @@ Tạo ATP bằng direct phosphate transfer gọi là **cơ chất (substrate)-le
 
 Nó cũng cung cấp intermediate cho biosynthesis, không chỉ ATP. Vì vậy nếu chỉ nhìn đường phân như “10 bước tạo 2 ATP”, ta bỏ mất vai trò central hub của nó.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **5. Đường phân là pathway cổ và linh hoạt** xác định đầu vào; **6. Pyruvate là ngã rẽ metabolic** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Lên men: mục tiêu chính là tái sinh NAD⁺** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Glycolysis cung cấp pyruvate và NADH; pyruvate rẽ theo oxygen và nhu cầu redox. **Fermentation** kiểm tra mục tiêu tái sinh NAD⁺.
 
 ## 6. Pyruvate là ngã rẽ metabolic
 
@@ -86,7 +86,7 @@ Pyruvate cũng có thể đi vào biosynthetic pathway.
 
 Metabolism chọn tuyến (route / 경로) dựa trên oxygen, enzyme expression, năng lượng (energy / 에너지) demand và mô (tissue) bối cảnh (context).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **7. Lên men: mục tiêu chính là tái sinh NAD⁺** tiếp nhận điểm tựa từ **6. Pyruvate là ngã rẽ metabolic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Lên men: mục tiêu chính là tái sinh NAD⁺** nối từ **6. Pyruvate là ngã rẽ metabolic** sang **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Lên men: mục tiêu chính là tái sinh NAD⁺
 
@@ -102,7 +102,7 @@ Trong yeast alcohol lên men, pyruvate cuối cùng tạo ethanol và CO₂ đ�
 
 Khi exercise intense, lactate môi trường vận hành (production / 운영 환경) tăng không đơn giản vì “thiếu oxygen hoàn toàn”; nó phản ánh balance giữa glycolytic flux, mitochondrial oxidation và redox trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin** tiếp nhận điểm tựa từ **7. Lên men: mục tiêu chính là tái sinh NAD⁺** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin** nối từ **7. Lên men: mục tiêu chính là tái sinh NAD⁺** sang **9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin
 
@@ -112,7 +112,7 @@ Vì vậy acetyl-CoA là metabolic junction nối nhiều nutrient.
 
 Điều này giải thích tại sao các macronutrient không tồn tại như ba “đường năng lượng” hoàn toàn tách biệt.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp** tiếp nhận điểm tựa từ **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chuỗi chuyền electron (electron transport chain): electron đi xuống “bậc thang” năng lượng (energy / 에너지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp** nối từ **8. Acetyl-CoA: junction giữa carbohydrate, fat và axit amin** sang **10. Chuỗi chuyền electron (electron transport chain): electron đi xuống “bậc thang” năng lượng (energy / 에너지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp
 
@@ -124,7 +124,7 @@ TCA còn cung cấp intermediate cho axit amin, heme và biosynthesis khác. Khi
 
 Một lần nữa, pathway là mạng (network / 네트워크) intersection chứ không phải chỉ năng lượng (energy / 에너지) line.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **9. Chu trình axit citric (citric acid cycle): mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp** xác định đầu vào; **10. Chuỗi chuyền electron (electron transport chain): electron đi xuống “bậc thang” năng lượng (energy / 에너지)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Oxygen là final chất nhận electron (electron acceptor), không phải “nguyên liệu tạo ATP trực tiếp”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Citric acid cycle thu electron; electron transport chain hạ năng lượng theo bậc thang. **Oxygen là final electron acceptor**, không phải nguyên liệu tạo ATP trực tiếp.
 
 ## 10. Chuỗi chuyền electron (electron transport chain): electron đi xuống “bậc thang” năng lượng (energy / 에너지)
 
@@ -146,7 +146,7 @@ proton-motive force
 
 Màng chương (chapter) đã cho ta vận chuyển chủ động (active transport) và chênh lệch điện hóa (electrochemical gradient). Bây giờ ta thấy độ dốc (gradient / 기울기) được dùng như năng lượng (energy / 에너지) intermediate.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **10. Chuỗi chuyền electron (electron transport chain): electron đi xuống “bậc thang” năng lượng (energy / 에너지)** xác định đầu vào; **11. Oxygen là final chất nhận electron (electron acceptor), không phải “nguyên liệu tạo ATP trực tiếp”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Electron transport chain đưa electron về oxygen và bơm proton; **chemiosmosis** kiểm tra cách gradient biến thành ATP.
 
 ## 11. Oxygen là final chất nhận electron (electron acceptor), không phải “nguyên liệu tạo ATP trực tiếp”
 
@@ -156,7 +156,7 @@ Nếu không có oxy, electron chuỗi (chain / 사슬) bị backlog, NADH khó 
 
 Vì vậy oxygen cần thiết cho high-yield oxidative metabolism không phải vì ATP synthase (ATP synthase) “ăn oxygen”, mà vì oxy giữ electron luồng (flow / 흐름) tiếp tục.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology** tiếp nhận điểm tựa từ **11. Oxygen là final chất nhận electron (electron acceptor), không phải “nguyên liệu tạo ATP trực tiếp”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology** nối từ **11. Oxygen là final chất nhận electron (electron acceptor), không phải “nguyên liệu tạo ATP trực tiếp”** sang **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology
 
@@ -174,7 +174,7 @@ ATP synthase là molecular rotary machine: proton luồng (flow / 흐름) drive 
 
 Lô-gic (logic / 논리) này xuất hiện cả respiration và quang hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối** tiếp nhận điểm tựa từ **12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Mitochondria vừa là power hub vừa là signaling hub** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối** nối từ **12. Thẩm thấu hóa học (chemiosmosis): một trong những idea thống nhất mạnh nhất của Biology** sang **14. Mitochondria vừa là power hub vừa là signaling hub**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối
 
@@ -193,7 +193,7 @@ E --> F[ATP]
 
 Biology thường ưu tiên correct cơ chế (mechanism / 메커니즘) hơn memorizing một integer dễ thay đổi theo giả định (assumption / 가정).
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **14. Mitochondria vừa là power hub vừa là signaling hub** tiếp nhận điểm tựa từ **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Mitochondria vừa là power hub vừa là signaling hub** nối từ **13. Phosphoryl hóa oxy hóa và số ATP không phải hằng số tuyệt đối** sang **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Mitochondria vừa là power hub vừa là signaling hub
 
@@ -203,7 +203,7 @@ Reactive oxygen species có thể gây damage khi quá mức nhưng cũng có tr
 
 Mitochondrial hàm (function / 함수) vì vậy gắn với aging, metabolism và chết tế bào (cell death), nhưng không nên giản hóa thành “mitochondria là nhà máy năng lượng”.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?** tiếp nhận điểm tựa từ **14. Mitochondria vừa là power hub vừa là signaling hub** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?** nối từ **14. Mitochondria vừa là power hub vừa là signaling hub** sang **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?
 
@@ -213,7 +213,7 @@ Vì axit béo rất reduced, oxidation cho nhiều chất mang electron và ATP.
 
 Nhưng fuel selection phụ thuộc intensity, hormonal trạng thái (state / 상태), vận chuyển oxy (oxygen delivery) và mô. Tập luyện (exercise) physiology không thể tóm gọn bằng một câu “đốt mỡ sau X phút”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?** tiếp nhận điểm tựa từ **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?** nối từ **15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?** sang **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?
 
@@ -226,7 +226,7 @@ Hai phần lớn:
 1. các pha sáng (light reactions) ở thylakoid membrane;
 2. cố định carbon (carbon fixation)/Chu trình Calvin (Calvin cycle) ở stroma.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?** tiếp nhận điểm tựa từ **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Photosystem II và water splitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?** nối từ **16. Quang hợp: năng lượng (energy / 에너지) của biosphere đi vào chemical mạng (network / 네트워크) như thế nào?** sang **18. Photosystem II và water splitting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Photon và diệp lục (chlorophyll): light được capture như thế nào?
 
@@ -236,7 +236,7 @@ Excited electron được transfer vào electron vận chuyển (transport / 전
 
 Photosystem được tổ chức thành antenna pigment và reaction center, tăng khả năng capture năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **18. Photosystem II và water splitting** tiếp nhận điểm tựa từ **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Photosystem I và NADPH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Photosystem II và water splitting** nối từ **17. Photon và diệp lục (chlorophyll): light được capture như thế nào?** sang **19. Photosystem I và NADPH**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Photosystem II và water splitting
 
@@ -252,7 +252,7 @@ Electron sau đó đi qua vận chuyển (transport / 전송) chuỗi (chain / �
 
 Lại là cùng kiến trúc (architecture / 아키텍처) màng–chênh lệch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **19. Photosystem I và NADPH** tiếp nhận điểm tựa từ **18. Photosystem II và water splitting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Photosystem I và NADPH** nối từ **18. Photosystem II và water splitting** sang **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Photosystem I và NADPH
 
@@ -262,7 +262,7 @@ NADPH mang khả năng khử cho cố định carbon.
 
 Pha sáng (light reaction) do đó tạo hai tài nguyên (resource / 자원) chính: ATP và NADPH.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại** tiếp nhận điểm tựa từ **19. Photosystem I và NADPH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại** nối từ **19. Photosystem I và NADPH** sang **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại
 
@@ -272,7 +272,7 @@ Cơ chế (mechanism / 메커니즘) tương tự mitochondria nhưng orientatio
 
 Đây là một trong những bằng chứng (evidence / 증거) đẹp cho idea conserved molecular cơ chế (mechanism / 메커니즘) qua tiến hóa (evolution).
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)** tiếp nhận điểm tựa từ **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)** nối từ **20. Quang phosphoryl hóa (photophosphorylation): ATP synthase xuất hiện lại** sang **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)
 
@@ -282,7 +282,7 @@ Enzyme Rubisco catalyze bước carboxylation. sản phẩm (product / 제품) �
 
 Điểm quan trọng: plant “lấy khối lượng” chủ yếu từ carbon dioxide (carbon dioxide), không phải từ đất. Đất (soil) cung cấp mineral/nước; khung carbon lớn đến từ atmospheric CO₂.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử** tiếp nhận điểm tựa từ **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử** nối từ **21. Chu trình Calvin: CO₂ được đưa vào phân tử hữu cơ (organic molecule)** sang **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử
 
@@ -294,7 +294,7 @@ C4 và CAM plants phát triển chiến lược (strategy / 전략) giúp concen
 
 Đây là nơi metabolism nối evolution và sinh thái học (ecology).
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn** tiếp nhận điểm tựa từ **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn** nối từ **22. Rubisco và hô hấp sáng (photorespiration): evolution làm việc với ràng buộc (constraint / 제약조건) lịch sử** sang **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn
 
@@ -310,7 +310,7 @@ Cả hai dùng:
 
 Điều này gợi ý dùng chung (common / 공통) evolutionary origin của chemiosmotic năng lượng (energy / 에너지) conversion.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?** tiếp nhận điểm tựa từ **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?** nối từ **23. Respiration và quang hợp không phải hai equation “đối nghịch” hoàn toàn** sang **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?
 
@@ -322,7 +322,7 @@ Khi ATP/năng lượng (energy / 에너지) charge cao, một số catabolic pat
 
 Cellular metabolism vì vậy nằm trong larger điều khiển (control / 제어) mạng lưới (network).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng** tiếp nhận điểm tựa từ **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng** nối từ **24. Metabolic regulation: tế bào biết lúc nào cần tạo ATP?** sang **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng
 
@@ -332,7 +332,7 @@ Không có “metabolism chế độ (mode / 모드)” cố định. Cùng path
 
 Đây là lý do (reason) truyền tín hiệu chapter phải đến ngay sau chuyển hóa (metabolism).
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)** tiếp nhận điểm tựa từ **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)** nối từ **25. Fed trạng thái (state / 상태) và fasting trạng thái (state / 상태): cùng mạng (network / 네트워크) nhưng flux đổi hướng** sang **27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)
 
@@ -342,7 +342,7 @@ Một số cancer cell tăng glycolytic flux ngay cả khi oxygen có, mẫu (pa
 
 Điểm lesson là metabolic phenotype phản ánh **mục tiêu của cell**: maintenance khác growth.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)** cho ta quy tắc; **27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. Tình huống phân tích: uncoupling và heat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Cancer metabolism: sinh trưởng (growth) đổi yêu cầu mạng lưới chuyển hóa (metabolic network)** nêu quy tắc; **27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)** thử quy tắc trong tình huống, rồi **28. Tình huống phân tích: uncoupling và heat** mở rộng hệ quả.
 
 ## 27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)
 
@@ -362,7 +362,7 @@ ETC inhibited
 
 Cơ chế (mechanism / 메커니즘) giải thích toxicity tốt hơn câu “cyanide làm thiếu oxygen”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, sau khi thấy quy trình trong **27. Tình huống phân tích (case study): cyanide nguy hiểm vì đánh vào electron luồng (flow / 흐름)**, **28. Tình huống phân tích: uncoupling và heat** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **29. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cyanide cho thấy electron flow bị chặn gây nguy hiểm; uncoupling tách gradient khỏi ATP và tạo heat. **Misconceptions** kiểm tra giới hạn của hai case.
 
 ## 28. Tình huống phân tích: uncoupling và heat
 
@@ -372,7 +372,7 @@ Vì vậy same độ dốc (gradient / 기울기) có thể được channel và
 
 Cấu trúc (structure / 구조) và dòng năng lượng (energy flow) gặp nhau.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **28. Tình huống phân tích: uncoupling và heat** cho ta quy tắc; **29. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Tình huống phân tích: uncoupling và heat** nêu quy tắc; **29. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** mở rộng hệ quả.
 
 ## 29. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -390,7 +390,7 @@ Cấu trúc (structure / 구조) và dòng năng lượng (energy flow) gặp nh
 
 <!-- depth-audit-2026:metabolic-control -->
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **29. Các hiểu lầm phổ biến (common misconceptions)** đã nêu tiêu chí phân biệt, còn **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Các hiểu lầm phổ biến (common misconceptions)** đặt tiêu chí; **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** dùng nó để kiểm tra ranh giới, rồi **Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?** mở rộng cơ chế.
 
 ## Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất
 
@@ -404,7 +404,7 @@ Thất bại (failure / 실패) cũng có tính mạng lưới. Electron rò kh�
 
 <!-- continuity-2026:chemiosmosis-mechanism -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** đã nêu tiêu chí phân biệt, còn **Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **30. cầu nối (bridge / 브리지): có năng lượng (energy / 에너지) rồi, ai quyết định khi nào pathway chạy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Flux được điều khiển phân tán, không bởi một “enzym giới hạn tốc độ” duy nhất** đặt tiêu chí; **Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?** dùng nó để kiểm tra ranh giới, rồi **30. cầu nối (bridge / 브리지): có năng lượng (energy / 에너지) rồi, ai quyết định khi nào pathway chạy?** mở rộng cơ chế.
 
 ## Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?
 
@@ -414,7 +414,7 @@ Cấu trúc màng vì vậy là một phần của cơ chế. Nếu màng trong 
 
 Lục lạp dùng cùng nguyên lý nhưng nguồn electron và hướng sinh học khác. Photon tạo trạng thái kích thích, nước cung cấp electron, chuỗi quang hợp tạo độ dốc (gradient / 기울기) proton và ATP/NADPH được dùng cho cố định carbon. Vì thế respiration và photosynthesis không phải hai danh sách phản ứng rời rạc; cả hai là ví dụ của `redox → gradient → ATP → biosynthesis/work`.
 
-> **Chuyển mạch:** Trong **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**, **Thẩm thấu hóa học: cấu trúc màng biến phản ứng redox thành ATP như thế nào?** xác định đầu vào; **30. cầu nối (bridge / 브리지): có năng lượng (energy / 에너지) rồi, ai quyết định khi nào pathway chạy?** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Chemiosmosis cho thấy membrane structure biến redox thành ATP; **cầu nối** tiếp theo hỏi ai điều khiển thời điểm pathway chạy.
 
 ## 30. cầu nối (bridge / 브리지): có năng lượng (energy / 에너지) rồi, ai quyết định khi nào pathway chạy?
 

@@ -12,7 +12,7 @@ Một con đường không tạo sản phẩm phụ đó thường tốt hơn vi
 
 Đây là lý do **phòng ngừa (prevention)** thường có giá trị cao hơn kiểm soát cuối đường ống (**end-of-pipe control**).
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu suất phản ứng chưa đủ** tiếp nhận điểm tựa từ **Phòng ngừa là nguyên tắc đầu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả nguyên tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu suất phản ứng chưa đủ** nối từ **Phòng ngừa là nguyên tắc đầu tiên** sang **Hiệu quả nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu suất phản ứng chưa đủ
 
@@ -20,7 +20,7 @@ Một phản ứng có thể đạt 99% hiệu suất phân lập nhưng vẫn t
 
 Thiết kế xanh cần hỏi đồng thời: bao nhiêu nguyên tử của chất phản ứng đi vào sản phẩm, dùng bao nhiêu dung môi, khâu tinh chế nặng đến đâu, mối nguy gì tồn tại, cần bao nhiêu năng lượng và vòng đời nguyên liệu–sản phẩm ra sao.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả nguyên tử** tiếp nhận điểm tựa từ **Hiệu suất phản ứng chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: phản ứng thế và phản ứng cộng xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả nguyên tử** nối từ **Hiệu suất phản ứng chưa đủ** sang **Ví dụ: phản ứng thế và phản ứng cộng xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu quả nguyên tử
 
@@ -34,7 +34,7 @@ Thiết kế xanh cần hỏi đồng thời: bao nhiêu nguyên tử của ch�
 
 Phản ứng cộng thường có hiệu quả nguyên tử cao vì phần lớn nguyên tử đi vào sản phẩm. Phản ứng thế có nhóm rời lại dễ tạo muối hoặc sản phẩm phụ theo tỉ lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả nguyên tử** cho ta quy tắc; **Ví dụ: phản ứng thế và phản ứng cộng xúc tác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hệ số E** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả nguyên tử** nêu quy tắc; **Ví dụ: phản ứng thế và phản ứng cộng xúc tác** thử quy tắc trong tình huống, rồi **Hệ số E** mở rộng hệ quả.
 
 ## Ví dụ: phản ứng thế và phản ứng cộng xúc tác
 
@@ -50,7 +50,7 @@ Con đường thứ nhất sinh muối `MX` theo tỉ lượng. Con đường th
 
 Ngay cả khi cả hai cùng đạt 95% hiệu suất, con đường thứ hai vẫn có thể tốt hơn nhiều về hiệu quả nguyên tử.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ví dụ: phản ứng thế và phản ứng cộng xúc tác** cho ta quy tắc; **Hệ số E** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cường độ khối lượng quy trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ví dụ: phản ứng thế và phản ứng cộng xúc tác** nêu quy tắc; **Hệ số E** thử quy tắc trong tình huống, rồi **Cường độ khối lượng quy trình** mở rộng hệ quả.
 
 ## Hệ số E
 
@@ -64,7 +64,7 @@ Giá trị càng thấp nhìn chung càng tốt.
 
 Tuy nhiên quy ước có thể có hoặc không tính nước, vì vậy chỉ nên so sánh khi phạm vi báo cáo được định nghĩa giống nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hệ số E** xác định đầu vào; **Cường độ khối lượng quy trình** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vì sao dung môi thường chi phối khối lượng công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hệ số E** đặt đầu vào cho **Cường độ khối lượng quy trình**, rồi **Vì sao dung môi thường chi phối khối lượng công nghiệp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cường độ khối lượng quy trình
 
@@ -82,7 +82,7 @@ Khi định nghĩa nhất quán:
 PMI\approx E+1
 \]
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cường độ khối lượng quy trình** xác định đầu vào; **Vì sao dung môi thường chi phối khối lượng công nghiệp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chọn dung môi an toàn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cường độ khối lượng quy trình** đặt đầu vào cho **Vì sao dung môi thường chi phối khối lượng công nghiệp**, rồi **Chọn dung môi an toàn hơn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao dung môi thường chi phối khối lượng công nghiệp
 
@@ -90,7 +90,7 @@ Trong phòng thí nghiệm, người học thường chú ý chất phản ứng
 
 Vì vậy giảm hoặc tuần hoàn dung môi đôi khi tạo cải thiện lớn hơn một thay đổi nhỏ trong tỉ lượng phản ứng.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chọn dung môi an toàn hơn** tiếp nhận điểm tựa từ **Vì sao dung môi thường chi phối khối lượng công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng không dung môi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chọn dung môi an toàn hơn** nối từ **Vì sao dung môi thường chi phối khối lượng công nghiệp** sang **Phản ứng không dung môi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chọn dung môi an toàn hơn
 
@@ -98,7 +98,7 @@ Một dung môi “xanh” phải được đánh giá đồng thời về độ
 
 Nước không tự động là lựa chọn tốt nhất. Nếu quá trình thu sản phẩm yêu cầu bay hơi khối lượng nước rất lớn, gánh nặng năng lượng có thể cao.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phản ứng không dung môi** tiếp nhận điểm tựa từ **Chọn dung môi an toàn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phản ứng không dung môi** nối từ **Chọn dung môi an toàn hơn** sang **Xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng không dung môi
 
@@ -108,7 +108,7 @@ Loại bỏ dung môi có thể giảm mạnh khối lượng vật liệu phụ
 
 Hóa học xanh là bài toán tối ưu hóa, không phải một tập khẩu hiệu tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Xúc tác** tiếp nhận điểm tựa từ **Phản ứng không dung môi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính bền vững của chất xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Xúc tác** nối từ **Phản ứng không dung môi** sang **Tính bền vững của chất xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác
 
@@ -118,7 +118,7 @@ Lợi ích tiềm năng gồm giảm chất thải, giảm nhiệt độ, tăng 
 
 Tuy nhiên bản thân chất xúc tác cũng có vòng đời và dấu chân môi trường.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tính bền vững của chất xúc tác** tiếp nhận điểm tựa từ **Xúc tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chọn lọc là một biến số xanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tính bền vững của chất xúc tác** nối từ **Xúc tác** sang **Độ chọn lọc là một biến số xanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính bền vững của chất xúc tác
 
@@ -128,7 +128,7 @@ Một xúc tác Pd có thể tạo phản ứng ghép rất hiệu quả nhưng 
 
 Nói “phản ứng có xúc tác” chưa đủ để kết luận nó bền vững.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Độ chọn lọc là một biến số xanh** tiếp nhận điểm tựa từ **Tính bền vững của chất xúc tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm bảo vệ thường che giấu chất thải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Độ chọn lọc là một biến số xanh** nối từ **Tính bền vững của chất xúc tác** sang **Nhóm bảo vệ thường che giấu chất thải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chọn lọc là một biến số xanh
 
@@ -138,7 +138,7 @@ Các loại quan trọng gồm **hóa chọn lọc (chemoselectivity)**, **đị
 
 Một xúc tác tạo trực tiếp một stereoisomer mong muốn thường xanh hơn việc tạo hỗn hợp racemic rồi loại bỏ một nửa qua phân giải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nhóm bảo vệ thường che giấu chất thải** tiếp nhận điểm tựa từ **Độ chọn lọc là một biến số xanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả số bước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nhóm bảo vệ thường che giấu chất thải** nối từ **Độ chọn lọc là một biến số xanh** sang **Hiệu quả số bước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm bảo vệ thường che giấu chất thải
 
@@ -152,7 +152,7 @@ Mỗi bước dùng thuốc thử, dung môi và làm mất một phần hiệu 
 
 Tổng hợp hiện đại cố gắng dùng xúc tác chọn lọc và chiến lược phản ứng trực giao để tránh các bước bảo vệ không cần thiết.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả số bước** tiếp nhận điểm tựa từ **Nhóm bảo vệ thường che giấu chất thải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghép nhiều bước không phân lập trung gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả số bước** nối từ **Nhóm bảo vệ thường che giấu chất thải** sang **Ghép nhiều bước không phân lập trung gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu quả số bước
 
@@ -166,7 +166,7 @@ Ngay cả khi mỗi bước đạt 90%, sau 10 bước hiệu suất tổng ch�
 
 Giảm số bước thường giảm đáng kể lượng vật liệu, dung môi và năng lượng dùng cho phân lập trung gian.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ghép nhiều bước không phân lập trung gian** tiếp nhận điểm tựa từ **Hiệu quả số bước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ghép nhiều bước không phân lập trung gian** nối từ **Hiệu quả số bước** sang **Hiệu quả năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghép nhiều bước không phân lập trung gian
 
@@ -176,7 +176,7 @@ Cách này giảm dung môi, sấy, tinh chế và thao tác.
 
 Đổi lại cần kiểm soát tích lũy tạp chất và khả năng tương thích giữa các bước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả năng lượng** tiếp nhận điểm tựa từ **Ghép nhiều bước không phân lập trung gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chưng cất có thể rất tốn năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hiệu quả năng lượng** nối từ **Ghép nhiều bước không phân lập trung gian** sang **Chưng cất có thể rất tốn năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu quả năng lượng
 
@@ -186,7 +186,7 @@ Một phản ứng chạy ở nhiệt độ phòng vẫn có thể tốn năng l
 
 Phải đánh giá toàn quy trình, không chỉ bình phản ứng.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chưng cất có thể rất tốn năng lượng** tiếp nhận điểm tựa từ **Hiệu quả năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên liệu tái tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chưng cất có thể rất tốn năng lượng** nối từ **Hiệu quả năng lượng** sang **Nguyên liệu tái tạo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chưng cất có thể rất tốn năng lượng
 
@@ -196,7 +196,7 @@ Với hỗn hợp có điểm sôi gần nhau hoặc dòng giàu nước, nhu c�
 
 Các phương án khác có thể gồm kết tinh, màng, chiết, hấp phụ hoặc phân tách phản ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nguyên liệu tái tạo** tiếp nhận điểm tựa từ **Chưng cất có thể rất tốn năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học sinh khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nguyên liệu tái tạo** nối từ **Chưng cất có thể rất tốn năng lượng** sang **Hóa học sinh khối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên liệu tái tạo
 
@@ -204,7 +204,7 @@ Sinh khối, carbon từ `CO2` hoặc nguyên liệu tái chế có thể giảm
 
 Tuy nhiên nguồn tái tạo không tự động đồng nghĩa tác động thấp. Cần xét sử dụng đất, phân bón, nước, đa dạng sinh học, năng lượng tiền xử lý và vận chuyển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học sinh khối** tiếp nhận điểm tựa từ **Nguyên liệu tái tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CO2 làm nguyên liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học sinh khối** nối từ **Nguyên liệu tái tạo** sang **CO2 làm nguyên liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học sinh khối
 
@@ -214,7 +214,7 @@ Việc chuyển hóa hiệu quả khó vì cấu trúc không đồng nhất và
 
 Nếu mục tiêu là nhiên liệu, thường cần loại bớt oxygen; nếu mục tiêu là hóa chất chức năng, giữ lại một phần nhóm chức có sẵn đôi khi hiệu quả hơn việc loại bỏ rồi xây dựng lại từ đầu.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **CO2 làm nguyên liệu** tiếp nhận điểm tựa từ **Hóa học sinh khối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế để phân hủy sau sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **CO2 làm nguyên liệu** nối từ **Hóa học sinh khối** sang **Thiết kế để phân hủy sau sử dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CO2 làm nguyên liệu
 
@@ -224,7 +224,7 @@ Sử dụng `CO2` thu giữ chỉ có ý nghĩa về carbon khi nguồn năng l�
 
 “Có dùng CO2” không tự động đồng nghĩa “carbon âm”.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Thiết kế để phân hủy sau sử dụng** tiếp nhận điểm tựa từ **CO2 làm nguyên liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Thiết kế để phân hủy sau sử dụng** nối từ **CO2 làm nguyên liệu** sang **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiết kế để phân hủy sau sử dụng
 
@@ -234,7 +234,7 @@ Sản phẩm nên đủ bền trong vòng đời sử dụng nhưng không tồn
 
 Polymer có thể được thiết kế với liên kết thủy phân hoặc nhóm nhạy sáng, nhưng sản phẩm phân hủy cũng phải được đánh giá về an toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường** tiếp nhận điểm tựa từ **Thiết kế để phân hủy sau sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học an toàn nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường** nối từ **Thiết kế để phân hủy sau sử dụng** sang **Hóa học an toàn nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường
 
@@ -244,7 +244,7 @@ Tốc độ phụ thuộc nhiệt độ, vi sinh vật, độ ẩm và hình h�
 
 Vì vậy nhãn “biodegradable” phải đi kèm điều kiện phân hủy cụ thể.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học an toàn nội tại** tiếp nhận điểm tựa từ **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuốc thử an toàn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học an toàn nội tại** nối từ **Phân hủy sinh học không đồng nghĩa vô hại ở mọi môi trường** sang **Thuốc thử an toàn hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học an toàn nội tại
 
@@ -258,7 +258,7 @@ loại bỏ > thay thế > kiểm soát kỹ thuật > kiểm soát hành chính
 
 Thiết kế phân tử và quy trình có thể tác động ngay ở tầng cao nhất của hệ phân cấp.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Thuốc thử an toàn hơn** tiếp nhận điểm tựa từ **Hóa học an toàn nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo trung gian nguy hiểm tại chỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Thuốc thử an toàn hơn** nối từ **Hóa học an toàn nội tại** sang **Tạo trung gian nguy hiểm tại chỗ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thuốc thử an toàn hơn
 
@@ -266,7 +266,7 @@ Chiến lược có thể gồm dùng oxy hóa xúc tác với `O2/H2O2` thay ch
 
 Mọi thay thế vẫn cần đánh giá toàn hệ vì một lựa chọn “ít độc” nhưng tốn năng lượng hoặc tạo chất thải khó xử lý chưa chắc tốt hơn tổng thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tạo trung gian nguy hiểm tại chỗ** tiếp nhận điểm tựa từ **Thuốc thử an toàn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng dòng liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tạo trung gian nguy hiểm tại chỗ** nối từ **Thuốc thử an toàn hơn** sang **Phản ứng dòng liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo trung gian nguy hiểm tại chỗ
 
@@ -274,7 +274,7 @@ Nếu không thể tránh một trung gian nguy hiểm, tạo nó với lượng
 
 Hóa học dòng liên tục thường hỗ trợ chiến lược này.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phản ứng dòng liên tục** tiếp nhận điểm tựa từ **Tạo trung gian nguy hiểm tại chỗ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tăng cường quá trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phản ứng dòng liên tục** nối từ **Tạo trung gian nguy hiểm tại chỗ** sang **Tăng cường quá trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng dòng liên tục
 
@@ -284,7 +284,7 @@ Lợi ích có thể gồm kiểm soát trung gian năng lượng cao tốt hơn
 
 Tuy vậy máy bơm, tắc nghẽn và lượng dung môi vẫn phải được tính trong đánh giá.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tăng cường quá trình** tiếp nhận điểm tựa từ **Phản ứng dòng liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích thời gian thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tăng cường quá trình** nối từ **Phản ứng dòng liên tục** sang **Phân tích thời gian thực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tăng cường quá trình
 
@@ -292,7 +292,7 @@ Tuy vậy máy bơm, tắc nghẽn và lượng dung môi vẫn phải được 
 
 Các ví dụ gồm chưng cất phản ứng, reactor màng, quang hóa dòng hoặc tích hợp xúc tác với phân tách khi thật sự có lợi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phân tích thời gian thực** tiếp nhận điểm tựa từ **Tăng cường quá trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt lượng kế phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Phân tích thời gian thực** nối từ **Tăng cường quá trình** sang **Nhiệt lượng kế phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tích thời gian thực
 
@@ -302,7 +302,7 @@ Dữ liệu thời gian thực giúp kiểm soát điểm kết thúc, phát hi�
 
 Hóa học xanh vì vậy liên hệ chặt với kỹ thuật điều khiển quá trình.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nhiệt lượng kế phản ứng** tiếp nhận điểm tựa từ **Phân tích thời gian thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ phân cấp chất thải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Nhiệt lượng kế phản ứng** nối từ **Phân tích thời gian thực** sang **Hệ phân cấp chất thải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt lượng kế phản ứng
 
@@ -312,7 +312,7 @@ Một tuyến hóa học có số liệu “xanh” đẹp nhưng có nguy cơ m
 
 An toàn là một phần của chất lượng quy trình.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hệ phân cấp chất thải** tiếp nhận điểm tựa từ **Nhiệt lượng kế phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học tuần hoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hệ phân cấp chất thải** nối từ **Nhiệt lượng kế phản ứng** sang **Hóa học tuần hoàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ phân cấp chất thải
 
@@ -334,7 +334,7 @@ thải bỏ
 
 Tái chế có giá trị nhưng vẫn đứng sau phòng ngừa vì bản thân việc thu gom và tái chế cũng cần tài nguyên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học tuần hoàn** tiếp nhận điểm tựa từ **Hệ phân cấp chất thải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tái chế cơ học và tái chế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học tuần hoàn** nối từ **Hệ phân cấp chất thải** sang **Tái chế cơ học và tái chế hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học tuần hoàn
 
@@ -344,7 +344,7 @@ Với polymer, lựa chọn có thể gồm tái chế cơ học, depolymer hóa
 
 Lựa chọn phụ thuộc mức nhiễm bẩn, hóa học polymer và kinh tế quy trình.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tái chế cơ học và tái chế hóa học** tiếp nhận điểm tựa từ **Hóa học tuần hoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Tái chế cơ học và tái chế hóa học** nối từ **Hóa học tuần hoàn** sang **Đánh giá vòng đời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tái chế cơ học và tái chế hóa học
 
@@ -354,7 +354,7 @@ Tái chế hóa học phá polymer về monomer hoặc nguyên liệu hóa học
 
 Không có phương án nào luôn vượt trội trong mọi hệ.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Đánh giá vòng đời** tiếp nhận điểm tựa từ **Tái chế cơ học và tái chế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Đánh giá vòng đời** nối từ **Tái chế cơ học và tái chế hóa học** sang **Đơn vị chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đánh giá vòng đời
 
@@ -364,7 +364,7 @@ Các nhóm tác động có thể gồm phát thải khí nhà kính, năng lư�
 
 Kết quả phụ thuộc rất mạnh vào ranh giới hệ được chọn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Đơn vị chức năng** tiếp nhận điểm tựa từ **Đánh giá vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển dịch gánh nặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Đơn vị chức năng** nối từ **Đánh giá vòng đời** sang **Chuyển dịch gánh nặng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị chức năng
 
@@ -374,7 +374,7 @@ So “1 kg nhựa với 1 kg kim loại” có thể vô nghĩa nếu hai vật 
 
 Đơn vị chức năng có thể là “đóng gói an toàn 1000 L đồ uống” hoặc “vận chuyển một hành khách 100 km”.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chuyển dịch gánh nặng** tiếp nhận điểm tựa từ **Đơn vị chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cường độ carbon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Chuyển dịch gánh nặng** nối từ **Đơn vị chức năng** sang **Cường độ carbon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển dịch gánh nặng
 
@@ -382,7 +382,7 @@ Thay dung môi độc bằng dung môi ít độc hơn có thể làm năng lư�
 
 Tối ưu xanh phải tránh chỉ chuyển tác động từ một chỉ số hoặc một giai đoạn sang nơi khác.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cường độ carbon** tiếp nhận điểm tựa từ **Chuyển dịch gánh nặng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dấu chân nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cường độ carbon** nối từ **Chuyển dịch gánh nặng** sang **Dấu chân nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cường độ carbon
 
@@ -390,7 +390,7 @@ Dấu chân carbon của quy trình gồm phát thải trực tiếp và phát t
 
 Điện hóa quy trình chỉ làm phát thải giảm mạnh khi nguồn điện đủ ít carbon.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Dấu chân nước** tiếp nhận điểm tựa từ **Cường độ carbon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần một danh mục chỉ số, không phải một điểm số duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Dấu chân nước** nối từ **Cường độ carbon** sang **Cần một danh mục chỉ số, không phải một điểm số duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dấu chân nước
 
@@ -398,7 +398,7 @@ Sử dụng nước không chỉ là số lít tiêu thụ mà còn phụ thuộ
 
 Một mét khối nước ở vùng khan hiếm có hệ quả khác một mét khối ở nơi dư nước.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cần một danh mục chỉ số, không phải một điểm số duy nhất** tiếp nhận điểm tựa từ **Dấu chân nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cần một danh mục chỉ số, không phải một điểm số duy nhất** nối từ **Dấu chân nước** sang **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cần một danh mục chỉ số, không phải một điểm số duy nhất
 
@@ -406,7 +406,7 @@ Các chỉ số hữu ích gồm hiệu quả nguyên tử, hiệu quả khối 
 
 Một tuyến có thể cải thiện chỉ số này nhưng làm chỉ số khác xấu đi.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cần một danh mục chỉ số, không phải một điểm số duy nhất** cho ta quy tắc; **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hóa học xanh và hóa dược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Cần một danh mục chỉ số, không phải một điểm số duy nhất** nêu quy tắc; **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ** thử quy tắc trong tình huống, rồi **Hóa học xanh và hóa dược** mở rộng hệ quả.
 
 ## Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ
 
@@ -416,7 +416,7 @@ Hiệu quả nguyên tử sẽ trông hoàn hảo, trong khi PMI và mối nguy 
 
 Mỗi chỉ số trả lời một câu hỏi khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ** cho ta quy tắc; **Hóa học xanh và hóa dược** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Gánh nặng dung môi trong sản xuất dược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Ví dụ: hiệu quả nguyên tử cao nhưng dung môi rất tệ** nêu quy tắc; **Hóa học xanh và hóa dược** thử quy tắc trong tình huống, rồi **Gánh nặng dung môi trong sản xuất dược** mở rộng hệ quả.
 
 ## Hóa học xanh và hóa dược
 
@@ -424,7 +424,7 @@ Khám phá thuốc thường ưu tiên hoạt tính sinh học ở giai đoạn 
 
 Tối ưu tuyến tổng hợp có thể giảm mạnh dấu chân môi trường mà không thay đổi phân tử thuốc cuối cùng.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Gánh nặng dung môi trong sản xuất dược** tiếp nhận điểm tựa từ **Hóa học xanh và hóa dược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với sản xuất bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Gánh nặng dung môi trong sản xuất dược** nối từ **Hóa học xanh và hóa dược** sang **Liên hệ với sản xuất bán dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gánh nặng dung môi trong sản xuất dược
 
@@ -432,7 +432,7 @@ Tổng hợp hoạt chất dược (**Active Pharmaceutical Ingredient, API**) n
 
 Kết tinh và telescoping thường là những nơi có tiềm năng cải thiện lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Liên hệ với sản xuất bán dẫn** tiếp nhận điểm tựa từ **Gánh nặng dung môi trong sản xuất dược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Liên hệ với sản xuất bán dẫn** nối từ **Gánh nặng dung môi trong sản xuất dược** sang **Liên hệ với pin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với sản xuất bán dẫn
 
@@ -442,7 +442,7 @@ Thách thức hóa học xanh gồm khí khắc có tiềm năng nóng lên toà
 
 Công nghệ tiên tiến không làm dấu chân hóa học biến mất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Liên hệ với pin** tiếp nhận điểm tựa từ **Liên hệ với sản xuất bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học xanh và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Liên hệ với pin** nối từ **Liên hệ với sản xuất bán dẫn** sang **Hóa học xanh và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với pin
 
@@ -450,7 +450,7 @@ Thiết kế pin bền vững phải xét kim loại quan trọng, độc tính 
 
 Một pin có tuổi thọ gấp đôi đôi khi giảm tác động vòng đời nhiều hơn một thay thế vật liệu nhỏ.
 
-> **Chuyển mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học xanh và AI** tiếp nhận điểm tựa từ **Liên hệ với pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Hóa học xanh và AI** nối từ **Liên hệ với pin** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học xanh và AI
 
@@ -464,7 +464,7 @@ Bài toán phù hợp hơn là **tối ưu nhiều mục tiêu (multi-objective 
 hiệu suất + độ chọn lọc + PMI + mối nguy + năng lượng + chi phí
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Hóa học xanh và AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Những hiểu lầm thường gặp** nối từ **Hóa học xanh và AI** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -488,7 +488,7 @@ Phòng ngừa, độ bền phù hợp và thiết kế để tái sử dụng đ
 
 Không. Độ khan hiếm, quá trình tổng hợp và khả năng thu hồi chất xúc tác vẫn quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

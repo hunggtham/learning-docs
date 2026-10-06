@@ -30,7 +30,7 @@ r=-\frac{1}{a}\frac{d[A]}{dt}
 
 Dấu âm xuất hiện cho chất phản ứng vì nồng độ giảm theo thời gian. Đây là ví dụ quan trọng cho việc **hóa lượng và động học không tách rời nhau**: phương trình hóa học cho biết các tốc độ thay đổi nồng độ phải liên hệ với nhau theo tỉ lệ nào.
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ trung bình và tốc độ tức thời** tiếp nhận điểm tựa từ **Tốc độ là mức thay đổi theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao phản ứng thường chậm dần?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ trung bình và tốc độ tức thời** nối từ **Tốc độ là mức thay đổi theo thời gian** sang **Vì sao phản ứng thường chậm dần?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tốc độ trung bình và tốc độ tức thời
 
@@ -50,7 +50,7 @@ r=-\frac{1}{a}\frac{d[A]}{dt}
 
 Về hình học, đó là độ dốc tiếp tuyến của đường nồng độ–thời gian. Vì vậy đạo hàm không phải công cụ toán học được gắn thêm vào động học; nó chính là ngôn ngữ tự nhiên để mô tả “tốc độ thay đổi ngay lúc này”.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Vì sao phản ứng thường chậm dần?** tiếp nhận điểm tựa từ **Tốc độ trung bình và tốc độ tức thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Vì sao phản ứng thường chậm dần?** nối từ **Tốc độ trung bình và tốc độ tức thời** sang **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao phản ứng thường chậm dần?
 
@@ -60,7 +60,7 @@ Nhưng đây không phải quy luật bắt buộc. Hệ có thể tăng tốc n
 
 Do đó hình dạng đường nồng độ–thời gian chính là dữ liệu về cơ chế chứ không chỉ là một đường để tính độ dốc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại** tiếp nhận điểm tựa từ **Vì sao phản ứng thường chậm dần?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các yếu tố làm tốc độ thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại** nối từ **Vì sao phản ứng thường chậm dần?** sang **Các yếu tố làm tốc độ thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại
 
@@ -80,7 +80,7 @@ Nếu khuếch tán chậm nhất, tăng hoạt tính hóa học của xúc tác
 
 Khi nghiên cứu động học, phải hỏi: **ta đang đo động học hóa học thật hay đang đo giới hạn vận chuyển?**
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Các yếu tố làm tốc độ thay đổi** tiếp nhận điểm tựa từ **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuyết va chạm — mô hình trực giác đầu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Các yếu tố làm tốc độ thay đổi** nối từ **Tốc độ phản ứng không nhất thiết là tốc độ phản ứng nội tại** sang **Thuyết va chạm — mô hình trực giác đầu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các yếu tố làm tốc độ thay đổi
 
@@ -96,7 +96,7 @@ Diện tích bề mặt quyết định số vị trí tiếp xúc trong phản 
 
 Chất xúc tác thay đổi cơ chế và hàng rào hoạt hóa nhưng không thay đổi hằng số cân bằng của phản ứng ròng.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Thuyết va chạm — mô hình trực giác đầu tiên** tiếp nhận điểm tựa từ **Các yếu tố làm tốc độ thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Thuyết va chạm — mô hình trực giác đầu tiên** nối từ **Các yếu tố làm tốc độ thay đổi** sang **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thuyết va chạm — mô hình trực giác đầu tiên
 
@@ -115,7 +115,7 @@ Mô hình này giải thích được vì sao tăng nồng độ thường tăng
 
 Tuy nhiên nó không đủ để mô tả đầy đủ dung dịch, phản ứng qua phức chất, động học enzyme, bề mặt rắn hoặc xuyên hầm lượng tử. Cần xem nó là một mô hình nhập môn chứ không phải hình ảnh cuối cùng của trạng thái chuyển tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?** tiếp nhận điểm tựa từ **Thuyết va chạm — mô hình trực giác đầu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép đo phải nhanh hơn quá trình muốn nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?** nối từ **Thuyết va chạm — mô hình trực giác đầu tiên** sang **Phép đo phải nhanh hơn quá trình muốn nghiên cứu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?
 
@@ -142,7 +142,7 @@ Các cách khác gồm đo:
 
 Mỗi phép đo có **độ phân giải thời gian (time resolution)**. Nếu phản ứng xảy ra trong 1 ms nhưng thiết bị chỉ ghi mỗi 1 s, phần quan trọng nhất của động học đã bị mất.
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Phép đo phải nhanh hơn quá trình muốn nghiên cứu** tiếp nhận điểm tựa từ **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tốc độ ban đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Phép đo phải nhanh hơn quá trình muốn nghiên cứu** nối từ **Làm thế nào đo tốc độ nếu không nhìn thấy phân tử?** sang **Tốc độ ban đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép đo phải nhanh hơn quá trình muốn nghiên cứu
 
@@ -157,7 +157,7 @@ Nếu thời gian trộn dung dịch là 5 s còn phản ứng hoàn tất trong
 
 Nguyên tắc chung là **thời gian đáp ứng của phép đo phải nhỏ hơn đáng kể thang thời gian của hiện tượng cần suy ra**.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ ban đầu** tiếp nhận điểm tựa từ **Phép đo phải nhanh hơn quá trình muốn nghiên cứu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ ban đầu** nối từ **Phép đo phải nhanh hơn quá trình muốn nghiên cứu** sang **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tốc độ ban đầu
 
@@ -167,7 +167,7 @@ Nguyên tắc chung là **thời gian đáp ứng của phép đo phải nhỏ h
 
 Bằng cách lặp thí nghiệm với các nồng độ ban đầu khác nhau, ta có thể suy ra bậc phản ứng trong phương trình tốc độ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ ban đầu** nêu điều cần giải thích; **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mức tiến triển phản ứng và tốc độ tiến triển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Tốc độ ban đầu** đặt vấn đề; **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật** đối chiếu bằng chứng, rồi **Mức tiến triển phản ứng và tốc độ tiến triển** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật
 
@@ -181,7 +181,7 @@ có thể làm nhiễu tăng mạnh, đặc biệt khi \(\Delta t\) nhỏ. Vì v
 
 Đây là điểm nối giữa động học, thống kê và phân tích dữ liệu.
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật** nêu điều cần giải thích; **Mức tiến triển phản ứng và tốc độ tiến triển** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hệ kín, hệ dòng liên tục và trạng thái ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Từ dữ liệu rời rạc tới đạo hàm — nhiễu là vấn đề thật** đặt vấn đề; **Mức tiến triển phản ứng và tốc độ tiến triển** đối chiếu bằng chứng, rồi **Hệ kín, hệ dòng liên tục và trạng thái ổn định** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mức tiến triển phản ứng và tốc độ tiến triển
 
@@ -193,7 +193,7 @@ r=\frac{1}{V}\frac{d\xi}{dt}
 
 với hệ đồng nhất có thể tích phù hợp. Cách nhìn này làm rõ rằng các đạo hàm nồng độ của từng chất chỉ là những hình chiếu khác nhau của cùng một tiến trình hóa lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Hệ kín, hệ dòng liên tục và trạng thái ổn định** tiếp nhận điểm tựa từ **Mức tiến triển phản ứng và tốc độ tiến triển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học và định luật bảo toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Hệ kín, hệ dòng liên tục và trạng thái ổn định** nối từ **Mức tiến triển phản ứng và tốc độ tiến triển** sang **Động học và định luật bảo toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ kín, hệ dòng liên tục và trạng thái ổn định
 
@@ -203,7 +203,7 @@ Trong reactor dòng liên tục, một chất có thể liên tục đi vào và
 
 Sự phân biệt này rất quan trọng trong kỹ thuật hóa học, sinh học tế bào và hóa học khí quyển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Động học và định luật bảo toàn** tiếp nhận điểm tựa từ **Hệ kín, hệ dòng liên tục và trạng thái ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động lực học giới hạn động học như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Động học và định luật bảo toàn** nối từ **Hệ kín, hệ dòng liên tục và trạng thái ổn định** sang **Nhiệt động lực học giới hạn động học như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học và định luật bảo toàn
 
@@ -217,7 +217,7 @@ ma trận hóa lượng \(S\) chuyển véc-tơ (vector / 벡터) tốc độ c�
 
 Điều này cho thấy động học phức tạp có thể được tổ chức bằng đại số tuyến tính thay vì viết riêng từng phương trình một cách rời rạc.
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Động học và định luật bảo toàn** đã nêu tiêu chí phân biệt, còn **Nhiệt động lực học giới hạn động học như thế nào?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Động học và định luật bảo toàn** đặt tiêu chí; **Nhiệt động lực học giới hạn động học như thế nào?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** mở rộng hệ quả.
 
 ## Nhiệt động lực học giới hạn động học như thế nào?
 
@@ -231,7 +231,7 @@ và trong các hệ cơ bản phù hợp, tỉ số hằng số tốc độ liê
 
 Vì thế một cơ chế động học hợp lý phải tương thích với nhiệt động lực học; không thể chọn tùy ý các hằng số thuận/nghịch nếu chúng dẫn tới một cân bằng sai.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Nhiệt động lực học giới hạn động học như thế nào?** cho ta quy tắc; **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ vật liệu và pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Nhiệt động lực học giới hạn động học như thế nào?** nêu quy tắc; **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** thử quy tắc trong tình huống, rồi **Ví dụ vật liệu và pin** mở rộng hệ quả.
 
 ## Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?
 
@@ -239,7 +239,7 @@ Nhiều phản ứng phân hủy và quá trình enzyme chậm đi khi nhiệt �
 
 Tủ lạnh không làm thực phẩm “ngừng hóa học”. Nó đưa nhiều quá trình sang thang thời gian dài hơn. Đây là một ứng dụng trực tiếp của kinetics vào đời sống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** cho ta quy tắc; **Ví dụ vật liệu và pin** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Ví dụ đời sống: vì sao thực phẩm để lạnh lâu hỏng hơn?** nêu quy tắc; **Ví dụ vật liệu và pin** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ vật liệu và pin
 
@@ -247,7 +247,7 @@ Pin có thể có năng lượng nhiệt động lớn nhưng công suất bị 
 
 Khi sạc quá nhanh, dòng yêu cầu có thể vượt tốc độ vận chuyển ion mong muốn, làm tăng phân cực và kích hoạt phản ứng phụ. Vì vậy **năng lượng** và **công suất** là hai vấn đề khác nhau: một phần của khác biệt đó chính là động học.
 
-> **Chuyển mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Ví dụ vật liệu và pin** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Ví dụ vật liệu và pin** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -271,7 +271,7 @@ Không nhất thiết. Hệ mở có thể ở trạng thái ổn định với 
 
 Không nếu phép đo chậm, làm nhiễu hệ hoặc các điểm đều nằm ngoài vùng thời gian chứa thông tin về cơ chế.
 
-> **Chuyển mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

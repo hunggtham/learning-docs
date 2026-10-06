@@ -8,7 +8,7 @@ Phân tích địa chính trị có thể bắt đầu từ biển, núi, biên 
 
 Chapter này tập trung vào **lô-gic (logic / 논리) không gian của phụ thuộc (dependency / 의존성) và substitution**, không dự đoán hành vi của quốc gia cụ thể.
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Chokepoint là thuộc tính của mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Địa lý tạo ràng buộc, không tạo định mệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bốn câu hỏi để kiểm tra (audit / 감사) chokepoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Địa lý tạo chi phí và lựa chọn, nhưng chokepoint chỉ có quyền lực khi luồng, tuyến thay thế và node phụ thuộc vào nó. **Chokepoint là thuộc tính của mạng (network / 네트워크)** đặt cơ chế mạng trước khi xác định một điểm nghẽn cụ thể.
 
 ## Chokepoint là thuộc tính của mạng (network / 네트워크)
 
@@ -16,7 +16,7 @@ Chapter này tập trung vào **lô-gic (logic / 논리) không gian của phụ
 
 Cùng lô-gic (logic / 논리) áp dụng cho canal, mountain pass, chuỗi xử lý (pipeline / 파이프라인) junction, border cầu nối (bridge / 브리지), grid interconnector, semiconductor tiến trình (process / 프로세스) hoặc cable landing station.
 
-> **Chuyển mạch:** Ở chặng này của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Bốn câu hỏi để kiểm tra (audit / 감사) chokepoint** tiếp nhận điểm tựa từ **Chokepoint là thuộc tính của mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Detour không chỉ tăng distance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Muốn xác định leverage cần hỏi luồng nào đi qua, tuyến thay thế nào tồn tại, sức chứa ra sao và ai kiểm soát node; bốn câu hỏi này tránh gán quyền lực cho tên địa danh. **Detour không chỉ tăng distance** chuyển sang chi phí và thời gian của phương án vòng.
 
 ## Bốn câu hỏi để kiểm tra (audit / 감사) chokepoint
 
@@ -27,7 +27,7 @@ Cùng lô-gic (logic / 논리) áp dụng cho canal, mountain pass, chuỗi xử
 
 Một chokepoint có alternate tuyến (route / 경로) nhưng detour dài vẫn gây chi phí (cost / 비용). Một nút (node / 노드) không có alternate nhưng luồng (flow / 흐름) nhỏ có thể ít systemic hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Detour không chỉ tăng distance** tiếp nhận điểm tựa từ **Bốn câu hỏi để kiểm tra (audit / 감사) chokepoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redundancy thật và redundancy giả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Detour có thể tăng kilomet, thời gian, nhiên liệu, bảo hiểm và rủi ro pháp lý; vì vậy khoảng cách không đủ để đo leverage. **Redundancy thật và redundancy giả** hỏi liệu tuyến vòng có thực sự độc lập và đủ sức thay thế hay không.
 
 ## Detour không chỉ tăng distance
 
@@ -35,7 +35,7 @@ Khi tuyến (route / 경로) đổi, hệ thống (system / 시스템) cần th�
 
 Nếu alternate tuyến (route / 경로) có sức chứa (capacity / 용량) thấp, rerouting còn tạo congestion thứ cấp. Vì vậy consequence nonlinear: 10% tuyến (route / 경로) dài hơn không nhất thiết chỉ tăng 10% chi phí (cost / 비용).
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Redundancy thật và redundancy giả** tiếp nhận điểm tựa từ **Detour không chỉ tăng distance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stockpile biến disruption luồng (flow / 흐름) thành bài toán thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hai tuyến có vẻ khác nhau vẫn có thể dùng chung cảng, nhiên liệu, dữ liệu hoặc nhà cung cấp nên redundancy chỉ là giả. **Stockpile biến disruption luồng (flow / 흐름) thành bài toán thời gian** bổ sung bộ đệm khi thay tuyến chưa kịp hoạt động.
 
 ## Redundancy thật và redundancy giả
 
@@ -43,7 +43,7 @@ Có hai supplier không đồng nghĩa có redundancy nếu cả hai phụ thu�
 
 Phân tích resilience cần vẽ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) nhiều tầng**, không chỉ đếm số supplier trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Redundancy thật và redundancy giả** xác định đầu vào; **Stockpile biến disruption luồng (flow / 흐름) thành bài toán thời gian** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tài nguyên: location khác điều khiển (control / 제어) của giá trị (value / 값) chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Stockpile biến một đứt dòng thành câu hỏi có thể chịu bao nhiêu ngày, với chi phí lưu trữ, suy giảm và vốn nào. **Tài nguyên: location khác điều khiển (control / 제어) của giá trị (value / 값) chuỗi (chain / 사슬)** tiếp theo tách nơi có mỏ khỏi nơi giữ quyền định giá.
 
 ## Stockpile biến disruption luồng (flow / 흐름) thành bài toán thời gian
 
@@ -55,7 +55,7 @@ T\approx \frac{S}{D}
 
 Thực tế demand thay đổi và stock có bản phát hành (release / 릴리스) ràng buộc (constraint / 제약조건), nhưng công thức nhắc rằng vulnerability phụ thuộc cả luồng (flow / 흐름) và stock.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Stockpile biến disruption luồng (flow / 흐름) thành bài toán thời gian** xác định đầu vào; **Tài nguyên: location khác điều khiển (control / 제어) của giá trị (value / 값) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Substitutability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vị trí tài nguyên tạo lợi thế địa chất, nhưng processing, finance, technology, contracts và market access mới quyết định phần giá trị giữ lại. **Substitutability** hỏi mắt xích nào có thể thay và với chi phí bao nhiêu.
 
 ## Tài nguyên: location khác điều khiển (control / 제어) của giá trị (value / 값) chuỗi (chain / 사슬)
 
@@ -63,7 +63,7 @@ Có ore/oil/gas không đồng nghĩa kiểm soát toàn chuỗi. Mining, proces
 
 Một stage có concentration cao và khó mở rộng nhanh có thể là bottleneck lớn hơn raw tài nguyên (resource / 자원).
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Tài nguyên: location khác điều khiển (control / 제어) của giá trị (value / 값) chuỗi (chain / 사슬)** xác định đầu vào; **Substitutability** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Fixed corridor và maritime flexibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Substitutability không chỉ là có mỏ khác; cần cùng chất lượng, công suất, chuẩn kỹ thuật, tuyến và thời gian mở rộng. **Fixed corridor và maritime flexibility** đối chiếu hạ tầng cố định với tuyến biển có khả năng đổi hướng.
 
 ## Substitutability
 
@@ -71,7 +71,7 @@ Rủi ro giảm nếu đầu vào (input / 입력) có substitute kỹ thuật, 
 
 Vì vậy “có vật liệu thay thế” không đồng nghĩa disruption vô hại trong vài tháng.
 
-> **Chuyển mạch:** Ở chặng này của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Fixed corridor và maritime flexibility** tiếp nhận điểm tựa từ **Substitutability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landlocked geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor cố định tạo hiệu quả và lock-in, còn biển cho nhiều tuyến hơn nhưng chịu thời tiết, cảng và chokepoint. **Landlocked geography** cho thấy khi thiếu cửa biển, quốc gia phải mua connectivity qua transit và corridor.
 
 ## Fixed corridor và maritime flexibility
 
@@ -79,7 +79,7 @@ Chuỗi xử lý (pipeline / 파이프라인)/rail có tuyến (route / 경로) 
 
 Fixed hạ tầng (infrastructure / 인프라) tạo efficiency nhưng đường dẫn (path / 경로) dependence; mobile vận chuyển (transport / 전송) tạo rerouting option nhưng tuyến (route / 경로) dài có chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Landlocked geography** tiếp nhận điểm tựa từ **Fixed corridor và maritime flexibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Landlocked geography làm tăng friction, nhưng rail, pipeline, air freight và hiệp định transit có thể giảm effective distance. **Năng lượng (energy / 에너지) mạng (network / 네트워크)** tiếp theo theo dõi các phụ thuộc tuyến dài và node chuyển đổi.
 
 ## Landlocked geography
 
@@ -87,7 +87,7 @@ Quốc gia không giáp biển cần transit qua neighbor hoặc corridor tới 
 
 Một inland country có high-quality corridor có thể kết nối tốt hơn coastal country có cổng (port / 포트)/hạ tầng (infrastructure / 인프라) yếu.
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Năng lượng (energy / 에너지) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Landlocked geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital chokepoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Năng lượng cần mỏ, xử lý, đường ống, điện lưới, kho và cảng; một đứt gãy ở node có thể lan qua nhiều ngành. **Digital chokepoint** bổ sung các node dữ liệu và điều khiển có thể gây gián đoạn tương tự.
 
 ## Năng lượng (energy / 에너지) mạng (network / 네트워크)
 
@@ -95,7 +95,7 @@ Oil có lưu trữ (storage / 저장소) và maritime mobility cao hơn electric
 
 Do đó “năng lượng (energy / 에너지) bảo mật (security / 보안)” phải tách fuel, conversion, lưu trữ (storage / 저장소) và mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Digital chokepoint** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) corridor và cục bộ (local / 로컬) development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cáp, cloud, DNS, điện và trung tâm dữ liệu tạo chokepoint số có vị trí vật lý, không phải không gian vô hình hoàn toàn. **Tài nguyên (resource / 자원) corridor và cục bộ (local / 로컬) development** hỏi các tuyến vật chất có tạo giá trị và năng lực địa phương hay chỉ vận chuyển tài nguyên ra ngoài.
 
 ## Digital chokepoint
 
@@ -103,7 +103,7 @@ Semiconductor fabrication, cloud region, cable landing, DNS/dịch vụ (service
 
 Một hệ thống (system / 시스템) có multi-cloud trên giấy nhưng cùng region/power/mạng (network / 네트워크) upstream có thể vẫn có common-mode thất bại (failure / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Digital chokepoint** nêu điều cần giải thích; **Tài nguyên (resource / 자원) corridor và cục bộ (local / 로컬) development** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Efficiency ↔ resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor tài nguyên chỉ tạo phát triển địa phương khi có value capture, supplier, kỹ năng, thuế và hạ tầng dùng chung; đường đi qua chưa đủ. **Efficiency ↔ resilience** cân bằng lợi ích của tập trung với chi phí khi mạng bị đứt.
 
 ## Tài nguyên (resource / 자원) corridor và cục bộ (local / 로컬) development
 
@@ -111,7 +111,7 @@ Mine–rail–cổng (port / 포트) corridor có thể mở truy cập (access 
 
 Để đánh giá, hỏi cục bộ (local / 로컬) firm có dùng corridor không, năng lượng (energy / 에너지)/water allocation thế nào và value-added stage nằm ở đâu.
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Tài nguyên (resource / 자원) corridor và cục bộ (local / 로컬) development** nêu điều cần giải thích; **Efficiency ↔ resilience** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Map không chứng minh intention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hiệu quả tối đa thường giảm dự phòng, còn resilience cần slack, route thay thế và tồn kho; lựa chọn phụ thuộc rủi ro và thời gian. **Map không chứng minh intention** nhắc rằng bản đồ tuyến không tự cho biết mục đích chính trị.
 
 ## Efficiency ↔ resilience
 
@@ -119,19 +119,19 @@ Mạng (network / 네트워크) tối ưu chi phí trung bình thường gom lu�
 
 Không có mức redundancy tối ưu chung; nó phụ thuộc chi phí (cost / 비용) of thất bại (failure / 실패) và xác suất (probability / 확률) phân phối (distribution / 분포) của shock.
 
-> **Chuyển mạch:** Ở chặng này của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Map không chứng minh intention** tiếp nhận điểm tựa từ **Efficiency ↔ resilience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Map cho thấy vị trí, tuyến và quan hệ hình học; intention cần văn bản, hành vi, lịch sử và bằng chứng độc lập. **Những hiểu lầm phổ biến** tiếp theo sửa các bước nhảy từ bản đồ sang kết luận về quyền lực.
 
 ## Map không chứng minh intention
 
 Bản đồ tuyến (route / 경로) và tài nguyên (resource / 자원) cho thấy ràng buộc (constraint / 제약조건) và phụ thuộc (dependency / 의존성), nhưng không chứng minh motive chính trị. Một phân tích (analysis / 분석) có trách nhiệm phải tách **observable geography** khỏi **attributed chiến lược (strategy / 전략)** và dẫn nguồn khi nói về hành động/ý định cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Map không chứng minh intention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về chokepoint, detour, redundancy, tài nguyên, digital và bản đồ, còn lại cách đọc địa chính trị qua mạng, phụ thuộc, thời gian và bằng chứng. **Mô hình tư duy** cô đọng khung đó.
 
 ## Những hiểu lầm phổ biến
 
 “Hẹp = chokepoint” bỏ luồng (flow / 흐름). “Có alternate tuyến (route / 경로) = không rủi ro” bỏ sức chứa (capacity / 용량)/detour. “Hai supplier = diversified” bỏ dùng chung (shared / 공유) upstream. “Sở hữu mine = kiểm soát thị trường (market / 시장)” bỏ refining/manufacturing. “Geography quyết định chính sách (policy / 정책)” bỏ agency.
 
-> **Chuyển mạch:** Trong **Điểm nghẽn, tài nguyên và lô-gic (logic / 논리) mạng của địa chính trị**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi geography–chokepoint → detour và redundancy → stockpile, tài nguyên và substitutability → corridor, landlocked, energy và digital network → local development, resilience và bằng chứng bản đồ. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang thương mại, đô thị và hệ thống toàn cầu.
 
 ## Mô hình tư duy
 

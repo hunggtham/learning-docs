@@ -24,7 +24,7 @@ Cell lớn lên thì diện tích bề mặt trên mỗi đơn vị volume giả
 
 Hình học (geometry / 기하학) trở thành biology.
 
-> **Chuyển mạch:** Cell size bị giới hạn bởi exchange surface; prokaryote/eukaryote tổ chức architecture khác nhau, và compartmentalization tiếp theo tách chemistry để tăng kiểm soát.
+> **Nối mạch:** Cell size bị giới hạn bởi exchange surface; prokaryote/eukaryote tổ chức architecture khác nhau, và compartmentalization tiếp theo tách chemistry để tăng kiểm soát.
 
 ## 2. Prokaryote và eukaryote: hai kiến trúc (architecture / 아키텍처) khác nhau
 
@@ -34,7 +34,7 @@ Hình học (geometry / 기하학) trở thành biology.
 
 Điểm khác biệt không nên hiểu như “prokaryote đơn giản, eukaryote phức tạp”. Bacteria có mạng lưới điều hòa (regulatory network) và đa dạng chuyển hóa (metabolic diversity) rất cao. Khác biệt chính là **organization**: eukaryote dùng compartmentalization mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **3. Compartmentalization: chia không gian để chemistry không cản nhau** tiếp nhận điểm tựa từ **2. Prokaryote và eukaryote: hai kiến trúc (architecture / 아키텍처) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Membrane là ranh giới động, không phải tường cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Compartmentalization: chia không gian để chemistry không cản nhau** nối từ **2. Prokaryote và eukaryote: hai kiến trúc (architecture / 아키텍처) khác nhau** sang **4. Membrane là ranh giới động, không phải tường cứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Compartmentalization: chia không gian để chemistry không cản nhau
 
@@ -46,7 +46,7 @@ Eukaryotic cell giải bằng organelle.
 
 Khoang giúp cell vừa tăng efficiency vừa tăng điều khiển (control / 제어).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **4. Membrane là ranh giới động, không phải tường cứng** tiếp nhận điểm tựa từ **3. Compartmentalization: chia không gian để chemistry không cản nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Membrane là ranh giới động, không phải tường cứng** nối từ **3. Compartmentalization: chia không gian để chemistry không cản nhau** sang **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Membrane là ranh giới động, không phải tường cứng
 
@@ -58,7 +58,7 @@ Mô hình **mô hình khảm lỏng (fluid mosaic model) (유동 모자이크 �
 
 Cholesterol ở animal membrane có vai trò buffer fluidity: ở temperature cao nó hạn chế movement quá mức; ở temperature thấp nó cản phospholipid pack quá chặt.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **4. Membrane là ranh giới động, không phải tường cứng** đã nêu tiêu chí phân biệt, còn **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Membrane là ranh giới động, không phải tường cứng** đặt tiêu chí; **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau** dùng nó để kiểm tra ranh giới, rồi **6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng** mở rộng cơ chế.
 
 ## 5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau
 
@@ -68,7 +68,7 @@ Molecule nhỏ nonpolar như O₂ và CO₂ có thể diffuse qua bilayer khá d
 
 Tính thấm chọn lọc biến membrane thành giao diện (interface / 인터페이스) có lô-gic (logic / 논리) chứ không chỉ packaging.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau** đã nêu tiêu chí phân biệt, còn **6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Tính thấm chọn lọc (selective permeability): ranh giới (boundary / 경계) hữu ích vì không cho mọi thứ đi qua như nhau** đặt tiêu chí; **6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng** dùng nó để kiểm tra ranh giới, rồi **7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa** mở rộng cơ chế.
 
 ## 6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng
 
@@ -84,7 +84,7 @@ Trong đó \(J\) là dòng chuyển hóa (flux), \(D\) là hệ số khuếch t�
 
 Math làm rõ intuition: độ dốc (gradient / 기울기) càng dốc, diffusion net càng mạnh; distance diffusion càng dài, exchange càng khó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **6. Khuếch tán (diffusion): movement ngẫu nhiên tạo net luồng (flow / 흐름) có hướng** xác định đầu vào; **7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Diffusion tạo net flow từ chuyển động ngẫu nhiên; facilitated diffusion thêm cửa và specificity. **Osmosis và tonicity** kiểm tra khi water balance quyết định cell sống hay vỡ.
 
 ## 7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa
 
@@ -98,7 +98,7 @@ Glucose transporter GLUT là carrier; kênh ion (ion channel) trong neuron là v
 
 Protein không tạo năng lượng (energy / 에너지) cho movement; nó tạo tuyến (route / 경로) qua barrier.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ** tiếp nhận điểm tựa từ **7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ** nối từ **7. Khuếch tán được hỗ trợ (facilitated diffusion): đi “xuống dốc” nhưng cần cửa** sang **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ
 
@@ -110,7 +110,7 @@ Plant cell có thành tế bào (cell wall). Nước đi vào tạo **turgor pre
 
 Tonicity không chỉ phụ thuộc tổng solute concentration mà phụ thuộc solute có xuyên membrane hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)** tiếp nhận điểm tựa từ **8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)** nối từ **8. Osmosis và tonicity: cân bằng nước (water balance) có thể quyết định cell sống hay vỡ** sang **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)
 
@@ -132,7 +132,7 @@ electrochemical gradient stored
 
 Độ dốc (gradient / 기울기) là một dạng potential năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác** tiếp nhận điểm tựa từ **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác** nối từ **9. Vận chuyển chủ động (active transport): giữ hệ thống (system / 시스템) xa equilibrium cần năng lượng (energy / 에너지)** sang **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác
 
@@ -156,7 +156,7 @@ ATP
 
 Đây là ghép năng lượng (energy coupling) ở membrane quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage** tiếp nhận điểm tựa từ **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Điện thế màng không phải “điện giống dây đồng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage** nối từ **10. Vận chuyển chủ động thứ cấp (secondary active transport): dùng một độ dốc (gradient / 기울기) để kéo molecule khác** sang **12. Điện thế màng không phải “điện giống dây đồng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage
 
@@ -168,7 +168,7 @@ K⁺ có thể concentration cao bên trong nên chemical tendency kéo ra ngoà
 
 Nguyên lý này sẽ trở thành nền cho điện thế hoạt động (action potential) ở hệ thần kinh (nervous system) và chênh lệch proton ở mitochondria.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **12. Điện thế màng không phải “điện giống dây đồng”** tiếp nhận điểm tựa từ **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Điện thế màng không phải “điện giống dây đồng”** nối từ **11. Chênh lệch điện hóa: ion chịu cả concentration lẫn voltage** sang **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Điện thế màng không phải “điện giống dây đồng”
 
@@ -178,7 +178,7 @@ Membrane hoạt động gần giống capacitor: bilayer cách điện tương �
 
 Điều này giải thích vì sao mở kênh ion có thể đổi voltage nhanh mà không cần chuyển toàn bộ ion của cell.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?** tiếp nhận điểm tựa từ **12. Điện thế màng không phải “điện giống dây đồng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?** nối từ **12. Điện thế màng không phải “điện giống dây đồng”** sang **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?
 
@@ -190,7 +190,7 @@ Neuron bản phát hành (release / 릴리스) neurotransmitter bằng xuất b�
 
 Membrane vì vậy không phải ranh giới (boundary / 경계) cố định; nó liên tục được tái cấu trúc.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation** tiếp nhận điểm tựa từ **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation** nối từ **13. Vận chuyển bằng túi màng (vesicle transport): molecule quá lớn thì sao?** sang **15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation
 
@@ -202,7 +202,7 @@ Sự tách không gian cho phép thêm tầng (layer / 계층) regulation như R
 
 Kiến trúc (architecture / 아키텍처) tạo regulatory possibility.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng** tiếp nhận điểm tựa từ **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. ER–Golgi pathway: logistics nội bộ của cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng** nối từ **14. Nucleus: tách archive thông tin (information / 정보) khỏi vùng translation** sang **16. ER–Golgi pathway: logistics nội bộ của cell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng
 
@@ -212,7 +212,7 @@ Ribosome tự do thường tạo protein hoạt động trong cytosol/nucleus/mi
 
 Protein destination bắt đầu được quyết định ngay khi synthesis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **15. Ribosome: nơi thông tin (information / 정보) trở thành vật chất chức năng** xác định đầu vào; **16. ER–Golgi pathway: logistics nội bộ của cell** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Lysosome và autophagy: cell cũng phải dọn rác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ribosome chuyển information thành vật chất chức năng; ER–Golgi pathway vận chuyển sản phẩm nội bộ. **Lysosome và autophagy** kiểm tra cách cell dọn rác.
 
 ## 16. ER–Golgi pathway: logistics nội bộ của cell
 
@@ -232,7 +232,7 @@ D --> G[Secretory vesicle]
 
 Nếu folding sai, protein có thể bị giữ lại và degraded. Cell logistics gắn chặt với protein kiểm soát chất lượng.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **16. ER–Golgi pathway: logistics nội bộ của cell** xác định đầu vào; **17. Lysosome và autophagy: cell cũng phải dọn rác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** ER–Golgi pathway tổ chức logistics; lysosome và autophagy xử lý hàng hỏng. **Cytoskeleton** kiểm tra shape, transport và force.
 
 ## 17. Lysosome và autophagy: cell cũng phải dọn rác
 
@@ -242,7 +242,7 @@ Lysosome chứa hydrolytic enzyme hoạt động tốt trong pH acid. Nó phân 
 
 Maintenance không kém synthesis. Một cell chỉ sản xuất mà không dọn waste sẽ mất organization.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force** tiếp nhận điểm tựa từ **17. Lysosome và autophagy: cell cũng phải dọn rác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Protein vận động: ATP thành movement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force** nối từ **17. Lysosome và autophagy: cell cũng phải dọn rác** sang **19. Protein vận động: ATP thành movement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force
 
@@ -252,7 +252,7 @@ Actin liên quan cell shape, di chuyển (migration / 마이그레이션) và co
 
 Cytoskeleton không phải “bộ xương chết”. Nó động (dynamic / 동적), polymerize/depolymerize liên tục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **19. Protein vận động: ATP thành movement** tiếp nhận điểm tựa từ **18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Protein vận động: ATP thành movement** nối từ **18. Bộ xương tế bào: shape, vận chuyển (transport / 전송) và force** sang **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Protein vận động: ATP thành movement
 
@@ -262,7 +262,7 @@ Protein vận động hydrolyze ATP và chuyển chemical năng lượng tự do
 
 Đây là liên kết (connection / 연결) trực tiếp từ biomolecule chapter: ATP không phải “năng lượng chung chung”; nó được machine cụ thể hydrolyze để tạo force.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây** tiếp nhận điểm tựa từ **19. Protein vận động: ATP thành movement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây** nối từ **19. Protein vận động: ATP thành movement** sang **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây
 
@@ -272,7 +272,7 @@ Mối nối kín (tight junction) giảm leak giữa cell; mối nối bám dín
 
 Tế bào (cell)–ECM receptor như integrin vừa neo cấu trúc (structure / 구조) vừa truyền tín hiệu (signal / 신호). Vì vậy kiến trúc mô (tissue architecture) và signaling liên kết.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng** tiếp nhận điểm tựa từ **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng** nối từ **20. Mối nối tế bào (cell junction) và chất nền ngoại bào (extracellular matrix): multicellularity bắt đầu từ đây** sang **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng
 
@@ -282,7 +282,7 @@ Evolutionary lịch sử (history / 이력) giải thích cell kiến trúc (arc
 
 Mitochondrial/chloroplast genome đã mất/chuyển nhiều gene vào nucleus; organelle hiện phụ thuộc cell nhưng vẫn giữ dấu vết nguồn gốc bacterial.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng** cho ta quy tắc; **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Nội cộng sinh (endosymbiosis): mitochondria/chloroplast có lịch sử riêng** nêu quy tắc; **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)** thử quy tắc trong tình huống, rồi **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** mở rộng hệ quả.
 
 ## 22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)
 
@@ -294,7 +294,7 @@ Một treatment đơn giản dựa trực tiếp trên vận chuyển chủ đ�
 
 Đây là ví dụ đẹp cho việc hiểu membrane cơ chế (mechanism / 메커니즘) có thể giải thích medicine thực tế.
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)** cho ta quy tắc; **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Tình huống phân tích (case study): oral rehydration solution hoạt động vì membrane vận chuyển (transport / 전송)** nêu quy tắc; **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** thử quy tắc trong tình huống, rồi **24. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)
 
@@ -313,7 +313,7 @@ mutation
 
 Một gene ảnh hưởng disease thông qua màng vật lý (physics), không qua “gene quyết định disease” một cách trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** cho ta quy tắc; **24. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Tình huống phân tích: cystic fibrosis và ion vận chuyển (transport / 전송)** nêu quy tắc; **24. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** mở rộng hệ quả.
 
 ## 24. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -329,7 +329,7 @@ Một gene ảnh hưởng disease thông qua màng vật lý (physics), không q
 
 <!-- depth-audit-2026:pump-leak -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** tiếp nhận điểm tựa từ **24. Các hiểu lầm phổ biến (common misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** nối từ **24. Các hiểu lầm phổ biến (common misconceptions)** sang **Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng
 
@@ -349,7 +349,7 @@ Màng cũng là đối tượng của thích nghi và tiến hóa. Tỉ lệ aci
 
 <!-- continuity-2026:organelle-trafficking -->
 
-> **Chuyển mạch:** Trong **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng** tiếp nhận điểm tựa từ **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. cầu nối (bridge / 브리지): cấu trúc (structure / 구조) đã có, nhưng cell lấy năng lượng (energy / 에너지) ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng** nối từ **Pump–leak steady trạng thái (state / 상태): màng sống không ở cân bằng** sang **25. cầu nối (bridge / 브리지): cấu trúc (structure / 구조) đã có, nhưng cell lấy năng lượng (energy / 에너지) ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng
 
@@ -361,7 +361,7 @@ Màng còn có **tính bất đối xứng (membrane asymmetry)**. Hai lá của
 
 Đây cũng là nơi tiến hóa tận dụng cấu trúc cũ. Hệ nội màng cho phép tế bào nhân thực tăng kích thước và chuyên hóa mà không phải để mọi phản ứng xảy ra trong cùng một khoang. Compartmentalization vì vậy là một thích nghi kiến trúc giúp tách các hóa học không tương thích và tăng khả năng điều hòa.
 
-> **Chuyển mạch:** Ở chặng này của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**, **25. cầu nối (bridge / 브리지): cấu trúc (structure / 구조) đã có, nhưng cell lấy năng lượng (energy / 에너지) ở đâu?** tiếp nhận điểm tựa từ **Bào quan chỉ có chức năng khi topology và dòng vận chuyển được giữ đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối hỏi cell lấy energy ở đâu sau khi topology và transport flow đã được tổ chức đúng; đó là bước chuyển từ cấu trúc sang metabolism.
 
 ## 25. cầu nối (bridge / 브리지): cấu trúc (structure / 구조) đã có, nhưng cell lấy năng lượng (energy / 에너지) ở đâu?
 

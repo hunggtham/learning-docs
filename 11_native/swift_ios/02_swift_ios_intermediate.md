@@ -30,7 +30,7 @@ b.name = "B"
 
 Tham chiếu (reference / 참조) kiểu (type / 타입) có định danh (identity / 식별자) và dùng chung (shared / 공유) mutable trạng thái (state / 상태). Khi nhiều đơn vị sở hữu (owner / 오너) cùng thấy một lớp (class / 클래스) instance, bạn phải trả lời cả hai câu hỏi: ai giữ thời gian tồn tại (lifetime / 수명) và ai được phép mutate.
 
-> **Chuyển mạch:** Value/reference semantics và copy-on-write quyết định equality behavior; các protocol `Equatable`/`Hashable`/`Identifiable` tiếp theo đưa behavior đó vào collection và API design.
+> **Nối mạch:** Value/reference semantics và copy-on-write quyết định equality behavior; các protocol `Equatable`/`Hashable`/`Identifiable` tiếp theo đưa behavior đó vào collection và API design.
 
 ## 1.2 `Equatable`, `Hashable`, `Comparable`, `Identifiable`
 
@@ -45,7 +45,7 @@ struct Product: Identifiable, Hashable {
 
 `Identifiable.id` phải đại diện stable định danh (identity / 식별자) của thực thể (entity / 엔터티) trong khoảng thời gian tồn tại (lifetime / 수명) phù hợp. Nếu ID thay đổi theo vị trí array, diffing/điều hướng (navigation / 내비게이션)/trạng thái (state / 상태) restoration có thể gắn trạng thái (state / 상태) vào sai item.
 
-> **Chuyển mạch:** Protocol conformances tạo capability có thể dùng trong collections; generic/`where` tiếp theo biểu diễn constraint, còn associated type/`some`/`any` chọn mức abstraction phù hợp.
+> **Nối mạch:** Protocol conformances tạo capability có thể dùng trong collections; generic/`where` tiếp theo biểu diễn constraint, còn associated type/`some`/`any` chọn mức abstraction phù hợp.
 
 ## 1.3 Generic, `where` và capability-oriented API
 
@@ -63,7 +63,7 @@ where C1.Element == C2.Element {
 
 Chỉ yêu cầu năng lực (capability / 역량) thực sự cần. Nếu hàm (function / 함수) chỉ iterate một lần, `Sequence` có thể phù hợp hơn `Array`; nếu cần random truy cập (access / 접근), ràng buộc (constraint / 제약조건) mạnh hơn mới có ý nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **1.4 Associated kiểu (type / 타입), some và any** tiếp nhận điểm tựa từ **1.3 Generic, where và capability-oriented API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.1 Structured tính đồng thời (concurrency / 동시성) với async let** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **1.4 Associated kiểu (type / 타입), some và any** nối từ **1.3 Generic, where và capability-oriented API** sang **5.1 Structured tính đồng thời (concurrency / 동시성) với async let**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.4 Associated kiểu (type / 타입), `some` và `any`
 
@@ -159,7 +159,7 @@ Swift tính đồng thời (concurrency / 동시성) có bốn trục cần tác
 
 Nếu bốn trục này rõ, phần lớn trình biên dịch (compiler / 컴파일러) diagnostic Swift 6 trở nên có lý do thay vì “annotation ceremony”.
 
-> **Chuyển mạch:** `some`/`any` chọn abstraction boundary; `async let` tiếp theo chạy child tasks có cấu trúc, còn TaskGroup phục vụ số lượng task động.
+> **Nối mạch:** `some`/`any` chọn abstraction boundary; `async let` tiếp theo chạy child tasks có cấu trúc, còn TaskGroup phục vụ số lượng task động.
 
 ## 5.1 Structured tính đồng thời (concurrency / 동시성) với `async let`
 
@@ -174,7 +174,7 @@ let (p, m) = try await (profile, messages)
 
 Child tác vụ (task / 작업) gắn thời gian tồn tại (lifetime / 수명) với lexical phạm vi (scope / 범위). phạm vi (scope / 범위) không kết thúc hợp lệ khi child tác vụ (task / 작업) còn bị bỏ quên; lỗi (error / 오류)/cancellation có quan hệ rõ hơn unstructured tác vụ (task / 작업).
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup** tiếp nhận điểm tựa từ **5.1 Structured tính đồng thời (concurrency / 동시성) với async let** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup** nối từ **5.1 Structured tính đồng thời (concurrency / 동시성) với async let** sang **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup
 
@@ -198,7 +198,7 @@ let values = try await withThrowingTaskGroup(of: Int.self) { group in
 
 Tác vụ (task / 작업) group phù hợp fan-out động. Đừng tạo vô hạn tác vụ (task / 작업) chỉ vì API cho phép; tính đồng thời (concurrency / 동시성) cần bounded theo tài nguyên (resource / 자원)/backend các ràng buộc (constraints / 제약조건들) khi đầu vào (input / 입력) lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động** tiếp nhận điểm tựa từ **5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.4 Task.detached là escape hatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động** nối từ **5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup** sang **5.4 Task.detached là escape hatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.3 `Task {}` là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động
 
@@ -225,13 +225,13 @@ func search(_ query: String) {
 }
 ```
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.4 Task.detached là escape hatch** tiếp nhận điểm tựa từ **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.5 Cancellation là cooperative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.4 Task.detached là escape hatch** nối từ **5.3 Task {} là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động** sang **5.5 Cancellation là cooperative**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.4 `Task.detached` là escape hatch
 
 Detached tác vụ (task / 작업) không nên là “background luồng thực thi (thread / 스레드) button”. Nó tách khỏi nhiều ngữ cảnh (context / 맥락) mà `Task {}` kế thừa. Dùng khi thật sự cần independent unstructured công việc (work / 작업) và bạn hiểu priority/task-local/isolation implications. Với app tính năng (feature / 기능) bình thường, structured tác vụ (task / 작업) hoặc `Task {}` có đơn vị sở hữu (owner / 오너) rõ thường tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.5 Cancellation là cooperative** tiếp nhận điểm tựa từ **5.4 Task.detached là escape hatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.6 Priority không phải QoS guarantee tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.5 Cancellation là cooperative** nối từ **5.4 Task.detached là escape hatch** sang **5.6 Priority không phải QoS guarantee tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.5 Cancellation là cooperative
 
@@ -243,7 +243,7 @@ try Task.checkCancellation()
 
 Cancellation thường không phải “lỗi (error / 오류) UX”. Khi người dùng (user / 사용자) đổi tìm kiếm (search / 검색) truy vấn (query / 쿼리) hay rời màn hình, tác vụ (task / 작업) cũ bị cancel là điều khiển (control / 제어) luồng (flow / 흐름) hợp lệ; đừng hiện alert “CancellationError” như máy chủ (server / 서버) thất bại (failure / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.6 Priority không phải QoS guarantee tuyệt đối** tiếp nhận điểm tựa từ **5.5 Cancellation là cooperative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **5.6 Priority không phải QoS guarantee tuyệt đối** nối từ **5.5 Cancellation là cooperative** sang **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.6 Priority không phải QoS guarantee tuyệt đối
 
@@ -271,7 +271,7 @@ actor TokenStore {
 
 Gọi actor member từ lĩnh vực (domain / 도메인) khác thường cần `await` vì lời gọi (call / 호출) có thể suspend để executor chạy actor job.
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới** tiếp nhận điểm tựa từ **5.6 Priority không phải QoS guarantee tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.2 @MainActor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới** nối từ **5.6 Priority không phải QoS guarantee tuyệt đối** sang **6.2 @MainActor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới
 
@@ -294,7 +294,7 @@ actor Inventory {
 
 Đây là **actor reentrancy**, không phải dữ liệu (data / 데이터) race. trình biên dịch (compiler / 컴파일러) ngăn unsynchronized truy cập (access / 접근) nhưng không tự chứng minh nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) qua suspension điểm (point / 지점).
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.2 @MainActor** tiếp nhận điểm tựa từ **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.3 nonisolated** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.2 @MainActor** nối từ **6.1 Actor không phải khóa (lock / 잠금) cú pháp (syntax / 문법) mới** sang **6.3 nonisolated**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.2 `@MainActor`
 
@@ -323,13 +323,13 @@ final class HomeModel {
 
 `@MainActor` là isolation đặc tả hợp đồng (contract / 계약), không chỉ là synonym của `DispatchQueue.main.async`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.3 nonisolated** tiếp nhận điểm tựa từ **6.2 @MainActor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.4 toàn cục (global / 전역) actor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.3 nonisolated** nối từ **6.2 @MainActor** sang **6.4 toàn cục (global / 전역) actor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.3 `nonisolated`
 
 Member không cần actor-isolated trạng thái (state / 상태) có thể được thiết kế `nonisolated` khi ngữ nghĩa (semantics / 의미론) cho phép. Không thêm `nonisolated` chỉ để trình biên dịch (compiler / 컴파일러) ngừng báo; hãy đảm bảo hiện thực (implementation / 구현) không lén đọc mutable actor trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.4 toàn cục (global / 전역) actor** tiếp nhận điểm tựa từ **6.3 nonisolated** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.1 @Sendable closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **6.4 toàn cục (global / 전역) actor** nối từ **6.3 nonisolated** sang **7.1 @Sendable closure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.4 toàn cục (global / 전역) actor
 
@@ -352,7 +352,7 @@ Immutable giá trị (value / 값) kiểu (type / 타입) gồm trường dữ l
 
 `@unchecked Sendable` là lời hứa của programmer rằng synchronization/bất biến (invariant / 불변식) bên trong đã đúng. Nó không “làm đối tượng (object / 객체) thread-safe”; nó tắt một phần kiểm tra trình biên dịch (compiler / 컴파일러). Mỗi `@unchecked Sendable` nên có lý do/bất biến (invariant / 불변식) được rà soát (review / 검토).
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **7.1 @Sendable closure** tiếp nhận điểm tựa từ **6.4 toàn cục (global / 전역) actor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.2 Snapshot mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **7.1 @Sendable closure** nối từ **6.4 toàn cục (global / 전역) actor** sang **7.2 Snapshot mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.1 `@Sendable` closure
 
@@ -366,7 +366,7 @@ func perform(_ operation: @Sendable @escaping () async -> Void) {
 
 Nếu trình biên dịch (compiler / 컴파일러) phàn nàn capture, đừng mặc định thêm `@unchecked`. Hãy hỏi capture có thể chuyển thành immutable snapshot/giá trị (value / 값) hay phụ thuộc (dependency / 의존성) actor-isolated không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **7.2 Snapshot mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **7.1 @Sendable closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist trước khi sang Advanced/cấp cao (senior / 시니어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **7.2 Snapshot mẫu (pattern / 패턴)** nối từ **7.1 @Sendable closure** sang **Checklist trước khi sang Advanced/cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 Snapshot mẫu (pattern / 패턴)
 
@@ -978,7 +978,7 @@ FeatureCatalog/
   Tests/
 ```
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **Checklist trước khi sang Advanced/cấp cao (senior / 시니어)** tiếp nhận điểm tựa từ **7.2 Snapshot mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Intermediate**, **Checklist trước khi sang Advanced/cấp cao (senior / 시니어)** nối từ **7.2 Snapshot mẫu (pattern / 패턴)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Checklist trước khi sang Advanced/cấp cao (senior / 시니어)
 

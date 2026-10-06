@@ -14,7 +14,7 @@ KRX vận hành nhiều thị trường. KOSPI tập trung nhiều doanh nghiệ
 
 Do đó cùng một cú sốc lợi suất thực có thể tác động KOSDAQ mạnh hơn nếu chỉ số đang chứa nhiều cổ phiếu có dòng tiền xa trong tương lai.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **2. KOSPI 200** tiếp nhận điểm tựa từ **1. KRX, KOSPI và KOSDAQ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Rủi ro tập trung chỉ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **2. KOSPI 200** nối từ **1. KRX, KOSPI và KOSDAQ** sang **3. Rủi ro tập trung chỉ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. KOSPI 200
 
@@ -27,7 +27,7 @@ Dòng tiền bám chỉ số có thể tạo khối lượng kỹ thuật lớn 
 - đấu giá đóng cửa;
 - dòng tiền quỹ thụ động.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **3. Rủi ro tập trung chỉ số** tiếp nhận điểm tựa từ **2. KOSPI 200** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chu kỳ xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **3. Rủi ro tập trung chỉ số** nối từ **2. KOSPI 200** sang **4. Chu kỳ xuất khẩu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Rủi ro tập trung chỉ số
 
@@ -47,7 +47,7 @@ Chỉ số tăng không đồng nghĩa cổ phiếu trung vị hoặc đa số n
 
 # Phần II — Nền kinh tế xuất khẩu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **4. Chu kỳ xuất khẩu** tiếp nhận điểm tựa từ **3. Rủi ro tập trung chỉ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Giá trị xuất khẩu phải tách giá và lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **4. Chu kỳ xuất khẩu** nối từ **3. Rủi ro tập trung chỉ số** sang **5. Giá trị xuất khẩu phải tách giá và lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Chu kỳ xuất khẩu
 
@@ -60,7 +60,7 @@ Hàn Quốc phụ thuộc lớn vào thương mại toàn cầu. Các nhóm quan
 - đóng tàu;
 - pin.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **5. Giá trị xuất khẩu phải tách giá và lượng** tiếp nhận điểm tựa từ **4. Chu kỳ xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mức phơi nhiễm với Trung Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **5. Giá trị xuất khẩu phải tách giá và lượng** nối từ **4. Chu kỳ xuất khẩu** sang **6. Mức phơi nhiễm với Trung Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Giá trị xuất khẩu phải tách giá và lượng
 
@@ -76,7 +76,7 @@ Giá trị xuất khẩu
 + Ảnh hưởng tỷ giá
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **6. Mức phơi nhiễm với Trung Quốc** tiếp nhận điểm tựa từ **5. Giá trị xuất khẩu phải tách giá và lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chu kỳ bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **6. Mức phơi nhiễm với Trung Quốc** nối từ **5. Giá trị xuất khẩu phải tách giá và lượng** sang **7. Chu kỳ bộ nhớ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Mức phơi nhiễm với Trung Quốc
 
@@ -93,7 +93,7 @@ Kích thích bất động sản khác kích thích sản xuất công nghệ ca
 
 # Phần III — Bán dẫn
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **7. Chu kỳ bộ nhớ** tiếp nhận điểm tựa từ **6. Mức phơi nhiễm với Trung Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. HBM và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **7. Chu kỳ bộ nhớ** nối từ **6. Mức phơi nhiễm với Trung Quốc** sang **8. HBM và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chu kỳ bộ nhớ
 
@@ -109,7 +109,7 @@ Nhu cầu cuối
 → Chi tiêu vốn
 ```
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **8. HBM và AI** tiếp nhận điểm tựa từ **7. Chu kỳ bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Thiết bị và vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **8. HBM và AI** nối từ **7. Chu kỳ bộ nhớ** sang **9. Thiết bị và vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. HBM và AI
 
@@ -124,7 +124,7 @@ Các biến quan trọng:
 - cơ cấu sản phẩm;
 - kỷ luật nguồn cung.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **9. Thiết bị và vật liệu** tiếp nhận điểm tựa từ **8. HBM và AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Điều chỉnh dự báo lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **9. Thiết bị và vật liệu** nối từ **8. HBM và AI** sang **10. Điều chỉnh dự báo lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Thiết bị và vật liệu
 
@@ -134,7 +134,7 @@ Doanh nghiệp vật liệu và hóa chất thường nhạy hơn với số waf
 
 Vì vậy cùng một chu kỳ tăng không giúp mọi nhà cung cấp ở cùng thời điểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **10. Điều chỉnh dự báo lợi nhuận** tiếp nhận điểm tựa từ **9. Thiết bị và vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. USD/KRW là biến kết nối nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **10. Điều chỉnh dự báo lợi nhuận** nối từ **9. Thiết bị và vật liệu** sang **11. USD/KRW là biến kết nối nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Điều chỉnh dự báo lợi nhuận
 
@@ -153,7 +153,7 @@ Hướng dẫn biên lợi nhuận
 
 # Phần IV — KRW
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **11. USD/KRW là biến kết nối nhiều lớp** tiếp nhận điểm tựa từ **10. Điều chỉnh dự báo lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. KRW yếu và doanh nghiệp xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **11. USD/KRW là biến kết nối nhiều lớp** nối từ **10. Điều chỉnh dự báo lợi nhuận** sang **12. KRW yếu và doanh nghiệp xuất khẩu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. USD/KRW là biến kết nối nhiều lớp
 
@@ -169,7 +169,7 @@ Dòng vốn cổ phiếu nước ngoài
 Khẩu vị rủi ro toàn cầu
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **12. KRW yếu và doanh nghiệp xuất khẩu** tiếp nhận điểm tựa từ **11. USD/KRW là biến kết nối nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Bản đồ tiền tệ của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **12. KRW yếu và doanh nghiệp xuất khẩu** nối từ **11. USD/KRW là biến kết nối nhiều lớp** sang **13. Bản đồ tiền tệ của doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. KRW yếu và doanh nghiệp xuất khẩu
 
@@ -182,7 +182,7 @@ KRW yếu có thể làm doanh thu quy đổi tăng nhưng đồng thời:
 
 Vì vậy không dùng khẩu quyết “KRW yếu = doanh nghiệp xuất khẩu tốt”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **13. Bản đồ tiền tệ của doanh nghiệp** tiếp nhận điểm tựa từ **12. KRW yếu và doanh nghiệp xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Hàm phản ứng của BOK** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **13. Bản đồ tiền tệ của doanh nghiệp** nối từ **12. KRW yếu và doanh nghiệp xuất khẩu** sang **14. Hàm phản ứng của BOK**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Bản đồ tiền tệ của doanh nghiệp
 
@@ -198,7 +198,7 @@ Chính sách phòng vệ
 
 # Phần V — BOK và lãi suất
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **14. Hàm phản ứng của BOK** tiếp nhận điểm tựa từ **13. Bản đồ tiền tệ của doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Lãi suất chính sách và lãi suất thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **14. Hàm phản ứng của BOK** nối từ **13. Bản đồ tiền tệ của doanh nghiệp** sang **15. Lãi suất chính sách và lãi suất thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Hàm phản ứng của BOK
 
@@ -213,7 +213,7 @@ BOK phải cân bằng:
 
 **Hàm phản ứng (reaction function)** là cách BOK cân trọng số các mục tiêu này khi dữ liệu thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **15. Lãi suất chính sách và lãi suất thị trường** tiếp nhận điểm tựa từ **14. Hàm phản ứng của BOK** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Nợ hộ gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **15. Lãi suất chính sách và lãi suất thị trường** nối từ **14. Hàm phản ứng của BOK** sang **16. Nợ hộ gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Lãi suất chính sách và lãi suất thị trường
 
@@ -226,7 +226,7 @@ Theo dõi:
 - lãi suất thế chấp;
 - chênh lệch tín dụng doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **16. Nợ hộ gia đình** tiếp nhận điểm tựa từ **15. Lãi suất chính sách và lãi suất thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tài trợ dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **16. Nợ hộ gia đình** nối từ **15. Lãi suất chính sách và lãi suất thị trường** sang **17. Tài trợ dự án**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Nợ hộ gia đình
 
@@ -234,7 +234,7 @@ Theo dõi:
 
 # Phần VI — Tài trợ dự án bất động sản và tín dụng
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **17. Tài trợ dự án** tiếp nhận điểm tựa từ **16. Nợ hộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Cơ chế truyền dẫn tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **17. Tài trợ dự án** nối từ **16. Nợ hộ gia đình** sang **18. Cơ chế truyền dẫn tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Tài trợ dự án
 
@@ -253,7 +253,7 @@ Bán trước
 Rủi ro hoàn thành
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **17. Tài trợ dự án** xác định đầu vào; **18. Cơ chế truyền dẫn tín dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. Động lực ngành ô tô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **17. Tài trợ dự án** đặt đầu vào cho **18. Cơ chế truyền dẫn tín dụng**, rồi **19. Động lực ngành ô tô** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Cơ chế truyền dẫn tín dụng
 
@@ -270,7 +270,7 @@ Chi phí nguồn vốn ↑
 
 # Phần VII — Ô tô và xe điện
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **18. Cơ chế truyền dẫn tín dụng** xác định đầu vào; **19. Động lực ngành ô tô** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Chuyển dịch sang xe điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **18. Cơ chế truyền dẫn tín dụng** đặt đầu vào cho **19. Động lực ngành ô tô**, rồi **20. Chuyển dịch sang xe điện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Động lực ngành ô tô
 
@@ -285,7 +285,7 @@ Các biến chính:
 - chi phí bảo hành;
 - điều kiện tài trợ mua xe.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **20. Chuyển dịch sang xe điện** tiếp nhận điểm tựa từ **19. Động lực ngành ô tô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Chuỗi giá trị pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **20. Chuyển dịch sang xe điện** nối từ **19. Động lực ngành ô tô** sang **21. Chuỗi giá trị pin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Chuyển dịch sang xe điện
 
@@ -293,7 +293,7 @@ Xe điện không chỉ là tăng sản lượng. Cần xem chi phí pin, trợ 
 
 # Phần VIII — Pin
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **20. Chuyển dịch sang xe điện** xác định đầu vào; **21. Chuỗi giá trị pin** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. Tỷ lệ sử dụng công suất và dư cung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **20. Chuyển dịch sang xe điện** đặt đầu vào cho **21. Chuỗi giá trị pin**, rồi **22. Tỷ lệ sử dụng công suất và dư cung** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Chuỗi giá trị pin
 
@@ -309,7 +309,7 @@ Lithium / Nickel
 
 Mỗi tầng có quyền định giá và cường độ vốn khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **21. Chuỗi giá trị pin** xác định đầu vào; **22. Tỷ lệ sử dụng công suất và dư cung** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. Đóng tàu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **21. Chuỗi giá trị pin** đặt đầu vào cho **22. Tỷ lệ sử dụng công suất và dư cung**, rồi **23. Đóng tàu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Tỷ lệ sử dụng công suất và dư cung
 
@@ -319,7 +319,7 @@ Mở rộng công suất quá nhanh có thể làm tỷ lệ sử dụng giảm 
 
 # Phần IX — Đóng tàu và công nghiệp
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **23. Đóng tàu** tiếp nhận điểm tựa từ **22. Tỷ lệ sử dụng công suất và dư cung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Quốc phòng và công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **23. Đóng tàu** nối từ **22. Tỷ lệ sử dụng công suất và dư cung** sang **24. Quốc phòng và công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Đóng tàu
 
@@ -335,7 +335,7 @@ Theo dõi:
 
 Sổ đơn hàng lớn phải được đánh giá cùng biên lợi nhuận của hợp đồng đã ký.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **24. Quốc phòng và công nghiệp** tiếp nhận điểm tựa từ **23. Đóng tàu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **24. Quốc phòng và công nghiệp** nối từ **23. Đóng tàu** sang **25. Ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Quốc phòng và công nghiệp
 
@@ -343,7 +343,7 @@ Sổ đơn hàng lớn phải được đánh giá cùng biên lợi nhuận c�
 
 # Phần X — Tài chính
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **25. Ngân hàng** tiếp nhận điểm tựa từ **24. Quốc phòng và công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bảo hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **25. Ngân hàng** nối từ **24. Quốc phòng và công nghiệp** sang **26. Bảo hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Ngân hàng
 
@@ -356,7 +356,7 @@ Các chỉ số chính gồm:
 - CET1;
 - chính sách hoàn vốn cho cổ đông.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **26. Bảo hiểm** tiếp nhận điểm tựa từ **25. Ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Công ty chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **26. Bảo hiểm** nối từ **25. Ngân hàng** sang **27. Công ty chứng khoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Bảo hiểm
 
@@ -367,7 +367,7 @@ Nhạy với:
 - chất lượng bảo hiểm gốc;
 - quy định vốn.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **27. Công ty chứng khoán** tiếp nhận điểm tựa từ **26. Bảo hiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Nền tảng internet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **27. Công ty chứng khoán** nối từ **26. Bảo hiểm** sang **28. Nền tảng internet**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Công ty chứng khoán
 
@@ -381,13 +381,13 @@ Nhạy với:
 
 # Phần XI — Nền tảng số, trò chơi và công nghệ sinh học
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **28. Nền tảng internet** tiếp nhận điểm tựa từ **27. Công ty chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Trò chơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **28. Nền tảng internet** nối từ **27. Công ty chứng khoán** sang **29. Trò chơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Nền tảng internet
 
 Theo dõi mức độ sử dụng, thị trường quảng cáo, tỷ lệ thu phí giao dịch, thanh toán và quy định.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **29. Trò chơi** tiếp nhận điểm tựa từ **28. Nền tảng internet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Công nghệ sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **29. Trò chơi** nối từ **28. Nền tảng internet** sang **30. Công nghệ sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Trò chơi
 
@@ -399,7 +399,7 @@ Nhà phát hành trò chơi phụ thuộc:
 - chi phí phát triển;
 - quy định ở thị trường nước ngoài.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **30. Công nghệ sinh học** tiếp nhận điểm tựa từ **29. Trò chơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Lọc dầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **30. Công nghệ sinh học** nối từ **29. Trò chơi** sang **31. Lọc dầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Công nghệ sinh học
 
@@ -407,7 +407,7 @@ Cần phân tích theo xác suất, thời gian tiền mặt còn đủ sử d�
 
 # Phần XII — Lọc dầu, hóa dầu và tiện ích
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **31. Lọc dầu** tiếp nhận điểm tựa từ **30. Công nghệ sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Hóa dầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **31. Lọc dầu** nối từ **30. Công nghệ sinh học** sang **32. Hóa dầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Lọc dầu
 
@@ -415,13 +415,13 @@ Refining economics phụ thuộc crack spread, utilization, crude slate, invento
 
 **Chênh lệch lọc dầu (crack spread)**, tỷ lệ sử dụng, tồn kho dầu và nhu cầu sản phẩm là các biến chính.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **32. Hóa dầu** tiếp nhận điểm tựa từ **31. Lọc dầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Tiện ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **32. Hóa dầu** nối từ **31. Lọc dầu** sang **33. Tiện ích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Hóa dầu
 
 Chênh lệch giữa giá sản phẩm và nguyên liệu cùng công suất mới trong khu vực quyết định chu kỳ.
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **33. Tiện ích** tiếp nhận điểm tựa từ **32. Hóa dầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Dòng vốn của nhà đầu tư nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **33. Tiện ích** nối từ **32. Hóa dầu** sang **34. Dòng vốn của nhà đầu tư nước ngoài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Tiện ích
 
@@ -429,7 +429,7 @@ Chi phí nhiên liệu, chính sách giá bán, mức lợi nhuận được đi
 
 # Phần XIII — Dòng vốn nước ngoài
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **34. Dòng vốn của nhà đầu tư nước ngoài** tiếp nhận điểm tựa từ **33. Tiện ích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Dòng vốn có phòng vệ tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **34. Dòng vốn của nhà đầu tư nước ngoài** nối từ **33. Tiện ích** sang **35. Dòng vốn có phòng vệ tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Dòng vốn của nhà đầu tư nước ngoài
 
@@ -443,7 +443,7 @@ Dòng vốn nước ngoài có thể phản ánh:
 
 Không mặc định mua ròng của nước ngoài là tín hiệu cơ bản tích cực.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **35. Dòng vốn có phòng vệ tiền tệ** tiếp nhận điểm tựa từ **34. Dòng vốn của nhà đầu tư nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **35. Dòng vốn có phòng vệ tiền tệ** nối từ **34. Dòng vốn của nhà đầu tư nước ngoài** sang **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Dòng vốn có phòng vệ tiền tệ
 
@@ -451,19 +451,19 @@ Nhà đầu tư nước ngoài có thể mua cổ phiếu Hàn Quốc nhưng đ�
 
 # Phần XIV — ETF và phái sinh
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài** tiếp nhận điểm tựa từ **35. Dòng vốn có phòng vệ tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. ETF đòn bẩy và nghịch đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài** nối từ **35. Dòng vốn có phòng vệ tiền tệ** sang **37. ETF đòn bẩy và nghịch đảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài
 
 ETF niêm yết bằng KRW vẫn có thể mang mức phơi nhiễm USD, JPY hoặc cổ phiếu toàn cầu. Cần kiểm tra trạng thái phòng vệ và tài sản cơ sở.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **37. ETF đòn bẩy và nghịch đảo** tiếp nhận điểm tựa từ **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Hợp đồng tương lai và quyền chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **37. ETF đòn bẩy và nghịch đảo** nối từ **36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài** sang **38. Hợp đồng tương lai và quyền chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. ETF đòn bẩy và nghịch đảo
 
 Các quỹ này thường tái đặt mục tiêu hằng ngày nên kết quả nhiều ngày phụ thuộc đường đi của giá. Chúng phù hợp với quản lý phơi nhiễm ngắn hạn hơn là mặc định nắm dài hạn.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **38. Hợp đồng tương lai và quyền chọn** tiếp nhận điểm tựa từ **37. ETF đòn bẩy và nghịch đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **38. Hợp đồng tương lai và quyền chọn** nối từ **37. ETF đòn bẩy và nghịch đảo** sang **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Hợp đồng tương lai và quyền chọn
 
@@ -471,19 +471,19 @@ Phái sinh chỉ số ảnh hưởng quá trình khám phá giá và dòng lện
 
 # Phần XV — Định giá trong ngành chu kỳ
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc** tiếp nhận điểm tựa từ **38. Hợp đồng tương lai và quyền chọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. P/B và phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc** nối từ **38. Hợp đồng tương lai và quyền chọn** sang **40. P/B và phân bổ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc
 
 Bán dẫn, đóng tàu, hóa chất và công ty chứng khoán có lợi nhuận chu kỳ mạnh. Cần dùng lợi nhuận chuẩn hóa và xác định giai đoạn chu kỳ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **40. P/B và phân bổ vốn** tiếp nhận điểm tựa từ **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Chiết khấu quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **40. P/B và phân bổ vốn** nối từ **39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc** sang **41. Chiết khấu quản trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. P/B và phân bổ vốn
 
 P/B đặc biệt hữu ích với doanh nghiệp tài chính nhưng phải đọc cùng ROE, chất lượng tài sản và chính sách hoàn vốn cho cổ đông.
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **41. Chiết khấu quản trị** tiếp nhận điểm tựa từ **40. P/B và phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Báo cáo lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **41. Chiết khấu quản trị** nối từ **40. P/B và phân bổ vốn** sang **42. Báo cáo lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Chiết khấu quản trị
 
@@ -493,7 +493,7 @@ Governance discount phản ánh rủi ro quyền lợi cổ đông thiểu số,
 
 # Phần XVI — Phân tích sự kiện
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **42. Báo cáo lợi nhuận** tiếp nhận điểm tựa từ **41. Chiết khấu quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Sự kiện BOK** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **42. Báo cáo lợi nhuận** nối từ **41. Chiết khấu quản trị** sang **43. Sự kiện BOK**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Báo cáo lợi nhuận
 
@@ -510,7 +510,7 @@ Phản ứng giá
 Điều gì đã được định giá trước?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **43. Sự kiện BOK** tiếp nhận điểm tựa từ **42. Báo cáo lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Sự kiện vĩ mô toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **43. Sự kiện BOK** nối từ **42. Báo cáo lợi nhuận** sang **44. Sự kiện vĩ mô toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Sự kiện BOK
 
@@ -527,7 +527,7 @@ USD/KRW
 Phản ứng theo ngành
 ```
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **44. Sự kiện vĩ mô toàn cầu** tiếp nhận điểm tựa từ **43. Sự kiện BOK** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Hằng ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **44. Sự kiện vĩ mô toàn cầu** nối từ **43. Sự kiện BOK** sang **45. Hằng ngày**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Sự kiện vĩ mô toàn cầu
 
@@ -543,7 +543,7 @@ Lợi suất Mỹ
 
 # Phần XVII — Bảng theo dõi
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **45. Hằng ngày** tiếp nhận điểm tựa từ **44. Sự kiện vĩ mô toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Hằng tuần / hằng tháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **45. Hằng ngày** nối từ **44. Sự kiện vĩ mô toàn cầu** sang **46. Hằng tuần / hằng tháng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Hằng ngày
 
@@ -560,7 +560,7 @@ Dầu
 Bối cảnh công nghệ Mỹ / SOX
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **46. Hằng tuần / hằng tháng** tiếp nhận điểm tựa từ **45. Hằng ngày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Một cổ phiếu Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **46. Hằng tuần / hằng tháng** nối từ **45. Hằng ngày** sang **47. Một cổ phiếu Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Hằng tuần / hằng tháng
 
@@ -578,7 +578,7 @@ Tin tín dụng / PF
 
 # Phần XVIII — Mẫu nghiên cứu
 
-> **Chuyển mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **47. Một cổ phiếu Hàn Quốc** tiếp nhận điểm tựa từ **46. Hằng tuần / hằng tháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Luận điểm toàn thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cẩm nang phân tích thị trường Hàn Quốc**, **47. Một cổ phiếu Hàn Quốc** nối từ **46. Hằng tuần / hằng tháng** sang **48. Luận điểm toàn thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Một cổ phiếu Hàn Quốc
 
@@ -597,7 +597,7 @@ Mô hình kinh doanh
 → điều kiện vô hiệu hóa
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **48. Luận điểm toàn thị trường** tiếp nhận điểm tựa từ **47. Một cổ phiếu Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cẩm nang phân tích thị trường Hàn Quốc**, **48. Luận điểm toàn thị trường** nối từ **47. Một cổ phiếu Hàn Quốc** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Luận điểm toàn thị trường
 
@@ -614,7 +614,7 @@ Chế độ toàn cầu
 → định giá
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **Kết luận** gom các mảnh từ **48. Luận điểm toàn thị trường** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cẩm nang phân tích thị trường Hàn Quốc**, **Kết luận** tổng hợp từ **48. Luận điểm toàn thị trường** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

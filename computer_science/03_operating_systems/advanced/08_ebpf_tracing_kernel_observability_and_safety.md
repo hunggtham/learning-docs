@@ -32,7 +32,7 @@ instrumentation không được phá safety của kernel
 instrumentation overhead phải đủ nhỏ để evidence còn đại diện workload thật
 ```
 
-> **Chuyển mạch:** Kernel tracing khó vì timing và context; eBPF hook neo semantics vào điểm sự kiện, còn verifier là safety gate trước khi chương trình chạy trong kernel.
+> **Nối mạch:** Kernel tracing khó vì timing và context; eBPF hook neo semantics vào điểm sự kiện, còn verifier là safety gate trước khi chương trình chạy trong kernel.
 
 ## 2. Hook là nơi ngữ nghĩa (semantics / 의미론) được neo
 
@@ -42,7 +42,7 @@ Hook quyết định ngữ cảnh (context / 맥락) nào đang chạy, dữ li�
 
 Vì vậy “có dấu vết (trace / 추적)” chưa đủ. Phải hỏi dấu vết (trace / 추적) được lấy ở **chuyển tiếp trạng thái (state transition / 상태 전이) nào**.
 
-> **Chuyển mạch:** Ở chặng này của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **3. Verifier là an toàn (safety / 안전) gate** tiếp nhận điểm tựa từ **2. Hook là nơi ngữ nghĩa (semantics / 의미론) được neo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Verifier là an toàn (safety / 안전) gate** nối từ **2. Hook là nơi ngữ nghĩa (semantics / 의미론) được neo** sang **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Verifier là an toàn (safety / 안전) gate
 
@@ -52,7 +52,7 @@ Verifier lập luận (reasoning / 추론) thường quan tâm tới pointer pro
 
 Đây là một dạng **proof before thực thi (execution / 실행)**: không chứng minh mọi tính chất của chương trình, nhưng chứng minh đủ một tập bất biến (invariant / 불변식) để giảm lớp (class / 클래스) thất bại (failure / 실패) nguy hiểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **3. Verifier là an toàn (safety / 안전) gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)** nối từ **3. Verifier là an toàn (safety / 안전) gate** sang **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)
 
@@ -62,7 +62,7 @@ Mỗi sự kiện (event / 이벤트) vẫn có chi phí (cost / 비용): execut
 
 Do đó sampling và in-kernel aggregation thường tốt hơn emit mọi sự kiện (event / 이벤트). Nếu câu hỏi chỉ cần histogram độ trễ (latency / 지연 시간), việc cộng bucket tại kernel rồi đọc định kỳ thường rẻ hơn stream từng sự kiện (event / 이벤트) ra người dùng (user / 사용자) không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)** tiếp nhận điểm tựa từ **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)** nối từ **4. JIT và thực thi (execution / 실행) chi phí (cost / 비용)** sang **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)
 
@@ -77,7 +77,7 @@ Per-CPU map giảm contention vì mỗi CPU cập nhật trạng thái (state / 
 
 Map cũng tạo thời gian tồn tại (lifetime / 수명) và memory-pressure concern. Cardinality không giới hạn theo PID, liên kết (connection / 연결) hoặc key tùy ý có thể biến khả năng quan sát (observability / 관측 가능성) thành bộ nhớ (memory / 메모리) leak lô-gic (logic / 논리). Instrumentation phải có eviction/bound hoặc aggregation phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)** tiếp nhận điểm tựa từ **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)** nối từ **5. Maps: trạng thái (state / 상태) có kiểm soát giữa kernel và người dùng (user / 사용자) không gian (space / 공간)** sang **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)
 
@@ -94,7 +94,7 @@ arrival rate > drain rate
 
 Dropped telemetry là một phần của ngữ nghĩa (semantics / 의미론). Nếu không đo drop count, ta có thể nhìn dấu vết (trace / 추적) “sạch” chỉ vì hệ thống mất bằng chứng (evidence / 증거) đúng lúc overload.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)** nối từ **6. Ring buffer và sự kiện (event / 이벤트) vận chuyển (transport / 전송)** sang **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)
 
@@ -104,7 +104,7 @@ Stable tracepoint thường có đặc tả hợp đồng (contract / 계약) r�
 
 Khi xây môi trường vận hành (production / 운영 환경) khả năng quan sát (observability / 관측 가능성) lâu dài, nên ưu tiên ngữ nghĩa (semantic / 의미적) attachment điểm (point / 지점) ổn định nếu có; probe hiện thực (implementation / 구현) detail phù hợp hơn cho investigation có kiểm soát.
 
-> **Chuyển mạch:** Trong **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Scheduler tracing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. kprobe, tracepoint và stability đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)** kiểm tra bằng chứng, rồi **9. Scheduler tracing** mở rộng hệ quả.
 
 ## 8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)
 
@@ -121,7 +121,7 @@ program expresses field/type intent
 
 Tính tương thích (compatibility / 호환성) vẫn phải được kiểm thử (test / 테스트); siêu dữ liệu (metadata / 메타데이터) không xóa mọi ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경).
 
-> **Chuyển mạch:** Ở chặng này của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)** nêu điều cần giải thích; **9. Scheduler tracing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. mạng (network / 네트워크) tracing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. CO-RE và kiểu (type / 타입) siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **9. Scheduler tracing** kiểm tra bằng chứng, rồi **10. mạng (network / 네트워크) tracing** mở rộng hệ quả.
 
 ## 9. Scheduler tracing
 
@@ -136,7 +136,7 @@ preemption/migration
 
 Nếu wall-clock độ trễ (latency / 지연 시간) cao nhưng on-CPU thấp và run-queue delay cao, bottleneck nằm ở scheduling/sức chứa (capacity / 용량) hơn là đường đi mã (code path / 코드 경로). Nếu luồng thực thi (thread / 스레드) ngủ trên futex, cần quay lên synchronization đơn vị sở hữu (owner / 오너). Nếu blocked ở I/O, cần nối tới thiết bị (device / 장치)/filesystem bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **10. mạng (network / 네트워크) tracing** tiếp nhận điểm tựa từ **9. Scheduler tracing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Off-CPU profiling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. mạng (network / 네트워크) tracing** nối từ **9. Scheduler tracing** sang **11. Off-CPU profiling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. mạng (network / 네트워크) tracing
 
@@ -232,7 +232,7 @@ flow/CPU/drop counters
 
 Khi dùng per-CPU maps, phải merge theo luồng (flow / 흐름)/CPU mà không tạo cardinality vô hạn. Khi dùng ring buffer, ghi drop counter và bên tiêu thụ (consumer / 소비자) lag cạnh sự kiện (event / 이벤트) count. Khi dấu vết (trace / 추적) bộ chứa (container / 컨테이너), cần giữ mạng (network / 네트워크) không gian tên (namespace / 네임스페이스), cgroup, pod/tác vụ (task / 작업) định danh (identity / 식별자) và giao diện (interface / 인터페이스) chỉ mục (index / 인덱스); thiếu một chiều định danh (identity / 식별자) có thể ghép nhầm hai luồng (flow / 흐름) giống tuple ở các không gian tên (namespace / 네임스페이스) khác nhau.
 
-> **Chuyển mạch:** Trong **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **11. Off-CPU profiling** tiếp nhận điểm tựa từ **10. mạng (network / 네트워크) tracing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Observer tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Off-CPU profiling** nối từ **10. mạng (network / 네트워크) tracing** sang **12. Observer tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Off-CPU profiling
 
@@ -240,7 +240,7 @@ CPU profiler truyền thống tập trung nơi chương trình đang execute. Nh
 
 Off-CPU profiling ghi lại ngăn xếp (stack / 스택)/ngữ cảnh (context / 맥락) khi tác vụ (task / 작업) bị deschedule và khi nó trở lại, từ đó gán waiting thời gian (time / 시간) về lời gọi (call / 호출) đường dẫn (path / 경로) gây khối (block / 블록). Nó giúp biến “dịch vụ (service / 서비스) chậm nhưng CPU thấp” thành hypothesis cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **12. Observer tác động (effect / 효과)** tiếp nhận điểm tựa từ **11. Off-CPU profiling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Observer tác động (effect / 효과)** nối từ **11. Off-CPU profiling** sang **13. ranh giới bảo mật (security boundary / 보안 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Observer tác động (effect / 효과)
 
@@ -258,7 +258,7 @@ cheap always-on counters
 → disable/reduce sau khi có evidence
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **12. Observer tác động (effect / 효과)** đã nêu tiêu chí phân biệt, còn **13. ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Observer tác động (effect / 효과)** đặt tiêu chí; **13. ranh giới bảo mật (security boundary / 보안 경계)** dùng nó để kiểm tra ranh giới, rồi **14. thất bại (failure / 실패) modes** mở rộng hệ quả.
 
 ## 13. ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -266,7 +266,7 @@ BPF program có visibility rất mạnh vào kernel/ứng dụng (application / 
 
 Verifier giảm memory-safety rủi ro (risk / 위험) nhưng không thay authorization. Program hợp lệ về bộ nhớ (memory / 메모리) vẫn có thể thu thập dữ liệu nhạy cảm nếu principal được cấp năng lực (capability / 역량) quá rộng.
 
-> **Chuyển mạch:** Trong **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **13. ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **14. thất bại (failure / 실패) modes** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. ranh giới bảo mật (security boundary / 보안 경계)** đặt tiêu chí; **14. thất bại (failure / 실패) modes** dùng nó để kiểm tra ranh giới, rồi **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** mở rộng hệ quả.
 
 ## 14. thất bại (failure / 실패) modes
 
@@ -282,7 +282,7 @@ Verifier giảm memory-safety rủi ro (risk / 위험) nhưng không thay author
 
 **Privilege overreach:** khả năng quan sát (observability / 관측 가능성) tác nhân (agent / 에이전트) có năng lực (capability / 역량) kernel lớn hơn nhu cầu thực.
 
-> **Chuyển mạch:** Ở chặng này của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **14. thất bại (failure / 실패) modes** nêu điều cần giải thích; **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Kết nối các tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. thất bại (failure / 실패) modes** đặt vấn đề; **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** kiểm tra bằng chứng, rồi **16. Kết nối các tầng (layer / 계층)** mở rộng hệ quả.
 
 ## 15. bằng chứng vận hành (production evidence / 운영 증거) và workflow
 
@@ -302,7 +302,7 @@ Không attach hàng chục probe chỉ vì có thể. bằng chứng (evidence /
 
 Các tín hiệu (signal / 신호) quan trọng gồm sự kiện (event / 이벤트)/drop count, map occupancy, per-CPU skew, run-queue delay, off-CPU duration, syscall độ trễ (latency / 지연 시간), page-fault độ trễ (latency / 지연 시간), mạng (network / 네트워크)/socket hàng đợi (queue / 큐) và correlation với ứng dụng (application / 애플리케이션) dấu vết (trace / 추적).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** nêu điều cần giải thích; **16. Kết nối các tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **15. bằng chứng vận hành (production evidence / 운영 증거) và workflow** đặt vấn đề; **16. Kết nối các tầng (layer / 계층)** kiểm tra bằng chứng; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## 16. Kết nối các tầng (layer / 계층)
 

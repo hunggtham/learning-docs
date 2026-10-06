@@ -21,7 +21,7 @@ memory pressure
   lượng page reclaimable và cost để reclaim chúng
 ```
 
-> **Chuyển mạch:** Free memory chỉ là page chưa dùng; available còn tính reclaimable cache. Page fault là control transfer, và demand paging đổi startup cost thành first-touch cost trước khi reclaim/dirty-page pressure xuất hiện.
+> **Nối mạch:** Free memory chỉ là page chưa dùng; available còn tính reclaimable cache. Page fault là control transfer, và demand paging đổi startup cost thành first-touch cost trước khi reclaim/dirty-page pressure xuất hiện.
 
 ## 2. Page fault là điều khiển (control / 제어) transfer, không đồng nghĩa lỗi nghiêm trọng
 
@@ -31,7 +31,7 @@ memory pressure
 
 Page-fault count không đủ. Cần biết loại fault, working-set ngữ cảnh (context / 맥락) và độ trễ (latency / 지연 시간) hậu quả.
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)** tiếp nhận điểm tựa từ **2. Page fault là điều khiển (control / 제어) transfer, không đồng nghĩa lỗi nghiêm trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)** nối từ **2. Page fault là điều khiển (control / 제어) transfer, không đồng nghĩa lỗi nghiêm trọng** sang **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)
 
@@ -41,7 +41,7 @@ Demand paging giảm startup bộ nhớ (memory / 메모리) footprint nhưng đ
 
 Nếu latency-sensitive đường dẫn (path / 경로) first-touch một vùng bộ nhớ (memory / 메모리) lớn, page faults có thể xuất hiện đúng lúc yêu cầu (request / 요청) đang chạy dù startup đồ thị (graph / 그래프) nhìn rất nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không** tiếp nhận điểm tựa từ **3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không** nối từ **3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)** sang **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không
 
@@ -51,7 +51,7 @@ Nếu working set vượt sức chứa (capacity / 용량), kernel evict page r�
 
 Thrashing là dạng thất bại (failure mode / 실패 모드) của một bộ nhớ đệm (cache / 캐시) có sức chứa (capacity / 용량) nhỏ hơn active demand, không phải chỉ là “swap chậm”.
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau** tiếp nhận điểm tựa từ **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau** nối từ **4. Working set mới quyết định hệ thống (system / 시스템) có khỏe hay không** sang **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau
 
@@ -61,7 +61,7 @@ Vì vậy cùng 1 GB bộ nhớ (memory / 메모리) nhưng vật lý (physical 
 
 Điều này cũng giải thích vì sao JVM vùng nhớ động (heap / 힙), bản địa (native / 네이티브)/direct buffer và mmap/page bộ nhớ đệm (cache / 캐시) không thể gom thành một con số “tiến trình (process / 프로세스) dùng RAM” đơn giản.
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi** tiếp nhận điểm tựa từ **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Reclaim là eviction bài toán (problem / 문제) của OS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi** nối từ **5. File-backed và anonymous bộ nhớ (memory / 메모리) có reclaim chi phí (cost / 비용) khác nhau** sang **7. Reclaim là eviction bài toán (problem / 문제) của OS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi
 
@@ -69,7 +69,7 @@ Sau `fork`, parent/child có thể cùng map pages read-only. Khi một bên ghi
 
 Tối ưu hóa (optimization / 최적화) dựa trên giả định (assumption / 가정) “chia sẻ chủ yếu read”. Khi pressure/tải công việc (workload / 워크로드) đổi, hành vi (behavior / 동작) cũng đổi. Đây là mẫu (pattern / 패턴) lặp lại xuyên Khoa học máy tính (computer science / 컴퓨터 과학): tối ưu hóa (optimization / 최적화) trì hoãn tài nguyên (resource / 자원) chi phí (cost / 비용) dựa trên expected truy cập (access / 접근) mẫu (pattern / 패턴).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **7. Reclaim là eviction bài toán (problem / 문제) của OS** tiếp nhận điểm tựa từ **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Background reclaim và direct reclaim khác impact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Reclaim là eviction bài toán (problem / 문제) của OS** nối từ **6. sao chép khi ghi (copy-on-write / 쓰기 시 복사): tối ưu hóa (optimization / 최적화) có dạng thất bại (failure mode / 실패 모드) khi ghi (write / 쓰기) mẫu (pattern / 패턴) thay đổi** sang **8. Background reclaim và direct reclaim khác impact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Reclaim là eviction bài toán (problem / 문제) của OS
 
@@ -86,7 +86,7 @@ reclaim nó có tạo I/O không?
 
 Khác biệt là miss chi phí (cost / 비용) có thể từ microseconds tới milliseconds và có thể nằm trực tiếp trên yêu cầu (request / 요청) đường găng (critical path / 임계 경로).
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **8. Background reclaim và direct reclaim khác impact** tiếp nhận điểm tựa từ **7. Reclaim là eviction bài toán (problem / 문제) của OS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Background reclaim và direct reclaim khác impact** nối từ **7. Reclaim là eviction bài toán (problem / 문제) của OS** sang **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Background reclaim và direct reclaim khác impact
 
@@ -96,7 +96,7 @@ Direct reclaim rất quan trọng cho môi trường vận hành (production / �
 
 Do đó tail độ trễ (latency / 지연 시간) có thể tăng trước OOM rất lâu.
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure** tiếp nhận điểm tựa từ **8. Background reclaim và direct reclaim khác impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure** nối từ **8. Background reclaim và direct reclaim khác impact** sang **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure
 
@@ -117,7 +117,7 @@ write burst
 
 Đây là liên kết (connection / 연결) trực tiếp giữa bộ nhớ (memory / 메모리) subsystem và durability/lưu trữ (storage / 저장소) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)** nối từ **9. Dirty pages biến bộ nhớ (memory / 메모리) pressure thành lưu trữ (storage / 저장소) pressure** sang **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. `fsync` thay đổi đặc tả hợp đồng (contract / 계약)
 
@@ -125,7 +125,7 @@ Buffered ghi (write / 쓰기) chỉ nói kernel đã nhận dữ liệu (data / 
 
 Bộ nhớ (memory / 메모리) pressure và durability vì vậy không độc lập. Xem [đường durability xuyên tầng](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)** tiếp nhận điểm tựa từ **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)** nối từ **10. fsync thay đổi đặc tả hợp đồng (contract / 계약)** sang **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)
 
@@ -133,7 +133,7 @@ Swap có thể giúp giữ infrequently used anonymous pages ngoài RAM để ac
 
 Nếu lưu trữ (storage / 저장소)/page-fault vòng lặp (loop / 루프) chiếm phần lớn thời gian, CPU có thể không full nhưng hệ thống (system / 시스템) gần như không tiến triển. Chỉ nhìn CPU utilization dễ bỏ sót thất bại (failure / 실패) này.
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure** tiếp nhận điểm tựa từ **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure** nối từ **11. Swap: flexibility tốt, thrashing mới là thất bại (failure / 실패)** sang **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure
 
@@ -141,7 +141,7 @@ Huge pages giảm số page-table entries và TLB pressure cho large-memory tả
 
 Không có bất biến (invariant / 불변식) “page lớn luôn nhanh hơn”. Cần đo TLB benefit so với compaction/allocation chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure** đã nêu tiêu chí phân biệt, còn **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Huge pages: giảm translation chi phí (cost / 비용), tăng allocation/fragmentation pressure** đặt tiêu chí; **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng** dùng nó để kiểm tra ranh giới, rồi **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** mở rộng hệ quả.
 
 ## 13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng
 
@@ -151,7 +151,7 @@ Ví dụ JVM vùng nhớ động (heap / 힙) 6 GB trong bộ chứa (container 
 
 Sức chứa (capacity / 용량) phải lập luận (reasoning / 추론) trên **total resident/tài nguyên (resource / 자원) footprint tại ranh giới (boundary / 경계) bị limit**, không chỉ managed vùng nhớ động (heap / 힙).
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng** đã nêu tiêu chí phân biệt, còn **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. cgroup tạo bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) riêng** đặt tiêu chí; **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** dùng nó để kiểm tra ranh giới, rồi **15. bằng chứng vận hành (production evidence / 운영 증거)** mở rộng hệ quả.
 
 ## 14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên
 
@@ -169,7 +169,7 @@ latency p95/p99 xấu đi
 
 Nếu alert chỉ đợi tiến trình (process / 프로세스) bị OOM-killed thì khả năng quan sát (observability / 관측 가능성) bắt thất bại (failure / 실패) quá muộn.
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** nêu điều cần giải thích; **15. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. OOM là thất bại (failure / 실패) cuối, không phải tín hiệu đầu tiên** đặt vấn đề; **15. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 15. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -195,7 +195,7 @@ Storage correlation:
 
 Một vùng nhớ động (heap / 힙) đồ thị (graph / 그래프) đẹp không loại trừ host/cgroup pressure; một `free` snapshot cũng không chứng minh working set khỏe.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **15. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** kiểm tra bằng chứng, rồi **17. Mô hình tư duy** mở rộng hệ quả.
 
 ## 16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?
 
@@ -203,13 +203,13 @@ Nếu symptom là major-fault độ trễ (latency / 지연 시간), tầng lưu
 
 Advanced debugging phải theo đặc tả hợp đồng (contract / 계약) tới đúng lower tầng (layer / 계층) thay vì gắn nhãn chung “bộ nhớ (memory / 메모리) leak”.
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **17. Mô hình tư duy** gom các mảnh từ **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Mô hình tư duy** tổng hợp từ **16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Mô hình tư duy
 
 > RAM trong OS là **working-set bộ nhớ đệm (cache / 캐시) + backing chiến lược (strategy / 전략) + allocation hệ thống (system / 시스템)**. Page fault là cơ chế (mechanism / 메커니즘) đưa ánh xạ (mapping / 매핑)/dữ liệu (data / 데이터) vào trạng thái dùng được; reclaim chọn page để tái sử dụng; dirty trạng thái (state / 상태) biến reclaim thành I/O; cgroup tạo tài nguyên (resource / 자원) ranh giới (boundary / 경계); hiệu năng (performance / 성능) pressure xuất hiện thành stall/tail độ trễ (latency / 지연 시간) trước khi OOM. Câu hỏi đúng không phải “RAM dùng bao nhiêu?” mà là **tài nguyên (resource / 자원) nào reclaim được với chi phí (cost / 비용) nào, và yêu cầu (request / 요청) đang trả chi phí (cost / 비용) đó ở đâu?**
 
-> **Chuyển mạch:** Ở chặng này của **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **Kết nối** gom các mảnh từ **17. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **17. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

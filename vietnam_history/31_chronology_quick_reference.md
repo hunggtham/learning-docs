@@ -12,7 +12,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - Khoảng 207 TCN: Triệu Đà hình thành Nam Việt (Nanyue) ở khu vực nam Trung Hoa và Bắc Việt hiện nay.
 - 111 TCN: nhà Hán đánh bại Nam Việt, đưa Bắc Bộ vào imperial commandery hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** tiếp nhận điểm tựa từ **Tiền sử và early trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế kỷ X và early dynastic trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** nối từ **Tiền sử và early trạng thái (state / 상태)** sang **Thế kỷ X và early dynastic trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bắc thuộc và cục bộ (local / 로컬) autonomy attempts
 
@@ -26,7 +26,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 930s: Dương Đình Nghệ và Ngô Quyền tiếp tục contest southern Chinese điều khiển (control / 제어).
 - 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — major break from direct northern imperial quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Thế kỷ X và early dynastic trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lý–Trần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Thế kỷ X và early dynastic trạng thái (state / 상태)** nối từ **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** sang **Lý–Trần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế kỷ X và early dynastic trạng thái (state / 상태)
 
@@ -36,7 +36,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1009: Lý Công Uẩn becomes ruler.
 - 1010: capital moved from Hoa Lư to Thăng Long.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lý–Trần** tiếp nhận điểm tựa từ **Thế kỷ X và early dynastic trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hồ, Minh occupation, Lam Sơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lý–Trần** nối từ **Thế kỷ X và early dynastic trạng thái (state / 상태)** sang **Hồ, Minh occupation, Lam Sơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lý–Trần
 
@@ -47,7 +47,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1285: major Mongol–Yuan invasion defeated.
 - 1287–1288: third major Yuan campaign; Bạch Đằng 1288.
 
-> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Hồ, Minh occupation, Lam Sơn** tiếp nhận điểm tựa từ **Lý–Trần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lê sơ and fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Hồ, Minh occupation, Lam Sơn** nối từ **Lý–Trần** sang **Lê sơ and fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hồ, Minh occupation, Lam Sơn
 
@@ -57,7 +57,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1427: Ming forces defeated/withdrawal settlement.
 - 1428: Lê Lợi establishes restored Đại Việt under Lê dynasty.
 
-> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lê sơ and fragmentation** tiếp nhận điểm tựa từ **Hồ, Minh occupation, Lam Sơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trịnh–Nguyễn and southern frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lê sơ and fragmentation** nối từ **Hồ, Minh occupation, Lam Sơn** sang **Trịnh–Nguyễn and southern frontier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lê sơ and fragmentation
 
@@ -67,7 +67,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1533 onward: Lê restoration movement forms rival court.
 - 1592: Trịnh–Lê forces retake Thăng Long; Mạc power survives in northern pockets afterward.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Trịnh–Nguyễn and southern frontier** tiếp nhận điểm tựa từ **Lê sơ and fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tây Sơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Trịnh–Nguyễn and southern frontier** nối từ **Lê sơ and fragmentation** sang **Tây Sơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trịnh–Nguyễn and southern frontier
 
@@ -77,7 +77,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1698: Nguyễn administration commonly associates Nguyễn Hữu Cảnh mission with formalizing Gia Định administration.
 - Eighteenth century: intensified settlement, trade and political competition in southern regions.
 
-> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Tây Sơn** tiếp nhận điểm tựa từ **Trịnh–Nguyễn and southern frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyễn nineteenth century** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Tây Sơn** nối từ **Trịnh–Nguyễn and southern frontier** sang **Nguyễn nineteenth century**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tây Sơn
 
@@ -88,7 +88,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1788–1789: Qing intervention and Tây Sơn counteroffensive; victory associated with Quang Trung in spring 1789.
 - 1802: Nguyễn Ánh defeats Tây Sơn, becomes emperor Gia Long and establishes Nguyễn dynasty over unified territory.
 
-> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Nguyễn nineteenth century** tiếp nhận điểm tựa từ **Tây Sơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial era and revolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Nguyễn nineteenth century** nối từ **Tây Sơn** sang **Colonial era and revolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyễn nineteenth century
 
@@ -100,7 +100,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1867: French điều khiển (control / 제어) extends over remaining Cochinchina provinces.
 - 1883–1884: treaties establish French protectorate khung phần mềm (framework / 프레임워크) over Annam/Tonkin; colonial hệ thống (system / 시스템) consolidates over following years.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Colonial era and revolution** tiếp nhận điểm tựa từ **Nguyễn nineteenth century** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First Indochina War and division** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Colonial era and revolution** nối từ **Nguyễn nineteenth century** sang **First Indochina War and division**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial era and revolution
 
@@ -113,7 +113,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - August 1945: August Revolution amid Japanese surrender and imperial collapse.
 - 2 September 1945: Hồ Chí Minh declares Democratic Republic of Vietnam in Hanoi.
 
-> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **First Indochina War and division** tiếp nhận điểm tựa từ **Colonial era and revolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1954–1975** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **First Indochina War and division** nối từ **Colonial era and revolution** sang **1954–1975**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## First Indochina War and division
 
@@ -122,7 +122,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 7 May 1954: French position at Điện Biên Phủ falls.
 - July 1954: Geneva agreements establish provisional military regrouping around seventeenth parallel and political khung phần mềm (framework / 프레임워크); not intended as permanent international border.
 
-> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **1954–1975** tiếp nhận điểm tựa từ **First Indochina War and division** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reunification, crisis and reform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **1954–1975** nối từ **First Indochina War and division** sang **Reunification, crisis and reform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1954–1975
 
@@ -133,7 +133,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1973: Paris Peace Accords; U.S. combat forces withdraw.
 - 30 April 1975: Republic of Vietnam government collapses; war ends with northern/revolutionary forces controlling Saigon.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Reunification, crisis and reform** tiếp nhận điểm tựa từ **1954–1975** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) reintegration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Reunification, crisis and reform** nối từ **1954–1975** sang **Toàn cục (global / 전역) reintegration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reunification, crisis and reform
 
@@ -144,7 +144,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1987: Foreign Investment Law enacted.
 - Late 1980s: household-oriented agricultural reforms expand.
 
-> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Toàn cục (global / 전역) reintegration** tiếp nhận điểm tựa từ **Reunification, crisis and reform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Twenty-first century anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Toàn cục (global / 전역) reintegration** nối từ **Reunification, crisis and reform** sang **Twenty-first century anchors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Toàn cục (global / 전역) reintegration
 
@@ -154,7 +154,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 2000/2001: U.S.–Vietnam Bilateral Trade Agreement signed/enters into force.
 - 11 January 2007: Vietnam becomes 150th member of WTO.
 
-> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Twenty-first century anchors** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) reintegration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **How to use this tệp (file / 파일)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Twenty-first century anchors** nối từ **Toàn cục (global / 전역) reintegration** sang **How to use this tệp (file / 파일)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Twenty-first century anchors
 
@@ -163,7 +163,7 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - Early 2020s: COVID-19 stress-tests công khai (public / 공개) health, labor mobility and supply chains.
 - 2020s: aging, climate rủi ro (risk / 위험), năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), productivity and higher-value manufacturing become increasingly central structural questions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **How to use this tệp (file / 파일)** tiếp nhận điểm tựa từ **Twenty-first century anchors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **How to use this tệp (file / 파일)** nối từ **Twenty-first century anchors** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## How to use this tệp (file / 파일)
 

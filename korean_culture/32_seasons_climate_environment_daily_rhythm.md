@@ -8,7 +8,7 @@ Khi người Hàn nói về **bốn mùa (four seasons / 사계절)**, họ khô
 
 Tuy nhiên không nên biến câu “Hàn Quốc có bốn mùa rõ rệt” thành bản chất bất biến. Biến đổi khí hậu, nắng nóng, mùa đông ngắn, mưa lớn và bụi mịn làm trải nghiệm từng mùa thay đổi. Lịch văn hoá có quán tính: lễ hội và kỳ vọng vẫn tồn tại trong khi nền khí hậu đang dịch chuyển.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **봄: mùa xuân như một lần “khởi động lại” xã hội** tiếp nhận điểm tựa từ **“Bốn mùa” không chỉ là mô tả thời tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **봄: mùa xuân như một lần “khởi động lại” xã hội** nối từ **“Bốn mùa” không chỉ là mô tả thời tiết** sang **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 봄: mùa xuân như một lần “khởi động lại” xã hội
 
@@ -18,7 +18,7 @@ Sinh viên mới vào trường, nhân viên mới ở một số tổ chức b�
 
 Trong hệ thống phân tán, đồng bộ giúp các nút cùng chuyển trạng thái. Lịch văn hoá có chức năng tương tự: mọi người đều biết “đây là thời điểm bắt đầu”.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện** tiếp nhận điểm tựa từ **봄: mùa xuân như một lần “khởi động lại” xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **황사 và 미세먼지: hai hiện tượng thường bị trộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện** nối từ **봄: mùa xuân như một lần “khởi động lại” xã hội** sang **황사 và 미세먼지: hai hiện tượng thường bị trộn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện
 
@@ -28,7 +28,7 @@ Sự khan hiếm theo thời gian tạo cảm giác khẩn cấp tập thể. N�
 
 Đây là kinh tế học của trải nghiệm tạm thời. Mạng xã hội còn khuếch đại hiệu ứng: ảnh hoa nở báo cho mọi người rằng “cửa sổ” đã mở, khiến đám đông tăng nhanh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **황사 và 미세먼지: hai hiện tượng thường bị trộn** tiếp nhận điểm tựa từ **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장마: mùa mưa và sự thích nghi của đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **황사 và 미세먼지: hai hiện tượng thường bị trộn** nối từ **벚꽃 và 꽃놀이: cảnh quan trở thành sự kiện** sang **장마: mùa mưa và sự thích nghi của đô thị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 황사 và 미세먼지: hai hiện tượng thường bị trộn
 
@@ -38,7 +38,7 @@ Trong đời sống hằng ngày, khác biệt khoa học có thể được né
 
 Đây là ví dụ dữ liệu môi trường đi vào thói quen qua ứng dụng, cảnh báo thời tiết và chỉ số chất lượng không khí.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **장마: mùa mưa và sự thích nghi của đô thị** tiếp nhận điểm tựa từ **황사 và 미세먼지: hai hiện tượng thường bị trộn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **장마: mùa mưa và sự thích nghi của đô thị** nối từ **황사 và 미세먼지: hai hiện tượng thường bị trộn** sang **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 장마: mùa mưa và sự thích nghi của đô thị
 
@@ -48,7 +48,7 @@ Văn hoá ở đây phát sinh từ ràng buộc môi trường lặp lại. N�
 
 Một chiếc máy hút ẩm nhìn như đồ điện tử tiêu dùng nhưng thực chất là phản ứng của hộ gia đình trước khí hậu.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ** tiếp nhận điểm tựa từ **장마: mùa mưa và sự thích nghi của đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ** nối từ **장마: mùa mưa và sự thích nghi của đô thị** sang **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ
 
@@ -58,7 +58,7 @@ Khi nhiệt độ tăng, nhu cầu điện cực đại cũng tăng cùng lúc. 
 
 Phản ứng văn hoá cũng thay đổi: chọn giờ tập thể dục, vào trung tâm thương mại, quán cà phê, không gian làm mát công cộng hoặc đổi kế hoạch du lịch hè.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá** tiếp nhận điểm tựa từ **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **여름휴가: kỳ nghỉ và sự tập trung theo mùa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá** nối từ **폭염: khi mùa hè trở thành vấn đề hạ tầng sức khoẻ** sang **여름휴가: kỳ nghỉ và sự tập trung theo mùa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá
 
@@ -68,7 +68,7 @@ Không cần hiểu theo nghĩa đen rằng đồ nóng “hạ nhiệt” bằn
 
 Một món ăn trở thành dấu mốc mùa khi xã hội cùng nhớ “đến lúc này thì ăn món đó”. Có thể hình dung chức năng giống một lệnh gọi theo mùa: lịch kích hoạt một hành vi quen thuộc.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **여름휴가: kỳ nghỉ và sự tập trung theo mùa** tiếp nhận điểm tựa từ **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **태풍 và giao tiếp rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **여름휴가: kỳ nghỉ và sự tập trung theo mùa** nối từ **복날 và 삼계탕: thức ăn như sự thích nghi được biểu tượng hoá** sang **태풍 và giao tiếp rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 여름휴가: kỳ nghỉ và sự tập trung theo mùa
 
@@ -78,7 +78,7 @@ Một món ăn trở thành dấu mốc mùa khi xã hội cùng nhớ “đến
 
 Văn hoá nghỉ lễ vì vậy không chỉ là sở thích cá nhân mà là đầu ra của lịch dùng chung.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **태풍 và giao tiếp rủi ro** tiếp nhận điểm tựa từ **여름휴가: kỳ nghỉ và sự tập trung theo mùa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **태풍 và giao tiếp rủi ro** nối từ **여름휴가: kỳ nghỉ và sự tập trung theo mùa** sang **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 태풍 và giao tiếp rủi ro
 
@@ -88,7 +88,7 @@ Sự thích nghi hiện đại không chỉ dựa vào “kinh nghiệm người
 
 Một đường dự báo thay đổi không nhất thiết nghĩa dự báo “sai”; nó có thể phản ánh việc bất định được cập nhật khi có dữ liệu mới. Đây là mô hình tư duy hữu ích khi đọc thông tin thời tiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”** tiếp nhận điểm tựa từ **태풍 và giao tiếp rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **추석: mùa thu như sự đồng bộ gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”** nối từ **태풍 và giao tiếp rủi ro** sang **추석: mùa thu như sự đồng bộ gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”
 
@@ -98,7 +98,7 @@ Văn hoá leo núi mạnh một phần vì Hàn Quốc có nhiều núi gần đ
 
 Đây là liên hệ giữa địa hình và văn hoá giải trí.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **추석: mùa thu như sự đồng bộ gia đình** tiếp nhận điểm tựa từ **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **겨울: khí hậu lạnh đi vào kiến trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **추석: mùa thu như sự đồng bộ gia đình** nối từ **가을: mùa thu, đi bộ đường núi và cảm giác “đẹp nhưng ngắn”** sang **겨울: khí hậu lạnh đi vào kiến trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 추석: mùa thu như sự đồng bộ gia đình
 
@@ -108,7 +108,7 @@ Khi hàng triệu người di chuyển gần cùng thời điểm, đường cao
 
 Một ngày lễ truyền thống vì vậy có thể tạo bài toán kỹ thuật giao thông hiện đại.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **겨울: khí hậu lạnh đi vào kiến trúc** tiếp nhận điểm tựa từ **추석: mùa thu như sự đồng bộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **김장: bảo quản trước khi tủ lạnh phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **겨울: khí hậu lạnh đi vào kiến trúc** nối từ **추석: mùa thu như sự đồng bộ gia đình** sang **김장: bảo quản trước khi tủ lạnh phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 겨울: khí hậu lạnh đi vào kiến trúc
 
@@ -125,7 +125,7 @@ Văn hoá “ngồi sàn” không thể tách khỏi khả năng nhiệt của 
 
 Đây là một chuỗi nhân quả quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **김장: bảo quản trước khi tủ lạnh phổ biến** tiếp nhận điểm tựa từ **겨울: khí hậu lạnh đi vào kiến trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **김장: bảo quản trước khi tủ lạnh phổ biến** nối từ **겨울: khí hậu lạnh đi vào kiến trúc** sang **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 김장: bảo quản trước khi tủ lạnh phổ biến
 
@@ -135,7 +135,7 @@ Ngày nay tủ lạnh, siêu thị và kimchi thương mại làm giảm nhu c�
 
 Đây là ví dụ điển hình của **dịch chuyển chức năng (functional drift)**: chức năng sinh tồn ban đầu giảm, chức năng xã hội và ký ức vẫn còn.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức** tiếp nhận điểm tựa từ **김장: bảo quản trước khi tủ lạnh phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức** nối từ **김장: bảo quản trước khi tủ lạnh phổ biến** sang **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 겨울 간식: đồ ăn mùa đông như tín hiệu ký ức
 
@@ -145,7 +145,7 @@ Ký ức không chỉ được lưu bằng khái niệm trừu tượng. Mùi, n
 
 Vì vậy thực phẩm theo mùa có sức gợi nhớ lớn ngay cả khi nhiều món hiện có thể mua quanh năm.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê** tiếp nhận điểm tựa từ **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê** nối từ **겨울 간식: đồ ăn mùa đông như tín hiệu ký ức** sang **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 수능한파: truyền thuyết dân gian của sự trùng hợp thống kê
 
@@ -155,7 +155,7 @@ Nó cho thấy trí nhớ con người thích gắn sự kiện lớn với đi�
 
 Đây là **thiên lệch sẵn có (availability bias)**. Một cụm từ văn hoá có thể sống lâu hơn thực tế thống kê.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng** tiếp nhận điểm tựa từ **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng** nối từ **수능한파: truyền thuyết dân gian của sự trùng hợp thống kê** sang **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 난방 và 냉방: tiện nghi trở thành văn hoá năng lượng
 
@@ -165,7 +165,7 @@ Giá năng lượng và cách nhiệt công trình ảnh hưởng thói quen. N�
 
 Thực hành văn hoá vì vậy liên tục cập nhật theo kinh tế năng lượng và thông tin môi trường.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng** tiếp nhận điểm tựa từ **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi khí hậu và lịch văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng** nối từ **난방 và 냉방: tiện nghi trở thành văn hoá năng lượng** sang **Biến đổi khí hậu và lịch văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ứng dụng bụi mịn, thời tiết và môi trường được định lượng
 
@@ -183,7 +183,7 @@ cảm giác trực tiếp
 
 Đây là một dạng **văn hoá định lượng (quantified culture)**: môi trường được biến thành bảng điều khiển.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Biến đổi khí hậu và lịch văn hoá** tiếp nhận điểm tựa từ **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Biến đổi khí hậu và lịch văn hoá** nối từ **Ứng dụng bụi mịn, thời tiết và môi trường được định lượng** sang **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến đổi khí hậu và lịch văn hoá
 
@@ -193,7 +193,7 @@ Nếu hoa nở sớm hơn, nắng nóng kéo dài hơn hoặc tuyết hiếm hơ
 
 Tài liệu văn hoá nên giữ khác biệt này để không biến giai thoại thành kết luận khí hậu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau** tiếp nhận điểm tựa từ **Biến đổi khí hậu và lịch văn hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau** nối từ **Biến đổi khí hậu và lịch văn hoá** sang **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau
 
@@ -209,7 +209,7 @@ hôm nay lạnh
 
 Ký ức cá nhân còn có thiên lệch: người mới chuyển đến Hàn ba năm chỉ có ba mùa đông làm mẫu tham chiếu. Vì vậy câu “năm nay thời tiết lạ” là quan sát hữu ích nhưng chưa phải phân tích xu hướng.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện** tiếp nhận điểm tựa từ **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện** nối từ **Thời tiết, khí hậu và chuẩn khí hậu: ba tầng thời gian khác nhau** sang **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện
 
@@ -227,7 +227,7 @@ nhưng
 
 Vì vậy khi đọc dữ liệu, cần hỏi ít nhất: trung bình thay đổi ra sao, cực trị thay đổi ra sao, độ dài mùa thay đổi không và mức biến động có tăng không.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá** tiếp nhận điểm tựa từ **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá** nối từ **Biến thiên và xu hướng: trung bình không kể toàn bộ câu chuyện** sang **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phenology: lịch sinh học có thể rời khỏi lịch văn hoá
 
@@ -242,7 +242,7 @@ lịch sự kiện được đặt trước
 
 Điều này biến biến đổi khí hậu thành vấn đề tổ chức: địa phương phải đặt lịch linh hoạt hơn, cập nhật dự báo và quản lý khách trong cửa sổ ngắn hơn hoặc khó đoán hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **반지하 và rủi ro không phân bố đều trong cùng một thành phố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau** nối từ **Phenology: lịch sinh học có thể rời khỏi lịch văn hoá** sang **반지하 và rủi ro không phân bố đều trong cùng một thành phố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau
 
@@ -259,7 +259,7 @@ lượng mưa vào mỗi đơn vị thời gian
 
 Mật độ bê tông và bề mặt không thấm làm nước chảy nhanh hơn về cống. Cây xanh, đất thấm, hồ điều tiết và hạ tầng thoát nước là các lớp giảm tải khác nhau.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **반지하 và rủi ro không phân bố đều trong cùng một thành phố** tiếp nhận điểm tựa từ **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **반지하 và rủi ro không phân bố đều trong cùng một thành phố** nối từ **Mưa cực đoan: tổng lượng mưa và tốc độ mưa là hai câu hỏi khác nhau** sang **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 반지하 và rủi ro không phân bố đều trong cùng một thành phố
 
@@ -278,7 +278,7 @@ Mưa là mối nguy; sống ở vùng trũng là phơi nhiễm; tuổi, khả n�
 
 Khí hậu vì vậy luôn đi qua cấu trúc xã hội trước khi trở thành thiệt hại.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt** tiếp nhận điểm tựa từ **반지하 và rủi ro không phân bố đều trong cùng một thành phố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hoà tạo một vòng phản hồi hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt** nối từ **반지하 và rủi ro không phân bố đều trong cùng một thành phố** sang **Điều hoà tạo một vòng phản hồi hạ tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt
 
@@ -288,7 +288,7 @@ Trong đợt nóng, sự khác biệt vài độ vào buổi tối có thể qua
 
 Giải pháp không chỉ là “mọi người bật điều hoà”: cây xanh, bóng râm, vật liệu bề mặt, thông gió đô thị, hiệu suất công trình và không gian làm mát công cộng cùng tham gia.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Điều hoà tạo một vòng phản hồi hạ tầng** tiếp nhận điểm tựa từ **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Điều hoà tạo một vòng phản hồi hạ tầng** nối từ **Đảo nhiệt đô thị: thành phố tự tạo thêm tải nhiệt** sang **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều hoà tạo một vòng phản hồi hạ tầng
 
@@ -305,7 +305,7 @@ Máy điều hoà còn thải nhiệt ra môi trường gần công trình. Vì 
 
 Giải pháp bền hơn thường kết hợp cách nhiệt, che nắng, thiết bị hiệu suất cao, quản lý phụ tải và nguồn điện đủ tin cậy.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau** tiếp nhận điểm tựa từ **Điều hoà tạo một vòng phản hồi hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau** nối từ **Điều hoà tạo một vòng phản hồi hạ tầng** sang **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau
 
@@ -322,7 +322,7 @@ nóng ban đêm
 
 Khí hậu vì vậy có thể đi vào công việc và học tập qua một biến tưởng rất riêng tư là giấc ngủ.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau** tiếp nhận điểm tựa từ **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau** nối từ **Nắng nóng ban đêm và giấc ngủ: khí hậu đi vào năng suất hôm sau** sang **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau
 
@@ -332,7 +332,7 @@ Do đó cảnh báo chung chỉ là lớp đầu. Tổ chức lao động còn p
 
 Đây là liên hệ giữa khí hậu và văn hoá công việc: **lịch lao động có thể phải thích nghi với môi trường**, thay vì giả định môi trường luôn phù hợp lịch cũ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau** xác định đầu vào; **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Lao động ngoài trời: cùng nhiệt độ nhưng tải cơ thể khác nhau** đặt đầu vào cho **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng**, rồi **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng
 
@@ -350,7 +350,7 @@ Do đó chương ẩm thực và chương khí hậu không thể tách nhau. M�
 
 Đọc cùng [`07_food_table_fermentation_drinking.md`](07_food_table_fermentation_drinking.md) để thấy chuỗi lạnh và logistics làm tính mùa vụ thay đổi thế nào.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng** xác định đầu vào; **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Nông nghiệp: mùa văn hoá phụ thuộc mùa sinh học và chuỗi cung ứng** đặt đầu vào cho **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá**, rồi **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá
 
@@ -358,7 +358,7 @@ Nhiệt độ biển, dòng chảy và hệ sinh thái ảnh hưởng vùng đá
 
 Điều này cho thấy “đặc sản địa phương” không cố định vĩnh viễn. Nó phụ thuộc sinh thái còn tiếp tục hỗ trợ nguyên liệu đó hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** tiếp nhận điểm tựa từ **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptation và mitigation: thích nghi khác giảm nguyên nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** nối từ **Biển và nghề cá: nhiệt độ nước cũng là một bản đồ văn hoá** sang **Adaptation và mitigation: thích nghi khác giảm nguyên nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh
 
@@ -378,7 +378,7 @@ Có thể phản ứng bằng:
 
 Đây là chuyển từ “khí hậu là phông nền” sang **khí hậu là biến đầu vào của mô hình kinh doanh**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Adaptation và mitigation: thích nghi khác giảm nguyên nhân** tiếp nhận điểm tựa từ **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng phục hồi khác tối ưu cho ngày bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Adaptation và mitigation: thích nghi khác giảm nguyên nhân** nối từ **Du lịch mùa vụ: khí hậu là một phần của mô hình kinh doanh** sang **Khả năng phục hồi khác tối ưu cho ngày bình thường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptation và mitigation: thích nghi khác giảm nguyên nhân
 
@@ -393,7 +393,7 @@ giảm phát thải → giảm mức biến đổi trong tương lai
 
 Một thành phố cần vừa chuẩn bị cho nóng và mưa hiện có, vừa giảm phụ thuộc năng lượng phát thải cao nếu muốn giảm rủi ro dài hạn.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Khả năng phục hồi khác tối ưu cho ngày bình thường** tiếp nhận điểm tựa từ **Adaptation và mitigation: thích nghi khác giảm nguyên nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Khả năng phục hồi khác tối ưu cho ngày bình thường** nối từ **Adaptation và mitigation: thích nghi khác giảm nguyên nhân** sang **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng phục hồi khác tối ưu cho ngày bình thường
 
@@ -413,7 +413,7 @@ hệ thống có dư địa / hồ điều tiết / kế hoạch khẩn cấp
 
 Đây là đánh đổi giữa hiệu quả và dự phòng xuất hiện ở lưới điện, thực phẩm, y tế và giao thông.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua** tiếp nhận điểm tựa từ **Khả năng phục hồi khác tối ưu cho ngày bình thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua** nối từ **Khả năng phục hồi khác tối ưu cho ngày bình thường** sang **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua
 
@@ -431,7 +431,7 @@ người nhận nên làm gì?
 
 Một cảnh báo chỉ nói “nguy hiểm” nhưng không có hành động cụ thể có thể tạo lo lắng nhiều hơn khả năng ứng phó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua** nêu điều cần giải thích; **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Cảnh báo rủi ro: quá nhiều thông báo cũng có thể làm người dùng bỏ qua** đặt vấn đề; **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực** đối chiếu bằng chứng, rồi **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực
 
@@ -441,7 +441,7 @@ Vì vậy cùng một nhiệt độ không tạo cùng một “chi phí”. Kh�
 
 Đây là lý do phân tích văn hoá khí hậu phải nối với [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md).
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực** nêu điều cần giải thích; **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Bất bình đẳng khí hậu: khả năng tránh rủi ro là một nguồn lực** đặt vấn đề; **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** đối chiếu bằng chứng, rồi **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở
 
@@ -460,7 +460,7 @@ biến được đo
 
 Vì vậy chương này chủ yếu giải thích cơ chế. Khi bổ sung số liệu cụ thể, phải dùng nguồn khí tượng chính thức và ghi năm dữ liệu thay vì biến một mùa gần đây thành quy luật lâu dài.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** nêu điều cần giải thích; **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc dữ liệu khí hậu: luôn giữ mốc thời gian và đường cơ sở** đặt vấn đề; **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** đối chiếu bằng chứng, rồi **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục
 
@@ -470,7 +470,7 @@ Mùa là một **đồng hồ bên ngoài (external clock)**. Khi nhiệt độ 
 
 Hàn Quốc hiện đại vận hành trên nhiều đồng hồ cùng lúc: ngày Gregorian, lễ âm lịch, chu kỳ năm học bắt đầu tháng 3 và năm doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** tiếp nhận điểm tựa từ **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** nối từ **Liên hệ kiến thức: tính mùa vụ như đồng hồ toàn cục** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt
 
@@ -486,13 +486,13 @@ thời điểm trung bình đổi
 
 Một mùa không “biến mất” trong một ngày. Thay vào đó, những dấu hiệu dùng để nhận biết mùa có thể đến sớm hơn, muộn hơn, kéo dài khác hoặc biến động mạnh hơn.
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: khí hậu như sự dịch chuyển phân bố, không phải một nút bật/tắt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Mùa không phải phông nền của văn hoá; mùa là một biến điều khiển hành vi. Khí hậu tạo phân bố rủi ro, thiết chế tạo lịch, nhà ở và hạ tầng quyết định mức phơi nhiễm, thị trường tạo sản phẩm thích nghi, còn ký ức biến mẫu lặp lại thành “cảm giác mùa”. Khi khí hậu dịch chuyển, xã hội không chỉ đổi quần áo: lịch lễ hội, nông nghiệp, du lịch, năng lượng, y tế, giao thông và thiết kế nhà ở đều phải tái đồng bộ.
 
-> **Chuyển mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -514,13 +514,13 @@ Một mùa không “biến mất” trong một ngày. Thay vào đó, những 
 
 “Lễ hội chỉ cần giữ ngày cũ là giữ được truyền thống” bỏ qua việc đối tượng sinh học và điều kiện thời tiết có thể dịch chuyển khỏi lịch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn tham khảo định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang **Nguồn tham khảo định hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 Đọc cùng [`07_food_table_fermentation_drinking.md`](07_food_table_fermentation_drinking.md), [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`11_holidays_rites_games_memory.md`](11_holidays_rites_games_memory.md), [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`20_sports_leisure_fan_culture.md`](20_sports_leisure_fan_culture.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md).
 
-> **Chuyển mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn tham khảo định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Mùa, khí hậu, môi trường và nhịp sống hằng ngày**, **Đọc tiếp** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

@@ -32,7 +32,7 @@ Cách này giúp tránh cả hai lỗi: dismiss symptom quan trọng và biến 
 
 ---
 
-> **Chuyển mạch:** Risk is a probability, not a symptom or diagnosis; absolute versus relative risk prevents misleading headlines, then cumulative risk explains chronic outcomes over time.
+> **Nối mạch:** Risk is a probability, not a symptom or diagnosis; absolute versus relative risk prevents misleading headlines, then cumulative risk explains chronic outcomes over time.
 
 ## 2. Nguy cơ tuyệt đối (absolute risk) và nguy cơ tương đối (relative risk) — vì sao headline dễ làm sai trực giác
 
@@ -52,7 +52,7 @@ Cả hai đều đúng nhưng trả lời hai câu hỏi khác nhau. Nguy cơ t�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **3. rủi ro (risk / 위험) tích lũy theo thời gian — bệnh mạn tính (chronic disease) thường là mạng lưới (network) kết quả (outcome / 결과)** tiếp nhận điểm tựa từ **2. Nguy cơ tuyệt đối (absolute risk) và nguy cơ tương đối (relative risk) — vì sao headline dễ làm sai trực giác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. rủi ro (risk / 위험) tích lũy theo thời gian — bệnh mạn tính (chronic disease) thường là mạng lưới (network) kết quả (outcome / 결과)** nối từ **2. Nguy cơ tuyệt đối (absolute risk) và nguy cơ tương đối (relative risk) — vì sao headline dễ làm sai trực giác** sang **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. rủi ro (risk / 위험) tích lũy theo thời gian — bệnh mạn tính (chronic disease) thường là mạng lưới (network) kết quả (outcome / 결과)
 
@@ -72,7 +72,7 @@ Vì vậy prevention hiệu quả thường là **portfolio of modest improvemen
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)** tiếp nhận điểm tựa từ **3. rủi ro (risk / 위험) tích lũy theo thời gian — bệnh mạn tính (chronic disease) thường là mạng lưới (network) kết quả (outcome / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)** nối từ **3. rủi ro (risk / 위험) tích lũy theo thời gian — bệnh mạn tính (chronic disease) thường là mạng lưới (network) kết quả (outcome / 결과)** sang **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)
 
@@ -95,7 +95,7 @@ Cluster này không phải công cụ tự chẩn đoán. Nó giải thích vì 
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất** tiếp nhận điểm tựa từ **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất** nối từ **4. Sức khỏe tim mạch–chuyển hóa (cardiometabolic health) là một mạng (network / 네트워크)** sang **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất
 
@@ -107,7 +107,7 @@ Mô hình tư duy tốt hơn là xem nó như **warning cluster**: khi nhiều s
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)** nối từ **5. Hội chứng chuyển hóa (metabolic syndrome) — tên gọi cho một cluster, không phải một nguyên nhân duy nhất** sang **7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)
 
@@ -119,7 +119,7 @@ Nếu đo tại nhà, consistency giúp giảm noise: cuff phù hợp, nghỉ tr
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa** tiếp nhận điểm tựa từ **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Điều hòa glucose — sợ từng spike sau ăn là sai mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa** nối từ **6. Huyết áp — tải (load / 로드) âm thầm lên vascular hệ thống (system / 시스템)** sang **8. Điều hòa glucose — sợ từng spike sau ăn là sai mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa
 
@@ -131,7 +131,7 @@ Do đó cách nói “LDL xấu, HDL tốt” là shortcut quá thô. Nguy cơ t
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **8. Điều hòa glucose — sợ từng spike sau ăn là sai mô hình tư duy** gom các mảnh từ **7. Lipid — cholesterol cần thiết, nhưng particle exposure vẫn có ý nghĩa** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **9. Khối lượng cơ thể, waist và thành phần cơ thể (body composition) trả lời các câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Glucose regulation và lipid particle exposure bổ sung cho nhau; **body weight, waist và body composition** trả lời các câu hỏi khác nhau về risk.
 
 ## 8. Điều hòa glucose — sợ từng spike sau ăn là sai mô hình tư duy
 
@@ -143,7 +143,7 @@ Muscle activity đặc biệt hữu ích vì contracting muscle có thể tăng 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **9. Khối lượng cơ thể, waist và thành phần cơ thể (body composition) trả lời các câu hỏi khác nhau** gom các mảnh từ **8. Điều hòa glucose — sợ từng spike sau ăn là sai mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **10. Thể lực tim phổi (cardiorespiratory fitness) — reserve của whole oxygen-delivery chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Body weight, waist và body composition phân biệt các phép đo risk; **cardiorespiratory fitness** tiếp theo đo reserve của oxygen-delivery chain.
 
 ## 9. Khối lượng cơ thể, waist và thành phần cơ thể (body composition) trả lời các câu hỏi khác nhau
 
@@ -155,7 +155,7 @@ Một nguyên tắc cần nhớ là **đừng nhầm số có nhiều chữ số
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **9. Khối lượng cơ thể, waist và thành phần cơ thể (body composition) trả lời các câu hỏi khác nhau** xác định đầu vào; **10. Thể lực tim phổi (cardiorespiratory fitness) — reserve của whole oxygen-delivery chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Sedentary hành vi (behavior / 동작) — exercise và sitting không phải cùng một biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Body-composition measures cung cấp bối cảnh; cardiorespiratory fitness phản ánh oxygen-delivery reserve. **Sedentary behavior** kiểm tra exercise và sitting như hai biến khác nhau.
 
 ## 10. Thể lực tim phổi (cardiorespiratory fitness) — reserve của whole oxygen-delivery chuỗi (chain / 사슬)
 
@@ -167,7 +167,7 @@ Thể lực tim phổi tích hợp lung, heart, tuần hoàn (circulation), hemo
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **10. Thể lực tim phổi (cardiorespiratory fitness) — reserve của whole oxygen-delivery chuỗi (chain / 사슬)** xác định đầu vào; **11. Sedentary hành vi (behavior / 동작) — exercise và sitting không phải cùng một biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cardiorespiratory fitness tạo reserve; sedentary behavior mô tả phân bổ hoạt động. **Musculoskeletal health** kiểm tra posture trong toàn bộ load system.
 
 ## 11. Sedentary hành vi (behavior / 동작) — exercise và sitting không phải cùng một biến
 
@@ -179,7 +179,7 @@ Mục tiêu không phải biến mọi phút thành workout. Mục tiêu là tr�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **11. Sedentary hành vi (behavior / 동작) — exercise và sitting không phải cùng một biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)** nối từ **11. Sedentary hành vi (behavior / 동작) — exercise và sitting không phải cùng một biến** sang **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)
 
@@ -191,7 +191,7 @@ Workstation tốt giảm unnecessary tải (load / 로드) nhưng không thay st
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp** tiếp nhận điểm tựa từ **12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp** nối từ **12. Musculoskeletal health — posture chỉ là một phần của tải (load / 로드) hệ thống (system / 시스템)** sang **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp
 
@@ -213,7 +213,7 @@ Vì vậy chronic pain thường cần multimodal lập luận (reasoning / 추�
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi** tiếp nhận điểm tựa từ **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi** nối từ **13. Khoa học thần kinh về đau (pain neuroscience) — đau là đầu ra (output / 출력) bảo vệ, không phải máy đo damage trực tiếp** sang **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi
 
@@ -229,7 +229,7 @@ recent load ≫ capacity → excessive fatigue / injury risk
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)** tiếp nhận điểm tựa từ **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Hearing — cumulative dose quan trọng ngay cả khi không đau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)** nối từ **14. tải (load / 로드) management — tissue cần stress vừa đủ để thích nghi** sang **16. Hearing — cumulative dose quan trọng ngay cả khi không đau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)
 
@@ -241,7 +241,7 @@ Persistent vision thay đổi (change / 변경), eye pain, sudden visual mất m
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **16. Hearing — cumulative dose quan trọng ngay cả khi không đau** tiếp nhận điểm tựa từ **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Skin và UV — quản lý dose thay vì sợ ánh sáng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Hearing — cumulative dose quan trọng ngay cả khi không đau** nối từ **15. Sức khỏe mắt (eye health) — near-work tải (load / 로드), ocular surface và visual môi trường (environment / 환경)** sang **17. Skin và UV — quản lý dose thay vì sợ ánh sáng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Hearing — cumulative dose quan trọng ngay cả khi không đau
 
@@ -253,7 +253,7 @@ Sudden hearing mất mát (loss / 손실), marked asymmetry hoặc tinnitus mớ
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **17. Skin và UV — quản lý dose thay vì sợ ánh sáng** tiếp nhận điểm tựa từ **16. Hearing — cumulative dose quan trọng ngay cả khi không đau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Skin và UV — quản lý dose thay vì sợ ánh sáng** nối từ **16. Hearing — cumulative dose quan trọng ngay cả khi không đau** sang **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Skin và UV — quản lý dose thay vì sợ ánh sáng
 
@@ -265,7 +265,7 @@ Sun protection vì vậy là chiến lược (strategy / 전략) gồm shade, cl
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau** tiếp nhận điểm tựa từ **17. Skin và UV — quản lý dose thay vì sợ ánh sáng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau** nối từ **17. Skin và UV — quản lý dose thay vì sợ ánh sáng** sang **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau
 
@@ -288,7 +288,7 @@ Persistent sleep difficulty, excessive daytime sleepiness, loud snoring kèm bre
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)** nối từ **18. Rối loạn giấc ngủ (sleep disorder) lập luận (reasoning / 추론) — thiếu ngủ và rối loạn giấc ngủ không giống nhau** sang **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)
 
@@ -311,7 +311,7 @@ Pharmacist và clinician thường là nguồn phù hợp để kiểm tra tươ
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)** đã nêu tiêu chí phân biệt, còn **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. An toàn dùng thuốc (medication safety) — thuốc là intervention có mục tiêu (target / 대상), dose và tương tác (interaction / 상호작용)** đặt tiêu chí; **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)** dùng nó để kiểm tra ranh giới, rồi **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** mở rộng cơ chế.
 
 ## 20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)
 
@@ -323,7 +323,7 @@ Một danh sách (list / 목록) đơn giản gồm tên hoạt chất, liều (
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)** đã nêu tiêu chí phân biệt, còn **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Đối chiếu danh sách thuốc (medication reconciliation) và đa dụng thuốc (polypharmacy)** đặt tiêu chí; **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** dùng nó để kiểm tra ranh giới, rồi **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** mở rộng cơ chế.
 
 ## 21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)
 
@@ -344,7 +344,7 @@ mục tiêu cụ thể?
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** tiếp nhận điểm tựa từ **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** nối từ **21. Chất bổ sung — bài toán (problem / 문제) statement phải đứng trước sản phẩm (product / 제품)** sang **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis
 
@@ -356,7 +356,7 @@ Wearable hữu ích nhất cho xu hướng (trend), habit phản hồi (feedback
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard** tiếp nhận điểm tựa từ **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard** nối từ **22. Wearable — bộ cảm nhận (sensor) đầu ra (output / 출력) là estimate, không phải diagnosis** sang **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard
 
@@ -368,7 +368,7 @@ Do đó HRV hữu ích hơn khi hỏi “hôm nay khác baseline của chính m�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện** tiếp nhận điểm tựa từ **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện** nối từ **23. Nhịp tim lúc nghỉ (resting heart rate) và HRV — so với baseline cá nhân quan trọng hơn leaderboard** sang **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện
 
@@ -380,7 +380,7 @@ Cold extremity, movement, poor contact và technical limitation có thể làm r
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking** tiếp nhận điểm tựa từ **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking** nối từ **24. SpO₂ — saturation không phải vận chuyển oxy (oxygen delivery) toàn diện** sang **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking
 
@@ -401,7 +401,7 @@ Xu hướng + triệu chứng + bối cảnh đáng tin hơn một notification 
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking** cho ta quy tắc; **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. tín hiệu (signal / 신호), noise và false alarm trong self-tracking** nêu quy tắc; **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau** thử quy tắc trong tình huống, rồi **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** mở rộng hệ quả.
 
 ## 26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau
 
@@ -424,7 +424,7 @@ Một lab ngoài tham chiếu (reference / 참조) phạm vi (range / 범위) kh
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau** cho ta quy tắc; **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Lab kết quả (result / 결과) — khoảng tham chiếu (reference interval) và clinical threshold không giống nhau** nêu quy tắc; **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** thử quy tắc trong tình huống, rồi **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** mở rộng hệ quả.
 
 ## 27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt
 
@@ -446,7 +446,7 @@ Một số abnormality được phát hiện có thể không bao giờ gây sym
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** tiếp nhận điểm tựa từ **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** nối từ **27. Sàng lọc (screening) — “càng sớm càng nhiều” không phải luôn tốt** sang **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ
 
@@ -456,7 +456,7 @@ Antibiotic chỉ có ích khi mục tiêu (target / 대상) bacterial tiến tr�
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health** tiếp nhận điểm tựa từ **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health** nối từ **28. Vaccination và nhiễm trùng (infection) phòng ngừa (prevention) — nhiều tầng (layer / 계층) phòng thủ** sang **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health
 
@@ -470,7 +470,7 @@ Nếu có nguy cơ tự làm hại bản thân hoặc mất an toàn tức thì,
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)** tiếp nhận điểm tựa từ **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)** nối từ **29. Sức khỏe tâm thần (mental health) và cognitive health là một phần của whole-body health** sang **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)
 
@@ -489,7 +489,7 @@ but reserve, exposure and function can be influenced
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ** tiếp nhận điểm tựa từ **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ** nối từ **30. Lão hóa (aging) — điều đáng chú ý là reserve và hồi phục (recovery) năng lực (capacity)** sang **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ
 
@@ -501,7 +501,7 @@ Không nên tự dùng một home kiểm thử (test / 테스트) để chẩn �
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)** nối từ **31. Frailty và functional markers — hàm (function / 함수) thường có ý nghĩa hơn một biomarker đơn lẻ** sang **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)
 
@@ -521,7 +521,7 @@ Mức (level / 수준) 5 không vô ích. Nó chỉ thường có lower expected
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên** tiếp nhận điểm tựa từ **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên** nối từ **32. Prevention pyramid — xử lý nền trước tối ưu hóa (optimization / 최적화)** sang **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên
 
@@ -539,7 +539,7 @@ Ví dụ chronic sleep restriction + sedentary hành vi (behavior / 동작) + ni
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?** tiếp nhận điểm tựa từ **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?** nối từ **33. Nguy cơ × Impact × Reversibility — khung tư duy (framework) ưu tiên** sang **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?
 
@@ -563,7 +563,7 @@ Khung phần mềm (framework / 프레임워크) này không thay clinical judgm
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable** tiếp nhận điểm tựa từ **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable** nối từ **34. Thang quyết định (decision ladder) — tự chăm sóc, routine, urgent hay emergency?** sang **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable
 
@@ -585,7 +585,7 @@ Suy luận nhân quả (causal reasoning) tốt không có nghĩa biến cơ th�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable** cho ta quy tắc; **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **35. Safe self-experimentation — N-of-1 chỉ phù hợp với low-risk variable** nêu quy tắc; **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)** thử quy tắc trong tình huống, rồi **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** mở rộng hệ quả.
 
 ## 36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)
 
@@ -608,7 +608,7 @@ Mục tiêu không phải tự chẩn đoán từng nhánh. Mục tiêu là bi�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)** cho ta quy tắc; **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **36. Tình huống phân tích (case study): fatigue — từ symptom mơ hồ đến structured lập luận (reasoning / 추론)** nêu quy tắc; **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** thử quy tắc trong tình huống, rồi **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** mở rộng hệ quả.
 
 ## 37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính
 
@@ -620,7 +620,7 @@ Lesson ở đây là: **ergonomics giảm tải (load / 로드); năng lực gi�
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** cho ta quy tắc; **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **39. Weekly–Monthly–Periodic rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **37. Tình huống phân tích: neck–shoulder discomfort ở người làm máy tính** nêu quy tắc; **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** thử quy tắc trong tình huống, rồi **39. Weekly–Monthly–Periodic rà soát (review / 검토)** mở rộng hệ quả.
 
 ## 38. Tình huống phân tích: wearable báo nhịp tim “bất thường”
 
@@ -641,7 +641,7 @@ number
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** cho ta quy tắc; **39. Weekly–Monthly–Periodic rà soát (review / 검토)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **40. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **38. Tình huống phân tích: wearable báo nhịp tim “bất thường”** nêu quy tắc; **39. Weekly–Monthly–Periodic rà soát (review / 검토)** thử quy tắc trong tình huống, rồi **40. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 39. Weekly–Monthly–Periodic rà soát (review / 검토)
 
@@ -663,7 +663,7 @@ Cadence này tránh hai cực: chỉ quan tâm khi crisis xảy ra và đo quá 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **40. Các hiểu lầm phổ biến (common misconceptions)** tiếp nhận điểm tựa từ **39. Weekly–Monthly–Periodic rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **40. Các hiểu lầm phổ biến (common misconceptions)** nối từ **39. Weekly–Monthly–Periodic rà soát (review / 검토)** sang **41. Mô hình tư duy tổng hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -681,7 +681,7 @@ Cadence này tránh hai cực: chỉ quan tâm khi crisis xảy ra và đo quá 
 
 ---
 
-> **Chuyển mạch:** Trong **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **41. Mô hình tư duy tổng hợp** gom các mảnh từ **40. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **42. cầu nối (bridge / 브리지) sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 40; cầu nối sang chapter khác mở rộng risk-prevention mechanism.
 
 ## 41. Mô hình tư duy tổng hợp
 
@@ -709,7 +709,7 @@ Mục tiêu không phải perfect health score. Mục tiêu là làm trajectory 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **42. cầu nối (bridge / 브리지) sang các chapter khác** gom các mảnh từ **41. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **43. Nguồn tham khảo định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cầu nối sang các chapter khác mang mô hình risk-prevention ra ngoài health management; **Nguồn tham khảo định hướng** cung cấp bằng chứng.
 
 ## 42. cầu nối (bridge / 브리지) sang các chapter khác
 
@@ -721,7 +721,7 @@ Mục tiêu không phải perfect health score. Mục tiêu là làm trajectory 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản lý nguy cơ, phòng bệnh và tự theo dõi sức khỏe — Health rủi ro (risk / 위험), Prevention and Self-Monitoring (건강 위험 관리, 예방과 자가 모니터링)**, **42. cầu nối (bridge / 브리지) sang các chapter khác** nêu điều cần giải thích; **43. Nguồn tham khảo định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối đặt câu hỏi liên domain; nguồn tham khảo định hướng đối chiếu bằng chứng để khép mạch.
 
 ## 43. Nguồn tham khảo định hướng
 

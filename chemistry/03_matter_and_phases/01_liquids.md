@@ -18,7 +18,7 @@ chuyển động nhiệt + entropy
 
 Nếu tương tác chi phối mạnh hơn, pha rắn có thể ổn định. Nếu entropy và xu hướng tách xa thắng đủ mạnh, pha khí được ưu tiên. Pha lỏng ổn định trong vùng trung gian của năng lượng tự do.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng có cấu trúc hay không?** tiếp nhận điểm tựa từ **Chất lỏng nằm giữa khí và rắn như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chất lỏng khó nén?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng có cấu trúc hay không?** nối từ **Chất lỏng nằm giữa khí và rắn như thế nào?** sang **Vì sao chất lỏng khó nén?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lỏng có cấu trúc hay không?
 
@@ -30,7 +30,7 @@ Một đại lượng dùng trong vật lý chất lỏng và mô phỏng là **
 
 Trong tinh thể, `g(r)` có các đỉnh kéo dài rất xa. Trong chất lỏng, một vài đỉnh đầu rõ ràng nhưng trật tự suy giảm khi khoảng cách tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Vì sao chất lỏng khó nén?** tiếp nhận điểm tựa từ **Chất lỏng có cấu trúc hay không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuếch tán trong chất lỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Vì sao chất lỏng khó nén?** nối từ **Chất lỏng có cấu trúc hay không?** sang **Khuếch tán trong chất lỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao chất lỏng khó nén?
 
@@ -40,7 +40,7 @@ Do đó **hệ số nén (compressibility)** của chất lỏng nhỏ hơn khí
 
 Tuy nhiên “chất lỏng không nén được” chỉ là xấp xỉ kỹ thuật. Trong thủy lực thông thường xấp xỉ này rất hữu ích, nhưng ở áp suất rất cao hoặc khi nghiên cứu sóng âm cần xét độ nén hữu hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Khuếch tán trong chất lỏng** tiếp nhận điểm tựa từ **Vì sao chất lỏng khó nén?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ nhớt là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Khuếch tán trong chất lỏng** nối từ **Vì sao chất lỏng khó nén?** sang **Độ nhớt là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuếch tán trong chất lỏng
 
@@ -64,7 +64,7 @@ D=\frac{k_BT}{6\pi\eta r}
 
 Nhưng công thức này có thể sai với phân tử nhỏ, chất lỏng rất nhớt hoặc môi trường có cấu trúc phức tạp.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Độ nhớt là gì?** tiếp nhận điểm tựa từ **Khuếch tán trong chất lỏng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Độ nhớt là gì?** nối từ **Khuếch tán trong chất lỏng** sang **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ nhớt là gì?
 
@@ -84,7 +84,7 @@ trong đó:
 
 Ở mức phân tử, dòng chảy đòi hỏi các tiểu phần liên tục vượt qua hàng rào tái sắp xếp cục bộ. Tương tác mạnh, phân tử dài hoặc mạng liên kết rộng có thể làm quá trình đó chậm hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?** tiếp nhận điểm tựa từ **Độ nhớt là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lỏng phi Newton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?** nối từ **Độ nhớt là gì?** sang **Chất lỏng phi Newton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?
 
@@ -94,7 +94,7 @@ Khi nhiệt độ tăng, phân bố năng lượng rộng hơn và các phân t�
 
 Khí có xu hướng ngược lại trong nhiều điều kiện: độ nhớt của khí thường tăng theo nhiệt độ vì vận chuyển động lượng giữa các lớp khí tăng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng phi Newton** tiếp nhận điểm tựa từ **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức căng bề mặt từ đâu ra?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng phi Newton** nối từ **Vì sao tăng nhiệt độ thường làm chất lỏng ít nhớt hơn?** sang **Sức căng bề mặt từ đâu ra?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lỏng phi Newton
 
@@ -104,7 +104,7 @@ Không phải mọi chất lỏng đều có \(\tau\propto dv/dy\). Dung dịch 
 
 Đây là ví dụ cho thấy tính chất dòng chảy không chỉ đến từ “độ mạnh lực liên phân tử” mà còn từ cấu trúc tập thể và thời gian tái tổ chức của hệ.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Sức căng bề mặt từ đâu ra?** tiếp nhận điểm tựa từ **Chất lỏng phi Newton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất Laplace và kích thước giọt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Sức căng bề mặt từ đâu ra?** nối từ **Chất lỏng phi Newton** sang **Áp suất Laplace và kích thước giọt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức căng bề mặt từ đâu ra?
 
@@ -120,7 +120,7 @@ với \(\gamma\) là **sức căng bề mặt (surface tension / 표면 장력)*
 
 Chính vì hệ muốn giảm diện tích bề mặt nên giọt nhỏ có xu hướng gần hình cầu nếu trọng lực không chi phối mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Áp suất Laplace và kích thước giọt** tiếp nhận điểm tựa từ **Sức căng bề mặt từ đâu ra?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làm ướt và góc tiếp xúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Áp suất Laplace và kích thước giọt** nối từ **Sức căng bề mặt từ đâu ra?** sang **Làm ướt và góc tiếp xúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất Laplace và kích thước giọt
 
@@ -136,7 +136,7 @@ Quan hệ này quan trọng với bọt, aerosol, phổi, nhũ tương và công
 
 Trong phế nang, chất hoạt động bề mặt sinh học làm giảm sức căng bề mặt và giúp ngăn các túi khí nhỏ bị xẹp quá dễ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Làm ướt và góc tiếp xúc** tiếp nhận điểm tựa từ **Áp suất Laplace và kích thước giọt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mao dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Làm ướt và góc tiếp xúc** nối từ **Áp suất Laplace và kích thước giọt** sang **Mao dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làm ướt và góc tiếp xúc
 
@@ -154,7 +154,7 @@ Khái niệm này quan trọng trong:
 
 Một bề mặt “kỵ nước” không chỉ do thành phần hóa học; độ nhám vi mô cũng có thể làm hành vi thấm ướt thay đổi mạnh.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Mao dẫn** tiếp nhận điểm tựa từ **Làm ướt và góc tiếp xúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bay hơi xảy ra dưới nhiệt độ sôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Mao dẫn** nối từ **Làm ướt và góc tiếp xúc** sang **Bay hơi xảy ra dưới nhiệt độ sôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mao dẫn
 
@@ -172,7 +172,7 @@ trong đó \(\theta\) là góc tiếp xúc.
 
 Mao dẫn là cơ chế quan trọng trong giấy, đất, gỗ, vật liệu xốp và nhiều hệ vi lưu.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Bay hơi xảy ra dưới nhiệt độ sôi** tiếp nhận điểm tựa từ **Mao dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất hơi cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Bay hơi xảy ra dưới nhiệt độ sôi** nối từ **Mao dẫn** sang **Áp suất hơi cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bay hơi xảy ra dưới nhiệt độ sôi
 
@@ -182,7 +182,7 @@ Trong một chất lỏng, các phân tử có phân bố năng lượng. Một 
 
 Bay hơi làm các phân tử năng lượng cao rời hệ ưu tiên, nên phần chất lỏng còn lại có thể nguội đi. Đây là cơ chế cơ bản của mồ hôi làm mát cơ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Áp suất hơi cân bằng** tiếp nhận điểm tựa từ **Bay hơi xảy ra dưới nhiệt độ sôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ nhiệt độ – áp suất hơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Áp suất hơi cân bằng** nối từ **Bay hơi xảy ra dưới nhiệt độ sôi** sang **Liên hệ nhiệt độ – áp suất hơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất hơi cân bằng
 
@@ -192,7 +192,7 @@ Trong bình kín, phân tử liên tục bay hơi và ngưng tụ. Khi tốc đ�
 
 Áp suất hơi phụ thuộc nhiệt độ và bản chất chất lỏng, không phụ thuộc trực tiếp lượng chất lỏng còn lại miễn là vẫn còn cả pha lỏng và pha hơi ở cân bằng.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Liên hệ nhiệt độ – áp suất hơi** tiếp nhận điểm tựa từ **Áp suất hơi cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự sôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Liên hệ nhiệt độ – áp suất hơi** nối từ **Áp suất hơi cân bằng** sang **Sự sôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ nhiệt độ – áp suất hơi
 
@@ -208,7 +208,7 @@ cho thấy áp suất hơi tăng rất nhanh với nhiệt độ.
 
 Đây là cầu nối giữa nhiệt động lực học và hiện tượng đời sống như phơi khô, chưng cất hoặc nấu ăn ở vùng cao.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Sự sôi** tiếp nhận điểm tựa từ **Liên hệ nhiệt độ – áp suất hơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo mầm khi sôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Sự sôi** nối từ **Liên hệ nhiệt độ – áp suất hơi** sang **Tạo mầm khi sôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự sôi
 
@@ -218,7 +218,7 @@ Do đó nhiệt độ sôi không phải một hằng số tuyệt đối của 
 
 Ở vùng cao, áp suất khí quyển thấp hơn nên nước sôi dưới `100 °C`. Trong nồi áp suất, áp suất tăng nên nước có thể đạt nhiệt độ lớn hơn trước khi sôi mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Tạo mầm khi sôi** tiếp nhận điểm tựa từ **Sự sôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Tạo mầm khi sôi** nối từ **Sự sôi** sang **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo mầm khi sôi
 
@@ -228,7 +228,7 @@ Khi bọt bất ngờ hình thành, chất lỏng có thể sôi bùng. Đây l�
 
 Các điểm nhám, hạt bụi hoặc đá bọt giúp tạo mầm và làm sôi ổn định hơn.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”** tiếp nhận điểm tựa từ **Tạo mầm khi sôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lỏng trong sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”** nối từ **Tạo mầm khi sôi** sang **Chất lỏng trong sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”
 
@@ -240,7 +240,7 @@ Nhiệt dung cao giúp đại dương và cơ thể sống đệm nhiệt. Sức
 
 Các tính chất này vẫn là hệ quả của nhiệt động lực học và cấu trúc phân tử, không phải ngoại lệ khỏi vật lý.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng trong sinh học** tiếp nhận điểm tựa từ **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lỏng trong pin và vật liệu năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng trong sinh học** nối từ **Nước là chất lỏng đặc biệt nhưng không “vi phạm quy luật”** sang **Chất lỏng trong pin và vật liệu năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lỏng trong sinh học
 
@@ -248,7 +248,7 @@ Tế bào hoạt động trong môi trường nước cô đặc với protein, 
 
 Vận chuyển qua màng, khuếch tán thuốc, phản ứng enzyme và sự gấp cuộn protein đều phụ thuộc tính chất của pha lỏng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng trong pin và vật liệu năng lượng** tiếp nhận điểm tựa từ **Chất lỏng trong sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Chất lỏng trong pin và vật liệu năng lượng** nối từ **Chất lỏng trong sinh học** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lỏng trong pin và vật liệu năng lượng
 
@@ -263,7 +263,7 @@ Chất điện ly lỏng trong pin phải đồng thời:
 
 Một dung môi rất phân cực có thể hòa tan muối tốt nhưng tạo solvation quá mạnh, làm desolvation ở giao diện chậm hơn. Đây là ví dụ rõ của sự đánh đổi (trade-off / 트레이드오프) trong thiết kế chất lỏng kỹ thuật.
 
-> **Chuyển mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Chất lỏng trong pin và vật liệu năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Các hiểu lầm thường gặp** nối từ **Chất lỏng trong pin và vật liệu năng lượng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -287,7 +287,7 @@ Không. Mọi chất lỏng có độ bay hơi hữu hạn đều tạo hơi ở
 
 Không. Hình dạng, rối chuỗi, cấu trúc tập thể và tốc độ tái sắp xếp cũng quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

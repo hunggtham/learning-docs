@@ -6,7 +6,7 @@
 
 Tệp (file / 파일) này không đòi hỏi biết trước lịch sử Việt Nam. Nó cung cấp phương pháp dùng cho toàn bộ thư viện (library / 라이브러리): **khi một câu chuyện lịch sử được kể, ta biết điều đó từ đâu và mức độ chắc chắn đến đâu?** Kết quả sẽ được dùng ngay ở [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) và đặc biệt quan trọng khi đọc Văn Lang – Âu Lạc trong [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md).
 
-> **Chuyển mạch:** **Prerequisite và câu hỏi trung tâm** xác định cần giải thích gì; **Niên đại là coordinate, không phải explanation** giữ mốc đúng chỗ, còn **Nguồn không phải “camera quay quá khứ”** giới hạn điều có thể suy ra.
+> **Nối mạch:** **Prerequisite và câu hỏi trung tâm** xác định cần giải thích gì; **Niên đại là coordinate, không phải explanation** giữ mốc đúng chỗ, còn **Nguồn không phải “camera quay quá khứ”** giới hạn điều có thể suy ra.
 
 ## Niên đại là coordinate, không phải explanation
 
@@ -24,7 +24,7 @@ actor và institution phản ứng ra sao?
 state mới khác gì, và cái gì vẫn tiếp tục?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cách đọc lịch sử Việt Nam: bằng chứng (evidence / 증거), niên đại và quan hệ nhân quả**, **Niên đại là coordinate, không phải explanation** nêu điều cần giải thích; **Nguồn (source / 소스) không phải “camera quay quá khứ”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cách đọc lịch sử Việt Nam: bằng chứng (evidence / 증거), niên đại và quan hệ nhân quả**, **Niên đại là coordinate, không phải explanation** đặt vấn đề; **Nguồn (source / 소스) không phải “camera quay quá khứ”** đối chiếu bằng chứng, rồi **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nguồn (source / 소스) không phải “camera quay quá khứ”
 
@@ -32,7 +32,7 @@ state mới khác gì, và cái gì vẫn tiếp tục?
 
 Với thời chưa có nhiều văn bản bản địa, **material culture (văn hóa vật chất)** trở nên quan trọng: settlement, mộ táng, gốm, công cụ, phế liệu sản xuất, dấu thực vật, thành lũy, đường nước. Nhưng archaeology cũng là suy luận (inference / 추론). Tìm thấy nhiều đầu mũi tên đồng ở Cổ Loa cho phép nói nhiều về môi trường vận hành (production / 운영 환경) và military material; nó không tự động chứng minh từng chi tiết của chuyện “nỏ thần”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc lịch sử Việt Nam: bằng chứng (evidence / 증거), niên đại và quan hệ nhân quả**, **Nguồn (source / 소스) không phải “camera quay quá khứ”** nêu điều cần giải thích; **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tránh teleology: quá khứ không “biết trước” sẽ thành Việt Nam hiện nay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cách đọc lịch sử Việt Nam: bằng chứng (evidence / 증거), niên đại và quan hệ nhân quả**, **Nguồn (source / 소스) không phải “camera quay quá khứ”** đặt vấn đề; **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ** đối chiếu bằng chứng, rồi **Tránh teleology: quá khứ không “biết trước” sẽ thành Việt Nam hiện nay** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ
 
@@ -40,7 +40,7 @@ Lạc Long Quân – Âu Cơ, Hùng Vương, Sơn Tinh – Thủy Tinh hay Mỵ 
 
 Sai lầm có hai cực. Một cực biến truyền thuyết thành fact literal: vì chuyện kể có vua Hùng nên mọi niên đại truyền thống đều được coi là archaeology đã xác nhận. Cực còn lại vứt truyền thuyết đi vì “không khoa học”. Cách đọc tốt hơn là tách câu hỏi: câu chuyện được ghi thành văn khi nào, motif nào có thể cổ hơn văn bản, nó được dùng trong ritual/politics ra sao, và archaeology xác nhận hoặc không xác nhận phần nào.
 
-> **Chuyển mạch:** Tách myth, memory và history giúp tránh teleology; từ đó **Kinh tế lịch sử không chỉ là “thời đó nghèo hay giàu”** có thể hỏi về thể chế, phân phối và năng lực huy động.
+> **Nối mạch:** Tách myth, memory và history giúp tránh teleology; từ đó **Kinh tế lịch sử không chỉ là “thời đó nghèo hay giàu”** có thể hỏi về thể chế, phân phối và năng lực huy động.
 
 ## Tránh teleology: quá khứ không “biết trước” sẽ thành Việt Nam hiện nay
 
@@ -48,7 +48,7 @@ Sai lầm có hai cực. Một cực biến truyền thuyết thành fact litera
 
 Vì vậy cụm “người Việt” phải được dùng đúng ngữ cảnh (context / 맥락). Với thời tiền sử, đôi khi an toàn hơn khi nói “cư dân của lưu vực sông Hồng/sông Mã” hoặc “cộng đồng Đông Sơn” thay vì giả định định danh (identity / 식별자) hiện đại đã tồn tại nguyên dạng.
 
-> **Chuyển mạch:** Sau khi bỏ cách đo nghèo/giàu đơn giản, **Di tích hiện tại có nhiều lớp thời gian** cho thấy kinh tế, quyền lực và ký ức chồng lên cùng một địa điểm.
+> **Nối mạch:** Sau khi bỏ cách đo nghèo/giàu đơn giản, **Di tích hiện tại có nhiều lớp thời gian** cho thấy kinh tế, quyền lực và ký ức chồng lên cùng một địa điểm.
 
 ## Kinh tế lịch sử không chỉ là “thời đó nghèo hay giàu”
 
@@ -56,7 +56,7 @@ Khi thư viện (library / 라이브러리) nói về economy, câu hỏi cụ t
 
 Một nền kinh tế lúa nước có thể tạo surplus, nhưng không có phương trình đơn giản “lúa nước → nhà nước tập quyền”. Ta phải tìm biến trung gian như population density, labor coordination, warfare, craft specialization, trade và legitimacy.
 
-> **Chuyển mạch:** **Di tích hiện tại có nhiều lớp thời gian** buộc người đọc tách lớp vật chất khỏi diễn giải; **misconceptions cần khóa ngay từ đầu** ghi lại các suy luận sai dễ lặp.
+> **Nối mạch:** **Di tích hiện tại có nhiều lớp thời gian** buộc người đọc tách lớp vật chất khỏi diễn giải; **misconceptions cần khóa ngay từ đầu** ghi lại các suy luận sai dễ lặp.
 
 ## Di tích hiện tại có nhiều lớp thời gian
 
@@ -64,7 +64,7 @@ Một địa điểm lịch sử thường giống một software hệ thống (
 
 Do đó mỗi mục “đi đâu để nhìn thấy lịch sử” trong thư viện (library / 라이브러리) sẽ nói rõ **ta đang nhìn vật lý (physical / 물리적) bằng chứng (evidence / 증거), later commemoration hay cả hai**.
 
-> **Chuyển mạch:** Khi các misconception đã được nêu, **Mô hình tư duy bàn giao** chốt cách phân biệt bằng chứng, diễn giải và nhân quả để dùng lại ở mọi chapter.
+> **Nối mạch:** Khi các misconception đã được nêu, **Mô hình tư duy bàn giao** chốt cách phân biệt bằng chứng, diễn giải và nhân quả để dùng lại ở mọi chapter.
 
 ## Dùng chung (common / 공통) misconceptions cần khóa ngay từ đầu
 
@@ -72,7 +72,7 @@ Do đó mỗi mục “đi đâu để nhìn thấy lịch sử” trong thư vi
 
 Những ranh giới (boundary / 경계) này sẽ được nhắc lại tại đúng chapter thay vì trở thành disclaimer lặp đi lặp lại.
 
-> **Chuyển mạch:** **Mô hình tư duy bàn giao** khép phương pháp bằng một quy tắc vận hành: nêu claim, chỉ nguồn, tách mức chắc chắn và ghi rõ giới hạn trước khi chuyển sang lịch sử cụ thể.
+> **Nối mạch:** **Mô hình tư duy bàn giao** khép phương pháp bằng một quy tắc vận hành: nêu claim, chỉ nguồn, tách mức chắc chắn và ghi rõ giới hạn trước khi chuyển sang lịch sử cụ thể.
 
 ## Mô hình tư duy (mental model / 사고 모델) bàn giao
 

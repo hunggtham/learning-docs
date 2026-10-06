@@ -38,13 +38,13 @@ flow: pilgrims, donations, translations, letters, relics, ideas, disease
 
 Đừng đo “sức mạnh” tôn giáo chỉ bằng số tín đồ. Khả năng duy trì trường học, cứu trợ, ký ức và authority qua khủng hoảng có thể quan trọng hơn headcount.
 
-> **Chuyển mạch:** Trong **05 — Religions and transregional networks: ý tưởng đi cùng người và hàng**, **Cơ chế lan truyền và địa phương hoá** đã nêu tiêu chí phân biệt, còn **So sánh và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cơ chế lan truyền và địa phương hoá cho biết ý tưởng đi theo người, hàng và thiết chế thế nào; **So sánh và giới hạn** kiểm tra ranh giới giữa trao đổi và áp đặt. **Bằng chứng, giới hạn và cầu nối** đưa tiêu chí đó về dấu vết cụ thể.
 
 ## So sánh và giới hạn
 
 Indian Ocean làm nổi bật merchant diaspora và cổng (port / 포트) cosmopolitanism; Silk Roads làm nổi bật caravan/translation; steppe làm nổi bật mobile court và conquest; các mạng ở châu Phi và châu Mỹ cho thấy diffusion không chỉ chạy Đông–Tây. “World religion” là một category hữu ích nhưng có thể che khuất ancestor practice, cục bộ (local / 로컬) ecology và các tradition không tập trung.
 
-> **Chuyển mạch:** Từ **So sánh và giới hạn** sang **Bằng chứng, giới hạn và cầu nối**, hãy kiểm tra xem cùng một mạng tôn giáo được duy trì bằng văn bản, thiết chế và thực hành địa phương thế nào; phần sau dùng các dấu vết đó để giới hạn kết luận về lan truyền.
+> **Nối mạch:** So sánh chỉ có giá trị khi biết mạng tôn giáo được duy trì bằng văn bản, thiết chế hay thực hành địa phương. **Bằng chứng, giới hạn và cầu nối** dùng các dấu vết đó để giới hạn kết luận về lan truyền.
 
 ## Bằng chứng, giới hạn và cầu nối
 

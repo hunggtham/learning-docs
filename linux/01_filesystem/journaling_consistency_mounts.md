@@ -27,7 +27,7 @@ Nếu máy mất điện ở giữa chuỗi này, một phần đã xuống disk
 
 Filesystem phải có cách phục hồi để cấu trúc vẫn hợp lệ.
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Journaling giải quyết điều gì?** tiếp nhận điểm tựa từ **Vấn đề cơ bản: một thao tác lô-gic (logic / 논리) có thể cần nhiều thao tác vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Journaling giải quyết điều gì?** nối từ **Vấn đề cơ bản: một thao tác lô-gic (logic / 논리) có thể cần nhiều thao tác vật lý** sang **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journaling giải quyết điều gì?
 
@@ -37,7 +37,7 @@ Sau crash, filesystem có thể kiểm tra journal để biết giao dịch (tra
 
 Điểm quan trọng là journaling chủ yếu giúp **tính nhất quán siêu dữ liệu (metadata / 메타데이터)** và thời gian phục hồi. Nó không có nghĩa mọi byte ứng dụng (application / 애플리케이션) vừa ghi đều chắc chắn đã bền vững trên lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Journaling giải quyết điều gì?** nêu điều cần giải thích; **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **write() không đồng nghĩa dữ liệu đã bền vững** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Journaling giải quyết điều gì?** đặt vấn đề; **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling** đối chiếu bằng chứng, rồi **write() không đồng nghĩa dữ liệu đã bền vững** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling
 
@@ -51,7 +51,7 @@ Các filesystem có thể journal siêu dữ liệu (metadata / 메타데이터)
 
 Không nên đổi mount chế độ (mode / 모드) chỉ vì thấy benchmark trên internet. sự đánh đổi (trade-off / 트레이드오프) liên quan durability, thông lượng (throughput / 처리량), độ trễ (latency / 지연 시간) và tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling** nêu điều cần giải thích; **write() không đồng nghĩa dữ liệu đã bền vững** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **sync, fsync và flush** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling** đặt vấn đề; **write() không đồng nghĩa dữ liệu đã bền vững** đối chiếu bằng chứng, rồi **sync, fsync và flush** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `write()` không đồng nghĩa dữ liệu đã bền vững
 
@@ -71,7 +71,7 @@ Kernel có thể nhận dữ liệu vào page bộ nhớ đệm (cache / 캐시)
 
 Các hệ quản trị cơ sở dữ liệu thường có write-ahead log và cơ chế fsync riêng để đạt durability theo ACID.
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **write() không đồng nghĩa dữ liệu đã bền vững** nêu điều cần giải thích; **sync, fsync và flush** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Atomic rename** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **write() không đồng nghĩa dữ liệu đã bền vững** đặt vấn đề; **sync, fsync và flush** đối chiếu bằng chứng, rồi **Atomic rename** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `sync`, `fsync` và flush
 
@@ -89,7 +89,7 @@ Nhưng durability cuối cùng còn phụ thuộc lưu trữ (storage / 저장�
 
 Do đó “đã fsync” là một guarantee mạnh ở OS giao diện (interface / 인터페이스), nhưng phần cứng/lưu trữ (storage / 저장소) ngăn xếp (stack / 스택) vẫn phải thực hiện đúng đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Atomic rename** tiếp nhận điểm tựa từ **sync, fsync và flush** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao cross-filesystem rename không giống nhau?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Atomic rename** nối từ **sync, fsync và flush** sang **Tại sao cross-filesystem rename không giống nhau?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Atomic rename
 
@@ -116,7 +116,7 @@ fsync directory khi durability của directory entry là yêu cầu nghiêm ng�
 
 Ứng dụng (application / 애플리케이션) updater, trình quản lý gói (package manager / 패키지 관리자) và cấu hình (config / 설정) triển khai (deployment / 배포) thường tận dụng ý tưởng này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Tại sao cross-filesystem rename không giống nhau?** tiếp nhận điểm tựa từ **Atomic rename** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Tại sao cross-filesystem rename không giống nhau?** nối từ **Atomic rename** sang **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao cross-filesystem rename không giống nhau?
 
@@ -137,7 +137,7 @@ findmnt -T /tmp/a
 findmnt -T /data
 ```
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **Tại sao cross-filesystem rename không giống nhau?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao umount báo busy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)** nối từ **Tại sao cross-filesystem rename không giống nhau?** sang **Vì sao umount báo busy?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)
 
@@ -162,7 +162,7 @@ thì nội dung underlying directory lại thấy được.
 
 Điều này giải thích một số tình huống “tệp (file / 파일) biến mất sau mount” nhưng thực ra dữ liệu cũ vẫn nằm ở filesystem bên dưới.
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Vì sao umount báo busy?** tiếp nhận điểm tựa từ **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bind mount** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Vì sao umount báo busy?** nối từ **Mount điểm (point / 지점) và không gian tên (namespace / 네임스페이스)** sang **Bind mount**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao `umount` báo busy?
 
@@ -185,7 +185,7 @@ sudo fuser -vm /data
 
 Không nên dùng forced/lazy unmount như phản xạ đầu tiên trên môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Bind mount** tiếp nhận điểm tựa từ **Vì sao umount báo busy?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Read-only mount** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Bind mount** nối từ **Vì sao umount báo busy?** sang **Read-only mount**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bind mount
 
@@ -199,7 +199,7 @@ Hai pathname khác nhau có thể dẫn đến cùng underlying objects.
 
 Containers sử dụng mount không gian tên (namespace / 네임스페이스) và bind mount rất nhiều để tạo filesystem view riêng.
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Read-only mount** tiếp nhận điểm tựa từ **Bind mount** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **noexec, nosuid, nodev** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Read-only mount** nối từ **Bind mount** sang **noexec, nosuid, nodev**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Read-only mount
 
@@ -213,7 +213,7 @@ Một tiến trình (process / 프로세스) dù có UID gốc (root / 루트) h
 
 Đây là ví dụ rõ rằng permission bits chỉ là một tầng (layer / 계층) trong quyết định truy cập (access / 접근).
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **noexec, nosuid, nodev** tiếp nhận điểm tựa từ **Read-only mount** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ext4, XFS và lựa chọn filesystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **noexec, nosuid, nodev** nối từ **Read-only mount** sang **ext4, XFS và lựa chọn filesystem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `noexec`, `nosuid`, `nodev`
 
@@ -225,7 +225,7 @@ Mount options có thể thay đổi chính sách (policy / 정책):
 
 Các option này thường dùng trong hardening, nhưng có thể phá ứng dụng (application / 애플리케이션) nếu áp dụng mà không hiểu nhu cầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **ext4, XFS và lựa chọn filesystem** tiếp nhận điểm tựa từ **noexec, nosuid, nodev** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Filesystem check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **ext4, XFS và lựa chọn filesystem** nối từ **noexec, nosuid, nodev** sang **Filesystem check**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ext4, XFS và lựa chọn filesystem
 
@@ -242,7 +242,7 @@ Lựa chọn nên dựa trên:
 - hiệu năng (performance / 성능) characteristics;
 - tính năng (feature / 기능) requirements.
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Filesystem check** tiếp nhận điểm tựa từ **ext4, XFS và lựa chọn filesystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Filesystem check** nối từ **ext4, XFS và lựa chọn filesystem** sang **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Filesystem check
 
@@ -260,7 +260,7 @@ thường yêu cầu filesystem unmounted hoặc boot vào maintenance ngữ c�
 
 Trước repair phải hiểu lưu trữ (storage / 저장소) topology và có backup nếu có thể.
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency** tiếp nhận điểm tựa từ **Filesystem check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency** nối từ **Filesystem check** sang **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency
 
@@ -279,7 +279,7 @@ Hai tệp (file / 파일)/cơ sở dữ liệu (database / 데이터베이스) p
 
 Filesystem bảo vệ cấu trúc lưu trữ; cơ sở dữ liệu (database / 데이터베이스) bảo vệ invariants cấp dữ liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)** tiếp nhận điểm tựa từ **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)** nối từ **Crash consistency không bằng ứng dụng (application / 애플리케이션) consistency** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)
 
@@ -287,7 +287,7 @@ Layered bộ chứa (container / 컨테이너) filesystems thường dùng sao c
 
 Điều này có thể làm I/O hành vi (behavior / 동작) khác host filesystem trực tiếp, đặc biệt với cơ sở dữ liệu (database / 데이터베이스) tải công việc (workload / 워크로드). Vì vậy cơ sở dữ liệu (database / 데이터베이스) persistent dữ liệu (data / 데이터) thường được đặt trên volume riêng thay vì writable bộ chứa (container / 컨테이너) tầng (layer / 계층).
 
-> **Chuyển mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mô hình tư duy** gom các mảnh từ **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Mô hình tư duy** tổng hợp từ **Mối liên hệ với ảnh bộ chứa (container image / 컨테이너 이미지)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -311,7 +311,7 @@ physical or remote storage
 
 Một lời gọi ghi chỉ đi qua từng tầng (layer / 계층) theo đặc tả hợp đồng (contract / 계약) tương ứng. Khi đánh giá “dữ liệu đã an toàn chưa?”, phải hỏi an toàn tới tầng (layer / 계층) nào.
 
-> **Chuyển mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Journaling, tính nhất quán và cơ chế mount của filesystem**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Những hiểu lầm phổ biến
 

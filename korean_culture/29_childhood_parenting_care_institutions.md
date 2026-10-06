@@ -8,7 +8,7 @@ Trong văn hoá Hàn Quốc hiện đại, việc có con không chỉ là một
 
 Điều này giải thích một nghịch lý: xã hội có thể rất coi trọng trẻ em và giáo dục nhưng đồng thời nhiều người trẻ vẫn trì hoãn hoặc từ bỏ việc sinh con. Hai hiện tượng không mâu thuẫn. Nếu chuẩn “nuôi con tốt” trở nên đắt về thời gian, tiền bạc và năng lượng, mức đầu tư kỳ vọng trên mỗi trẻ tăng, khiến quyết định sinh thêm con khó hơn.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **태교: trước khi sinh đã bắt đầu một vai trò xã hội** tiếp nhận điểm tựa từ **Trẻ em không chỉ là một thành viên mới của gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **태교: trước khi sinh đã bắt đầu một vai trò xã hội** nối từ **Trẻ em không chỉ là một thành viên mới của gia đình** sang **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 태교: trước khi sinh đã bắt đầu một vai trò xã hội
 
@@ -18,7 +18,7 @@ Trong văn hoá Hàn Quốc hiện đại, việc có con không chỉ là một
 
 Về mặt xã hội học, `태교` cho thấy vai trò làm cha mẹ bắt đầu trước khi đứa trẻ chào đời. Người lớn bắt đầu thay đổi hành vi vì một vai trò tương lai chưa xuất hiện hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc** tiếp nhận điểm tựa từ **태교: trước khi sinh đã bắt đầu một vai trò xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc** nối từ **태교: trước khi sinh đã bắt đầu một vai trò xã hội** sang **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc
 
@@ -37,7 +37,7 @@ chăm sóc do gia đình cung cấp giảm
 
 Điều này không có nghĩa mọi gia đình đều sử dụng `산후조리원`, cũng không có nghĩa mọi thực hành trong đó có cùng mức bằng chứng y khoa. Khi đánh giá hiệu quả hoặc an toàn, cần tách kỳ vọng văn hoá khỏi bằng chứng lâm sàng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình** tiếp nhận điểm tựa từ **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **육아: nuôi con là bài toán phân phối thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình** nối từ **산후조리: phục hồi sau sinh và sự thể chế hoá của chăm sóc** sang **육아: nuôi con là bài toán phân phối thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 백일 và 돌: mốc sinh tồn trở thành ký ức gia đình
 
@@ -47,7 +47,7 @@ chăm sóc do gia đình cung cấp giảm
 
 Điểm đáng chú ý là nghi lễ không cần giữ nguyên nội dung để giữ chức năng. Chức năng cốt lõi có thể là “cả gia đình xác nhận đứa trẻ đã bước qua một cột mốc”. Cách thực hiện có thể thay theo thế hệ.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **육아: nuôi con là bài toán phân phối thời gian** tiếp nhận điểm tựa từ **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **육아: nuôi con là bài toán phân phối thời gian** nối từ **백일 và 돌: mốc sinh tồn trở thành ký ức gia đình** sang **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 육아: nuôi con là bài toán phân phối thời gian
 
@@ -63,7 +63,7 @@ Nếu thời gian làm việc + đi lại dài, phần còn lại buộc phải 
 
 Thuật ngữ **독박육아** mô tả tình trạng một người cảm thấy phải gánh gần như toàn bộ việc nuôi con. Nó thường xuất hiện trong thảo luận về phân chia lao động trong gia đình. Từ này có tính đánh giá và phản ánh cảm nhận bất bình đẳng, không phải một phạm trù pháp lý.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song** tiếp nhận điểm tựa từ **육아: nuôi con là bài toán phân phối thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song** nối từ **육아: nuôi con là bài toán phân phối thời gian** sang **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 워킹맘, 워킹대디 và hai hệ thống lịch chạy song song
 
@@ -73,7 +73,7 @@ Trẻ có giờ đón, ngày nghỉ, bệnh đột xuất và hoạt động ở
 
 Tư duy hệ thống gọi đây là **lệch lịch (schedule mismatch)**. Một xã hội có thể có đủ tổng số giờ chăm trẻ trung bình nhưng vẫn gây căng thẳng nếu cơ sở chăm trẻ đóng cửa trước giờ phụ huynh có thể rời nơi làm việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau** tiếp nhận điểm tựa từ **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **조부모 육아: ông bà như năng lực dự phòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau** nối từ **워킹맘, 워킹대디 và hai hệ thống lịch chạy song song** sang **조부모 육아: ông bà như năng lực dự phòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau
 
@@ -81,7 +81,7 @@ Tư duy hệ thống gọi đây là **lệch lịch (schedule mismatch)**. Mộ
 
 Điểm văn hoá quan trọng không phải thuộc lòng mọi quy định hành chính — những chi tiết có thể thay — mà là hiểu đời sống gia đình được tổ chức quanh lịch của thiết chế. Khi một đứa trẻ vào cơ sở chăm sóc, gia đình không chỉ “gửi trẻ”; họ kết nối với mạng giáo viên, phụ huynh khác, ứng dụng thông báo và các sự kiện tập thể.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **조부모 육아: ông bà như năng lực dự phòng** tiếp nhận điểm tựa từ **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **맘카페 và mạng thông tin của phụ huynh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **조부모 육아: ông bà như năng lực dự phòng** nối từ **어린이집 và 유치원: chăm sóc và giáo dục mầm non không hoàn toàn giống nhau** sang **맘카페 và mạng thông tin của phụ huynh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 조부모 육아: ông bà như năng lực dự phòng
 
@@ -91,7 +91,7 @@ Nhưng đây không phải nguồn lực miễn phí. Người cao tuổi cũng 
 
 Trong mô hình mạng, ông bà là một lớp dự phòng. Hệ thống có nhiều nút chăm sóc sẽ chịu cú sốc tốt hơn hệ thống chỉ có hai cha mẹ. Nhưng khả năng dự phòng phụ thuộc khoảng cách địa lý và chất lượng quan hệ.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **맘카페 và mạng thông tin của phụ huynh** tiếp nhận điểm tựa từ **조부모 육아: ông bà như năng lực dự phòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사교육 bắt đầu sớm như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **맘카페 và mạng thông tin của phụ huynh** nối từ **조부모 육아: ông bà như năng lực dự phòng** sang **사교육 bắt đầu sớm như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 맘카페 và mạng thông tin của phụ huynh
 
@@ -101,7 +101,7 @@ Nhưng sức mạnh đó đi cùng thiên lệch chọn mẫu và rủi ro tin �
 
 Mô hình tư duy hữu ích là xem cộng đồng như một **mạng cảm biến (sensor network)** chứ không phải chân lý tuyệt đối. Nhiều cảm biến tạo tín hiệu hữu ích, nhưng cảm biến cũng có nhiễu và thiên lệch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사교육 bắt đầu sớm như thế nào?** tiếp nhận điểm tựa từ **맘카페 và mạng thông tin của phụ huynh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cha mẹ như người quản lý dự án: lợi ích và mặt trái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사교육 bắt đầu sớm như thế nào?** nối từ **맘카페 và mạng thông tin của phụ huynh** sang **Cha mẹ như người quản lý dự án: lợi ích và mặt trái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 사교육 bắt đầu sớm như thế nào?
 
@@ -111,7 +111,7 @@ Khi bất định về tương lai cao, phụ huynh có xu hướng mua **giá t
 
 Đây là cùng một bài toán phối hợp xuất hiện trong `선행학습`, chỉ bắt đầu sớm hơn trong vòng đời.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Cha mẹ như người quản lý dự án: lợi ích và mặt trái** tiếp nhận điểm tựa từ **사교육 bắt đầu sớm như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nuôi con và quyết định sinh ít con** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Cha mẹ như người quản lý dự án: lợi ích và mặt trái** nối từ **사교육 bắt đầu sớm như thế nào?** sang **Nuôi con và quyết định sinh ít con**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cha mẹ như người quản lý dự án: lợi ích và mặt trái
 
@@ -121,7 +121,7 @@ Nếu mọi biến đều được tối ưu — chiều cao, ngôn ngữ, đi�
 
 Phát triển trẻ em không phải một đường ống tất định. Hai trẻ cùng tuổi có thể khác nhau rất lớn mà vẫn nằm trong phạm vi bình thường. Văn hoá thành tích không nên làm ta quên biến thiên sinh học và tâm lý.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Nuôi con và quyết định sinh ít con** tiếp nhận điểm tựa từ **Cha mẹ như người quản lý dự án: lợi ích và mặt trái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Nuôi con và quyết định sinh ít con** nối từ **Cha mẹ như người quản lý dự án: lợi ích và mặt trái** sang **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nuôi con và quyết định sinh ít con
 
@@ -129,7 +129,7 @@ Một liên hệ quan trọng với chương dân số là **đánh đổi chấ
 
 Nhà ở, độ ổn định việc làm, chăm trẻ, chi phí giáo dục và gián đoạn nghề nghiệp đều đi vào cùng một bài toán. Vì vậy mức sinh thấp là đầu ra của nhiều hệ thống con liên kết với nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán** tiếp nhận điểm tựa từ **Nuôi con và quyết định sinh ít con** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán** nối từ **Nuôi con và quyết định sinh ít con** sang **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán
 
@@ -147,7 +147,7 @@ khoảng cách từ nhà / nơi làm việc
 
 Hai gia đình đều “có chỗ gửi trẻ” nhưng một gia đình mất 15 phút đưa đón, gia đình kia phải đổi hai tuyến tàu điện sẽ có chi phí thời gian khác nhau. Vì vậy năng lực chăm sóc là **hàm của khả năng tiếp cận thực tế**, không chỉ số lượng chỗ trên giấy.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán** xác định đầu vào; **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chất lượng chăm trẻ: có chỗ gửi chưa đồng nghĩa hệ thống đã giải được bài toán** đặt đầu vào cho **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc**, rồi **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc
 
@@ -163,7 +163,7 @@ trẻ ốm
 
 Hệ thống bền không phải hệ thống không bao giờ có gián đoạn, mà là hệ thống có **dự phòng chăm sóc (care redundancy)**. Gia đình chỉ có một người có thể nghỉ việc khi trẻ ốm sẽ dễ tổn thương hơn gia đình có nhiều phương án thay thế.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc** xác định đầu vào; **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **아픈 아이: trẻ ốm làm lộ điểm yếu của toàn chuỗi chăm sóc** đặt đầu vào cho **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức**, rồi **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức
 
@@ -173,7 +173,7 @@ Nghỉ để chăm con hoặc giảm giờ làm có thể tồn tại như một
 
 Nếu một chính sách chỉ tồn tại trên giấy nhưng người dùng cảm thấy phải “xin lỗi vì sử dụng”, tác động thực tế sẽ nhỏ hơn thiết kế. Ngược lại, khi quản lý chủ động chuẩn bị bàn giao và xem nghỉ chăm con như trạng thái bình thường của vòng đời nhân viên, ma sát giảm mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** tiếp nhận điểm tựa từ **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** nối từ **육아휴직 và khoảng cách giữa quyền chính thức với chi phí không chính thức** sang **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành
 
@@ -192,7 +192,7 @@ Năng lực chăm sóc cũng là kỹ năng học qua thực hành. Người ít
 
 Muốn phân chia cân bằng hơn, cần thay cả thời gian lẫn quyền sở hữu công việc chăm sóc, không chỉ “phụ giúp khi được nhờ”.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy** tiếp nhận điểm tựa từ **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy** nối từ **아빠육아: vai trò của cha thay đổi khi chăm sóc trở thành năng lực thực hành** sang **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy
 
@@ -209,7 +209,7 @@ Hai hộ có thể chia thời gian trực tiếp gần bằng nhau nhưng vẫn
 
 Khái niệm này nối trực tiếp với `업무분장` trong công sở: một nhiệm vụ chỉ thật sự được chuyển giao khi cả **trách nhiệm theo dõi** cũng được chuyển, không chỉ thao tác cuối.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy** nêu điều cần giải thích; **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **invisible tải (load / 로드): công việc chăm sóc còn có lớp quản lý không nhìn thấy** đặt vấn đề; **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con** đối chiếu bằng chứng, rồi **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con
 
@@ -228,7 +228,7 @@ nhưng
 
 Không phải mọi thứ đo được đều cần đo; không phải mọi chỉ số lệch nhẹ đều cần can thiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con** nêu điều cần giải thích; **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **사춘기 và việc tái thương lượng quyền lực trong gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **스마트육아: camera, ứng dụng và dữ liệu đi vào việc nuôi con** đặt vấn đề; **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** đối chiếu bằng chứng, rồi **사춘기 và việc tái thương lượng quyền lực trong gia đình** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”
 
@@ -246,7 +246,7 @@ bảo vệ cao / tự chủ thấp
 
 Tốc độ chuyển đổi khác nhau theo gia đình và cá nhân; không tồn tại một tuổi duy nhất cho mọi quyết định.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사춘기 và việc tái thương lượng quyền lực trong gia đình** tiếp nhận điểm tựa từ **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사춘기 và việc tái thương lượng quyền lực trong gia đình** nối từ **Trẻ em như chủ thể chứ không chỉ là “dự án của cha mẹ”** sang **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 사춘기 và việc tái thương lượng quyền lực trong gia đình
 
@@ -258,7 +258,7 @@ Niềm tin bền hơn thường cần **khả năng dự đoán của quy tắc*
 
 Phần này mô tả cơ chế quan hệ, không thay thế hướng dẫn tâm lý hay y khoa cá nhân.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사춘기 và việc tái thương lượng quyền lực trong gia đình** xác định đầu vào; **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên hệ kiến thức: kinh tế chăm sóc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **사춘기 và việc tái thương lượng quyền lực trong gia đình** đặt đầu vào cho **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình**, rồi **Liên hệ kiến thức: kinh tế chăm sóc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình
 
@@ -277,7 +277,7 @@ hộ gia đình
 
 Vì vậy chăm sóc không chỉ là chất lượng từng nút mà còn là **chất lượng phối hợp giữa các nút**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình** xác định đầu vào; **Liên hệ kiến thức: kinh tế chăm sóc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Chuỗi cung ứng chăm sóc: hộ gia đình không hoạt động một mình** đặt đầu vào cho **Liên hệ kiến thức: kinh tế chăm sóc**, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên hệ kiến thức: kinh tế chăm sóc
 
@@ -285,13 +285,13 @@ Vì vậy chăm sóc không chỉ là chất lượng từng nút mà còn là *
 
 Nếu lao động chăm sóc trở nên vô hình trong đo lường và ra quyết định, chính sách hoặc doanh nghiệp có thể thiết kế lịch tưởng là hiệu quả nhưng thực tế đẩy chi phí về hộ gia đình.
 
-> **Chuyển mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: kinh tế chăm sóc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: kinh tế chăm sóc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Văn hoá nuôi con ở Hàn Quốc nên được nhìn như giao điểm giữa tình cảm gia đình, hạ tầng chăm sóc, lịch làm việc, cạnh tranh giáo dục và áp lực dân số. “Cha mẹ Hàn đầu tư nhiều cho con” mới chỉ là quan sát; lời giải thích cần chỉ ra những ràng buộc và vòng phản hồi tạo ra mức đầu tư đó. Muốn đánh giá hệ thống chăm sóc, cần hỏi thêm hệ thống phản ứng thế nào khi trẻ ốm, ai giữ tải quản lý vô hình và quyền tự chủ của trẻ tăng ra sao theo tuổi.
 
-> **Chuyển mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -309,7 +309,7 @@ Nếu lao động chăm sóc trở nên vô hình trong đo lường và ra quy�
 
 “Nuôi con tốt nghĩa là tối ưu càng nhiều chỉ số càng tốt” bỏ qua biến thiên phát triển, quyền riêng tư và quyền tự chủ tăng dần của trẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tuổi thơ, nuôi dạy con và các thiết chế chăm sóc**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

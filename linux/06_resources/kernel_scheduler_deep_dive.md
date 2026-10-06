@@ -31,7 +31,7 @@ logical CPUs execute
 
 Các tác vụ (task / 작업) không runnable vì đang chờ mạng (network / 네트워크), disk, khóa (lock / 잠금) hoặc timer không cạnh tranh CPU theo cùng cách.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Runnable khác running** tiếp nhận điểm tựa từ **CPU cốt lõi (core / 핵심) không chạy vô hạn threads cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scheduler không chỉ có một thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Runnable khác running** nối từ **CPU cốt lõi (core / 핵심) không chạy vô hạn threads cùng lúc** sang **Scheduler không chỉ có một thuật toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Runnable khác running
 
@@ -53,7 +53,7 @@ vmstat 1
 
 Nếu host có 4 CPUs và `r` liên tục 30–40 cùng `%us/%sy` cao, CPU contention là hypothesis đáng chú ý.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler không chỉ có một thuật toán** tiếp nhận điểm tựa từ **Runnable khác running** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CFS và fair scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler không chỉ có một thuật toán** nối từ **Runnable khác running** sang **CFS và fair scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scheduler không chỉ có một thuật toán
 
@@ -71,7 +71,7 @@ Các nhóm concept thường gặp:
 
 Không nên dùng real-time priority để “làm app nhanh hơn” nếu chưa hiểu hệ thống (system / 시스템) impact.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CFS và fair scheduling** tiếp nhận điểm tựa từ **Scheduler không chỉ có một thuật toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nice giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CFS và fair scheduling** nối từ **Scheduler không chỉ có một thuật toán** sang **Nice giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CFS và fair scheduling
 
@@ -81,7 +81,7 @@ Mục tiêu không phải chia mỗi luồng thực thi (thread / 스레드) đ�
 
 Nice giá trị (value / 값) ảnh hưởng weight của normal scheduling.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Nice giá trị (value / 값)** tiếp nhận điểm tựa từ **CFS và fair scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority là quan hệ tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Nice giá trị (value / 값)** nối từ **CFS và fair scheduling** sang **Priority là quan hệ tương đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nice giá trị (value / 값)
 
@@ -111,7 +111,7 @@ Nếu chỉ có một runnable tiến trình (process / 프로세스) trên CPU,
 
 Đây là lý do nice giá trị (value / 값) không tương đương cgroup Giới hạn CPU (CPU limit / CPU 제한).
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Priority là quan hệ tương đối** tiếp nhận điểm tựa từ **Nice giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian (time / 시간) slice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Priority là quan hệ tương đối** nối từ **Nice giá trị (value / 값)** sang **Thời gian (time / 시간) slice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Priority là quan hệ tương đối
 
@@ -123,7 +123,7 @@ Nhưng nếu B là I/O-bound và ngủ phần lớn thời gian, A vẫn dùng p
 
 Vì vậy priority có ý nghĩa trong **contention ngữ cảnh (context / 맥락)**, không phải quota tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Thời gian (time / 시간) slice** tiếp nhận điểm tựa từ **Priority là quan hệ tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Preemption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Thời gian (time / 시간) slice** nối từ **Priority là quan hệ tương đối** sang **Preemption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian (time / 시간) slice
 
@@ -135,7 +135,7 @@ Scheduler quyết định dựa trên chính sách (policy / 정책) và runnabl
 
 Điểm quan trọng là nhiều runnable tasks dẫn tới frequent ngữ cảnh (context / 맥락) switching và mỗi tác vụ (task / 작업) nhận CPU theo lượt.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Preemption** tiếp nhận điểm tựa từ **Thời gian (time / 시간) slice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) switch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Preemption** nối từ **Thời gian (time / 시간) slice** sang **Ngữ cảnh (context / 맥락) switch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Preemption
 
@@ -147,7 +147,7 @@ Linux kernel còn có preemption các mô hình (models / 모델들) khác nhau 
 
 Môi trường vận hành (production / 운영 환경) backend thường không cần chỉnh kernel preemption mô hình (model / 모델) trừ khi có yêu cầu (requirement / 요구사항) rất đặc thù.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Ngữ cảnh (context / 맥락) switch** tiếp nhận điểm tựa từ **Preemption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Voluntary và involuntary ngữ cảnh (context / 맥락) switch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Ngữ cảnh (context / 맥락) switch** nối từ **Preemption** sang **Voluntary và involuntary ngữ cảnh (context / 맥락) switch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngữ cảnh (context / 맥락) switch
 
@@ -178,7 +178,7 @@ có thể cho voluntary/nonvoluntary ngữ cảnh (context / 맥락) switches th
 
 Không có universal threshold “ngữ cảnh (context / 맥락) switch bao nhiêu là xấu”. Cần baseline và tải công việc (workload / 워크로드) ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Voluntary và involuntary ngữ cảnh (context / 맥락) switch** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) switch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU affinity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Voluntary và involuntary ngữ cảnh (context / 맥락) switch** nối từ **Ngữ cảnh (context / 맥락) switch** sang **CPU affinity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Voluntary và involuntary ngữ cảnh (context / 맥락) switch
 
@@ -196,7 +196,7 @@ Nếu involuntary switches tăng mạnh cùng CPU saturation, runnable contentio
 
 Nếu voluntary switches cao, ứng dụng (application / 애플리케이션) có thể chờ I/O/locks nhiều.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU affinity** tiếp nhận điểm tựa từ **Voluntary và involuntary ngữ cảnh (context / 맥락) switch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드) balancing giữa CPU cores** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU affinity** nối từ **Voluntary và involuntary ngữ cảnh (context / 맥락) switch** sang **Tải (load / 로드) balancing giữa CPU cores**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU affinity
 
@@ -218,7 +218,7 @@ Affinity có thể tăng bộ nhớ đệm (cache / 캐시) locality trong một
 
 Không nên pin JVM threads/whole tiến trình (process / 프로세스) chỉ dựa cảm giác.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Tải (load / 로드) balancing giữa CPU cores** tiếp nhận điểm tựa từ **CPU affinity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyper-Threading / SMT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Tải (load / 로드) balancing giữa CPU cores** nối từ **CPU affinity** sang **Hyper-Threading / SMT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tải (load / 로드) balancing giữa CPU cores
 
@@ -232,7 +232,7 @@ Nhưng topology phần cứng không hoàn toàn đồng nhất:
 
 Vì vậy “8 CPUs” không luôn nghĩa 8 units có hiệu năng (performance / 성능) độc lập hoàn toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Hyper-Threading / SMT** tiếp nhận điểm tựa từ **Tải (load / 로드) balancing giữa CPU cores** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NUMA và scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Hyper-Threading / SMT** nối từ **Tải (load / 로드) balancing giữa CPU cores** sang **NUMA và scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hyper-Threading / SMT
 
@@ -256,7 +256,7 @@ lscpu
 
 Fields về cốt lõi (core / 핵심), Socket, luồng thực thi (thread / 스레드) giúp hiểu topology.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **NUMA và scheduling** tiếp nhận điểm tựa từ **Hyper-Threading / SMT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Real-time scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **NUMA và scheduling** nối từ **Hyper-Threading / SMT** sang **Real-time scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NUMA và scheduling
 
@@ -274,7 +274,7 @@ nếu công cụ (tool / 도구) được cài.
 
 NUMA tuning là advanced topic và cần đo đạc. Bind CPU/bộ nhớ (memory / 메모리) sai có thể làm độ trễ (latency / 지연 시간) tệ hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Real-time scheduling** tiếp nhận điểm tựa từ **NUMA và scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scheduler và interrupt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Real-time scheduling** nối từ **NUMA và scheduling** sang **Scheduler và interrupt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Real-time scheduling
 
@@ -294,7 +294,7 @@ Sai cấu hình real-time có thể làm hệ thống (system / 시스템) khó 
 
 Backend web thông thường không nên chuyển sang real-time scheduling để “giảm độ trễ (latency / 지연 시간)” nếu chưa có hard real-time yêu cầu (requirement / 요구사항).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler và interrupt** tiếp nhận điểm tựa từ **Real-time scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IRQ affinity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler và interrupt** nối từ **Real-time scheduling** sang **IRQ affinity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scheduler và interrupt
 
@@ -318,7 +318,7 @@ cũng giúp thấy per-CPU usage.
 
 Một NIC interrupt tập trung vào một CPU có thể tạo imbalance.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **IRQ affinity** tiếp nhận điểm tựa từ **Scheduler và interrupt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Softirq và mạng (network / 네트워크) tải (load / 로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **IRQ affinity** nối từ **Scheduler và interrupt** sang **Softirq và mạng (network / 네트워크) tải (load / 로드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## IRQ affinity
 
@@ -332,7 +332,7 @@ systemctl status irqbalance
 
 Manual IRQ pinning chỉ nên dùng khi có benchmark/low-latency yêu cầu (requirement / 요구사항) rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Softirq và mạng (network / 네트워크) tải (load / 로드)** tiếp nhận điểm tựa từ **IRQ affinity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Softirq và mạng (network / 네트워크) tải (load / 로드)** nối từ **IRQ affinity** sang **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Softirq và mạng (network / 네트워크) tải (load / 로드)
 
@@ -348,7 +348,7 @@ Nếu `NET_RX` tăng mạnh trên một CPU, mạng (network / 네트워크) pro
 
 Đây là lý do CPU bottleneck không luôn nằm trong ứng dụng (application / 애플리케이션) luồng thực thi (thread / 스레드) dump.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Softirq và mạng (network / 네트워크) tải (load / 로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tail độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)** nối từ **Softirq và mạng (network / 네트워크) tải (load / 로드)** sang **Tail độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)
 
@@ -362,7 +362,7 @@ Nghiệp vụ (business / 비즈니스) mã (code / 코드) vẫn chỉ cần 5 
 
 Đây là lý do CPU saturation thường làm tail độ trễ (latency / 지연 시간) tăng trước khi thông lượng (throughput / 처리량) collapse hoàn toàn.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Tail độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU steal thời gian (time / 시간) trong VM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Tail độ trễ (latency / 지연 시간)** nối từ **Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)** sang **CPU steal thời gian (time / 시간) trong VM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tail độ trễ (latency / 지연 시간)
 
@@ -381,7 +381,7 @@ Môi trường vận hành (production / 운영 환경) dịch vụ (service / �
 
 Không nên chỉ dùng average CPU/độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU steal thời gian (time / 시간) trong VM** tiếp nhận điểm tựa từ **Tail độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU quota trong cgroup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU steal thời gian (time / 시간) trong VM** nối từ **Tail độ trễ (latency / 지연 시간)** sang **CPU quota trong cgroup**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU steal thời gian (time / 시간) trong VM
 
@@ -401,7 +401,7 @@ Nếu `%st` cao, guest tuning có thể không giải quyết host-level content
 
 Đây là ví dụ bottleneck nằm ngoài Linux guest.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU quota trong cgroup** tiếp nhận điểm tựa từ **CPU steal thời gian (time / 시간) trong VM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU yêu cầu (request / 요청) và limit trong Kubernetes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU quota trong cgroup** nối từ **CPU steal thời gian (time / 시간) trong VM** sang **CPU yêu cầu (request / 요청) và limit trong Kubernetes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU quota trong cgroup
 
@@ -422,7 +422,7 @@ Tùy đường dẫn (path / 경로)/thời gian chạy (runtime / 런타임).
 
 CPU throttling có thể gây độ trễ (latency / 지연 시간) spikes dù host CPU tổng thể chưa 100%.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU quota trong cgroup** đã nêu tiêu chí phân biệt, còn **CPU yêu cầu (request / 요청) và limit trong Kubernetes** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Java luồng thực thi (thread / 스레드) pool và scheduler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU quota trong cgroup** đặt tiêu chí; **CPU yêu cầu (request / 요청) và limit trong Kubernetes** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Java luồng thực thi (thread / 스레드) pool và scheduler** mở rộng hệ quả.
 
 ## CPU yêu cầu (request / 요청) và limit trong Kubernetes
 
@@ -432,7 +432,7 @@ Một pod Java có limit thấp có thể bị throttled trong burst dù nút (n
 
 Đây là lý do cần xem cả nút (node / 노드) CPU và pod cgroup metrics.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU yêu cầu (request / 요청) và limit trong Kubernetes** đã nêu tiêu chí phân biệt, còn **Java luồng thực thi (thread / 스레드) pool và scheduler** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU yêu cầu (request / 요청) và limit trong Kubernetes** đặt tiêu chí; **Java luồng thực thi (thread / 스레드) pool và scheduler** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** mở rộng hệ quả.
 
 ## Java luồng thực thi (thread / 스레드) pool và scheduler
 
@@ -444,7 +444,7 @@ Nếu tải công việc (workload / 워크로드) I/O-bound, nhiều threads c�
 
 Optimal luồng thực thi (thread / 스레드) count phụ thuộc ratio CPU/wait và kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** tiếp nhận điểm tựa từ **Java luồng thực thi (thread / 스레드) pool và scheduler** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** nối từ **Java luồng thực thi (thread / 스레드) pool và scheduler** sang **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound
 
@@ -467,7 +467,7 @@ Nếu `W/S` lớn, nhiều threads có thể giúp giữ CPU bận trong khi lu�
 
 Nhưng cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool, bộ nhớ (memory / 메모리)/luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và downstream limits cũng là các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU-bound tải công việc (workload / 워크로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)** nối từ **Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound** sang **CPU-bound tải công việc (workload / 워크로드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)
 
@@ -485,7 +485,7 @@ CPU
 
 Không tối ưu một dimension riêng lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU-bound tải công việc (workload / 워크로드)** tiếp nhận điểm tựa từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **I/O-bound tải công việc (workload / 워크로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU-bound tải công việc (workload / 워크로드)** nối từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)** sang **I/O-bound tải công việc (workload / 워크로드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU-bound tải công việc (workload / 워크로드)
 
@@ -497,7 +497,7 @@ Thông lượng (throughput / 처리량) thường tốt hơn với tính đồn
 
 ForkJoinPool/work-stealing runtimes cố giải quyết một phần scheduling ở ứng dụng (application / 애플리케이션) tầng (layer / 계층), nhưng kernel vẫn là scheduler cuối cùng cho OS threads.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **I/O-bound tải công việc (workload / 워크로드)** tiếp nhận điểm tựa từ **CPU-bound tải công việc (workload / 워크로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **I/O-bound tải công việc (workload / 워크로드)** nối từ **CPU-bound tải công việc (workload / 워크로드)** sang **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## I/O-bound tải công việc (workload / 워크로드)
 
@@ -514,7 +514,7 @@ Nhưng nếu downstream chậm, tất cả threads có thể bị occupied và h
 
 Lúc đó tăng threads có thể chỉ tạo thêm tải (load / 로드) xuống downstream.
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)** tiếp nhận điểm tựa từ **I/O-bound tải công việc (workload / 워크로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Futex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)** nối từ **I/O-bound tải công việc (workload / 워크로드)** sang **Futex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scheduler và tranh chấp khóa (lock contention / 잠금 경합)
 
@@ -528,7 +528,7 @@ Linux `perf lock`/futex tracing có thể dùng trong advanced diagnosis.
 
 Tranh chấp khóa (lock contention / 잠금 경합) là reminder rằng “luồng thực thi (thread / 스레드) runnable” và “công việc (work / 작업) parallelizable” không giống nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Futex** tiếp nhận điểm tựa từ **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) CPU saturation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Futex** nối từ **Scheduler và tranh chấp khóa (lock contention / 잠금 경합)** sang **Gỡ lỗi (debug / 디버그) CPU saturation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Futex
 
@@ -546,7 +546,7 @@ rất nhiều khi ứng dụng (application / 애플리케이션) có khóa (loc
 
 Không nên kết luận futex là lỗi chỉ vì xuất hiện nhiều; JVM synchronization naturally dùng futex.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Gỡ lỗi (debug / 디버그) CPU saturation** tiếp nhận điểm tựa từ **Futex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **One-core bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Gỡ lỗi (debug / 디버그) CPU saturation** nối từ **Futex** sang **One-core bottleneck**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gỡ lỗi (debug / 디버그) CPU saturation
 
@@ -591,7 +591,7 @@ perf top
 
 Nếu `%system` cao, cần xem syscalls/mạng (network / 네트워크)/I/O chứ không chỉ Java ngăn xếp (stack / 스택).
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **One-core bottleneck** tiếp nhận điểm tựa từ **Gỡ lỗi (debug / 디버그) CPU saturation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU frequency scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **One-core bottleneck** nối từ **Gỡ lỗi (debug / 디버그) CPU saturation** sang **CPU frequency scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## One-core bottleneck
 
@@ -601,7 +601,7 @@ Nếu ứng dụng (application / 애플리케이션) single-threaded đường 
 
 Xem per-thread/per-CPU thay vì chỉ host aggregate.
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU frequency scaling** tiếp nhận điểm tựa từ **One-core bottleneck** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **CPU frequency scaling** nối từ **One-core bottleneck** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU frequency scaling
 
@@ -613,7 +613,7 @@ Thermal throttling hoặc power chính sách (policy / 정책) có thể làm hi
 
 Sức chứa (capacity / 용량) planning không nên chỉ đếm vCPU.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **CPU frequency scaling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **CPU frequency scaling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -633,7 +633,7 @@ Nếu arrival CPU công việc (work / 작업) vượt CPU dịch vụ (service 
 
 Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạo thêm compute sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -649,7 +649,7 @@ Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạ
 
 **“ngữ cảnh (context / 맥락) switch cao chắc chắn là lỗi.”** Cần baseline và tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Xem thêm** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes**, **Xem thêm** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Xem thêm
 

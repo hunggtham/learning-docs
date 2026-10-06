@@ -17,7 +17,7 @@ ps -p $$ -o pid,ppid,cmd
 
 `$$` thường là `PID` của shell hiện tại.
 
-> **Chuyển mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Từ văn bản tới lệnh thực thi** tiếp nhận điểm tựa từ **Shell và terminal khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dấu nháy và tách từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Từ văn bản tới lệnh thực thi** nối từ **Shell và terminal khác nhau** sang **Dấu nháy và tách từ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ văn bản tới lệnh thực thi
 
@@ -31,7 +31,7 @@ shell không chuyển nguyên chuỗi này cho `grep`. Nó phải nhận diện 
 
 Quy tắc mở rộng của shell có nhiều chi tiết, nhưng mô hình tư duy quan trọng là: **văn bản bạn gõ không nhất thiết giống danh sách đối số mà chương trình cuối cùng nhận được**.
 
-> **Chuyển mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Dấu nháy và tách từ** tiếp nhận điểm tựa từ **Từ văn bản tới lệnh thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Globbing không phải biểu thức chính quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Dấu nháy và tách từ** nối từ **Từ văn bản tới lệnh thực thi** sang **Globbing không phải biểu thức chính quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dấu nháy và tách từ
 
@@ -69,7 +69,7 @@ echo "home=$HOME time=$(date)"
 
 Một thói quen quan trọng là **đặt mở rộng biến trong dấu nháy kép**, trừ khi bạn thật sự muốn shell tách từ hoặc mở rộng mẫu tên tệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Globbing không phải biểu thức chính quy** tiếp nhận điểm tựa từ **Dấu nháy và tách từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã thoát: giao diện biểu thị thành công hoặc thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Globbing không phải biểu thức chính quy** nối từ **Dấu nháy và tách từ** sang **Mã thoát: giao diện biểu thị thành công hoặc thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Globbing không phải biểu thức chính quy
 
@@ -89,7 +89,7 @@ find . -name '*.log'
 
 Nếu không đặt dấu nháy, shell hiện tại có thể mở rộng `*.log` trước, khiến `find` nhận danh sách đối số khác dự kiến.
 
-> **Chuyển mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Mã thoát: giao diện biểu thị thành công hoặc thất bại** tiếp nhận điểm tựa từ **Globbing không phải biểu thức chính quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Mã thoát: giao diện biểu thị thành công hoặc thất bại** nối từ **Globbing không phải biểu thức chính quy** sang **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mã thoát: giao diện biểu thị thành công hoặc thất bại
 
@@ -116,7 +116,7 @@ curl -fsS http://localhost:8080/health || echo "health check failed"
 
 Lệnh phía sau `||` chỉ chạy nếu `curl` thất bại. Đây là **luồng điều khiển (control flow)** chứ không chỉ là cách viết ngắn.
 
-> **Chuyển mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Mã thoát: giao diện biểu thị thành công hoặc thất bại** xác định đầu vào; **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuyển hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Mã thoát: giao diện biểu thị thành công hoặc thất bại** đặt đầu vào cho **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)**, rồi **Chuyển hướng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)
 
@@ -136,7 +136,7 @@ set -o pipefail
 
 Khi bật `pipefail`, chuỗi xử lý (pipeline / 파이프라인) có thể phản ánh lỗi của một thành phần trước thay vì chỉ dựa vào câu lệnh cuối. Cấu hình `set -euo pipefail` rất phổ biến nhưng cần hiểu rõ trước khi sao chép máy móc, vì `set -e` có nhiều trường hợp biên (edge case / 경계 사례) và có thể làm script kết thúc ở nơi người viết không dự kiến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Chuyển hướng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Biến shell và biến môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **Chuyển hướng**, rồi **Biến shell và biến môi trường** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuyển hướng
 
@@ -162,7 +162,7 @@ command &>all.log
 
 có thể chuyển cả `stdout` và `stderr`, nhưng cách `>file 2>&1` thường dễ gặp hơn trong nhiều môi trường shell khác nhau.
 
-> **Chuyển mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Biến shell và biến môi trường** tiếp nhận điểm tựa từ **Chuyển hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay thế kết quả câu lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Biến shell và biến môi trường** nối từ **Chuyển hướng** sang **Thay thế kết quả câu lệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến shell và biến môi trường
 
@@ -186,7 +186,7 @@ NAME=app ./run.sh
 
 Điều này giải thích một lỗi kinh điển: chạy ứng dụng thủ công thì hoạt động nhưng dịch vụ systemd lại thất bại vì môi trường của shell tương tác không tự động được truyền vào trình quản lý dịch vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Thay thế kết quả câu lệnh** tiếp nhận điểm tựa từ **Biến shell và biến môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gom nhóm lệnh và subshell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Thay thế kết quả câu lệnh** nối từ **Biến shell và biến môi trường** sang **Gom nhóm lệnh và subshell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay thế kết quả câu lệnh
 
@@ -199,7 +199,7 @@ cp -a app.conf "$backup"
 
 `$(...)` chạy câu lệnh bên trong và thay biểu thức bằng `stdout` của câu lệnh đó. Đây là một luồng dữ liệu từ chương trình quay trở lại biểu thức shell.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Gom nhóm lệnh và subshell** tiếp nhận điểm tựa từ **Thay thế kết quả câu lệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Gom nhóm lệnh và subshell** nối từ **Thay thế kết quả câu lệnh** sang **Hàm shell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gom nhóm lệnh và subshell
 
@@ -219,7 +219,7 @@ Dấu ngoặc nhọn gom nhóm các lệnh trong shell hiện tại:
 
 Toàn bộ đầu ra của nhóm được chuyển hướng chỉ một lần.
 
-> **Chuyển mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Hàm shell** tiếp nhận điểm tựa từ **Gom nhóm lệnh và subshell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **xargs và xây dựng danh sách đối số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Hàm shell** nối từ **Gom nhóm lệnh và subshell** sang **xargs và xây dựng danh sách đối số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm shell
 
@@ -235,7 +235,7 @@ check_app() {
 
 Khi lô-gic (logic / 논리) lớn, cần cấu trúc dữ liệu phức tạp, kiểm thử nghiêm túc hoặc xử lý đồng thời, một ngôn ngữ như Python hoặc Go thường phù hợp hơn. Shell mạnh nhất khi dùng để **điều phối (orchestration)** các công cụ hệ thống nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **xargs và xây dựng danh sách đối số** tiếp nhận điểm tựa từ **Hàm shell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khiển tác vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **xargs và xây dựng danh sách đối số** nối từ **Hàm shell** sang **Điều khiển tác vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `xargs` và xây dựng danh sách đối số
 
@@ -247,7 +247,7 @@ find . -type f -name '*.log' -print0 | xargs -0 grep -n ERROR
 
 Cặp `-print0` và `-0` dùng ký tự NUL làm dấu phân cách, an toàn hơn với tên tệp chứa khoảng trắng hoặc xuống dòng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Điều khiển tác vụ** tiếp nhận điểm tựa từ **xargs và xây dựng danh sách đối số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Điều khiển tác vụ** nối từ **xargs và xây dựng danh sách đối số** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều khiển tác vụ
 
@@ -260,7 +260,7 @@ jobs -l
 
 Đây là tiện ích dành cho phiên tương tác, không phải cơ chế giám sát tiến trình môi trường vận hành (production / 운영 환경). Dịch vụ chạy lâu dài nên được systemd hoặc một trình giám sát bộ chứa (container / 컨테이너) quản lý để có chính sách khởi động lại, nhật ký và vòng đời rõ ràng.
 
-> **Chuyển mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Điều khiển tác vụ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Shell, Bash, pipe và chuyển hướng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Điều khiển tác vụ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -274,7 +274,7 @@ bash -x script.sh
 
 `-x` hiển thị các câu lệnh sau quá trình mở rộng ở mức rất hữu ích, giúp quan sát luồng điều khiển thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối sang chương tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Shell, Bash, pipe và chuyển hướng**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối sang chương tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -288,7 +288,7 @@ bash -x script.sh
 
 **"`nohup` là trình quản lý dịch vụ."** Nó chỉ giải quyết một phần vấn đề liên quan phiên làm việc và `SIGHUP`; nó không cung cấp đầy đủ cơ chế giám sát vòng đời dịch vụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Kết nối sang chương tiếp theo** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Shell, Bash, pipe và chuyển hướng**, **Kết nối sang chương tiếp theo** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối sang chương tiếp theo
 

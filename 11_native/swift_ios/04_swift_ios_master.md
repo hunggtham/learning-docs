@@ -38,7 +38,7 @@ Các đời đầu đặt nền cho Optional, giá trị (value / 값) types, pr
 
 Bài học: nguồn (source / 소스) tính tương thích (compatibility / 호환성) chưa phải điều mặc định trong giai đoạn đầu; khi đọc mã (code / 코드) rất cũ, đừng cố “sửa từng cú pháp (syntax / 문법)” mà phải hiểu intent rồi map sang hiện đại (modern / 현대적) API.
 
-> **Chuyển mạch:** Swift 1–2 còn ổn định language/ecosystem; Swift 3 chuẩn hóa API design và call-site readability, rồi Swift 4.x đưa Codable vào model boundary type-safe hơn.
+> **Nối mạch:** Swift 1–2 còn ổn định language/ecosystem; Swift 3 chuẩn hóa API design và call-site readability, rồi Swift 4.x đưa Codable vào model boundary type-safe hơn.
 
 ## 2.2 Swift 3: API thiết kế (design / 설계) và call-site readability trở thành convention lớn
 
@@ -46,7 +46,7 @@ Swift 3 là bước chuẩn hóa naming/import style rất mạnh. Apple SDK Swi
 
 Ảnh hưởng lâu dài: Swift mã (code / 코드) hiện đại coi API naming là một phần ngữ nghĩa (semantics / 의미론). hàm (function / 함수) không chỉ “tên + parameter”; lời gọi (call / 호출) site cần đọc rõ hành động và quan hệ (relation / 관계) giữa argument.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.2 Swift 3: API thiết kế (design / 설계) và call-site readability trở thành convention lớn** đã nêu tiêu chí phân biệt, còn **2.3 Swift 4.x: Codable và mô hình (model / 모델) ranh giới (boundary / 경계) trở nên type-safe hơn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.2 Swift 3: API thiết kế (design / 설계) và call-site readability trở thành convention lớn** đặt tiêu chí; **2.3 Swift 4.x: Codable và mô hình (model / 모델) ranh giới (boundary / 경계) trở nên type-safe hơn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/khung phần mềm (framework / 프레임워크)** mở rộng hệ quả.
 
 ## 2.3 Swift 4.x: Codable và mô hình (model / 모델) ranh giới (boundary / 경계) trở nên type-safe hơn
 
@@ -54,7 +54,7 @@ Swift 3 là bước chuẩn hóa naming/import style rất mạnh. Apple SDK Swi
 
 Ảnh hưởng: vận chuyển (transport / 전송) mô hình (model / 모델) có thể được kiểu (type / 타입) hóa dễ hơn, nhưng “Codable được” không có nghĩa vận chuyển (transport / 전송) DTO nên trở thành lĩnh vực (domain / 도메인) mô hình (model / 모델). ranh giới (boundary / 경계) thiết kế (design / 설계) vẫn là kiến trúc (architecture / 아키텍처) concern.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.3 Swift 4.x: Codable và mô hình (model / 모델) ranh giới (boundary / 경계) trở nên type-safe hơn** đã nêu tiêu chí phân biệt, còn **2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/khung phần mềm (framework / 프레임워크)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **2.5 Swift 5.1 + SwiftUI era: opaque kiểu (type / 타입)/thuộc tính (property / 속성) wrapper/kết quả (result / 결과) builder thay đổi UI style** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.3 Swift 4.x: Codable và mô hình (model / 모델) ranh giới (boundary / 경계) trở nên type-safe hơn** đặt tiêu chí; **2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/khung phần mềm (framework / 프레임워크)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **2.5 Swift 5.1 + SwiftUI era: opaque kiểu (type / 타입)/thuộc tính (property / 속성) wrapper/kết quả (result / 결과) builder thay đổi UI style** mở rộng hệ quả.
 
 ## 2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/khung phần mềm (framework / 프레임워크)
 
@@ -62,7 +62,7 @@ ABI stability trên Apple platforms giảm nhu cầu bundle Swift thời gian ch
 
 Swift 5.x còn là thời kỳ nguồn (source / 소스) tính tương thích (compatibility / 호환성) tốt hơn, làm enterprise codebase có thể sống qua nhiều Xcode generation hơn.
 
-> **Chuyển mạch:** ABI stability thay đổi distribution boundary; Swift 5.1 thêm opaque types/property wrappers/result builders, rồi iOS 13 ghép SwiftUI với Combine thành UI/data-flow stack.
+> **Nối mạch:** ABI stability thay đổi distribution boundary; Swift 5.1 thêm opaque types/property wrappers/result builders, rồi iOS 13 ghép SwiftUI với Combine thành UI/data-flow stack.
 
 ## 2.5 Swift 5.1 + SwiftUI era: opaque kiểu (type / 타입)/thuộc tính (property / 속성) wrapper/kết quả (result / 결과) builder thay đổi UI style
 
@@ -70,7 +70,7 @@ Swift 5.x còn là thời kỳ nguồn (source / 소스) tính tương thích (c
 
 Ảnh hưởng kiến trúc (architecture / 아키텍처): định danh (identity / 식별자)/quyền sở hữu trạng thái (state ownership / 상태 소유권) trở nên quan trọng hơn view-object thời gian tồn tại (lifetime / 수명) kiểu UIKit. Nhưng UIKit không biến mất; hybrid kiến trúc (architecture / 아키텍처) trở thành skill môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.6 iOS 13 era: SwiftUI + Combine** tiếp nhận điểm tựa từ **2.5 Swift 5.1 + SwiftUI era: opaque kiểu (type / 타입)/thuộc tính (property / 속성) wrapper/kết quả (result / 결과) builder thay đổi UI style** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.7 Swift 5.5: async/await, structured tính đồng thời (concurrency / 동시성) và actor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.6 iOS 13 era: SwiftUI + Combine** nối từ **2.5 Swift 5.1 + SwiftUI era: opaque kiểu (type / 타입)/thuộc tính (property / 속성) wrapper/kết quả (result / 결과) builder thay đổi UI style** sang **2.7 Swift 5.5: async/await, structured tính đồng thời (concurrency / 동시성) và actor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.6 iOS 13 era: SwiftUI + Combine
 
@@ -78,7 +78,7 @@ SwiftUI và Combine đưa declarative UI/reactive stream vào Apple ecosystem. N
 
 Khi maintain mã (code / 코드) này, không cần rewrite chỉ vì async/await/Observation mới hơn. Xác định ranh giới (boundary / 경계) nào được hưởng lợi từ di chuyển (migration / 마이그레이션) và giữ hành vi (behavior / 동작)/kiểm thử (test / 테스트) trước.
 
-> **Chuyển mạch:** SwiftUI/Combine đặt reactive UI baseline; Swift 5.5 thêm async/await, structured concurrency và actor, rồi 5.7–5.9 làm rõ existential, macros và Observation.
+> **Nối mạch:** SwiftUI/Combine đặt reactive UI baseline; Swift 5.5 thêm async/await, structured concurrency và actor, rồi 5.7–5.9 làm rõ existential, macros và Observation.
 
 ## 2.7 Swift 5.5: async/await, structured tính đồng thời (concurrency / 동시성) và actor
 
@@ -86,7 +86,7 @@ Khi maintain mã (code / 코드) này, không cần rewrite chỉ vì async/awai
 
 Ảnh hưởng: “thread-safe” dần chuyển thành “isolation/sendability correct”. Nhưng API callback/Combine/OperationQueue/GCD vẫn tồn tại ở khung phần mềm (framework / 프레임워크) legacy và cần cầu nối (bridge / 브리지) đúng.
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.8 Swift 5.7–5.9: existential clarity, macros, Observation** tiếp nhận điểm tựa từ **2.7 Swift 5.5: async/await, structured tính đồng thời (concurrency / 동시성) và actor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.8 Swift 5.7–5.9: existential clarity, macros, Observation** nối từ **2.7 Swift 5.5: async/await, structured tính đồng thời (concurrency / 동시성) và actor** sang **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.8 Swift 5.7–5.9: existential clarity, macros, Observation
 
@@ -94,7 +94,7 @@ Khi maintain mã (code / 코드) này, không cần rewrite chỉ vì async/awai
 
 SwiftData xuất hiện ở iOS 17 era, giúp persistence Swift-native hơn nhưng không xóa cơ sở dữ liệu (database / 데이터베이스) fundamentals như lược đồ (schema / 스키마)/di chuyển (migration / 마이그레이션)/chỉ mục (index / 인덱스)/giao dịch (transaction / 트랜잭션).
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **2.8 Swift 5.7–5.9: existential clarity, macros, Observation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)** nối từ **2.8 Swift 5.7–5.9: existential clarity, macros, Observation** sang **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)
 
@@ -104,7 +104,7 @@ Typed throws và Synchronization/tooling tiếp tục mở rộng khả năng ex
 
 Ảnh hưởng lớn nhất: API thư viện (library / 라이브러리) giờ phải nghĩ đến isolation/sendability như công khai (public / 공개) surface, không thể coi tính đồng thời (concurrency / 동시성) là hiện thực (implementation / 구현) detail hoàn toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction** tiếp nhận điểm tựa từ **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction** nối từ **2.9 Swift 6.0: data-race an toàn (safety / 안전) trở thành language-level di chuyển (migration / 마이그레이션)** sang **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction
 
@@ -112,7 +112,7 @@ Swift 6.2 làm tính đồng thời (concurrency / 동시성) dễ tiếp cận 
 
 Ảnh hưởng: mô hình tư duy (mental model / 사고 모델) “mọi async hàm (function / 함수) tự chạy background” càng không còn đúng. Sequential/isolation-first mã (code / 코드) là default hợp lý; tính đồng thời (concurrency / 동시성) được opt-in ở nơi có lợi.
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, sau nội dung của **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction**, **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **6.1 Inventory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, sau nội dung của **2.10 Swift 6.2: approachable tính đồng thời (concurrency / 동시성) và safe các hệ thống (systems / 시스템들) direction**, **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **6.1 Inventory** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity
 
@@ -192,7 +192,7 @@ Công khai (public / 공개) khung phần mềm (framework / 프레임워크) AP
 
 Di chuyển (migration / 마이그레이션) tính đồng thời (concurrency / 동시성) tốt không bắt đầu bằng fix trình biên dịch (compiler / 컴파일러) warning ngẫu nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.1 Inventory** tiếp nhận điểm tựa từ **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.2 Move ranh giới (boundary / 경계) theo batch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.1 Inventory** nối từ **2.11 Swift 6.4: quyền sở hữu (ownership / 소유권), bản dựng (build / 빌드) và cross-platform maturity** sang **6.2 Move ranh giới (boundary / 경계) theo batch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.1 Inventory
 
@@ -207,19 +207,19 @@ Lập bản đồ:
 - GCD/OperationQueue/Combine chuỗi xử lý (pipeline / 파이프라인);
 - kiểm thử (test / 테스트) phụ thuộc timing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.1 Inventory** đã nêu tiêu chí phân biệt, còn **6.2 Move ranh giới (boundary / 경계) theo batch** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.1 Inventory** đặt tiêu chí; **6.2 Move ranh giới (boundary / 경계) theo batch** dùng tiêu chí đó để kiểm tra ranh giới, rồi **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** mở rộng hệ quả.
 
 ## 6.2 Move ranh giới (boundary / 경계) theo batch
 
 Migrate mô-đun (module / 모듈)/tính năng (feature / 기능) có kiểm thử (test / 테스트) trước. Giữ lần ghi nhận (commit / 커밋) nhỏ đủ bisect. Khi annotation thay đổi thực thi (execution / 실행) ngữ nghĩa (semantics / 의미론)/thời gian tồn tại (lifetime / 수명), thêm regression kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.2 Move ranh giới (boundary / 경계) theo batch** đã nêu tiêu chí phân biệt, còn **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6.4 cầu nối (bridge / 브리지) legacy thay vì rewrite đồng loạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.2 Move ranh giới (boundary / 경계) theo batch** đặt tiêu chí; **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **6.4 cầu nối (bridge / 브리지) legacy thay vì rewrite đồng loạt** mở rộng hệ quả.
 
 ## 6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 
 `@unchecked Sendable`, `nonisolated(unsafe)` hoặc toàn cục (global / 전역) `@MainActor` có thể hữu ích ở ranh giới (boundary / 경계) được chứng minh, nhưng nếu dùng để silence trình biên dịch (compiler / 컴파일러) hàng loạt, bạn đã xóa an toàn (safety / 안전) mà di chuyển (migration / 마이그레이션) định đạt được.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.4 cầu nối (bridge / 브리지) legacy thay vì rewrite đồng loạt** tiếp nhận điểm tựa từ **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Master**, **6.4 cầu nối (bridge / 브리지) legacy thay vì rewrite đồng loạt** nối từ **6.3 Không dùng escape hatch như di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 6.4 cầu nối (bridge / 브리지) legacy thay vì rewrite đồng loạt
 

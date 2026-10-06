@@ -19,7 +19,7 @@ Ví dụ, hai người đều có 100 triệu KRW nhưng một người cần 70
 
 Điểm cốt lõi là **rủi ro phải được đo so với mục tiêu**, không chỉ so với độ biến động thị trường.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **2. Xây bảng cân đối kinh tế của hộ gia đình** tiếp nhận điểm tựa từ **1. Bắt đầu từ bài toán tài chính, không bắt đầu từ sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tách khả năng chịu rủi ro thành ba lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **2. Xây bảng cân đối kinh tế của hộ gia đình** nối từ **1. Bắt đầu từ bài toán tài chính, không bắt đầu từ sản phẩm** sang **3. Tách khả năng chịu rủi ro thành ba lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Xây bảng cân đối kinh tế của hộ gia đình
 
@@ -38,7 +38,7 @@ Tài sản tài chính
 = Bảng cân đối kinh tế
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **3. Tách khả năng chịu rủi ro thành ba lớp** tiếp nhận điểm tựa từ **2. Xây bảng cân đối kinh tế của hộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **3. Tách khả năng chịu rủi ro thành ba lớp** nối từ **2. Xây bảng cân đối kinh tế của hộ gia đình** sang **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Tách khả năng chịu rủi ro thành ba lớp
 
@@ -52,7 +52,7 @@ Không nên dùng một câu hỏi kiểu “bạn có chịu được giảm 30
 
 Một kế hoạch tốt phải thỏa cả ba. Nếu mục tiêu yêu cầu lợi suất quá cao trong khi khả năng chịu rủi ro thấp, giải pháp không phải “tìm tài sản tốt hơn” mà có thể phải tăng tiết kiệm, kéo dài thời gian hoặc giảm mục tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro** tiếp nhận điểm tựa từ **3. Tách khả năng chịu rủi ro thành ba lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro** nối từ **3. Tách khả năng chịu rủi ro thành ba lớp** sang **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Chuyển tỷ trọng vốn thành ngân sách rủi ro
 
@@ -74,7 +74,7 @@ Rủi ro vận hành
 
 Sau đó hỏi: nếu một biến duy nhất gây 50–60% tổn thất tiềm năng, danh mục có thực sự đa dạng không?
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần** tiếp nhận điểm tựa từ **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tương quan phải được xem theo trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần** nối từ **4. Chuyển tỷ trọng vốn thành ngân sách rủi ro** sang **6. Tương quan phải được xem theo trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần
 
@@ -90,7 +90,7 @@ Tỷ trọng vị thế × MCTR
 
 Không cần tối ưu toán học hoàn hảo; chỉ cần dùng khái niệm này để phát hiện **tập trung rủi ro ẩn**.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **6. Tương quan phải được xem theo trạng thái** tiếp nhận điểm tựa từ **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thiết kế tầng thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **6. Tương quan phải được xem theo trạng thái** nối từ **5. Đóng góp rủi ro biên và đóng góp rủi ro thành phần** sang **7. Thiết kế tầng thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Tương quan phải được xem theo trạng thái
 
@@ -106,7 +106,7 @@ Nếu nhiều tài sản có tương quan thấp trong bình thường nhưng t�
 
 Đây là lý do kiểm thử căng thẳng phải bổ sung cho covariance lịch sử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **7. Thiết kế tầng thanh khoản** tiếp nhận điểm tựa từ **6. Tương quan phải được xem theo trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Kiểm thử cú sốc đơn biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **7. Thiết kế tầng thanh khoản** nối từ **6. Tương quan phải được xem theo trạng thái** sang **8. Kiểm thử cú sốc đơn biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Thiết kế tầng thanh khoản
 
@@ -122,7 +122,7 @@ Tầng 5: ý tưởng chủ động / rủi ro cao
 
 Một danh mục có lợi suất kỳ vọng cao nhưng buộc phải bán cổ phiếu trong khủng hoảng để trả nghĩa vụ ngắn hạn là một thiết kế kém.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **8. Kiểm thử cú sốc đơn biến** tiếp nhận điểm tựa từ **7. Thiết kế tầng thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Kiểm thử cú sốc kết hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **8. Kiểm thử cú sốc đơn biến** nối từ **7. Thiết kế tầng thanh khoản** sang **9. Kiểm thử cú sốc kết hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Kiểm thử cú sốc đơn biến
 
@@ -139,7 +139,7 @@ Thanh khoản giảm mạnh
 
 Mục tiêu không phải dự báo xác suất chính xác mà là nhìn xem danh mục gãy ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **9. Kiểm thử cú sốc kết hợp** tiếp nhận điểm tựa từ **8. Kiểm thử cú sốc đơn biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Kiểm thử ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **9. Kiểm thử cú sốc kết hợp** nối từ **8. Kiểm thử cú sốc đơn biến** sang **10. Kiểm thử ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Kiểm thử cú sốc kết hợp
 
@@ -167,7 +167,7 @@ Suy thoái
 
 Hai kịch bản đều có cổ phiếu giảm nhưng phần phòng vệ phù hợp rất khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **10. Kiểm thử ngược** tiếp nhận điểm tựa từ **9. Kiểm thử cú sốc kết hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Tái cân bằng theo dải và theo rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **10. Kiểm thử ngược** nối từ **9. Kiểm thử cú sốc kết hợp** sang **11. Tái cân bằng theo dải và theo rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Kiểm thử ngược
 
@@ -188,7 +188,7 @@ Mức margin nào gây bán cưỡng bức?
 
 Cách nhìn này giúp tìm điểm thất bại trước khi tối ưu lợi suất.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **11. Tái cân bằng theo dải và theo rủi ro** tiếp nhận điểm tựa từ **10. Kiểm thử ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dùng dòng tiền mới để tái cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **11. Tái cân bằng theo dải và theo rủi ro** nối từ **10. Kiểm thử ngược** sang **12. Dùng dòng tiền mới để tái cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Tái cân bằng theo dải và theo rủi ro
 
@@ -205,7 +205,7 @@ Nếu cổ phiếu tăng lên 66%, có thể tái cân bằng. Tuy nhiên nếu 
 
 Điều quan trọng là quy tắc phải được đặt **trước** khi cảm xúc xuất hiện.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **12. Dùng dòng tiền mới để tái cân bằng** tiếp nhận điểm tựa từ **11. Tái cân bằng theo dải và theo rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Quy tắc giảm rủi ro khi mục tiêu đến gần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **12. Dùng dòng tiền mới để tái cân bằng** nối từ **11. Tái cân bằng theo dải và theo rủi ro** sang **13. Quy tắc giảm rủi ro khi mục tiêu đến gần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Dùng dòng tiền mới để tái cân bằng
 
@@ -213,7 +213,7 @@ Trong giai đoạn tích lũy, dòng tiền mới là công cụ tái cân bằn
 
 Nếu cổ phiếu đang cao hơn mục tiêu và trái phiếu thấp hơn mục tiêu, khoản tiết kiệm mới có thể được chuyển vào trái phiếu trước khi bán cổ phiếu. Cách này giảm phí, thuế và sai lầm thời điểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **13. Quy tắc giảm rủi ro khi mục tiêu đến gần** tiếp nhận điểm tựa từ **12. Dùng dòng tiền mới để tái cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Quy tắc bán phải gắn với nguyên nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **13. Quy tắc giảm rủi ro khi mục tiêu đến gần** nối từ **12. Dùng dòng tiền mới để tái cân bằng** sang **14. Quy tắc bán phải gắn với nguyên nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Quy tắc giảm rủi ro khi mục tiêu đến gần
 
@@ -230,7 +230,7 @@ Một quy tắc có thể là:
 
 Đây không phải công thức cố định, mà là cách minh họa tư duy khớp tài sản–nghĩa vụ.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **14. Quy tắc bán phải gắn với nguyên nhân** tiếp nhận điểm tựa từ **13. Quy tắc giảm rủi ro khi mục tiêu đến gần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Nhật ký quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **14. Quy tắc bán phải gắn với nguyên nhân** nối từ **13. Quy tắc giảm rủi ro khi mục tiêu đến gần** sang **15. Nhật ký quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Quy tắc bán phải gắn với nguyên nhân
 
@@ -248,7 +248,7 @@ Có lựa chọn thay thế tốt hơn sau chi phí
 
 Việc ghi lý do bán trước khi hành động giúp tránh hợp lý hóa sau sự kiện.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **15. Nhật ký quyết định** tiếp nhận điểm tựa từ **14. Quy tắc bán phải gắn với nguyên nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Hiệu chỉnh dự báo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **15. Nhật ký quyết định** nối từ **14. Quy tắc bán phải gắn với nguyên nhân** sang **16. Hiệu chỉnh dự báo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Nhật ký quyết định
 
@@ -267,7 +267,7 @@ Thời điểm đánh giá lại
 
 Sau đó đánh giá **chất lượng quyết định** riêng với **kết quả**. Một quyết định tốt vẫn có thể lỗ do bất định; một quyết định xấu vẫn có thể lời do may mắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **16. Hiệu chỉnh dự báo** tiếp nhận điểm tựa từ **15. Nhật ký quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Phân rã sai lầm danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **16. Hiệu chỉnh dự báo** nối từ **15. Nhật ký quyết định** sang **17. Phân rã sai lầm danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Hiệu chỉnh dự báo
 
@@ -277,7 +277,7 @@ Ví dụ, các sự kiện được gán xác suất 70% có xảy ra gần 70% 
 
 Đây là bước quan trọng để cải thiện tư duy thay vì chỉ nhìn lợi nhuận.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **17. Phân rã sai lầm danh mục** tiếp nhận điểm tựa từ **16. Hiệu chỉnh dự báo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Bài tập tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **17. Phân rã sai lầm danh mục** nối từ **16. Hiệu chỉnh dự báo** sang **18. Bài tập tổng hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Phân rã sai lầm danh mục
 
@@ -296,7 +296,7 @@ Phá kỷ luật
 
 Không sửa mô hình vĩ mô nếu vấn đề thực sự là quy mô vị thế; không sửa chiến lược nếu vấn đề là phá quy tắc.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **18. Bài tập tổng hợp** gom các mảnh từ **17. Phân rã sai lầm danh mục** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **19. Liên kết đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **18. Bài tập tổng hợp** tổng hợp từ **17. Phân rã sai lầm danh mục** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **19. Liên kết đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Bài tập tổng hợp
 
@@ -322,7 +322,7 @@ Sau đó:
 
 Nếu hoàn thành được bài tập này, người đọc đã chuyển từ “biết sản phẩm” sang **thiết kế một hệ thống đầu tư có mục tiêu**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **19. Liên kết đọc tiếp** gom các mảnh từ **18. Bài tập tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **19. Liên kết đọc tiếp** tổng hợp từ **18. Bài tập tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Liên kết đọc tiếp
 
@@ -333,7 +333,7 @@ Phần này là điểm bàn giao từ lab thiết kế danh mục sang các cha
 - [Danh mục đa tài sản và phòng vệ](../02_asset_classes/05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md)
 - [Tình huống cú sốc lạm phát](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md)
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **Kết luận** gom các mảnh từ **19. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định**, **Kết luận** tổng hợp từ **19. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

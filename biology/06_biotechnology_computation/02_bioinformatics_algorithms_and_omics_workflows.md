@@ -18,7 +18,7 @@ Các format phổ biến phản ánh stage đó. FASTQ giữ read và chất lư
 
 Format không chỉ là cú pháp (syntax / 문법) IT; nó encode **trạng thái (state / 상태) của lập luận (reasoning / 추론)**.
 
-> **Chuyển mạch:** Bioinformatics biến molecule thành digital object; metadata giữ ngữ cảnh mẫu và pipeline, còn QC phải đi trước inference để tránh diễn giải tín hiệu do lỗi kỹ thuật.
+> **Nối mạch:** Bioinformatics biến molecule thành digital object; metadata giữ ngữ cảnh mẫu và pipeline, còn QC phải đi trước inference để tránh diễn giải tín hiệu do lỗi kỹ thuật.
 
 ## 2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)
 
@@ -28,7 +28,7 @@ Nếu siêu dữ liệu (metadata / 메타데이터) sai hoặc ambiguous, phân
 
 Điều này làm cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계), quy ước đặt tên (naming convention) và từ vựng được kiểm soát (controlled vocabulary) trở thành thành phần (component / 컴포넌트) của chất lượng khoa học (scientific quality).
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)** nêu điều cần giải thích; **3. QC phải diễn ra trước suy luận (inference / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)** đặt vấn đề; **3. QC phải diễn ra trước suy luận (inference / 추론)** kiểm tra bằng chứng, rồi **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** mở rộng hệ quả.
 
 ## 3. QC phải diễn ra trước suy luận (inference / 추론)
 
@@ -38,7 +38,7 @@ Nhưng QC chỉ số (metric / 지표) không có ngưỡng phổ quát (univers
 
 QC vì vậy là **đánh giá theo bối cảnh (contextual diagnosis)**, không phải đạt/không đạt (pass/fail) máy móc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **3. QC phải diễn ra trước suy luận (inference / 추론)** nêu điều cần giải thích; **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. QC phải diễn ra trước suy luận (inference / 추론)** đặt vấn đề; **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** kiểm tra bằng chứng, rồi **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** mở rộng hệ quả.
 
 ## 4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)
 
@@ -52,7 +52,7 @@ Q30 tương ứng estimated xác suất lỗi (error probability) khoảng 0.001
 
 Nhưng điểm chất lượng vẫn là mô hình (model / 모델) estimate từ machine hành vi (behavior / 동작). “Q30” không nghĩa cơ sở (base / 기반) chắc chắn đúng; nó nghĩa instrument/mô hình (model / 모델) đánh giá độ tin cậy (confidence) ở mức tương ứng.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** nêu điều cần giải thích; **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** kiểm tra bằng chứng, rồi **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** mở rộng hệ quả.
 
 ## 5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)
 
@@ -64,7 +64,7 @@ Căn chỉnh toàn cục (global alignment) thích hợp khi hai chuỗi (sequen
 
 Biological question “hai chuỗi (sequence / 시퀀스) có quan hệ không?” trở thành computational bài toán (problem / 문제) “alignment nào có score cao dưới mô hình (model / 모델) đã chọn?”.
 
-> **Chuyển mạch:** Sequence alignment defines an optimization objective; dynamic programming finds an exact solution at cost, while BLAST trades completeness for speed through heuristics.
+> **Nối mạch:** Sequence alignment defines an optimization objective; dynamic programming finds an exact solution at cost, while BLAST trades completeness for speed through heuristics.
 
 ## 6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)
 
@@ -74,7 +74,7 @@ Khi cơ sở dữ liệu (database / 데이터베이스) có millions chuỗi (s
 
 Khoa học máy tính (computer science / 컴퓨터 과학) không chỉ giúp chạy nhanh hơn; nó quyết định loại approximation nào ta chấp nhận để quy mô (scale / 규모) biological question.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **7. BLAST: heuristic đánh đổi completeness lấy speed** tiếp nhận điểm tựa từ **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. E-value và significance của chuỗi (sequence / 시퀀스) match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. BLAST: heuristic đánh đổi completeness lấy speed** nối từ **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** sang **8. E-value và significance của chuỗi (sequence / 시퀀스) match**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. BLAST: heuristic đánh đổi completeness lấy speed
 
@@ -84,7 +84,7 @@ Kết quả nhanh và thường biologically useful, nhưng “BLAST hit” khô
 
 Chức năng (function) suy luận (inference / 추론) nên xem coverage, định danh (identity / 식별자), conserved lĩnh vực (domain / 도메인), synteny, phylogeny và ideally experiment.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **7. BLAST: heuristic đánh đổi completeness lấy speed** xác định đầu vào; **8. E-value và significance của chuỗi (sequence / 시퀀스) match** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** BLAST heuristic đánh đổi completeness lấy speed; E-value định lượng significance của sequence match. **Reference genome** kiểm tra coordinate system và giới hạn diễn giải.
 
 ## 8. E-value và significance của chuỗi (sequence / 시퀀스) match
 
@@ -94,7 +94,7 @@ Cơ sở dữ liệu (database / 데이터베이스) càng lớn, chance match c
 
 Đây là lesson statistical quan trọng: bằng chứng (evidence / 증거) strength phụ thuộc tìm kiếm (search / 검색) không gian (space / 공간).
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, sau nội dung của **8. E-value và significance của chuỗi (sequence / 시퀀스) match**, **9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** E-value và sequence-match significance đặt nền; reference genome là coordinate system chứ không phải chuẩn tuyệt đối. **Mapping quality** định lượng uncertainty về vị trí.
 
 ## 9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”
 
@@ -104,7 +104,7 @@ Read từ region divergent hoặc repeat có thể map khó. **Sai lệch do tha
 
 Hệ gen toàn quần thể (pangenome) biểu diễn (representation / 표현) cố mô hình hóa nhiều đường dẫn (path / 경로)/haplotype hơn, thường bằng graph-like cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** tiếp nhận điểm tựa từ **9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Coverage là redundancy, nhưng coverage thực không đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** nối từ **9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”** sang **11. Coverage là redundancy, nhưng coverage thực không đều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí
 
@@ -114,7 +114,7 @@ Chất lượng ánh xạ phản ánh confidence placement. Vì vậy statement 
 
 Nếu downstream variant caller bỏ qua bất định (uncertainty / 불확실성) ánh xạ (mapping / 매핑), dương tính giả (false positive) có thể tăng.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **11. Coverage là redundancy, nhưng coverage thực không đều** tiếp nhận điểm tựa từ **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Coverage là redundancy, nhưng coverage thực không đều** nối từ **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** sang **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Coverage là redundancy, nhưng coverage thực không đều
 
@@ -130,7 +130,7 @@ Coverage cao tạo redundancy giúp phân biệt sequencing lỗi (error / 오�
 
 “30× hệ gen (genome)” là average, không nghĩa mọi cơ sở (base / 기반) đều được đọc 30 lần.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)** tiếp nhận điểm tựa từ **11. Coverage là redundancy, nhưng coverage thực không đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Germline và somatic workflow dùng biological prior khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)** nối từ **11. Coverage là redundancy, nhưng coverage thực không đều** sang **13. Germline và somatic workflow dùng biological prior khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)
 
@@ -140,7 +140,7 @@ Variant caller so likelihood của genotype hypothesis dựa trên cơ sở (bas
 
 VCF vì vậy không phải danh sách (list / 목록) truth. Nó là collection of candidate variant + bằng chứng (evidence / 증거) + filter.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)** xác định đầu vào; **13. Germline và somatic workflow dùng biological prior khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Variant calling là probabilistic decision; germline và somatic workflow dùng prior khác nhau. **Copy-number và structural variant** cần evidence khác SNV.
 
 ## 13. Germline và somatic workflow dùng biological prior khác nhau
 
@@ -150,7 +150,7 @@ Tumor mẫu (sample / 표본) có purity <100%, subclone, copy-number alteration
 
 Cùng raw read nhưng mô hình (model / 모델) biological khác làm suy luận (inference / 추론) khác.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, cơ chế trong **13. Germline và somatic workflow dùng biological prior khác nhau** cần được kiểm chứng bằng dấu vết cụ thể; **14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Germline/somatic priors cần được kiểm chứng; copy-number và structural variant đòi hỏi evidence riêng. **Genome assembly không có reference** tiếp tục bằng reconstruction.
 
 ## 14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV
 
@@ -160,7 +160,7 @@ Ta cần độ sâu (depth / 깊이) thay đổi (change / 변경), discordant p
 
 Điều này cho thấy thuật toán (algorithm / 알고리즘) phụ thuộc **signature vật lý mà experiment tạo ra**.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV** nêu điều cần giải thích; **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV** đặt vấn đề; **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** kiểm tra bằng chứng, rồi **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** mở rộng hệ quả.
 
 ## 15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)
 
@@ -170,7 +170,7 @@ Repeat tạo branch, sequencing lỗi (error / 오류) tạo spur, heterozygosit
 
 Assembly là đồ thị (graph / 그래프) reconstruction dưới incomplete/noisy dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** nối từ **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** sang **17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)
 
@@ -180,7 +180,7 @@ Không có k “tốt nhất” universal. Parameter phản ánh sự đánh đ�
 
 Đây là example thuật toán (algorithm / 알고리즘) parameter có biological consequence.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** xác định đầu vào; **17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. RNA-seq: count không phải expression tuyệt đối trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** k-mer size tạo trade-off; annotation diễn giải sequence thành gene; **RNA-seq count** kiểm tra vì count không phải expression tuyệt đối.
 
 ## 17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”
 
@@ -190,7 +190,7 @@ Annotation cơ sở dữ liệu (database / 데이터베이스) có phiên bản
 
 Do đó downstream phân tích (analysis / 분석) phải ghi hệ gen tham chiếu **và annotation phiên bản (version / 버전)**.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”** xác định đầu vào; **18. RNA-seq: count không phải expression tuyệt đối trực tiếp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. Normalization có thể che toàn cục (global / 전역) shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Annotation tạo giả thuyết gene; RNA-seq count cần mô hình; **Normalization** kiểm tra khi global shift bị che.
 
 ## 18. RNA-seq: count không phải expression tuyệt đối trực tiếp
 
@@ -200,7 +200,7 @@ Raw count phụ thuộc thư viện (library / 라이브러리) kích thước (
 
 Normalization cố tạo comparable quy mô (scale / 규모) giữa mẫu (sample / 표본) nhưng luôn có giả định (assumption / 가정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **19. Normalization có thể che toàn cục (global / 전역) shift** tiếp nhận điểm tựa từ **18. RNA-seq: count không phải expression tuyệt đối trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Normalization có thể che toàn cục (global / 전역) shift** nối từ **18. RNA-seq: count không phải expression tuyệt đối trực tiếp** sang **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Normalization có thể che toàn cục (global / 전역) shift
 
@@ -210,7 +210,7 @@ Nếu treatment làm toàn cục (global / 전역) RNA môi trường vận hàn
 
 Đây là reason spike-in điều khiển (control / 제어) đôi khi hữu ích: bên ngoài (external / 외부) tham chiếu (reference / 참조) giúp nhận biết toàn cục (global / 전역) scaling.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** tiếp nhận điểm tựa từ **19. Normalization có thể che toàn cục (global / 전역) shift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** nối từ **19. Normalization có thể che toàn cục (global / 전역) shift** sang **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)
 
@@ -220,7 +220,7 @@ False Discovery tỷ lệ (rate / 비율) giúp kiểm soát expected false disc
 
 Nhưng adjusted p-value nhỏ vẫn cần tác động (effect / 효과) kích thước (size / 크기). Gene thay 1.03× với huge n có thể significant mà biological relevance thấp.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** tiếp nhận điểm tựa từ **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Clustering là hypothesis generator, không phải truth generator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** nối từ **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** sang **22. Clustering là hypothesis generator, không phải truth generator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục
 
@@ -230,7 +230,7 @@ PCA plot giúp detect batch, outlier hoặc major biological separation. Nhưng 
 
 Loading và siêu dữ liệu (metadata / 메타데이터) cần để interpret axis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **22. Clustering là hypothesis generator, không phải truth generator** tiếp nhận điểm tựa từ **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Clustering là hypothesis generator, không phải truth generator** nối từ **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** sang **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Clustering là hypothesis generator, không phải truth generator
 
@@ -240,7 +240,7 @@ Một cluster đẹp không tự chứng minh “loại tế bào (cell type) m�
 
 Thuật toán (algorithm / 알고리즘) tạo partition; biologist gắn interpretation.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **22. Clustering là hypothesis generator, không phải truth generator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** nối từ **22. Clustering là hypothesis generator, không phải truth generator** sang **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)
 
@@ -250,7 +250,7 @@ Nhưng capture efficiency thấp, count sparse và nhiều zero. Zero có thể 
 
 Vì vậy single-cell phân tích (analysis / 분석) cần mô hình (model / 모델) count noise và tránh đọc heatmap như đo lường (measurement / 측정) hoàn hảo.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** tiếp nhận điểm tựa từ **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Pseudotime: reconstruct dynamics từ snapshot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** nối từ **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** sang **25. Pseudotime: reconstruct dynamics từ snapshot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách
 
@@ -258,7 +258,7 @@ Giảm chiều dữ liệu (dimensionality reduction) nén hàng nghìn dimensio
 
 Một plot đẹp là biểu diễn (representation / 표현) của thuật toán (algorithm / 알고리즘), không phải microscope ảnh (image / 이미지) của “tế bào (cell)-state không gian (space / 공간)”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **25. Pseudotime: reconstruct dynamics từ snapshot** tiếp nhận điểm tựa từ **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Pseudotime: reconstruct dynamics từ snapshot** nối từ **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** sang **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Pseudotime: reconstruct dynamics từ snapshot
 
@@ -268,7 +268,7 @@ Pseudotime không phải actual chronological thời gian (time / 시간). Nó l
 
 Kiểm tra hợp lệ (validation / 검증) bằng lineage tracing hoặc time-course giúp mạnh hơn.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** tiếp nhận điểm tựa từ **25. Pseudotime: reconstruct dynamics từ snapshot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** nối từ **25. Pseudotime: reconstruct dynamics từ snapshot** sang **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality
 
@@ -278,7 +278,7 @@ Kết hợp epigenomics với RNA-seq giúp xây regulatory hypothesis. Nhưng o
 
 CRISPR perturb enhancer hoặc reporter assay có thể kiểm tra nhân quả (causal / 인과적) role.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** tiếp nhận điểm tựa từ **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** nối từ **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** sang **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác
 
@@ -288,7 +288,7 @@ Mức độ phong phú của protein (protein abundance) chịu translation, ph�
 
 Không tầng (layer / 계층) omics nào “cao hơn” tuyệt đối. Mỗi tầng (layer / 계층) có ý nghĩa sinh học và phép đo (measurement) độ lệch (bias / 편향) riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** tiếp nhận điểm tựa từ **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** nối từ **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** sang **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết
 
@@ -298,7 +298,7 @@ Một useful chiến lược (strategy / 전략) là đặt nhân quả (causal 
 
 Tích hợp (integration / 통합) tốt đi theo biological cơ chế (mechanism / 메커니즘), không chỉ concatenate ma trận (matrix / 행렬).
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** nêu điều cần giải thích; **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. Học máy (machine learning): prediction khác explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** đặt vấn đề; **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** kiểm tra bằng chứng, rồi **30. Học máy (machine learning): prediction khác explanation** mở rộng hệ quả.
 
 ## 29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)
 
@@ -308,7 +308,7 @@ Degree, centrality và quần xã (community) cấu trúc (structure / 구조) g
 
 Mọi mạng (network / 네트워크) visualization nên hỏi: **edge nghĩa gì và bằng chứng (evidence / 증거) từ đâu?**
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** nêu điều cần giải thích; **30. Học máy (machine learning): prediction khác explanation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** đặt vấn đề; **30. Học máy (machine learning): prediction khác explanation** kiểm tra bằng chứng, rồi **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** mở rộng hệ quả.
 
 ## 30. Học máy (machine learning): prediction khác explanation
 
@@ -318,7 +318,7 @@ Mô hình (model / 모델) có thể học batch, hospital, scanner hoặc ances
 
 Prediction trả lời “có dự đoán được không?”. Causality trả lời “thay X có làm Y đổi không?”. Hai câu hỏi khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **30. Học máy (machine learning): prediction khác explanation** nêu điều cần giải thích; **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Học máy (machine learning): prediction khác explanation** đặt vấn đề; **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** kiểm tra bằng chứng, rồi **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** mở rộng hệ quả.
 
 ## 31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)
 
@@ -328,7 +328,7 @@ Huấn luyện (training / 학습) set fit mô hình (model / 모델). kiểm tr
 
 Mô hình khi đó có thể memorize individual-specific tín hiệu (signal / 신호) thay vì general biological quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** nêu điều cần giải thích; **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** đặt vấn đề; **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** kiểm tra bằng chứng, rồi **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** mở rộng hệ quả.
 
 ## 32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập
 
@@ -336,7 +336,7 @@ Nếu đơn vị (unit / 단위) biological thật là patient, split nên theo 
 
 Đây là cầu nối (bridge / 브리지) giữa thiết kế thực nghiệm (experimental design) và ML: independence giả định (assumption / 가정) phải phản ánh sampling quá trình (process).
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** tiếp nhận điểm tựa từ **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** nối từ **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** sang **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance
 
@@ -344,7 +344,7 @@ Một gene có predictive power lớn có thể chỉ là downstream marker. SHA
 
 Để kiểm thử (test / 테스트) driver cần perturbation hoặc nhân quả (causal / 인과적) thiết kế (design / 설계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** xác định đầu vào; **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **35. Tình huống phân tích (case study): germline variant workflow end-to-end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Feature importance không phải causal importance; reproducible workflow giữ science có thể kiểm tra. **Germline variant workflow** kiểm tra cả chuỗi end-to-end.
 
 ## 34. Quy trình có thể tái lập (reproducible workflow) là một phần của science
 
@@ -367,7 +367,7 @@ raw data
 
 Nếu chuỗi (chain / 사슬) không dấu vết (trace / 추적) được, reproducibility yếu.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science** cho ta quy tắc; **35. Tình huống phân tích (case study): germline variant workflow end-to-end** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science** nêu quy tắc; **35. Tình huống phân tích (case study): germline variant workflow end-to-end** thử quy tắc trong tình huống, rồi **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** mở rộng hệ quả.
 
 ## 35. Tình huống phân tích (case study): germline variant workflow end-to-end
 
@@ -377,7 +377,7 @@ Cuối cùng variant “pathogenic hay không” vẫn cần clinical/genetic b�
 
 Chuỗi xử lý (pipeline / 파이프라인) không biến raw read trực tiếp thành diagnosis; mỗi stage thu hẹp bất định (uncertainty / 불확실성) một phần.
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, sau khi thấy quy trình trong **35. Tình huống phân tích (case study): germline variant workflow end-to-end**, **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **37. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Germline variant workflow cho thấy pipeline end-to-end; RNA-seq differential expression mở case thứ hai và **misconceptions** kiểm tra giới hạn.
 
 ## 36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot
 
@@ -387,7 +387,7 @@ Biological lập luận (reasoning / 추론) tiếp theo hỏi pathway nào enri
 
 Omics là hypothesis engine mạnh, nhưng cơ chế (mechanism / 메커니즘) cần vòng experiment mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** cho ta quy tắc; **37. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **38. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** nêu quy tắc; **37. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **38. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 37. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -399,7 +399,7 @@ Omics là hypothesis engine mạnh, nhưng cơ chế (mechanism / 메커니즘) 
 
 “Hệ gen tham chiếu là genome chuẩn của species” quá đơn giản; population có diversity và biến thể cấu trúc (structural variation).
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **38. Mô hình tư duy tổng hợp** gom các mảnh từ **37. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bioinformatics phải bắt đầu từ data-generating tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 37; bioinformatics phải bắt đầu từ data-generating process.
 
 ## 38. Mô hình tư duy tổng hợp
 
@@ -420,7 +420,7 @@ Mỗi stage vừa thêm thông tin (information / 정보) vừa làm mất một
 
 <!-- depth-audit-2026:ai-data-generating-process -->
 
-> **Chuyển mạch:** Ở chặng này của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **Bioinformatics phải bắt đầu từ data-generating tiến trình (process / 프로세스)** gom các mảnh từ **38. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **39. cầu nối (bridge / 브리지) sang Sinh học hệ thống (systems biology)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Data-generating process đặt giới hạn cho bioinformatics; cầu nối sang systems biology mở rộng từ pipeline tới mô hình hệ thống.
 
 ## Bioinformatics phải bắt đầu từ data-generating tiến trình (process / 프로세스)
 
@@ -432,7 +432,7 @@ Foundation mô hình (model / 모델) và protein ngôn ngữ (language / 언어
 
 AI hữu ích nhất khi đặt trong chuỗi xử lý (pipeline / 파이프라인) `biological question → measurement → representation → model → prediction → experimental test`, không phải khi thay toàn bộ biology bằng score.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **Bioinformatics phải bắt đầu từ data-generating tiến trình (process / 프로세스)** xác định đầu vào; **39. cầu nối (bridge / 브리지) sang Sinh học hệ thống (systems biology)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Data-generating process cung cấp đầu vào; cầu nối sang systems biology giải thích vận hành và khép mạch.
 
 ## 39. cầu nối (bridge / 브리지) sang Sinh học hệ thống (systems biology)
 

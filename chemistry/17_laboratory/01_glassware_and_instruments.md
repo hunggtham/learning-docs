@@ -10,7 +10,7 @@ Trước khi dùng một thiết bị, cần hỏi: nó đo hoặc cấp đại 
 
 Đó là lý do vạch `100 mL` trên cốc becher không có cùng ý nghĩa với bình định mức 100 mL.
 
-> **Chuyển mạch:** Mỗi dụng cụ có measurement contract về thể tích, độ chính xác và cách dùng; beaker phù hợp thao tác chung, còn Erlenmeyer hỗ trợ trộn/đun trước khi chọn dụng cụ định lượng chính xác.
+> **Nối mạch:** Mỗi dụng cụ có measurement contract về thể tích, độ chính xác và cách dùng; beaker phù hợp thao tác chung, còn Erlenmeyer hỗ trợ trộn/đun trước khi chọn dụng cụ định lượng chính xác.
 
 ## Cốc becher
 
@@ -20,7 +20,7 @@ Các vạch thể tích thường chỉ gần đúng. Dùng becher để pha dun
 
 Miệng rộng giúp rót và bay hơi thuận tiện hơn nhưng cũng làm nguy cơ nhiễm bẩn và bay hơi tăng.
 
-> **Chuyển mạch:** Becher tối ưu cho trộn, rót và gia nhiệt thô; Erlenmeyer giữ cùng mục tiêu thao tác nhưng thêm hình học chống bắn, nên bước kế tiếp phải hỏi hình học nào phân bố nhiệt tốt hơn.
+> **Nối mạch:** Becher tối ưu cho trộn, rót và gia nhiệt thô; Erlenmeyer giữ cùng mục tiêu thao tác nhưng thêm hình học chống bắn, nên bước kế tiếp phải hỏi hình học nào phân bố nhiệt tốt hơn.
 
 ## Bình Erlenmeyer
 
@@ -30,7 +30,7 @@ Nó phù hợp làm bình nhận trong chuẩn độ, trộn phản ứng hoặc
 
 Vạch thể tích trên bình thông thường chỉ có tính ước lượng nếu không phải dụng cụ được hiệu chuẩn chuyên biệt.
 
-> **Chuyển mạch:** Erlenmeyer ưu tiên thao tác an toàn khi lắc và nhận mẫu; bình cầu đáy tròn đổi ưu tiên sang phân bố nhiệt và hồi lưu, đồng thời buộc người dùng kiểm soát giá đỡ trước khi định lượng.
+> **Nối mạch:** Erlenmeyer ưu tiên thao tác an toàn khi lắc và nhận mẫu; bình cầu đáy tròn đổi ưu tiên sang phân bố nhiệt và hồi lưu, đồng thời buộc người dùng kiểm soát giá đỡ trước khi định lượng.
 
 ## Bình cầu đáy tròn
 
@@ -38,7 +38,7 @@ Vạch thể tích trên bình thông thường chỉ có tính ước lượng 
 
 Bình không tự đứng được nếu không có giá đỡ và không phải dụng cụ đo thể tích chính xác.
 
-> **Chuyển mạch:** Bình cầu đáy tròn là vessel cho phản ứng và truyền nhiệt, không phải chuẩn thể tích; ống đong chuyển câu hỏi sang độ gần đúng của thể tích và cách đọc vạch.
+> **Nối mạch:** Bình cầu đáy tròn là vessel cho phản ứng và truyền nhiệt, không phải chuẩn thể tích; ống đong chuyển câu hỏi sang độ gần đúng của thể tích và cách đọc vạch.
 
 ## Ống đong
 
@@ -48,7 +48,7 @@ Khi đọc, mắt cần ngang mức meniscus để tránh sai số thị sai (**
 
 Với nhiều dung dịch nước tạo meniscus lõm, thường đọc đáy meniscus trừ khi quy ước của chất lỏng hoặc dụng cụ yêu cầu khác.
 
-> **Chuyển mạch:** Ống đong chỉ có ý nghĩa khi người đọc chọn đúng đáy meniscus và góc mắt; meniscus/parallax biến thao tác quan sát đó thành nguồn sai số cần kiểm soát trước khi dùng bình định mức.
+> **Nối mạch:** Ống đong chỉ có ý nghĩa khi người đọc chọn đúng đáy meniscus và góc mắt; meniscus/parallax biến thao tác quan sát đó thành nguồn sai số cần kiểm soát trước khi dùng bình định mức.
 
 ## Meniscus và thị sai
 
@@ -58,7 +58,7 @@ Nếu mắt ở cao hoặc thấp hơn vạch, mức chất lỏng biểu kiến
 
 Đọc nhất quán ở ngang tầm mắt giúp giảm sai lệch hệ thống.
 
-> **Chuyển mạch:** Meniscus/parallax define how the reading is observed; a volumetric flask turns that corrected reading into one calibrated final volume, so temperature becomes the next systematic limit.
+> **Nối mạch:** Meniscus/parallax define how the reading is observed; a volumetric flask turns that corrected reading into one calibrated final volume, so temperature becomes the next systematic limit.
 
 ## Bình định mức
 
@@ -70,7 +70,7 @@ Nó được dùng để pha dung dịch chuẩn và thực hiện pha loãng ch
 
 Quy trình khái niệm gồm hòa tan chất trong một phần dung môi, chuyển định lượng vào bình, đưa mức dung dịch gần vạch, chờ cân bằng nhiệt khi cần, thêm dung môi đúng tới vạch rồi trộn đồng nhất.
 
-> **Chuyển mạch:** A volumetric flask is calibrated at a temperature and to contain a fixed volume; thermal expansion therefore sets the condition before a pipette is chosen to deliver a portion of that solution.
+> **Nối mạch:** A volumetric flask is calibrated at a temperature and to contain a fixed volume; thermal expansion therefore sets the condition before a pipette is chosen to deliver a portion of that solution.
 
 ## Nhiệt độ và sự giãn nở của thủy tinh
 
@@ -80,7 +80,7 @@ Công việc đòi hỏi độ chính xác cao cần tôn trọng nhiệt độ 
 
 Bình định mức không được thiết kế để gia nhiệt trực tiếp.
 
-> **Chuyển mạch:** Temperature control protects the concentration in the calibrated flask; a volumetric pipette then delivers one fixed aliquot, unlike the graduated pipette that trades accuracy for range.
+> **Nối mạch:** Temperature control protects the concentration in the calibrated flask; a volumetric pipette then delivers one fixed aliquot, unlike the graduated pipette that trades accuracy for range.
 
 ## Pipette định mức
 
@@ -90,7 +90,7 @@ Nhiều pipette mang ký hiệu **TD / EX (to deliver)**, nghĩa là được hi
 
 Một số loại được thiết kế để giữ lại lớp chất lỏng mỏng trên thành; không nên thổi phần còn lại nếu pipette không được ghi là loại **blow-out**.
 
-> **Chuyển mạch:** A volumetric pipette optimizes one exact delivery; a graduated pipette offers several volumes, making scale reading and operator technique the trade-off before moving to a micropipette.
+> **Nối mạch:** A volumetric pipette optimizes one exact delivery; a graduated pipette offers several volumes, making scale reading and operator technique the trade-off before moving to a micropipette.
 
 ## Pipette chia độ
 
@@ -100,7 +100,7 @@ Hai kiểu quen thuộc là Mohr, nơi vạch chia dừng trước đầu pipett
 
 Kỹ thuật phải phù hợp chính kiểu pipette đang dùng.
 
-> **Chuyển mạch:** A graduated pipette trades precision for a broad range; a micropipette narrows the range to microlitres, so piston travel and tip handling become the dominant error sources.
+> **Nối mạch:** A graduated pipette trades precision for a broad range; a micropipette narrows the range to microlitres, so piston travel and tip handling become the dominant error sources.
 
 ## Micropipette
 
@@ -108,7 +108,7 @@ Micropipette dịch chuyển không khí (**air-displacement micropipette**) ph�
 
 Độ chính xác phụ thuộc việc dùng đúng dải định mức, đầu tip tương thích, làm ướt trước khi cần tăng độ chụm, hút với tư thế phù hợp, thao tác piston trơn và tránh để chất lỏng đi ngược vào thân pipette.
 
-> **Chuyển mạch:** The first stop defines the metered air volume and the second stop expels residue; confusing them overfills the tip, which motivates a positive-displacement design for difficult liquids.
+> **Nối mạch:** The first stop defines the metered air volume and the second stop expels residue; confusing them overfills the tip, which motivates a positive-displacement design for difficult liquids.
 
 ## Nấc thứ nhất và nấc thứ hai
 
@@ -116,7 +116,7 @@ Micropipette dịch chuyển không khí (**air-displacement micropipette**) ph�
 
 Nếu hút mẫu từ nấc thứ hai, pipette sẽ hút quá thể tích dự kiến và tạo sai số.
 
-> **Chuyển mạch:** Positive displacement removes the air cushion and lets the piston contact the sample, improving behavior for viscous or volatile liquids; gravimetric testing then checks whether the delivered mass matches the intended volume.
+> **Nối mạch:** Positive displacement removes the air cushion and lets the piston contact the sample, improving behavior for viscous or volatile liquids; gravimetric testing then checks whether the delivered mass matches the intended volume.
 
 ## Pipette dịch chuyển dương
 
@@ -124,7 +124,7 @@ Trong **pipette dịch chuyển dương (positive-displacement pipette)**, pisto
 
 Kiểu này hữu ích với chất nhớt, dễ bay hơi hoặc tạo bọt, nơi đệm không khí của micropipette thông thường gây sai lệch đáng kể.
 
-> **Chuyển mạch:** Gravimetric verification converts delivered mass through water density at temperature into volume and uncertainty; the same calibration mindset carries to a burette with a continuous reading.
+> **Nối mạch:** Gravimetric verification converts delivered mass through water density at temperature into volume and uncertainty; the same calibration mindset carries to a burette with a continuous reading.
 
 ## Kiểm tra pipette bằng phương pháp trọng lượng
 
@@ -138,7 +138,7 @@ Trong đo lường chính xác hơn còn có thể hiệu chỉnh lực nổi c�
 
 Cách này biến phép đo khối lượng bằng cân thành phép kiểm tra thể tích.
 
-> **Chuyển mạch:** Gravimetric testing checks one delivered aliquot; a burette instead measures a variable dose as the difference between initial and final readings, so both readings contribute uncertainty.
+> **Nối mạch:** Gravimetric testing checks one delivered aliquot; a burette instead measures a variable dose as the difference between initial and final readings, so both readings contribute uncertainty.
 
 ## Burette
 
@@ -154,7 +154,7 @@ Trước chuẩn độ, burette thường được điều hòa bằng chính du
 
 Bọt khí ở đầu burette cần được loại trước khi bắt đầu vì nó làm thể tích đọc và thể tích thực cấp ra không còn tương ứng.
 
-> **Chuyển mạch:** Burette accuracy is a difference of two meniscus readings; uncertainty propagation makes that explicit before the workflow changes from dosing to separating immiscible phases.
+> **Nối mạch:** Burette accuracy is a difference of two meniscus readings; uncertainty propagation makes that explicit before the workflow changes from dosing to separating immiscible phases.
 
 ## Độ không đảm bảo khi đọc burette
 
@@ -168,7 +168,7 @@ u_V\approx\sqrt{u_i^2+u_f^2}
 
 Do đó độ không đảm bảo của lượng đã cấp không đơn giản chỉ bằng một vạch chia nhỏ nhất.
 
-> **Chuyển mạch:** Burette uncertainty concerns a single liquid scale; a separatory funnel changes the problem to phase identity, pressure release, and density before draining either layer.
+> **Nối mạch:** Burette uncertainty concerns a single liquid scale; a separatory funnel changes the problem to phase identity, pressure release, and density before draining either layer.
 
 ## Phễu chiết
 
@@ -178,7 +178,7 @@ Các thao tác vật lý chính là trộn hai pha, giải áp khi cần, chờ 
 
 Không nên mặc định “pha hữu cơ luôn nằm trên”. Vị trí lớp phụ thuộc khối lượng riêng và cần được kiểm tra nếu không chắc chắn.
 
-> **Chuyển mạch:** Liquid–liquid extraction separates by partition and density; a condenser instead manages vapor–liquid phase change, so cooling flow and heat-transfer area become the control variables.
+> **Nối mạch:** Liquid–liquid extraction separates by partition and density; a condenser instead manages vapor–liquid phase change, so cooling flow and heat-transfer area become the control variables.
 
 ## Sinh hàn
 
@@ -188,7 +188,7 @@ Với sinh hàn dùng nước, nước làm mát thường đi vào từ đầu 
 
 Lưu lượng chỉ cần đủ cho trao đổi nhiệt; dòng quá mạnh lãng phí nước và có thể làm ống mềm chịu ứng suất không cần thiết.
 
-> **Chuyển mạch:** A condenser removes heat after vaporization; the heating mantle or hot plate supplies that energy under a controlled, safer interface before mixing determines how evenly the heat spreads.
+> **Nối mạch:** A condenser removes heat after vaporization; the heating mantle or hot plate supplies that energy under a controlled, safer interface before mixing determines how evenly the heat spreads.
 
 ## Áo gia nhiệt và bếp gia nhiệt
 
@@ -196,7 +196,7 @@ Lưu lượng chỉ cần đủ cho trao đổi nhiệt; dòng quá mạnh lãng
 
 Nguồn lửa hở không phù hợp khi có hơi dung môi dễ cháy.
 
-> **Chuyển mạch:** Heating sets the energy input and safety boundary; magnetic stirring reduces concentration and temperature gradients, but scale and viscosity determine when mechanical stirring is needed.
+> **Nối mạch:** Heating sets the energy input and safety boundary; magnetic stirring reduces concentration and temperature gradients, but scale and viscosity determine when mechanical stirring is needed.
 
 ## Khuấy từ
 
@@ -206,7 +206,7 @@ Trộn tốt làm giảm độ dốc (gradient / 기울기) nồng độ và nhi
 
 Khi tăng quy mô, khuấy từ có thể không đủ vì thời gian trộn và hình học dòng thay đổi.
 
-> **Chuyển mạch:** Magnetic stirring is convenient for low-viscosity, small-scale work; mechanical agitation adds torque and controllable flow for viscous or larger systems, making probe placement the next measurement question.
+> **Nối mạch:** Magnetic stirring is convenient for low-viscosity, small-scale work; mechanical agitation adds torque and controllable flow for viscous or larger systems, making probe placement the next measurement question.
 
 ## Khuấy cơ
 
@@ -216,7 +216,7 @@ Hình dạng cánh khuấy quyết định kiểu dòng.
 
 Chất lượng trộn là một phần của khả năng tái lập phản ứng chứ không chỉ là thao tác phụ.
 
-> **Chuyển mạch:** Mechanical stirring changes the flow field and helps homogenize the sample; a temperature probe must therefore measure a representative region before mass is measured on the analytical balance.
+> **Nối mạch:** Mechanical stirring changes the flow field and helps homogenize the sample; a temperature probe must therefore measure a representative region before mass is measured on the analytical balance.
 
 ## Nhiệt kế và đầu dò nhiệt độ
 
@@ -224,7 +224,7 @@ Nhiệt kế thủy tinh, thermocouple, RTD và thermistor có dải đo, thời
 
 Giá trị đo còn phụ thuộc vị trí đầu dò. Đầu dò chạm thành bình nóng có thể không đại diện nhiệt độ trung bình của chất lỏng.
 
-> **Chuyển mạch:** A temperature probe validates whether the mixed sample is representative; the analytical balance then measures mass under its own environmental limits, which tare can only partially offset.
+> **Nối mạch:** A temperature probe validates whether the mixed sample is representative; the analytical balance then measures mass under its own environmental limits, which tare can only partially offset.
 
 ## Cân phân tích
 
@@ -232,7 +232,7 @@ Cân phân tích có độ phân giải cao, thường tới 0,1 mg hoặc tốt
 
 Các nguồn sai số thực tế gồm luồng gió, rung, mẫu nóng/lạnh tạo đối lưu, tĩnh điện, mẫu hút ẩm, dấu tay và vật chứa không ổn định.
 
-> **Chuyển mạch:** The balance exposes wind, vibration, convection, and static as distinct error sources; tare resets the container baseline but does not erase those effects, motivating difference weighing.
+> **Nối mạch:** The balance exposes wind, vibration, convection, and static as distinct error sources; tare resets the container baseline but does not erase those effects, motivating difference weighing.
 
 ## Tare không loại bỏ mọi độ không đảm bảo
 
@@ -240,7 +240,7 @@ Tare chỉ đặt lại mốc hiển thị sau khi có vật chứa.
 
 Nó không loại bỏ sai số hiệu chuẩn, giới hạn độ lặp lại, trôi tín hiệu, lực nổi không khí hay ảnh hưởng môi trường.
 
-> **Chuyển mạch:** Difference weighing measures what leaves the container, not an assumed transfer; a desiccator then controls moisture and cooling so the measured mass does not drift before the next assay.
+> **Nối mạch:** Difference weighing measures what leaves the container, not an assumed transfer; a desiccator then controls moisture and cooling so the measured mass does not drift before the next assay.
 
 ## Cân theo chênh lệch
 
@@ -254,7 +254,7 @@ m_{transferred}=m_{before}-m_{after}
 
 Cách này thường đáng tin cậy hơn cố ép cân đúng một giá trị mục tiêu trên giấy cân rồi giả định toàn bộ đã được chuyển vào mẫu.
 
-> **Chuyển mạch:** Difference weighing protects against incomplete transfer; the desiccator stabilizes sample water content and temperature, after which an electrochemical pH measurement can be interpreted without that mass/moisture confounder.
+> **Nối mạch:** Difference weighing protects against incomplete transfer; the desiccator stabilizes sample water content and temperature, after which an electrochemical pH measurement can be interpreted without that mass/moisture confounder.
 
 ## Bình hút ẩm
 
@@ -262,7 +262,7 @@ Bình hút ẩm duy trì môi trường khô và cho phép mẫu nóng sau sấy
 
 Đặt vật nóng trực tiếp lên cân có thể tạo dòng đối lưu và làm sai phép cân, vì vậy mẫu cần được đưa gần nhiệt độ phòng trước khi cân chính xác.
 
-> **Chuyển mạch:** Drying and cooling stabilize sample condition; the pH meter then maps hydrogen-ion activity to voltage, so calibration must establish the real offset and slope before interpretation.
+> **Nối mạch:** Drying and cooling stabilize sample condition; the pH meter then maps hydrogen-ion activity to voltage, so calibration must establish the real offset and slope before interpretation.
 
 ## Máy đo pH — một thiết bị điện hóa
 
@@ -276,7 +276,7 @@ E=E^0-\frac{2.303RT}{F}\,pH
 
 Ở 25 °C, độ dốc lý tưởng gần 59,16 mV trên mỗi đơn vị pH.
 
-> **Chuyển mạch:** The pH electrode follows a near-Nernst slope but drifts in offset and sensitivity; multi-point buffer calibration measures both, after which electrode condition becomes the dominant maintenance variable.
+> **Nối mạch:** The pH electrode follows a near-Nernst slope but drifts in offset and sensitivity; multi-point buffer calibration measures both, after which electrode condition becomes the dominant maintenance variable.
 
 ## Hiệu chuẩn máy đo pH
 
@@ -286,7 +286,7 @@ Hiệu chuẩn sửa cả độ lệch gốc và độ dốc.
 
 Dung dịch đệm cũ hoặc nhiễm bẩn tạo sai lệch hệ thống ngay cả khi thiết bị vẫn hiển thị nhiều chữ số.
 
-> **Chuyển mạch:** Calibration is only valid while the glass membrane stays hydrated and the reference junction remains open; care preserves that response before comparing pH with another ionic measurement.
+> **Nối mạch:** Calibration is only valid while the glass membrane stays hydrated and the reference junction remains open; care preserves that response before comparing pH with another ionic measurement.
 
 ## Chăm sóc điện cực pH
 
@@ -296,7 +296,7 @@ Sau đo có thể rửa bằng nước sạch và thấm nhẹ thay vì chà m�
 
 Mối nối tham chiếu có thể bị tắc trong mẫu bẩn hoặc giàu protein.
 
-> **Chuyển mạch:** Electrode care protects a potential-based measurement; conductivity instead aggregates ion concentration, charge, mobility, and temperature, leading next to an optical signal with a different blank.
+> **Nối mạch:** Electrode care protects a potential-based measurement; conductivity instead aggregates ion concentration, charge, mobility, and temperature, leading next to an optical signal with a different blank.
 
 ## Máy đo độ dẫn điện
 
@@ -306,7 +306,7 @@ Thiết bị đo khả năng dẫn điện của dung dịch.
 
 Hiệu chỉnh nhiệt độ quan trọng vì độ dẫn thay đổi đáng kể khi nhiệt độ thay đổi.
 
-> **Chuyển mạch:** Conductivity summarizes ionic transport and temperature; absorption spectroscopy measures wavelength-dependent light loss, so the next control is subtracting solvent, reagent, and cuvette background.
+> **Nối mạch:** Conductivity summarizes ionic transport and temperature; absorption spectroscopy measures wavelength-dependent light loss, so the next control is subtracting solvent, reagent, and cuvette background.
 
 ## Máy quang phổ hấp thụ
 
@@ -320,7 +320,7 @@ A=\varepsilon bc
 
 chỉ có ý nghĩa trong vùng nồng độ phù hợp và khi dạng hóa học của chất hấp thụ ổn định.
 
-> **Chuyển mạch:** Beer–Lambert relates absorbance to path length and concentration only under stable chemical conditions; a blank estimates non-analyte absorbance before the cuvette becomes the optical interface to control.
+> **Nối mạch:** Beer–Lambert relates absorbance to path length and concentration only under stable chemical conditions; a blank estimates non-analyte absorbance before the cuvette becomes the optical interface to control.
 
 ## Mẫu trắng
 
@@ -328,7 +328,7 @@ chỉ có ý nghĩa trong vùng nồng độ phù hợp và khi dạng hóa họ
 
 Blank là một phần của mô hình đo, không phải chỉ là “nút đưa máy về 0”.
 
-> **Chuyển mạch:** A blank removes solvent/reagent/cuvette contributions statistically; cuvette material, orientation, fingerprints, and scratches determine how much of the remaining signal is trustworthy before checking linearity.
+> **Nối mạch:** A blank removes solvent/reagent/cuvette contributions statistically; cuvette material, orientation, fingerprints, and scratches determine how much of the remaining signal is trustworthy before checking linearity.
 
 ## Cuvette
 
@@ -336,7 +336,7 @@ Vật liệu cuvette quyết định vùng bước sóng sử dụng. Nhựa ho�
 
 Dấu tay, vết xước và việc đặt cuvette khác hướng có thể làm phép đo hấp thụ bị lệch.
 
-> **Chuyển mạch:** Cuvette quality protects the optical path; detector saturation and stray light still limit linearity, so samples must be diluted or validated before a mechanical separation step such as centrifugation.
+> **Nối mạch:** Cuvette quality protects the optical path; detector saturation and stray light still limit linearity, so samples must be diluted or validated before a mechanical separation step such as centrifugation.
 
 ## Vùng tuyến tính của thiết bị
 
@@ -344,7 +344,7 @@ Bão hòa đầu dò và ánh sáng lạc (**stray light**) làm quan hệ hấp
 
 Nên pha loãng mẫu về vùng đã được thẩm định thay vì giả định hấp thụ càng lớn thì nồng độ luôn tăng tỷ lệ chính xác.
 
-> **Chuyển mạch:** Once absorbance is kept inside its validated linear range, centrifugation changes the control variable to relative centrifugal force, which depends on rotor radius as well as rpm.
+> **Nối mạch:** Once absorbance is kept inside its validated linear range, centrifugation changes the control variable to relative centrifugal force, which depends on rotor radius as well as rpm.
 
 ## Máy ly tâm
 
@@ -360,7 +360,7 @@ với \(r\) tính bằng cm.
 
 Cùng rpm nhưng rotor bán kính lớn hơn tạo RCF cao hơn.
 
-> **Chuyển mạch:** Centrifuge separation is set by RCF, but an unbalanced load converts that force into vibration and rotor stress; drying and ashing therefore require a different thermal safety envelope.
+> **Nối mạch:** Centrifuge separation is set by RCF, but an unbalanced load converts that force into vibration and rotor stress; drying and ashing therefore require a different thermal safety envelope.
 
 ## Cân bằng rotor theo khối lượng
 
@@ -368,7 +368,7 @@ Các ống đối diện cần được cân bằng phù hợp.
 
 Tải lệch tạo rung và ứng suất lên rotor. Tính toàn vẹn cơ học của rotor là vấn đề an toàn hậu quả cao.
 
-> **Chuyển mạch:** Rotor balance protects mechanical integrity; an oven or muffle furnace instead controls temperature and material compatibility, after which reduced pressure can lower the boiling point for gentler drying.
+> **Nối mạch:** Rotor balance protects mechanical integrity; an oven or muffle furnace instead controls temperature and material compatibility, after which reduced pressure can lower the boiling point for gentler drying.
 
 ## Tủ sấy và lò nung
 
@@ -378,7 +378,7 @@ Lò nung muffle đạt nhiệt độ cao hơn nhiều để tro hóa hoặc nung
 
 Vật liệu của chén/bình chứa phải tương thích cả với nhiệt độ và hóa học của mẫu.
 
-> **Chuyển mạch:** Thermal equipment sets the heat load and material limit; a vacuum pump changes pressure, so solvent compatibility, cold trapping, and exhaust protection determine whether evaporation is safe enough for rotary concentration.
+> **Nối mạch:** Thermal equipment sets the heat load and material limit; a vacuum pump changes pressure, so solvent compatibility, cold trapping, and exhaust protection determine whether evaporation is safe enough for rotary concentration.
 
 ## Bơm chân không
 
@@ -388,7 +388,7 @@ Bẫy lạnh có thể bảo vệ bơm và giảm lượng hơi đi vào đườ
 
 Bơm dầu bị nhiễm hơi phản ứng hoặc ăn mòn có thể trở thành vấn đề bảo trì và an toàn.
 
-> **Chuyển mạch:** Vacuum pressure and cold trapping protect the pump; the rotary evaporator combines pressure, thin-film area, rotation, and condenser temperature to concentrate solvent before chromatographic analysis.
+> **Nối mạch:** Vacuum pressure and cold trapping protect the pump; the rotary evaporator combines pressure, thin-film area, rotation, and condenser temperature to concentrate solvent before chromatographic analysis.
 
 ## Máy cô quay
 
@@ -398,7 +398,7 @@ Tốc độ bay hơi phụ thuộc nhiệt độ bể, áp suất, tốc độ q
 
 Kiểm soát áp suất và quay phù hợp giúp giảm nguy cơ sôi bumping.
 
-> **Chuyển mạch:** Rotary evaporation removes solvent under controlled boiling; HPLC then separates nonvolatile components through pump, injector, column, and detector stability, unlike the gas-phase path of GC.
+> **Nối mạch:** Rotary evaporation removes solvent under controlled boiling; HPLC then separates nonvolatile components through pump, injector, column, and detector stability, unlike the gas-phase path of GC.
 
 ## Các mô-đun của HPLC
 
@@ -410,7 +410,7 @@ dung môi → bơm → bộ tiêm mẫu → cột → đầu dò → chất th�
 
 Độ ổn định bơm, khử khí, tình trạng cột và hiệu chuẩn đầu dò đều ảnh hưởng chất lượng dữ liệu.
 
-> **Chuyển mạch:** HPLC controls liquid transport and column interactions; GC controls carrier gas, injector, oven, and detector, so leaks and contamination become observable failure modes before calibration is trusted.
+> **Nối mạch:** HPLC controls liquid transport and column interactions; GC controls carrier gas, injector, oven, and detector, so leaks and contamination become observable failure modes before calibration is trusted.
 
 ## Các mô-đun của GC
 
@@ -422,7 +422,7 @@ khí mang → bộ tiêm mẫu → cột trong lò → đầu dò
 
 Rò khí, nhiễm bẩn inlet và hư hỏng cột làm thời gian lưu và hình dạng peak thay đổi.
 
-> **Chuyển mạch:** Both HPLC and GC expose instrument-specific drift and contamination; calibration maps signal to a reference, while verification checks that the map still meets its acceptance criteria.
+> **Nối mạch:** Both HPLC and GC expose instrument-specific drift and contamination; calibration maps signal to a reference, while verification checks that the map still meets its acceptance criteria.
 
 ## Hiệu chuẩn và xác minh
 
@@ -432,7 +432,7 @@ Rò khí, nhiễm bẩn inlet và hư hỏng cột làm thời gian lưu và hì
 
 Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập giữa các lần hiệu chuẩn đầy đủ.
 
-> **Chuyển mạch:** Calibration and verification establish whether an instrument meets its target; metrological traceability links that claim through documented standards, and preventive maintenance keeps the chain valid over time.
+> **Nối mạch:** Calibration and verification establish whether an instrument meets its target; metrological traceability links that claim through documented standards, and preventive maintenance keeps the chain valid over time.
 
 ## Tính truy xuất đo lường
 
@@ -440,7 +440,7 @@ Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập gi�
 
 Điều này rất quan trọng trong phòng thí nghiệm được quản lý và khi cần so sánh kết quả giữa nhiều cơ sở.
 
-> **Chuyển mạch:** Traceability makes calibration evidence comparable across sites; maintenance records explain when pumps, seals, electrodes, or columns can break that comparability, which the misconceptions section makes explicit.
+> **Nối mạch:** Traceability makes calibration evidence comparable across sites; maintenance records explain when pumps, seals, electrodes, or columns can break that comparability, which the misconceptions section makes explicit.
 
 ## Bảo trì phòng ngừa
 
@@ -448,7 +448,7 @@ Nhiều “vấn đề hóa học bí ẩn” thực ra đến từ tình trạn
 
 Lịch sử bảo trì vì vậy là một phần của siêu dữ liệu (metadata / 메타데이터) thí nghiệm.
 
-> **Chuyển mạch:** Preventive maintenance preserves the measurement chain; the misconceptions show how resolution, tare, glassware markings, and rpm can still be mistaken for accuracy, setting up a reusable model.
+> **Nối mạch:** Preventive maintenance preserves the measurement chain; the misconceptions show how resolution, tare, glassware markings, and rpm can still be mistaken for accuracy, setting up a reusable model.
 
 ## Những hiểu lầm thường gặp
 
@@ -468,7 +468,7 @@ Không. Cấp hiệu chuẩn của dụng cụ đặt giới hạn trước kỹ
 
 Không. RCF còn phụ thuộc bán kính rotor.
 
-> **Chuyển mạch:** The misconceptions become a general model: every instrument maps a physical quantity through calibration assumptions and failure modes; the next owner applies that model to solution preparation.
+> **Nối mạch:** The misconceptions become a general model: every instrument maps a physical quantity through calibration assumptions and failure modes; the next owner applies that model to solution preparation.
 
 ## Mô hình tư duy
 

@@ -8,7 +8,7 @@ Học theo **cách suy nghĩ → công cụ biểu diễn → vật lý (physica
 
 Mỗi giai đoạn nên trả lời được không chỉ “cái gì ở đâu” mà còn “vì sao mẫu (pattern / 패턴) đó xuất hiện, luồng (flow / 흐름) nào duy trì nó, và quy mô (scale / 규모) nào làm kết luận đổi”.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **1. Geographic thinking** tiếp nhận điểm tựa từ **Nguyên tắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Location, coordinates và maps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nguyên tắc của route đặt địa lý vào pattern, process, scale và evidence; **1. Geographic thinking** biến nguyên tắc đó thành cách đặt câu hỏi. **2. Location, coordinates và maps** tiếp theo làm câu hỏi có vị trí đo được.
 
 ## 1. Geographic thinking
 
@@ -16,7 +16,7 @@ Bắt đầu bằng [Tư duy địa lý](./00_foundations/00_geographical_thinki
 
 Mục tiêu: nhìn được mẫu (pattern / 패턴), tiến trình (process / 프로세스), quy mô (scale / 규모), mạng (network / 네트워크)/luồng (flow / 흐름), hệ thống (system / 시스템) ranh giới (boundary / 경계), stock–luồng (flow / 흐름), phản hồi (feedback / 피드백), lag và bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Location, coordinates và maps** tiếp nhận điểm tựa từ **1. Geographic thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Earth / toàn cục (global / 전역) Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Geographic thinking cần tọa độ, bản đồ và quy mô để kiểm tra pattern thay vì chỉ mô tả. **3. Earth Geography** dùng các công cụ đó để đặt vị trí trong cấu trúc hành tinh.
 
 ## 2. Location, coordinates và maps
 
@@ -24,7 +24,7 @@ Mục tiêu: nhìn được mẫu (pattern / 패턴), tiến trình (process / �
 
 Sau bước này phải phân biệt location với khả năng tiếp cận (accessibility / 접근성), geographic coordinate với projected coordinate, quy mô (scale / 규모) với resolution, map với territory, đo lường (measurement / 측정) với inferred variable.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Earth / toàn cục (global / 전역) Geography** tiếp nhận điểm tựa từ **2. Location, coordinates và maps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Solid Earth và landforms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Earth Geography cung cấp nền tham chiếu về địa cầu, rotation, relief và các hệ toàn cục. **4. Solid Earth và landforms** đi sâu vào process địa chất tạo hình bề mặt.
 
 ## 3. Earth / toàn cục (global / 전역) Geography
 
@@ -32,7 +32,7 @@ Sau bước này phải phân biệt location với khả năng tiếp cận (ac
 
 Mục tiêu là hiểu planet hình học (geometry / 기하학) và toàn cục (global / 전역) circulation trước khi đi vào tiến trình (process / 프로세스) cục bộ (local / 로컬).
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Solid Earth và landforms** tiếp nhận điểm tựa từ **3. Earth / toàn cục (global / 전역) Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Atmosphere, climate và water** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tectonics, weathering và erosion tạo relief, độ dốc và lưu vực; các điều kiện đó điều khiển dòng khí và nước. **5. Atmosphere, climate và water** theo dõi các dòng năng lượng–nước trên nền địa hình ấy.
 
 ## 4. Solid Earth và landforms
 
@@ -42,7 +42,7 @@ Mục tiêu là hiểu planet hình học (geometry / 기하학) và toàn cục
 
 Chuỗi này sẽ quay lại ở Hydrology, Coasts, Hazards và Regional Geography.
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Atmosphere, climate và water** tiếp nhận điểm tựa từ **4. Solid Earth và landforms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Soils, ecosystems và rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu và thủy văn phân phối nhiệt, mưa, dòng chảy và hạn–lũ; chúng cung cấp đầu vào cho đất và hệ sinh thái. **6. Soils, ecosystems và risk** kiểm tra cách các hệ sống và hazard phản ứng.
 
 ## 5. Atmosphere, climate và water
 
@@ -52,7 +52,7 @@ Mục tiêu: thấy water cycle là năng lượng (energy / 에너지) cycle, r
 
 Khi rà soát (review / 검토), thử nối `rainfall → soil moisture → runoff/groundwater → river sediment → delta/coast → settlement risk`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Soils, ecosystems và rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **5. Atmosphere, climate và water** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Population, di chuyển (migration / 마이그레이션), urbanization, culture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đất, biome và hazard tạo điều kiện sống nhưng không tự quyết định xã hội; phơi lộ và năng lực thích ứng mới biến process thành tổn thất. **7. Population, migration, urbanization, culture** đưa con người vào cùng hệ.
 
 ## 6. Soils, ecosystems và rủi ro (risk / 위험)
 
@@ -60,7 +60,7 @@ Khi rà soát (review / 검토), thử nối `rainfall → soil moisture → run
 
 Chuyển từ “hazard xảy ra ở đâu” sang `hazard × exposure × vulnerability × dependency`. Đây là cầu nối (bridge / 브리지) trực tiếp sang settlement/urbanization và development.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. Population, di chuyển (migration / 마이그레이션), urbanization, culture** tiếp nhận điểm tựa từ **6. Soils, ecosystems và rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Political–economic geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dân số, di chuyển, đô thị và văn hóa phân bố lại cơ hội, lao động và rủi ro trong không gian. **8. Political–economic geography** giải thích quyền lực, biên giới và giá trị được tổ chức quanh các phân bố đó.
 
 ## 7. Population, di chuyển (migration / 마이그레이션), urbanization, culture
 
@@ -68,7 +68,7 @@ Chuyển từ “hazard xảy ra ở đâu” sang `hazard × exposure × vulner
 
 Hãy theo dõi cách vật lý (physical / 물리적) setting và khả năng tiếp cận (accessibility / 접근성) ảnh hưởng settlement, sau đó di chuyển (migration / 마이그레이션) và mạng (network / 네트워크) tạo city/cultural landscape.
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Political–economic geography** tiếp nhận điểm tựa từ **7. Population, di chuyển (migration / 마이그레이션), urbanization, culture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Regional Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Political–economic geography cho biết thể chế, thị trường và biên giới lọc các dòng người, hàng hóa và vốn như thế nào. **9. Regional Geography** đặt các cơ chế ấy vào những cấu hình không gian cụ thể.
 
 ## 8. Political–economic geography
 
@@ -82,7 +82,7 @@ Sau tích hợp (integration / 통합) pass mới nhất, bốn chapter cuối n
 
 Mục tiêu: đọc region như `resource + labor + market + infrastructure + institution + history`, không như danh sách sector.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Regional Geography** tiếp nhận điểm tựa từ **8. Political–economic geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. toàn cục (global / 전역) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Region chapter tổng hợp nền vật lý, settlement, economy, transport và regional role, đồng thời giữ giới hạn của từng case. **10. Global systems** theo dõi các dòng vượt qua biên giới region.
 
 ## 9. Regional Geography
 
@@ -96,7 +96,7 @@ Tuyến (route / 경로) ưu tiên Korea–Vietnam:
 
 Oceania nên được đọc bằng `island type → water/resources → settlement/gateway → trade dependency → resilience`; Polar Regions bằng `energy/ice/permafrost → accessibility → settlement/infrastructure → logistics/resources → global climate role`.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. toàn cục (global / 전역) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **9. Regional Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Selective World Atlas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global systems nối climate, water, energy, trade, cities và rủi ro thành các mạng liên vùng; region là các nút trong những mạng đó. **11. Selective World Atlas** dùng case để kiểm tra cơ chế ở quy mô địa điểm.
 
 ## 10. toàn cục (global / 전역) các hệ thống (systems / 시스템들)
 
@@ -106,7 +106,7 @@ Oceania nên được đọc bằng `island type → water/resources → settlem
 
 Chapter trade mạng (network / 네트워크) là synthesis: tài nguyên (resource / 자원) → processing → cổng (port / 포트)/corridor → inventory/finance → city → systemic shock.
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. Selective World Atlas** tiếp nhận điểm tựa từ **10. toàn cục (global / 전역) các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) Korea–Vietnam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Atlas chọn lọc kiểm tra xem cơ chế toàn cầu có còn đúng khi đi qua lịch sử, thể chế và địa hình của một case hay không. **Tuyến Korea–Vietnam** dùng hai case gần người học để luyện phép so sánh đó.
 
 ## 11. Selective World Atlas
 
@@ -126,7 +126,7 @@ Brazil và Australia đặc biệt hữu ích để so hai kiểu tài nguyên (
 
 Thailand và Philippines vẫn ở trạng thái Planned/tham chiếu (reference / 참조); chỉ đọc như orientation nếu chưa được promote.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Tuyến (route / 경로) Korea–Vietnam** tiếp nhận điểm tựa từ **11. Selective World Atlas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) IT/GIS/dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh Korea–Vietnam làm rõ cách địa hình, cảng, đô thị và thể chế tạo quỹ đạo khác nhau trong cùng mạng khu vực. **Tuyến IT/GIS/dữ liệu** đưa các claim đó về tọa độ, lớp dữ liệu và pipeline kiểm chứng.
 
 ## Tuyến (route / 경로) Korea–Vietnam
 
@@ -134,7 +134,7 @@ Foundations → vật lý (physical / 물리적) cốt lõi (core / 핵심) → 
 
 Mục tiêu là nhìn Korea–Vietnam như nodes trong East/Southeast Asian môi trường vận hành (production / 운영 환경)–shipping–di chuyển (migration / 마이그레이션) mạng (network / 네트워크), rồi dùng Malaysia/Singapore/Indonesia để hiểu division of functions trong ASEAN.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Tuyến (route / 경로) Korea–Vietnam** nêu điều cần giải thích; **Tuyến (route / 경로) IT/GIS/dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cách rà soát (review / 검토) sau một vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Case Korea–Vietnam nêu câu hỏi địa lý; IT/GIS/data biến câu hỏi thành lớp, phép đo và provenance có thể kiểm tra. **Cách rà soát sau một vòng** đánh giá lại claim, link và owner sau khi học.
 
 ## Tuyến (route / 경로) IT/GIS/dữ liệu (data / 데이터)
 
@@ -142,7 +142,7 @@ Geographic Thinking → Coordinates/Cartography → GIS/Remote Sensing → Geogr
 
 Hữu ích cho spatial cơ sở dữ liệu (database / 데이터베이스), routing, geofencing, location intelligence, remote sensing ML, logistics và hạ tầng (infrastructure / 인프라) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Tuyến (route / 경로) IT/GIS/dữ liệu (data / 데이터)** nêu điều cần giải thích; **Cách rà soát (review / 검토) sau một vòng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Rà soát sau một vòng kiểm tra xem bằng chứng còn phù hợp quy mô, semantics và đường dẫn hay không; nếu không, quay lại owner trong README để sửa đúng lớp. Đây là điểm khép route và mở vòng học tiếp theo.
 
 ## Cách rà soát (review / 검토) sau một vòng
 

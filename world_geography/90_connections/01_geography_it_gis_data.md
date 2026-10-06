@@ -8,7 +8,7 @@ Trong ứng dụng thông thường, vị trí hay bị lưu đơn giản thành
 
 Các hệ như PostGIS, SQL máy chủ (server / 서버) Spatial hay Oracle Spatial cung cấp các kiểu **hình học/địa lý (`geometry`/`geography`)**, phép toán không gian và chỉ mục chuyên dụng. Điểm quan trọng là không gian phải đi vào thiết kế dữ liệu ngay từ đầu, giống như tiền tệ cần đơn vị và ngày–giờ cần múi giờ.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Dữ liệu không gian phải được xem là kiểu dữ liệu cốt lõi** nêu điều cần giải thích; **Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khoảng cách phẳng và khoảng cách trắc địa không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dữ liệu không gian có hình học, CRS, topology và sai số riêng, nên phải được xử lý như kiểu dữ liệu cốt lõi chứ không chỉ chuỗi tọa độ. **Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu** làm rõ metadata cần đi cùng dữ liệu.
 
 ## Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu
 
@@ -18,7 +18,7 @@ Một lỗi rất phổ biến là nhầm `latitude, longitude` với `x, y`. Tr
 
 EPSG:4326 thường dùng đơn vị độ. Nếu mã chương trình mặc định mọi tọa độ đều tính bằng mét, vùng đệm `1000` có thể bị hiểu thành 1000 độ. Vì vậy CRS nên được coi như **đơn vị đo** trong hợp đồng API, không phải siêu dữ liệu (metadata / 메타데이터) phụ.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu** nêu điều cần giải thích; **Khoảng cách phẳng và khoảng cách trắc địa không giống nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tính hợp lệ hình học và quan hệ tô-pô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** CRS quyết định tọa độ, đơn vị, datum và phép đo; thiếu nó, cùng một con số có thể bị hiểu sai. **Khoảng cách phẳng và khoảng cách trắc địa không giống nhau** nối hợp đồng tọa độ với cách tính khoảng cách.
 
 ## Khoảng cách phẳng và khoảng cách trắc địa không giống nhau
 
@@ -26,7 +26,7 @@ Trên phạm vi nhỏ, phép đo trên mặt phẳng thường đủ tốt. Như
 
 Điều này ảnh hưởng trực tiếp tới các tính năng “tìm địa điểm gần tôi”, vùng phục vụ, định tuyến và định giá giao hàng. Nếu doanh nghiệp tính phí theo khoảng cách, sai mô hình hình học có thể trở thành lỗi nghiệp vụ chứ không chỉ lỗi bản đồ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Tính hợp lệ hình học và quan hệ tô-pô** tiếp nhận điểm tựa từ **Khoảng cách phẳng và khoảng cách trắc địa không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục không gian: giảm số phép toán đắt tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khoảng cách sai có thể làm sai buffer, nearest và route; topology lại kiểm tra giao, chứa, nối và không tự suy ra từ khoảng cách. **Chỉ mục không gian: giảm số phép toán đắt tiền** đưa các quan hệ đó vào hiệu năng truy vấn.
 
 ## Tính hợp lệ hình học và quan hệ tô-pô
 
@@ -34,7 +34,7 @@ Một đa giác có thể tự cắt, có lỗ bị đảo hướng hoặc có �
 
 Tô-pô (topology) trả lời các quan hệ kiểu “chạm”, “nằm trong”, “giao nhau” hay “kề nhau”. Hai đa giác có thể nhìn như tiếp xúc trên màn hình nhưng thực tế còn một khe nhỏ do sai số dữ liệu; ngược lại, hai đường có thể cắt nhau về hình học nhưng không được phép nối trong mạng đường vì khác cao độ. Đây là ví dụ cho thấy hình học hiển thị và lô-gic (logic / 논리) nghiệp vụ không phải lúc nào cũng giống nhau.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Chỉ mục không gian: giảm số phép toán đắt tiền** tiếp nhận điểm tựa từ **Tính hợp lệ hình học và quan hệ tô-pô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu vectơ và dữ liệu lưới là hai mô hình khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial index lọc ứng viên bằng bounding box hoặc cấu trúc gần kề, nhưng phép hình học cuối vẫn cần chính xác. **Dữ liệu vectơ và dữ liệu lưới là hai mô hình khác nhau** quyết định cấu trúc lưu trữ và truy vấn phù hợp.
 
 ## Chỉ mục không gian: giảm số phép toán đắt tiền
 
@@ -44,7 +44,7 @@ Có thể hình dung truy vấn “tìm mọi bệnh viện trong bán kính 5 k
 
 Các cấu trúc thường gặp gồm R-tree, GiST, quadtree, geohash, S2 và H3. Không có cấu trúc nào tốt nhất cho mọi bài toán; lựa chọn phụ thuộc loại hình học, kiểu truy vấn, phân bố dữ liệu và yêu cầu cập nhật.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Chỉ mục không gian: giảm số phép toán đắt tiền** nêu điều cần giải thích; **Dữ liệu vectơ và dữ liệu lưới là hai mô hình khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ phân giải là một phần của ý nghĩa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vector giữ đối tượng và topology; grid giữ trường giá trị theo ô và phù hợp phép tính raster. **Độ phân giải là một phần của ý nghĩa dữ liệu** nhắc rằng cùng một hiện tượng có thể khác khi đổi kích thước ô.
 
 ## Dữ liệu vectơ và dữ liệu lưới là hai mô hình khác nhau
 
@@ -52,7 +52,7 @@ Các cấu trúc thường gặp gồm R-tree, GiST, quadtree, geohash, S2 và H
 
 Khác biệt quan trọng nằm ở cách đặt câu hỏi. Với vectơ, ta thường hỏi về đối tượng và quan hệ. Với raster, ta thường hỏi giá trị của trường tại một ô hoặc mẫu phân bố trên bề mặt. Chuyển raster thành véc-tơ (vector / 벡터) hay ngược lại luôn thêm giả định về độ phân giải và ranh giới, nên không phải phép biến đổi “miễn phí”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Dữ liệu vectơ và dữ liệu lưới là hai mô hình khác nhau** nêu điều cần giải thích; **Độ phân giải là một phần của ý nghĩa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kiến trúc ô bản đồ và mức chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Resolution quyết định chi tiết, nhiễu, chi phí lưu trữ và khả năng phát hiện đối tượng; tăng resolution không tự tạo thêm thông tin đúng. **Kiến trúc ô bản đồ và mức chi tiết** nối resolution với tile, pyramid và hiển thị.
 
 ## Độ phân giải là một phần của ý nghĩa dữ liệu
 
@@ -60,7 +60,7 @@ Raster 10 m, 100 m và 1 km có thể mô tả cùng một biến nhưng không 
 
 Đây là phiên bản số của vấn đề quy mô trong địa lý: dữ liệu không chỉ có giá trị, mà còn có **kích thước ô, phạm vi thời gian và đơn vị tổng hợp**. Nếu mô hình học máy được huấn luyện trên dữ liệu 10 m nhưng triển khai trên dữ liệu 100 m, phân bố đặc trưng có thể thay đổi mạnh.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Độ phân giải là một phần của ý nghĩa dữ liệu** nêu điều cần giải thích; **Kiến trúc ô bản đồ và mức chi tiết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tile và level-of-detail giúp tải dữ liệu theo viewport và tránh tính mọi pixel cùng lúc, nhưng phải giữ CRS, extent và semantics nhất quán. **Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian** dùng hình học để ghép bảng.
 
 ## Kiến trúc ô bản đồ và mức chi tiết
 
@@ -70,7 +70,7 @@ Bản đồ web thường chia thế giới thành các **ô bản đồ (tile)*
 
 Mức chi tiết (LOD — Level of Detail) không chỉ là tối ưu hiệu năng. Nó là quyết định về thông tin nào được giữ ở mỗi quy mô. Một đường nhỏ có thể xuất hiện ở zoom cao nhưng biến mất ở zoom thấp; điều này phản ánh quá trình khái quát hóa bản đồ.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Kiến trúc ô bản đồ và mức chi tiết** nêu điều cần giải thích; **Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial join biến giao, gần, chứa hoặc chồng lấn thành quan hệ dữ liệu, nhưng cardinality và tolerance phải được định nghĩa rõ. **Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ** tiếp theo đưa quan hệ không gian vào đường đi có chi phí.
 
 ## Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian
 
@@ -78,7 +78,7 @@ Trong cơ sở dữ liệu thông thường, ta nối bảng bằng khóa. Trong
 
 Đây gọi là **phép nối không gian (spatial join)**. Sai CRS, hình học lỗi hoặc quy tắc “gần nhất” không phù hợp có thể tạo kết quả sai dù câu SQL chạy thành công. Vì vậy spatial phép nối (join / 조인) luôn cần kiểm tra cả lô-gic (logic / 논리) địa lý, không chỉ cú pháp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian** nêu điều cần giải thích; **Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Map matching: từ GPS nhiễu về mạng đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Routing kết hợp graph, khoảng cách, tốc độ, cấm rẽ, thời gian và quy tắc nghiệp vụ; đường ngắn hình học không luôn là đường tốt nhất. **Map matching: từ GPS nhiễu về mạng đường** làm sạch vị trí quan sát trước khi gán lên graph.
 
 ## Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ
 
@@ -88,7 +88,7 @@ Dẫn đường thực tế phức tạp hơn vì có đường một chiều, c
 
 Vì vậy routing engine thực tế là sự kết hợp giữa **hình học mạng + luật giao thông + chi phí động theo thời gian**.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Map matching: từ GPS nhiễu về mạng đường** tiếp nhận điểm tựa từ **Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng rào địa lý và hiện tượng rung ranh giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Map matching suy tuyến từ GPS nhiễu bằng hình học, tốc độ, topology và lịch sử, nên có bất định và bias. **Hàng rào địa lý và hiện tượng rung ranh giới** tiếp theo xử lý ranh giới làm thay đổi truy vấn và phân loại.
 
 ## Map matching: từ GPS nhiễu về mạng đường
 
@@ -96,7 +96,7 @@ Quỹ đạo GPS không nằm chính xác trên tim đường do sai số đo v�
 
 Chỉ lấy “đường gần nhất” có thể sai tại nút giao nhiều tầng hoặc hai đường chạy song song. Thuật toán tốt thường xét cả khoảng cách, hướng, tốc độ và tính liên tục của tuyến. Đây là ví dụ điển hình cho việc quan sát vị trí luôn chứa bất định.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Hàng rào địa lý và hiện tượng rung ranh giới** tiếp nhận điểm tựa từ **Map matching: từ GPS nhiễu về mạng đường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không gian luôn đi cùng thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Geofence là quy tắc dựa trên ranh giới, nhưng GPS noise, boundary mismatch và thời gian có thể gây rung trạng thái. **Không gian luôn đi cùng thời gian** thêm phiên bản, timestamp và event sequence vào dữ liệu không gian.
 
 ## Hàng rào địa lý và hiện tượng rung ranh giới
 
@@ -104,7 +104,7 @@ Chỉ lấy “đường gần nhất” có thể sai tại nút giao nhiều t
 
 Một chiến lược là dùng **độ trễ chuyển trạng thái (hysteresis)**: ngưỡng vào và ngưỡng ra khác nhau. Cách khác là yêu cầu thiết bị ở trong vùng đủ lâu trước khi kích hoạt. Đây là bài toán giống chống rung công tắc trong điện tử: dữ liệu đo không bao giờ hoàn hảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Không gian luôn đi cùng thời gian** tiếp nhận điểm tựa từ **Hàng rào địa lý và hiện tượng rung ranh giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viễn thám và học máy: nguy cơ rò rỉ không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dữ liệu không gian–thời gian cần xử lý chuyển động, thay đổi ranh giới, lag và lịch sử; ảnh chụp tại một thời điểm không đại diện cho mọi thời điểm. **Viễn thám và học máy: nguy cơ rò rỉ không gian** nối dữ liệu đó với mô hình dự đoán.
 
 ## Không gian luôn đi cùng thời gian
 
@@ -112,7 +112,7 @@ Nhiều hệ thống GIS thực chất là **không gian–thời gian (spatiote
 
 Thiết kế dữ liệu tốt cần xác định đây là vị trí tức thời, quỹ đạo, snapshot định kỳ hay trạng thái có hiệu lực trong một khoảng thời gian. Trong cơ sở dữ liệu, điều này thường dẫn tới partition theo thời gian kết hợp chỉ mục không gian.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Viễn thám và học máy: nguy cơ rò rỉ không gian** tiếp nhận điểm tựa từ **Không gian luôn đi cùng thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đặc trưng không gian và nguy cơ học nhầm vị trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Remote sensing và ML có thể học dấu vết vị trí thay vì cơ chế mục tiêu; split ngẫu nhiên sẽ làm điểm gần nhau lọt cả vào train và test. **Đặc trưng không gian và nguy cơ học nhầm vị trí** kiểm tra leakage và generalization theo không gian.
 
 ## Viễn thám và học máy: nguy cơ rò rỉ không gian
 
@@ -122,7 +122,7 @@ Tuy nhiên các điểm ảnh (pixel / 픽셀) gần nhau thường rất tươn
 
 Vì vậy kiểm định chéo theo khối (block / 블록) không gian, theo lưu vực hoặc theo thành phố thường phù hợp hơn khi mục tiêu là dự báo ngoài vùng đã học.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Viễn thám và học máy: nguy cơ rò rỉ không gian** đã nêu tiêu chí phân biệt, còn **Đặc trưng không gian và nguy cơ học nhầm vị trí** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quyền riêng tư vị trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial features cần tách tín hiệu vật lý khỏi proxy địa điểm, kiểm tra theo vùng và thời gian, và ghi rõ độ phân giải. **Quyền riêng tư vị trí** đặt ranh giới đạo đức cho việc thu thập và suy luận từ feature đó.
 
 ## Đặc trưng không gian và nguy cơ học nhầm vị trí
 
@@ -130,7 +130,7 @@ Một mô hình có thể học “địa chỉ” thay vì học cơ chế. Ví
 
 Đây là lý do đặc trưng không gian phải được dùng có chủ đích. Khoảng cách tới sông, độ cao, độ dốc hoặc mật độ xây dựng thường mang ý nghĩa cơ chế tốt hơn kinh độ–vĩ độ thô.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Đặc trưng không gian và nguy cơ học nhầm vị trí** đã nêu tiêu chí phân biệt, còn **Quyền riêng tư vị trí** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **ETL không gian cần kiểm tra nhiều hơn ETL thông thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Location data có thể suy ra nơi ở, thói quen, sức khỏe và nhóm xã hội; feature engineering cần tối thiểu hóa dữ liệu và kiểm soát truy cập. **ETL không gian cần kiểm tra nhiều hơn ETL thông thường** chuyển privacy thành yêu cầu pipeline.
 
 ## Quyền riêng tư vị trí
 
@@ -138,7 +138,7 @@ Vị trí chính xác là dữ liệu nhạy cảm. Một chuỗi vị trí vô 
 
 Có thể giảm rủi ro bằng tổng hợp theo vùng, làm thô độ chính xác, giới hạn thời gian lưu và kiểm soát quyền truy cập. Nhưng làm thô dữ liệu cũng làm giảm khả năng phân tích, nên đây là một đánh đổi chứ không phải thao tác miễn phí.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **ETL không gian cần kiểm tra nhiều hơn ETL thông thường** tiếp nhận điểm tựa từ **Quyền riêng tư vị trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan sát hệ thống và kiểm thử GIS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial ETL phải kiểm CRS, geometry validity, topology, units, timestamp, missingness, lineage và privacy chứ không chỉ schema. **Quan sát hệ thống và kiểm thử GIS** đưa các điều kiện đó vào kiểm thử end-to-end.
 
 ## ETL không gian cần kiểm tra nhiều hơn ETL thông thường
 
@@ -146,7 +146,7 @@ Một chuỗi xử lý (pipeline / 파이프라인) không gian thường gồm:
 
 Các kiểm tra nên bao gồm: tọa độ có nằm trong phạm vi hợp lý không, hình học có hợp lệ không, đơn vị có nhất quán không, dữ liệu có bị đảo kinh–vĩ độ không và trường thời gian có dùng cùng múi giờ không. Đây là tương đương của kiểm tra hợp lệ (validation / 검증) lược đồ (schema / 스키마) trong kỹ thuật dữ liệu, nhưng có thêm lớp địa lý.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Quan sát hệ thống và kiểm thử GIS** tiếp nhận điểm tựa từ **ETL không gian cần kiểm tra nhiều hơn ETL thông thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sao số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Observability cần kiểm tra dữ liệu, phép biến đổi, latency, lỗi hình học và drift không gian qua thời gian. **Bản sao số** mở rộng pipeline thành mô hình vận hành có trạng thái, cảm biến và phản hồi.
 
 ## Quan sát hệ thống và kiểm thử GIS
 
@@ -154,7 +154,7 @@ Nhiều lỗi không gian chỉ xuất hiện ở vùng biên hoặc dữ liệu
 
 Trong môi trường vận hành (production / 운영 환경), nên theo dõi tỷ lệ hình học (geometry / 기하학) invalid, độ trễ (latency / 지연 시간) của spatial truy vấn (query / 쿼리), số lượng tile trượt bộ nhớ đệm (cache miss / 캐시 미스) và phân bố sai số vị trí. Một hệ thống bản đồ “trông đúng” không đảm bảo backend đang tính đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Bản sao số** tiếp nhận điểm tựa từ **Quan sát hệ thống và kiểm thử GIS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Digital twin phải đồng bộ mô hình, dữ liệu, thời gian, bất định và quy tắc hành động; bản sao trực quan không tự là bản sao đúng. **Những hiểu lầm phổ biến** kiểm tra các nhầm lẫn về CRS, AI, routing và dashboard.
 
 ## Bản sao số
 
@@ -162,7 +162,7 @@ Trong môi trường vận hành (production / 운영 환경), nên theo dõi t�
 
 Thách thức lớn không phải chỉ dựng mô hình 3D mà là đồng bộ danh tính đối tượng, phiên bản dữ liệu và trạng thái. Nếu cùng một tòa nhà có ba ID khác nhau trong GIS, BIM và hệ cảm biến, “digital twin” dễ trở thành ba hệ tách rời có giao diện đẹp.
 
-> **Chuyển mạch:** Trong **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Bản sao số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về CRS, distance, index, resolution, map matching, ML, privacy và digital twin, còn lại cách đọc địa lý như data contract có hình học, thời gian và đạo đức. **Mô hình tư duy** cô đọng khung đó.
 
 ## Những hiểu lầm phổ biến
 
@@ -174,7 +174,7 @@ Thách thức lớn không phải chỉ dựng mô hình 3D mà là đồng bộ
 
 **“mô hình (model / 모델) accuracy cao nghĩa là mô hình không gian tốt.”** Không đúng nếu train/kiểm thử (test / 테스트) bị rò rỉ không gian.
 
-> **Chuyển mạch:** Ở chặng này của **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi spatial data/CRS → distance/topology/index → vector/raster/resolution → join/routing/map matching/geofence → spacetime/remote sensing/ML → features, privacy, ETL, observability và digital twin. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang GIS, AI và hệ thống vùng.
 
 ## Mô hình tư duy
 

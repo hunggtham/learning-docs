@@ -10,7 +10,7 @@ Trong memory-unsafe languages, out-of-bounds ghi (write / 쓰기), use-after-fre
 
 Mitigations tăng difficulty nhưng không thay fix gốc (root / 루트) bug. Memory-safe languages loại nhiều classes này by construction/checks, nhưng bản địa (native / 네이티브) libraries/unsafe blocks vẫn là ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Memory corruption phá invariant của address space; injection phá ranh giới khi data bị diễn giải thành code/command, và XSS là trường hợp web-specific của cùng một lỗi boundary.
+> **Nối mạch:** Memory corruption phá invariant của address space; injection phá ranh giới khi data bị diễn giải thành code/command, và XSS là trường hợp web-specific của cùng một lỗi boundary.
 
 ## Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command
 
@@ -28,7 +28,7 @@ Same mẫu (pattern / 패턴) xuất hiện shell injection, LDAP injection, tem
 
 Parameterization không giải động (dynamic / 동적) identifiers/thứ tự (order / 순서) clauses tự động; allowlist/structured APIs cần cho cú pháp (syntax / 문법) positions không parameterizable.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command** nêu điều cần giải thích; **XSS** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CSRF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command** đặt vấn đề; **XSS** kiểm tra bằng chứng, rồi **CSRF** mở rộng hệ quả.
 
 ## XSS
 
@@ -36,7 +36,7 @@ Cross-Site Scripting cho attacker-controlled content execute trong trình duyệ
 
 Đầu ra (output / 출력) encoding phải phù hợp HTML văn bản (text / 텍스트), attribute, JavaScript, URL contexts. CSP là defense-in-depth, không thay correct encoding.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **CSRF** tiếp nhận điểm tựa từ **XSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SSRF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CSRF** nối từ **XSS** sang **SSRF**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSRF
 
@@ -44,49 +44,49 @@ Trình duyệt (browser / 브라우저) tự gửi cookies tới matching site; 
 
 CSRF khác XSS: XSS chạy mã (code / 코드) trong trusted origin; CSRF lợi dụng ambient authority từ trình duyệt (browser / 브라우저).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **SSRF** tiếp nhận điểm tựa từ **CSRF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường dẫn (path / 경로) traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **SSRF** nối từ **CSRF** sang **Đường dẫn (path / 경로) traversal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SSRF
 
 Server-Side yêu cầu (request / 요청) Forgery khiến máy chủ (server / 서버) yêu cầu (request / 요청) URL attacker-controlled, có thể reach nội bộ (internal / 내부) siêu dữ liệu (metadata / 메타데이터)/services không công khai (public / 공개). Mitigation cần allowlist destinations/protocols, mạng (network / 네트워크) egress controls, DNS/IP kiểm tra hợp lệ (validation / 검증) cẩn thận và siêu dữ liệu (metadata / 메타데이터) protections.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **SSRF** xác định đầu vào; **Đường dẫn (path / 경로) traversal** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Deserialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **SSRF** đặt đầu vào cho **Đường dẫn (path / 경로) traversal**, rồi **Deserialization** mở rộng hệ quả.
 
 ## Đường dẫn (path / 경로) traversal
 
 Đầu vào (input / 입력) như `../../etc/passwd` có thể escape intended directory nếu đường dẫn (path / 경로) phép nối (join / 조인)/canonicalization sai. Safe thiết kế (design / 설계) use generated IDs/lưu trữ (storage / 저장소) APIs, normalize và enforce resolved đường dẫn (path / 경로) under allowed gốc (root / 루트). String prefix check naive có edge cases symbolic links/encoding/nền tảng (platform / 플랫폼).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Đường dẫn (path / 경로) traversal** xác định đầu vào; **Deserialization** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Race vulnerabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đường dẫn (path / 경로) traversal** đặt đầu vào cho **Deserialization**, rồi **Race vulnerabilities** mở rộng hệ quả.
 
 ## Deserialization
 
 Unsafe deserialization of attacker dữ liệu (data / 데이터) can instantiate unexpected đối tượng (object / 객체) graphs or trigger gadget chains in ecosystems supporting polymorphic/đối tượng (object / 객체) deserialization. Prefer simple dữ liệu (data / 데이터) formats + tường minh (explicit / 명시적) schemas/types; never treat untrusted serialized đối tượng (object / 객체) stream as trustworthy mã (code / 코드) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Race vulnerabilities** tiếp nhận điểm tựa từ **Deserialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Race vulnerabilities** nối từ **Deserialization** sang **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Race vulnerabilities
 
 TOCTOU — thời gian (time / 시간) Of Check To thời gian (time / 시간) Of Use: check permission/đường dẫn (path / 경로)/trạng thái (state / 상태) rồi attacker changes before use. Atomic OS APIs, tệp (file / 파일) descriptors, transactions hoặc locks reduce gap. bảo mật (security / 보안) often requires same atomicity lập luận (reasoning / 추론) as tính đồng thời (concurrency / 동시성) tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Race vulnerabilities** xác định đầu vào; **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Race vulnerabilities** đặt đầu vào cho **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)**, rồi **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer** mở rộng hệ quả.
 
 ## Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)
 
 Vulnerability can enter through phụ thuộc (dependency / 의존성), bản dựng (build / 빌드) script, gói (package / 패키지) registry compromise or CI secret leakage. Pin versions/check integrity, minimize dependencies, SBOM/scanning, protected CI credentials and reproducible bản dựng (build / 빌드) practices reduce rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)** xác định đầu vào; **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)** đặt đầu vào cho **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer
 
 Validate ngữ nghĩa (semantic / 의미적) lĩnh vực (domain / 도메인) at ranh giới (boundary / 경계); encode when outputting into cú pháp (syntax / 문법) ngữ cảnh (context / 맥락); parameterize mã (code / 코드)/dữ liệu (data / 데이터); authorize every tài nguyên (resource / 자원) hành động (action / 동작). One “sanitize()” hàm (function / 함수) cannot safely cover SQL, HTML, shell, URL and JSON contexts.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Nhiều vulnerabilities là **ranh giới (boundary / 경계) confusion**: dữ liệu (data / 데이터) becomes mã (code / 코드), untrusted định danh (identity / 식별자) becomes authorized, đường dẫn (path / 경로) escapes không gian tên (namespace / 네임스페이스), bộ nhớ (memory / 메모리) ghi (write / 쓰기) escapes đối tượng (object / 객체). Hãy xác định parser/trình thông dịch (interpreter / 인터프리터) nào sẽ đọc đầu vào (input / 입력) tiếp theo và giữ dữ liệu (data / 데이터) ở đúng channel.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -96,7 +96,7 @@ Validate ngữ nghĩa (semantic / 의미적) lĩnh vực (domain / 도메인) at
 
 **“Escaping HTML một lần bảo vệ mọi ngữ cảnh (context / 맥락).”** JavaScript/URL/attribute contexts có rules khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

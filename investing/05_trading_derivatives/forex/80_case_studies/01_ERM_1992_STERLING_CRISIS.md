@@ -21,7 +21,7 @@ Sterling tham gia ERM năm 1990. Trong giai đoạn đầu, membership hỗ tr�
 
 Nhưng một fixed/semi-fixed regime không xóa nghiệp vụ (business / 비즈니스) cycle. Nó chỉ thêm một ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **1. ERM là gì trong trường hợp (case / 사례) này?** cho ta quy tắc; **2. Domestic UK điều kiện (condition / 조건)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Germany ở phía đối diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **1. ERM là gì trong trường hợp (case / 사례) này?** nêu quy tắc; **2. Domestic UK điều kiện (condition / 조건)** thử quy tắc trong tình huống, rồi **3. Germany ở phía đối diện** mở rộng hệ quả.
 
 ## 2. Domestic UK điều kiện (condition / 조건)
 
@@ -44,7 +44,7 @@ without pushing sterling below its ERM band?
 
 Khi câu trả lời ngày càng trở thành “khó”, domestic monetary mục tiêu (objective / 목표) và bên ngoài (external / 외부) exchange-rate mục tiêu (objective / 목표) bắt đầu xung đột.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **3. Germany ở phía đối diện** tiếp nhận điểm tựa từ **2. Domestic UK điều kiện (condition / 조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Why relative rates matter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **3. Germany ở phía đối diện** nối từ **2. Domestic UK điều kiện (condition / 조건)** sang **4. Why relative rates matter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Germany ở phía đối diện
 
@@ -60,7 +60,7 @@ but ERM links their exchange-rate relationship
 
 Do đó UK không thể chỉ nhìn domestic recession để giảm rates tự do.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **4. Why relative rates matter** tiếp nhận điểm tựa từ **3. Germany ở phía đối diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Credibility is a balance-sheet concept** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **4. Why relative rates matter** nối từ **3. Germany ở phía đối diện** sang **5. Credibility is a balance-sheet concept**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Why relative rates matter
 
@@ -84,7 +84,7 @@ and/or
 credible expectation that parity will hold
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **5. Credibility is a balance-sheet concept** tiếp nhận điểm tựa từ **4. Why relative rates matter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **5. Credibility is a balance-sheet concept** nối từ **4. Why relative rates matter** sang **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Credibility is a balance-sheet concept
 
@@ -101,7 +101,7 @@ Political willingness
 
 Nếu defense yêu cầu lãi suất quá cao so với domestic economic conditions, credibility có thể suy yếu ngay cả trước khi reserves cạn hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)** tiếp nhận điểm tựa từ **5. Credibility is a balance-sheet concept** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Self-reinforcing pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)** nối từ **5. Credibility is a balance-sheet concept** sang **7. Self-reinforcing pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)
 
@@ -117,7 +117,7 @@ Existing macro inconsistency
 
 Political sự kiện (event / 이벤트) không nhất thiết là nguyên nhân gốc (root cause / 근본 원인). Nó có thể chỉ là catalyst làm participants coordination nhanh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **7. Self-reinforcing pressure** tiếp nhận điểm tựa từ **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. September 16, 1992** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **7. Self-reinforcing pressure** nối từ **6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)** sang **8. September 16, 1992**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Self-reinforcing pressure
 
@@ -136,7 +136,7 @@ Sell sterling
 
 Không phải mọi attack vào fixed exchange tỷ lệ (rate / 비율) đều tự hoàn thành, nhưng nếu underlying chính sách (policy / 정책) inconsistency đủ lớn thì expectation có thể tăng tốc adjustment.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **8. September 16, 1992** tiếp nhận điểm tựa từ **7. Self-reinforcing pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vì sao tăng rates không đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **8. September 16, 1992** nối từ **7. Self-reinforcing pressure** sang **9. Vì sao tăng rates không đủ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. September 16, 1992
 
@@ -156,7 +156,7 @@ After:
 exchange rate allowed to adjust outside ERM commitment
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **9. Vì sao tăng rates không đủ?** tiếp nhận điểm tựa từ **8. September 16, 1992** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Intervention is not infinite in economic terms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **9. Vì sao tăng rates không đủ?** nối từ **8. September 16, 1992** sang **10. Intervention is not infinite in economic terms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vì sao tăng rates không đủ?
 
@@ -182,7 +182,7 @@ High rate
 
 Nếu tỷ lệ (rate / 비율) mức (level / 수준) làm recession/debt-service bài toán (problem / 문제) nặng hơn, participants có thể tin authorities cuối cùng sẽ abandon parity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **10. Intervention is not infinite in economic terms** tiếp nhận điểm tựa từ **9. Vì sao tăng rates không đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **10. Intervention is not infinite in economic terms** nối từ **9. Vì sao tăng rates không đủ?** sang **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Intervention is not infinite in economic terms
 
@@ -198,7 +198,7 @@ Interest-rate cost
 
 Ngay cả khi technical sức chứa (capacity / 용량) lớn, economic willingness không phải vô hạn.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)** tiếp nhận điểm tựa từ **10. Intervention is not infinite in economic terms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Optionality hidden in a peg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)** nối từ **10. Intervention is not infinite in economic terms** sang **12. Optionality hidden in a peg**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)
 
@@ -221,7 +221,7 @@ Expected probability of realignment
 
 Price gần band edge chứa thông tin về regime survival, không chỉ PPP/fundamental giá trị (value / 값).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **12. Optionality hidden in a peg** tiếp nhận điểm tựa từ **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. The role of reserves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **12. Optionality hidden in a peg** nối từ **11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)** sang **13. The role of reserves**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Optionality hidden in a peg
 
@@ -237,7 +237,7 @@ Nếu downside của short currency bị giới hạn bởi band nhưng upside l
 
 Tất nhiên giao dịch (transaction / 트랜잭션) chi phí (cost / 비용), intervention rủi ro (risk / 위험) và sudden chính sách (policy / 정책) hành động (action / 동작) vẫn rất lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **13. The role of reserves** tiếp nhận điểm tựa từ **12. Optionality hidden in a peg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Monetary-policy trilemma liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **13. The role of reserves** nối từ **12. Optionality hidden in a peg** sang **14. Monetary-policy trilemma liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. The role of reserves
 
@@ -254,7 +254,7 @@ Market expects imminent realignment
 Banking system cannot tolerate tightening
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, sau nội dung của **13. The role of reserves**, **14. Monetary-policy trilemma liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **15. Why Germany mattered disproportionately** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, sau nội dung của **13. The role of reserves**, **14. Monetary-policy trilemma liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **15. Why Germany mattered disproportionately** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Monetary-policy trilemma liên kết (connection / 연결)
 
@@ -272,7 +272,7 @@ UK trong ERM với capital mobility phải sacrifice một phần monetary indep
 
 Khi domestic economy cần chính sách (policy / 정책) khác với anchor country, tension tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **15. Why Germany mattered disproportionately** tiếp nhận điểm tựa từ **14. Monetary-policy trilemma liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. What changed after exit?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **15. Why Germany mattered disproportionately** nối từ **14. Monetary-policy trilemma liên kết (connection / 연결)** sang **16. What changed after exit?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Why Germany mattered disproportionately
 
@@ -287,7 +287,7 @@ may need tighter policy than domestic conditions warrant
 
 Do đó hệ thống (system / 시스템) không hoàn toàn symmetric trên thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **16. What changed after exit?** tiếp nhận điểm tựa từ **15. Why Germany mattered disproportionately** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Trader lesson vs macro lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **16. What changed after exit?** nối từ **15. Why Germany mattered disproportionately** sang **17. Trader lesson vs macro lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. What changed after exit?
 
@@ -304,7 +304,7 @@ but introduce new exchange-rate volatility
 
 Không có chính sách (policy / 정책) regime miễn phí.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **17. Trader lesson vs macro lesson** tiếp nhận điểm tựa từ **16. What changed after exit?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Signals that regime stress was rising** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **17. Trader lesson vs macro lesson** nối từ **16. What changed after exit?** sang **18. Signals that regime stress was rising**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Trader lesson vs macro lesson
 
@@ -320,7 +320,7 @@ Không được coi central-bank line là guaranteed floor/ceiling chỉ vì aut
 
 Khi peg breaks, move có thể discontinuous. Stop-loss và historical volatility các mô hình (models / 모델들) có thể underestimate gap rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **18. Signals that regime stress was rising** tiếp nhận điểm tựa từ **17. Trader lesson vs macro lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. What not to learn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **18. Signals that regime stress was rising** nối từ **17. Trader lesson vs macro lesson** sang **19. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Signals that regime stress was rising
 
@@ -339,7 +339,7 @@ Options/implied volatility if available
 
 Không chỉ số (metric / 지표) nào đủ một mình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **19. What not to learn** tiếp nhận điểm tựa từ **18. Signals that regime stress was rising** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Research exercise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **19. What not to learn** nối từ **18. Signals that regime stress was rising** sang **20. Research exercise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. What not to learn
 
@@ -358,7 +358,7 @@ When policy constraints become internally inconsistent,
 measure the cost and credibility of maintaining the regime.
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **20. Research exercise** tiếp nhận điểm tựa từ **19. What not to learn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Generalization to hiện đại (modern / 현대적) FX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **20. Research exercise** nối từ **19. What not to learn** sang **21. Generalization to hiện đại (modern / 현대적) FX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Research exercise
 
@@ -386,7 +386,7 @@ C. UK suspends membership
 
 Không dùng kết quả (outcome / 결과) thật để điều chỉnh prior probabilities.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **21. Generalization to hiện đại (modern / 현대적) FX** tiếp nhận điểm tựa từ **20. Research exercise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Cơ chế (mechanism / 메커니즘) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **21. Generalization to hiện đại (modern / 현대적) FX** nối từ **20. Research exercise** sang **22. Cơ chế (mechanism / 메커니즘) map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Generalization to hiện đại (modern / 현대적) FX
 
@@ -402,7 +402,7 @@ capital-control regimes
 
 Nhưng institutional thiết kế (design / 설계) khác nhau nên không bản sao (copy / 복사) mechanical quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **21. Generalization to hiện đại (modern / 현대적) FX** xác định đầu vào; **22. Cơ chế (mechanism / 메커니즘) map** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **21. Generalization to hiện đại (modern / 현대적) FX** đặt đầu vào cho **22. Cơ chế (mechanism / 메커니즘) map**, rồi **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Cơ chế (mechanism / 메커니즘) map
 
@@ -420,7 +420,7 @@ German reunification / tight German policy
 → regime shift to greater FX flexibility
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, sau khi thấy quy trình trong **22. Cơ chế (mechanism / 메커니즘) map**, **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, sau khi thấy quy trình trong **22. Cơ chế (mechanism / 메커니즘) map**, **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Nguồn nền** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)
 
@@ -437,7 +437,7 @@ Can price gap through stop levels?
 What counterparties fail if volatility jumps?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** cho ta quy tắc; **Nguồn nền** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle**, **23. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** cho ta quy tắc; **Nguồn nền** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

@@ -27,7 +27,7 @@ uptime
 
 Timestamp rất quan trọng vì log, metrics và triển khai (deployment / 배포) sự kiện (event / 이벤트) phải được ghép trên cùng timeline.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?** tiếp nhận điểm tựa từ **Bắt đầu từ thời điểm và phạm vi ảnh hưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 2: xác định đúng JVM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?** nối từ **Bắt đầu từ thời điểm và phạm vi ảnh hưởng** sang **Bước 2: xác định đúng JVM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?
 
@@ -43,7 +43,7 @@ Ba command này cho biết dịch vụ (service / 서비스) manager nhìn thấ
 
 Nếu dịch vụ (service / 서비스) `failed`, đừng restart ngay nếu có thể lấy thêm bằng chứng (evidence / 증거) trước.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 2: xác định đúng JVM** tiếp nhận điểm tựa từ **Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 2: xác định đúng JVM** nối từ **Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?** sang **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bước 2: xác định đúng JVM
 
@@ -70,7 +70,7 @@ ps -p "$PID" -o pid,ppid,user,%cpu,%mem,rss,vsz,nlwp,etime,cmd
 
 Điều này tạo snapshot ban đầu về CPU, bộ nhớ (memory / 메모리), luồng thực thi (thread / 스레드) count và thời gian chạy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 2: xác định đúng JVM** xác định đầu vào; **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tiến trình (process / 프로세스) biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 2: xác định đúng JVM** đặt đầu vào cho **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?**, rồi **Tiến trình (process / 프로세스) biến mất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?
 
@@ -97,7 +97,7 @@ local health tốt nhưng external request fail
 
 Mỗi trường hợp dẫn tới nhánh điều tra khác.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?** xác định đầu vào; **Tiến trình (process / 프로세스) biến mất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **CPU cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bước 3: tiến trình (process / 프로세스) tồn tại có nghĩa ứng dụng (application / 애플리케이션) healthy không?** đặt đầu vào cho **Tiến trình (process / 프로세스) biến mất**, rồi **CPU cao** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) biến mất
 
@@ -110,7 +110,7 @@ journalctl -k --since '30 minutes ago' | grep -i -E 'oom|out of memory|killed pr
 
 Nếu thấy OOM killer, ứng dụng (application / 애플리케이션) log có thể chỉ dừng đột ngột mà không có Java exception cuối cùng.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Tiến trình (process / 프로세스) biến mất** xác định đầu vào; **CPU cao** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **CPU cao do GC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Tiến trình (process / 프로세스) biến mất** đặt đầu vào cho **CPU cao**, rồi **CPU cao do GC** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## CPU cao
 
@@ -143,7 +143,7 @@ done
 
 Nếu một luồng thực thi (thread / 스레드) dùng CPU cao liên tục và ngăn xếp (stack / 스택) lặp lại cùng đường đi mã (code path / 코드 경로), hypothesis về hot vòng lặp (loop / 루프)/hot phương thức (method / 메서드) mạnh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **CPU cao do GC** tiếp nhận điểm tựa từ **CPU cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **CPU cao do GC** nối từ **CPU cao** sang **Bộ nhớ (memory / 메모리) tăng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU cao do GC
 
@@ -158,7 +158,7 @@ Công cụ (tool / 도구) availability phụ thuộc JDK. Nếu old generation 
 
 Không tăng `-Xmx` ngay khi chưa biết host/bộ chứa (container / 컨테이너) giới hạn bộ nhớ (memory limit / 메모리 제한); vùng nhớ động (heap / 힙) lớn hơn có thể đẩy tiến trình (process / 프로세스) vào cgroup/host OOM.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bộ nhớ (memory / 메모리) tăng** tiếp nhận điểm tựa từ **CPU cao do GC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghi bộ nhớ (memory / 메모리) leak** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Bộ nhớ (memory / 메모리) tăng** nối từ **CPU cao do GC** sang **Nghi bộ nhớ (memory / 메모리) leak**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) tăng
 
@@ -181,7 +181,7 @@ Nếu vùng nhớ động (heap / 힙) ổn nhưng RSS tăng, hãy nghĩ tới d
 
 Java tiến trình (process / 프로세스) bộ nhớ (memory / 메모리) không bằng `-Xmx`.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Nghi bộ nhớ (memory / 메모리) leak** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) tăng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Too many open files** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Nghi bộ nhớ (memory / 메모리) leak** nối từ **Bộ nhớ (memory / 메모리) tăng** sang **Too many open files**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghi bộ nhớ (memory / 메모리) leak
 
@@ -201,7 +201,7 @@ df -h /tmp
 
 Với môi trường vận hành (production / 운영 환경), vùng nhớ động (heap / 힙) dump procedure cần dự tính pause và disk sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Too many open files** tiếp nhận điểm tựa từ **Nghi bộ nhớ (memory / 메모리) leak** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng thực thi (thread / 스레드) count tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Too many open files** nối từ **Nghi bộ nhớ (memory / 메모리) leak** sang **Luồng thực thi (thread / 스레드) count tăng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Too many open files
 
@@ -231,7 +231,7 @@ sudo lsof -p "$PID" | head -100
 
 Nếu count tăng liên tục, có thể là tệp (file / 파일)/socket/tài nguyên (resource / 자원) leak. Tăng limit chỉ kéo dài thời gian trước thất bại (failure / 실패) nếu vòng đời (lifecycle / 생명주기) bug vẫn còn.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Luồng thực thi (thread / 스레드) count tăng** tiếp nhận điểm tựa từ **Too many open files** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Yêu cầu (request / 요청) hang nhưng CPU thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Luồng thực thi (thread / 스레드) count tăng** nối từ **Too many open files** sang **Yêu cầu (request / 요청) hang nhưng CPU thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luồng thực thi (thread / 스레드) count tăng
 
@@ -245,7 +245,7 @@ Nếu luồng thực thi (thread / 스레드) count tăng không giảm, kiểm 
 
 Mỗi luồng thực thi (thread / 스레드) tiêu thụ ngăn xếp (stack / 스택)/bản địa (native / 네이티브) resources; hàng nghìn threads có thể gây bộ nhớ (memory / 메모리) pressure và scheduling overhead ngay cả khi vùng nhớ động (heap / 힙) không lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Yêu cầu (request / 요청) hang nhưng CPU thấp** tiếp nhận điểm tựa từ **Luồng thực thi (thread / 스레드) count tăng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) pool exhaustion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Yêu cầu (request / 요청) hang nhưng CPU thấp** nối từ **Luồng thực thi (thread / 스레드) count tăng** sang **Liên kết (connection / 연결) pool exhaustion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Yêu cầu (request / 요청) hang nhưng CPU thấp
 
@@ -274,7 +274,7 @@ curl -v https://downstream.example.com/health
 
 Không dùng phụ thuộc (dependency / 의존성) kiểm thử (test / 테스트) có side tác động (effect / 효과) nếu endpoint không an toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, sau nội dung của **Yêu cầu (request / 요청) hang nhưng CPU thấp**, **Liên kết (connection / 연결) pool exhaustion** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) chậm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, sau nội dung của **Yêu cầu (request / 요청) hang nhưng CPU thấp**, **Liên kết (connection / 연결) pool exhaustion** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) chậm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết (connection / 연결) pool exhaustion
 
@@ -288,7 +288,7 @@ ss -antp | grep ':5432' | wc -l
 
 Con số này không đồng nghĩa trực tiếp pool kích thước (size / 크기) vì có thể có nhiều tiến trình (process / 프로세스)/states, nhưng nó giúp kiểm tra hypothesis.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Liên kết (connection / 연결) pool exhaustion** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) chậm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Liên kết (connection / 연결) pool exhaustion** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) chậm** đối chiếu bằng chứng, rồi **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) chậm
 
@@ -302,7 +302,7 @@ nc -vz db.internal 5432
 
 hoặc cổng (port / 포트) phù hợp. TCP success chỉ chứng minh connect tầng (layer / 계층), không chứng minh truy vấn (query / 쿼리) nhanh.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Cơ sở dữ liệu (database / 데이터베이스) chậm** nêu điều cần giải thích; **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Disk full và Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Cơ sở dữ liệu (database / 데이터베이스) chậm** đặt vấn đề; **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** đối chiếu bằng chứng, rồi **Disk full và Java** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt
 
@@ -322,7 +322,7 @@ curl -v https://api.example.com/health
 
 Nếu app bind `127.0.0.1` nhưng proxy kỳ vọng private IP, đó là bind mismatch. Nếu proxy gọi localhost trên cùng host thì bind đó có thể hoàn toàn đúng. Kiến trúc quyết định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Disk full và Java** tiếp nhận điểm tựa từ **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **I/O chậm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Disk full và Java** nối từ **Mạng (network / 네트워크) bên ngoài (external / 외부) thất bại (fail / 실패) nhưng localhost tốt** sang **I/O chậm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Disk full và Java
 
@@ -337,7 +337,7 @@ sudo lsof +L1
 
 Deleted log vẫn được JVM giữ open có thể làm `df` đầy nhưng `du` không thấy.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **I/O chậm** tiếp nhận điểm tựa từ **Disk full và Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tệp (file / 파일)/cấu hình (config / 설정) permission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **I/O chậm** nối từ **Disk full và Java** sang **Tệp (file / 파일)/cấu hình (config / 설정) permission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## I/O chậm
 
@@ -354,7 +354,7 @@ Nếu backend dùng mạng (network / 네트워크) filesystem hoặc cloud volu
 findmnt /path/to/data
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Tệp (file / 파일)/cấu hình (config / 설정) permission** tiếp nhận điểm tựa từ **I/O chậm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chạy tay được nhưng systemd thất bại (fail / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Tệp (file / 파일)/cấu hình (config / 설정) permission** nối từ **I/O chậm** sang **Chạy tay được nhưng systemd thất bại (fail / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tệp (file / 파일)/cấu hình (config / 설정) permission
 
@@ -372,7 +372,7 @@ namei -l /opt/app/config/application.yml
 
 Không `chmod -R 777` để thử. Parent directory traverse, ACL, SELinux/AppArmor hoặc read-only mount cũng có thể là nguyên nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Chạy tay được nhưng systemd thất bại (fail / 실패)** tiếp nhận điểm tựa từ **Tệp (file / 파일)/cấu hình (config / 설정) permission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **jcmd không attach được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Chạy tay được nhưng systemd thất bại (fail / 실패)** nối từ **Tệp (file / 파일)/cấu hình (config / 설정) permission** sang **jcmd không attach được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chạy tay được nhưng systemd thất bại (fail / 실패)
 
@@ -392,7 +392,7 @@ readlink -f "$(command -v java)"
 
 Đưa đường dẫn rõ vào `ExecStart` tốt hơn phụ thuộc đường dẫn (path / 경로) của SSH shell.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **jcmd không attach được** tiếp nhận điểm tựa từ **Chạy tay được nhưng systemd thất bại (fail / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Containerized Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **jcmd không attach được** nối từ **Chạy tay được nhưng systemd thất bại (fail / 실패)** sang **Containerized Java**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `jcmd` không attach được
 
@@ -406,7 +406,7 @@ sudo -u appuser jcmd "$PID" VM.version
 
 Không đổi quyền sở hữu (ownership / 소유권) `/tmp` hoặc tiến trình (process / 프로세스) files một cách ngẫu nhiên để làm attach hoạt động.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Containerized Java** tiếp nhận điểm tựa từ **jcmd không attach được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trước restart nên capture gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Containerized Java** nối từ **jcmd không attach được** sang **Trước restart nên capture gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Containerized Java
 
@@ -416,7 +416,7 @@ Host `free -h` còn nhiều không loại trừ bộ chứa (container / 컨테�
 
 Cần biết command đang chạy ở host không gian tên (namespace / 네임스페이스) hay bộ chứa (container / 컨테이너) không gian tên (namespace / 네임스페이스) trước khi diễn giải PID, localhost, mount hoặc mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Trước restart nên capture gì?** tiếp nhận điểm tựa từ **Containerized Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sau restart phải verify gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Trước restart nên capture gì?** nối từ **Containerized Java** sang **Sau restart phải verify gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trước restart nên capture gì?
 
@@ -436,7 +436,7 @@ df -h
 
 Không phải sự cố (incident / 인시던트) nào cũng cần tất cả. Chọn bằng chứng (evidence / 증거) theo symptom và tránh command nặng khi máy chủ (server / 서버) đang trọng yếu (critical / 중요).
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Sau restart phải verify gì?** tiếp nhận điểm tựa từ **Trước restart nên capture gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Sau restart phải verify gì?** nối từ **Trước restart nên capture gì?** sang **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sau restart phải verify gì?
 
@@ -457,7 +457,7 @@ curl -fsS http://127.0.0.1:8080/version
 
 để xác minh sản phẩm tạo ra (artifact / 산출물) mong muốn đang chạy.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)** tiếp nhận điểm tựa từ **Sau restart phải verify gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)** nối từ **Sau restart phải verify gì?** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)
 
@@ -465,7 +465,7 @@ Restart có thể làm luồng thực thi (thread / 스레드) pool, liên kết
 
 Sau khôi phục (recovery / 복구), dùng bằng chứng (evidence / 증거) đã capture để xác định chuỗi nhân quả (causal chain / 인과 사슬).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khôi phục (recovery / 복구) khác nguyên nhân gốc (root cause / 근본 원인)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -488,7 +488,7 @@ CPU / memory / storage / network
 
 Sự cố (incident / 인시던트) investigation là tìm tầng (layer / 계층) đầu tiên không còn đáp ứng expectation.
 
-> **Chuyển mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -502,7 +502,7 @@ Sự cố (incident / 인시던트) investigation là tìm tầng (layer / 계�
 
 **“Too many open files chỉ cần tăng ulimit.”** Nếu có descriptor leak, tăng limit chỉ trì hoãn lỗi.
 
-> **Chuyển mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Java Backend sự cố (incident / 인시던트) Playbook trên Linux**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

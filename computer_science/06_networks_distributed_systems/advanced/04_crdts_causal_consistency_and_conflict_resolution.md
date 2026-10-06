@@ -10,7 +10,7 @@ Hai events concurrent khi không có nhân quả (causal / 인과적) thứ tự
 
 Wall-clock timestamps không đủ đáng tin để suy ra causality vì clock skew và mạng (network / 네트워크) delay.
 
-> **Chuyển mạch:** Trong **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Happens-before và logical clocks** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) không chỉ là “cùng timestamp”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CRDT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Happens-before và logical clocks** nối từ **Tính đồng thời (concurrency / 동시성) không chỉ là “cùng timestamp”** sang **CRDT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Happens-before và logical clocks
 
@@ -18,7 +18,7 @@ Lamport clock tạo thứ tự (ordering / 순서) nhất quán với causality 
 
 Nhân quả (causal / 인과적) consistency đảm bảo tác động (effect / 효과) không xuất hiện trước cause: nếu comment trả lời một post, replica không nên hiển thị reply trước post mà người dùng (user / 사용자) đã dựa vào.
 
-> **Chuyển mạch:** Ở chặng này của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **CRDT** tiếp nhận điểm tựa từ **Happens-before và logical clocks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **G-Counter và PN-Counter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CRDT** nối từ **Happens-before và logical clocks** sang **G-Counter và PN-Counter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CRDT
 
@@ -26,7 +26,7 @@ Nhân quả (causal / 인과적) consistency đảm bảo tác động (effect /
 
 State-based CRDT thường cần merge thao tác (operation / 연산) có tính commutative, associative và idempotent; join-semilattice cung cấp formal cấu trúc (structure / 구조) cho monotonic merge.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **G-Counter và PN-Counter** tiếp nhận điểm tựa từ **CRDT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sets và remove ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **G-Counter và PN-Counter** nối từ **CRDT** sang **Sets và remove ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## G-Counter và PN-Counter
 
@@ -34,7 +34,7 @@ Grow-only counter giữ thành phần (component / 컴포넌트) per replica và
 
 PN-Counter kết hợp hai grow-only counters cho increments và decrements. siêu dữ liệu (metadata / 메타데이터) tăng theo replica định danh (identity / 식별자), minh họa sự đánh đổi (trade-off / 트레이드오프) giữa coordination-free merge và trạng thái (state / 상태) overhead.
 
-> **Chuyển mạch:** Trong **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Sets và remove ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **G-Counter và PN-Counter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Last-write-wins không phải CRDT thần kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sets và remove ngữ nghĩa (semantics / 의미론)** nối từ **G-Counter và PN-Counter** sang **Last-write-wins không phải CRDT thần kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sets và remove ngữ nghĩa (semantics / 의미론)
 
@@ -42,7 +42,7 @@ Set khó hơn counter vì add/remove concurrent cần ngữ nghĩa (semantics / 
 
 CRDT không tự quyết định ngữ nghĩa (semantics / 의미론) đúng; designer phải chọn xung đột (conflict / 충돌) chính sách (policy / 정책) phù hợp lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Ở chặng này của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Last-write-wins không phải CRDT thần kỳ** tiếp nhận điểm tựa từ **Sets và remove ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tombstone và garbage collection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Last-write-wins không phải CRDT thần kỳ** nối từ **Sets và remove ngữ nghĩa (semantics / 의미론)** sang **Tombstone và garbage collection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Last-write-wins không phải CRDT thần kỳ
 
@@ -50,13 +50,13 @@ LWW dùng timestamp chọn winner đơn giản nhưng có thể mất concurrent
 
 “Không xung đột (conflict / 충돌) lỗi (error / 오류)” không nghĩa “không mất thông tin”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Tombstone và garbage collection** tiếp nhận điểm tựa từ **Last-write-wins không phải CRDT thần kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào dùng consensus, khi nào dùng CRDT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tombstone và garbage collection** nối từ **Last-write-wins không phải CRDT thần kỳ** sang **Khi nào dùng consensus, khi nào dùng CRDT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tombstone và garbage collection
 
 Để nhớ remove đã xảy ra và ngăn item cũ sống lại, replicated structures có thể cần tombstones/phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터). Garbage collect siêu dữ liệu (metadata / 메타데이터) đòi hỏi biết mọi replicas đã vượt nhân quả (causal / 인과적) frontier nào đó, điều khó khi nodes offline lâu.
 
-> **Chuyển mạch:** Trong **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Khi nào dùng consensus, khi nào dùng CRDT** tiếp nhận điểm tựa từ **Tombstone và garbage collection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khi nào dùng consensus, khi nào dùng CRDT** nối từ **Tombstone và garbage collection** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi nào dùng consensus, khi nào dùng CRDT
 
@@ -64,7 +64,7 @@ Bank transfer với bất biến (invariant / 불변식) số dư không âm th�
 
 CAP không nói “chọn CP hoặc AP cho toàn cơ sở dữ liệu (database / 데이터베이스)”; nhiều các hệ thống (systems / 시스템들) chọn consistency mô hình (model / 모델) theo thao tác (operation / 연산)/dữ liệu (data / 데이터) kiểu (type / 타입).
 
-> **Chuyển mạch:** Ở chặng này của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi nào dùng consensus, khi nào dùng CRDT** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi nào dùng consensus, khi nào dùng CRDT**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

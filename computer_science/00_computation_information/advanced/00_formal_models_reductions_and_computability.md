@@ -10,7 +10,7 @@ Một computation mô hình (model / 모델) xác định trạng thái (state /
 
 Điều này cho phép ta tách hai tầng: **expressive power** và **chi phí (cost / 비용) mô hình (model / 모델)**. Hai languages đều Turing-complete nhưng có thể khác rất xa về bộ nhớ (memory / 메모리) an toàn (safety / 안전), hiệu năng (performance / 성능) mô hình (model / 모델), tính đồng thời (concurrency / 동시성) ngữ nghĩa (semantics / 의미론) hay khả năng xác minh (verification / 확인). Turing-equivalence không làm các hiện thực (implementation / 구현) trở nên giống nhau.
 
-> **Chuyển mạch:** Computation model đặt contract cho machine và input; mapping reduction truyền độ khó giữa bài toán, còn halting problem là nguồn chuẩn để chứng minh giới hạn đó.
+> **Nối mạch:** Computation model đặt contract cho machine và input; mapping reduction truyền độ khó giữa bài toán, còn halting problem là nguồn chuẩn để chứng minh giới hạn đó.
 
 ## Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó
 
@@ -18,7 +18,7 @@ Giả sử bài toán (problem / 문제) `A` có thể transform thành bài to�
 
 Sai lầm phổ biến là nhớ reduction như một “mũi tên độ khó” mà không kiểm tra ngữ nghĩa (semantic / 의미적) preservation. Một reduction đúng phải định nghĩa ánh xạ (mapping / 매핑) trên mọi đầu vào (input / 입력) hợp lệ và chứng minh quan hệ giữa answer của đầu vào (input / 입력) gốc và answer của instance sau transform.
 
-> **Chuyển mạch:** Ở chặng này của **Formal các mô hình (models / 모델들), reductions và computability**, **Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó** nêu điều cần giải thích; **Halting bài toán (problem / 문제) là nguồn reduction trung tâm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Recognizable, decidable và complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó** đặt vấn đề; **Halting bài toán (problem / 문제) là nguồn reduction trung tâm** kiểm tra bằng chứng, rồi **Recognizable, decidable và complement** mở rộng hệ quả.
 
 ## Halting bài toán (problem / 문제) là nguồn reduction trung tâm
 
@@ -26,7 +26,7 @@ Halting bài toán (problem / 문제) hỏi program `P` trên đầu vào (input
 
 Ví dụ tưởng tượng một công cụ (tool / 도구) `AlwaysTerminatesAfterNetworkRead(program)` quyết định hoàn hảo liệu program sau lần đọc mạng (network / 네트워크) đầu tiên có luôn terminate. Nếu ta có thể encode một arbitrary computation `P(x)` vào phần chương trình sau mạng (network / 네트워크) read, công cụ (tool / 도구) đó có thể bị biến thành halting decider. Chi tiết proof phụ thuộc thuộc tính (property / 속성) cụ thể, nhưng mô hình tư duy (mental model / 사고 모델) là: **nhúng computation chưa biết vào ngữ cảnh (context / 맥락) mà thuộc tính (property / 속성) mới buộc phải tiết lộ answer**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Formal các mô hình (models / 모델들), reductions và computability**, **Halting bài toán (problem / 문제) là nguồn reduction trung tâm** nêu điều cần giải thích; **Recognizable, decidable và complement** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Rice's theorem và static phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Halting bài toán (problem / 문제) là nguồn reduction trung tâm** đặt vấn đề; **Recognizable, decidable và complement** kiểm tra bằng chứng, rồi **Rice's theorem và static phân tích (analysis / 분석)** mở rộng hệ quả.
 
 ## Recognizable, decidable và complement
 
@@ -34,7 +34,7 @@ Một ngôn ngữ (language / 언어) decidable nếu có machine luôn halt và
 
 Nếu một ngôn ngữ (language / 언어) và complement của nó đều recognizable, ta có thể chạy hai recognizers song song theo dovetailing; một bên cuối cùng accept, tạo decider. Đây là một cầu nối (bridge / 브리지) quan trọng giữa existence proof và thực thi (execution / 실행) chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Trong **Formal các mô hình (models / 모델들), reductions và computability**, **Rice's theorem và static phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Recognizable, decidable và complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Computability khác độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rice's theorem và static phân tích (analysis / 분석)** nối từ **Recognizable, decidable và complement** sang **Computability khác độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rice's theorem và static phân tích (analysis / 분석)
 
@@ -42,7 +42,7 @@ Rice's theorem nói, ở mức khái quát, mọi non-trivial ngữ nghĩa (sema
 
 Abstract interpretation là ví dụ điển hình: thay vì execute trên trạng thái (state / 상태) không gian (space / 공간) thật vô hạn, analyzer chạy trên abstract lĩnh vực (domain / 도메인) nhỏ hơn và thiết kế transfer functions để bảo toàn guarantee cần thiết. Precision tăng thường kéo theo chi phí (cost / 비용) tăng; termination của phân tích (analysis / 분석) lại trở thành một kỹ thuật (engineering / 엔지니어링) ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Ở chặng này của **Formal các mô hình (models / 모델들), reductions và computability**, **Computability khác độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Rice's theorem và static phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào formal limit hữu ích trong công việc?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Computability khác độ phức tạp (complexity / 복잡도)** nối từ **Rice's theorem và static phân tích (analysis / 분석)** sang **Khi nào formal limit hữu ích trong công việc?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Computability khác độ phức tạp (complexity / 복잡도)
 
@@ -50,19 +50,19 @@ Một bài toán (problem / 문제) decidable vẫn có thể không practical. 
 
 Một proof undecidability nói không có thuật toán (algorithm / 알고리즘) tổng quát theo mô hình (model / 모델). Một NP-hardness proof không nói bài toán (problem / 문제) “không giải được”; nó đặt bài toán (problem / 문제) vào quan hệ worst-case độ phức tạp (complexity / 복잡도) với các bài toán (problem / 문제) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Formal các mô hình (models / 모델들), reductions và computability**, **Computability khác độ phức tạp (complexity / 복잡도)** đã nêu tiêu chí phân biệt, còn **Khi nào formal limit hữu ích trong công việc?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Computability khác độ phức tạp (complexity / 복잡도)** đặt tiêu chí; **Khi nào formal limit hữu ích trong công việc?** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Khi nào formal limit hữu ích trong công việc?
 
 Formal limits giúp tránh mục tiêu bất khả thi. Một “perfect bug detector cho mọi program”, “công cụ (tool / 도구) luôn biết yêu cầu (request / 요청) nào sẽ deadlock”, hay “analyzer luôn suy ra chính xác mọi hành vi thời gian chạy (runtime behavior / 런타임 동작)” có thể đụng undecidability. Thiết kế tốt chuyển câu hỏi sang subset có cấu trúc: finite-state giao thức (protocol / 프로토콜), bounded mô hình (model / 모델), restricted kiểu (type / 타입)/tác động (effect / 효과) hệ thống (system / 시스템), symbolic thực thi (execution / 실행) với cutoff, hoặc thời gian chạy (runtime / 런타임) monitoring.
 
-> **Chuyển mạch:** Trong **Formal các mô hình (models / 모델들), reductions và computability**, **Khi nào formal limit hữu ích trong công việc?** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khi nào formal limit hữu ích trong công việc?** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng nó để kiểm tra ranh giới, rồi **Kết nối** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Advanced computability không phải học thêm tên theorem. Nó là kỹ năng chọn mô hình (model / 모델), định nghĩa thuộc tính (property / 속성), xây reduction và phân biệt ba câu hỏi: **có giải được không, giải với tài nguyên (resource / 자원) nào, và hiện thực (implementation / 구현) thực tế có đáng dùng không**.
 
-> **Chuyển mạch:** Ở chặng này của **Formal các mô hình (models / 모델들), reductions và computability**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

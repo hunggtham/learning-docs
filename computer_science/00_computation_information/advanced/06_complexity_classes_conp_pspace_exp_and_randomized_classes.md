@@ -34,7 +34,7 @@ Có assignment nào làm formula đúng không?
 
 khác với tác vụ (task / 작업) tìm assignment cụ thể hoặc tối ưu một mục tiêu (objective / 목표).
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **1. độ phức tạp (complexity / 복잡도) là asymptotic tài nguyên (resource / 자원) của bài toán (problem / 문제) family** nêu điều cần giải thích; **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. NP: yes-instance có certificate kiểm tra polynomial** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. độ phức tạp (complexity / 복잡도) là asymptotic tài nguyên (resource / 자원) của bài toán (problem / 문제) family** đặt vấn đề; **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine** kiểm tra bằng chứng, rồi **3. NP: yes-instance có certificate kiểm tra polynomial** mở rộng hệ quả.
 
 ## 2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine
 
@@ -50,7 +50,7 @@ Polynomial không đồng nghĩa “nhanh trong thực tế”. `n^100` là poly
 
 Ý nghĩa lý thuyết của P là một ranh giới (boundary / 경계) robust cho efficient computation dưới nhiều reasonable machine các mô hình (models / 모델들), không phải SLA môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **3. NP: yes-instance có certificate kiểm tra polynomial** tiếp nhận điểm tựa từ **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. co-NP: certificate cho phía “no” theo complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. NP: yes-instance có certificate kiểm tra polynomial** nối từ **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine** sang **4. co-NP: certificate cho phía “no” theo complement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. NP: yes-instance có certificate kiểm tra polynomial
 
@@ -71,7 +71,7 @@ Mọi bài toán (problem / 문제) trong P cũng thuộc NP vì nếu tự gi�
 
 Câu hỏi nổi tiếng `P = NP?` vẫn chưa được giải quyết. Không được viết tài liệu như thể `P ≠ NP` đã là theorem.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **4. co-NP: certificate cho phía “no” theo complement** tiếp nhận điểm tựa từ **3. NP: yes-instance có certificate kiểm tra polynomial** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. co-NP: certificate cho phía “no” theo complement** nối từ **3. NP: yes-instance có certificate kiểm tra polynomial** sang **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. co-NP: certificate cho phía “no” theo complement
 
@@ -88,7 +88,7 @@ Ví dụ TAUT hỏi formula Boolean có đúng với mọi assignment không. Co
 
 Không biết liệu `NP = co-NP` hay không. Nếu một NP-complete bài toán (problem / 문제) cũng được chứng minh nằm trong co-NP theo cách dẫn tới equality phù hợp, hậu quả độ phức tạp (complexity / 복잡도) rất lớn.
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof** tiếp nhận điểm tựa từ **4. co-NP: certificate cho phía “no” theo complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Reduction là ngôn ngữ so sánh độ khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof** nối từ **4. co-NP: certificate cho phía “no” theo complement** sang **6. Reduction là ngôn ngữ so sánh độ khó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof
 
@@ -103,7 +103,7 @@ Ràng buộc (constraint / 제약조건) solver có thể mất lâu để tìm 
 
 Độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) formalize một phần trực giác này, nhưng không nên suy ra mọi “dễ verify, khó find” đều là NP-complete.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof** đã nêu tiêu chí phân biệt, còn **6. Reduction là ngôn ngữ so sánh độ khó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. NP-completeness không nói instance nào cũng khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof** đặt tiêu chí; **6. Reduction là ngôn ngữ so sánh độ khó** dùng nó để kiểm tra ranh giới, rồi **7. NP-completeness không nói instance nào cũng khó** mở rộng hệ quả.
 
 ## 6. Reduction là ngôn ngữ so sánh độ khó
 
@@ -119,7 +119,7 @@ Complete bài toán (problem / 문제) là đại diện cho difficulty của l�
 
 Reduction direction rất dễ nhầm. Để chứng minh `B` khó, reduce **bài toán (problem / 문제) đã biết khó A vào B**, không làm ngược lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **6. Reduction là ngôn ngữ so sánh độ khó** đã nêu tiêu chí phân biệt, còn **7. NP-completeness không nói instance nào cũng khó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Reduction là ngôn ngữ so sánh độ khó** đặt tiêu chí; **7. NP-completeness không nói instance nào cũng khó** dùng nó để kiểm tra ranh giới, rồi **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** mở rộng hệ quả.
 
 ## 7. NP-completeness không nói instance nào cũng khó
 
@@ -138,7 +138,7 @@ real workload distribution
 
 Bảo mật (security / 보안) còn quan tâm average-case/hard-on-distribution nhiều hơn worst-case đơn thuần, vì attacker gặp key/instance được sinh theo phân phối (distribution / 분포) cụ thể.
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **7. NP-completeness không nói instance nào cũng khó** nêu điều cần giải thích; **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. PSPACE và game/planning có alternating choices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. NP-completeness không nói instance nào cũng khó** đặt vấn đề; **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** kiểm tra bằng chứng, rồi **9. PSPACE và game/planning có alternating choices** mở rộng hệ quả.
 
 ## 8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)
 
@@ -156,7 +156,7 @@ Một số inclusion có thể strict nhưng không phải tất cả separation
 
 Không gian (space / 공간) có thể reuse. Một depth-first tìm kiếm (search / 검색) trên trạng thái (state / 상태) không gian (space / 공간) khổng lồ có thể cần ít bộ nhớ (memory / 메모리) hơn breadth-first traversal dù thời gian (time / 시간) rất lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** nêu điều cần giải thích; **9. PSPACE và game/planning có alternating choices** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)** đặt vấn đề; **9. PSPACE và game/planning có alternating choices** kiểm tra bằng chứng, rồi **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** mở rộng hệ quả.
 
 ## 9. PSPACE và game/planning có alternating choices
 
@@ -172,7 +172,7 @@ Khác SAT chỉ có existential assignment, QBF xen kẽ existential/universal c
 
 Liên kết (connection / 연결) này dẫn tự nhiên tới interactive proof và alternating computation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **9. PSPACE và game/planning có alternating choices** nêu điều cần giải thích; **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. PSPACE và game/planning có alternating choices** đặt vấn đề; **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** kiểm tra bằng chứng, rồi **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** mở rộng hệ quả.
 
 ## 10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound
 
@@ -192,7 +192,7 @@ intractable under known complexity
 
 Đọc lại [Formal models, reductions và computability](./00_formal_models_reductions_and_computability.md).
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** nêu điều cần giải thích; **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound** đặt vấn đề; **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** kiểm tra bằng chứng, rồi **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** mở rộng hệ quả.
 
 ## 11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power
 
@@ -209,7 +209,7 @@ can increase computable decision power
 
 nhưng chính xác (exact / 정확한) ranh giới (boundary / 경계) phụ thuộc lớp (class / 클래스)/mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** nêu điều cần giải thích; **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Monte Carlo và Las Vegas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power** đặt vấn đề; **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** kiểm tra bằng chứng, rồi **13. Monte Carlo và Las Vegas** mở rộng hệ quả.
 
 ## 12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)
 
@@ -246,7 +246,7 @@ với polynomial overhead cho mức confidence hợp lý.
 
 Zero-error probabilistic polynomial expected thời gian (time / 시간) có thể nhìn như thuật toán (algorithm / 알고리즘) không trả answer sai nhưng thời gian chạy (runtime / 런타임) là random variable với expected polynomial bound.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** nêu điều cần giải thích; **13. Monte Carlo và Las Vegas** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Amplification không sửa systematic độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)** đặt vấn đề; **13. Monte Carlo và Las Vegas** kiểm tra bằng chứng, rồi **14. Amplification không sửa systematic độ lệch (bias / 편향)** mở rộng hệ quả.
 
 ## 13. Monte Carlo và Las Vegas
 
@@ -260,7 +260,7 @@ Không phải mọi textbook map terminology hoàn toàn một-một với độ
 
 Ví dụ randomized quicksort luôn sort đúng nhưng thời gian chạy (runtime / 런타임) phụ thuộc random pivot; đây là Las Vegas-style lập luận (reasoning / 추론) về hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **14. Amplification không sửa systematic độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **13. Monte Carlo và Las Vegas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Pseudorandomness và derandomization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Amplification không sửa systematic độ lệch (bias / 편향)** nối từ **13. Monte Carlo và Las Vegas** sang **15. Pseudorandomness và derandomization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Amplification không sửa systematic độ lệch (bias / 편향)
 
@@ -278,7 +278,7 @@ systematic model error
 
 Đây là cầu nối (bridge / 브리지) tới [Randomness, entropy sources và computational unpredictability](./05_randomness_entropy_sources_and_computational_unpredictability.md).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **15. Pseudorandomness và derandomization** tiếp nhận điểm tựa từ **14. Amplification không sửa systematic độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Pseudorandomness và derandomization** nối từ **14. Amplification không sửa systematic độ lệch (bias / 편향)** sang **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Pseudorandomness và derandomization
 
@@ -288,7 +288,7 @@ Nếu random bits có thể được thay bằng pseudorandom generator phù h�
 
 Quan hệ chính xác giữa BPP và P là chủ đề sâu; không nên tuyên bố equality chưa chứng minh như fact. Tuy nhiên nhiều kết quả cho thấy randomness và hardness giả định (assumption / 가정) có liên kết (connection / 연결) chặt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding** tiếp nhận điểm tựa từ **15. Pseudorandomness và derandomization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Strong vs weak NP-hardness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding** nối từ **15. Pseudorandomness và derandomization** sang **17. Strong vs weak NP-hardness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding
 
@@ -300,7 +300,7 @@ Knapsack động (dynamic / 동적) programming theo sức chứa (capacity / �
 
 Độ phức tạp (complexity / 복잡도) luôn đo theo kích thước (size / 크기) của biểu diễn (representation / 표현), không theo magnitude được viết ra nếu hai thứ khác nhau.
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **17. Strong vs weak NP-hardness** tiếp nhận điểm tựa từ **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Strong vs weak NP-hardness** nối từ **16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding** sang **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Strong vs weak NP-hardness
 
@@ -310,7 +310,7 @@ Weakly NP-hard bài toán (problem / 문제) có thể trở nên tractable khi 
 
 Đây là lý do “NP-hard” chưa đủ để chọn hiện thực (implementation / 구현); parameter phân phối (distribution / 분포) thực tế có thể làm động (dynamic / 동적) programming rất hiệu quả.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì** tiếp nhận điểm tựa từ **17. Strong vs weak NP-hardness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Approximation và hardness of approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì** nối từ **17. Strong vs weak NP-hardness** sang **19. Approximation và hardness of approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì
 
@@ -331,7 +331,7 @@ Mô hình tư duy (mental model / 사고 모델):
 → exponential theo n hay theo một parameter nhỏ?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **19. Approximation và hardness of approximation** tiếp nhận điểm tựa từ **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Approximation và hardness of approximation** nối từ **18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì** sang **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Approximation và hardness of approximation
 
@@ -351,7 +351,7 @@ Heuristic có thể rất tốt thực tế nhưng bằng chứng (evidence / �
 
 Cross-link DSA: [Hard problems, reductions và approximation](../../01_algorithms_data_structures/advanced/04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md).
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark** tiếp nhận điểm tựa từ **19. Approximation và hardness of approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. độ phức tạp (complexity / 복잡도) và cryptography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark** nối từ **19. Approximation và hardness of approximation** sang **21. độ phức tạp (complexity / 복잡도) và cryptography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark
 
@@ -371,7 +371,7 @@ asymptotic work
 
 Do đó lớp (class / 클래스) là upper-level feasibility lập luận (reasoning / 추론), không thay benchmark.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **21. độ phức tạp (complexity / 복잡도) và cryptography** tiếp nhận điểm tựa từ **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. độ phức tạp (complexity / 복잡도) và cryptography** nối từ **20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark** sang **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. độ phức tạp (complexity / 복잡도) và cryptography
 
@@ -381,7 +381,7 @@ Một NP-complete bài toán (problem / 문제) không tự động là thành p
 
 Bảo mật (security / 보안) thường dựa trên stronger average-case/computational các giả định (assumptions / 가정들) và concrete parameter sizes.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **21. độ phức tạp (complexity / 복잡도) và cryptography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)** nối từ **21. độ phức tạp (complexity / 복잡도) và cryptography** sang **23. Những nhầm lẫn thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)
 
@@ -389,7 +389,7 @@ NP có certificate một chiều: prover đưa witness, verifier check. Nếu ch
 
 Đây là motivation cho [Interactive proofs, zero-knowledge và verifiable computation](./07_interactive_proofs_zero_knowledge_and_verifiable_computation.md).
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)** đã nêu tiêu chí phân biệt, còn **23. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)** đặt tiêu chí; **23. Những nhầm lẫn thường gặp** dùng nó để kiểm tra ranh giới, rồi **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** mở rộng hệ quả.
 
 ## 23. Những nhầm lẫn thường gặp
 
@@ -407,7 +407,7 @@ NP có certificate một chiều: prover đưa witness, verifier check. Nếu ch
 
 **“NP-hard bài toán (problem / 문제) không thể giải thực tế.”** Không; cấu trúc (structure / 구조), parameter, approximation và heuristic có thể làm tải công việc (workload / 워크로드) cụ thể tractable.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **23. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **25. Checklist lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Những nhầm lẫn thường gặp** đặt tiêu chí; **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** dùng nó để kiểm tra ranh giới, rồi **25. Checklist lập luận (reasoning / 추론)** mở rộng hệ quả.
 
 ## 24. lớp (class / 클래스) map để lập luận (reasoning / 추론)
 
@@ -430,7 +430,7 @@ P ?= NP      chưa biết
 
 Randomized classes tạo trục khác về lỗi (error / 오류)/randomness. Không nên ép chúng vào một line duy nhất nếu chưa nói rõ known containment và giả định (assumption / 가정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **25. Checklist lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Checklist lập luận (reasoning / 추론)** nối từ **24. lớp (class / 클래스) map để lập luận (reasoning / 추론)** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Checklist lập luận (reasoning / 추론)
 
@@ -447,7 +447,7 @@ Randomized error là one-sided, two-sided hay zero-error expected-time?
 Production bottleneck có thực sự do asymptotic complexity hay do memory/I/O/queueing?
 ```
 
-> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**, **Kết luận** gom các mảnh từ **25. Checklist lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết luận** tổng hợp từ **25. Checklist lập luận (reasoning / 추론)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết luận
 

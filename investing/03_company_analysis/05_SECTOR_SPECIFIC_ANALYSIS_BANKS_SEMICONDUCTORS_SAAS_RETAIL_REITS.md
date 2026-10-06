@@ -27,7 +27,7 @@ occupancy → rent → NOI → cap rate → refinancing
 
 Một chỉ số chỉ có ý nghĩa khi được đặt vào đúng cơ chế kinh tế.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **2. Khung chung trước khi đi vào từng ngành** tiếp nhận điểm tựa từ **1. Vì sao phải phân tích theo ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **2. Khung chung trước khi đi vào từng ngành** nối từ **1. Vì sao phải phân tích theo ngành** sang **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Khung chung trước khi đi vào từng ngành
 
@@ -48,7 +48,7 @@ Sau đó mới chọn KPI và bội số.
 
 # Phần I — Ngân hàng
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp** tiếp nhận điểm tựa từ **2. Khung chung trước khi đi vào từng ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thu nhập lãi thuần và NIM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp** nối từ **2. Khung chung trước khi đi vào từng ngành** sang **4. Thu nhập lãi thuần và NIM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp
 
@@ -62,7 +62,7 @@ Do đó tỷ lệ Debt/Equity cao không tự động nghĩa ngân hàng yếu. 
 - thanh khoản;
 - tập trung tín dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **4. Thu nhập lãi thuần và NIM** tiếp nhận điểm tựa từ **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tăng trưởng tín dụng không luôn tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **4. Thu nhập lãi thuần và NIM** nối từ **3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp** sang **5. Tăng trưởng tín dụng không luôn tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Thu nhập lãi thuần và NIM
 
@@ -76,7 +76,7 @@ Biên lãi ròng (Net Interest Margin, NIM) chuẩn hóa chênh lệch đó trê
 
 NIM tăng khi lợi suất tài sản tăng nhanh hơn chi phí tiền gửi. Nhưng nếu cạnh tranh tiền gửi mạnh hoặc khách hàng chuyển từ CASA sang tiền gửi kỳ hạn, NIM có thể giảm.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **5. Tăng trưởng tín dụng không luôn tốt** tiếp nhận điểm tựa từ **4. Thu nhập lãi thuần và NIM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chất lượng tài sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **5. Tăng trưởng tín dụng không luôn tốt** nối từ **4. Thu nhập lãi thuần và NIM** sang **6. Chất lượng tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Tăng trưởng tín dụng không luôn tốt
 
@@ -90,7 +90,7 @@ Rủi ro tín dụng thường xuất hiện trễ. Vì vậy cần xem tăng tr
 - tiêu dùng không bảo đảm;
 - bất động sản.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **6. Chất lượng tài sản** tiếp nhận điểm tựa từ **5. Tăng trưởng tín dụng không luôn tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Credit chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **6. Chất lượng tài sản** nối từ **5. Tăng trưởng tín dụng không luôn tốt** sang **7. Credit chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Chất lượng tài sản
 
@@ -104,7 +104,7 @@ NPL thường là chỉ báo trễ. Tín hiệu sớm hơn có thể gồm:
 
 Tỷ lệ bao phủ dự phòng (provision coverage) giúp đánh giá buffer nhưng còn phụ thuộc chất lượng tài sản thế chấp và chính sách ghi nhận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **7. Credit chi phí (cost / 비용)** tiếp nhận điểm tựa từ **6. Chất lượng tài sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. CASA và chất lượng funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **7. Credit chi phí (cost / 비용)** nối từ **6. Chất lượng tài sản** sang **8. CASA và chất lượng funding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Credit chi phí (cost / 비용)
 
@@ -114,7 +114,7 @@ Trong suy thoái, credit chi phí (cost / 비용) có thể tăng nhanh và xóa
 
 Do đó lợi nhuận ngân hàng phải được chuẩn hóa theo chu kỳ.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **8. CASA và chất lượng funding** tiếp nhận điểm tựa từ **7. Credit chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vốn và ROE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **8. CASA và chất lượng funding** nối từ **7. Credit chi phí (cost / 비용)** sang **9. Vốn và ROE**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. CASA và chất lượng funding
 
@@ -122,7 +122,7 @@ CASA là tiền gửi thanh toán và tiết kiệm chi phí thấp. CASA cao th
 
 Ngân hàng phụ thuộc vài khách hàng lớn hoặc nguồn vốn wholesale có rủi ro thanh khoản khác ngân hàng có tiền gửi bán lẻ phân tán.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **9. Vốn và ROE** tiếp nhận điểm tựa từ **8. CASA và chất lượng funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Thu nhập phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **9. Vốn và ROE** nối từ **8. CASA và chất lượng funding** sang **10. Thu nhập phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vốn và ROE
 
@@ -140,7 +140,7 @@ fee income
 credit cost
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **10. Thu nhập phí** tiếp nhận điểm tựa từ **9. Vốn và ROE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Định giá ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **10. Thu nhập phí** nối từ **9. Vốn và ROE** sang **11. Định giá ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Thu nhập phí
 
@@ -155,7 +155,7 @@ Ngân hàng còn có thể kiếm từ:
 
 Thu nhập phí từ giao dịch lặp lại thường bền hơn thu nhập phụ thuộc thị trường tài sản đang nóng.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **11. Định giá ngân hàng** tiếp nhận điểm tựa từ **10. Thu nhập phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Cơ chế kinh tế của bảo hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **11. Định giá ngân hàng** nối từ **10. Thu nhập phí** sang **12. Cơ chế kinh tế của bảo hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Định giá ngân hàng
 
@@ -172,7 +172,7 @@ P/B thấp có thể hợp lý nếu chất lượng tài sản kém hoặc ROE 
 
 # Phần II — Bảo hiểm
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **11. Định giá ngân hàng** xác định đầu vào; **12. Cơ chế kinh tế của bảo hiểm** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Combined ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **11. Định giá ngân hàng** đặt đầu vào cho **12. Cơ chế kinh tế của bảo hiểm**, rồi **13. Combined ratio** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Cơ chế kinh tế của bảo hiểm
 
@@ -186,7 +186,7 @@ Hoạt động underwriting có lời trước lợi nhuận đầu tư không?
 
 Nếu doanh nghiệp chỉ có lời nhờ danh mục đầu tư bù lỗ bảo hiểm, chất lượng khác hẳn doanh nghiệp underwriting tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **12. Cơ chế kinh tế của bảo hiểm** xác định đầu vào; **13. Combined ratio** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Bảo hiểm nhân thọ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **12. Cơ chế kinh tế của bảo hiểm** đặt đầu vào cho **13. Combined ratio**, rồi **14. Bảo hiểm nhân thọ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Combined ratio
 
@@ -201,7 +201,7 @@ Dưới 100% thường nghĩa underwriting có lãi.
 
 Tuy nhiên cần kiểm tra reserve bản phát hành (release / 릴리스), catastrophe exposure và lịch sử phát triển dự phòng.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **14. Bảo hiểm nhân thọ** tiếp nhận điểm tựa từ **13. Combined ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Ngành thâm dụng vốn và có chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **14. Bảo hiểm nhân thọ** nối từ **13. Combined ratio** sang **15. Ngành thâm dụng vốn và có chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Bảo hiểm nhân thọ
 
@@ -217,7 +217,7 @@ Mismatch kỳ hạn có thể tạo lỗ kinh tế khi lãi suất thay đổi m
 
 # Phần III — Bán dẫn
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **15. Ngành thâm dụng vốn và có chu kỳ** tiếp nhận điểm tựa từ **14. Bảo hiểm nhân thọ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **15. Ngành thâm dụng vốn và có chu kỳ** nối từ **14. Bảo hiểm nhân thọ** sang **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Ngành thâm dụng vốn và có chu kỳ
 
@@ -235,7 +235,7 @@ Margin ↑ mạnh
 
 Nhưng capex cao sau đó có thể tạo dư cung.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment** tiếp nhận điểm tựa từ **15. Ngành thâm dụng vốn và có chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. ASP, bit growth và cơ cấu sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment** nối từ **15. Ngành thâm dụng vốn và có chu kỳ** sang **17. ASP, bit growth và cơ cấu sản phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. bộ nhớ (memory / 메모리), foundry, fabless và equipment
 
@@ -257,7 +257,7 @@ capex của khách hàng + technology transition
 
 Không nên dùng cùng bội số cho tất cả.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **17. ASP, bit growth và cơ cấu sản phẩm** tiếp nhận điểm tựa từ **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Utilization và đòn bẩy hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **17. ASP, bit growth và cơ cấu sản phẩm** nối từ **16. bộ nhớ (memory / 메모리), foundry, fabless và equipment** sang **18. Utilization và đòn bẩy hoạt động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. ASP, bit growth và cơ cấu sản phẩm
 
@@ -269,7 +269,7 @@ Revenue ≈ Bit Shipment × ASP
 
 HBM, DDR và NAND có biên lợi nhuận khác nhau. Doanh thu tăng nhờ mix tốt thường có chất lượng khác tăng chỉ nhờ sản lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **18. Utilization và đòn bẩy hoạt động** tiếp nhận điểm tựa từ **17. ASP, bit growth và cơ cấu sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Chu kỳ tồn kho** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **18. Utilization và đòn bẩy hoạt động** nối từ **17. ASP, bit growth và cơ cấu sản phẩm** sang **19. Chu kỳ tồn kho**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Utilization và đòn bẩy hoạt động
 
@@ -277,7 +277,7 @@ Fab có chi phí cố định cao. Khi utilization tăng, chi phí cố định 
 
 Khi utilization giảm, hiệu ứng ngược lại rất mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **19. Chu kỳ tồn kho** tiếp nhận điểm tựa từ **18. Utilization và đòn bẩy hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Capex và kỷ luật nguồn cung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **19. Chu kỳ tồn kho** nối từ **18. Utilization và đòn bẩy hoạt động** sang **20. Capex và kỷ luật nguồn cung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Chu kỳ tồn kho
 
@@ -289,7 +289,7 @@ Cần tách:
 
 Điểm đảo chiều tồn kho có thể xuất hiện trước điểm đáy của lợi nhuận báo cáo.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **19. Chu kỳ tồn kho** nêu điều cần giải thích; **20. Capex và kỷ luật nguồn cung** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Yield và năng lực công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **19. Chu kỳ tồn kho** đặt vấn đề; **20. Capex và kỷ luật nguồn cung** đối chiếu bằng chứng, rồi **21. Yield và năng lực công nghệ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Capex và kỷ luật nguồn cung
 
@@ -304,7 +304,7 @@ Capex toàn ngành ↑ mạnh
 
 Kỷ luật nguồn cung là biến rất quan trọng trong bộ nhớ (memory / 메모리) cycle.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **20. Capex và kỷ luật nguồn cung** nêu điều cần giải thích; **21. Yield và năng lực công nghệ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Định giá bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **20. Capex và kỷ luật nguồn cung** đặt vấn đề; **21. Yield và năng lực công nghệ** đối chiếu bằng chứng, rồi **22. Định giá bán dẫn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Yield và năng lực công nghệ
 
@@ -318,7 +318,7 @@ Không nên chỉ nhìn tên nút (node / 노드). Cần nhìn:
 - công suất;
 - mức chấp nhận của khách hàng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **22. Định giá bán dẫn** tiếp nhận điểm tựa từ **21. Yield và năng lực công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Cơ chế kinh tế SaaS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **22. Định giá bán dẫn** nối từ **21. Yield và năng lực công nghệ** sang **23. Cơ chế kinh tế SaaS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Định giá bán dẫn
 
@@ -335,7 +335,7 @@ Do đó nên kết hợp:
 
 # Phần IV — SaaS và phần mềm
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **22. Định giá bán dẫn** xác định đầu vào; **23. Cơ chế kinh tế SaaS** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. ARR, bookings và RPO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **22. Định giá bán dẫn** đặt đầu vào cho **23. Cơ chế kinh tế SaaS**, rồi **24. ARR, bookings và RPO** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Cơ chế kinh tế SaaS
 
@@ -348,7 +348,7 @@ Mỗi đồng chi để có khách hàng mới
 tạo ra bao nhiêu gross profit bền vững?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **23. Cơ chế kinh tế SaaS** xác định đầu vào; **24. ARR, bookings và RPO** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. NRR và churn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **23. Cơ chế kinh tế SaaS** đặt đầu vào cho **24. ARR, bookings và RPO**, rồi **25. NRR và churn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. ARR, bookings và RPO
 
@@ -360,7 +360,7 @@ SaaS có nhiều thước đo nhìn giống doanh thu nhưng thuộc các thời
 
 Ba chỉ số có thời điểm ghi nhận khác nhau nên phải đối chiếu với doanh thu báo cáo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **25. NRR và churn** tiếp nhận điểm tựa từ **24. ARR, bookings và RPO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. CAC, LTV và thời gian hoàn vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **25. NRR và churn** nối từ **24. ARR, bookings và RPO** sang **26. CAC, LTV và thời gian hoàn vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. NRR và churn
 
@@ -373,7 +373,7 @@ NRR > 100%
 
 Cần tách logo churn và revenue churn vì mất nhiều khách hàng nhỏ khác mất một khách hàng doanh nghiệp lớn.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **26. CAC, LTV và thời gian hoàn vốn** tiếp nhận điểm tựa từ **25. NRR và churn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Hiệu quả bán hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **26. CAC, LTV và thời gian hoàn vốn** nối từ **25. NRR và churn** sang **27. Hiệu quả bán hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. CAC, LTV và thời gian hoàn vốn
 
@@ -381,7 +381,7 @@ CAC là chi phí có khách hàng mới. LTV ước tính lợi nhuận vòng đ
 
 CAC payback thường dễ kiểm chứng hơn một LTV quá xa tương lai.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **27. Hiệu quả bán hàng** tiếp nhận điểm tựa từ **26. CAC, LTV và thời gian hoàn vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. quy tắc (rule / 규칙) of 40** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **27. Hiệu quả bán hàng** nối từ **26. CAC, LTV và thời gian hoàn vốn** sang **28. quy tắc (rule / 규칙) of 40**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Hiệu quả bán hàng
 
@@ -394,7 +394,7 @@ Có thể theo dõi:
 
 Nếu tăng trưởng chậm nhưng sales & marketing tiếp tục tăng nhanh, đơn vị (unit / 단위) economics có thể đang xấu đi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **28. quy tắc (rule / 규칙) of 40** tiếp nhận điểm tựa từ **27. Hiệu quả bán hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. SBC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **28. quy tắc (rule / 규칙) of 40** nối từ **27. Hiệu quả bán hàng** sang **29. SBC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. quy tắc (rule / 규칙) of 40
 
@@ -408,7 +408,7 @@ Nó không thay thế việc đánh giá:
 - capital intensity;
 - durability của growth.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **29. SBC** tiếp nhận điểm tựa từ **28. quy tắc (rule / 규칙) of 40** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Định giá phần mềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **29. SBC** nối từ **28. quy tắc (rule / 규칙) of 40** sang **30. Định giá phần mềm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. SBC
 
@@ -424,7 +424,7 @@ Net Buyback
 
 FCF đẹp nhưng số cổ phiếu tăng liên tục có thể làm giá trị trên mỗi cổ phiếu tăng chậm.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **30. Định giá phần mềm** tiếp nhận điểm tựa từ **29. SBC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. nền tảng (platform / 플랫폼) economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **30. Định giá phần mềm** nối từ **29. SBC** sang **31. nền tảng (platform / 플랫폼) economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Định giá phần mềm
 
@@ -434,7 +434,7 @@ Reverse DCF thường hữu ích hơn peer multiple khi kỳ vọng thị trư�
 
 # Phần V — Nền tảng Internet và marketplace
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **31. nền tảng (platform / 플랫폼) economics** tiếp nhận điểm tựa từ **30. Định giá phần mềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Take tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **31. nền tảng (platform / 플랫폼) economics** nối từ **30. Định giá phần mềm** sang **32. Take tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. nền tảng (platform / 플랫폼) economics
 
@@ -447,7 +447,7 @@ Nền tảng có thể kiếm tiền từ:
 
 Mạng (network / 네트워크) tác động (effect / 효과) có thể mạnh nhưng không phải mọi nền tảng đều winner-take-all.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **32. Take tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **31. nền tảng (platform / 플랫폼) economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Quảng cáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **32. Take tỷ lệ (rate / 비율)** nối từ **31. nền tảng (platform / 플랫폼) economics** sang **33. Quảng cáo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Take tỷ lệ (rate / 비율)
 
@@ -455,7 +455,7 @@ Take tỷ lệ (rate / 비율) tăng giúp doanh thu tăng nhanh nhưng nếu qu
 
 Khả năng tăng giá phải cân bằng với sức khỏe hệ sinh thái.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **33. Quảng cáo** tiếp nhận điểm tựa từ **32. Take tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Same-store sales** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **33. Quảng cáo** nối từ **32. Take tỷ lệ (rate / 비율)** sang **34. Same-store sales**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Quảng cáo
 
@@ -469,7 +469,7 @@ Cần theo dõi attention, ad tải (load / 로드), conversion, ROI cho adverti
 
 # Phần VI — Bán lẻ và tiêu dùng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **34. Same-store sales** tiếp nhận điểm tựa từ **33. Quảng cáo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Traffic, ticket và mix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **34. Same-store sales** nối từ **33. Quảng cáo** sang **35. Traffic, ticket và mix**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Same-store sales
 
@@ -477,7 +477,7 @@ Same-store sales giúp tách tăng trưởng cửa hàng hiện hữu khỏi tă
 
 Doanh thu tăng nhờ mở nhiều cửa hàng chỉ tạo giá trị khi cửa hàng mới có ROIC tốt.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **35. Traffic, ticket và mix** tiếp nhận điểm tựa từ **34. Same-store sales** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Biên gộp và markdown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **35. Traffic, ticket và mix** nối từ **34. Same-store sales** sang **36. Biên gộp và markdown**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Traffic, ticket và mix
 
@@ -490,7 +490,7 @@ Same-store sales
 
 Ticket tăng do lạm phát khác tăng trưởng sản lượng thật.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **36. Biên gộp và markdown** tiếp nhận điểm tựa từ **35. Traffic, ticket và mix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Inventory turnover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **36. Biên gộp và markdown** nối từ **35. Traffic, ticket và mix** sang **37. Inventory turnover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Biên gộp và markdown
 
@@ -504,7 +504,7 @@ Retail gross margin chịu ảnh hưởng:
 
 Tồn kho dư thường dẫn tới giảm giá và margin thấp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **37. Inventory turnover** tiếp nhận điểm tựa từ **36. Biên gộp và markdown** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Kinh tế cửa hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **37. Inventory turnover** nối từ **36. Biên gộp và markdown** sang **38. Kinh tế cửa hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Inventory turnover
 
@@ -514,7 +514,7 @@ Mức hợp lý phụ thuộc ngành hàng. Grocery khác apparel rất nhiều.
 
 Quan trọng là so tồn kho tăng với doanh thu tăng.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **38. Kinh tế cửa hàng** tiếp nhận điểm tựa từ **37. Inventory turnover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Staples và discretionary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **38. Kinh tế cửa hàng** nối từ **37. Inventory turnover** sang **39. Staples và discretionary**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Kinh tế cửa hàng
 
@@ -532,7 +532,7 @@ Incremental ROIC
 
 Mở nhiều điểm bán không tự động tạo giá trị.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **39. Staples và discretionary** tiếp nhận điểm tựa từ **38. Kinh tế cửa hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. NOI, FFO và AFFO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **39. Staples và discretionary** nối từ **38. Kinh tế cửa hàng** sang **40. NOI, FFO và AFFO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Staples và discretionary
 
@@ -542,7 +542,7 @@ Bên tiêu thụ (consumer / 소비자) discretionary nhạy hơn với thu nh�
 
 # Phần VII — REIT và bất động sản
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **40. NOI, FFO và AFFO** tiếp nhận điểm tựa từ **39. Staples và discretionary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Occupancy và tăng giá thuê** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **40. NOI, FFO và AFFO** nối từ **39. Staples và discretionary** sang **41. Occupancy và tăng giá thuê**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. NOI, FFO và AFFO
 
@@ -550,7 +550,7 @@ NOI là thu nhập cấp tài sản trước chi phí tài trợ.
 
 FFO điều chỉnh khấu hao và lãi/lỗ bán bất động sản. AFFO thường trừ maintenance capex và điều chỉnh thuê để gần dòng tiền phân phối hơn.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **41. Occupancy và tăng giá thuê** tiếp nhận điểm tựa từ **40. NOI, FFO và AFFO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Cap tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **41. Occupancy và tăng giá thuê** nối từ **40. NOI, FFO và AFFO** sang **42. Cap tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Occupancy và tăng giá thuê
 
@@ -561,7 +561,7 @@ Tỷ lệ lấp đầy cao chưa đủ. Cần xem:
 - chất lượng tenant;
 - tenant concentration.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **42. Cap tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **41. Occupancy và tăng giá thuê** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Development chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **42. Cap tỷ lệ (rate / 비율)** nối từ **41. Occupancy và tăng giá thuê** sang **43. Development chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Cap tỷ lệ (rate / 비율)
 
@@ -575,7 +575,7 @@ Nếu NOI không đổi, cap tỷ lệ (rate / 비율) tăng thường làm giá
 
 Spread giữa cap tỷ lệ (rate / 비율) và lãi suất tài trợ là mốc quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **42. Cap tỷ lệ (rate / 비율)** xác định đầu vào; **43. Development chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **44. Nợ và tái cấp vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **42. Cap tỷ lệ (rate / 비율)** đặt đầu vào cho **43. Development chuỗi xử lý (pipeline / 파이프라인)**, rồi **44. Nợ và tái cấp vốn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 43. Development chuỗi xử lý (pipeline / 파이프라인)
 
@@ -588,7 +588,7 @@ Nhưng cần tính:
 - leasing rủi ro (risk / 위험);
 - funding chi phí (cost / 비용).
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **43. Development chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **44. Nợ và tái cấp vốn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **45. NAV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **43. Development chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **44. Nợ và tái cấp vốn**, rồi **45. NAV** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 44. Nợ và tái cấp vốn
 
@@ -601,7 +601,7 @@ Cần xem:
 
 Một refinancing wall trong môi trường lãi suất cao có thể làm AFFO giảm mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **45. NAV** tiếp nhận điểm tựa từ **44. Nợ và tái cấp vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Backlog và đơn hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **45. NAV** nối từ **44. Nợ và tái cấp vốn** sang **46. Backlog và đơn hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. NAV
 
@@ -616,7 +616,7 @@ Premium/discount to NAV cần đọc cùng:
 
 # Phần VIII — Công nghiệp, xây dựng và capital goods
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **46. Backlog và đơn hàng** tiếp nhận điểm tựa từ **45. NAV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Book-to-bill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **46. Backlog và đơn hàng** nối từ **45. NAV** sang **47. Book-to-bill**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Backlog và đơn hàng
 
@@ -629,7 +629,7 @@ Backlog lớn chỉ tốt nếu:
 - không có điều khoản hủy dễ dàng;
 - chi phí đầu vào được kiểm soát.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **47. Book-to-bill** tiếp nhận điểm tựa từ **46. Backlog và đơn hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Biên lợi nhuận dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **47. Book-to-bill** nối từ **46. Backlog và đơn hàng** sang **48. Biên lợi nhuận dự án**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Book-to-bill
 
@@ -642,7 +642,7 @@ Book-to-Bill
 
 Trên 1 kéo dài có thể báo hiệu backlog tăng. Dưới 1 kéo dài có thể báo hiệu nhu cầu suy yếu.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **48. Biên lợi nhuận dự án** tiếp nhận điểm tựa từ **47. Book-to-bill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Vốn lưu động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **48. Biên lợi nhuận dự án** nối từ **47. Book-to-bill** sang **49. Vốn lưu động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Biên lợi nhuận dự án
 
@@ -656,7 +656,7 @@ Construction và kỹ thuật (engineering / 엔지니어링) có rủi ro lớn
 
 Doanh thu tăng không có ý nghĩa nếu margin dự án xấu đi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **49. Vốn lưu động** tiếp nhận điểm tựa từ **48. Biên lợi nhuận dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Shipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **49. Vốn lưu động** nối từ **48. Biên lợi nhuận dự án** sang **50. Shipping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Vốn lưu động
 
@@ -671,7 +671,7 @@ CFO thường là chỉ báo quan trọng ngang lợi nhuận.
 
 # Phần IX — Vận tải biển và hàng không
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **50. Shipping** tiếp nhận điểm tựa từ **49. Vốn lưu động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Airlines** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **50. Shipping** nối từ **49. Vốn lưu động** sang **51. Airlines**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Shipping
 
@@ -688,7 +688,7 @@ Fuel Cost
 
 Giá cước cao kích thích đóng tàu mới, nhưng tàu cần nhiều năm để giao nên chu kỳ có độ trễ lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **51. Airlines** tiếp nhận điểm tựa từ **50. Shipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Upstream oil & gas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **51. Airlines** nối từ **50. Shipping** sang **52. Upstream oil & gas**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Airlines
 
@@ -706,7 +706,7 @@ Doanh thu cao chưa chắc tạo tiền nếu fuel và lease chi phí (cost / �
 
 # Phần X — Dầu khí, refining và hóa dầu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **52. Upstream oil & gas** tiếp nhận điểm tựa từ **51. Airlines** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Refining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **52. Upstream oil & gas** nối từ **51. Airlines** sang **53. Refining**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Upstream oil & gas
 
@@ -722,7 +722,7 @@ Cần theo dõi:
 
 FCF phụ thuộc mạnh giá hàng hóa nên valuation phải dùng giả định giá chuẩn hóa.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **53. Refining** tiếp nhận điểm tựa từ **52. Upstream oil & gas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Petrochemicals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **53. Refining** nối từ **52. Upstream oil & gas** sang **54. Petrochemicals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Refining
 
@@ -736,7 +736,7 @@ KPI quan trọng:
 - sản phẩm (product / 제품) mix;
 - inventory effects.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **54. Petrochemicals** tiếp nhận điểm tựa từ **53. Refining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Utility được điều tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **54. Petrochemicals** nối từ **53. Refining** sang **55. Utility được điều tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Petrochemicals
 
@@ -746,7 +746,7 @@ Dư cung có thể làm spread thấp kéo dài dù nhu cầu vẫn tăng.
 
 # Phần XI — Utilities và điện
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **55. Utility được điều tiết** tiếp nhận điểm tựa từ **54. Petrochemicals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Power generation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **55. Utility được điều tiết** nối từ **54. Petrochemicals** sang **56. Power generation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Utility được điều tiết
 
@@ -758,7 +758,7 @@ Rate Base × Allowed Return
 
 Tăng capex có thể hỗ trợ tăng trưởng tỷ lệ (rate / 비율) cơ sở (base / 기반) nhưng cũng tăng nhu cầu tài trợ.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **56. Power generation** tiếp nhận điểm tựa từ **55. Utility được điều tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Telecom economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **56. Power generation** nối từ **55. Utility được điều tiết** sang **57. Telecom economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Power generation
 
@@ -775,7 +775,7 @@ Renewable, thermal và hydro có cấu trúc rủi ro khác nhau.
 
 # Phần XII — Telecom
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **57. Telecom economics** tiếp nhận điểm tựa từ **56. Power generation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Pharma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **57. Telecom economics** nối từ **56. Power generation** sang **58. Pharma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Telecom economics
 
@@ -792,7 +792,7 @@ Ngành có recurring revenue nhưng capex lớn và cạnh tranh giá có thể 
 
 # Phần XIII — Biotech và dược phẩm
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **58. Pharma** tiếp nhận điểm tựa từ **57. Telecom economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Biotech** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **58. Pharma** nối từ **57. Telecom economics** sang **59. Biotech**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Pharma
 
@@ -807,7 +807,7 @@ Cần theo dõi:
 
 Một sản phẩm lớn sắp mất độc quyền có thể làm tăng trưởng hiện tại nhìn tốt nhưng giá trị tương lai giảm.
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **59. Biotech** tiếp nhận điểm tựa từ **58. Pharma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. Mining economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **59. Biotech** nối từ **58. Pharma** sang **60. Mining economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Biotech
 
@@ -824,7 +824,7 @@ Biotech giai đoạn sớm cần tập trung:
 
 # Phần XIV — Mining và vật liệu
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **60. Mining economics** tiếp nhận điểm tựa từ **59. Biotech** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. chi phí (cost / 비용) curve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **60. Mining economics** nối từ **59. Biotech** sang **61. chi phí (cost / 비용) curve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Mining economics
 
@@ -843,7 +843,7 @@ Reserve Life
 
 Grade giảm có thể làm chi phí tăng ngay cả khi sản lượng ổn định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **61. chi phí (cost / 비용) curve** tiếp nhận điểm tựa từ **60. Mining economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Driver → KPI → báo cáo tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **61. chi phí (cost / 비용) curve** nối từ **60. Mining economics** sang **62. Driver → KPI → báo cáo tài chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. chi phí (cost / 비용) curve
 
@@ -853,7 +853,7 @@ Doanh nghiệp nằm thấp trên đường cong chi phí có khả năng sống
 
 # Phần XV — Cách nối ngành với mô hình tài chính
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **62. Driver → KPI → báo cáo tài chính** tiếp nhận điểm tựa từ **61. chi phí (cost / 비용) curve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. Không dùng KPI ngoài bối cảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **62. Driver → KPI → báo cáo tài chính** nối từ **61. chi phí (cost / 비용) curve** sang **63. Không dùng KPI ngoài bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Driver → KPI → báo cáo tài chính
 
@@ -895,7 +895,7 @@ Inventory + Supply
 → Normalized Valuation
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **63. Không dùng KPI ngoài bối cảnh** tiếp nhận điểm tựa từ **62. Driver → KPI → báo cáo tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Mẫu phân tích ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **63. Không dùng KPI ngoài bối cảnh** nối từ **62. Driver → KPI → báo cáo tài chính** sang **64. Mẫu phân tích ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Không dùng KPI ngoài bối cảnh
 
@@ -909,7 +909,7 @@ Ví dụ:
 - backlog có thể đi trước doanh thu;
 - cap tỷ lệ (rate / 비율) có thể phản ứng nhanh hơn NOI.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **64. Mẫu phân tích ngành** tiếp nhận điểm tựa từ **63. Không dùng KPI ngoài bối cảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **64. Mẫu phân tích ngành** nối từ **63. Không dùng KPI ngoài bối cảnh** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. Mẫu phân tích ngành
 
@@ -928,7 +928,7 @@ Với một doanh nghiệp mới, có thể dùng:
 10. Kịch bản nào làm luận điểm sai?
 ```
 
-> **Chuyển mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **Kết luận** gom các mảnh từ **64. Mẫu phân tích ngành** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng**, **Kết luận** tổng hợp từ **64. Mẫu phân tích ngành** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

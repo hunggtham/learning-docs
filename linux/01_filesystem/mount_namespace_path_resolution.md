@@ -18,7 +18,7 @@ là một chuỗi tên cần được phân giải qua cây không gian tên (na
 
 Nếu rename hoặc mount thay đổi không gian tên (namespace / 네임스페이스), cùng pathname có thể trỏ tới đối tượng (object / 객체) khác mà tiến trình (process / 프로세스) không nhất thiết thay đổi mã (code / 코드).
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Pathname chỉ là tên, không phải đối tượng (object / 객체)** xác định đầu vào; **Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Pathname chỉ là tên, không phải đối tượng (object / 객체)** đặt đầu vào cho **Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory**, rồi **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory
 
@@ -45,7 +45,7 @@ readlink /proc/<PID>/root
 
 Hai tiến trình (process / 프로세스) khác nhau có thể có gốc (root / 루트) khác nhau nếu dùng chroot/bộ chứa (container / 컨테이너)/mount không gian tên (namespace / 네임스페이스).
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory** xác định đầu vào; **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quyền x trên thư mục là quyền traverse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory** đặt đầu vào cho **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup**, rồi **Quyền x trên thư mục là quyền traverse** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup
 
@@ -62,7 +62,7 @@ VFS dùng dentry bộ nhớ đệm (cache / 캐시) để tăng tốc lookup tê
 
 Điều này nối trực tiếp với VFS và page bộ nhớ đệm (cache / 캐시) nhưng là hai bộ nhớ đệm (cache / 캐시) khác mục đích: dentry bộ nhớ đệm (cache / 캐시) giúp tên → đối tượng (object / 객체), page bộ nhớ đệm (cache / 캐시) giúp tệp (file / 파일) offset → page dữ liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup** xác định đầu vào; **Quyền x trên thư mục là quyền traverse** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Symbolic link** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup** đặt đầu vào cho **Quyền x trên thư mục là quyền traverse**, rồi **Symbolic link** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quyền `x` trên thư mục là quyền traverse
 
@@ -80,7 +80,7 @@ namei -l /a/b/c.txt
 
 Đây là công cụ rất hữu ích để tìm thành phần (component / 컴포넌트) nào gây `Permission denied`.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Symbolic link** tiếp nhận điểm tựa từ **Quyền x trên thư mục là quyền traverse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Symbolic link** nối từ **Quyền x trên thư mục là quyền traverse** sang **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Symbolic link
 
@@ -98,7 +98,7 @@ Symlink vòng lặp (loop / 루프) hoặc quá nhiều lần dereference có th
 readlink -f /opt/app/current
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **Symbolic link** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)** nối từ **Symbolic link** sang **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)
 
@@ -106,7 +106,7 @@ Hard link là nhiều directory entry cùng trỏ tới inode. Symlink là tệp
 
 Vì vậy đổi mục tiêu (target / 대상) symlink không đổi inode của tệp (file / 파일) đích cũ; còn hard link vẫn giữ cùng đối tượng (object / 객체) cho tới khi link count về 0 và không còn open tham chiếu (reference / 참조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bind mount** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)** nối từ **Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)** sang **Bind mount**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)
 
@@ -124,7 +124,7 @@ Dữ liệu cũ không bị xóa; nó chỉ bị che.
 
 Unmount sẽ làm không gian tên (namespace / 네임스페이스) cũ hiện lại.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bind mount** tiếp nhận điểm tựa từ **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mount không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bind mount** nối từ **Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)** sang **Mount không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bind mount
 
@@ -138,7 +138,7 @@ Hai pathname có thể cùng dẫn đến underlying objects giống nhau.
 
 Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) dùng bind mount rất nhiều để đưa cấu hình (config / 설정), secret, volume hoặc socket host vào bộ chứa (container / 컨테이너).
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **Bind mount** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유), slave, private propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount không gian tên (namespace / 네임스페이스)** nối từ **Bind mount** sang **Dùng chung (shared / 공유), slave, private propagation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mount không gian tên (namespace / 네임스페이스)
 
@@ -162,7 +162,7 @@ sudo nsenter -t <PID> -m
 
 Sau đó `mount`, `findmnt`, `ls` sẽ nhìn theo không gian tên (namespace / 네임스페이스) của tiến trình (process / 프로세스) đích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Dùng chung (shared / 공유), slave, private propagation** tiếp nhận điểm tựa từ **Mount không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **chroot không phải bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Dùng chung (shared / 공유), slave, private propagation** nối từ **Mount không gian tên (namespace / 네임스페이스)** sang **chroot không phải bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (shared / 공유), slave, private propagation
 
@@ -183,7 +183,7 @@ Kiểm tra:
 findmnt -o TARGET,PROPAGATION
 ```
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **chroot không phải bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Dùng chung (shared / 공유), slave, private propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pivotroot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **chroot không phải bộ chứa (container / 컨테이너)** nối từ **Dùng chung (shared / 공유), slave, private propagation** sang **pivotroot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `chroot` không phải bộ chứa (container / 컨테이너)
 
@@ -200,7 +200,7 @@ Vì vậy `chroot` không phải ranh giới bảo mật (security boundary / �
 
 Bộ chứa (container / 컨테이너) ghép nhiều không gian tên (namespace / 네임스페이스) và chính sách (policy / 정책) khác nhau, trong đó mount không gian tên (namespace / 네임스페이스) chỉ là một phần.
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **pivotroot** tiếp nhận điểm tựa từ **chroot không phải bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overlay filesystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **pivotroot** nối từ **chroot không phải bộ chứa (container / 컨테이너)** sang **Overlay filesystem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `pivot_root`
 
@@ -208,7 +208,7 @@ Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) 
 
 Đây là cơ chế nền tảng để bộ chứa (container / 컨테이너) nhìn ảnh (image / 이미지) gốc (root / 루트) filesystem như `/` riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Overlay filesystem** tiếp nhận điểm tựa từ **pivotroot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Overlay filesystem** nối từ **pivotroot** sang **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Overlay filesystem
 
@@ -226,7 +226,7 @@ Khi sửa tệp (file / 파일) từ lower tầng (layer / 계층), copy-up có 
 
 Điều này có ảnh hưởng hiệu năng và ngữ nghĩa (semantics / 의미론), nhất là tải công việc (workload / 워크로드) ghi nhiều.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Overlay filesystem** xác định đầu vào; **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **openat() và dirfd** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Overlay filesystem** đặt đầu vào cho **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)**, rồi **openat() và dirfd** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)
 
@@ -241,7 +241,7 @@ có thể có race nếu attacker hoặc tiến trình (process / 프로세스) 
 
 Đây là lý do API hiện đại như `openat()`, `openat2()` và dirfd-based operations tồn tại để giảm ambiguity và kiểm soát resolution tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)** xác định đầu vào; **openat() và dirfd** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Deleted cwd và deleted tệp (file / 파일)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)** đặt đầu vào cho **openat() và dirfd**, rồi **Deleted cwd và deleted tệp (file / 파일)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `openat()` và dirfd
 
@@ -251,7 +251,7 @@ Thay vì luôn lookup từ cwd/gốc (root / 루트), `openat()` cho phép bắt
 
 `openat2()` trên Linux mới hơn thêm flags để kiểm soát resolution như không đi qua symlink hoặc không thoát khỏi subtree tùy use trường hợp (case / 사례).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Deleted cwd và deleted tệp (file / 파일)** tiếp nhận điểm tựa từ **openat() và dirfd** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mount options là chính sách (policy / 정책) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Deleted cwd và deleted tệp (file / 파일)** nối từ **openat() và dirfd** sang **Mount options là chính sách (policy / 정책) tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deleted cwd và deleted tệp (file / 파일)
 
@@ -261,7 +261,7 @@ Tương tự tệp (file / 파일) descriptor vẫn giữ inode sau khi pathname
 
 Điều này nhắc lại nguyên tắc quan trọng: không gian tên (namespace / 네임스페이스) name và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명) không giống nhau.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount options là chính sách (policy / 정책) tầng (layer / 계층)** tiếp nhận điểm tựa từ **Deleted cwd và deleted tệp (file / 파일)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount options là chính sách (policy / 정책) tầng (layer / 계층)** nối từ **Deleted cwd và deleted tệp (file / 파일)** sang **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mount options là chính sách (policy / 정책) tầng (layer / 계층)
 
@@ -277,7 +277,7 @@ Mount có thể thêm chính sách (policy / 정책):
 
 Tiến trình (process / 프로세스) có permission tệp (file / 파일) đúng vẫn có thể bị chính sách (policy / 정책) mount chặn.
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount options là chính sách (policy / 정책) tầng (layer / 계층)** xác định đầu vào; **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Systemd và filesystem không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mount options là chính sách (policy / 정책) tầng (layer / 계층)** đặt đầu vào cho **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”**, rồi **Systemd và filesystem không gian tên (namespace / 네임스페이스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”
 
@@ -294,7 +294,7 @@ sudo nsenter -t <PID> -m -- ls -l /path
 
 Nếu host thấy tệp (file / 파일) nhưng không gian tên (namespace / 네임스페이스) tiến trình (process / 프로세스) không thấy, vấn đề không nằm ở Java tệp (file / 파일) API mà ở filesystem view.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”** xác định đầu vào; **Systemd và filesystem không gian tên (namespace / 네임스페이스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bộ chứa (container / 컨테이너) volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”** đặt đầu vào cho **Systemd và filesystem không gian tên (namespace / 네임스페이스)**, rồi **Bộ chứa (container / 컨테이너) volume** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Systemd và filesystem không gian tên (namespace / 네임스페이스)
 
@@ -310,7 +310,7 @@ Vì vậy dịch vụ (service / 서비스) có thể nhìn `/tmp` hoặc filesy
 
 Đây là một nguyên nhân rất thực tế khi “SSH thấy tệp (file / 파일) nhưng dịch vụ (service / 서비스) không thấy”.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bộ chứa (container / 컨테이너) volume** tiếp nhận điểm tựa từ **Systemd và filesystem không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Bộ chứa (container / 컨테이너) volume** nối từ **Systemd và filesystem không gian tên (namespace / 네임스페이스)** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ chứa (container / 컨테이너) volume
 
@@ -320,7 +320,7 @@ Nếu mount nhầm đường dẫn (path / 경로), có thể che tệp (file / 
 
 Ví dụ ảnh (image / 이미지) có `/app/config/default.yml`, nhưng mount empty directory lên `/app/config` sẽ làm tệp (file / 파일) trong ảnh (image / 이미지) không còn thấy ở merged không gian tên (namespace / 네임스페이스).
 
-> **Chuyển mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mô hình tư duy** gom các mảnh từ **Bộ chứa (container / 컨테이너) volume** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Mô hình tư duy** tổng hợp từ **Bộ chứa (container / 컨테이너) volume** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -339,7 +339,7 @@ process root/cwd
 
 Đường dẫn (path / 경로) không phải đối tượng (object / 객체). Nó là một truy vấn vào không gian tên (namespace / 네임스페이스) động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -353,7 +353,7 @@ process root/cwd
 
 **“Permission đúng thì open chắc chắn thành công.”** Mount option, không gian tên (namespace / 네임스페이스), LSM và symlink resolution vẫn có thể chặn.
 
-> **Chuyển mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

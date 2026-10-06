@@ -24,7 +24,7 @@ Trong môi trường vận hành (production / 운영 환경) toolchain hiện �
 
 TypeScript 7.0 thay trình biên dịch (compiler / 컴파일러) foundation sang bản địa (native / 네이티브) Go hiện thực (implementation / 구현) và khai thác multithreading/dùng chung (shared / 공유) bộ nhớ (memory / 메모리). Thay đổi này chủ yếu cải thiện tốc độ và kiến trúc (architecture / 아키텍처) toolchain; tầng mã nguồn (source-level / 소스 수준) kiểu (type / 타입) mô hình tư duy (mental model / 사고 모델) vẫn cố tương thích chặt với 6.0.
 
-> **Chuyển mạch:** `tsc` xác định compile pipeline và output; `tsconfig.json` biến pipeline đó thành project contract có include, module và strictness. `target`/`lib` tiếp theo tách runtime syntax khỏi API assumptions.
+> **Nối mạch:** `tsc` xác định compile pipeline và output; `tsconfig.json` biến pipeline đó thành project contract có include, module và strictness. `target`/`lib` tiếp theo tách runtime syntax khỏi API assumptions.
 
 ## 2. `tsconfig.json` là dự án (project / 프로젝트) mô hình (model / 모델), không chỉ là danh sách flags
 
@@ -50,7 +50,7 @@ Một baseline hiện đại có thể trông như:
 
 Đây chỉ là ví dụ mô hình tư duy (mental model / 사고 모델), không phải cấu hình (config / 설정) copy-paste cho mọi dự án (project / 프로젝트). nút (node / 노드) app, trình duyệt (browser / 브라우저) app, thư viện (library / 라이브러리) gói (package / 패키지) và hybrid/WebView mục tiêu (target / 대상) có thời gian chạy (runtime / 런타임) khác nhau.
 
-> **Chuyển mạch:** `tsconfig` defines project contract; target/lib separate emitted syntax from available platform APIs. Build pipeline tiếp theo bổ sung bundler, resolver và runtime steps mà TypeScript không sở hữu.
+> **Nối mạch:** `tsconfig` defines project contract; target/lib separate emitted syntax from available platform APIs. Build pipeline tiếp theo bổ sung bundler, resolver và runtime steps mà TypeScript không sở hữu.
 
 ## 3. `target` và `lib` giải quyết hai câu hỏi khác nhau
 
@@ -65,7 +65,7 @@ lib    = static declaration universe compiler được phép biết
 
 Nếu `Promise`, `Map`, `document` hay `fetch` báo kiểu (type / 타입) khác thường, kiểm tra `lib`; nếu thời gian chạy (runtime / 런타임) cũ crash vì cú pháp (syntax / 문법)/API không hỗ trợ (support / 지원), kiểm tra mục tiêu (target / 대상) + transpilation + polyfill + actual thời gian chạy (runtime / 런타임) tính tương thích (compatibility / 호환성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **3. target và lib giải quyết hai câu hỏi khác nhau** xác định đầu vào; **4. TypeScript không sở hữu toàn bộ bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. mô-đun (module / 모듈) specifier có ba đời sống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **3. target và lib giải quyết hai câu hỏi khác nhau** đặt đầu vào cho **4. TypeScript không sở hữu toàn bộ bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인)**, rồi **5. mô-đun (module / 모듈) specifier có ba đời sống** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. TypeScript không sở hữu toàn bộ bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인)
 
@@ -82,7 +82,7 @@ Một frontend chuỗi xử lý (pipeline / 파이프라인) thường là:
 
 Công cụ (tool / 도구) có thể gộp nhiều bước, nhưng conceptually hãy tách. Bug tree-shaking thuộc bundler ngữ nghĩa (semantics / 의미론); mô-đun (module / 모듈) not found có thể là resolver mismatch; stale kiểu (type / 타입) declaration thuộc gói (package / 패키지)/declaration tầng (layer / 계층); thời gian chạy (runtime / 런타임) cú pháp (syntax / 문법) lỗi (error / 오류) có thể do mục tiêu (target / 대상)/trình duyệt (browser / 브라우저) mismatch.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **4. TypeScript không sở hữu toàn bộ bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **5. mô-đun (module / 모듈) specifier có ba đời sống** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. ESM và CommonJS: cú pháp (syntax / 문법) giống chưa chắc ngữ nghĩa (semantics / 의미론) giống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **4. TypeScript không sở hữu toàn bộ bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **5. mô-đun (module / 모듈) specifier có ba đời sống**, rồi **6. ESM và CommonJS: cú pháp (syntax / 문법) giống chưa chắc ngữ nghĩa (semantics / 의미론) giống** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. mô-đun (module / 모듈) specifier có ba đời sống
 
@@ -104,7 +104,7 @@ bundle/runtime: module not found
 
 Fix đúng là đồng bộ alias/resolution across toolchain hoặc dùng gói (package / 패키지)/workspace ranh giới (boundary / 경계) thật, không cast hay thêm declaration giả.
 
-> **Chuyển mạch:** Module specifier đi qua source, compiler và runtime; ESM/CommonJS có syntax gần nhau nhưng semantics khác, nên `moduleResolution` phải khớp environment thật.
+> **Nối mạch:** Module specifier đi qua source, compiler và runtime; ESM/CommonJS có syntax gần nhau nhưng semantics khác, nên `moduleResolution` phải khớp environment thật.
 
 ## 6. ESM và CommonJS: cú pháp (syntax / 문법) giống chưa chắc ngữ nghĩa (semantics / 의미론) giống
 
@@ -121,7 +121,7 @@ Emit giữ/chuyển syntax ra sao?
 Package/runtime sẽ load file với semantics nào?
 ```
 
-> **Chuyển mạch:** ESM/CommonJS chỉ đúng khi khớp semantics của runtime; `moduleResolution` phải mô phỏng môi trường đó, còn `import type` giữ type namespace tách khỏi runtime values.
+> **Nối mạch:** ESM/CommonJS chỉ đúng khi khớp semantics của runtime; `moduleResolution` phải mô phỏng môi trường đó, còn `import type` giữ type namespace tách khỏi runtime values.
 
 ## 7. `moduleResolution` nên khớp môi trường thật
 
@@ -129,7 +129,7 @@ Trình duyệt (browser / 브라우저) app qua bundler thường hợp với bu
 
 Đừng sửa mô-đun (module / 모듈) resolution lỗi (error / 오류) bằng `declare module "x"` nếu gói (package / 패키지) thật sự không resolve. Ambient declaration giả có thể làm checker im trong khi môi trường vận hành (production / 운영 환경) vẫn thất bại (fail / 실패).
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **8. import type và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **7. moduleResolution nên khớp môi trường thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **8. import type và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)** nối từ **7. moduleResolution nên khớp môi trường thật** sang **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. `import type` và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)
 
@@ -143,7 +143,7 @@ import type { User } from "./types";
 
 Một lỗi phổ biến là dùng giá trị (value / 값) như kiểu (type / 타입) không qua `typeof`, hoặc tưởng kiểu (type / 타입) import tạo thời gian chạy (runtime / 런타임) mô-đun (module / 모듈) phụ thuộc (dependency / 의존성). TypeScript 7.0 còn làm JavaScript/JSDoc hỗ trợ (support / 지원) nhất quán hơn với distinction value-vs-type.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)** tiếp nhận điểm tựa từ **8. import type và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ambient declarations và toàn cục (global / 전역) pollution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)** nối từ **8. import type và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)** sang **10. Ambient declarations và toàn cục (global / 전역) pollution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. `.d.ts`: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)
 
@@ -161,7 +161,7 @@ export declare function createClient(options: ClientOptions): Client;
 
 Thư viện (library / 라이브러리) author phải coi `.d.ts` như API công khai (public API / 공개 API) sản phẩm tạo ra (artifact / 산출물). Breaking declaration thay đổi (change / 변경) có thể làm bên tiêu thụ (consumer / 소비자) bản dựng (build / 빌드) thất bại (fail / 실패) ngay cả khi hành vi thời gian chạy (runtime behavior / 런타임 동작) tương tự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **10. Ambient declarations và toàn cục (global / 전역) pollution** tiếp nhận điểm tựa từ **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **10. Ambient declarations và toàn cục (global / 전역) pollution** nối từ **9. .d.ts: đặc tả hợp đồng (contract / 계약) surface không có hiện thực (implementation / 구현)** sang **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Ambient declarations và toàn cục (global / 전역) pollution
 
@@ -169,7 +169,7 @@ Tệp (file / 파일) declaration không có top-level import/export có thể b
 
 Ứng dụng (application / 애플리케이션) hiện đại nên ưu tiên module-scoped declarations và tường minh (explicit / 명시적) imports. Nếu phải augment `Window`, third-party mô-đun (module / 모듈) hoặc toàn cục (global / 전역) không gian tên (namespace / 네임스페이스), tập trung augmentation ở tệp (file / 파일) dễ tìm và giải thích thời gian chạy (runtime / 런타임) nguồn (source / 소스) tạo giá trị (value / 값) tương ứng.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)** tiếp nhận điểm tựa từ **10. Ambient declarations và toàn cục (global / 전역) pollution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)** nối từ **10. Ambient declarations và toàn cục (global / 전역) pollution** sang **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)
 
@@ -183,7 +183,7 @@ namespace LegacyApp {
 
 Nhưng mã (code / 코드) mới thường nên ưu tiên ES modules. không gian tên (namespace / 네임스페이스) không phải ranh giới bảo mật (security boundary / 보안 경계) và không thay gói (package / 패키지)/mô-đun (module / 모듈) kiến trúc (architecture / 아키텍처). Học nó để migrate legacy, không chọn nó mặc định cho new mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, sau nội dung của **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)**, **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, sau nội dung của **11. Declaration merging, không gian tên (namespace / 네임스페이스) và legacy mã (code / 코드)**, **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)
 
@@ -199,19 +199,19 @@ packages/domain
 
 Dự án (project / 프로젝트) references hữu ích khi boundaries thật sự ổn định. Nếu bạn tạo hàng chục projects theo folder tùy ý, cấu hình (config / 설정) độ phức tạp (complexity / 복잡도) và circular phụ thuộc (dependency / 의존성) có thể tăng hơn lợi ích incremental bản dựng (build / 빌드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** nối từ **12. dự án (project / 프로젝트) references: chia đồ thị (graph / 그래프) để quy mô (scale / 규모) bản dựng (build / 빌드)** sang **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)
 
 Trình biên dịch (compiler / 컴파일러) có thể lưu bản dựng (build / 빌드) thông tin (information / 정보) để tránh check/emit lại phần không đổi. bộ nhớ đệm (cache / 캐시) giúp độ trễ (latency / 지연 시간), nhưng stale/corrupt bộ nhớ đệm (cache / 캐시) hoặc mismatch giữa trình biên dịch (compiler / 컴파일러) versions có thể gây hành vi (behavior / 동작) khó hiểu. Khi bug chỉ xuất hiện cục bộ (local / 로컬)/editor mà clean CI không có, thử phân biệt nguồn (source / 소스) issue với bộ nhớ đệm (cache / 캐시)/tooling trạng thái (state / 상태) thay vì sửa mã (code / 코드) ngẫu nhiên.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** nêu điều cần giải thích; **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **13. Incremental bản dựng (build / 빌드) và bộ nhớ đệm (cache / 캐시) không thay tính đúng đắn (correctness / 정확성)** đặt vấn đề; **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)** đối chiếu bằng chứng, rồi **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)
 
 Thời gian chạy (runtime / 런타임) dấu vết ngăn xếp (stack trace / 스택 트레이스) chạy trên JavaScript artifacts. nguồn (source / 소스) maps giúp debugger ánh xạ về `.ts/.tsx`. Nếu môi trường vận hành (production / 운영 환경) ngăn xếp (stack / 스택) line lệch, hãy kiểm tra bản dựng (build / 빌드) transform chuỗi (chain / 사슬), bản đồ mã nguồn (source map / 소스 맵) upload/deploy và minification, không kết luận “TypeScript dấu vết ngăn xếp (stack trace / 스택 트레이스) sai”.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)** nêu điều cần giải thích; **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **14. bản đồ mã nguồn (source map / 소스 맵) nối emitted JavaScript về TypeScript nguồn (source / 소스)** đặt vấn đề; **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** đối chiếu bằng chứng, rồi **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. `allowJs` và `checkJs`: di chuyển (migration / 마이그레이션) không cần big bang
 
@@ -219,7 +219,7 @@ TypeScript có thể tham gia JavaScript dự án (project / 프로젝트) từn
 
 Di chuyển (migration / 마이그레이션) tốt thường đi từ ranh giới (boundary / 경계) có giá trị (value / 값) cao: dùng chung (shared / 공유) lĩnh vực (domain / 도메인) types, API clients, utility cốt lõi (core / 핵심), thành phần (component / 컴포넌트) props. Đừng bắt đầu bằng việc cast toàn bộ legacy mã (code / 코드) sang `any` chỉ để đạt “100% .ts”. tệp (file / 파일) extension không phải chỉ số (metric / 지표) kiểu (type / 타입) an toàn (safety / 안전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** tiếp nhận điểm tựa từ **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** nối từ **15. allowJs và checkJs: di chuyển (migration / 마이그레이션) không cần big bang** sang **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp
 
@@ -227,7 +227,7 @@ TypeScript 6.0 là bản phát hành (release / 릴리스) chuyển tiếp: hi�
 
 Những thay đổi cần đặc biệt kiểm tra (audit / 감사) khi upgrade gồm default `strict`, mô-đun (module / 모듈)/mục tiêu (target / 대상) các giả định (assumptions / 가정들), side-effect import checking, ambient `types` visibility và những options đã bị deprecate trong 6.0 rồi không còn được 7.0 hỗ trợ. Đừng upgrade bằng cách thêm `ignoreDeprecations` vĩnh viễn; đó chỉ là cầu di chuyển (migration / 마이그레이션) ở 6.0, không phải kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** nêu điều cần giải thích; **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **16. TypeScript 6.0 → 7.0: hiểu di chuyển (migration / 마이그레이션) theo hai lớp** đặt vấn đề; **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần** đối chiếu bằng chứng, rồi **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần
 
@@ -235,7 +235,7 @@ TypeScript 7.0 được cổng (port / 포트) sang Go, dùng bản địa (nati
 
 Một điểm ecosystem quan trọng ở 7.0 là programmatic trình biên dịch (compiler / 컴파일러) API chưa ship như 6.x. Tooling cần API có thể phải chạy TypeScript 6 side-by-side trong giai đoạn chuyển tiếp. Điều này đặc biệt liên quan custom transforms, ESLint integrations hoặc nội bộ (internal / 내부) tooling phụ thuộc trình biên dịch (compiler / 컴파일러) API.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần** nêu điều cần giải thích; **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **17. TypeScript 7.0 bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러): hiệu năng (performance / 성능) đổi, bằng chứng (evidence / 증거) vẫn cần** đặt vấn đề; **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)
 
@@ -247,7 +247,7 @@ npx tsc --traceResolution
 
 Sau đó kiểm tra gói (package / 패키지) `exports`, `types`, extension, resolution chế độ (mode / 모드) và đường dẫn (path / 경로) ánh xạ (mapping / 매핑). `--explainFiles` giúp hiểu tại sao tệp (file / 파일) vào compilation. `--showConfig` giúp thấy cấu hình (config / 설정) cuối sau `extends`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** nêu điều cần giải thích; **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **18. gỡ lỗi (debug / 디버그) mô-đun (module / 모듈) resolution bằng bằng chứng (evidence / 증거)** đặt vấn đề; **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** đối chiếu bằng chứng, rồi **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker
 
@@ -260,7 +260,7 @@ npx tsc --generateTrace trace-output
 
 Bạn cần bằng chứng (evidence / 증거) về parse/check/emit thời gian (time / 시간), tệp (file / 파일) count, kiểu (type / 타입) instantiation và bộ nhớ (memory / 메모리) trước khi tối ưu kiểu (type / 타입) definitions. Nếu check thời gian (time / 시간) tăng sau một PR, compare diagnostic metrics và narrow lần ghi nhận (commit / 커밋), đừng đoán do “TypeScript chậm”.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** tiếp nhận điểm tựa từ **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** nối từ **19. gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) của checker** sang **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)
 
@@ -277,13 +277,13 @@ install reproducibly
 
 Nếu mã (code / 코드) generation tạo types/lược đồ (schema / 스키마) clients, thứ tự (ordering / 순서) quan trọng: type-check trước codegen có thể báo hàng loạt lỗi giả; codegen từ stale lược đồ (schema / 스키마) lại tạo false confidence. chuỗi xử lý (pipeline / 파이프라인) phải encode phụ thuộc (dependency / 의존성) thật.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”** tiếp nhận điểm tựa từ **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”** nối từ **20. bản dựng (build / 빌드) và CI: thất bại (fail / 실패) fast ở đặc tả hợp đồng (contract / 계약) tầng (layer / 계층)** sang **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `skipLibCheck` là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”
 
 `skipLibCheck` giảm check trên declaration files và có thể giúp bản dựng (build / 빌드) hiệu năng (performance / 성능)/tính tương thích (compatibility / 호환성) khi phụ thuộc (dependency / 의존성) declarations xung đột. Nhưng nó cũng che lỗi ở `.d.ts`. Nếu issue đến từ duplicate types hoặc incompatible thư viện (library / 라이브러리) versions, hãy giải quyết phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) khi có thể. Dùng flag như một sự đánh đổi (trade-off / 트레이드오프) có chủ đích, không như reflex.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”** nêu điều cần giải thích; **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **21. skipLibCheck là sự đánh đổi (trade-off / 트레이드오프), không phải “fix kiểu (type / 타입) lỗi (error / 오류)”** đặt vấn đề; **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface** đối chiếu bằng chứng, rồi **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface
 
@@ -291,19 +291,19 @@ Thư viện (library / 라이브러리) author phải nghĩ tới JavaScript đ�
 
 Kiểm thử (test / 테스트) gói (package / 패키지) nên bao gồm bên tiêu thụ (consumer / 소비자) fixture thật hoặc gói (package / 패키지) tarball install, không chỉ đơn vị (unit / 단위) tests trong nguồn (source / 소스) cây (tree / 트리).
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface** nêu điều cần giải thích; **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **22. thư viện (library / 라이브러리) bản dựng (build / 빌드): nguồn (source / 소스) mục tiêu (target / 대상) khác bên tiêu thụ (consumer / 소비자) surface** đặt vấn đề; **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** đối chiếu bằng chứng, rồi **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)
 
 TypeScript từng phổ biến `experimentalDecorators` dựa trên proposal cũ, đặc biệt trong Angular/Nest-like ecosystems. TypeScript 5.x hỗ trợ tiêu chuẩn (standard / 표준) decorators ngữ nghĩa (semantics / 의미론) mới. Hai hệ có differences về typing/thời gian chạy (runtime / 런타임) emit và siêu dữ liệu (metadata / 메타데이터) các giả định (assumptions / 가정들). Khi migrate khung phần mềm (framework / 프레임워크) mã (code / 코드), đừng chỉ xóa flag; xác nhận khung phần mềm (framework / 프레임워크) phiên bản (version / 버전), decorator đặc tả hợp đồng (contract / 계약) và siêu dữ liệu (metadata / 메타데이터) chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** nối từ **23. Decorators: phân biệt tiêu chuẩn (standard / 표준) direction và legacy experimental chế độ (mode / 모드)** sang **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)
 
 `tsconfig`, gói (package / 패키지) siêu dữ liệu (metadata / 메타데이터) và bundler cấu hình (config / 설정) cùng mô tả cách nguồn (source / 소스) biến thành thời gian chạy (runtime / 런타임) sản phẩm tạo ra (artifact / 산출물). Chúng không phải “setup một lần rồi quên”. Khi thời gian chạy (runtime / 런타임)/nền tảng (platform / 플랫폼) thay đổi, cấu hình (config / 설정) phải được kiểm tra (audit / 감사) như mã nguồn (source code / 소스 코드): giả định (assumption / 가정) nào còn đúng, option nào legacy, alias nào drift, declaration nào không còn match hiện thực (implementation / 구현)?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau** tiếp nhận điểm tựa từ **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau** nối từ **24. cấp cao (senior / 시니어) ghi chú (note / 노트): trình biên dịch (compiler / 컴파일러) cấu hình (config / 설정) là executable kiến trúc (architecture / 아키텍처)** sang **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau
 
@@ -323,7 +323,7 @@ parse/syntax
 
 Nếu không phân tầng (layer / 계층), rất dễ dùng kiểu (type / 타입) assertion để “sửa” một module-resolution bug hoặc thay tsconfig để che một modeling bug.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở** tiếp nhận điểm tựa từ **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở** nối từ **25. trình biên dịch (compiler / 컴파일러) internals: parser, binder, checker và emit giữ những bất biến (invariant / 불변식) khác nhau** sang **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở
 
@@ -333,7 +333,7 @@ Một thay đổi ở dùng chung (shared / 공유) `.d.ts`, `tsconfig`, gói (p
 
 TypeScript 7 chuyển editor foundation sang ngôn ngữ (language / 언어) máy chủ (server / 서버) giao thức (protocol / 프로토콜) (LSP) và bản địa (native / 네이티브) multithreaded hiện thực (implementation / 구현). Điều này giúp nhiều editor dùng cùng giao thức (protocol / 프로토콜) và cho phép ngôn ngữ (language / 언어) máy chủ (server / 서버) xử lý nhiều yêu cầu (request / 요청) đồng thời. Tuy vậy, embedded-language ecosystems như Vue/Svelte/Astro/MDX hoặc khung phần mềm (framework / 프레임워크) tooling cần trình biên dịch (compiler / 컴파일러) API có thể vẫn phụ thuộc TypeScript 6 trong giai đoạn 7.0 vì TypeScript 7.0 chưa có stable programmatic API.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở** nêu điều cần giải thích; **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **26. Program đồ thị (graph / 그래프) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스): editor không chỉ check tệp (file / 파일) đang mở** đặt vấn đề; **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)** đối chiếu bằng chứng, rồi **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. `verbatimModuleSyntax`: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)
 
@@ -348,7 +348,7 @@ Type-only cú pháp (syntax / 문법) bị xóa; import/export không có `type`
 
 Cấp cao (senior / 시니어) practice là dùng kiểu (type / 타입)/giá trị (value / 값) distinction rõ ở nguồn (source / 소스). Một import bị giữ hay xóa có thể thay thời gian chạy (runtime / 런타임) side tác động (effect / 효과), tree-shaking và cycle hành vi (behavior / 동작); đây không chỉ là style.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)** nêu điều cần giải thích; **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **27. verbatimModuleSyntax: nguồn (source / 소스) phải nói rõ import nào tồn tại ở thời gian chạy (runtime / 런타임)** đặt vấn đề; **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** đối chiếu bằng chứng, rồi **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. `isolatedModules` và `isolatedDeclarations`: khi mỗi tệp (file / 파일) phải tự đủ thông tin
 
@@ -358,7 +358,7 @@ Một số transpiler xử lý từng tệp (file / 파일) mà không có toàn
 
 Sự đánh đổi (trade-off / 트레이드오프) là author phải viết tường minh (explicit / 명시적) công khai (public / 공개) annotations nhiều hơn. Đây là ví dụ tốt của kiến trúc (architecture / 아키텍처) pressure làm coding style thay đổi: annotation không phải vì trình biên dịch (compiler / 컴파일러) “không suy luận (inference / 추론) được”, mà vì bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인) muốn giảm coupling giữa files.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** nêu điều cần giải thích; **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **28. isolatedModules và isolatedDeclarations: khi mỗi tệp (file / 파일) phải tự đủ thông tin** đặt vấn đề; **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** đối chiếu bằng chứng, rồi **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. gói (package / 패키지) `exports` là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí
 
@@ -378,7 +378,7 @@ Khi resolver hiện đại đọc `package.json` có `exports`, subpath không m
 
 TypeScript ở `node16`/`nodenext`/`bundler` còn ưu tiên tìm điều kiện (condition / 조건) `types` khi resolve declaration surface. gói (package / 패키지) author vì thế phải kiểm thử (test / 테스트) cả JavaScript thời gian chạy (runtime / 런타임) resolution và TypeScript kiểu (type / 타입) resolution; publish đúng tệp (file / 파일) nhưng sai điều kiện (condition / 조건) vẫn có thể làm bên tiêu thụ (consumer / 소비자) mất types.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** nêu điều cần giải thích; **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **29. gói (package / 패키지) exports là allow-list, không phải siêu dữ liệu (metadata / 메타데이터) trang trí** đặt vấn đề; **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** đối chiếu bằng chứng, rồi **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. `typesVersions` và versioned `types` conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích
 
@@ -388,7 +388,7 @@ Khi công khai (public / 공개) `.d.ts` dùng cú pháp (syntax / 문법) chỉ
 
 Cấp cao (senior / 시니어) lesson: đừng hứa “hỗ trợ (support / 지원) TypeScript >= X” chỉ dựa trên nguồn (source / 소스) bản dựng (build / 빌드) của chính gói (package / 패키지). Hãy install tarball vào bên tiêu thụ (consumer / 소비자) dự án (project / 프로젝트) thật với minimum trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전) và check công khai (public / 공개) imports.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** nêu điều cần giải thích; **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **30. typesVersions và versioned types conditions: phục vụ trình biên dịch (compiler / 컴파일러) cũ có chủ đích** đặt vấn đề; **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** đối chiếu bằng chứng, rồi **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. Bundler-compatible nguồn (source / 소스) có thể tạo `.d.ts` không tương thích `nodenext`
 
@@ -404,7 +404,7 @@ Bundler hiểu extensionless relative import và xóa/ghép nó trong JavaScript
 
 Nếu thư viện (library / 라이브러리) không bundle declarations, cấu hình declaration emit cần mô hình (model / 모델) bên tiêu thụ (consumer / 소비자) thời gian chạy (runtime / 런타임) đủ chặt; với thư viện (library / 라이브러리) cho nút (node / 노드) consumers, `nodenext` thường cung cấp an toàn (safety / 안전) tốt hơn. Cách chắc chắn nhất vẫn là kiểm thử (test / 테스트) gói (package / 패키지) sản phẩm tạo ra (artifact / 산출물) trong bên tiêu thụ (consumer / 소비자) fixtures với mô-đun (module / 모듈) modes bạn tuyên bố hỗ trợ.
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** nêu điều cần giải thích; **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **31. Bundler-compatible nguồn (source / 소스) có thể tạo .d.ts không tương thích nodenext** đặt vấn đề; **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** đối chiếu bằng chứng, rồi **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Chạy `.ts` trực tiếp và `erasableSyntaxOnly`: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)
 
@@ -414,7 +414,7 @@ Các construct như `enum`, không gian tên (namespace / 네임스페이스) c�
 
 Nếu kiến trúc (architecture / 아키텍처) chọn direct-TypeScript thời gian chạy (runtime / 런타임), hãy xem đây là một **source-language subset** có chủ đích. Thường cần kết hợp với `verbatimModuleSyntax`, mô-đun (module / 모듈) settings đúng host và kiểm thử (test / 테스트) thời gian chạy (runtime / 런타임) thật. Không nên suy từ “tsc type-check pass” sang “nút (node / 노드)/Bun/Deno chắc chắn chạy nguồn (source / 소스) này”.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **32. Chạy .ts trực tiếp và erasableSyntaxOnly: “kiểu (type / 타입) erasure” trở thành thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** đối chiếu bằng chứng, rồi **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. `.ts` extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau
 
@@ -436,7 +436,7 @@ Published/runtime specifier cuối cùng là gì?
 
 Không trả lời đủ ba câu sẽ tạo dự án (project / 프로젝트) chạy trong dev loader nhưng thất bại (fail / 실패) sau bản dựng (build / 빌드), hoặc thư viện (library / 라이브러리) chạy kiểm thử (test / 테스트) nguồn (source / 소스) nhưng gói (package / 패키지) publish hỏng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** nêu điều cần giải thích; **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **33. .ts extension trong import: nguồn (source / 소스) host và đầu ra (output / 출력) host có thể là hai thế giới khác nhau** đặt vấn đề; **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** đối chiếu bằng chứng, rồi **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn
 
@@ -446,7 +446,7 @@ Tăng workers làm tăng parallelism nhưng có thể tăng aggregate bộ nhớ
 
 Một dạng thất bại (failure mode / 실패 모드) hiếm nhưng quan trọng là order-dependent checking có thể lộ ra khi thay số checker. Nếu nhóm (team / 팀) gặp diagnostic khác giữa môi trường, cố định worker count trong điều tra và dùng `--singleThreaded` làm điều khiển (control / 제어) trường hợp (case / 사례) trước khi quy lỗi cho nguồn (source / 소스).
 
-> **Chuyển mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** tiếp nhận điểm tựa từ **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** nối từ **34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn** sang **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. TypeScript 7 `--watch`: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)
 
@@ -454,7 +454,7 @@ Watch chế độ (mode / 모드) không chỉ là “chạy trình biên dịch
 
 Nếu watch chế độ (mode / 모드) ngốn CPU, đừng chỉ profile checker. Hãy xem workspace có symlink/worktree lớn, generated directories, phụ thuộc (dependency / 의존성) trees hoặc công cụ (tool / 도구) khác cùng theo dõi quá nhiều files không. môi trường vận hành (production / 운영 환경) nhà phát triển (developer / 개발자) experience là tổng của tệp (file / 파일) watching + dự án (project / 프로젝트) đồ thị (graph / 그래프) vô hiệu hóa (invalidation / 무효화) + checking + bundling, không phải một con số `tsc` duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics** tiếp nhận điểm tựa từ **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. TypeScript 7 không có trình biên dịch (compiler / 컴파일러) API: side-by-side không phải hack tạm bợ vô tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics** nối từ **35. TypeScript 7 --watch: file-system hành vi (behavior / 동작) cũng là hiệu năng (performance / 성능) tầng (layer / 계층)** sang **37. TypeScript 7 không có trình biên dịch (compiler / 컴파일러) API: side-by-side không phải hack tạm bợ vô tổ chức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics
 
@@ -473,7 +473,7 @@ Upgrade runbook đúng nên là:
 6. Benchmark build/editor/watch trên workload thật.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **37. TypeScript 7 không có trình biên dịch (compiler / 컴파일러) API: side-by-side không phải hack tạm bợ vô tổ chức** tiếp nhận điểm tựa từ **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **37. TypeScript 7 không có trình biên dịch (compiler / 컴파일러) API: side-by-side không phải hack tạm bợ vô tổ chức** nối từ **36. TypeScript 6/7 defaults: upgrade phải kiểm tra (audit / 감사) các giả định (assumptions / 가정들), không chỉ sửa diagnostics** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 37. TypeScript 7 không có trình biên dịch (compiler / 컴파일러) API: side-by-side không phải hack tạm bợ vô tổ chức
 

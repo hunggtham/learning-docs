@@ -23,7 +23,7 @@ Hai mô hình quan trọng là:
 
 Không mô hình nào bao phủ hoàn hảo mọi hạt nhân.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ký hiệu hạt nhân** tiếp nhận điểm tựa từ **Hạt nhân không phải một quả cầu rắn thu nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao neutron quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ký hiệu hạt nhân** nối từ **Hạt nhân không phải một quả cầu rắn thu nhỏ** sang **Vì sao neutron quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký hiệu hạt nhân
 
@@ -41,7 +41,7 @@ với:
 
 Bản sắc nguyên tố được quyết định bởi `Z`. Đồng vị có cùng `Z` nhưng khác `N`.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao neutron quan trọng?** tiếp nhận điểm tựa từ **Ký hiệu hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán kính hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao neutron quan trọng?** nối từ **Ký hiệu hạt nhân** sang **Bán kính hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao neutron quan trọng?
 
@@ -53,7 +53,7 @@ Vì vậy khi `Z` tăng, các hạt nhân bền thường cần tỷ lệ `N/Z` 
 
 Hạt nhân quá giàu neutron hoặc quá giàu proton có xu hướng biến đổi theo những con đường làm năng lượng tổng giảm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Bán kính hạt nhân** tiếp nhận điểm tựa từ **Vì sao neutron quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết khối và năng lượng liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Bán kính hạt nhân** nối từ **Vì sao neutron quan trọng?** sang **Khuyết khối và năng lượng liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bán kính hạt nhân
 
@@ -73,7 +73,7 @@ Do đó thể tích hạt nhân tăng gần tỷ lệ với `A`, gợi ý mật 
 
 Bán kính nguyên tử lớn hơn bán kính hạt nhân khoảng năm bậc độ lớn theo chiều dài, nên hạt nhân chứa gần toàn bộ khối lượng nhưng chiếm phần cực nhỏ thể tích nguyên tử.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, sau nội dung của **Bán kính hạt nhân**, **Khuyết khối và năng lượng liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng liên kết trên mỗi nucleon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, sau nội dung của **Bán kính hạt nhân**, **Khuyết khối và năng lượng liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng liên kết trên mỗi nucleon** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Khuyết khối và năng lượng liên kết
 
@@ -91,7 +91,7 @@ E_b=\Delta mc^2
 
 Không phải vật chất “biến mất”. Hệ liên kết có năng lượng tổng thấp hơn, và trong thuyết tương đối năng lượng chênh lệch được phản ánh bằng chênh lệch khối lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Năng lượng liên kết trên mỗi nucleon** tiếp nhận điểm tựa từ **Khuyết khối và năng lượng liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình khối lượng bán thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Năng lượng liên kết trên mỗi nucleon** nối từ **Khuyết khối và năng lượng liên kết** sang **Mô hình khối lượng bán thực nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng liên kết trên mỗi nucleon
 
@@ -119,7 +119,7 @@ hạt nhân rất nặng
 
 Nhiệt hạch và phân hạch vì vậy không phải hai ngoại lệ rời rạc; chúng là hai phía của cùng một cảnh quan năng lượng liên kết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Mô hình khối lượng bán thực nghiệm** tiếp nhận điểm tựa từ **Năng lượng liên kết trên mỗi nucleon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thung lũng bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Mô hình khối lượng bán thực nghiệm** nối từ **Năng lượng liên kết trên mỗi nucleon** sang **Thung lũng bền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình khối lượng bán thực nghiệm
 
@@ -163,7 +163,7 @@ Các nuclide chẵn–chẵn thường bền hơn các trường hợp lẻ–l�
 
 Đây là hiệu ứng ghép cặp lượng tử giữa nucleon, không phải “keo dính đôi” theo nghĩa cổ điển.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Thung lũng bền** tiếp nhận điểm tựa từ **Mô hình khối lượng bán thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số ma thuật và bằng chứng cho cấu trúc lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Thung lũng bền** nối từ **Mô hình khối lượng bán thực nghiệm** sang **Số ma thuật và bằng chứng cho cấu trúc lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thung lũng bền
 
@@ -173,7 +173,7 @@ Hạt nhân nhẹ bền thường có `N ≈ Z`; hạt nhân nặng bền cần 
 
 Nuclide lệch khỏi vùng này thường có thể phân rã beta theo chiều làm tỉ lệ neutron/proton thuận lợi hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Thung lũng bền** nêu điều cần giải thích; **Số ma thuật và bằng chứng cho cấu trúc lớp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình lớp hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Thung lũng bền** đặt vấn đề; **Số ma thuật và bằng chứng cho cấu trúc lớp** đối chiếu bằng chứng, rồi **Mô hình lớp hạt nhân** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Số ma thuật và bằng chứng cho cấu trúc lớp
 
@@ -189,7 +189,7 @@ Chúng gợi ý nucleon cũng tạo các lớp lượng tử đóng.
 
 Tương tự electron ở chỗ đều có trạng thái lượng tử, nhưng thế năng, tương tác spin–quỹ đạo và tương tác giữa hạt hoàn toàn khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Số ma thuật và bằng chứng cho cấu trúc lớp** nêu điều cần giải thích; **Mô hình lớp hạt nhân** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chuyển động tập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Số ma thuật và bằng chứng cho cấu trúc lớp** đặt vấn đề; **Mô hình lớp hạt nhân** đối chiếu bằng chứng, rồi **Chuyển động tập thể** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình lớp hạt nhân
 
@@ -199,7 +199,7 @@ Tương tác spin–quỹ đạo mạnh góp phần tạo thứ tự mức năng
 
 Các lớp đóng thường liên hệ với độ bền cao và cấu trúc gần cầu hơn.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Chuyển động tập thể** tiếp nhận điểm tựa từ **Mô hình lớp hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spin hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Chuyển động tập thể** nối từ **Mô hình lớp hạt nhân** sang **Spin hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển động tập thể
 
@@ -215,7 +215,7 @@ chuyển động phối hợp của toàn hạt nhân
 
 Điều này giải thích vì sao không thể chỉ dùng một mô hình “nucleon độc lập” cho mọi trạng thái.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Spin hạt nhân** tiếp nhận điểm tựa từ **Chuyển động tập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái kích thích và photon gamma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Spin hạt nhân** nối từ **Chuyển động tập thể** sang **Trạng thái kích thích và photon gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spin hạt nhân
 
@@ -225,7 +225,7 @@ Hạt nhân có spin khác 0 có mômen từ và tương tác với từ trườ
 
 Đây là nền của NMR và MRI. Trong NMR, người ta khai thác chênh lệch năng lượng spin mà không biến đổi hạt nhân sang nguyên tố khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Trạng thái kích thích và photon gamma** tiếp nhận điểm tựa từ **Spin hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng phân hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Trạng thái kích thích và photon gamma** nối từ **Spin hạt nhân** sang **Đồng phân hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái kích thích và photon gamma
 
@@ -239,7 +239,7 @@ Phát gamma làm năng lượng giảm nhưng không đổi `Z` hay `A`.
 
 Photon gamma có năng lượng lớn hơn nhiều photon thường gặp trong hóa học phân tử, phản ánh chênh mức hạt nhân lớn hơn chênh mức electron hóa trị.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng phân hạt nhân** tiếp nhận điểm tựa từ **Trạng thái kích thích và photon gamma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã là quá trình xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng phân hạt nhân** nối từ **Trạng thái kích thích và photon gamma** sang **Phân rã là quá trình xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng phân hạt nhân
 
@@ -247,7 +247,7 @@ Một số trạng thái kích thích có thời gian sống tương đối dài
 
 Technetium-99m là ví dụ quan trọng trong y học hạt nhân vì trạng thái siêu bền phát gamma hữu ích cho chẩn đoán trước khi chuyển về mức thấp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Phân rã là quá trình xác suất** tiếp nhận điểm tựa từ **Đồng phân hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hạt nhân nặng khó bền?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Phân rã là quá trình xác suất** nối từ **Đồng phân hạt nhân** sang **Vì sao hạt nhân nặng khó bền?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã là quá trình xác suất
 
@@ -264,7 +264,7 @@ quần thể lớn      → quy luật thống kê rất chính xác
 
 Phần toán học của phân rã mũ được phát triển ở [Phóng xạ](./01_radioactivity.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao hạt nhân nặng khó bền?** tiếp nhận điểm tựa từ **Phân rã là quá trình xác suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao hạt nhân nặng khó bền?** nối từ **Phân rã là quá trình xác suất** sang **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao hạt nhân nặng khó bền?
 
@@ -276,7 +276,7 @@ Khi `Z` tăng, chi phí Coulomb tăng trong khi mỗi nucleon chỉ hưởng tư
 
 Đây là một trong những lý do làm hạt nhân rất nặng trở nên dễ phân hạch hoặc phân rã hơn.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?** tiếp nhận điểm tựa từ **Vì sao hạt nhân nặng khó bền?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng vị và hiệu ứng đồng vị hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?** nối từ **Vì sao hạt nhân nặng khó bền?** sang **Đồng vị và hiệu ứng đồng vị hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?
 
@@ -288,7 +288,7 @@ Do đó thay đổi liên kết hóa học thường chỉ ảnh hưởng rất 
 
 Một ngoại lệ đáng chú ý là **bắt electron (electron capture)**, nơi mật độ electron gần hạt nhân có thể tạo hiệu ứng nhỏ nhưng đo được.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng vị và hiệu ứng đồng vị hóa học** tiếp nhận điểm tựa từ **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết hạt nhân và nguồn gốc nguyên tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng vị và hiệu ứng đồng vị hóa học** nối từ **Vì sao hóa học thông thường hầu như không đổi tốc độ phân rã?** sang **Liên kết hạt nhân và nguồn gốc nguyên tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị và hiệu ứng đồng vị hóa học
 
@@ -300,7 +300,7 @@ Hydrogen/deuterium cho hiệu ứng đặc biệt rõ vì tỷ lệ khối lư�
 
 Xem thêm [hiệu ứng đồng vị động học trong cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng vị và hiệu ứng đồng vị hóa học** nêu điều cần giải thích; **Liên kết hạt nhân và nguồn gốc nguyên tố** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Đồng vị và hiệu ứng đồng vị hóa học** đặt vấn đề; **Liên kết hạt nhân và nguồn gốc nguyên tố** đối chiếu bằng chứng, rồi **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết hạt nhân và nguồn gốc nguyên tố
 
@@ -310,7 +310,7 @@ Các nguyên tố nặng hơn vùng Fe/Ni cần các môi trường giàu neutro
 
 Hóa học hạt nhân vì vậy nối trực tiếp với nguồn gốc nguyên tố trong vũ trụ.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Liên kết hạt nhân và nguồn gốc nguyên tố** cho ta quy tắc; **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Liên kết hạt nhân và nguồn gốc nguyên tố** nêu quy tắc; **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?
 
@@ -320,7 +320,7 @@ Nếu sản phẩm có tổng năng lượng thấp hơn, phần chênh lệch x
 
 Không phải “do tạo hạt nhân lớn hơn” nói chung; động lực đến từ **đi về vùng binding năng lượng (energy / 에너지) per nucleon cao hơn**.
 
-> **Chuyển mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** cho ta quy tắc; **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ví dụ suy luận: vì sao fusion H có thể giải phóng năng lượng?** nêu quy tắc; **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?
 
@@ -330,7 +330,7 @@ Iron/Ni đã gần đỉnh đường cong. Tách chúng thành hạt nhân nhỏ
 
 Đây là lý do đường cong `Eb/A`, chứ không phải nhãn “nặng/nhẹ”, mới là mô hình tư duy (mental model / 사고 모델) nền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -354,7 +354,7 @@ Không. Đây là lớp đóng của nucleon với vật lý khác electron nguy
 
 Không. Tính thuận lợi năng lượng và hàng rào phân hạch là hai câu hỏi khác nhau; hạt nhân có thể metastable trong thời gian rất dài.
 
-> **Chuyển mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

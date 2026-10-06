@@ -12,7 +12,7 @@ Ví dụ `Human(x) -> Mortal(x)` và `Human(Socrates)` cho phép infer `Mortal(S
 
 Lô-gic (logic / 논리) cho guarantees mạnh nhưng world thực thường incomplete/noisy.
 
-> **Chuyển mạch:** Symbols và propositions biểu diễn mệnh đề; knowledge graph nối thực thể, còn rules/inference engines suy ra kết luận. Khi dữ liệu bất định, probabilistic inference phải nêu rõ giả định và độ tin cậy.
+> **Nối mạch:** Symbols và propositions biểu diễn mệnh đề; knowledge graph nối thực thể, còn rules/inference engines suy ra kết luận. Khi dữ liệu bất định, probabilistic inference phải nêu rõ giả định và độ tin cậy.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)
 
@@ -20,7 +20,7 @@ Lô-gic (logic / 논리) cho guarantees mạnh nhưng world thực thường inc
 
 Nhưng đồ thị (graph / 그래프) lưu facts không tự tạo truth. Provenance, định danh (identity / 식별자) resolution và temporal validity vẫn quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Rules và suy luận (inference / 추론) engines** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rules và suy luận (inference / 추론) engines** nối từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** sang **Bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rules và suy luận (inference / 추론) engines
 
@@ -30,7 +30,7 @@ Prolog-style lập luận (reasoning / 추론) dùng unification/backtracking. E
 
 Quy tắc (rule / 규칙) các hệ thống (systems / 시스템들) explainable trong lĩnh vực (domain / 도메인) hẹp nhưng maintenance khó khi rules tương tác phức tạp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Rules và suy luận (inference / 추론) engines** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayesian networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất định (uncertainty / 불확실성)** nối từ **Rules và suy luận (inference / 추론) engines** sang **Bayesian networks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất định (uncertainty / 불확실성)
 
@@ -44,7 +44,7 @@ P(H|E)=\frac{P(E|H)P(H)}{P(E)}
 
 kết hợp prior belief và bằng chứng (evidence / 증거) likelihood.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Bayesian networks** tiếp nhận điểm tựa từ **Bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bayesian networks** nối từ **Bất định (uncertainty / 불확실성)** sang **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bayesian networks
 
@@ -52,7 +52,7 @@ Bayesian mạng (network / 네트워크) là directed acyclic đồ thị (graph
 
 Cấu trúc (structure / 구조) của đồ thị (graph / 그래프) là modeling giả định (assumption / 가정), không phải fact tự động.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Bayesian networks** xác định đầu vào; **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Approximate suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bayesian networks** đặt đầu vào cho **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)**, rồi **Approximate suy luận (inference / 추론)** mở rộng hệ quả.
 
 ## Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)
 
@@ -60,7 +60,7 @@ Hidden Markov mô hình (model / 모델) có hidden states tạo observations th
 
 Speech, bioinformatics và tracking dùng family ideas này, dù deep học tập (learning / 학습) đã thay nhiều implementations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)** xác định đầu vào; **Approximate suy luận (inference / 추론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hidden variables và chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)** đặt đầu vào cho **Approximate suy luận (inference / 추론)**, rồi **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** mở rộng hệ quả.
 
 ## Approximate suy luận (inference / 추론)
 
@@ -68,7 +68,7 @@ Chính xác (exact / 정확한) suy luận (inference / 추론) có thể expone
 
 Đây là same mẫu (pattern / 패턴) như approximation algorithms: chính xác (exact / 정확한) answer có thể computationally intractable, nên ta trade accuracy/tài nguyên (resource / 자원).
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** tiếp nhận điểm tựa từ **Approximate suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** nối từ **Approximate suy luận (inference / 추론)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation
 
@@ -76,7 +76,7 @@ Probabilistic association `P(Y|X)` không tự động cho intervention tác đ�
 
 AI/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들) ra quyết định (decision / 결정) cần cẩn thận không coi prediction correlation thành nhân quả (causal / 인과적) prescription.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Lập luận nhân quả (causal reasoning / 인과적 추론) khác correlation** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,13 +86,13 @@ AI/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들) ra 
 
 **“xác suất (probability / 확률) là degree of truth duy nhất.”** Nó thường biểu diễn bất định (uncertainty / 불확실성)/belief frequency tùy interpretation, không thay logical ngữ nghĩa (semantics / 의미론) mọi lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > biểu diễn (representation / 표현) quyết định câu hỏi nào có thể hỏi hiệu quả. lô-gic (logic / 논리) xử lý entailment dưới rules; xác suất (probability / 확률) xử lý bất định (uncertainty / 불확실성) dưới phân phối (distribution / 분포) các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

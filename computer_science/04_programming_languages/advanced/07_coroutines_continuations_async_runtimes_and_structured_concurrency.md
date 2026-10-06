@@ -22,7 +22,7 @@ CPU cores
 
 Điểm cốt lõi là coroutine không tự chạy song song. Nó cần một scheduler và cuối cùng vẫn chạy trên luồng thực thi (thread / 스레드) thật.
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **2. Continuation là gì?** tiếp nhận điểm tựa từ **1. luồng thực thi (thread / 스레드) và coroutine khác nhau ở tầng nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Continuation là gì?** nối từ **1. luồng thực thi (thread / 스레드) và coroutine khác nhau ở tầng nào?** sang **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Continuation là gì?
 
@@ -30,7 +30,7 @@ CPU cores
 
 Về mặt khái niệm, một ngăn xếp lời gọi (call stack / 호출 스택) đang hoạt động cũng là một dạng continuation được biểu diễn bằng ngăn xếp (stack / 스택) frame. Coroutine có thể biến trạng thái này thành đối tượng (object / 객체)/máy trạng thái (state machine / 상태 머신) nằm trên vùng nhớ động (heap / 힙) thay vì giữ toàn bộ bản địa (native / 네이티브) ngăn xếp (stack / 스택) đang chiếm luồng thực thi (thread / 스레드).
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)** tiếp nhận điểm tựa từ **2. Continuation là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Blocking và suspension không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)** nối từ **2. Continuation là gì?** sang **4. Blocking và suspension không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)
 
@@ -51,7 +51,7 @@ state 1: khi B hoàn thành, khôi phục state và chạy C
 
 `await` vì vậy không phải “dừng luồng thực thi (thread / 스레드)”. Nếu thao tác (operation / 연산) hỗ trợ non-blocking I/O, coroutine nhường quyền thực thi để luồng thực thi (thread / 스레드) chạy công việc khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **4. Blocking và suspension không giống nhau** tiếp nhận điểm tựa từ **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. vòng lặp sự kiện (event loop / 이벤트 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Blocking và suspension không giống nhau** nối từ **3. Async/await thường được hạ thành máy trạng thái (state machine / 상태 머신)** sang **5. vòng lặp sự kiện (event loop / 이벤트 루프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Blocking và suspension không giống nhau
 
@@ -66,7 +66,7 @@ thread blocked      -> thread không làm việc khác được
 
 Thời gian chạy (runtime / 런타임) thường cần luồng thực thi (thread / 스레드) pool riêng cho blocking I/O hoặc API legacy.
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **5. vòng lặp sự kiện (event loop / 이벤트 루프)** tiếp nhận điểm tựa từ **4. Blocking và suspension không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cooperative scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. vòng lặp sự kiện (event loop / 이벤트 루프)** nối từ **4. Blocking và suspension không giống nhau** sang **6. Cooperative scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. vòng lặp sự kiện (event loop / 이벤트 루프)
 
@@ -86,7 +86,7 @@ Khi kernel báo I/O sẵn sàng qua epoll/kqueue/IOCP/io_uring, thời gian ch�
 
 Đây là liên kết (connection / 연결) trực tiếp giữa async thời gian chạy (runtime / 런타임) và OS I/O subsystem.
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **6. Cooperative scheduling** tiếp nhận điểm tựa từ **5. vòng lặp sự kiện (event loop / 이벤트 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Structured tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Cooperative scheduling** nối từ **5. vòng lặp sự kiện (event loop / 이벤트 루프)** sang **7. Structured tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Cooperative scheduling
 
@@ -94,7 +94,7 @@ Nhiều coroutine thời gian chạy (runtime / 런타임) dùng **lập lịch 
 
 Do đó async thời gian chạy (runtime / 런타임) phù hợp nhất với tải công việc (workload / 워크로드) có nhiều chờ I/O; CPU-heavy công việc (work / 작업) cần executor/luồng thực thi (thread / 스레드) pool phù hợp hoặc chia nhỏ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **7. Structured tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **6. Cooperative scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cancellation là một giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Structured tính đồng thời (concurrency / 동시성)** nối từ **6. Cooperative scheduling** sang **8. Cancellation là một giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Structured tính đồng thời (concurrency / 동시성)
 
@@ -110,7 +110,7 @@ Phạm vi (scope / 범위) chỉ hoàn tất khi children hoàn tất hoặc đ�
 
 Mô hình tư duy (mental model / 사고 모델) giống structured programming: thay vì `goto` làm điều khiển (control / 제어) luồng (flow / 흐름) khó theo dõi, structured tính đồng thời (concurrency / 동시성) tránh tác vụ (task / 작업) thời gian tồn tại (lifetime / 수명) trôi tự do khỏi nơi tạo nó.
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **8. Cancellation là một giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **7. Structured tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Cancellation là một giao thức (protocol / 프로토콜)** nối từ **7. Structured tính đồng thời (concurrency / 동시성)** sang **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cancellation là một giao thức (protocol / 프로토콜)
 
@@ -127,7 +127,7 @@ child task có bị cancel theo không?
 
 Cancellation an toàn (safety / 안전) là một phần tính đúng đắn (correctness / 정확성), không chỉ UX.
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline** tiếp nhận điểm tựa từ **8. Cancellation là một giao thức (protocol / 프로토콜)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline** nối từ **8. Cancellation là một giao thức (protocol / 프로토콜)** sang **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline
 
@@ -135,7 +135,7 @@ Hết thời gian chờ (timeout / 타임아웃) thường được xây bằng 
 
 Async điều khiển (control / 제어) luồng (flow / 흐름) vì vậy phải kết nối với idempotency và distributed-system ngữ nghĩa (semantics / 의미론), không chỉ thời gian chạy (runtime / 런타임) scheduling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline** xác định đầu vào; **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Thread-local trở nên khó với coroutine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. hết thời gian chờ (timeout / 타임아웃) là cancellation có deadline** đặt đầu vào cho **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)**, rồi **11. Thread-local trở nên khó với coroutine** mở rộng hệ quả.
 
 ## 10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)
 
@@ -154,7 +154,7 @@ arrival rate > service rate
 
 Đây là liên kết (connection / 연결) giữa thời gian chạy (runtime / 런타임) tính đồng thời (concurrency / 동시성) và queueing lý thuyết (theory / 이론).
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **11. Thread-local trở nên khó với coroutine** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Synchronization vẫn tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Backpressure trong async chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **11. Thread-local trở nên khó với coroutine**, rồi **12. Synchronization vẫn tồn tại** mở rộng hệ quả.
 
 ## 11. Thread-local trở nên khó với coroutine
 
@@ -162,7 +162,7 @@ Coroutine có thể suspend trên luồng thực thi (thread / 스레드) A rồ
 
 Thời gian chạy (runtime / 런타임) thường cung cấp ngữ cảnh (context / 맥락) propagation riêng như coroutine ngữ cảnh (context / 맥락), task-local hoặc async-local. Logging dấu vết (trace / 추적) ID, bảo mật (security / 보안) ngữ cảnh (context / 맥락) và giao dịch (transaction / 트랜잭션) ngữ cảnh (context / 맥락) cần hiểu ranh giới (boundary / 경계) này.
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **12. Synchronization vẫn tồn tại** tiếp nhận điểm tựa từ **11. Thread-local trở nên khó với coroutine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Actor và channel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Synchronization vẫn tồn tại** nối từ **11. Thread-local trở nên khó với coroutine** sang **13. Actor và channel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Synchronization vẫn tồn tại
 
@@ -178,7 +178,7 @@ write balance
 
 Trong lúc await, tác vụ (task / 작업) khác có thể thay đổi balance. Suspension điểm (point / 지점) là nơi bất biến (invariant / 불변식) có thể bị phá nếu mã (code / 코드) giả định trạng thái (state / 상태) đứng yên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **13. Actor và channel** tiếp nhận điểm tựa từ **12. Synchronization vẫn tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. công việc (work / 작업) stealing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Actor và channel** nối từ **12. Synchronization vẫn tồn tại** sang **14. công việc (work / 작업) stealing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Actor và channel
 
@@ -186,7 +186,7 @@ Trong lúc await, tác vụ (task / 작업) khác có thể thay đổi balance.
 
 Hai mô hình này giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태) nhưng không loại thất bại (failure / 실패): mailbox có thể đầy, actor có thể crash, message có thể bị duplicate ở ranh giới (boundary / 경계) phân tán (distributed / 분산).
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **14. công việc (work / 작업) stealing** tiếp nhận điểm tựa từ **13. Actor và channel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Scheduler fairness và starvation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. công việc (work / 작업) stealing** nối từ **13. Actor và channel** sang **15. Scheduler fairness và starvation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. công việc (work / 작업) stealing
 
@@ -194,7 +194,7 @@ Một thời gian chạy (runtime / 런타임) nhiều worker có thể dùng **
 
 Điều này giảm contention trên một toàn cục (global / 전역) hàng đợi (queue / 큐) và cân bằng tải tương đối tốt. Nhưng tác vụ (task / 작업) affinity, bộ nhớ đệm (cache / 캐시) locality và blocking tác vụ (task / 작업) vẫn ảnh hưởng hiệu năng.
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **15. Scheduler fairness và starvation** tiếp nhận điểm tựa từ **14. công việc (work / 작업) stealing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Scheduler fairness và starvation** nối từ **14. công việc (work / 작업) stealing** sang **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Scheduler fairness và starvation
 
@@ -202,7 +202,7 @@ Async scheduler phải quyết định tác vụ (task / 작업) nào chạy ti�
 
 Fairness tuyệt đối có thể giảm thông lượng (throughput / 처리량) do tăng scheduling overhead. Đây là sự đánh đổi (trade-off / 트레이드오프) giống OS scheduler nhưng ở tầng thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)** tiếp nhận điểm tựa từ **15. Scheduler fairness và starvation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. thất bại (failure / 실패) propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)** nối từ **15. Scheduler fairness và starvation** sang **17. thất bại (failure / 실패) propagation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)
 
@@ -210,7 +210,7 @@ Vì continuation có thể bị tách qua nhiều callback/máy trạng thái (s
 
 Khả năng quan sát (observability / 관측 가능성) công cụ (tool / 도구) cần hiểu async ngữ cảnh (context / 맥락); nếu không, dấu vết (trace / 추적) sẽ mất parent-child quan hệ (relation / 관계) ở điểm suspension.
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **17. thất bại (failure / 실패) propagation** tiếp nhận điểm tựa từ **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Java, Kotlin, JavaScript và Go** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. thất bại (failure / 실패) propagation** nối từ **16. Async dấu vết ngăn xếp (stack trace / 스택 트레이스)** sang **18. Java, Kotlin, JavaScript và Go**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. thất bại (failure / 실패) propagation
 
@@ -218,7 +218,7 @@ Structured tính đồng thời (concurrency / 동시성) thường định ngh�
 
 Không có ngữ nghĩa (semantics / 의미론) duy nhất. Điều quan trọng là tác vụ (task / 작업) cây (tree / 트리) phải có quy tắc (rule / 규칙) xác định thay vì exception bị mất trong background tác vụ (task / 작업).
 
-> **Chuyển mạch:** Ở chặng này của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **18. Java, Kotlin, JavaScript và Go** tiếp nhận điểm tựa từ **17. thất bại (failure / 실패) propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Java, Kotlin, JavaScript và Go** nối từ **17. thất bại (failure / 실패) propagation** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Java, Kotlin, JavaScript và Go
 
@@ -235,7 +235,7 @@ context truyền như thế nào?
 backpressure nằm ở đâu?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **18. Java, Kotlin, JavaScript và Go** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **18. Java, Kotlin, JavaScript và Go** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -247,7 +247,7 @@ backpressure nằm ở đâu?
 
 **“Cancellation dừng thao tác (operation / 연산) remote.”** Cancel cục bộ (local / 로컬) wait không đảm bảo remote máy chủ (server / 서버) chưa thực hiện side tác động (effect / 효과).
 
-> **Chuyển mạch:** Trong **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

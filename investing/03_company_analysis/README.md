@@ -20,13 +20,13 @@ Lĩnh vực này chuyển từ việc “biết đọc báo cáo” sang khả n
 
 [07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md](./07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md) là lớp học sâu nối toàn bộ lĩnh vực (domain / 도메인) thành một quy trình: cây động lực doanh thu, cầu nối biên lợi nhuận, vốn lưu động, lịch nợ, mô hình ba báo cáo, ROIC tăng thêm, dư địa tái đầu tư, bằng chứng moat, reverse DCF, kịch bản theo driver và quản trị luận điểm đầu tư.
 
-> **Chuyển mạch:** **Thứ tự đọc** đi từ business model, statements đến valuation và governance; **Sau lĩnh vực này bạn cần làm được gì?** nêu năng lực kiểm tra một thesis bằng evidence.
+> **Nối mạch:** **Thứ tự đọc** đi từ business model, statements đến valuation và governance; **Sau lĩnh vực này bạn cần làm được gì?** nêu năng lực kiểm tra một thesis bằng evidence.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt kết quả kế toán và kết quả kinh tế, kiểm tra lợi nhuận có chuyển thành tiền mặt bền vững hay chỉ được hỗ trợ bởi khoản dồn tích, vốn lưu động hoặc thay đổi ước tính; lập bản đồ chuỗi giá trị và bể lợi nhuận; xác định lợi thế cạnh tranh bằng bằng chứng; chọn đúng KPI theo mô hình kinh doanh; phân biệt tăng trưởng cấu trúc với tăng trưởng chu kỳ; xây mô hình ba báo cáo theo động lực cho kịch bản cơ sở/tích cực/tiêu cực; đọc định giá dưới góc kỳ vọng ngầm và đánh giá liệu ban lãnh đạo có biến chất lượng doanh nghiệp thành giá trị trên mỗi cổ phiếu hay không.
 
-> **Chuyển mạch:** **Bài tập tích hợp** nối thesis, numbers và downside vào một memo có thể kiểm chứng; phần tiếp theo dùng memo đó để so sánh asset và market context.
+> **Nối mạch:** **Bài tập tích hợp** nối thesis, numbers và downside vào một memo có thể kiểm chứng; phần tiếp theo dùng memo đó để so sánh asset và market context.
 
 ## Bài tập tích hợp
 

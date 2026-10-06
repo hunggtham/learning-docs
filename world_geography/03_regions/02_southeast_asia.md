@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬) cốt lõi:
 
 **tropical monsoon + active tectonics → river/delta/island landscape → rice/fisheries/tài nguyên (resource / 자원) → dense coastal/delta settlement → cổng (port / 포트)/industrial corridor → toàn cục (global / 전역) trade mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Mainland và maritime không phải hai thế giới tách biệt** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon và seasonal water pulse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis nối các đồng bằng, đảo, biển và eo biển trong một không gian trao đổi liên tục. **Mainland và maritime không phải hai thế giới tách biệt** là bước đầu để thấy người, hàng hóa và nước đi qua cả hai môi trường, trước khi theo dõi nhịp monsoon.
 
 ## Mainland và maritime không phải hai thế giới tách biệt
 
@@ -18,7 +18,7 @@ Mainland Southeast Asia gồm các basin/corridor như Mekong, Red River, Chao P
 
 Sea không phải barrier đơn thuần. Trong lịch sử, monsoon wind và sea tuyến (route / 경로) tạo exchange mạng (network / 네트워크) mạnh. Ngày nay bộ chứa (container / 컨테이너) shipping, aviation và submarine cable tiếp tục biến sea thành hạ tầng kết nối.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Monsoon và seasonal water pulse** tiếp nhận điểm tựa từ **Mainland và maritime không phải hai thế giới tách biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tropical cyclone không phân bố đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mainland và maritime cùng chịu một nhịp mùa nhưng nhận nước, gió và rủi ro khác nhau theo địa hình. **Monsoon và seasonal water pulse** giải thích nền thủy văn đó, rồi mở sang các cực trị khí tượng không phân bố đều.
 
 ## Monsoon và seasonal water pulse
 
@@ -28,7 +28,7 @@ Agriculture, reservoir, hydropower, urban drainage và disease ecology đều nh
 
 Ví dụ Vietnam có regional contrast lớn: north có winter season rõ hơn; central coast có rainfall peak lệch mùa ở nhiều nơi; Mekong Delta chịu flood pulse và dry-season salinity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Tropical cyclone không phân bố đều** tiếp nhận điểm tựa từ **Monsoon và seasonal water pulse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tectonic arcs và volcanic opportunity–rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon tạo mùa mưa theo vùng, còn cyclone phụ thuộc đường đi, biển ấm và hình dạng bờ; vì thế cùng một mùa nhưng rủi ro khác nhau. **Tectonic arcs và volcanic opportunity–rủi ro (risk / 위험)** bổ sung lớp rủi ro kiến tạo và đất núi lửa màu mỡ.
 
 ## Tropical cyclone không phân bố đều
 
@@ -38,7 +38,7 @@ Hazard phân phối (distribution / 분포) này ảnh hưởng building tiêu c
 
 Một label “Southeast Asia tropical” che mất độ dốc (gradient / 기울기) hazard rất lớn.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Tectonic arcs và volcanic opportunity–rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Tropical cyclone không phân bố đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mekong hệ thống (system / 시스템): transboundary geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cyclone và núi lửa đều cho thấy rủi ro không chỉ là “thiên nhiên” mà tác động qua dân cư, hạ tầng và sinh kế. **Mekong hệ thống (system / 시스템): transboundary geography** chuyển sang một hệ thống nước nơi nhiều quốc gia cùng chia sẻ dòng chảy.
 
 ## Tectonic arcs và volcanic opportunity–rủi ro (risk / 위험)
 
@@ -48,7 +48,7 @@ Java có population density cao một phần vì fertile volcanic landscape và 
 
 Đây là trường hợp (case / 사례) rõ cho principle: **hazardous place có thể đồng thời là productive place**.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Tectonic arcs và volcanic opportunity–rủi ro (risk / 위험)** đã nêu tiêu chí phân biệt, còn **Mekong hệ thống (system / 시스템): transboundary geography** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Red River và northern Vietnam corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mekong cho thấy upstream, delta, thủy điện, phù sa và sinh kế bị nối qua biên giới; không thể quản trị từng đoạn riêng. **Red River và northern Vietnam corridor** đem logic basin–corridor vào một không gian phía bắc Việt Nam.
 
 ## Mekong hệ thống (system / 시스템): transboundary geography
 
@@ -62,7 +62,7 @@ Mekong Delta phải được hiểu như balance:
 
 Không một factor đơn lẻ giải thích toàn bộ trajectory.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Mekong hệ thống (system / 시스템): transboundary geography** đã nêu tiêu chí phân biệt, còn **Red River và northern Vietnam corridor** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chao Phraya và Bangkok** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Red River vừa là đồng bằng nông nghiệp vừa là corridor nối miền bắc với biên giới và cảng. **Chao Phraya và Bangkok** đối chiếu một basin–capital khác, nơi đồng bằng, đô thị và logistics cùng hội tụ.
 
 ## Red River và northern Vietnam corridor
 
@@ -70,7 +70,7 @@ Red River delta tạo lowland agriculture, Hanoi metropolitan growth và liên k
 
 Northern Vietnam còn kết nối land corridor với southern China, nên vật lý (physical / 물리적) valley và border hạ tầng (infrastructure / 인프라) cùng tạo economic corridor.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Chao Phraya và Bangkok** tiếp nhận điểm tựa từ **Red River và northern Vietnam corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Archipelago logistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chao Phraya và Bangkok cho thấy một megadelta có thể tập trung thủ đô, công nghiệp và giao thông nhưng dễ chịu ngập. **Archipelago logistics** chuyển sang bài toán kết nối khi lãnh thổ bị chia thành nhiều đảo.
 
 ## Chao Phraya và Bangkok
 
@@ -80,7 +80,7 @@ Urban expansion trên floodplain, drainage, tidal điều kiện (condition / �
 
 Trường hợp (case / 사례) này cho thấy delta city cần quản lý basin và groundwater, không chỉ city drainage.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Archipelago logistics** tiếp nhận điểm tựa từ **Chao Phraya và Bangkok** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Strait of Malacca và Singapore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Quần đảo cần phối hợp cảng, tàu, kho và các node trung chuyển; chi phí không chỉ do khoảng cách mà do tần suất và độ tin cậy. **Strait of Malacca và Singapore** là trường hợp chokepoint–hub nơi các luồng đó tập trung.
 
 ## Archipelago logistics
 
@@ -88,7 +88,7 @@ Indonesia và Philippines có hàng nghìn island. Archipelago làm domestic log
 
 Một national highway mạng (network / 네트워크) không thể thay thế sea liên kết (connection / 연결). Vì vậy hạ tầng (infrastructure / 인프라) chính sách (policy / 정책) phải phù hợp hình học (geometry / 기하학) quốc gia.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Strait of Malacca và Singapore** tiếp nhận điểm tựa từ **Archipelago logistics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **South China Sea như không gian kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Malacca và Singapore cho thấy một eo biển có thể gom thương mại, cảng và dịch vụ vượt xa lãnh thổ hẹp của nó. **South China Sea như không gian kết nối** mở rộng từ một chokepoint sang cả mạng biển, đảo và bờ lục địa.
 
 ## Strait of Malacca và Singapore
 
@@ -98,7 +98,7 @@ Singapore phát triển như high-centrality nút (node / 노드) nhờ location
 
 Location tạo opportunity; năng lực (capability / 역량) biến opportunity thành nút (node / 노드) power.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **South China Sea như không gian kết nối** tiếp nhận điểm tựa từ **Strait of Malacca và Singapore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rice, aquaculture và food geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Biển Đông vừa là tuyến hàng hải, vùng đánh bắt, không gian quyền biển và cầu nối giữa các nền kinh tế. **Rice, aquaculture và food geography** chuyển từ luồng biển sang cách nước, đất và thực phẩm tổ chức đời sống vùng.
 
 ## South China Sea như không gian kết nối
 
@@ -106,7 +106,7 @@ South China Sea là sea basin nối mainland coast, island Southeast Asia và Ea
 
 Khi học political geography, cần tách vật lý (physical / 물리적) sea lane, economic use, legal maritime zone và claim; không suy political conclusion trực tiếp từ map.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Rice, aquaculture và food geography** tiếp nhận điểm tựa từ **South China Sea như không gian kết nối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tropical commodity và toàn cục (global / 전역) thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rice, aquaculture và delta cho thấy hệ thống lương thực vừa phụ thuộc nước vừa phụ thuộc thị trường và logistics. **Tropical commodity và toàn cục (global / 전역) thị trường (market / 시장)** theo dõi khi cao su, dầu cọ, cà phê hay thủy sản đi vào chuỗi giá trị toàn cầu.
 
 ## Rice, aquaculture và food geography
 
@@ -116,7 +116,7 @@ Nhưng food môi trường vận hành (production / 운영 환경) phụ thuộ
 
 Mekong Delta minh họa sự đánh đổi (trade-off / 트레이드오프) giữa rice, shrimp, freshwater và salinity adaptation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Tropical commodity và toàn cục (global / 전역) thị trường (market / 시장)** tiếp nhận điểm tựa từ **Rice, aquaculture và food geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hàng hóa nhiệt đới nối đất, lao động và hạ tầng vùng với giá và tiêu chuẩn toàn cầu, đồng thời tạo ngoại tác. **Manufacturing corridor** tiếp theo xem các mạng sản xuất công nghiệp hình thành dọc những tuyến và cảng nào.
 
 ## Tropical commodity và toàn cục (global / 전역) thị trường (market / 시장)
 
@@ -124,7 +124,7 @@ Palm oil, rubber, coffee, rice, seafood và other commodity nối region với t
 
 Commodity boom có thể thay đổi land cover nhanh; environmental tác động (effect / 효과) phải đọc cùng price tín hiệu (signal / 신호) và road expansion.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Manufacturing corridor** tiếp nhận điểm tựa từ **Tropical commodity và toàn cục (global / 전역) thị trường (market / 시장)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urbanization và megacity rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Manufacturing corridor chuyển lợi thế cảng, lao động và thương mại thành cụm nhà máy, nhưng cũng tập trung tắc nghẽn, nhà ở và rủi ro. **Urbanization và megacity rủi ro (risk / 위험)** đọc các hệ quả đó ở cấp đô thị.
 
 ## Manufacturing corridor
 
@@ -134,7 +134,7 @@ Factory location chịu influence của cổng (port / 포트), power, supplier 
 
 Vietnam north–south có nhiều industrial corridor gắn Hanoi–Hai Phong và Ho Chi Minh City–southeast region; đây là example của cổng (port / 포트)–hinterland industrialization.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Urbanization và megacity rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Manufacturing corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di chuyển (migration / 마이그레이션) và labor mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Megacity hút dân và vốn nhờ corridor nhưng phân bố rủi ro ngập, nhiệt, tắc nghẽn và nhà ở không đều. **Di chuyển (migration / 마이그레이션) và labor mạng (network / 네트워크)** giải thích dòng người đáp ứng các cơ hội đó và nối các thành phố với vùng quê.
 
 ## Urbanization và megacity rủi ro (risk / 위험)
 
@@ -144,7 +144,7 @@ Low elevation, heavy rain, river, tide và subsidence có thể chồng lên nha
 
 Urban rủi ro (risk / 위험) cũng lan qua hạ tầng (infrastructure / 인프라): power thất bại (failure / 실패) làm pump dừng; road flood làm supply chuỗi (chain / 사슬) đứt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Urbanization và megacity rủi ro (risk / 위험)** cho ta quy tắc; **Di chuyển (migration / 마이그레이션) và labor mạng (network / 네트워크)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **ASEAN như regional khung phần mềm (framework / 프레임워크) và giới hạn của regional label** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Di chuyển và mạng lao động biến các đô thị, biên giới và ngành sản xuất thành một hệ liên vùng. **ASEAN như regional khung phần mềm (framework / 프레임워크) và giới hạn của regional label** tiếp theo hỏi thể chế khu vực có thể điều phối các dòng ấy đến đâu.
 
 ## Di chuyển (migration / 마이그레이션) và labor mạng (network / 네트워크)
 
@@ -152,7 +152,7 @@ Region có strong nội bộ (internal / 내부)/international labor di chuyển
 
 Remittance, labor shortage, housing và xã hội (social / 사회적) dịch vụ (service / 서비스) đều có geography. di chuyển (migration / 마이그레이션) mạng (network / 네트워크) làm distance chi phí (cost / 비용) giảm cho người đi sau.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Di chuyển (migration / 마이그레이션) và labor mạng (network / 네트워크)** cho ta quy tắc; **ASEAN như regional khung phần mềm (framework / 프레임워크) và giới hạn của regional label** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Korea–Vietnam và East–Southeast Asia môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** ASEAN tạo ngôn ngữ và diễn đàn chung nhưng không xóa khác biệt thể chế, hạ tầng và năng lực thực thi giữa các nước. **Korea–Vietnam và East–Southeast Asia môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** đưa giới hạn của nhãn vùng vào một mạng sản xuất cụ thể.
 
 ## ASEAN như regional khung phần mềm (framework / 프레임워크) và giới hạn của regional label
 
@@ -160,7 +160,7 @@ Southeast Asia có nhiều cơ chế (mechanism / 메커니즘) hợp tác khu v
 
 Do đó không dùng regional average như mô tả cho từng country.
 
-> **Chuyển mạch:** Ở chặng này của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **ASEAN như regional khung phần mềm (framework / 프레임워크) và giới hạn của regional label** cho ta quy tắc; **Korea–Vietnam và East–Southeast Asia môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mạng Korea–Vietnam cho thấy Đông Á và Đông Nam Á nối nhau bằng cảng, đầu tư, lao động, logistics và tiêu chuẩn, không chỉ bằng nhãn ASEAN. **Dùng chung (common / 공통) misconceptions** kiểm tra các cách giản lược vùng thành “lục địa” hoặc “quần đảo” thuần túy.
 
 ## Korea–Vietnam và East–Southeast Asia môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)
 
@@ -172,7 +172,7 @@ Chuỗi (chain / 사슬) có thể được đọc:
 
 Nếu năng lượng (energy / 에너지), cổng (port / 포트) hoặc key thành phần (component / 컴포넌트) bị disruption, tác động (effect / 효과) lan xuyên border.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Korea–Vietnam và East–Southeast Asia môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về monsoon, đảo, megacity, ASEAN và chokepoint, còn lại chuỗi tự nhiên–hạ tầng–dòng người–thể chế–mạng sản xuất. **Mô hình tư duy** cô đọng chuỗi này để đọc từng quốc gia mà không tách chúng khỏi hệ vùng.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -182,7 +182,7 @@ Nếu năng lượng (energy / 에너지), cổng (port / 포트) hoặc key th�
 
 “Delta luôn màu mỡ nên an toàn cho settlement” sai; delta productive nhưng có flood, subsidence và sea-level exposure.
 
-> **Chuyển mạch:** Trong **Đông Nam Á: monsoon, megadelta, archipelago và chokepoint**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi mainland–maritime → monsoon, cyclone và tectonic arcs → Mekong, Red River, Chao Phraya → archipelago, Malacca và Biển Đông → lương thực, hàng hóa, corridor, đô thị, migration và ASEAN. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang Nam Á, Đông Á hoặc hệ thống toàn cầu.
 
 ## Mô hình tư duy
 

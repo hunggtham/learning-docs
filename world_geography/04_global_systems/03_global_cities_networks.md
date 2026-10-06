@@ -8,7 +8,7 @@
 
 Câu hỏi địa lý vì thế là: **dòng gì đi qua thành phố, quyết định gì được đưa ra ở đó, và nó kết nối những vùng nào?**
 
-> **Chuyển mạch:** Trong **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Thành phố là nút (node / 노드) trong nhiều mạng (network / 네트워크) chồng lên nhau** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) city không đồng nghĩa megacity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Centrality: degree, betweenness và eigenvector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global city được xác định bởi chức năng, dòng vốn, thông tin và quyết định chứ không chỉ bởi dân số. **Thành phố là nút (node / 노드) trong nhiều mạng (network / 네트워크) chồng lên nhau** chuyển tiêu chí đó thành cấu trúc node–flow có thể đo.
 
 ## Thành phố là nút (node / 노드) trong nhiều mạng (network / 네트워크) chồng lên nhau
 
@@ -16,7 +16,7 @@ Không tồn tại một “toàn cục (global / 전역) city mạng (network /
 
 Một city có thể central trong aviation nhưng không trong finance, hoặc mạnh về manufacturing coordination nhưng yếu về maritime trade. Vì vậy ranking tổng hợp thường nén nhiều dimension và cần đọc methodology.
 
-> **Chuyển mạch:** Ở chặng này của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Centrality: degree, betweenness và eigenvector** tiếp nhận điểm tựa từ **Thành phố là nút (node / 노드) trong nhiều mạng (network / 네트워크) chồng lên nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Command-and-control hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Centrality có nhiều nghĩa: nhiều liên kết, nằm trên đường đi, hoặc nối với các node quan trọng; mỗi thước đo trả lời một câu hỏi khác. **Command-and-control hàm (function / 함수)** chuyển centrality thành quyền điều phối và ra quyết định.
 
 ## Centrality: degree, betweenness và eigenvector
 
@@ -24,7 +24,7 @@ Một city có thể central trong aviation nhưng không trong finance, hoặc 
 
 Những khái niệm đồ thị (graph / 그래프) giúp xây intuition nhưng mạng (network / 네트워크) đô thị có weight, direction, sức chứa (capacity / 용량) và geography. Flight tuyến (route / 경로) 1 chuyến/tuần không tương đương tuyến (route / 경로) 20 chuyến/ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Command-and-control hàm (function / 함수)** tiếp nhận điểm tựa từ **Centrality: degree, betweenness và eigenvector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gateway hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Command-and-control tập trung headquarters, tài chính, luật, tri thức và dịch vụ chuyên môn; nó không nhất thiết trùng với lượng hàng đi qua. **Gateway hàm (function / 함수)** tách quyền điều phối khỏi chức năng trung chuyển người và hàng.
 
 ## Command-and-control hàm (function / 함수)
 
@@ -32,7 +32,7 @@ Trụ sở, finance, legal, consulting và professional dịch vụ (service / �
 
 Vì vậy môi trường vận hành (production / 운영 환경) geography và command geography có thể tách nhau: nhà máy ở một vùng, thiết kế (design / 설계)/finance/marketing ở city khác.
 
-> **Chuyển mạch:** Trong **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Gateway hàm (function / 함수)** tiếp nhận điểm tựa từ **Command-and-control hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agglomeration của dịch vụ cao cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gateway city gom luồng và nối hinterland với mạng rộng, còn command city định hướng quyết định; một nơi có thể giữ một chức năng mà không giữ chức năng kia. **Agglomeration của dịch vụ cao cấp** giải thích vì sao kỹ năng và khách hàng chuyên biệt vẫn tập trung.
 
 ## Gateway hàm (function / 함수)
 
@@ -40,7 +40,7 @@ Cảng, sân bay và rail terminal biến city thành **gateway** giữa hinterl
 
 Một cảng hiện đại nhưng đường ra hinterland tắc nghẽn sẽ không tạo cùng vai trò như cảng tích hợp rail/highway/logistics park.
 
-> **Chuyển mạch:** Ở chặng này của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Agglomeration của dịch vụ cao cấp** tiếp nhận điểm tựa từ **Gateway hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) và city** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dịch vụ cao cấp tập trung nhờ chia sẻ kỹ năng, thông tin và khách hàng, nhưng cần kết nối với production network toàn cầu. **Toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) và city** nối agglomeration với các chuỗi sản xuất và logistics.
 
 ## Agglomeration của dịch vụ cao cấp
 
@@ -48,7 +48,7 @@ Professional dịch vụ (service / 서비스) có lợi từ proximity vì nhi�
 
 Remote công việc (work / 작업) giảm một số tương tác (interaction / 상호작용) chi phí (cost / 비용) nhưng trust building, deal-making và job switching vẫn tạo lợi thế cho dense thị trường (market / 시장).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) và city** tiếp nhận điểm tựa từ **Agglomeration của dịch vụ cao cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mega-region và polycentric mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** City vừa là node dịch vụ vừa là nơi tổ chức sản xuất, dữ liệu và vốn; các chức năng có thể trải qua nhiều đô thị gần nhau. **Mega-region và polycentric mạng (network / 네트워크)** xem khi nào một hệ thống đa trung tâm thay thế mô hình một lõi duy nhất.
 
 ## Toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) và city
 
@@ -56,7 +56,7 @@ Thành phố không chỉ cạnh tranh; chúng bổ sung nhau. Một giá trị 
 
 Do đó nên hỏi **city pair / corridor** nào có luồng (flow / 흐름) mạnh, thay vì chỉ xếp hạng từng city riêng lẻ.
 
-> **Chuyển mạch:** Trong **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Mega-region và polycentric mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) và city** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) city, airport city và dữ liệu (data / 데이터) hub là các kiểu nút (node / 노드) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mega-region nối nhiều node bằng commuting, logistics, dữ liệu và chuỗi cung ứng, nên centrality được phân bố thay vì tập trung một điểm. **Cổng (port / 포트) city, airport city và dữ liệu (data / 데이터) hub là các kiểu nút (node / 노드) khác nhau** phân biệt các giao diện cụ thể.
 
 ## Mega-region và polycentric mạng (network / 네트워크)
 
@@ -64,7 +64,7 @@ Khi nhiều metropolitan area gần nhau được nối bằng high-speed vận 
 
 Điều này làm ranh giới hành chính ngày càng kém phù hợp với economic geography.
 
-> **Chuyển mạch:** Ở chặng này của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Mega-region và polycentric mạng (network / 네트워크)** nêu điều cần giải thích; **Cổng (port / 포트) city, airport city và dữ liệu (data / 데이터) hub là các kiểu nút (node / 노드) khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Housing và inequality là giới hạn của global-city success** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng, sân bay và data hub có luồng, tiêu chuẩn và phạm vi phục vụ khác nhau; không thể dùng một chỉ số centrality cho mọi node. **Housing và inequality là giới hạn của global-city success** đưa câu hỏi quyền lực về chi phí sống và phân phối lợi ích.
 
 ## Cổng (port / 포트) city, airport city và dữ liệu (data / 데이터) hub là các kiểu nút (node / 노드) khác nhau
 
@@ -72,7 +72,7 @@ Cổng (port / 포트) city cần maritime–hinterland giao diện (interface /
 
 Một nơi có thể kết hợp nhiều vai trò, nhưng mỗi role có hạ tầng (infrastructure / 인프라) bottleneck khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Cổng (port / 포트) city, airport city và dữ liệu (data / 데이터) hub là các kiểu nút (node / 노드) khác nhau** đã nêu tiêu chí phân biệt, còn **Housing và inequality là giới hạn của global-city success** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Resilience: central nút (node / 노드) cũng là thất bại (failure / 실패) điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global-city success có thể đi cùng giá nhà, phân cực lao động và loại trừ không gian; chức năng kết nối không tự tạo công bằng. **Resilience: central nút (node / 노드) cũng là thất bại (failure / 실패) điểm (point / 지점)** kiểm tra rủi ro khi node quan trọng bị gián đoạn.
 
 ## Housing và inequality là giới hạn của global-city success
 
@@ -80,7 +80,7 @@ High-wage sectors tăng demand cho location, có thể đẩy housing chi phí (
 
 Vì vậy “city thành công” ở aggregate không đảm bảo khả năng tiếp cận (accessibility / 접근성) tốt cho mọi nhóm. **Spatial inequality** là phần nội tại của phân tích toàn cục (global / 전역) city.
 
-> **Chuyển mạch:** Trong **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Housing và inequality là giới hạn của global-city success** đã nêu tiêu chí phân biệt, còn **Resilience: central nút (node / 노드) cũng là thất bại (failure / 실패) điểm (point / 지점)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Seoul trong mạng Đông Á như trường hợp (case / 사례) học phương pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Inequality cho thấy node trung tâm có thể tạo tăng trưởng và đồng thời tập trung rủi ro; resilience cần route, nhà cung cấp và dịch vụ thay thế. **Seoul trong mạng Đông Á như trường hợp (case / 사례) học phương pháp** áp dụng khung này vào một city cụ thể.
 
 ## Resilience: central nút (node / 노드) cũng là thất bại (failure / 실패) điểm (point / 지점)
 
@@ -88,7 +88,7 @@ Centrality tạo lợi thế nhưng tăng consequence khi gián đoạn. Airport
 
 Resilience không chỉ là backup trong city; còn là khả năng luồng (flow / 흐름) reroute qua nút (node / 노드) khác và sức chứa (capacity / 용량) spare của mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Resilience: central nút (node / 노드) cũng là thất bại (failure / 실패) điểm (point / 지점)** cho ta quy tắc; **Seoul trong mạng Đông Á như trường hợp (case / 사례) học phương pháp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Toàn cục (global / 전역) city ranking: đọc methodology trước thứ hạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Seoul cho phép đọc đồng thời headquarters, cảng, sân bay, dữ liệu, housing, inequality và mạng Đông Á thay vì chỉ gắn nhãn global city. **Toàn cục (global / 전역) city ranking: đọc methodology trước thứ hạng** tiếp theo kiểm tra cách các chỉ số tạo ra thứ hạng.
 
 ## Seoul trong mạng Đông Á như trường hợp (case / 사례) học phương pháp
 
@@ -96,7 +96,7 @@ Seoul metropolitan region có thể được dùng để học cách headquarter
 
 Tương tự, Singapore là ví dụ rõ về quy mô lãnh thổ nhỏ nhưng mạng (network / 네트워크) centrality cao. trường hợp (case / 사례) giúp thấy **kích thước (size / 크기) ≠ connectivity**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Seoul trong mạng Đông Á như trường hợp (case / 사례) học phương pháp** cho ta quy tắc; **Toàn cục (global / 전역) city ranking: đọc methodology trước thứ hạng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Digital economy không làm city biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ranking phụ thuộc tập biến, trọng số, thời điểm, quy mô và dữ liệu; thứ hạng không phải bản chất cố định của city. **Digital economy không làm city biến mất** tiếp theo hỏi dữ liệu số thay đổi node và geography thế nào.
 
 ## Toàn cục (global / 전역) city ranking: đọc methodology trước thứ hạng
 
@@ -104,7 +104,7 @@ Các chỉ mục (index / 인덱스) chọn biến khác nhau: corporate offices
 
 Vì vậy ranking nên dùng như dataset để hiểu dimension, không như bảng “thành phố tốt nhất”.
 
-> **Chuyển mạch:** Trong **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Digital economy không làm city biến mất** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) city ranking: đọc methodology trước thứ hạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dịch vụ số vẫn cần điện, cáp, máy chủ, kỹ năng, văn phòng và thể chế ở những nơi cụ thể; nó tái tổ chức chứ không xóa city. **Những hiểu lầm phổ biến** tiếp theo sửa các đồng nhất hóa về dân số, ranking và “phi địa điểm”.
 
 ## Digital economy không làm city biến mất
 
@@ -112,13 +112,13 @@ Luồng dữ liệu (data flow / 데이터 흐름) tức thời nhưng dữ li�
 
 Số hóa làm một số tương tác (interaction / 상호작용) decouple khỏi distance nhưng thường tăng giá trị của nút (node / 노드) có hạ tầng (infrastructure / 인프라) và skill mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Digital economy không làm city biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về megacity, centrality, gateway, ranking và digital economy, còn lại cách đọc city qua chức năng, mạng, bất bình đẳng và resilience. **Mô hình tư duy** cô đọng khung đó.
 
 ## Những hiểu lầm phổ biến
 
 “Đông dân = toàn cục (global / 전역) city” nhầm kích thước (size / 크기) với hàm (function / 함수). “Globalization làm mọi city cạnh tranh trực tiếp” bỏ complementarity. “Remote công việc (work / 작업) xóa agglomeration” bỏ labor thị trường (market / 시장) và tacit kiến thức (knowledge / 지식). “Centrality chỉ có lợi” bỏ systemic rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thành phố toàn cầu, mạng đô thị và quyền lực kết nối**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi global city–node → centrality và command/gateway → dịch vụ, production network, mega-region và hub → housing, inequality, resilience, Seoul, ranking và digital economy. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang thương mại, môi trường và đô thị hóa.
 
 ## Mô hình tư duy
 

@@ -16,7 +16,7 @@ Mà là:
 
 > Cú sốc thay đổi đường đi lãi suất, thanh khoản, chi phí vốn và nhu cầu ngành như thế nào; từ đó FCF, định giá và rủi ro danh mục thay đổi bao nhiêu?
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **2. Trạng thái trước cú sốc** tiếp nhận điểm tựa từ **1. Câu hỏi nghiên cứu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dữ liệu mới gây bất ngờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **2. Trạng thái trước cú sốc** nối từ **1. Câu hỏi nghiên cứu** sang **3. Dữ liệu mới gây bất ngờ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Trạng thái trước cú sốc
 
@@ -60,7 +60,7 @@ FCF ≈ 96,8
 
 Đây là **điểm xuất phát**, không phải giá trị hợp lý.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **2. Trạng thái trước cú sốc** nêu điều cần giải thích; **3. Dữ liệu mới gây bất ngờ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **2. Trạng thái trước cú sốc** đặt vấn đề; **3. Dữ liệu mới gây bất ngờ** đối chiếu bằng chứng, rồi **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Dữ liệu mới gây bất ngờ
 
@@ -96,7 +96,7 @@ Lạm phát dai dẳng hơn
 
 Vì vậy không thể dùng một dấu `+` hoặc `-` cho toàn bộ cổ phiếu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **3. Dữ liệu mới gây bất ngờ** nêu điều cần giải thích; **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **3. Dữ liệu mới gây bất ngờ** đặt vấn đề; **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** đối chiếu bằng chứng, rồi **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Lớp 1 — Macro: xác định biến thay đổi thật sự
 
@@ -115,7 +115,7 @@ Lạm phát dịch vụ dai dẳng
 
 Dạng thất bại (failure mode / 실패 모드) của cách đọc đơn giản là chỉ nhìn CPI mà bỏ qua PMI suy yếu. Nếu tăng trưởng giảm nhanh hơn, vài tháng sau thị trường có thể chuyển từ “higher for longer” sang “chính sách (policy / 정책) easing vì suy thoái”.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** tiếp nhận điểm tựa từ **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** nối từ **4. Lớp 1 — Macro: xác định biến thay đổi thật sự** sang **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield
 
@@ -141,7 +141,7 @@ Với tài sản duration dài, real yield tăng 50 bp có thể quan trọng h�
 
 Con số này là xấp xỉ bậc một; convexity, carry và curve shape có thể làm kết quả khác.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock** tiếp nhận điểm tựa từ **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock** nối từ **5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield** sang **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock
 
@@ -175,7 +175,7 @@ Chi phí lãi tăng gần đúng
 
 2,25 không lớn so với EBIT 180, nhưng đây mới là **direct interest tác động (effect / 효과)**. Tác động lớn hơn có thể đến từ khách hàng cắt capex vì WACC tăng và financing khó hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản** tiếp nhận điểm tựa từ **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản** nối từ **6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock** sang **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản
 
@@ -200,7 +200,7 @@ Inventory financing
 
 Nếu khách hàng của công ty phụ thuộc vốn vay để mở rộng fab, liquidity tightening có thể tác động vào đơn hàng mạnh hơn chi phí lãi của chính công ty.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle** tiếp nhận điểm tựa từ **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle** nối từ **7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản** sang **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle
 
@@ -234,7 +234,7 @@ HBM qualification / advanced packaging demand
 
 Không dùng một chỉ tiêu “semiconductor export” để đại diện toàn bộ ngành.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí** tiếp nhận điểm tựa từ **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Lớp 6 — Company: xây shock từ driver, không từ EPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí** nối từ **8. Lớp 4 — Industry: chuyển financial conditions thành capex cycle** sang **10. Lớp 6 — Company: xây shock từ driver, không từ EPS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí
 
@@ -263,7 +263,7 @@ FX translation benefit
 
 Giả định sau phòng vệ, tác động ròng lên doanh thu tương đương khoảng +4%.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **10. Lớp 6 — Company: xây shock từ driver, không từ EPS** tiếp nhận điểm tựa từ **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. FCF sau cú sốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **10. Lớp 6 — Company: xây shock từ driver, không từ EPS** nối từ **9. Lớp 5 — FX: KRW yếu vừa hỗ trợ vừa gây chi phí** sang **11. FCF sau cú sốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Lớp 6 — Company: xây shock từ driver, không từ EPS
 
@@ -299,7 +299,7 @@ EBIT giảm gần 19%
 
 Đây là lý do doanh thu giảm nhẹ không đồng nghĩa earnings rủi ro (risk / 위험) nhỏ.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **11. FCF sau cú sốc** tiếp nhận điểm tựa từ **10. Lớp 6 — Company: xây shock từ driver, không từ EPS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Kiểm tra bảng cân đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **11. FCF sau cú sốc** nối từ **10. Lớp 6 — Company: xây shock từ driver, không từ EPS** sang **12. Kiểm tra bảng cân đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. FCF sau cú sốc
 
@@ -333,7 +333,7 @@ FCF -12%
 
 Ba con số khác nhau do operating leverage, capex và working capital.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **12. Kiểm tra bảng cân đối** tiếp nhận điểm tựa từ **11. FCF sau cú sốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **12. Kiểm tra bảng cân đối** nối từ **11. FCF sau cú sốc** sang **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Kiểm tra bảng cân đối
 
@@ -350,7 +350,7 @@ Khách hàng có thể chậm thanh toán không?
 
 Nếu EBIT giảm nhưng bảng cân đối vẫn khỏe, vấn đề chủ yếu có thể là valuation/cycle. Nếu refinancing wall gần và covenant mỏng, cùng shock có thể biến thành vấn đề sống sót.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)** tiếp nhận điểm tựa từ **12. Kiểm tra bảng cân đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Reverse DCF sau shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)** nối từ **12. Kiểm tra bảng cân đối** sang **14. Reverse DCF sau shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)
 
@@ -390,7 +390,7 @@ Terminal giá trị (value / 값) trong ví dụ giảm khoảng 32,5%.
 
 Đây không phải mục tiêu giá; nó minh họa độ nhạy của valuation khi **cash luồng (flow / 흐름) và discount tỷ lệ (rate / 비율) cùng xấu đi**.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **14. Reverse DCF sau shock** tiếp nhận điểm tựa từ **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Multiples: vì sao P/E có thể gây nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **14. Reverse DCF sau shock** nối từ **13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)** sang **15. Multiples: vì sao P/E có thể gây nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Reverse DCF sau shock
 
@@ -408,7 +408,7 @@ ROIC trên capex mới
 
 Nếu giá hiện tại chỉ hợp lý khi margin quay lại 20% rất nhanh và capex khách hàng không giảm, thesis phụ thuộc nhiều giả định đồng thời.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **14. Reverse DCF sau shock** đã nêu tiêu chí phân biệt, còn **15. Multiples: vì sao P/E có thể gây nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **14. Reverse DCF sau shock** đặt tiêu chí; **15. Multiples: vì sao P/E có thể gây nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** mở rộng hệ quả.
 
 ## 15. Multiples: vì sao P/E có thể gây nhầm
 
@@ -423,7 +423,7 @@ Cổ phiếu “rẻ hơn về giá” nhưng lại **đắt hơn trên earnings
 
 Với doanh nghiệp chu kỳ cần dùng normalized earnings, EV/EBITDA mid-cycle, DCF hoặc reverse DCF thay vì trailing P/E đơn lẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **15. Multiples: vì sao P/E có thể gây nhầm** đã nêu tiêu chí phân biệt, còn **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Portfolio stress có số liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **15. Multiples: vì sao P/E có thể gây nhầm** đặt tiêu chí; **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Portfolio stress có số liệu** mở rộng hệ quả.
 
 ## 16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker
 
@@ -451,7 +451,7 @@ Liquidity stress: trung bình-cao
 
 Cú shock real yield + credit + USD có thể làm nhiều vị thế cùng giảm.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **17. Portfolio stress có số liệu** tiếp nhận điểm tựa từ **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Hedge phải khớp factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **17. Portfolio stress có số liệu** nối từ **16. Lớp 8 — Portfolio: nhìn factor exposure trước ticker** sang **18. Hedge phải khớp factor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Portfolio stress có số liệu
 
@@ -487,7 +487,7 @@ Tổng stress mất mát (loss / 손실) gần đúng:
 
 Điểm cần học không phải con số -13,65%, mà là **10% company position chỉ là một phần; concentration thật nằm trong dùng chung (common / 공통) factors**.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **18. Hedge phải khớp factor** tiếp nhận điểm tựa từ **17. Portfolio stress có số liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. dạng thất bại (failure mode / 실패 모드) của hedge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **18. Hedge phải khớp factor** nối từ **17. Portfolio stress có số liệu** sang **19. dạng thất bại (failure mode / 실패 모드) của hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Hedge phải khớp factor
 
@@ -501,7 +501,7 @@ Nếu mục tiêu là bảo vệ tail mất mát (loss / 손실) nhưng giữ up
 
 Không tồn tại “hedge tốt nhất” độc lập với rủi ro (risk / 위험) cần hedge.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **19. dạng thất bại (failure mode / 실패 모드) của hedge** tiếp nhận điểm tựa từ **18. Hedge phải khớp factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. dữ liệu (data / 데이터) dashboard sau cú sốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **19. dạng thất bại (failure mode / 실패 모드) của hedge** nối từ **18. Hedge phải khớp factor** sang **20. dữ liệu (data / 데이터) dashboard sau cú sốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. dạng thất bại (failure mode / 실패 모드) của hedge
 
@@ -519,7 +519,7 @@ FX exposure thực khác exposure ước tính
 
 Do đó trường hợp (case / 사례) study phải ghi cả **hedge dạng thất bại (failure mode / 실패 모드)**, không chỉ hedge instrument.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **19. dạng thất bại (failure mode / 실패 모드) của hedge** nêu điều cần giải thích; **20. dữ liệu (data / 데이터) dashboard sau cú sốc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Phân biệt dữ kiện, ước tính và giả định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **19. dạng thất bại (failure mode / 실패 모드) của hedge** đặt vấn đề; **20. dữ liệu (data / 데이터) dashboard sau cú sốc** đối chiếu bằng chứng, rồi **21. Phân biệt dữ kiện, ước tính và giả định** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. dữ liệu (data / 데이터) dashboard sau cú sốc
 
@@ -550,7 +550,7 @@ factor exposure, stress loss, liquidity bucket, hedge effectiveness
 
 Đây là dashboard để **cập nhật xác suất**, không phải để tìm một indicator dự báo hoàn hảo.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **20. dữ liệu (data / 데이터) dashboard sau cú sốc** nêu điều cần giải thích; **21. Phân biệt dữ kiện, ước tính và giả định** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **20. dữ liệu (data / 데이터) dashboard sau cú sốc** đặt vấn đề; **21. Phân biệt dữ kiện, ước tính và giả định** đối chiếu bằng chứng, rồi **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Phân biệt dữ kiện, ước tính và giả định
 
@@ -566,7 +566,7 @@ Portfolio shock loss -13,65%     → kết quả kịch bản
 
 Nếu trộn năm lớp này, research ghi chú (note / 노트) dễ tạo cảm giác chắc chắn giả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** tiếp nhận điểm tựa từ **21. Phân biệt dữ kiện, ước tính và giả định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Counterfactual ngược lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** nối từ **21. Phân biệt dữ kiện, ước tính và giả định** sang **23. Counterfactual ngược lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?
 
@@ -583,7 +583,7 @@ Valuation trước shock đã rất thấp
 
 Do đó `macro đúng` không đồng nghĩa `company call đúng`.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **23. Counterfactual ngược lại** tiếp nhận điểm tựa từ **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **23. Counterfactual ngược lại** nối từ **22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?** sang **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Counterfactual ngược lại
 
@@ -600,7 +600,7 @@ Governance / capital allocation yếu
 
 Trường hợp (case / 사례) study tích hợp phải giữ **company-specific rủi ro (risk / 위험)** độc lập với macro.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng** tiếp nhận điểm tựa từ **23. Counterfactual ngược lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Post-mortem và attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng** nối từ **23. Counterfactual ngược lại** sang **25. Post-mortem và attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. vô hiệu hóa (invalidation / 무효화) theo từng tầng
 
@@ -628,7 +628,7 @@ Price đã phản ánh bear case sâu hơn mô hình
 
 Không nên dùng một điều kiện duy nhất cho toàn thesis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **25. Post-mortem và attribution** tiếp nhận điểm tựa từ **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bài tập bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **25. Post-mortem và attribution** nối từ **24. vô hiệu hóa (invalidation / 무효화) theo từng tầng** sang **26. Bài tập bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Post-mortem và attribution
 
@@ -647,7 +647,7 @@ Hedge giảm được bao nhiêu loss?
 
 Một quyết định có thể có kết quả (outcome / 결과) tốt nhưng lô-gic (logic / 논리) sai. Attribution giúp tránh học nhầm từ may mắn.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **26. Bài tập bắt buộc** tiếp nhận điểm tựa từ **25. Post-mortem và attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Đầu ra chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **26. Bài tập bắt buộc** nối từ **25. Post-mortem và attribution** sang **27. Đầu ra chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Bài tập bắt buộc
 
@@ -671,7 +671,7 @@ Portfolio stress loss
 
 Mục tiêu là thấy **kết quả phụ thuộc giả định nào mạnh nhất**.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **27. Đầu ra chuẩn** tiếp nhận điểm tựa từ **26. Bài tập bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Liên kết học tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **27. Đầu ra chuẩn** nối từ **26. Bài tập bắt buộc** sang **28. Liên kết học tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Đầu ra chuẩn
 
@@ -689,7 +689,7 @@ Tạo một ghi chú (note / 노트) gồm:
 09_postmortem_template.md
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, sau nội dung của **27. Đầu ra chuẩn**, **28. Liên kết học tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, sau nội dung của **27. Đầu ra chuẩn**, **28. Liên kết học tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Liên kết học tiếp
 
@@ -704,7 +704,7 @@ Các tài liệu sau mở rộng từng tầng của worked case theo đúng th�
 - [Portfolio Lab](../01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md)
 - [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md)
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **Kết luận** gom các mảnh từ **28. Liên kết học tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục**, **Kết luận** tổng hợp từ **28. Liên kết học tiếp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

@@ -10,7 +10,7 @@ Nếu câu hỏi chứa “ở đâu?”, “gần gì?”, “nằm trong vùng
 
 Quan trọng nhất: **GIS không biến dữ liệu xấu thành kiến thức tốt**. Sai ở đo lường, CRS, thời điểm hay cách lấy mẫu có thể tạo một bản đồ rất đẹp nhưng kết luận sai.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **GIS không phải chỉ là phần mềm vẽ bản đồ** nêu điều cần giải thích; **Từ thế giới thật tới dữ liệu: observation mô hình (model / 모델)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Véc-tơ (vector / 벡터) và raster biểu diễn hai cách nhìn khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** GIS không chỉ vẽ bản đồ mà biến quan sát thành lớp dữ liệu có mô hình, thang đo và sai số. **Từ thế giới thật tới dữ liệu: observation mô hình (model / 모델)** giải thích bước chuyển đó trước khi chọn kiểu biểu diễn.
 
 ## Từ thế giới thật tới dữ liệu: observation mô hình (model / 모델)
 
@@ -22,7 +22,7 @@ Chuỗi suy luận nên là:
 
 Mỗi mũi tên đều có giả định và sai số. Đây là **mô hình quan sát (observation model)**, nền tảng để tránh nhầm dữ liệu với thực tại.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Từ thế giới thật tới dữ liệu: observation mô hình (model / 모델)** nêu điều cần giải thích; **Véc-tơ (vector / 벡터) và raster biểu diễn hai cách nhìn khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CRS là một phần của kiểu dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi thế giới liên tục được rời rạc hóa, vector giữ đối tượng và quan hệ biên, còn raster giữ trường giá trị theo ô. **Véc-tơ (vector / 벡터) và raster biểu diễn hai cách nhìn khác nhau** làm rõ lựa chọn biểu diễn trước khi đặt chúng lên CRS.
 
 ## Véc-tơ (vector / 벡터) và raster biểu diễn hai cách nhìn khác nhau
 
@@ -30,7 +30,7 @@ Mỗi mũi tên đều có giả định và sai số. Đây là **mô hình qua
 
 Không có mô hình “tốt hơn” tuyệt đối. Chuyển véc-tơ (vector / 벡터) sang raster đòi chọn kích thước ô; chuyển raster sang polygon đòi chọn ngưỡng và có thể tạo ranh giới giả. Mỗi phép chuyển đổi đưa thêm giả định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **Véc-tơ (vector / 벡터) và raster biểu diễn hai cách nhìn khác nhau** nêu điều cần giải thích; **CRS là một phần của kiểu dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Topology: “nối với nhau thế nào?” khác “cách nhau bao xa?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vector và raster chỉ có ý nghĩa khi tọa độ được diễn giải trong cùng hệ quy chiếu; đổi CRS có thể đổi khoảng cách, diện tích và vị trí hiển thị. **CRS là một phần của kiểu dữ liệu** đặt nền cho topology và phép đo kế tiếp.
 
 ## CRS là một phần của kiểu dữ liệu
 
@@ -38,7 +38,7 @@ Hai số `x, y` không đủ. Cần **CRS — Coordinate tham chiếu (reference
 
 Nếu dùng buffer `1000` trên dữ liệu độ mà tưởng là mét, lỗi lô-gic (logic / 논리) có thể rất lớn. Vì vậy trong API và cơ sở dữ liệu (database / 데이터베이스), CRS nên được coi như **đơn vị (unit / 단위)/kiểu (type / 타입) đặc tả hợp đồng (contract / 계약)**, không phải siêu dữ liệu (metadata / 메타데이터) tùy chọn.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **CRS là một phần của kiểu dữ liệu** nêu điều cần giải thích; **Topology: “nối với nhau thế nào?” khác “cách nhau bao xa?”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Spatial phép nối (join / 조인) là phép nối theo quan hệ không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** CRS bảo đảm tọa độ cùng nghĩa, còn topology mô tả liền kề, chứa, giao và nối mà khoảng cách không thay thế được. **Spatial phép nối (join / 조인) là phép nối theo quan hệ không gian** dùng các quan hệ đó để ghép thuộc tính.
 
 ## Topology: “nối với nhau thế nào?” khác “cách nhau bao xa?”
 
@@ -46,7 +46,7 @@ GIS quan tâm **topology**: đường nào nối nhau, polygon nào kề nhau, �
 
 Các quan hệ `within`, `contains`, `intersects`, `touches`, `overlaps` có nghĩa hình học cụ thể. Cần chọn đúng predicate thay vì dùng bounding box như kết quả cuối.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Spatial phép nối (join / 조인) là phép nối theo quan hệ không gian** tiếp nhận điểm tựa từ **Topology: “nối với nhau thế nào?” khác “cách nhau bao xa?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục không gian: lọc ứng viên trước, tính chính xác sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial join biến quan hệ hình học thành bảng kết quả, nhưng nhiều đối tượng có thể là ứng viên cùng lúc. **Chỉ mục không gian: lọc ứng viên trước, tính chính xác sau** giải thích cách giảm số cặp phải kiểm tra mà vẫn giữ phép đo chính xác ở bước cuối.
 
 ## Spatial phép nối (join / 조인) là phép nối theo quan hệ không gian
 
@@ -54,7 +54,7 @@ Trong SQL thông thường ta phép nối (join / 조인) bằng ID. Trong GIS t
 
 **Spatial phép nối (join / 조인)** rất mạnh nhưng dễ nhân bản bản ghi khi một tính năng (feature / 기능) khớp nhiều tính năng (feature / 기능). Vì vậy sau phép nối (join / 조인) cần hiểu cardinality và quy tắc tổng hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **Chỉ mục không gian: lọc ứng viên trước, tính chính xác sau** tiếp nhận điểm tựa từ **Spatial phép nối (join / 조인) là phép nối theo quan hệ không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distance: planar, geodesic và mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chỉ mục chỉ lọc ứng viên theo vùng bao hoặc lân cận; kết quả cuối vẫn phụ thuộc định nghĩa khoảng cách. **Distance: planar, geodesic và mạng (network / 네트워크)** phân biệt đo trên mặt phẳng, trên ellipsoid và theo tuyến mạng.
 
 ## Chỉ mục không gian: lọc ứng viên trước, tính chính xác sau
 
@@ -62,7 +62,7 @@ Tính giao polygon phức tạp cho hàng triệu đối tượng rất đắt. 
 
 Đây là mẫu (pattern / 패턴) tương tự tìm kiếm (search / 검색) engine: bước đầu thu hẹp candidates, bước sau tính score chính xác.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Distance: planar, geodesic và mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Chỉ mục không gian: lọc ứng viên trước, tính chính xác sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Raster: resolution, extent và resampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khoảng cách khác nhau theo bề mặt và mạng, còn raster lại phụ thuộc độ phân giải, extent và cách lấy mẫu. **Raster: resolution, extent và resampling** chuyển từ phép đo quan hệ sang chất lượng trường dữ liệu.
 
 ## Distance: planar, geodesic và mạng (network / 네트워크)
 
@@ -70,7 +70,7 @@ Khoảng cách Euclid trên bản đồ phẳng phù hợp phạm vi nhỏ với
 
 Chọn sai distance mô hình (model / 모델) là một lỗi khái niệm, không chỉ lỗi kỹ thuật.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Raster: resolution, extent và resampling** tiếp nhận điểm tựa từ **Distance: planar, geodesic và mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viễn thám đo bức xạ chứ không “nhìn thấy đối tượng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Raster thay đổi khi đổi kích thước ô, phạm vi và phương pháp resampling; chi tiết hiển thị không tự động là thông tin thật. **Viễn thám đo bức xạ chứ không “nhìn thấy đối tượng”** tiếp theo giải thích tín hiệu tạo ra raster ảnh.
 
 ## Raster: resolution, extent và resampling
 
@@ -78,7 +78,7 @@ Raster có kích thước điểm ảnh (pixel / 픽셀), phạm vi và alignmen
 
 Khi đổi resolution, **nearest neighbor** phù hợp lớp phân loại; bilinear/cubic phù hợp hơn dữ liệu liên tục nhưng làm thay đổi giá trị. Resampling không tạo thông tin mới; nó chỉ nội suy hoặc tái biểu diễn dữ liệu đã có.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **Viễn thám đo bức xạ chứ không “nhìn thấy đối tượng”** tiếp nhận điểm tựa từ **Raster: resolution, extent và resampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bốn loại độ phân giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ảnh viễn thám ghi bức xạ phản xạ hoặc phát ra, rồi người phân tích suy ra đối tượng bằng mô hình và ngữ cảnh. **Bốn loại độ phân giải** tách các giới hạn cảm biến, thời gian, phổ và không gian của suy luận ấy.
 
 ## Viễn thám đo bức xạ chứ không “nhìn thấy đối tượng”
 
@@ -86,7 +86,7 @@ Cảm biến ghi năng lượng điện từ ở các dải bước sóng. Từ 
 
 **Dấu hiệu phổ (spectral signature)** khác nhau giữa nước, đất, thực vật và vật liệu xây dựng, nhưng bị ảnh hưởng bởi góc Mặt Trời, khí quyển, mùa và độ ẩm. Vì vậy classification là suy luận, không phải nhãn được vệ tinh đọc trực tiếp.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Bốn loại độ phân giải** tiếp nhận điểm tựa từ **Viễn thám đo bức xạ chứ không “nhìn thấy đối tượng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NDVI và giới hạn của chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bốn loại độ phân giải quyết định khi nào hai đối tượng bị trộn, khi nào tín hiệu cũ đã lỗi thời và khi nào phổ không phân biệt được vật liệu. **NDVI và giới hạn của chỉ mục (index / 인덱스)** là ví dụ cụ thể về chỉ mục phụ thuộc các giới hạn đó.
 
 ## Bốn loại độ phân giải
 
@@ -99,7 +99,7 @@ Trước khi chọn sensor hoặc sản phẩm raster, cần xác định mình 
 
 Không có sensor tốt nhất cho mọi bài toán. Theo dõi cây trồng theo tuần có thể ưu tiên temporal resolution; nhận diện mái nhà cần spatial resolution cao hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Bốn loại độ phân giải** đã nêu tiêu chí phân biệt, còn **NDVI và giới hạn của chỉ mục (index / 인덱스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Atmospheric correction, cloud mask và preprocessing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** NDVI tóm tắt tương phản phổ của thảm thực vật nhưng chịu ảnh hưởng đất trống, mây, góc chiếu và mùa vụ. **Atmospheric correction, cloud mask và preprocessing** xử lý các nguồn nhiễu trước khi diễn giải chỉ mục.
 
 ## NDVI và giới hạn của chỉ mục (index / 인덱스)
 
@@ -109,7 +109,7 @@ NDVI=\frac{NIR-Red}{NIR+Red}
 
 NDVI tận dụng việc thực vật khỏe thường phản xạ NIR mạnh và hấp thụ đỏ. Nhưng NDVI có thể bão hòa ở tán dày, bị ảnh hưởng nền đất, mây và mùa. Một chỉ mục (index / 인덱스) là **proxy**, không phải biến sinh học cần đo trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **NDVI và giới hạn của chỉ mục (index / 인덱스)** đã nêu tiêu chí phân biệt, còn **Atmospheric correction, cloud mask và preprocessing** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **DEM và dòng chảy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Preprocessing làm tín hiệu giữa các ảnh có thể so sánh hơn, nhưng không thay thế mô hình địa hình và cơ chế dòng chảy. **DEM và dòng chảy** chuyển dữ liệu đã hiệu chỉnh thành hướng dốc, lưu vực và mạng nước.
 
 ## Atmospheric correction, cloud mask và preprocessing
 
@@ -117,7 +117,7 @@ NDVI tận dụng việc thực vật khỏe thường phản xạ NIR mạnh v�
 
 Nếu ảnh năm A dùng surface reflectance còn năm B dùng top-of-atmosphere reflectance, chênh lệch có thể đến từ chuỗi xử lý (pipeline / 파이프라인) thay vì thay đổi bề mặt.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Atmospheric correction, cloud mask và preprocessing** xác định đầu vào; **DEM và dòng chảy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mạng (network / 네트워크) phân tích (analysis / 분석) và routing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** DEM biến độ cao thành hướng dốc, dòng chảy và lưu vực, nhưng nhiều bài toán còn cần chi phí di chuyển qua cạnh và node. **Mạng (network / 네트워크) phân tích (analysis / 분석) và routing** tiếp theo đưa địa hình vào bài toán tuyến.
 
 ## DEM và dòng chảy
 
@@ -125,7 +125,7 @@ Nếu ảnh năm A dùng surface reflectance còn năm B dùng top-of-atmosphere
 
 Hydrologic preprocessing như fill/breach depression có thể cần thiết, nhưng cũng là quyết định mô hình. Không nên coi mọi dòng suy ra từ DEM là sông thật.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Mạng (network / 네트워크) phân tích (analysis / 분석) và routing** tiếp nhận điểm tựa từ **DEM và dòng chảy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spatial autocorrelation và thống kê không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Routing tìm đường tối ưu theo trọng số, không chỉ theo khoảng cách, và có thể thay đổi khi mạng bị đứt. **Spatial autocorrelation và thống kê không gian** chuyển từ đường đi sang mẫu phân bố và sự phụ thuộc giữa các vị trí.
 
 ## Mạng (network / 네트워크) phân tích (analysis / 분석) và routing
 
@@ -133,7 +133,7 @@ Bản đồ đường được chuyển thành đồ thị (graph / 그래프) v
 
 **A***, Dijkstra và contraction hierarchy là thuật toán; chất lượng kết quả vẫn phụ thuộc chất lượng đồ thị (graph / 그래프) và chi phí (cost / 비용) mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **Spatial autocorrelation và thống kê không gian** tiếp nhận điểm tựa từ **Mạng (network / 네트워크) phân tích (analysis / 분석) và routing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geocoding và địa chỉ là dữ liệu xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Autocorrelation cho biết các giá trị gần nhau có xu hướng giống nhau hay khác nhau, giúp tránh coi các điểm là độc lập. **Geocoding và địa chỉ là dữ liệu xã hội** nhắc rằng chính vị trí và tên gọi cũng được tạo bởi thể chế và đời sống.
 
 ## Spatial autocorrelation và thống kê không gian
 
@@ -141,7 +141,7 @@ Dữ liệu gần nhau thường không độc lập. **Moran's I** hoặc các 
 
 Nếu train/kiểm thử (test / 테스트) machine học tập (learning / 학습) bằng cách chia ngẫu nhiên điểm ảnh (pixel / 픽셀) liền kề, mô hình có thể hưởng lợi từ **spatial leakage** và đánh giá quá lạc quan. Spatial cross-validation theo khối (block / 블록) hoặc vùng thường phù hợp hơn cho khả năng tổng quát địa lý.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Spatial autocorrelation và thống kê không gian** nêu điều cần giải thích; **Geocoding và địa chỉ là dữ liệu xã hội** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **GNSS và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Địa chỉ và geocoding có thể lệch do tên đường, mã vùng, ngôn ngữ và khả năng được đăng ký; điểm tọa độ không hoàn toàn trung tính. **GNSS và bất định (uncertainty / 불확실성)** tiếp theo đo vị trí, sai số và nguồn bất định của nó.
 
 ## Geocoding và địa chỉ là dữ liệu xã hội
 
@@ -149,7 +149,7 @@ Nếu train/kiểm thử (test / 테스트) machine học tập (learning / 학�
 
 Một geocoder trả điểm không có nghĩa vị trí chính xác tới cửa. Cần lưu chất lượng (quality / 품질) score hoặc match kiểu (type / 타입) nếu ứng dụng nhạy với sai số.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Geocoding và địa chỉ là dữ liệu xã hội** nêu điều cần giải thích; **GNSS và bất định (uncertainty / 불확실성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dữ liệu thời gian–không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** GNSS cung cấp vị trí có độ chính xác, hình học vệ tinh và điều kiện thu tín hiệu riêng; tọa độ luôn cần metadata về sai số. **Dữ liệu thời gian–không gian** tiếp theo thêm chiều biến đổi để tránh coi điểm đo là bất biến.
 
 ## GNSS và bất định (uncertainty / 불확실성)
 
@@ -157,7 +157,7 @@ GNSS suy vị trí từ tín hiệu vệ tinh trong hệ tham chiếu. Sai số 
 
 Đối với geofencing nhỏ, một tọa độ nên được hiểu cùng **bất định (uncertainty / 불확실성) radius**. Nếu lô-gic (logic / 논리) nghiệp vụ kích hoạt đúng tại ranh giới, hysteresis hoặc dwell thời gian (time / 시간) giúp giảm trạng thái vào–ra liên tục do nhiễu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **GNSS và bất định (uncertainty / 불확실성)** nêu điều cần giải thích; **Dữ liệu thời gian–không gian** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kiểm tra hợp lệ (validation / 검증): accuracy không chỉ là một số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dữ liệu không gian–thời gian cần đồng bộ timestamp, phiên bản, độ trễ và thay đổi của đối tượng, không chỉ thêm một cột thời gian. **Kiểm tra hợp lệ (validation / 검증): accuracy không chỉ là một số** đánh giá dữ liệu có phù hợp mục đích và thời điểm hay không.
 
 ## Dữ liệu thời gian–không gian
 
@@ -165,7 +165,7 @@ Nhiều hiện tượng thay đổi theo thời gian: traffic, nhiệt độ, v�
 
 Thiết kế **spatiotemporal dữ liệu (data / 데이터)** cần timestamp/validity interval và cân nhắc đối tượng (object / 객체) thay đổi hình học. Câu hỏi “ở đâu?” thường phải đi cùng “khi nào?”.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Dữ liệu thời gian–không gian** nêu điều cần giải thích; **Kiểm tra hợp lệ (validation / 검증): accuracy không chỉ là một số** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ethics và privacy của location dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Validation phải tách độ chính xác hình học, độ đúng thuộc tính, độ đầy đủ và độ phù hợp với quyết định; một số accuracy đơn lẻ không đủ. **Ethics và privacy của location dữ liệu (data / 데이터)** đưa thêm câu hỏi ai bị phơi lộ khi dữ liệu đúng hơn.
 
 ## Kiểm tra hợp lệ (validation / 검증): accuracy không chỉ là một số
 
@@ -173,7 +173,7 @@ Bản đồ phân loại cần ground truth và confusion ma trận (matrix / �
 
 Kiểm tra hợp lệ (validation / 검증) mẫu (sample / 표본) phải đại diện không gian; chỉ lấy mẫu gần đường sẽ độ lệch (bias / 편향) vùng dễ tiếp cận.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu không gian, GIS và viễn thám**, **Kiểm tra hợp lệ (validation / 검증): accuracy không chỉ là một số** nêu điều cần giải thích; **Ethics và privacy của location dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Workflow GIS đáng tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Location data có thể suy ra nhà ở, sức khỏe, tôn giáo, thói quen và quan hệ; độ chính xác cao làm tăng cả giá trị lẫn rủi ro. **Workflow GIS đáng tin cậy** gom provenance, quyền truy cập, kiểm tra và công bố có trách nhiệm.
 
 ## Ethics và privacy của location dữ liệu (data / 데이터)
 
@@ -181,7 +181,7 @@ Quỹ đạo vị trí có thể tái nhận dạng dù bỏ tên vì nhà–nơ
 
 Bản đồ cũng có thể làm lộ vị trí nhạy cảm. “Có thể vẽ” không đồng nghĩa “nên công bố”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu không gian, GIS và viễn thám**, **Ethics và privacy của location dữ liệu (data / 데이터)** nêu điều cần giải thích; **Workflow GIS đáng tin cậy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Workflow đáng tin cậy phải ghi nguồn, CRS, phiên bản, phép biến đổi, bất định, quyền riêng tư và cách kiểm tra kết quả. **Mô hình tư duy** cô đọng toàn bộ chuỗi từ quan sát đến quyết định để người học áp dụng sang dự án mới.
 
 ## Workflow GIS đáng tin cậy
 
@@ -193,7 +193,7 @@ Bản đồ cũng có thể làm lộ vị trí nhạy cảm. “Có thể vẽ�
 6. Trực quan hóa mà không che bất định (uncertainty / 불확실성).
 7. Ghi lại provenance để có thể tái lập.
 
-> **Chuyển mạch:** Trong **Dữ liệu không gian, GIS và viễn thám**, **Mô hình tư duy** gom các mảnh từ **Workflow GIS đáng tin cậy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi thế giới thật → mô hình dữ liệu → vector/raster và CRS → topology, join, distance và raster → viễn thám, resolution, preprocessing → DEM, network, spatial statistics, geocoding, GNSS → thời gian, validation, ethics và workflow. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang atlas và các phân tích vùng.
 
 ## Mô hình tư duy
 

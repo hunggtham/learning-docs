@@ -32,7 +32,7 @@ Kiểm thử (test / 테스트) nên nhắm vào bất biến (invariant / 불�
 
 ---
 
-> **Chuyển mạch:** Test phải chứng minh contract và failure behavior; pyramid chỉ là heuristic, còn fake stateful collaborator giúp kiểm thử state transition có bằng chứng.
+> **Nối mạch:** Test phải chứng minh contract và failure behavior; pyramid chỉ là heuristic, còn fake stateful collaborator giúp kiểm thử state transition có bằng chứng.
 
 ## 2. kiểm thử (test / 테스트) pyramid không phải tỷ lệ cứng
 
@@ -56,7 +56,7 @@ Tầng kiểm thử (test / 테스트) nên tương ứng ranh giới (boundary 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **2. kiểm thử (test / 테스트) pyramid không phải tỷ lệ cứng** cho ta quy tắc; **3. Fake thường tốt hơn mock cho stateful collaborator** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **2. kiểm thử (test / 테스트) pyramid không phải tỷ lệ cứng** nêu quy tắc; **3. Fake thường tốt hơn mock cho stateful collaborator** thử quy tắc trong tình huống, rồi **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** mở rộng hệ quả.
 
 ## 3. Fake thường tốt hơn mock cho stateful collaborator
 
@@ -91,7 +91,7 @@ Mock vẫn hữu ích để verify ranh giới (boundary / 경계) side tác đ�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **3. Fake thường tốt hơn mock cho stateful collaborator** cho ta quy tắc; **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **3. Fake thường tốt hơn mock cho stateful collaborator** nêu quy tắc; **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** thử quy tắc trong tình huống, rồi **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** mở rộng hệ quả.
 
 ## 4. kiểm thử (test / 테스트) double phải có fidelity phù hợp
 
@@ -111,7 +111,7 @@ Chọn kiểm thử (test / 테스트) double theo dạng thất bại (failure 
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** đã nêu tiêu chí phân biệt, còn **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **4. kiểm thử (test / 테스트) double phải có fidelity phù hợp** đặt tiêu chí; **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** dùng tiêu chí đó để kiểm tra ranh giới, rồi **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** mở rộng hệ quả.
 
 ## 5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend
 
@@ -133,7 +133,7 @@ Một đặc tả hợp đồng (contract / 계약) fixture nên lấy từ API 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** đã nêu tiêu chí phân biệt, còn **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **5. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) bảo vệ ranh giới (boundary / 경계) giữa app và backend** đặt tiêu chí; **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** mở rộng hệ quả.
 
 ## 6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao
 
@@ -156,7 +156,7 @@ Backend evolution thường phá app ở serialization ranh giới (boundary / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** tiếp nhận điểm tựa từ **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** nối từ **6. Serialization kiểm thử (test / 테스트) là regression kiểm thử (test / 테스트) rẻ nhưng giá trị cao** sang **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ
 
@@ -175,7 +175,7 @@ Nếu app có nhiều phiên bản (version / 버전) ngoài thị trường, c�
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** nối từ **7. di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) thật của phiên bản (version / 버전) cũ** sang **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)
 
@@ -196,7 +196,7 @@ Testing bản phát hành (release / 릴리스) không dừng ở “latest app 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn** tiếp nhận điểm tựa từ **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn** nối từ **8. di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) khác quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** sang **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn
 
@@ -225,7 +225,7 @@ Property-based kiểm thử (test / 테스트) bắt combination mà nhà phát 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ** tiếp nhận điểm tựa từ **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ** nối từ **9. Property-based testing hữu ích cho bất biến (invariant / 불변식) lớn** sang **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ
 
@@ -248,7 +248,7 @@ Kiểu (type / 타입)/máy trạng thái (state machine / 상태 머신) rõ gi
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)** tiếp nhận điểm tựa từ **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)** nối từ **10. máy trạng thái (state machine / 상태 머신) kiểm thử (test / 테스트) nên kiểm tra chuyển tiếp (transition / 전이) hợp lệ** sang **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)
 
@@ -275,7 +275,7 @@ Virtual thời gian (time / 시간) làm kiểm thử (test / 테스트) nhanh v
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)** xác định đầu vào; **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **11. Coroutine kiểm thử (test / 테스트) phải deterministic theo virtual thời gian (time / 시간)** đặt đầu vào cho **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)**, rồi **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)
 
@@ -302,7 +302,7 @@ Cleanup đường dẫn (path / 경로) là part của Đặc tả API (API cont
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)** xác định đầu vào; **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **12. kiểm thử (test / 테스트) cancellation đường dẫn (path / 경로)** đặt đầu vào cho **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)**, rồi **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)
 
@@ -330,7 +330,7 @@ assert state vẫn là result B
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** tiếp nhận điểm tựa từ **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** nối từ **13. Race kiểm thử (test / 테스트) phải điều khiển thứ tự (ordering / 순서)** sang **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát
 
@@ -350,7 +350,7 @@ Mỗi thất bại (failure / 실패) nên map tới một expected khôi phục
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** xác định đầu vào; **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **14. thất bại (failure / 실패) injection tốt hơn random chaos không kiểm soát** đặt đầu vào cho **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction**, rồi **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction
 
@@ -377,7 +377,7 @@ Tiến trình (process / 프로세스) death kiểm thử (test / 테스트) ph�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction** xác định đầu vào; **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **15. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) nên là acceptance kiểm thử (test / 테스트) cho trạng thái (state / 상태) reconstruction** đặt đầu vào cho **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng**, rồi **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng
 
@@ -397,7 +397,7 @@ App phải degrade/re-request hợp lý, không crash vì assume permission perm
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** nối từ **16. Permission revoke là thời gian chạy (runtime / 런타임) kiểm thử (test / 테스트) quan trọng** sang **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)
 
@@ -424,7 +424,7 @@ Mobile mạng (network / 네트워크) thực tế không nhị phân (binary / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)** nối từ **17. mạng (network / 네트워크) flapping kiểm thử (test / 테스트)** sang **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)
 
@@ -438,7 +438,7 @@ Dùng hai loại kiểm thử (test / 테스트) cho hai đặc tả hợp đồ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)** nối từ **18. Snapshot/screenshot kiểm thử (test / 테스트) không thay ngữ nghĩa (semantics / 의미론) kiểm thử (test / 테스트)** sang **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)
 
@@ -458,7 +458,7 @@ Kiểm thử (test / 테스트) ngữ nghĩa (semantic / 의미적) intent bền
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated** tiếp nhận điểm tựa từ **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated** nối từ **19. Compose UI kiểm thử (test / 테스트) nên assert hành vi (behavior / 동작) qua ngữ nghĩa (semantics / 의미론)** sang **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated
 
@@ -481,7 +481,7 @@ Khả năng tiếp cận (accessibility / 접근성) là tương tác (interacti
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold** tiếp nhận điểm tựa từ **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold** nối từ **20. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) cần manual + automated** sang **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold
 
@@ -506,7 +506,7 @@ Threshold phải gắn với baseline/sản phẩm (product / 제품) SLO.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)** tiếp nhận điểm tựa từ **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Baseline Profile phải được đo tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)** nối từ **21. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải có chỉ số (metric / 지표) trước khi có threshold** sang **23. Baseline Profile phải được đo tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)
 
@@ -525,7 +525,7 @@ navigate tab
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **23. Baseline Profile phải được đo tác động (effect / 효과)** tiếp nhận điểm tựa từ **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **23. Baseline Profile phải được đo tác động (effect / 효과)** nối từ **22. Macrobenchmark đo người dùng (user / 사용자) journey, không chỉ hàm (function / 함수)** sang **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Baseline Profile phải được đo tác động (effect / 효과)
 
@@ -544,7 +544,7 @@ Profile generator cũng cần cover trọng yếu (critical / 중요) người d
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)** tiếp nhận điểm tựa từ **23. Baseline Profile phải được đo tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)** nối từ **23. Baseline Profile phải được đo tác động (effect / 효과)** sang **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)
 
@@ -554,7 +554,7 @@ Benchmark trên gỡ lỗi (debug / 디버그) rồi kết luận môi trường
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt** tiếp nhận điểm tựa từ **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt** nối từ **24. hiệu năng (performance / 성능) kiểm thử (test / 테스트) nên chạy release-like bản dựng (build / 빌드)** sang **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt
 
@@ -573,7 +573,7 @@ Nhánh học (track / 트랙) flake tỷ lệ (rate / 비율) như môi trườn
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn** tiếp nhận điểm tựa từ **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn** nối từ **25. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt** sang **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn
 
@@ -593,7 +593,7 @@ Thử lại (retry / 재시도) chỉ là mitigation tạm thời.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)** nối từ **26. Không sửa flaky bằng thử lại (retry / 재시도) vô hạn** sang **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)
 
@@ -613,7 +613,7 @@ Một kiểm thử (test / 테스트) pass riêng nhưng thất bại (fail / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)** tiếp nhận điểm tựa từ **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Random nên seed hoặc inject** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)** nối từ **27. kiểm thử (test / 테스트) isolation cần điều khiển (control / 제어) toàn cục (global / 전역) trạng thái (state / 상태)** sang **29. Random nên seed hoặc inject**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)
 
@@ -639,7 +639,7 @@ Kiểm thử (test / 테스트) dùng fixed clock.
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **29. Random nên seed hoặc inject** tiếp nhận điểm tựa từ **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **29. Random nên seed hoặc inject** nối từ **28. Clock nên inject khi lô-gic (logic / 논리) phụ thuộc thời gian (time / 시간)** sang **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Random nên seed hoặc inject
 
@@ -649,7 +649,7 @@ Môi trường vận hành (production / 운영 환경) vẫn random; kiểm th�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)** tiếp nhận điểm tựa từ **29. Random nên seed hoặc inject** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)** nối từ **29. Random nên seed hoặc inject** sang **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)
 
@@ -672,7 +672,7 @@ Từ đó thiết kế sự kiện (event / 이벤트)/log lược đồ (schema
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)** tiếp nhận điểm tựa từ **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Structured log tốt hơn free-text log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)** nối từ **30. khả năng quan sát (observability / 관측 가능성) bắt đầu từ câu hỏi sự cố (incident / 인시던트)** sang **32. Structured log tốt hơn free-text log**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)
 
@@ -692,7 +692,7 @@ Không dùng PII làm correlation key.
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **32. Structured log tốt hơn free-text log** tiếp nhận điểm tựa từ **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Crash log không đủ cho ANR/jank** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **32. Structured log tốt hơn free-text log** nối từ **31. Correlation ID nối mobile sự kiện (event / 이벤트) xuyên tầng (layer / 계층)** sang **33. Crash log không đủ cho ANR/jank**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Structured log tốt hơn free-text log
 
@@ -717,7 +717,7 @@ Structured dữ liệu (data / 데이터) truy vấn (query / 쿼리)/aggregate 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **33. Crash log không đủ cho ANR/jank** tiếp nhận điểm tựa từ **32. Structured log tốt hơn free-text log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **33. Crash log không đủ cho ANR/jank** nối từ **32. Structured log tốt hơn free-text log** sang **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Crash log không đủ cho ANR/jank
 
@@ -733,7 +733,7 @@ App “crash-free 99.9%” vẫn có thể UX rất tệ vì ANR/jank.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile** tiếp nhận điểm tựa từ **33. Crash log không đủ cho ANR/jank** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile** nối từ **33. Crash log không đủ cho ANR/jank** sang **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile
 
@@ -752,7 +752,7 @@ SLO biến “app ổn” thành mục tiêu (target / 대상) measurable.
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau** tiếp nhận điểm tựa từ **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau** nối từ **34. độ tin cậy (reliability / 신뢰성) SLI/SLO cho mobile** sang **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau
 
@@ -772,7 +772,7 @@ Nếu telemetry chỉ có CPU/bộ nhớ (memory / 메모리) mà không có jou
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing** tiếp nhận điểm tựa từ **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Rollout theo cohort giảm blast radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing** nối từ **35. sản phẩm (product / 제품) success chỉ số (metric / 지표) và technical chỉ số (metric / 지표) phải nối nhau** sang **37. Rollout theo cohort giảm blast radius**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing
 
@@ -799,7 +799,7 @@ Flag tồn tại mãi tạo branching debt.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **37. Rollout theo cohort giảm blast radius** tiếp nhận điểm tựa từ **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **37. Rollout theo cohort giảm blast radius** nối từ **36. cờ tính năng (feature flag / 기능 플래그) là độ tin cậy (reliability / 신뢰성) công cụ (tool / 도구), không chỉ A/B testing** sang **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Rollout theo cohort giảm blast radius
 
@@ -817,7 +817,7 @@ Nếu chỉ số (metric / 지표) regress, stop/quay lui (rollback / 롤백) tr
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **37. Rollout theo cohort giảm blast radius** nêu điều cần giải thích; **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **37. Rollout theo cohort giảm blast radius** đặt vấn đề; **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích** đối chiếu bằng chứng, rồi **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích
 
@@ -835,7 +835,7 @@ Bản phát hành (release / 릴리스) thiết kế (design / 설계) phải xe
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích** nêu điều cần giải thích; **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **38. quay lui (rollback / 롤백) chỉ an toàn nếu dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) tương thích** đặt vấn đề; **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** đối chiếu bằng chứng, rồi **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey
 
@@ -856,7 +856,7 @@ upgrade from previous production
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** tiếp nhận điểm tựa từ **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Postmortem phải tìm hệ thống (system / 시스템) cause** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** nối từ **39. Canary/nội bộ (internal / 내부) nhánh học (track / 트랙) nên có representative người dùng (user / 사용자) journey** sang **41. Postmortem phải tìm hệ thống (system / 시스템) cause**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific
 
@@ -876,7 +876,7 @@ Runbook giảm quyết định (decision / 결정) độ trễ (latency / 지연
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **41. Postmortem phải tìm hệ thống (system / 시스템) cause** tiếp nhận điểm tựa từ **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **41. Postmortem phải tìm hệ thống (system / 시스템) cause** nối từ **40. sự cố (incident / 인시던트) phản hồi (response / 응답) cần runbook mobile-specific** sang **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Postmortem phải tìm hệ thống (system / 시스템) cause
 
@@ -900,7 +900,7 @@ Mục tiêu là giảm recurrence, không tìm người chịu lỗi.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based** tiếp nhận điểm tựa từ **41. Postmortem phải tìm hệ thống (system / 시스템) cause** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based** nối từ **41. Postmortem phải tìm hệ thống (system / 시스템) cause** sang **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based
 
@@ -921,7 +921,7 @@ Kiểm thử (test / 테스트) độ sâu (depth / 깊이) nên tỷ lệ với
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)** tiếp nhận điểm tựa từ **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)** nối từ **42. kiểm thử (test / 테스트) ma trận (matrix / 행렬) nên risk-based** sang **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)
 
@@ -931,7 +931,7 @@ Emulator vẫn rất tốt cho deterministic API-level ma trận (matrix / 행�
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ** tiếp nhận điểm tựa từ **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Reliability review checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ** nối từ **43. “Works on emulator” không đủ cho hardware tính năng (feature / 기능)** sang **45. Reliability review checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ
 
@@ -957,7 +957,7 @@ Chaos không thay specification.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **45. Reliability review checklist** tiếp nhận điểm tựa từ **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **45. Reliability review checklist** nối từ **44. Chaos kiểm thử (test / 테스트) có giá trị khi bất biến (invariant / 불변식) rõ** sang **46. Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Reliability review checklist
 Phần này nối mạch Android vừa học với “45. Reliability review checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -977,7 +977,7 @@ Phần này nối mạch Android vừa học với “45. Reliability review che
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **46. Kết luận** gom các mảnh từ **45. Reliability review checklist** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 05 — Testing, độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성) và thất bại (failure / 실패) Injection**, **46. Kết luận** tổng hợp từ **45. Reliability review checklist** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 46. Kết luận
 

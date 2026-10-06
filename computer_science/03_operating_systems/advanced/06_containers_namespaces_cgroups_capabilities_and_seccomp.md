@@ -23,7 +23,7 @@ Docker/Kubernetes xây lớp trừu tượng (abstraction / 추상화) cao hơn 
 
 > bộ chứa (container / 컨테이너) là một **hợp đồng cô lập (isolation contract)** được ghép từ nhiều cơ chế kernel, không phải một lớp ảo hóa duy nhất.
 
-> **Chuyển mạch:** Container là tổ hợp namespaces, cgroups và security controls; namespace đổi thế giới nhìn thấy, còn PID 1 nhận trách nhiệm signal/reaping riêng trong không gian đó.
+> **Nối mạch:** Container là tổ hợp namespaces, cgroups và security controls; namespace đổi thế giới nhìn thấy, còn PID 1 nhận trách nhiệm signal/reaping riêng trong không gian đó.
 
 ## 2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”
 
@@ -35,7 +35,7 @@ Mount không gian tên (namespace / 네임스페이스) cho mỗi nhóm tiến t
 
 Điểm quan trọng: không gian tên (namespace / 네임스페이스) chủ yếu giải quyết **visibility và naming**, không tự giới hạn lượng CPU/RAM mà tiến trình (process / 프로세스) tiêu thụ.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt** tiếp nhận điểm tựa từ **2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt** nối từ **2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”** sang **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt
 
@@ -45,7 +45,7 @@ Nếu ứng dụng (application / 애플리케이션) chạy trực tiếp làm 
 
 Vấn đề này cho thấy lớp trừu tượng (abstraction / 추상화) bộ chứa (container / 컨테이너) không xóa ngữ nghĩa (semantics / 의미론) của OS; ngược lại, ứng dụng (application / 애플리케이션) đôi khi tiếp xúc trực tiếp hơn với chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem** tiếp nhận điểm tựa từ **3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem** nối từ **3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt** sang **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem
 
@@ -55,7 +55,7 @@ Bộ chứa (container / 컨테이너) có thể thấy một filesystem cây (t
 
 Điều này tiết kiệm lưu trữ (storage / 저장소) nhưng có chi phí siêu dữ liệu (metadata / 메타데이터) và I/O. cơ sở dữ liệu (database / 데이터베이스) có tải công việc (workload / 워크로드) ghi nặng thường không nên coi writable ảnh (image / 이미지) tầng (layer / 계층) như lưu trữ (storage / 저장소) bền vững chính; volume/bind mount phù hợp hơn.
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng** tiếp nhận điểm tựa từ **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng** nối từ **4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem** sang **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng
 
@@ -75,7 +75,7 @@ Packet có thể đi qua routing, NAT, conntrack và firewall quy tắc (rule / 
 
 Khi gỡ lỗi (debug / 디버그) độ trễ (latency / 지연 시간) hoặc packet mất mát (loss / 손실), cần biết packet thực sự đi qua những không gian tên (namespace / 네임스페이스) và quy tắc (rule / 규칙) nào thay vì chỉ nhìn dịch vụ (service / 서비스) name của Kubernetes.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng** nêu điều cần giải thích; **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. CPU quota không tương đương CPU riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng** đặt vấn đề; **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)** kiểm tra bằng chứng, rồi **7. CPU quota không tương đương CPU riêng** mở rộng hệ quả.
 
 ## 6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)
 
@@ -83,7 +83,7 @@ Khi gỡ lỗi (debug / 디버그) độ trễ (latency / 지연 시간) hoặc 
 
 Không gian tên (namespace / 네임스페이스) trả lời “tiến trình (process / 프로세스) nhìn thấy gì”; cgroup trả lời “tiến trình (process / 프로세스) được dùng bao nhiêu”. Hai khái niệm thường xuất hiện cùng bộ chứa (container / 컨테이너) nhưng giải quyết vấn đề khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)** nêu điều cần giải thích; **7. CPU quota không tương đương CPU riêng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)** đặt vấn đề; **7. CPU quota không tương đương CPU riêng** kiểm tra bằng chứng, rồi **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** mở rộng hệ quả.
 
 ## 7. CPU quota không tương đương CPU riêng
 
@@ -93,7 +93,7 @@ Quota có thể được mô hình hóa bằng ngân sách CPU trong một kho�
 
 Đây là lý do chỉ số (metric / 지표) `CPU usage` đơn lẻ không đủ. Cần quan sát throttled thời gian (time / 시간), run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **7. CPU quota không tương đương CPU riêng** đã nêu tiêu chí phân biệt, còn **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. CPU quota không tương đương CPU riêng** đặt tiêu chí; **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** dùng nó để kiểm tra ranh giới, rồi **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** mở rộng hệ quả.
 
 ## 8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)
 
@@ -103,7 +103,7 @@ Nhưng bộ nhớ (memory / 메모리) accounting không đơn giản chỉ là 
 
 Một JVM đặt vùng nhớ động (heap / 힙) gần bằng bộ chứa (container / 컨테이너) giới hạn bộ nhớ (memory limit / 메모리 제한) có thể vẫn bị OOMKill vì bản địa (native / 네이티브) bộ nhớ (memory / 메모리), luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), direct buffer, JIT siêu dữ liệu (metadata / 메타데이터) và page bộ nhớ đệm (cache / 캐시) cần không gian riêng.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** đã nêu tiêu chí phân biệt, còn **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)** đặt tiêu chí; **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** dùng nó để kiểm tra ranh giới, rồi **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** mở rộng hệ quả.
 
 ## 9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)
 
@@ -111,7 +111,7 @@ Người dùng (user / 사용자) không gian tên (namespace / 네임스페이�
 
 Tuy nhiên, “rootless” không tự động có nghĩa là an toàn tuyệt đối. Kernel vẫn là dùng chung (shared / 공유) attack surface và cấu hình không gian tên (namespace / 네임스페이스)/năng lực (capability / 역량)/filesystem vẫn quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** tiếp nhận điểm tựa từ **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Seccomp thu hẹp syscall surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** nối từ **9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)** sang **11. Seccomp thu hẹp syscall surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Linux capabilities chia nhỏ quyền gốc (root / 루트)
 
@@ -121,7 +121,7 @@ Bộ chứa (container / 컨테이너) nên chỉ giữ năng lực (capability 
 
 Nguyên tắc ở đây là **đặc quyền tối thiểu (least privilege)**: ứng dụng (application / 애플리케이션) web không cần quyền quản trị mạng (network / 네트워크) hoặc mount filesystem chỉ vì nó chạy trong bộ chứa (container / 컨테이너).
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **11. Seccomp thu hẹp syscall surface** tiếp nhận điểm tựa từ **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Seccomp thu hẹp syscall surface** nối từ **10. Linux capabilities chia nhỏ quyền gốc (root / 루트)** sang **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Seccomp thu hẹp syscall surface
 
@@ -138,7 +138,7 @@ namespace
 + read-only filesystem
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel** tiếp nhận điểm tựa từ **11. Seccomp thu hẹp syscall surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Cgroups và Kubernetes requests/limits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel** nối từ **11. Seccomp thu hẹp syscall surface** sang **13. Cgroups và Kubernetes requests/limits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel
 
@@ -146,7 +146,7 @@ VM thường đặt guest sau ranh giới (boundary / 경계) hypervisor và gue
 
 Do đó threat mô hình (model / 모델) quyết định isolation technology. Multi-tenant tải công việc (workload / 워크로드) không tin cậy có thể cần VM, microVM hoặc sandbox bổ sung thay vì chỉ bộ chứa (container / 컨테이너) tiêu chuẩn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel** đã nêu tiêu chí phân biệt, còn **13. Cgroups và Kubernetes requests/limits** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Noisy neighbor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel** đặt tiêu chí; **13. Cgroups và Kubernetes requests/limits** dùng nó để kiểm tra ranh giới, rồi **14. Noisy neighbor** mở rộng hệ quả.
 
 ## 13. Cgroups và Kubernetes requests/limits
 
@@ -154,7 +154,7 @@ Kubernetes `requests` và `limits` cuối cùng phải được chuyển thành 
 
 Điều này giải thích tại sao hiểu Kubernetes mà không hiểu scheduler, bộ nhớ (memory / 메모리) reclaim và cgroups sẽ tạo khoảng trống mô hình tư duy (mental model / 사고 모델). YAML chỉ là lớp cấu hình; hành vi cuối cùng xảy ra trong kernel.
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **13. Cgroups và Kubernetes requests/limits** đã nêu tiêu chí phân biệt, còn **14. Noisy neighbor** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Cgroups và Kubernetes requests/limits** đặt tiêu chí; **14. Noisy neighbor** dùng nó để kiểm tra ranh giới, rồi **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** mở rộng hệ quả.
 
 ## 14. Noisy neighbor
 
@@ -162,7 +162,7 @@ Hai bộ chứa (container / 컨테이너) trên cùng host vẫn chia sẻ nhi�
 
 Một tải công việc (workload / 워크로드) có thể không vượt Giới hạn CPU (CPU limit / CPU 제한) nhưng vẫn làm tải công việc (workload / 워크로드) khác chậm do bộ nhớ (memory / 메모리) bandwidth hoặc I/O contention. Đây là **ảnh hưởng hàng xóm ồn (noisy-neighbor effect)**.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** tiếp nhận điểm tựa từ **14. Noisy neighbor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** nối từ **14. Noisy neighbor** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel
 
@@ -184,7 +184,7 @@ storage hoặc network
 
 `docker stats` hoặc dashboard Kubernetes chỉ là điểm bắt đầu. môi trường vận hành (production / 운영 환경) debugging sâu cần nối chỉ số (metric / 지표) ở orchestration tầng (layer / 계층) với kernel bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -196,7 +196,7 @@ storage hoặc network
 
 **“giới hạn bộ nhớ (memory limit / 메모리 제한) chỉ giới hạn Java vùng nhớ động (heap / 힙).”** Không. thời gian chạy (runtime / 런타임) còn dùng bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và hệ thống còn nhiều loại bộ nhớ (memory / 메모리) accounting khác.
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

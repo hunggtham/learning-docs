@@ -10,7 +10,7 @@ People can participate in multiple ritual các hệ thống (systems / 시스템
 
 Thus better concept is **lived religion (tôn giáo trong đời sống thực)**: what people actually do, where, for what bài toán (problem / 문제) and with whom.
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Không nên hỏi “Việt Nam theo tôn giáo nào?” như một single-choice trường dữ liệu (field / 필드)** nêu điều cần giải thích; **Ancestor ritual as intergenerational institution** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cục bộ (local / 로컬) deity and village protection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Không nên hỏi “Việt Nam theo tôn giáo nào?” như một single-choice trường dữ liệu (field / 필드)** đặt vấn đề; **Ancestor ritual as intergenerational institution** đối chiếu bằng chứng, rồi **Cục bộ (local / 로컬) deity and village protection** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ancestor ritual as intergenerational institution
 
@@ -20,7 +20,7 @@ Hàm (function / 함수) can be simultaneously religious, moral and xã hội (s
 
 It also stabilizes thuộc tính (property / 속성)/family bộ nhớ (memory / 메모리): who belongs to lineage and where ancestral land/grave lies matters materially.
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Cục bộ (local / 로컬) deity and village protection** tiếp nhận điểm tựa từ **Ancestor ritual as intergenerational institution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Buddhism and early states** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Cục bộ (local / 로컬) deity and village protection** nối từ **Ancestor ritual as intergenerational institution** sang **Buddhism and early states**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cục bộ (local / 로컬) deity and village protection
 
@@ -28,7 +28,7 @@ It also stabilizes thuộc tính (property / 속성)/family bộ nhớ (memory /
 
 Ritual therefore becomes cục bộ (local / 로컬) archive—though archive of bộ nhớ (memory / 메모리), not necessarily literal factual bản ghi (record / 레코드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Buddhism and early states** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) deity and village protection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Confucianism: more than religion label** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Buddhism and early states** nối từ **Cục bộ (local / 로컬) deity and village protection** sang **Confucianism: more than religion label**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buddhism and early states
 
@@ -36,7 +36,7 @@ Buddhism entered region through multiple routes and became particularly influent
 
 Court patronage does not mean all society has uniform Buddhist doctrine.
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Buddhism and early states** cho ta quy tắc; **Confucianism: more than religion label** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Daoist and folk practice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Buddhism and early states** nêu quy tắc; **Confucianism: more than religion label** thử quy tắc trong tình huống, rồi **Daoist and folk practice** mở rộng hệ quả.
 
 ## Confucianism: more than religion label
 
@@ -46,7 +46,7 @@ Under Lê sơ and Nguyễn, Neo-Confucian trạng thái (state / 상태) ideolog
 
 Again normative văn bản (text / 텍스트) ≠ complete everyday hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Confucianism: more than religion label** cho ta quy tắc; **Daoist and folk practice** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trạng thái (state / 상태) ritual and legitimacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Confucianism: more than religion label** nêu quy tắc; **Daoist and folk practice** thử quy tắc trong tình huống, rồi **Trạng thái (state / 상태) ritual and legitimacy** mở rộng hệ quả.
 
 ## Daoist and folk practice
 
@@ -56,7 +56,7 @@ Trying to classify every ritual as purely “Buddhist/Daoist/folk” can distort
 
 Historical actors did not always use hiện đại (modern / 현대적) taxonomy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Trạng thái (state / 상태) ritual and legitimacy** tiếp nhận điểm tựa từ **Daoist and folk practice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hùng Vương cult** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Trạng thái (state / 상태) ritual and legitimacy** nối từ **Daoist and folk practice** sang **Hùng Vương cult**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái (state / 상태) ritual and legitimacy
 
@@ -64,7 +64,7 @@ Court sacrifices, temple recognition, royal genealogy and calendar are tools of 
 
 Ritual is therefore quản trị (governance / 거버넌스) technology: it maps moral thứ tự (order / 순서) onto territory.
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Hùng Vương cult** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) ritual and legitimacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Champa and Hindu–Buddhist landscapes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Hùng Vương cult** nối từ **Trạng thái (state / 상태) ritual and legitimacy** sang **Champa and Hindu–Buddhist landscapes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hùng Vương cult
 
@@ -72,7 +72,7 @@ Hùng Vương worship illustrates transformation of origin tradition into nation
 
 UNESCO recognition of worship practices in hiện đại (modern / 현대적) period is bằng chứng (evidence / 증거) of living heritage, not archaeological proof of every legendary detail.
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Champa and Hindu–Buddhist landscapes** tiếp nhận điểm tựa từ **Hùng Vương cult** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khmer Theravada Buddhism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Champa and Hindu–Buddhist landscapes** nối từ **Hùng Vương cult** sang **Khmer Theravada Buddhism**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Champa and Hindu–Buddhist landscapes
 
@@ -82,7 +82,7 @@ Mỹ Sơn is key checkpoint: kiến trúc (architecture / 아키텍처) and insc
 
 After territorial thay đổi (change / 변경), Chăm religious communities continue rather than disappearing with trạng thái (state / 상태) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Khmer Theravada Buddhism** tiếp nhận điểm tựa từ **Champa and Hindu–Buddhist landscapes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Islam among Chăm communities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Khmer Theravada Buddhism** nối từ **Champa and Hindu–Buddhist landscapes** sang **Islam among Chăm communities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khmer Theravada Buddhism
 
@@ -90,7 +90,7 @@ Khmer communities in Mekong Delta maintain Theravada Buddhist institutions. Pago
 
 This demonstrates why “religion of Vietnam” cannot be reduced to lowland Kinh mẫu (pattern / 패턴).
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Islam among Chăm communities** tiếp nhận điểm tựa từ **Khmer Theravada Buddhism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Christianity and missionary mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Islam among Chăm communities** nối từ **Khmer Theravada Buddhism** sang **Christianity and missionary mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Islam among Chăm communities
 
@@ -98,7 +98,7 @@ Some Chăm communities practice forms of Islam, with regional variation. Religio
 
 Avoid treating Chăm as one religious khối (block / 블록).
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Christianity and missionary mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Islam among Chăm communities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial modernity and religious reform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Christianity and missionary mạng (network / 네트워크)** nối từ **Islam among Chăm communities** sang **Colonial modernity and religious reform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Christianity and missionary mạng (network / 네트워크)
 
@@ -108,7 +108,7 @@ Under different regimes, Christian communities experience periods of protection,
 
 Religious lịch sử (history / 이력) should distinguish doctrine from colonial politics: Christianity cannot be reduced to French conquest, even though missionary/imperial relations became historically entangled.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Colonial modernity and religious reform** tiếp nhận điểm tựa từ **Christianity and missionary mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cao Đài and Hòa Hảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Colonial modernity and religious reform** nối từ **Christianity and missionary mạng (network / 네트워크)** sang **Cao Đài and Hòa Hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial modernity and religious reform
 
@@ -116,7 +116,7 @@ Urban print and new education stimulate Buddhist reform, Catholic organization a
 
 New association and print mạng (network / 네트워크) allow doctrine/organization to quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Cao Đài and Hòa Hảo** tiếp nhận điểm tựa từ **Colonial modernity and religious reform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Religion during war** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Cao Đài and Hòa Hảo** nối từ **Colonial modernity and religious reform** sang **Religion during war**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cao Đài and Hòa Hảo
 
@@ -126,7 +126,7 @@ They become not only religious communities but important xã hội (social / 사
 
 Their rise shows new religion can emerge from existing symbolic vocabulary while responding to colonial/hiện đại (modern / 현대적) conditions.
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Religion during war** tiếp nhận điểm tựa từ **Cao Đài and Hòa Hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Post-1975 and contemporary religious life** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Religion during war** nối từ **Cao Đài and Hòa Hảo** sang **Post-1975 and contemporary religious life**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Religion during war
 
@@ -134,7 +134,7 @@ War can transform religious institution into refuge, mạng (network / 네트워
 
 Use specific organization/person/thời gian (time / 시간) rather than generalizing “Buddhists supported X” or “Catholics supported Y”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Post-1975 and contemporary religious life** tiếp nhận điểm tựa từ **Religion during war** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Festival economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Post-1975 and contemporary religious life** nối từ **Religion during war** sang **Festival economy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Post-1975 and contemporary religious life
 
@@ -144,7 +144,7 @@ Urbanization creates new mẫu (pattern / 패턴): large pilgrimage site, online
 
 Modernity often **reformats** ritual rather than eliminating it.
 
-> **Chuyển mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Festival economy** tiếp nhận điểm tựa từ **Post-1975 and contemporary religious life** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Material checkpoint phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Festival economy** nối từ **Post-1975 and contemporary religious life** sang **Material checkpoint phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Festival economy
 
@@ -152,7 +152,7 @@ Pilgrimage/festival generates vận chuyển (transport / 전송), food, accommo
 
 But commercialization can create tension about authenticity, crowding and conservation.
 
-> **Chuyển mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Material checkpoint phương thức (method / 메서드)** tiếp nhận điểm tựa từ **Festival economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Material checkpoint phương thức (method / 메서드)** nối từ **Festival economy** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Material checkpoint phương thức (method / 메서드)
 
@@ -166,7 +166,7 @@ When visiting pagoda/temple/church, ask:
 
 This separates kiến trúc (architecture / 아키텍처) age from cult age.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Material checkpoint phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion**, **Recap và bàn giao** nối từ **Material checkpoint phương thức (method / 메서드)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

@@ -16,7 +16,7 @@ Trong nguyên tử trung hòa, quy tắc Aufbau giúp dự đoán cấu hình el
 
 Vì vậy ion kim loại không có một “bảng xếp hạng orbital” bất biến; cảnh quan năng lượng phụ thuộc trạng thái cụ thể của hệ.
 
-> **Chuyển mạch:** Khối d có nhiều trạng thái oxy hóa vì ns và (n−1)d gần năng lượng; đếm d-electron tiếp theo giúp dự đoán cấu hình, màu và hoạt tính xúc tác cụ thể hơn số nhóm.
+> **Nối mạch:** Khối d có nhiều trạng thái oxy hóa vì ns và (n−1)d gần năng lượng; đếm d-electron tiếp theo giúp dự đoán cấu hình, màu và hoạt tính xúc tác cụ thể hơn số nhóm.
 
 ## Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính
 
@@ -26,7 +26,7 @@ Sc thường +3; Ti phổ biến +3/+4; V có thể từ +2 tới +5; Cr thườ
 
 Mn(VII) ổn định trong permanganate nhờ tương tác Mn–O mạnh, nhưng không nên hình dung một ion \(Mn^{7+}\) cô lập theo nghĩa cổ điển. Số oxy hóa chỉ là quy ước ghi sổ; mật độ electron thực được phi định xứ trên toàn khung kim loại–phối tử.
 
-> **Chuyển mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán** tiếp nhận điểm tựa từ **Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán** nối từ **Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính** sang **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán
 
@@ -42,7 +42,7 @@ Ví dụ Fe thuộc nhóm 8. \(Fe^{2+}\) thường được xem là \(d^6\), cò
 
 Điều này quan trọng vì hai phức của kim loại khác nhau nhưng có cùng số electron d có thể cho mô hình trường phối tử tương tự, dù thang năng lượng và khả năng phản ứng không hoàn toàn giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”** tiếp nhận điểm tựa từ **Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ tính — đọc cấu trúc điện tử qua electron độc thân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”** nối từ **Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán** sang **Từ tính — đọc cấu trúc điện tử qua electron độc thân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”
 
@@ -58,7 +58,7 @@ Tuy nhiên nhiều chuyển d–d bị **quy tắc chọn (selection rules)** l�
 
 Phần định lượng sâu hơn về sự tách mức và quy tắc chọn được trình bày ở [Trường tinh thể và trường phối tử](./04_crystal_field_and_ligand_field.md).
 
-> **Chuyển mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Từ tính — đọc cấu trúc điện tử qua electron độc thân** tiếp nhận điểm tựa từ **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Từ tính — đọc cấu trúc điện tử qua electron độc thân** nối từ **Màu sắc: chuyển mức electron chứ không phải “kim loại vốn có màu”** sang **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ tính — đọc cấu trúc điện tử qua electron độc thân
 
@@ -74,7 +74,7 @@ với \(n\) là số electron độc thân.
 
 Vì vậy phép đo độ cảm từ có thể giúp suy ra cấu hình d và trạng thái spin cao/thấp. Tuy nhiên ở kim loại nặng, mômen quỹ đạo và ghép spin–quỹ đạo làm mô hình phức tạp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”** tiếp nhận điểm tựa từ **Từ tính — đọc cấu trúc điện tử qua electron độc thân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học oxy hóa-khử và môi trường phối tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”** nối từ **Từ tính — đọc cấu trúc điện tử qua electron độc thân** sang **Hóa học oxy hóa-khử và môi trường phối tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”
 
@@ -84,7 +84,7 @@ Số phối trí 4 có thể tạo tứ diện hoặc vuông phẳng. Ion \(d^8\
 
 Hình học là kết quả cân bằng giữa đẩy phối tử–phối tử, năng lượng orbital kim loại, ổn định trường phối tử, cản trở lập thể và thành phần cộng hóa trị của liên kết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hóa học oxy hóa-khử và môi trường phối tử** tiếp nhận điểm tựa từ **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hóa học oxy hóa-khử và môi trường phối tử** nối từ **Hình học phối trí không chỉ là “4 = tứ diện, 6 = bát diện”** sang **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học oxy hóa-khử và môi trường phối tử
 
@@ -98,7 +98,7 @@ Vì vậy cùng một nguyên tố kim loại có thể có thế oxy hóa-khử
 
 Nếu một phối tử ổn định Fe(III) tốt hơn Fe(II), quá trình oxy hóa Fe(II) → Fe(III) trở nên thuận lợi hơn về năng lượng tự do. Nếu một phối tử khác ổn định Fe(II) mạnh hơn, xu hướng có thể đảo chiều. Vì vậy thế điện cực quan sát được là thuộc tính của **cặp oxy hóa-khử trong môi trường phối tử cụ thể**, không phải con số cố định gắn với nguyên tố Fe.
 
-> **Chuyển mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích** tiếp nhận điểm tựa từ **Hóa học oxy hóa-khử và môi trường phối tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích** nối từ **Hóa học oxy hóa-khử và môi trường phối tử** sang **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích
 
@@ -108,7 +108,7 @@ Bề mặt Fe trong Haber–Bosch giúp làm yếu \(N\equiv N\) và tổ chức
 
 Chất xúc tác không làm phản ứng “thuận lợi hơn” về cân bằng. Nó thay đổi con đường và tốc độ của cả chiều thuận lẫn chiều nghịch.
 
-> **Chuyển mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim** tiếp nhận điểm tựa từ **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết π kim loại–phối tử và carbonyl kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim** nối từ **Xúc tác: vì sao kim loại chuyển tiếp đặc biệt hữu ích** sang **Liên kết π kim loại–phối tử và carbonyl kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim
 
@@ -118,7 +118,7 @@ Trong **loại khử (reductive elimination)**, quá trình ngược lại tạo
 
 Hai bước sơ cấp này rất phổ biến trong xúc tác đồng thể và cho thấy sự tạo liên kết hữu cơ có thể được điều khiển bằng hóa học oxy hóa-khử vô cơ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, sau nội dung của **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim**, **Liên kết π kim loại–phối tử và carbonyl kim loại** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kim loại–kim loại và cụm kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, sau nội dung của **Cộng oxy hóa và loại khử — mô-típ quan trọng của hóa cơ kim**, **Liên kết π kim loại–phối tử và carbonyl kim loại** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kim loại–kim loại và cụm kim loại** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết π kim loại–phối tử và carbonyl kim loại
 
@@ -128,7 +128,7 @@ Cho ngược làm liên kết kim loại–CO mạnh hơn nhưng làm liên kế
 
 Đây là cầu nối trực tiếp giữa lý thuyết orbital phân tử, [phổ học](../12_analytical_chemistry/03_spectroscopy.md) và liên kết hóa học.
 
-> **Chuyển mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Liên kết kim loại–kim loại và cụm kim loại** tiếp nhận điểm tựa từ **Liên kết π kim loại–phối tử và carbonyl kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Liên kết kim loại–kim loại và cụm kim loại** nối từ **Liên kết π kim loại–phối tử và carbonyl kim loại** sang **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết kim loại–kim loại và cụm kim loại
 
@@ -136,7 +136,7 @@ Kim loại chuyển tiếp cũng có thể liên kết trực tiếp với nhau.
 
 Cụm là khái niệm cầu nối giữa phân tử riêng lẻ và chất rắn kim loại. Trong xúc tác, hạt nano và bề mặt cũng có nhiều tâm kim loại lân cận, tạo ra hóa học mà một nguyên tử kim loại cô lập không thể tái tạo.
 
-> **Chuyển mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật** tiếp nhận điểm tựa từ **Liên kết kim loại–kim loại và cụm kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật** nối từ **Liên kết kim loại–kim loại và cụm kim loại** sang **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật
 
@@ -144,7 +144,7 @@ Nhiều phức cơ kim ở trạng thái oxy hóa thấp có tổng khoảng 18 
 
 Tuy nhiên **quy tắc 18 electron (18-electron rule)** có nhiều ngoại lệ, đặc biệt với kim loại chuyển tiếp đầu dãy, hệ spin cao, phối tử cồng kềnh và phức vuông phẳng \(d^8\). Vì vậy nên dùng nó như một quy tắc kinh nghiệm về độ bền, không phải điều kiện bắt buộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp** tiếp nhận điểm tựa từ **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc tính cũng là hóa học phối trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp** nối từ **Quy tắc 18 electron — quy tắc kinh nghiệm hữu ích, không phải định luật** sang **Độc tính cũng là hóa học phối trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp
 
@@ -152,7 +152,7 @@ Hemoglobin dùng Fe trong porphyrin để liên kết \(O_2\) thuận nghịch. 
 
 Hệ sinh học kiểm soát hóa học kim loại bằng phối tử protein, hình học và môi trường điện môi cục bộ. Protein không thay đổi quy luật cơ bản của hóa vô cơ; nó **thiết kế trường phối tử và khả năng tiếp cận** cực kỳ tinh vi.
 
-> **Chuyển mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Độc tính cũng là hóa học phối trí** tiếp nhận điểm tựa từ **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Độc tính cũng là hóa học phối trí** nối từ **Hóa vô cơ sinh học — sinh học cũng dùng “bộ công cụ” của kim loại chuyển tiếp** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độc tính cũng là hóa học phối trí
 
@@ -160,7 +160,7 @@ Hệ sinh học kiểm soát hóa học kim loại bằng phối tử protein, h
 
 Kim loại mềm có thể liên kết mạnh với phân tử sinh học chứa lưu huỳnh. Kim loại có hoạt tính oxy hóa-khử có thể tạo **các dạng oxy phản ứng (reactive oxygen species, ROS)** nếu xuất hiện sai môi trường. Vì vậy dạng tồn tại hóa học quyết định tác động sinh học.
 
-> **Chuyển mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Độc tính cũng là hóa học phối trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Những hiểu lầm thường gặp** nối từ **Độc tính cũng là hóa học phối trí** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -184,7 +184,7 @@ Không. Điện thế thuộc một cặp oxy hóa-khử cụ thể trong một 
 
 Không. Nó hữu ích cho nhiều phức cơ kim nhưng có nhiều ngoại lệ có thể giải thích bằng cấu hình d, hình học, spin và yêu cầu lập thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

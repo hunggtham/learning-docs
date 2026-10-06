@@ -16,7 +16,7 @@ Từ kỳ thi cập nhật tháng 7/2026, PMP có ba exam lĩnh vực (domain / 
 
 Exam 2026 cũng dùng item format gần dự án (project / 프로젝트) công việc (work / 작업) hơn, gồm scenario/trường hợp (case / 사례), multiple-response, drag-and-drop và practicum dựa trên tools, dữ liệu (data / 데이터), dashboard hoặc dự án (project / 프로젝트) sản phẩm tạo ra (artifact / 산출물). Vì vậy tầng (layer / 계층) consolidation của thư viện (library / 라이브러리) không chỉ luyện “đọc câu hỏi chữ”, mà còn luyện cách giữ trạng thái (state / 상태) mô hình (model / 모델), đọc bằng chứng (evidence / 증거) và ra quyết định (decision / 결정) xuyên nhiều sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** **Bản chất của PMP trong thư viện này** xác định mental model và owner; **Học tập phụ thuộc** biến chúng thành prerequisite, rồi **Reading routes theo mục tiêu** chọn đường học phù hợp.
+> **Nối mạch:** Bản chất của PMP xác định mental model và owner; **Học tập phụ thuộc** biến chúng thành prerequisite. **Reading routes theo mục tiêu** chọn đường học phù hợp với nhu cầu.
 
 ## Học tập (learning / 학습) phụ thuộc (dependency / 의존성)
 
@@ -68,7 +68,7 @@ Có thể đọc liên tục theo thứ tự dưới đây. Mỗi chapter vẫn 
 
 Các chapter 00–12 xây mô hình tư duy (mental model / 사고 모델) theo phụ thuộc (dependency / 의존성). Chapter 13–16 là lớp consolidation: lập luận (reasoning / 추론) với scenario/sản phẩm tạo ra (artifact / 산출물), nhìn dự án (project / 프로젝트) thông tin (information / 정보) như một hệ thống (system / 시스템), luyện quantitative lập luận (reasoning / 추론) cùng giả định (assumption / 가정) và nối nhiều lĩnh vực (domain / 도메인) trong các trường hợp (case / 사례) hoàn chỉnh.
 
-> **Chuyển mạch:** **Reading routes theo mục tiêu** sắp xếp nội dung theo nhu cầu người học; **Kết nối với thư viện khác** mở rộng bối cảnh nhưng vẫn giữ owner và ranh giới của PMP.
+> **Nối mạch:** Reading routes theo mục tiêu sắp xếp nội dung theo nhu cầu; **Kết nối với thư viện khác** mở rộng bối cảnh nhưng giữ owner và ranh giới của PMP.
 
 ## Reading routes theo mục tiêu
 
@@ -102,17 +102,15 @@ Nếu lỗi (error / 오류) log cho thấy cùng một lớp (class / 클래스
 
 Khi gặp thuật ngữ chưa quen, xem [Glossary](./GLOSSARY.md). Coverage đối với PMP 2026, PMBOK 8 và các ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác được theo dõi ở [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Nguồn chuẩn và thời điểm kiểm chứng nằm ở [References](./REFERENCES.md).
 
-> **Chuyển mạch:** Sau khi biết các route và thư viện liên quan, **Cách sử dụng khi học PMP** chỉ cách chọn file, ghi lại bằng chứng và quay về route khi phát hiện gap.
+> **Nối mạch:** Sau khi biết route và thư viện liên quan, Cách sử dụng khi học PMP chỉ cách chọn file, ghi bằng chứng và quay về route khi phát hiện gap.
 
 ## Kết nối với thư viện kiến thức (knowledge library / 지식 라이브러리) khác
 
 PMP nhìn requirements, chất lượng (quality / 품질), delivery và thay đổi (change / 변경) ở cấp dự án; Khoa học máy tính (computer science / 컴퓨터 과학) nhìn chúng ở cấp hệ thống phần mềm. Vì vậy thư viện này chỉ giải thích đủ mô hình tư duy (mental model / 사고 모델) để quản lý dự án, sau đó cross-link tới chuẩn gốc (canonical / 정본) Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) khi cần cơ chế kỹ thuật sâu hơn. yêu cầu (requirement / 요구사항) có thể đọc tiếp ở [Requirements Engineering](../computer_science/09_software_engineering/00_requirements_specification_and_engineering_process.md), chất lượng (quality / 품질) ở [Testing & Verification](../computer_science/09_software_engineering/02_testing_quality_and_verification_strategy.md), delivery ở [Delivery & Operations](../computer_science/09_software_engineering/03_delivery_configuration_and_operations.md), và technical debt/evolution ở [Maintenance & Evolution](../computer_science/09_software_engineering/04_maintenance_evolution_and_technical_debt.md).
 
-[Thinking Toolkit](../thinking/README.md) cung cấp lớp reasoning dùng chung cho problem framing, evidence, uncertainty, risk và decision-making; PMP vẫn là owner của governance, delivery và project artifacts.
-
 PMP chỉ dùng finance ở mức dự án (project / 프로젝트)/business-case quyết định (decision / 결정). Nếu cần đi sâu hơn vào financial hệ thống (system / 시스템), asset pricing, company phân tích (analysis / 분석), portfolio hoặc macroeconomics, chuyển sang [Investing Knowledge Library](../investing/README.md) thay vì kéo các chapter PMP vượt conceptual ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** **Cách sử dụng khi học PMP** khép phần README bằng một vòng lặp: chọn owner → học theo prerequisite → kiểm tra case → cập nhật gap, không học như danh sách thuật ngữ.
+> **Nối mạch:** Cách sử dụng khi học PMP khép README bằng vòng lặp chọn owner → học prerequisite → kiểm tra case → cập nhật gap; tài liệu vì vậy không bị biến thành danh sách thuật ngữ.
 
 ## Cách sử dụng khi học PMP
 

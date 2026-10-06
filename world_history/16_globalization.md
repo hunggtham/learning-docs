@@ -31,13 +31,13 @@ stock: factories, ports, data centers, skills, reserves, trust
 flow: components, capital, data, workers, emissions, pathogens
 ```
 
-> **Chuyển mạch:** Trong **16 — Globalization: tích hợp mạng và phân mảnh rủi ro**, **Toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬) và giá trị (value / 값) capture** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global value chain phải được đọc cùng value capture để biết ai giữ lợi ích và ai gánh rủi ro. **Bằng chứng, giới hạn và cầu nối** kiểm tra các dòng đó trước depth pass.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Đầu vào (input / 입력)–đầu ra (output / 출력) bảng (table / 테이블), shipping/AIS dữ liệu (data / 데이터), FDI, wage phân phối (distribution / 분포), di chuyển (migration / 마이그레이션)/remittance, patent/IP và emissions giúp nhìn luồng (flow / 흐름); GDP không cho biết ai chịu precarious công việc (work / 작업) hay ecological mất mát (loss / 손실). Counterfactual: nếu không có bộ chứa (container / 컨테이너) tiêu chuẩn (standard / 표준), trade vẫn tăng qua air/rail/digital services nhưng geography, inventory và cổng (port / 포트) power khác. Cầu nối sang 17 là **interdependence tạo sức chứa (capacity / 용량) lẫn vulnerability trong một trật tự đang tranh chấp**.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** chuyển từ mô tả tích hợp mạng sang kiểm tra ai nhận lợi ích và ai gánh rủi ro; hãy dùng phần **Độ sâu pass** để đối chiếu các chuỗi cung ứng, tài chính và thông tin thay vì coi toàn cầu hóa là một chiều.
+> **Nối mạch:** Bằng chứng chuyển mô tả tích hợp mạng thành phân tích lợi ích–rủi ro; **Độ sâu pass** đối chiếu chuỗi cung ứng, tài chính và thông tin thay vì coi toàn cầu hóa là một chiều.
 
 ## Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro
 

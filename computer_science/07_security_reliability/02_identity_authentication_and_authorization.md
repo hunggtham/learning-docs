@@ -10,7 +10,7 @@
 
 Định danh (identity / 식별자) có vòng đời (lifecycle / 생명주기): provisioning, credential enrollment, role changes, suspension, deletion. Orphaned accounts/keys là rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Identity names the subject; authentication proves control of that identity, and authorization next evaluates which actions/resources the authenticated subject may use.
+> **Nối mạch:** Identity names the subject; authentication proves control of that identity, and authorization next evaluates which actions/resources the authenticated subject may use.
 
 ## Authentication
 
@@ -20,7 +20,7 @@ Factors thường phân theo something you know/have/are. MFA mạnh khi factors
 
 Authentication sự kiện (event / 이벤트) có assurance mức (level / 수준)/ngữ cảnh (context / 맥락); “logged in once” không bảo session mãi trustworthy.
 
-> **Chuyển mạch:** Ở chặng này của **Định danh (identity / 식별자), authentication và authorization**, **Authorization** tiếp nhận điểm tựa từ **Authentication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Authentication ≠ authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Authorization** nối từ **Authentication** sang **Authentication ≠ authorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Authorization
 
@@ -33,7 +33,7 @@ Authorization (인가 / phân quyền) quyết định hành động (action / �
 
 Real các hệ thống (systems / 시스템들) thường mix.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định danh (identity / 식별자), authentication và authorization**, **Authentication ≠ authorization** tiếp nhận điểm tựa từ **Authorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sessions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Authentication ≠ authorization** nối từ **Authorization** sang **Sessions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Authentication ≠ authorization
 
@@ -41,7 +41,7 @@ Máy chủ (server / 서버) biết yêu cầu (request / 요청) đến từ ng
 
 Every tài nguyên (resource / 자원) truy cập (access / 접근) cần complete mediation.
 
-> **Chuyển mạch:** Trong **Định danh (identity / 식별자), authentication và authorization**, **Sessions** tiếp nhận điểm tựa từ **Authentication ≠ authorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sessions** nối từ **Authentication ≠ authorization** sang **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sessions
 
@@ -49,7 +49,7 @@ After authentication, máy chủ (server / 서버) can create session ID stored 
 
 JWT không tự làm hệ thống (system / 시스템) stateless nếu revocation, người dùng (user / 사용자) trạng thái (state / 상태), permissions hoặc refresh tokens cần máy chủ (server / 서버) dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Định danh (identity / 식별자), authentication và authorization**, **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)** tiếp nhận điểm tựa từ **Sessions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OAuth 2.0 và OpenID Connect intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)** nối từ **Sessions** sang **OAuth 2.0 và OpenID Connect intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)
 
@@ -57,7 +57,7 @@ HttpOnly giảm JavaScript truy cập (access / 접근); Secure yêu cầu HTTPS
 
 CSRF exploits trình duyệt (browser / 브라우저) automatically attaching credentials to cross-site requests; anti-CSRF tokens/SameSite/origin checks mitigate depending kiến trúc (architecture / 아키텍처). XSS can perform actions as người dùng (user / 사용자) and steal non-HttpOnly dữ liệu (data / 데이터), so prevention remains trọng yếu (critical / 중요).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định danh (identity / 식별자), authentication và authorization**, **OAuth 2.0 và OpenID Connect intuition** tiếp nhận điểm tựa từ **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ (service / 서비스) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **OAuth 2.0 và OpenID Connect intuition** nối từ **Cookies và trình duyệt (browser / 브라우저) bảo mật (security / 보안)** sang **Dịch vụ (service / 서비스) định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## OAuth 2.0 và OpenID Connect intuition
 
@@ -65,25 +65,25 @@ OAuth 2.0 is authorization khung phần mềm (framework / 프레임워크) for 
 
 Authorization mã (code / 코드) + PKCE is dùng chung (common / 공통) safe luồng (flow / 흐름) for công khai (public / 공개) clients. chính xác (exact / 정확한) recommendations evolve, so hiện thực (implementation / 구현) should follow hiện tại (current / 현재) provider/spec guidance.
 
-> **Chuyển mạch:** Trong **Định danh (identity / 식별자), authentication và authorization**, **Dịch vụ (service / 서비스) định danh (identity / 식별자)** tiếp nhận điểm tựa từ **OAuth 2.0 và OpenID Connect intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Least privilege and phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dịch vụ (service / 서비스) định danh (identity / 식별자)** nối từ **OAuth 2.0 và OpenID Connect intuition** sang **Least privilege and phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dịch vụ (service / 서비스) định danh (identity / 식별자)
 
 Microservices need machine định danh (identity / 식별자) too: mTLS certificates, tải công việc (workload / 워크로드) định danh (identity / 식별자), short-lived tokens or cloud IAM. dùng chung (shared / 공유) static API keys across many services destroy attribution and rotation granularity.
 
-> **Chuyển mạch:** Ở chặng này của **Định danh (identity / 식별자), authentication và authorization**, **Least privilege and phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **Dịch vụ (service / 서비스) định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Least privilege and phạm vi (scope / 범위)** nối từ **Dịch vụ (service / 서비스) định danh (identity / 식별자)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Least privilege and phạm vi (scope / 범위)
 
 Đơn vị từ (token / 토큰) scopes/roles should narrow what holder can do. Short-lived credentials reduce exposure cửa sổ (window / 윈도우), but refresh/rotation cơ chế (mechanism / 메커니즘) becomes trọng yếu (critical / 중요).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định danh (identity / 식별자), authentication và authorization**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Least privilege and phạm vi (scope / 범위)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Least privilege and phạm vi (scope / 범위)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **định danh (identity / 식별자) = subject. Authentication = prove/điều khiển (control / 제어) định danh (identity / 식별자). Authorization = chính sách (policy / 정책) quyết định (decision / 결정) for hành động (action / 동작)/tài nguyên (resource / 자원). Session/đơn vị từ (token / 토큰) = carry bằng chứng (evidence / 증거)/ngữ cảnh (context / 맥락) over thời gian (time / 시간).** Keep these layers tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Trong **Định danh (identity / 식별자), authentication và authorization**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -93,7 +93,7 @@ Microservices need machine định danh (identity / 식별자) too: mTLS certifi
 
 **“OAuth = authentication.”** OAuth cốt lõi (core / 핵심) delegates authorization; OIDC adds authentication/định danh (identity / 식별자) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Định danh (identity / 식별자), authentication và authorization**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

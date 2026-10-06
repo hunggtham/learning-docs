@@ -10,7 +10,7 @@ Nếu tổ chức chạy sprint nhưng mọi phạm vi (scope / 범위) đã kh�
 
 Một mô hình tư duy (mental model / 사고 모델) hữu ích là economics của phản hồi (feedback / 피드백): phản hồi (feedback / 피드백) càng đến sớm, chi phí (cost / 비용) sửa giả định (assumption / 가정) càng thấp. Nhưng phản hồi (feedback / 피드백) cũng có chi phí. Vì vậy cadence nên đủ nhanh để giảm rủi ro (risk / 위험) đáng kể nhưng không nhanh đến mức ceremony lớn hơn học tập (learning / 학습) giá trị (value / 값).
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Agile là phản hồi (feedback / 피드백) economics, không phải ceremony** nêu điều cần giải thích; **Adaptive vòng lặp (loop / 루프): hypothesis → bằng chứng (evidence / 증거) → quyết định (decision / 결정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Empiricism: transparency, inspection, adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Agile là phản hồi (feedback / 피드백) economics, không phải ceremony** đặt vấn đề; **Adaptive vòng lặp (loop / 루프): hypothesis → bằng chứng (evidence / 증거) → quyết định (decision / 결정)** kiểm tra bằng chứng, rồi **Empiricism: transparency, inspection, adaptation** mở rộng hệ quả.
 
 ## Adaptive vòng lặp (loop / 루프): hypothesis → bằng chứng (evidence / 증거) → quyết định (decision / 결정)
 
@@ -26,7 +26,7 @@ hypothesis → smallest useful test/increment → evidence → interpretation �
 
 Điểm quan trọng là quyết định (decision / 결정). phản hồi (feedback / 피드백) không có quyền thay direction thì chỉ là thông tin (information / 정보) collection.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Adaptive vòng lặp (loop / 루프): hypothesis → bằng chứng (evidence / 증거) → quyết định (decision / 결정)** nêu điều cần giải thích; **Empiricism: transparency, inspection, adaptation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive vòng lặp (loop / 루프): hypothesis → bằng chứng (evidence / 증거) → quyết định (decision / 결정)** đặt vấn đề; **Empiricism: transparency, inspection, adaptation** kiểm tra bằng chứng, rồi **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** mở rộng hệ quả.
 
 ## Empiricism: transparency, inspection, adaptation
 
@@ -36,7 +36,7 @@ Transparency không có nghĩa báo cáo thật nhiều. Nó nghĩa những thô
 
 Empiricism còn phụ thuộc chất lượng (quality / 품질) của bằng chứng (evidence / 증거). Một demo cho 5 người dùng (user / 사용자) thân thiện không chứng minh product-market fit. Một chỉ số (metric / 지표) aggregate có thể che segment thất bại (failure / 실패). Inspection tốt phải hiểu mẫu (sample / 표본), đo lường (measurement / 측정) ranh giới (boundary / 경계) và độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **Empiricism: transparency, inspection, adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm (product / 제품) backlog như một option set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** nối từ **Empiricism: transparency, inspection, adaptation** sang **Sản phẩm (product / 제품) backlog như một option set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)
 
@@ -46,7 +46,7 @@ Nếu backlog thay liên tục theo stakeholder mới nhất mà không có stab
 
 Một goal tốt cũng có stop criterion. Nếu bằng chứng (evidence / 증거) liên tục cho thấy hypothesis không tạo giá trị (value / 값), nhóm (team / 팀) phải có permission dừng/pivot thay vì tiếp tục vì roadmap đã công bố.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Sản phẩm (product / 제품) backlog như một option set** tiếp nhận điểm tựa từ **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backlog aging và option decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sản phẩm (product / 제품) backlog như một option set** nối từ **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** sang **Backlog aging và option decay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sản phẩm (product / 제품) backlog như một option set
 
@@ -56,7 +56,7 @@ Chủ sản phẩm (product owner / 제품 책임자) chịu trách nhiệm tố
 
 Backlog item nên đủ nhỏ để tạo học tập (learning / 학습) trong thời gian hợp lý. Một item quá lớn che nhiều giả định (assumption / 가정); một item quá nhỏ lại tạo administrative overhead. Decomposition tốt theo vertical slice thường tạo bằng chứng (evidence / 증거) tốt hơn chia theo technical tầng (layer / 계층) thuần túy.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Backlog aging và option decay** tiếp nhận điểm tựa từ **Sản phẩm (product / 제품) backlog như một option set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Backlog aging và option decay** nối từ **Sản phẩm (product / 제품) backlog như một option set** sang **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backlog aging và option decay
 
@@ -66,7 +66,7 @@ Backlog quá lớn có carrying chi phí (cost / 비용): refinement, duplicate 
 
 Vì vậy backlog refinement không chỉ thêm detail; nó còn xóa option không còn đáng giữ. “Không làm” là một đầu ra (output / 출력) hợp lệ của học tập (learning / 학습).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)** tiếp nhận điểm tựa từ **Backlog aging và option decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí (cost / 비용) of delay và sequencing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)** nối từ **Backlog aging và option decay** sang **Chi phí (cost / 비용) of delay và sequencing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)
 
@@ -76,7 +76,7 @@ Vì vậy “làm tính năng (feature / 기능) có giá trị (value / 값) ca
 
 Priority còn phụ thuộc expiry. Một small tính năng (feature / 기능) có giá trị (value / 값) vừa nhưng thị trường (market / 시장) cửa sổ (window / 윈도우) một tuần có thể nên đi trước tính năng (feature / 기능) giá trị (value / 값) lớn hơn nhưng không time-sensitive.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Chi phí (cost / 비용) of delay và sequencing** tiếp nhận điểm tựa từ **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chi phí (cost / 비용) of delay và sequencing** nối từ **Prioritization không chỉ là nghiệp vụ (business / 비즈니스) giá trị (value / 값)** sang **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chi phí (cost / 비용) of delay và sequencing
 
@@ -84,7 +84,7 @@ Chi phí (cost / 비용) of delay biến “trễ” thành economic consequence
 
 Adaptive sequencing nên nhìn giá trị (value / 값) over thời gian (time / 시간), không chỉ static priority. Điều này nối backlog quyết định (decision / 결정) với finance/schedule lập luận (reasoning / 추론) ở chapter `05–06`.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Chi phí (cost / 비용) of delay và sequencing** đã nêu tiêu chí phân biệt, còn **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Done, deployed, released và giá trị (value / 값) realized khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chi phí (cost / 비용) of delay và sequencing** đặt tiêu chí; **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **Done, deployed, released và giá trị (value / 값) realized khác nhau** mở rộng cơ chế.
 
 ## Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)
 
@@ -94,7 +94,7 @@ Acceptance criteria áp cho item cụ thể; Definition of Done là chất lư�
 
 Nếu Definition of Done bỏ tích hợp (integration / 통합), bảo mật (security / 보안) scan hoặc documentation bắt buộc, nhóm (team / 팀) có thể tối ưu sprint completion nhưng tạo bản phát hành (release / 릴리스) debt. “Done” phải phản ánh trạng thái đủ thật để management không bị false progress.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Done, deployed, released và giá trị (value / 값) realized khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **MVP, prototype, experiment và increment không phải một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Increment, Definition of Done và chất lượng (quality / 품질) ranh giới (boundary / 경계)** đặt tiêu chí; **Done, deployed, released và giá trị (value / 값) realized khác nhau** dùng nó để kiểm tra ranh giới, rồi **MVP, prototype, experiment và increment không phải một thứ** mở rộng cơ chế.
 
 ## Done, deployed, released và giá trị (value / 값) realized khác nhau
 
@@ -104,7 +104,7 @@ Phân biệt các trạng thái (state / 상태) này ngăn false progress. “C
 
 Adaptive reporting nên nói rõ trạng thái (state / 상태) nào đang được đo.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **MVP, prototype, experiment và increment không phải một thứ** tiếp nhận điểm tựa từ **Done, deployed, released và giá trị (value / 값) realized khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **MVP, prototype, experiment và increment không phải một thứ** nối từ **Done, deployed, released và giá trị (value / 값) realized khác nhau** sang **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MVP, prototype, experiment và increment không phải một thứ
 
@@ -114,7 +114,7 @@ Nhầm bốn khái niệm này tạo quản trị (governance / 거버넌스) sa
 
 Dự án (project / 프로젝트) manager cần hỏi sản phẩm tạo ra (artifact / 산출물) này được tạo để học điều gì, ai sẽ dùng, exposure là bao nhiêu và exit criterion là gì. “Chúng ta đang làm MVP” không phải lý do để bỏ qua compliance hoặc operational readiness.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **MVP, prototype, experiment và increment không phải một thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch kích thước (size / 크기) và queueing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)** nối từ **MVP, prototype, experiment và increment không phải một thứ** sang **Batch kích thước (size / 크기) và queueing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)
 
@@ -124,7 +124,7 @@ Nếu nhóm (team / 팀) nhìn kết quả (result / 결과) sau rồi mới ch�
 
 Experiment cũng có ethical/quản trị (governance / 거버넌스) ranh giới (boundary / 경계). Không phải mọi hypothesis được phép kiểm thử (test / 테스트) trực tiếp trên customer nếu exposure, consent hoặc an toàn (safety / 안전) consequence quá lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Batch kích thước (size / 크기) và queueing** tiếp nhận điểm tựa từ **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Batch kích thước (size / 크기) và queueing** nối từ **Experiment phải có quyết định (decision / 결정) quy tắc (rule / 규칙)** sang **Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Batch kích thước (size / 크기) và queueing
 
@@ -132,7 +132,7 @@ Batch nhỏ làm giảm thời gian từ công việc (work / 작업) start tớ
 
 Một hệ thống (system / 시스템) luôn giữ mọi người 100% bận có thể làm cycle thời gian (time / 시간) tăng mạnh vì không còn slack để xử lý variation, rà soát (review / 검토) hoặc urgent defect. Adaptive delivery tối ưu luồng (flow / 흐름) của giá trị (value / 값) hơn utilization của từng cá nhân.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt** tiếp nhận điểm tựa từ **Batch kích thước (size / 크기) và queueing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iteration, luồng (flow / 흐름) và Kanban** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt** nối từ **Batch kích thước (size / 크기) và queueing** sang **Iteration, luồng (flow / 흐름) và Kanban**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt
 
@@ -142,7 +142,7 @@ Automation thường làm optimum batch nhỏ hơn bằng cách giảm giao dị
 
 Câu hỏi đúng là batch nào tối thiểu hóa tổng chi phí (cost / 비용) của waiting, rework và giao dịch (transaction / 트랜잭션)—not “sprint càng ngắn càng agile”.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Batch kích thước (size / 크기) có optimum kinh tế, không phải càng nhỏ càng tốt** xác định đầu vào; **Iteration, luồng (flow / 흐름) và Kanban** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Lớp (class / 클래스) of dịch vụ (service / 서비스) và expedite rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Batch size có optimum kinh tế, nên Iteration, flow và Kanban phải được chọn theo mục tiêu. **Class of service và expedite risk** kiểm tra chi phí của việc ưu tiên.
 
 ## Iteration, luồng (flow / 흐름) và Kanban
 
@@ -152,7 +152,7 @@ WIP limit giúp expose bottleneck. Nếu nhóm (team / 팀) cứ bắt đầu t�
 
 Kanban board chỉ có giá trị nếu column phản ánh real workflow trạng thái (state / 상태). Một board đẹp nhưng công việc (work / 작업) thực vẫn chạy ngoài hệ thống không tạo khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Iteration, luồng (flow / 흐름) và Kanban** xác định đầu vào; **Lớp (class / 클래스) of dịch vụ (service / 서비스) và expedite rủi ro (risk / 위험)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Scrum events như điều khiển (control / 제어) loops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Iteration, flow và Kanban tạo nhịp quan sát; Class of service và expedite risk điều chỉnh thứ tự. **Scrum events như control loops** kiểm tra phản hồi và giới hạn.
 
 ## Lớp (class / 클래스) of dịch vụ (service / 서비스) và expedite rủi ro (risk / 위험)
 
@@ -160,7 +160,7 @@ Không phải mọi công việc (work / 작업) có cùng urgency. Một môi t
 
 Nhưng expedite lane không miễn phí. Nếu quá nhiều item được gọi urgent, luồng bố cục thông thường (normal flow / 일반 흐름) bị phá và priority hệ thống (system / 시스템) mất meaning. nhóm (team / 팀) nên định nghĩa tiêu chí expedite và theo dõi chi phí (cost / 비용) mà urgent công việc (work / 작업) gây cho hàng đợi (queue / 큐) khác.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Scrum events như điều khiển (control / 제어) loops** tiếp nhận điểm tựa từ **Lớp (class / 클래스) of dịch vụ (service / 서비스) và expedite rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Scrum events như điều khiển (control / 제어) loops** nối từ **Lớp (class / 클래스) of dịch vụ (service / 서비스) và expedite rủi ro (risk / 위험)** sang **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scrum events như điều khiển (control / 제어) loops
 
@@ -168,7 +168,7 @@ Sprint Planning tạo near-term commitment dựa trên mục tiêu (objective / 
 
 Nếu biến Daily Scrum thành status report cho manager, hoặc Sprint rà soát (review / 검토) thành demo ceremonial không ảnh hưởng backlog, sự kiện (event / 이벤트) mất control-loop hàm (function / 함수). Khi học khung phần mềm (framework / 프레임워크), nên luôn hỏi sự kiện (event / 이벤트) này làm giảm loại bất định (uncertainty / 불확실성) nào.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Scrum events như điều khiển (control / 제어) loops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)** nối từ **Scrum events như điều khiển (control / 제어) loops** sang **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)
 
@@ -178,7 +178,7 @@ So sánh velocity giữa hai nhóm (team / 팀) dễ gây gaming vì story đi�
 
 Forecast tốt nên nói bằng phạm vi (range / 범위) và confidence thay vì một ngày duy nhất khi bất định (uncertainty / 불확실성) cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa** tiếp nhận điểm tựa từ **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa** nối từ **Estimation và forecasting trong adaptive ngữ cảnh (context / 맥락)** sang **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa
 
@@ -188,7 +188,7 @@ Story điểm (point / 지점) cũng không phải measure productivity. nhóm (
 
 Khi công việc (work / 작업) tương đối đồng nhất và historical dữ liệu (data / 데이터) đủ tốt, thông lượng (throughput / 처리량)/cycle thời gian (time / 시간) có thể forecast mà không cần điểm (point / 지점). Khi item kích thước (size / 크기) thay đổi lớn, decomposition hoặc class-of-service có thể quan trọng hơn cố tìm một conversion factor thần kỳ.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa** nêu điều cần giải thích; **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Forecast calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Story điểm (point / 지점) là relative mô hình (model / 모델), không phải giờ được mã hóa** đặt vấn đề; **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)** kiểm tra bằng chứng, rồi **Forecast calibration** mở rộng hệ quả.
 
 ## Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)
 
@@ -198,7 +198,7 @@ Forecast chỉ đáng tin khi công việc (work / 작업) hệ thống (system 
 
 Điểm quan trọng không phải dùng công cụ (tool / 도구) Monte Carlo cho mọi sprint; điểm quan trọng là tránh biến average thành certainty.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)** nêu điều cần giải thích; **Forecast calibration** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Adaptive planning across horizons** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Probabilistic forecast và bằng chứng (evidence / 증거) từ luồng (flow / 흐름)** đặt vấn đề; **Forecast calibration** kiểm tra bằng chứng, rồi **Adaptive planning across horizons** mở rộng hệ quả.
 
 ## Forecast calibration
 
@@ -208,7 +208,7 @@ Calibration tốt hơn việc ép nhóm (team / 팀) cho một date “chắc ch
 
 Forecast miss cũng cần phân loại: phạm vi (scope / 범위) inflow, blocked phụ thuộc (dependency / 의존성), thông lượng (throughput / 처리량) shift hay mô hình (model / 모델) giả định (assumption / 가정) sai. Chỉ cập nhật average mà không hiểu cause dễ lặp lại lỗi (error / 오류).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Adaptive planning across horizons** tiếp nhận điểm tựa từ **Forecast calibration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) horizon khác delivery horizon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive planning across horizons** nối từ **Forecast calibration** sang **Quyết định (decision / 결정) horizon khác delivery horizon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptive planning across horizons
 
@@ -218,7 +218,7 @@ Vision/roadmap định hướng kết quả (outcome / 결과) dài hơn. bản 
 
 Roadmap không nên bị biến thành fixed phạm vi (scope / 범위) schedule dài hạn nếu môi trường còn nhiều bất định (uncertainty / 불확실성). Nó có thể giữ kết quả (outcome / 결과), strategic chuỗi (sequence / 시퀀스) và major ràng buộc (constraint / 제약조건) trong khi detail thay đổi theo bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Quyết định (decision / 결정) horizon khác delivery horizon** tiếp nhận điểm tựa từ **Adaptive planning across horizons** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) horizon khác delivery horizon** nối từ **Adaptive planning across horizons** sang **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) horizon khác delivery horizon
 
@@ -226,7 +226,7 @@ Nhóm (team / 팀) có thể chỉ plan tác vụ (task / 작업) chi tiết hai
 
 Adaptive planning cần identify quyết định (decision / 결정) có long lead thời gian (time / 시간) hoặc high irreversibility và tạo bằng chứng (evidence / 증거) sớm. “Không plan xa” là hiểu sai agility; đúng hơn là không lần ghi nhận (commit / 커밋) detail xa hơn thông tin (information / 정보) chất lượng (quality / 품질) cho phép, trong khi vẫn quản lý future ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) horizon khác delivery horizon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”** nối từ **Quyết định (decision / 결정) horizon khác delivery horizon** sang **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”
 
@@ -236,7 +236,7 @@ Vì vậy câu “Agile không có thay đổi (change / 변경) điều khiển
 
 Điều này đặc biệt quan trọng trong hybrid dự án (project / 프로젝트): nhóm (team / 팀) có thể đổi chuỗi (sequence / 시퀀스) hàng ngày nhưng không thể tự thay contractual acceptance hoặc regulatory bằng chứng (evidence / 증거) yêu cầu (requirement / 요구사항).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail** tiếp nhận điểm tựa từ **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discovery và delivery không nên tách tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail** nối từ **Thay đổi (change / 변경) trong adaptive môi trường (environment / 환경) không có nghĩa “không cần điều khiển (control / 제어)”** sang **Discovery và delivery không nên tách tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail
 
@@ -244,7 +244,7 @@ Traditional thay đổi (change / 변경) điều khiển (control / 제어) th�
 
 Nhưng thay đổi (change / 변경) vẫn có chi phí (cost / 비용). Nếu stakeholder thêm công việc (work / 작업) nhanh hơn thông lượng (throughput / 처리량), backlog inflow tăng và lead thời gian (time / 시간) dài. Adaptive hệ thống (system / 시스템) cần sức chứa (capacity / 용량) quy tắc (rule / 규칙): new item vào có thể đẩy item khác ra hoặc làm forecast thay đổi; không có free phạm vi (scope / 범위).
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Discovery và delivery không nên tách tuyệt đối** tiếp nhận điểm tựa từ **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Technical practice ảnh hưởng trực tiếp khả năng adaptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Discovery và delivery không nên tách tuyệt đối** nối từ **Adaptive thay đổi (change / 변경) điều khiển (control / 제어) là continuous reprioritization có guardrail** sang **Technical practice ảnh hưởng trực tiếp khả năng adaptive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Discovery và delivery không nên tách tuyệt đối
 
@@ -252,7 +252,7 @@ Discovery tìm hiểu bài toán (problem / 문제), người dùng (user / 사�
 
 Dual-track hoặc continuous discovery chỉ có ý nghĩa khi học tập (learning / 학습) được nối vào backlog quyết định (decision / 결정). Discovery sản phẩm tạo ra (artifact / 산출물) không phải mục tiêu; quyết định (decision / 결정) chất lượng (quality / 품질) mới là mục tiêu.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Technical practice ảnh hưởng trực tiếp khả năng adaptive** tiếp nhận điểm tựa từ **Discovery và delivery không nên tách tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Technical option giá trị (value / 값) và reversibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Technical practice ảnh hưởng trực tiếp khả năng adaptive** nối từ **Discovery và delivery không nên tách tuyệt đối** sang **Technical option giá trị (value / 값) và reversibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Technical practice ảnh hưởng trực tiếp khả năng adaptive
 
@@ -260,7 +260,7 @@ Agile về management không đủ nếu technical hệ thống (system / 시스
 
 PMP không cần đi sâu hiện thực (implementation / 구현), nhưng dự án (project / 프로젝트) manager phải hiểu một phụ thuộc (dependency / 의존성) quan trọng: technical debt có thể làm organization “muốn agile” nhưng không thể thay đổi nhanh. Nội dung kỹ thuật sâu hơn nằm ở [Delivery, configuration và operations](../computer_science/09_software_engineering/03_delivery_configuration_and_operations.md) và [Maintenance, evolution và technical debt](../computer_science/09_software_engineering/04_maintenance_evolution_and_technical_debt.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Technical option giá trị (value / 값) và reversibility** tiếp nhận điểm tựa từ **Technical practice ảnh hưởng trực tiếp khả năng adaptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Technical option giá trị (value / 값) và reversibility** nối từ **Technical practice ảnh hưởng trực tiếp khả năng adaptive** sang **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Technical option giá trị (value / 값) và reversibility
 
@@ -268,7 +268,7 @@ Modularity, tính năng (feature / 기능) flags, backward-compatible giao diệ
 
 Khi hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) làm mọi thay đổi (change / 변경) cross-cutting, management adaptation bị giới hạn dù tiến trình (process / 프로세스) rất agile. Technical reversibility là một phần của dự án (project / 프로젝트) flexibility.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ** tiếp nhận điểm tựa từ **Technical option giá trị (value / 값) và reversibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cadence mismatch và synchronization chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ** nối từ **Technical option giá trị (value / 값) và reversibility** sang **Cadence mismatch và synchronization chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ
 
@@ -278,7 +278,7 @@ Một hybrid thiết kế (design / 설계) tốt xác định cadence, đặc t
 
 Nếu nội bộ (internal / 내부) nhóm (team / 팀) dùng backlog linh hoạt nhưng vendor đặc tả hợp đồng (contract / 계약) fixed phạm vi (scope / 범위)/fixed date, thay đổi (change / 변경) economics cần được tường minh (explicit / 명시적). Mỗi backlog reorder có thể không chi phí (cost / 비용) nhiều bên trong nhưng có đặc tả hợp đồng (contract / 계약) implication bên ngoài.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Cadence mismatch và synchronization chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cadence mismatch và synchronization chi phí (cost / 비용)** nối từ **Hybrid giao diện (interface / 인터페이스) là nơi rủi ro tích tụ** sang **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cadence mismatch và synchronization chi phí (cost / 비용)
 
@@ -288,7 +288,7 @@ Giải pháp không nhất thiết làm mọi cadence giống nhau. Có thể d�
 
 Hybrid thiết kế (design / 설계) tốt tối ưu synchronization chi phí (cost / 비용), không chỉ chọn methodology riêng cho từng nhóm (team / 팀).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Cadence mismatch và synchronization chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive quản trị (governance / 거버넌스) và funding guardrail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)** nối từ **Cadence mismatch và synchronization chi phí (cost / 비용)** sang **Adaptive quản trị (governance / 거버넌스) và funding guardrail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)
 
@@ -296,7 +296,7 @@ Adaptive delivery phù hợp hơn với đặc tả hợp đồng (contract / �
 
 Không có đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) “agile” tự động. Câu hỏi là incentive có hỗ trợ dùng chung (shared / 공유) kết quả (outcome / 결과) và adaptation hay không.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Adaptive quản trị (governance / 거버넌스) và funding guardrail** tiếp nhận điểm tựa từ **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive funding và option-based investment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive quản trị (governance / 거버넌스) và funding guardrail** nối từ **Đặc tả hợp đồng (contract / 계약) và procurement trong adaptive ngữ cảnh (context / 맥락)** sang **Adaptive funding và option-based investment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptive quản trị (governance / 거버넌스) và funding guardrail
 
@@ -306,7 +306,7 @@ Một quản trị (governance / 거버넌스) thiết kế (design / 설계) t�
 
 Nếu steering committee approve từng người dùng (user / 사용자) story, vòng phản hồi (feedback loop / 피드백 루프) bị nghẹt. Nếu nhóm (team / 팀) tự thay strategic commitment mà không quản trị (governance / 거버넌스), organization mất điều khiển (control / 제어). Adaptive quản trị (governance / 거버넌스) là đặt quyết định (decision / 결정) ở mức (level / 수준) thấp nhất vẫn giữ được accountability.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Adaptive funding và option-based investment** tiếp nhận điểm tựa từ **Adaptive quản trị (governance / 거버넌스) và funding guardrail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Servant leadership và impediment removal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive funding và option-based investment** nối từ **Adaptive quản trị (governance / 거버넌스) và funding guardrail** sang **Servant leadership và impediment removal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptive funding và option-based investment
 
@@ -316,7 +316,7 @@ Nhưng funding rà soát (review / 검토) quá dày làm nhóm (team / 팀) m�
 
 Adaptive portfolio lô-gic (logic / 논리) không có nghĩa “mỗi sprint xin tiền”; nó nghĩa commitment tăng cùng bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Servant leadership và impediment removal** tiếp nhận điểm tựa từ **Adaptive funding và option-based investment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Servant leadership và impediment removal** nối từ **Adaptive funding và option-based investment** sang **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Servant leadership và impediment removal
 
@@ -324,7 +324,7 @@ Adaptive nhóm (team / 팀) cần autonomy nhưng organization vẫn có impedim
 
 Nếu cùng một blocker xuất hiện nhiều sprint, xử lý từng lần chỉ là workaround. Retrospective nên chuyển issue thành hệ thống (system / 시스템) improvement có đơn vị sở hữu (owner / 오너).
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Servant leadership và impediment removal** đã nêu tiêu chí phân biệt, còn **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Servant leadership và impediment removal** đặt tiêu chí; **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility** dùng nó để kiểm tra ranh giới, rồi **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** mở rộng cơ chế.
 
 ## Autonomy ranh giới (boundary / 경계) phải đi cùng visibility
 
@@ -332,7 +332,7 @@ Self-management không có nghĩa cục bộ (local / 로컬) nhóm (team / 팀)
 
 Nhóm (team / 팀) có thể tự quyết hiện thực (implementation / 구현) nhưng nếu quyết định (decision / 결정) làm Đặc tả API (API contract / API 계약) đổi, blast radius vượt cục bộ (local / 로컬) ranh giới (boundary / 경계). quyết định (decision / 결정) right cần match consequence radius.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility** đã nêu tiêu chí phân biệt, còn **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Scaling không chỉ là thêm ceremony** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Autonomy ranh giới (boundary / 경계) phải đi cùng visibility** đặt tiêu chí; **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** dùng nó để kiểm tra ranh giới, rồi **Scaling không chỉ là thêm ceremony** mở rộng cơ chế.
 
 ## Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)
 
@@ -340,7 +340,7 @@ Regulated agile dự án (project / 프로젝트) vẫn cần bằng chứng (ev
 
 Trong software dự án (project / 프로젝트), cơ chế delivery kỹ thuật sâu hơn nằm ở [Delivery, configuration và operations](../computer_science/09_software_engineering/03_delivery_configuration_and_operations.md). PMP chapter giữ focus ở coordination/giá trị (value / 값)/quản trị (governance / 거버넌스) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Scaling không chỉ là thêm ceremony** tiếp nhận điểm tựa từ **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Scaling không chỉ là thêm ceremony** nối từ **Agile không loại bỏ documentation hoặc quản trị (governance / 거버넌스)** sang **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scaling không chỉ là thêm ceremony
 
@@ -350,7 +350,7 @@ Trước khi chọn scaling khung phần mềm (framework / 프레임워크), n�
 
 Tích hợp (integration / 통합) cadence thường quan trọng hơn reporting cadence. Hai nhóm (team / 팀) demo tốt riêng lẻ nhưng chỉ integrate cuối quý vẫn mang batch rủi ro (risk / 위험) lớn. dùng chung (shared / 공유) môi trường (environment / 환경), giao diện (interface / 인터페이스) đặc tả hợp đồng (contract / 계약), phiên bản (version / 버전) tính tương thích (compatibility / 호환성) và cross-team Definition of Done có thể là điều khiển (control / 제어) mạnh hơn thêm một coordination meeting.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count** tiếp nhận điểm tựa từ **Scaling không chỉ là thêm ceremony** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive anti-patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count** nối từ **Scaling không chỉ là thêm ceremony** sang **Adaptive anti-patterns**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count
 
@@ -358,7 +358,7 @@ Thêm nhóm (team / 팀) có thể tăng sức chứa (capacity / 용량) nhưng
 
 Scaling tốt cố giảm phụ thuộc (dependency / 의존성) trước khi tăng coordination ceremony. nhóm (team / 팀) ranh giới (boundary / 경계) nên align với giá trị (value / 값) stream/năng lực (capability / 역량) đủ độc lập để cục bộ (local / 로컬) quyết định (decision / 결정) không liên tục chờ cross-team agreement.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Agile, adaptive và hybrid delivery**, **Adaptive anti-patterns** tiếp nhận điểm tựa từ **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive anti-patterns** nối từ **Scaling law: phụ thuộc (dependency / 의존성) tăng nhanh hơn nhóm (team / 팀) count** sang **Ví dụ scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adaptive anti-patterns
 
@@ -368,7 +368,7 @@ Một anti-pattern khác là bản phát hành (release / 릴리스) every sprin
 
 Experiment theater xảy ra khi mọi công việc (work / 작업) được gọi là experiment nhưng kết quả (result / 결과) không bao giờ làm roadmap đổi. Hybrid theater xảy ra khi organization cộng tất cả gate và ceremony của cả hai chế độ (mode / 모드) mà không bỏ điều khiển (control / 제어) trùng lặp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Agile, adaptive và hybrid delivery**, **Adaptive anti-patterns** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adaptive anti-patterns** nêu quy tắc; **Ví dụ scenario** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ scenario
 
@@ -380,7 +380,7 @@ Một scenario khác: velocity tăng 25% sau khi management đặt KPI “tăng 
 
 Một scenario experimentation: onboarding experiment tăng activation 8% nhưng churn tháng đầu không đổi. nhóm (team / 팀) không nên tự động rollout full tính năng (feature / 기능) chỉ vì primary chỉ số (metric / 지표) tăng. Cần xem hypothesis ban đầu là activation có dẫn tới retention hay không, guardrail chỉ số (metric / 지표) có xấu đi không và thêm bằng chứng (evidence / 증거) có khả năng đổi quyết định (decision / 결정) không.
 
-> **Chuyển mạch:** Trong **10 — Agile, adaptive và hybrid delivery**, **Ví dụ scenario** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ví dụ scenario nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống cụ thể để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

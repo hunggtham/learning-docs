@@ -22,7 +22,7 @@ Trong đó:
 
 Bậc phản ứng có thể bằng 0, số nguyên, phân số hoặc thậm chí thay đổi hiệu dụng theo vùng nồng độ nếu cơ chế phức tạp. Vì thế “bậc phản ứng” là một thuộc tính của **mô hình tốc độ dưới điều kiện đang xét**, không phải nhãn cố định gắn vĩnh viễn lên phương trình tổng.
 
-> **Chuyển mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** tiếp nhận điểm tựa từ **Dạng tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ý nghĩa của bậc phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** nối từ **Dạng tổng quát** sang **Ý nghĩa của bậc phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?
 
@@ -44,7 +44,7 @@ chỉ được suy trực tiếp từ hệ số khi phương trình đó thực 
 
 Đây là lý do kinetics cung cấp thông tin cơ chế mà stoichiometry không thể cung cấp.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ý nghĩa của bậc phản ứng** tiếp nhận điểm tựa từ **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị của hằng số tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ý nghĩa của bậc phản ứng** nối từ **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** sang **Đơn vị của hằng số tốc độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ý nghĩa của bậc phản ứng
 
@@ -74,7 +74,7 @@ thì trong vùng điều kiện đó, thay đổi \([A]\) không làm tốc đ�
 
 Bậc 0 không có nghĩa A “không tham gia phản ứng”. Nó có thể nghĩa vị trí xúc tác đã bão hòa, photon là yếu tố giới hạn hoặc một bước khác đang kiểm soát tốc độ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Đơn vị của hằng số tốc độ** tiếp nhận điểm tựa từ **Ý nghĩa của bậc phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. Phương pháp tốc độ ban đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Đơn vị của hằng số tốc độ** nối từ **Ý nghĩa của bậc phản ứng** sang **1. Phương pháp tốc độ ban đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị của hằng số tốc độ
 
@@ -102,7 +102,7 @@ bậc 2: L mol^-1 s^-1
 
 # Ba cách chính để tìm phương trình tốc độ
 
-> **Chuyển mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **1. Phương pháp tốc độ ban đầu** tiếp nhận điểm tựa từ **Đơn vị của hằng số tốc độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Theo dõi toàn bộ đường nồng độ–thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **1. Phương pháp tốc độ ban đầu** nối từ **Đơn vị của hằng số tốc độ** sang **2. Theo dõi toàn bộ đường nồng độ–thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. Phương pháp tốc độ ban đầu
 
@@ -132,7 +132,7 @@ Nếu \([B]\) tăng gấp đôi nhưng tốc độ giữ gần như không đổ
 
 Ưu điểm của phương pháp tỉ số là \(k\) triệt tiêu. Nhược điểm là cần nhiều thí nghiệm được kiểm soát tốt và tốc độ ban đầu phải đo đáng tin cậy.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** tiếp nhận điểm tựa từ **1. Phương pháp tốc độ ban đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** nối từ **1. Phương pháp tốc độ ban đầu** sang **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Theo dõi toàn bộ đường nồng độ–thời gian
 
@@ -140,7 +140,7 @@ Thay vì chỉ dùng vài độ dốc ban đầu, có thể fit toàn bộ traje
 
 Cách này tận dụng nhiều dữ liệu hơn và đặc biệt hữu ích khi nhiễu làm đạo hàm cục bộ không ổn định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** xác định đầu vào; **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vì sao hàm mũ xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** đặt đầu vào cho **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law**, rồi **Vì sao hàm mũ xuất hiện?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law
 
@@ -212,7 +212,7 @@ không phụ thuộc \([A]_0\).
 
 Chính tính chất này làm phân rã phóng xạ trở thành ví dụ rất rõ của động học bậc nhất.
 
-> **Chuyển mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** xác định đầu vào; **Vì sao hàm mũ xuất hiện?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ví dụ hóa sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** đặt đầu vào cho **Vì sao hàm mũ xuất hiện?**, rồi **Ví dụ hóa sinh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao hàm mũ xuất hiện?
 
@@ -284,7 +284,7 @@ Hệ biểu hiện **động học giả bậc nhất (pseudo-first-order kineti
 
 Đây không phải “thay đổi bản chất” của bước phản ứng; nó là cách thiết kế thí nghiệm để biến một biến số gần như thành hằng số, giúp phân tích đơn giản hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hàm mũ xuất hiện?** cho ta quy tắc; **Ví dụ hóa sinh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hàm mũ xuất hiện?** nêu quy tắc; **Ví dụ hóa sinh** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Ví dụ hóa sinh
 
@@ -423,7 +423,7 @@ Không. Linearization có thể bóp méo sai số; cần residuals, kiểm ch�
 
 Không. Mạng cơ chế có thể tạo bậc phân số, 0 hoặc âm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ví dụ hóa sinh** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ví dụ hóa sinh** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

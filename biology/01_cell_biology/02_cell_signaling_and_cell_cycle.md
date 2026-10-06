@@ -16,7 +16,7 @@ Nếu liver cell, muscle cell và nơron (neuron) đều tự quyết định đ
 
 Tín hiệu (signal / 신호) không chỉ đến từ bên ngoài. Tổn thương DNA (DNA damage), low ATP, protein chưa gấp cuộn đúng (unfolded protein) hay thiếu oxy (low oxygen) cũng kích hoạt truyền tín hiệu nội bào (intracellular signaling).
 
-> **Chuyển mạch:** Cell signaling solves coordination across distance; signal/receptor/response forms a chain, and receptor transduction converts ligand binding into intracellular language.
+> **Nối mạch:** Cell signaling solves coordination across distance; signal/receptor/response forms a chain, and receptor transduction converts ligand binding into intracellular language.
 
 ## 2. tín hiệu (signal / 신호), receptor và đáp ứng (response)
 
@@ -36,7 +36,7 @@ cellular response
 
 Phản hồi (response / 응답) có thể là mở kênh ion (ion channel), thay metabolism, di chuyển, tiết molecule, đổi biểu hiện gen, divide hoặc apoptosis.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ** tiếp nhận điểm tựa từ **2. tín hiệu (signal / 신호), receptor và đáp ứng (response)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Các kiểu communication theo khoảng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ** nối từ **2. tín hiệu (signal / 신호), receptor và đáp ứng (response)** sang **4. Các kiểu communication theo khoảng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ
 
@@ -46,7 +46,7 @@ Ví dụ insulin bind insulin receptor ở màng (membrane). Receptor activation
 
 Một molecule peptide ngoài cell cuối cùng có thể đổi glucose uptake bên trong mà bản thân insulin không cần đi qua màng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **4. Các kiểu communication theo khoảng cách** tiếp nhận điểm tựa từ **3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Các kiểu communication theo khoảng cách** nối từ **3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ** sang **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Các kiểu communication theo khoảng cách
 
@@ -62,7 +62,7 @@ Một molecule peptide ngoài cell cuối cùng có thể đổi glucose uptake 
 
 Những kiểu này không phải category để học thuộc; chúng phản ánh bài toán distance, speed và độ đặc hiệu (specificity).
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)** tiếp nhận điểm tựa từ **4. Các kiểu communication theo khoảng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)** nối từ **4. Các kiểu communication theo khoảng cách** sang **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)
 
@@ -72,7 +72,7 @@ Thụ thể nội bào thường trực tiếp hoặc gián tiếp điều chỉ
 
 Cùng một mục tiêu “đổi cell hành vi (behavior / 동작)”, chemistry của ligand quyết định kiến trúc (architecture / 아키텍처) signaling phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn** tiếp nhận điểm tựa từ **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn** nối từ **5. Màng (membrane) receptor và thụ thể nội bào (intracellular receptor)** sang **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn
 
@@ -82,7 +82,7 @@ Ligand bind làm receptor đổi conformation, activation heterotrimeric G prote
 
 Một receptor có thể activate nhiều G protein; một enzyme có thể tạo nhiều chất truyền tin thứ hai (second messenger). Đây là **tín hiệu (signal / 신호) khuếch đại (amplification)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm** tiếp nhận điểm tựa từ **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm** nối từ **6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn** sang **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm
 
@@ -92,7 +92,7 @@ Một receptor activation có thể tạo rất nhiều cAMP; cAMP activate prot
 
 Tín hiệu khuếch đại giúp lượng ligand nhỏ tạo phản hồi (response / 응답) lớn, nhưng cũng đòi hỏi shutdown cơ chế (mechanism / 메커니즘) để tránh runaway activation.
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)** tiếp nhận điểm tựa từ **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)** nối từ **7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm** sang **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)
 
@@ -104,7 +104,7 @@ Sau đáp ứng, pump đưa Ca²⁺ trở lại store/outside. Nếu Ca²⁺ cao
 
 Một độ dốc (gradient / 기울기) được membrane chapter tạo ra giờ trở thành thông tin (information / 정보) channel.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu** tiếp nhận điểm tựa từ **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Phosphorylation: molecular switch linh hoạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu** nối từ **8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)** sang **10. Phosphorylation: molecular switch linh hoạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu
 
@@ -116,7 +116,7 @@ Các pathway này điều chỉnh growth, survival, metabolism và biểu hiện
 
 Mutation làm RTK/pathway active liên tục có thể góp phần cancer.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **10. Phosphorylation: molecular switch linh hoạt** tiếp nhận điểm tựa từ **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Signaling cascade và lôgic (logic) mạng lưới (network)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Phosphorylation: molecular switch linh hoạt** nối từ **9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu** sang **11. Signaling cascade và lôgic (logic) mạng lưới (network)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Phosphorylation: molecular switch linh hoạt
 
@@ -128,7 +128,7 @@ Một điểm cần tránh là nghĩ “phosphorylation luôn bật”. tác đ�
 
 Kinase–phosphatase pair tạo reversible điều khiển (control / 제어) rất phù hợp cho hệ động (dynamic system / 동적 시스템).
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **11. Signaling cascade và lôgic (logic) mạng lưới (network)** tiếp nhận điểm tựa từ **10. Phosphorylation: molecular switch linh hoạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Signaling cascade và lôgic (logic) mạng lưới (network)** nối từ **10. Phosphorylation: molecular switch linh hoạt** sang **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Signaling cascade và lôgic (logic) mạng lưới (network)
 
@@ -146,7 +146,7 @@ F[Stress signal] --> C
 
 Cross-talk giúp cell integrate ngữ cảnh (context / 맥락) thay vì phản ứng mechanical với một tín hiệu (signal / 신호) duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác** tiếp nhận điểm tựa từ **11. Signaling cascade và lôgic (logic) mạng lưới (network)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác** nối từ **11. Signaling cascade và lôgic (logic) mạng lưới (network)** sang **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác
 
@@ -156,7 +156,7 @@ Một cell chỉ “nghe” tín hiệu (signal / 신호) nếu có receptor ph�
 
 Đây là principle quan trọng của multicellularity: organism có thể dùng cùng hormone nhưng nhiều tissue interpret khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?** tiếp nhận điểm tựa từ **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?** nối từ **12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác** sang **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?
 
@@ -168,7 +168,7 @@ Ví dụ odor receptor đáp ứng (response) giảm khi mùi kéo dài. hệ th
 
 Điều khiển hệ thống (system / 시스템) luôn cần reset.
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)** tiếp nhận điểm tựa từ **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)** nối từ **13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?** sang **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)
 
@@ -178,7 +178,7 @@ Mạng lưới sinh học (biological network) đôi khi tạo **tính lưỡng 
 
 Tế bào-cycle commitment là ví dụ nơi phản hồi dương giúp quyết định (decision / 결정) trở nên rõ ràng thay vì lưng chừng.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn** tiếp nhận điểm tựa từ **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn** nối từ **14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)** sang **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn
 
@@ -188,7 +188,7 @@ Yếu tố phiên mã vào nucleus/bind DNA và thay biểu hiện gen. Protein 
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang molecular genetics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)** tiếp nhận điểm tựa từ **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)** nối từ **15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn** sang **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)
 
@@ -201,7 +201,7 @@ Yếu tố phiên mã vào nucleus/bind DNA và thay biểu hiện gen. Protein 
 
 Điều quan trọng là cell không đơn giản “đủ lớn rồi chia”. Nó phải integrate nutrient, sinh trưởng tín hiệu, DNA integrity và mô (tissue) bối cảnh (context).
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào** tiếp nhận điểm tựa từ **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Checkpoint: “đi tiếp hay dừng?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào** nối từ **16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)** sang **18. Checkpoint: “đi tiếp hay dừng?”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào
 
@@ -211,7 +211,7 @@ CDK phosphorylate mục tiêu (target / 대상) để drive chuyển tiếp (tra
 
 Điều khiển (control / 제어) bằng synthesis + destruction cho cycle có directionality.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **18. Checkpoint: “đi tiếp hay dừng?”** tiếp nhận điểm tựa từ **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Tổn thương DNA phản hồi (response / 응답) và p53** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Checkpoint: “đi tiếp hay dừng?”** nối từ **17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào** sang **19. Tổn thương DNA phản hồi (response / 응답) và p53**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Checkpoint: “đi tiếp hay dừng?”
 
@@ -221,7 +221,7 @@ G1/S checkpoint đánh giá growth điều kiện (condition / 조건) và Tổn
 
 Checkpoint không phải vật lý (physical / 물리적) gate; nó là mạng lưới điều hòa (regulatory network).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **19. Tổn thương DNA phản hồi (response / 응답) và p53** tiếp nhận điểm tựa từ **18. Checkpoint: “đi tiếp hay dừng?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Tổn thương DNA phản hồi (response / 응답) và p53** nối từ **18. Checkpoint: “đi tiếp hay dừng?”** sang **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Tổn thương DNA phản hồi (response / 응답) và p53
 
@@ -231,7 +231,7 @@ p53 thường được gọi “guardian of the genome”, nhưng mô hình tư 
 
 Mutation p53 pathway có thể cho damaged cell tiếp tục proliferate, tăng cancer rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác** tiếp nhận điểm tựa từ **19. Tổn thương DNA phản hồi (response / 응답) và p53** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Meiosis khác vì mục tiêu khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác** nối từ **19. Tổn thương DNA phản hồi (response / 응답) và p53** sang **21. Meiosis khác vì mục tiêu khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác
 
@@ -241,7 +241,7 @@ Phases như prophase, metaphase, anaphase, telophase hữu ích để mô tả, 
 
 Cytokinesis sau đó chia cytoplasm.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **21. Meiosis khác vì mục tiêu khác** tiếp nhận điểm tựa từ **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Meiosis khác vì mục tiêu khác** nối từ **20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác** sang **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Meiosis khác vì mục tiêu khác
 
@@ -253,7 +253,7 @@ Trao đổi chéo (crossing-over) và phân ly độc lập (independent assortm
 
 Meiosis là cầu nối (bridge / 브리지) giữa chu kỳ tế bào và di truyền (inheritance) di truyền học (genetics).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)** tiếp nhận điểm tựa từ **21. Meiosis khác vì mục tiêu khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)** nối từ **21. Meiosis khác vì mục tiêu khác** sang **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)
 
@@ -263,7 +263,7 @@ Apoptosis loại damaged cell và sculpt tissue trong phát triển (development
 
 Ở sinh vật đa bào, survival của individual cell không phải mục tiêu tối cao; integrity của organism mới là ngữ cảnh (context / 맥락) lớn hơn.
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)** tiếp nhận điểm tựa từ **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)** nối từ **22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)** sang **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)
 
@@ -273,7 +273,7 @@ Một tumor cell có mutation tăng proliferation; clone đó expand; thêm muta
 
 Cancer nối truyền tín hiệu tế bào (cell signaling) với genetics và tiến hóa (evolution).
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)** cho ta quy tắc; **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)** nêu quy tắc; **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)** thử quy tắc trong tình huống, rồi **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** mở rộng hệ quả.
 
 ## 24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)
 
@@ -293,7 +293,7 @@ meal
 
 Một hormone không “hạ đường” trực tiếp; nó thay cell hành vi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)** cho ta quy tắc; **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)** nêu quy tắc; **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** thử quy tắc trong tình huống, rồi **26. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 25. Tình huống phân tích: yếu tố tăng trưởng và proliferation
 
@@ -303,7 +303,7 @@ Nếu receptor/con đường mutation làm tín hiệu (signal / 신호) “on�
 
 Đây là ví dụ thông tin (information / 정보) processing thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** cho ta quy tắc; **26. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Tình huống phân tích: yếu tố tăng trưởng và proliferation** nêu quy tắc; **26. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** mở rộng hệ quả.
 
 ## 26. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -321,7 +321,7 @@ Nếu receptor/con đường mutation làm tín hiệu (signal / 신호) “on�
 
 <!-- depth-audit-2026:signal-quantitation -->
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** tiếp nhận điểm tựa từ **26. Các hiểu lầm phổ biến (common misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tế bào mã hóa thông tin bằng thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** nối từ **26. Các hiểu lầm phổ biến (common misconceptions)** sang **Tế bào mã hóa thông tin bằng thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện
 
@@ -341,13 +341,13 @@ phản hồi (response / 응답)=\frac{[L]^n}{K^n+[L]^n}
 
 \(n>1\) tạo đường cong dốc hơn và có thể giúp quyết định trở nên switch-like. Nhưng \(n\) là tham số mô tả; không nên tự động diễn giải nó như đúng số phân tử cùng gắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **Tế bào mã hóa thông tin bằng thời gian** tiếp nhận điểm tựa từ **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tế bào mã hóa thông tin bằng thời gian** nối từ **Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện** sang **Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tế bào mã hóa thông tin bằng thời gian
 
 Hai tín hiệu (signal / 신호) có cùng nồng độ trung bình vẫn có thể tạo kết quả khác nếu một tín hiệu (signal / 신호) liên tục còn tín hiệu (signal / 신호) kia phát xung. Ca²⁺, ERK, NF-κB và nhiều pathway có thể dùng **tần số, độ dài xung và lịch sử kích thích (signal history)** để mã hóa trạng thái. phản hồi (feedback / 피드백) âm tạo adaptation; phản hồi (feedback / 피드백) dương tạo commitment; degradation và phosphatase xác định bộ nhớ (memory / 메모리) của pathway.
 
-> **Chuyển mạch:** Trong **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **Tế bào mã hóa thông tin bằng thời gian** xác định đầu vào; **Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Cầu nối: tín hiệu (signal / 신호) ngắn hạn trở thành chương trình dài hạn bằng cách nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cell mã hóa information bằng thời gian; cell-cycle commitment làm quyết định khó đảo ngược. **Cầu nối** kiểm tra cách signal ngắn hạn thành chương trình dài hạn.
 
 ## Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược
 
@@ -355,7 +355,7 @@ G1/S chuyển tiếp (transition / 전이) không chỉ là “cyclin đủ cao�
 
 Cơ chế này giải thích vì sao thất bại (failure / 실패) ở cell cycle thường là thất bại (failure / 실패) của mạng (network / 네트워크) chứ không phải một nút đơn. Oncogene có thể tăng drive, tumor suppressor mất mát (loss / 손실) làm mất brake, repair defect tăng variation; selection trong mô sau đó giữ clone có lợi thế tăng trưởng. Cancer vì vậy nối trực tiếp **regulation → thất bại (failure / 실패) → somatic evolution**.
 
-> **Chuyển mạch:** Ở chặng này của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**, **Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược** xác định đầu vào; **27. Cầu nối: tín hiệu (signal / 신호) ngắn hạn trở thành chương trình dài hạn bằng cách nào?** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cell-cycle commitment tạo trạng thái khó đảo ngược; cầu nối cuối giải thích cách signal ngắn hạn chuyển thành chương trình dài hạn.
 
 ## 27. Cầu nối: tín hiệu (signal / 신호) ngắn hạn trở thành chương trình dài hạn bằng cách nào?
 

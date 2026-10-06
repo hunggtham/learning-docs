@@ -26,7 +26,7 @@ Tuy nhiên enthalpy không quyết định một mình. Ở nhiệt độ và á
 
 **Entropy trộn (entropy of mixing)** thường có xu hướng thuận lợi vì các hạt có nhiều cách phân bố hơn, nhưng việc dung môi bị sắp xếp mạnh quanh một chất tan kỵ nước hoặc ion có mật độ điện tích cao có thể làm đóng góp entropy phức tạp hơn trực giác đơn giản.
 
-> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** tiếp nhận điểm tựa từ **Hòa tan thực chất là tái tổ chức các tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Solvat hóa, hydrat hóa và lớp solvat hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** nối từ **Hòa tan thực chất là tái tổ chức các tương tác** sang **Solvat hóa, hydrat hóa và lớp solvat hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?
 
@@ -38,7 +38,7 @@ Một phân tử có nhóm phân cực nhưng khung hydrocarbon rất lớn vẫ
 
 > Cách hỏi tốt hơn là: **những tương tác nào bị mất, những tương tác nào được tạo ra, và entropy thay đổi ra sao?**
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Solvat hóa, hydrat hóa và lớp solvat hóa** tiếp nhận điểm tựa từ **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Solvat hóa, hydrat hóa và lớp solvat hóa** nối từ **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** sang **Dung dịch chưa bão hòa, bão hòa và quá bão hòa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Solvat hóa, hydrat hóa và lớp solvat hóa
 
@@ -50,7 +50,7 @@ Ion nhỏ có điện tích cao như `Mg²+` có mật độ điện tích lớn
 
 Hydrat hóa mạnh cũng giải thích vì sao xu hướng ion hóa ở pha khí không thể trực tiếp dùng để dự đoán hành vi trong dung dịch nước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** tiếp nhận điểm tựa từ **Solvat hóa, hydrat hóa và lớp solvat hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** nối từ **Solvat hóa, hydrat hóa và lớp solvat hóa** sang **Ảnh hưởng của nhiệt độ và áp suất tới độ tan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dung dịch chưa bão hòa, bão hòa và quá bão hòa
 
@@ -62,7 +62,7 @@ Hydrat hóa mạnh cũng giải thích vì sao xu hướng ion hóa ở pha khí
 
 Trạng thái quá bão hòa minh họa rõ sự khác nhau giữa nhiệt động lực học và động học: hình thành tinh thể có thể thuận lợi về nhiệt động nhưng không xảy ra ngay vì chưa có mầm tinh thể đủ ổn định để khởi động chuyển pha.
 
-> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** tiếp nhận điểm tựa từ **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch lý tưởng và định luật Raoult** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** nối từ **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** sang **Dung dịch lý tưởng và định luật Raoult**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ảnh hưởng của nhiệt độ và áp suất tới độ tan
 
@@ -80,7 +80,7 @@ Một số tài liệu dùng quy ước hằng số nghịch đảo, nên luôn 
 
 Nước có ga là ví dụ trực quan: chai đóng kín duy trì áp suất riêng phần `CO2` cao nên nhiều `CO2` hòa tan. Khi mở nắp, áp suất giảm và `CO2` thoát ra để hệ tiến tới cân bằng mới.
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch lý tưởng và định luật Raoult** tiếp nhận điểm tựa từ **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai lệch dương và sai lệch âm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch lý tưởng và định luật Raoult** nối từ **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** sang **Sai lệch dương và sai lệch âm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dung dịch lý tưởng và định luật Raoult
 
@@ -102,7 +102,7 @@ P_{tot}=\sum_i x_iP_i^*
 
 **Định luật Raoult (Raoult's law)** không phải quy luật phổ quát cho mọi hỗn hợp; nó là một mô hình giới hạn cho hành vi gần lý tưởng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sai lệch dương và sai lệch âm** tiếp nhận điểm tựa từ **Dung dịch lý tưởng và định luật Raoult** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sai lệch dương và sai lệch âm** nối từ **Dung dịch lý tưởng và định luật Raoult** sang **Thế hóa học — ngôn ngữ sâu hơn của dung dịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sai lệch dương và sai lệch âm
 
@@ -114,7 +114,7 @@ Nếu tương tác A–B mạnh hơn, áp suất hơi thấp hơn dự đoán l�
 
 Tính không lý tưởng mạnh có thể tạo **hỗn hợp đẳng phí (azeotrope / 공비 혼합물)**, nơi hơi và lỏng có cùng thành phần tại một thành phần xác định. Khi đó chưng cất đơn giản không thể tiếp tục làm giàu một cấu tử vô hạn.
 
-> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** tiếp nhận điểm tựa từ **Sai lệch dương và sai lệch âm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực ion và tính không lý tưởng của chất điện ly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** nối từ **Sai lệch dương và sai lệch âm** sang **Lực ion và tính không lý tưởng của chất điện ly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế hóa học — ngôn ngữ sâu hơn của dung dịch
 
@@ -136,7 +136,7 @@ trong đó `γ_i` là **hệ số hoạt độ (activity coefficient / 활동도
 
 Điểm cốt lõi là cân bằng và động lực nhiệt động phụ thuộc hoạt độ, không phải chỉ nồng độ. Nồng độ là đại lượng dễ đo; hoạt độ mô tả “mức hiện diện hiệu dụng” về mặt nhiệt động của một tiểu phần trong môi trường tương tác.
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Lực ion và tính không lý tưởng của chất điện ly** tiếp nhận điểm tựa từ **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chất tập hợp từ thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Lực ion và tính không lý tưởng của chất điện ly** nối từ **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** sang **Tính chất tập hợp từ thế hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực ion và tính không lý tưởng của chất điện ly
 
@@ -152,7 +152,7 @@ I=\frac12\sum_i c_i z_i^2
 
 Ở nồng độ cao hơn cần các mô hình phức tạp hơn như Debye–Hückel mở rộng, Davies, Pitzer hoặc các mô hình tương tác ion riêng biệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tính chất tập hợp từ thế hóa học** tiếp nhận điểm tựa từ **Lực ion và tính không lý tưởng của chất điện ly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tính chất tập hợp từ thế hóa học** nối từ **Lực ion và tính không lý tưởng của chất điện ly** sang **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính chất tập hợp từ thế hóa học
 
@@ -175,7 +175,7 @@ Trong đó `i` là **hệ số van 't Hoff (van 't Hoff factor)**.
 
 Với chất điện ly thực, sự ghép cặp ion và tương tác tĩnh điện làm số hạt hiệu dụng khác giá trị nguyên đơn giản dự đoán từ công thức phân ly.
 
-> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** tiếp nhận điểm tựa từ **Tính chất tập hợp từ thế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự phân bố giữa hai pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** nối từ **Tính chất tập hợp từ thế hóa học** sang **Sự phân bố giữa hai pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ
 
@@ -185,7 +185,7 @@ Với chất điện ly thực, sự ghép cặp ion và tương tác tĩnh đi�
 
 Tế bào sinh học rất nhạy với thẩm thấu. Môi trường ưu trương kéo nước ra khỏi tế bào; môi trường nhược trương làm nước đi vào. Tuy nhiên hành vi thực còn phụ thuộc độ thấm màng và vận chuyển chủ động.
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sự phân bố giữa hai pha** tiếp nhận điểm tựa từ **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích số tan và kết tủa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sự phân bố giữa hai pha** nối từ **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** sang **Tích số tan và kết tủa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự phân bố giữa hai pha
 
@@ -203,7 +203,7 @@ Nếu chất tan có thể ion hóa, sự phân bố phụ thuộc pH vì dạng
 
 Đây là nền tảng của chiết lỏng–lỏng, sự hấp thu thuốc và vận chuyển chất ô nhiễm trong môi trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tích số tan và kết tủa** tiếp nhận điểm tựa từ **Sự phân bố giữa hai pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan trong hóa học hữu cơ và dược hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tích số tan và kết tủa** nối từ **Sự phân bố giữa hai pha** sang **Độ tan trong hóa học hữu cơ và dược hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích số tan và kết tủa
 
@@ -221,7 +221,7 @@ Kết tủa phụ thuộc **tích hoạt độ ion (ion activity product)** so v
 
 Sự tạo phức, pH và lực ion có thể thay đổi độ tan biểu kiến rất mạnh. Ví dụ, khi phối tử liên kết ion kim loại và làm giảm hoạt độ kim loại tự do, thêm chất rắn có thể hòa tan để thiết lập lại cân bằng.
 
-> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Độ tan trong hóa học hữu cơ và dược hóa học** tiếp nhận điểm tựa từ **Tích số tan và kết tủa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Độ tan trong hóa học hữu cơ và dược hóa học** nối từ **Tích số tan và kết tủa** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ tan trong hóa học hữu cơ và dược hóa học
 
@@ -237,7 +237,7 @@ Dược hóa học phải cân bằng:
 
 Một hợp chất có độ phân cực nội tại khá cao vẫn có thể ít tan nếu mạng tinh thể quá bền. Vì vậy độ tan không chỉ là câu hỏi “phân tử có phân cực không?” mà còn là sự cạnh tranh giữa **độ bền pha rắn** và **năng lượng tự do solvat hóa (solvation free energy)**.
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Độ tan trong hóa học hữu cơ và dược hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Các hiểu lầm thường gặp** nối từ **Độ tan trong hóa học hữu cơ và dược hóa học** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -257,7 +257,7 @@ Không. Hoạt độ là đại lượng nhiệt động xuất hiện trực ti
 
 Sai. Khi tương tác ion mạnh, hiệu chỉnh hoạt độ trở nên cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

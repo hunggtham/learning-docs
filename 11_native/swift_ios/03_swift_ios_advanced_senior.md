@@ -34,25 +34,25 @@ final class Downloader {
 
 Câu hỏi đúng là: ai giữ `Downloader`, ai giữ closure, closure sống đến khi nào, thao tác (operation / 연산) có cần đơn vị sở hữu (owner / 오너) sống để hoàn tất hay không. Nếu closure synchronous/non-escaping, weak capture thường không cần. Nếu closure được thuộc tính (property / 속성)/dịch vụ (service / 서비스) giữ và closure lại giữ `self`, cycle có thể hình thành.
 
-> **Chuyển mạch:** Ownership graph giải thích retain cycle; `weak`/`unowned` là lifetime contracts, rồi closure capture tiếp theo phải xét mọi captured value chứ không chỉ `self`.
+> **Nối mạch:** Ownership graph giải thích retain cycle; `weak`/`unowned` là lifetime contracts, rồi closure capture tiếp theo phải xét mọi captured value chứ không chỉ `self`.
 
 ## 1.2 `weak` và `unowned` là thời gian tồn tại (lifetime / 수명) đặc tả hợp đồng (contract / 계약)
 
 `weak` cho phép mục tiêu (target / 대상) biến mất và vì vậy truy cập (access / 접근) có Optional ngữ nghĩa (semantics / 의미론). `unowned` không retain nhưng giả định mục tiêu (target / 대상) còn sống tại mọi truy cập (access / 접근). `unowned` nên được dùng khi quan hệ (relation / 관계) thời gian tồn tại (lifetime / 수명) là bất biến (invariant / 불변식) của mô hình (model / 모델), không phải để tránh unwrap.
 
-> **Chuyển mạch:** `weak`/`unowned` đặt lifetime contract cho reference; closure capture tiếp theo phải kiểm kê mọi captured value trước khi vượt sang Objective-C/autorelease boundary.
+> **Nối mạch:** `weak`/`unowned` đặt lifetime contract cho reference; closure capture tiếp theo phải kiểm kê mọi captured value trước khi vượt sang Objective-C/autorelease boundary.
 
 ## 1.3 Closure capture không chỉ là `self`
 
 Capture danh sách (list / 목록) có thể snapshot giá trị (value / 값) hoặc thay quyền sở hữu (ownership / 소유권) của tham chiếu (reference / 참조). Large giá trị (value / 값) capture, existential box, closure allocation và hidden bridging có thể ảnh hưởng bộ nhớ (memory / 메모리)/hiệu năng (performance / 성능) trong đường xử lý nóng (hot path / 핫 패스). Đừng optimize trước khi profile, nhưng khi profile cho thấy allocation pressure, hãy biết closure/generic/existential cũng là nguồn allocation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.3 Closure capture không chỉ là self** đã nêu tiêu chí phân biệt, còn **1.4 Autorelease và Objective-C ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.3 Closure capture không chỉ là self** đặt tiêu chí; **1.4 Autorelease và Objective-C ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** mở rộng hệ quả.
 
 ## 1.4 Autorelease và Objective-C ranh giới (boundary / 경계)
 
 Swift-native ARC và Objective-C ARC interoperable nhưng Foundation/Objective-C API có thể tạo autoreleased đối tượng (object / 객체). Trong batch vòng lặp (loop / 루프) lớn qua legacy API, autorelease pool phạm vi (scope / 범위) có thể ảnh hưởng peak bộ nhớ (memory / 메모리). Đây là tối ưu hóa (optimization / 최적화) ranh giới (boundary / 경계); đừng rải `autoreleasepool` khắp app nếu Instruments chưa chỉ ra nhu cầu.
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.4 Autorelease và Objective-C ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4.1 Single-flight thao tác (operation / 연산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.4 Autorelease và Objective-C ranh giới (boundary / 경계)** đặt tiêu chí; **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4.1 Single-flight thao tác (operation / 연산)** mở rộng hệ quả.
 
 ## 1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)
 
@@ -123,25 +123,25 @@ actor BankAccount {
 
 `await` là nơi giả định (assumption / 가정) có thể mất hiệu lực. Nếu thao tác (operation / 연산) cần atomic chuyển tiếp trạng thái (state transition / 상태 전이), hãy giảm suspension bên trong trọng yếu (critical / 중요) ngữ nghĩa (semantic / 의미적) region hoặc lưu/revalidate phiên bản (version / 버전)/trạng thái (state / 상태) sau await.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** nêu điều cần giải thích; **4.1 Single-flight thao tác (operation / 연산)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **1.5 tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) ngoài bộ nhớ (memory / 메모리)** đặt vấn đề; **4.1 Single-flight thao tác (operation / 연산)** đối chiếu bằng chứng, rồi **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4.1 Single-flight thao tác (operation / 연산)
 
 Auth refresh, expensive bộ nhớ đệm (cache / 캐시) tải (load / 로드) hoặc lược đồ (schema / 스키마) preparation thường cần “một thao tác (operation / 연산) in-flight, nhiều caller chờ chung”. Actor có thể giữ `Task` hiện tại và clear khi hoàn tất. Điều khó không phải cú pháp (syntax / 문법) mà là thất bại (failure / 실패)/cancellation chính sách (policy / 정책): caller cancel có cancel dùng chung (shared / 공유) công việc (work / 작업) không, hay dùng chung (shared / 공유) tác vụ (task / 작업) sống vì caller khác còn cần?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, sau nội dung của **4.1 Single-flight thao tác (operation / 연산)**, **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4.3 Cancellation cleanup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, sau nội dung của **4.1 Single-flight thao tác (operation / 연산)**, **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4.3 Cancellation cleanup** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)
 
 Tác vụ (task / 작업) thuộc tính (property / 속성) phải có đơn vị sở hữu (owner / 오너)/thời gian tồn tại (lifetime / 수명) chính sách (policy / 정책). Screen tác vụ (task / 작업) có thể cancel khi screen biến mất; upload/background sync có thể thuộc dịch vụ (service / 서비스) khác. tác vụ (task / 작업) không nên sống vô hạn chỉ vì đối tượng (object / 객체) bị singleton giữ.
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **4.3 Cancellation cleanup** tiếp nhận điểm tựa từ **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.4 Lower-level synchronization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **4.3 Cancellation cleanup** nối từ **4.2 tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** sang **4.4 Lower-level synchronization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.3 Cancellation cleanup
 
 Cancellation-aware thao tác (operation / 연산) cần cleanup idempotent. Nếu giao dịch (transaction / 트랜잭션) đã mutate một phần trạng thái (state / 상태) trước cancellation, quay lui (rollback / 롤백)/compensation phải được thiết kế; `CancellationError` không tự đảo side tác động (effect / 효과).
 
-> **Chuyển mạch:** Cancellation cleanup phải hoàn tất trước khi hạ xuống lock/atomic synchronization; sau đó view loading và controller lifetime được tách thành lifecycle boundary riêng.
+> **Nối mạch:** Cancellation cleanup phải hoàn tất trước khi hạ xuống lock/atomic synchronization; sau đó view loading và controller lifetime được tách thành lifecycle boundary riêng.
 
 ## 4.4 Lower-level synchronization
 
@@ -194,19 +194,19 @@ Một `UIViewController` đi qua các phase chính:
 
 Không đặt yêu cầu (request / 요청) one-time vào `viewWillAppear` nếu điều hướng (navigation / 내비게이션) back/forward sẽ gọi lặp ngoài ý muốn. Ngược lại, trạng thái (state / 상태) phải refresh mỗi lần màn hình hiện lại không nên chỉ nằm trong `viewDidLoad`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.1 View loading khác controller thời gian tồn tại (lifetime / 수명)** tiếp nhận điểm tựa từ **4.4 Lower-level synchronization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.1 View loading khác controller thời gian tồn tại (lifetime / 수명)** nối từ **4.4 Lower-level synchronization** sang **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.1 View loading khác controller thời gian tồn tại (lifetime / 수명)
 
 Controller tồn tại không đồng nghĩa `view` đã tải (load / 로드). Truy cập `view` có thể trigger tải (load / 로드). Dùng `isViewLoaded` khi cần kiểm mà không ép tải (load / 로드).
 
-> **Chuyển mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O** tiếp nhận điểm tựa từ **7.1 View loading khác controller thời gian tồn tại (lifetime / 수명)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.3 Trait và adaptive UI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O** nối từ **7.1 View loading khác controller thời gian tồn tại (lifetime / 수명)** sang **7.3 Trait và adaptive UI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O
 
 `viewDidLayoutSubviews` có thể được gọi rất nhiều lần do ràng buộc (constraint / 제약조건), rotation, safe-area, content-size thay đổi (change / 변경). Không đặt mạng (network / 네트워크)/cơ sở dữ liệu (database / 데이터베이스)/heavy computation tại đây.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.3 Trait và adaptive UI** tiếp nhận điểm tựa từ **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gate trước khi sang Master** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.3 Trait và adaptive UI** nối từ **7.2 bố cục (layout / 레이아웃) callback không phải nơi làm I/O** sang **Gate trước khi sang Master**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.3 Trait và adaptive UI
 
@@ -719,7 +719,7 @@ Rà soát (review / 검토) ngữ nghĩa (semantics / 의미론) trước style:
 
 Nếu reviewer phải mất rất lâu mới xác định trạng thái (state / 상태)/tác động (effect / 효과)/phụ thuộc (dependency / 의존성) luồng (flow / 흐름), mã (code / 코드) có thể compile nhưng kiến trúc (architecture / 아키텍처) chưa đạt mức cấp cao (senior / 시니어) maintainability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **Gate trước khi sang Master** tiếp nhận điểm tựa từ **7.3 Trait và adaptive UI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **Gate trước khi sang Master** nối từ **7.3 Trait và adaptive UI** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Gate trước khi sang Master
 

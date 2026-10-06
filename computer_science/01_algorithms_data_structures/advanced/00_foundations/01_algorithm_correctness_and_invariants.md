@@ -34,7 +34,7 @@ trả insertion point nếu không có target
 
 Tên thuật toán giống nhau nhưng điều kiện sau khác nhau, nên bất biến và mã (code / 코드) cũng khác nhau.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Điều kiện trước và điều kiện sau** tiếp nhận điểm tựa từ **Trước khi chứng minh phải có specification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoare triple: cách viết hợp đồng ngắn gọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Điều kiện trước và điều kiện sau** nối từ **Trước khi chứng minh phải có specification** sang **Hoare triple: cách viết hợp đồng ngắn gọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện trước và điều kiện sau
 
@@ -49,7 +49,7 @@ multiset(output) = multiset(left) ∪ multiset(right)
 
 Nếu chỉ chứng minh thứ tự mà không chứng minh bảo toàn phần tử, một hiện thực (implementation / 구현) làm mất hoặc nhân đôi dữ liệu vẫn có thể vượt qua nửa đầu specification.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Hoare triple: cách viết hợp đồng ngắn gọn** tiếp nhận điểm tựa từ **Điều kiện trước và điều kiện sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hoare triple: cách viết hợp đồng ngắn gọn** nối từ **Điều kiện trước và điều kiện sau** sang **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoare triple: cách viết hợp đồng ngắn gọn
 
@@ -71,7 +71,7 @@ binarySearch(a, x)
 
 Ta không cần formal xác minh (verification / 확인) hoàn chỉnh để hưởng lợi từ cách nghĩ này. Nó buộc ta tách rõ “được giả định gì” và “phải bảo đảm gì”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Hoare triple: cách viết hợp đồng ngắn gọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất biến vòng lặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)** nối từ **Hoare triple: cách viết hợp đồng ngắn gọn** sang **Bất biến vòng lặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)
 
@@ -88,7 +88,7 @@ progress: một đại lượng tiến dần về điểm dừng
 
 Đại lượng dùng để chứng minh tiến triển thường gọi là **variant** hoặc **ranking hàm (function / 함수)**.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Bất biến vòng lặp** tiếp nhận điểm tựa từ **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất biến vòng lặp** nối từ **Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)** sang **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất biến vòng lặp
 
@@ -128,7 +128,7 @@ Nếu `a[mid] < target`, tính sorted cho phép loại toàn bộ `[lo, mid]`. K
 
 Progress measure là độ dài đoạn ứng viên. Mỗi vòng không trả kết quả đều làm đoạn ngắn hơn, nên thuật toán kết thúc.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì** tiếp nhận điểm tựa từ **Bất biến vòng lặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất biến bảo toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì** nối từ **Bất biến vòng lặp** sang **Bất biến bảo toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì
 
@@ -147,7 +147,7 @@ conservation invariant
 
 Nếu thiếu conservation, ta chưa chứng minh thuật toán không làm mất hoặc nhân đôi phần tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Bất biến bảo toàn** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất biến bảo toàn** nối từ **Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì** sang **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất biến bảo toàn
 
@@ -157,7 +157,7 @@ Sorting bảo toàn đa tập phần tử. vùng nhớ động (heap / 힙) gi�
 
 Một validator tốt hiếm khi chỉ kiểm tra một thuộc tính (property / 속성).
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Bất biến bảo toàn** nêu điều cần giải thích; **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bất biến cục bộ và bất biến toàn cục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất biến bảo toàn** đặt vấn đề; **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu** kiểm tra bằng chứng, rồi **Bất biến cục bộ và bất biến toàn cục** mở rộng hệ quả.
 
 ## Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu
 
@@ -185,7 +185,7 @@ representation invariant sau thao tác
 
 Nếu bất biến (invariant / 불변식) được phục hồi trước khi API trả về, các thao tác sau có thể tiếp tục dựa trên nó.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu** nêu điều cần giải thích; **Bất biến cục bộ và bất biến toàn cục** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu** đặt vấn đề; **Bất biến cục bộ và bất biến toàn cục** kiểm tra bằng chứng, rồi **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** mở rộng hệ quả.
 
 ## Bất biến cục bộ và bất biến toàn cục
 
@@ -199,7 +199,7 @@ node.key ∈ (lowerBound, upperBound)
 
 Đây là bài học tổng quát: **cục bộ (local / 로컬) consistency không luôn suy ra toàn cục (global / 전역) tính đúng đắn (correctness / 정확성)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **Bất biến cục bộ và bất biến toàn cục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy nạp và đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** nối từ **Bất biến cục bộ và bất biến toàn cục** sang **Quy nạp và đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)
 
@@ -211,7 +211,7 @@ Trong BFS, ta có thể lập luận (reasoning / 추론) bằng “khoảng cá
 
 Ghost trạng thái (state / 상태) giúp tách “thông tin cần để chứng minh” khỏi “thông tin cần để chạy hiệu quả”.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Quy nạp và đệ quy** tiếp nhận điểm tựa từ **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy nạp mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quy nạp và đệ quy** nối từ **Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)** sang **Quy nạp mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy nạp và đệ quy
 
@@ -227,7 +227,7 @@ step: hai nửa được sort đúng + merge đúng => toàn bộ đúng
 
 Với cây, **quy nạp cấu trúc (structural induction)** còn tự nhiên hơn. Nếu hàm trên nút chỉ phụ thuộc các cây con, ta giả sử các cây con trả đúng rồi chứng minh phép kết hợp ở nút cha đúng.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Quy nạp mạnh** tiếp nhận điểm tựa từ **Quy nạp và đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hợp đồng của hàm đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quy nạp mạnh** nối từ **Quy nạp và đệ quy** sang **Hợp đồng của hàm đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy nạp mạnh
 
@@ -235,7 +235,7 @@ Với cây, **quy nạp cấu trúc (structural induction)** còn tự nhiên h�
 
 Bottom-up DP về bản chất thực thi đúng thứ tự chứng minh: mọi prerequisite được tính trước khi chuyển tiếp (transition / 전이) hiện tại dùng tới chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Hợp đồng của hàm đệ quy** tiếp nhận điểm tựa từ **Quy nạp mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chứng minh termination cho đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hợp đồng của hàm đệ quy** nối từ **Quy nạp mạnh** sang **Chứng minh termination cho đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hợp đồng của hàm đệ quy
 
@@ -250,7 +250,7 @@ và khi trả về thì global mutable state đã được phục hồi như tr�
 
 Trong backtracking, phần “phục hồi trạng thái (state / 상태)” là cực kỳ quan trọng. Nếu `choose -> recurse -> unchoose` không đối xứng, lời gọi anh em có thể nhìn thấy trạng thái rác.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Chứng minh termination cho đệ quy** tiếp nhận điểm tựa từ **Hợp đồng của hàm đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy và exchange argument** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chứng minh termination cho đệ quy** nối từ **Hợp đồng của hàm đệ quy** sang **Greedy và exchange argument**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chứng minh termination cho đệ quy
 
@@ -267,7 +267,7 @@ kích thước cây con nhỏ hơn cây cha
 
 Nếu recursion có thể quay lại trạng thái cũ mà không có visited/memoization hoặc progress chỉ số (metric / 지표), termination chưa được chứng minh.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Greedy và exchange argument** tiếp nhận điểm tựa từ **Chứng minh termination cho đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Greedy và exchange argument** nối từ **Chứng minh termination cho đệ quy** sang **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Greedy và exchange argument
 
@@ -288,7 +288,7 @@ Trong interval scheduling, chọn interval kết thúc sớm nhất là an toàn
 
 “Có vẻ hợp lý” không phải chứng minh greedy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **Greedy và exchange argument** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proof by contradiction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)** nối từ **Greedy và exchange argument** sang **Proof by contradiction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)
 
@@ -300,7 +300,7 @@ Minimum Spanning cây (tree / 트리) có các mẫu chứng minh riêng nhưng 
 
 Kruskal và Prim có hiện thực (implementation / 구현) khác nhau nhưng đều dựa vào cấu trúc chứng minh này.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Proof by contradiction** tiếp nhận điểm tựa từ **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chứng minh bằng cực trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Proof by contradiction** nối từ **Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)** sang **Chứng minh bằng cực trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proof by contradiction
 
@@ -310,7 +310,7 @@ Dijkstra với cạnh không âm là ví dụ. Khi đỉnh `u` có tentative dis
 
 Lập luận này đồng thời chỉ ra vì sao cạnh âm phá điều kiện cốt lõi của Dijkstra.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Chứng minh bằng cực trị** tiếp nhận điểm tựa từ **Proof by contradiction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chứng minh bằng cực trị** nối từ **Proof by contradiction** sang **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chứng minh bằng cực trị
 
@@ -320,7 +320,7 @@ Giả sử một thuộc tính (property / 속성) đúng ban đầu nhưng cu�
 
 Đây là cách rất mạnh để chứng minh bất biến (invariant / 불변식) của cấu trúc động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer** tiếp nhận điểm tựa từ **Chứng minh bằng cực trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS: bất biến (invariant / 불변식) theo tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer** nối từ **Chứng minh bằng cực trị** sang **BFS: bất biến (invariant / 불변식) theo tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer
 
@@ -336,7 +336,7 @@ Nhưng trước khi viết mã (code / 코드) phải chứng minh **tính đơn
 
 Một lỗi phổ biến là thấy “đáp án là một số” rồi áp tìm kiếm nhị phân (binary search / 이진 탐색) mà chưa chứng minh predicate có cấu trúc đơn điệu.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **BFS: bất biến (invariant / 불변식) theo tầng** tiếp nhận điểm tựa từ **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **BFS: bất biến (invariant / 불변식) theo tầng** nối từ **Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer** sang **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## BFS: bất biến (invariant / 불변식) theo tầng
 
@@ -348,7 +348,7 @@ Lý do hàng đợi (queue / 큐) xử lý đỉnh theo lớp khoảng cách kh�
 
 Điều này giải thích vì sao đánh dấu khi enqueue thường quan trọng: nó ngăn cùng một trạng thái (state / 상태) được đưa vào hàng đợi (queue / 큐) nhiều lần và giữ rõ nghĩa “đã phát hiện khoảng cách ngắn nhất”.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)** tiếp nhận điểm tựa từ **BFS: bất biến (invariant / 불변식) theo tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DSU: bất biến (invariant / 불변식) của đại diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)** nối từ **BFS: bất biến (invariant / 불변식) theo tầng** sang **DSU: bất biến (invariant / 불변식) của đại diện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)
 
@@ -362,7 +362,7 @@ BLACK = đã hoàn tất
 
 Một cạnh tới `GRAY` cho thấy có chu trình có hướng vì ta quay lại một tổ tiên đang hoạt động. Nếu chỉ dùng `visited` Boolean, thông tin “đang hoạt động” bị mất và không đủ cho chứng minh kiểu này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **DSU: bất biến (invariant / 불변식) của đại diện** tiếp nhận điểm tựa từ **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **DSU: bất biến (invariant / 불변식) của đại diện** nối từ **DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)** sang **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## DSU: bất biến (invariant / 불변식) của đại diện
 
@@ -376,7 +376,7 @@ find(x) trả cùng representative khi và chỉ khi x thuộc cùng component t
 
 Nếu có `size[root]` hoặc `rank[root]`, siêu dữ liệu (metadata / 메타데이터) chỉ có ý nghĩa ở gốc (root / 루트) và phải được cập nhật theo đúng union quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)** tiếp nhận điểm tựa từ **DSU: bất biến (invariant / 불변식) của đại diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)** nối từ **DSU: bất biến (invariant / 불변식) của đại diện** sang **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)
 
@@ -394,7 +394,7 @@ một mutation chỉ có thể phá invariant trong một vùng nhỏ
 
 AVL/Red-Black rotation, Segment cây (tree / 트리) cập nhật (update / 업데이트) và nhiều cấu trúc tăng cường đều dựa trên tư duy này.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shortest đường dẫn (path / 경로) relaxation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn** nối từ **Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)** sang **Shortest đường dẫn (path / 경로) relaxation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn
 
@@ -410,7 +410,7 @@ Khi cập nhật một điểm, chỉ các nút (node / 노드) trên đường 
 
 Tính đúng đắn đến từ việc các nút (node / 노드) không chứa vị trí cập nhật giữ nguyên giá trị đúng, còn các nút (node / 노드) có chứa nó được tính lại từ hai child đã đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn** xác định đầu vào; **Shortest đường dẫn (path / 경로) relaxation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bất biến (invariant / 불변식) giữa nhiều cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn** đặt đầu vào cho **Shortest đường dẫn (path / 경로) relaxation**, rồi **Bất biến (invariant / 불변식) giữa nhiều cấu trúc** mở rộng hệ quả.
 
 ## Shortest đường dẫn (path / 경로) relaxation
 
@@ -424,7 +424,7 @@ Một bất biến (invariant / 불변식) nền tảng là `dist[v]` luôn là 
 
 Các thuật toán shortest đường dẫn (path / 경로) khác nhau chủ yếu khác ở quy tắc chọn thứ tự relaxation và điều kiện cho phép ta kết luận bound đã trở thành chính xác.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Shortest đường dẫn (path / 경로) relaxation** xác định đầu vào; **Bất biến (invariant / 불변식) giữa nhiều cấu trúc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Atomicity của thao tác phức hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Shortest đường dẫn (path / 경로) relaxation** đặt đầu vào cho **Bất biến (invariant / 불변식) giữa nhiều cấu trúc**, rồi **Atomicity của thao tác phức hợp** mở rộng hệ quả.
 
 ## Bất biến (invariant / 불변식) giữa nhiều cấu trúc
 
@@ -441,7 +441,7 @@ thứ tự list đúng recency semantics
 
 Trong mã (code / 코드) môi trường vận hành (production / 운영 환경), đây thường là nơi bug khó xuất hiện nhất vì validator riêng lẻ của từng bộ chứa (container / 컨테이너) vẫn pass.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Atomicity của thao tác phức hợp** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식) giữa nhiều cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성) và linearizability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Atomicity của thao tác phức hợp** nối từ **Bất biến (invariant / 불변식) giữa nhiều cấu trúc** sang **Tính đồng thời (concurrency / 동시성) và linearizability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Atomicity của thao tác phức hợp
 
@@ -455,7 +455,7 @@ hoặc
 
 Trong C, resize bảng băm (hash table / 해시 테이블) nên hoàn thành allocation/rehash bảng mới trước khi thay pointer chính. Đây là lập luận (reasoning / 추론) gần với giao dịch (transaction / 트랜잭션): không để công khai (public / 공개) trạng thái (state / 상태) ở trạng thái nửa cũ nửa mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Tính đồng thời (concurrency / 동시성) và linearizability** tiếp nhận điểm tựa từ **Atomicity của thao tác phức hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Arithmetic tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính đồng thời (concurrency / 동시성) và linearizability** nối từ **Atomicity của thao tác phức hợp** sang **Arithmetic tính đúng đắn (correctness / 정확성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính đồng thời (concurrency / 동시성) và linearizability
 
@@ -474,7 +474,7 @@ Một mô hình tính đúng đắn (correctness / 정확성) quan trọng là *
 
 Lock-free structures còn cần bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và bộ nhớ (memory / 메모리) reclamation lập luận (reasoning / 추론). “Dùng atomic pointer” tự nó chưa chứng minh thuật toán đúng.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Arithmetic tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) và linearizability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Floating-point tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Arithmetic tính đúng đắn (correctness / 정확성)** nối từ **Tính đồng thời (concurrency / 동시성) và linearizability** sang **Floating-point tính đúng đắn (correctness / 정확성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Arithmetic tính đúng đắn (correctness / 정확성)
 
@@ -490,7 +490,7 @@ Nếu `dist[u]` là sentinel gần `Long.MAX_VALUE`, phép cộng có thể over
 
 Do đó proof của hiện thực (implementation / 구현) phải bao gồm miền giá trị của kiểu số.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Floating-point tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Arithmetic tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Validator cho cấu trúc dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Floating-point tính đúng đắn (correctness / 정확성)** nối từ **Arithmetic tính đúng đắn (correctness / 정확성)** sang **Validator cho cấu trúc dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Floating-point tính đúng đắn (correctness / 정확성)
 
@@ -500,7 +500,7 @@ Nếu comparator vi phạm transitivity, sort hoặc balanced cây (tree / 트�
 
 Với hình học (geometry / 기하학) và numerical algorithms, biểu diễn (representation / 표현) số là một phần của specification, không phải chi tiết hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Floating-point tính đúng đắn (correctness / 정확성)** nêu điều cần giải thích; **Validator cho cấu trúc dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Differential testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Floating-point tính đúng đắn (correctness / 정확성)** đặt vấn đề; **Validator cho cấu trúc dữ liệu** kiểm tra bằng chứng, rồi **Differential testing** mở rộng hệ quả.
 
 ## Validator cho cấu trúc dữ liệu
 
@@ -517,7 +517,7 @@ LinkedList -> size và prev/next đối xứng
 
 Validator không thay proof nhưng giúp phát hiện hiện thực (implementation / 구현) phá proof ở đâu.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Validator cho cấu trúc dữ liệu** nêu điều cần giải thích; **Differential testing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Property-based testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Validator cho cấu trúc dữ liệu** đặt vấn đề; **Differential testing** kiểm tra bằng chứng, rồi **Property-based testing** mở rộng hệ quả.
 
 ## Differential testing
 
@@ -533,7 +533,7 @@ custom heap     -> so chuỗi pop với mảng đã sort
 
 Differential testing rất hiệu quả vì nó kiểm tra hàng nghìn chuỗi thao tác mà ta khó viết tay.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Property-based testing** tiếp nhận điểm tựa từ **Differential testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Property-based testing** nối từ **Differential testing** sang **Adversarial tests**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Property-based testing
 
@@ -549,7 +549,7 @@ serialize rồi deserialize phải bảo toàn cấu trúc
 
 Đây là cách biến specification thành kiểm thử (test / 테스트) tự động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Adversarial tests** tiếp nhận điểm tựa từ **Property-based testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proof sketch trong rà soát mã (code review / 코드 리뷰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adversarial tests** nối từ **Property-based testing** sang **Proof sketch trong rà soát mã (code review / 코드 리뷰)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adversarial tests
 
@@ -570,7 +570,7 @@ input gây nhiều hash collision
 
 Một proof tốt cho biết trường hợp (case / 사례) nào nằm trong lĩnh vực (domain / 도메인) hợp lệ và trường hợp (case / 사례) nào phải bị từ chối.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Proof sketch trong rà soát mã (code review / 코드 리뷰)** tiếp nhận điểm tựa từ **Adversarial tests** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một template chứng minh có thể tái sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Proof sketch trong rà soát mã (code review / 코드 리뷰)** nối từ **Adversarial tests** sang **Một template chứng minh có thể tái sử dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proof sketch trong rà soát mã (code review / 코드 리뷰)
 
@@ -588,7 +588,7 @@ Front vì vậy luôn là maximum hiện tại.
 
 Đây là loại comment giải thích “vì sao đúng”, giúp reviewer đánh giá thay đổi thuật toán.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đúng đắn và bất biến của thuật toán**, **Một template chứng minh có thể tái sử dụng** tiếp nhận điểm tựa từ **Proof sketch trong rà soát mã (code review / 코드 리뷰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Một template chứng minh có thể tái sử dụng** nối từ **Proof sketch trong rà soát mã (code review / 코드 리뷰)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một template chứng minh có thể tái sử dụng
 
@@ -609,7 +609,7 @@ Khi cần chứng minh thuật toán, có thể dùng khung:
 
 Với greedy, thêm exchange/cut argument. Với recursion, thêm induction. Với concurrent cấu trúc (structure / 구조), thêm linearization điểm (point / 지점) và memory-order lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đúng đắn và bất biến của thuật toán**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Một template chứng minh có thể tái sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nối từ **Một template chứng minh có thể tái sử dụng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -625,7 +625,7 @@ Với greedy, thêm exchange/cut argument. Với recursion, thêm induction. V�
 
 “Đã chứng minh thuật toán nên mã (code / 코드) chắc đúng” — sai; overflow, aliasing, indexing và ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) có thể làm hiện thực (implementation / 구현) khác mô hình toán học.
 
-> **Chuyển mạch:** Trong **Tính đúng đắn và bất biến của thuật toán**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

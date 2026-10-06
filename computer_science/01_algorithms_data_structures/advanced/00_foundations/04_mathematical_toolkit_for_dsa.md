@@ -36,7 +36,7 @@ Mô hình tư duy:
 
 > `log n` thường xuất hiện khi mỗi bước loại bỏ hoặc gom lại một tỷ lệ cố định của phần còn lại.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Lũy thừa của hai và biểu diễn nhị phân** tiếp nhận điểm tựa từ **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổng số học và vòng lặp lồng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lũy thừa của hai và biểu diễn nhị phân** nối từ **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** sang **Tổng số học và vòng lặp lồng nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lũy thừa của hai và biểu diễn nhị phân
 
@@ -64,7 +64,7 @@ Sparse bảng (table / 테이블) lưu khối (block / 블록) độ dài `2^k`.
 
 Một insight quan trọng là nhiều kỹ thuật tưởng khác nhau thực ra cùng dùng ý tưởng: **tiền xử lý các bước có kích thước tăng gấp đôi rồi ghép chúng theo biểu diễn nhị phân của một số nguyên**.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Tổng số học và vòng lặp lồng nhau** tiếp nhận điểm tựa từ **Lũy thừa của hai và biểu diễn nhị phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp số nhân và phân tích khấu hao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tổng số học và vòng lặp lồng nhau** nối từ **Lũy thừa của hai và biểu diễn nhị phân** sang **Cấp số nhân và phân tích khấu hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tổng số học và vòng lặp lồng nhau
 
@@ -100,7 +100,7 @@ for (int i = 1; i <= n; i *= 2)
 
 vòng ngoài chạy `O(log n)` lần, nên tổng là `O(n log n)`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Cấp số nhân và phân tích khấu hao** tiếp nhận điểm tựa từ **Tổng số học và vòng lặp lồng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Harmonic series** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cấp số nhân và phân tích khấu hao** nối từ **Tổng số học và vòng lặp lồng nhau** sang **Harmonic series**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp số nhân và phân tích khấu hao
 
@@ -122,7 +122,7 @@ Do đó tổng bản sao (copy / 복사) là `O(n)`, dù một lần append riê
 
 Điểm quan trọng: **amortized** không phải “trung bình theo xác suất”. Nó là bảo đảm về tổng chi phí của một chuỗi thao tác hợp lệ.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Harmonic series** tiếp nhận điểm tựa từ **Cấp số nhân và phân tích khấu hao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích và factorial: nhận diện bùng nổ tổ hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Harmonic series** nối từ **Cấp số nhân và phân tích khấu hao** sang **Tích và factorial: nhận diện bùng nổ tổ hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Harmonic series
 
@@ -136,7 +136,7 @@ xuất hiện trong randomized algorithms, coupon-collector lập luận (reason
 
 Khi thấy tổng nghịch đảo `1/i`, nên nghĩ tới tăng trưởng logarithmic thay vì tuyến tính.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Tích và factorial: nhận diện bùng nổ tổ hợp** tiếp nhận điểm tựa từ **Harmonic series** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức truy hồi mô tả cây đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tích và factorial: nhận diện bùng nổ tổ hợp** nối từ **Harmonic series** sang **Công thức truy hồi mô tả cây đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích và factorial: nhận diện bùng nổ tổ hợp
 
@@ -168,7 +168,7 @@ và do đó:
 
 Kết quả này xuất hiện trực tiếp trong cận dưới của comparison sorting.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Công thức truy hồi mô tả cây đệ quy** tiếp nhận điểm tựa từ **Tích và factorial: nhận diện bùng nổ tổ hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Master Theorem và giới hạn của nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Công thức truy hồi mô tả cây đệ quy** nối từ **Tích và factorial: nhận diện bùng nổ tổ hợp** sang **Master Theorem và giới hạn của nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức truy hồi mô tả cây đệ quy
 
@@ -198,7 +198,7 @@ T(n)=T(n-1)+cn=\Theta(n^2)
 
 Truy hồi là bản mô tả toán học của hình dạng recursion cây (tree / 트리). Nếu không hiểu recursion cây (tree / 트리), dùng công thức dễ trở thành thao tác máy móc.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Công thức truy hồi mô tả cây đệ quy** đã nêu tiêu chí phân biệt, còn **Master Theorem và giới hạn của nó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nguyên lý cộng và nhân trong tổ hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Công thức truy hồi mô tả cây đệ quy** đã nêu tiêu chí phân biệt, còn **Master Theorem và giới hạn của nó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **Nguyên lý cộng và nhân trong tổ hợp** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Master Theorem và giới hạn của nó
 
@@ -226,7 +226,7 @@ hoặc subproblem không đều, recurrence phụ thuộc dữ liệu, hay rando
 
 Bài học: theorem là công cụ cho một lớp cấu trúc, không phải phép biến đổi cú pháp tổng quát.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Master Theorem và giới hạn của nó** đã nêu tiêu chí phân biệt, còn **Nguyên lý cộng và nhân trong tổ hợp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Combination và subset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Master Theorem và giới hạn của nó** đã nêu tiêu chí phân biệt, còn **Nguyên lý cộng và nhân trong tổ hợp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **Combination và subset** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Nguyên lý cộng và nhân trong tổ hợp
 
@@ -250,7 +250,7 @@ O(b^d)
 
 với `b` là branching factor và `d` là độ sâu. Pruning làm branching factor hiệu dụng nhỏ hơn, nhưng không tự thay đổi worst-case nếu vẫn tồn tại đầu vào (input / 입력) buộc duyệt gần toàn cây.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Combination và subset** tiếp nhận điểm tựa từ **Nguyên lý cộng và nhân trong tổ hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pigeonhole principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Combination và subset** nối từ **Nguyên lý cộng và nhân trong tổ hợp** sang **Pigeonhole principle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Combination và subset
 
@@ -270,7 +270,7 @@ Tổng số subset của một tập `n` phần tử là:
 
 Với `n=20`, khoảng một triệu subset còn có thể xử lý trong nhiều bối cảnh. Với `n=40`, hơn một nghìn tỷ subset thường buộc ta dùng meet-in-the-middle hoặc cấu trúc khác.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Pigeonhole principle** tiếp nhận điểm tựa từ **Combination và subset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inclusion–exclusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Pigeonhole principle** nối từ **Combination và subset** sang **Inclusion–exclusion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pigeonhole principle
 
@@ -280,7 +280,7 @@ Trong hashing, miền khóa thường lớn hơn số bucket, nên collision kh�
 
 Pigeonhole cũng xuất hiện trong chứng minh duplicate, cycle và nhiều lập luận tồn tại.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Inclusion–exclusion** tiếp nhận điểm tựa từ **Pigeonhole principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix Sum và cấu trúc đại số phía sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Inclusion–exclusion** nối từ **Pigeonhole principle** sang **Prefix Sum và cấu trúc đại số phía sau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Inclusion–exclusion
 
@@ -294,7 +294,7 @@ Ta phải trừ phần giao vì nó bị đếm hai lần.
 
 Với nhiều tập, các giao được cộng/trừ luân phiên. Ý tưởng này xuất hiện trong combinatorial counting, bitmask DP, xác suất và một số thuật toán đếm với điều kiện loại trừ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Prefix Sum và cấu trúc đại số phía sau** tiếp nhận điểm tựa từ **Inclusion–exclusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Semigroup, monoid và group trong DSA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Prefix Sum và cấu trúc đại số phía sau** nối từ **Inclusion–exclusion** sang **Semigroup, monoid và group trong DSA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prefix Sum và cấu trúc đại số phía sau
 
@@ -314,7 +314,7 @@ sum(L,R)=P[R+1]-P[L]
 
 Điều này giải thích vì sao Prefix Sum làm phạm vi (range / 범위) sum rất tự nhiên, còn prefix minimum không thể “trừ min cũ” để lấy min của một đoạn bất kỳ.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Semigroup, monoid và group trong DSA** tiếp nhận điểm tựa từ **Prefix Sum và cấu trúc đại số phía sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commutativity không giống associativity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Semigroup, monoid và group trong DSA** nối từ **Prefix Sum và cấu trúc đại số phía sau** sang **Commutativity không giống associativity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Semigroup, monoid và group trong DSA
 
@@ -375,7 +375,7 @@ f(x,x)=x
 
 Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có tổng quát sang thao tác (operation / 연산) khác không?” chính xác hơn việc học thuộc danh sách.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Commutativity không giống associativity** tiếp nhận điểm tựa từ **Semigroup, monoid và group trong DSA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số học modulo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Commutativity không giống associativity** nối từ **Semigroup, monoid và group trong DSA** sang **Số học modulo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Commutativity không giống associativity
 
@@ -395,7 +395,7 @@ Ví dụ nối chuỗi là associative nhưng không commutative:
 
 Phân biệt hai tính chất này tránh nhiều lỗi khi tổng quát hóa phạm vi (range / 범위) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Số học modulo** tiếp nhận điểm tựa từ **Commutativity không giống associativity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GCD, coprime và modular inverse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Số học modulo** nối từ **Commutativity không giống associativity** sang **GCD, coprime và modular inverse**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số học modulo
 
@@ -413,7 +413,7 @@ Modulo xuất hiện trong hashing, cyclic buffer, rolling băm (hash / 해시) 
 
 Phép chia không thể thay bằng chia số nguyên rồi `% m`. Muốn “chia” trong modulo cần **nghịch đảo modulo (modular inverse)** và inverse chỉ tồn tại khi điều kiện phù hợp được thỏa.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **GCD, coprime và modular inverse** tiếp nhận điểm tựa từ **Số học modulo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Modulo âm trong ngôn ngữ lập trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **GCD, coprime và modular inverse** nối từ **Số học modulo** sang **Modulo âm trong ngôn ngữ lập trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## GCD, coprime và modular inverse
 
@@ -441,7 +441,7 @@ ax+by=gcd(a,b)
 
 Nếu `gcd(a,m)=1`, từ đó suy ra một inverse của `a (mod m)`.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Modulo âm trong ngôn ngữ lập trình** tiếp nhận điểm tựa từ **GCD, coprime và modular inverse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bit và lũy thừa của hai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Modulo âm trong ngôn ngữ lập trình** nối từ **GCD, coprime và modular inverse** sang **Bit và lũy thừa của hai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Modulo âm trong ngôn ngữ lập trình
 
@@ -455,7 +455,7 @@ Một mẫu normalize thường gặp:
 
 Nhưng hiện thực (implementation / 구현) vẫn phải xét overflow trước khi cộng nếu kiểu số hữu hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Bit và lũy thừa của hai** tiếp nhận điểm tựa từ **Modulo âm trong ngôn ngữ lập trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất và biến cố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bit và lũy thừa của hai** nối từ **Modulo âm trong ngôn ngữ lập trình** sang **Xác suất và biến cố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bit và lũy thừa của hai
 
@@ -483,7 +483,7 @@ x & -x
 
 để lấy lowbit, tức giá trị của bit 1 thấp nhất. Đây không phải mẹo thần bí; nó là hệ quả của biểu diễn bù hai.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Xác suất và biến cố** tiếp nhận điểm tựa từ **Bit và lũy thừa của hai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kỳ vọng và tính tuyến tính của kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Xác suất và biến cố** nối từ **Bit và lũy thừa của hai** sang **Kỳ vọng và tính tuyến tính của kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác suất và biến cố
 
@@ -503,7 +503,7 @@ P(A\mid B)=\frac{P(A\cap B)}{P(B)}
 
 là công cụ nền tảng khi phân tích sampling, collision và quá trình ngẫu nhiên phụ thuộc trạng thái trước đó.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Kỳ vọng và tính tuyến tính của kỳ vọng** tiếp nhận điểm tựa từ **Xác suất và biến cố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indicator variable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Kỳ vọng và tính tuyến tính của kỳ vọng** nối từ **Xác suất và biến cố** sang **Indicator variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kỳ vọng và tính tuyến tính của kỳ vọng
 
@@ -525,7 +525,7 @@ Nếu tổng chi phí là tổng contribution của nhiều sự kiện, ta có 
 
 Đây là một trong những lý do probabilistic phân tích (analysis / 분석) thường trở nên đơn giản hơn sau khi định nghĩa đúng biến ngẫu nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Indicator variable** tiếp nhận điểm tựa từ **Kỳ vọng và tính tuyến tính của kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variance và tail hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Indicator variable** nối từ **Kỳ vọng và tính tuyến tính của kỳ vọng** sang **Variance và tail hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Indicator variable
 
@@ -558,7 +558,7 @@ E[X]=\sum_i P(i\text{ xảy ra})
 
 Cách này rất hữu ích để đếm kỳ vọng số collision, số phần tử được chọn hoặc số lần một sự kiện (event / 이벤트) xảy ra.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Variance và tail hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Indicator variable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Union bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Variance và tail hành vi (behavior / 동작)** nối từ **Indicator variable** sang **Union bound**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Variance và tail hành vi (behavior / 동작)
 
@@ -574,7 +574,7 @@ Markov, Chebyshev, Chernoff và Hoeffding là các lớp công cụ để đưa 
 
 > Expected giá trị (value / 값) tốt không tự động chứng minh bad trường hợp (case / 사례) hiếm.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Union bound** tiếp nhận điểm tựa từ **Variance và tail hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Union bound** nối từ **Variance và tail hành vi (behavior / 동작)** sang **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Union bound
 
@@ -588,7 +588,7 @@ Không cần các biến cố độc lập.
 
 Union bound rất hữu ích khi muốn chứng minh “xác suất có ít nhất một lỗi trong nhiều vị trí” nhỏ bằng cách cộng các xác suất lỗi riêng lẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Union bound** nêu điều cần giải thích; **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy nạp cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Union bound** đặt vấn đề; **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** kiểm tra bằng chứng, rồi **Quy nạp cấu trúc** mở rộng hệ quả.
 
 ## Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)
 
@@ -600,7 +600,7 @@ Bloom Filter có thể trả false positive; randomness ảnh hưởng cả bi�
 
 Một thuật toán có thể ngẫu nhiên nhưng chính xác (exact / 정확한), hoặc deterministic nhưng approximate, hoặc vừa randomized vừa approximate. Không nên trộn các loại guarantee này.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** nêu điều cần giải thích; **Quy nạp cấu trúc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy nạp mạnh và động (dynamic / 동적) Programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** đặt vấn đề; **Quy nạp cấu trúc** kiểm tra bằng chứng, rồi **Quy nạp mạnh và động (dynamic / 동적) Programming** mở rộng hệ quả.
 
 ## Quy nạp cấu trúc
 
@@ -613,7 +613,7 @@ step: giả sử các substructure đúng, chứng minh cách ghép ở node hi�
 
 Đây là phiên bản toán học của đặc tả hợp đồng (contract / 계약) đệ quy.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Quy nạp mạnh và động (dynamic / 동적) Programming** tiếp nhận điểm tựa từ **Quy nạp cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một số đẳng thức đồ thị cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quy nạp mạnh và động (dynamic / 동적) Programming** nối từ **Quy nạp cấu trúc** sang **Một số đẳng thức đồ thị cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy nạp mạnh và động (dynamic / 동적) Programming
 
@@ -621,7 +621,7 @@ Một trạng thái DP có thể phụ thuộc nhiều trạng thái nhỏ hơn.
 
 Bottom-up DP thực hiện chính thứ tự chứng minh đó: prerequisite được tính trước khi trạng thái (state / 상태) mới sử dụng chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Một số đẳng thức đồ thị cơ bản** tiếp nhận điểm tựa từ **Quy nạp mạnh và động (dynamic / 동적) Programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đếm cạnh của đồ thị dày đặc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Một số đẳng thức đồ thị cơ bản** nối từ **Quy nạp mạnh và động (dynamic / 동적) Programming** sang **Đếm cạnh của đồ thị dày đặc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một số đẳng thức đồ thị cơ bản
 
@@ -649,7 +649,7 @@ Nếu một đồ thị vô hướng liên thông có `n-1` cạnh thì nó là 
 
 Các định danh (identity / 식별자) này vừa hỗ trợ chứng minh vừa hỗ trợ validator.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Đếm cạnh của đồ thị dày đặc** tiếp nhận điểm tựa từ **Một số đẳng thức đồ thị cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đếm cạnh của đồ thị dày đặc** nối từ **Một số đẳng thức đồ thị cơ bản** sang **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đếm cạnh của đồ thị dày đặc
 
@@ -671,7 +671,7 @@ Khi `m` gần `n²`, adjacency ma trận (matrix / 행렬) có thể hợp lý h
 
 Toán đếm giúp chọn biểu diễn (representation / 표현) trước cả khi benchmark.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Đếm cạnh của đồ thị dày đặc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích khấu hao: phương pháp tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)** nối từ **Đếm cạnh của đồ thị dày đặc** sang **Phân tích khấu hao: phương pháp tổng hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)
 
@@ -679,7 +679,7 @@ Adjacency ma trận (matrix / 행렬) của đồ thị (graph / 그래프) là 
 
 Nhiều phép toán đồ thị (graph / 그래프) có thể được nhìn dưới dạng tuyến tính (linear / 선형) algebra. Ví dụ số walk độ dài `k` liên hệ với lũy thừa ma trận kề. Tuy nhiên, cách nhìn ma trận không luôn là hiện thực (implementation / 구현) tốt nhất cho đồ thị (graph / 그래프) traversal thông thường; nó cung cấp một mô hình toán học khác để thấy cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Phân tích khấu hao: phương pháp tổng hợp** gom các mảnh từ **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phương pháp hạch toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phân tích khấu hao: phương pháp tổng hợp** tổng hợp từ **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)**; **Phương pháp hạch toán** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Phân tích khấu hao: phương pháp tổng hợp
 
@@ -691,7 +691,7 @@ Nếu `n` thao tác có tổng chi phí `T(n)`, chi phí khấu hao là:
 
 Động (dynamic / 동적) Array doubling là ví dụ điển hình: một số append đắt nhưng tổng chi phí vẫn tuyến tính.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Phương pháp hạch toán** gom các mảnh từ **Phân tích khấu hao: phương pháp tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phương pháp thế năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phương pháp hạch toán** tổng hợp từ **Phân tích khấu hao: phương pháp tổng hợp**; **Phương pháp thế năng** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Phương pháp hạch toán
 
@@ -701,7 +701,7 @@ Nếu chứng minh credit không bao giờ âm và tổng charge là `O(n)`, t�
 
 Đây là cách suy nghĩ trực quan về việc các thao tác rẻ “trả trước” cho resize sau này.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Phương pháp thế năng** tiếp nhận điểm tựa từ **Phương pháp hạch toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lower bound theo lý thuyết thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phương pháp thế năng** nối từ **Phương pháp hạch toán** sang **Lower bound theo lý thuyết thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương pháp thế năng
 
@@ -717,7 +717,7 @@ Nếu một thao tác (operation / 연산) rẻ làm potential tăng, nó tích 
 
 Potential phương thức (method / 메서드) rất mạnh vì không cần gắn credit vào từng đối tượng (object / 객체) cụ thể; chỉ cần một hàm đo toàn trạng thái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Lower bound theo lý thuyết thông tin** tiếp nhận điểm tựa từ **Phương pháp thế năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) lower bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lower bound theo lý thuyết thông tin** nối từ **Phương pháp thế năng** sang **Tìm kiếm (search / 검색) lower bound**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lower bound theo lý thuyết thông tin
 
@@ -733,7 +733,7 @@ Do đó không thể có general comparison sort worst-case `O(n)`.
 
 Counting Sort/Radix Sort không mâu thuẫn với cận này vì chúng khai thác thông tin khác ngoài pairwise comparison, chẳng hạn miền khóa hữu hạn hoặc biểu diễn (representation / 표현) chữ số.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Tìm kiếm (search / 검색) lower bound** tiếp nhận điểm tựa từ **Lower bound theo lý thuyết thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Big-O, Omega và Theta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tìm kiếm (search / 검색) lower bound** nối từ **Lower bound theo lý thuyết thông tin** sang **Big-O, Omega và Theta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tìm kiếm (search / 검색) lower bound
 
@@ -749,7 +749,7 @@ Lower bound thường bắt đầu từ câu hỏi:
 
 > Mỗi observation cung cấp tối đa bao nhiêu thông tin về đáp án?
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Big-O, Omega và Theta** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) lower bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worst-case, average-case, expected-case và amortized** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Big-O, Omega và Theta** nối từ **Tìm kiếm (search / 검색) lower bound** sang **Worst-case, average-case, expected-case và amortized**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Big-O, Omega và Theta
 
@@ -765,7 +765,7 @@ O(n²)
 
 Việc chỉ nói `O(n³)` cũng đúng về mặt cận trên nhưng quá lỏng và ít thông tin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Big-O, Omega và Theta** cho ta quy tắc; **Worst-case, average-case, expected-case và amortized** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sai số số học và miền giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Big-O, Omega và Theta** nêu quy tắc; **Worst-case, average-case, expected-case và amortized** thử quy tắc trong tình huống, rồi **Sai số số học và miền giá trị** mở rộng hệ quả.
 
 ## Worst-case, average-case, expected-case và amortized
 
@@ -781,7 +781,7 @@ Bốn khái niệm này không giống nhau.
 
 Trộn các khái niệm này dễ dẫn tới tuyên bố hiệu năng sai.
 
-> **Chuyển mạch:** Trong **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Worst-case, average-case, expected-case và amortized** cho ta quy tắc; **Sai số số học và miền giá trị** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Một checklist toán học cho DSA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Worst-case, average-case, expected-case và amortized** nêu quy tắc; **Sai số số học và miền giá trị** thử quy tắc trong tình huống, rồi **Một checklist toán học cho DSA** mở rộng hệ quả.
 
 ## Sai số số học và miền giá trị
 
@@ -799,7 +799,7 @@ nếu `a*b` vượt miền kiểu. tính đúng đắn (correctness / 정확성)
 
 JavaScript `Number` chỉ biểu diễn chính xác mọi số nguyên tới `2^53-1`; các bài counting lớn có thể cần `BigInt`.
 
-> **Chuyển mạch:** Ở chặng này của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Một checklist toán học cho DSA** tiếp nhận điểm tựa từ **Sai số số học và miền giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Một checklist toán học cho DSA** nối từ **Sai số số học và miền giá trị** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một checklist toán học cho DSA
 
@@ -820,7 +820,7 @@ Kiểu số có đủ miền giá trị không?
 
 Những câu hỏi này giúp toán học trở thành công cụ thiết kế thay vì phần phụ lý thuyết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**, **Mô hình tư duy** gom các mảnh từ **Một checklist toán học cho DSA** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Một checklist toán học cho DSA**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

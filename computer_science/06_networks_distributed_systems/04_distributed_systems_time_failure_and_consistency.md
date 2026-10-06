@@ -10,7 +10,7 @@ Single tiến trình (process / 프로세스) crash thường dễ nhận: nó d
 
 Hết thời gian chờ (timeout / 타임아웃) chỉ nói “chưa nhận phản hồi (response / 응답) trong thời gian chờ”, không chứng minh remote thao tác (operation / 연산) chưa chạy. Đây là nguồn duplicate side effects khi thử lại (retry / 재시도).
 
-> **Chuyển mạch:** Partial failure làm observation lệch giữa nodes; không có global clock đơn giản, nên causality tiếp theo phải được biểu diễn bằng event ordering hoặc logical clocks.
+> **Nối mạch:** Partial failure làm observation lệch giữa nodes; không có global clock đơn giản, nên causality tiếp theo phải được biểu diễn bằng event ordering hoặc logical clocks.
 
 ## Không có toàn cục (global / 전역) thời gian (time / 시간) đơn giản
 
@@ -20,13 +20,13 @@ Lamport clocks capture happens-before partial thứ tự (order / 순서): cục
 
 Logical clocks không đo wall thời gian (time / 시간); chúng encode thứ tự (ordering / 순서) thông tin (information / 정보).
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Causality** tiếp nhận điểm tựa từ **Không có toàn cục (global / 전역) thời gian (time / 시간) đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consistency các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Causality** nối từ **Không có toàn cục (global / 전역) thời gian (time / 시간) đơn giản** sang **Consistency các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Causality
 
 Sự kiện (event / 이벤트) A causally precedes B nếu B có thể be influenced by A via program/message chuỗi (chain / 사슬). Concurrent events không có nhân quả (causal / 인과적) quan hệ (relation / 관계). Many consistency các mô hình (models / 모델들) preserve nhân quả (causal / 인과적) thứ tự (order / 순서) even if total thứ tự (order / 순서) unnecessary.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Consistency các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAP theorem đúng ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Consistency các mô hình (models / 모델들)** nối từ **Causality** sang **CAP theorem đúng ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consistency các mô hình (models / 모델들)
 
@@ -34,7 +34,7 @@ Strong consistency là family, không một term duy nhất. Linearizability mak
 
 Máy khách (client / 클라이언트)/session guarantees như read-your-writes và monotonic reads có thể làm weakly consistent các hệ thống (systems / 시스템들) dễ dùng hơn.
 
-> **Chuyển mạch:** Trong **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **CAP theorem đúng ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Consistency các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An toàn (safety / 안전) và liveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CAP theorem đúng ngữ cảnh (context / 맥락)** nối từ **Consistency các mô hình (models / 모델들)** sang **An toàn (safety / 안전) và liveness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CAP theorem đúng ngữ cảnh (context / 맥락)
 
@@ -44,7 +44,7 @@ CAP không nói “chọn 2 trong 3” trong normal thao tác (operation / 연�
 
 PACELC extends intuition: if Partition, trade Availability vs Consistency; Else, often độ trễ (latency / 지연 시간) vs Consistency.
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **An toàn (safety / 안전) và liveness** tiếp nhận điểm tựa từ **CAP theorem đúng ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exactly-once myth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **An toàn (safety / 안전) và liveness** nối từ **CAP theorem đúng ngữ cảnh (context / 맥락)** sang **Exactly-once myth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## An toàn (safety / 안전) và liveness
 
@@ -52,7 +52,7 @@ An toàn (safety / 안전) thuộc tính (property / 속성): bad thing never ha
 
 Consensus algorithms often sacrifice liveness during certain partitions to preserve an toàn (safety / 안전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Exactly-once myth** tiếp nhận điểm tựa từ **An toàn (safety / 안전) và liveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thất bại (failure / 실패) detectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Exactly-once myth** nối từ **An toàn (safety / 안전) và liveness** sang **Thất bại (failure / 실패) detectors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exactly-once myth
 
@@ -60,19 +60,19 @@ Mạng (network / 네트워크) can lose yêu cầu (request / 요청) or phản
 
 Message brokers may advertise exactly-once within scoped ngữ nghĩa (semantics / 의미론), but bên ngoài (external / 외부) side effects still need coordinated giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Trong **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Thất bại (failure / 실패) detectors** tiếp nhận điểm tựa từ **Exactly-once myth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thất bại (failure / 실패) detectors** nối từ **Exactly-once myth** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thất bại (failure / 실패) detectors
 
 Perfectly distinguishing slow from failed is impossible in fully asynchronous mô hình (model / 모델). Practical các hệ thống (systems / 시스템들) use heartbeats/timeouts and eventually accurate các giả định (assumptions / 가정들). Tuning thất bại (failure / 실패) detector too aggressive causes false positives; too slow delays failover.
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thất bại (failure / 실패) detectors** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thất bại (failure / 실패) detectors**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > phân tán (distributed / 분산) các hệ thống (systems / 시스템들) replace certainty with **messages + bất định (uncertainty / 불확실성)**. Never infer “did not happen” from hết thời gian chờ (timeout / 타임아웃). Separate thứ tự (ordering / 순서), durability, availability and độ trễ (latency / 지연 시간) guarantees explicitly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,7 +82,7 @@ Perfectly distinguishing slow from failed is impossible in fully asynchronous m�
 
 **“Timestamp sorts events correctly globally.”** Clock skew and bất định (uncertainty / 불확실성) break nhân quả (causal / 인과적) suy luận (inference / 추론) unless stronger clock giao thức (protocol / 프로토콜)/các giả định (assumptions / 가정들) exist.
 
-> **Chuyển mạch:** Trong **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -31,13 +31,13 @@ Cổng (port / 포트) không tự đại diện cho cả thuộc địa. Cần 
 
 Archive của company/crown thường ghi đầu ra (output / 출력), thuế và rebellion, không ghi đầy đủ công việc (work / 작업), gender, oral bộ nhớ (memory / 메모리) hay ecological mất mát (loss / 손실). Đọc cùng khảo cổ, ngôn ngữ, dữ liệu dân số, lời kể bản địa và lịch sử môi trường. “Resistance” gồm cả chiến tranh, trốn chạy, kiện tụng, đình công, giữ giống và tái nghĩa hóa tôn giáo.
 
-> **Chuyển mạch:** Trong **08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế**, cơ chế trong **Bốn dòng luồng (flow / 흐름) phải theo dõi** cần được kiểm chứng bằng dấu vết cụ thể; **Bằng chứng, giới hạn và cầu nối** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bốn dòng hàng hóa, lao động, vốn và cưỡng chế phải được gắn với dấu vết cảng, sổ sách, luật và bạo lực. **Bằng chứng, giới hạn và cầu nối** đưa dữ liệu vào đúng điểm trước khi nâng depth pass.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Shipping/customs records, plantation accounts, slave voyages, Indigenous archaeology, pollen, disease lịch sử (history / 이력) và oral tradition phải được đọc cùng nhau; đầu ra (output / 출력) của công ty không đại diện cho wellbeing. Counterfactual: nếu disease shock nhỏ hơn, conquest vẫn cần labor, alliance và logistics nhưng cán cân dân số–quân sự có thể khác. Cầu nối sang 09 là **commodity, slavery và empire cung cấp vốn/nguyên liệu/thị trường cho tri thức và công nghiệp**, dù không phải nguyên nhân duy nhất.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** xác định dòng hàng, lao động và cưỡng chế; phần **Độ sâu pass** dùng chúng để kiểm tra thuộc địa hóa đã tái phân phối năng lực giữa những tác nhân nào.
+> **Nối mạch:** Bằng chứng xác định ai kiểm soát dòng hàng, lao động và cưỡng chế; **Độ sâu pass** kiểm tra thuộc địa hóa đã tái phân phối năng lực giữa những tác nhân nào.
 
 ## Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực
 

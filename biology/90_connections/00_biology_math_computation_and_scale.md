@@ -40,7 +40,7 @@ nên:
 
 Một equation hình học (geometry / 기하학) tạo consequences ở nhiều chapter.
 
-> **Chuyển mạch:** Surface-area-to-volume ratio đặt giới hạn trao đổi theo kích thước; rate of change chuyển câu hỏi sang dynamics, nơi cần biết hệ thay đổi nhanh đến đâu so với capacity vận chuyển.
+> **Nối mạch:** Surface-area-to-volume ratio đặt giới hạn trao đổi theo kích thước; **tỷ lệ thay đổi** chuyển câu hỏi sang dynamics, nơi cần biết hệ đổi nhanh đến đâu so với capacity vận chuyển.
 
 ## 3. tỷ lệ (rate / 비율) of thay đổi (change / 변경)
 
@@ -105,7 +105,7 @@ Log hữu ích khi quantity span nhiều thứ tự (order / 순서) of magnitud
 
 Ví dụ pH 6 và 7 khác khoảng 10 lần [H⁺], không phải “1 đơn vị (unit / 단위) nhỏ”.
 
-> **Chuyển mạch:** Logarithm nén các khoảng cách nhân thành khoảng cách cộng để so sánh nhiều bậc độ lớn; **7. Chênh lệch** dùng một ý khác để mô tả hướng trong không gian: gradient cho biết chất hay năng lượng sẽ di chuyển về đâu.
+> **Nối mạch:** Logarithm nén nhiều bậc độ lớn thành thang dễ so sánh; **7. Chênh lệch** chuyển từ độ lớn sang hướng, vì gradient cho biết chất hoặc năng lượng sẽ đi về đâu.
 
 ## 7. Chênh lệch
 
@@ -196,7 +196,7 @@ Nếu disease hiếm, dương tính giả (false positive) từ population healt
 
 Biology và statistics không thể tách trong diagnostic lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Khi đã thấy prevalence làm đổi ý nghĩa của một kết quả dương tính, **13. Sampling và độ bất định** mở rộng cùng vấn đề sang sai số của mẫu và độ tin cậy của ước lượng.
+> **Nối mạch:** Prevalence cho thấy cùng một kết quả dương tính có thể mang ý nghĩa khác; **13. Sampling và độ bất định** kiểm tra sai số khi ta chỉ quan sát một phần quần thể.
 
 ## 13. Sampling và độ bất định (uncertainty / 불확실성)
 
@@ -224,7 +224,7 @@ Directed acyclic đồ thị (graph / 그래프) (DAG) giúp reason confounder/m
 
 Tư duy khoa học (scientific thinking) chapter quay lại bằng formal mô hình (model / 모델).
 
-> **Chuyển mạch:** Correlation chỉ cho biết biến cùng thay đổi; **16. Lý thuyết đồ thị** cung cấp cấu trúc để biểu diễn các quan hệ và đặt câu hỏi về đường dẫn, nút trung tâm và yếu tố gây nhiễu.
+> **Nối mạch:** Correlation mô tả đồng biến nhưng không chỉ ra cấu trúc quan hệ; **16. Lý thuyết đồ thị** biểu diễn nút, cạnh và đường dẫn để truy tìm phụ thuộc hoặc yếu tố gây nhiễu.
 
 ## 16. Lý thuyết đồ thị (graph theory)
 

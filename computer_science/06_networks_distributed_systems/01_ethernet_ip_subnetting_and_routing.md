@@ -10,7 +10,7 @@ Ethernet frame có nguồn (source / 소스)/destination MAC addresses và Ether
 
 MAC address không phải toàn cục (global / 전역) routing định danh (identity / 식별자) Internet. Router tách Layer-2 domains; mỗi hop có thể dùng frame headers khác trong khi IP nguồn (source / 소스)/destination thường end-to-end hơn (trừ NAT/tunnels).
 
-> **Chuyển mạch:** Ethernet cung cấp local link; ARP/Neighbor Discovery ánh xạ địa chỉ mạng sang link-layer, rồi IP prefix/subnet quyết định host nào cùng mạng và gói tin cần route.
+> **Nối mạch:** Ethernet cung cấp local link; ARP/Neighbor Discovery ánh xạ địa chỉ mạng sang link-layer, rồi IP prefix/subnet quyết định host nào cùng mạng và gói tin cần route.
 
 ## ARP và Neighbor Discovery
 
@@ -18,7 +18,7 @@ IPv4 host cần map next-hop IP tới MAC trên cục bộ (local / 로컬) Ethe
 
 Đây là distinction quan trọng giữa **next hop** và **final destination**.
 
-> **Chuyển mạch:** Ở chặng này của **Ethernet, IP, subnetting và routing**, **IP prefix và subnet** tiếp nhận điểm tựa từ **ARP và Neighbor Discovery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Routing bảng (table / 테이블) và longest-prefix match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **IP prefix và subnet** nối từ **ARP và Neighbor Discovery** sang **Routing bảng (table / 테이블) và longest-prefix match**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## IP prefix và subnet
 
@@ -28,7 +28,7 @@ Subnetting không chỉ bài toán đổi nhị phân (binary / 이진); nó xá
 
 IPv6 address 128 bits, dùng hexadecimal và prefixes; operational conventions khác IPv4 nhưng same prefix-routing idea.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethernet, IP, subnetting và routing**, **Routing bảng (table / 테이블) và longest-prefix match** tiếp nhận điểm tựa từ **IP prefix và subnet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Static và động (dynamic / 동적) routing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Routing bảng (table / 테이블) và longest-prefix match** nối từ **IP prefix và subnet** sang **Static và động (dynamic / 동적) routing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Routing bảng (table / 테이블) và longest-prefix match
 
@@ -36,7 +36,7 @@ Router có routes `prefix → next hop/interface`. Khi destination match nhiều
 
 Routing bảng (table / 테이블) mặt phẳng dữ liệu (data plane / 데이터 플레인) forwarding khác routing protocols điều khiển (control / 제어) plane học routes.
 
-> **Chuyển mạch:** Trong **Ethernet, IP, subnetting và routing**, **Static và động (dynamic / 동적) routing** tiếp nhận điểm tựa từ **Routing bảng (table / 테이블) và longest-prefix match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TTL/Hop Limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Static và động (dynamic / 동적) routing** nối từ **Routing bảng (table / 테이블) và longest-prefix match** sang **TTL/Hop Limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Static và động (dynamic / 동적) routing
 
@@ -44,7 +44,7 @@ Trong small mạng (network / 네트워크) có static routes. Large networks d�
 
 BGP không đơn giản chọn geographic shortest đường dẫn (path / 경로); chính sách (policy / 정책), AS đường dẫn (path / 경로) và attributes matter. Internet routing là phân tán (distributed / 분산) chính sách (policy / 정책) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Ethernet, IP, subnetting và routing**, **Static và động (dynamic / 동적) routing** đã nêu tiêu chí phân biệt, còn **TTL/Hop Limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **NAT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Static và động (dynamic / 동적) routing** đặt tiêu chí; **TTL/Hop Limit** dùng nó để kiểm tra ranh giới, rồi **NAT** mở rộng hệ quả.
 
 ## TTL/Hop Limit
 
@@ -52,7 +52,7 @@ IP header có TTL (IPv4) hoặc Hop Limit (IPv6), decrement mỗi router. Khi v�
 
 `traceroute` khai thác TTL expiry để infer hops, nhưng đường dẫn (path / 경로)/asymmetric/firewall hành vi (behavior / 동작) có thể làm đầu ra (output / 출력) không hoàn hảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethernet, IP, subnetting và routing**, **TTL/Hop Limit** đã nêu tiêu chí phân biệt, còn **NAT** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **ICMP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **TTL/Hop Limit** đặt tiêu chí; **NAT** dùng nó để kiểm tra ranh giới, rồi **ICMP** mở rộng hệ quả.
 
 ## NAT
 
@@ -60,19 +60,19 @@ Mạng (network / 네트워크) Address Translation rewrite addresses/ports, th�
 
 NAT không thay firewall bảo mật (security / 보안) mô hình (model / 모델). Stateful NAT often coexists firewall hành vi (behavior / 동작), nhưng translation bản thân không phải full access-control chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **Ethernet, IP, subnetting và routing**, **ICMP** tiếp nhận điểm tựa từ **NAT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **ICMP** nối từ **NAT** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ICMP
 
 ICMP mang điều khiển (control / 제어)/lỗi (error / 오류) diagnostics như destination unreachable, thời gian (time / 시간) exceeded, echo yêu cầu (request / 요청)/reply. Blocking all ICMP có thể phá đường dẫn (path / 경로) MTU discovery hoặc diagnostics; bảo mật (security / 보안) chính sách (policy / 정책) nên hiểu message types thay vì assume ICMP vô ích.
 
-> **Chuyển mạch:** Ở chặng này của **Ethernet, IP, subnetting và routing**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **ICMP** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **ICMP**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Host trước tiên hỏi: destination có cục bộ (local / 로컬) prefix không? Nếu cục bộ (local / 로컬), resolve neighbor; nếu remote, gửi frame tới gateway. Router lặp **longest-prefix match → next hop** cho tới destination mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethernet, IP, subnetting và routing**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,7 +82,7 @@ ICMP mang điều khiển (control / 제어)/lỗi (error / 오류) diagnostics 
 
 **“NAT là firewall.”** NAT rewrites mappings; firewall enforces chính sách (policy / 정책), dù devices thường combine cả hai.
 
-> **Chuyển mạch:** Trong **Ethernet, IP, subnetting và routing**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

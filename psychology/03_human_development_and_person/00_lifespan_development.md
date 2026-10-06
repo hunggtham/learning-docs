@@ -19,7 +19,7 @@ Developmental science quan tâm ít nhất bốn câu hỏi:
 
 Một milestone có thể hữu ích như statistical tham chiếu (reference / 참조), nhưng không phải deadline tuyệt đối cho every individual.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **2. Hệ động và mô hình giao dịch** tiếp nhận điểm tựa từ **1. Phát triển là quá trình, không phải danh sách mốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Timescale là một phần của lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **2. Hệ động và mô hình giao dịch** nối từ **1. Phát triển là quá trình, không phải danh sách mốc** sang **3. Timescale là một phần của lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Hệ động và mô hình giao dịch
 
@@ -42,7 +42,7 @@ Sinh học + trạng thái trước đó + môi trường + quan hệ
 - “parents determine everything”;
 - “genes determine everything”.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **3. Timescale là một phần của lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **2. Hệ động và mô hình giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Nature–nurture là false dichotomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **3. Timescale là một phần của lý thuyết (theory / 이론)** nối từ **2. Hệ động và mô hình giao dịch** sang **4. Nature–nurture là false dichotomy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Timescale là một phần của lý thuyết (theory / 이론)
 
@@ -58,7 +58,7 @@ Một thiết kế (design / 설계) đo mỗi 5 năm không thể capture same 
 
 > **hiện tại (current / 현재) methodological principle:** lý thuyết (theory / 이론), sampling frequency và statistical mô hình (model / 모델) phải match timescale của tiến trình (process / 프로세스) được hypothesize.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **4. Nature–nurture là false dichotomy** tiếp nhận điểm tựa từ **3. Timescale là một phần của lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sensitive period và trọng yếu (critical / 중요) period** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **4. Nature–nurture là false dichotomy** nối từ **3. Timescale là một phần của lý thuyết (theory / 이론)** sang **5. Sensitive period và trọng yếu (critical / 중요) period**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Nature–nurture là false dichotomy
 
@@ -74,7 +74,7 @@ Do đó câu “trait này bao nhiêu % do gene?” thường bị hiểu sai n�
 
 Xem [[../01_brain_and_mind/03_evolution_genetics_and_behavior]].
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **5. Sensitive period và trọng yếu (critical / 중요) period** tiếp nhận điểm tựa từ **4. Nature–nurture là false dichotomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Phát triển trước sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **5. Sensitive period và trọng yếu (critical / 중요) period** nối từ **4. Nature–nurture là false dichotomy** sang **6. Phát triển trước sinh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Sensitive period và trọng yếu (critical / 중요) period
 
@@ -88,7 +88,7 @@ Human development có bằng chứng (evidence / 증거) rõ về timing effects
 >
 > **Debated/conditional:** chính xác (exact / 정확한) windows, mechanisms và reversibility differ by hệ thống (system / 시스템) and exposure.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **6. Phát triển trước sinh** tiếp nhận điểm tựa từ **5. Sensitive period và trọng yếu (critical / 중요) period** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Birth outcomes và developmental suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **6. Phát triển trước sinh** nối từ **5. Sensitive period và trọng yếu (critical / 중요) period** sang **7. Birth outcomes và developmental suy luận (inference / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Phát triển trước sinh
 
@@ -104,7 +104,7 @@ Prenatal development chịu influence của nutrition, infection, toxins, medica
 
 Exposure is probabilistic rủi ro (risk / 위험), not deterministic destiny.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **7. Birth outcomes và developmental suy luận (inference / 추론)** tiếp nhận điểm tựa từ **6. Phát triển trước sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **7. Birth outcomes và developmental suy luận (inference / 추론)** nối từ **6. Phát triển trước sinh** sang **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Birth outcomes và developmental suy luận (inference / 추론)
 
@@ -114,7 +114,7 @@ Many children show resilience; postnatal healthcare, family resources and interv
 
 A rủi ro (risk / 위험) marker is not a fixed developmental fate.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)** tiếp nhận điểm tựa từ **7. Birth outcomes và developmental suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)** nối từ **7. Birth outcomes và developmental suy luận (inference / 추론)** sang **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)
 
@@ -122,7 +122,7 @@ Infants learn through coordinated perception and hành động (action / 동작)
 
 This illustrates **developmental cascade**: progress in one lĩnh vực (domain / 도메인) alters opportunities in another.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Attachment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)** nối từ **8. Infancy: perception, hành động (action / 동작) và xã hội (social / 사회적) học tập (learning / 학습)** sang **10. Attachment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)
 
@@ -132,7 +132,7 @@ But claim “one chính xác (exact / 정확한) parenting style permanently wir
 
 Xem [[01_attachment_and_relationships]] và [[14_parenting_caregiving_and_family_development]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **10. Attachment** tiếp nhận điểm tựa từ **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. ngôn ngữ (language / 언어) development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **10. Attachment** nối từ **9. Early xã hội (social / 사회적) tương tác (interaction / 상호작용)** sang **11. ngôn ngữ (language / 언어) development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Attachment
 
@@ -142,7 +142,7 @@ Attachment lý thuyết (theory / 이론) describes how children organize proxim
 >
 > **Limitation:** infant attachment category is not permanent personality kiểu (type / 타입) and should not be used as internet diagnosis of adult relationships.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **11. ngôn ngữ (language / 언어) development** tiếp nhận điểm tựa từ **10. Attachment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Piaget: historical importance and hiện đại (modern / 현대적) revision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **11. ngôn ngữ (language / 언어) development** nối từ **10. Attachment** sang **12. Piaget: historical importance and hiện đại (modern / 현대적) revision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. ngôn ngữ (language / 언어) development
 
@@ -152,7 +152,7 @@ Word segmentation, phonological categories, grammar and pragmatics develop on di
 
 Early exposure matters, particularly phonological tuning, but adults remain capable of second-language học tập (learning / 학습). Accent-like proficiency may become harder without making later học tập (learning / 학습) impossible.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **12. Piaget: historical importance and hiện đại (modern / 현대적) revision** tiếp nhận điểm tựa từ **11. ngôn ngữ (language / 언어) development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vygotsky and sociocultural development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **12. Piaget: historical importance and hiện đại (modern / 현대적) revision** nối từ **11. ngôn ngữ (language / 언어) development** sang **13. Vygotsky and sociocultural development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Piaget: historical importance and hiện đại (modern / 현대적) revision
 
@@ -162,7 +162,7 @@ Piaget proposed stages of cognitive development and emphasized active constructi
 
 Tác vụ (task / 작업) demand, ngôn ngữ (language / 언어) and executive hàm (function / 함수) can make young children appear less competent than they are.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **13. Vygotsky and sociocultural development** tiếp nhận điểm tựa từ **12. Piaget: historical importance and hiện đại (modern / 현대적) revision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Executive functions in childhood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **13. Vygotsky and sociocultural development** nối từ **12. Piaget: historical importance and hiện đại (modern / 현대적) revision** sang **14. Executive functions in childhood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Vygotsky and sociocultural development
 
@@ -174,7 +174,7 @@ Vygotsky emphasized ngôn ngữ (language / 언어), tools and xã hội (social
 
 This remains influential educational khung phần mềm (framework / 프레임워크), but should not be treated as one precisely quantified biological law.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **14. Executive functions in childhood** tiếp nhận điểm tựa từ **13. Vygotsky and sociocultural development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Adolescence: more than “immature brain”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **14. Executive functions in childhood** nối từ **13. Vygotsky and sociocultural development** sang **15. Adolescence: more than “immature brain”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Executive functions in childhood
 
@@ -184,7 +184,7 @@ These skills are influenced by maturation, schooling, sleep, stress, nutrition a
 
 Huấn luyện (training / 학습) tác vụ (task / 작업) hiệu năng (performance / 성능) does not automatically produce large far-transfer gains to general intelligence or life kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **15. Adolescence: more than “immature brain”** tiếp nhận điểm tựa từ **14. Executive functions in childhood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Peer influence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **15. Adolescence: more than “immature brain”** nối từ **14. Executive functions in childhood** sang **16. Peer influence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Adolescence: more than “immature brain”
 
@@ -194,7 +194,7 @@ Popular claim “brain is not developed until 25” is oversimplified. Different
 
 Adolescents can reason well in calm settings but peer/emotional ngữ cảnh (context / 맥락) may thay đổi (change / 변경) rủi ro (risk / 위험) weighting.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **16. Peer influence** tiếp nhận điểm tựa từ **15. Adolescence: more than “immature brain”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. định danh (identity / 식별자) development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **16. Peer influence** nối từ **15. Adolescence: more than “immature brain”** sang **17. định danh (identity / 식별자) development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Peer influence
 
@@ -202,7 +202,7 @@ Peer presence can increase risk-taking in some contexts but can also hỗ trợ 
 
 > **bằng chứng (evidence / 증거) status:** peer influence is real but direction depends norm and group. “Peers make adolescents reckless” is too broad.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **17. định danh (identity / 식별자) development** tiếp nhận điểm tựa từ **16. Peer influence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Emerging adulthood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **17. định danh (identity / 식별자) development** nối từ **16. Peer influence** sang **18. Emerging adulthood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. định danh (identity / 식별자) development
 
@@ -212,7 +212,7 @@ Adolescence and emerging adulthood often involve exploration of values, occupati
 
 Xem [[09_self_concept_identity_and_self_regulation]] và [[16_acculturation_migration_and_bicultural_identity]].
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **18. Emerging adulthood** tiếp nhận điểm tựa từ **17. định danh (identity / 식별자) development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Adult development continues** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **18. Emerging adulthood** nối từ **17. định danh (identity / 식별자) development** sang **19. Adult development continues**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Emerging adulthood
 
@@ -220,7 +220,7 @@ The concept **emerging adulthood** describes a prolonged chuyển tiếp (transi
 
 > **hiện tại (current / 현재)/debated khung phần mềm (framework / 프레임워크):** it describes many industrialized contexts well but is not universal developmental stage. Economic cấu trúc (structure / 구조), education, culture and family expectations shape whether this period exists.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **19. Adult development continues** tiếp nhận điểm tựa từ **18. Emerging adulthood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Midlife** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **19. Adult development continues** nối từ **18. Emerging adulthood** sang **20. Midlife**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Adult development continues
 
@@ -234,7 +234,7 @@ Development can be:
 
 Career expertise can grow while processing speed changes. xã hội (social / 사회적) mạng (network / 네트워크) can become smaller while relationship selectivity increases.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **20. Midlife** tiếp nhận điểm tựa từ **19. Adult development continues** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Aging is multidimensional** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **20. Midlife** nối từ **19. Adult development continues** sang **21. Aging is multidimensional**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Midlife
 
@@ -242,7 +242,7 @@ Career expertise can grow while processing speed changes. xã hội (social / �
 
 Some people experience role overload, caregiving, career reevaluation or health thay đổi (change / 변경); others show high stability. Life events and socioeconomic ngữ cảnh (context / 맥락) often explain more than chronological age alone.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **21. Aging is multidimensional** tiếp nhận điểm tựa từ **20. Midlife** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Cognitive reserve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **21. Aging is multidimensional** nối từ **20. Midlife** sang **22. Cognitive reserve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Aging is multidimensional
 
@@ -254,7 +254,7 @@ Individual trajectories differ widely.
 
 Xem [[11_aging_cognitive_health_and_late_life]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **22. Cognitive reserve** tiếp nhận điểm tựa từ **21. Aging is multidimensional** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Cohort effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **22. Cognitive reserve** nối từ **21. Aging is multidimensional** sang **23. Cohort effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Cognitive reserve
 
@@ -266,7 +266,7 @@ Education, occupational độ phức tạp (complexity / 복잡도), vật lý (
 
 Do not ghi (write / 쓰기) “học tập (learning / 학습) prevents dementia”.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **23. Cohort effects** tiếp nhận điểm tựa từ **22. Cognitive reserve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Longitudinal thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **23. Cohort effects** nối từ **22. Cognitive reserve** sang **24. Longitudinal thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Cohort effects
 
@@ -281,7 +281,7 @@ Therefore:
 
 Longitudinal and cohort-sequential designs help disentangle age, period and cohort, but no thiết kế (design / 설계) solves all confounding.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **24. Longitudinal thiết kế (design / 설계)** tiếp nhận điểm tựa từ **23. Cohort effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Cross-sectional thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **24. Longitudinal thiết kế (design / 설계)** nối từ **23. Cohort effects** sang **25. Cross-sectional thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Longitudinal thiết kế (design / 설계)
 
@@ -289,7 +289,7 @@ Following same people reveals within-person thay đổi (change / 변경) but su
 
 People who remain in decades-long study may be healthier or more advantaged than dropouts.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **25. Cross-sectional thiết kế (design / 설계)** tiếp nhận điểm tựa từ **24. Longitudinal thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Developmental cascade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **25. Cross-sectional thiết kế (design / 설계)** nối từ **24. Longitudinal thiết kế (design / 설계)** sang **26. Developmental cascade**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Cross-sectional thiết kế (design / 설계)
 
@@ -297,7 +297,7 @@ Cross-sectional studies are efficient and useful for description but cannot dire
 
 Age-group mean difference should not be narrated as “people thay đổi (change / 변경) this way” without longitudinal hỗ trợ (support / 지원).
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **26. Developmental cascade** tiếp nhận điểm tựa từ **25. Cross-sectional thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Cumulative rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **26. Developmental cascade** nối từ **25. Cross-sectional thiết kế (design / 설계)** sang **27. Cumulative rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Developmental cascade
 
@@ -323,7 +323,7 @@ Support
 
 Cascades explain why early intervention can matter without implying early life irreversibly determines kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **27. Cumulative rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **26. Developmental cascade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **27. Cumulative rủi ro (risk / 위험)** nối từ **26. Developmental cascade** sang **28. Resilience**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Cumulative rủi ro (risk / 위험)
 
@@ -333,7 +333,7 @@ Rủi ro (risk / 위험) count can predict kết quả (outcome / 결과), but s
 
 A developmental formulation should ask which cơ chế (mechanism / 메커니즘) each exposure affects.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **28. Resilience** tiếp nhận điểm tựa từ **27. Cumulative rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Early adversity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **28. Resilience** nối từ **27. Cumulative rủi ro (risk / 위험)** sang **29. Early adversity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Resilience
 
@@ -343,7 +343,7 @@ Xã hội (social / 사회적) hỗ trợ (support / 지원), resources, meaning
 
 Calling someone “not resilient enough” can individualize structural problems.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **29. Early adversity** tiếp nhận điểm tựa từ **28. Resilience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Socioeconomic ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **29. Early adversity** nối từ **28. Resilience** sang **30. Socioeconomic ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Early adversity
 
@@ -355,7 +355,7 @@ Early adversity is associated with later mental and vật lý (physical / 물리
 
 Adversity ≠ destiny.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **30. Socioeconomic ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **29. Early adversity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Culture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **30. Socioeconomic ngữ cảnh (context / 맥락)** nối từ **29. Early adversity** sang **31. Culture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Socioeconomic ngữ cảnh (context / 맥락)
 
@@ -363,7 +363,7 @@ Income, housing, education, pollution, food bảo mật (security / 보안), hea
 
 These are not mere “background variables”. They influence stress, sleep, học tập (learning / 학습) resources and health exposure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **31. Culture** tiếp nhận điểm tựa từ **30. Socioeconomic ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **31. Culture** nối từ **30. Socioeconomic ngữ cảnh (context / 맥락)** sang **32. di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Culture
 
@@ -371,7 +371,7 @@ Developmental milestones and goals are partly culturally organized. Independence
 
 Cross-cultural variation does not mean biology irrelevant; it reveals which mẫu (pattern / 패턴) is context-dependent.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **32. di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **31. Culture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Plasticity across life** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **32. di chuyển (migration / 마이그레이션)** nối từ **31. Culture** sang **33. Plasticity across life**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. di chuyển (migration / 마이그레이션)
 
@@ -379,7 +379,7 @@ Di chuyển (migration / 마이그레이션) can thay đổi (change / 변경) n
 
 Xem [[16_acculturation_migration_and_bicultural_identity]].
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **33. Plasticity across life** tiếp nhận điểm tựa từ **32. di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Developmental timing hypotheses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **33. Plasticity across life** nối từ **32. di chuyển (migration / 마이그레이션)** sang **34. Developmental timing hypotheses**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Plasticity across life
 
@@ -389,7 +389,7 @@ Plasticity persists throughout life but is not unlimited. học tập (learning 
 >
 > **Limitation:** “you can rewire anything at any age” is an overclaim.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **34. Developmental timing hypotheses** tiếp nhận điểm tựa từ **33. Plasticity across life** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Moral and xã hội (social / 사회적) development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **34. Developmental timing hypotheses** nối từ **33. Plasticity across life** sang **35. Moral and xã hội (social / 사회적) development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Developmental timing hypotheses
 
@@ -402,7 +402,7 @@ When an exposure occurs repeatedly, different temporal các mô hình (models / 
 
 Researchers should compare these các mô hình (models / 모델들) rather than assume one timing story.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **35. Moral and xã hội (social / 사회적) development** tiếp nhận điểm tựa từ **34. Developmental timing hypotheses** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Development and psychopathology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **35. Moral and xã hội (social / 사회적) development** nối từ **34. Developmental timing hypotheses** sang **36. Development and psychopathology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Moral and xã hội (social / 사회적) development
 
@@ -412,7 +412,7 @@ Classic stage theories are historically important but hiện đại (modern / �
 
 Xem [[08_moral_psychology_and_prosocial_behavior]].
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **35. Moral and xã hội (social / 사회적) development** xác định đầu vào; **36. Development and psychopathology** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **37. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **35. Moral and xã hội (social / 사회적) development** đặt đầu vào cho **36. Development and psychopathology**, rồi **37. dùng chung (common / 공통) misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 36. Development and psychopathology
 
@@ -424,7 +424,7 @@ Mental disorder rủi ro (risk / 위험) is developmental. Same symptom can mean
 
 This is why diagnosis should consider developmental lịch sử (history / 이력), not just hiện tại (current / 현재) symptom danh sách (list / 목록).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **36. Development and psychopathology** xác định đầu vào; **37. dùng chung (common / 공통) misconceptions** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **38. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **36. Development and psychopathology** đặt đầu vào cho **37. dùng chung (common / 공통) misconceptions**, rồi **38. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. dùng chung (common / 공통) misconceptions
 
@@ -448,7 +448,7 @@ No. rủi ro (risk / 위험) is probabilistic.
 
 No. Cognitive domains thay đổi (change / 변경) differently.
 
-> **Chuyển mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **38. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **37. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **38. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **37. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. mô hình tư duy (mental model / 사고 모델)
 
@@ -472,7 +472,7 @@ next developmental state
 
 Development is path-dependent but not fate.
 
-> **Chuyển mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **Kết nối kiến thức** gom các mảnh từ **38. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Phát triển suốt vòng đời — Lifespan Development / 발달심리학**, **Kết nối kiến thức** tổng hợp từ **38. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

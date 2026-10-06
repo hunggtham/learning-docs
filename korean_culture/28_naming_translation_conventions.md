@@ -38,7 +38,7 @@ Nếu tên lịch sử có Hán tự và cách đọc Hán–Việt giúp ngư�
 | Huấn Dân Chính Âm | 훈민정음 | Hunminjeongeum |
 | Chiến tranh Nhâm Thìn | 임진왜란 | Imjin War |
 
-> **Chuyển mạch:** Trong **Quy ước tên riêng Việt–Hàn–Anh**, **Khi nào không nên dịch cưỡng ép** tiếp nhận điểm tựa từ **Khi nào dịch sang Hán–Việt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy ước tên riêng Việt–Hàn–Anh**, **Khi nào không nên dịch cưỡng ép** nối từ **Khi nào dịch sang Hán–Việt** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi nào không nên dịch cưỡng ép
 
@@ -46,7 +46,7 @@ Tên hiện đại mà cách Hán–Việt ít được người Việt sử d�
 
 Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu bối cảnh đã rõ. Tên tệp (file / 파일) vẫn giữ tiếng Anh hoặc dạng Latin hoá để đường dẫn, Git và liên kết chéo ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Quy ước tên riêng Việt–Hàn–Anh**, **Mô hình tư duy** gom các mảnh từ **Khi nào không nên dịch cưỡng ép** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Quy ước tên riêng Việt–Hàn–Anh**, **Mô hình tư duy** tổng hợp từ **Khi nào không nên dịch cưỡng ép** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -109,7 +109,7 @@ graph TD
 
 Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật ngữ người đọc sẽ thường xuyên gặp trong tài liệu Linux. Phần giải thích trong từng chương ưu tiên tiếng Việt và chỉ giữ thuật ngữ gốc trong ngoặc khi nó giúp nhận diện khái niệm.
 
-> **Chuyển mạch:** **Bản đồ đọc và quan hệ phụ thuộc** xác định prerequisite của Linux; **Cấu trúc thư viện** sắp xếp chúng, rồi **Gợi ý đường đọc theo nhu cầu** chọn route theo task.
+> **Nối mạch:** **Bản đồ đọc và quan hệ phụ thuộc** xác định prerequisite của Linux; **Cấu trúc thư viện** sắp xếp chúng, rồi **Gợi ý đường đọc theo nhu cầu** chọn route theo task.
 
 ## Cấu trúc thư viện
 
@@ -215,7 +215,7 @@ Các tài liệu cuối cùng dùng để nối Linux với backend, database, n
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.
 
-> **Chuyển mạch:** **Gợi ý đường đọc** ánh xạ task như process, networking hoặc storage vào owner; **Cách dùng chapter nền tảng và deep dive** giữ mental model trước khi mở chi tiết.
+> **Nối mạch:** **Gợi ý đường đọc** ánh xạ task như process, networking hoặc storage vào owner; **Cách dùng chapter nền tảng và deep dive** giữ mental model trước khi mở chi tiết.
 
 ## Gợi ý đường đọc theo nhu cầu
 
@@ -231,7 +231,7 @@ Nếu mục tiêu là **hiểu một HTTP yêu cầu (request / 요청) môi tr�
 
 Nếu mục tiêu là **hiểu độ tin cậy (reliability / 신뢰성) từ chỉ số (metric / 지표) Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → sức chứa (capacity / 용량) planning → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/DR → SLI/SLO/lỗi (error / 오류) ngân sách (budget / 예산) → sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giải thích tại sao một máy chủ (server / 서버) “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là sự cố (incident / 인시던트).
 
-> **Chuyển mạch:** **Cách dùng chapter và deep dive** phân biệt concept với implementation detail; **Quy ước ngôn ngữ và liên kết** giữ terminology và canonical links ổn định.
+> **Nối mạch:** **Cách dùng chapter và deep dive** phân biệt concept với implementation detail; **Quy ước ngôn ngữ và liên kết** giữ terminology và canonical links ổn định.
 
 ## Cách dùng chapter nền tảng và deep dive
 
@@ -276,7 +276,7 @@ production_troubleshooting / capacity_planning
 
 Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) → độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표)**.
 
-> **Chuyển mạch:** **Quy ước ngôn ngữ và liên kết** khép README bằng owner và boundary; syscall, kernel và network detail quay về canonical chapters.
+> **Nối mạch:** **Quy ước ngôn ngữ và liên kết** khép README bằng owner và boundary; syscall, kernel và network detail quay về canonical chapters.
 
 ## Quy ước ngôn ngữ và liên kết
 

@@ -10,7 +10,7 @@ Hai dimension cơ bản thường được dùng là **mức kích hoạt (arous
 
 Arousal thường làm một số detail trung tâm nổi bật hơn, nhưng không có nghĩa toàn bộ scene được nhớ chính xác hơn. Attention có thể narrow vào threat hoặc salient đối tượng (object / 객체), làm peripheral detail kém hơn.
 
-> **Chuyển mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Amygdala và hippocampus** tiếp nhận điểm tựa từ **Arousal và valence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mood-congruent bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Amygdala và hippocampus** nối từ **Arousal và valence** sang **Mood-congruent bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amygdala và hippocampus
 
@@ -18,7 +18,7 @@ Amygdala và hippocampus tương tác trong emotional bộ nhớ (memory / 메�
 
 Simplification kiểu `amygdala = fear` hoặc `hippocampus = memory` hữu ích để bắt đầu nhưng dễ gây hiểu sai nếu coi như ánh xạ (mapping / 매핑) một-vùng-một-chức-năng.
 
-> **Chuyển mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Mood-congruent bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Amygdala và hippocampus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Autobiographical bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Mood-congruent bộ nhớ (memory / 메모리)** nối từ **Amygdala và hippocampus** sang **Autobiographical bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mood-congruent bộ nhớ (memory / 메모리)
 
@@ -26,7 +26,7 @@ Simplification kiểu `amygdala = fear` hoặc `hippocampus = memory` hữu ích
 
 Cơ chế này có thể góp phần duy trì rumination. Tuy nhiên tác động (effect / 효과) không tuyệt đối và phụ thuộc person, material và ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Autobiographical bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Mood-congruent bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overgeneral bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Autobiographical bộ nhớ (memory / 메모리)** nối từ **Mood-congruent bộ nhớ (memory / 메모리)** sang **Overgeneral bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Autobiographical bộ nhớ (memory / 메모리)
 
@@ -34,7 +34,7 @@ Cơ chế này có thể góp phần duy trì rumination. Tuy nhiên tác độn
 
 Recent rà soát (review / 검토) nhấn mạnh emotional autobiographical memories vừa có stability vừa có malleability. Narrative giúp con người rút meaning từ past nhưng cũng làm bộ nhớ (memory / 메모리) transform qua thời gian.
 
-> **Chuyển mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Overgeneral bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Autobiographical bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reconsolidation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Overgeneral bộ nhớ (memory / 메모리)** nối từ **Autobiographical bộ nhớ (memory / 메모리)** sang **Reconsolidation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Overgeneral bộ nhớ (memory / 메모리)
 
@@ -42,7 +42,7 @@ Một số người dưới stress hoặc depression có xu hướng nhớ theo 
 
 Kỹ năng specificity có thể hữu ích: thay “mình luôn làm tệ interview” bằng một sự kiện (event / 이벤트) rõ, xem cue nào xảy ra và phản hồi (response / 응답) nào có thể đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Reconsolidation** tiếp nhận điểm tựa từ **Overgeneral bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trauma bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Reconsolidation** nối từ **Overgeneral bộ nhớ (memory / 메모리)** sang **Trauma bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reconsolidation
 
@@ -50,7 +50,7 @@ Khi bộ nhớ (memory / 메모리) được reactivated, nó có thể bước 
 
 Không nên hiểu rằng chỉ cần “nhớ lại rồi nghĩ tích cực” là rewrite bộ nhớ (memory / 메모리) theo ý muốn. Điều kiện reconsolidation, prediction lỗi (error / 오류) và ranh giới (boundary / 경계) điều kiện (condition / 조건) phức tạp hơn nhiều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Trauma bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Reconsolidation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flashbulb bộ nhớ (memory / 메모리) và confidence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Trauma bộ nhớ (memory / 메모리)** nối từ **Reconsolidation** sang **Flashbulb bộ nhớ (memory / 메모리) và confidence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trauma bộ nhớ (memory / 메모리)
 
@@ -60,7 +60,7 @@ Intrusive bộ nhớ (memory / 메모리) có thể được triggered bởi cue
 
 Xem [[../04_mental_health/02_anxiety_ocd_and_trauma]].
 
-> **Chuyển mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Flashbulb bộ nhớ (memory / 메모리) và confidence** tiếp nhận điểm tựa từ **Trauma bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) và emotion regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Flashbulb bộ nhớ (memory / 메모리) và confidence** nối từ **Trauma bộ nhớ (memory / 메모리)** sang **Bộ nhớ (memory / 메모리) và emotion regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Flashbulb bộ nhớ (memory / 메모리) và confidence
 
@@ -68,7 +68,7 @@ Sự kiện (event / 이벤트) cảm xúc mạnh có thể tạo flashbulb bộ
 
 Xem [[07_memory_distortion_eyewitness_and_false_memory]]. Emotional intensity có thể làm narrative nhất quán hơn trong khi một số detail vẫn thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Bộ nhớ (memory / 메모리) và emotion regulation** tiếp nhận điểm tựa từ **Flashbulb bộ nhớ (memory / 메모리) và confidence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rumination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Bộ nhớ (memory / 메모리) và emotion regulation** nối từ **Flashbulb bộ nhớ (memory / 메모리) và confidence** sang **Rumination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) và emotion regulation
 
@@ -76,7 +76,7 @@ Con người regulate emotion bằng cách thay đổi attention, reappraisal ho
 
 **Self-distancing** — nhìn sự kiện (event / 이벤트) từ perspective rộng hơn — có thể giảm immersion trong một số ngữ cảnh (context / 맥락). Nhưng dùng distancing để avoid mọi emotion có thể trở thành experiential avoidance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Rumination** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) và emotion regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Future simulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Rumination** nối từ **Bộ nhớ (memory / 메모리) và emotion regulation** sang **Future simulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rumination
 
@@ -96,7 +96,7 @@ negative mood duy trì
 
 Breaking vòng lặp (loop / 루프) có thể mục tiêu (target / 대상) hành vi (behavior / 동작), attention, sleep, xã hội (social / 사회적) ngữ cảnh (context / 맥락) hoặc cognitive tiến trình (process / 프로세스) thay vì tranh luận từng thought.
 
-> **Chuyển mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Future simulation** tiếp nhận điểm tựa từ **Rumination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nostalgia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Future simulation** nối từ **Rumination** sang **Nostalgia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Future simulation
 
@@ -104,13 +104,13 @@ Bộ nhớ (memory / 메모리) hệ thống (system / 시스템) cũng được
 
 Đây là một lý do depression có thể đi cùng hopelessness: future không chỉ là logical forecast mà được xây từ material bộ nhớ (memory / 메모리) và hiện tại (current / 현재) mood.
 
-> **Chuyển mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Nostalgia** tiếp nhận điểm tựa từ **Future simulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Nostalgia** nối từ **Future simulation** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nostalgia
 
 Nostalgia có thể tăng cảm giác continuity, belonging và meaning trong một số ngữ cảnh (context / 맥락). Nó không đơn giản là “sống trong quá khứ”. Nhưng nếu nostalgia thay thế engagement với present, hàm (function / 함수) có thể khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Nostalgia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Những hiểu lầm phổ biến** nối từ **Nostalgia** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -122,7 +122,7 @@ Nostalgia có thể tăng cảm giác continuity, belonging và meaning trong m�
 
 **“Muốn bớt cảm xúc thì phải xóa bộ nhớ (memory / 메모리).”** Regulation thường thay relationship với bộ nhớ (memory / 메모리) hơn là xóa sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -140,13 +140,13 @@ body state      autobiographical narrative
 
 > Emotional bộ nhớ (memory / 메모리) là hệ thống hai chiều: emotion định hình bộ nhớ (memory / 메모리), và bộ nhớ (memory / 메모리) tiếp tục định hình emotion.
 
-> **Chuyển mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đọc nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đọc nền** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kết nối kiến thức
 
 Xem [[01_memory]], [[07_memory_distortion_eyewitness_and_false_memory]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[../04_mental_health/02_anxiety_ocd_and_trauma]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Kết nối kiến thức** nêu điều cần giải thích; **Nguồn đọc nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cảm xúc, trí nhớ và nhận thức cảm tính — Emotion, bộ nhớ (memory / 메모리) & Affective Cognition**, **Kết nối kiến thức** đặt vấn đề; **Nguồn đọc nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn đọc nền
 

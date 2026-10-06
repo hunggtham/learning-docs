@@ -10,7 +10,7 @@ Chọn default công khai (public / 공개)/private, dữ liệu (data / 데이�
 
 Một thiết kế (design / 설계) có thể technically neutral-looking nhưng embed incentives/các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Quyết định kỹ thuật luôn cài giả định về giá trị; privacy rộng hơn secrecy vì liên quan quyền kiểm soát, ngữ cảnh và khả năng kết hợp dữ liệu. Vì vậy **data minimization** là nguyên tắc thiết kế kế tiếp: giảm dữ liệu trước khi phải bảo vệ nó.
+> **Nối mạch:** Quyết định kỹ thuật luôn cài giả định về giá trị; privacy rộng hơn secrecy vì liên quan quyền kiểm soát, ngữ cảnh và khả năng kết hợp dữ liệu. Vì vậy **data minimization** là nguyên tắc thiết kế kế tiếp: giảm dữ liệu trước khi phải bảo vệ nó.
 
 ## Privacy không chỉ là secrecy
 
@@ -18,7 +18,7 @@ Privacy liên quan điều khiển (control / 제어)/ngữ cảnh (context / �
 
 Thông tin (information / 정보) có thể không secret nhưng aggregation/re-identification tạo harm mới.
 
-> **Chuyển mạch:** Privacy bao gồm quyền kiểm soát, ngữ cảnh, truy cập và việc kết hợp dữ liệu về sau, không chỉ bí mật. **Data minimization** thu hẹp dữ liệu được giữ; sau đó **consent** mới xác định khi nào một người cho phép một mục đích cụ thể.
+> **Nối mạch:** Privacy bao gồm quyền kiểm soát, ngữ cảnh, truy cập và việc kết hợp dữ liệu về sau, không chỉ bí mật. **Data minimization** thu hẹp dữ liệu được giữ; sau đó **consent** mới xác định khi nào một người cho phép một mục đích cụ thể.
 
 ## Dữ liệu (data / 데이터) minimization
 
@@ -26,7 +26,7 @@ Thu thập ít dữ liệu (data / 데이터) cần thiết giảm breach impact
 
 Minimization cũng là bảo mật (security / 보안) principle: dữ liệu (data / 데이터) không tồn tại thì không thể leak từ hệ thống (system / 시스템) đó.
 
-> **Chuyển mạch:** Minimization làm nhỏ bề mặt rò rỉ vì hệ thống giữ ít dữ liệu hơn; **consent** xác định phạm vi ủy quyền, còn **purpose limitation** ngăn việc tái sử dụng vượt khỏi ngữ cảnh đã thông báo.
+> **Nối mạch:** Minimization làm nhỏ bề mặt rò rỉ vì hệ thống giữ ít dữ liệu hơn; **consent** xác định phạm vi ủy quyền, còn **purpose limitation** ngăn việc tái sử dụng vượt khỏi ngữ cảnh đã thông báo.
 
 ## Consent
 
@@ -34,7 +34,7 @@ Consent có ý nghĩa khi informed, specific và reasonably voluntary. Dark patt
 
 Kỹ thuật (engineering / 엔지니어링) cần làm preference enforceable trong actual dữ liệu (data / 데이터) flows, không chỉ checkbox UI.
 
-> **Chuyển mạch:** Consent chỉ có ý nghĩa khi mục đích rõ và có giới hạn; **purpose limitation** biến giới hạn đó thành quy tắc thiết kế và quản trị. Khi phát sinh ngoại lệ hoặc khả năng tái sử dụng, trách nhiệm nghề nghiệp trở nên cụ thể.
+> **Nối mạch:** Consent chỉ có ý nghĩa khi mục đích rõ và có giới hạn; **purpose limitation** biến giới hạn đó thành quy tắc thiết kế và quản trị. Khi phát sinh ngoại lệ hoặc khả năng tái sử dụng, trách nhiệm nghề nghiệp trở nên cụ thể.
 
 ## Purpose limitation
 
@@ -42,7 +42,7 @@ Dữ liệu (data / 데이터) collected cho fraud prevention không tự độn
 
 Dữ liệu (data / 데이터) lineage giúp biết downstream các hệ thống (systems / 시스템들) đang dùng dataset nào cho purpose nào.
 
-> **Chuyển mạch:** Purpose limitation defines the intended use; professional responsibility asks who must act when the design can be repurposed, which is the dual-use problem rather than a purely technical defect.
+> **Nối mạch:** Purpose limitation định nghĩa mục đích sử dụng; professional responsibility hỏi ai phải hành động khi thiết kế bị tái sử dụng, tức bài toán dual-use chứ không chỉ là lỗi kỹ thuật.
 
 ## Professional responsibility
 
@@ -52,7 +52,7 @@ Trong high-stakes các hệ thống (systems / 시스템들), pressure deadline 
 
 Codes of ethics từ professional organizations cung cấp frameworks nhưng không tự giải mọi xung đột (conflict / 충돌).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Dual use** tiếp nhận điểm tựa từ **Professional responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Whistleblowing và escalation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dual use** nối từ **Professional responsibility** sang **Whistleblowing và escalation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dual use
 
@@ -60,7 +60,7 @@ Technology như encryption, facial recognition, vulnerability research và gener
 
 Không phải mọi misuse có thể prevent, nhưng “công cụ (tool / 도구) neutral nên không cần nghĩ” là insufficient.
 
-> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Whistleblowing và escalation** tiếp nhận điểm tựa từ **Dual use** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Whistleblowing và escalation** nối từ **Dual use** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Whistleblowing và escalation
 
@@ -68,7 +68,7 @@ Khi harm/quy tắc (rule / 규칙) violation nghiêm trọng bị ignore, nội 
 
 Điểm CS nền tảng: organization tiến trình (process / 프로세스) là một an toàn (safety / 안전) điều khiển (control / 제어), giống rà soát mã (code review / 코드 리뷰) nhưng cho societal rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Whistleblowing và escalation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Whistleblowing và escalation** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -78,13 +78,13 @@ Khi harm/quy tắc (rule / 규칙) violation nghiêm trọng bị ignore, nội 
 
 **“Engineer không quyết sản phẩm (product / 제품) nên không có responsibility.”** Engineers biết hiện thực (implementation / 구현)/rủi ro (risk / 위험) details và có role communicate consequences.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Responsible computing hỏi không chỉ “hệ thống (system / 시스템) có hoạt động không?” mà “hoạt động cho ai, với dữ liệu/quyền lực nào, và ai chịu chi phí (cost / 비용) khi các giả định (assumptions / 가정들) sai?”
 
-> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

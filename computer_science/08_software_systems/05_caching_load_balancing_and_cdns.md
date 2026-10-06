@@ -10,7 +10,7 @@ Bộ nhớ đệm (cache / 캐시) giữ bản sao (copy / 복사) của dữ li
 
 Mỗi bộ nhớ đệm (cache / 캐시) thiết kế (design / 설계) phải trả lời key, giá trị (value / 값), eviction, freshness và vô hiệu hóa (invalidation / 무효화). “Thêm Redis” không trả lời các câu đó.
 
-> **Chuyển mạch:** Trong **Caching, tải (load / 로드) balancing và CDNs**, **Cache-aside** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) là bản sao có điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TTL và staleness ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cache-aside** nối từ **Bộ nhớ đệm (cache / 캐시) là bản sao có điều kiện** sang **TTL và staleness ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cache-aside
 
@@ -18,7 +18,7 @@ Mỗi bộ nhớ đệm (cache / 캐시) thiết kế (design / 설계) phải t
 
 Race có thể xảy ra: yêu cầu (request / 요청) A miss, yêu cầu (request / 요청) B cập nhật (update / 업데이트) nguồn (source / 소스) + invalidate, rồi A ghi old giá trị (value / 값) trở lại bộ nhớ đệm (cache / 캐시). Solutions phụ thuộc versioning, short TTL hoặc coordinated ghi (write / 쓰기) chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Ở chặng này của **Caching, tải (load / 로드) balancing và CDNs**, **TTL và staleness ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Cache-aside** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eviction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **TTL và staleness ngân sách (budget / 예산)** nối từ **Cache-aside** sang **Eviction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TTL và staleness ngân sách (budget / 예산)
 
@@ -26,7 +26,7 @@ Time-to-live đặt upper bound thực dụng cho freshness nhưng không đảm
 
 Nghiệp vụ (business / 비즈니스) yêu cầu (requirement / 요구사항) nên nói “stale tối đa bao lâu chấp nhận được” thay vì “bộ nhớ đệm (cache / 캐시) phải luôn mới”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching, tải (load / 로드) balancing và CDNs**, **Eviction** tiếp nhận điểm tựa từ **TTL và staleness ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm (cache / 캐시) stampede** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Eviction** nối từ **TTL và staleness ngân sách (budget / 예산)** sang **Bộ nhớ đệm (cache / 캐시) stampede**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Eviction
 
@@ -34,7 +34,7 @@ Bộ nhớ đệm (cache / 캐시) sức chứa (capacity / 용량) hữu hạn 
 
 Eviction chính sách (policy / 정책) là online thuật toán (algorithm / 알고리즘) vì không biết future accesses.
 
-> **Chuyển mạch:** Trong **Caching, tải (load / 로드) balancing và CDNs**, **Bộ nhớ đệm (cache / 캐시) stampede** tiếp nhận điểm tựa từ **Eviction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드) balancing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bộ nhớ đệm (cache / 캐시) stampede** nối từ **Eviction** sang **Tải (load / 로드) balancing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ đệm (cache / 캐시) stampede
 
@@ -42,7 +42,7 @@ Khi hot key hết hạn, hàng nghìn requests cùng miss và cùng hit backend.
 
 Đây là ví dụ synchronization bài toán (problem / 문제) ở hệ thống (system / 시스템) mức (level / 수준).
 
-> **Chuyển mạch:** Ở chặng này của **Caching, tải (load / 로드) balancing và CDNs**, **Tải (load / 로드) balancing** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) stampede** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tải (load / 로드) balancing** nối từ **Bộ nhớ đệm (cache / 캐시) stampede** sang **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tải (load / 로드) balancing
 
@@ -52,7 +52,7 @@ Nếu backends heterogeneous hoặc requests chi phí (cost / 비용) khác nhau
 
 Health check phải phân biệt tiến trình (process / 프로세스) alive với dịch vụ (service / 서비스) capable of useful công việc (work / 작업). Một máy chủ (server / 서버) overloaded có thể technically return health 200 nhưng không nên nhận thêm tải (load / 로드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching, tải (load / 로드) balancing và CDNs**, **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7** tiếp nhận điểm tựa từ **Tải (load / 로드) balancing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consistent hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7** nối từ **Tải (load / 로드) balancing** sang **Consistent hashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tầng (layer / 계층) 4 và tầng (layer / 계층) 7
 
@@ -60,7 +60,7 @@ L4 bộ cân bằng tải (load balancer / 로드 밸런서) tuyến (route / �
 
 L7 flexibility có CPU/parsing/TLS overhead và larger attack surface.
 
-> **Chuyển mạch:** Trong **Caching, tải (load / 로드) balancing và CDNs**, **Consistent hashing** tiếp nhận điểm tựa từ **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CDN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Consistent hashing** nối từ **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7** sang **CDN**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consistent hashing
 
@@ -68,7 +68,7 @@ Hashing key lên ring/không gian (space / 공간) giúp remap fraction nhỏ ke
 
 Virtual nodes cải thiện balance. Tuy nhiên consistent hashing không tự xử lý hot keys hoặc heterogeneous sức chứa (capacity / 용량) nếu không weighting.
 
-> **Chuyển mạch:** Ở chặng này của **Caching, tải (load / 로드) balancing và CDNs**, **CDN** tiếp nhận điểm tựa từ **Consistent hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CDN** nối từ **Consistent hashing** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CDN
 
@@ -76,7 +76,7 @@ Content Delivery mạng (network / 네트워크) đặt edge caches gần users/
 
 Bộ nhớ đệm (cache / 캐시) key phải bao gồm dimensions làm phản hồi (response / 응답) khác nhau. Bỏ `Accept-Encoding`, auth trạng thái (state / 상태) hoặc locale khỏi key có thể trả sai dữ liệu (data / 데이터); include quá nhiều dimensions lại phá hit tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching, tải (load / 로드) balancing và CDNs**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **CDN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **CDN** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,13 +86,13 @@ Bộ nhớ đệm (cache / 캐시) key phải bao gồm dimensions làm phản h
 
 **“CDN chỉ là mirror static files.”** hiện đại (modern / 현대적) CDNs còn TLS termination, routing, DDoS absorption và edge computation, nhưng cốt lõi (core / 핵심) mô hình tư duy (mental model / 사고 모델) vẫn là placement/caching gần máy khách (client / 클라이언트).
 
-> **Chuyển mạch:** Trong **Caching, tải (load / 로드) balancing và CDNs**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Caching đổi freshness/độ phức tạp (complexity / 복잡도) lấy độ trễ (latency / 지연 시간)/tải (load / 로드); tải (load / 로드) balancing đổi single-resource simplicity lấy coordination. Cả hai chỉ đúng khi key, health và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) rõ.
 
-> **Chuyển mạch:** Ở chặng này của **Caching, tải (load / 로드) balancing và CDNs**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

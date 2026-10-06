@@ -20,7 +20,7 @@ trait = phân bố xác suất hành vi qua nhiều tình huống
 
 Một người hướng nội vẫn có thể nói nhiều khi ở với bạn thân. Trait không nói “người này sẽ luôn làm X”; nó nói “so với người khác, xác suất X trong nhiều ngữ cảnh (context / 맥락) có xu hướng cao/thấp hơn”.
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Big Five** tiếp nhận điểm tựa từ **Trait khác kiểu (type / 타입)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Big Five** nối từ **Trait khác kiểu (type / 타입)** sang **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Big Five
 
@@ -34,7 +34,7 @@ Mô hình **Năm yếu tố lớn (Big Five / Five-Factor Model)** mô tả pers
 
 Đây là các lĩnh vực (domain / 도메인) rộng, không phải “năm loại người”. Mỗi lĩnh vực (domain / 도메인) còn có facet nhỏ hơn. Hai người cùng conscientiousness cao có thể khác nhau ở orderliness, industriousness hoặc self-discipline.
 
-> **Chuyển mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”** tiếp nhận điểm tựa từ **Big Five** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HEXACO và Honesty–Humility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”** nối từ **Big Five** sang **HEXACO và Honesty–Humility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”
 
@@ -42,7 +42,7 @@ Big Five mạnh ở chỗ mô tả được mẫu (pattern / 패턴) khác biệ
 
 Nhưng đây là mô hình mô tả, không phải lời giải cơ chế hoàn chỉnh. Biết một người conscientious cao không tự động giải thích tại sao họ như vậy. Trait summarises mẫu (pattern / 패턴); cơ chế (mechanism / 메커니즘) có thể liên quan temperament, reinforcement lịch sử (history / 이력), goals, xã hội (social / 사회적) roles và môi trường (environment / 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **HEXACO và Honesty–Humility** tiếp nhận điểm tựa từ **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temperament, gene và môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **HEXACO và Honesty–Humility** nối từ **Vì sao Big Five hữu ích nhưng không phải “bản đồ hoàn chỉnh của con người”** sang **Temperament, gene và môi trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## HEXACO và Honesty–Humility
 
@@ -50,7 +50,7 @@ Mô hình **HEXACO** thêm lĩnh vực (domain / 도메인) **trung thực–khi
 
 Big Five và HEXACO không nhất thiết loại trừ nhau. Chúng là hai cách phân rã covariance khác nhau và hữu ích cho câu hỏi khác nhau.
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Temperament, gene và môi trường** tiếp nhận điểm tựa từ **HEXACO và Honesty–Humility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tình huống vẫn quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Temperament, gene và môi trường** nối từ **HEXACO và Honesty–Humility** sang **Tình huống vẫn quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Temperament, gene và môi trường
 
@@ -60,7 +60,7 @@ Heritability là statistic ở cấp population trong một môi trường cụ 
 
 Gene–môi trường (environment / 환경) interplay cũng quan trọng. Một người thích stimulation có thể chủ động tìm môi trường nhiều xã hội (social / 사회적) tương tác (interaction / 상호작용); môi trường đó lại củng cố kỹ năng xã hội và định danh (identity / 식별자).
 
-> **Chuyển mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Temperament, gene và môi trường** cho ta quy tắc; **Tình huống vẫn quan trọng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Personality states** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Temperament, gene và môi trường** nêu quy tắc; **Tình huống vẫn quan trọng** thử quy tắc trong tình huống, rồi **Personality states** mở rộng hệ quả.
 
 ## Tình huống vẫn quan trọng
 
@@ -76,7 +76,7 @@ hành vi = đặc điểm cá nhân × đặc điểm tình huống × lịch s�
 
 Dấu nhân ở đây mang ý nghĩa tương tác (interaction / 상호작용), không phải công thức số học chính xác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Tình huống vẫn quan trọng** cho ta quy tắc; **Personality states** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Self-concept khác personality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Tình huống vẫn quan trọng** nêu quy tắc; **Personality states** thử quy tắc trong tình huống, rồi **Self-concept khác personality** mở rộng hệ quả.
 
 ## Personality states
 
@@ -86,7 +86,7 @@ Theo thời gian, phân phối (distribution / 분포) của states tạo nên b
 
 Xem [[../00_foundations/07_ecological_momentary_assessment_and_real_world_measurement]].
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Self-concept khác personality** tiếp nhận điểm tựa từ **Personality states** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Personality development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Self-concept khác personality** nối từ **Personality states** sang **Personality development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Self-concept khác personality
 
@@ -96,7 +96,7 @@ Hai thứ liên quan nhưng không đồng nhất. Một người có thể ngh�
 
 Xem [[09_self_concept_identity_and_self_regulation]].
 
-> **Chuyển mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Personality development** tiếp nhận điểm tựa từ **Self-concept khác personality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychoanalytic và humanistic traditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Personality development** nối từ **Self-concept khác personality** sang **Psychoanalytic và humanistic traditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Personality development
 
@@ -106,7 +106,7 @@ Thay đổi có thể đến từ role transitions, môi trường (environment 
 
 Một engineer từng né giao tiếp có thể qua nhiều năm làm lead trở nên assertive và socially skilled hơn. Một phần thay đổi có thể phản ánh trạng thái (state / 상태) practice trở thành mẫu (pattern / 패턴) ổn định hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Psychoanalytic và humanistic traditions** tiếp nhận điểm tựa từ **Personality development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Defense mechanisms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Psychoanalytic và humanistic traditions** nối từ **Personality development** sang **Defense mechanisms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychoanalytic và humanistic traditions
 
@@ -116,7 +116,7 @@ Humanistic psychology nhấn mạnh meaning, growth, self-concept và điều ki
 
 Xem [[../90_connections/00_freud_jung_and_depth_psychology_in_context]].
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Psychoanalytic và humanistic traditions** xác định đầu vào; **Defense mechanisms** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Psychoanalytic và humanistic traditions** đặt đầu vào cho **Defense mechanisms**, rồi **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Defense mechanisms
 
@@ -124,7 +124,7 @@ Xem [[../90_connections/00_freud_jung_and_depth_psychology_in_context]].
 
 Nếu một người bác bỏ criticism, có nhiều explanation khả dĩ: criticism sai, người đó không tin nguồn, threat định danh (identity / 식별자), hoặc defense. Không thể suy ra cơ chế (mechanism / 메커니즘) nội tâm chỉ từ một hành vi đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Defense mechanisms** xác định đầu vào; **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Personality và công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Defense mechanisms** đặt đầu vào cho **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị**, rồi **Personality và công việc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị
 
@@ -136,7 +136,7 @@ Các khung phần mềm (framework / 프레임워크) dùng trong nhóm (team / 
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Personality và công việc** tiếp nhận điểm tựa từ **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dark traits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Personality và công việc** nối từ **Personality kiểm thử (test / 테스트): validity quan trọng hơn độ thú vị** sang **Dark traits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Personality và công việc
 
@@ -146,7 +146,7 @@ Không nên tuyển dụng theo một cutoff personality đơn giản mà bỏ q
 
 Ngoài ra, “culture fit” dễ trở thành similarity độ lệch (bias / 편향) nếu được định nghĩa mơ hồ. Fit tốt nên liên quan values, công việc (work / 작업) style và role demands, không phải “giống người đang làm ở đây”.
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Dark traits** tiếp nhận điểm tựa từ **Personality và công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Dark traits** nối từ **Personality và công việc** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dark traits
 
@@ -154,7 +154,7 @@ Narcissism, Machiavellianism và psychopathy traits thường được nghiên c
 
 Trait research và diagnosis là hai việc khác nhau. Personality disorder cần đánh giá impairment, severity, persistence và ngữ cảnh (context / 맥락) rộng hơn. Xem [[../04_mental_health/06_personality_pathology]].
 
-> **Chuyển mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Dark traits** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhân cách — Personality / 성격심리학**, **Những hiểu lầm phổ biến** nối từ **Dark traits** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -166,13 +166,13 @@ Trait research và diagnosis là hai việc khác nhau. Personality disorder c�
 
 **“Một trait giải thích mọi hành vi (behavior / 동작).”** Situation, goals và học tập (learning / 학습) lịch sử (history / 이력) luôn quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhân cách — Personality / 성격심리학**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Personality là mẫu (pattern / 패턴) xác suất tương đối ổn định của cách một hệ thống người phản ứng với nhiều ngữ cảnh (context / 맥락). Nó giúp dự đoán, nhưng không phải số phận và không thay thế phân tích tình huống.
 
-> **Chuyển mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Nhân cách — Personality / 성격심리학**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

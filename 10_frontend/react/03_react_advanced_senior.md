@@ -10,7 +10,7 @@ React không cập nhật DOM ngay khi setter được gọi. Nó schedule công
 
 Do đó kết xuất (render / 렌더링) phải pure. Không gửi yêu cầu (request / 요청) thanh toán, mutate toàn cục (global / 전역) đối tượng (object / 객체), log kiểm tra (audit / 감사) hay điều khiển DOM bên ngoài trong kết xuất (render / 렌더링).
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **2. kết xuất (render / 렌더링) phase và lần ghi nhận (commit / 커밋) phase** gom các mảnh từ **1. kết xuất (render / 렌더링) kiến trúc (architecture / 아키텍처) và Fiber mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. định danh trạng thái (state identity / 상태 식별성), preserve và reset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **2. kết xuất (render / 렌더링) phase và lần ghi nhận (commit / 커밋) phase** tổng hợp từ **1. kết xuất (render / 렌더링) kiến trúc (architecture / 아키텍처) và Fiber mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. định danh trạng thái (state identity / 상태 식별성), preserve và reset** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. kết xuất (render / 렌더링) phase và lần ghi nhận (commit / 커밋) phase
 
@@ -25,7 +25,7 @@ function Product({ product }) {
 
 `formatPrice` nên pure. Analytics do người dùng (user / 사용자) click đặt ở sự kiện (event / 이벤트). Analytics gắn với việc screen được đồng bộ/hiển thị có thể dùng tác động (effect / 효과) tùy ngữ nghĩa (semantics / 의미론). cấp cao (senior / 시니어) rà soát mã (code review / 코드 리뷰) nên hỏi “lô-gic (logic / 논리) này thuộc kết xuất (render / 렌더링), sự kiện (event / 이벤트) hay synchronization?” trước khi hỏi “dùng Hook nào?”.
 
-> **Chuyển mạch:** Render/commit phases xác định khi UI work có thể restart; state identity quyết định state nào được preserve/reset qua các lần đó. Concurrent rendering tiếp theo đặt hai constraint này dưới scheduling thực tế.
+> **Nối mạch:** Render/commit phases xác định khi UI work có thể restart; state identity quyết định state nào được preserve/reset qua các lần đó. Concurrent rendering tiếp theo đặt hai constraint này dưới scheduling thực tế.
 
 ## 3. định danh trạng thái (state identity / 상태 식별성), preserve và reset
 
@@ -47,7 +47,7 @@ Nếu chỉ đổi prop:
 
 Trạng thái (state / 상태) thường được preserve. Nếu draft phải reset khi document đổi, có thể mô hình (model / 모델) draft theo ID, chủ động reset hoặc `key={documentId}` nếu muốn remount subtree. `key` là công cụ định danh (identity / 식별자), không chỉ là danh sách (list / 목록) warning.
 
-> **Chuyển mạch:** State identity bảo vệ mental model khi render bị gián đoạn; concurrent rendering quyết định work nào được ưu tiên hoặc bỏ. Reconciliation tiếp theo giải thích cách tree diff giữ invariant trong quá trình đó.
+> **Nối mạch:** State identity bảo vệ mental model khi render bị gián đoạn; concurrent rendering quyết định work nào được ưu tiên hoặc bỏ. Reconciliation tiếp theo giải thích cách tree diff giữ invariant trong quá trình đó.
 
 ## 4. Concurrent rendering
 
@@ -55,13 +55,13 @@ Concurrent React không có nghĩa thành phần (component / 컴포넌트) Java
 
 Tính đồng thời (concurrency / 동시성) API không thay kiến trúc tốt. Trước tiên giảm công việc (work / 작업), tránh waterfall và profile.
 
-> **Chuyển mạch:** Concurrent scheduling quyết định khi nào work được tiếp tục; reconciliation quyết định tree nào có thể commit mà không phá identity. `useTransition` tiếp theo cho application một cách đánh dấu non-urgent work.
+> **Nối mạch:** Concurrent scheduling quyết định khi nào work được tiếp tục; reconciliation quyết định tree nào có thể commit mà không phá identity. `useTransition` tiếp theo cho application một cách đánh dấu non-urgent work.
 
 ## 4A. Reconciliation dưới concurrent rendering
 
 Concurrent rendering không thay định danh (identity / 식별자) rules; nó thay cách kết xuất (render / 렌더링) công việc (work / 작업) được schedule. React có thể bắt đầu, pause, restart hoặc abandon kết xuất (render / 렌더링) trước lần ghi nhận (commit / 커밋), nên kết xuất (render / 렌더링) phải pure. Reconciliation trả lời cây (tree / 트리) nào là cùng định danh (identity / 식별자) và cần thay gì; scheduling trả lời công việc (work / 작업) nào ưu tiên và có thể ngắt. bên ngoài (external / 외부) store cần snapshot nhất quán với tính đồng thời (concurrency / 동시성), là lý do React 18 có `useSyncExternalStore` thay cho subscription tác động (effect / 효과) tự chế dễ tearing.
 
-> **Chuyển mạch:** Concurrent reconciliation tách render work; `useTransition`/`startTransition` tiếp theo hạ priority cho update không khẩn cấp, còn `useDeferredValue` trì hoãn giá trị đọc.
+> **Nối mạch:** Concurrent reconciliation tách render work; `useTransition`/`startTransition` tiếp theo hạ priority cho update không khẩn cấp, còn `useDeferredValue` trì hoãn giá trị đọc.
 
 ## 5. `useTransition` và `startTransition`
 Phần này nối mạch bài học với “5. `useTransition` và `startTransition`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -81,7 +81,7 @@ function handleChange(event) {
 
 Chuyển tiếp (transition / 전이) không phải debounce. Debounce trì hoãn theo thời gian; chuyển tiếp (transition / 전이) biểu đạt priority. `startTransition` standalone dùng khi không cần pending trạng thái (state / 상태) tại caller.
 
-> **Chuyển mạch:** `startTransition` lowers update priority; `useDeferredValue` lets a consumer lag, while debounce controls input frequency rather than render priority.
+> **Nối mạch:** `startTransition` lowers update priority; `useDeferredValue` lets a consumer lag, while debounce controls input frequency rather than render priority.
 
 ## 6. `useDeferredValue`
 Phần này nối mạch bài học với “6. `useDeferredValue`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -97,7 +97,7 @@ return <SearchResults query={deferredQuery} />;
 >
 > `startTransition`, `useTransition` và `useDeferredValue` thuộc wave React 18. Chúng không phải “React 19 tối ưu hóa (optimization / 최적화)”. React 19 tiếp tục xây Actions/Suspense/máy chủ (server / 서버) features trên concurrent foundations này, nên hiểu chuyển tiếp (transition / 전이) trước khi học Actions và Activity sẽ giúp luồng học tự nhiên hơn.
 
-> **Chuyển mạch:** Transition changes scheduling priority, deferred value changes what a consumer reads, and debounce changes event frequency; Suspense then coordinates async reveal.
+> **Nối mạch:** Transition changes scheduling priority, deferred value changes what a consumer reads, and debounce changes event frequency; Suspense then coordinates async reveal.
 
 ## 6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau
 
@@ -105,7 +105,7 @@ return <SearchResults query={deferredQuery} />;
 
 Ví dụ tìm kiếm (search / 검색) box có thể cập nhật văn bản (text / 텍스트) ngay, defer kết xuất (render / 렌더링) danh sách lớn để typing mượt, đồng thời debounce mạng (network / 네트워크) yêu cầu (request / 요청) để giảm traffic. Nếu chỉ debounce toàn bộ trạng thái (state / 상태) đầu vào (input / 입력), UI có thể cảm giác lag; nếu chỉ chuyển tiếp (transition / 전이) yêu cầu (request / 요청), bạn vẫn có thể gửi quá nhiều HTTP calls. cấp cao (senior / 시니어) thiết kế (design / 설계) phải tách **responsiveness**, **kết xuất (render / 렌더링) priority** và **I/O tỷ lệ (rate / 비율) limiting**.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7. Suspense nâng cao** tiếp nhận điểm tựa từ **6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. use** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7. Suspense nâng cao** nối từ **6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau** sang **8. use**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Suspense nâng cao
 Phần này nối mạch bài học với “7. Suspense nâng cao”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -120,7 +120,7 @@ Suspense là ranh giới (boundary / 경계) cho rendering có thể suspend qua
 
 Suspense kết hợp chuyển tiếp (transition / 전이) cho phép giữ content cũ trong khi content mới chuẩn bị tùy kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8. use** tiếp nhận điểm tựa từ **7. Suspense nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Actions và form APIs React 19** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8. use** nối từ **7. Suspense nâng cao** sang **9. Actions và form APIs React 19**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. `use`
 
@@ -139,7 +139,7 @@ Promise pending làm thành phần (component / 컴포넌트) suspend. Không t�
 >
 > API `use` thuộc React 19. Nếu dự án (project / 프로젝트) React 18, bạn không thể bản sao (copy / 복사) mã (code / 코드) `use(promise)` từ docs React mới vào trực tiếp. Ngoài ra `use` không biến mọi Promise tùy ý thành dữ liệu (data / 데이터) tầng (layer / 계층) môi trường vận hành (production / 운영 환경); cách tạo/bộ nhớ đệm (cache / 캐시) Promise và tích hợp (integration / 통합) với khung phần mềm (framework / 프레임워크) vẫn quyết định tính đúng đắn.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9. Actions và form APIs React 19** tiếp nhận điểm tựa từ **8. use** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. useActionState** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9. Actions và form APIs React 19** nối từ **8. use** sang **10. useActionState**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Actions và form APIs React 19
 
@@ -154,7 +154,7 @@ React 19 mở rộng async mutation qua Actions. Trong môi trường hỗ trợ
 
 Không phải cứ viết `"use server"` trong Vite SPA là có máy chủ (server / 서버) thời gian chạy (runtime / 런타임). máy chủ (server / 서버) Actions/Functions cần RSC/khung phần mềm (framework / 프레임워크) tích hợp (integration / 통합).
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10. useActionState** tiếp nhận điểm tựa từ **9. Actions và form APIs React 19** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. useFormStatus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10. useActionState** nối từ **9. Actions và form APIs React 19** sang **11. useFormStatus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. `useActionState`
 Phần này nối mạch bài học với “10. `useActionState`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -176,7 +176,7 @@ return (
 
 Dùng khi kết quả mutation cần trở thành form/hành động (action / 동작) trạng thái (state / 상태) có pending/lỗi (error / 오류)/kết quả (result / 결과) rõ ràng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **11. useFormStatus** tiếp nhận điểm tựa từ **10. useActionState** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. useOptimistic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **11. useFormStatus** nối từ **10. useActionState** sang **12. useOptimistic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. `useFormStatus`
 
@@ -197,7 +197,7 @@ function SubmitButton() {
 
 Thành phần (component / 컴포넌트) đọc status phải nằm trong form ngữ cảnh (context / 맥락) đúng cấu trúc.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **12. useOptimistic** tiếp nhận điểm tựa từ **11. useFormStatus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. useEffectEvent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **12. useOptimistic** nối từ **11. useFormStatus** sang **13. useEffectEvent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. `useOptimistic`
 Phần này nối mạch bài học với “12. `useOptimistic`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -215,7 +215,7 @@ const [optimisticMessages, addOptimisticMessage] =
 
 Optimistic UI chỉ nên dùng khi quay lui (rollback / 롤백)/reconciliation rõ. Với giao dịch tài chính hoặc thao tác không thể hoàn tác, UI phải phân biệt “đã gửi yêu cầu” với “đã xác nhận thành công”.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **13. useEffectEvent** tiếp nhận điểm tựa từ **12. useOptimistic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. <Activity />** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **13. useEffectEvent** nối từ **12. useOptimistic** sang **14. <Activity />**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. `useEffectEvent`
 
@@ -244,7 +244,7 @@ Tác động (effect / 효과) sự kiện (event / 이벤트) tách hai ngữ n
 
 Một dấu hiệu dùng sai là bọc gần như mọi hàm (function / 함수) bằng `useEffectEvent` chỉ để phụ thuộc (dependency / 의존성) array ngắn lại. Hãy hỏi trước: “Đây có thật sự là một sự kiện (event / 이벤트) phát sinh từ synchronization tiến trình (process / 프로세스) không?” Nếu giá trị (value / 값) quyết định tài nguyên (resource / 자원) nào được mở, URL nào được subscribe, timer interval bao nhiêu hoặc observer theo dõi nút (node / 노드) nào, giá trị (value / 값) đó vẫn là phụ thuộc (dependency / 의존성) của tác động (effect / 효과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **14. <Activity />** tiếp nhận điểm tựa từ **13. useEffectEvent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. View Transitions trong React 19.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **14. <Activity />** nối từ **13. useEffectEvent** sang **15. View Transitions trong React 19.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. `<Activity />`
 
@@ -268,7 +268,7 @@ Mô hình tư duy (mental model / 사고 모델) hữu ích là **“preserve tr
 >
 > `useEffectEvent` và `<Activity />` được thêm ở **React 19.2**. Nếu gói (package / 패키지) khai hỗ trợ React 19.0+, không được import chúng vô điều kiện rồi kỳ vọng bên tiêu thụ (consumer / 소비자) 19.0/19.1 chạy được. Đây là ví dụ điển hình cho việc minor phiên bản (version / 버전) React 19 có thể bổ sung công khai (public / 공개) tính năng (feature / 기능) chứ không chỉ bug fix.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **15. View Transitions trong React 19.3** tiếp nhận điểm tựa từ **14. <Activity />** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Fragment refs trong React 19.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **15. View Transitions trong React 19.3** nối từ **14. <Activity />** sang **16. Fragment refs trong React 19.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. View Transitions trong React 19.3
 
@@ -306,13 +306,13 @@ Default hành vi (behavior / 동작) là cross-fade; môi trường vận hành 
 
 Cấp cao (senior / 시니어) rà soát (review / 검토) cũng cần kiểm tra interruption. người dùng (user / 사용자) có thể click tiếp khi chuyển tiếp (transition / 전이) trước chưa kết thúc, Suspense có thể reveal ở thời điểm khác dự kiến, hoặc điều hướng (navigation / 내비게이션) có thể thất bại (fail / 실패). Animation tầng (layer / 계층) phải là progressive enhancement bên trên trạng thái (state / 상태)/điều hướng (navigation / 내비게이션) kiến trúc (architecture / 아키텍처), không được trở thành nguồn chuẩn (source of truth / 정본).
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **16. Fragment refs trong React 19.3** tiếp nhận điểm tựa từ **15. View Transitions trong React 19.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. External store và useSyncExternalStore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **16. Fragment refs trong React 19.3** nối từ **15. View Transitions trong React 19.3** sang **17. External store và useSyncExternalStore**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Fragment refs trong React 19.3
 
 Fragment refs giải quyết trường hợp một hành vi (behavior / 동작) cần thao tác với **một nhóm sibling DOM nodes** nhưng không muốn thêm wrapper chỉ để có ref, hoặc children đến từ thành phần (component / 컴포넌트) không expose raw DOM ref.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **17. External store và useSyncExternalStore** tiếp nhận điểm tựa từ **16. Fragment refs trong React 19.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. useInsertionEffect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **17. External store và useSyncExternalStore** nối từ **16. Fragment refs trong React 19.3** sang **18. useInsertionEffect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. External store và `useSyncExternalStore`
 Phần này nối mạch bài học với “17. External store và `useSyncExternalStore`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -352,7 +352,7 @@ const load = cache(async url => {
 
 Điểm bản chất không phải API `AbortSignal` mới, mà là **tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) propagation**. Nếu kết xuất (render / 렌더링)/cached computation bị hủy nhưng cơ sở dữ liệu (database / 데이터베이스)/HTTP lời gọi (call / 호출) vẫn chạy đến cùng, máy chủ (server / 서버) vẫn tiêu liên kết (connection / 연결), CPU và upstream quota cho kết quả không còn bên tiêu thụ (consumer / 소비자). Khi khung phần mềm (framework / 프레임워크) hỗ trợ, cancellation tín hiệu (signal / 신호) nên được truyền sâu qua máy khách (client / 클라이언트) HTTP, cơ sở dữ liệu (database / 데이터베이스) adapter hoặc dịch vụ (service / 서비스) lời gọi (call / 호출) có khả năng abort. `cacheSignal` không dành cho máy khách (client / 클라이언트) thành phần (component / 컴포넌트) fetch tác động (effect / 효과); ở máy khách (client / 클라이언트) vẫn dùng vòng đời (lifecycle / 생명주기)/cancellation của dữ liệu (data / 데이터) tầng (layer / 계층) hoặc `AbortController` phù hợp.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **18. useInsertionEffect** tiếp nhận điểm tựa từ **17. External store và useSyncExternalStore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. useImperativeHandle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **18. useInsertionEffect** nối từ **17. External store và useSyncExternalStore** sang **19. useImperativeHandle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. `useInsertionEffect`
 
@@ -362,7 +362,7 @@ const load = cache(async url => {
 >
 > `useSyncExternalStore` và `useInsertionEffect` được giới thiệu cùng React 18 chủ yếu để bên ngoài (external / 외부) store và CSS-in-JS thư viện (library / 라이브러리) tương thích tốt với concurrent rendering. ứng dụng (application / 애플리케이션) mã (code / 코드) bình thường hiếm khi cần tự dùng `useInsertionEffect`, còn `useSyncExternalStore` thường nằm phía dưới các state-management libraries.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **19. useImperativeHandle** tiếp nhận điểm tựa từ **18. useInsertionEffect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **19. useImperativeHandle** nối từ **18. useInsertionEffect** sang **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. `useImperativeHandle`
 Phần này nối mạch bài học với “19. `useImperativeHandle`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -383,7 +383,7 @@ function MyInput({ ref }) {
 
 Expose năng lực (capability / 역량) nhỏ giúp giữ encapsulation tốt hơn việc expose raw DOM nút (node / 노드). Imperative API là escape hatch; declarative API vẫn nên là mặc định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **19. useImperativeHandle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** nối từ **19. useImperativeHandle** sang **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)
 
@@ -391,7 +391,7 @@ Phân biệt kết xuất (render / 렌더링) lỗi (error / 오류), async mut
 
 Môi trường vận hành (production / 운영 환경) app cần khả năng quan sát (observability / 관측 가능성), correlation ID và fallback theo tuyến (route / 경로)/tính năng (feature / 기능). Một ranh giới (boundary / 경계) duy nhất ở gốc (root / 루트) thường quá thô.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)** tiếp nhận điểm tựa từ **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. SSR, streaming và hydration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)** nối từ **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** sang **21. SSR, streaming và hydration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)
 
@@ -399,7 +399,7 @@ Suspense ranh giới (boundary / 경계) xử lý “chưa sẵn sàng để k�
 
 Với dữ liệu (data / 데이터) tầng (layer / 계층) môi trường vận hành (production / 운영 환경), cần xác định ranh giới (boundary / 경계) nào thử lại (retry / 재시도), ranh giới (boundary / 경계) nào giữ stale content, ranh giới (boundary / 경계) nào reset khi tuyến (route / 경로)/key đổi và lỗi nào phải report khả năng quan sát (observability / 관측 가능성). chuyển tiếp (transition / 전이) có thể giữ UI cũ trong lúc điều hướng (navigation / 내비게이션)/dữ liệu (data / 데이터) mới chuẩn bị; nhưng nếu yêu cầu (request / 요청) thất bại, UX cần tuyến (route / 경로)/action-specific khôi phục (recovery / 복구) thay vì chỉ spinner biến mất.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **21. SSR, streaming và hydration** tiếp nhận điểm tựa từ **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Hydration mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **21. SSR, streaming và hydration** nối từ **20A. Async UI cần phân biệt pending, expected lỗi (error / 오류) và unexpected kết xuất (render / 렌더링) thất bại (failure / 실패)** sang **22. Hydration mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. SSR, streaming và hydration
 
@@ -445,7 +445,7 @@ Trên máy chủ (server / 서버), `use(browser())` suspend nên nearest Suspen
 
 Sự đánh đổi (trade-off / 트레이드오프) phải được nhìn rõ: opt-out nghĩa máy chủ (server / 서버) không gửi content thật của subtree đó, nên có thể làm initial content/SEO kém hơn và đẩy công việc (work / 작업) sang máy khách (client / 클라이언트). `browser()` vì vậy không phải cách “sửa nhanh mọi hydration mismatch”; trước tiên hãy làm kết xuất (render / 렌더링) deterministic. Chỉ dùng khi trình duyệt (browser / 브라우저) môi trường (environment / 환경) thật sự là một phần của dữ liệu cần kết xuất (render / 렌더링).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **22. Hydration mismatch** tiếp nhận điểm tựa từ **21. SSR, streaming và hydration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. máy chủ (server / 서버) Components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **22. Hydration mismatch** nối từ **21. SSR, streaming và hydration** sang **23. máy chủ (server / 서버) Components**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Hydration mismatch
 
@@ -466,7 +466,7 @@ Các nguồn cần kiểm tra theo thứ tự gồm dữ liệu nondeterministic
 
 Một nguyên tắc môi trường vận hành (production / 운영 환경) hữu ích là máy chủ (server / 서버) kết xuất (render / 렌더링) và initial máy khách (client / 클라이언트) kết xuất (render / 렌더링) phải cùng một **logical snapshot**. Sau hydration, tác động (effect / 효과) hoặc normal cập nhật (update / 업데이트) có thể chuyển sang browser-specific trạng thái (state / 상태). Nếu thành phần (component / 컴포넌트) không thể tuân bất biến (invariant / 불변식) đó một cách có nghĩa, `browser()`/Suspense hoặc khung phần mềm (framework / 프레임워크) client-only ranh giới (boundary / 경계) mới là lựa chọn rõ ràng hơn.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **23. máy chủ (server / 서버) Components** tiếp nhận điểm tựa từ **22. Hydration mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. 'use client' và 'use server'** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **23. máy chủ (server / 서버) Components** nối từ **22. Hydration mismatch** sang **24. 'use client' và 'use server'**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. máy chủ (server / 서버) Components
 
@@ -493,7 +493,7 @@ Máy chủ (server / 서버) Components có thể `await` trong kết xuất (re
 >
 > React 19 đưa React máy chủ (server / 서버) Components/máy chủ (server / 서버) Functions vào thế hệ môi trường vận hành (production / 운영 환경) hiện đại, nhưng **application-facing mô hình (model / 모델) ổn định không đồng nghĩa hiện thực (implementation / 구현) giao thức (protocol / 프로토콜) cho bundler/khung phần mềm (framework / 프레임워크) là một API bất biến giữa mọi minor/patch**. Nếu dùng Next.js hoặc khung phần mềm (framework / 프레임워크) RSC khác, phiên bản (version / 버전) khung phần mềm (framework / 프레임워크) và patch React máy chủ (server / 서버) DOM packages quan trọng không kém phiên bản (version / 버전) `react` chính.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24. 'use client' và 'use server'** tiếp nhận điểm tựa từ **23. máy chủ (server / 서버) Components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24. 'use client' và 'use server'** nối từ **23. máy chủ (server / 서버) Components** sang **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `'use client'` và `'use server'`
 
@@ -521,7 +521,7 @@ async function updateUser(formData) {
 
 Máy chủ (server / 서버) thành phần (component / 컴포넌트) không cần directive `"use server"`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24. 'use client' và 'use server'** đã nêu tiêu chí phân biệt, còn **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24B. SSR, hydration và RSC là các trục khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24. 'use client' và 'use server'** đặt tiêu chí; **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **24B. SSR, hydration và RSC là các trục khác nhau** mở rộng hệ quả.
 
 ## 24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -529,7 +529,7 @@ Trong RSC, `'use client'` tạo ranh giới mô-đun (module boundary / 모듈 �
 
 Evolution đi từ SPA mọi thành phần (component / 컴포넌트) chạy máy khách (client / 클라이언트), qua SSR kết xuất (render / 렌더링) HTML máy chủ (server / 서버) rồi hydrate máy khách (client / 클라이언트), tới RSC nơi một phần thành phần (component / 컴포넌트) chỉ chạy máy chủ (server / 서버). di chuyển (migration / 마이그레이션) nên đặt interactive ranh giới (boundary / 경계) nhỏ nhất hợp lý thay vì thêm `'use client'` lên gốc (root / 루트) cho hết lỗi.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** đã nêu tiêu chí phân biệt, còn **24B. SSR, hydration và RSC là các trục khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **24A. máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** đặt tiêu chí; **24B. SSR, hydration và RSC là các trục khác nhau** dùng tiêu chí đó để kiểm tra ranh giới, rồi **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** mở rộng hệ quả.
 
 ## 24B. SSR, hydration và RSC là các trục khác nhau
 
@@ -567,7 +567,7 @@ export async function Layout({ children }) {
 
 Trước đó khung phần mềm (framework / 프레임워크)/app thường cần một máy khách (client / 클라이언트) wrapper chỉ để nhận prop từ máy chủ (server / 서버) rồi kết xuất (render / 렌더링) provider. năng lực (capability / 역량) mới giảm wrapper nhưng không xóa máy khách (client / 클라이언트) ranh giới (boundary / 경계): ngữ cảnh (context / 맥락) vẫn được tạo từ mô-đun (module / 모듈) máy khách (client / 클라이언트) và giá trị truyền qua ranh giới (boundary / 경계) vẫn phải phù hợp serialization/bảo mật (security / 보안) các ràng buộc (constraints / 제약조건들). Đừng truyền cơ sở dữ liệu (database / 데이터베이스) thực thể (entity / 엔터티) chứa secret hoặc đối tượng (object / 객체) lớn chỉ vì provider cú pháp (syntax / 문법) ngắn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** tiếp nhận điểm tựa từ **24B. SSR, hydration và RSC là các trục khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** nối từ **24B. SSR, hydration và RSC là các trục khác nhau** sang **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)
 
@@ -594,7 +594,7 @@ Trước React 19.3, React có thể coerce Trusted Types đối tượng (objec
 
 Điều này **không có nghĩa `dangerouslySetInnerHTML` trở nên an toàn tự động**. React không chứng minh HTML của bạn sạch; Trusted Types cũng chỉ mạnh bằng chính sách (policy / 정책) tạo ra đối tượng (object / 객체) trusted. môi trường vận hành (production / 운영 환경) bảo mật (security / 보안) vẫn cần sanitize đúng ngữ cảnh (context / 맥락), CSP hợp lý, tránh URL/script sink nguy hiểm và kiểm tra (audit / 감사) third-party mã (code / 코드). Hãy coi React 19.3 là sửa plumbing để trình duyệt (browser / 브라우저) ranh giới bảo mật (security boundary / 보안 경계) hoạt động đúng, không phải một sanitizer mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** nêu điều cần giải thích; **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **25. máy chủ (server / 서버) Functions và bảo mật (security / 보안)** đặt vấn đề; **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)** đối chiếu bằng chứng, rồi **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)
 
@@ -611,7 +611,7 @@ derived state       -> tính từ source of truth
 
 Quyết định “Redux, Zustand hay ngữ cảnh (context / 맥락)?” chỉ nên đặt sau khi phân loại trạng thái (state / 상태). Nhiều app không cần giant toàn cục (global / 전역) store nếu máy chủ (server / 서버) dữ liệu (data / 데이터) đã ở truy vấn (query / 쿼리) bộ nhớ đệm (cache / 캐시) và điều hướng (navigation / 내비게이션) trạng thái (state / 상태) đã ở URL.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)** nêu điều cần giải thích; **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27A. State-management evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **26. dữ liệu (data / 데이터) kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경)** đặt vấn đề; **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** đối chiếu bằng chứng, rồi **27A. State-management evolution** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
@@ -619,13 +619,13 @@ Cục bộ (local / 로컬) trạng thái (state / 상태) là mặc định vì
 
 Redux Toolkit hợp với lĩnh vực (domain / 도메인)/hành động (action / 동작) luồng (flow / 흐름) lớn và nhóm (team / 팀) cần cấu trúc chặt. Zustand nhẹ hơn nhưng convention do nhóm (team / 팀) tự quyết định nhiều hơn. Không nên tự xây HTTP bộ nhớ đệm (cache / 캐시) bên trong toàn cục (global / 전역) store khi server-state thư viện (library / 라이브러리) đã giải quyết stale/thử lại (retry / 재시도)/vô hiệu hóa (invalidation / 무효화) tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **27A. State-management evolution** tiếp nhận điểm tựa từ **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **27A. State-management evolution** nối từ **27. trạng thái (state / 상태) management quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** sang **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27A. State-management evolution
 
 Flux/Redux giải quyết predictable trạng thái dùng chung (shared state / 공유 상태) trong thời lớp (class / 클래스). Hooks giảm nhu cầu bộ chứa (container / 컨테이너)/HOC cho cục bộ (local / 로컬) lô-gic (logic / 논리); ngữ cảnh (context / 맥락) lo phụ thuộc (dependency / 의존성) theo subtree; truy vấn (query / 쿼리)/router/form layers tách máy chủ (server / 서버), URL và form trạng thái (state / 상태) khỏi toàn cục (global / 전역) store. Redux không obsolete: bên ngoài (external / 외부) store vẫn phù hợp khi lĩnh vực (domain / 도메인) máy khách (client / 클라이언트) trạng thái (state / 상태) lớn, nhiều nhánh cùng đọc/ghi và cần selector, middleware, sự kiện (event / 이벤트) log hoặc convention tổ chức mạnh. Chọn theo quyền sở hữu (ownership / 소유권)/cập nhật (update / 업데이트) topology, không theo thời thượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)** tiếp nhận điểm tựa từ **27A. State-management evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)** nối từ **27A. State-management evolution** sang **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)
 
@@ -660,7 +660,7 @@ hoặc composition:
 
 Boolean props nhiều tạo trạng thái (state / 상태) không gian (space / 공간) khổng lồ và combination vô nghĩa. API thiết kế (design / 설계) phải cân bằng convenience với extensibility.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến** tiếp nhận điểm tựa từ **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Headless và compound components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến** nối từ **28. thành phần (component / 컴포넌트) API thiết kế (design / 설계)** sang **30. Headless và compound components**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến
 
@@ -682,7 +682,7 @@ Kết xuất (render / 렌더링) prop vẫn hữu ích khi bên tiêu thụ (co
 </DataProvider>
 ```
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **30. Headless và compound components** tiếp nhận điểm tựa từ **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **30. Headless và compound components** nối từ **29. Các mẫu thiết kế (design pattern / 디자인 패턴) phổ biến** sang **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Headless và compound components
 
@@ -701,7 +701,7 @@ Headless thành phần (component / 컴포넌트) quản lý hành vi (behavior 
 
 Hiện thực (implementation / 구현) có thể dùng ngữ cảnh (context / 맥락) nội bộ, roving tabindex, keyboard điều hướng (navigation / 내비게이션) và máy trạng thái (state machine / 상태 머신). Đây là mẫu (pattern / 패턴) mạnh cho thiết kế (design / 설계) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API** tiếp nhận điểm tựa từ **30. Headless và compound components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API** nối từ **30. Headless và compound components** sang **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Controlled và uncontrolled thành phần (component / 컴포넌트) API
 
@@ -719,7 +719,7 @@ Uncontrolled:
 
 Controlled nghĩa parent là nguồn chuẩn (source of truth / 정본); uncontrolled nghĩa thành phần (component / 컴포넌트) giữ trạng thái (state / 상태) nội bộ. Không nên chuyển qua lại hai chế độ (mode / 모드) mơ hồ trong cùng thời gian tồn tại (lifetime / 수명). thư viện (library / 라이브러리) phải document precedence và callback hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)** nối từ **31. Controlled và uncontrolled thành phần (component / 컴포넌트) API** sang **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)
 
@@ -727,7 +727,7 @@ React hiệu năng (performance / 성능) không chỉ là re-render. Bottleneck
 
 Quy trình đúng: đo trải nghiệm, profile bằng React DevTools và trình duyệt (browser / 브라우저) hiệu năng (performance / 성능), xác định bottleneck, giảm công việc (work / 작업) ở tầng (layer / 계층) đúng, rồi đo lại. Memo một thành phần (component / 컴포넌트) 0.1 ms trong khi tải 4 MB JS là tối ưu sai chỗ.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)** tiếp nhận điểm tựa từ **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Profiling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)** nối từ **32. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)** sang **33. Profiling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)
 
@@ -737,7 +737,7 @@ Một workflow tối ưu hợp lý là: tái hiện tương tác (interaction / 
 
 Các tối ưu structural thường thắng memoization rải rác: giữ trạng thái (state / 상태) gần nơi dùng, tránh tác động (effect / 효과) chuỗi (chain / 사슬) set trạng thái (state / 상태), chia ngữ cảnh (context / 맥락) theo volatility, virtualize danh sách (list / 목록) lớn, tránh kết xuất (render / 렌더링) subtree không cần thiết, và đặt Suspense/code-split ranh giới (boundary / 경계) theo tương tác (interaction / 상호작용) thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **33. Profiling** tiếp nhận điểm tựa từ **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. danh sách (list / 목록) virtualization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **33. Profiling** nối từ **32A. hiệu năng (performance / 성능) chi phí (cost / 비용) mô hình (model / 모델): kết xuất (render / 렌더링) công việc (work / 작업), lần ghi nhận (commit / 커밋) công việc (work / 작업) và bên ngoài (external / 외부) công việc (work / 작업)** sang **34. danh sách (list / 목록) virtualization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Profiling
 
@@ -751,7 +751,7 @@ Từ React 19.2, Chrome DevTools hiệu năng (performance / 성능) có React-s
 
 Một worked lập luận (reasoning / 추론) đơn giản: nếu Scheduler cho thấy chuyển tiếp (transition / 전이) công việc (work / 작업) thường xuyên yield đúng cách nhưng INP vẫn xấu vì sự kiện (event / 이벤트) handler tự parse 20 MB JSON trước khi gọi setter, đổi thêm `startTransition` không giải quyết được. Ngược lại, nếu CPU chi phí (cost / 비용) nằm trong một kết xuất (render / 렌더링) subtree non-urgent và đầu vào (input / 입력) bị cạnh tranh với nó, chuyển tiếp (transition / 전이)/structural split mới là hướng có bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **34. danh sách (list / 목록) virtualization** tiếp nhận điểm tựa từ **33. Profiling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Referential equality và định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **34. danh sách (list / 목록) virtualization** nối từ **33. Profiling** sang **35. Referential equality và định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. danh sách (list / 목록) virtualization
 
@@ -759,7 +759,7 @@ Danh sách hàng nghìn item không nên kết xuất (render / 렌더링) toàn
 
 Cần kiểm tra động (dynamic / 동적) row height, keyboard điều hướng (navigation / 내비게이션), khả năng tiếp cận (accessibility / 접근성), sticky rows, trình duyệt (browser / 브라우저) find và đo lường (measurement / 측정). Virtualization không “miễn phí”.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35. Referential equality và định danh (identity / 식별자)** tiếp nhận điểm tựa từ **34. danh sách (list / 목록) virtualization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35. Referential equality và định danh (identity / 식별자)** nối từ **34. danh sách (list / 목록) virtualization** sang **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Referential equality và định danh (identity / 식별자)
 
@@ -774,7 +774,7 @@ Trong JavaScript:
 
 React trình biên dịch (compiler / 컴파일러) có thể tự xử lý nhiều memoization, nhưng định danh (identity / 식별자) đặc tả hợp đồng (contract / 계약) với hệ thống bên ngoài (external system / 외부 시스템) vẫn cần hiểu rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35. Referential equality và định danh (identity / 식별자)** đã nêu tiêu chí phân biệt, còn **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35. Referential equality và định danh (identity / 식별자)** đặt tiêu chí; **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** mở rộng hệ quả.
 
 ## 35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)
 
@@ -782,7 +782,7 @@ React trình biên dịch (compiler / 컴파일러) có thể tự xử lý nhi�
 
 React trình biên dịch (compiler / 컴파일러) có thể tự động hóa nhiều memoization, nhưng điều đó làm **purity và luồng dữ liệu (data flow / 데이터 흐름)** quan trọng hơn chứ không ít đi. trình biên dịch (compiler / 컴파일러) không sửa quyền sở hữu trạng thái (state ownership / 상태 소유권) sai, tác động (effect / 효과) vòng lặp (loop / 루프), ngữ cảnh (context / 맥락) giá trị (value / 값) thay đổi vô ích hay mạng (network / 네트워크) waterfall. thư viện (library / 라이브러리) cũng không thể giả định mọi bên tiêu thụ (consumer / 소비자) bật trình biên dịch (compiler / 컴파일러), nên API công khai (public API / 공개 API) vẫn cần định danh (identity / 식별자) đặc tả hợp đồng (contract / 계약) rõ và benchmark trên thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원) thực tế.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)** đã nêu tiêu chí phân biệt, còn **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **35A. Memoization ranh giới (boundary / 경계) trong thời React trình biên dịch (compiler / 컴파일러)** đặt tiêu chí; **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** mở rộng hệ quả.
 
 ## 36. mã (code / 코드) splitting chiến lược (strategy / 전략)
 
@@ -794,7 +794,7 @@ const AdminPage = lazy(() => import("./AdminPage.jsx"));
 
 Preload/prefetch theo intent hoặc khung phần mềm (framework / 프레임워크) năng lực (capability / 역량) có thể giảm delay. Bundle phân tích (analysis / 분석) nên kiểm tra phụ thuộc (dependency / 의존성) lớn, duplicate gói (package / 패키지), locale dữ liệu (data / 데이터) và dead mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** nối từ **36. mã (code / 코드) splitting chiến lược (strategy / 전략)** sang **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)
 
@@ -802,7 +802,7 @@ Khả năng tiếp cận (accessibility / 접근성) là hành vi (behavior / �
 
 Dialog cần focus containment/trap phù hợp, focus restore, accessible title và escape ngữ nghĩa (semantics / 의미론). Dùng thành phần nguyên thủy (primitive / 기본 요소) khả năng tiếp cận (accessibility / 접근성) đã được kiểm chứng thường tốt hơn tự implement widget phức tạp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. TypeScript với React** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)** nối từ **37. khả năng tiếp cận (accessibility / 접근성) môi trường vận hành (production / 운영 환경)** sang **39. TypeScript với React**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)
 
@@ -810,7 +810,7 @@ Kiểm thử (test / 테스트) theo rủi ro (risk / 위험). trọng yếu (cr
 
 Mock quá sâu tạo kiểm thử (test / 테스트) “xanh” nhưng không phản ánh tích hợp (integration / 통합). mạng (network / 네트워크) mocking ở ranh giới (boundary / 경계) HTTP thường tốt hơn mock từng custom Hook hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **39. TypeScript với React** tiếp nhận điểm tựa từ **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **39. TypeScript với React** nối từ **38. Testing chiến lược (strategy / 전략) môi trường vận hành (production / 운영 환경)** sang **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. TypeScript với React
 
@@ -856,7 +856,7 @@ const inputRef = useRef<HTMLInputElement>(null);
 
 Không cần dùng `React.FC` cho mọi thành phần (component / 컴포넌트); typed props trực tiếp thường đơn giản hơn.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3** tiếp nhận điểm tựa từ **39. TypeScript với React** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40A. Ma trận API cũ, trạng thái và cách thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3** nối từ **39. TypeScript với React** sang **40A. Ma trận API cũ, trạng thái và cách thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3
 
@@ -882,7 +882,7 @@ Nếu thấy `ReactDOM.render`, hãy nghĩ “pre-React-18 gốc (root / 루트)
 
 React 19 từng có các bảo mật (security / 보안) advisory nghiêm trọng liên quan React máy chủ (server / 서버) Components và các bản sửa được backport vào nhiều nhánh patch. Bài học môi trường vận hành (production / 운영 환경) là không chỉ nói “chúng ta đang ở React 19.1/19.2”; phải theo **patch phiên bản (version / 버전) đã được khung phần mềm (framework / 프레임워크)/React khuyến nghị**, đặc biệt khi dùng `react-server-dom-*`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40A. Ma trận API cũ, trạng thái và cách thay thế** tiếp nhận điểm tựa từ **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40A. Ma trận API cũ, trạng thái và cách thay thế** nối từ **40. phiên bản (version / 버전) tính tương thích (compatibility / 호환성): React 16.8 → 19.3** sang **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40A. Ma trận API cũ, trạng thái và cách thay thế
 
@@ -918,7 +918,7 @@ Bảng này dùng để tra cứu khi gặp mã (code / 코드) legacy. `Removed
 
 Không nên nhìn cột “thay thế” như một bảng search-and-replace. Ví dụ `componentWillReceiveProps` có thể đã được dùng để đồng bộ prop vào trạng thái (state / 상태), gọi API, reset draft hoặc tính derived giá trị (value / 값); mỗi intent có một hướng migrate khác nhau. cấp cao (senior / 시니어) di chuyển (migration / 마이그레이션) luôn bắt đầu bằng việc xác định **ngữ nghĩa (semantics / 의미론)**, sau đó mới chọn API mới.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ** tiếp nhận điểm tựa từ **40A. Ma trận API cũ, trạng thái và cách thay thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. cấp cao (senior / 시니어) Notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ** nối từ **40A. Ma trận API cũ, trạng thái và cách thay thế** sang **41. cấp cao (senior / 시니어) Notes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ
 
@@ -1035,7 +1035,7 @@ function ChatRoom({
 
 Điểm cần học không phải “phiên bản (version / 버전) mới luôn ngắn hơn”, mà là mỗi thế hệ React biểu đạt phụ thuộc (dependency / 의존성) và side tác động (effect / 효과) chính xác hơn.
 
-> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **41. cấp cao (senior / 시니어) Notes** tiếp nhận điểm tựa từ **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist Advanced/cấp cao (senior / 시니어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **41. cấp cao (senior / 시니어) Notes** nối từ **40B. di chuyển (migration / 마이그레이션) thực tế: cùng một tính năng (feature / 기능) qua ba thế hệ** sang **Checklist Advanced/cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. cấp cao (senior / 시니어) Notes
 
@@ -1053,7 +1053,7 @@ function ChatRoom({
 
 **khung phần mềm (framework / 프레임워크) matters.** RSC, router, bộ nhớ đệm (cache / 캐시) và triển khai (deployment / 배포) ngữ nghĩa (semantics / 의미론) thường do khung phần mềm (framework / 프레임워크) quyết định; không nên gọi tất cả là “React hành vi (behavior / 동작)”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **Checklist Advanced/cấp cao (senior / 시니어)** tiếp nhận điểm tựa từ **41. cấp cao (senior / 시니어) Notes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **Checklist Advanced/cấp cao (senior / 시니어)** nối từ **41. cấp cao (senior / 시니어) Notes** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Checklist Advanced/cấp cao (senior / 시니어)
 

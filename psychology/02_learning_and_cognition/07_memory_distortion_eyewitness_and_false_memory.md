@@ -10,7 +10,7 @@ Mỗi lần hồi tưởng là một lần xây lại mô hình về quá khứ.
 
 Khi một chi tiết phù hợp với lược đồ (schema / 스키마) sẵn có, nó có thể được thêm vào ký ức dù ban đầu không xuất hiện. Đây không phải nói dối; người nhớ có thể thật sự tin rằng chi tiết đó đã có.
 
-> **Chuyển mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Hiệu ứng thông tin sai sau sự kiện** tiếp nhận điểm tựa từ **Tái dựng thay vì phát lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giám sát nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Hiệu ứng thông tin sai sau sự kiện** nối từ **Tái dựng thay vì phát lại** sang **Giám sát nguồn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng thông tin sai sau sự kiện
 
@@ -20,7 +20,7 @@ Ví dụ, nếu hai người cùng chứng kiến một vụ va chạm rồi tra
 
 Systematic rà soát (review / 검토) năm 2024 về eyewitness misinformation tiếp tục cho thấy susceptibility với thông tin sai sau sự kiện là một hiện tượng đáng kể, dù mức độ khác nhau giữa cá nhân và hoàn cảnh.
 
-> **Chuyển mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Hiệu ứng thông tin sai sau sự kiện** nêu điều cần giải thích; **Giám sát nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhận dạng sai và cảm giác quen thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Hiệu ứng thông tin sai sau sự kiện** đặt vấn đề; **Giám sát nguồn** đối chiếu bằng chứng, rồi **Nhận dạng sai và cảm giác quen thuộc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Giám sát nguồn
 
@@ -28,7 +28,7 @@ Systematic rà soát (review / 검토) năm 2024 về eyewitness misinformation 
 
 Sai nguồn đặc biệt dễ xảy ra khi nội dung có vẻ hợp lý và nhiều nguồn giống nhau. Trong công việc, một nhà phát triển (developer / 개발자) có thể “nhớ” rằng yêu cầu (requirement / 요구사항) đã được khách hàng xác nhận, trong khi thực tế đó chỉ là suy luận của nhóm (team / 팀).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Giám sát nguồn** nêu điều cần giải thích; **Nhận dạng sai và cảm giác quen thuộc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Confidence và accuracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Giám sát nguồn** đặt vấn đề; **Nhận dạng sai và cảm giác quen thuộc** đối chiếu bằng chứng, rồi **Confidence và accuracy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nhận dạng sai và cảm giác quen thuộc
 
@@ -36,7 +36,7 @@ Khi gặp một khuôn mặt quen, cảm giác quen thuộc có thể được d
 
 Vì vậy quy trình nhận dạng nhân chứng cần giảm pressure, tránh gợi ý rằng thủ phạm chắc chắn nằm trong lineup, và ghi nhận mức tự tin ngay tại thời điểm nhận dạng đầu tiên thay vì chỉ hỏi lại rất lâu sau đó.
 
-> **Chuyển mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Confidence và accuracy** tiếp nhận điểm tựa từ **Nhận dạng sai và cảm giác quen thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flashbulb bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Confidence và accuracy** nối từ **Nhận dạng sai và cảm giác quen thuộc** sang **Flashbulb bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Confidence và accuracy
 
@@ -44,7 +44,7 @@ Tự tin không đồng nghĩa chính xác. Tuy nhiên quan hệ này không ph�
 
 Điều nguy hiểm là confidence có thể tăng sau khi nhận phản hồi (feedback / 피드백) kiểu “đúng rồi, đó là người cảnh sát cũng nghi”. Người chứng kiến không nhất thiết trở nên chính xác hơn; họ chỉ trở nên chắc hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Flashbulb bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Confidence và accuracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ký ức sai không có nghĩa mọi ký ức đều vô dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Flashbulb bộ nhớ (memory / 메모리)** nối từ **Confidence và accuracy** sang **Ký ức sai không có nghĩa mọi ký ức đều vô dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Flashbulb bộ nhớ (memory / 메모리)
 
@@ -52,7 +52,7 @@ Tự tin không đồng nghĩa chính xác. Tuy nhiên quan hệ này không ph�
 
 Vấn đề quan trọng là cảm giác chắc chắn và độ chính xác có thể tách nhau. Cảm xúc mạnh giúp một số khía cạnh được ưu tiên, nhưng không biến toàn bộ sự kiện thành bản ghi hoàn hảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ký ức sai không có nghĩa mọi ký ức đều vô dụng** tiếp nhận điểm tựa từ **Flashbulb bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ký ức cảm xúc và câu chuyện bản thân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ký ức sai không có nghĩa mọi ký ức đều vô dụng** nối từ **Flashbulb bộ nhớ (memory / 메모리)** sang **Ký ức cảm xúc và câu chuyện bản thân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký ức sai không có nghĩa mọi ký ức đều vô dụng
 
@@ -60,7 +60,7 @@ Nói trí nhớ tái dựng không có nghĩa không thể tin vào bất kỳ l
 
 Chất lượng encoding ban đầu, thời gian trôi qua, stress, attention, số lần kể lại, câu hỏi dẫn dắt và phản hồi (feedback / 피드백) đều ảnh hưởng độ đáng tin.
 
-> **Chuyển mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ký ức cảm xúc và câu chuyện bản thân** tiếp nhận điểm tựa từ **Ký ức sai không có nghĩa mọi ký ức đều vô dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng trong pháp lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ký ức cảm xúc và câu chuyện bản thân** nối từ **Ký ức sai không có nghĩa mọi ký ức đều vô dụng** sang **Ứng dụng trong pháp lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký ức cảm xúc và câu chuyện bản thân
 
@@ -68,7 +68,7 @@ Ký ức cá nhân không chỉ giữ dữ kiện; nó giúp tạo định danh 
 
 Xem [[11_emotion_memory_and_affective_cognition]].
 
-> **Chuyển mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ứng dụng trong pháp lý** tiếp nhận điểm tựa từ **Ký ức cảm xúc và câu chuyện bản thân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng trong đời sống và công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ứng dụng trong pháp lý** nối từ **Ký ức cảm xúc và câu chuyện bản thân** sang **Ứng dụng trong đời sống và công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ứng dụng trong pháp lý
 
@@ -76,7 +76,7 @@ Trong forensic psychology, câu hỏi tốt phải giảm suggestion. Interview 
 
 Lời khai cần được đánh giá như bằng chứng (evidence / 증거) có bất định (uncertainty / 불확실성) chứ không như replay trực tiếp của quá khứ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ứng dụng trong đời sống và công việc** tiếp nhận điểm tựa từ **Ứng dụng trong pháp lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Ứng dụng trong đời sống và công việc** nối từ **Ứng dụng trong pháp lý** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ứng dụng trong đời sống và công việc
 
@@ -84,7 +84,7 @@ Trong sự cố (incident / 인시던트) rà soát (review / 검토), tranh cã
 
 Trong mối quan hệ, hai người có thể thật sự nhớ cùng một cuộc hội thoại khác nhau. Việc thừa nhận bộ nhớ (memory / 메모리) reconstructive có thể giảm xu hướng coi khác biệt ký ức là bằng chứng người kia cố tình lừa mình.
 
-> **Chuyển mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Ứng dụng trong đời sống và công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Những hiểu lầm phổ biến** nối từ **Ứng dụng trong đời sống và công việc** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -96,7 +96,7 @@ Trong mối quan hệ, hai người có thể thật sự nhớ cùng một cu�
 
 **“bộ nhớ (memory / 메모리) research chứng minh không thể dùng eyewitness.”** Không. Nó chỉ cho thấy điều kiện thu thập và diễn giải bằng chứng (evidence / 증거) rất quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -116,13 +116,13 @@ reconstructed memory
 
 > Trí nhớ tốt nhất nên được xem như một hệ thống suy luận về quá khứ, không phải camera lưu trữ quá khứ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đọc nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đọc nền** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kết nối kiến thức
 
 Xem [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[11_emotion_memory_and_affective_cognition]], [[../06_applied/17_misinformation_belief_revision_and_inoculation]] và [[../00_foundations/02_research_methods]].
 
-> **Chuyển mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** nêu điều cần giải thích; **Nguồn đọc nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Biến dạng trí nhớ, nhân chứng và ký ức sai — bộ nhớ (memory / 메모리) Distortion, Eyewitness & False bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** đặt vấn đề; **Nguồn đọc nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn đọc nền
 

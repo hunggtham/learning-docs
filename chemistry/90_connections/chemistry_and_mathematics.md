@@ -12,7 +12,7 @@ Hóa lượng, nồng độ và định luật khí dựa mạnh vào tỉ lệ,
 
 Phương trình hóa học cân bằng cũng có thể được viết thành hệ ràng buộc tuyến tính dựa trên bảo toàn nguyên tố. Khi số chất tăng, bài toán cân bằng có thể được giải như bài toán tìm véc-tơ (vector / 벡터) trong không gian nghiệm của ma trận thành phần.
 
-> **Chuyển mạch:** Algebra và dimensional analysis kiểm tra cấu trúc phương trình; logarithm nén scale như pH/pKa, còn calculus mô tả tốc độ biến đổi và kinetics.
+> **Nối mạch:** Algebra và dimensional analysis kiểm tra cấu trúc phương trình; logarithm nén scale như pH/pKa, còn calculus mô tả tốc độ biến đổi và kinetics.
 
 ## Logarithm
 
@@ -30,7 +30,7 @@ Logarithm biến phép nhân thành phép cộng. Vì hằng số cân bằng c�
 
 Đây là ví dụ đẹp cho việc toán học không chỉ làm tính toán thuận tiện hơn mà còn làm lộ cấu trúc của Hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Giải tích** tiếp nhận điểm tựa từ **Logarithm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình vi phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Giải tích** nối từ **Logarithm** sang **Phương trình vi phân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giải tích
 
@@ -44,7 +44,7 @@ Phương trình tốc độ tích phân là nghiệm của phương trình vi ph
 
 Nhiệt động lực học cũng dùng đạo hàm để định nghĩa nhiệt dung, thế hóa học và nhiều đại lượng đáp ứng. Khi gặp một đạo hàm trong Hóa học, nên đọc nó như câu hỏi: “đại lượng này thay đổi nhạy tới mức nào khi ta thay đổi một biến khác?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương trình vi phân** tiếp nhận điểm tựa từ **Giải tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại số tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương trình vi phân** nối từ **Giải tích** sang **Đại số tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình vi phân
 
@@ -58,7 +58,7 @@ Hóa học khí quyển, cháy và chuyển hóa sinh học có thể chứa hà
 
 Khi các tốc độ khác nhau qua nhiều thang thời gian, hệ trở thành **hệ cứng (stiff system)** và cần bộ giải số phù hợp.
 
-> **Chuyển mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Đại số tuyến tính** tiếp nhận điểm tựa từ **Phương trình vi phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất và thống kê** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Đại số tuyến tính** nối từ **Phương trình vi phân** sang **Xác suất và thống kê**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại số tuyến tính
 
@@ -72,7 +72,7 @@ A\mathbf v=\lambda\mathbf v
 
 Phân tích phổ, hóa lượng đa biến và xử lý dữ liệu cũng dùng mạnh các công cụ như phân rã ma trận, bình phương tối thiểu và phân tích thành phần chính.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Xác suất và thống kê** tiếp nhận điểm tựa từ **Đại số tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Xác suất và thống kê** nối từ **Đại số tuyến tính** sang **Tối ưu hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác suất và thống kê
 
@@ -82,7 +82,7 @@ Cơ học lượng tử có bản chất xác suất; cơ học thống kê mô 
 
 Đây là mối liên hệ giữa mô hình ngẫu nhiên vi mô và hành vi gần như xác định ở cấp vĩ mô.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Tối ưu hóa** tiếp nhận điểm tựa từ **Xác suất và thống kê** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Tối ưu hóa** nối từ **Xác suất và thống kê** sang **Phương pháp số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tối ưu hóa
 
@@ -92,7 +92,7 @@ Thiết kế quy trình phải tối ưu nhiều mục tiêu như hiệu suất,
 
 Trong mọi trường hợp, việc đặt đúng hàm mục tiêu và ràng buộc quan trọng không kém thuật toán tối ưu.
 
-> **Chuyển mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương pháp số** tiếp nhận điểm tựa từ **Tối ưu hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương pháp số** nối từ **Tối ưu hóa** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương pháp số
 
@@ -102,7 +102,7 @@ Tìm nghiệm số được dùng cho cân bằng phi tuyến; tích phân số 
 
 Vì vậy năng lực tính toán số ngày càng trở thành một phần tự nhiên của Hóa học hiện đại.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Mô hình tư duy** gom các mảnh từ **Phương pháp số** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Mô hình tư duy** tổng hợp từ **Phương pháp số** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

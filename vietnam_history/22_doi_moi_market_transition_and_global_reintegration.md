@@ -10,7 +10,7 @@ Câu hỏi của chapter này là: **những cơ chế nào thực sự thay đ�
 
 Mô hình tư duy (mental model / 사고 모델) cần giữ là **chuyển tiếp (transition / 전이) economy (nền kinh tế chuyển đổi)**: old institution không biến mất ngay, new thị trường (market / 시장) cơ chế (mechanism / 메커니즘) cũng không xuất hiện đồng bộ.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Điểm tựa và câu hỏi trung tâm** xác định đầu vào; **Đổi Mới là tiến trình (process / 프로세스), không phải một ngày** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Agriculture: vì sao household responsibility tạo thay đổi lớn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Điểm tựa và câu hỏi trung tâm** đặt đầu vào cho **Đổi Mới là tiến trình (process / 프로세스), không phải một ngày**, rồi **Agriculture: vì sao household responsibility tạo thay đổi lớn?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Đổi Mới là tiến trình (process / 프로세스), không phải một ngày
 
@@ -32,7 +32,7 @@ new coordination regime
 
 Nếu chỉ nhớ “1986 mở cửa” ta bỏ mất cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Đổi Mới là tiến trình (process / 프로세스), không phải một ngày** xác định đầu vào; **Agriculture: vì sao household responsibility tạo thay đổi lớn?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Đổi Mới là tiến trình (process / 프로세스), không phải một ngày** đặt đầu vào cho **Agriculture: vì sao household responsibility tạo thay đổi lớn?**, rồi **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Agriculture: vì sao household responsibility tạo thay đổi lớn?
 
@@ -52,7 +52,7 @@ stronger incentive to raise output
 
 Các reform cuối 1980s, đặc biệt household contracting và land-use arrangement, giúp agriculture chuyển nhanh khỏi nhiều ràng buộc (constraint / 제약조건) của collective allocation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, sau nội dung của **Agriculture: vì sao household responsibility tạo thay đổi lớn?**, **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, sau nội dung của **Agriculture: vì sao household responsibility tạo thay đổi lớn?**, **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau
 
@@ -62,7 +62,7 @@ Một điểm cần phân biệt là **land quyền sở hữu (ownership / 소�
 
 Đây là example tốt cho institutional economics: effective economic right không chỉ nằm ở label “private/công khai (public / 공개) quyền sở hữu (ownership / 소유권)”, mà ở bundle of rights thực tế.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** nối từ **Land-use right: quyền sở hữu (ownership / 소유권) và use right không giống nhau** sang **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)
 
@@ -74,7 +74,7 @@ Nhưng liberalization trong high-inflation môi trường (environment / 환경)
 
 Vì vậy late 1980s–early 1990s reform vừa là micro incentive reform vừa là macro stabilization bài toán (problem / 문제).
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** nối từ **Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)** sang **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)
 
@@ -84,7 +84,7 @@ Key concept là **soft ngân sách (budget / 예산) ràng buộc (constraint / 
 
 SOE reform vì thế là long tiến trình (process / 프로세스), không phải privatization wholesale.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)** tiếp nhận điểm tựa từ **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)** nối từ **State-owned enterprises: từ command mục tiêu (target / 대상) sang hard ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** sang **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)
 
@@ -101,7 +101,7 @@ FDI
 
 Nhưng spillover không tự động. Domestic firm chỉ học được nếu có skill, chất lượng (quality / 품질) hệ thống (system / 시스템) và link đủ mạnh với foreign-invested sector.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity** tiếp nhận điểm tựa từ **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1995: ASEAN và normalization với Hoa Kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity** nối từ **Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)** sang **1995: ASEAN và normalization với Hoa Kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity
 
@@ -111,7 +111,7 @@ Shock này làm diversification of trade, finance và diplomacy trở nên cấp
 
 Đây là cơ chế (mechanism / 메커니즘) tốt để tránh tách “kinh tế” và “đối ngoại” thành hai môn học độc lập.
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1995: ASEAN và normalization với Hoa Kỳ** tiếp nhận điểm tựa từ **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1995: ASEAN và normalization với Hoa Kỳ** nối từ **Collapse của Soviet bloc: reform trở thành bên ngoài (external / 외부) necessity** sang **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1995: ASEAN và normalization với Hoa Kỳ
 
@@ -121,7 +121,7 @@ Các bước này không đơn thuần là diplomatic symbolism. Regional instit
 
 Một exporter quan tâm tariff, payment, shipping và thị trường (market / 시장) truy cập (access / 접근); investor quan tâm legal predictability và international quan hệ (relation / 관계). Diplomacy tác động economy qua các channel rất cụ thể như vậy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1995: ASEAN và normalization với Hoa Kỳ** xác định đầu vào; **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Urbanization và di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1995: ASEAN và normalization với Hoa Kỳ** đặt đầu vào cho **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau**, rồi **Urbanization và di chuyển (migration / 마이그레이션)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau
 
@@ -141,7 +141,7 @@ higher marketed surplus
 
 Chỉ khi các tầng (layer / 계층) cùng hoạt động, surplus mới đi từ trường dữ liệu (field / 필드) tới international buyer.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau** xác định đầu vào; **Urbanization và di chuyển (migration / 마이그레이션)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Rice exporter: kết quả (outcome / 결과) của nhiều cơ chế (mechanism / 메커니즘) chồng lên nhau** đặt đầu vào cho **Urbanization và di chuyển (migration / 마이그레이션)**, rồi **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Urbanization và di chuyển (migration / 마이그레이션)
 
@@ -151,7 +151,7 @@ Di chuyển (migration / 마이그레이션) không chỉ là demographic fact. 
 
 Điều này tạo **dual attachment** giữa village và city, làm ranh giới (boundary / 경계) rural/urban ít tuyệt đối hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** tiếp nhận điểm tựa từ **Urbanization và di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Private enterprise và institutional normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** nối từ **Urbanization và di chuyển (migration / 마이그레이션)** sang **Private enterprise và institutional normalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock
 
@@ -159,7 +159,7 @@ Asian Financial Crisis cho thấy opening không chỉ đem thị trường (mar
 
 Đây là lesson quan trọng: tích hợp (integration / 통합) thay đổi correlation giữa domestic economy và bên ngoài (external / 외부) shock.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Private enterprise và institutional normalization** tiếp nhận điểm tựa từ **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Private enterprise và institutional normalization** nối từ **1997 Asian Financial Crisis: tích hợp (integration / 통합) mang cả opportunity và shock** sang **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Private enterprise và institutional normalization
 
@@ -177,7 +177,7 @@ many decentralized economic decision nodes
 
 Trạng thái (state / 상태) vẫn regulate, tax, invest và own enterprise; nhưng coordination cơ chế (mechanism / 메커니즘) trở nên hybrid hơn.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment** tiếp nhận điểm tựa từ **Private enterprise và institutional normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Poverty reduction: growth truyền xuống household bằng channel nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment** nối từ **Private enterprise và institutional normalization** sang **Poverty reduction: growth truyền xuống household bằng channel nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## WTO 2007: tích hợp (integration / 통합) thành rule-based commitment
 
@@ -189,7 +189,7 @@ WTO accession khác simple export boom. Nó gắn thị trường (market / 시�
 
 Tích hợp (integration / 통합) therefore creates both **opportunity and adjustment pressure**.
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Poverty reduction: growth truyền xuống household bằng channel nào?** tiếp nhận điểm tựa từ **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Uneven development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Poverty reduction: growth truyền xuống household bằng channel nào?** nối từ **WTO 2007: tích hợp (integration / 통합) thành rule-based commitment** sang **Uneven development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Poverty reduction: growth truyền xuống household bằng channel nào?
 
@@ -199,7 +199,7 @@ Transmission channel gồm higher farm income, wage employment, di chuyển (mig
 
 Nếu muốn hiểu development, phải hỏi **income nguồn (source / 소스) của household thay đổi ra sao** thay vì chỉ nhìn GDP.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Uneven development** tiếp nhận điểm tựa từ **Poverty reduction: growth truyền xuống household bằng channel nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Education như growth hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Uneven development** nối từ **Poverty reduction: growth truyền xuống household bằng channel nào?** sang **Education như growth hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Uneven development
 
@@ -209,7 +209,7 @@ Industrial corridor, large city và export-connected province thường grow nha
 
 Các ethnic-minority community ở mountainous areas, migrant worker ở industrial zone và urban middle lớp (class / 클래스) có experience rất khác nhau trong cùng reform period.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Education như growth hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Uneven development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thành phố Hồ Chí Minh và industrial belt như checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Education như growth hạ tầng (infrastructure / 인프라)** nối từ **Uneven development** sang **Thành phố Hồ Chí Minh và industrial belt như checkpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Education như growth hạ tầng (infrastructure / 인프라)
 
@@ -219,7 +219,7 @@ Education vì thế không chỉ là xã hội (social / 사회적) chính sách
 
 Chapter 26 sẽ đi xuyên thời gian để giải thích writing/education hệ thống (system / 시스템) từ Hán văn tới mass schooling và digital kiến thức (knowledge / 지식) economy.
 
-> **Chuyển mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Thành phố Hồ Chí Minh và industrial belt như checkpoint** tiếp nhận điểm tựa từ **Education như growth hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Thành phố Hồ Chí Minh và industrial belt như checkpoint** nối từ **Education như growth hạ tầng (infrastructure / 인프라)** sang **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thành phố Hồ Chí Minh và industrial belt như checkpoint
 
@@ -229,7 +229,7 @@ Factory zone, bộ chứa (container / 컨테이너) tuyến (route / 경로), w
 
 Một smartphone thành phần (component / 컴포넌트) xuất khẩu không bắt đầu ở cổng (port / 포트); nó bắt đầu từ industrial land, electricity, worker commute, supplier, customs dữ liệu (data / 데이터) và shipping schedule.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Thành phố Hồ Chí Minh và industrial belt như checkpoint** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Thành phố Hồ Chí Minh và industrial belt như checkpoint** đặt tiêu chí; **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Recap và bàn giao** mở rộng hệ quả.
 
 ## Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy
 
@@ -237,7 +237,7 @@ Một misconception phổ biến là Đổi Mới = “chuyển sang capitalism�
 
 Để phân tích chính xác, nên hỏi role nào do price/firm/household thực hiện, role nào do trạng thái (state / 상태) thực hiện, và ranh giới (boundary / 경계) đó thay đổi theo period/sector thế nào.
 
-> **Chuyển mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy** đã nêu tiêu chí phân biệt, còn **Recap và bàn giao** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới**, **Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy** đã nêu tiêu chí phân biệt, còn **Recap và bàn giao** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

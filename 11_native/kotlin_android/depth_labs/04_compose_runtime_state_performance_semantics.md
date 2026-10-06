@@ -34,7 +34,7 @@ Trạng thái (state / 상태) được đọc ở phase nào ảnh hưởng pha
 
 ---
 
-> **Chuyển mạch:** Compose invalidates readers of changed state, không redraw toàn màn hình; read location vì vậy ảnh hưởng recomposition scope và chi phí work.
+> **Nối mạch:** Compose invalidates readers of changed state, không redraw toàn màn hình; read location vì vậy ảnh hưởng recomposition scope và chi phí work.
 
 ## 2. trạng thái (state / 상태) read location là hiệu năng (performance / 성능) quyết định (decision / 결정)
 
@@ -68,7 +68,7 @@ Tối ưu hóa (optimization / 최적화) không phải “tránh recomposition 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **3. Recomposition không nhất thiết đắt, nhưng unnecessary công việc (work / 작업) có thể đắt** tiếp nhận điểm tựa từ **2. trạng thái (state / 상태) read location là hiệu năng (performance / 성능) quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Composition phải gần với pure hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **3. Recomposition không nhất thiết đắt, nhưng unnecessary công việc (work / 작업) có thể đắt** nối từ **2. trạng thái (state / 상태) read location là hiệu năng (performance / 성능) quyết định (decision / 결정)** sang **4. Composition phải gần với pure hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Recomposition không nhất thiết đắt, nhưng unnecessary công việc (work / 작업) có thể đắt
 
@@ -89,7 +89,7 @@ Vấn đề xảy ra khi recomposition kéo theo:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **4. Composition phải gần với pure hàm (function / 함수)** tiếp nhận điểm tựa từ **3. Recomposition không nhất thiết đắt, nhưng unnecessary công việc (work / 작업) có thể đắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. LaunchedEffect là lifecycle của coroutine theo composition key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **4. Composition phải gần với pure hàm (function / 함수)** nối từ **3. Recomposition không nhất thiết đắt, nhưng unnecessary công việc (work / 작업) có thể đắt** sang **5. LaunchedEffect là lifecycle của coroutine theo composition key**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Composition phải gần với pure hàm (function / 함수)
 
@@ -114,7 +114,7 @@ Tác động (effect / 효과) phải được đưa vào tác động (effect /
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **4. Composition phải gần với pure hàm (function / 함수)** xác định đầu vào; **5. LaunchedEffect là lifecycle của coroutine theo composition key** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **4. Composition phải gần với pure hàm (function / 함수)** đặt đầu vào cho **5. LaunchedEffect là lifecycle của coroutine theo composition key**, rồi **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. `LaunchedEffect` là lifecycle của coroutine theo composition key
 Phần này nối mạch Android vừa học với “5. `LaunchedEffect` là lifecycle của coroutine theo composition key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -148,7 +148,7 @@ nếu `userId` thay đổi nhưng key vẫn `Unit`, tác động (effect / 효�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **5. LaunchedEffect là lifecycle của coroutine theo composition key** xác định đầu vào; **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **5. LaunchedEffect là lifecycle của coroutine theo composition key** đặt đầu vào cho **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)**, rồi **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. `rememberUpdatedState` giải quyết stale capture, không restart tác động (effect / 효과)
 
@@ -176,7 +176,7 @@ nhưng callback/value bên trong luôn mới nhất
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)** nêu điều cần giải thích; **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **6. rememberUpdatedState giải quyết stale capture, không restart tác động (effect / 효과)** đặt vấn đề; **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** đối chiếu bằng chứng, rồi **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. `DisposableEffect` dành cho tài nguyên (resource / 자원) registration có cleanup
 
@@ -204,7 +204,7 @@ Nếu cleanup không gắn với cùng đơn vị sở hữu (owner / 오너), l
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** nêu điều cần giải thích; **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. remember chỉ sống theo composition identity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **7. DisposableEffect dành cho tài nguyên (resource / 자원) registration có cleanup** đặt vấn đề; **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** đối chiếu bằng chứng, rồi **9. remember chỉ sống theo composition identity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. `SideEffect` dành cho publish trạng thái (state / 상태) sau successful composition
 
@@ -216,7 +216,7 @@ Mỗi tác động (effect / 효과) API encode một thời gian tồn tại (l
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **9. remember chỉ sống theo composition identity** tiếp nhận điểm tựa từ **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **9. remember chỉ sống theo composition identity** nối từ **8. SideEffect dành cho publish trạng thái (state / 상태) sau successful composition** sang **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. `remember` chỉ sống theo composition identity
 Phần này nối mạch Android vừa học với “9. `remember` chỉ sống theo composition identity”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -239,7 +239,7 @@ key thay đổi
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **9. remember chỉ sống theo composition identity** nêu điều cần giải thích; **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **9. remember chỉ sống theo composition identity** đặt vấn đề; **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)** đối chiếu bằng chứng, rồi **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. `rememberSaveable` không phải cơ sở dữ liệu (database / 데이터베이스)
 
@@ -267,7 +267,7 @@ Persist large dữ liệu (data / 데이터) ở Room/DataStore/tệp (file / �
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **10. rememberSaveable không phải cơ sở dữ liệu (database / 데이터베이스)** đặt vấn đề; **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** đối chiếu bằng chứng, rồi **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào
 
@@ -298,7 +298,7 @@ Nhưng key phải thật sự stable và unique trong danh sách (list / 목록)
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** đã nêu tiêu chí phân biệt, còn **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **11. định danh (identity / 식별자) quyết định trạng thái (state / 상태) đi theo item nào** đặt tiêu chí; **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** mở rộng hệ quả.
 
 ## 12. `key()` là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition
 
@@ -316,7 +316,7 @@ Dùng key đúng giúp reset remembered trạng thái (state / 상태) khi thự
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** đã nêu tiêu chí phân biệt, còn **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **12. key() là định danh (identity / 식별자) ranh giới (boundary / 경계) trong composition** đặt tiêu chí; **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** mở rộng hệ quả.
 
 ## 13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose
 
@@ -342,7 +342,7 @@ Trường dữ liệu (field / 필드) thường không tạo observable phụ t
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** nối từ **13. Snapshot trạng thái (state / 상태) là observable bộ nhớ (memory / 메모리) mô hình (model / 모델) của Compose** sang **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)
 
@@ -367,7 +367,7 @@ Mutation nên đi qua sự kiện (event / 이벤트)/tác động (effect / 효
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)** tiếp nhận điểm tựa từ **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)** nối từ **14. Backwards ghi (write / 쓰기) có thể tạo recomposition vòng lặp (loop / 루프)** sang **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)
 
@@ -387,7 +387,7 @@ Không cần dùng cho mọi computed thuộc tính (property / 속성) đơn gi
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được** tiếp nhận điểm tựa từ **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được** nối từ **15. Derived trạng thái (state / 상태) giúp giảm vô hiệu hóa (invalidation / 무효화) khi đầu ra (output / 출력) đổi ít hơn đầu vào (input / 입력)** sang **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được
 
@@ -411,7 +411,7 @@ Prefer immutable mô hình dữ liệu (data model / 데이터 모델) hoặc ob
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai** tiếp nhận điểm tựa từ **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai** nối từ **16. Stability là đặc tả hợp đồng (contract / 계약) về khả năng thay đổi quan sát được** sang **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai
 
@@ -423,7 +423,7 @@ Nếu lời hứa sai, bug khó gỡ lỗi (debug / 디버그) hơn hiệu năng
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn** tiếp nhận điểm tựa từ **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn** nối từ **17. Không dùng stability annotation để che thiết kế (design / 설계) mutable sai** sang **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn
 
@@ -445,7 +445,7 @@ old state -> reducer/update -> new state
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation** tiếp nhận điểm tựa từ **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation** nối từ **18. Immutable snapshot giúp lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성) đơn giản hơn** sang **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation
 
@@ -465,7 +465,7 @@ Nhiều bố cục (layout / 레이아웃) bug đến từ việc nghĩ child t�
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý** tiếp nhận điểm tựa từ **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý** nối từ **19. bố cục (layout / 레이아웃) là ràng buộc (constraint / 제약조건) negotiation** sang **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý
 
@@ -491,7 +491,7 @@ Modifier chuỗi (chain / 사슬) là chuỗi xử lý (pipeline / 파이프라�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **20. Modifier thứ tự (order / 순서) là ngữ nghĩa (semantic / 의미적), không phải decoration thứ tự (order / 순서) tùy ý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)
 
@@ -503,7 +503,7 @@ Khi cần intrinsic đo lường (measurement / 측정) hoặc subcomposition, h
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** gom các mảnh từ **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **23. Draw phase nên tránh allocation nóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** tổng hợp từ **21. Custom bố cục (layout / 레이아웃) cần giữ single-measure mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **23. Draw phase nên tránh allocation nóng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường
 
@@ -515,7 +515,7 @@ Mỗi lớp động (dynamic / 동적) composition thêm chi phí (cost / 비용
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **23. Draw phase nên tránh allocation nóng** tiếp nhận điểm tựa từ **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **23. Draw phase nên tránh allocation nóng** nối từ **22. SubcomposeLayout là công cụ (tool / 도구) mạnh nhưng đắt hơn bố cục (layout / 레이아웃) thường** sang **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Draw phase nên tránh allocation nóng
 
@@ -536,7 +536,7 @@ Mục tiêu là tránh đối tượng (object / 객체) allocation và expensiv
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí** tiếp nhận điểm tựa từ **23. Draw phase nên tránh allocation nóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí** nối từ **23. Draw phase nên tránh allocation nóng** sang **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `graphicsLayer` có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí
 
@@ -548,7 +548,7 @@ Tối ưu luôn phải benchmark, không đổi mọi animation sang graphics t�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item** tiếp nhận điểm tựa từ **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Expensive computation nên tách khỏi composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item** nối từ **24. graphicsLayer có thể tránh composition/bố cục (layout / 레이아웃) nhưng không miễn phí** sang **26. Expensive computation nên tách khỏi composition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item
 
@@ -567,7 +567,7 @@ Recomposition count chỉ là một tín hiệu.
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **26. Expensive computation nên tách khỏi composition** tiếp nhận điểm tựa từ **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **26. Expensive computation nên tách khỏi composition** nối từ **25. Lazy danh sách (list / 목록) hiệu năng (performance / 성능) bắt đầu từ item định danh (identity / 식별자) và công việc (work / 작업) per item** sang **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Expensive computation nên tách khỏi composition
 
@@ -595,7 +595,7 @@ UI không nên trở thành data-processing engine.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)** tiếp nhận điểm tựa từ **26. Expensive computation nên tách khỏi composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)** nối từ **26. Expensive computation nên tách khỏi composition** sang **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. `remember` bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)
 
@@ -605,7 +605,7 @@ Immutable đầu vào (input / 입력) làm `remember(key)` ngữ nghĩa (semant
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)** đã nêu tiêu chí phân biệt, còn **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **27. remember bộ nhớ đệm (cache / 캐시) theo key, không phải memoization toàn cục (global / 전역)** đặt tiêu chí; **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** mở rộng hệ quả.
 
 ## 28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)
 
@@ -635,7 +635,7 @@ Trạng thái (state / 상태) hoisting không phải chỉ để preview; nó t
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **28. trạng thái (state / 상태) hoisting tạo reusable ranh giới (boundary / 경계)** đặt tiêu chí; **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** dùng tiêu chí đó để kiểm tra ranh giới, rồi **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** mở rộng hệ quả.
 
 ## 29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết
 
@@ -647,7 +647,7 @@ Quy tắc (rule / 규칙):
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** tiếp nhận điểm tựa từ **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** nối từ **29. Không hoist trạng thái (state / 상태) cao hơn mức cần thiết** sang **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau
 
@@ -661,7 +661,7 @@ Không gom mọi thứ vào một ViewModel chỉ vì “single nguồn chuẩn 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** nối từ **30. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) và screen trạng thái (state / 상태) là hai loại khác nhau** sang **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)
 
@@ -673,7 +673,7 @@ Ngữ nghĩa (semantics / 의미론) cần mô tả **meaning và hành động 
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)** nối từ **31. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** sang **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)
 
@@ -685,7 +685,7 @@ Nếu toàn card clickable, một ngữ nghĩa (semantics / 의미론) nút (nod
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail** tiếp nhận điểm tựa từ **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail** nối từ **32. Merge ngữ nghĩa (semantics / 의미론) có thể thay đổi trải nghiệm khả năng tiếp cận (accessibility / 접근성)** sang **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail
 
@@ -705,7 +705,7 @@ TestTag vẫn hữu ích khi ngữ nghĩa (semantic / 의미적) selector không
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)** tiếp nhận điểm tựa từ **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)** nối từ **33. kiểm thử (test / 테스트) theo ngữ nghĩa (semantics / 의미론) tốt hơn kiểm thử (test / 테스트) theo hiện thực (implementation / 구현) detail** sang **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)
 
@@ -724,7 +724,7 @@ Visual và ngữ nghĩa (semantics / 의미론) nên derive từ cùng trạng t
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting** tiếp nhận điểm tựa từ **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. RTL không chỉ mirror icon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting** nối từ **34. khả năng tiếp cận (accessibility / 접근성) trạng thái (state / 상태) phải cập nhật (update / 업데이트) cùng visual trạng thái (state / 상태)** sang **36. RTL không chỉ mirror icon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting
 
@@ -743,7 +743,7 @@ Kiểm thử (test / 테스트) font quy mô (scale / 규모) lớn là part c�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **36. RTL không chỉ mirror icon** tiếp nhận điểm tựa từ **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **36. RTL không chỉ mirror icon** nối từ **35. Font scaling là bố cục (layout / 레이아웃) kiểm thử (test / 테스트), không chỉ khả năng tiếp cận (accessibility / 접근성) setting** sang **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. RTL không chỉ mirror icon
 
@@ -755,7 +755,7 @@ Văn bản (text / 텍스트) alignment, gesture direction và animation cũng c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **36. RTL không chỉ mirror icon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)** nối từ **36. RTL không chỉ mirror icon** sang **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)
 
@@ -767,7 +767,7 @@ Dùng inset APIs để bố cục (layout / 레이아웃) phản ứng với thi
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Pointer input có lifetime theo key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)** nối từ **37. Edge-to-edge thay đổi trách nhiệm bố cục (layout / 레이아웃)** sang **39. Pointer input có lifetime theo key**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)
 
@@ -788,7 +788,7 @@ Form môi trường vận hành (production / 운영 환경) phải hoạt độ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **39. Pointer input có lifetime theo key** tiếp nhận điểm tựa từ **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **39. Pointer input có lifetime theo key** nối từ **38. IME là một động (dynamic / 동적) inset + focus hệ thống (system / 시스템)** sang **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Pointer input có lifetime theo key
 Phần này nối mạch Android vừa học với “39. Pointer input có lifetime theo key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -807,7 +807,7 @@ Nếu detector capture stale trạng thái (state / 상태), dùng key hoặc up
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child** tiếp nhận điểm tựa từ **39. Pointer input có lifetime theo key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child** nối từ **39. Pointer input có lifetime theo key** sang **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child
 
@@ -819,7 +819,7 @@ Khi implement collapsing toolbar hoặc coordinated motion, cần hiểu consump
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi** tiếp nhận điểm tựa từ **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi** nối từ **40. Nested scroll là giao thức (protocol / 프로토콜) giữa parent và child** sang **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi
 
@@ -836,7 +836,7 @@ Declarative animation giảm khả năng visual trạng thái (state / 상태) l
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi** xác định đầu vào; **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **41. Animation cần mô hình (model / 모델) mục tiêu (target / 대상) trạng thái (state / 상태), không imperative timeline khắp nơi** đặt đầu vào cho **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow**, rồi **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow
 
@@ -869,7 +869,7 @@ Nếu chưa biết bottleneck nằm ở đâu, tối ưu hóa (optimization / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow** xác định đầu vào; **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **42. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) workflow** đặt đầu vào cho **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)**, rồi **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)
 
@@ -879,7 +879,7 @@ Gỡ lỗi (debug / 디버그) có instrumentation và thiếu tối ưu R8/AOT/
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** tiếp nhận điểm tựa từ **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** nối từ **43. gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) không đại diện bản phát hành (release / 릴리스) hiệu năng (performance / 성능)** sang **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm
 
@@ -891,7 +891,7 @@ Profile là tối ưu hóa (optimization / 최적화) tầng (layer / 계층) sa
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Recomposition counter có thể gây hiểu nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)** nối từ **44. Baseline Profile không sửa kiến trúc (architecture / 아키텍처) chậm** sang **46. Recomposition counter có thể gây hiểu nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)
 
@@ -910,7 +910,7 @@ Hiệu năng (performance / 성능) rà soát (review / 검토) phải xem toàn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)** đã nêu tiêu chí phân biệt, còn **46. Recomposition counter có thể gây hiểu nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **45. Frame ngân sách (budget / 예산) là end-to-end ngân sách (budget / 예산)** đặt tiêu chí; **46. Recomposition counter có thể gây hiểu nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** mở rộng hệ quả.
 
 ## 46. Recomposition counter có thể gây hiểu nhầm
 
@@ -922,7 +922,7 @@ Chi phí (cost / 비용) > count.
 
 ---
 
-> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **46. Recomposition counter có thể gây hiểu nhầm** đã nêu tiêu chí phân biệt, còn **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **48. Compose correctness checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **46. Recomposition counter có thể gây hiểu nhầm** đặt tiêu chí; **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** dùng tiêu chí đó để kiểm tra ranh giới, rồi **48. Compose correctness checklist** mở rộng hệ quả.
 
 ## 47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame
 
@@ -932,7 +932,7 @@ Nếu ViewModel tạo danh sách (list / 목록) mô hình (model / 모델) mớ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **48. Compose correctness checklist** tiếp nhận điểm tựa từ **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **48. Compose correctness checklist** nối từ **47. Stable key không cứu item nếu mô hình (model / 모델) thay đổi toàn bộ mỗi frame** sang **49. Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Compose correctness checklist
 Phần này nối mạch Android vừa học với “48. Compose correctness checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -952,7 +952,7 @@ Phần này nối mạch Android vừa học với “48. Compose correctness ch
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **49. Kết luận** gom các mảnh từ **48. Compose correctness checklist** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 04 — Compose thời gian chạy (runtime / 런타임), trạng thái (state / 상태), hiệu năng (performance / 성능) và ngữ nghĩa (semantics / 의미론)**, **49. Kết luận** tổng hợp từ **48. Compose correctness checklist** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 49. Kết luận
 

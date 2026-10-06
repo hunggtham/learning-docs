@@ -12,7 +12,7 @@ Mục tiêu không phải thuộc mọi môi trường vận hành (production /
 
 # PHẦN 1 — NHỮNG ELEMENT ÍT GẶP NHƯNG CẦN BIẾT
 
-> **Chuyển mạch:** Browser parsing, form, accessibility và security là các constraint chung; `<search>` minh họa một element hiện đại trong các constraint đó, còn `<hgroup>` tiếp theo kiểm tra semantics heading.
+> **Nối mạch:** Browser parsing, form, accessibility và security là các constraint chung; `<search>` minh họa một element hiện đại trong các constraint đó, còn `<hgroup>` tiếp theo kiểm tra semantics heading.
 
 ## 1. `<search>`
 
@@ -32,7 +32,7 @@ Khi dùng, hãy nghĩ theo meaning thay vì visual bố cục (layout / 레이�
 
 ---
 
-> **Chuyển mạch:** `<search>` diễn đạt vùng tìm kiếm; `<hgroup>` tiếp theo nhóm heading có quan hệ, còn `<menu>` mở rộng semantic cho nhóm thao tác.
+> **Nối mạch:** `<search>` diễn đạt vùng tìm kiếm; `<hgroup>` tiếp theo nhóm heading có quan hệ, còn `<menu>` mở rộng semantic cho nhóm thao tác.
 
 ## 2. `<hgroup>`
 
@@ -49,7 +49,7 @@ Nó không phải shortcut để gộp `h1`, `h2`, `h3` thành một hierarchy. 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **3. <menu>** tiếp nhận điểm tựa từ **2. <hgroup>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. <wbr>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **3. <menu>** nối từ **2. <hgroup>** sang **4. <wbr>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. `<menu>`
 
@@ -66,7 +66,7 @@ Trong ứng dụng (application / 애플리케이션) thông thường `ul` vẫ
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **4. <wbr>** tiếp nhận điểm tựa từ **3. <menu>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. <dfn> và <u>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **4. <wbr>** nối từ **3. <menu>** sang **5. <dfn> và <u>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. `<wbr>`
 
@@ -82,7 +82,7 @@ Nó hữu ích với URL, băm (hash / 해시), identifier hoặc technical đơ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **5. <dfn> và <u>** tiếp nhận điểm tựa từ **4. <wbr>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. <map> và <area>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **5. <dfn> và <u>** nối từ **4. <wbr>** sang **6. <map> và <area>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. `<dfn>` và `<u>`
 
@@ -107,7 +107,7 @@ Nếu mục tiêu chỉ là presentation, CSS phù hợp hơn. Underline còn c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **6. <map> và <area>** tiếp nhận điểm tựa từ **5. <dfn> và <u>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. <canvas>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **6. <map> và <area>** nối từ **5. <dfn> và <u>** sang **7. <canvas>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. `<map>` và `<area>`
 
@@ -132,7 +132,7 @@ Trình duyệt (browser / 브라우저) dùng `shape` và `coords` để hit-tes
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **7. <canvas>** tiếp nhận điểm tựa từ **6. <map> và <area>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. SVG và MathML là foreign content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **7. <canvas>** nối từ **6. <map> và <area>** sang **8. SVG và MathML là foreign content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. `<canvas>`
 
@@ -150,7 +150,7 @@ Canvas pixels không tự tạo ngữ nghĩa (semantic / 의미적) cây (tree /
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **8. SVG và MathML là foreign content** tiếp nhận điểm tựa từ **7. <canvas>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. HTML không phải XML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **8. SVG và MathML là foreign content** nối từ **7. <canvas>** sang **9. HTML không phải XML**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. SVG và MathML là foreign content
 
@@ -180,7 +180,7 @@ Khi parser đi vào SVG hoặc MathML, không gian tên (namespace / 네임스�
 
 # PHẦN 2 — HTML PARSER VÀ cây (tree / 트리) CONSTRUCTION
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **9. HTML không phải XML** tiếp nhận điểm tựa từ **8. SVG và MathML là foreign content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Optional end tags và parser repair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **9. HTML không phải XML** nối từ **8. SVG và MathML là foreign content** sang **10. Optional end tags và parser repair**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. HTML không phải XML
 
@@ -200,7 +200,7 @@ không biến document thành XML. Parsing chế độ (mode / 모드) đến t�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **10. Optional end tags và parser repair** tiếp nhận điểm tựa từ **9. HTML không phải XML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. <p> auto-closing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **10. Optional end tags và parser repair** nối từ **9. HTML không phải XML** sang **11. <p> auto-closing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Optional end tags và parser repair
 
@@ -219,7 +219,7 @@ HTML parser còn có lỗi (error / 오류) khôi phục (recovery / 복구) m�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **11. <p> auto-closing** tiếp nhận điểm tựa từ **10. Optional end tags và parser repair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **11. <p> auto-closing** nối từ **10. Optional end tags và parser repair** sang **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. `<p>` auto-closing
 
@@ -238,7 +238,7 @@ không tạo cây (tree / 트리) “div nằm trong p” như indentation gợi
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **11. <p> auto-closing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** nối từ **11. <p> auto-closing** sang **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)
 
@@ -250,7 +250,7 @@ Bạn không cần thuộc từng bước thuật toán. Điều cần hiểu l�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** nêu điều cần giải thích; **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Raw văn bản (text / 텍스트), RCDATA và character references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** đặt vấn đề; **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** đối chiếu bằng chứng, rồi **14. Raw văn bản (text / 텍스트), RCDATA và character references** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)
 
@@ -260,7 +260,7 @@ Khi gỡ lỗi (debug / 디버그) hydration, bảng (table / 테이블) cấu t
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** nêu điều cần giải thích; **14. Raw văn bản (text / 텍스트), RCDATA và character references** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Form đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** đặt vấn đề; **14. Raw văn bản (text / 텍스트), RCDATA và character references** đối chiếu bằng chứng, rồi **15. Form đơn vị sở hữu (owner / 오너)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Raw văn bản (text / 텍스트), RCDATA và character references
 
@@ -272,7 +272,7 @@ Character references như `&amp;`, `&lt;`, `&gt;` và `&quot;` dùng khi cần b
 
 # PHẦN 3 — FORM INTERNALS VÀ LIVE trạng thái (state / 상태)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **15. Form đơn vị sở hữu (owner / 오너)** tiếp nhận điểm tựa từ **14. Raw văn bản (text / 텍스트), RCDATA và character references** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Submitter và implicit submission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **15. Form đơn vị sở hữu (owner / 오너)** nối từ **14. Raw văn bản (text / 텍스트), RCDATA và character references** sang **16. Submitter và implicit submission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Form đơn vị sở hữu (owner / 오너)
 
@@ -302,7 +302,7 @@ Nested `form` không phải cách tạo form con. Hãy dùng sibling forms hoặ
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **16. Submitter và implicit submission** tiếp nhận điểm tựa từ **15. Form đơn vị sở hữu (owner / 오너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Successful controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **16. Submitter và implicit submission** nối từ **15. Form đơn vị sở hữu (owner / 오너)** sang **17. Successful controls**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Submitter và implicit submission
 
@@ -323,7 +323,7 @@ Pressing Enter trong văn bản (text / 텍스트) điều khiển (control / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **17. Successful controls** tiếp nhận điểm tựa từ **16. Submitter và implicit submission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Disabled, readonly và disabled fieldset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **17. Successful controls** nối từ **16. Submitter và implicit submission** sang **18. Disabled, readonly và disabled fieldset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Successful controls
 
@@ -333,7 +333,7 @@ Khi form submit, trình duyệt (browser / 브라우저) không đơn giản ser
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **18. Disabled, readonly và disabled fieldset** tiếp nhận điểm tựa từ **17. Successful controls** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **18. Disabled, readonly và disabled fieldset** nối từ **17. Successful controls** sang **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Disabled, readonly và disabled fieldset
 
@@ -349,7 +349,7 @@ Không được coi readonly giá trị (value / 값) là trusted; máy khách (
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** tiếp nhận điểm tựa từ **18. Disabled, readonly và disabled fieldset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. dirname và capture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** nối từ **18. Disabled, readonly và disabled fieldset** sang **20. dirname và capture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)
 
@@ -365,7 +365,7 @@ sau khi người dùng (user / 사용자) sửa thành `Bob`, `input.value` là 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **20. dirname và capture** tiếp nhận điểm tựa từ **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **20. dirname và capture** nối từ **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** sang **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. `dirname` và `capture`
 
@@ -386,7 +386,7 @@ Nó không phải bảo mật (security / 보안)/permission guarantee và UX c�
 
 # PHẦN 4 — DOM quan hệ (relation / 관계) VÀ DOM CLOBBERING
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **20. dirname và capture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. DOM clobbering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** nối từ **20. dirname và capture** sang **22. DOM clobbering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Attribute không đồng nghĩa live thuộc tính (property / 속성)
 
@@ -398,7 +398,7 @@ Cấp cao (senior / 시니어) cần biết attribute reflection rules khác nha
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **22. DOM clobbering** tiếp nhận điểm tựa từ **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Microdata** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **22. DOM clobbering** nối từ **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** sang **23. Microdata**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. DOM clobbering
 
@@ -418,7 +418,7 @@ DOM không nên được dùng như trusted cấu hình (configuration / 구성)
 
 # PHẦN 5 — MICRODATA
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **23. Microdata** tiếp nhận điểm tựa từ **22. DOM clobbering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. <template>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **23. Microdata** nối từ **22. DOM clobbering** sang **24. <template>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Microdata
 
@@ -440,7 +440,7 @@ JSON-LD thường dễ quản lý hơn trong SEO kiến trúc (architecture / �
 
 # PHẦN 6 — TEMPLATE, CUSTOM ELEMENTS VÀ SHADOW DOM
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **24. <template>** tiếp nhận điểm tựa từ **23. Microdata** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Declarative Shadow DOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **24. <template>** nối từ **23. Microdata** sang **25. Declarative Shadow DOM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `<template>`
 
@@ -456,7 +456,7 @@ Content không participate như ordinary rendered content cho tới khi được
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **25. Declarative Shadow DOM** tiếp nhận điểm tựa từ **24. <template>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Slots và composed cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **25. Declarative Shadow DOM** nối từ **24. <template>** sang **26. Slots và composed cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Declarative Shadow DOM
 
@@ -480,7 +480,7 @@ Trình duyệt (browser / 브라우저) có thể attach shadow gốc (root / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **26. Slots và composed cây (tree / 트리)** tiếp nhận điểm tựa từ **25. Declarative Shadow DOM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Custom elements và form-associated custom elements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **26. Slots và composed cây (tree / 트리)** nối từ **25. Declarative Shadow DOM** sang **27. Custom elements và form-associated custom elements**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Slots và composed cây (tree / 트리)
 
@@ -500,7 +500,7 @@ Shadow DOM dùng `slot` để phân phối light-DOM content:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **27. Custom elements và form-associated custom elements** tiếp nhận điểm tựa từ **26. Slots và composed cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. hidden="until-found"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **27. Custom elements và form-associated custom elements** nối từ **26. Slots và composed cây (tree / 트리)** sang **28. hidden="until-found"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Custom elements và form-associated custom elements
 
@@ -518,7 +518,7 @@ Advanced components có thể tham gia form mô hình (model / 모델) thông qu
 
 # PHẦN 7 — HIDDEN, POPOVER VÀ TOP tầng (layer / 계층)
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **28. hidden="until-found"** tiếp nhận điểm tựa từ **27. Custom elements và form-associated custom elements** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Popover modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **28. hidden="until-found"** nối từ **27. Custom elements và form-associated custom elements** sang **29. Popover modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. `hidden="until-found"`
 
@@ -534,7 +534,7 @@ Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **29. Popover modes** tiếp nhận điểm tựa từ **28. hidden="until-found"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Top tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **29. Popover modes** nối từ **28. hidden="until-found"** sang **30. Top tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Popover modes
 
@@ -551,7 +551,7 @@ Popover không tự quyết định nghiệp vụ (business / 비즈니스) ng�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **30. Top tầng (layer / 계층)** tiếp nhận điểm tựa từ **29. Popover modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Modal và non-modal dialog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **30. Top tầng (layer / 계층)** nối từ **29. Popover modes** sang **31. Modal và non-modal dialog**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Top tầng (layer / 계층)
 
@@ -563,7 +563,7 @@ Khi bản địa (native / 네이티브) top-layer thành phần nguyên thủy 
 
 # PHẦN 8 — DIALOG VÀ DECLARATIVE COMMANDS
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **31. Modal và non-modal dialog** tiếp nhận điểm tựa từ **30. Top tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. command và commandfor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **31. Modal và non-modal dialog** nối từ **30. Top tầng (layer / 계층)** sang **32. command và commandfor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Modal và non-modal dialog
 
@@ -575,7 +575,7 @@ Hiện đại (modern / 현대적) `closedby` cho phép mô tả close hành vi 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **32. command và commandfor** tiếp nhận điểm tựa từ **31. Modal và non-modal dialog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. <selectedcontent> và rich options** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **32. command và commandfor** nối từ **31. Modal và non-modal dialog** sang **33. <selectedcontent> và rich options**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. `command` và `commandfor`
 
@@ -604,7 +604,7 @@ Các commands như `show-modal`, `close`, `request-close` có thể giảm JavaS
 
 # PHẦN 9 — CUSTOMIZABLE SELECT
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **33. <selectedcontent> và rich options** tiếp nhận điểm tựa từ **32. command và commandfor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. referrerpolicy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **33. <selectedcontent> và rich options** nối từ **32. command và commandfor** sang **34. referrerpolicy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. `<selectedcontent>` và rich options
 
@@ -631,7 +631,7 @@ Concept:
 
 # PHẦN 10 — ADVANCED tài nguyên (resource / 자원), LINK VÀ yêu cầu (request / 요청) ATTRIBUTES
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **34. referrerpolicy** tiếp nhận điểm tựa từ **33. <selectedcontent> và rich options** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. crossorigin và CORS chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **34. referrerpolicy** nối từ **33. <selectedcontent> và rich options** sang **35. crossorigin và CORS chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. `referrerpolicy`
 
@@ -649,7 +649,7 @@ Policies như `no-referrer`, `origin`, `same-origin`, `strict-origin`, `strict-o
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **35. crossorigin và CORS chế độ (mode / 모드)** tiếp nhận điểm tựa từ **34. referrerpolicy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. ping và hyperlink auditing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **35. crossorigin và CORS chế độ (mode / 모드)** nối từ **34. referrerpolicy** sang **36. ping và hyperlink auditing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `crossorigin` và CORS chế độ (mode / 모드)
 
@@ -670,7 +670,7 @@ Trên script/link/font/SRI scenarios, CORS chế độ (mode / 모드) cũng có
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** tiếp nhận điểm tựa từ **35. crossorigin và CORS chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. hreflang, alternate resources và SEO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** nối từ **35. crossorigin và CORS chế độ (mode / 모드)** sang **37. hreflang, alternate resources và SEO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. `ping` và hyperlink auditing
 
@@ -686,7 +686,7 @@ Trình duyệt (browser / 브라우저) có thể gửi auditing requests khi đ
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** nêu điều cần giải thích; **37. hreflang, alternate resources và SEO** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **38. Responsive preload và priority hints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** đặt vấn đề; **37. hreflang, alternate resources và SEO** đối chiếu bằng chứng, rồi **38. Responsive preload và priority hints** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. `hreflang`, alternate resources và SEO
 Phần này nối mạch bài học với “37. `hreflang`, alternate resources và SEO”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -702,7 +702,7 @@ Phần này nối mạch bài học với “37. `hreflang`, alternate resources
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **37. hreflang, alternate resources và SEO** nêu điều cần giải thích; **38. Responsive preload và priority hints** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **39. Parser-blocking, render-blocking và preload scanner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **37. hreflang, alternate resources và SEO** đặt vấn đề; **38. Responsive preload và priority hints** đối chiếu bằng chứng, rồi **39. Parser-blocking, render-blocking và preload scanner** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. Responsive preload và priority hints
 
@@ -714,7 +714,7 @@ Hiệu năng (performance / 성능) decisions nên đo bằng mạng (network / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **39. Parser-blocking, render-blocking và preload scanner** tiếp nhận điểm tựa từ **38. Responsive preload và priority hints** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **39. Parser-blocking, render-blocking và preload scanner** nối từ **38. Responsive preload và priority hints** sang **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Parser-blocking, render-blocking và preload scanner
 
@@ -726,7 +726,7 @@ Trình duyệt (browser / 브라우저) còn có speculative/preload scanner đ�
 
 # PHẦN 11 — siêu dữ liệu (metadata / 메타데이터) ADVANCED
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** tiếp nhận điểm tựa từ **39. Parser-blocking, render-blocking và preload scanner** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. meta name="color-scheme"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** nối từ **39. Parser-blocking, render-blocking và preload scanner** sang **41. meta name="color-scheme"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `meta http-equiv` không phải replacement hoàn chỉnh cho HTTP headers
 
@@ -750,7 +750,7 @@ Trình duyệt (browser / 브라우저) chỉ hỗ trợ những directives cụ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **41. meta name="color-scheme"** tiếp nhận điểm tựa từ **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Document-level referrer chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **41. meta name="color-scheme"** nối từ **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** sang **42. Document-level referrer chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. `meta name="color-scheme"`
 Phần này nối mạch bài học với “41. `meta name="color-scheme"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -767,7 +767,7 @@ Khả năng tiếp cận (accessibility / 접근성) implication là UA controls
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **42. Document-level referrer chính sách (policy / 정책)** tiếp nhận điểm tựa từ **41. meta name="color-scheme"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. bản địa (native / 네이티브) HTML trước ARIA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **42. Document-level referrer chính sách (policy / 정책)** nối từ **41. meta name="color-scheme"** sang **43. bản địa (native / 네이티브) HTML trước ARIA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Document-level referrer chính sách (policy / 정책)
 
@@ -779,7 +779,7 @@ Nguyên tắc thiết kế là chính sách (policy / 정책) toàn site/documen
 
 # PHẦN 12 — khả năng tiếp cận (accessibility / 접근성) VÀ ARIA NHƯ MỘT API tầng (layer / 계층)
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **43. bản địa (native / 네이티브) HTML trước ARIA** tiếp nhận điểm tựa từ **42. Document-level referrer chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Accessible name và description** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **43. bản địa (native / 네이티브) HTML trước ARIA** nối từ **42. Document-level referrer chính sách (policy / 정책)** sang **44. Accessible name và description**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. bản địa (native / 네이티브) HTML trước ARIA
 
@@ -799,7 +799,7 @@ thường tốt hơn:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **44. Accessible name và description** tiếp nhận điểm tựa từ **43. bản địa (native / 네이티브) HTML trước ARIA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. aria-expanded và aria-controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **44. Accessible name và description** nối từ **43. bản địa (native / 네이티브) HTML trước ARIA** sang **45. aria-expanded và aria-controls**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Accessible name và description
 
@@ -827,7 +827,7 @@ Name trả lời “điều khiển (control / 제어) là gì”; description c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **45. aria-expanded và aria-controls** tiếp nhận điểm tựa từ **44. Accessible name và description** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. aria-invalid và aria-errormessage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **45. aria-expanded và aria-controls** nối từ **44. Accessible name và description** sang **46. aria-invalid và aria-errormessage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. `aria-expanded` và `aria-controls`
 Phần này nối mạch bài học với “45. `aria-expanded` và `aria-controls`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -846,7 +846,7 @@ Nếu bản địa (native / 네이티브) `details/summary` hoặc Popover đá
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **46. aria-invalid và aria-errormessage** tiếp nhận điểm tựa từ **45. aria-expanded và aria-controls** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. aria-busy, live regions và động (dynamic / 동적) updates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **46. aria-invalid và aria-errormessage** nối từ **45. aria-expanded và aria-controls** sang **47. aria-busy, live regions và động (dynamic / 동적) updates**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. `aria-invalid` và `aria-errormessage`
 
@@ -871,7 +871,7 @@ Nếu đầu vào (input / 입력) đang valid, đừng để stale `aria-invali
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **47. aria-busy, live regions và động (dynamic / 동적) updates** tiếp nhận điểm tựa từ **46. aria-invalid và aria-errormessage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. aria-hidden, hidden, inert và disabled khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **47. aria-busy, live regions và động (dynamic / 동적) updates** nối từ **46. aria-invalid và aria-errormessage** sang **48. aria-hidden, hidden, inert và disabled khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. `aria-busy`, live regions và động (dynamic / 동적) updates
 
@@ -881,7 +881,7 @@ Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `asse
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **48. aria-hidden, hidden, inert và disabled khác nhau** tiếp nhận điểm tựa từ **47. aria-busy, live regions và động (dynamic / 동적) updates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Sanitization không phải remove <script>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **48. aria-hidden, hidden, inert và disabled khác nhau** nối từ **47. aria-busy, live regions và động (dynamic / 동적) updates** sang **49. Sanitization không phải remove <script>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. `aria-hidden`, `hidden`, `inert` và `disabled` khác nhau
 
@@ -893,7 +893,7 @@ Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `asse
 
 # PHẦN 13 — bảo mật (security / 보안) DEEPER
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **49. Sanitization không phải remove <script>** tiếp nhận điểm tựa từ **48. aria-hidden, hidden, inert và disabled khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. URL-valued attributes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **49. Sanitization không phải remove <script>** nối từ **48. aria-hidden, hidden, inert và disabled khác nhau** sang **50. URL-valued attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Sanitization không phải remove `<script>`
 
@@ -903,7 +903,7 @@ Nếu ứng dụng (application / 애플리케이션) thực sự cho phép rich
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **50. URL-valued attributes** tiếp nhận điểm tựa từ **49. Sanitization không phải remove <script>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. iframe srcdoc, sandbox và permissions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **50. URL-valued attributes** nối từ **49. Sanitization không phải remove <script>** sang **51. iframe srcdoc, sandbox và permissions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. URL-valued attributes
 
@@ -913,7 +913,7 @@ Ví dụ nếu tính năng (feature / 기능) chỉ cho bên ngoài (external / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **51. iframe srcdoc, sandbox và permissions** tiếp nhận điểm tựa từ **50. URL-valued attributes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Valid HTML quan trọng đặc biệt với SSR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **51. iframe srcdoc, sandbox và permissions** nối từ **50. URL-valued attributes** sang **52. Valid HTML quan trọng đặc biệt với SSR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. `iframe srcdoc`, sandbox và permissions
 
@@ -925,7 +925,7 @@ Ví dụ nếu tính năng (feature / 기능) chỉ cho bên ngoài (external / 
 
 # PHẦN 14 — SSR, FRAMEWORKS VÀ PARSER-STABLE MARKUP
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **52. Valid HTML quan trọng đặc biệt với SSR** tiếp nhận điểm tựa từ **51. iframe srcdoc, sandbox và permissions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Declarative Shadow DOM và SSR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **52. Valid HTML quan trọng đặc biệt với SSR** nối từ **51. iframe srcdoc, sandbox và permissions** sang **53. Declarative Shadow DOM và SSR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Valid HTML quan trọng đặc biệt với SSR
 
@@ -935,7 +935,7 @@ Trình duyệt (browser / 브라우저) không parse JSX; trình duyệt (browse
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **53. Declarative Shadow DOM và SSR** tiếp nhận điểm tựa từ **52. Valid HTML quan trọng đặc biệt với SSR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **53. Declarative Shadow DOM và SSR** nối từ **52. Valid HTML quan trọng đặc biệt với SSR** sang **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Declarative Shadow DOM và SSR
 
@@ -947,7 +947,7 @@ Khi dùng, kiểm thử (test / 테스트) parser hành vi (behavior / 동작), 
 
 # PHẦN 15 — LEGACY, DEPRECATED VÀ OBSOLETE HTML
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** tiếp nhận điểm tựa từ **53. Declarative Shadow DOM và SSR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Presentational elements: <font>, <center>, <big> và <tt>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** nối từ **53. Declarative Shadow DOM và SSR** sang **55. Presentational elements: <font>, <center>, <big> và <tt>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author
 
@@ -957,7 +957,7 @@ Khi maintain legacy hệ thống (system / 시스템), hãy phân biệt hai câ
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **55. Presentational elements: <font>, <center>, <big> và <tt>** tiếp nhận điểm tựa từ **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. <strike> và <acronym>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **55. Presentational elements: <font>, <center>, <big> và <tt>** nối từ **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** sang **56. <strike> và <acronym>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Presentational elements: `<font>`, `<center>`, `<big>` và `<tt>`
 
@@ -985,7 +985,7 @@ và CSS chịu font, color, alignment, kích thước (size / 크기).
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **56. <strike> và <acronym>** tiếp nhận điểm tựa từ **55. Presentational elements: <font>, <center>, <big> và <tt>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **56. <strike> và <acronym>** nối từ **55. Presentational elements: <font>, <center>, <big> và <tt>** sang **57. <marquee>, <blink>, <bgsound> và motion/audio legacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. `<strike>` và `<acronym>`
 
@@ -1012,7 +1012,7 @@ Di chuyển (migration / 마이그레이션) tốt không chỉ đổi tên tag;
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** tiếp nhận điểm tựa từ **56. <strike> và <acronym>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. <frameset>, <frame> và <noframes>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** nối từ **56. <strike> và <acronym>** sang **58. <frameset>, <frame> và <noframes>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. `<marquee>`, `<blink>`, `<bgsound>` và motion/audio legacy
 
@@ -1022,7 +1022,7 @@ Nếu animation thực sự cần thiết, CSS/Web Animations/JavaScript cung c�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **58. <frameset>, <frame> và <noframes>** tiếp nhận điểm tựa từ **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. <applet>, <param>, <object> và plugin-era content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **58. <frameset>, <frame> và <noframes>** nối từ **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** sang **59. <applet>, <param>, <object> và plugin-era content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. `<frameset>`, `<frame>` và `<noframes>`
 
@@ -1032,7 +1032,7 @@ Hiện đại (modern / 현대적) page bố cục (layout / 레이아웃) dùng
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **59. <applet>, <param>, <object> và plugin-era content** tiếp nhận điểm tựa từ **58. <frameset>, <frame> và <noframes>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **59. <applet>, <param>, <object> và plugin-era content** nối từ **58. <frameset>, <frame> và <noframes>** sang **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. `<applet>`, `<param>`, `<object>` và plugin-era content
 
@@ -1042,7 +1042,7 @@ Hiện đại (modern / 현대적) page bố cục (layout / 레이아웃) dùng
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** tiếp nhận điểm tựa từ **59. <applet>, <param>, <object> và plugin-era content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. <dir> element khác dir toàn cục (global / 전역) attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** nối từ **59. <applet>, <param>, <object> và plugin-era content** sang **61. <dir> element khác dir toàn cục (global / 전역) attribute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. `<isindex>`, `<keygen>`, `<listing>`, `<xmp>`, `<plaintext>` và các parser-era relics
 
@@ -1052,7 +1052,7 @@ Khi gặp chúng trong mã (code / 코드) legacy, mục tiêu không phải h�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **61. <dir> element khác dir toàn cục (global / 전역) attribute** tiếp nhận điểm tựa từ **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Presentational/legacy attributes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **61. <dir> element khác dir toàn cục (global / 전역) attribute** nối từ **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** sang **62. Presentational/legacy attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. `<dir>` element khác `dir` toàn cục (global / 전역) attribute
 
@@ -1062,7 +1062,7 @@ Legacy `<dir>` element từng đại diện directory danh sách (list / 목록)
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **62. Presentational/legacy attributes** tiếp nhận điểm tựa từ **61. <dir> element khác dir toàn cục (global / 전역) attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. Legacy JavaScript attributes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **62. Presentational/legacy attributes** nối từ **61. <dir> element khác dir toàn cục (global / 전역) attribute** sang **63. Legacy JavaScript attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Presentational/legacy attributes
 
@@ -1083,7 +1083,7 @@ Một số legacy attributes vẫn có parser tính tương thích (compatibilit
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **63. Legacy JavaScript attributes** tiếp nhận điểm tựa từ **62. Presentational/legacy attributes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Anchor name và fragment IDs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **63. Legacy JavaScript attributes** nối từ **62. Presentational/legacy attributes** sang **64. Anchor name và fragment IDs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Legacy JavaScript attributes
 
@@ -1111,7 +1111,7 @@ Khi migrate, phân biệt “legacy cú pháp (syntax / 문법) bỏ được”
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **64. Anchor name và fragment IDs** tiếp nhận điểm tựa từ **63. Legacy JavaScript attributes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **64. Anchor name và fragment IDs** nối từ **63. Legacy JavaScript attributes** sang **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. Anchor `name` và fragment IDs
 
@@ -1133,7 +1133,7 @@ Hiện đại (modern / 현대적) fragment mục tiêu (target / 대상) nên d
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **64. Anchor name và fragment IDs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. Disclosure, dialog, popover và forms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** nối từ **64. Anchor name và fragment IDs** sang **66. Disclosure, dialog, popover và forms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 
@@ -1145,7 +1145,7 @@ Legacy markup thường có hidden coupling với JavaScript selectors hoặc m�
 
 # PHẦN 16 — bản địa (native / 네이티브) HTML TRƯỚC CUSTOM JAVASCRIPT
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **66. Disclosure, dialog, popover và forms** tiếp nhận điểm tựa từ **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. Parser repair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **66. Disclosure, dialog, popover và forms** nối từ **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** sang **67. Parser repair**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Disclosure, dialog, popover và forms
 
@@ -1157,7 +1157,7 @@ Native-first không có nghĩa “không được custom”. Nó nghĩa bạn t�
 
 # PHẦN 17 — gỡ lỗi (debug / 디버그) EXERCISES
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **67. Parser repair** tiếp nhận điểm tựa từ **66. Disclosure, dialog, popover và forms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Attribute/property state** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **67. Parser repair** nối từ **66. Disclosure, dialog, popover và forms** sang **68. Attribute/property state**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Parser repair
 
@@ -1174,7 +1174,7 @@ Mục tiêu là thấy nguồn (source / 소스) indentation không quyết đ�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **68. Attribute/property state** tiếp nhận điểm tựa từ **67. Parser repair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. Checkbox trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **68. Attribute/property state** nối từ **67. Parser repair** sang **69. Checkbox trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Attribute/property state
 Phần này nối mạch bài học với “68. Attribute/property state”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1189,7 +1189,7 @@ Trong console, sửa `el.value = "Bob"`, rồi so sánh `el.value`, `el.defaultV
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **69. Checkbox trạng thái (state / 상태)** tiếp nhận điểm tựa từ **68. Attribute/property state** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. Form đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **69. Checkbox trạng thái (state / 상태)** nối từ **68. Attribute/property state** sang **70. Form đơn vị sở hữu (owner / 오너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. Checkbox trạng thái (state / 상태)
 
@@ -1203,7 +1203,7 @@ Người dùng (user / 사용자) uncheck rồi so sánh `checked`, `defaultChec
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, sau nội dung của **69. Checkbox trạng thái (state / 상태)**, **70. Form đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **71. DOM clobbering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, sau nội dung của **69. Checkbox trạng thái (state / 상태)**, **70. Form đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **71. DOM clobbering** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 70. Form đơn vị sở hữu (owner / 오너)
 
@@ -1211,7 +1211,7 @@ Người dùng (user / 사용자) uncheck rồi so sánh `checked`, `defaultChec
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **71. DOM clobbering** tiếp nhận điểm tựa từ **70. Form đơn vị sở hữu (owner / 오너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. Popover và until-found** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **71. DOM clobbering** nối từ **70. Form đơn vị sở hữu (owner / 오너)** sang **72. Popover và until-found**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. DOM clobbering
 
@@ -1219,7 +1219,7 @@ Tạo form có `<input name="method">` và inspect `form.method`. Mục tiêu kh
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **72. Popover và until-found** tiếp nhận điểm tựa từ **71. DOM clobbering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **72. Popover và until-found** nối từ **71. DOM clobbering** sang **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. Popover và until-found
 
@@ -1275,7 +1275,7 @@ Một tag quan trọng vì nó tham gia một hoặc nhiều layers trong luồn
 
 Phần này khép những khoảng nhỏ còn lại sau khi kiểm tra (audit / 감사) toàn bộ chuẩn gốc (canonical / 정본) HTML notes theo document cấu trúc (structure / 구조), ngữ nghĩa (semantics / 의미론), siêu dữ liệu (metadata / 메타데이터), tables, forms, kiểm tra hợp lệ (validation / 검증), DOM, khả năng tiếp cận (accessibility / 접근성), hiệu năng (performance / 성능), bảo mật (security / 보안), hiện đại (modern / 현대적) HTML và legacy HTML. Các mục dưới đây không phải danh sách thuộc lòng; mục tiêu vẫn là hiểu **meaning → trình duyệt (browser / 브라우저) processing → lúc dùng → ngữ nghĩa (semantic / 의미적)/khả năng tiếp cận (accessibility / 접근성) implication**.
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** tiếp nhận điểm tựa từ **72. Popover và until-found** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **74. Những input type dễ bị bỏ sót: submit, reset, button, image** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** nối từ **72. Popover và until-found** sang **74. Những input type dễ bị bỏ sót: submit, reset, button, image**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 73. `<colgroup>` và `<col>`: mô tả nhóm cột, không phải header thay thế
 
@@ -1310,7 +1310,7 @@ Trình duyệt (browser / 브라우저) dùng column mô hình (model / 모델) 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **74. Những input type dễ bị bỏ sót: submit, reset, button, image** tiếp nhận điểm tựa từ **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **75. form, novalidate, formnovalidate và accept-charset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **74. Những input type dễ bị bỏ sót: submit, reset, button, image** nối từ **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** sang **75. form, novalidate, formnovalidate và accept-charset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 74. Những `input type` dễ bị bỏ sót: `submit`, `reset`, `button`, `image`
 
@@ -1329,7 +1329,7 @@ Trình duyệt (browser / 브라우저) còn có thể submit click coordinates 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **75. form, novalidate, formnovalidate và accept-charset** tiếp nhận điểm tựa từ **74. Những input type dễ bị bỏ sót: submit, reset, button, image** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **75. form, novalidate, formnovalidate và accept-charset** nối từ **74. Những input type dễ bị bỏ sót: submit, reset, button, image** sang **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 75. `form`, `novalidate`, `formnovalidate` và `accept-charset`
 
@@ -1354,7 +1354,7 @@ Hai attributes này không có nghĩa máy chủ (server / 서버) được bỏ
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** tiếp nhận điểm tựa từ **75. form, novalidate, formnovalidate và accept-charset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **77. accept, list, size, placeholder: hint, association và presentation khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** nối từ **75. form, novalidate, formnovalidate và accept-charset** sang **77. accept, list, size, placeholder: hint, association và presentation khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?
 
@@ -1383,7 +1383,7 @@ Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không đi�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **77. accept, list, size, placeholder: hint, association và presentation khác nhau** tiếp nhận điểm tựa từ **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **78. accesskey, autocapitalize và autocorrect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **77. accept, list, size, placeholder: hint, association và presentation khác nhau** nối từ **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** sang **78. accesskey, autocapitalize và autocorrect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 77. `accept`, `list`, `size`, `placeholder`: hint, association và presentation khác nhau
 
@@ -1403,7 +1403,7 @@ Trình duyệt (browser / 브라우저) có thể lọc picker UI, nhưng attack
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **78. accesskey, autocapitalize và autocorrect** tiếp nhận điểm tựa từ **77. accept, list, size, placeholder: hint, association và presentation khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **78. accesskey, autocapitalize và autocorrect** nối từ **77. accept, list, size, placeholder: hint, association và presentation khác nhau** sang **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `accesskey`, `autocapitalize` và `autocorrect`
 
@@ -1413,7 +1413,7 @@ Trình duyệt (browser / 브라우저) có thể lọc picker UI, nhưng attack
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** tiếp nhận điểm tựa từ **78. accesskey, autocapitalize và autocorrect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **80. meta name="theme-color" và link rel="manifest"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** nối từ **78. accesskey, autocapitalize và autocorrect** sang **80. meta name="theme-color" và link rel="manifest"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `loading="lazy"` trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên
 
@@ -1433,7 +1433,7 @@ Lazy loading không thay ngữ nghĩa (semantic / 의미적) yêu cầu (require
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **80. meta name="theme-color" và link rel="manifest"** tiếp nhận điểm tựa từ **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **81. blocking="render": khi author chủ động đánh dấu render-blocking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **80. meta name="theme-color" và link rel="manifest"** nối từ **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** sang **81. blocking="render": khi author chủ động đánh dấu render-blocking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. `meta name="theme-color"` và `link rel="manifest"`
 
@@ -1457,7 +1457,7 @@ Trình duyệt (browser / 브라우저) fetch manifest như một bên ngoài (e
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **81. blocking="render": khi author chủ động đánh dấu render-blocking** tiếp nhận điểm tựa từ **80. meta name="theme-color" và link rel="manifest"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **81. blocking="render": khi author chủ động đánh dấu render-blocking** nối từ **80. meta name="theme-color" và link rel="manifest"** sang **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. `blocking="render"`: khi author chủ động đánh dấu render-blocking
 
@@ -1478,7 +1478,7 @@ Không thêm `blocking="render"` bừa. Render-blocking tài nguyên (resource /
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** tiếp nhận điểm tựa từ **81. blocking="render": khi author chủ động đánh dấu render-blocking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** nối từ **81. blocking="render": khi author chủ động đánh dấu render-blocking** sang **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. Declarative Shadow DOM 2026: không chỉ có `shadowrootmode`
 
@@ -1500,7 +1500,7 @@ Ví dụ concept:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)** nối từ **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 83. `interestfor`: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)
 

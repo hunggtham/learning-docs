@@ -40,7 +40,7 @@ Bảng này cho biết mỗi chapter đã giải thích được concept, mechan
 | Liên kết chéo | Rất tốt | `00`, `16`, `17` tạo được đồ thị kiến thức; ranh giới chapter đã khá rõ |
 | Khả năng học lâu dài | Rất tốt | Đủ sâu để đọc như sách; vòng tiếp theo nên tối ưu khả năng đọc thay vì tăng chiều dài |
 
-> **Chuyển mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **2. Chuẩn chất lượng của một chapter** gom các mảnh từ **1. Kết luận tổng thể** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Đánh giá theo nhóm chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **2. Chuẩn chất lượng của một chapter** tổng hợp từ **1. Kết luận tổng thể** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Đánh giá theo nhóm chapter** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Chuẩn chất lượng của một chapter
 
@@ -63,7 +63,7 @@ Một chapter được xem là hoàn chỉnh khi người đọc trả lời đ�
 
 Một chapter đạt chất lượng cao khi người đọc có thể dùng mô hình đó để phân tích tình huống mới, thay vì chỉ nhắc lại ví dụ trong sách.
 
-> **Chuyển mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **3. Đánh giá theo nhóm chapter** tiếp nhận điểm tựa từ **2. Chuẩn chất lượng của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Trùng lặp: lặp có ích và lặp cần tránh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **3. Đánh giá theo nhóm chapter** nối từ **2. Chuẩn chất lượng của một chapter** sang **4. Trùng lặp: lặp có ích và lặp cần tránh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Đánh giá theo nhóm chapter
 
@@ -138,7 +138,7 @@ Ranh giới nên duy trì:
 
 `25` có khung phân tích trung tính về xã hội dân sự, truyền thông, tập hội, biểu tình và không gian công luận. Vì có yếu tố chính trị–pháp lý, đây là chapter cần kỷ luật nguồn cao nhất: dữ kiện hiện hành, quyền pháp lý, cơ quan, chính sách và sự kiện mới phải được kiểm tra trước khi cập nhật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **4. Trùng lặp: lặp có ích và lặp cần tránh** tiếp nhận điểm tựa từ **3. Đánh giá theo nhóm chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chất lượng sư phạm và tải nhận thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **4. Trùng lặp: lặp có ích và lặp cần tránh** nối từ **3. Đánh giá theo nhóm chapter** sang **5. Chất lượng sư phạm và tải nhận thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Trùng lặp: lặp có ích và lặp cần tránh
 
@@ -166,7 +166,7 @@ Các vùng giao nhau cần kiểm soát nhất:
 | `19` ↔ `26` | văn hoá làm đẹp ↔ y khoa/sức khoẻ |
 | `15` ↔ `29` | cấu trúc dân số ↔ cơ chế chăm sóc cấp hộ |
 
-> **Chuyển mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **5. Chất lượng sư phạm và tải nhận thức** tiếp nhận điểm tựa từ **4. Trùng lặp: lặp có ích và lặp cần tránh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **5. Chất lượng sư phạm và tải nhận thức** nối từ **4. Trùng lặp: lặp có ích và lặp cần tránh** sang **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chất lượng sư phạm và tải nhận thức
 
@@ -192,7 +192,7 @@ Một vấn đề còn đáng theo dõi là **mật độ tiêu đề phụ**. `
 
 thay vì tiếp tục sinh tiêu đề.
 
-> **Chuyển mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** tiếp nhận điểm tựa từ **5. Chất lượng sư phạm và tải nhận thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chính sách nguồn nên được giữ thống nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** nối từ **5. Chất lượng sư phạm và tải nhận thức** sang **7. Chính sách nguồn nên được giữ thống nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này
 
@@ -218,7 +218,7 @@ thương hiệu / tên thể loại / thuật ngữ đã cố định → có th
 
 Mục tiêu là **văn xuôi tiếng Việt tự nhiên**, không phải tỷ lệ 0% từ tiếng Anh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** nêu điều cần giải thích; **7. Chính sách nguồn nên được giữ thống nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Chính sách độ mới của dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** đặt vấn đề; **7. Chính sách nguồn nên được giữ thống nhất** đối chiếu bằng chứng, rồi **8. Chính sách độ mới của dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Chính sách nguồn nên được giữ thống nhất
 
@@ -251,7 +251,7 @@ sự kiện được xác nhận
 
 Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng người đọc tới cơ quan có thẩm quyền thay vì đóng băng con số trong sách.
 
-> **Chuyển mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **7. Chính sách nguồn nên được giữ thống nhất** nêu điều cần giải thích; **8. Chính sách độ mới của dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Liên kết chéo cần giữ ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **7. Chính sách nguồn nên được giữ thống nhất** đặt vấn đề; **8. Chính sách độ mới của dữ liệu** đối chiếu bằng chứng, rồi **9. Liên kết chéo cần giữ ổn định** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Chính sách độ mới của dữ liệu
 
@@ -268,7 +268,7 @@ Các số liệu dân số, hành vi nền tảng và quy định có thể thay
 - số liệu khí hậu phải có địa điểm, giai đoạn quan sát và nguồn;
 - quy tắc rác, trường học, căn hộ, childcare và dịch vụ phải phân biệt cấp quốc gia, cấp địa phương, quy tắc tổ chức và chuẩn mực không chính thức.
 
-> **Chuyển mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **8. Chính sách độ mới của dữ liệu** nêu điều cần giải thích; **9. Liên kết chéo cần giữ ổn định** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Hướng phát triển tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **8. Chính sách độ mới của dữ liệu** đặt vấn đề; **9. Liên kết chéo cần giữ ổn định** đối chiếu bằng chứng, rồi **10. Hướng phát triển tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Liên kết chéo cần giữ ổn định
 
@@ -296,7 +296,7 @@ Cross-link chỉ hữu ích khi nó có lý do học tập rõ ràng. Hãy kiể
 31 Căn hộ ↔ 32 Khí hậu ↔ 15 Già hoá ↔ 26 Sức khoẻ
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **10. Hướng phát triển tiếp theo** tiếp nhận điểm tựa từ **9. Liên kết chéo cần giữ ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện**, **10. Hướng phát triển tiếp theo** nối từ **9. Liên kết chéo cần giữ ổn định** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 10. Hướng phát triển tiếp theo
 

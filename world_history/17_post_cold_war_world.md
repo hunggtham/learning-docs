@@ -32,13 +32,13 @@ Digital platforms làm giảm chi phí phối hợp nhưng tập trung dữ li�
 
 “Democracy backsliding”, “globalization” hay “multipolarity” cần operational definition: chỉ số nào, thời gian (time / 시간) cửa sổ (window / 윈도우) nào, actor nào. Một cuộc khủng hoảng truyền thông không đại diện cho toàn xã hội; GDP không đo resilience, unpaid care, ecological mất mát (loss / 손실) hay coercion.
 
-> **Chuyển mạch:** Trong **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng**, **Unipolarity, multipolarity và mạng (network / 네트워크) power** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Unipolarity, multipolarity và network power là ba cách tổ chức quyền lực khác nhau sau 1991. **Bằng chứng, giới hạn và cầu nối** đối chiếu thể chế, công nghệ và mạng trước depth pass.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Trade/finance networks, xung đột (conflict / 충돌) dữ liệu (data / 데이터), nền tảng (platform / 플랫폼) transparency, climate observations, demographic projections và chính sách (policy / 정책) documents cần được đặt cạnh survey/ethnography; proxy measures như GDP hoặc social-media trend dễ phóng đại một phần xã hội. Counterfactual: nếu một nền tảng (platform / 플랫폼)/tuyến (route / 경로)/chips supplier không trở thành chokepoint, rủi ro (risk / 위험) có thể phân tán nhưng competition sẽ tìm nút (node / 노드) khác. Cầu nối mở sang vòng nghiên cứu mới là **climate, AI, năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), demographic aging và institutional redesign**.
 
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối** sang **Độ sâu pass**, hãy đối chiếu thể chế, công nghệ và mạng quyền lực sau 1991 để thấy vì sao phân mảnh có thể cùng tồn tại với hội nhập.
+> **Nối mạch:** Đối chiếu thể chế, công nghệ và mạng quyền lực giúp giải thích vì sao phân mảnh có thể cùng tồn tại với hội nhập; **Độ sâu pass** kiểm tra đường dẫn phụ thuộc của cấu trúc đó.
 
 ## Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power
 

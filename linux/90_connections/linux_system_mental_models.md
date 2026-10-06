@@ -27,7 +27,7 @@ graph LR
 
 Khi yêu cầu thất bại, đồ thị này tạo ra danh sách các lớp có thể quan sát và kiểm tra.
 
-> **Chuyển mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tên và đối tượng** tiếp nhận điểm tựa từ **Một yêu cầu web đi qua Linux như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tham chiếu và vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tên và đối tượng** nối từ **Một yêu cầu web đi qua Linux như thế nào?** sang **Tham chiếu và vòng đời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tên và đối tượng
 
@@ -39,7 +39,7 @@ Khi đồng nhất tên với đối tượng, việc xử lý sự cố dễ đ
 
 Mô hình chung là luôn hỏi: **bước phân giải nào biến tên thành đối tượng hoặc trạng thái hiện tại?**
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tham chiếu và vòng đời** tiếp nhận điểm tựa từ **Tên và đối tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cô lập là thay đổi góc nhìn và quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tham chiếu và vòng đời** nối từ **Tên và đối tượng** sang **Cô lập là thay đổi góc nhìn và quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tham chiếu và vòng đời
 
@@ -47,7 +47,7 @@ Nhiều đối tượng Linux tồn tại dựa trên tham chiếu và vòng đ�
 
 Khái niệm **tham chiếu và vòng đời (reference/lifetime)** có mối liên hệ mạnh với lập trình: garbage collection, tham chiếu (reference / 참조) counting, quyền sở hữu tài nguyên và RAII/`try-with-resources` đều giải quyết các biến thể của câu hỏi "tài nguyên này vẫn đang được ai giữ?".
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Cô lập là thay đổi góc nhìn và quyền** tiếp nhận điểm tựa từ **Tham chiếu và vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Cô lập là thay đổi góc nhìn và quyền** nối từ **Tham chiếu và vòng đời** sang **Khả năng kết hợp thông qua tệp (file / 파일) descriptor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cô lập là thay đổi góc nhìn và quyền
 
@@ -67,7 +67,7 @@ Sự cô lập không phải một cơ chế duy nhất. Nó là sự kết hợ
 
 Đó là lý do câu "ứng dụng chạy trong bộ chứa (container / 컨테이너)" chưa đủ để trả lời một câu hỏi bảo mật.
 
-> **Chuyển mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** tiếp nhận điểm tựa từ **Cô lập là thay đổi góc nhìn và quyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái và bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** nối từ **Cô lập là thay đổi góc nhìn và quyền** sang **Trạng thái và bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng kết hợp thông qua tệp (file / 파일) descriptor
 
@@ -75,7 +75,7 @@ Tệp thông thường, pipe, terminal và socket khác nhau về quy tắc ho�
 
 Đây là một bài học rộng hơn trong kỹ nghệ phần mềm: **giao diện nhỏ, ổn định làm tăng khả năng kết hợp**. Giao diện I/O của Unix là một ví dụ lịch sử rất rõ cho nguyên tắc này.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** nêu điều cần giải thích; **Trạng thái và bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dung lượng phục vụ và hàng đợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** đặt vấn đề; **Trạng thái và bằng chứng** đối chiếu bằng chứng, rồi **Dung lượng phục vụ và hàng đợi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trạng thái và bằng chứng
 
@@ -89,7 +89,7 @@ quan sát -> giả thuyết -> phép kiểm tra phân biệt -> can thiệp -> x
 
 Cùng cách suy nghĩ này áp dụng được cho gỡ lỗi mã nguồn, hiệu năng truy vấn cơ sở dữ liệu và hệ thống phân tán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái và bằng chứng** nêu điều cần giải thích; **Dung lượng phục vụ và hàng đợi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái và bằng chứng** đặt vấn đề; **Dung lượng phục vụ và hàng đợi** đối chiếu bằng chứng, rồi **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dung lượng phục vụ và hàng đợi
 
@@ -107,7 +107,7 @@ Trong đó `L` là số lượng phần tử trung bình trong hệ thống, `λ
 
 Cần nhớ giả định trạng thái ổn định và ranh giới đo phải được xác định rõ; một đợt tăng tải ngắn trên môi trường vận hành (production / 운영 환경) có thể chưa thỏa các giả định đó.
 
-> **Chuyển mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** tiếp nhận điểm tựa từ **Dung lượng phục vụ và hàng đợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** nối từ **Dung lượng phục vụ và hàng đợi** sang **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới
 
@@ -115,7 +115,7 @@ Page bộ nhớ đệm (cache / 캐시) dùng RAM để giảm I/O đĩa. bộ n
 
 Mô hình chung là bộ nhớ đệm (cache / 캐시) đổi **không gian lưu trữ và độ phức tạp nhất quán** để lấy **độ trễ thấp hơn hoặc thông lượng cao hơn**. Khi gỡ lỗi, hãy hỏi bộ nhớ đệm (cache / 캐시) nằm ở lớp nào, cơ chế hết hạn là gì và dữ liệu được làm mới theo quy tắc nào.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái mong muốn và trạng thái thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** nối từ **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** sang **Trạng thái mong muốn và trạng thái thực tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp
 
@@ -123,7 +123,7 @@ Bộ nhớ ảo ánh xạ địa chỉ ảo → vật lý. Hệ thống tệp á
 
 **Ánh xạ gián tiếp (indirection)** tạo sự linh hoạt nhưng đồng thời thêm một lớp phân giải có thể thất bại. Người xử lý sự cố có kinh nghiệm thường nhanh hơn vì biết các điểm ánh xạ nào cần được kiểm tra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái mong muốn và trạng thái thực tế** tiếp nhận điểm tựa từ **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối với độ tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái mong muốn và trạng thái thực tế** nối từ **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** sang **Kết nối với độ tin cậy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái mong muốn và trạng thái thực tế
 
@@ -133,7 +133,7 @@ Sửa `application.yml` không có nghĩa JVM đang chạy đã nạp lại. S�
 
 Việc xác minh vận hành phải kiểm tra **trạng thái thực tế đang có hiệu lực**, không chỉ nhìn tệp cấu hình.
 
-> **Chuyển mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Kết nối với độ tin cậy** tiếp nhận điểm tựa từ **Trạng thái mong muốn và trạng thái thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Kết nối với độ tin cậy** nối từ **Trạng thái mong muốn và trạng thái thực tế** sang **Mô hình tư duy cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kết nối với độ tin cậy
 
@@ -141,7 +141,7 @@ Một hệ thống đáng tin không phải là hệ thống "không bao giờ l
 
 Chính sách restart của systemd, lưu giữ nhật ký, giới hạn tài nguyên, đặc quyền tối thiểu, health check và backup đều chỉ là cơ chế. Chúng chỉ có giá trị khi phù hợp với mô hình lỗi thực tế của hệ thống.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Mô hình tư duy cuối cùng** gom các mảnh từ **Kết nối với độ tin cậy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Mô hình tư duy cuối cùng** tổng hợp từ **Kết nối với độ tin cậy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy cuối cùng
 

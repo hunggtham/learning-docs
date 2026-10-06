@@ -1201,7 +1201,7 @@ paint/composite
 next useful frame
 ```
 
-> **Chuyển mạch:** Trace A đo interaction path; Trace B đo load/update path, nên so sánh chúng theo cùng mốc style/layout/paint/composite trước khi rút ra cross-link.
+> **Nối mạch:** Trace A đo interaction path; Trace B đo load/update path, nên so sánh chúng theo cùng mốc style/layout/paint/composite trước khi rút ra cross-link.
 
 ## Dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)
 
@@ -1231,7 +1231,7 @@ What regression guard should remain?
 
 Nếu câu trả lời ban đầu và bằng chứng (evidence / 증거) khác nhau, đó không phải thất bại. Đó chính là lý do hiệu năng (performance / 성능) profiling tồn tại.
 
-> **Chuyển mạch:** Sau khi đối chiếu Trace B với Trace A, cross-link phải chỉ ra nguyên nhân–hệ quả đo được và boundary của từng workload, không chỉ lặp lại số liệu.
+> **Nối mạch:** Sau khi đối chiếu Trace B với Trace A, cross-link phải chỉ ra nguyên nhân–hệ quả đo được và boundary của từng workload, không chỉ lặp lại số liệu.
 
 ## Cross-link
 

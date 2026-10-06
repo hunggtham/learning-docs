@@ -24,7 +24,7 @@ Không có một cơ quan nào “làm việc một mình”. Một hành độn
 
 ---
 
-> **Chuyển mạch:** Organs form coupled control loops, not isolated parts; homeostasis changes continuously, and reserve capacity explains why normal resting output can hide limited resilience.
+> **Nối mạch:** Organs form coupled control loops, not isolated parts; homeostasis changes continuously, and reserve capacity explains why normal resting output can hide limited resilience.
 
 ## 2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi
 
@@ -54,7 +54,7 @@ Xem lại nền tảng tại [Sinh lý động vật và Cân bằng nội môi]
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** tiếp nhận điểm tựa từ **2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** nối từ **2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi** sang **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”
 
@@ -74,7 +74,7 @@ an toàn (safety / 안전)\ Margin \approx sức chứa (capacity / 용량) - Us
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** tiếp nhận điểm tựa từ **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** nối từ **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** sang **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi
 
@@ -100,7 +100,7 @@ Exercise minh họa rõ nhất: kích thích tập luyện (training stimulus) t
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện** tiếp nhận điểm tựa từ **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện** nối từ **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** sang **6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện
 
@@ -118,7 +118,7 @@ Vì vậy “calories matter” và “chất lượng thực phẩm (food quali
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện** xác định đầu vào; **6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Body energy cần calories nhưng còn phụ thuộc metabolism; nutrition là supply chain cho chuyển hóa. **Hydration** kiểm tra giới hạn của trực giác “càng nhiều càng tốt”.
 
 ## 6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa
 
@@ -160,7 +160,7 @@ Sodium rất cần cho nerve impulse, extracellular fluid và muscle hàm (funct
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa** xác định đầu vào; **7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Glucose — không phải chất độc, mà là fuel cần regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nutrition supply chain cung cấp substrate; hydration giữ water balance; **glucose** kiểm tra fuel cần regulation thay vì bị gắn nhãn độc.
 
 ## 7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai
 
@@ -174,7 +174,7 @@ Urine quá đậm kéo dài có thể gợi ý intake thấp trong nhiều ngữ
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **8. Glucose — không phải chất độc, mà là fuel cần regulation** tiếp nhận điểm tựa từ **7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Glucose — không phải chất độc, mà là fuel cần regulation** nối từ **7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai** sang **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Glucose — không phải chất độc, mà là fuel cần regulation
 
@@ -188,7 +188,7 @@ Một meal làm glucose tăng tạm thời không đồng nghĩa bệnh. Clinica
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** tiếp nhận điểm tựa từ **8. Glucose — không phải chất độc, mà là fuel cần regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Muscle — “metabolic organ” thường bị đánh giá thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** nối từ **8. Glucose — không phải chất độc, mà là fuel cần regulation** sang **10. Muscle — “metabolic organ” thường bị đánh giá thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng
 
@@ -202,7 +202,7 @@ BMI hữu ích ở quần thể-level screening nhưng không phải diagnostic 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **10. Muscle — “metabolic organ” thường bị đánh giá thấp** tiếp nhận điểm tựa từ **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Muscle — “metabolic organ” thường bị đánh giá thấp** nối từ **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** sang **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Muscle — “metabolic organ” thường bị đánh giá thấp
 
@@ -216,7 +216,7 @@ Nếu kích thích tập luyện tăng mà sleep và nutrition không theo kịp
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** tiếp nhận điểm tựa từ **10. Muscle — “metabolic organ” thường bị đánh giá thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** nối từ **10. Muscle — “metabolic organ” thường bị đánh giá thấp** sang **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen
 
@@ -239,7 +239,7 @@ Một lợi ích thực tế của aerobic huấn luyện (training / 학습) l�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** tiếp nhận điểm tựa từ **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** nối từ **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** sang **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên
 
@@ -251,7 +251,7 @@ Practical principle đơn giản là **move more, sit less**. Những đoạn đ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** tiếp nhận điểm tựa từ **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** nối từ **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** sang **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống
 
@@ -277,7 +277,7 @@ Nếu một người thường xuyên có difficulty sleeping kéo dài, buồn 
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** tiếp nhận điểm tựa từ **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** nối từ **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** sang **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới
 
@@ -291,7 +291,7 @@ Nếu phải tăng caffeine liên tục để đạt cùng mức tỉnh táo, c�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** tiếp nhận điểm tựa từ **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** nối từ **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** sang **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress
 
@@ -309,7 +309,7 @@ Nếu anxiety, low mood, panic, irritability, substance use hoặc mất mát (l
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** tiếp nhận điểm tựa từ **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** nối từ **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** sang **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”
 
@@ -323,7 +323,7 @@ Xem thêm [Hệ thần kinh, Nội tiết và Miễn dịch](02_nervous_endocrin
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** tiếp nhận điểm tựa từ **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** nối từ **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** sang **18. Gan và thận — cơ thể đã có hệ detox rất mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ
 
@@ -342,7 +342,7 @@ Do đó không nên xem mọi marker hay cảm giác “viêm” như một enem
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** tiếp nhận điểm tựa từ **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** nối từ **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** sang **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Gan và thận — cơ thể đã có hệ detox rất mạnh
 
@@ -354,7 +354,7 @@ Quản lý sức khỏe hữu ích hơn là giảm exposure thật sự có hạ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** tiếp nhận điểm tựa từ **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** nối từ **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** sang **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng
 
@@ -366,7 +366,7 @@ Practical foundation vẫn là diet diversity, fibre-rich plant foods khi phù h
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** tiếp nhận điểm tựa từ **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** nối từ **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** sang **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe
 
@@ -378,7 +378,7 @@ Một principle rộng hơn xuất hiện ở đây: **small maintenance repeate
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** tiếp nhận điểm tựa từ **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** nối từ **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** sang **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize
 
@@ -390,7 +390,7 @@ Với prescription drug, principle là dùng đúng indication/dose và không c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** tiếp nhận điểm tựa từ **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** nối từ **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** sang **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”
 
@@ -416,7 +416,7 @@ Fat-soluble vitamin, mineral và herbal sản phẩm (product / 제품) có th�
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** tiếp nhận điểm tựa từ **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** nối từ **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** sang **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?
 
@@ -434,7 +434,7 @@ Một khung phần mềm (framework / 프레임워크) thực dụng là chia d�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** nêu điều cần giải thích; **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** đặt vấn đề; **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** kiểm tra bằng chứng, rồi **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** mở rộng hệ quả.
 
 ## 24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe
 
@@ -456,7 +456,7 @@ Ví dụ nhịp tim lúc nghỉ cao hơn một ngày sau thiếu ngủ không đ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** nêu điều cần giải thích; **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** đặt vấn đề; **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** kiểm tra bằng chứng, rồi **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** mở rộng hệ quả.
 
 ## 25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số
 
@@ -470,7 +470,7 @@ Persistent abnormal readings cần professional evaluation vì hypertension thư
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, sau khi thấy quy trình trong **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số**, **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Blood-pressure mechanism đặt nền; lab reference range thêm bằng chứng nhưng không chia khỏe/bệnh tuyệt đối. **Preventive care** chuyển hiểu biết đó thành xử lý risk sớm.
 
 ## 26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh
 
@@ -488,7 +488,7 @@ Một kiểm thử (test / 테스트) có thể dương tính giả (false posit
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** cho ta quy tắc; **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** nêu quy tắc; **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** thử quy tắc trong tình huống, rồi **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** mở rộng hệ quả.
 
 ## 27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom
 
@@ -500,7 +500,7 @@ Practical principle là duy trì primary-care/dental contact phù hợp thay vì
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** tiếp nhận điểm tựa từ **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** nối từ **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** sang **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật
 
@@ -512,7 +512,7 @@ Vaccination cũng có population tác động (effect / 효과) khi giảm trans
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** tiếp nhận điểm tựa từ **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** nối từ **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** sang **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)
 
@@ -524,7 +524,7 @@ Tự quản lý tốt không phải cố “push through” mọi triệu chứn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** tiếp nhận điểm tựa từ **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** nối từ **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** sang **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp
 
@@ -536,7 +536,7 @@ Ngược lại, symptom nhẹ nhưng persistent, recurring hoặc progressively 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** tiếp nhận điểm tựa từ **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Minimum effective routine — ưu tiên consistency hơn perfection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** nối từ **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** sang **32. Minimum effective routine — ưu tiên consistency hơn perfection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Một “Health Operating hệ thống (system / 시스템)” đơn giản
 
@@ -577,7 +577,7 @@ Foundation
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **32. Minimum effective routine — ưu tiên consistency hơn perfection** tiếp nhận điểm tựa từ **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **32. Minimum effective routine — ưu tiên consistency hơn perfection** nối từ **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** sang **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Minimum effective routine — ưu tiên consistency hơn perfection
 
@@ -597,7 +597,7 @@ Danh sách (list / 목록) này là hiện thực (implementation / 구현) chec
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **32. Minimum effective routine — ưu tiên consistency hơn perfection** cho ta quy tắc; **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **32. Minimum effective routine — ưu tiên consistency hơn perfection** nêu quy tắc; **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** thử quy tắc trong tình huống, rồi **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** mở rộng hệ quả.
 
 ## 33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?
 
@@ -621,7 +621,7 @@ Nếu chỉ xử lý bằng “uống vitamin gì?”, ta đang can thiệp ở 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** cho ta quy tắc; **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **35. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** nêu quy tắc; **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** thử quy tắc trong tình huống, rồi **35. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc
 
@@ -633,7 +633,7 @@ Nhưng dose vẫn quan trọng. Too little không đủ kích thích (stimulus);
 
 ---
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** cho ta quy tắc; **35. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **36. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** nêu quy tắc; **35. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **36. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 35. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -651,7 +651,7 @@ Nhưng dose vẫn quan trọng. Too little không đủ kích thích (stimulus);
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **36. Mô hình tư duy tổng hợp** gom các mảnh từ **35. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Everyday-life ứng dụng (application / 애플리케이션) nên bắt đầu bằng cơ chế (mechanism / 메커니즘), không bắt đầu bằng “mẹo”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 35; everyday-life application phải bắt đầu bằng mechanism, không bằng mẹo.
 
 ## 36. Mô hình tư duy tổng hợp
 
@@ -689,7 +689,7 @@ Quản lý sức khỏe tác động tốt nhất khi ta làm ba việc cùng l�
 
 <!-- depth-audit-2026:mechanism-first-everyday -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **Everyday-life ứng dụng (application / 애플리케이션) nên bắt đầu bằng cơ chế (mechanism / 메커니즘), không bắt đầu bằng “mẹo”** gom các mảnh từ **36. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Ứng dụng đời sống chỉ có giá trị khi đi ngược được về cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Everyday-life application phải bắt đầu bằng mechanism; ứng dụng chỉ có giá trị khi lần ngược được về cơ chế.
 
 ## Everyday-life ứng dụng (application / 애플리케이션) nên bắt đầu bằng cơ chế (mechanism / 메커니즘), không bắt đầu bằng “mẹo”
 
@@ -699,7 +699,7 @@ Cách trình bày này tránh biến Biology thành health advice. thư viện (
 
 <!-- continuity-2026:everyday-mechanism -->
 
-> **Chuyển mạch:** Trong **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **Everyday-life ứng dụng (application / 애플리케이션) nên bắt đầu bằng cơ chế (mechanism / 메커니즘), không bắt đầu bằng “mẹo”** xác định đầu vào; **Ứng dụng đời sống chỉ có giá trị khi đi ngược được về cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **37. cầu nối (bridge / 브리지) sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mechanism là đầu vào; ứng dụng đời sống giải thích vận hành. **Cầu nối sang các chapter khác** kiểm tra hệ quả và owner phù hợp.
 
 ## Ứng dụng đời sống chỉ có giá trị khi đi ngược được về cơ chế
 
@@ -707,7 +707,7 @@ Một ứng dụng đời sống tốt phải trả lời được chuỗi: **t�
 
 Cách dùng chapter này vì vậy không phải “mẹo X chữa Y”. Nó là khung phần mềm (framework / 프레임워크) để hiểu vì sao một hành vi có thể tác động physiology, biến nào có thể đo được và khi nào bằng chứng (evidence / 증거) chỉ là association. Recommendation cá nhân vẫn cần ngữ cảnh (context / 맥락), rủi ro (risk / 위험) và khi thích hợp là đánh giá chuyên môn.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **Ứng dụng đời sống chỉ có giá trị khi đi ngược được về cơ chế** xác định đầu vào; **37. cầu nối (bridge / 브리지) sang các chapter khác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **38. Nguồn tham khảo định hướng sức khỏe cộng đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ứng dụng có giá trị khi truy ngược được về cơ chế; cầu nối sang chapter khác giữ owner. **Nguồn tham khảo sức khỏe cộng đồng** kiểm tra hệ quả.
 
 ## 37. cầu nối (bridge / 브리지) sang các chapter khác
 
@@ -715,7 +715,7 @@ Nếu muốn hiểu sâu vì sao tuần hoàn, kidney, breathing và metabolism 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**, **37. cầu nối (bridge / 브리지) sang các chapter khác** nêu điều cần giải thích; **38. Nguồn tham khảo định hướng sức khỏe cộng đồng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối sang các chapter khác đặt câu hỏi; nguồn tham khảo sức khỏe cộng đồng đối chiếu bằng chứng để khép mạch.
 
 ## 38. Nguồn tham khảo định hướng sức khỏe cộng đồng
 

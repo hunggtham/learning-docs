@@ -17,13 +17,13 @@ Các nhãn dưới đây mô tả chất lượng giải thích và độ chắc
 
 Bằng chứng (evidence / 증거) taxonomy: [[EVIDENCE_STATUS_GUIDE]].
 
-> **Chuyển mạch:** **Trạng thái** cho biết coverage đang ở đâu; **Foundations** đặt prerequisite, rồi **Brain & Mind** nối biology với mental process.
+> **Nối mạch:** **Trạng thái** cho biết coverage đang ở đâu; **Foundations** đặt prerequisite, rồi **Brain & Mind** nối biology với mental process.
 
 ## 1. Foundations
 
 Psychology as science, lịch sử (history / 이력), research methods, đo lường (measurement / 측정)/statistics, ethics, psychometrics, open science, EMA, nhân quả (causal / 인과적) suy luận (inference / 추론) và replication/meta-analysis/Bayes hiện đều **Strong**.
 
-> **Chuyển mạch:** **Foundations** giữ biological và methodological boundary; **Brain & Mind** giải thích mechanism, rồi **Learning & Cognition** kiểm tra thay đổi qua behavior.
+> **Nối mạch:** **Foundations** giữ biological và methodological boundary; **Brain & Mind** giải thích mechanism, rồi **Learning & Cognition** kiểm tra thay đổi qua behavior.
 
 ## 2. Brain & Mind
 
@@ -31,13 +31,13 @@ Nervous hệ thống (system / 시스템), sensation/perception, attention, slee
 
 `02_consciousness_sleep_and_attention.md` là **cầu nối (bridge / 브리지)** có chủ đích.
 
-> **Chuyển mạch:** **Learning & Cognition** biến mechanism thành adaptation và decision; **Human Development & Social Psychology** đặt chúng vào lifespan và context xã hội.
+> **Nối mạch:** **Learning & Cognition** biến mechanism thành adaptation và decision; **Human Development & Social Psychology** đặt chúng vào lifespan và context xã hội.
 
 ## 3. học tập (learning / 학습) & Cognition
 
 Cốt lõi (core / 핵심) group hiện **Strong**: học tập (learning / 학습), bộ nhớ (memory / 메모리), lập luận (reasoning / 추론), ngôn ngữ (language / 언어)/xã hội (social / 사회적) cognition, intelligence, quyết định (decision / 결정) making, cognitive độ lệch (bias / 편향)/metacognition, expertise/creativity, bộ nhớ (memory / 메모리) distortion, durable học tập (learning / 학습), cognitive offloading, emotion–bộ nhớ (memory / 메모리) và temporal cognition.
 
-> **Chuyển mạch:** **Human Development & Social Psychology** nối cognition với relationship và institution; **Mental Health & Psychopathology** phân tích distress, diagnosis và intervention boundary.
+> **Nối mạch:** **Human Development & Social Psychology** nối cognition với relationship và institution; **Mental Health & Psychopathology** phân tích distress, diagnosis và intervention boundary.
 
 ## 4. Human Development & xã hội (social / 사회적) Psychology
 
@@ -45,7 +45,7 @@ Lifespan, attachment, motivation/emotion, personality, social-cultural psycholog
 
 `10_group_dynamics_collective_behavior_and_cooperation.md` và `15_power_status_hierarchy_and_inequality.md` đã được mức (level / 수준) 2026-09-21 về tiếng Việt, cơ chế (mechanism / 메커니즘), bằng chứng (evidence / 증거) ranh giới (boundary / 경계) và liên kết (connection / 연결) với công việc (work / 작업)/quyết định (decision / 결정) các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage kiểm tra (audit / 감사)**, **4. Human Development & xã hội (social / 사회적) Psychology** xác định đầu vào; **5. Mental Health & Psychopathology** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Psychotherapy & Intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage kiểm tra (audit / 감사)**, **4. Human Development & xã hội (social / 사회적) Psychology** đặt đầu vào cho **5. Mental Health & Psychopathology**, rồi **6. Psychotherapy & Intervention** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Mental Health & Psychopathology
 
@@ -61,13 +61,13 @@ Chuẩn gốc (canonical / 정본) chapters tương ứng đã tách thành anxi
 
 Psychosis, eating/body ảnh (image / 이미지) và addiction đã được mức (level / 수준) 2026-09-21 về tiếng Việt, cơ chế (mechanism / 메커니즘) và bằng chứng (evidence / 증거) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage kiểm tra (audit / 감사)**, **5. Mental Health & Psychopathology** xác định đầu vào; **6. Psychotherapy & Intervention** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Historical Schools** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage kiểm tra (audit / 감사)**, **5. Mental Health & Psychopathology** đặt đầu vào cho **6. Psychotherapy & Intervention**, rồi **7. Historical Schools** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Psychotherapy & Intervention
 
 Psychotherapy/thay đổi (change / 변경), CBT/behavioral/third-wave, biological/community treatment và psychodynamic/humanistic/systemic hiện **Strong**. Treatment kết quả (outcome / 결과) bằng chứng (evidence / 증거) luôn được tách khỏi truth-status của historical lý thuyết (theory / 이론) hoặc cơ chế (mechanism / 메커니즘) hypothesis.
 
-> **Chuyển mạch:** **Psychotherapy & Intervention** mô tả mục tiêu và mechanism thay đổi; **Historical Schools** đặt các approach vào lịch sử, rồi **Applied Psychology** kiểm tra bối cảnh sử dụng.
+> **Nối mạch:** **Psychotherapy & Intervention** mô tả mục tiêu và mechanism thay đổi; **Historical Schools** đặt các approach vào lịch sử, rồi **Applied Psychology** kiểm tra bối cảnh sử dụng.
 
 ## 7. Historical Schools
 
@@ -81,7 +81,7 @@ Chuẩn gốc (canonical / 정본) guardrail:
 
 Không trình bày nonconscious processing, attachment, định danh (identity / 식별자) tích hợp (integration / 통합) hoặc hiện đại (modern / 현대적) motivation science như “proof” cho Freud/Adler/Jung.
 
-> **Chuyển mạch:** **Historical Schools** cho biết nguồn gốc và giới hạn của approach; **Applied Psychology** chuyển chúng thành domain evidence, rồi **Short-file audit** kiểm tra độ bao phủ.
+> **Nối mạch:** **Historical Schools** cho biết nguồn gốc và giới hạn của approach; **Applied Psychology** chuyển chúng thành domain evidence, rồi **Short-file audit** kiểm tra độ bao phủ.
 
 ## 8. Applied Psychology
 
@@ -96,7 +96,7 @@ Nhóm fast-moving sau đã refresh 2026-09-21:
 | Human–AI trust / reliance | **Strong / fast-moving** | Trust ≠ trustworthiness ≠ reliance; appropriate reliance quan trọng hơn maximized trust; explainability không tự động tạo calibration. |
 | rủi ro (risk / 위험) / bất định (uncertainty / 불확실성) communication | **Strong / fast-moving** | bất định (uncertainty / 불확실성) communication không có một tác động (effect / 효과) trust duy nhất; audience, prior belief, topic và presentation matter. |
 
-> **Chuyển mạch:** **Short-file audit** xác nhận chapter-level coverage; **README/navigation audit** kiểm tra route và owner có truy cập được từ map hay không.
+> **Nối mạch:** **Short-file audit** xác nhận chapter-level coverage; **README/navigation audit** kiểm tra route và owner có truy cập được từ map hay không.
 
 ## 9. Short-file kiểm tra (audit / 감사) — hoàn tất 2026-09-21
 
@@ -111,7 +111,7 @@ Kết quả:
 
 Các cầu nối (bridge / 브리지) chính: legacy consciousness/sleep/attention, anxiety/OCD/trauma map, depression/bipolar/suicidality map và neurodevelopmental ADHD/autism map.
 
-> **Chuyển mạch:** **README/navigation audit** khóa link và ownership; **Current state** ghi chính xác chapter nào còn thiếu evidence.
+> **Nối mạch:** **README/navigation audit** khóa link và ownership; **Current state** ghi chính xác chapter nào còn thiếu evidence.
 
 ## 10. README / điều hướng (navigation / 내비게이션) kiểm tra (audit / 감사) — hoàn tất vòng chính 2026-09-21
 
@@ -121,7 +121,7 @@ Cầu nối (bridge / 브리지) tiếp tục tồn tại để giữ backward t
 
 Targeted critical-link pass đã sửa stale đường dẫn (path / 경로) đã phát hiện như financial psychology và xác minh chuẩn gốc (canonical / 정본) mục tiêu (target / 대상) quan trọng sau refactor. Không tuyên bố full đồ thị (graph / 그래프) `0 broken links` vì connector hiện không có full wiki-link resolver.
 
-> **Chuyển mạch:** **Current state** tách done, gap và specialization; **Merge gate** dùng distinction đó để ngăn ghi nhận coverage chưa có bằng chứng.
+> **Nối mạch:** **Current state** tách done, gap và specialization; **Merge gate** dùng distinction đó để ngăn ghi nhận coverage chưa có bằng chứng.
 
 ## 11. trạng thái hiện tại (current state / 현재 상태)
 
@@ -134,7 +134,7 @@ Remaining công việc (work / 작업) được xếp vào hai loại:
 
 Không tạo chapter mới nếu không phát hiện conceptual gap thực sự.
 
-> **Chuyển mạch:** **Merge gate** khép audit bằng owner, link, evidence và boundary; specialization tiếp theo quay về canonical psychology chapters.
+> **Nối mạch:** **Merge gate** khép audit bằng owner, link, evidence và boundary; specialization tiếp theo quay về canonical psychology chapters.
 
 ## 12. Merge gate
 

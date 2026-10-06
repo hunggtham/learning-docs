@@ -19,7 +19,7 @@ tham gia lặp lại
 + danh tính biểu tượng
 ```
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân** tiếp nhận điểm tựa từ **Thời gian rảnh cho thấy xã hội phân bổ thời gian, tiền và không gian như thế nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **야구: sân vận động như một hệ thống nghi thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân** nối từ **Thời gian rảnh cho thấy xã hội phân bổ thời gian, tiền và không gian như thế nào** sang **야구: sân vận động như một hệ thống nghi thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân
 
@@ -27,7 +27,7 @@ tham gia lặp lại
 
 Thay đổi này không diễn ra đồng đều giữa các ngành. Tuy nhiên khi giá trị của thời gian rảnh tăng, thị trường cho phòng tập, du lịch, lớp sở thích, nhóm chạy bộ và hoạt động với thú cưng cũng mở rộng.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **야구: sân vận động như một hệ thống nghi thức** tiếp nhận điểm tựa từ **워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **응원가와 떼창: đồng bộ tạo cảm giác thuộc về** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **야구: sân vận động như một hệ thống nghi thức** nối từ **워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân** sang **응원가와 떼창: đồng bộ tạo cảm giác thuộc về**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 야구: sân vận động như một hệ thống nghi thức
 
@@ -46,7 +46,7 @@ vào sân
 
 Nghi thức lặp lại biến những người xa lạ cùng ủng hộ một đội thành nhóm tạm thời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **응원가와 떼창: đồng bộ tạo cảm giác thuộc về** tiếp nhận điểm tựa từ **야구: sân vận động như một hệ thống nghi thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **치맥 và đồ ăn khi xem thể thao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **응원가와 떼창: đồng bộ tạo cảm giác thuộc về** nối từ **야구: sân vận động như một hệ thống nghi thức** sang **치맥 và đồ ăn khi xem thể thao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 응원가와 떼창: đồng bộ tạo cảm giác thuộc về
 
@@ -54,7 +54,7 @@ Nghi thức lặp lại biến những người xa lạ cùng ủng hộ một �
 
 Cơ chế tương tự xuất hiện ở buổi hoà nhạc, nghi lễ tôn giáo, huấn luyện quân sự hoặc các cuộc tập hợp đông người, dù ý nghĩa của từng bối cảnh hoàn toàn khác. **Đồng bộ là hình thức; văn hoá quyết định nội dung**.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **치맥 và đồ ăn khi xem thể thao** tiếp nhận điểm tựa từ **응원가와 떼창: đồng bộ tạo cảm giác thuộc về** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **치맥 và đồ ăn khi xem thể thao** nối từ **응원가와 떼창: đồng bộ tạo cảm giác thuộc về** sang **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 치맥 và đồ ăn khi xem thể thao
 
@@ -62,7 +62,7 @@ Cơ chế tương tự xuất hiện ở buổi hoà nhạc, nghi lễ tôn giá
 
 Một cụm như `치맥` hoạt động gần như bộ nhớ đệm: chỉ cần nói từ này là người nghe có thể hình dung cả không khí thoải mái, món ăn chia sẻ và thời gian nghỉ ngơi.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia** tiếp nhận điểm tựa từ **치맥 và đồ ăn khi xem thể thao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **등산: địa lý trở thành hạ tầng giải trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia** nối từ **치맥 và đồ ăn khi xem thể thao** sang **등산: địa lý trở thành hạ tầng giải trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia
 
@@ -70,7 +70,7 @@ Bóng đá tạo hai kiểu danh tính khác nhau. Người hâm mộ câu lạc
 
 Xem chung ở quảng trường, quán bar hoặc gia đình làm nhiều người phản ứng với cùng sự kiện theo thời gian thực. Tuy nhiên nhiệt tình với đội tuyển quốc gia không thể dùng để suy ra quan điểm chính trị hay mức chủ nghĩa dân tộc của từng cá nhân; danh tính thể thao và danh tính chính trị là hai chiều khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **등산: địa lý trở thành hạ tầng giải trí** tiếp nhận điểm tựa từ **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **국립공원: giải trí cũng cần quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **등산: địa lý trở thành hạ tầng giải trí** nối từ **축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia** sang **국립공원: giải trí cũng cần quản trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 등산: địa lý trở thành hạ tầng giải trí
 
@@ -86,7 +86,7 @@ Cùng quãng đường ngang nhưng chênh lệch độ cao lớn làm nhu cầu
 
 Lớp văn hoá nằm ở nhóm leo núi, quán ăn quanh núi, thị trường trang phục–dụng cụ và nhịp cuối tuần.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **국립공원: giải trí cũng cần quản trị** tiếp nhận điểm tựa từ **등산: địa lý trở thành hạ tầng giải trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **국립공원: giải trí cũng cần quản trị** nối từ **등산: địa lý trở thành hạ tầng giải trí** sang **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 국립공원: giải trí cũng cần quản trị
 
@@ -94,7 +94,7 @@ Núi không phải không gian mở vô hạn. Xói mòn đường mòn, nguy c�
 
 Một hoạt động trông “tự nhiên” vẫn có quyền tiếp cận do thiết chế thiết kế: bãi đỗ xe, xe buýt, đóng đường mòn, biển hướng dẫn và hệ thống cứu hộ.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ** tiếp nhận điểm tựa từ **국립공원: giải trí cũng cần quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **한강: không gian công cộng như nền tảng giải trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ** nối từ **국립공원: giải trí cũng cần quản trị** sang **한강: không gian công cộng như nền tảng giải trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ
 
@@ -112,7 +112,7 @@ phát hiện nhóm trực tuyến
 
 Đây là khuôn mẫu lớn của giải trí hiện đại: nền tảng số không thay cộng đồng ngoại tuyến; nó giúp cộng đồng hình thành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **한강: không gian công cộng như nền tảng giải trí** tiếp nhận điểm tựa từ **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **자전거: ranh giới giữa di chuyển và giải trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **한강: không gian công cộng như nền tảng giải trí** nối từ **러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ** sang **자전거: ranh giới giữa di chuyển và giải trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 한강: không gian công cộng như nền tảng giải trí
 
@@ -120,7 +120,7 @@ Các công viên sông Hàn ở Seoul cung cấp hạ tầng cho chạy bộ, đ
 
 Ý nghĩa của `한강 피크닉` không chỉ đến từ con sông mà còn từ khả năng tiếp cận, đường phẳng, giao thông, nhà vệ sinh, cửa hàng và việc dễ nhìn thấy người khác đang cùng tham gia. Chất lượng không gian công cộng làm một hành vi dễ trở thành chuẩn mực.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **자전거: ranh giới giữa di chuyển và giải trí** tiếp nhận điểm tựa từ **한강: không gian công cộng như nền tảng giải trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **골프: địa vị, quan hệ và thể thao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **자전거: ranh giới giữa di chuyển và giải trí** nối từ **한강: không gian công cộng như nền tảng giải trí** sang **골프: địa vị, quan hệ và thể thao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 자전거: ranh giới giữa di chuyển và giải trí
 
@@ -128,7 +128,7 @@ Các công viên sông Hàn ở Seoul cung cấp hạ tầng cho chạy bộ, đ
 
 Mạng đường xe đạp làm hoạt động an toàn và dễ tiếp cận hơn; cộng đồng thiết bị sau đó tạo danh tính và chia sẻ kiến thức.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **골프: địa vị, quan hệ và thể thao** tiếp nhận điểm tựa từ **자전거: ranh giới giữa di chuyển và giải trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스크린골프: mô phỏng không chỉ là bản sao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **골프: địa vị, quan hệ và thể thao** nối từ **자전거: ranh giới giữa di chuyển và giải trí** sang **스크린골프: mô phỏng không chỉ là bản sao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 골프: địa vị, quan hệ và thể thao
 
@@ -136,7 +136,7 @@ Golf ở Hàn Quốc có nhiều lớp: kỹ năng thể thao, giao lưu công v
 
 Nhưng **golf mô phỏng (스크린골프 / screen golf)** mở rộng khả năng tiếp cận bằng số hoá không gian. Cảm biến đo tốc độ bóng, góc phóng, độ xoáy; phần mềm mô phỏng quỹ đạo. Một hoạt động cần diện tích rất lớn được nén vào phòng trong đô thị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **스크린골프: mô phỏng không chỉ là bản sao** tiếp nhận điểm tựa từ **골프: địa vị, quan hệ và thể thao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **스크린골프: mô phỏng không chỉ là bản sao** nối từ **골프: địa vị, quan hệ và thể thao** sang **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 스크린골프: mô phỏng không chỉ là bản sao
 
@@ -144,7 +144,7 @@ Mô phỏng thay môi trường vật lý, nhịp chơi và bối cảnh xã h�
 
 Bài học rộng hơn: phiên bản số của một hoạt động thường tạo văn hoá riêng thay vì chỉ đổi địa điểm.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **스크린골프: mô phỏng không chỉ là bản sao** nêu điều cần giải thích; **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **클라이밍: thể thao trong nhà như bài toán cơ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **스크린골프: mô phỏng không chỉ là bản sao** đặt vấn đề; **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường** đối chiếu bằng chứng, rồi **클라이밍: thể thao trong nhà như bài toán cơ thể** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường
 
@@ -154,7 +154,7 @@ Phòng tập `헬스장` và huấn luyện cá nhân `PT` biến vận động 
 
 Ranh giới giữa sức khoẻ, làm đẹp và thành tích vì thế khá mờ; xem thêm [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường** nêu điều cần giải thích; **클라이밍: thể thao trong nhà như bài toán cơ thể** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường** đặt vấn đề; **클라이밍: thể thao trong nhà như bài toán cơ thể** đối chiếu bằng chứng, rồi **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 클라이밍: thể thao trong nhà như bài toán cơ thể
 
@@ -162,7 +162,7 @@ Leo tường/bouldering trong nhà phù hợp đô thị vì không gian theo ch
 
 Sự phát triển của thể thao đô thị thường theo khuôn mẫu: địa điểm chuyên dụng + ứng dụng đặt lịch/cộng đồng + khả năng chia sẻ lên mạng xã hội.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** tiếp nhận điểm tựa từ **클라이밍: thể thao trong nhà như bài toán cơ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **차박: xe + giải trí + không gian vi mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** nối từ **클라이밍: thể thao trong nhà như bài toán cơ thể** sang **차박: xe + giải trí + không gian vi mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị
 
@@ -170,7 +170,7 @@ Diễn ngôn cắm trại thường nói “trở về thiên nhiên”, nhưng 
 
 Sở thích có thiết bị dễ nhìn thấy thường tạo **danh tính qua dụng cụ (gear identity)**. Khi chức năng sản phẩm khó đánh giá trực tiếp, người dùng dựa vào đánh giá, thương hiệu và kiến thức cộng đồng. Khi chi phí tham gia tăng, khác biệt tầng lớp cũng dễ thấy hơn.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **차박: xe + giải trí + không gian vi mô** tiếp nhận điểm tựa từ **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **여행: du lịch trong nước và xây thương hiệu vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **차박: xe + giải trí + không gian vi mô** nối từ **캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị** sang **여행: du lịch trong nước và xây thương hiệu vùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 차박: xe + giải trí + không gian vi mô
 
@@ -178,7 +178,7 @@ Sở thích có thiết bị dễ nhìn thấy thường tạo **danh tính qua 
 
 Một hình thức giải trí có thể tạo **ngoại ứng (externality)** nếu hưởng thụ cá nhân sử dụng không gian công cộng mà không phối hợp với người khác.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **여행: du lịch trong nước và xây thương hiệu vùng** tiếp nhận điểm tựa từ **차박: xe + giải trí + không gian vi mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **찜질방, 휴식: giải trí không nhất thiết phải vận động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **여행: du lịch trong nước và xây thương hiệu vùng** nối từ **차박: xe + giải trí + không gian vi mô** sang **찜질방, 휴식: giải trí không nhất thiết phải vận động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 여행: du lịch trong nước và xây thương hiệu vùng
 
@@ -188,7 +188,7 @@ Mạng xã hội làm việc khám phá điểm đến dựa nhiều vào hình 
 
 Vì vậy du lịch có một lớp **địa lý do thuật toán định hình (algorithmic geography)**: khả năng hiển thị trên nền tảng làm dòng khách đổi hướng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **찜질방, 휴식: giải trí không nhất thiết phải vận động** tiếp nhận điểm tựa từ **여행: du lịch trong nước và xây thương hiệu vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **힐링: từ từ y học thành ẩn dụ văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **찜질방, 휴식: giải trí không nhất thiết phải vận động** nối từ **여행: du lịch trong nước và xây thương hiệu vùng** sang **힐링: từ từ y học thành ẩn dụ văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 찜질방, 휴식: giải trí không nhất thiết phải vận động
 
@@ -196,7 +196,7 @@ Vì vậy du lịch có một lớp **địa lý do thuật toán định hình 
 
 “Ngủ nghỉ” trong thị trường đô thị có thể được hàng hoá hoá thành phòng, bồn tắm, tầm nhìn, mùi hương và sự yên tĩnh.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **힐링: từ từ y học thành ẩn dụ văn hoá** tiếp nhận điểm tựa từ **찜질방, 휴식: giải trí không nhất thiết phải vận động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **힐링: từ từ y học thành ẩn dụ văn hoá** nối từ **찜질방, 휴식: giải trí không nhất thiết phải vận động** sang **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 힐링: từ từ y học thành ẩn dụ văn hoá
 
@@ -204,7 +204,7 @@ Vì vậy du lịch có một lớp **địa lý do thuật toán định hình 
 
 Nhưng nhãn `힐링` không chứng minh một hoạt động có hiệu quả lâm sàng; đây chủ yếu là từ vựng văn hoá/cảm xúc.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem** tiếp nhận điểm tựa từ **힐링: từ từ y học thành ẩn dụ văn hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PC방 và đường phát triển của thể thao điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem** nối từ **힐링: từ từ y học thành ẩn dụ văn hoá** sang **PC방 và đường phát triển của thể thao điện tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem
 
@@ -221,7 +221,7 @@ Thành tích cạnh tranh phụ thuộc:
 
 Đây là hệ sinh thái kỹ năng, không chỉ là “chơi game nhiều”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **PC방 và đường phát triển của thể thao điện tử** tiếp nhận điểm tựa từ **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학교체육 và thể thao thành tích cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **PC방 và đường phát triển của thể thao điện tử** nối từ **e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem** sang **학교체육 và thể thao thành tích cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PC방 và đường phát triển của thể thao điện tử
 
@@ -229,7 +229,7 @@ PC bang từng làm giảm rào cản phần cứng và khả năng tiếp cận
 
 Hạ tầng không tự tạo nhà vô địch, nhưng nó tăng quy mô người tham gia và chất lượng môi trường thực hành.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **학교체육 và thể thao thành tích cao** tiếp nhận điểm tựa từ **PC방 và đường phát triển của thể thao điện tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **학교체육 và thể thao thành tích cao** nối từ **PC방 và đường phát triển của thể thao điện tử** sang **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 학교체육 và thể thao thành tích cao
 
@@ -237,7 +237,7 @@ Thể thao trường học ở Hàn có thể chia giữa giáo dục thể ch�
 
 Điểm cần tránh là đồng nhất thành công huy chương quốc gia với mức vận động trung bình của toàn dân. Thành tích tinh hoa và sức khoẻ cộng đồng là hai phân phối khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia** tiếp nhận điểm tựa từ **학교체육 và thể thao thành tích cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **관람 접근성: làm khán giả cũng cần khả năng tiếp cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia** nối từ **학교체육 và thể thao thành tích cao** sang **관람 접근성: làm khán giả cũng cần khả năng tiếp cận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia
 
@@ -255,7 +255,7 @@ khả năng thể chất cá nhân
 
 Mô hình này nối trực tiếp với chương [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md): khuyết tật không chỉ là đặc tính của cơ thể; môi trường có thể khuếch đại hoặc giảm rào cản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **관람 접근성: làm khán giả cũng cần khả năng tiếp cận** tiếp nhận điểm tựa từ **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **관람 접근성: làm khán giả cũng cần khả năng tiếp cận** nối từ **장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia** sang **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관람 접근성: làm khán giả cũng cần khả năng tiếp cận
 
@@ -265,7 +265,7 @@ Vì vậy câu hỏi “sân vận động có bao nhiêu ghế?” chưa đủ.
 
 Đây là cách chuyển tư duy từ “có cơ sở vật chất” sang “có hành trình sử dụng được”.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội** tiếp nhận điểm tựa từ **관람 접근성: làm khán giả cũng cần khả năng tiếp cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội** nối từ **관람 접근성: làm khán giả cũng cần khả năng tiếp cận** sang **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội
 
@@ -283,7 +283,7 @@ nghỉ hưu
 
 Không nên suy rằng mọi người cao tuổi thích cùng loại hoạt động. Sức khoẻ, thu nhập, giới, nơi ở, khả năng lái xe và kỹ năng số tạo khác biệt lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận** tiếp nhận điểm tựa từ **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận** nối từ **노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội** sang **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận
 
@@ -291,7 +291,7 @@ Không nên suy rằng mọi người cao tuổi thích cùng loại hoạt đ�
 
 Một dịch vụ có thể rất hiện đại nhưng giảm khả năng tham gia nếu không còn kênh thay thế. Vì vậy số hoá giải trí cần đi cùng thiết kế tiếp cận, không chỉ tối ưu tốc độ cho người dùng trung bình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự** tiếp nhận điểm tựa từ **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **굿즈: hàng lưu niệm như danh tính có thể mang theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự** nối từ **디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận** sang **굿즈: hàng lưu niệm như danh tính có thể mang theo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự
 
@@ -308,7 +308,7 @@ Vật lý: sân vận động / nhà thi đấu / buổi hoà nhạc / PC bang
 
 Cùng kiến trúc nhưng ý nghĩa khác theo lĩnh vực.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **굿즈: hàng lưu niệm như danh tính có thể mang theo** tiếp nhận điểm tựa từ **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **굿즈: hàng lưu niệm như danh tính có thể mang theo** nối từ **팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự** sang **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 굿즈: hàng lưu niệm như danh tính có thể mang theo
 
@@ -316,7 +316,7 @@ Cùng kiến trúc nhưng ý nghĩa khác theo lĩnh vực.
 
 Phiên bản giới hạn tạo khan hiếm. Khan hiếm có thể tăng giá trị cảm nhận nhưng cũng tạo mua đi bán lại và đầu cơ. Vì vậy tiêu dùng của người hâm mộ cần nhìn cả cảm xúc lẫn cơ chế thị trường.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm** tiếp nhận điểm tựa từ **굿즈: hàng lưu niệm như danh tính có thể mang theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm** nối từ **굿즈: hàng lưu niệm như danh tính có thể mang theo** sang **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm
 
@@ -324,7 +324,7 @@ Sự kiện thể thao/hoà nhạc nổi tiếng thường có nhu cầu lớn h
 
 Trải nghiệm `티켓팅` trở thành câu chuyện văn hoá chung vì công nghệ quyết định ai có quyền tiếp cận một tài nguyên khan hiếm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng** tiếp nhận điểm tựa từ **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **관중 흐름: đám đông là bài toán luồng, không chỉ số người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng** nối từ **티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm** sang **관중 흐름: đám đông là bài toán luồng, không chỉ số người**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng
 
@@ -340,7 +340,7 @@ giá cao có phản ánh nhu cầu hay quyền lực của người trung gian?
 
 Thiết kế bán vé có thể dùng giới hạn số vé, xác thực danh tính, hàng đợi, bốc thăm hoặc quy tắc chuyển nhượng. Mỗi cơ chế giảm một loại lạm dụng nhưng tạo ma sát khác.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **관중 흐름: đám đông là bài toán luồng, không chỉ số người** tiếp nhận điểm tựa từ **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **관중 흐름: đám đông là bài toán luồng, không chỉ số người** nối từ **티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng** sang **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관중 흐름: đám đông là bài toán luồng, không chỉ số người
 
@@ -359,7 +359,7 @@ lượng người đến
 
 Vì vậy quản trị sự kiện cần nhìn từng điểm nghẽn chứ không chỉ hỏi “đã bán bao nhiêu vé”.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau** tiếp nhận điểm tựa từ **관중 흐름: đám đông là bài toán luồng, không chỉ số người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau** nối từ **관중 흐름: đám đông là bài toán luồng, không chỉ số người** sang **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 입장·퇴장: vào sân và rời sân là hai bài toán khác nhau
 
@@ -376,7 +376,7 @@ Thiết kế tốt cần:
 
 Khả năng rời sự kiện an toàn là một phần của trải nghiệm, không phải việc diễn ra sau khi “sự kiện đã kết thúc”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại** tiếp nhận điểm tựa từ **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **행사 운영: sự kiện là một hệ thống tạm thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại** nối từ **입장·퇴장: vào sân và rời sân là hai bài toán khác nhau** sang **행사 운영: sự kiện là một hệ thống tạm thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại
 
@@ -388,7 +388,7 @@ Vì vậy an toàn đám đông không thể dựa hoàn toàn vào lời khuyê
 
 > **Rủi ro cá nhân có thể được tạo hoặc giảm mạnh bởi cấu trúc môi trường.**
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **행사 운영: sự kiện là một hệ thống tạm thời** tiếp nhận điểm tựa từ **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **행사 운영: sự kiện là một hệ thống tạm thời** nối từ **군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại** sang **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 행사 운영: sự kiện là một hệ thống tạm thời
 
@@ -408,7 +408,7 @@ vé
 
 Vì chỉ hoạt động trong thời gian ngắn, hệ thống phải được chuẩn bị trước khi biết chính xác mọi tình huống. Đây là lý do kế hoạch dự phòng, diễn tập và phân quyền tại chỗ quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu** tiếp nhận điểm tựa từ **행사 운영: sự kiện là một hệ thống tạm thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu** nối từ **행사 운영: sự kiện là một hệ thống tạm thời** sang **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu
 
@@ -418,7 +418,7 @@ Một ngày “vẫn tổ chức được” về kỹ thuật chưa chắc an t
 
 Điều này nối trực tiếp với [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị** tiếp nhận điểm tựa từ **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị** nối từ **날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu** sang **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 커뮤니티 운영: cộng đồng sở thích cũng cần quản trị
 
@@ -428,7 +428,7 @@ Một cộng đồng chỉ dựa vào một người tổ chức có rủi ro ca
 
 Đây là cùng bài toán với tổ chức công việc: cộng đồng giải trí cũng có tải điều phối vô hình.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập** tiếp nhận điểm tựa từ **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép ứng xử khi cổ vũ và ranh giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập** nối từ **커뮤니티 운영: cộng đồng sở thích cũng cần quản trị** sang **Phép ứng xử khi cổ vũ và ranh giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập
 
@@ -447,7 +447,7 @@ thông tin rõ cho người mới
 
 Nếu chi phí gia nhập quá cao, nhóm có thể già hoá hoặc thu hẹp dù thành viên cũ rất trung thành.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **Phép ứng xử khi cổ vũ và ranh giới** tiếp nhận điểm tựa từ **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **Phép ứng xử khi cổ vũ và ranh giới** nối từ **신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập** sang **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép ứng xử khi cổ vũ và ranh giới
 
@@ -455,7 +455,7 @@ Cộng đồng người hâm mộ tạo cảm giác thuộc về nhưng cũng c�
 
 Văn hoá người hâm mộ lành mạnh cần ranh giới giữa tham gia nhiệt tình và quấy rối/xâm phạm đời tư.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”** tiếp nhận điểm tựa từ **Phép ứng xử khi cổ vũ và ranh giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”** nối từ **Phép ứng xử khi cổ vũ và ranh giới** sang **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”
 
@@ -463,7 +463,7 @@ Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, phòng tập ho
 
 Điều này không có nghĩa người Hàn “không biết nghỉ”. Một người có thể thật sự thích sở thích mang tính phát triển bản thân. Câu hỏi là hoạt động xuất phát từ niềm vui nội tại, áp lực bên ngoài hay cả hai.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều** tiếp nhận điểm tựa từ **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **여가 측정: tham gia được đo thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều** nối từ **자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”** sang **여가 측정: tham gia được đo thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều
 
@@ -473,7 +473,7 @@ Vì vậy bảng tin mạng xã hội đầy du lịch, golf và quán cà phê 
 
 Phân tích văn hoá luôn phải hỏi mẫu số: ai không xuất hiện trên bảng tin?
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **여가 측정: tham gia được đo thế nào?** tiếp nhận điểm tựa từ **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **여가 측정: tham gia được đo thế nào?** nối từ **Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều** sang **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 여가 측정: tham gia được đo thế nào?
 
@@ -491,7 +491,7 @@ Mỗi thước đo trả lời câu hỏi khác nhau. Một nhóm nhỏ nhưng r
 
 Do đó khi đọc “xu hướng giải trí”, cần hỏi dữ liệu đo **hành vi thực**, **chi tiêu**, **lượt truy cập** hay chỉ **độ hiển thị truyền thông**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch** tiếp nhận điểm tựa từ **여가 측정: tham gia được đo thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch** nối từ **여가 측정: tham gia được đo thế nào?** sang **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch
 
@@ -509,7 +509,7 @@ mạng bạn bè cùng tham gia tăng
 
 Núi gần tàu điện → leo núi dễ. Golf mô phỏng gần nhà → chơi golf dễ. Nhóm chạy bộ có phòng chat → chi phí xã hội khi tham gia lần đầu giảm. Hạ tầng làm phân phối hoạt động giải trí thay đổi.
 
-> **Chuyển mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi** tiếp nhận điểm tựa từ **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thể thao, giải trí và văn hoá người hâm mộ**, **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi** nối từ **Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi
 
@@ -527,13 +527,13 @@ người đến
 
 Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải nghiệm toàn chuỗi suy giảm. Đây là cùng lô-gic (logic / 논리) với dịch vụ đô thị và hệ thống phần mềm: **điểm nghẽn thường nằm ở mắt xích yếu nhất, không phải ở trung bình toàn hệ thống**.
 
-> **Chuyển mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thể thao, giải trí và văn hoá người hâm mộ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường, quản trị sự kiện và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo golf mô phỏng và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; cộng đồng người hâm mộ biến người xem thành người tham gia. Khi hoạt động có quy mô lớn, văn hoá người hâm mộ còn phụ thuộc vào hàng đợi, an toàn đám đông, lối thoát, giao thông và năng lực quản trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **Hiểu lầm phổ biến (common misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thể thao, giải trí và văn hoá người hâm mộ**, **Hiểu lầm phổ biến (common misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Hiểu lầm phổ biến (common misconceptions)
 

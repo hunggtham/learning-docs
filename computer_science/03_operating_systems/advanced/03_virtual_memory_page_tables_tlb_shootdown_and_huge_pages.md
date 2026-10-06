@@ -10,7 +10,7 @@ Hai tiến trình có thể sử dụng cùng một địa chỉ ảo nhưng án
 
 `mmap`, mở rộng vùng nhớ động (heap / 힙), thư viện dùng chung và ánh xạ tệp (file / 파일) đều là các cách xây dựng không gian địa chỉ. Nhiều ánh xạ ban đầu chỉ tạo siêu dữ liệu; trang vật lý có thể chưa được cấp cho tới khi lần truy cập đầu tiên gây lỗi trang.
 
-> **Chuyển mạch:** Address space là contract giữa process và OS; multi-level page tables map it, TLB caches the mapping, còn page faults và huge pages đổi chi phí translation với memory footprint.
+> **Nối mạch:** Address space là contract giữa process và OS; multi-level page tables map it, TLB caches the mapping, còn page faults và huge pages đổi chi phí translation với memory footprint.
 
 ## Bảng trang nhiều cấp
 
@@ -18,7 +18,7 @@ Một bảng trang phẳng cho không gian địa chỉ lớn sẽ lãng phí r�
 
 Kernel phải quản lý vòng đời của các trang chứa bảng trang, thay đổi quyền và đồng bộ khi nhiều luồng của cùng một tiến trình chạy trên nhiều lõi.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Lỗi trang nhỏ và lỗi trang lớn** tiếp nhận điểm tựa từ **Bảng trang nhiều cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sao chép khi ghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lỗi trang nhỏ và lỗi trang lớn** nối từ **Bảng trang nhiều cấp** sang **Sao chép khi ghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi trang nhỏ và lỗi trang lớn
 
@@ -26,7 +26,7 @@ Kernel phải quản lý vòng đời của các trang chứa bảng trang, thay
 
 Lỗi trang không tự động có nghĩa là hệ thống có lỗi. Phân trang theo nhu cầu (demand paging) cố ý dùng page fault như một cơ chế điều khiển. Điều cần quan tâm là tần suất và chi phí của nó trong ngữ cảnh tải thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Sao chép khi ghi** tiếp nhận điểm tựa từ **Lỗi trang nhỏ và lỗi trang lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLB shootdown từ góc nhìn hệ điều hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sao chép khi ghi** nối từ **Lỗi trang nhỏ và lỗi trang lớn** sang **TLB shootdown từ góc nhìn hệ điều hành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sao chép khi ghi
 
@@ -34,7 +34,7 @@ Sau `fork`, tiến trình cha và con có thể tạm thời dùng chung các tr
 
 COW hiệu quả khi phần lớn trang không bị sửa. Nếu tiến trình con ghi gần như toàn bộ vùng nhớ, các bản sao trì hoãn vẫn phải được tạo và có thể gây đột biến độ trễ hoặc mức sử dụng bộ nhớ.
 
-> **Chuyển mạch:** Trong **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **TLB shootdown từ góc nhìn hệ điều hành** tiếp nhận điểm tựa từ **Sao chép khi ghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trang lớn và THP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **TLB shootdown từ góc nhìn hệ điều hành** nối từ **Sao chép khi ghi** sang **Trang lớn và THP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLB shootdown từ góc nhìn hệ điều hành
 
@@ -42,7 +42,7 @@ Khi kernel bỏ ánh xạ một trang hoặc giảm quyền truy cập, CPU khá
 
 Đây là kết nối trực tiếp với [TLB và ảo hóa ở tầng kiến trúc](../../02_computer_architecture/advanced/05_tlb_page_walkers_huge_pages_and_virtualization.md).
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Trang lớn và THP** tiếp nhận điểm tựa từ **TLB shootdown từ góc nhìn hệ điều hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp phát vượt mức và OOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trang lớn và THP** nối từ **TLB shootdown từ góc nhìn hệ điều hành** sang **Cấp phát vượt mức và OOM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trang lớn và THP
 
@@ -50,7 +50,7 @@ Trang lớn tăng phạm vi bao phủ của TLB nhưng làm cấp phát bộ nh�
 
 Không có chính sách đúng cho mọi tải. Phân mảnh bộ nhớ, độ nhạy với độ trễ và kiểu truy cập quyết định sự đánh đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Cấp phát vượt mức và OOM** tiếp nhận điểm tựa từ **Trang lớn và THP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cấp phát vượt mức và OOM** nối từ **Trang lớn và THP** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp phát vượt mức và OOM
 
@@ -58,7 +58,7 @@ Hệ điều hành có thể cho tiến trình đặt trước không gian bộ 
 
 Vì vậy câu “ứng dụng đã cấp phát X GB” có thể mang nhiều nghĩa khác nhau: vùng địa chỉ ảo đặt trước, bộ nhớ ẩn danh đã cam kết, tập trang đang cư trú trong RAM hoặc tập dữ liệu thực sự được dùng thường xuyên.
 
-> **Chuyển mạch:** Trong **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Mô hình tư duy** gom các mảnh từ **Cấp phát vượt mức và OOM** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Cấp phát vượt mức và OOM**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

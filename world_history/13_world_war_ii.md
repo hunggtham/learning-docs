@@ -32,13 +32,13 @@ failure: blockade/occupation → famine → mortality/resistance/black market
 
 Nuremberg, Tokyo, refugee regimes và UN human-rights ngôn ngữ (language / 언어) tạo institution mới nhưng justice vẫn chọn lọc. Women, colonial soldiers, forced laborers, Roma, disabled people, Indigenous communities và civilian survivors thường bị làm mờ trong national victory narrative.
 
-> **Chuyển mạch:** Trong **13 — World War II: chiến tranh tổng lực và trật tự mới**, **Chiến tranh tổng lực và các chiến tranh khác nhau** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phân biệt chiến tranh tổng lực với các dạng chiến tranh khác bằng logistics, sản xuất và chiếm đóng. **Bằng chứng, giới hạn và cầu nối** kiểm tra từng mặt trước depth pass.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Operational records, survivor testimony, demographic reconstruction, satellite/industrial bằng chứng (evidence / 증거) và tribunal documents có độ gần sự kiện khác nhau; national archives thường im lặng về người bị chiếm đóng. Counterfactual: nếu không có total war, decolonization vẫn có động lực nhưng tốc độ, superpower legitimacy và human-rights institution có thể khác. Cầu nối sang 14–15 là **power vacuum, nuclear monopoly, refugee luồng (flow / 흐름) và anti-colonial claim**.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** tách các mặt trận và nhóm dân cư bằng logistics, sản xuất và chiếm đóng; phần **Độ sâu pass** kiểm tra cách những cuộc chiến đó nối thành trật tự mới.
+> **Nối mạch:** Bằng chứng tách mặt trận và nhóm dân cư theo logistics, sản xuất và chiếm đóng; **Độ sâu pass** kiểm tra cách các cuộc chiến nối thành trật tự mới.
 
 ## Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics
 

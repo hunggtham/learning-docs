@@ -28,7 +28,7 @@ cấu hình electron hóa trị
 
 Nhờ vậy ta tránh biến bảng tuần hoàn thành một tập mũi tên phải học thuộc.
 
-> **Chuyển mạch:** Khung hóa trị dự đoán xu hướng phản ứng; nhóm 1 dễ mất một electron, còn nhóm 2 giữ hai electron hóa trị chặt hơn nên không thể suy ra hành vi bằng cách “gấp đôi” nhóm 1.
+> **Nối mạch:** Khung hóa trị dự đoán xu hướng phản ứng; nhóm 1 dễ mất một electron, còn nhóm 2 giữ hai electron hóa trị chặt hơn nên không thể suy ra hành vi bằng cách “gấp đôi” nhóm 1.
 
 ## Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ
 
@@ -46,7 +46,7 @@ Xu hướng phản ứng mạnh hơn khi đi xuống nhóm phản ánh tổng h�
 
 Ion kim loại kiềm cũng cho thấy **phối trí chọn lọc theo kích thước (size-selective coordination)**. Crown ether hoặc kênh ion sinh học có kích thước khoang và cách bố trí nguyên tử cho electron khác nhau, nhờ đó phân biệt \(K^+\) và \(Na^+\) dù cả hai đều mang điện tích +1. Đây là ví dụ quan trọng cho thấy cùng điện tích không đồng nghĩa cùng hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”** tiếp nhận điểm tựa từ **Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 13 — thiếu electron và tính acid Lewis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”** nối từ **Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ** sang **Nhóm 13 — thiếu electron và tính acid Lewis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”
 
@@ -54,7 +54,7 @@ Nhóm 2 có cấu hình \(ns^2\) và thường tạo ion +2. Điện tích cao h
 
 \(Mg^{2+}\) nhỏ, được hydrat hóa mạnh và đóng vai trò acid Lewis quan trọng trong sinh học. \(Ca^{2+}\) lớn hơn và nổi bật trong cấu trúc xương, khoáng vật và truyền tín hiệu tế bào. Khác biệt về kích thước, hydrat hóa và ưu tiên phối tử đủ để sinh học sử dụng hai ion này cho các chức năng khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 13 — thiếu electron và tính acid Lewis** tiếp nhận điểm tựa từ **Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 13 — thiếu electron và tính acid Lewis** nối từ **Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”** sang **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 13 — thiếu electron và tính acid Lewis
 
@@ -72,7 +72,7 @@ Nhôm (Al) lớn hơn và điện dương hơn. \(Al^{3+}\) có mật độ đi�
 
 Khi đi xuống nhóm, trạng thái oxy hóa +1 được ổn định hơn do hiệu ứng cặp electron trơ, đặc biệt rõ với Tl(I).
 
-> **Chuyển mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng** tiếp nhận điểm tựa từ **Nhóm 13 — thiếu electron và tính acid Lewis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng** nối từ **Nhóm 13 — thiếu electron và tính acid Lewis** sang **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng
 
@@ -84,7 +84,7 @@ Một so sánh giàu ý nghĩa là \(CO_2\) và \(SiO_2\). \(CO_2\) là phân t�
 
 Xuống Sn và Pb, trạng thái +2 dần ổn định hơn so với +4. Vì vậy Pb(II) phổ biến hơn điều mà quy tắc đơn giản “nhóm 14 nên +4” gợi ý.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, sau nội dung của **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng**, **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, sau nội dung của **Nhóm 14 — từ hóa học phân tử của carbon tới mạng silicon và tính kim loại của nguyên tố nặng**, **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết
 
@@ -96,7 +96,7 @@ Orbital 3p của phospho tạo liên kết π kém hiệu quả hơn, nên P th�
 
 Nitơ có trạng thái oxy hóa từ −3 tới +5 và giữ vai trò trung tâm trong phân bón, thuốc nổ, hóa học NOx khí quyển và chu trình nitơ sinh học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** tiếp nhận điểm tựa từ **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** nối từ **Nhóm 15 — nitơ và phospho: cùng số electron hóa trị, khác thế giới liên kết** sang **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa
 
@@ -106,7 +106,7 @@ Lưu huỳnh (S) lớn hơn, dễ phân cực hơn và có nhiều trạng thái
 
 \(SO_2\) và \(SO_3\) cũng minh họa mối liên hệ cấu trúc → tính chất. \(SO_2\) có dạng gấp khúc, phân cực và tham gia oxy hóa khí quyển; \(SO_3\) có dạng tam giác phẳng và là anhydride acid của sulfuric acid.
 
-> **Chuyển mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen** tiếp nhận điểm tựa từ **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen** nối từ **Nhóm 16 — oxy, lưu huỳnh và sự đa dạng trạng thái oxy hóa** sang **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen
 
@@ -116,7 +116,7 @@ Khả năng oxy hóa trong dung dịch nước không chỉ phụ thuộc ái l�
 
 Hóa học halogen còn có hợp chất liên halogen (**interhalogen compound**) như \(ClF_3\) và ion polyhalide như \(I_3^-\), cho thấy mô hình đơn giản “bát tử và −1” không đủ mô tả toàn bộ họ.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”** tiếp nhận điểm tựa từ **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ đường chéo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”** nối từ **Nhóm 17 — halogen: ái lực electron, khả năng oxy hóa và hợp chất liên halogen** sang **Quan hệ đường chéo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”
 
@@ -124,7 +124,7 @@ Lớp electron hóa trị kín làm khí hiếm kém phản ứng, nhưng “tr�
 
 Sự tồn tại của hợp chất khí hiếm có giá trị khái niệm lớn: những quy tắc như bát tử là các khuôn mẫu xuất phát từ năng lượng, không phải điều cấm tuyệt đối của tự nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Quan hệ đường chéo** tiếp nhận điểm tựa từ **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Quan hệ đường chéo** nối từ **Nhóm 18 — khí hiếm: ít phản ứng chứ không phải “không phản ứng”** sang **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ đường chéo
 
@@ -132,7 +132,7 @@ Một số nguyên tố chu kỳ 2 có tính chất gần với nguyên tố chu
 
 Li và Mg chẳng hạn đều có thể tạo nitride tương đối dễ và một số muối có hành vi độ tan khác các nguyên tố lân cận trong nhóm của chúng. Điều này nhắc rằng bảng tuần hoàn là một không gian hai chiều của kích thước và năng lượng.
 
-> **Chuyển mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng** tiếp nhận điểm tựa từ **Quan hệ đường chéo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng** nối từ **Quan hệ đường chéo** sang **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng
 
@@ -142,7 +142,7 @@ Vì vậy Tl(I) cạnh tranh mạnh với Tl(III), Pb(II) ổn định hơn đá
 
 Không nên biến hiệu ứng cặp electron trơ thành khẩu quyết “hai electron không phản ứng”. Đây là ưu tiên tương đối về năng lượng; trạng thái oxy hóa cao vẫn có thể tồn tại trong điều kiện phối tử hoặc chất oxy hóa thích hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ** tiếp nhận điểm tựa từ **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ** nối từ **Hiệu ứng cặp electron trơ — vì sao trạng thái oxy hóa thấp ổn định hơn ở nguyên tố khối p nặng** sang **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ
 
@@ -152,7 +152,7 @@ Liên kết đa tâm, đóng góp cộng hưởng ion và sự phi định xứ 
 
 Điều cần giữ lại là: **quy tắc bát tử là công cụ ghi sổ cục bộ**, đặc biệt hữu ích cho nguyên tố chu kỳ 2, chứ không phải định luật lượng tử nền tảng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide** tiếp nhận điểm tựa từ **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide** nối từ **Siêu hóa trị: vượt khỏi mô hình “orbital d mở rộng bát tử” cũ** sang **Liên hệ công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xu hướng acid–cơ sở (base / 기반) của hydride và oxide
 
@@ -166,7 +166,7 @@ Oxide chuyển dần từ cơ sở (base / 기반) → lưỡng tính → acid k
 
 Nhôm nằm giữa vùng kim loại điện dương mạnh và vùng phi kim. Liên kết Al–O đủ phân cực để oxide phản ứng với acid, nhưng Al(III) cũng là acid Lewis mạnh nên trong môi trường cơ sở (base / 기반), các tiểu phân hydroxo hòa tan có thể được ổn định. Vì vậy tính lưỡng tính không phải một ngoại lệ phải học thuộc; nó phản ánh vị trí trung gian của Al trong phổ ion–cộng hóa trị.
 
-> **Chuyển mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Liên hệ công nghiệp** tiếp nhận điểm tựa từ **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Liên hệ công nghiệp** nối từ **Xu hướng acid–cơ sở (base / 기반) của hydride và oxide** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ công nghiệp
 
@@ -174,7 +174,7 @@ Hóa học nhóm chính đứng sau nhiều hệ công nghiệp lớn: Haber–B
 
 Ở quy mô công nghiệp, khái niệm không thay đổi nhưng các ràng buộc mở rộng: tuổi thọ xúc tác, truyền nhiệt, ăn mòn, chuyển hóa cân bằng, chi phí tách và phát thải môi trường đều trở thành phần của thiết kế hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Những hiểu lầm thường gặp** nối từ **Liên hệ công nghiệp** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -194,7 +194,7 @@ Không. Năng lượng phản ứng là tổng của nhiều bước, đặc bi�
 
 Không. Ở nguyên tố nặng, hiệu ứng cặp electron trơ, tương tác với phối tử và điều kiện oxy hóa-khử có thể làm trạng thái oxy hóa thấp ổn định hơn đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

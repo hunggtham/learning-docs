@@ -15,7 +15,7 @@ Thư viện (library / 라이브러리) này mở rộng từ [foundation Comput
 7. [Complexity classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes](./06_complexity_classes_conp_pspace_exp_and_randomized_classes.md)
 8. [Interactive proofs, zero-knowledge và verifiable computation](./07_interactive_proofs_zero_knowledge_and_verifiable_computation.md)
 
-> **Chuyển mạch:** Trong **Advanced Computation & thông tin (information / 정보)**, **Chuẩn gốc (canonical / 정본) chapters** xác định đầu vào; **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Các distinction bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chuẩn gốc (canonical / 정본) chapters** đặt đầu vào cho **Lập luận (reasoning / 추론) đường dẫn (path / 경로)**, rồi **Các distinction bắt buộc** mở rộng hệ quả.
 
 ## Lập luận (reasoning / 추론) đường dẫn (path / 경로)
 
@@ -34,7 +34,7 @@ formal model
 
 Ba chapter đầu trả lời **computer có thể nhận biết và quyết định điều gì trong nguyên tắc**. Kolmogorov độ phức tạp (complexity / 복잡도) và thông tin (information / 정보) lý thuyết (theory / 이론) chuyển sang câu hỏi **một đối tượng (object / 객체)/phân phối (distribution / 분포) thực sự chứa bao nhiêu bất định (uncertainty / 불확실성) hoặc regularity**. Randomness phân biệt entropy thật với deterministic expansion và computational unpredictability. độ phức tạp (complexity / 복잡도) classes thêm giới hạn thời gian (time / 시간)/không gian (space / 공간)/randomness. Interactive proofs cho thấy xác minh (verification / 확인) power còn phụ thuộc tương tác (interaction / 상호작용), challenge và proof cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Advanced Computation & thông tin (information / 정보)**, **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** xác định đầu vào; **Các distinction bắt buộc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** đặt đầu vào cho **Các distinction bắt buộc**, rồi **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** mở rộng hệ quả.
 
 ## Các distinction bắt buộc
 
@@ -60,7 +60,7 @@ proof of a relation
 
 Các distinction này là prerequisite cho static phân tích (analysis / 분석), cryptography, compression, randomized algorithms, cơ sở dữ liệu (database / 데이터베이스) encoding, machine học tập (learning / 학습) và verifiable các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced Computation & thông tin (information / 정보)**, sau nội dung của **Các distinction bắt buộc**, **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cách đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** nối từ **Các distinction bắt buộc** sang **Cách đọc**, vì prerequisite phải được gắn với route và owner chuẩn.
 
 ## Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác
 
@@ -74,7 +74,7 @@ Các liên kết (connection / 연결) quan trọng:
 - hàng đợi (queue / 큐)/sức chứa (capacity / 용량)/chi phí (cost / 비용) của prover hoặc heavy computation → [`08_software_systems/advanced`](../../08_software_systems/advanced/README.md);
 - AI cross-entropy/suy luận (inference / 추론) các hệ thống (systems / 시스템들) → [`10_ai_foundations/advanced`](../../10_ai_foundations/advanced/README.md).
 
-> **Chuyển mạch:** **Liên kết với Mathematics và các domain khác** cho biết prerequisite đi ra ngoài; **Cách đọc** biến các prerequisite đó thành route để người học biết lúc nào quay về owner chuẩn.
+> **Nối mạch:** **Liên kết với Mathematics và các domain khác** cho biết prerequisite đi ra ngoài; **Cách đọc** biến các prerequisite đó thành route để người học biết lúc nào quay về owner chuẩn.
 
 ## Cách đọc
 

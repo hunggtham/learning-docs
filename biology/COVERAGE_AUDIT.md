@@ -53,7 +53,7 @@ Cổng chất lượng (quality gate / 품질 게이트) mới cho mọi cập n
 
 <!-- continuity-2026:followup -->
 
-> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **Kiểm tra (audit / 감사) 2026-09-21 — matter → năng lượng (energy / 에너지) → thông tin (information / 정보) → regulation → adaptation → evolution → ecosystem** xác định đầu vào; **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Kiểm tra (audit / 감사) 2026-09-21 — matter → năng lượng (energy / 에너지) → thông tin (information / 정보) → regulation → adaptation → evolution → ecosystem** đặt đầu vào cho **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass**, rồi **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem** mở rộng hệ quả.
 
 ## Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass
 
@@ -75,7 +75,7 @@ Cổng chất lượng (quality gate / 품질 게이트) cho pass sau: chỉ th�
 
 <!-- continuity-2026:final-validation -->
 
-> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass** xác định đầu vào; **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1. Chuẩn một chapter được xem là hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass** đặt đầu vào cho **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem**, rồi **1. Chuẩn một chapter được xem là hoàn chỉnh** mở rộng hệ quả.
 
 ## Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem
 
@@ -98,7 +98,7 @@ Chemistry / matter / energy
 
 Cổng chất lượng (quality gate / 품질 게이트) tiếp theo không phải “thêm tệp (file / 파일)”. Chỉ deepen khi một chapter cụ thể còn thiếu nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘), regulation, thất bại (failure / 실패) ranh giới (boundary / 경계), evolutionary liên kết (connection / 연결) hoặc worked bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** **Final continuity validation** kiểm tra chuỗi molecular → ecosystem; **Chuẩn một chapter hoàn chỉnh** chuyển continuity đó thành tiêu chí owner, mechanism và evidence cho **Foundations**.
+> **Nối mạch:** **Final continuity validation** kiểm tra chuỗi molecular → ecosystem; **Chuẩn một chapter hoàn chỉnh** chuyển continuity đó thành tiêu chí owner, mechanism và evidence cho **Foundations**.
 
 ## 1. Chuẩn một chapter được xem là hoàn chỉnh
 
@@ -123,7 +123,7 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Chuyển mạch:** **Chapter-complete standard** đặt mức depth tối thiểu; **Foundations** áp dụng mức đó cho chemistry, physics và evolution prerequisite trước khi bàn giao **Cell Biology**.
+> **Nối mạch:** **Chapter-complete standard** đặt mức depth tối thiểu; **Foundations** áp dụng mức đó cho chemistry, physics và evolution prerequisite trước khi bàn giao **Cell Biology**.
 
 ## 2. Foundations — trạng thái: hoàn chỉnh ở mức cốt lõi (core / 핵심)
 
@@ -141,7 +141,7 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Chuyển mạch:** **Foundations** cung cấp energy, matter và scale; **Cell Biology** biến chúng thành cơ chế tissue-scale, rồi **Genetics/Molecular Biology** truy nguyên thông tin và stability.
+> **Nối mạch:** **Foundations** cung cấp energy, matter và scale; **Cell Biology** biến chúng thành cơ chế tissue-scale, rồi **Genetics/Molecular Biology** truy nguyên thông tin và stability.
 
 ## 3. Sinh học tế bào (cell biology) — trạng thái: hoàn chỉnh ở mức cốt lõi (core / 핵심) và đã có cầu nối (bridge / 브리지) mô (tissue)-scale
 
@@ -157,7 +157,7 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Chuyển mạch:** **Genetics/Molecular Biology** giải thích inheritance và variation ở cấp phân tử; **Evolution & Diversity** dùng variation đó để nối microevolution, phylogeny và macrohistory.
+> **Nối mạch:** **Genetics/Molecular Biology** giải thích inheritance và variation ở cấp phân tử; **Evolution & Diversity** dùng variation đó để nối microevolution, phylogeny và macrohistory.
 
 ## 4. Di truyền học (genetics) & Sinh học phân tử (molecular biology) — trạng thái: core-complete và có stability tầng (layer / 계층) mạnh
 
@@ -173,7 +173,7 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Chuyển mạch:** **Evolution & Diversity** xác định lịch sử và constraint của sự sống; **Organismal Biology** áp dụng chúng vào function, development và systems-level behavior.
+> **Nối mạch:** **Evolution & Diversity** xác định lịch sử và constraint của sự sống; **Organismal Biology** áp dụng chúng vào function, development và systems-level behavior.
 
 ## 5. Tiến hóa & Diversity — trạng thái: microevolution, phylogeny và macrohistory đã nối đầy đủ
 
@@ -189,7 +189,7 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Chuyển mạch:** **Organismal Biology** nối gene và evolution với physiology; **Ecology** mở rộng cùng causal chain từ individual đến biosphere.
+> **Nối mạch:** **Organismal Biology** nối gene và evolution với physiology; **Ecology** mở rộng cùng causal chain từ individual đến biosphere.
 
 ## 6. Organismal Biology — trạng thái: đã nâng từ cốt lõi (core / 핵심) overview thành systems-level textbook
 
@@ -260,7 +260,7 @@ Wearable section giải sensor → thuật toán (algorithm / 알고리즘) → 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **6. Organismal Biology — trạng thái: đã nâng từ cốt lõi (core / 핵심) overview thành systems-level textbook** xác định đầu vào; **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Organismal Biology — trạng thái: đã nâng từ cốt lõi (core / 핵심) overview thành systems-level textbook** đặt đầu vào cho **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)**, rồi **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh** mở rộng hệ quả.
 
 ## 7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)
 
@@ -274,7 +274,7 @@ Wearable section giải sensor → thuật toán (algorithm / 알고리즘) → 
 
 ---
 
-> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)** xác định đầu vào; **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Cross-domain synthesis — trạng thái: mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)** đặt đầu vào cho **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh**, rồi **9. Cross-domain synthesis — trạng thái: mạnh** mở rộng hệ quả.
 
 ## 8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh
 
@@ -292,7 +292,7 @@ Human Health nối trực tiếp vào section này qua blood-áp suất (pressur
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **9. Cross-domain synthesis — trạng thái: mạnh** gom các mảnh từ **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Cross-domain synthesis — trạng thái: mạnh** tổng hợp từ **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh**; **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Cross-domain synthesis — trạng thái: mạnh
 
@@ -304,7 +304,7 @@ Organismal Biology hiện tái sử dụng trực tiếp các motif này: plant 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage, độ sâu (depth / 깊이) & Continuity kiểm tra (audit / 감사)**, **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** gom các mảnh từ **9. Cross-domain synthesis — trạng thái: mạnh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **11. Health-content an toàn (safety / 안전) & chất lượng (quality / 품질) gates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** tổng hợp từ **9. Cross-domain synthesis — trạng thái: mạnh**; **11. Health-content an toàn (safety / 안전) & chất lượng (quality / 품질) gates** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Continuity motifs đã được kiểm tra (audit / 감사) lại
 
@@ -342,7 +342,7 @@ Phân tử (molecule) → tế bào → mô → cơ quan → sinh vật → qu�
 
 ---
 
-> **Chuyển mạch:** **Continuity motifs** xác nhận các scale vẫn nối được; **Health-content safety/quality gates** bảo vệ claim nhạy cảm trước khi phân loại **specialization gaps**.
+> **Nối mạch:** **Continuity motifs** xác nhận các scale vẫn nối được; **Health-content safety/quality gates** bảo vệ claim nhạy cảm trước khi phân loại **specialization gaps**.
 
 ## 11. Health-content an toàn (safety / 안전) & chất lượng (quality / 품질) gates
 
@@ -364,7 +364,7 @@ Thứ bảy, chapter phải có **escalation lô-gic (logic / 논리)** cho symp
 
 ---
 
-> **Chuyển mạch:** **Specialization gaps** được giữ riêng để không lẫn với core hole; **Quality gates cho pass tiếp theo** định nghĩa evidence cần có nếu mở rộng.
+> **Nối mạch:** **Specialization gaps** được giữ riêng để không lẫn với core hole; **Quality gates cho pass tiếp theo** định nghĩa evidence cần có nếu mở rộng.
 
 ## 12. Các khoảng trống còn lại là specialization, không phải cốt lõi (core / 핵심) hole
 
@@ -374,7 +374,7 @@ Các chapter Organismal Biology vừa được deepen đủ để làm prerequis
 
 ---
 
-> **Chuyển mạch:** **Quality gates** biến gap thành điều kiện review cụ thể; **Final audit conclusion** tổng hợp trạng thái coverage và ưu tiên còn lại.
+> **Nối mạch:** **Quality gates** biến gap thành điều kiện review cụ thể; **Final audit conclusion** tổng hợp trạng thái coverage và ưu tiên còn lại.
 
 ## 13. chất lượng (quality / 품질) gates cho các pass tiếp theo
 
@@ -384,7 +384,7 @@ Các pass tiếp theo nên ưu tiên những lĩnh vực (domain / 도메인) c�
 
 ---
 
-> **Chuyển mạch:** **Final audit conclusion** khép coverage bằng owner, evidence và boundary; phần specialization tiếp theo quay về chapter biology canonical.
+> **Nối mạch:** **Final audit conclusion** khép coverage bằng owner, evidence và boundary; phần specialization tiếp theo quay về chapter biology canonical.
 
 ## 14. Final kiểm tra (audit / 감사) conclusion
 

@@ -14,7 +14,7 @@ Nếu quyền sở hữu (ownership / 소유권) chỉ tồn tại trong comment
 
 Tài nguyên (resource / 자원) không chỉ là bộ nhớ vùng động (heap memory / 힙 메모리). tệp (file / 파일) descriptor, socket, mutex guard, giao dịch (transaction / 트랜잭션) handle, GPU buffer hay cryptographic năng lực (capability / 역량) đều có vòng đời (lifecycle / 생명주기).
 
-> **Chuyển mạch:** Trong **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **1. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) là vấn đề ngữ nghĩa (semantic / 의미적)** nêu điều cần giải thích; **2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) là vấn đề ngữ nghĩa (semantic / 의미적)** đặt vấn đề; **2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng** kiểm tra bằng chứng, rồi **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** mở rộng hệ quả.
 
 ## 2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng
 
@@ -29,7 +29,7 @@ Move ngữ nghĩa (semantics / 의미론) tránh implicit duplication của reso
 
 Bất biến (invariant / 불변식) cốt lõi là: **không tồn tại hai đơn vị sở hữu (owner / 오너) độc lập cùng tin rằng mình có quyền hủy cùng một unique tài nguyên (resource / 자원).**
 
-> **Chuyển mạch:** Ở chặng này của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** tiếp nhận điểm tựa từ **2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** nối từ **2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng** sang **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Borrowing tách quyền sử dụng khỏi quyền sở hữu
 
@@ -45,7 +45,7 @@ một mutable borrow độc quyền
 
 Mục tiêu là ngăn unrestricted mutable aliasing — nguồn gốc của nhiều dữ liệu (data / 데이터) race, iterator vô hiệu hóa (invalidation / 무효화) và temporal bugs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ** tiếp nhận điểm tựa từ **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ** nối từ **3. Borrowing tách quyền sử dụng khỏi quyền sở hữu** sang **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ
 
@@ -55,7 +55,7 @@ Nếu hàm (function / 함수) trả tham chiếu (reference / 참조) tới c�
 
 Thời gian tồn tại (lifetime / 수명) vì thế là thuộc tính (property / 속성) của phạm vi (scope / 범위)/data-flow/quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프), không phải timestamp thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Trong **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng** tiếp nhận điểm tựa từ **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng** nối từ **4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ** sang **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng
 
@@ -65,7 +65,7 @@ Hệ thống thực tế có thể không tuân một calculus thuần túy, nh�
 
 Một integer có thể bản sao (copy / 복사) tự do; một unique tệp (file / 파일) handle, khóa (lock / 잠금) guard hay signing năng lực (capability / 역량) có thể cần ngữ nghĩa (semantics / 의미론) khác.
 
-> **Chuyển mạch:** Ở chặng này của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, sau nội dung của **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng**, **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **7. RAII và deterministic cleanup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng**, **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **7. RAII và deterministic cleanup** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang **typestate**. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:
 
@@ -79,7 +79,7 @@ Nếu API encode chuyển tiếp trạng thái (state transition / 상태 전이
 
 Đây là cách hệ kiểu (type system / 타입 시스템) giữ bất biến (invariant / 불변식) của một giao thức (protocol / 프로토콜), không chỉ thời gian tồn tại (lifetime / 수명) bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **7. RAII và deterministic cleanup** tiếp nhận điểm tựa từ **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. RAII và deterministic cleanup** nối từ **6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang typestate. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:** sang **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. RAII và deterministic cleanup
 
@@ -89,7 +89,7 @@ Khóa (lock / 잠금) guard là ví dụ rõ: acquire khóa (lock / 잠금) tạ
 
 Java dùng GC cho bộ nhớ (memory / 메모리) nhưng vẫn cần `try-with-resources` cho tệp (file / 파일)/socket vì reachability thời gian tồn tại (lifetime / 수명) không đồng nghĩa external-resource thời gian tồn tại (lifetime / 수명).
 
-> **Chuyển mạch:** Trong **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, sau nội dung của **7. RAII và deterministic cleanup**, **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **7. RAII và deterministic cleanup**, **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng
 
@@ -99,7 +99,7 @@ Nhưng chi phí (cost / 비용) không miễn phí. Atomic tham chiếu (referen
 
 “Không dùng GC” không có nghĩa bộ nhớ (memory / 메모리) management không có thời gian chạy (runtime / 런타임) chi phí (cost / 비용); chi phí (cost / 비용) được chuyển sang refcount, allocator, static các ràng buộc (constraints / 제약조건들) hoặc tường minh (explicit / 명시적) kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Ở chặng này của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** tiếp nhận điểm tựa từ **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** nối từ **8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng** sang **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến
 
@@ -109,7 +109,7 @@ Mô hình tư duy (mental model / 사고 모델) đúng là: dùng chung (shared
 
 Điều này rất quan trọng khi lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성): “API nhìn immutable” không có nghĩa đối tượng (object / 객체) physically không đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)** tiếp nhận điểm tựa từ **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)** nối từ **9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến** sang **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)
 
@@ -119,7 +119,7 @@ Tuy nhiên quyền sở hữu (ownership / 소유권) không chứng minh toàn 
 
 Static quyền sở hữu (ownership / 소유권) chỉ sở hữu một số bất biến (invariant / 불변식): thời gian tồn tại (lifetime / 수명), aliasing và transfer discipline. Đừng mở rộng guarantee vượt quá ranh giới (boundary / 경계) đó.
 
-> **Chuyển mạch:** Trong **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. FFI là nơi static proof dừng lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)** nối từ **10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)** sang **12. FFI là nơi static proof dừng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)
 
@@ -129,7 +129,7 @@ Dùng chung (shared / 공유) atomic refcount có thể tạo cache-line content
 
 Vì vậy “quyền sở hữu (ownership / 소유권) = nhanh” không phải bất biến (invariant / 불변식). hiệu năng (performance / 성능) phụ thuộc bố cục (layout / 레이아웃), allocation chiến lược (strategy / 전략), sharing mẫu (pattern / 패턴) và thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **12. FFI là nơi static proof dừng lại** tiếp nhận điểm tựa từ **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. thất bại (failure / 실패) modes cần phân biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. FFI là nơi static proof dừng lại** nối từ **11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)** sang **13. thất bại (failure / 실패) modes cần phân biệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. FFI là nơi static proof dừng lại
 
@@ -148,7 +148,7 @@ resource có được share/mutate đồng thời không?
 
 Đây là leaky lớp trừu tượng (abstraction / 추상화) điển hình giữa ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) và ABI/bản địa (native / 네이티브) thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **13. thất bại (failure / 실패) modes cần phân biệt** tiếp nhận điểm tựa từ **12. FFI là nơi static proof dừng lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. thất bại (failure / 실패) modes cần phân biệt** nối từ **12. FFI là nơi static proof dừng lại** sang **14. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. thất bại (failure / 실패) modes cần phân biệt
 
@@ -175,7 +175,7 @@ resource exhaustion
 
 Một type-safe program không đồng nghĩa system-level correct.
 
-> **Chuyển mạch:** Trong **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **13. thất bại (failure / 실패) modes cần phân biệt** nêu điều cần giải thích; **14. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. thất bại (failure / 실패) modes cần phân biệt** đặt vấn đề; **14. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **15. Mô hình tư duy** mở rộng hệ quả.
 
 ## 14. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -185,13 +185,13 @@ Với tham chiếu (reference / 참조) counting, contention/profile có thể c
 
 Bằng chứng (evidence / 증거) nên gắn đúng hypothesis: thời gian tồn tại (lifetime / 수명) bug, leak, allocator pressure hay contention không phải cùng một vấn đề.
 
-> **Chuyển mạch:** Ở chặng này của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, các dấu vết trong **14. bằng chứng vận hành (production evidence / 운영 증거)** được đọc cùng nhau ở **15. Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** các dấu vết trong **14. bằng chứng vận hành (production evidence / 운영 증거)** được đọc cùng nhau ở **15. Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời; **Kết nối** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 15. Mô hình tư duy
 
 > quyền sở hữu (ownership / 소유권) biến câu hỏi “ai chịu trách nhiệm thời gian tồn tại (lifetime / 수명) và ai được phép mutate/use?” thành một phần của program ngữ nghĩa (semantics / 의미론). **Move chuyển responsibility; borrow cấp quyền tạm thời; thời gian tồn tại (lifetime / 수명) chứng minh tham chiếu (reference / 참조) không vượt tài nguyên (resource / 자원); tuyến tính (linear / 선형)/affine discipline giới hạn duplication; typestate có thể encode tài nguyên (resource / 자원) giao thức (protocol / 프로토콜).** Static proof kết thúc ở ranh giới (boundary / 경계) như FFI/unsafe, nơi programmer phải tái lập bất biến (invariant / 불변식) bằng đặc tả hợp đồng (contract / 계약) rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Kết nối** gom các mảnh từ **15. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **15. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

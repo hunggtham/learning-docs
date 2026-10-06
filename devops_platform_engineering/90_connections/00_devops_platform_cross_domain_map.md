@@ -12,7 +12,7 @@ Khi câu hỏi chuyển sang “không gian tên (namespace / 네임스페이스
 
 Tiến trình (process / 프로세스), syscall, virtual bộ nhớ (memory / 메모리), filesystem và scheduling thuộc [OS foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) và [OS advanced](../../computer_science/03_operating_systems/advanced/README.md).
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **1. bộ chứa (container / 컨테이너) và Linux** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** nối từ **1. bộ chứa (container / 컨테이너) và Linux** sang **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
@@ -20,7 +20,7 @@ Kubernetes chapter giải vòng điều khiển (control loop / 제어 루프), 
 
 Các liên kết (connection / 연결) trực tiếp gồm [failure detectors](../../computer_science/06_networks_distributed_systems/advanced/01_failure_detectors_membership_and_gossip.md), [leases/fencing/split brain](../../computer_science/06_networks_distributed_systems/advanced/02_leases_fencing_tokens_and_split_brain_prevention.md) và [consensus/log replication](../../computer_science/06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** tiếp nhận điểm tựa từ **2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nối từ **2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** sang **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
@@ -28,7 +28,7 @@ DevOps delivery chapters quan tâm luồng (flow / 흐름), sản phẩm tạo r
 
 Safe rollout nối trực tiếp [deployment safety, canary, blue-green, flags và rollback](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md). môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) nối [test architecture và production verification](../../computer_science/09_software_engineering/advanced/04_test_architecture_contract_mutation_property_and_production_verification.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals** tiếp nhận điểm tựa từ **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals** nối từ **3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sang **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals
 
@@ -36,7 +36,7 @@ DevOps request-path chapter tập trung DNS/TLS/proxy/bộ cân bằng tải (lo
 
 Khi symptom là liên kết (connection / 연결)/hết thời gian chờ (timeout / 타임아웃), bắt đầu ở đường đi của yêu cầu (request path / 요청 경로). Khi câu hỏi là thứ tự (ordering / 순서), thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), nhân quả (causal / 인과적) consistency hoặc consensus, chuyển sang Khoa học máy tính (computer science / 컴퓨터 과학).
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)** tiếp nhận điểm tựa từ **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)** nối từ **4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals** sang **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)
 
@@ -44,7 +44,7 @@ DevOps bảo mật (security / 보안) chapter biến định danh (identity / �
 
 Các liên kết quan trọng: [PKI/mTLS/service identity](../../computer_science/07_security_reliability/advanced/02_pki_certificate_validation_mtls_and_service_identity.md), [OAuth/OIDC token lifecycle](../../computer_science/07_security_reliability/advanced/03_oauth_oidc_token_lifecycle_and_federation_threats.md), [secrets/KMS/HSM](../../computer_science/07_security_reliability/advanced/06_secrets_kms_hsm_rotation_and_envelope_encryption.md).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. cơ sở dữ liệu (database / 데이터베이스) operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** nối từ **5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)** sang **7. cơ sở dữ liệu (database / 데이터베이스) operations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
@@ -52,7 +52,7 @@ SRE chapter nói cách đặt SLI/SLO, lỗi (error / 오류) ngân sách (budge
 
 Khi cần nối độ tin cậy (reliability / 신뢰성) với ranh giới bảo mật (security boundary / 보안 경계), đọc [Computer Science learning route 4](../../computer_science/README.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** nêu điều cần giải thích; **7. cơ sở dữ liệu (database / 데이터베이스) operations** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** đặt vấn đề; **7. cơ sở dữ liệu (database / 데이터베이스) operations** kiểm tra bằng chứng, rồi **8. hiệu năng (performance / 성능)** mở rộng hệ quả.
 
 ## 7. cơ sở dữ liệu (database / 데이터베이스) operations
 
@@ -60,19 +60,19 @@ DevOps thư viện (library / 라이브러리) không dạy cơ sở dữ liệu
 
 Điều này tránh viết lại cơ sở dữ liệu (database / 데이터베이스) book bên trong nền tảng (platform / 플랫폼) book.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **7. cơ sở dữ liệu (database / 데이터베이스) operations** nêu điều cần giải thích; **8. hiệu năng (performance / 성능)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. AI/LLMOps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. cơ sở dữ liệu (database / 데이터베이스) operations** đặt vấn đề; **8. hiệu năng (performance / 성능)** kiểm tra bằng chứng, rồi **9. AI/LLMOps** mở rộng hệ quả.
 
 ## 8. hiệu năng (performance / 성능)
 
 Khi chỉ số (metric / 지표) cho thấy CPU throttling, page fault, I/O hoặc scheduler độ trễ (latency / 지연 시간) và cần đi xuống kernel/hardware, đọc OS/kiến trúc (architecture / 아키텍처) chuẩn gốc (canonical / 정본) docs. DevOps giữ symptom→bằng chứng (evidence / 증거) đường dẫn (path / 경로); Khoa học máy tính (computer science / 컴퓨터 과학) giải cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **9. AI/LLMOps** tiếp nhận điểm tựa từ **8. hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Nguyên tắc quyết định nơi đặt nội dung mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. AI/LLMOps** nối từ **8. hiệu năng (performance / 성능)** sang **10. Nguyên tắc quyết định nơi đặt nội dung mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. AI/LLMOps
 
 AI thư viện (library / 라이브러리) trong `computer_science/02_artificial_intelligence/` đã có LLMOps/AI kỹ thuật (engineering / 엔지니어링). DevOps nền tảng (platform / 플랫폼) chỉ nên cung cấp năng lực (capability / 역량) chung như CI/CD, secrets, Kubernetes, khả năng quan sát (observability / 관측 가능성) và nền tảng (platform / 플랫폼) API. Những vấn đề mô hình (model / 모델) evaluation, véc-tơ (vector / 벡터)/RAG/tác nhân (agent / 에이전트) độ tin cậy (reliability / 신뢰성) thuộc AI lĩnh vực (domain / 도메인) để tránh duplicate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **10. Nguyên tắc quyết định nơi đặt nội dung mới** tiếp nhận điểm tựa từ **9. AI/LLMOps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Nguyên tắc quyết định nơi đặt nội dung mới** nối từ **9. AI/LLMOps** sang **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Nguyên tắc quyết định nơi đặt nội dung mới
 
@@ -82,7 +82,7 @@ Nếu nội dung giải thích **cách tổ chức delivery, automation, vòng �
 
 Nếu một chapter mới chỉ mô tả một sản phẩm (product / 제품)/công cụ (tool / 도구) mà không tạo mô hình tư duy (mental model / 사고 모델) mới, không nên tạo chapter riêng; thêm ví dụ vào chapter concept tương ứng là đủ.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel** tiếp nhận điểm tựa từ **10. Nguyên tắc quyết định nơi đặt nội dung mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel** nối từ **10. Nguyên tắc quyết định nơi đặt nội dung mới** sang **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel
 
@@ -102,7 +102,7 @@ DevOps chapters giữ phần symptom, ngân sách thời gian chờ (timeout bud
 
 Ranh giới (boundary / 경계) này ngăn hai lỗi đối lập: operator chỉ nhìn dashboard cấp cao và không hiểu kernel, hoặc operator lao xuống kernel quá sớm khi thất bại (failure / 실패) thực ra là cấu hình (config / 설정)/phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)** nối từ **11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel** sang **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)
 
@@ -123,7 +123,7 @@ Mỗi arrow là một trust/định danh (identity / 식별자) ranh giới (bou
 
 Nếu môi trường vận hành (production / 운영 환경) khác staging, tuyến (route / 경로) này giúp hỏi đúng thứ tự: bytes có giống không, cấu hình (config / 설정) có giống đặc tả hợp đồng (contract / 계약) không, thời gian chạy (runtime / 런타임) có resolve đúng digest không, dữ liệu (data / 데이터)/phụ thuộc (dependency / 의존성) có khác không. Không rebuild sản phẩm tạo ra (artifact / 산출물) giữa chừng vì rebuild làm mất biến kiểm soát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)** nối từ **12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)** sang **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)
 
@@ -141,7 +141,7 @@ Khi trạng thái (state / 상태) dao động hoặc “bị đổi ngược”
 
 Phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본) giải các vấn đề consensus/thất bại (failure / 실패) detector/fencing khi chúng đi xuống cơ chế nền. DevOps/kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giữ bài toán quyền sở hữu (ownership / 소유권), reconciliation độ trễ (latency / 지연 시간), backoff, operational bằng chứng (evidence / 증거) và safe emergency override.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)** tiếp nhận điểm tựa từ **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)** nối từ **13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)** sang **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)
 
@@ -161,7 +161,7 @@ Nếu FinOps tối ưu chi phí mà không giữ thất bại (failure / 실패)
 
 Vì vậy kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) kết nối độ tin cậy (reliability / 신뢰성) với Economics: nền tảng (platform / 플랫폼) tier nên biểu diễn năng lực (capability / 역량) và thất bại (failure / 실패) đặc tả hợp đồng (contract / 계약), không chỉ kích thước CPU/RAM.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default** tiếp nhận điểm tựa từ **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default** nối từ **14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)** sang **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default
 
@@ -180,7 +180,7 @@ Nếu năm nhóm (team / 팀) đều gặp cùng lỗi certificate rotation, sol
 
 Đây là liên kết (connection / 연결) quan trọng nhất giữa môi trường vận hành (production / 운영 환경) Practice và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): troubleshooting không kết thúc ở chữa dịch vụ (service / 서비스); thất bại (failure / 실패) lặp lại phải trở thành phản hồi (feedback / 피드백) cho dùng chung (shared / 공유) năng lực (capability / 역량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)** nối từ **15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default** sang **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)
 
@@ -200,7 +200,7 @@ SRE sở hữu sức chứa (capacity / 용량), thử lại (retry / 재시도)
 
 Khi cần formal queueing sâu hơn, chuyển sang Mathematics/Khoa học máy tính (computer science / 컴퓨터 과학); DevOps giữ operational bất biến (invariant / 불변식): **không nhận công việc (work / 작업) vượt khả năng rồi để tất cả chết chậm**.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority** tiếp nhận điểm tựa từ **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority** nối từ **16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)** sang **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority
 
@@ -219,7 +219,7 @@ caller identity
 
 Khoa học máy tính (computer science / 컴퓨터 과학) bảo mật (security / 보안) giải đơn vị từ (token / 토큰)/PKI/OIDC cơ chế (mechanism / 메커니즘); DevOps/nền tảng (platform / 플랫폼) giữ phạm vi (scope / 범위), tải công việc (workload / 워크로드) định danh (identity / 식별자), delegated điều khiển (control / 제어) và bằng chứng (evidence / 증거) chuỗi (chain / 사슬) trên môi trường vận hành (production / 운영 환경) đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics** tiếp nhận điểm tựa từ **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics** nối từ **17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority** sang **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics
 
@@ -239,7 +239,7 @@ Một tenant dưới CPU quota vẫn có thể làm API máy chủ (server / 서
 
 SLO quyết định blast-radius ngân sách (budget / 예산); blast-radius ngân sách (budget / 예산) quyết định cell/dedicated/dùng chung (shared / 공유) topology; topology lại quyết định chi phí (cost / 비용). Đây là vòng độ tin cậy (reliability / 신뢰성) ↔ nền tảng (platform / 플랫폼) ↔ FinOps, không phải ba chủ đề rời nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics** xác định đầu vào; **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics** xác định đầu vào; **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)** giải thích vận hành; **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** kiểm tra hệ quả.
 
 ## 19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)
 
@@ -260,7 +260,7 @@ Nền tảng (platform / 플랫폼) API chỉ trưởng thành khi idempotency �
 
 Khi ngữ nghĩa (semantics / 의미론) chuyển sang exactly-once/idempotency/phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) nền, đọc phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본). nền tảng (platform / 플랫폼) chapter giữ đặc tả hợp đồng (contract / 계약) mà nhà phát triển (developer / 개발자)/operator cần để không phải hiểu mọi provider detail.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** giải thích vận hành; **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** kiểm tra hệ quả.
 
 ## 20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay
 
@@ -279,7 +279,7 @@ Nếu ràng buộc (constraint / 제약조건) là rà soát (review / 검토) h
 
 Foundations giữ operating-model lập luận (reasoning / 추론); khi cần queueing lý thuyết (theory / 이론) chính thức có thể đọc Mathematics. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) dùng kết quả này để quyết định chỗ nào nên self-service, chỗ nào cần reserve sức chứa (capacity / 용량) và chỗ nào automation chỉ đang đẩy hàng đợi (queue / 큐) sang tầng (layer / 계층) khác.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** nêu điều cần giải thích; **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay** đặt vấn đề; **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** kiểm tra bằng chứng, rồi **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** mở rộng hệ quả.
 
 ## 21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness
 
@@ -299,7 +299,7 @@ Thất bại (failure / 실패) có thể xuất hiện ở bất kỳ arrow nà
 
 Khả năng quan sát (observability / 관측 가능성) chapter sở hữu sensor ngữ nghĩa (semantics / 의미론). môi trường vận hành (production / 운영 환경) Practice sở hữu cách bằng chứng (evidence / 증거) được dùng để bác bỏ hypothesis. độ tin cậy (reliability / 신뢰성)/bảo mật (security / 보안) quyết định tín hiệu (signal / 신호) nào đủ quan trọng để loss-of-signal tự nó trở thành sự cố (incident / 인시던트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** nêu điều cần giải thích; **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness** đặt vấn đề; **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** kiểm tra bằng chứng, rồi **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** mở rộng hệ quả.
 
 ## 22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence
 
@@ -319,7 +319,7 @@ Nếu mở toàn bộ backlog ngay sau failover, khôi phục (recovery / 복구
 
 Sự cố (incident / 인시던트)/DR chapter giữ sequencing, exit criteria và kiểm tra hợp lệ (validation / 검증); phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본) giải fencing/consistency cơ chế (mechanism / 메커니즘); kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) có nhiệm vụ biến khôi phục (recovery / 복구) mẫu (pattern / 패턴) lặp lại thành workflow có idempotency, status và safe defaults.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** nêu điều cần giải thích; **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence** đặt vấn đề; **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** kiểm tra bằng chứng, rồi **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** mở rộng hệ quả.
 
 ## 23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)
 
@@ -339,7 +339,7 @@ Low-traffic dịch vụ (service / 서비스) cần xem cỡ mẫu (sample size 
 
 Khả năng quan sát (observability / 관측 가능성)/SRE giữ đo lường (measurement / 측정) ngữ nghĩa (semantics / 의미론). kiến trúc (architecture / 아키텍처) quyết định đường dẫn (path / 경로) nào thật sự trọng yếu (critical / 중요); nền tảng (platform / 플랫폼)/bảo mật (security / 보안) cần biết SLO trạng thái (state / 상태) có đáng tin trước khi dùng nó để freeze bản phát hành (release / 릴리스) hay tự động thay chính sách (policy / 정책).
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** nêu điều cần giải thích; **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)** đặt vấn đề; **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** kiểm tra bằng chứng, rồi **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** mở rộng hệ quả.
 
 ## 24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption
 
@@ -359,7 +359,7 @@ Cancellation có thể chỉ dừng controller chứ không đảo bên ngoài (
 
 Khi nền tảng (platform / 플랫폼) điều khiển (control / 제어) plane tự hỏng, tuyến (route / 경로) còn phải kéo dài tới bootstrap đường dẫn (path / 경로): trạng thái (state / 상태) backend, định danh (identity / 식별자), sản phẩm tạo ra (artifact / 산출물) và khôi phục (recovery / 복구) controller nào tồn tại ngoài miền lỗi (failure domain / 장애 도메인). Đây là liên kết (connection / 연결) trực tiếp giữa kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링), phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và sự cố (incident / 인시던트)/DR.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** xác định đầu vào; **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption** xác định đầu vào; **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** giải thích vận hành; **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** kiểm tra hệ quả.
 
 ## 25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)
 
@@ -378,7 +378,7 @@ Rotation chưa complete nếu bên tiêu thụ (consumer / 소비자) vẫn dùn
 
 Bảo mật (security / 보안) chapter giữ trust/authority vòng đời (lifecycle / 생명주기); khả năng quan sát (observability / 관측 가능성) cung cấp bằng chứng (evidence / 증거); nền tảng (platform / 플랫폼) biến mẫu (pattern / 패턴) này thành default workflow để bảo mật (security / 보안) không phụ thuộc thao tác thủ công khó kiểm chứng.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** giải thích vận hành; **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** kiểm tra hệ quả.
 
 ## 26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence
 
@@ -398,7 +398,7 @@ Deploy trước sự cố (incident / 인시던트) là correlation; nhân quả
 
 Môi trường vận hành (production / 운영 환경) Practice giữ discipline này; khả năng quan sát (observability / 관측 가능성) quyết định detector coverage; sự cố (incident / 인시던트) tiến trình (process / 프로세스) điều phối trạng thái (state / 상태) mutation để intervention của nhiều operator không phá chính bằng chứng (evidence / 증거) đang dùng để suy luận.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** tiếp nhận điểm tựa từ **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** nối từ **26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence** sang **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification
 
@@ -419,7 +419,7 @@ Mạng (network / 네트워크) chapter giữ liên kết (connection / 연결)/
 
 Điểm quan trọng là resilience cơ chế (mechanism / 메커니즘) cũng là traffic generator. thử lại (retry / 재시도), hedge và half-open probe phải được tính vào downstream tải (load / 로드) thay vì coi chúng là “free độ tin cậy (reliability / 신뢰성)”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence** tiếp nhận điểm tựa từ **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence** nối từ **27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification** sang **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence
 
@@ -440,7 +440,7 @@ CI/CD giữ orchestration/bằng chứng (evidence / 증거) và quay lui (rollb
 
 Di chuyển (migration / 마이그레이션) hoàn tất khi dữ liệu (data / 데이터) và bên tiêu thụ (consumer / 소비자) phụ thuộc (dependency / 의존성) đã converge, không phải khi DDL/job/deploy trả exit mã (code / 코드) 0.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability** tiếp nhận điểm tựa từ **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability** nối từ **28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence** sang **30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability
 
@@ -459,7 +459,7 @@ Khả năng quan sát (observability / 관측 가능성) chapter giữ priority,
 
 Mục tiêu không phải giữ mọi byte telemetry mà là bảo vệ **minimum diagnostic năng lực (capability / 역량)** khi hệ thống đang xấu nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)**, **30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)** khép chuỗi từ **29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability** bằng một quy trình khôi phục an toàn.
 
 ## 30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)
 

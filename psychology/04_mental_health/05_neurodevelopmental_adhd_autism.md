@@ -16,7 +16,7 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 - medication/non-pharmacological hỗ trợ (support / 지원);
 - education/workplace accommodation.
 
-> **Chuyển mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Autism** tiếp nhận điểm tựa từ **ADHD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tách?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Autism** nối từ **ADHD** sang **Vì sao tách?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Autism
 
@@ -30,13 +30,13 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 - neurodiversity và hỗ trợ (support / 지원) needs;
 - education/workplace adaptations.
 
-> **Chuyển mạch:** Ở chặng này của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Vì sao tách?** tiếp nhận điểm tựa từ **Autism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유) principles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Vì sao tách?** nối từ **Autism** sang **Dùng chung (shared / 공유) principles**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao tách?
 
 ADHD và autism có thể co-occur và cùng thuộc neurodevelopmental lĩnh vực (domain / 도메인), nhưng cơ chế (mechanism / 메커니즘), assessment lô-gic (logic / 논리) và hỗ trợ (support / 지원) need không đồng nhất. Gộp quá sâu vào một tệp (file / 파일) dễ biến `neurodevelopmental` thành một category quá rộng và làm mất conceptual ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Dùng chung (shared / 공유) principles** tiếp nhận điểm tựa từ **Vì sao tách?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Dùng chung (shared / 공유) principles** nối từ **Vì sao tách?** sang **Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (shared / 공유) principles
 
@@ -52,7 +52,7 @@ developmental history
 
 Không chẩn đoán chỉ bằng online checklist hoặc một kiểm thử (test / 테스트) đơn lẻ.
 
-> **Chuyển mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (shared / 공유) principles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Kết nối** nối từ **Dùng chung (shared / 공유) principles** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối
 

@@ -34,7 +34,7 @@ B. Borrow KRW, then swap KRW funding into USD
 
 Choice không nên dựa chỉ vào headline coupon.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **2. Direct USD borrowing** tiếp nhận điểm tựa từ **1. Nghiệp vụ (business / 비즈니스) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. KRW borrowing tuyến (route / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **2. Direct USD borrowing** nối từ **1. Nghiệp vụ (business / 비즈니스) bài toán (problem / 문제)** sang **3. KRW borrowing tuyến (route / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Direct USD borrowing
 
@@ -49,7 +49,7 @@ Company has direct USD liability.
 
 If nghiệp vụ (business / 비즈니스) cash flows are in USD, this may naturally match funding need.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **3. KRW borrowing tuyến (route / 경로)** tiếp nhận điểm tựa từ **2. Direct USD borrowing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cross-currency swap concept** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **3. KRW borrowing tuyến (route / 경로)** nối từ **2. Direct USD borrowing** sang **4. Cross-currency swap concept**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. KRW borrowing tuyến (route / 경로)
 
@@ -64,7 +64,7 @@ But dự án (project / 프로젝트) needs USD cash.
 
 At inception, company can swap KRW into USD.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **4. Cross-currency swap concept** tiếp nhận điểm tựa từ **3. KRW borrowing tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Why not just spot-convert KRW into USD?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **4. Cross-currency swap concept** nối từ **3. KRW borrowing tuyến (route / 경로)** sang **5. Why not just spot-convert KRW into USD?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cross-currency swap concept
 
@@ -89,7 +89,7 @@ so KRW debt dịch vụ (service / 서비스) is economically offset while compa
 
 Chính xác (exact / 정확한) convention depends on đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **5. Why not just spot-convert KRW into USD?** tiếp nhận điểm tựa từ **4. Cross-currency swap concept** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Synthetic funding chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **5. Why not just spot-convert KRW into USD?** nối từ **4. Cross-currency swap concept** sang **6. Synthetic funding chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Why not just spot-convert KRW into USD?
 
@@ -104,7 +104,7 @@ Future principal repayment creates FX mismatch.
 
 Cross-currency hedge transforms future cash flows too.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **6. Synthetic funding chi phí (cost / 비용)** tiếp nhận điểm tựa từ **5. Why not just spot-convert KRW into USD?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Covered interest parity intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **6. Synthetic funding chi phí (cost / 비용)** nối từ **5. Why not just spot-convert KRW into USD?** sang **7. Covered interest parity intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Synthetic funding chi phí (cost / 비용)
 
@@ -118,7 +118,7 @@ KRW borrowing cost
 
 Not simply KRW coupon translated at spot.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **7. Covered interest parity intuition** tiếp nhận điểm tựa từ **6. Synthetic funding chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cross-currency basis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **7. Covered interest parity intuition** nối từ **6. Synthetic funding chi phí (cost / 비용)** sang **8. Cross-currency basis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Covered interest parity intuition
 
@@ -132,7 +132,7 @@ arbitrage demand should compress gap
 
 Real markets have balance-sheet, collateral, regulatory and credit frictions.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **8. Cross-currency basis** tiếp nhận điểm tựa từ **7. Covered interest parity intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Funding currency vs reporting currency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **8. Cross-currency basis** nối từ **7. Covered interest parity intuition** sang **9. Funding currency vs reporting currency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cross-currency basis
 
@@ -150,7 +150,7 @@ market segmentation
 
 Basis is economics, not automatically arbitrage profit.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **9. Funding currency vs reporting currency** tiếp nhận điểm tựa từ **8. Cross-currency basis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Natural hedge through revenue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **9. Funding currency vs reporting currency** nối từ **8. Cross-currency basis** sang **10. Natural hedge through revenue**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Funding currency vs reporting currency
 
@@ -167,7 +167,7 @@ What currency services debt?
 What happens under stress?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **10. Natural hedge through revenue** tiếp nhận điểm tựa từ **9. Funding currency vs reporting currency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Example capital cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **10. Natural hedge through revenue** nối từ **9. Funding currency vs reporting currency** sang **11. Example capital cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Natural hedge through revenue
 
@@ -182,7 +182,7 @@ can reduce giao dịch (transaction / 트랜잭션) FX rủi ro (risk / 위험).
 
 But if revenue is only partially USD or cyclical, mismatch remains.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **10. Natural hedge through revenue** cho ta quy tắc; **11. Example capital cấu trúc (structure / 구조)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Do not use spot movement to judge swap alone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **10. Natural hedge through revenue** nêu quy tắc; **11. Example capital cấu trúc (structure / 구조)** thử quy tắc trong tình huống, rồi **12. Do not use spot movement to judge swap alone** mở rộng hệ quả.
 
 ## 11. Example capital cấu trúc (structure / 구조)
 
@@ -197,7 +197,7 @@ Tenor = 3 years
 
 Cross-currency swap maps KRW debt cash flows into agreed USD cash flows.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **11. Example capital cấu trúc (structure / 구조)** cho ta quy tắc; **12. Do not use spot movement to judge swap alone** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **11. Example capital cấu trúc (structure / 구조)** nêu quy tắc; **12. Do not use spot movement to judge swap alone** thử quy tắc trong tình huống, rồi **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)** mở rộng hệ quả.
 
 ## 12. Do not use spot movement to judge swap alone
 
@@ -207,7 +207,7 @@ But company also has debt/assets whose economic values move.
 
 Evaluate combined funding gói (package / 패키지).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **12. Do not use spot movement to judge swap alone** xác định đầu vào; **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Collateral mechanics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **12. Do not use spot movement to judge swap alone** đặt đầu vào cho **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)**, rồi **14. Collateral mechanics** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)
 
@@ -224,7 +224,7 @@ termination cost
 
 Economic cash-flow hedge can create interim liquidity needs.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)** xác định đầu vào; **14. Collateral mechanics** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Wrong-way liquidity rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)** đặt đầu vào cho **14. Collateral mechanics**, rồi **15. Wrong-way liquidity rủi ro (risk / 위험)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Collateral mechanics
 
@@ -240,7 +240,7 @@ market move
 
 Even if final maturity cash flows remain economically matched.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **15. Wrong-way liquidity rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **14. Collateral mechanics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Counterparty credit rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **15. Wrong-way liquidity rủi ro (risk / 위험)** nối từ **14. Collateral mechanics** sang **16. Counterparty credit rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Wrong-way liquidity rủi ro (risk / 위험)
 
@@ -254,7 +254,7 @@ business cash flow weakens
 
 Treasury must stress combined liquidity, not each item separately.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **16. Counterparty credit rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **15. Wrong-way liquidity rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Replacement rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **16. Counterparty credit rủi ro (risk / 위험)** nối từ **15. Wrong-way liquidity rủi ro (risk / 위험)** sang **17. Replacement rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Counterparty credit rủi ro (risk / 위험)
 
@@ -272,7 +272,7 @@ replacement cost
 
 A 3-year hedge has longer counterparty horizon than 1-month forward.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **17. Replacement rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **16. Counterparty credit rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Maturity mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **17. Replacement rủi ro (risk / 위험)** nối từ **16. Counterparty credit rủi ro (risk / 위험)** sang **18. Maturity mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Replacement rủi ro (risk / 위험)
 
@@ -284,7 +284,7 @@ company must replace hedge at current market rate
 
 Replacement chi phí (cost / 비용) can be material.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **18. Maturity mismatch** tiếp nhận điểm tựa từ **17. Replacement rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Rollover basis rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **18. Maturity mismatch** nối từ **17. Replacement rủi ro (risk / 위험)** sang **19. Rollover basis rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Maturity mismatch
 
@@ -299,7 +299,7 @@ hedge expires
 
 Company faces roll/refinancing rủi ro (risk / 위험) for hedge.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **19. Rollover basis rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **18. Maturity mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Debt refinancing rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **19. Rollover basis rủi ro (risk / 위험)** nối từ **18. Maturity mismatch** sang **20. Debt refinancing rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Rollover basis rủi ro (risk / 위험)
 
@@ -307,7 +307,7 @@ Future swap basis may be very different.
 
 A chiến lược (strategy / 전략) that looks cheap today because 3-year basis is favorable may become expensive when rolled.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **20. Debt refinancing rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **19. Rollover basis rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Lời gọi (call / 호출)/put features in debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **20. Debt refinancing rủi ro (risk / 위험)** nối từ **19. Rollover basis rủi ro (risk / 위험)** sang **21. Lời gọi (call / 호출)/put features in debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Debt refinancing rủi ro (risk / 위험)
 
@@ -321,7 +321,7 @@ orphan derivative exposure
 
 must be closed/restructured.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **21. Lời gọi (call / 호출)/put features in debt** tiếp nhận điểm tựa từ **20. Debt refinancing rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Floating vs fixed legs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **21. Lời gọi (call / 호출)/put features in debt** nối từ **20. Debt refinancing rủi ro (risk / 위험)** sang **22. Floating vs fixed legs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Lời gọi (call / 호출)/put features in debt
 
@@ -331,7 +331,7 @@ Fixed hedge maturity can become mismatched.
 
 Instrument optionality and hedge optionality should be considered together.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **22. Floating vs fixed legs** tiếp nhận điểm tựa từ **21. Lời gọi (call / 호출)/put features in debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Interest-rate swap combination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **22. Floating vs fixed legs** nối từ **21. Lời gọi (call / 호출)/put features in debt** sang **23. Interest-rate swap combination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Floating vs fixed legs
 
@@ -353,7 +353,7 @@ interest-rate risk
 
 Do not discuss currency leg while ignoring tỷ lệ (rate / 비율) reset cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **23. Interest-rate swap combination** tiếp nhận điểm tựa từ **22. Floating vs fixed legs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. DV01 and FX delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **23. Interest-rate swap combination** nối từ **22. Floating vs fixed legs** sang **24. DV01 and FX delta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Interest-rate swap combination
 
@@ -368,7 +368,7 @@ or one cấu trúc (structure / 구조) that transforms both currency and tỷ l
 
 Rủi ro (risk / 위험) hệ thống (system / 시스템) should consolidate sensitivities.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **24. DV01 and FX delta** tiếp nhận điểm tựa từ **23. Interest-rate swap combination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Basis sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **24. DV01 and FX delta** nối từ **23. Interest-rate swap combination** sang **25. Basis sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. DV01 and FX delta
 
@@ -382,7 +382,7 @@ basis sensitivity
 
 A “currency hedge” can still have substantial rates/basis rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **25. Basis sensitivity** tiếp nhận điểm tựa từ **24. DV01 and FX delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. NDF/funding limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **25. Basis sensitivity** nối từ **24. DV01 and FX delta** sang **26. NDF/funding limitation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Basis sensitivity
 
@@ -390,7 +390,7 @@ If cross-currency basis widens, swap MTM changes even if spot FX stays unchanged
 
 This is why funding hedge cannot be monitored by spot chart alone.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **25. Basis sensitivity** đã nêu tiêu chí phân biệt, còn **26. NDF/funding limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **27. FX swap for short-term funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **25. Basis sensitivity** đặt tiêu chí; **26. NDF/funding limitation** dùng tiêu chí đó để kiểm tra ranh giới, rồi **27. FX swap for short-term funding** mở rộng hệ quả.
 
 ## 26. NDF/funding limitation
 
@@ -405,7 +405,7 @@ NDF P/L
 
 This distinction is trọng yếu (critical / 중요) in restricted/onshore-offshore markets.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **26. NDF/funding limitation** đã nêu tiêu chí phân biệt, còn **27. FX swap for short-term funding** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **28. FX swap rollover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **26. NDF/funding limitation** đặt tiêu chí; **27. FX swap for short-term funding** dùng tiêu chí đó để kiểm tra ranh giới, rồi **28. FX swap rollover** mở rộng hệ quả.
 
 ## 27. FX swap for short-term funding
 
@@ -418,7 +418,7 @@ Far leg: return USD / receive KRW later
 
 This transforms temporary liquidity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **28. FX swap rollover** tiếp nhận điểm tựa từ **27. FX swap for short-term funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. 2020 lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **28. FX swap rollover** nối từ **27. FX swap for short-term funding** sang **29. 2020 lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. FX swap rollover
 
@@ -431,7 +431,7 @@ funded by short FX swaps
 
 can be vulnerable to rollover freeze.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **29. 2020 lesson** tiếp nhận điểm tựa từ **28. FX swap rollover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Reserve/corporate distinction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **29. 2020 lesson** nối từ **28. FX swap rollover** sang **30. Reserve/corporate distinction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. 2020 lesson
 
@@ -447,7 +447,7 @@ can thay đổi (change / 변경) rapidly under hệ thống (system / 시스템
 
 A normal-times synthetic funding advantage may disappear when needed most.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **30. Reserve/corporate distinction** tiếp nhận điểm tựa từ **29. 2020 lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. All-in funding comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **30. Reserve/corporate distinction** nối từ **29. 2020 lesson** sang **31. All-in funding comparison**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Reserve/corporate distinction
 
@@ -455,7 +455,7 @@ Central-bank swap lines can improve hệ thống (system / 시스템) USD liquid
 
 Do not assume central-bank facility guarantees company funding.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **31. All-in funding comparison** tiếp nhận điểm tựa từ **30. Reserve/corporate distinction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **31. All-in funding comparison** nối từ **30. Reserve/corporate distinction** sang **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. All-in funding comparison
 
@@ -481,7 +481,7 @@ counterparty risk
 market-access risk
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **31. All-in funding comparison** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Term funding premium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)** nối từ **31. All-in funding comparison** sang **33. Term funding premium**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)
 
@@ -494,7 +494,7 @@ may reflect taking future rollover/basis risk
 
 Do not compare expected chi phí (cost / 비용) without rủi ro (risk / 위험) horizon.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **33. Term funding premium** tiếp nhận điểm tựa từ **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Liquidity stress scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **33. Term funding premium** nối từ **32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)** sang **34. Liquidity stress scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Term funding premium
 
@@ -504,7 +504,7 @@ Paying more can buy certainty.
 
 Treasury choice is rủi ro (risk / 위험) allocation, not only price tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **34. Liquidity stress scenario** tiếp nhận điểm tựa từ **33. Term funding premium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Revenue shock scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **34. Liquidity stress scenario** nối từ **33. Term funding premium** sang **35. Revenue shock scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Liquidity stress scenario
 
@@ -526,7 +526,7 @@ interest
 principal/roll needs
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **35. Revenue shock scenario** tiếp nhận điểm tựa từ **34. Liquidity stress scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Early termination scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **35. Revenue shock scenario** nối từ **34. Liquidity stress scenario** sang **36. Early termination scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Revenue shock scenario
 
@@ -536,7 +536,7 @@ Natural hedge deteriorates.
 
 Currency-matched debt does not remove business-volume rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **36. Early termination scenario** tiếp nhận điểm tựa từ **35. Revenue shock scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Counterparty thất bại (failure / 실패) scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **36. Early termination scenario** nối từ **35. Revenue shock scenario** sang **37. Counterparty thất bại (failure / 실패) scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Early termination scenario
 
@@ -546,7 +546,7 @@ Debt prepaid, but 3-year cross-currency swap remains.
 
 Need compute termination giá trị (value / 값) and liquidity impact.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **37. Counterparty thất bại (failure / 실패) scenario** tiếp nhận điểm tựa từ **36. Early termination scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Multi-counterparty chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **37. Counterparty thất bại (failure / 실패) scenario** nối từ **36. Early termination scenario** sang **38. Multi-counterparty chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Counterparty thất bại (failure / 실패) scenario
 
@@ -562,7 +562,7 @@ basis
 legal closeout delay
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **38. Multi-counterparty chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **37. Counterparty thất bại (failure / 실패) scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Collateral currency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **38. Multi-counterparty chiến lược (strategy / 전략)** nối từ **37. Counterparty thất bại (failure / 실패) scenario** sang **39. Collateral currency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Multi-counterparty chiến lược (strategy / 전략)
 
@@ -576,7 +576,7 @@ netting fragmentation
 
 Diversification has chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **39. Collateral currency** tiếp nhận điểm tựa từ **38. Multi-counterparty chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Hedge accounting ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **39. Collateral currency** nối từ **38. Multi-counterparty chiến lược (strategy / 전략)** sang **40. Hedge accounting ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Collateral currency
 
@@ -584,7 +584,7 @@ Collateral posted in different currency can itself create FX/funding need.
 
 CSA terms are part of economics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **39. Collateral currency** đã nêu tiêu chí phân biệt, còn **40. Hedge accounting ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **39. Collateral currency** đặt tiêu chí; **40. Hedge accounting ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** mở rộng hệ quả.
 
 ## 40. Hedge accounting ranh giới (boundary / 경계)
 
@@ -592,7 +592,7 @@ Accounting designation can affect P&L presentation, but economic hedge should fi
 
 Professional hiện thực (implementation / 구현) requires hiện tại (current / 현재) accounting and legal rà soát (review / 검토) separately.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **40. Hedge accounting ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **42. Funding attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **40. Hedge accounting ranh giới (boundary / 경계)** đặt tiêu chí; **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **42. Funding attribution** mở rộng hệ quả.
 
 ## 41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)
 
@@ -608,7 +608,7 @@ collateral/legal framework
 
 Korea/Vietnam-specific rules should be verified from hiện tại (current / 현재) official sources before real use.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **42. Funding attribution** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)** đặt tiêu chí; **42. Funding attribution** dùng tiêu chí đó để kiểm tra ranh giới, rồi **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** mở rộng hệ quả.
 
 ## 42. Funding attribution
 
@@ -626,7 +626,7 @@ Early termination cost
 
 Without decomposition, “synthetic USD chi phí (cost / 비용)” is opaque.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** tiếp nhận điểm tựa từ **42. Funding attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Balance-sheet exposure map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** nối từ **42. Funding attribution** sang **44. Balance-sheet exposure map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)
 
@@ -641,7 +641,7 @@ and remove FX mismatch
 
 Evaluate against rủi ro (risk / 위험) mục tiêu (objective / 목표), not hindsight spot tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **44. Balance-sheet exposure map** tiếp nhận điểm tựa từ **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Maturity ladder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **44. Balance-sheet exposure map** nối từ **43. Hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)** sang **45. Maturity ladder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Balance-sheet exposure map
 
@@ -660,7 +660,7 @@ Maturity buckets
 
 This map should precede derivative choice.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **45. Maturity ladder** tiếp nhận điểm tựa từ **44. Balance-sheet exposure map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Sensitivity dashboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **45. Maturity ladder** nối từ **44. Balance-sheet exposure map** sang **46. Sensitivity dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Maturity ladder
 
@@ -678,7 +678,7 @@ for debt, derivatives and expected cash flows.
 
 Funding rủi ro (risk / 위험) often hides in maturity mismatch rather than net currency exposure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **46. Sensitivity dashboard** tiếp nhận điểm tựa từ **45. Maturity ladder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. What not to learn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **46. Sensitivity dashboard** nối từ **45. Maturity ladder** sang **47. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Sensitivity dashboard
 
@@ -693,7 +693,7 @@ Counterparty exposure
 Refinancing amount by horizon
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **47. What not to learn** tiếp nhận điểm tựa từ **46. Sensitivity dashboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Trường hợp (case / 사례) outputs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **47. What not to learn** nối từ **46. Sensitivity dashboard** sang **48. Trường hợp (case / 사례) outputs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. What not to learn
 
@@ -722,7 +722,7 @@ Compare all-in synthetic funding cost together with
 basis, collateral, rollover, counterparty and maturity risk.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **47. What not to learn** cho ta quy tắc; **48. Trường hợp (case / 사례) outputs** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **49. Rà soát (review / 검토) questions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **47. What not to learn** nêu quy tắc; **48. Trường hợp (case / 사례) outputs** thử quy tắc trong tình huống, rồi **49. Rà soát (review / 검토) questions** mở rộng hệ quả.
 
 ## 48. Trường hợp (case / 사례) outputs
 
@@ -738,7 +738,7 @@ counterparty_limit_report.md
 funding_cost_attribution.md
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **48. Trường hợp (case / 사례) outputs** cho ta quy tắc; **49. Rà soát (review / 검토) questions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nội bộ (internal / 내부) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **48. Trường hợp (case / 사례) outputs** nêu quy tắc; **49. Rà soát (review / 검토) questions** thử quy tắc trong tình huống, rồi **Nội bộ (internal / 내부) links** mở rộng hệ quả.
 
 ## 49. Rà soát (review / 검토) questions
 
@@ -752,7 +752,7 @@ Explain:
 6. Why NDF hedge is not vật lý (physical / 물리적) funding.
 7. Why all-in funding chi phí (cost / 비용) must include hidden rủi ro (risk / 위험), not coupon only.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **Nội bộ (internal / 내부) links** tiếp nhận điểm tựa từ **49. Rà soát (review / 검토) questions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis Rủi ro (risk / 위험)**, **Nội bộ (internal / 내부) links** nối từ **49. Rà soát (review / 검토) questions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

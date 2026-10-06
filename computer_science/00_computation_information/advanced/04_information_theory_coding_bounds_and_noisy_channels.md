@@ -41,7 +41,7 @@ P(x,y) = P(x)P(y)
 
 Đây là thuộc tính (property / 속성) phù hợp với cách description length cộng qua các lựa chọn độc lập.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **1. thông tin (information / 정보) bắt đầu từ surprise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Joint, conditional entropy và mutual thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)** nối từ **1. thông tin (information / 정보) bắt đầu từ surprise** sang **3. Joint, conditional entropy và mutual thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)
 
@@ -63,7 +63,7 @@ Một coin có xác suất head `0.999` có entropy thấp hơn nhiều vì kế
 
 Nếu nguồn (source / 소스) phát symbol theo phân phối (distribution / 분포) lệch, ta có cơ hội dùng mã (code / 코드) ngắn cho symbol phổ biến và mã (code / 코드) dài cho symbol hiếm để giảm expected length.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **3. Joint, conditional entropy và mutual thông tin (information / 정보)** tiếp nhận điểm tựa từ **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Joint, conditional entropy và mutual thông tin (information / 정보)** nối từ **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)** sang **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Joint, conditional entropy và mutual thông tin (information / 정보)
 
@@ -95,7 +95,7 @@ I(X;Y)    = phần uncertainty đã được Y giải thích
 
 Mutual thông tin (information / 정보) quan trọng trong tính năng (feature / 기능) selection, communication và biểu diễn (representation / 표현) học tập (learning / 학습), nhưng không tự động chứng minh nhân quả (causal / 인과적) quan hệ (relation / 관계). Hai variable có thể chia sẻ thông tin (information / 정보) vì cùng phụ thuộc một nguyên nhân khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **3. Joint, conditional entropy và mutual thông tin (information / 정보)** nêu điều cần giải thích; **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Prefix mã (code / 코드) và Kraft inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Joint, conditional entropy và mutual thông tin (information / 정보)** đặt vấn đề; **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ** kiểm tra bằng chứng, rồi **5. Prefix mã (code / 코드) và Kraft inequality** mở rộng hệ quả.
 
 ## 4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ
 
@@ -123,7 +123,7 @@ D → 3 bits
 
 Symbol phổ biến nhận mã (code / 코드) ngắn hơn.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ** nêu điều cần giải thích; **5. Prefix mã (code / 코드) và Kraft inequality** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ** đặt vấn đề; **5. Prefix mã (code / 코드) và Kraft inequality** kiểm tra bằng chứng, rồi **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** mở rộng hệ quả.
 
 ## 5. Prefix mã (code / 코드) và Kraft inequality
 
@@ -148,7 +148,7 @@ Nó cho thấy mã (code / 코드) length không thể tùy ý ngắn cho mọi 
 
 **Huffman coding** tìm prefix mã (code / 코드) tối ưu theo expected length trong lớp (class / 클래스) mã (code / 코드) symbol-by-symbol với xác suất (probability / 확률) đã biết. **Arithmetic/phạm vi (range / 범위) coding** có thể biểu diễn cả chuỗi (sequence / 시퀀스) theo interval và tiến gần entropy hơn khi xác suất (probability / 확률) không khớp đẹp với integer bit lengths.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** tiếp nhận điểm tựa từ **5. Prefix mã (code / 코드) và Kraft inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Cross-entropy và coding regret** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** nối từ **5. Prefix mã (code / 코드) và Kraft inequality** sang **7. Cross-entropy và coding regret**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol
 
@@ -166,7 +166,7 @@ thay vì chỉ `P(symbol)`.
 
 Đây là cầu nối (bridge / 브리지) tới ngôn ngữ (language / 언어) modeling: predictive mô hình (model / 모델) tốt giảm bất định (uncertainty / 불확실성) của next đơn vị từ (token / 토큰). Tuy nhiên cross-entropy/perplexity của mô hình (model / 모델) và ngữ nghĩa (semantic / 의미적) understanding không phải cùng một khái niệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **7. Cross-entropy và coding regret** tiếp nhận điểm tựa từ **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Cross-entropy và coding regret** nối từ **6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol** sang **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Cross-entropy và coding regret
 
@@ -192,7 +192,7 @@ true uncertainty
 
 Mô hình (model / 모델) xác suất (probability / 확률) tệ không chỉ là “dự đoán kém”; nếu dùng cho entropy coding, nó tạo thêm bit thật.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất** tiếp nhận điểm tựa từ **7. Cross-entropy và coding regret** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất** nối từ **7. Cross-entropy và coding regret** sang **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất
 
@@ -208,7 +208,7 @@ C = max I(X;Y)
 
 Không cần thuộc công thức cho mọi channel; cần giữ mô hình tư duy (mental model / 사고 모델): sức chứa (capacity / 용량) phụ thuộc cả tín hiệu (signal / 신호) choices lẫn noise hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise** tiếp nhận điểm tựa từ **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise** nối từ **8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất** sang **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise
 
@@ -225,7 +225,7 @@ Ta thêm structured redundancy để decoder phân biệt codeword ngay cả khi
 
 Nhưng redundancy dùng bandwidth/lưu trữ (storage / 저장소). độ tin cậy (reliability / 신뢰성) luôn có chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau** tiếp nhận điểm tựa từ **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Erasure dễ hơn unknown corruption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau** nối từ **9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise** sang **11. Erasure dễ hơn unknown corruption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau
 
@@ -240,7 +240,7 @@ Nếu minimum distance giữa codeword là `d`, trực giác:
 
 Đây là geometric view: codeword phải đủ xa nhau để noise nhỏ không đẩy received word sang vùng của codeword khác.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **11. Erasure dễ hơn unknown corruption** tiếp nhận điểm tựa từ **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Burst lỗi (error / 오류) và interleaving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Erasure dễ hơn unknown corruption** nối từ **10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau** sang **12. Burst lỗi (error / 오류) và interleaving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Erasure dễ hơn unknown corruption
 
@@ -250,7 +250,7 @@ Erasure thường dễ sửa hơn vì bất định (uncertainty / 불확실성)
 
 Nhưng erasure coding thêm CPU, mạng (network / 네트워크) fan-out, repair traffic và failure-domain lập luận (reasoning / 추론). Không nên kết luận “erasure coding luôn rẻ hơn replication” chỉ từ raw lưu trữ (storage / 저장소) ratio.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **12. Burst lỗi (error / 오류) và interleaving** tiếp nhận điểm tựa từ **11. Erasure dễ hơn unknown corruption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Burst lỗi (error / 오류) và interleaving** nối từ **11. Erasure dễ hơn unknown corruption** sang **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Burst lỗi (error / 오류) và interleaving
 
@@ -260,7 +260,7 @@ Nhiều vật lý (physical / 물리적) channel không tạo independent random
 
 Sự đánh đổi (trade-off / 트레이드오프) là độ trễ (latency / 지연 시간) và buffer tăng. Đây là ví dụ điển hình của việc thay đổi biểu diễn (representation / 표현) để biến thất bại (failure / 실패) mẫu (pattern / 패턴) thành dạng mã (code / 코드) xử lý tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **12. Burst lỗi (error / 오류) và interleaving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)** nối từ **12. Burst lỗi (error / 오류) và interleaving** sang **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)
 
@@ -277,7 +277,7 @@ Nếu packet mất mát (loss / 손실) tăng, vận chuyển (transport / 전�
 
 Do đó khi debugging cần xác định tầng (layer / 계층) nào sở hữu “tỷ lệ (rate / 비율)” đang nói tới.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)** tiếp nhận điểm tựa từ **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)** nối từ **13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)** sang **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)
 
@@ -287,7 +287,7 @@ Thông tin (information / 정보) lý thuyết (theory / 이론) cố ý bỏ qu
 
 Đừng dùng “entropy cao” như synonym của “thông tin quan trọng”.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)** nêu điều cần giải thích; **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)** đặt vấn đề; **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)** kiểm tra bằng chứng, rồi **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** mở rộng hệ quả.
 
 ## 15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)
 
@@ -301,7 +301,7 @@ Nếu chuỗi (sequence / 시퀀스) rất predictable từ lịch sử (history
 
 Liên kết (connection / 연결) này giải thích tại sao dictionary/ngữ cảnh (context / 맥락) compressor có thể nén chuỗi (sequence / 시퀀스) mà frequency histogram đơn giản không cho thấy lợi ích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)** nêu điều cần giải thích; **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)** đặt vấn đề; **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** kiểm tra bằng chứng, rồi **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** mở rộng hệ quả.
 
 ## 16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding
 
@@ -321,7 +321,7 @@ failure-domain correlation
 
 Nếu compression ratio tốt nhưng CPU saturation làm hàng đợi (queue / 큐) tăng, end-to-end hệ thống (system / 시스템) có thể tệ hơn. Nếu erasure coding tiết kiệm lưu trữ (storage / 저장소) nhưng repair storm bão hòa mạng (network / 네트워크) sau rack thất bại (failure / 실패), chi phí (cost / 비용) mô hình (model / 모델) ban đầu thiếu hành vi khi thất bại (failure behavior / 실패 동작).
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** nêu điều cần giải thích; **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding** đặt vấn đề; **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** kiểm tra bằng chứng, rồi **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** mở rộng hệ quả.
 
 ## 17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
@@ -333,7 +333,7 @@ Cơ sở dữ liệu (database / 데이터베이스) columnar encoding dùng ph�
 - [Multi-region replication và geo-distributed trade-offs](../../06_networks_distributed_systems/advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md)
 - [Durability path application → WAL → filesystem → device](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md)
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** nêu điều cần giải thích; **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** đặt vấn đề; **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** kiểm tra bằng chứng, rồi **19. Những nhầm lẫn thường gặp** mở rộng hệ quả.
 
 ## 18. liên kết (connection / 연결) với machine học tập (learning / 학습)
 
@@ -343,7 +343,7 @@ Nhưng môi trường vận hành (production / 운영 환경) mô hình (model 
 
 Information-theoretic chỉ số (metric / 지표) cho biết mô hình (model / 모델) xác suất (probability / 확률) phù hợp dữ liệu (data / 데이터) tới đâu, không tự động cho biết quyết định (decision / 결정) downstream đúng hay có giá trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** đã nêu tiêu chí phân biệt, còn **19. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. Checklist lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. liên kết (connection / 연결) với machine học tập (learning / 학습)** đặt tiêu chí; **19. Những nhầm lẫn thường gặp** dùng nó để kiểm tra ranh giới, rồi **20. Checklist lập luận (reasoning / 추론)** mở rộng hệ quả.
 
 ## 19. Những nhầm lẫn thường gặp
 
@@ -359,7 +359,7 @@ Information-theoretic chỉ số (metric / 지표) cho biết mô hình (model /
 
 **“Mutual thông tin (information / 정보) cao nghĩa X gây ra Y.”** Không. phụ thuộc (dependency / 의존성) không đồng nghĩa causality.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **19. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **20. Checklist lập luận (reasoning / 추론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Những nhầm lẫn thường gặp** đặt tiêu chí; **20. Checklist lập luận (reasoning / 추론)** dùng nó để kiểm tra ranh giới, rồi **Kết luận** mở rộng hệ quả.
 
 ## 20. Checklist lập luận (reasoning / 추론)
 
@@ -375,7 +375,7 @@ Rate đang đo ở physical, transport hay application layer?
 Evidence nào cho thấy bottleneck là information limit thay vì implementation limit?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**, **Kết luận** gom các mảnh từ **20. Checklist lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết luận** tổng hợp từ **20. Checklist lập luận (reasoning / 추론)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết luận
 

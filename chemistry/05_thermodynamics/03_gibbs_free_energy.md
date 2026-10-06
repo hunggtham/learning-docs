@@ -36,7 +36,7 @@ Nhân với `-T`:
 
 Vì vậy Gibbs free năng lượng (energy / 에너지) cho phép dùng **chỉ các đại lượng của hệ** để kiểm tra chiều tự phát trong điều kiện hóa học phổ biến.
 
-> **Chuyển mạch:** Chọn G cho điều kiện T/P không đổi; vi phân của G cho biết các biến liên hợp, rồi dấu ΔG nối state change với hướng tự phát.
+> **Nối mạch:** Chọn G cho điều kiện T/P không đổi; vi phân của G cho biết các biến liên hợp, rồi dấu ΔG nối state change với hướng tự phát.
 
 ## Vi phân cơ bản của G
 
@@ -72,7 +72,7 @@ Phương trình này rất quan trọng vì nó cho thấy Gibbs free năng lư�
 - áp suất;
 - thành phần hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Ý nghĩa của dấu ΔG** tiếp nhận điểm tựa từ **Vi phân cơ bản của G** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **G là tiêu chuẩn tối thiểu ở T và P không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Ý nghĩa của dấu ΔG** nối từ **Vi phân cơ bản của G** sang **G là tiêu chuẩn tối thiểu ở T và P không đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ý nghĩa của dấu ΔG
 
@@ -102,7 +102,7 @@ hệ ở trạng thái cân bằng dưới các ràng buộc đang xét.
 
 “Tự diễn ra” không có nghĩa “xảy ra ngay lập tức”. Kim cương → graphite có thể thuận lợi về nhiệt động nhưng cực chậm vì hàng rào động học cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **G là tiêu chuẩn tối thiểu ở T và P không đổi** tiếp nhận điểm tựa từ **Ý nghĩa của dấu ΔG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự cạnh tranh giữa enthalpy và entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **G là tiêu chuẩn tối thiểu ở T và P không đổi** nối từ **Ý nghĩa của dấu ΔG** sang **Sự cạnh tranh giữa enthalpy và entropy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## G là tiêu chuẩn tối thiểu ở T và P không đổi
 
@@ -116,7 +116,7 @@ Với hệ kín ở nhiệt độ và áp suất không đổi, trạng thái c�
 
 Một nguyên lý duy nhất đứng sau nhiều hiện tượng tưởng như tách rời.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Sự cạnh tranh giữa enthalpy và entropy** tiếp nhận điểm tựa từ **G là tiêu chuẩn tối thiểu ở T và P không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tự do chuẩn của phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Sự cạnh tranh giữa enthalpy và entropy** nối từ **G là tiêu chuẩn tối thiểu ở T và P không đổi** sang **Năng lượng tự do chuẩn của phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự cạnh tranh giữa enthalpy và entropy
 
@@ -160,7 +160,7 @@ T_m=\frac{\Delta H_{fus}}{\Delta S_{fus}}
 
 nếu các đại lượng thay đổi không đáng kể trong khoảng xét.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Năng lượng tự do chuẩn của phản ứng** tiếp nhận điểm tựa từ **Sự cạnh tranh giữa enthalpy và entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện không chuẩn và thương số phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Năng lượng tự do chuẩn của phản ứng** nối từ **Sự cạnh tranh giữa enthalpy và entropy** sang **Điều kiện không chuẩn và thương số phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tự do chuẩn của phản ứng
 
@@ -174,7 +174,7 @@ Tương tự enthalpy, **năng lượng tự do tạo thành chuẩn (standard G
 
 Các giá trị này phụ thuộc trạng thái chuẩn và nhiệt độ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Điều kiện không chuẩn và thương số phản ứng** tiếp nhận điểm tựa từ **Năng lượng tự do chuẩn của phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hằng số cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Điều kiện không chuẩn và thương số phản ứng** nối từ **Năng lượng tự do chuẩn của phản ứng** sang **Liên hệ với hằng số cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện không chuẩn và thương số phản ứng
 
@@ -190,7 +190,7 @@ Trong đó `Q` là **thương số phản ứng (reaction quotient)** được x
 
 Ngược lại, một phản ứng có `ΔG° < 0` có thể bị đẩy theo chiều nghịch nếu sản phẩm tích tụ quá nhiều.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với hằng số cân bằng** tiếp nhận điểm tựa từ **Điều kiện không chuẩn và thương số phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với hằng số cân bằng** nối từ **Điều kiện không chuẩn và thương số phản ứng** sang **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với hằng số cân bằng
 
@@ -212,7 +212,7 @@ nên:
 
 Nhưng `K` không cho biết tốc độ phản ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân** tiếp nhận điểm tựa từ **Liên hệ với hằng số cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chất khuếch tán?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân** nối từ **Liên hệ với hằng số cân bằng** sang **Vì sao chất khuếch tán?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân
 
@@ -240,7 +240,7 @@ Trong đó \(a_i\) là hoạt độ.
 - điện hóa;
 - thẩm thấu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Vì sao chất khuếch tán?** tiếp nhận điểm tựa từ **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Vì sao chất khuếch tán?** nối từ **Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân** sang **Thế điện hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao chất khuếch tán?
 
@@ -252,7 +252,7 @@ Một species có thể di chuyển từ vùng nồng độ thấp sang cao nế
 
 Trong hệ có điện tích, cần dùng **thế điện hóa (electrochemical potential)** thay vì chỉ chemical potential.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Thế điện hóa** tiếp nhận điểm tựa từ **Vì sao chất khuếch tán?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Thế điện hóa** nối từ **Vì sao chất khuếch tán?** sang **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế điện hóa
 
@@ -273,7 +273,7 @@ Khái niệm này đứng sau:
 - pin điện hóa;
 - vận chuyển ion qua màng.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại** tiếp nhận điểm tựa từ **Thế điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gibbs và cân bằng pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại** nối từ **Thế điện hóa** sang **Gibbs và cân bằng pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại
 
@@ -291,7 +291,7 @@ Trong pin điện hóa:
 
 Điện áp pin vì vậy là một biểu hiện trực tiếp của chênh lệch Gibbs free năng lượng (energy / 에너지) trên mỗi mol electron chuyển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs và cân bằng pha** tiếp nhận điểm tựa từ **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **G theo thành phần và tính ổn định của hỗn hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs và cân bằng pha** nối từ **Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại** sang **G theo thành phần và tính ổn định của hỗn hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gibbs và cân bằng pha
 
@@ -311,7 +311,7 @@ Nếu nhiệt độ thấp hơn điểm nóng chảy, pha rắn có chemical pot
 
 Đây là cách nhiệt động giải thích chuyển pha mà không cần dùng câu “chất thích ở pha nào”.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **G theo thành phần và tính ổn định của hỗn hợp** tiếp nhận điểm tựa từ **Gibbs và cân bằng pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spinodal và nucleation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **G theo thành phần và tính ổn định của hỗn hợp** nối từ **Gibbs và cân bằng pha** sang **Spinodal và nucleation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## G theo thành phần và tính ổn định của hỗn hợp
 
@@ -330,7 +330,7 @@ Nếu có vùng lõm thích hợp, hệ có thể giảm G bằng cách tách th
 - spinodal decomposition;
 - alloy phase separation.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Spinodal và nucleation** tiếp nhận điểm tựa từ **G theo thành phần và tính ổn định của hỗn hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gibbs–Duhem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Spinodal và nucleation** nối từ **G theo thành phần và tính ổn định của hỗn hợp** sang **Gibbs–Duhem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spinodal và nucleation
 
@@ -346,7 +346,7 @@ khi đó dao động composition nhỏ có thể tự lớn lên mà không cầ
 
 Khái niệm này nối Gibbs free năng lượng (energy / 에너지) với materials science và phase transformation kinetics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs–Duhem** tiếp nhận điểm tựa từ **Spinodal và nucleation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt độ và dung dịch không lý tưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs–Duhem** nối từ **Spinodal và nucleation** sang **Hoạt độ và dung dịch không lý tưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gibbs–Duhem
 
@@ -362,7 +362,7 @@ Quan hệ Gibbs–Duhem ở T, P cố định:
 
 Nó là nền tảng của nhiều mô hình hoạt độ và thermodynamic consistency.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Hoạt độ và dung dịch không lý tưởng** tiếp nhận điểm tựa từ **Gibbs–Duhem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với áp suất thẩm thấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Hoạt độ và dung dịch không lý tưởng** nối từ **Gibbs–Duhem** sang **Liên hệ với áp suất thẩm thấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoạt độ và dung dịch không lý tưởng
 
@@ -391,7 +391,7 @@ Nếu tương tác A–B khác mạnh A–A/B–B, Gibbs mixing không còn ch�
 - activity correction;
 - salt effects.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với áp suất thẩm thấu** tiếp nhận điểm tựa từ **Hoạt độ và dung dịch không lý tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hóa sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với áp suất thẩm thấu** nối từ **Hoạt độ và dung dịch không lý tưởng** sang **Liên hệ với hóa sinh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với áp suất thẩm thấu
 
@@ -407,7 +407,7 @@ Với dung dịch loãng lý tưởng:
 
 Đây không phải một định luật tách biệt; nó là hệ quả của cân bằng chemical potential.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với hóa sinh** tiếp nhận điểm tựa từ **Liên hệ với áp suất thẩm thấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nồng độ trong tế bào làm ΔG khác ΔG°'** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với hóa sinh** nối từ **Liên hệ với áp suất thẩm thấu** sang **Nồng độ trong tế bào làm ΔG khác ΔG°'**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với hóa sinh
 
@@ -428,7 +428,7 @@ ATP không “giải phóng năng lượng vì phá một liên kết cao năng�
 - giảm repulsion;
 - entropy.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Nồng độ trong tế bào làm ΔG khác ΔG°'** tiếp nhận điểm tựa từ **Liên hệ với hóa sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gibbs free năng lượng (energy / 에너지) và reaction coordinate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Nồng độ trong tế bào làm ΔG khác ΔG°'** nối từ **Liên hệ với hóa sinh** sang **Gibbs free năng lượng (energy / 에너지) và reaction coordinate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nồng độ trong tế bào làm ΔG khác ΔG°'
 
@@ -444,7 +444,7 @@ Do ATP/ADP/Pi không ở nồng độ chuẩn, Gibbs free năng lượng (energy
 
 Điều này cho thấy **nồng độ thật là một phần của năng lượng khả dụng**.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) và reaction coordinate** tiếp nhận điểm tựa từ **Nồng độ trong tế bào làm ΔG khác ΔG°'** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) và reaction coordinate** nối từ **Nồng độ trong tế bào làm ΔG khác ΔG°'** sang **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gibbs free năng lượng (energy / 에너지) và reaction coordinate
 
@@ -478,7 +478,7 @@ Tại cân bằng:
 
 Đây là cách hình học rất trực quan để nối reaction quotient với minimization của G.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa** tiếp nhận điểm tựa từ **Gibbs free năng lượng (energy / 에너지) và reaction coordinate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ làm Gibbs thay đổi như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa** nối từ **Gibbs free năng lượng (energy / 에너지) và reaction coordinate** sang **Nhiệt độ làm Gibbs thay đổi như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa
 
@@ -501,7 +501,7 @@ nhưng ΔG‡ rất lớn
 
 Đây là phân biệt quan trọng nhất giữa thermodynamics và kinetics.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Nhiệt độ làm Gibbs thay đổi như thế nào?** tiếp nhận điểm tựa từ **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất làm Gibbs thay đổi như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Nhiệt độ làm Gibbs thay đổi như thế nào?** nối từ **Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa** sang **Áp suất làm Gibbs thay đổi như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt độ làm Gibbs thay đổi như thế nào?
 
@@ -515,7 +515,7 @@ G giảm theo nhiệt độ với độ dốc bằng âm entropy.
 
 Pha có entropy cao hơn có đường G giảm nhanh hơn khi T tăng. Đây là cách hình học để hiểu tại sao liquid có thể trở nên ổn định hơn solid ở nhiệt độ cao.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Áp suất làm Gibbs thay đổi như thế nào?** tiếp nhận điểm tựa từ **Nhiệt độ làm Gibbs thay đổi như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Clapeyron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Áp suất làm Gibbs thay đổi như thế nào?** nối từ **Nhiệt độ làm Gibbs thay đổi như thế nào?** sang **Phương trình Clapeyron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất làm Gibbs thay đổi như thế nào?
 
@@ -531,7 +531,7 @@ Do đó áp suất cao thường ưu tiên pha có thể tích nhỏ hơn, dù c
 
 Đây là cơ sở trực giác cho ảnh hưởng áp suất lên chuyển pha.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Phương trình Clapeyron** tiếp nhận điểm tựa từ **Áp suất làm Gibbs thay đổi như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tự do và khả năng sinh công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Phương trình Clapeyron** nối từ **Áp suất làm Gibbs thay đổi như thế nào?** sang **Năng lượng tự do và khả năng sinh công**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Clapeyron
 
@@ -545,7 +545,7 @@ Từ điều kiện cân bằng hai pha có thể suy ra:
 
 Với vaporization và giả định khí lý tưởng, nó dẫn tới phương trình Clausius–Clapeyron gần đúng.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Năng lượng tự do và khả năng sinh công** tiếp nhận điểm tựa từ **Phương trình Clapeyron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với exergy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Năng lượng tự do và khả năng sinh công** nối từ **Phương trình Clapeyron** sang **Liên hệ với exergy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tự do và khả năng sinh công
 
@@ -555,7 +555,7 @@ Nó là một thế nhiệt động cho biết mức công không-PV tối đa c
 
 Trong quá trình thật không thuận nghịch, công thực tế luôn nhỏ hơn giới hạn này.
 
-> **Chuyển mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với exergy** tiếp nhận điểm tựa từ **Năng lượng tự do và khả năng sinh công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Liên hệ với exergy** nối từ **Năng lượng tự do và khả năng sinh công** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với exergy
 
@@ -565,7 +565,7 @@ Gibbs free năng lượng (energy / 에너지) đặc biệt liên quan tới ch
 
 Trong kỹ thuật, mất exergy gắn với entropy generation và irreversibility.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với exergy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Các hiểu lầm thường gặp** nối từ **Liên hệ với exergy** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -593,7 +593,7 @@ Không. Nó phụ thuộc composition, tương tác, áp suất, nhiệt độ v
 
 Không nhất thiết. Ở nhiệt độ hữu hạn, entropy đóng góp qua `-TS`, nên pha có enthalpy cao hơn vẫn có thể có G thấp hơn.
 
-> **Chuyển mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -18,7 +18,7 @@ Do đó acid béo tự do thường là ion lưỡng ưa hơn là acid trung hò
 
 Chiều dài chuỗi và mức độ không bão hòa quyết định tính kỵ nước, hành vi nóng chảy và khả năng đóng gói.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Acid béo — đuôi hydrocarbon + đầu có thể ion hóa** xác định đầu vào; **Chuỗi bão hòa và không bão hòa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Acid béo — đuôi hydrocarbon + đầu có thể ion hóa** đặt đầu vào cho **Chuỗi bão hòa và không bão hòa**, rồi **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi bão hòa và không bão hòa
 
@@ -28,7 +28,7 @@ Liên kết đôi cis tạo một “gấp khúc” hình học vì C=C không q
 
 Liên kết đôi trans giữ chuỗi thẳng hơn cis nên hành vi vật lý gần với chuỗi bão hòa hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chuỗi bão hòa và không bão hòa** xác định đầu vào; **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Acid béo thiết yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chuỗi bão hòa và không bão hòa** đặt đầu vào cho **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn**, rồi **Acid béo thiết yếu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn
 
@@ -36,7 +36,7 @@ Chuỗi hydrocarbon dài có diện tích tiếp xúc phân tán lớn hơn. Khi
 
 Đây là biểu hiện vĩ mô của lực liên phân tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn** xác định đầu vào; **Acid béo thiết yếu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Triacylglycerol — dự trữ năng lượng cô đặc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vì sao chuỗi dài nóng chảy ở nhiệt độ cao hơn** đặt đầu vào cho **Acid béo thiết yếu**, rồi **Triacylglycerol — dự trữ năng lượng cô đặc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Acid béo thiết yếu
 
@@ -46,7 +46,7 @@ Các dẫn xuất của chúng trở thành phân tử tín hiệu và thành ph
 
 Tầm quan trọng sinh học vì vậy đến từ giới hạn của hệ enzyme tổng hợp, không phải vì phân tử “chứa loại năng lượng đặc biệt”.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Triacylglycerol — dự trữ năng lượng cô đặc** tiếp nhận điểm tựa từ **Acid béo thiết yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xà phòng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Triacylglycerol — dự trữ năng lượng cô đặc** nối từ **Acid béo thiết yếu** sang **Xà phòng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triacylglycerol — dự trữ năng lượng cô đặc
 
@@ -58,7 +58,7 @@ Chuỗi hydrocarbon bị khử mạnh hơn carbohydrate, nên oxy hóa giải ph
 
 Điều này giải thích vì sao mỡ là nhiên liệu dài hạn có mật độ năng lượng cao.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Xà phòng hóa** tiếp nhận điểm tựa từ **Triacylglycerol — dự trữ năng lượng cô đặc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phospholipid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Xà phòng hóa** nối từ **Triacylglycerol — dự trữ năng lượng cô đặc** sang **Phospholipid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xà phòng hóa
 
@@ -72,7 +72,7 @@ Muối acid béo là xà phòng. Cấu trúc lưỡng ưa của chúng tạo mic
 
 Hóa học xà phòng là ứng dụng trực tiếp của thủy phân ester + tự lắp ghép.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Phospholipid** tiếp nhận điểm tựa từ **Xà phòng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao lớp kép tự lắp ghép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Phospholipid** nối từ **Xà phòng hóa** sang **Vì sao lớp kép tự lắp ghép**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phospholipid
 
@@ -86,7 +86,7 @@ Chúng có tính lưỡng ưa mạnh.
 
 Trong nước, các đuôi hydrocarbon giảm tiếp xúc với nước còn đầu phân cực duy trì hydrat hóa.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vì sao lớp kép tự lắp ghép** tiếp nhận điểm tựa từ **Phospholipid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Micelle, lớp kép và túi màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vì sao lớp kép tự lắp ghép** nối từ **Phospholipid** sang **Micelle, lớp kép và túi màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao lớp kép tự lắp ghép
 
@@ -102,7 +102,7 @@ Không nên mô tả đơn giản rằng “các đuôi kỵ nước hút nhau�
 
 Hệ chọn hình thái làm năng lượng tự do toàn phần thấp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Micelle, lớp kép và túi màng** tiếp nhận điểm tựa từ **Vì sao lớp kép tự lắp ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nồng độ micelle tới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Micelle, lớp kép và túi màng** nối từ **Vì sao lớp kép tự lắp ghép** sang **Nồng độ micelle tới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Micelle, lớp kép và túi màng
 
@@ -114,7 +114,7 @@ Phospholipid hai đuôi gần hình trụ hơn và ưu tiên lớp kép.
 
 Tấm lớp kép có xu hướng khép thành **túi màng (vesicle)** để loại bỏ các mép kỵ nước đang tiếp xúc với nước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Nồng độ micelle tới hạn** tiếp nhận điểm tựa từ **Micelle, lớp kép và túi màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Màng là chất lỏng hai chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Nồng độ micelle tới hạn** nối từ **Micelle, lớp kép và túi màng** sang **Màng là chất lỏng hai chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nồng độ micelle tới hạn
 
@@ -124,7 +124,7 @@ Tạo micelle là cân bằng mang tính hợp tác, không phải một công t
 
 CMC phụ thuộc chiều dài chuỗi, điện tích nhóm đầu, muối, nhiệt độ và chất phụ gia.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Màng là chất lỏng hai chiều** tiếp nhận điểm tựa từ **Nồng độ micelle tới hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính bất đối xứng của màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Màng là chất lỏng hai chiều** nối từ **Nồng độ micelle tới hạn** sang **Tính bất đối xứng của màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Màng là chất lỏng hai chiều
 
@@ -134,7 +134,7 @@ Tự lật qua màng thường chậm với nhóm đầu phân cực vì phải 
 
 Tế bào dùng flippase, floppase và scramblase để điều khiển tính bất đối xứng.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Tính bất đối xứng của màng** tiếp nhận điểm tựa từ **Màng là chất lỏng hai chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ lỏng của màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Tính bất đối xứng của màng** nối từ **Màng là chất lỏng hai chiều** sang **Độ lỏng của màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính bất đối xứng của màng
 
@@ -144,7 +144,7 @@ Phosphatidylserine chẳng hạn thường giàu ở lá phía cytosol; khi xu�
 
 Vì vậy màng là cấu trúc bất đối xứng về hóa học chứ không chỉ là một lớp kép đối xứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ lỏng của màng** tiếp nhận điểm tựa từ **Tính bất đối xứng của màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ lỏng của màng** nối từ **Tính bất đối xứng của màng** sang **Chuyển pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ lỏng của màng
 
@@ -158,7 +158,7 @@ Vì vậy màng là cấu trúc bất đối xứng về hóa học chứ không
 
 Đuôi ngắn hơn hoặc nhiều liên kết đôi cis hơn thường làm màng lỏng hơn.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chuyển pha** tiếp nhận điểm tựa từ **Độ lỏng của màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chuyển pha** nối từ **Độ lỏng của màng** sang **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển pha
 
@@ -168,7 +168,7 @@ Nhiệt độ chuyển phụ thuộc khả năng đóng gói và tương tác.
 
 Màng sinh học thường tránh hoạt động quá gần trạng thái cứng vì vận chuyển và chức năng protein cần độ linh động ngang thích hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”** tiếp nhận điểm tựa từ **Chuyển pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bè lipid — mô hình hữu ích, không phải đảo cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”** nối từ **Chuyển pha** sang **Bè lipid — mô hình hữu ích, không phải đảo cố định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”
 
@@ -178,7 +178,7 @@ Cholesterol chen giữa các đuôi phospholipid.
 
 Vì vậy cholesterol giúp đệm độ lỏng qua một khoảng nhiệt độ rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Bè lipid — mô hình hữu ích, không phải đảo cố định** tiếp nhận điểm tựa từ **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính thấm của màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Bè lipid — mô hình hữu ích, không phải đảo cố định** nối từ **Cholesterol — bộ đệm độ lỏng, không chỉ “làm màng cứng”** sang **Tính thấm của màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bè lipid — mô hình hữu ích, không phải đảo cố định
 
@@ -186,7 +186,7 @@ Các vùng giàu cholesterol và sphingolipid có thể tạo tập hợp nano �
 
 Thuật ngữ **bè lipid (lipid raft)** dễ gây hiểu sai nếu hình dung như các “hòn đảo” cố định. Màng thật có tính không đồng nhất động và phụ thuộc thang kích thước.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Tính thấm của màng** tiếp nhận điểm tựa từ **Bè lipid — mô hình hữu ích, không phải đảo cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với định luật Fick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Tính thấm của màng** nối từ **Bè lipid — mô hình hữu ích, không phải đảo cố định** sang **Liên hệ với định luật Fick**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính thấm của màng
 
@@ -202,7 +202,7 @@ phân tử nhỏ kỵ nước > phân tử nhỏ phân cực không điện tíc
 
 Tuy nhiên tính thấm thực còn phụ thuộc kích thước, khả năng tạo hydrogen bond và thành phần màng.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Liên hệ với định luật Fick** tiếp nhận điểm tựa từ **Tính thấm của màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kênh, chất tải và bơm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Liên hệ với định luật Fick** nối từ **Tính thấm của màng** sang **Kênh, chất tải và bơm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với định luật Fick
 
@@ -216,7 +216,7 @@ Với vận chuyển qua màng, hệ số thấm kết hợp khả năng phân b
 
 Vì vậy vận chuyển phụ thuộc cả **độ tan trong màng** và **độ linh động trong màng**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Kênh, chất tải và bơm** tiếp nhận điểm tựa từ **Liên hệ với định luật Fick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Kênh, chất tải và bơm** nối từ **Liên hệ với định luật Fick** sang **Thế điện hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kênh, chất tải và bơm
 
@@ -234,7 +234,7 @@ Dùng năng lượng tự do từ ATP, ánh sáng hoặc độ dốc (gradient /
 
 Ba cơ chế này khác nhau về bản chất.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Thế điện hóa** tiếp nhận điểm tựa từ **Kênh, chất tải và bơm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế Nernst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Thế điện hóa** nối từ **Kênh, chất tải và bơm** sang **Điện thế Nernst**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế điện hóa
 
@@ -248,7 +248,7 @@ Khi một ion đi qua màng:
 
 Với một ion thấm qua màng ở cân bằng, đặt \(\Delta G=0\) dẫn tới quan hệ Nernst.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Điện thế Nernst** tiếp nhận điểm tựa từ **Thế điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiều ion và điện thế màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Điện thế Nernst** nối từ **Thế điện hóa** sang **Nhiều ion và điện thế màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế Nernst
 
@@ -262,7 +262,7 @@ quy ước dấu phụ thuộc cách định nghĩa chiều điện thế.
 
 Phương trình nối trực tiếp điện hóa học với sinh lý màng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Nhiều ion và điện thế màng** tiếp nhận điểm tựa từ **Điện thế Nernst** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) proton và tổng hợp ATP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Nhiều ion và điện thế màng** nối từ **Điện thế Nernst** sang **Độ dốc (gradient / 기울기) proton và tổng hợp ATP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiều ion và điện thế màng
 
@@ -272,7 +272,7 @@ Các mô hình kiểu Goldman–Hodgkin–Katz mở rộng vượt khỏi cân b
 
 Màng tế bào vì vậy là một mạng điện hóa chọn lọc, không chỉ là một tụ điện đơn giản.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ dốc (gradient / 기울기) proton và tổng hợp ATP** gom các mảnh từ **Nhiều ion và điện thế màng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Vận chuyển tích cực thứ cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ dốc (gradient / 기울기) proton và tổng hợp ATP** tổng hợp từ **Nhiều ion và điện thế màng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Vận chuyển tích cực thứ cấp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ dốc (gradient / 기울기) proton và tổng hợp ATP
 
@@ -284,7 +284,7 @@ ATP synthase ghép dòng proton đi xuống độ dốc (gradient / 기울기) v
 
 Kiến trúc màng biến hóa học oxy hóa-khử thành công hóa học có thể sử dụng.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vận chuyển tích cực thứ cấp** gom các mảnh từ **Độ dốc (gradient / 기울기) proton và tổng hợp ATP** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Protein màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Vận chuyển tích cực thứ cấp** tổng hợp từ **Độ dốc (gradient / 기울기) proton và tổng hợp ATP** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Protein màng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vận chuyển tích cực thứ cấp
 
@@ -294,7 +294,7 @@ Một chất đi xuống độ dốc (gradient / 기울기) có thể kéo chấ
 
 Transporter không nhất thiết trực tiếp tiêu thụ ATP nếu độ dốc (gradient / 기울기) được một bơm khác tạo ra trước đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Protein màng** tiếp nhận điểm tựa từ **Vận chuyển tích cực thứ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lipid tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Protein màng** nối từ **Vận chuyển tích cực thứ cấp** sang **Lipid tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Protein màng
 
@@ -304,7 +304,7 @@ Transporter không nhất thiết trực tiếp tiêu thụ ATP nếu độ dố
 
 Protein và lipid tác động qua lại lên cấu dạng của nhau.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Lipid tín hiệu** tiếp nhận điểm tựa từ **Protein màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học phosphoinositide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Lipid tín hiệu** nối từ **Protein màng** sang **Hóa học phosphoinositide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lipid tín hiệu
 
@@ -320,7 +320,7 @@ Ví dụ:
 
 Biến đổi hóa học của lipid màng vì vậy có thể mã hóa tín hiệu tạm thời.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Hóa học phosphoinositide** tiếp nhận điểm tựa từ **Lipid tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Peroxide hóa lipid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Hóa học phosphoinositide** nối từ **Lipid tín hiệu** sang **Peroxide hóa lipid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học phosphoinositide
 
@@ -330,7 +330,7 @@ Các mẫu phosphoryl hóa khác nhau tuyển mộ protein có lĩnh vực (doma
 
 Một khác biệt nhỏ trong tô-pô phosphate tạo các “địa chỉ” tế bào khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Peroxide hóa lipid** tiếp nhận điểm tựa từ **Hóa học phosphoinositide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất chống oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Peroxide hóa lipid** nối từ **Hóa học phosphoinositide** sang **Chất chống oxy hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Peroxide hóa lipid
 
@@ -346,7 +346,7 @@ LOO• + LH → LOOH + L•
 
 Hóa học gốc lan truyền này làm hỏng màng và tạo aldehyde phản ứng mạnh.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chất chống oxy hóa** tiếp nhận điểm tựa từ **Peroxide hóa lipid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sphingolipid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Chất chống oxy hóa** nối từ **Peroxide hóa lipid** sang **Sphingolipid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất chống oxy hóa
 
@@ -356,7 +356,7 @@ Vitamin E là ví dụ kinh điển trong pha lipid.
 
 Tuy nhiên mạng chống oxy hóa còn phụ thuộc glutathione, enzyme, cô lập kim loại và cơ chế sửa chữa; không nên rút gọn thành “đếm số chất bắt gốc tự do”.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Sphingolipid** tiếp nhận điểm tựa từ **Chất chống oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Steroid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Sphingolipid** nối từ **Chất chống oxy hóa** sang **Steroid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sphingolipid
 
@@ -366,7 +366,7 @@ Ceramide là khung trung tâm; thêm phosphocholine tạo sphingomyelin, thêm �
 
 Những lipid này quan trọng trong màng, myelin và tín hiệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Steroid** tiếp nhận điểm tựa từ **Sphingolipid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lipoprotein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Steroid** nối từ **Sphingolipid** sang **Lipoprotein**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Steroid
 
@@ -376,7 +376,7 @@ Cholesterol là tiền chất của hormone steroid, acid mật và các hợp c
 
 Khung vòng cứng tạo tính chất vật lý khác rõ so với chuỗi acid béo linh động.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Lipoprotein** tiếp nhận điểm tựa từ **Steroid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ cong màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Lipoprotein** nối từ **Steroid** sang **Độ cong màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lipoprotein
 
@@ -384,7 +384,7 @@ Lipid kỵ nước không thể tự do hòa tan trong máu. Hạt lipoprotein �
 
 Đây là một giải pháp tự lắp ghép khác để vận chuyển phân tử kỵ nước qua môi trường nước.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ cong màng** tiếp nhận điểm tựa từ **Lipoprotein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung hợp màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Độ cong màng** nối từ **Lipoprotein** sang **Dung hợp màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ cong màng
 
@@ -396,7 +396,7 @@ Tế bào khai thác thành phần lipid và protein để tạo chồi, dung h�
 
 Tái cấu trúc màng vì vậy là hệ quả cơ học của cách phân tử đóng gói.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Dung hợp màng** tiếp nhận điểm tựa từ **Độ cong màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Dung hợp màng** nối từ **Độ cong màng** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dung hợp màng
 
@@ -404,7 +404,7 @@ Hai lớp kép muốn hợp nhất phải vượt hàng rào hydrat hóa và tĩ
 
 Protein dung hợp làm giảm hàng rào này bằng cách ép hai màng lại gần và thay đổi hình học cục bộ.
 
-> **Chuyển mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Dung hợp màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Những hiểu lầm thường gặp** nối từ **Dung hợp màng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -424,7 +424,7 @@ Giải thích sâu hơn nằm ở cân bằng năng lượng tự do của toàn
 
 Không. Hàng rào chính là chi phí mất hydrat hóa và tĩnh điện rất lớn khi ion đi vào lõi kỵ nước, chứ không chỉ kích thước.
 
-> **Chuyển mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

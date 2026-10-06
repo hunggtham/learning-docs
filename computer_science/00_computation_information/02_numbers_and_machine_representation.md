@@ -10,7 +10,7 @@ Trong decimal, `472 = 4×10² + 7×10¹ + 2×10⁰`. nhị phân (binary / 이�
 
 Hexadecimal (base 16 / 16진수) dùng digits `0–9, A–F`. Một hex digit tương ứng chính xác 4 bits, nên hex là shorthand rất tiện cho bit patterns. `0xFF = 11111111₂ = 255`. Đây là lý do bộ nhớ (memory / 메모리) addresses, bit masks, colors và mã máy (machine code / 기계어) thường hiển thị bằng hex.
 
-> **Chuyển mạch:** Positional notation giải thích binary/hex; số bit quyết định range của unsigned integer, còn signed integer dùng two’s complement để mã hóa dấu và phép cộng trong cùng phần cứng.
+> **Nối mạch:** Positional notation giải thích binary/hex; số bit quyết định range của unsigned integer, còn signed integer dùng two’s complement để mã hóa dấu và phép cộng trong cùng phần cứng.
 
 ## Unsigned integer: phạm vi (range / 범위) đến từ số patterns
 
@@ -22,7 +22,7 @@ Với `n` bits có `2^n` patterns. Nếu dùng tất cả cho non-negative integ
 
 8-bit unsigned integer có 256 values, từ 0 tới 255. Khi cộng 255 + 1 trong arithmetic modulo 256, bit mẫu (pattern / 패턴) quay về 0. Hardware có thể đặt carry flag, còn ngôn ngữ (language / 언어) quyết định đây là wraparound, exception hay undefined hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Signed integer và two's complement** tiếp nhận điểm tựa từ **Unsigned integer: phạm vi (range / 범위) đến từ số patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overflow không phải bug của CPU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Signed integer và two's complement** nối từ **Unsigned integer: phạm vi (range / 범위) đến từ số patterns** sang **Overflow không phải bug của CPU**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Signed integer và two's complement
 
@@ -38,7 +38,7 @@ Two's complement có lợi vì cùng mạch cộng nhị phân (binary / 이진)
 
 Không nên hiểu bit cao nhất đơn giản là “dấu” độc lập với các bit khác như sign-magnitude. Trong two's complement, toàn mẫu (pattern / 패턴) có meaning theo trọng số, với most-significant bit có weight âm `-2^{n-1}`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Signed integer và two's complement** xác định đầu vào; **Overflow không phải bug của CPU** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Signed integer và two's complement** đặt đầu vào cho **Overflow không phải bug của CPU**, rồi **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân** mở rộng hệ quả.
 
 ## Overflow không phải bug của CPU
 
@@ -48,7 +48,7 @@ Java signed integer overflow wrap theo two's-complement ngữ nghĩa (semantics 
 
 Với tiền, floating điểm (point / 지점) thường không phù hợp nếu cần chính xác (exact / 정확한) decimal accounting; `BigDecimal`, decimal kiểu (type / 타입) hoặc integer nhỏ nhất như cents/won có thể phù hợp hơn tùy lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Trong **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Overflow không phải bug của CPU** xác định đầu vào; **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **NaN, infinity và signed zero** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Overflow không phải bug của CPU** đặt đầu vào cho **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân**, rồi **NaN, infinity và signed zero** mở rộng hệ quả.
 
 ## Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân
 
@@ -70,7 +70,7 @@ Khoảng cách giữa các representable floats không đều. Gần 1, spacing 
 
 So sánh floats thường cần tolerance phù hợp với quy mô (scale / 규모) và lĩnh vực (domain / 도메인), nhưng “luôn dùng epsilon = 1e-9” cũng không đúng chung. Numerical phân tích (analysis / 분석) quan tâm conditioning và accumulated lỗi (error / 오류); xem [Numerical Methods](../../mathematics/08_optimization_numerical/02_numerical_methods_and_error.md).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **NaN, infinity và signed zero** tiếp nhận điểm tựa từ **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **NaN, infinity và signed zero** nối từ **Floating điểm (point / 지점): phạm vi (range / 범위) lớn bằng scientific notation nhị phân** sang **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NaN, infinity và signed zero
 
@@ -78,7 +78,7 @@ IEEE 754 còn có special values. `+∞`/`-∞` cho overflow hoặc division the
 
 NaN có thuộc tính (property / 속성) đáng chú ý: thường `NaN != NaN`. Vì vậy mã (code / 코드) kiểm tra `x == NaN` là sai; cần API như `isNaN`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)** tiếp nhận điểm tựa từ **NaN, infinity và signed zero** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alignment và padding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)** nối từ **NaN, infinity và signed zero** sang **Alignment và padding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Endianness: thứ tự byte trong multi-byte giá trị (value / 값)
 
@@ -86,7 +86,7 @@ Giá trị `0x12345678` cần 4 bytes. Little-endian lưu least significant byte
 
 Endianness không thay đổi giá trị abstract; nó thay bộ nhớ (memory / 메모리) biểu diễn (representation / 표현). mạng (network / 네트워크) byte thứ tự (order / 순서) truyền thống là big-endian. Khi serialize nhị phân (binary / 이진) dữ liệu (data / 데이터) giữa heterogeneous các hệ thống (systems / 시스템들), giao thức (protocol / 프로토콜) phải quy định byte thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Alignment và padding** tiếp nhận điểm tựa từ **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitwise operations và masks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Alignment và padding** nối từ **Endianness: thứ tự byte trong multi-byte giá trị (value / 값)** sang **Bitwise operations và masks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Alignment và padding
 
@@ -101,7 +101,7 @@ int32 b;   // 4 bytes
 
 Hiện thực (implementation / 구현) có thể chèn 3 padding bytes trước `b` để `b` bắt đầu tại address chia hết cho 4. Đây là cầu nối (bridge / 브리지) trực tiếp từ language-level types sang hardware bộ nhớ (memory / 메모리) truy cập (access / 접근).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Bitwise operations và masks** tiếp nhận điểm tựa từ **Alignment và padding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bitwise operations và masks** nối từ **Alignment và padding** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bitwise operations và masks
 
@@ -109,13 +109,13 @@ AND, OR, XOR, NOT và shifts cho phép thao tác từng bit. Bitmask compactly b
 
 Bitwise operations xuất hiện trong protocols, graphics, cryptography, low-level thiết bị (device / 장치) điều khiển (control / 제어) và performance-sensitive representations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Bitwise operations và masks** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Bitwise operations và masks**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **kiểu (type / 타입) ở mã nguồn (source code / 소스 코드) là một đặc tả hợp đồng (contract / 계약) trên tập bit patterns hữu hạn.** phạm vi (range / 범위), precision, signedness, byte thứ tự (order / 순서) và bố cục (layout / 레이아웃) là phần của đặc tả hợp đồng (contract / 계약) hoặc hiện thực (implementation / 구현). Khi gặp trường hợp biên (edge case / 경계 사례) số học, hãy quay về câu hỏi: “bit mẫu (pattern / 패턴) nào đang tồn tại và quy tắc (rule / 규칙) diễn giải nó là gì?”
 
-> **Chuyển mạch:** Trong **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -125,7 +125,7 @@ Bitwise operations xuất hiện trong protocols, graphics, cryptography, low-le
 
 **“Endian là thứ tự bit.”** Thông thường thuật ngữ đề cập thứ tự bytes của multi-byte giá trị (value / 값) trong bộ nhớ (memory / 메모리)/giao thức (protocol / 프로토콜), không phải cách ta viết từng bit trong byte.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

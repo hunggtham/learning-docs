@@ -35,7 +35,7 @@ class TasksRepository(
 }
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **1. cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) làm nguồn chuẩn (source of truth / 정본)** nêu điều cần giải thích; **2. Read offline và ghi (write / 쓰기) offline là hai mức khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Optimistic ghi (write / 쓰기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **1. cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) làm nguồn chuẩn (source of truth / 정본)** đặt vấn đề; **2. Read offline và ghi (write / 쓰기) offline là hai mức khác nhau** đối chiếu bằng chứng, rồi **3. Optimistic ghi (write / 쓰기)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Read offline và ghi (write / 쓰기) offline là hai mức khác nhau
 
@@ -45,7 +45,7 @@ Read-offline cần bộ nhớ đệm (cache / 캐시) chính sách (policy / 정
 
 Write-offline cần thêm durable pending thao tác (operation / 연산), idempotency, thứ tự (ordering / 순서), xung đột (conflict / 충돌) handling và reconciliation. Nếu sản phẩm (product / 제품) không cần ghi (write / 쓰기) offline, đừng tự thêm độ phức tạp (complexity / 복잡도) này.
 
-> **Chuyển mạch:** Offline read chỉ cần local source; optimistic write thêm pending intent, nên mutation queue tiếp theo phải durable để survive process death và retry.
+> **Nối mạch:** Offline read chỉ cần local source; optimistic write thêm pending intent, nên mutation queue tiếp theo phải durable để survive process death và retry.
 
 ## 3. Optimistic ghi (write / 쓰기)
 
@@ -66,7 +66,7 @@ data class TaskEntity(
 
 `syncState` có thể là `Synced`, `PendingCreate`, `PendingUpdate`, `PendingDelete`, `FailedPermanent`. Không nên dùng một Boolean `dirty` nếu thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론) cần phân biệt create/cập nhật (update / 업데이트)/delete.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **4. hàng đợi (queue / 큐) mutation phải durable** tiếp nhận điểm tựa từ **3. Optimistic ghi (write / 쓰기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. thao tác (operation / 연산) ID và idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **4. hàng đợi (queue / 큐) mutation phải durable** nối từ **3. Optimistic ghi (write / 쓰기)** sang **5. thao tác (operation / 연산) ID và idempotency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. hàng đợi (queue / 큐) mutation phải durable
 
@@ -86,7 +86,7 @@ data class PendingMutationEntity(
 
 Một giao dịch (transaction / 트랜잭션) nên cập nhật thực thể (entity / 엔터티) cục bộ (local / 로컬) và enqueue mutation cùng lúc. Nếu app crash giữa hai bước mà không có giao dịch (transaction / 트랜잭션), trạng thái (state / 상태) có thể nói “đã sửa” nhưng không còn bản ghi (record / 레코드) để sync.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **5. thao tác (operation / 연산) ID và idempotency** tiếp nhận điểm tựa từ **4. hàng đợi (queue / 큐) mutation phải durable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. WorkManager phù hợp cho durable deferred sync** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **5. thao tác (operation / 연산) ID và idempotency** nối từ **4. hàng đợi (queue / 큐) mutation phải durable** sang **6. WorkManager phù hợp cho durable deferred sync**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. thao tác (operation / 연산) ID và idempotency
 
@@ -107,7 +107,7 @@ retry same key returns same logical result
 
 Exactly-once tác động (effect / 효과) hiếm khi đến từ vận chuyển (transport / 전송); nó đến từ idempotent giao thức (protocol / 프로토콜) và reconciliation.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **6. WorkManager phù hợp cho durable deferred sync** tiếp nhận điểm tựa từ **5. thao tác (operation / 연산) ID và idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **6. WorkManager phù hợp cho durable deferred sync** nối từ **5. thao tác (operation / 연산) ID và idempotency** sang **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. WorkManager phù hợp cho durable deferred sync
 
@@ -125,7 +125,7 @@ val request = OneTimeWorkRequestBuilder<SyncWorker>()
 
 Nhưng WorkManager không phải real-time socket và không đảm bảo chạy đúng một thời điểm tuyệt đối. Nếu chỉ cần refresh khi screen active, coroutine trong vòng đời (lifecycle / 생명주기)/ViewModel đơn giản hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật** tiếp nhận điểm tựa từ **6. WorkManager phù hợp cho durable deferred sync** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật** nối từ **6. WorkManager phù hợp cho durable deferred sync** sang **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Sync worker phải thử lại (retry / 재시도) có kỷ luật
 
@@ -139,7 +139,7 @@ Không phải thất bại (failure / 실패) nào cũng thử lại (retry / �
 
 Nếu mọi lỗi (error / 오류) đều `Result.retry()`, hàng đợi (queue / 큐) có thể lặp vô hạn và đốt pin.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)** tiếp nhận điểm tựa từ **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Version-based optimistic tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)** nối từ **7. Sync worker phải thử lại (retry / 재시도) có kỷ luật** sang **9. Version-based optimistic tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)
 
@@ -157,7 +157,7 @@ Các chiến lược (strategy / 전략) phổ biến:
 
 Sản phẩm (product / 제품) phải định nghĩa xung đột (conflict / 충돌) ngữ nghĩa (semantics / 의미론). Kỹ thuật chỉ implement ngữ nghĩa (semantics / 의미론) đó.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **9. Version-based optimistic tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Delete cần tombstone khi sync offline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **9. Version-based optimistic tính đồng thời (concurrency / 동시성)** nối từ **8. xung đột (conflict / 충돌) là nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) trước khi là technical bài toán (problem / 문제)** sang **10. Delete cần tombstone khi sync offline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Version-based optimistic tính đồng thời (concurrency / 동시성)
 
@@ -173,7 +173,7 @@ Ví dụ máy chủ (server / 서버) trả phiên bản (version / 버전) 7. m
 
 Nếu máy chủ (server / 서버) đã lên phiên bản (version / 버전) 8, phản hồi (response / 응답) 409 xung đột (conflict / 충돌) có thể kèm latest bản ghi (record / 레코드). máy khách (client / 클라이언트) quyết định auto-merge hay hiển thị xung đột (conflict / 충돌) UI.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **10. Delete cần tombstone khi sync offline** tiếp nhận điểm tựa từ **9. Version-based optimistic tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Pull sync và cursor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **10. Delete cần tombstone khi sync offline** nối từ **9. Version-based optimistic tính đồng thời (concurrency / 동시성)** sang **11. Pull sync và cursor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Delete cần tombstone khi sync offline
 
@@ -183,7 +183,7 @@ Sau khi máy chủ (server / 서버) acknowledge, cleanup job mới hard-delete 
 
 Tombstone cũng giúp remote snapshot không vô tình “hồi sinh” thực thể (entity / 엔터티) đã xóa cục bộ (local / 로컬) nhưng chưa sync.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **11. Pull sync và cursor** tiếp nhận điểm tựa từ **10. Delete cần tombstone khi sync offline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **11. Pull sync và cursor** nối từ **10. Delete cần tombstone khi sync offline** sang **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Pull sync và cursor
 
@@ -196,7 +196,7 @@ GET /tasks/changes?cursor=abc123
 
 Máy khách (client / 클라이언트) transactionally apply thay đổi (change / 변경) set rồi persist `nextCursor`. Cursor chỉ được advance sau khi apply thành công; nếu crash giữa chừng, thử lại (retry / 재시도) cùng cursor phải an toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **11. Pull sync và cursor** đã nêu tiêu chí phân biệt, còn **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Pagination và Paging 3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **11. Pull sync và cursor** đặt tiêu chí; **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Pagination và Paging 3** mở rộng hệ quả.
 
 ## 12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)
 
@@ -217,7 +217,7 @@ suspend fun applyPage(
 
 Nếu cursor cập nhật (update / 업데이트) trước dữ liệu (data / 데이터) rồi app crash, lần sau máy chủ (server / 서버) nghĩ máy khách (client / 클라이언트) đã consume changes dù cục bộ (local / 로컬) chưa có chúng. Đây là dữ liệu (data / 데이터) integrity bug.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)** đã nêu tiêu chí phân biệt, còn **13. Pagination và Paging 3** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Staleness và refresh chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **12. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) quan trọng hơn số lượng DAO phương thức (method / 메서드)** đặt tiêu chí; **13. Pagination và Paging 3** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. Staleness và refresh chính sách (policy / 정책)** mở rộng hệ quả.
 
 ## 13. Pagination và Paging 3
 
@@ -227,7 +227,7 @@ Mô hình tư duy (mental model / 사고 모델) vẫn giống source-of-truth: 
 
 Remote key/cursor cũng là persistent trạng thái (state / 상태) và cần giao dịch (transaction / 트랜잭션) cùng page dữ liệu (data / 데이터) nếu consistency yêu cầu.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **14. Staleness và refresh chính sách (policy / 정책)** tiếp nhận điểm tựa từ **13. Pagination và Paging 3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Clock và thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **14. Staleness và refresh chính sách (policy / 정책)** nối từ **13. Pagination và Paging 3** sang **15. Clock và thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Staleness và refresh chính sách (policy / 정책)
 
@@ -245,7 +245,7 @@ data class Freshness(
 
 UI có thể hiển thị cached content cùng “Last updated …” thay vì spinner full-screen.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **15. Clock và thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **14. Staleness và refresh chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **15. Clock và thứ tự (ordering / 순서)** nối từ **14. Staleness và refresh chính sách (policy / 정책)** sang **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Clock và thứ tự (ordering / 순서)
 
@@ -253,7 +253,7 @@ Không nên dựa quá nhiều vào thiết bị (device / 장치) wall clock đ
 
 `updatedAt` vẫn hữu ích cho UX, nhưng ngữ nghĩa (semantics / 의미론) xung đột (conflict / 충돌) cần rõ nguồn thời gian nào authoritative.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)** tiếp nhận điểm tựa từ **15. Clock và thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)** nối từ **15. Clock và thứ tự (ordering / 순서)** sang **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)
 
@@ -271,7 +271,7 @@ val MIGRATION_3_4 = object : Migration(3, 4) {
 
 Không chỉ compile; di chuyển (migration / 마이그레이션) phải preserve bất biến (invariant / 불변식) và dữ liệu (data / 데이터) meaning.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename** tiếp nhận điểm tựa từ **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename** nối từ **16. Room di chuyển (migration / 마이그레이션) là executable lịch sử (history / 이력)** sang **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename
 
@@ -288,7 +288,7 @@ create new table
 
 Cần đặc biệt chú ý default giá trị (value / 값), nullability, chỉ mục (index / 인덱스) unique và foreign key.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename** nêu điều cần giải thích; **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **17. di chuyển (migration / 마이그레이션) phức tạp: create-copy-drop-rename** đặt vấn đề; **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ** đối chiếu bằng chứng, rồi **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ
 
@@ -296,13 +296,13 @@ Room hỗ trợ di chuyển (migration / 마이그레이션) kiểm thử (test 
 
 Các trường hợp (case / 사례) nên có: null cũ, unicode, bản ghi (record / 레코드) lớn, foreign key, duplicate dữ liệu (data / 데이터) trước khi thêm unique ràng buộc (constraint / 제약조건), tombstone/pending mutation và người dùng (user / 사용자) ở trạng thái offline lâu ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ** nêu điều cần giải thích; **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **18. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션) bằng cơ sở dữ liệu (database / 데이터베이스) thật của lược đồ (schema / 스키마) cũ** đặt vấn đề; **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** đối chiếu bằng chứng, rồi **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)
 
 AutoMigration hữu ích cho thay đổi Room suy luận được. Nhưng nếu rename/delete column, transform ngữ nghĩa (semantic / 의미적) hoặc đổi bất biến (invariant / 불변식), cần spec/manual di chuyển (migration / 마이그레이션). Đừng coi “bản dựng (build / 빌드) pass” là bằng chứng dữ liệu (data / 데이터) môi trường vận hành (production / 운영 환경) an toàn.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** tiếp nhận điểm tựa từ **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** nối từ **19. AutoMigration không loại bỏ trách nhiệm hiểu lược đồ (schema / 스키마)** sang **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. lược đồ (schema / 스키마) export và rà soát (review / 검토)
 
@@ -310,7 +310,7 @@ Export Room lược đồ (schema / 스키마) vào repository giúp rà soát (
 
 Một PR đổi thực thể (entity / 엔터티) nên được rà soát (review / 검토) cùng lược đồ (schema / 스키마) diff: column nào thêm, default gì, chỉ mục (index / 인덱스) thay đổi không, di chuyển (migration / 마이그레이션) đường dẫn (path / 경로) từ phiên bản (version / 버전) trước ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Serialization tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** nối từ **20. lược đồ (schema / 스키마) export và rà soát (review / 검토)** sang **22. Serialization tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)
 
@@ -318,7 +318,7 @@ Nếu bản phát hành (release / 릴리스) phiên bản (version / 버전) 10
 
 Các chiến lược gồm forward-compatible di chuyển (migration / 마이그레이션), staged rollout nhỏ trước, backup/export cần thiết, hoặc tránh destructive ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경) trong một bản phát hành (release / 릴리스) có rủi ro (risk / 위험) cao. cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계) và rollout chiến lược (strategy / 전략) không thể tách rời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **22. Serialization tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Unknown enum và máy chủ (server / 서버) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **22. Serialization tính tương thích (compatibility / 호환성)** nối từ **21. quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** sang **23. Unknown enum và máy chủ (server / 서버) evolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Serialization tính tương thích (compatibility / 호환성)
 
@@ -337,7 +337,7 @@ Có thể lưu tường minh (explicit / 명시적) payload phiên bản (versio
 
 Deserializer migrate payload cũ hoặc hàng đợi (queue / 큐) bảng (table / 테이블) lưu structured columns thay vì raw serialized đối tượng (object / 객체) tùy use trường hợp (case / 사례).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **23. Unknown enum và máy chủ (server / 서버) evolution** tiếp nhận điểm tựa từ **22. Serialization tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **23. Unknown enum và máy chủ (server / 서버) evolution** nối từ **22. Serialization tính tương thích (compatibility / 호환성)** sang **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Unknown enum và máy chủ (server / 서버) evolution
 
@@ -345,7 +345,7 @@ Máy chủ (server / 서버) có thể thêm enum mới trước khi app cập n
 
 Tương tự, mạng (network / 네트워크) DTO nên tolerant với additive fields nhưng strict với bất biến (invariant / 불변식) thật sự cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu** tiếp nhận điểm tựa từ **23. Unknown enum và máy chủ (server / 서버) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu** nối từ **23. Unknown enum và máy chủ (server / 서버) evolution** sang **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu
 
@@ -363,7 +363,7 @@ enum class SyncStatus {
 
 Detailed diagnostics có thể nằm trong logging/gỡ lỗi (debug / 디버그) tooling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu** nêu điều cần giải thích; **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Sync khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **24. Sync trạng thái (state / 상태) không nên leak hiện thực (implementation / 구현) lên UI quá sâu** đặt vấn đề; **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)** đối chiếu bằng chứng, rồi **26. Sync khả năng quan sát (observability / 관측 가능성)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)
 
@@ -371,7 +371,7 @@ Nếu app hỗ trợ nhiều account, hãy quyết định sớm giữa cơ sở
 
 Điều không được phép là truy vấn (query / 쿼리) quên filter account dẫn tới dữ liệu (data / 데이터) leakage. Nếu dùng chung (shared / 공유) bảng (table / 테이블), repository/DAO API nên làm account phạm vi (scope / 범위) khó bị quên.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **26. Sync khả năng quan sát (observability / 관측 가능성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. thất bại (failure / 실패) drill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **25. Multi-account và cơ sở dữ liệu (database / 데이터베이스)** đặt vấn đề; **26. Sync khả năng quan sát (observability / 관측 가능성)** đối chiếu bằng chứng, rồi **27. thất bại (failure / 실패) drill** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Sync khả năng quan sát (observability / 관측 가능성)
 
@@ -379,7 +379,7 @@ Môi trường vận hành (production / 운영 환경) sync cần chỉ số (m
 
 Nếu người dùng (user / 사용자) báo “ghi chú (note / 노트) của tôi không lên máy khác”, log chỉ có dấu vết ngăn xếp (stack trace / 스택 트레이스) HTTP là chưa đủ. Bạn cần biết cục bộ (local / 로컬) thao tác (operation / 연산) ID, sync vòng đời (lifecycle / 생명주기) và máy chủ (server / 서버) correlation ID — nhưng không log nội dung nhạy cảm nếu không cần.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **27. thất bại (failure / 실패) drill** tiếp nhận điểm tựa từ **26. Sync khả năng quan sát (observability / 관측 가능성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. cấp cao (senior / 시니어) notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **27. thất bại (failure / 실패) drill** nối từ **26. Sync khả năng quan sát (observability / 관측 가능성)** sang **28. cấp cao (senior / 시니어) notes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. thất bại (failure / 실패) drill
 
@@ -398,7 +398,7 @@ Một sync kiến trúc (architecture / 아키텍처) nên được kiểm thử
 
 Nếu hành vi (behavior / 동작) mong muốn chưa được định nghĩa, đó là sản phẩm (product / 제품)/kiến trúc (architecture / 아키텍처) gap chứ không chỉ là kiểm thử (test / 테스트) gap.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **28. cấp cao (senior / 시니어) notes** tiếp nhận điểm tựa từ **27. thất bại (failure / 실패) drill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Offline-First, Sync, Room di chuyển (migration / 마이그레이션) và dữ liệu (data / 데이터) Integrity**, **28. cấp cao (senior / 시니어) notes** nối từ **27. thất bại (failure / 실패) drill** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 28. cấp cao (senior / 시니어) notes
 

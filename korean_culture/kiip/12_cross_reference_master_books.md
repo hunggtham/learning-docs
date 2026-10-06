@@ -6,7 +6,7 @@ Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha tha
 
 ## Culture map
 
-Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → đối chiếu lại cơ chế thay vì học thuộc danh sách rời.
 
 | KIIP | Đọc sâu trong `korean_culture/` |
 |---|---|
@@ -27,11 +27,11 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 아동·육아·돌봄 | [`../29_childhood_parenting_care_institutions.md`](../29_childhood_parenting_care_institutions.md) |
 | 시민사회·민주주의 | [`../25_civic_media_public_sphere_protest.md`](../25_civic_media_public_sphere_protest.md) |
 
-> **Chuyển mạch:** Trong **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Lịch sử (history / 이력) map** tiếp nhận điểm tựa từ **Culture map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Lịch sử (history / 이력) map** nối từ **Culture map** sang **Cách dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lịch sử (history / 이력) map
 
-Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → đối chiếu lại cơ chế thay vì học thuộc danh sách rời.
 
 | KIIP | Đọc sâu trong `korean_history/` |
 |---|---|
@@ -50,7 +50,7 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 산업화 | [`../../korean_history/19_developmental_state_industrialization_1961_1979.md`](../../korean_history/19_developmental_state_industrialization_1961_1979.md) |
 | 민주화 | [`../../korean_history/20_gwangju_and_democratization_1987.md`](../../korean_history/20_gwangju_and_democratization_1987.md) |
 
-> **Chuyển mạch:** Ở chặng này của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Cách dùng** tiếp nhận điểm tựa từ **Lịch sử (history / 이력) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Cách dùng** nối từ **Lịch sử (history / 이력) map** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Cách dùng
 

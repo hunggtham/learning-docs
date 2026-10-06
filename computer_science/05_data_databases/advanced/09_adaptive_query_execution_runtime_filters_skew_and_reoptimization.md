@@ -28,7 +28,7 @@ Một lỗi cardinality nhỏ ở đầu plan có thể khuếch đại. Nếu o
 
 Vì vậy compile-time tối ưu hóa (optimization / 최적화) luôn có epistemic limit: nó ra quyết định dưới bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Trong **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **1. Vì sao optimizer không thể biết mọi thứ trước thực thi (execution / 실행)** đã nêu tiêu chí phân biệt, còn **2. Adaptation ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. thời gian chạy (runtime / 런타임) cardinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Vì sao optimizer không thể biết mọi thứ trước thực thi (execution / 실행)** đặt tiêu chí; **2. Adaptation ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **3. thời gian chạy (runtime / 런타임) cardinality** mở rộng hệ quả.
 
 ## 2. Adaptation ranh giới (boundary / 경계)
 
@@ -45,7 +45,7 @@ stage A chạy
 
 Nếu đổi giữa chừng mà trạng thái (state / 상태) của operator cũ đã có side tác động (effect / 효과) hoặc partial aggregation phức tạp, tính đúng đắn (correctness / 정확성) trở nên khó chứng minh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **2. Adaptation ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **3. thời gian chạy (runtime / 런타임) cardinality** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Adaptation ranh giới (boundary / 경계)** đặt tiêu chí; **3. thời gian chạy (runtime / 런타임) cardinality** dùng nó để kiểm tra ranh giới, rồi **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** mở rộng hệ quả.
 
 ## 3. thời gian chạy (runtime / 런타임) cardinality
 
@@ -59,7 +59,7 @@ Cardinality thời gian chạy (runtime / 런타임) là bằng chứng (evidenc
 
 Nhưng thời gian chạy (runtime / 런타임) stats cũng có chi phí (cost / 비용). Muốn biết chính xác mọi intermediate cardinality có thể cần materialization hoặc synchronization. Adaptive engine phải cân bằng thông tin (information / 정보) giá trị (value / 값) với overhead.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** tiếp nhận điểm tựa từ **3. thời gian chạy (runtime / 런타임) cardinality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. thời gian chạy (runtime / 런타임) filters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** nối từ **3. thời gian chạy (runtime / 런타임) cardinality** sang **5. thời gian chạy (runtime / 런타임) filters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)
 
@@ -77,7 +77,7 @@ both sides partition by key → shuffle lớn hơn nhưng memory phân tán
 
 Threshold tốt phụ thuộc worker count, mạng (network / 네트워크), available bộ nhớ (memory / 메모리) và concurrent tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Trong **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **5. thời gian chạy (runtime / 런타임) filters** tiếp nhận điểm tựa từ **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Filter arrival thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. thời gian chạy (runtime / 런타임) filters** nối từ **4. Broadcast phép nối (join / 조인) có thể đổi thành partitioned phép nối (join / 조인)** sang **6. Filter arrival thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. thời gian chạy (runtime / 런타임) filters
 
@@ -97,7 +97,7 @@ Bloom-like filter thường chấp nhận false positive: một số row không 
 
 Thời gian chạy (runtime / 런타임) filter vì thế có cùng an toàn (safety / 안전) bất biến (invariant / 불변식) với pruning siêu dữ liệu (metadata / 메타데이터) trong [columnar storage](./08_columnar_storage_encoding_pruning_and_vectorized_scans.md).
 
-> **Chuyển mạch:** Ở chặng này của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **6. Filter arrival thời gian (time / 시간)** tiếp nhận điểm tựa từ **5. thời gian chạy (runtime / 런타임) filters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. dữ liệu (data / 데이터) skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Filter arrival thời gian (time / 시간)** nối từ **5. thời gian chạy (runtime / 런타임) filters** sang **7. dữ liệu (data / 데이터) skew**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Filter arrival thời gian (time / 시간)
 
@@ -107,7 +107,7 @@ Một thời gian chạy (runtime / 런타임) filter chỉ hữu ích nếu t�
 
 Adaptive hệ thống (system / 시스템) phải lập luận (reasoning / 추론) cả **giá trị (value / 값) of thông tin (information / 정보)** lẫn **chi phí (cost / 비용) of waiting**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **6. Filter arrival thời gian (time / 시간)** nêu điều cần giải thích; **7. dữ liệu (data / 데이터) skew** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Coalescing small partitions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Filter arrival thời gian (time / 시간)** đặt vấn đề; **7. dữ liệu (data / 데이터) skew** kiểm tra bằng chứng, rồi **8. Coalescing small partitions** mở rộng hệ quả.
 
 ## 7. dữ liệu (data / 데이터) skew
 
@@ -123,7 +123,7 @@ Average partition kích thước (size / 크기) che mất vấn đề. bằng c
 
 Adaptive mitigation có thể split skewed partition, replicate small-side dữ liệu (data / 데이터) cho subpartitions, salt hot key hoặc chọn chiến lược (strategy / 전략) khác. Nhưng mỗi kỹ thuật phải giữ phép nối (join / 조인) ngữ nghĩa (semantics / 의미론); salting tùy tiện có thể duplicate hoặc mất match.
 
-> **Chuyển mạch:** Trong **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **7. dữ liệu (data / 데이터) skew** nêu điều cần giải thích; **8. Coalescing small partitions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. bộ nhớ (memory / 메모리) grant và spill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. dữ liệu (data / 데이터) skew** đặt vấn đề; **8. Coalescing small partitions** kiểm tra bằng chứng, rồi **9. bộ nhớ (memory / 메모리) grant và spill** mở rộng hệ quả.
 
 ## 8. Coalescing small partitions
 
@@ -131,7 +131,7 @@ Ngược lại với skew là quá nhiều partition nhỏ. Scheduling overhead,
 
 Thời gian chạy (runtime / 런타임) kích thước (size / 크기) bằng chứng (evidence / 증거) cho phép coalesce nhiều partition nhỏ thành ít tác vụ (task / 작업) hơn. Nhưng coalesce quá mạnh giảm parallelism và tạo tác vụ (task / 작업) dài. Mục tiêu không phải ít partition nhất mà là công việc (work / 작업) granularity phù hợp cluster và tail hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **9. bộ nhớ (memory / 메모리) grant và spill** tiếp nhận điểm tựa từ **8. Coalescing small partitions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Re-optimization và sunk chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. bộ nhớ (memory / 메모리) grant và spill** nối từ **8. Coalescing small partitions** sang **10. Re-optimization và sunk chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. bộ nhớ (memory / 메모리) grant và spill
 
@@ -152,7 +152,7 @@ working set exceeds memory
 
 Do đó thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) nên ghi bytes spilled, spill count, merge passes và per-stage bộ nhớ (memory / 메모리) peak.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **10. Re-optimization và sunk chi phí (cost / 비용)** tiếp nhận điểm tựa từ **9. bộ nhớ (memory / 메모리) grant và spill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Parameter-sensitive hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Re-optimization và sunk chi phí (cost / 비용)** nối từ **9. bộ nhớ (memory / 메모리) grant và spill** sang **11. Parameter-sensitive hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Re-optimization và sunk chi phí (cost / 비용)
 
@@ -168,7 +168,7 @@ cost dừng + chuyển + chạy plan mới
 
 Re-optimization trigger quá nhạy có thể oscillate hoặc làm thực thi (execution / 실행) khó dự đoán.
 
-> **Chuyển mạch:** Trong **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **11. Parameter-sensitive hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **10. Re-optimization và sunk chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Parameter-sensitive hành vi (behavior / 동작)** nối từ **10. Re-optimization và sunk chi phí (cost / 비용)** sang **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Parameter-sensitive hành vi (behavior / 동작)
 
@@ -176,7 +176,7 @@ Cùng SQL văn bản (text / 텍스트) nhưng parameter khác có thể cần p
 
 Adaptive thực thi (execution / 실행) giảm một phần rủi ro (risk / 위험) bằng thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거), nhưng compile-time plan caching và thời gian chạy (runtime / 런타임) adaptation là hai tầng (layer / 계층) khác nhau. Cần quan sát cả estimated/actual cardinality và parameter cohort.
 
-> **Chuyển mạch:** Ở chặng này của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)** tiếp nhận điểm tựa từ **11. Parameter-sensitive hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)** nối từ **11. Parameter-sensitive hành vi (behavior / 동작)** sang **13. thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)
 
@@ -186,7 +186,7 @@ Một plan giảm CPU nhưng tăng shuffle có thể tệ khi mạng (network / 
 
 Chi phí (cost / 비용) mô hình (model / 모델) thời gian chạy (runtime / 런타임) cần hiểu tài nguyên (resource / 자원) đang scarce ở thời điểm đó; “cheapest plan” không cố định nếu cluster pressure thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **13. thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. thất bại (failure / 실패) modes** nối từ **12. phân tán (distributed / 분산) thực thi (execution / 실행) và mạng (network / 네트워크)** sang **14. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. thất bại (failure / 실패) modes
 
@@ -204,7 +204,7 @@ Chi phí (cost / 비용) mô hình (model / 모델) thời gian chạy (runtime 
 
 **Adaptive herd:** nhiều truy vấn (query / 쿼리) cùng thấy cluster trạng thái (state / 상태) rồi đồng thời chọn chiến lược (strategy / 전략) giống nhau, tạo bottleneck mới.
 
-> **Chuyển mạch:** Trong **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **13. thất bại (failure / 실패) modes** nêu điều cần giải thích; **14. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. thất bại (failure / 실패) modes** đặt vấn đề; **14. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** mở rộng hệ quả.
 
 ## 14. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -225,7 +225,7 @@ CPU, disk và network saturation
 
 Một plan diagram không có actual cardinality chỉ cho biết optimizer đã tin gì, chưa cho biết thời gian chạy (runtime / 런타임) đã xảy ra gì.
 
-> **Chuyển mạch:** Ở chặng này của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **14. bằng chứng vận hành (production evidence / 운영 증거)** cho ta quy tắc; **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. liên kết (connection / 연결) với các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. bằng chứng vận hành (production evidence / 운영 증거)** nêu quy tắc; **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **16. liên kết (connection / 연결) với các chapter khác** mở rộng hệ quả.
 
 ## 15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)
 
@@ -247,7 +247,7 @@ stale/correlated statistics
 
 Fix có thể nằm ở statistics, plan chính sách (policy / 정책), adaptive broadcast threshold hoặc stage scheduling. Tăng machine bộ nhớ (memory / 메모리) chỉ che symptom nếu estimator tiếp tục sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**, **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** cho ta quy tắc; **16. liên kết (connection / 연결) với các chapter khác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **15. Worked lập luận (reasoning / 추론) trường hợp (case / 사례)** nêu quy tắc; **16. liên kết (connection / 연결) với các chapter khác** thử quy tắc trong tình huống, rồi mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## 16. liên kết (connection / 연결) với các chapter khác
 

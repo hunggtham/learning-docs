@@ -42,7 +42,7 @@ Khoảng cách giữa theoretical price và actual fill là một phần **hiệ
 
 Backtest lấy candle close `1.1200` làm fill chính xác mà không modeling độ trễ (latency / 지연 시간)/spread/slippage có thể overstate edge.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **2. Thị trường (market / 시장) thứ tự (order / 순서)** tiếp nhận điểm tựa từ **1. Tín hiệu (signal / 신호) khác thứ tự (order / 순서), thứ tự (order / 순서) khác fill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Limit thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **2. Thị trường (market / 시장) thứ tự (order / 순서)** nối từ **1. Tín hiệu (signal / 신호) khác thứ tự (order / 순서), thứ tự (order / 순서) khác fill** sang **3. Limit thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Thị trường (market / 시장) thứ tự (order / 순서)
 
@@ -57,7 +57,7 @@ at best available executable price(s)
 
 Thị trường (market / 시장) thứ tự (order / 순서) không có nghĩa “fill đúng price đang thấy trên chart”. Price có thể thay đổi trong milliseconds, kích thước (size / 크기) available ở top quote có thể không đủ, và thứ tự (order / 순서) có thể sweep nhiều price levels tùy thị trường (market / 시장) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **2. Thị trường (market / 시장) thứ tự (order / 순서)** đã nêu tiêu chí phân biệt, còn **3. Limit thứ tự (order / 순서)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Stop thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **2. Thị trường (market / 시장) thứ tự (order / 순서)** đặt tiêu chí; **3. Limit thứ tự (order / 순서)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. Stop thứ tự (order / 순서)** mở rộng hệ quả.
 
 ## 3. Limit thứ tự (order / 순서)
 
@@ -73,7 +73,7 @@ buy at price <= limit
 
 Limit thứ tự (order / 순서) không miễn adverse selection. Nếu price chạm limit đúng lúc new thông tin (information / 정보) làm fair giá trị (value / 값) xấu đi, trader có thể được fill vì thị trường (market / 시장) đang chạy xuyên qua mình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **3. Limit thứ tự (order / 순서)** đã nêu tiêu chí phân biệt, còn **4. Stop thứ tự (order / 순서)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Stop-limit thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **3. Limit thứ tự (order / 순서)** đặt tiêu chí; **4. Stop thứ tự (order / 순서)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **5. Stop-limit thứ tự (order / 순서)** mở rộng hệ quả.
 
 ## 4. Stop thứ tự (order / 순서)
 
@@ -90,7 +90,7 @@ Trong fast thị trường (market / 시장) hoặc gap, actual fill có thể x
 
 Do đó planned rủi ro (risk / 위험) dùng stop distance là **estimate conditional on thực thi (execution / 실행) chất lượng (quality / 품질)**, không phải absolute cap.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **4. Stop thứ tự (order / 순서)** đã nêu tiêu chí phân biệt, còn **5. Stop-limit thứ tự (order / 순서)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Bid/ask side của stop quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **4. Stop thứ tự (order / 순서)** đặt tiêu chí; **5. Stop-limit thứ tự (order / 순서)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **6. Bid/ask side của stop quan trọng** mở rộng hệ quả.
 
 ## 5. Stop-limit thứ tự (order / 순서)
 
@@ -108,7 +108,7 @@ execution certainty
 
 Không có thứ tự (order / 순서) kiểu (type / 타입) nào loại bỏ cả hai rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **5. Stop-limit thứ tự (order / 순서)** đã nêu tiêu chí phân biệt, còn **6. Bid/ask side của stop quan trọng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Slippage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **5. Stop-limit thứ tự (order / 순서)** đặt tiêu chí; **6. Bid/ask side của stop quan trọng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. Slippage** mở rộng hệ quả.
 
 ## 6. Bid/ask side của stop quan trọng
 
@@ -122,7 +122,7 @@ Vì vậy khi rà soát (review / 검토) trade cần biết:
 - stop trigger basis;
 - actual bid/ask at thực thi (execution / 실행).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **7. Slippage** tiếp nhận điểm tựa từ **6. Bid/ask side của stop quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Spread không cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **7. Slippage** nối từ **6. Bid/ask side của stop quan trọng** sang **8. Spread không cố định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Slippage
 
@@ -141,7 +141,7 @@ Sources:
 - venue fragmentation;
 - broker routing/thực thi (execution / 실행) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **8. Spread không cố định** tiếp nhận điểm tựa từ **7. Slippage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Commission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **8. Spread không cố định** nối từ **7. Slippage** sang **9. Commission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Spread không cố định
 
@@ -165,7 +165,7 @@ Chiến lược (strategy / 전략) dùng fixed spread `0.5 pip` cho mọi giờ
 
 Research tốt cần spread phân phối (distribution / 분포) theo thời gian (time / 시간)/regime nếu dữ liệu (data / 데이터) cho phép.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **9. Commission** tiếp nhận điểm tựa từ **8. Spread không cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Rollover / financing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **9. Commission** nối từ **8. Spread không cố định** sang **10. Rollover / financing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Commission
 
@@ -191,7 +191,7 @@ Entry spread/impact
 + financing while held
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **10. Rollover / financing** tiếp nhận điểm tựa từ **9. Commission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **10. Rollover / financing** nối từ **9. Commission** sang **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Rollover / financing
 
@@ -209,7 +209,7 @@ Chi phí (cost / 비용) phụ thuộc:
 
 Không nên hard-code “positive swap” từ một website vào backtest dài hạn mà không phiên bản (version / 버전) dữ liệu (data / 데이터) theo thời gian.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover** tiếp nhận điểm tựa từ **10. Rollover / financing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Liquidity và độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover** nối từ **10. Rollover / financing** sang **12. Liquidity và độ sâu (depth / 깊이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover
 
@@ -227,7 +227,7 @@ Nếu gross expectancy chỉ `0.15R` nhưng average all-in chi phí (cost / 비�
 
 High-frequency turnover làm chi phí (cost / 비용) modeling quan trọng hơn tín hiệu (signal / 신호) storytelling.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **12. Liquidity và độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Thị trường (market / 시장) impact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **12. Liquidity và độ sâu (depth / 깊이)** nối từ **11. Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phải quy mô (scale / 규모) với turnover** sang **13. Thị trường (market / 시장) impact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Liquidity và độ sâu (depth / 깊이)
 
@@ -243,7 +243,7 @@ Kích thước (size / 크기) là một dimension của liquidity:
 A price is not meaningful without executable size
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **13. Thị trường (market / 시장) impact** tiếp nhận điểm tựa từ **12. Liquidity và độ sâu (depth / 깊이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **13. Thị trường (market / 시장) impact** nối từ **12. Liquidity và độ sâu (depth / 깊이)** sang **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Thị trường (market / 시장) impact
 
@@ -253,7 +253,7 @@ Với small trader, direct impact có thể negligible ở major FX. Nhưng conc
 
 Thị trường (market / 시장) impact thường nonlinear với kích thước (size / 크기) và thị trường (market / 시장) điều kiện (condition / 조건).
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **13. Thị trường (market / 시장) impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)** nối từ **13. Thị trường (market / 시장) impact** sang **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)
 
@@ -267,7 +267,7 @@ mà còn:
 
 > Tôi có contractual claim với legal thực thể (entity / 엔터티) nào, quote/fill được hình thành thế nào và nếu có dispute/insolvency thì khung phần mềm (framework / 프레임워크) nào áp dụng?
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)** cho ta quy tắc; **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Principal vs agency concept** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **14. OTC retail: broker/dealer là một phần của sản phẩm (product / 제품)** nêu quy tắc; **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)** thử quy tắc trong tình huống, rồi **16. Principal vs agency concept** mở rộng hệ quả.
 
 ## 15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)
 
@@ -296,7 +296,7 @@ price source / order handling
 margin and liquidation rules
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)** cho ta quy tắc; **16. Principal vs agency concept** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Internalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **15. Marketing labels không đủ để hiểu mô hình thực thi (execution model / 실행 모델)** nêu quy tắc; **16. Principal vs agency concept** thử quy tắc trong tình huống, rồi **17. Internalization** mở rộng hệ quả.
 
 ## 16. Principal vs agency concept
 
@@ -312,7 +312,7 @@ Thực tế có hybrid các mô hình (models / 모델들). Cùng firm có thể
 
 Vì vậy cần đọc disclosure cụ thể thay vì suy từ quảng cáo.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **17. Internalization** tiếp nhận điểm tựa từ **16. Principal vs agency concept** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Xung đột (conflict / 충돌) of interest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **17. Internalization** nối từ **16. Principal vs agency concept** sang **18. Xung đột (conflict / 충돌) of interest**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Internalization
 
@@ -328,7 +328,7 @@ Internalization không tự động là misconduct. Nó là một market-making/
 
 Rủi ro (risk / 위험) issue nằm ở thực thi (execution / 실행) fairness, disclosure, conflicts, solvency và regulation — không phải ở từ “internalize” tự nó.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **18. Xung đột (conflict / 충돌) of interest** tiếp nhận điểm tựa từ **17. Internalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **18. Xung đột (conflict / 충돌) of interest** nối từ **17. Internalization** sang **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Xung đột (conflict / 충돌) of interest
 
@@ -344,7 +344,7 @@ Potential conflicts có thể liên quan:
 
 Regulated khung phần mềm (framework / 프레임워크), best-execution/thực thi (execution / 실행) obligations tùy jurisdiction và transparent disclosure giúp quản lý conflicts nhưng không biến chúng thành zero.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name** tiếp nhận điểm tựa từ **18. Xung đột (conflict / 충돌) of interest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Regulatory registration check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name** nối từ **18. Xung đột (conflict / 충돌) of interest** sang **20. Regulatory registration check**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name
 
@@ -367,7 +367,7 @@ insolvency/client-money terms
 
 Không nên chỉ tìm kiếm (search / 검색) logo/brand rồi giả định mọi subsidiary có cùng protections.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **20. Regulatory registration check** tiếp nhận điểm tựa từ **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Offshore broker rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **20. Regulatory registration check** nối từ **19. Legal thực thể (entity / 엔터티) quan trọng hơn brand name** sang **21. Offshore broker rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Regulatory registration check
 
@@ -385,7 +385,7 @@ Find official regulator register
 
 Không dùng screenshot license do salesperson gửi làm proof duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **21. Offshore broker rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **20. Regulatory registration check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Máy khách (client / 클라이언트) money và insolvency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **21. Offshore broker rủi ro (risk / 위험)** nối từ **20. Regulatory registration check** sang **22. Máy khách (client / 클라이언트) money và insolvency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Offshore broker rủi ro (risk / 위험)
 
@@ -404,7 +404,7 @@ Red flags cần research kỹ:
 
 CFTC đã cảnh báo nhiều fraud complaints liên quan unregistered offshore dealers và social-media solicitation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **22. Máy khách (client / 클라이언트) money và insolvency** tiếp nhận điểm tựa từ **21. Offshore broker rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **22. Máy khách (client / 클라이언트) money và insolvency** nối từ **21. Offshore broker rủi ro (risk / 위험)** sang **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Máy khách (client / 클라이언트) money và insolvency
 
@@ -421,7 +421,7 @@ Cần hiểu:
 
 Các câu trả lời thay đổi theo jurisdiction/sản phẩm (product / 제품)/máy khách (client / 클라이언트) kiểu (type / 타입). Không được suy diễn universal protection.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)** tiếp nhận điểm tựa từ **22. Máy khách (client / 클라이언트) money và insolvency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)** nối từ **22. Máy khách (client / 클라이언트) money và insolvency** sang **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)
 
@@ -438,7 +438,7 @@ Mục tiêu không phải “kiểm thử (test / 테스트) profitability” m�
 
 Nếu firm yêu cầu nộp thêm tiền không được quy định rõ chỉ để bản phát hành (release / 릴리스) withdrawal, cần dừng và verify qua official channels.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)** nối từ **23. Withdrawal là operational rủi ro (risk / 위험) tín hiệu (signal / 신호)** sang **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)
 
@@ -457,7 +457,7 @@ Thất bại (failure / 실패) modes:
 
 Trading plan cần emergency contact/procedure phù hợp với broker, không nên phụ thuộc một UI duy nhất nếu kích thước (size / 크기) material.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Order-state machine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)** nối từ **24. Nền tảng (platform / 플랫폼) rủi ro (risk / 위험)** sang **26. Order-state machine**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)
 
@@ -479,7 +479,7 @@ kill switch
 
 Thuật toán (algorithm / 알고리즘) without rủi ro (risk / 위험) controls không phải automation hoàn chỉnh.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **26. Order-state machine** tiếp nhận điểm tựa từ **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Partial fills** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **26. Order-state machine** nối từ **25. API/algorithmic thực thi (execution / 실행) rủi ro (risk / 위험)** sang **27. Partial fills**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Order-state machine
 
@@ -500,7 +500,7 @@ UNKNOWN / RECONCILE
 
 Nếu mạng (network / 네트워크) hết thời gian chờ (timeout / 타임아웃) sau khi gửi thứ tự (order / 순서), hệ thống (system / 시스템) không được tự động assume thứ tự (order / 순서) failed rồi gửi duplicate. Phải truy vấn (query / 쿼리)/reconcile broker trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **27. Partial fills** tiếp nhận điểm tựa từ **26. Order-state machine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Requotes và last look** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **27. Partial fills** nối từ **26. Order-state machine** sang **28. Requotes và last look**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Partial fills
 
@@ -515,7 +515,7 @@ VWAP Fill
 
 Rủi ro (risk / 위험) hệ thống (system / 시스템) phải dùng actual filled quantity, không phải requested quantity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **28. Requotes và last look** tiếp nhận điểm tựa từ **27. Partial fills** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **28. Requotes và last look** nối từ **27. Partial fills** sang **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Requotes và last look
 
@@ -531,7 +531,7 @@ Không nên đánh giá thực thi (execution / 실행) bằng một anecdote. C
 - độ trễ (latency / 지연 시간);
 - phân phối (distribution / 분포) by session/sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **28. Requotes và last look** nêu điều cần giải thích; **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. Hiện thực (implementation / 구현) shortfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **28. Requotes và last look** đặt vấn đề; **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **30. Hiện thực (implementation / 구현) shortfall** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)
 
@@ -566,7 +566,7 @@ Performance around News
 
 Nếu chiến lược (strategy / 전략) edge biến mất sau realistic chi phí (cost / 비용), đó không phải thực thi (execution / 실행) “xui”; chiến lược (strategy / 전략) chưa đủ robust.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)** nêu điều cần giải thích; **30. Hiện thực (implementation / 구현) shortfall** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. News thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **29. Thực thi (execution / 실행) chất lượng (quality / 품질) phải đo bằng dữ liệu (data / 데이터)** đặt vấn đề; **30. Hiện thực (implementation / 구현) shortfall** đối chiếu bằng chứng, rồi **31. News thực thi (execution / 실행)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Hiện thực (implementation / 구현) shortfall
 
@@ -584,7 +584,7 @@ Paper Strategy P/L
 
 Khoảng cách giữa paper và live kết quả (result / 결과) cần được attribution, không giải thích bằng cảm giác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **31. News thực thi (execution / 실행)** tiếp nhận điểm tựa từ **30. Hiện thực (implementation / 구현) shortfall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Weekend rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **31. News thực thi (execution / 실행)** nối từ **30. Hiện thực (implementation / 구현) shortfall** sang **32. Weekend rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. News thực thi (execution / 실행)
 
@@ -601,7 +601,7 @@ Backtest dùng 1-minute OHLC thường không đủ để reconstruct intra-bar 
 
 Sự kiện (event / 이벤트) chiến lược (strategy / 전략) cần higher-resolution bid/ask dữ liệu (data / 데이터) nếu muốn estimate thực thi (execution / 실행) đáng tin hơn.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **32. Weekend rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **31. News thực thi (execution / 실행)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **32. Weekend rủi ro (risk / 위험)** nối từ **31. News thực thi (execution / 실행)** sang **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Weekend rủi ro (risk / 위험)
 
@@ -618,7 +618,7 @@ Stop nằm giữa hai mức giá có thể không được fill tại stop price
 
 Holding weekend là intentional rủi ro (risk / 위험) quyết định (decision / 결정), không phải “thị trường (market / 시장) ngủ nên rủi ro (risk / 위험) bằng zero”.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **32. Weekend rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Stop hunting: tách myth khỏi mechanics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)** nối từ **32. Weekend rủi ro (risk / 위험)** sang **34. Stop hunting: tách myth khỏi mechanics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)
 
@@ -640,7 +640,7 @@ correlated price move
 
 Tail rủi ro (risk / 위험) có cả **price correlation** và **liquidity correlation**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **34. Stop hunting: tách myth khỏi mechanics** tiếp nhận điểm tựa từ **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **34. Stop hunting: tách myth khỏi mechanics** nối từ **33. Correlated thực thi (execution / 실행) rủi ro (risk / 위험)** sang **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Stop hunting: tách myth khỏi mechanics
 
@@ -658,7 +658,7 @@ Nhưng từ đó không thể kết luận mọi stop-out là manipulation.
 
 Phân tích cần dữ liệu (data / 데이터): independent price feeds, chính xác (exact / 정확한) bid/ask timestamp, spread, venue/broker thực thi (execution / 실행) chính sách (policy / 정책) và broader thị trường (market / 시장) move.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)** tiếp nhận điểm tựa từ **34. Stop hunting: tách myth khỏi mechanics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)** nối từ **34. Stop hunting: tách myth khỏi mechanics** sang **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)
 
@@ -681,7 +681,7 @@ Backtest
 
 là học tập (learning / 학습) progression hợp lý hơn nhảy thẳng từ chart vào maximum kích thước (size / 크기).
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo** tiếp nhận điểm tựa từ **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo** nối từ **35. Demo account không tái tạo hoàn hảo live thực thi (execution / 실행)** sang **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo
 
@@ -707,7 +707,7 @@ Dispute process
 
 Không chọn chỉ vì leverage cao hoặc welcome bonus.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest** tiếp nhận điểm tựa từ **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Không overfit mô hình thực thi (execution model / 실행 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest** nối từ **36. Broker comparison khung phần mềm (framework / 프레임워크) — không xếp hạng theo quảng cáo** sang **38. Không overfit mô hình thực thi (execution model / 실행 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest
 
@@ -737,7 +737,7 @@ bid/ask historical data
 
 Mô hình (model / 모델) phức tạp hơn chỉ hữu ích nếu dữ liệu (data / 데이터) chất lượng (quality / 품질) đủ tốt.
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **38. Không overfit mô hình thực thi (execution model / 실행 모델)** tiếp nhận điểm tựa từ **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **38. Không overfit mô hình thực thi (execution model / 실행 모델)** nối từ **37. Chi phí (cost / 비용) mô hình (model / 모델) tối thiểu cho backtest** sang **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Không overfit mô hình thực thi (execution model / 실행 모델)
 
@@ -754,7 +754,7 @@ stress-event cost
 
 Chiến lược (strategy / 전략) robust nên không chết ngay khi chi phí (cost / 비용) giả định (assumption / 가정) xấu đi nhẹ.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **38. Không overfit mô hình thực thi (execution model / 실행 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Một chiến lược (strategy / 전략) specification đầy đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)** nối từ **38. Không overfit mô hình thực thi (execution model / 실행 모델)** sang **40. Một chiến lược (strategy / 전략) specification đầy đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)
 
@@ -771,7 +771,7 @@ Trước khi forward kiểm thử (test / 테스트) bằng real capital:
 9. Đặt max mất mát (loss / 손실)/max exposure controls.
 10. Reconcile statement với journal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **40. Một chiến lược (strategy / 전략) specification đầy đủ** tiếp nhận điểm tựa từ **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Sai lầm cần loại bỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **40. Một chiến lược (strategy / 전략) specification đầy đủ** nối từ **39. Operational checklist trước mỗi chiến lược (strategy / 전략) live kiểm thử (test / 테스트)** sang **41. Sai lầm cần loại bỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Một chiến lược (strategy / 전략) specification đầy đủ
 
@@ -805,7 +805,7 @@ Reconciliation process
 
 Lúc đó chiến lược (strategy / 전략) mới gần một executable hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **41. Sai lầm cần loại bỏ** tiếp nhận điểm tựa từ **40. Một chiến lược (strategy / 전략) specification đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Từ mechanics sang chiến lược (strategy / 전략) research** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **41. Sai lầm cần loại bỏ** nối từ **40. Một chiến lược (strategy / 전략) specification đầy đủ** sang **42. Từ mechanics sang chiến lược (strategy / 전략) research**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Sai lầm cần loại bỏ
 
@@ -833,7 +833,7 @@ Không luôn đúng. Cần bid/ask and actual fill.
 
 Sai. Regulation không thay thế hiểu sản phẩm (product / 제품), margin, client-money và dispute terms.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **42. Từ mechanics sang chiến lược (strategy / 전략) research** tiếp nhận điểm tựa từ **41. Sai lầm cần loại bỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **42. Từ mechanics sang chiến lược (strategy / 전략) research** nối từ **41. Sai lầm cần loại bỏ** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Từ mechanics sang chiến lược (strategy / 전략) research
 
@@ -859,7 +859,7 @@ Bây giờ mới hợp lý để học:
 
 Nếu đảo thứ tự và học entry setup trước, người học dễ tối ưu entry trong khi bỏ qua những biến quyết định survival.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **Đọc tiếp** tiếp nhận điểm tựa từ **42. Từ mechanics sang chiến lược (strategy / 전략) research** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **Đọc tiếp** nối từ **42. Từ mechanics sang chiến lược (strategy / 전략) research** sang **Nguồn nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
@@ -871,7 +871,7 @@ Quay lại [Forex learning path](./README.md) để xem các chapter mở rộng
 - [Execution, Microstructure and Trading Portfolio](../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md)
 - [Strategy Research, Robustness and Portfolio of Strategies](../04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md)
 
-> **Chuyển mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **05 — Thực thi (execution / 실행), broker, chi phí và operational rủi ro (risk / 위험) trong Forex**, **Đọc tiếp** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

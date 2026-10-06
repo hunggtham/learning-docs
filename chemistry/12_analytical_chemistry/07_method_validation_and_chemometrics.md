@@ -102,7 +102,7 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 
 Độ chụm không phải một con số duy nhất.
 
-> **Chuyển mạch:** Interference testing tìm failure mode của method; repeatability đo biến thiên trong điều kiện giữ nguyên, còn intermediate precision kiểm tra biến thiên giữa ngày/người/thiết bị.
+> **Nối mạch:** Interference testing tìm failure mode của method; repeatability đo biến thiên trong điều kiện giữ nguyên, còn intermediate precision kiểm tra biến thiên giữa ngày/người/thiết bị.
 
 ## Độ lặp lại
 
@@ -113,13 +113,13 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 - khoảng thời gian ngắn;
 - cùng phòng thí nghiệm.
 
-> **Chuyển mạch:** Ở chặng này của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ chụm trung gian** tiếp nhận điểm tựa từ **Độ lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tái lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ chụm trung gian** nối từ **Độ lặp lại** sang **Độ tái lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chụm trung gian
 
 **Độ chụm trung gian (intermediate precision)** mở rộng sang khác ngày, khác người, khác lô thuốc thử hoặc đôi khi khác thiết bị trong cùng phòng thí nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ tái lập** tiếp nhận điểm tựa từ **Độ chụm trung gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ tái lập** nối từ **Độ chụm trung gian** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Độ tái lập
 

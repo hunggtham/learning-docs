@@ -8,7 +8,7 @@ Sự ấm lên toàn cầu là tín hiệu ở quy mô toàn cầu, nhưng tác 
 
 Đây là nguyên tắc đầu tiên cần giữ khi học biến đổi khí hậu: **toàn cầu là tín hiệu, địa phương là trải nghiệm**. Hai nơi có cùng mức tăng nhiệt trung bình có thể đối mặt rủi ro rất khác nếu một nơi phụ thuộc tuyết tan còn nơi kia nằm ở đồng bằng ven biển thấp.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Cân bằng năng lượng: nền tảng vật lý của sự ấm lên** tiếp nhận điểm tựa từ **Biến đổi khí hậu không phân bố đồng đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cưỡng bức, phản ứng và phản hồi không phải cùng một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu biến đổi không đều vì bức xạ, bề mặt, hoàn lưu và vị trí khác nhau. **Cân bằng năng lượng: nền tảng vật lý của sự ấm lên** đặt cơ chế vật lý trước khi tách các loại nguyên nhân và phản hồi.
 
 ## Cân bằng năng lượng: nền tảng vật lý của sự ấm lên
 
@@ -18,7 +18,7 @@ Trái Đất nhận bức xạ sóng ngắn từ Mặt Trời và phát bức x�
 
 Thay đổi đó thường được mô tả bằng **cưỡng bức bức xạ (radiative forcing)**. Hệ khí hậu phản ứng bằng thay đổi nhiệt độ, hơi nước, mây, băng và nhiều thành phần khác cho tới khi đạt một trạng thái cân bằng mới.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Cưỡng bức, phản ứng và phản hồi không phải cùng một thứ** tiếp nhận điểm tựa từ **Cân bằng năng lượng: nền tảng vật lý của sự ấm lên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại dương tạo quán tính cho hệ khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cân bằng năng lượng mô tả đầu vào–đầu ra, còn forcing, response và feedback mô tả cách hệ phản ứng và khuếch đại/giảm tín hiệu. **Đại dương tạo quán tính cho hệ khí hậu** là ví dụ lớn nhất về độ trễ của response.
 
 ## Cưỡng bức, phản ứng và phản hồi không phải cùng một thứ
 
@@ -28,7 +28,7 @@ Ví dụ, nhiệt độ tăng làm không khí có thể chứa nhiều hơi nư
 
 Điểm quan trọng là “phản hồi dương” không có nghĩa tích cực về giá trị; nó chỉ có nghĩa khuếch đại thay đổi ban đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Đại dương tạo quán tính cho hệ khí hậu** tiếp nhận điểm tựa từ **Cưỡng bức, phản ứng và phản hồi không phải cùng một thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu trình carbon: phát thải không đồng nghĩa nồng độ tức thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đại dương hấp thụ và phân phối nhiệt, nên làm chậm nhưng không xóa biến đổi; dòng biển và trao đổi khí tạo phản hồi. **Chu trình carbon: phát thải không đồng nghĩa nồng độ tức thời** nối quán tính nhiệt với quán tính của carbon.
 
 ## Đại dương tạo quán tính cho hệ khí hậu
 
@@ -36,7 +36,7 @@ Ví dụ, nhiệt độ tăng làm không khí có thể chứa nhiều hơi nư
 
 Quán tính giải thích vì sao dừng tăng cưỡng bức không đồng nghĩa toàn bộ hệ quay lại trạng thái cũ ngay lập tức. Nhiệt đã đi vào đại dương sâu cần thời gian dài để phân phối lại. Đây là ví dụ của **độ trễ hệ thống (system lag)**, một khái niệm quen thuộc trong điều khiển và động lực hệ thống.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Chu trình carbon: phát thải không đồng nghĩa nồng độ tức thời** tiếp nhận điểm tựa từ **Đại dương tạo quán tính cho hệ khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Carbon đi qua khí quyển, đại dương, sinh quyển và đất với tốc độ khác nhau; phát thải hôm nay không biến thành nồng độ tức thời một cách đơn giản. **Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số** tiếp theo xử lý độ bất định của response.
 
 ## Chu trình carbon: phát thải không đồng nghĩa nồng độ tức thời
 
@@ -44,7 +44,7 @@ Carbon dioxide phát thải vào khí quyển không ở đó như một kho ho�
 
 Vì vậy cần phân biệt **dòng phát thải (emission flow)** với **nồng độ tích lũy (concentration stock)**. Nếu phát thải vẫn dương nhưng thấp hơn trước, nồng độ CO₂ vẫn có thể tiếp tục tăng. Đây là cùng lô-gic (logic / 논리) stock–luồng (flow / 흐름) đã dùng trong nước ngầm và dân số.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số** tiếp nhận điểm tựa từ **Chu trình carbon: phát thải không đồng nghĩa nồng độ tức thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao đất liền và Bắc Cực có thể ấm nhanh hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Độ nhạy phụ thuộc feedback, thời gian và quy mô; một con số không mô tả toàn bộ phân bố rủi ro. **Vì sao đất liền và Bắc Cực có thể ấm nhanh hơn** cho thấy response khác nhau theo bề mặt và vĩ độ.
 
 ## Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số
 
@@ -52,7 +52,7 @@ Vì vậy cần phân biệt **dòng phát thải (emission flow)** với **nồ
 
 Bất định về độ nhạy không có nghĩa “không biết gì”. Nó có nghĩa kết quả được mô tả bằng một khoảng xác suất thay vì một giá trị duy nhất. Trong quản lý rủi ro, phần đuôi của phân bố có thể rất quan trọng dù xác suất thấp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Vì sao đất liền và Bắc Cực có thể ấm nhanh hơn** tiếp nhận điểm tựa từ **Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu trình nước trong một khí hậu ấm hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đất liền nóng nhanh hơn đại dương, băng và albedo khuếch đại ấm lên ở Bắc Cực, nhưng các cơ chế này cũng đổi dòng nước. **Chu trình nước trong một khí hậu ấm hơn** theo dõi hệ quả lên mưa, bốc hơi và dòng chảy.
 
 ## Vì sao đất liền và Bắc Cực có thể ấm nhanh hơn
 
@@ -60,7 +60,7 @@ Bất định về độ nhạy không có nghĩa “không biết gì”. Nó c
 
 Điều này cho thấy “ấm lên toàn cầu” không phải một lớp nhiệt đồng đều phủ lên bản đồ. Mỗi vùng có tập phản hồi và điều kiện biên riêng.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Chu trình nước trong một khí hậu ấm hơn** tiếp nhận điểm tựa từ **Vì sao đất liền và Bắc Cực có thể ấm nhanh hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trung bình thay đổi và cực trị cũng có thể thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu ấm hơn làm tăng khả năng giữ hơi nước nhưng phân bố mưa không đồng đều; nơi ẩm hơn và nơi khô hơn có thể cùng xuất hiện. **Trung bình thay đổi và cực trị cũng có thể thay đổi** chuyển từ chu trình sang phân bố thống kê.
 
 ## Chu trình nước trong một khí hậu ấm hơn
 
@@ -68,7 +68,7 @@ Không khí ấm có thể chứa nhiều hơi nước hơn, nhưng điều đó
 
 Một khí hậu ấm hơn còn có thể làm **chu trình thủy văn mạnh hơn**: bốc hơi tăng ở nơi có đủ nước, khí quyển chứa nhiều hơi nước hơn và các trận mưa cực đoan có thể có tiềm năng mang nhiều nước hơn. Tuy nhiên mức thay đổi cụ thể vẫn phụ thuộc động lực khí quyển từng vùng.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Trung bình thay đổi và cực trị cũng có thể thay đổi** tiếp nhận điểm tựa từ **Chu trình nước trong một khí hậu ấm hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy kết sự kiện: hỏi xác suất thay đổi, không hỏi một nguyên nhân duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Người và hạ tầng thường chịu cực trị hơn là trung bình; thay đổi đuôi phân bố có thể làm rủi ro tăng mạnh. **Quy kết sự kiện: hỏi xác suất thay đổi, không hỏi một nguyên nhân duy nhất** cần đặt cực trị vào xác suất nền và cơ chế.
 
 ## Trung bình thay đổi và cực trị cũng có thể thay đổi
 
@@ -76,7 +76,7 @@ Nếu phân bố nhiệt độ dịch sang phía nóng, số ngày vượt một
 
 Đây là lý do **dịch chuyển phân bố xác suất** là mô hình tư duy tốt hơn câu “trái đất nóng thêm X độ”. Con người và hạ tầng thường nhạy với ngưỡng: nhiệt độ mà đường ray biến dạng, mực nước làm ngập tầng hầm hoặc số ngày nóng vượt khả năng cơ thể thích nghi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Quy kết sự kiện: hỏi xác suất thay đổi, không hỏi một nguyên nhân duy nhất** tiếp nhận điểm tựa từ **Trung bình thay đổi và cực trị cũng có thể thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mực nước biển: toàn cầu tăng nhưng địa phương trải nghiệm khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Attribution tốt hỏi xác suất và cường độ đã thay đổi thế nào, không gán một sự kiện cho một nguyên nhân duy nhất. **Mực nước biển: toàn cầu tăng nhưng địa phương trải nghiệm khác nhau** áp dụng logic đó vào tín hiệu toàn cầu và địa phương.
 
 ## Quy kết sự kiện: hỏi xác suất thay đổi, không hỏi một nguyên nhân duy nhất
 
@@ -84,7 +84,7 @@ Khoa học khí hậu không cần tuyên bố “một trận bão do biến đ
 
 Cách làm là so sánh thế giới quan sát được với một thế giới phản thực tế (counterfactual) không có cùng mức tác động của con người, thông qua mô hình và thống kê. Đây là suy luận xác suất, tương tự việc đánh giá một yếu tố làm rủi ro bệnh tăng bao nhiêu thay vì tìm một nguyên nhân duy nhất cho từng ca.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Mực nước biển: toàn cầu tăng nhưng địa phương trải nghiệm khác nhau** tiếp nhận điểm tựa từ **Quy kết sự kiện: hỏi xác suất thay đổi, không hỏi một nguyên nhân duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băng biển, sông băng và tấm băng có vai trò khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mực biển địa phương còn chịu sụt lún, dòng biển, gió, băng và thay đổi trọng lực; tín hiệu toàn cầu không trải đều. **Băng biển, sông băng và tấm băng có vai trò khác nhau** tách các nguồn đóng góp và phản hồi.
 
 ## Mực nước biển: toàn cầu tăng nhưng địa phương trải nghiệm khác nhau
 
@@ -94,7 +94,7 @@ Nếu đất đang sụt do khai thác nước ngầm, nén trầm tích hoặc 
 
 Vì vậy quy hoạch ven biển cần kết hợp cả khí hậu, địa chất và sử dụng nước ngầm.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Băng biển, sông băng và tấm băng có vai trò khác nhau** tiếp nhận điểm tựa từ **Mực nước biển: toàn cầu tăng nhưng địa phương trải nghiệm khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ sinh thái không chỉ phản ứng với nhiệt độ trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Băng biển ảnh hưởng albedo và habitat, sông băng ảnh hưởng dòng nước, tấm băng ảnh hưởng mực biển trực tiếp hơn; không nên gộp chúng. **Hệ sinh thái không chỉ phản ứng với nhiệt độ trung bình** tiếp theo xem timing, nước và mùa vụ.
 
 ## Băng biển, sông băng và tấm băng có vai trò khác nhau
 
@@ -102,7 +102,7 @@ Băng biển nổi khi tan không trực tiếp làm tăng đáng kể mực nư
 
 Thềm băng nổi quanh Nam Cực không trực tiếp làm nước biển tăng nhiều khi tan, nhưng có thể đóng vai trò “chống đỡ” dòng băng trên đất. Nếu thềm băng yếu đi, băng nội địa có thể chảy nhanh hơn ra biển. Đây là ví dụ về **tác động gián tiếp quan trọng hơn tác động trực tiếp**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Hệ sinh thái không chỉ phản ứng với nhiệt độ trung bình** tiếp nhận điểm tựa từ **Băng biển, sông băng và tấm băng có vai trò khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thành phố khuếch đại và tái phân phối rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sinh thái phản ứng với nhiệt, cực trị, mùa, nước, băng và tốc độ thay đổi; cùng nhiệt độ trung bình có thể tạo tác động khác nhau. **Thành phố khuếch đại và tái phân phối rủi ro** nối hệ sinh thái với hạ tầng và bất bình đẳng đô thị.
 
 ## Hệ sinh thái không chỉ phản ứng với nhiệt độ trung bình
 
@@ -110,7 +110,7 @@ Loài chịu ảnh hưởng của nhiệt độ, nước, mùa vụ, cháy, sâu
 
 Vùng núi có một vấn đề đặc biệt: loài có thể di chuyển lên cao để tìm khí hậu mát hơn, nhưng diện tích sinh cảnh thường giảm theo độ cao. Cuối cùng chúng có thể gặp “đỉnh núi” không còn nơi để dịch chuyển.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Thành phố khuếch đại và tái phân phối rủi ro** tiếp nhận điểm tựa từ **Hệ sinh thái không chỉ phản ứng với nhiệt độ trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giảm nhẹ: bài toán địa lý của nguồn phát và hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thành phố tập trung người, tài sản và hạ tầng nên vừa khuếch đại phơi nhiễm vừa có năng lực bảo vệ và tái phân phối rủi ro. **Giảm nhẹ: bài toán địa lý của nguồn phát và hạ tầng** chuyển sang nơi phát thải và nơi có thể can thiệp.
 
 ## Thành phố khuếch đại và tái phân phối rủi ro
 
@@ -118,7 +118,7 @@ Vùng núi có một vấn đề đặc biệt: loài có thể di chuyển lên
 
 Nhưng thành phố cũng có năng lực thích ứng lớn nhờ hạ tầng, tài chính và dịch vụ. Vì vậy mật độ không tự động đồng nghĩa rủi ro cao; kết quả phụ thuộc chất lượng quy hoạch và năng lực quản trị.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Thành phố khuếch đại và tái phân phối rủi ro** nêu điều cần giải thích; **Giảm nhẹ: bài toán địa lý của nguồn phát và hạ tầng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Carbon lock-in và tuổi thọ hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mitigation phải đặt nguồn phát, lưới điện, giao thông, đất và năng lực đầu tư vào cùng bản đồ; giảm phát thải ở một node có thể đẩy tác động sang nơi khác. **Carbon lock-in và tuổi thọ hạ tầng** giải thích vì sao thời điểm đầu tư quan trọng.
 
 ## Giảm nhẹ: bài toán địa lý của nguồn phát và hạ tầng
 
@@ -126,7 +126,7 @@ Nhưng thành phố cũng có năng lực thích ứng lớn nhờ hạ tầng, 
 
 Điện gió tốt ở nơi có tài nguyên gió; điện Mặt Trời tốt ở nơi có bức xạ phù hợp; lưới điện phải nối nơi phát tới nơi dùng; khoáng sản cho pin và đường truyền tải có chuỗi cung ứng riêng. Vì vậy chuyển đổi năng lượng không phải thao tác “đổi công nghệ” đơn thuần mà là **tái cấu trúc mạng hạ tầng không gian**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Giảm nhẹ: bài toán địa lý của nguồn phát và hạ tầng** nêu điều cần giải thích; **Carbon lock-in và tuổi thọ hạ tầng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạ tầng có tuổi thọ dài khóa công nghệ, nhiên liệu và hình thái đô thị; quyết định hôm nay làm thay đổi không gian lựa chọn ngày mai. **Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa** xử lý phần rủi ro đã không thể tránh.
 
 ## Carbon lock-in và tuổi thọ hạ tầng
 
@@ -134,7 +134,7 @@ Nhà máy điện, đường bộ và đô thị tồn tại hàng chục năm. 
 
 Đây là đường dẫn (path / 경로) dependence trong địa lý khí hậu: quyết định xây dựng hôm nay ảnh hưởng quỹ đạo phát thải nhiều năm sau.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa** tiếp nhận điểm tựa từ **Carbon lock-in và tuổi thọ hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptation pathway: không cần khóa vào một quyết định duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Adaptation giảm phơi nhiễm, độ nhạy và thiệt hại qua quy hoạch, hạ tầng, sinh thái và bảo hiểm, không chỉ tạo dự báo. **Adaptation pathway: không cần khóa vào một quyết định duy nhất** tổ chức các bước theo ngưỡng và thời gian.
 
 ## Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa
 
@@ -144,7 +144,7 @@ Một biện pháp thích ứng tốt phải xét tác động phụ. Điều h�
 
 Đây gọi là **thích ứng sai (maladaptation)** khi giải pháp ngắn hạn làm rủi ro dài hạn tăng hoặc chuyển rủi ro sang nơi khác.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa** xác định đầu vào; **Adaptation pathway: không cần khóa vào một quyết định duy nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kịch bản không phải dự báo chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pathway giữ nhiều lựa chọn mở và đặt trigger để chuyển hướng khi điều kiện đổi, thay vì đầu tư một lần vào một tương lai duy nhất. **Kịch bản không phải dự báo chính xác** cung cấp các tương lai có điều kiện để thử pathway.
 
 ## Adaptation pathway: không cần khóa vào một quyết định duy nhất
 
@@ -152,7 +152,7 @@ Khi tương lai không chắc chắn, có thể dùng **lộ trình thích ứng
 
 Cách này giống thiết kế hệ thống có khả năng nâng cấp dần theo quan sát thực tế, giúp tránh cả đầu tư quá sớm lẫn phản ứng quá muộn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Adaptation pathway: không cần khóa vào một quyết định duy nhất** xác định đầu vào; **Kịch bản không phải dự báo chính xác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Điểm tới hạn: dùng thận trọng, không dùng như từ gây sợ hãi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Scenario là cấu trúc giả định để so sánh, không phải lời tiên tri về một con số chính xác. **Điểm tới hạn: dùng thận trọng, không dùng như từ gây sợ hãi** tiếp theo xem khi nào thay đổi có thể trở nên phi tuyến hoặc khó đảo ngược.
 
 ## Kịch bản không phải dự báo chính xác
 
@@ -160,7 +160,7 @@ Bản đồ khí hậu tương lai thường dựa trên kịch bản về phát
 
 Do đó không nên trộn **bất định kịch bản**, **bất định mô hình** và **biến thiên tự nhiên** thành một khối mơ hồ. Mỗi loại có nguồn khác nhau và ý nghĩa khác nhau đối với quyết định.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Điểm tới hạn: dùng thận trọng, không dùng như từ gây sợ hãi** tiếp nhận điểm tựa từ **Kịch bản không phải dự báo chính xác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và di cư: không có một đường nhân quả đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tipping point cần bằng chứng về ngưỡng, phản hồi và khả năng phục hồi, không phải từ gây sợ hãi cho mọi biến động. **Khí hậu và di cư: không có một đường nhân quả đơn giản** đặt rủi ro khí hậu vào quyết định, sinh kế và thể chế của con người.
 
 ## Điểm tới hạn: dùng thận trọng, không dùng như từ gây sợ hãi
 
@@ -168,7 +168,7 @@ Một số thành phần hệ Trái Đất có thể phản ứng phi tuyến kh
 
 Nhưng không nên dùng “tipping điểm (point / 지점)” như nhãn chung cho mọi thay đổi nhanh. Cần hỏi cụ thể: biến trạng thái là gì, cơ chế phản hồi nào tồn tại, ngưỡng có chắc chắn không và quá trình có đảo ngược được không.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Khí hậu và di cư: không có một đường nhân quả đơn giản** tiếp nhận điểm tựa từ **Điểm tới hạn: dùng thận trọng, không dùng như từ gây sợ hãi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công bằng khí hậu như một câu hỏi phân bố không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu có thể tác động đến di cư qua sinh kế, giá, xung đột, chính sách và mạng xã hội; không có một tuyến nhân quả duy nhất. **Công bằng khí hậu như một câu hỏi phân bố không gian** tiếp theo hỏi ai chịu tác động và ai có năng lực đáp ứng.
 
 ## Khí hậu và di cư: không có một đường nhân quả đơn giản
 
@@ -176,7 +176,7 @@ Khí hậu có thể ảnh hưởng sinh kế, nước, nông nghiệp và hiể
 
 Do đó các con số “X triệu người chắc chắn sẽ di cư vì khí hậu vào năm Y” phải được đọc cùng giả định và định nghĩa. Địa lý di cư là một hệ đa nguyên nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Công bằng khí hậu như một câu hỏi phân bố không gian** tiếp nhận điểm tựa từ **Khí hậu và di cư: không có một đường nhân quả đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GIS trong thích ứng khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate justice phân bố lợi ích, phát thải, tổn thất, năng lực và tiếng nói theo không gian và thời gian. **GIS trong thích ứng khí hậu** cung cấp công cụ ghép phơi nhiễm, vulnerability, hạ tầng và quyền tiếp cận.
 
 ## Công bằng khí hậu như một câu hỏi phân bố không gian
 
@@ -184,7 +184,7 @@ Tác động, năng lực thích ứng và lợi ích của chuyển đổi khô
 
 Phân tích địa lý giúp biến câu hỏi đạo đức trừu tượng thành câu hỏi cụ thể: nhóm nào ở đâu chịu phơi lộ, ai có khả năng thích ứng, chi phí chuyển đổi tập trung ở vùng nào và hạ tầng mới tạo cơ hội ở đâu.
 
-> **Chuyển mạch:** Trong **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **GIS trong thích ứng khí hậu** tiếp nhận điểm tựa từ **Công bằng khí hậu như một câu hỏi phân bố không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** GIS có thể làm lộ nhóm chịu rủi ro và khoảng trống dịch vụ, nhưng kết quả phụ thuộc dữ liệu, quy mô, quyền riêng tư và cách phân loại. **Những hiểu lầm phổ biến** kiểm tra các suy luận như “bản đồ = sự thật” hoặc “một chỉ số = vulnerability”.
 
 ## GIS trong thích ứng khí hậu
 
@@ -192,7 +192,7 @@ GIS có thể chồng lớp kịch bản hiểm họa với dân số, đường
 
 Một raster mực nước 1 km không đủ để quyết định cao độ nền của một tòa nhà cụ thể. Ngược lại, mô hình cực chi tiết cũng không có ích nếu dữ liệu đầu vào bất định lớn. **Độ chi tiết phải tương xứng độ tin cậy**.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **GIS trong thích ứng khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về trung bình, attribution, mực biển, scenario, migration và GIS, còn lại cách đọc khí hậu như hệ thống vật lý–xã hội–không gian. **Mô hình tư duy** cô đọng chuỗi đó.
 
 ## Những hiểu lầm phổ biến
 
@@ -204,7 +204,7 @@ Một raster mực nước 1 km không đủ để quyết định cao độ n�
 
 **“Mô hình có bất định nghĩa là không dùng được.”** Sai; nhiều quyết định kỹ thuật luôn được thực hiện dưới bất định bằng cách dùng khoảng, kịch bản và biên an toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi khí hậu như một hệ thống địa lý toàn cầu**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi năng lượng–forcing–ocean–carbon → sensitivity và phân bố ấm lên → water, cực trị, attribution, mực biển và băng → sinh thái, đô thị, mitigation, adaptation, scenario, justice và GIS. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang nexus, môi trường và hệ thống toàn cầu.
 
 ## Mô hình tư duy
 

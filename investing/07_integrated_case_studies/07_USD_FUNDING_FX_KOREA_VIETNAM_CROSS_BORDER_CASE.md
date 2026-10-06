@@ -29,7 +29,7 @@ USD/VND: +4%
 
 Hai nền kinh tế đều chịu USD mạnh, nhưng cơ chế truyền dẫn không giống nhau.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **2. Concept — USD funding không chỉ là tỷ giá** tiếp nhận điểm tựa từ **1. Bối cảnh giả định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **2. Concept — USD funding không chỉ là tỷ giá** nối từ **1. Bối cảnh giả định** sang **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Concept — USD funding không chỉ là tỷ giá
 
@@ -43,7 +43,7 @@ Khả năng tiếp cận USD trong stress
 
 Một doanh nghiệp có thể không có nợ USD nhưng vẫn chịu tác động qua giá hàng hóa, nhà cung cấp, khách hàng, ngân hàng hoặc dòng vốn nước ngoài.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **2. Concept — USD funding không chỉ là tỷ giá** xác định đầu vào; **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Hàn Quốc — transmission map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **2. Concept — USD funding không chỉ là tỷ giá** đặt đầu vào cho **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu**, rồi **4. Hàn Quốc — transmission map** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu
 
@@ -62,7 +62,7 @@ US rates ↑
 
 Nhưng mức độ phụ thuộc vào cấu trúc mỗi nền kinh tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu** xác định đầu vào; **4. Hàn Quốc — transmission map** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Việt Nam — transmission map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu** đặt đầu vào cho **4. Hàn Quốc — transmission map**, rồi **5. Việt Nam — transmission map** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Hàn Quốc — transmission map
 
@@ -86,7 +86,7 @@ KRW yếu
 
 Vì vậy cùng một KRW shock có thể **âm với valuation nhưng dương với translation earnings**.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **5. Việt Nam — transmission map** tiếp nhận điểm tựa từ **4. Hàn Quốc — transmission map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. dữ liệu (data / 데이터) — bảng theo dõi chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **5. Việt Nam — transmission map** nối từ **4. Hàn Quốc — transmission map** sang **6. dữ liệu (data / 데이터) — bảng theo dõi chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Việt Nam — transmission map
 
@@ -113,7 +113,7 @@ Deposit rates
 Domestic margin liquidity
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **5. Việt Nam — transmission map** nêu điều cần giải thích; **6. dữ liệu (data / 데이터) — bảng theo dõi chung** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **5. Việt Nam — transmission map** đặt vấn đề; **6. dữ liệu (data / 데이터) — bảng theo dõi chung** đối chiếu bằng chứng, rồi **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. dữ liệu (data / 데이터) — bảng theo dõi chung
 
@@ -161,7 +161,7 @@ Market turnover / margin
 Corporate bond maturity
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **6. dữ liệu (data / 데이터) — bảng theo dõi chung** nêu điều cần giải thích; **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Industry map — Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **6. dữ liệu (data / 데이터) — bảng theo dõi chung** đặt vấn đề; **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** đối chiếu bằng chứng, rồi **8. Industry map — Hàn Quốc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND
 
@@ -176,7 +176,7 @@ Valuation multiple bị co bao nhiêu?
 
 Nếu USD/VND tăng 4%, không thể chỉ nhìn biên độ thấp hơn rồi kết luận stress nhỏ hơn. Cần hỏi **chính sách (policy / 정책) phản hồi (response / 응답) và domestic liquidity** thay đổi thế nào.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **8. Industry map — Hàn Quốc** tiếp nhận điểm tựa từ **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Industry map — Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **8. Industry map — Hàn Quốc** nối từ **7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND** sang **9. Industry map — Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Industry map — Hàn Quốc
 
@@ -196,7 +196,7 @@ Tác động qua funding, credit chất lượng (quality / 품질) và househol
 
 Rates cao lâu hơn làm refinancing và cap tỷ lệ (rate / 비율) khó hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **9. Industry map — Việt Nam** tiếp nhận điểm tựa từ **8. Industry map — Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Worked company A — exporter Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **9. Industry map — Việt Nam** nối từ **8. Industry map — Hàn Quốc** sang **10. Worked company A — exporter Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Industry map — Việt Nam
 
@@ -220,7 +220,7 @@ Nhạy với turnover, margin lending và domestic liquidity.
 
 Dài hạn có thể hưởng lợi từ FDI, nhưng ngắn hạn valuation vẫn chịu discount tỷ lệ (rate / 비율) và thị trường (market / 시장) liquidity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **9. Industry map — Việt Nam** cho ta quy tắc; **10. Worked company A — exporter Hàn Quốc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **9. Industry map — Việt Nam** nêu quy tắc; **10. Worked company A — exporter Hàn Quốc** thử quy tắc trong tình huống, rồi **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** mở rộng hệ quả.
 
 ## 10. Worked company A — exporter Hàn Quốc
 
@@ -256,7 +256,7 @@ EBIT sau ≈ 958 × 14,5%
 
 Dù KRW yếu hỗ trợ FX translation, EBIT vẫn giảm khoảng 13% vì demand + operating leverage.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **10. Worked company A — exporter Hàn Quốc** cho ta quy tắc; **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **10. Worked company A — exporter Hàn Quốc** nêu quy tắc; **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** thử quy tắc trong tình huống, rồi **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** mở rộng hệ quả.
 
 ## 11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa
 
@@ -286,7 +286,7 @@ EBIT giảm từ 200 xuống 161,5, gần 19%.
 
 Direct interest chi phí (cost / 비용) cũng tăng, nhưng vấn đề lớn hơn có thể là refinancing và tốc độ thu tiền.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** cho ta quy tắc; **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **11. Worked company B — doanh nghiệp Việt Nam phụ thuộc thanh khoản nội địa** nêu quy tắc; **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** thử quy tắc trong tình huống, rồi **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** mở rộng hệ quả.
 
 ## 12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác
 
@@ -304,7 +304,7 @@ Property collateral
 
 Đây là ví dụ của **indirect FX transmission**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cross-border return — đừng quên đồng tiền cơ sở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** nối từ **12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác** sang **14. Cross-border return — đừng quên đồng tiền cơ sở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)
 
@@ -340,7 +340,7 @@ Giảm gần 29% trong stress scenario.
 
 Đây chỉ là phép stress, không phải dự báo giá.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **14. Cross-border return — đừng quên đồng tiền cơ sở** tiếp nhận điểm tựa từ **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Hedge ratio — không phải 0% hoặc 100%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **14. Cross-border return — đừng quên đồng tiền cơ sở** nối từ **13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)** sang **15. Hedge ratio — không phải 0% hoặc 100%**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Cross-border return — đừng quên đồng tiền cơ sở
 
@@ -368,7 +368,7 @@ Ví dụ tài sản VND giảm 10% nhưng VND giảm thêm 4% so với KRW-equiv
 
 Không nên cộng cơ học -10% và -4% khi cần precision.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **15. Hedge ratio — không phải 0% hoặc 100%** tiếp nhận điểm tựa từ **14. Cross-border return — đừng quên đồng tiền cơ sở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **15. Hedge ratio — không phải 0% hoặc 100%** nối từ **14. Cross-border return — đừng quên đồng tiền cơ sở** sang **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Hedge ratio — không phải 0% hoặc 100%
 
@@ -387,7 +387,7 @@ Hedge 100% có thể giảm currency noise nhưng tạo chi phí (cost / 비용)
 
 Mục tiêu là quản trị exposure, không dự báo FX chắc chắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure** tiếp nhận điểm tựa từ **15. Hedge ratio — không phải 0% hoặc 100%** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Portfolio example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure** nối từ **15. Hedge ratio — không phải 0% hoặc 100%** sang **17. Portfolio example**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure
 
@@ -397,7 +397,7 @@ Một exporter Hàn Quốc có revenue USD nhưng chi phí và capex cũng USD c
 
 Hedge ticker currency không đồng nghĩa hedge nghiệp vụ (business / 비즈니스) economics.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure** cho ta quy tắc; **17. Portfolio example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Hidden concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure** nêu quy tắc; **17. Portfolio example** thử quy tắc trong tình huống, rồi **18. Hidden concentration** mở rộng hệ quả.
 
 ## 17. Portfolio example
 
@@ -444,7 +444,7 @@ Stress mất mát (loss / 손실) gần đúng:
 -13,10%
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **17. Portfolio example** cho ta quy tắc; **18. Hidden concentration** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **17. Portfolio example** nêu quy tắc; **18. Hidden concentration** thử quy tắc trong tình huống, rồi **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** mở rộng hệ quả.
 
 ## 18. Hidden concentration
 
@@ -460,7 +460,7 @@ Domestic liquidity
 
 Country diversification không tự động tạo factor diversification.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** tiếp nhận điểm tựa từ **18. Hidden concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. chính sách (policy / 정책) offset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** nối từ **18. Hidden concentration** sang **20. chính sách (policy / 정책) offset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm
 
@@ -484,7 +484,7 @@ Domestic growth
 Policy transmission
 ```
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **20. chính sách (policy / 정책) offset** tiếp nhận điểm tựa từ **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **20. chính sách (policy / 정책) offset** nối từ **19. Central bank reaction — BOK và SBV không tối ưu cùng một hàm** sang **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. chính sách (policy / 정책) offset
 
@@ -503,7 +503,7 @@ Public investment
 
 Chính sách (policy / 정책) offset có thể giảm hoặc chuyển vị trí của stress thay vì xóa stress hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **20. chính sách (policy / 정책) offset** đã nêu tiêu chí phân biệt, còn **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **20. chính sách (policy / 정책) offset** đặt tiêu chí; **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** mở rộng hệ quả.
 
 ## 21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)
 
@@ -524,7 +524,7 @@ Credit quality chưa cải thiện
 
 thì đợt tăng có thể chủ yếu là liquidity/valuation, chưa phải fundamental khôi phục (recovery / 복구).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)** đã nêu tiêu chí phân biệt, còn **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)** đặt tiêu chí; **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** dùng tiêu chí đó để kiểm tra ranh giới, rồi **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** mở rộng hệ quả.
 
 ## 22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement
 
@@ -540,7 +540,7 @@ Customer concentration
 
 FX tailwind không thay moat.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** đã nêu tiêu chí phân biệt, còn **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24. Scenario ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement** đặt tiêu chí; **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** dùng tiêu chí đó để kiểm tra ranh giới, rồi **24. Scenario ma trận (matrix / 행렬)** mở rộng hệ quả.
 
 ## 23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline
 
@@ -559,7 +559,7 @@ Product specification
 
 Trường hợp (case / 사례) này dùng số giả định, không thay thế dữ liệu hiện tại.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** nêu điều cần giải thích; **24. Scenario ma trận (matrix / 행렬)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. vô hiệu hóa (invalidation / 무효화) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline** đặt vấn đề; **24. Scenario ma trận (matrix / 행렬)** đối chiếu bằng chứng, rồi **25. vô hiệu hóa (invalidation / 무효화) map** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Scenario ma trận (matrix / 행렬)
 
@@ -588,7 +588,7 @@ Valuation multiple
 
 Không dùng một quy tắc (rule / 규칙) cố định cho “USD up/down”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **25. vô hiệu hóa (invalidation / 무효화) map** tiếp nhận điểm tựa từ **24. Scenario ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Post-mortem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **25. vô hiệu hóa (invalidation / 무효화) map** nối từ **24. Scenario ma trận (matrix / 행렬)** sang **26. Post-mortem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. vô hiệu hóa (invalidation / 무효화) map
 
@@ -627,7 +627,7 @@ Domestic turnover phục hồi cùng earnings revisions
 
 Luôn có vô hiệu hóa (invalidation / 무효화) riêng theo nghiệp vụ (business / 비즈니스) driver.
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **26. Post-mortem** tiếp nhận điểm tựa từ **25. vô hiệu hóa (invalidation / 무효화) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Bài tập bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **26. Post-mortem** nối từ **25. vô hiệu hóa (invalidation / 무효화) map** sang **27. Bài tập bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Post-mortem
 
@@ -644,7 +644,7 @@ Bao nhiêu do execution/slippage?
 
 Nếu không tách các phần này, rất dễ kết luận sai rằng country thesis đúng/sai.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **27. Bài tập bắt buộc** tiếp nhận điểm tựa từ **26. Post-mortem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Đầu ra chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **27. Bài tập bắt buộc** nối từ **26. Post-mortem** sang **28. Đầu ra chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Bài tập bắt buộc
 
@@ -659,7 +659,7 @@ Scenario 4: Vietnam domestic credit stress tăng dù USD yếu
 
 Mục tiêu là thấy **USD chỉ là một driver**, không phải toàn bộ mô hình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **28. Đầu ra chuẩn** tiếp nhận điểm tựa từ **27. Bài tập bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Liên kết học tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **28. Đầu ra chuẩn** nối từ **27. Bài tập bắt buộc** sang **29. Liên kết học tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Đầu ra chuẩn
 
@@ -678,7 +678,7 @@ Danh sách tệp này là sản phẩm cuối của bài thực hành, không ph
 10_postmortem.md
 ```
 
-> **Chuyển mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, sau nội dung của **28. Đầu ra chuẩn**, **29. Liên kết học tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, sau nội dung của **28. Đầu ra chuẩn**, **29. Liên kết học tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Liên kết học tiếp
 
@@ -692,7 +692,7 @@ Các tài liệu liên kết giúp mở rộng cú sốc USD funding sang bản 
 - [Portfolio Lab](../01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md)
 - [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md)
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **Kết luận** gom các mảnh từ **29. Liên kết học tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới**, **Kết luận** tổng hợp từ **29. Liên kết học tiếp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

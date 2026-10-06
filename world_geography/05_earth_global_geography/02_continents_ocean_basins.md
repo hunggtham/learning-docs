@@ -8,7 +8,7 @@ Nếu toàn bộ lớp vỏ có cùng mật độ và độ dày, phân bố đ�
 
 Đây là nguyên nhân sâu của phân bố cao–sâu có tính **hai đỉnh (bimodal)**. Vì vậy đường bờ hiện tại không phải ranh giới cơ bản nhất của hành tinh. Nhiều thềm lục địa nằm dưới mực nước biển nhưng vẫn thuộc khối vỏ lục địa.
 
-> **Chuyển mạch:** Trong **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Continental crust khác continent** tiếp nhận điểm tựa từ **Vì sao bề mặt Trái Đất có hai miền cao độ lớn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bồn đại dương là sản phẩm của chu trình kiến tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hai miền cao độ lớn phản ánh khác biệt vật chất và lịch sử kiến tạo, nhưng continental crust không đồng nghĩa với một continent trên bản đồ. **Continental crust khác continent** làm rõ cấp độ vật lý trước khi theo dõi bồn đại dương.
 
 ## Continental crust khác continent
 
@@ -16,7 +16,7 @@ Nếu toàn bộ lớp vỏ có cùng mật độ và độ dày, phân bố đ�
 
 Châu Âu và châu Á tạo thành một khối đất liền liên tục nhưng thường được tách thành hai châu vì lịch sử và quy ước. Ngược lại, Zealandia phần lớn chìm dưới biển nhưng có nhiều đặc điểm của một khối vỏ lục địa. Vì vậy khi đọc Atlas phải hỏi rõ: ta đang phân loại theo cấu trúc địa chất, theo đường bờ hay theo quy ước vùng?
 
-> **Chuyển mạch:** Ở chặng này của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Bồn đại dương là sản phẩm của chu trình kiến tạo** tiếp nhận điểm tựa từ **Continental crust khác continent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu kỳ Wilson: đại dương có thể mở và đóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vỏ lục địa nhẹ và dày giúp giải thích miền cao, còn vỏ đại dương tạo nền cho các bồn thấp và mới hơn. **Bồn đại dương là sản phẩm của chu trình kiến tạo** nối khác biệt vật chất với hình thái toàn cầu.
 
 ## Bồn đại dương là sản phẩm của chu trình kiến tạo
 
@@ -26,7 +26,7 @@ Tại **đới hút chìm (subduction zone)**, thạch quyển đại dương c�
 
 Mô hình tư duy (mental model / 사고 모델) cần giữ là: đại dương không phải một “hố chứa nước” tĩnh. Nó là bề mặt kiến tạo đang được sinh ra, vận chuyển và tái chế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Chu kỳ Wilson: đại dương có thể mở và đóng** tiếp nhận điểm tựa từ **Bồn đại dương là sản phẩm của chu trình kiến tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rìa lục địa thụ động và hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bồn đại dương không bất biến: spreading mở đáy biển, hút chìm thu hẹp và va chạm tái tổ chức lục địa. **Chu kỳ Wilson: đại dương có thể mở và đóng** đặt các quá trình đó vào chuỗi thời gian dài, trước khi phân loại rìa.
 
 ## Chu kỳ Wilson: đại dương có thể mở và đóng
 
@@ -34,7 +34,7 @@ Mô hình tư duy (mental model / 사고 모델) cần giữ là: đại dương
 
 Khái niệm này nối kiến tạo mảng với lịch sử dài hạn của lục địa. Các dãy núi cổ có thể là dấu vết của những đại dương đã biến mất; các vùng rift ngày nay có thể là giai đoạn sớm của một bồn đại dương tương lai.
 
-> **Chuyển mạch:** Trong **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Rìa lục địa thụ động và hoạt động** tiếp nhận điểm tựa từ **Chu kỳ Wilson: đại dương có thể mở và đóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thềm lục địa, sườn lục địa và đồng bằng vực sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chu kỳ mở–đóng tạo rìa thụ động ổn định và rìa hoạt động có động đất, núi lửa, biến dạng. **Rìa lục địa thụ động và hoạt động** dẫn xuống các bậc địa hình và trầm tích ở mép lục địa.
 
 ## Rìa lục địa thụ động và hoạt động
 
@@ -44,7 +44,7 @@ Khái niệm này nối kiến tạo mảng với lịch sử dài hạn của l
 
 Sự khác nhau này truyền trực tiếp sang địa lý con người. Passive margin có thể tích tụ bồn trầm tích dầu khí lớn và thuận lợi cho một số kiểu đồng bằng ven biển; active margin lại có mức hiểm họa địa chấn–sóng thần cao nhưng đồng thời tạo địa nhiệt, khoáng hóa và cảnh quan núi trẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Thềm lục địa, sườn lục địa và đồng bằng vực sâu** tiếp nhận điểm tựa từ **Rìa lục địa thụ động và hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sống núi, rãnh biển, seamount và plateau dưới biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thềm, sườn và đồng bằng vực sâu mô tả cách lục địa chuyển xuống bồn biển qua trầm tích và độ dốc. **Sống núi, rãnh biển, seamount và plateau dưới biển** bổ sung các địa hình tạo bởi spreading, hút chìm và núi lửa dưới nước.
 
 ## Thềm lục địa, sườn lục địa và đồng bằng vực sâu
 
@@ -52,7 +52,7 @@ Từ đất liền ra đại dương, địa hình thường chuyển qua **th�
 
 Thềm lục địa đặc biệt quan trọng đối với nghề cá, hạ tầng dầu khí, cáp biển và luật biển. Phần lớn hoạt động kinh tế biển tập trung ở vùng tương đối nông và dễ tiếp cận hơn, không phân bố đều trên toàn đại dương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Sống núi, rãnh biển, seamount và plateau dưới biển** tiếp nhận điểm tựa từ **Thềm lục địa, sườn lục địa và đồng bằng vực sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biển rìa, biển nội địa và eo biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các địa hình đáy biển tạo tuyến sâu, rào cản, habitat và điểm tập trung dòng chảy; hình học dưới nước ảnh hưởng kết nối trên mặt biển. **Biển rìa, biển nội địa và eo biển** tiếp theo đặt địa hình đó vào các không gian biển có mức trao đổi khác nhau.
 
 ## Sống núi, rãnh biển, seamount và plateau dưới biển
 
@@ -60,7 +60,7 @@ Thềm lục địa đặc biệt quan trọng đối với nghề cá, hạ t�
 
 Những cấu trúc này ảnh hưởng dòng biển sâu, sinh thái, tuyến cáp và vị trí rủi ro. Bathymetry vì thế là một lớp động lực học chứ không chỉ là “địa hình dưới nước”.
 
-> **Chuyển mạch:** Trong **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Biển rìa, biển nội địa và eo biển** tiếp nhận điểm tựa từ **Sống núi, rãnh biển, seamount và plateau dưới biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường bờ là giao tuyến động, không phải biên giới cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Biển rìa, biển nội địa và eo biển khác nhau về độ mở, trao đổi nước và vai trò giao thông, dù đều nằm giữa đất và đại dương. **Đường bờ là giao tuyến động, không phải biên giới cố định** giải thích vì sao ranh tiếp xúc ấy luôn thay đổi.
 
 ## Biển rìa, biển nội địa và eo biển
 
@@ -68,7 +68,7 @@ Các biển như Baltic, Mediterranean, Japan Sea hay South China Sea có mức 
 
 **Eo biển (strait)** là nơi cấu trúc lục địa–đảo ép dòng nước và dòng tàu qua hành lang hẹp. Vì vậy một cấu trúc địa mạo nhỏ có thể tạo ảnh hưởng kinh tế–địa chính trị rất lớn nếu nó trở thành **điểm nghẽn (chokepoint)** của mạng hàng hải.
 
-> **Chuyển mạch:** Ở chặng này của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Đường bờ là giao tuyến động, không phải biên giới cố định** tiếp nhận điểm tựa từ **Biển rìa, biển nội địa và eo biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan sát đáy biển: dữ liệu không đồng đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bờ biển dịch chuyển theo thủy triều, sóng, bồi tụ, sụt lún và mực biển; đường trên bản đồ phụ thuộc thời điểm và quy ước. **Quan sát đáy biển: dữ liệu không đồng đều** nhắc rằng chính phần dưới nước cũng có độ chắc chắn không đồng đều.
 
 ## Đường bờ là giao tuyến động, không phải biên giới cố định
 
@@ -76,7 +76,7 @@ Các biển như Baltic, Mediterranean, Japan Sea hay South China Sea có mức 
 
 Trong thời kỳ băng hà, mực nước biển thấp hơn có thể làm lộ thềm lục địa và tạo cầu đất; khi băng tan, biển tiến vào lowland. Điều này ảnh hưởng lịch sử di cư, vị trí khảo cổ và sự hình thành biển nông hiện đại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Đường bờ là giao tuyến động, không phải biên giới cố định** nêu điều cần giải thích; **Quan sát đáy biển: dữ liệu không đồng đều** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Từ cấu trúc hành tinh tới tài nguyên và settlement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Độ sâu và địa hình đáy biển được đo bằng sonar, vệ tinh, tàu khảo sát với độ phân giải khác nhau, nên bản đồ cần ghi nguồn và độ tin cậy. **Từ cấu trúc hành tinh tới tài nguyên và settlement** dùng dữ liệu đó để nối địa hình với con người và tài nguyên.
 
 ## Quan sát đáy biển: dữ liệu không đồng đều
 
@@ -84,7 +84,7 @@ Không thể nhìn trực tiếp toàn bộ đáy biển với cùng độ chi t
 
 Do đó bản đồ bathymetry toàn cầu thường kết hợp dữ liệu trực tiếp và suy đoán. Một bản đồ được tô kín không có nghĩa mọi ô đã được đo cùng chất lượng. Đây là bài học quan trọng về **dữ liệu (data / 데이터) provenance** và **resolution** trong GIS.
 
-> **Chuyển mạch:** Trong **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Quan sát đáy biển: dữ liệu không đồng đều** nêu điều cần giải thích; **Từ cấu trúc hành tinh tới tài nguyên và settlement** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cấu trúc lục địa, bồn biển, rìa và eo biển định hình mỏ, tuyến vận tải, fishery và nơi settlement có thể bám vào. **Những hiểu lầm phổ biến** tiếp theo kiểm tra các cách đồng nhất địa hình với tài nguyên hoặc cơ hội.
 
 ## Từ cấu trúc hành tinh tới tài nguyên và settlement
 
@@ -94,7 +94,7 @@ Chuỗi quan hệ cần nhìn là:
 
 Ví dụ, một passive margin rộng có thể tạo thềm nông và bồn trầm tích lớn; một delta nằm trên đó có thể tập trung dân cư và cảng; khi đô thị hóa tăng, chính vùng thấp thuận lợi lại trở thành nơi phơi lộ cao trước lũ, sụt lún và sea-level rise.
 
-> **Chuyển mạch:** Ở chặng này của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Từ cấu trúc hành tinh tới tài nguyên và settlement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt crust với continent, bồn với chu kỳ kiến tạo, và bờ với đường cố định, còn lại cách đọc cấu trúc qua cơ chế và dữ liệu. **Mô hình tư duy** cô đọng các quan hệ đó để mang sang địa hình và hệ thống biển.
 
 ## Những hiểu lầm phổ biến
 
@@ -102,7 +102,7 @@ Ví dụ, một passive margin rộng có thể tạo thềm nông và bồn tr�
 
 Một hiểu lầm khác là coi tên các châu lục như phân loại tự nhiên tuyệt đối. Chúng là cách chia hữu ích nhưng có thành phần lịch sử–quy ước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lục địa, bồn đại dương và cấu trúc cấp hành tinh**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi miền cao độ–crust → bồn đại dương–Wilson cycle → rìa, thềm và đáy biển → biển rìa, bờ động và dữ liệu khảo sát → tài nguyên, settlement và giới hạn suy luận. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang relief, nước và hệ thống toàn cầu.
 
 ## Mô hình tư duy
 

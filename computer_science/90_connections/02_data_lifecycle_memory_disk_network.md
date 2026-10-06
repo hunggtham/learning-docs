@@ -19,7 +19,7 @@ Vùng nhớ vùng nhớ động (heap / 힙) biểu diễn đối tượng (obje
 
 Biểu diễn (representation / 표현) changed while meaning stayed.
 
-> **Chuyển mạch:** Runtime đã đổi logical value thành object/bytes nhưng chưa tạo durability. **Kernel and socket buffers** tiếp nhận cùng bytes qua một boundary mới, nơi copy/zero-copy, framing và encryption quyết định representation nào thực sự rời process.
+> **Nối mạch:** Runtime đã đổi logical value thành object/bytes nhưng chưa tạo durability. **Kernel and socket buffers** tiếp nhận cùng bytes qua một boundary mới, nơi copy/zero-copy, framing và encryption quyết định representation nào thực sự rời process.
 
 ## Kernel and socket buffers
 
@@ -27,7 +27,7 @@ Biểu diễn (representation / 표현) changed while meaning stayed.
 
 Remote machine reverses layers to reconstruct ứng dụng (application / 애플리케이션) bytes.
 
-> **Chuyển mạch:** Socket path mô tả transport, còn durability bắt đầu khi database nhận và ghi lại bytes. **Cơ sở dữ liệu (database / 데이터베이스) buffer pool** tách page đang dirty khỏi WAL đã commit, nên “đã lưu” phải được đọc theo guarantee cụ thể.
+> **Nối mạch:** Socket path mô tả transport, còn durability bắt đầu khi database nhận và ghi lại bytes. **Cơ sở dữ liệu (database / 데이터베이스) buffer pool** tách page đang dirty khỏi WAL đã commit, nên “đã lưu” phải được đọc theo guarantee cụ thể.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) buffer pool
 
@@ -41,7 +41,7 @@ WAL ghi (write / 쓰기) passes OS page bộ nhớ đệm (cache / 캐시) or di
 
 SSD stores vật lý (physical / 물리적) charge states unrelated to tầng mã nguồn (source-level / 소스 수준) integer bố cục (layout / 레이아웃).
 
-> **Chuyển mạch:** Filesystem/device quyết định thứ tự và độ bền của local media; logical record vẫn có thể có bản sao khác ở replica. **Replication** tiếp tục bằng freshness và acknowledgment, không mặc định rằng primary commit đồng nghĩa mọi copy đã bền.
+> **Nối mạch:** Filesystem/device quyết định thứ tự và độ bền của local media; logical record vẫn có thể có bản sao khác ở replica. **Replication** tiếp tục bằng freshness và acknowledgment, không mặc định rằng primary commit đồng nghĩa mọi copy đã bền.
 
 ## Replication
 
@@ -49,7 +49,7 @@ Primary ships WAL/logical thay đổi (change / 변경) over mạng (network / �
 
 Now one logical bản ghi (record / 레코드) has multiple versions/copies with different freshness.
 
-> **Chuyển mạch:** Replication làm rõ nhiều bản copy, còn **Bộ nhớ đệm (cache / 캐시) copies** thêm các representation dẫn xuất có invalidation riêng. Từ đây cần phân biệt copy với reference để biết ai sở hữu mutation và freshness guarantee.
+> **Nối mạch:** Replication làm rõ nhiều bản copy, còn **Bộ nhớ đệm (cache / 캐시) copies** thêm các representation dẫn xuất có invalidation riêng. Từ đây cần phân biệt copy với reference để biết ai sở hữu mutation và freshness guarantee.
 
 ## Bộ nhớ đệm (cache / 캐시) copies
 

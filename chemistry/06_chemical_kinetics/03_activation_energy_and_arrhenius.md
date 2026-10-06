@@ -359,7 +359,7 @@ Không. Ratio phụ thuộc \(E_a\), temperature và cơ chế (mechanism / 메�
 
 Không. Catalyst đổi pathway/barrier, không đổi equilibrium thermodynamics.
 
-> **Chuyển mạch:** Trong **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**, **Ví dụ định tính** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**, **Ví dụ định tính** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

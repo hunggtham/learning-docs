@@ -20,7 +20,7 @@ across API/network/team boundaries
 
 Hệ thống (system / 시스템) thiết kế (design / 설계) là chọn **nơi độ phức tạp (complexity / 복잡도) rẻ nhất để sở hữu**, không phải xóa độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Decomposition phân chia complexity chứ không xóa nó; invariant phải được giữ qua boundary, nên module thường là bước kiểm chứng trước khi tách thành microservice.
+> **Nối mạch:** Decomposition phân chia complexity chứ không xóa nó; invariant phải được giữ qua boundary, nên module thường là bước kiểm chứng trước khi tách thành microservice.
 
 ## 2. bất biến (invariant / 불변식) trước ranh giới (boundary / 경계)
 
@@ -36,7 +36,7 @@ schema producer/consumer coexist trong deployment window
 
 Trạng thái (state / 상태) cần coordination mạnh để giữ cùng bất biến (invariant / 불변식) thường là tín hiệu (signal / 신호) rằng quyền sở hữu (ownership / 소유권) nên gần nhau. Nếu tách hai services nhưng mọi thao tác (operation / 연산) vẫn cần phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) giữa chúng, ranh giới (boundary / 경계) có thể đang cắt xuyên bất biến (invariant / 불변식) sai chỗ.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **2. bất biến (invariant / 불변식) trước ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **3. mô-đun (module / 모듈) trước microservice** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. bất biến (invariant / 불변식) trước ranh giới (boundary / 경계)** đặt tiêu chí; **3. mô-đun (module / 모듈) trước microservice** dùng nó để kiểm tra ranh giới, rồi **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** mở rộng hệ quả.
 
 ## 3. mô-đun (module / 모듈) trước microservice
 
@@ -55,7 +55,7 @@ mà không trả mạng (network / 네트워크)/TLS/thử lại (retry / 재시
 
 Phân phối (distribution / 분포) nên được chọn khi cần independent triển khai (deployment / 배포)/scaling/thất bại (failure / 실패) isolation/organizational autonomy đủ mạnh để bù overhead.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **3. mô-đun (module / 모듈) trước microservice** nêu điều cần giải thích; **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. mô-đun (module / 모듈) trước microservice** đặt vấn đề; **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** kiểm tra bằng chứng, rồi **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** mở rộng hệ quả.
 
 ## 4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)
 
@@ -75,7 +75,7 @@ one team blocks another for every change
 
 Kiến trúc (architecture / 아키텍처) diagram có thể “microservices” nhưng operationally vẫn là phân tán (distributed / 분산) monolith.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** đã nêu tiêu chí phân biệt, còn **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Cohesion và coupling phải đo bằng thay đổi (change / 변경), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) tương tác (interaction / 상호작용)** đặt tiêu chí; **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** mở rộng hệ quả.
 
 ## 5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)
 
@@ -91,7 +91,7 @@ rule nào chỉ authority này được thay đổi?
 contract nào bên ngoài được phép thấy?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Bounded ngữ cảnh (context / 맥락) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계), không phải bảng (table / 테이블) ranh giới (boundary / 경계)** đặt tiêu chí; **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** dùng nó để kiểm tra ranh giới, rồi **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## 6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)
 
@@ -108,7 +108,7 @@ rollback/versioning intertwined
 
 Một dịch vụ (service / 서비스) owning dữ liệu (data / 데이터) qua đặc tả hợp đồng (contract / 계약) làm authority rõ hơn, nhưng không nghĩa mọi read phải synchronous RPC. Read các mô hình (models / 모델들), replicated views, bộ nhớ đệm (cache / 캐시) hoặc event-fed projections có thể giảm coupling nếu consistency đặc tả hợp đồng (contract / 계약) phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** đã nêu tiêu chí phân biệt, còn **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. quyền sở hữu trạng thái (state ownership / 상태 소유권) mạnh hơn mã (code / 코드) quyền sở hữu (ownership / 소유권)** đặt tiêu chí; **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** dùng nó để kiểm tra ranh giới, rồi **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** mở rộng hệ quả.
 
 ## 7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)
 
@@ -135,7 +135,7 @@ observability
 
 Chia dịch vụ (service / 서비스) phải ngân sách (budget / 예산) cả tính đúng đắn (correctness / 정확성) chi phí (cost / 비용) này.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** đã nêu tiêu chí phân biệt, còn **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Remote ranh giới (boundary / 경계) làm xuất hiện partial thất bại (failure / 실패)** đặt tiêu chí; **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** dùng nó để kiểm tra ranh giới, rồi **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** mở rộng hệ quả.
 
 ## 8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)
 
@@ -151,7 +151,7 @@ có deadline, hàng đợi (queue / 큐) và thử lại (retry / 재시도) ở
 
 Nếu bất biến (invariant / 불변식) thật sự cần immediate quyết định (decision / 결정), sync có thể đúng. Nếu không, asynchronous ranh giới (boundary / 경계) có thể giảm temporal coupling.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** đã nêu tiêu chí phân biệt, còn **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Synchronous ranh giới (boundary / 경계) đưa downstream vào đường găng (critical path / 임계 경로)** đặt tiêu chí; **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** dùng nó để kiểm tra ranh giới, rồi **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** mở rộng hệ quả.
 
 ## 9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling
 
@@ -171,7 +171,7 @@ unbounded backlog
 
 Event-driven không tự “decoupled”; coupling chuyển từ call-time availability sang **giao thức (protocol / 프로토콜) + trạng thái (state / 상태) evolution + operations**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** đã nêu tiêu chí phân biệt, còn **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Asynchronous ranh giới (boundary / 경계) đổi coupling chứ không xóa coupling** đặt tiêu chí; **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** dùng nó để kiểm tra ranh giới, rồi **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** mở rộng hệ quả.
 
 ## 10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)
 
@@ -193,7 +193,7 @@ observability/correlation
 
 Hệ thống (system / 시스템) thiết kế (design / 설계) phải xem saga như durable máy trạng thái (state machine / 상태 머신), không chỉ mẫu (pattern / 패턴) name.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Saga là phân tán (distributed / 분산) máy trạng thái (state machine / 상태 머신), không phải quay lui (rollback / 롤백) nhiều cơ sở dữ liệu (database / 데이터베이스)** đặt vấn đề; **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** kiểm tra bằng chứng, rồi **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** mở rộng hệ quả.
 
 ## 11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)
 
@@ -215,7 +215,7 @@ Hai services compile với cùng protobuf/OpenAPI nhưng hiểu ngữ nghĩa (se
 
 Đọc [schema/protocol evolution](./advanced/06_schema_protocol_evolution_and_compatibility_contracts.md).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** đã nêu tiêu chí phân biệt, còn **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Đặc tả API (API contract / API 계약) phải bao gồm hành vi (behavior / 동작), không chỉ lược đồ (schema / 스키마)** đặt tiêu chí; **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** dùng nó để kiểm tra ranh giới, rồi **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả.
 
 ## 12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn
 
@@ -229,7 +229,7 @@ Cơ chế (mechanism / 메커니즘): bounded queues, semaphore, admission đi�
 
 Hệ thống (system / 시스템) thiết kế (design / 설계) không chỉ vẽ boxes; nó phải chỉ ra **hàng đợi (queue / 큐) nằm đâu và ai chịu trách nhiệm reject khi full**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** đã nêu tiêu chí phân biệt, còn **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. sức chứa (capacity / 용량) ranh giới (boundary / 경계) phải nằm gần tài nguyên (resource / 자원) hữu hạn** đặt tiêu chí; **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** dùng nó để kiểm tra ranh giới, rồi **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** mở rộng hệ quả.
 
 ## 13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)
 
@@ -245,7 +245,7 @@ physical separation
 
 Tách dịch vụ (service / 서비스) không tự tạo tenant isolation nếu backend tài nguyên (resource / 자원) vẫn dùng chung (shared / 공유). Noisy-neighbor hành vi (behavior / 동작) thường leak từ lower tầng (layer / 계층) như DB liên kết (connection / 연결) pool hoặc lưu trữ (storage / 저장소) IOPS.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** đã nêu tiêu chí phân biệt, còn **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Multi-tenant ranh giới (boundary / 경계) cần fairness ngữ nghĩa (semantics / 의미론)** đặt tiêu chí; **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** dùng nó để kiểm tra ranh giới, rồi **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** mở rộng hệ quả.
 
 ## 14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?
 
@@ -265,7 +265,7 @@ Nếu backend chỉ tin header `role=admin` từ gateway mà direct đường d�
 
 Đọc [Security boundaries](../07_security_reliability/advanced/00_security_boundaries_attack_chains_and_exploitability.md).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** đã nêu tiêu chí phân biệt, còn **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. bảo mật (security / 보안) principal đổi ở ranh giới (boundary / 경계) nào?** đặt tiêu chí; **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** dùng nó để kiểm tra ranh giới, rồi **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** mở rộng hệ quả.
 
 ## 15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt
 
@@ -275,7 +275,7 @@ Mỗi tính năng (feature / 기능) thêm hàng đợi (queue / 큐), trạng t
 
 Centralized chính sách (policy / 정책) giúp consistency nhưng tạo dùng chung (shared / 공유) phụ thuộc (dependency / 의존성); khả năng quan sát (observability / 관측 가능성) phải cho thấy công việc (work / 작업) đã chờ hoặc bị thử lại (retry / 재시도) ở proxy chứ không chỉ ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** nêu điều cần giải thích; **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. API gateway và dịch vụ (service / 서비스) mesh là chính sách (policy / 정책)/thời gian chạy (runtime / 런타임) layers, không phải dây dẫn trong suốt** đặt vấn đề; **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** kiểm tra bằng chứng, rồi **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** mở rộng hệ quả.
 
 ## 16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)
 
@@ -294,7 +294,7 @@ cross-region traffic
 
 Independent triển khai (deployment / 배포) không đáng nếu mọi yêu cầu (request / 요청) vẫn phải synchronous round-trip qua nhiều owners để assemble trivial trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** nêu điều cần giải thích; **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. dữ liệu (data / 데이터) locality và mạng (network / 네트워크) locality thuộc cùng thiết kế (design / 설계)** đặt vấn đề; **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** kiểm tra bằng chứng, rồi **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** mở rộng hệ quả.
 
 ## 17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need
 
@@ -312,7 +312,7 @@ Sau đó chọn placement/replication. toàn cục (global / 전역) strong đư
 
 Đọc [multi-region replication](../06_networks_distributed_systems/advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** tiếp nhận điểm tựa từ **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** nối từ **17. Multi-region decomposition phải phân loại thao tác (operation / 연산) theo coordination need** sang **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)
 
@@ -333,7 +333,7 @@ background jobs/backfill/replay
 
 Một thiết kế (design / 설계) “10k QPS” có thể tạo 100k downstream attempts nếu mỗi yêu cầu (request / 요청) fan-out 5 và thử lại (retry / 재시도) 2 tầng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count** tiếp nhận điểm tựa từ **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count** nối từ **18. chi phí (cost / 비용) mô hình (model / 모델) phải gồm coordination chi phí (cost / 비용)** sang **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count
 
@@ -353,7 +353,7 @@ human/operator workflow
 
 Redundancy chỉ có giá trị với dạng thất bại (failure mode / 실패 모드) độc lập tương ứng.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count** đã nêu tiêu chí phân biệt, còn **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. thất bại (failure / 실패) domains phải được vẽ, không giả định từ box count** đặt tiêu chí; **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác** dùng nó để kiểm tra ranh giới, rồi **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** mở rộng hệ quả.
 
 ## 20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác
 
@@ -363,7 +363,7 @@ Hệ thống (system / 시스템) thiết kế (design / 설계) cần cùng K�
 
 Đọc [large-scale migration](../09_software_engineering/advanced/03_large_scale_refactoring_strangler_and_branch_by_abstraction.md).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác** đã nêu tiêu chí phân biệt, còn **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. triển khai (deployment / 배포) ranh giới (boundary / 경계) và dữ liệu (data / 데이터) ranh giới (boundary / 경계) có thể khác** đặt tiêu chí; **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** dùng nó để kiểm tra ranh giới, rồi **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** mở rộng hệ quả.
 
 ## 21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)
 
@@ -380,7 +380,7 @@ who resolves incident across boundary?
 
 Poor socio-technical ranh giới (boundary / 경계) tạo coordination hàng đợi (queue / 큐) giống thời gian chạy (runtime / 런타임) hàng đợi (queue / 큐): công việc (work / 작업) chờ người khác trước khi luồng (flow / 흐름) tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** tiếp nhận điểm tựa từ **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** nối từ **21. Conway's Law và quyền sở hữu (ownership / 소유권) hàng đợi (queue / 큐)** sang **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được
 
@@ -397,7 +397,7 @@ contract/version changes lock-step
 
 Tách thêm services không chữa; thường cần gom bất biến (invariant / 불변식) lại hoặc thiết kế quyền sở hữu (ownership / 소유권)/giao thức (protocol / 프로토콜) đúng hơn.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** đã nêu tiêu chí phân biệt, còn **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. phân tán (distributed / 분산) monolith là dạng thất bại (failure mode / 실패 모드) có dấu hiệu đo được** đặt tiêu chí; **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** mở rộng hệ quả.
 
 ## 23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)
 
@@ -417,7 +417,7 @@ incident blast radius
 
 Một dịch vụ (service / 서비스) map đẹp nhưng traces cho thấy 40 synchronous calls/yêu cầu (request / 요청) là bằng chứng (evidence / 증거) ranh giới (boundary / 경계) chi phí (cost / 비용) đang cao.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. bằng chứng vận hành (production evidence / 운영 증거) phải theo ranh giới (boundary / 경계)** đặt tiêu chí; **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## 24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)
 
@@ -438,7 +438,7 @@ Evidence nào chứng minh boundary tốt hơn hiện tại?
 
 Nếu không trả lời được, technology choice còn quá sớm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** đã nêu tiêu chí phân biệt, còn **Dùng chung (common / 공통) Misconceptions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **25. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. ranh giới (boundary / 경계) rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** đặt tiêu chí; **Dùng chung (common / 공통) Misconceptions** dùng nó để kiểm tra ranh giới, rồi **25. Mô hình tư duy** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -452,13 +452,13 @@ Nếu không trả lời được, technology choice còn quá sớm.
 
 **“Nhiều regions nghĩa highly available.”** Chỉ đúng với thất bại (failure / 실패) domains/dependencies thật sự independent và failover sức chứa (capacity / 용량) đủ.
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **25. Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Mô hình tư duy** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Mô hình tư duy
 
 > hệ thống (system / 시스템) thiết kế (design / 설계) là bài toán **đặt authority, invariants, queues và thất bại (failure / 실패) boundaries**. mô-đun (module / 모듈)/dịch vụ (service / 서비스) ranh giới (boundary / 경계) tốt gom trạng thái (state / 상태) cần coordination và cho phần còn lại evolve độc lập. phân phối (distribution / 분포) chỉ đáng khi autonomy/scaling/isolation lợi hơn mạng (network / 네트워크)/giao thức (protocol / 프로토콜) chi phí (cost / 비용). **Bắt đầu bằng bất biến (invariant / 불변식) + tải công việc (workload / 워크로드) + thất bại (failure / 실패) mô hình (model / 모델) + bằng chứng (evidence / 증거); technology là hiện thực (implementation / 구현) của những đặc tả hợp đồng (contract / 계약) đó.**
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống (system / 시스템) decomposition, services và boundaries**, **Kết nối** gom các mảnh từ **25. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **25. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -10,7 +10,7 @@ Xã hội (social / 사회적) lịch sử (history / 이력) asks: **people liv
 
 The cốt lõi (core / 핵심) đơn vị (unit / 단위) is often not isolated individual but **household + kin + village + occupational/ethnic mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Household như môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위)** tiếp nhận điểm tựa từ **Vì sao political timeline không đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Household như môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위)** nối từ **Vì sao political timeline không đủ?** sang **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Household như môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위)
 
@@ -20,7 +20,7 @@ This is why land right and marriage mẫu (pattern / 패턴) are economic instit
 
 A household losing adult labor to war/corvée can face môi trường vận hành (production / 운영 환경) shock immediately.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell** tiếp nhận điểm tựa từ **Household như môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Status and elite reproduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell** nối từ **Household như môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위)** sang **Status and elite reproduction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell
 
@@ -40,7 +40,7 @@ household implementation
 
 Middleware can translate, buffer, distort or enforce quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Status and elite reproduction** tiếp nhận điểm tựa từ **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Women: avoid both “traditional equality” and “complete subordination” stereotypes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Status and elite reproduction** nối từ **Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell** sang **Women: avoid both “traditional equality” and “complete subordination” stereotypes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Status and elite reproduction
 
@@ -50,7 +50,7 @@ Exam hệ thống (system / 시스템) creates one channel of mobility but does 
 
 Thus meritocratic institution can coexist with unequal starting điều kiện (condition / 조건).
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Women: avoid both “traditional equality” and “complete subordination” stereotypes** tiếp nhận điểm tựa từ **Status and elite reproduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinship and ancestor ritual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Women: avoid both “traditional equality” and “complete subordination” stereotypes** nối từ **Status and elite reproduction** sang **Kinship and ancestor ritual**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Women: avoid both “traditional equality” and “complete subordination” stereotypes
 
@@ -60,7 +60,7 @@ Historical phương thức (method / 메서드) should separate **normative văn
 
 Female figures such as Hai Bà Trưng also become later bộ nhớ (memory / 메모리) symbols; their historical role and hiện đại (modern / 현대적) symbolic use are related but distinct questions.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Kinship and ancestor ritual** tiếp nhận điểm tựa từ **Women: avoid both “traditional equality” and “complete subordination” stereotypes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ethnicity is historical, not timeless box** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Kinship and ancestor ritual** nối từ **Women: avoid both “traditional equality” and “complete subordination” stereotypes** sang **Ethnicity is historical, not timeless box**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kinship and ancestor ritual
 
@@ -70,7 +70,7 @@ Genealogy, ancestral hall and grave are xã hội (social / 사회적) hạ tầ
 
 Ancestor worship is not simply “religion”; it can coordinate family obligation across generations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Ethnicity is historical, not timeless box** tiếp nhận điểm tựa từ **Kinship and ancestor ritual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lowland–upland tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Ethnicity is historical, not timeless box** nối từ **Kinship and ancestor ritual** sang **Lowland–upland tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ethnicity is historical, not timeless box
 
@@ -80,7 +80,7 @@ Kinh, Tày, Nùng, Thái, Mường, Chăm, Khmer, Hmong and many other groups ha
 
 Upland zones are not empty periphery. They can điều khiển (control / 제어) forest sản phẩm (product / 제품), mineral, tuyến (route / 경로) and border mediation.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Lowland–upland tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **Ethnicity is historical, not timeless box** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chăm and Khmer communities after territorial thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Lowland–upland tương tác (interaction / 상호작용)** nối từ **Ethnicity is historical, not timeless box** sang **Chăm and Khmer communities after territorial thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lowland–upland tương tác (interaction / 상호작용)
 
@@ -90,7 +90,7 @@ Trade connects salt, metal, forest sản phẩm (product / 제품), livestock an
 
 Therefore mountain lịch sử (history / 이력) is central to diplomacy and economy, not a cultural appendix.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Chăm and Khmer communities after territorial thay đổi (change / 변경)** tiếp nhận điểm tựa từ **Lowland–upland tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chinese/Vietnamese merchant communities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Chăm and Khmer communities after territorial thay đổi (change / 변경)** nối từ **Lowland–upland tương tác (interaction / 상호작용)** sang **Chinese/Vietnamese merchant communities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chăm and Khmer communities after territorial thay đổi (change / 변경)
 
@@ -100,7 +100,7 @@ A conquest date cannot be treated as demographic replacement date.
 
 Historical tích hợp (integration / 통합) may involve di chuyển (migration / 마이그레이션), intermarriage, administrative reclassification, land mất mát (loss / 손실)/gain, trade and cultural continuity simultaneously.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Chinese/Vietnamese merchant communities** tiếp nhận điểm tựa từ **Chăm and Khmer communities after territorial thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urbanization before colonialism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Chinese/Vietnamese merchant communities** nối từ **Chăm and Khmer communities after territorial thay đổi (change / 변경)** sang **Urbanization before colonialism**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chinese/Vietnamese merchant communities
 
@@ -108,7 +108,7 @@ Hoa merchant networks played important roles in ports/towns, especially southern
 
 Their position changes dramatically under different regimes, demonstrating how ethnicity and economic hàm (function / 함수) can become politically sensitive.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Urbanization before colonialism** tiếp nhận điểm tựa từ **Chinese/Vietnamese merchant communities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Urbanization before colonialism** nối từ **Chinese/Vietnamese merchant communities** sang **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Urbanization before colonialism
 
@@ -116,7 +116,7 @@ Thăng Long, Phố Hiến, Hội An, Huế and Gia Định show urban life exist
 
 City creates occupational diversity beyond agriculture and court bureaucracy.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere** tiếp nhận điểm tựa từ **Urbanization before colonialism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **War and displacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere** nối từ **Urbanization before colonialism** sang **War and displacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere
 
@@ -126,7 +126,7 @@ They communicate through newspaper/association/café/school rather than only vil
 
 This new **công khai (public / 공개) sphere** helps nationalism, reformism and revolutionary politics circulate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **War and displacement** tiếp nhận điểm tựa từ **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1954 di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **War and displacement** nối từ **Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere** sang **1954 di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## War and displacement
 
@@ -136,7 +136,7 @@ War changes family cấu trúc (structure / 구조) when men/women are mobilized
 
 Xã hội (social / 사회적) chi phí (cost / 비용) therefore cannot be captured by battlefield casualty alone.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **1954 di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **War and displacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Post-1975 di chuyển (migration / 마이그레이션) and diaspora** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **1954 di chuyển (migration / 마이그레이션)** nối từ **War and displacement** sang **Post-1975 di chuyển (migration / 마이그레이션) and diaspora**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1954 di chuyển (migration / 마이그레이션)
 
@@ -146,7 +146,7 @@ Di chuyển (migration / 마이그레이션) lịch sử (history / 이력) shou
 
 A migrant can simultaneously seek bảo mật (security / 보안), religious community, economic opportunity and family reunion.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Post-1975 di chuyển (migration / 마이그레이션) and diaspora** tiếp nhận điểm tựa từ **1954 di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đổi Mới and rural–urban household** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Post-1975 di chuyển (migration / 마이그레이션) and diaspora** nối từ **1954 di chuyển (migration / 마이그레이션)** sang **Đổi Mới and rural–urban household**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Post-1975 di chuyển (migration / 마이그레이션) and diaspora
 
@@ -154,7 +154,7 @@ After reunification, nội bộ (internal / 내부) resettlement and internation
 
 Diaspora định danh (identity / 식별자) is itself historically layered by departure wave and destination society.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Đổi Mới and rural–urban household** tiếp nhận điểm tựa từ **Post-1975 di chuyển (migration / 마이그레이션) and diaspora** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Informal sector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Đổi Mới and rural–urban household** nối từ **Post-1975 di chuyển (migration / 마이그레이션) and diaspora** sang **Informal sector**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đổi Mới and rural–urban household
 
@@ -164,7 +164,7 @@ This produces split household across không gian (space / 공간).
 
 Industrialization therefore changes family without requiring complete rural abandonment.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Informal sector** tiếp nhận điểm tựa từ **Đổi Mới and rural–urban household** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Education and status mobility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Informal sector** nối từ **Đổi Mới and rural–urban household** sang **Education and status mobility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Informal sector
 
@@ -172,7 +172,7 @@ Street vendor, small repair, household shop, motorcycle dịch vụ (service / �
 
 Informal economy offers low entry barrier but often less xã hội (social / 사회적) insurance/bảo mật (security / 보안).
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Education and status mobility** tiếp nhận điểm tựa từ **Informal sector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Housing as xã hội (social / 사회적) lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Education and status mobility** nối từ **Informal sector** sang **Housing as xã hội (social / 사회적) lịch sử (history / 이력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Education and status mobility
 
@@ -180,7 +180,7 @@ Exam prestige has deep lịch sử (history / 이력), but hiện đại (modern
 
 Still, truy cập (access / 접근) chất lượng (quality / 품질) varies by geography and household resources. Education can reduce inherited ràng buộc (constraint / 제약조건) while also creating new credential hierarchy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Housing as xã hội (social / 사회적) lịch sử (history / 이력)** tiếp nhận điểm tựa từ **Education and status mobility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Housing as xã hội (social / 사회적) lịch sử (history / 이력)** nối từ **Education and status mobility** sang **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Housing as xã hội (social / 사회적) lịch sử (history / 이력)
 
@@ -188,7 +188,7 @@ House form reveals economy and family. Village compound, tube house, colonial vi
 
 Kiến trúc (architecture / 아키텍처) is therefore dữ liệu (data / 데이터) about xã hội (social / 사회적) quan hệ (relation / 관계), not merely style.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Housing as xã hội (social / 사회적) lịch sử (history / 이력)** cho ta quy tắc; **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Aging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Housing as xã hội (social / 사회적) lịch sử (history / 이력)** nêu quy tắc; **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)** thử quy tắc trong tình huống, rồi **Aging** mở rộng hệ quả.
 
 ## Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)
 
@@ -198,7 +198,7 @@ This creates **double tải công việc (workload / 워크로드)** bài toán 
 
 Avoid claiming tuyến tính (linear / 선형) emancipation: rights, income, household norm and workplace điều kiện (condition / 조건) can move at different speeds.
 
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)** cho ta quy tắc; **Aging** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Gender under hiện đại (modern / 현대적) labor thị trường (market / 시장)** nêu quy tắc; **Aging** thử quy tắc trong tình huống, rồi **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** mở rộng hệ quả.
 
 ## Aging
 
@@ -206,7 +206,7 @@ Avoid claiming tuyến tính (linear / 선형) emancipation: rights, income, hou
 
 Demography turns a “private family issue” into national fiscal/hạ tầng (infrastructure / 인프라) issue.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Aging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** nối từ **Aging** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)
 
@@ -214,7 +214,7 @@ Northern, central and southern experiences differ due to ecology, political lị
 
 The goal is not assign fixed personality to regions, but understand why food, settlement, accent, thuộc tính (property / 속성) and political bộ nhớ (memory / 메모리) vary.
 
-> **Chuyển mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity**, **Recap và bàn giao** nối từ **Xã hội (social / 사회적) bộ nhớ (memory / 메모리) and regional định danh (identity / 식별자)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

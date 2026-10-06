@@ -41,7 +41,7 @@ khó bị input pattern phá nếu môi trường có input đối kháng
 
 Mục tiêu không phải “không collision”; điều đó bất khả thi khi miền khóa lớn hơn bảng.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Collision là điều chắc chắn có thể xảy ra** tiếp nhận điểm tựa từ **Hàm băm và ánh xạ vào bảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Collision là điều chắc chắn có thể xảy ra** nối từ **Hàm băm và ánh xạ vào bảng** sang **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Collision là điều chắc chắn có thể xảy ra
 
@@ -64,7 +64,7 @@ a.equals(b) == true  =>  a.hashCode() == b.hashCode()
 
 Chiều ngược lại không bắt buộc.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm** tiếp nhận điểm tựa từ **Collision là điều chắc chắn có thể xảy ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hai họ xử lý collision chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm** nối từ **Collision là điều chắc chắn có thể xảy ra** sang **Hai họ xử lý collision chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm
 
@@ -80,7 +80,7 @@ record UserProductKey(long userId, long productId) {}
 
 Trong C hoặc JavaScript, cũng phải tự định nghĩa rõ chuẩn gốc (canonical / 정본) biểu diễn (representation / 표현) của khóa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Hai họ xử lý collision chính** tiếp nhận điểm tựa từ **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Separate chaining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hai họ xử lý collision chính** nối từ **Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm** sang **Separate chaining**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hai họ xử lý collision chính
 
@@ -93,7 +93,7 @@ open addressing
 
 Chúng cùng cung cấp dictionary ngữ nghĩa (semantics / 의미론) nhưng có mô hình bộ nhớ rất khác.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Separate chaining** tiếp nhận điểm tựa từ **Hai họ xử lý collision chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Separate chaining** nối từ **Hai họ xử lý collision chính** sang **Hệ số tải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Separate chaining
 
@@ -135,7 +135,7 @@ object/header overhead
 
 Một hiện thực (implementation / 구현) hiện đại có thể dùng bucket nhỏ dạng mảng hoặc bố cục (layout / 레이아웃) gọn thay vì linked danh sách (list / 목록) cổ điển.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Hệ số tải** tiếp nhận điểm tựa từ **Separate chaining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resize và rehash** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hệ số tải** nối từ **Separate chaining** sang **Resize và rehash**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số tải
 
@@ -153,7 +153,7 @@ Với chaining, `α` có thể lớn hơn 1. Với open addressing, bảng cần
 
 Do đó sức chứa (capacity / 용량) planning là sự đánh đổi giữa bộ nhớ (memory / 메모리) và probe chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Resize và rehash** tiếp nhận điểm tựa từ **Hệ số tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incremental rehashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Resize và rehash** nối từ **Hệ số tải** sang **Incremental rehashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resize và rehash
 
@@ -171,7 +171,7 @@ Resize có thể tốn `O(n)`, nhưng nếu sức chứa (capacity / 용량) tă
 
 Nếu bảng gần đầy và mỗi lần chỉ tăng sức chứa (capacity / 용량) rất ít, ta có thể rehash gần toàn bộ bảng quá thường xuyên. Tăng theo tỷ lệ giúp số lần resize chỉ logarithmic theo số entry.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Incremental rehashing** tiếp nhận điểm tựa từ **Resize và rehash** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Open addressing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Incremental rehashing** nối từ **Resize và rehash** sang **Open addressing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Incremental rehashing
 
@@ -190,7 +190,7 @@ Tổng công việc không nhất thiết giảm, nhưng chi phí được dàn 
 
 Đây là ví dụ rõ ràng của sự đánh đổi (trade-off / 트레이드오프) thông lượng (throughput / 처리량)–độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Open addressing** tiếp nhận điểm tựa từ **Incremental rehashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao open addressing có thể rất nhanh trên máy thật?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Open addressing** nối từ **Incremental rehashing** sang **Vì sao open addressing có thể rất nhanh trên máy thật?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Open addressing
 
@@ -218,7 +218,7 @@ index_i=(h_1(key)+i\cdot h_2(key))\bmod m
 
 Thiết kế phải bảo đảm stride cho phép đi qua đủ không gian slot theo sức chứa (capacity / 용량) đã chọn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Vì sao open addressing có thể rất nhanh trên máy thật?** tiếp nhận điểm tựa từ **Open addressing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Primary clustering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vì sao open addressing có thể rất nhanh trên máy thật?** nối từ **Open addressing** sang **Primary clustering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao open addressing có thể rất nhanh trên máy thật?
 
@@ -228,7 +228,7 @@ Do đó hai cấu trúc cùng expected `O(1)` có thể khác đáng kể về t
 
 Đây là một bài học tổng quát: độ phức tạp tiệm cận không thay thế phân tích bố cục (layout / 레이아웃) bộ nhớ.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Primary clustering** tiếp nhận điểm tựa từ **Vì sao open addressing có thể rất nhanh trên máy thật?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deletion và tombstone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Primary clustering** nối từ **Vì sao open addressing có thể rất nhanh trên máy thật?** sang **Deletion và tombstone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Primary clustering
 
@@ -240,7 +240,7 @@ Khi một key băm (hash / 해시) vào giữa cụm, nó phải đi qua cụm v
 
 Ngay cả băm (hash / 해시) hàm (function / 함수) khá tốt vẫn không loại hoàn toàn hiện tượng này vì probing quy tắc (rule / 규칙) tự tạo phụ thuộc giữa các vị trí.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Deletion và tombstone** tiếp nhận điểm tựa từ **Primary clustering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backward-shift deletion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Deletion và tombstone** nối từ **Primary clustering** sang **Backward-shift deletion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deletion và tombstone
 
@@ -268,7 +268,7 @@ Lookup đi qua tombstone. Insert có thể tái sử dụng tombstone.
 
 Nhưng quá nhiều tombstone làm probe dài lên, vì vậy bảng có thể cần rebuild ngay cả khi số phần tử sống không lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Backward-shift deletion** tiếp nhận điểm tựa từ **Deletion và tombstone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng cách probe như một đại lượng trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Backward-shift deletion** nối từ **Deletion và tombstone** sang **Khoảng cách probe như một đại lượng trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backward-shift deletion
 
@@ -280,7 +280,7 @@ Một số scheme, đặc biệt các biến thể tuyến tính (linear / 선�
 
 Không thể tự ý “dọn slot cho đẹp” nếu việc đó làm lookup mất đường tới key khác.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Khoảng cách probe như một đại lượng trạng thái** tiếp nhận điểm tựa từ **Backward-shift deletion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robin Hood hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khoảng cách probe như một đại lượng trạng thái** nối từ **Backward-shift deletion** sang **Robin Hood hashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khoảng cách probe như một đại lượng trạng thái
 
@@ -297,7 +297,7 @@ quy tắc dừng lookup ở một số scheme
 
 Nhìn probe distance như siêu dữ liệu (metadata / 메타데이터) giúp hiểu các thiết kế hiện đại hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Robin Hood hashing** tiếp nhận điểm tựa từ **Khoảng cách probe như một đại lượng trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cuckoo hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Robin Hood hashing** nối từ **Khoảng cách probe như một đại lượng trạng thái** sang **Cuckoo hashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Robin Hood hashing
 
@@ -315,7 +315,7 @@ metadata/deletion cần cẩn thận hơn
 
 Đây là ví dụ một cấu trúc tối ưu không chỉ mean chi phí (cost / 비용) mà còn phân phối chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Cuckoo hashing** tiếp nhận điểm tựa từ **Robin Hood hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cuckoo hashing** nối từ **Robin Hood hashing** sang **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cuckoo hashing
 
@@ -334,7 +334,7 @@ Nhưng insertion có thể tạo cycle; khi đó cần rehash hoặc resize.
 
 Cuckoo hashing cho thấy một sự đánh đổi (trade-off / 트레이드오프) khác: lookup đơn giản hơn đổi lại insertion khó dự đoán hơn.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Cuckoo hashing** nêu điều cần giải thích; **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Băm (hash / 해시) mixing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cuckoo hashing** đặt vấn đề; **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization** kiểm tra bằng chứng, rồi **Băm (hash / 해시) mixing** mở rộng hệ quả.
 
 ## SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization
 
@@ -346,7 +346,7 @@ Một điều khiển (control / 제어) byte có thể mã hóa trạng thái s
 
 > Cùng ADT và cùng expected Big-O vẫn có thể khác nhau rất lớn nhờ bố cục (layout / 레이아웃) siêu dữ liệu (metadata / 메타데이터), bộ nhớ đệm (cache / 캐시) locality, branch hành vi (behavior / 동작) và SIMD.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization** nêu điều cần giải thích; **Băm (hash / 해시) mixing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Universal hashing: trực giác lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **SwissTable-style thiết kế (design / 설계): bài học về siêu dữ liệu (metadata / 메타데이터) và vectorization** đặt vấn đề; **Băm (hash / 해시) mixing** kiểm tra bằng chứng, rồi **Universal hashing: trực giác lý thuyết** mở rộng hệ quả.
 
 ## Băm (hash / 해시) mixing
 
@@ -356,7 +356,7 @@ Ví dụ ID luôn là bội số của `1024` có nhiều bit thấp bằng 0. M
 
 Do đó hiện thực (implementation / 구현) thường có bước trộn để khuếch tán thông tin từ toàn bộ key/băm (hash / 해시) vào các bit dùng cho chỉ mục (index / 인덱스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Universal hashing: trực giác lý thuyết** tiếp nhận điểm tựa từ **Băm (hash / 해시) mixing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Universal hashing: trực giác lý thuyết** nối từ **Băm (hash / 해시) mixing** sang **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Universal hashing: trực giác lý thuyết
 
@@ -366,7 +366,7 @@ Universal hashing chọn ngẫu nhiên một băm (hash / 해시) hàm (function
 
 Universal hashing giúp nối randomization với expected dictionary hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng** tiếp nhận điểm tựa từ **Universal hashing: trực giác lý thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng** nối từ **Universal hashing: trực giác lý thuyết** sang **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng
 
@@ -392,7 +392,7 @@ adversarial workload
 
 Expected `O(1)` luôn đi kèm giả định (assumption / 가정).
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu** tiếp nhận điểm tựa từ **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compound key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu** nối từ **Băm (hash / 해시) flooding và đầu vào (input / 입력) đối kháng** sang **Compound key**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu
 
@@ -402,7 +402,7 @@ Dùng cryptographic băm (hash / 해시) cho mọi map có thể quá đắt. Ng
 
 “băm (hash / 해시)” là một họ ý tưởng, không phải một loại hàm duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Compound key** tiếp nhận điểm tựa từ **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng băm (hash table / 해시 테이블) và memoization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Compound key** nối từ **Bảng băm (hash table / 해시 테이블) băm (hash / 해시) và cryptographic băm (hash / 해시) không cùng mục tiêu** sang **Bảng băm (hash table / 해시 테이블) và memoization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compound key
 
@@ -433,7 +433,7 @@ console.log(a === b); // false
 
 Nếu cần giá trị (value / 값) ngữ nghĩa (semantics / 의미론), phải canonicalize hoặc encode key.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Bảng băm (hash table / 해시 테이블) và memoization** tiếp nhận điểm tựa từ **Compound key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bảng băm (hash table / 해시 테이블) và memoization** nối từ **Compound key** sang **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảng băm (hash table / 해시 테이블) và memoization
 
@@ -451,7 +451,7 @@ Nếu key chứa quá nhiều dữ liệu lịch sử không cần thiết, số
 
 Bảng băm (hash table / 해시 테이블) vì vậy nằm trực tiếp trên ranh giới giữa trạng thái (state / 상태) modeling và lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set** tiếp nhận điểm tựa từ **Bảng băm (hash table / 해시 테이블) và memoization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grouping và frequency counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set** nối từ **Bảng băm (hash table / 해시 테이블) và memoization** sang **Grouping và frequency counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set
 
@@ -466,7 +466,7 @@ hai trạng thái logic khác nhau không được vô tình encode thành cùng
 
 Ví dụ một board puzzle có thể encode thành string, bitmask hoặc packed integer tùy kích thước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Grouping và frequency counting** tiếp nhận điểm tựa từ **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Grouping và frequency counting** nối từ **Bảng băm (hash table / 해시 테이블) và đồ thị (graph / 그래프) visited set** sang **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grouping và frequency counting
 
@@ -492,7 +492,7 @@ int[] freq = new int[n];
 
 Bảng băm (hash table / 해시 테이블) phù hợp khi miền khóa lớn, thưa hoặc không ánh xạ tự nhiên vào một đoạn chỉ số nhỏ.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Grouping và frequency counting** nêu điều cần giải thích; **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Grouping và frequency counting** đặt vấn đề; **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu** kiểm tra bằng chứng, rồi **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** mở rộng hệ quả.
 
 ## Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu
 
@@ -509,7 +509,7 @@ Nhưng phạm vi (range / 범위) phép nối (join / 조인) hoặc ordered tru
 
 Đây là ví dụ ngữ nghĩa (semantics / 의미론) của cấu trúc quyết định loại operator nó hỗ trợ tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu** nêu điều cần giải thích; **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Băm (hash / 해시) phép nối (join / 조인) trong cơ sở dữ liệu** đặt vấn đề; **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** kiểm tra bằng chứng, rồi **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả.
 
 ## Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp
 
@@ -531,7 +531,7 @@ thì balanced cây (tree / 트리), sorted array, Trie hoặc cấu trúc khác 
 
 Một bảng băm (hash table / 해시 테이블) mạnh ở equality lookup nhưng cố tình không duy trì nhiều thông tin khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) footprint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** nối từ **Khi bảng băm (hash table / 해시 테이블) không phải lựa chọn phù hợp** sang **Bộ nhớ (memory / 메모리) footprint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)
 
@@ -541,7 +541,7 @@ Nếu lô-gic nghiệp vụ (business logic / 비즈니스 로직) hoặc kiểm
 
 Không nên nhầm “thứ tự (order / 순서) hiện tại quan sát được” với “thứ tự (order / 순서) được API cam kết”.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Bộ nhớ (memory / 메모리) footprint** tiếp nhận điểm tựa từ **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bộ nhớ (memory / 메모리) footprint** nối từ **Iteration thứ tự (order / 순서) là một phần của đặc tả hợp đồng (contract / 계약)** sang **Tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) footprint
 
@@ -561,7 +561,7 @@ allocation count
 cache miss behavior
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) footprint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Persistency và crash consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính đồng thời (concurrency / 동시성)** nối từ **Bộ nhớ (memory / 메모리) footprint** sang **Persistency và crash consistency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính đồng thời (concurrency / 동시성)
 
@@ -586,7 +586,7 @@ if absent then insert
 
 phải dùng thành phần nguyên thủy (primitive / 기본 요소) atomic phù hợp nếu muốn tránh race.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Persistency và crash consistency** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử bảng băm (hash table / 해시 테이블)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Persistency và crash consistency** nối từ **Tính đồng thời (concurrency / 동시성)** sang **Kiểm thử bảng băm (hash table / 해시 테이블)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Persistency và crash consistency
 
@@ -596,7 +596,7 @@ Một resize đang làm dở mà tiến trình (process / 프로세스) chết k
 
 Đây là ví dụ cùng ADT nhưng lưu trữ (storage / 저장소) medium làm tính đúng đắn (correctness / 정확성) mô hình (model / 모델) thay đổi hoàn toàn.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Kiểm thử bảng băm (hash table / 해시 테이블)** tiếp nhận điểm tựa từ **Persistency và crash consistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benchmark bảng băm (hash table / 해시 테이블) đúng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Kiểm thử bảng băm (hash table / 해시 테이블)** nối từ **Persistency và crash consistency** sang **Benchmark bảng băm (hash table / 해시 테이블) đúng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm thử bảng băm (hash table / 해시 테이블)
 
@@ -618,7 +618,7 @@ Thuộc tính (property / 속성) mạnh:
 
 > Với mọi key đang được lưu, bắt đầu probe từ home position theo đúng quy tắc (rule / 규칙) phải tìm tới key trước khi gặp một slot thật sự EMPTY cho phép kết luận “không tồn tại”.
 
-> **Chuyển mạch:** Ở chặng này của **Bảng băm**, **Benchmark bảng băm (hash table / 해시 테이블) đúng cách** tiếp nhận điểm tựa từ **Kiểm thử bảng băm (hash table / 해시 테이블)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Benchmark bảng băm (hash table / 해시 테이블) đúng cách** nối từ **Kiểm thử bảng băm (hash table / 해시 테이블)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Benchmark bảng băm (hash table / 해시 테이블) đúng cách
 
@@ -641,7 +641,7 @@ collision-heavy workload hợp lệ
 
 Kết quả còn phụ thuộc allocator, GC, key kích thước (size / 크기), equality chi phí (cost / 비용) và CPU bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng băm**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Benchmark bảng băm (hash table / 해시 테이블) đúng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nối từ **Benchmark bảng băm (hash table / 해시 테이블) đúng cách** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -659,7 +659,7 @@ Kết quả còn phụ thuộc allocator, GC, key kích thước (size / 크기)
 
 “HashMap luôn tốt hơn array vì O(1)” — array với dense integer key có direct indexing, ít overhead và locality tốt hơn.
 
-> **Chuyển mạch:** Trong **Bảng băm**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Bảng băm**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

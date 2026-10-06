@@ -21,19 +21,19 @@ quản lý cây/con vật
 - **Demography:** fertility tăng nhưng mortality, bệnh lây và thiếu dinh dưỡng cũng tăng; đô thị là amplifier của cả thịnh vượng lẫn dịch.
 - **Ideas:** tổ tiên, thần nông nghiệp và lịch có thể hợp thức hóa thứ bậc; không được suy ra cùng một mô hình cho mọi vùng.
 
-> **Chuyển mạch:** Trong **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **Luận đề** đã nêu tiêu chí phân biệt, còn **So sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Luận đề đặt thặng dư, định cư và chi phí mới vào cùng khung; **So sánh** kiểm tra vì sao chuyển sang nông nghiệp không tạo một kết quả duy nhất. **Chuyển tiếp** theo dõi các bước thay đổi.
 
 ## So sánh
 
 Mesopotamia, Nile, Yellow River, Indus, Andes, Mesoamerica và nhiều trung tâm khác có thời điểm, loài cây và hình thái quyền lực khác nhau. Câu hỏi đúng là **điều kiện nào làm một gói kỹ thuật–sinh thái bền**, không phải ai “phát minh trước”.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **So sánh** đã nêu tiêu chí phân biệt, còn **Chuyển tiếp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cơ chế sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh cho thấy các vùng nhận chi phí và lợi ích khác nhau; **Chuyển tiếp** mô tả khi định cư, bệnh tật và phân tầng đổi theo thời gian. **Cơ chế sâu hơn** giải thích động lực phía sau.
 
 ## Chuyển tiếp
 
 Khi thuế, kho và công trình nước vượt quá quy mô làng, cần bộ máy ghi chép, cưỡng chế và phân xử: đó là bài toán của nhà nước sớm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **Chuyển tiếp** xác định đầu vào; **Cơ chế sâu hơn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **So sánh có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chuyển tiếp xác định đầu vào và kết quả theo thời gian; **Cơ chế sâu hơn** chỉ ra cơ chế sinh thái, lao động và quyền lực. **So sánh có kiểm soát** kiểm tra cơ chế ấy giữa các case.
 
 ## Cơ chế sâu hơn
 
@@ -55,25 +55,25 @@ feedback: more food → more people → land pressure → erosion/disease
 
 Đất màu mỡ và nước không phải stock vô hạn. Muối hoá, xói mòn, cạn nước và mất đa dạng giống là các cơ chế khiến một hệ nông nghiệp suy yếu dù tổng sản lượng từng tăng.
 
-> **Chuyển mạch:** Trong **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **Cơ chế sâu hơn** đã nêu tiêu chí phân biệt, còn **So sánh có kiểm soát** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phân phối (distribution / 분포) và counterfactual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cơ chế sâu hơn cần được so sánh với cùng tiêu chí; **So sánh có kiểm soát** giữ điều kiện ổn định để **Phân phối và counterfactual** chỉ ra ai được lợi, ai chịu chi phí.
 
 ## So sánh có kiểm soát
 
 Nile có nhịp lũ khác Mesopotamia; rice các hệ thống (systems / 시스템들) ở Đông Á khác wheat/barley ở Tây Á; Andes dùng terrace và vertical ecology; Mesoamerica tối ưu nhiều hốc sinh thái. Vì vậy “hydraulic trạng thái (state / 상태)” chỉ là một hypothesis cho một số nơi, không phải lời giải chung.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **So sánh có kiểm soát** đã nêu tiêu chí phân biệt, còn **Phân phối (distribution / 분포) và counterfactual** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh có kiểm soát và counterfactual làm rõ phân phối lợi ích–chi phí; **Bằng chứng, giới hạn và cầu nối** kiểm tra kết luận bằng dấu vết vật chất.
 
 ## Phân phối (distribution / 분포) và counterfactual
 
 Surplus có thể nuôi chuyên gia và cứu trợ, nhưng ai kiểm soát kho sẽ kiểm soát thời điểm phân phối. Nếu không có nhà nước tập trung, village federation, lineage, temple hoặc thị trường (market / 시장) vẫn có thể điều phối; câu hỏi là **chi phí giám sát và cưỡng chế** nằm ở đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **Phân phối (distribution / 분포) và counterfactual** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: từ điều kiện sinh thái đến đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phân phối và counterfactual chỉ có sức nặng khi bằng chứng, giới hạn và cầu nối được ghi rõ. **Độ sâu pass** kiểm tra từ điều kiện sinh thái đến path dependence.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Hạt giống, phytolith, pollen, xương, isotope, dấu răng và cấu trúc kho giúp tái dựng diet/labor, nhưng khó đo quyền sở hữu và cảm nhận của hộ. Counterfactual: nếu một cộng đồng giữ mobility và đa dạng thức ăn cao hơn, liệu density thấp hơn có đổi bargaining power không? Cầu nối sang 03 là lúc **surplus trở thành claim có thể ghi, thu và cưỡng chế**.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** nối thặng dư, định cư và phân tầng với dấu vết vật chất; phần **Độ sâu pass** kiểm tra điều kiện sinh thái nào thực sự tạo đường dẫn dài hạn.
+> **Nối mạch:** Bằng chứng nối thặng dư, định cư và phân tầng với dấu vết vật chất; **Độ sâu pass** kiểm tra điều kiện sinh thái nào thực sự tạo path dependence dài hạn.
 
 ## Độ sâu (depth / 깊이) pass: từ điều kiện sinh thái đến đường dẫn (path / 경로) dependence
 

@@ -10,7 +10,7 @@ Vận hành (operations / 운영) tối ưu một hệ thống đang tồn tại
 
 Ranh giới (boundary / 경계) này quan trọng vì tiêu chí thành công khác nhau. Operations ưu tiên ổn định, thông lượng (throughput / 처리량) và độ tin cậy (reliability / 신뢰성). dự án (project / 프로젝트) phải đồng thời quản lý học tập (learning / 학습), thay đổi (change / 변경), temporary coordination và chuyển tiếp (transition / 전이) sang trạng thái bền vững.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** gom các mảnh từ **Vì sao cần một mô hình tư duy (mental model / 사고 모델) trước khi học tiến trình (process / 프로세스)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** tổng hợp kết quả từ **Vì sao cần một mô hình tư duy (mental model / 사고 모델) trước khi học tiến trình (process / 프로세스)**; **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** mở rộng cơ chế.
 
 ## Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ
 
@@ -20,7 +20,7 @@ Mô hình tư duy (mental model / 사고 모델) này quan trọng vì dự án 
 
 Một dự án (project / 프로젝트) tốt bắt đầu bằng câu hỏi: điều gì trong hiện tại (current / 현재) hệ thống (system / 시스템) không đáp ứng mục tiêu (objective / 목표), và bằng chứng (evidence / 증거) nào cho thấy future trạng thái (state / 상태) tốt hơn?
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** xác định đầu vào; **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Option không gian (space / 공간) và premature commitment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** xác định đầu vào; **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** giải thích vận hành; **Option không gian (space / 공간) và premature commitment** kiểm tra hệ quả.
 
 ## Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)
 
@@ -30,7 +30,7 @@ Nếu dự án (project / 프로젝트) định nghĩa bài toán (problem / 문
 
 Bài toán (problem / 문제) framing tốt vì vậy có hai đầu ra (output / 출력): một nhân quả (causal / 인과적) hypothesis đủ để chọn intervention và một danh sách giả định (assumption / 가정) cần được kiểm chứng. dự án (project / 프로젝트) không cần biết toàn bộ truth trước khi bắt đầu, nhưng phải biết mình đang giả định điều gì.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** xác định đầu vào; **Option không gian (space / 공간) và premature commitment** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** xác định đầu vào; **Option không gian (space / 공간) và premature commitment** giải thích vận hành; **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** kiểm tra hệ quả.
 
 ## Option không gian (space / 공간) và premature commitment
 
@@ -40,7 +40,7 @@ Discovery, prototype, proof of concept hoặc pilot có thể được hiểu nh
 
 Mô hình tư duy (mental model / 사고 모델) hữu ích là: giữ option mở khi bất định (uncertainty / 불확실성) còn material và chi phí (cost / 비용) giữ option tương đối thấp; lần ghi nhận (commit / 커밋) khi additional thông tin (information / 정보) không còn đủ giá trị để biện minh cho delay. Đây là cầu nối giữa foundations, vòng đời (lifecycle / 생명주기)/tailoring và rủi ro (risk / 위험)/quyết định (decision / 결정) ở các chapter sau.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** tiếp nhận điểm tựa từ **Option không gian (space / 공간) và premature commitment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** nối từ **Option không gian (space / 공간) và premature commitment** sang **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)
 
@@ -56,7 +56,7 @@ resources → work → outputs → adoption/use → outcomes → benefits/value
 
 Dự án (project / 프로젝트) manager không kiểm soát hoàn toàn toàn bộ chuỗi, nhưng phải đảm bảo giả định giữa các mắt xích được nhìn thấy. Nếu giá trị (value / 값) phụ thuộc vào adoption mà không ai quản lý đào tạo hoặc thay đổi quy trình, dự án (project / 프로젝트) có thể “xanh” trên dashboard nhưng thất bại ở nghiệp vụ (business / 비즈니스) mức (level / 수준).
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** xác định đầu vào; **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Benefit attribution và counterfactual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** xác định đầu vào; **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** giải thích vận hành; **Benefit attribution và counterfactual** kiểm tra hệ quả.
 
 ## Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)
 
@@ -66,7 +66,7 @@ Benefits map làm các giả định (assumption / 가정) này tường minh (e
 
 Một giả định (assumption / 가정) quan trọng cần đơn vị sở hữu (owner / 오너), bằng chứng (evidence / 증거) và trigger rà soát (review / 검토), không nên nằm ẩn trong nghiệp vụ (business / 비즈니스) trường hợp (case / 사례).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** xác định đầu vào; **Benefit attribution và counterfactual** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Giá trị (value / 값) không phân bố đều giữa stakeholder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** xác định đầu vào; **Benefit attribution và counterfactual** giải thích vận hành; **Giá trị (value / 값) không phân bố đều giữa stakeholder** kiểm tra hệ quả.
 
 ## Benefit attribution và counterfactual
 
@@ -76,7 +76,7 @@ Counterfactual lập luận (reasoning / 추론) hỏi: nếu dự án (project 
 
 Điều này quan trọng vì organization dễ “claim” benefit cho dự án (project / 프로젝트) thành công và đổ thất bại (failure / 실패) cho bên ngoài (external / 외부) môi trường (environment / 환경). Benefit đo lường (measurement / 측정) có giá trị khi cùng một lô-gic (logic / 논리) nhân quả (causal / 인과적) được dùng cho cả upside lẫn downside.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Giá trị (value / 값) không phân bố đều giữa stakeholder** tiếp nhận điểm tựa từ **Benefit attribution và counterfactual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Success criteria cần nhiều tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Giá trị (value / 값) không phân bố đều giữa stakeholder** nối từ **Benefit attribution và counterfactual** sang **Success criteria cần nhiều tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giá trị (value / 값) không phân bố đều giữa stakeholder
 
@@ -86,7 +86,7 @@ Vì vậy giá trị (value / 값) không chỉ là một scalar duy nhất. C�
 
 Nếu total benefit cao nhưng harm tập trung vào một nhóm không có tiếng nói, “net positive” không tự động biến quyết định (decision / 결정) thành hợp lý. Mandatory legal, an toàn (safety / 안전) hoặc fairness ranh giới (boundary / 경계) có thể giới hạn cách organization đánh đổi benefit.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Success criteria cần nhiều tầng** tiếp nhận điểm tựa từ **Giá trị (value / 값) không phân bố đều giữa stakeholder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc (constraint / 제약조건) không phải mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Success criteria cần nhiều tầng** nối từ **Giá trị (value / 값) không phân bố đều giữa stakeholder** sang **Ràng buộc (constraint / 제약조건) không phải mục tiêu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Success criteria cần nhiều tầng
 
@@ -98,7 +98,7 @@ Một dự án (project / 프로젝트) có thể giao trễ nhưng tạo giá t
 
 Success criteria còn cần thời gian (time / 시간) horizon. Một di chuyển (migration / 마이그레이션) có thể thành công ngày cutover nhưng thất bại ba tháng sau nếu hỗ trợ (support / 지원) chi phí (cost / 비용) tăng mạnh. Một AI pilot có chỉ số (metric / 지표) đẹp trong 1.000 trường hợp (case / 사례) nhưng drift ở môi trường vận hành (production / 운영 환경). Vì vậy “success at handover” và “benefit realized sustainably” là hai câu hỏi khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Ràng buộc (constraint / 제약조건) không phải mục tiêu** tiếp nhận điểm tựa từ **Success criteria cần nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ràng buộc (constraint / 제약조건) không phải mục tiêu** nối từ **Success criteria cần nhiều tầng** sang **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ràng buộc (constraint / 제약조건) không phải mục tiêu
 
@@ -108,7 +108,7 @@ Phạm vi (scope / 범위), schedule và chi phí (cost / 비용) thường đư
 
 Ràng buộc (constraint / 제약조건) cũng không có cùng độ cứng. Legal deadline khác mục tiêu (target / 대상) date; an toàn (safety / 안전) yêu cầu (requirement / 요구사항) khác optional tính năng (feature / 기능); ngân sách (budget / 예산) cap khác chi phí (cost / 비용) forecast. dự án (project / 프로젝트) manager phải hiểu nguồn (source / 소스) và negotiability của mỗi ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** tiếp nhận điểm tựa từ **Ràng buộc (constraint / 제약조건) không phải mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** nối từ **Ràng buộc (constraint / 제약조건) không phải mục tiêu** sang **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém
 
@@ -118,7 +118,7 @@ Quản lý dự án không loại bỏ sự đánh đổi (trade-off / 트레이
 
 Sự đánh đổi (trade-off / 트레이드오프) cũng có second-order tác động (effect / 효과). Cắt testing để giữ deadline có thể không chỉ tăng defect rủi ro (risk / 위험); nó còn làm operations thiếu confidence, kéo dài hypercare và khiến vendor dispute về acceptance. Một cục bộ (local / 로컬) saving có thể tạo hệ thống (system / 시스템) chi phí (cost / 비용) lớn hơn ở downstream.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** tiếp nhận điểm tựa từ **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** nối từ **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** sang **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời
 
@@ -128,7 +128,7 @@ Một hệ thống tốt cần ít nhất bốn thứ. Thứ nhất là dùng ch
 
 Nếu thiếu direction, nhóm (team / 팀) bận rộn nhưng cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화). Nếu thiếu quyết định (decision / 결정) rights, việc nhỏ cũng bị chờ. Nếu thiếu phản hồi (feedback / 피드백), sai lệch chỉ lộ ra cuối dự án. Nếu thiếu escalation, blocker sống quá lâu và biến thành crisis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sensor, actuator và độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** nối từ **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** sang **Sensor, actuator và độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)
 
@@ -142,7 +142,7 @@ Nếu mục tiêu (target / 대상) không rõ, điều khiển (control / 제�
 
 Predictive và adaptive delivery khác nhau chủ yếu ở cadence, placement của phản hồi (feedback / 피드백) và mức commitment, nhưng cả hai đều cần vòng điều khiển (control loop / 제어 루프).
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Sensor, actuator và độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) rights và escalation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sensor, actuator và độ trễ (latency / 지연 시간)** nối từ **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** sang **Quyết định (decision / 결정) rights và escalation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sensor, actuator và độ trễ (latency / 지연 시간)
 
@@ -150,7 +150,7 @@ Control-system analogy sâu hơn khi tách ba phần. Sensor là cơ chế (mech
 
 Một dự án (project / 프로젝트) có dashboard tốt nhưng không có authority điều chỉnh chỉ có sensor mà thiếu actuator. Một dự án (project / 프로젝트) có sponsor mạnh nhưng report trễ ba tuần có actuator nhưng sensor độ trễ (latency / 지연 시간) quá cao. độ tin cậy (reliability / 신뢰성) của vòng điều khiển (control loop / 제어 루프) phụ thuộc cả ba, không chỉ số lượng report.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Quyết định (decision / 결정) rights và escalation** tiếp nhận điểm tựa từ **Sensor, actuator và độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) rights và escalation** nối từ **Sensor, actuator và độ trễ (latency / 지연 시간)** sang **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) rights và escalation
 
@@ -158,7 +158,7 @@ Một hệ thống (system / 시스템) tốt không đưa mọi quyết định
 
 Escalation không phải thất bại (failure / 실패) của PM. Nó là cơ chế (mechanism / 메커니즘) khi quyết định (decision / 결정) vượt authority hoặc cross-boundary. thất bại (failure / 실패) là escalate quá sớm mọi việc hoặc giữ issue quá lâu chỉ để chứng minh mình “tự xử lý được”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) rights và escalation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** nối từ **Quyết định (decision / 결정) rights và escalation** sang **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)
 
@@ -166,7 +166,7 @@ Dự án (project / 프로젝트) manager thiết kế coordination và tích h�
 
 PMP mindset trưởng thành là biết ai nên quyết, thông tin (information / 정보) nào họ cần và khi nào quyết định (decision / 결정) phải xảy ra.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** nối từ **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** sang **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)
 
@@ -174,7 +174,7 @@ Chiến lược (strategy / 전략) định hướng organization muốn đi đ�
 
 Nếu dự án (project / 프로젝트) không còn align chiến lược (strategy / 전략), “hoàn thành plan” có thể không còn giá trị. Đây là lý do nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) phải được reassess khi ngữ cảnh (context / 맥락) thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** nối từ **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** sang **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)
 
@@ -184,7 +184,7 @@ Sự khác biệt cốt lõi nằm ở câu hỏi quản trị. dự án (projec
 
 Một sản phẩm (product / 제품) có thể sống qua nhiều dự án (project / 프로젝트); một dự án (project / 프로젝트) có thể tạo năng lực (capability / 역량) cho nhiều sản phẩm (product / 제품). ranh giới (boundary / 경계) không phải lúc nào cũng clean, vì vậy quản trị (governance / 거버넌스) cần nói rõ temporary dự án (project / 프로젝트) kết thúc ở đâu và long-lived quyền sở hữu (ownership / 소유권) bắt đầu ở đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** cho ta quy tắc; **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** nêu quy tắc; **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** thử quy tắc trong tình huống, rồi **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** mở rộng hệ quả.
 
 ## Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization
 
@@ -194,7 +194,7 @@ Một charter tốt không cần dài. Nó phải đủ để tránh một dự 
 
 Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) nên sống đủ lâu để bị challenge. Nếu thị trường (market / 시장), regulation hoặc technology làm giả định (assumption / 가정) thay đổi lớn, quản trị (governance / 거버넌스) cần hỏi investment còn đáng tiếp tục không.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** cho ta quy tắc; **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** nêu quy tắc; **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** thử quy tắc trong tình huống, rồi **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** mở rộng hệ quả.
 
 ## Continue, pivot hay stop là quyết định (decision / 결정) bình thường
 
@@ -204,7 +204,7 @@ Stop criteria đặc biệt quan trọng với dự án (project / 프로젝트)
 
 Stop không nhất thiết nghĩa dự án (project / 프로젝트) management thất bại. Một discovery dự án (project / 프로젝트) có thể thành công nếu chứng minh sớm rằng hypothesis không viable và tránh hàng năm investment sai. giá trị (value / 값) của học tập (learning / 학습) đôi khi nằm ở việc biết điều gì không nên làm.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển tiếp (transition / 전이) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** nối từ **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** sang **Chuyển tiếp (transition / 전이) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)
 
@@ -214,7 +214,7 @@ Khi dự án (project / 프로젝트) kéo dài quá lâu hoặc số workstream
 
 Đây là lý do nhóm (team / 팀) topology, giao diện (interface / 인터페이스) rõ và sản phẩm tạo ra (artifact / 산출물) tốt có economic giá trị (value / 값): chúng giảm giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) của temporary organization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Chuyển tiếp (transition / 전이) debt** tiếp nhận điểm tựa từ **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chuyển tiếp (transition / 전이) debt** nối từ **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** sang **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển tiếp (transition / 전이) debt
 
@@ -224,7 +224,7 @@ Chuyển tiếp (transition / 전이) debt giống technical debt ở chỗ đ�
 
 Chuyển tiếp (transition / 전이) cần đơn vị sở hữu (owner / 오너) bên operations, sản phẩm (product / 제품) hoặc nghiệp vụ (business / 비즈니스). Closure vì vậy phải được nghĩ từ đầu, không phải cuối dự án (project / 프로젝트) mới hỏi “ai vận hành?”.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** tiếp nhận điểm tựa từ **Chuyển tiếp (transition / 전이) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** nối từ **Chuyển tiếp (transition / 전이) debt** sang **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn
 
@@ -234,7 +234,7 @@ Complex hệ thống (system / 시스템) tạo emergent hành vi (behavior / �
 
 Khi độ phức tạp (complexity / 복잡도) cao, decomposition vẫn cần nhưng phải giữ tích hợp (integration / 통합) view. Chia dự án (project / 프로젝트) thành 20 workstream không loại bỏ phụ thuộc (dependency / 의존성) giữa chúng.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** nối từ **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** sang **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)
 
@@ -244,7 +244,7 @@ Ngược lại, một improvement có thể tạo virtuous vòng lặp (loop / �
 
 Hệ thống (system / 시스템) thinking hỏi không chỉ “hành động (action / 동작) này giải issue hiện tại không?” mà còn “hành vi (behavior / 동작) nào nó khuyến khích và vòng phản hồi (feedback loop / 피드백 루프) nào nó tạo?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** tiếp nhận điểm tựa từ **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** nối từ **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** sang **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất định (uncertainty / 불확실성) và học tập (learning / 학습)
 
@@ -254,7 +254,7 @@ Good planning nói rõ cái gì đã biết, cái gì estimate, giả định (a
 
 Dự án (project / 프로젝트) maturity không phải dự đoán đúng mọi thứ từ đầu mà là phát hiện deviation sớm và điều chỉnh có kỷ luật.
 
-> **Chuyển mạch:** Trong **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** nối từ **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** sang **Ví dụ lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)
 
@@ -264,7 +264,7 @@ Ethics vì vậy không phải chapter phụ. Truthfulness, fairness và profess
 
 Ethics cũng là ranh giới (boundary / 경계) của giá trị (value / 값) tối ưu hóa (optimization / 최적화). Một option tạo ROI cao nhưng cần che material rủi ro (risk / 위험), vi phạm consent hoặc chuyển harm không hợp lý sang nhóm yếu thế không trở thành lựa chọn tốt chỉ vì financial chỉ số (metric / 지표) đẹp.
 
-> **Chuyển mạch:** Ở chặng này của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** cho ta quy tắc; **Ví dụ lập luận (reasoning / 추론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** nêu quy tắc; **Ví dụ lập luận (reasoning / 추론)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ lập luận (reasoning / 추론)
 
@@ -276,7 +276,7 @@ Giả sử pilot cho thấy ticket giảm nhưng customer complaint tăng vì c�
 
 Một bước lập luận (reasoning / 추론) sâu hơn là hỏi counterfactual: complaint có tăng vì chatbot hay vì campaign tạo volume bất thường? Nếu mô hình (model / 모델) chỉ tốt ở nhóm low-risk truy vấn (query / 쿼리), limited rollout có tạo giá trị (value / 값) tốt hơn nhị phân (binary / 이진) go/no-go không? Nếu human rà soát (review / 검토) làm chi phí (cost / 비용) quay về gần baseline, nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) còn đứng vững không? dự án (project / 프로젝트) manager không tự quyết mọi câu hỏi này, nhưng phải đưa đúng bằng chứng (evidence / 증거) tới đúng quyết định (decision / 결정) đơn vị sở hữu (owner / 오너).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00 — dự án (project / 프로젝트), kết quả (outcome / 결과), giá trị (value / 값) và hệ thống tạo giá trị**, **Ví dụ lập luận (reasoning / 추론)** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Ví dụ lập luận (reasoning / 추론)** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống cụ thể để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

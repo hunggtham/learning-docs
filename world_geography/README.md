@@ -12,7 +12,7 @@ Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md).
 
 World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**, không phải tiêu chí completion. Một tệp (file / 파일) country ngắn không được tính là chapter hoàn chỉnh chỉ vì nó tồn tại.
 
-> **Chuyển mạch:** **Cách dùng thư viện** xác định source và cách tra cứu; **Kiến trúc** tổ chức domain, rồi **Dependency graph** chỉ quan hệ prerequisite giữa các atlas.
+> **Nối mạch:** Cách dùng thư viện cho biết nên bắt đầu và tra cứu thế nào; **Kiến trúc** biến lựa chọn đó thành các domain có owner rõ ràng. **Dependency graph** tiếp theo mô tả prerequisite giữa các atlas.
 
 ## Kiến trúc
 
@@ -34,7 +34,7 @@ World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer 
 
 Để hiểu vì sao các mẫu (pattern / 패턴) không gian hình thành theo thời gian, đọc song song [World History](../world_history/README.md). Geography cung cấp vật lý (physical / 물리적) ràng buộc (constraint / 제약조건), tài nguyên (resource / 자원) cơ sở (base / 기반) và mạng (network / 네트워크) location; lịch sử (history / 이력) bổ sung institutions, technology, warfare, demography và ideas đã biến đổi chúng. Không dùng địa lý như lời giải định mệnh cho lịch sử.
 
-> **Chuyển mạch:** **Dependency graph** cho biết atlas nào cần đọc trước; **Chuỗi nhân quả bắt buộc cho chapter ứng dụng** biến geography thành explanation có cơ chế.
+> **Nối mạch:** Dependency graph đặt thứ tự đọc từ nền tảng đến atlas, còn **Chuỗi nhân quả bắt buộc cho chapter ứng dụng** giải thích vì sao một địa điểm có kết quả cụ thể thay vì chỉ liệt kê đặc điểm.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -64,7 +64,7 @@ graph TD
   T --> Q[Selective World Atlas]
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** xác định đầu vào; **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đồ thị phụ thuộc xác định nền tảng cần có trước; chuỗi nhân quả biến nền tảng ấy thành cơ chế giải thích cho từng region hoặc country. **Trạng thái sau các depth pass** kiểm tra những mắt xích đó đã đủ sâu hay chưa.
 
 ## Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng
 
@@ -74,7 +74,7 @@ Khi viết region hoặc country profile, ưu tiên chuỗi:
 
 Đây không phải tuyến tính (linear / 선형) determinism. Institution, technology và lịch sử (history / 이력) có thể thay đổi hoặc đảo chiều từng arrow.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** xác định đầu vào; **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quy tắc chất lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chuỗi nhân quả cho biết một chapter phải nối từ địa hình và khí hậu đến dân cư, kinh tế, mạng vận chuyển và rủi ro; trạng thái depth pass cho biết bằng chứng nào đã được viết. **Quy tắc chất lượng** đặt ngưỡng để không nhầm coverage với độ dài.
 
 ## Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất
 
@@ -118,7 +118,7 @@ Batch mới đã nâng:
 
 Chúng được chọn vì có học tập (learning / 학습) giá trị (value / 값) về resources, commodity/industrial networks, ports, urban các hệ thống (systems / 시스템들) và liên hệ East/Southeast Asia.
 
-> **Chuyển mạch:** **Trạng thái sau depth pass** cho biết coverage đang ở đâu; **Quy tắc chất lượng** chuyển trạng thái đó thành evidence, rồi **Quy tắc ngôn ngữ** giữ prose tiếng Việt.
+> **Nối mạch:** Trạng thái depth pass là bằng chứng hiện tại, còn Quy tắc chất lượng biến bằng chứng đó thành tiêu chí kiểm tra claim, cơ chế và giới hạn. **Quy tắc ngôn ngữ** tiếp theo bảo đảm phần giải thích vẫn tự nhiên bằng tiếng Việt.
 
 ## Quy tắc chất lượng
 
@@ -126,7 +126,7 @@ Một chapter tốt phải trả lời: khái niệm là gì; cơ chế (mechani
 
 Số tệp (file / 파일), số heading và số dòng không phải chỉ số (metric / 지표) chất lượng.
 
-> **Chuyển mạch:** **Quy tắc ngôn ngữ** diễn đạt claim và boundary nhất quán; **Roadmap tiếp theo** chỉ ưu tiên mở rộng theo gap có owner.
+> **Nối mạch:** Quy tắc ngôn ngữ giữ thuật ngữ và ranh giới nghĩa nhất quán; **Roadmap tiếp theo** dùng các gap còn lại để chọn việc có owner trong README, thay vì mở file mới chỉ để tăng số lượng.
 
 ## Quy tắc ngôn ngữ
 
@@ -134,7 +134,7 @@ Giải thích chính bằng tiếng Việt tự nhiên. English từ khóa (keyw
 
 Mã (code / 코드), formula, acronym, proper noun và chuẩn gốc (canonical / 정본) technical name giữ nguyên nếu dịch làm mất chính xác.
 
-> **Chuyển mạch:** **Roadmap tiếp theo** khép README bằng owner, coverage gap và route kiểm chứng; không mở chapter mới chỉ để tăng số lượng.
+> **Nối mạch:** Roadmap khép vòng bằng owner, coverage gap và cách kiểm chứng; các batch sau chỉ được xem là hoàn tất khi route trong README và liên kết nội bộ đều còn đúng.
 
 ## Roadmap tiếp theo
 

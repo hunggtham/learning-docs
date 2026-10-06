@@ -29,7 +29,7 @@ phút giờ ngày-trong-tháng tháng ngày-trong-tuần
 
 `*/5 * * * *` thường có nghĩa chạy mỗi 5 phút.
 
-> **Chuyển mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Môi trường của Cron khác shell tương tác** tiếp nhận điểm tựa từ **Mô hình của Cron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra và lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Môi trường của Cron khác shell tương tác** nối từ **Mô hình của Cron** sang **Đầu ra và lỗi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môi trường của Cron khác shell tương tác
 
@@ -54,7 +54,7 @@ Thư mục làm việc cũng không nên được giả định:
 cd /opt/app || exit 1
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Đầu ra và lỗi** tiếp nhận điểm tựa từ **Môi trường của Cron khác shell tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiều lần chạy chồng lên nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Đầu ra và lỗi** nối từ **Môi trường của Cron khác shell tương tác** sang **Nhiều lần chạy chồng lên nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu ra và lỗi
 
@@ -66,7 +66,7 @@ Nếu tác vụ được lập lịch thất bại nhưng không ai nhìn thấy
 
 Tốt hơn nữa là giám sát mã thoát và độ mới của bản sao lưu thay vì chỉ lưu một tệp log rồi hy vọng có người đọc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Nhiều lần chạy chồng lên nhau** tiếp nhận điểm tựa từ **Đầu ra và lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính lặp an toàn (idempotency)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Nhiều lần chạy chồng lên nhau** nối từ **Đầu ra và lỗi** sang **Tính lặp an toàn (idempotency)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiều lần chạy chồng lên nhau
 
@@ -80,7 +80,7 @@ Một tác vụ chạy mỗi 5 phút nhưng đôi lúc cần 8 phút sẽ bị c
 
 `-n` làm câu lệnh thất bại ngay nếu khóa đang được giữ. Tuy nhiên ý nghĩa của khóa phải phù hợp yêu cầu nghiệp vụ; nếu cùng tác vụ chạy trên nhiều máy, có thể cần hàng đợi hoặc khóa phân tán thay vì tệp (file / 파일) khóa (lock / 잠금) cục bộ.
 
-> **Chuyển mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Tính lặp an toàn (idempotency)** tiếp nhận điểm tựa từ **Nhiều lần chạy chồng lên nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã thoát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Tính lặp an toàn (idempotency)** nối từ **Nhiều lần chạy chồng lên nhau** sang **Mã thoát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính lặp an toàn (idempotency)
 
@@ -90,7 +90,7 @@ Tự động hóa đáng tin cậy nên cố gắng có **tính lặp an toàn (
 
 Idempotency liên hệ trực tiếp với hệ thống phân tán và hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라).
 
-> **Chuyển mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Mã thoát** tiếp nhận điểm tựa từ **Tính lặp an toàn (idempotency)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ hẹn giờ của systemd** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Mã thoát** nối từ **Tính lặp an toàn (idempotency)** sang **Bộ hẹn giờ của systemd**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mã thoát
 
@@ -102,7 +102,7 @@ set -o pipefail
 
 có thể giúp chuỗi xử lý (pipeline / 파이프라인) phản ánh lỗi ở các bước trước, nhưng cần hiểu ngữ nghĩa lỗi của Bash. Không nên thêm `|| true` chỉ để "cron không báo lỗi" nếu nó che giấu một thất bại nghiệp vụ thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Bộ hẹn giờ của systemd** tiếp nhận điểm tựa từ **Mã thoát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những lần chạy bị bỏ lỡ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Bộ hẹn giờ của systemd** nối từ **Mã thoát** sang **Những lần chạy bị bỏ lỡ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ hẹn giờ của systemd
 
@@ -120,7 +120,7 @@ journalctl -u myjob.service
 
 Cron vẫn đơn giản và phù hợp với nhiều tác vụ; systemd timer hữu ích hơn khi cần tích hợp sâu với trình quản lý dịch vụ.
 
-> **Chuyển mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Những lần chạy bị bỏ lỡ** tiếp nhận điểm tựa từ **Bộ hẹn giờ của systemd** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Múi giờ và DST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Những lần chạy bị bỏ lỡ** nối từ **Bộ hẹn giờ của systemd** sang **Múi giờ và DST**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những lần chạy bị bỏ lỡ
 
@@ -128,7 +128,7 @@ Cron truyền thống thường không tự chạy bù một tác vụ đã bỏ
 
 Đây là câu hỏi nghiệp vụ: nếu bản sao lưu lúc 02:00 bị bỏ lỡ vì máy chủ tắt, nên bỏ qua hay chạy ngay khi máy lên? Cấu hình bộ lập lịch phải phản ánh yêu cầu đó.
 
-> **Chuyển mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Múi giờ và DST** tiếp nhận điểm tựa từ **Những lần chạy bị bỏ lỡ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự động hóa và bí mật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Múi giờ và DST** nối từ **Những lần chạy bị bỏ lỡ** sang **Tự động hóa và bí mật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Múi giờ và DST
 
@@ -138,19 +138,19 @@ Lập lịch theo thời gian lịch chịu ảnh hưởng của múi giờ và 
 timedatectl
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Tự động hóa và bí mật** tiếp nhận điểm tựa từ **Múi giờ và DST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Tự động hóa và bí mật** nối từ **Múi giờ và DST** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tự động hóa và bí mật
 
 Không nên ghi cứng mật khẩu hoặc đơn vị từ (token / 토큰) trực tiếp trong dòng lệnh `crontab` nếu có thể tránh. Dòng lệnh có thể xuất hiện trong danh sách tiến trình hoặc lịch sử; tệp `crontab` và cấu hình cũng cần quyền thích hợp. Nên dùng cơ chế quản lý bí mật phù hợp với môi trường.
 
-> **Chuyển mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tự động hóa và bí mật** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tự động hóa và bí mật** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Tác vụ được lập lịch là một **tiến trình chạy không có người giám sát trực tiếp**. Vì thiếu ngữ cảnh của con người, các phụ thuộc phải được khai báo rõ: đường dẫn chương trình, danh tính, biến môi trường, thư mục làm việc, khóa, nhật ký, hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và tiêu chí thành công.
 
-> **Chuyển mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -164,7 +164,7 @@ Tác vụ được lập lịch là một **tiến trình chạy không có ngư
 
 **"Cron là lựa chọn duy nhất."** Systemd timer, bộ điều phối và trình lập lịch trong ứng dụng có ngữ nghĩa khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lập lịch, Cron và độ tin cậy của tự động hóa**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

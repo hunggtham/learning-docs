@@ -20,7 +20,7 @@ PV = Future Cash Flow / (1 + Discount Rate)^t
 
 Khi đã đặt mọi quyết định trong thời gian và sức mua, bước tiếp theo là tách con số lợi suất danh nghĩa khỏi sức mua thực tế.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **2. Lợi suất danh nghĩa và lợi suất thực** tiếp nhận điểm tựa từ **1. Đầu tư thực chất là phân bổ sức mua theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **2. Lợi suất danh nghĩa và lợi suất thực** nối từ **1. Đầu tư thực chất là phân bổ sức mua theo thời gian** sang **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Lợi suất danh nghĩa và lợi suất thực
 
@@ -34,7 +34,7 @@ Lợi suất danh nghĩa cao không đảm bảo sức mua tăng. Đây là lý 
 
 Sau khi hiểu đơn vị đo kết quả, ta cần biết các quyền và nghĩa vụ nào đứng phía sau mỗi sản phẩm trong hệ thống tài chính.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ** tiếp nhận điểm tựa từ **2. Lợi suất danh nghĩa và lợi suất thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ** nối từ **2. Lợi suất danh nghĩa và lợi suất thực** sang **4. Cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ
 
@@ -55,7 +55,7 @@ Cổ đông là người hưởng phần còn lại; trái chủ có quyền đ�
 
 Khung quyền lợi này là nền để đọc từng nhóm tài sản. Ta bắt đầu với cổ phiếu, nơi phần còn lại phụ thuộc trực tiếp vào lợi nhuận và số cổ phiếu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **4. Cổ phiếu** tiếp nhận điểm tựa từ **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cổ tức và mua lại cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **4. Cổ phiếu** nối từ **3. Hệ thống tài chính là mạng lưới quyền lợi và nghĩa vụ** sang **5. Cổ tức và mua lại cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cổ phiếu
 
@@ -73,7 +73,7 @@ Tăng doanh thu không đủ; phải kiểm tra pha loãng, ROIC, nhu cầu tái
 
 Vì vậy, cổ tức và mua lại chỉ có ý nghĩa khi được đọc cùng lợi nhuận giữ lại và số cổ phiếu thực tế.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **5. Cổ tức và mua lại cổ phiếu** tiếp nhận điểm tựa từ **4. Cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chia tách, phát hành thêm và pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **5. Cổ tức và mua lại cổ phiếu** nối từ **4. Cổ phiếu** sang **6. Chia tách, phát hành thêm và pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Cổ tức và mua lại cổ phiếu
 
@@ -85,7 +85,7 @@ Mua lại chỉ để bù SBC không tương đương hoàn vốn thật sự ch
 
 Điểm chốt là “trả tiền cho cổ đông” không tự động đồng nghĩa với tạo giá trị. Trước khi đánh giá tỷ lệ trên mỗi cổ phiếu, cần hiểu các hành động làm thay đổi mẫu số.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **6. Chia tách, phát hành thêm và pha loãng** tiếp nhận điểm tựa từ **5. Cổ tức và mua lại cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chỉ số và quỹ đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **6. Chia tách, phát hành thêm và pha loãng** nối từ **5. Cổ tức và mua lại cổ phiếu** sang **7. Chỉ số và quỹ đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Chia tách, phát hành thêm và pha loãng
 
@@ -97,7 +97,7 @@ Phát hành thêm, quyền mua, trái phiếu chuyển đổi và chứng quyề
 
 Khi đã hiểu mẫu số, ta có thể đọc chỉ số và quỹ như cấu trúc phân bổ nhiều tài sản chứ không chỉ là nhãn sản phẩm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **7. Chỉ số và quỹ đầu tư** tiếp nhận điểm tựa từ **6. Chia tách, phát hành thêm và pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. ETF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **7. Chỉ số và quỹ đầu tư** nối từ **6. Chia tách, phát hành thêm và pha loãng** sang **8. ETF**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chỉ số và quỹ đầu tư
 
@@ -119,7 +119,7 @@ ETF chỉ là cấu trúc triển khai; kinh tế của khoản đầu tư nằm
 
 Vì vậy, khi chuyển sang ETF, ta kiểm tra tài sản cơ sở, cách sao chép và các lớp chi phí/thanh khoản làm lợi suất thực tế lệch khỏi chỉ số.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **8. ETF** tiếp nhận điểm tựa từ **7. Chỉ số và quỹ đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Trái phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **8. ETF** nối từ **7. Chỉ số và quỹ đầu tư** sang **9. Trái phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. ETF
 
@@ -146,7 +146,7 @@ ETF giao dịch bằng KRW không có nghĩa tài sản cơ sở không còn r�
 
 Sau ETF, ta chuyển sang trái phiếu để đối chiếu một cấu trúc mà dòng tiền hợp đồng và độ nhạy lợi suất giữ vai trò trung tâm.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **9. Trái phiếu** tiếp nhận điểm tựa từ **8. ETF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **9. Trái phiếu** nối từ **8. ETF** sang **10. Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Trái phiếu
 
@@ -166,7 +166,7 @@ Một trái phiếu chính phủ dài hạn có thể biến động mạnh dù 
 
 Để đọc độ nhạy của dòng tiền đó một cách định lượng, ta cần duration và DV01.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **10. Duration** tiếp nhận điểm tựa từ **9. Trái phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. REIT và bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **10. Duration** nối từ **9. Trái phiếu** sang **11. REIT và bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Duration
 
@@ -178,7 +178,7 @@ Duration cũng là một trực giác hữu ích cho cổ phiếu: doanh nghiệ
 
 Trực giác về dòng tiền và chiết khấu này cũng xuất hiện ở bất động sản, nơi NOI và cap rate đóng vai trò tương tự.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **11. REIT và bất động sản** tiếp nhận điểm tựa từ **10. Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **11. REIT và bất động sản** nối từ **10. Duration** sang **12. Vàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. REIT và bất động sản
 
@@ -192,7 +192,7 @@ Cap tỷ lệ (rate / 비율) không nên được đọc tách khỏi tăng tr�
 
 Vàng không có dòng tiền hợp đồng, nên là đối chiếu tốt để học cách đọc giá theo real yield, USD và nhu cầu dự trữ.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **12. Vàng** tiếp nhận điểm tựa từ **11. REIT và bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Hàng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **12. Vàng** nối từ **11. REIT và bất động sản** sang **13. Hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Vàng
 
@@ -204,7 +204,7 @@ Vàng có thể giúp đa dạng hóa nhưng không phải công cụ phòng v�
 
 Tiếp theo, hàng hóa cho thấy vì sao lợi suất từ hợp đồng futures có thể khác đáng kể so với biến động spot.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **13. Hàng hóa** tiếp nhận điểm tựa từ **12. Vàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Forex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **13. Hàng hóa** nối từ **12. Vàng** sang **14. Forex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Hàng hóa
 
@@ -214,7 +214,7 @@ Lợi suất từ hàng hóa qua futures khác biến động giá giao ngay vì
 
 Contango có thể tạo lực kéo âm; backwardation có thể hỗ trợ carry dương. Do đó không thể nhìn biểu đồ spot rồi suy ra lợi suất ETF hàng hóa.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **14. Forex** tiếp nhận điểm tựa từ **13. Hàng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Futures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **14. Forex** nối từ **13. Hàng hóa** sang **15. Futures**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Forex
 
@@ -226,7 +226,7 @@ Một vị thế FX luôn có hai phía. “USD mạnh” phải nói rõ mạnh
 
 Khi đã hiểu tài sản cơ sở và nguồn lợi suất, ta chuyển sang futures để học notional, multiplier và margin.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **15. Futures** tiếp nhận điểm tựa từ **14. Forex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Quyền chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **15. Futures** nối từ **14. Forex** sang **16. Quyền chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Futures
 
@@ -242,7 +242,7 @@ Ký quỹ là tài sản bảo đảm, không phải quy mô rủi ro. Cần hi�
 
 Quyền chọn thêm payoff phi tuyến vào khung này; phần tiếp theo giải thích vì sao premium có thể giới hạn lỗ của người mua nhưng không xóa rủi ro của người bán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **16. Quyền chọn** tiếp nhận điểm tựa từ **15. Futures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. CFD và sản phẩm OTC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **16. Quyền chọn** nối từ **15. Futures** sang **17. CFD và sản phẩm OTC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Quyền chọn
 
@@ -256,7 +256,7 @@ Delta, Gamma, Theta và Vega là các độ nhạy, không phải dự báo.
 
 Sau công cụ niêm yết, CFD và OTC cho thấy thêm một lớp rủi ro đối tác và điều khoản hợp đồng.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **17. CFD và sản phẩm OTC** tiếp nhận điểm tựa từ **16. Quyền chọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. ETN, sản phẩm đòn bẩy và nghịch đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **17. CFD và sản phẩm OTC** nối từ **16. Quyền chọn** sang **18. ETN, sản phẩm đòn bẩy và nghịch đảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. CFD và sản phẩm OTC
 
@@ -268,7 +268,7 @@ Cần hiểu pháp nhân đối tác, spread, phí tài trợ qua đêm, margin,
 
 ETN và sản phẩm đòn bẩy/nghịch đảo tiếp tục cho thấy nhãn sản phẩm không đủ; phải đọc nghĩa vụ của nhà phát hành và đường đi lợi suất.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **18. ETN, sản phẩm đòn bẩy và nghịch đảo** tiếp nhận điểm tựa từ **17. CFD và sản phẩm OTC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Crypto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **18. ETN, sản phẩm đòn bẩy và nghịch đảo** nối từ **17. CFD và sản phẩm OTC** sang **19. Crypto**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. ETN, sản phẩm đòn bẩy và nghịch đảo
 
@@ -280,7 +280,7 @@ ETF đòn bẩy/nghịch đảo thường đặt mục tiêu theo ngày, vì v�
 
 Crypto mở rộng bản đồ rủi ro sang công nghệ, lưu ký và cơ chế quy đổi, nơi quyền lợi pháp lý cần được kiểm tra trước biến động giá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **19. Crypto** tiếp nhận điểm tựa từ **18. ETN, sản phẩm đòn bẩy và nghịch đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Lệnh giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **19. Crypto** nối từ **18. ETN, sản phẩm đòn bẩy và nghịch đảo** sang **20. Lệnh giao dịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Crypto
 
@@ -292,7 +292,7 @@ Nếu không giải thích được quyền lợi pháp lý, nguồn cầu và c
 
 Sau khi hiểu sản phẩm, ta chuyển sang lệnh giao dịch để thấy cách một ý định được biến thành fill và chi phí thực tế.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **20. Lệnh giao dịch** tiếp nhận điểm tựa từ **19. Crypto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Bán khống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **20. Lệnh giao dịch** nối từ **19. Crypto** sang **21. Bán khống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Lệnh giao dịch
 
@@ -304,7 +304,7 @@ Spread, slippage và thị trường (market / 시장) impact là các chi phí 
 
 Bán khống tiếp tục bài học về quyền và nghĩa vụ, nhưng với rủi ro giá tăng không có giới hạn lý thuyết.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **21. Bán khống** tiếp nhận điểm tựa từ **20. Lệnh giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Margin và đòn bẩy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **21. Bán khống** nối từ **20. Lệnh giao dịch** sang **22. Margin và đòn bẩy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Bán khống
 
@@ -316,7 +316,7 @@ Tổn thất lý thuyết của bán khống không bị giới hạn khi giá t
 
 Đòn bẩy và margin làm rủi ro này có thể xảy ra nhanh hơn, nên phần kế tiếp đặt chúng vào cùng một risk budget.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **22. Margin và đòn bẩy** tiếp nhận điểm tựa từ **21. Bán khống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Đa dạng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **22. Margin và đòn bẩy** nối từ **21. Bán khống** sang **23. Đa dạng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Margin và đòn bẩy
 
@@ -328,7 +328,7 @@ Luận điểm đúng nhưng dùng đòn bẩy quá lớn vẫn có thể thất
 
 Khi đã hiểu cách khuếch đại rủi ro, ta quay lại danh mục để xem nhiều tài sản có thực sự tạo nguồn lợi suất khác nhau hay chỉ lặp lại cùng một factor.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **23. Đa dạng hóa** tiếp nhận điểm tựa từ **22. Margin và đòn bẩy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. DCA và đầu tư một lần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **23. Đa dạng hóa** nối từ **22. Margin và đòn bẩy** sang **24. DCA và đầu tư một lần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Đa dạng hóa
 
@@ -352,7 +352,7 @@ Nguồn thu nhập cá nhân
 
 Từ bản đồ tập trung, ta có thể so sánh đầu tư định kỳ và đầu tư một lần như hai cách đưa vốn vào cùng một mục tiêu, không phải hai lời hứa loại bỏ rủi ro.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **24. DCA và đầu tư một lần** tiếp nhận điểm tựa từ **23. Đa dạng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Tái cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **24. DCA và đầu tư một lần** nối từ **23. Đa dạng hóa** sang **25. Tái cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. DCA và đầu tư một lần
 
@@ -366,7 +366,7 @@ Không có phương pháp nào loại bỏ rủi ro thị trường.
 
 Khi vốn đã được triển khai, tái cân bằng giữ danh mục gần risk budget thay vì để một nhóm tài sản chi phối ngoài chủ đích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **25. Tái cân bằng** tiếp nhận điểm tựa từ **24. DCA và đầu tư một lần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Phong cách đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **25. Tái cân bằng** nối từ **24. DCA và đầu tư một lần** sang **26. Phong cách đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Tái cân bằng
 
@@ -378,7 +378,7 @@ Dòng tiền mới thường là công cụ tái cân bằng rẻ hơn bán/mua 
 
 Sau đó, phong cách và nhân tố giúp giải thích vì sao các danh mục có tên khác nhau lại có exposure và hành vi khác nhau.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **26. Phong cách đầu tư** tiếp nhận điểm tựa từ **25. Tái cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Nhân tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **26. Phong cách đầu tư** nối từ **25. Tái cân bằng** sang **27. Nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Phong cách đầu tư
 
@@ -390,7 +390,7 @@ Không nên biến phong cách thành bản sắc cá nhân. Một phương phá
 
 Nhân tố biến các mô tả đó thành exposure có thể đo; vì vậy ta phải kiểm tra cách chỉ số hoặc ETF thực sự xếp hạng và tái cân bằng.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **27. Nhân tố** tiếp nhận điểm tựa từ **26. Phong cách đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Tâm lý và hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **27. Nhân tố** nối từ **26. Phong cách đầu tư** sang **28. Tâm lý và hành vi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Nhân tố
 
@@ -402,7 +402,7 @@ Một ETF có nhãn “smart beta” chỉ hữu ích nếu phương pháp thậ
 
 Ngay cả exposure đúng cũng có thể bị thực thi sai bởi hành vi; phần tâm lý dưới đây đưa yếu tố con người vào cùng khung rule và invalidation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **28. Tâm lý và hành vi** tiếp nhận điểm tựa từ **27. Nhân tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Thời hạn và nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **28. Tâm lý và hành vi** nối từ **27. Nhân tố** sang **29. Thời hạn và nghĩa vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Tâm lý và hành vi
 
@@ -414,7 +414,7 @@ Kỷ luật tốt cần quy tắc trước quyết định, nhật ký và đi�
 
 Các quy tắc đó chỉ hợp lý khi gắn với thời hạn và nghĩa vụ cụ thể, vì mục tiêu 12 tháng không thể chịu cùng drawdown như mục tiêu 20 năm.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **29. Thời hạn và nghĩa vụ** tiếp nhận điểm tựa từ **28. Tâm lý và hành vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **29. Thời hạn và nghĩa vụ** nối từ **28. Tâm lý và hành vi** sang **30. Thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Thời hạn và nghĩa vụ
 
@@ -426,7 +426,7 @@ Thời hạn đầu tư phải gắn với thời điểm cần tiền. Một t�
 
 Khi thời hạn đã rõ, thanh khoản trở thành điều kiện vận hành: phải đáp ứng chi tiêu, margin và sự cố mà không bán tháo.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **30. Thanh khoản** tiếp nhận điểm tựa từ **29. Thời hạn và nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Custody và operational risk** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **30. Thanh khoản** nối từ **29. Thời hạn và nghĩa vụ** sang **31. Custody và operational risk**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Thanh khoản
 
@@ -436,7 +436,7 @@ Tiền mặt và T-bill có vai trò khác cổ phiếu nhỏ, private credit ho
 
 Ngay cả tài sản thanh khoản cũng còn rủi ro custody và vận hành; phần tiếp theo mở rộng kiểm tra từ giá sang trung gian.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **31. Custody và operational risk** tiếp nhận điểm tựa từ **30. Thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. TWR, MWR và đánh giá hiệu quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **31. Custody và operational risk** nối từ **30. Thanh khoản** sang **32. TWR, MWR và đánh giá hiệu quả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Custody và operational risk
 
@@ -448,7 +448,7 @@ Nhà đầu tư phải hiểu ai thực sự giữ tài sản và quy trình x�
 
 Sau khi hiểu dòng tài sản, ta mới đánh giá hiệu quả: tách ảnh hưởng của dòng tiền nhà đầu tư khỏi hiệu quả của chiến lược.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **32. TWR, MWR và đánh giá hiệu quả** tiếp nhận điểm tựa từ **31. Custody và operational risk** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Lợi suất thực và sức mua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **32. TWR, MWR và đánh giá hiệu quả** nối từ **31. Custody và operational risk** sang **33. Lợi suất thực và sức mua**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. TWR, MWR và đánh giá hiệu quả
 
@@ -460,7 +460,7 @@ Không nên đánh giá chỉ bằng tổng lợi suất. Cần nhìn mức suy 
 
 Mục tiêu cuối vẫn là sức mua, nên lợi suất thực là bước kiểm tra tiếp theo.
 
-> **Chuyển mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **33. Lợi suất thực và sức mua** tiếp nhận điểm tựa từ **32. TWR, MWR và đánh giá hiệu quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. IPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **33. Lợi suất thực và sức mua** nối từ **32. TWR, MWR và đánh giá hiệu quả** sang **34. IPS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Lợi suất thực và sức mua
 
@@ -470,7 +470,7 @@ Mục tiêu tài chính cuối cùng là sức mua chứ không phải con số 
 
 Để biến kết luận đó thành quy tắc trước hành động, ta ghi mục tiêu, giới hạn và quyền được dùng công cụ trong IPS.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **34. IPS** tiếp nhận điểm tựa từ **33. Lợi suất thực và sức mua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Hệ thống cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ nền tảng đầu tư và quản trị danh mục**, **34. IPS** nối từ **33. Lợi suất thực và sức mua** sang **35. Hệ thống cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. IPS
 
@@ -482,7 +482,7 @@ IPS giúp giảm thay đổi theo cảm xúc.
 
 Phần cuối gom toàn bộ chuỗi thành một hệ thống. Nếu một mũi tên chưa có dữ liệu hoặc owner, đó là nơi cần mở chapter chuyên sâu chứ không phải chỗ để bỏ qua.
 
-> **Chuyển mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **35. Hệ thống cuối cùng** tiếp nhận điểm tựa từ **34. IPS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Bản đồ nền tảng đầu tư và quản trị danh mục**, **35. Hệ thống cuối cùng** nối từ **34. IPS** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 35. Hệ thống cuối cùng
 
