@@ -112,6 +112,8 @@ Bài tập không bị chép nguyên khối vào từng lesson; chúng được 
 | Chương 1, trắc nghiệm 48–50 | listing dispersion, 신주상장 và công thức tăng vốn | [05](./05-ipo-and-listing.md) |
 | Chương 1, trắc nghiệm 51–56 | market type, priority, order, Sidecar, KOSDAQ | [06](./06-stock-market-trading.md) |
 | Chương 1, trắc nghiệm 57–59 | thuế giao dịch, 공개매수 và large-holding report | [08](./08-securities-tax.md), [09](./09-ma.md) |
+| Chương 1, trắc nghiệm 60 | `불성실공시` và biện pháp của KRX/SRO | [06](./06-stock-market-trading.md) |
+| Chương 1, trắc nghiệm 61 | `의결권대리행사`, `위임장` và trường bắt buộc | [09](./09-ma.md) |
 | Chương 2, Đúng/Sai 1–15 | định nghĩa quỹ, chủ thể, NAV, phí, pricing | [10](./10-collective-investment-concepts.md), [11](./11-fund-structure.md) |
 | Chương 2, Đúng/Sai 16–22 | loại quỹ, bất động sản, tài sản đặc biệt, fund-of-funds | [12](./12-fund-types.md) |
 | Chương 2, Đúng/Sai 23–30 | khẩu vị, suitability, beta, Sharpe và thuế quỹ | [13](./13-fund-management.md) |
@@ -160,7 +162,7 @@ vẫn là snapshot của textbook.
 | 26 | ② | Quỹ bất động sản đấu giá/xiết nợ thường dùng cấu trúc `blind` vì tài sản cụ thể chưa cố định khi huy động. |
 | 27 | ④ | Source hạn chế đầu tư vào quỹ mẹ khác/quỹ riêng lẻ theo các ngưỡng bảo vệ; không thể suy ra “20% là luôn được phép”. |
 | 28 | ③ | `Inverse leveraged ETF` khuếch đại chiều giảm trong khoảng thời gian mục tiêu, kèm rủi ro tái cân bằng. |
-| 29 | — | Hãy chọn phương án không đo rủi ro rồi giải thích: source dùng độ lệch chuẩn, beta, excess return, category excess và độ bền thứ hạng; cần đối chiếu cách diễn đạt OCR của đáp án. |
+| 29 | ① | `운용사별 평균수익률` là kết quả trung bình theo manager, không phải trực tiếp là risk metric; source dùng độ lệch chuẩn, beta, benchmark/category excess và độ bền thứ hạng để đọc risk/performance. |
 | 30 | ② | `Sharpe = (10% − 3%) / 14% = 0,50`. |
 
 ## Các bẫy khái niệm chương 1 cần tự giải thích
@@ -182,6 +184,9 @@ bằng chủ thể gần nghĩa. Hãy che cột cuối rồi tự sửa câu tr�
 | `수평적 M&A` là mua doanh nghiệp ở chuỗi cung ứng khác | Ngang là cùng ngành; dọc là các khâu trước/sau; đa ngành là ngành khác | [09](./09-ma.md) |
 | Bán cổ phiếu lỗ thì không có thuế giao dịch | `증권거래세` có thể gắn với chuyển nhượng, không trực tiếp phụ thuộc có lãi vốn hay không | [08](./08-securities-tax.md) |
 | KOSPI/KOSDAQ và K-OTC cùng là thị trường cạnh tranh | KRX dùng cơ chế cạnh tranh tổ chức; K-OTC nhấn mạnh `상대매매` và rủi ro thanh khoản đối tác | [06](./06-stock-market-trading.md) |
+| `이론권리락주가` dùng `액면가액` trong tử số | answer key câu 50 xác nhận phải dùng `발행가액`; mệnh giá và giá phát hành là hai biến khác nhau | [05](./05-ipo-and-listing.md) |
+| `차금결제` là một trong các phương thức settlement của câu 41 | source giữ `차감결제`, `집중결제`, `대체결제`; `차금결제` là distractor | [06](./06-stock-market-trading.md) |
+| `위임장` bắt buộc ghi mục đích của bên vận động proxy | câu 61 loại trường này; cần tách nội dung giấy ủy quyền khỏi mục tiêu vận động | [09](./09-ma.md) |
 
 Các bẫy này đều kiểm tra một quan hệ, không chỉ một từ vựng. Nếu sửa được câu
 sai bằng cách chỉ ra **chủ thể – điều kiện – hệ quả**, bạn đã hiểu cơ chế; nếu chỉ
