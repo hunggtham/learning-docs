@@ -106,40 +106,75 @@ Ví dụ:
 - `유치원`: 유아교육을 중심으로 운영되는 교육기관이며 교육부 체계와 연결됩니다. (Trường mẫu giáo tập trung giáo dục mầm non, thuộc hệ thống giáo dục.)
 - `6-3-3`: 초등학교 6년, 중학교 3년, 고등학교 3년의 학제입니다. (Hệ thống 6 năm tiểu học, 3 năm THCS, 3 năm THPT.)
 - `의무교육`: 국가가 모든 아동에게 받도록 보장하고 의무화한 교육으로 기본적으로 초등학교와 중학교가 해당합니다. (Giáo dục bắt buộc, cơ bản gồm tiểu học và THCS.)
-- `일반고·특수목적고·특성화고·자율형 고등학교`.
+- `일반고`: 일반적인 교육과정을 운영하는 고등학교입니다. (THPT phổ thông.)
+- `특수목적고`: 특정 분야의 전문 인재 양성을 목적으로 하는 고등학교입니다. (THPT chuyên biệt.)
+- `특성화고`: 직업교육과 실무교육을 강화한 고등학교입니다. (THPT chuyên môn/nghề.)
+- `자율형 고등학교`: 학교 운영과 교육과정에 일정한 자율성을 가진 고등학교 유형입니다. (THPT có mức tự chủ nhất định.)
 - `수시`: 학생부·서류·면접 등 다양한 자료를 활용하는 대학 모집 방식입니다. (Tuyển sinh đại học đợt sớm dùng học bạ, hồ sơ, phỏng vấn và nhiều tiêu chí.)
 - `정시`: 주로 수능 성적 등을 중심으로 선발하는 정기 모집입니다. (Tuyển sinh chính quy, thường tập trung vào điểm CSAT.)
 - `수능`: 대학 입학에 활용되는 국가 단위 시험인 대학수학능력시험의 줄임말입니다. (CSAT, kỳ thi năng lực đại học quốc gia.)
-- `평생교육`, `학점은행제`, `독학학위제`.
+- `평생교육`: 생애 전반에 걸쳐 계속 배우는 교육입니다. (Giáo dục suốt đời.)
+- `학점은행제`: 학교 밖 학습과 자격 등을 학점으로 인정해 학위를 받을 수 있게 하는 제도입니다. (Hệ thống ngân hàng tín chỉ.)
+- `독학학위제`: 독학 후 시험을 통해 학위를 취득할 수 있는 제도입니다. (Hệ thống lấy bằng qua tự học và thi.)
 
 ## A5. Kinh tế – tài chính
 
 - `재화`: 사람의 욕구를 충족하는 유형의 상품입니다. (Hàng hóa hữu hình.)
 - `서비스`: 형태가 없는 활동이나 편익을 제공하는 경제적 가치입니다. (Dịch vụ, giá trị kinh tế vô hình.)
-- `생산·분배·소비`.
-- `물가`, `금리`, `한국은행`.
-- `소득·지출·저축·자산·부채·유동성`.
-- `예금·적금·대출·이자·신용·투자·보험`.
+- `생산·분배·소비`: 재화와 서비스를 만들고, 소득을 나누고, 사용하는 경제활동의 기본 과정입니다. (Sản xuất, phân phối và tiêu dùng.)
+- `물가`: 여러 상품과 서비스 가격의 전반적인 수준입니다. (Mức giá chung.)
+- `금리`: 돈을 빌리거나 맡길 때 적용되는 이자의 비율입니다. (Lãi suất.)
+- `한국은행`: 대한민국의 중앙은행으로 통화정책과 금융안정에 중요한 역할을 합니다. (Ngân hàng trung ương Hàn Quốc.)
+- `소득`: 일정 기간 동안 벌어들인 경제적 수입입니다. (Thu nhập.)
+- `지출`: 상품·서비스 등을 위해 돈을 쓰는 것입니다. (Chi tiêu.)
+- `저축`: 현재 소득의 일부를 미래를 위해 남겨 두는 것입니다. (Tiết kiệm.)
+- `자산`: 개인이나 가구가 보유한 경제적 가치가 있는 재산입니다. (Tài sản.)
+- `부채`: 다른 사람이나 금융기관에 갚아야 할 경제적 의무입니다. (Nợ phải trả.)
+- `유동성`: 자산을 큰 손실 없이 현금으로 바꾸기 쉬운 정도입니다. (Tính thanh khoản.)
+- `예금`: 은행에 돈을 맡기는 금융상품의 일반 명칭입니다. (Tiền gửi.)
+- `적금`: 일정 기간 정기적으로 돈을 넣어 목돈을 만드는 저축상품입니다. (Tiết kiệm góp định kỳ.)
+- `대출`: 돈을 빌리고 원금과 이자를 갚는 거래입니다. (Khoản vay.)
+- `이자`: 돈을 빌리거나 맡긴 대가로 주고받는 금액입니다. (Tiền lãi.)
+- `신용`: 돈을 갚을 능력과 의지에 대한 경제적 신뢰입니다. (Tín dụng.)
+- `투자`: 미래 수익을 기대하고 자산에 돈을 배분하는 행위입니다. (Đầu tư.)
+- `보험`: 보험료를 내고 사고 시 보장을 받는 제도입니다. (Bảo hiểm.)
 - `한국소비자원`: 소비자 피해 상담과 분쟁 해결을 지원하는 기관입니다. (Cơ quan hỗ trợ tư vấn và giải quyết tranh chấp người tiêu dùng.)
-- `보이스피싱·스미싱·파밍·메신저피싱`.
-- `근로계약서`, `임금`, `근로시간`, `휴일·휴가`, `퇴직금`, `산업안전`.
+- `보이스피싱`: 전화로 기관 등을 사칭해 돈이나 정보를 빼앗는 사기입니다. (Lừa đảo qua điện thoại.)
+- `스미싱`: 문자메시지의 악성 링크 등을 이용해 정보를 빼앗는 사기입니다. (Lừa đảo qua SMS.)
+- `파밍`: 가짜 사이트로 유도해 금융정보 등을 탈취하는 수법입니다. (Dẫn tới website giả để đánh cắp thông tin.)
+- `메신저피싱`: 메신저에서 지인을 사칭해 송금이나 개인정보를 요구하는 사기입니다. (Lừa đảo qua ứng dụng nhắn tin.)
+- `근로계약서`: 임금·근로시간·업무 등 근로조건을 적은 계약 문서입니다. (Hợp đồng lao động.)
+- `임금`: 근로의 대가로 받는 돈입니다. (Tiền lương.)
+- `근로시간`: 근로자가 사용자의 지휘 아래 일하는 시간입니다. (Giờ làm việc.)
+- `휴일·휴가`: 법이나 계약에 따라 일을 쉬는 날과 휴가입니다. (Ngày nghỉ/nghỉ phép.)
+- `퇴직금`: 일정 요건을 충족한 근로자가 퇴직할 때 받는 급여입니다. (Trợ cấp thôi việc/nghỉ việc.)
+- `산업안전`: 일터에서 사고와 질병을 예방하기 위한 안전 관리입니다. (An toàn lao động.)
 
 ## A6. Pháp luật – cư trú
 
 - `출입국관리법`: 외국인의 입국·체류·출국 등을 규율하는 법입니다. (Luật quản lý xuất nhập cảnh và cư trú của người nước ngoài.)
-- `사증(비자)`, `체류자격`, `체류기간`, `외국인등록`.
+- `사증(비자)`: 외국인이 입국할 수 있도록 발급되는 비자입니다. (Thị thực/visa.)
+- `체류자격`: 외국인이 한국에 체류하는 목적과 범위를 정하는 법적 지위입니다. (Tư cách lưu trú.)
+- `체류기간`: 외국인이 한국에 머물 수 있도록 허가된 기간입니다. (Thời hạn lưu trú.)
+- `외국인등록`: 일정 기간 이상 체류하는 외국인이 신분과 주소 등을 등록하는 절차입니다. (Đăng ký người nước ngoài.)
 - `영주권/영주자격`: 외국 국적을 유지하면서 장기간 안정적으로 체류할 수 있는 지위입니다. (Tư cách thường trú dài hạn, không đồng nghĩa quốc tịch.)
 - `국적`: 어떤 국가의 국민이라는 법적 지위입니다. (Quốc tịch: địa vị pháp lý là công dân của một quốc gia.)
-- `일반귀화·간이귀화·특별귀화`.
+- `일반귀화`: 일반적인 법정 요건을 충족해 귀화하는 방식입니다. (Nhập tịch thông thường.)
+- `간이귀화`: 특별한 가족관계 등으로 일부 요건이 완화되는 귀화 유형입니다. (Nhập tịch giản lược.)
+- `특별귀화`: 특별한 공로·관계 등 법정 사유에 따라 일부 요건이 달라지는 귀화 유형입니다. (Nhập tịch đặc biệt.)
 - `법률혼`: 법이 정한 혼인신고를 마친 법률상 부부 관계입니다. (Hôn nhân hợp pháp đã đăng ký.)
 - `사실혼`: 혼인신고는 없지만 실질적으로 부부처럼 공동생활을 하는 관계입니다. (Quan hệ vợ chồng thực tế nhưng chưa đăng ký.)
 - `협의이혼`: 부부가 이혼에 합의하여 법정 절차를 거쳐 이혼하는 방식입니다. (Ly hôn thuận tình.)
 - `재판상 이혼`: 합의가 어렵거나 법정 사유가 있을 때 재판으로 이혼하는 방식입니다. (Ly hôn qua tòa án.)
 - `민사`: 개인·법인 사이의 권리와 재산 분쟁을 다루는 법 영역입니다. (Dân sự: tranh chấp quyền và tài sản.)
 - `형사`: 범죄와 형벌에 관한 법적 절차나 사건을 말합니다. (Hình sự: vụ việc/thủ tục về tội phạm và hình phạt.)
-- `수사·기소·재판`.
+- `수사`: 범죄 혐의의 사실관계와 증거를 확인하는 절차입니다. (Điều tra.)
+- `기소`: 형사사건을 법원의 재판에 넘기기 위해 공소를 제기하는 절차입니다. (Truy tố.)
+- `재판`: 법원이 증거와 법에 따라 사건을 판단하는 절차입니다. (Xét xử.)
 - `무죄추정`: 유죄 판결이 확정되기 전까지는 무죄로 추정한다는 원칙입니다. (Nguyên tắc suy đoán vô tội cho tới khi có phán quyết có hiệu lực.)
-- `대한법률구조공단`, `국가인권위원회`, `국민권익위원회`.
+- `대한법률구조공단`: 법률 상담과 소송 구조 등을 지원하는 공공기관입니다. (Cơ quan trợ giúp pháp lý.)
+- `국가인권위원회`: 인권 침해와 차별 문제를 조사하고 권고하는 국가기관입니다. (Ủy ban Nhân quyền Quốc gia.)
+- `국민권익위원회`: 고충민원·부패방지·행정심판 등 국민 권익 관련 업무를 담당합니다. (Cơ quan bảo vệ quyền lợi công dân/chống tham nhũng.)
 
 ## A7. Lịch sử
 
@@ -157,13 +192,20 @@ Chuỗi dân chủ hóa:
 
 ## A8. Địa lý
 
-- `수도권 = 서울·경기·인천`.
-- `충청·전라(호남)·경상(영남)·강원·제주`.
+- `수도권`: 서울특별시·경기도·인천광역시를 묶어 부르는 지역입니다. (Vùng thủ đô gồm Seoul, Gyeonggi và Incheon.)
+- `충청`: 대전·세종·충청남도·충청북도를 중심으로 보는 지역입니다. (Vùng Chungcheong.)
+- `전라/호남`: 광주와 전라남도·전라북도를 중심으로 보는 지역입니다. (Vùng Jeolla/Honam.)
+- `경상/영남`: 부산·대구·울산과 경상남도·경상북도를 중심으로 보는 지역입니다. (Vùng Gyeongsang/Yeongnam.)
+- `강원`: 산악지형과 동해안이 특징적인 지역입니다. (Vùng Gangwon.)
+- `제주`: 한라산과 화산지형으로 유명한 섬 지역입니다. (Jeju.)
 - `동고서저`: 한반도의 지형이 동쪽이 높고 서쪽이 낮다는 특징입니다. (Địa hình bán đảo cao ở phía đông, thấp ở phía tây.)
-- `사계절`, `장마`, `태풍`.
+- `사계절`: 봄·여름·가을·겨울 네 계절이 뚜렷한 기후 특징입니다. (Bốn mùa.)
+- `장마`: 여름철에 비가 여러 날 이어지는 우기 현상입니다. (Mùa mưa kéo dài.)
+- `태풍`: 강한 바람과 비를 동반하는 열대저기압입니다. (Bão nhiệt đới.)
 - `표준어`: 공적인 의사소통의 기준으로 정한 표준적인 말입니다. (Ngôn ngữ chuẩn dùng làm chuẩn giao tiếp chính thức.)
 - `사투리`: 특정 지역에서 주로 사용하는 지역어입니다. (Phương ngữ địa phương.)
-- `수도권 집중`, `지방소멸`.
+- `수도권 집중`: 인구·일자리·교육·자원이 수도권에 과도하게 모이는 현상입니다. (Tập trung quá mức vào vùng thủ đô.)
+- `지방소멸`: 인구 감소와 고령화 등으로 지역의 지속 가능성이 약해지는 현상입니다. (Suy giảm địa phương.)
 
 ---
 
@@ -1011,6 +1053,61 @@ Phần này bám theo 8 lĩnh vực của bộ `한국사회 이해 기본`. M�
 
 ---
 
+# B+. 기본 보완 — các keyword dễ bị bỏ sót
+
+Phần này bổ sung những khái niệm **đã xuất hiện trong coverage/giáo trình hoặc rất gần với câu hỏi KIIP**, nhưng trước đây master mới nhắc gián tiếp, gộp chung hoặc chưa có câu giải thích song ngữ. Hãy học sau B1~B8 và trước khi chuyển sang 귀화용 심화.
+
+## B+1. 국가·영토·국경일
+
+- `한반도`: 대한민국과 북한이 위치한 동아시아의 반도입니다. (Bán đảo Triều Tiên, nơi Hàn Quốc và Triều Tiên nằm.)
+- `수도 서울`: 서울은 대한민국의 수도이며 정치·경제·문화의 중심입니다. (Seoul là thủ đô và trung tâm chính trị, kinh tế, văn hóa.)
+- `국경일`: 국가의 경사로운 날을 기념하기 위해 법으로 정한 날입니다. (Ngày quốc lễ được luật quy định để kỷ niệm các sự kiện trọng đại của quốc gia.)
+- `3·1절`: 3월 1일이며 1919년 3·1 운동의 독립정신을 기념합니다. (Ngày 1/3, kỷ niệm Phong trào 1/3/1919.)
+- `제헌절`: 7월 17일이며 대한민국 헌법 제정을 기념합니다. (Ngày Hiến pháp 17/7.)
+- `광복절`: 8월 15일이며 광복과 대한민국 정부 수립을 기념합니다. (Ngày Quang Phục 15/8.)
+- `개천절`: 10월 3일이며 고조선 건국의 전통과 홍익인간 이념을 기념합니다. (Ngày Khai Thiên 3/10, gắn với truyền thống lập quốc Gojoseon.)
+- `한글날`: 10월 9일이며 한글 창제·반포의 의미와 세종대왕의 업적을 기념합니다. (Ngày Hangul 9/10.)
+- `현충일`: 6월 6일이며 나라를 위해 희생한 사람들을 추모하는 날입니다. (Ngày Tưởng niệm 6/6.)
+- `조기`: 현충일처럼 조의를 표하는 날에는 태극기를 깃봉에서 내려 달아 애도를 나타냅니다. (Treo cờ rủ để tưởng niệm.)
+
+**Điểm bẫy:** `국경일` và `공휴일` không hoàn toàn giống nhau. `제헌절` là 국경일 nhưng hiện không nằm trong nhóm 국경일 공휴일; vì vậy đừng suy luận “mọi 국경일 đều là ngày nghỉ”.
+
+## B+2. 가족 관계
+
+- `부부`: 혼인 관계에 있는 두 사람을 말합니다. (Vợ chồng.)
+- `부모-자녀`: 부모와 자녀 사이의 가족 관계입니다. (Quan hệ cha mẹ–con cái.)
+- `조부모-손자녀`: 할아버지·할머니와 손자·손녀 사이의 세대 관계입니다. (Quan hệ ông bà–cháu.)
+- `식구`: 함께 살거나 한집안 사람을 친근하게 부르는 표현입니다. (Cách gọi thân mật những người cùng gia đình/cùng nhà.)
+- `우리`: 한국어에서는 가족·집단을 말할 때 개인 소유보다 공동체적 표현으로 자주 사용됩니다. (Trong tiếng Hàn “우리” thường được dùng mang sắc thái cộng đồng, ví dụ 우리 엄마.)
+
+## B+3. 교육 표현
+
+- `유아교육`: 초등학교 입학 전 유아의 발달과 학습을 지원하는 교육입니다. (Giáo dục mầm non.)
+- `대학`: 고등학교 이후의 고등교육기관을 넓게 가리키는 말입니다. (Cách gọi rộng các cơ sở giáo dục bậc đại học.)
+- `전문대학`: 직업·실무 중심의 전문 교육을 제공하는 고등교육기관입니다. (Cao đẳng/đại học chuyên môn.)
+- `교육열`: 교육을 중요하게 생각하고 교육에 많은 관심과 자원을 투자하는 사회적 경향입니다. (Mức độ coi trọng và đầu tư mạnh cho giáo dục.)
+
+## B+4. 선거 원칙을 từng từ로 구분
+
+- `보통선거`: 일정한 기본 자격을 갖춘 국민에게 재산·성별 등에 따른 차별 없이 선거권을 인정하는 원칙입니다. (Bầu cử phổ thông.)
+- `평등선거`: 유권자 한 사람의 표가 원칙적으로 동등한 가치를 갖는다는 원칙입니다. (Bầu cử bình đẳng.)
+- `직접선거`: 유권자가 대표자를 직접 선택하는 원칙입니다. (Bầu cử trực tiếp.)
+- `비밀선거`: 누구에게 투표했는지 다른 사람이 알 수 없도록 보장하는 원칙입니다. (Bỏ phiếu kín.)
+- `입법`: 사회 규칙인 법률을 만들거나 고치는 국가 작용입니다. (Hoạt động lập pháp: làm hoặc sửa luật.)
+
+## B+5. 경제·행정·생활법률
+
+- `세금`: 국가와 지방자치단체가 공공서비스를 운영하기 위해 법에 따라 거두는 돈입니다. (Thuế dùng làm nguồn lực cho dịch vụ công.)
+- `중앙은행`: 한 나라의 통화정책과 금융안정에 핵심 역할을 하는 은행이며 한국에서는 한국은행이 해당합니다. (Ngân hàng trung ương; ở Hàn Quốc là 한국은행.)
+- `매매`: 한쪽이 재산권을 넘기고 다른 쪽이 대금을 지급하기로 하는 계약입니다. (Hợp đồng mua bán.)
+- `정부24`: 여러 행정민원과 증명서 발급 등을 온라인으로 이용할 수 있는 정부 서비스입니다. (Cổng dịch vụ hành chính điện tử Government24.)
+- `법무부`: 출입국·국적·교정·법무정책 등 법무행정을 담당하는 중앙행정기관입니다. (Bộ Tư pháp Hàn Quốc.)
+- `법률구조`: 경제적·법률적 어려움이 있는 사람에게 상담·소송지원 등 법률 도움을 제공하는 제도입니다. (Trợ giúp pháp lý.)
+
+Điểm chốt của phần B+ là các từ trên **không tạo một chapter mới**; chúng lấp các lỗ hổng giữa những chapter đã có. Khi gặp `국경일`, `세금`, `중앙은행` hay `정부24`, hãy route ngược về 국가상징, 경제 hoặc 법·행정 tương ứng.
+
+---
+
 # C. 귀화용 심화 — phải học thêm
 
 Phần 심화 không chỉ hỏi “đây là gì?” mà thường đòi hỏi **định nghĩa → lý do → quyền/nghĩa vụ → giới hạn → ví dụ**. Ngoài 5 trục chính thức trong tài liệu Bộ Tư pháp, repo legacy đã triển khai thành 20 cụm để dễ ôn sâu; bảng dưới đây giữ cả hai cách nhìn.
@@ -1293,6 +1390,36 @@ Học ở mức hiểu: ngoại giao là cách nhà nước quản lý quan hệ
 
 ---
 
+## C19. 사회 변동 — 심화에서 놓치기 쉬운 변화 keyword
+
+Các keyword này giải thích **vì sao xã hội Hàn Quốc hiện đại khác trước**, nên rất hữu ích khi câu hỏi yêu cầu nguyên nhân–hệ quả thay vì định nghĩa đơn lẻ.
+
+- `교육 확대`: 더 많은 사람이 중등·고등교육을 받을 기회가 넓어지는 현상입니다. (Mở rộng cơ hội giáo dục trung học và đại học.)
+- `가족 구조 변화`: 대가족 중심에서 핵가족·1인 가구 등 다양한 가족·가구 형태가 늘어나는 변화입니다. (Thay đổi cấu trúc gia đình/hộ.)
+- `정보화`: 정보통신기술이 사회·경제·생활 전반에 널리 사용되는 변화입니다. (Thông tin hóa/số hóa đời sống xã hội.)
+- `고령화`: 전체 인구에서 노인 인구의 비중이 높아지는 현상입니다. (Già hóa dân số.)
+- `다문화 사회`: 서로 다른 국적·문화적 배경을 가진 사람들이 함께 살아가는 사회입니다. (Xã hội đa văn hóa.)
+- `저출산`: 출생아 수와 출산 수준이 낮아지는 현상입니다. (Mức sinh thấp.)
+- `인구 감소`: 출생·사망·이동의 결과로 전체 또는 특정 지역의 인구가 줄어드는 현상입니다. (Suy giảm dân số.)
+
+**Chuỗi nên hiểu:** `산업화·도시화 → 교육 확대·정보화 → 가족 구조 변화 → 고령화·저출산·다문화 사회`. Đây không phải quan hệ nguyên nhân một chiều tuyệt đối, nhưng là mental model giúp nối các biến đổi xã hội thay vì học rời từng từ.
+
+## C20. 시민교육 확장 — nên biết thêm, không coi là “chắc chắn ra đề”
+
+Bộ Tư pháp hiện mô tả các chương trình giáo dục công dân cho người nhập cư với những nội dung như 생활법률, 금융·경제, 소비자, 소방안전, 산업안전보건 và 마약예방. Đây là **phạm vi thích nghi xã hội hiện hành**, hữu ích cho câu tình huống; tuy nhiên không nên coi từng mục dưới đây là cam kết rằng đề KIIP 5 sẽ hỏi trực tiếp.
+
+- `생활법률`: 일상생활에서 자주 만나는 가족·근로·부동산·계약 등의 법률 문제를 다루는 실용 법지식입니다. (Pháp luật đời sống: kiến thức pháp lý thực tế về gia đình, lao động, bất động sản, hợp đồng.)
+- `범죄예방`: 범죄 위험을 줄이고 피해를 피하기 위한 행동과 교육입니다. (Phòng ngừa tội phạm.)
+- `소방안전`: 화재를 예방하고 화재 발생 시 안전하게 대피·신고하는 지식입니다. (An toàn phòng cháy chữa cháy.)
+- `교통안전`: 교통법규를 지키고 사고를 예방하기 위한 안전 지식과 행동입니다. (An toàn giao thông.)
+- `산업안전보건`: 일터에서 사고와 직업성 질병을 예방하고 근로자의 건강을 보호하는 제도와 활동입니다. (An toàn và sức khỏe nghề nghiệp.)
+- `마약예방`: 불법 마약류의 위험과 법적 문제를 알고 사용·유통을 피하도록 하는 예방교육입니다. (Phòng chống ma túy.)
+- `인권보호`: 사람의 존엄과 기본적 권리가 침해되지 않도록 보호하는 원칙과 활동입니다. (Bảo vệ nhân quyền.)
+
+Nếu gặp câu tình huống, dùng pattern **위험 인식 → 즉시 행동 → 공식 기관/신고 → 증거·기록 보존** thay vì chỉ nhớ tên chủ đề.
+
+---
+
 # D. Số liệu và cơ quan phải thuộc
 
 ## D1. Số ổn định/high-yield
@@ -1509,7 +1636,9 @@ Ví dụ:
 12. Nhớ `대통령 5년·국회의원 4년·300명·선거 만18세`.
 13. Nhớ `예금보호 1억원`, `법정 최고금리 연20%` nhưng biết đây là current facts cần timestamp.
 14. Nhớ current criminal-justice transition: `검찰청 폐지 → 공소청 + 중대범죄수사청`.
-15. Chọn 5 keyword bất kỳ và tự nói mỗi từ 2 câu Hàn.
+15. Nói đủ 5 `국경일`: `3·1절·제헌절·광복절·개천절·한글날`, và nhớ `현충일` là ngày tưởng niệm quan trọng.
+16. Phân biệt từng từ `보통·평등·직접·비밀선거`, không chỉ đọc thuộc cả cụm.
+17. Chọn 5 keyword bất kỳ và tự nói mỗi từ 2 câu Hàn.
 
 ---
 
@@ -1517,11 +1646,11 @@ Ví dụ:
 
 ## Tier S — không được sai
 
-`국가상징`, `삼권분립`, `국회/정부/법원`, `선거 4대 원칙`, `4대 사회보험`, `사회보험/공공부조`, `영주권/국적`, `전세/월세`, `어린이집/유치원`, `수시/정시`, `112/119/117/1345`, `역사 대순서`, `민주화 3사건`.
+`국가상징`, `국경일 5개`, `삼권분립`, `국회/정부/법원`, `선거 4대 원칙`, `4대 사회보험`, `사회보험/공공부조`, `영주권/국적`, `전세/월세`, `어린이집/유치원`, `수시/정시`, `112/119/117/1345`, `역사 대순서`, `민주화 3사건`.
 
 ## Tier A — rất nên thuộc
 
-`근로계약서`, `소비자 권리`, `한국은행`, `보이스피싱`, `입국·체류·귀화`, `가족법`, `등기부등본·전입신고·확정일자`, `민사/형사`, `수사/기소/재판`, `수도권·충청·호남·영남·강원·제주`.
+`근로계약서`, `소비자 권리`, `한국은행/중앙은행`, `세금`, `보이스피싱`, `입국·체류·귀화`, `정부24·법무부`, `가족법`, `등기부등본·전입신고·확정일자`, `민사/형사`, `수사/기소/재판`, `정보화·고령화·다문화 사회`, `수도권·충청·호남·영남·강원·제주`.
 
 ## Tier B — dùng để tăng độ chắc
 
@@ -1545,6 +1674,8 @@ Nguồn chính thức cần kiểm tra khi fact có thể thay đổi:
 - 한국사회 이해 교재/자료: https://www.moj.go.kr/
 - 국가법령정보센터: https://www.law.go.kr/
 - 금융위원회: https://www.fsc.go.kr/
+- 행정안전부 국가상징·국경일: https://www.mois.go.kr/
+- 법무부 출입국·외국인정책본부 이민자 사회통합: https://www.moj.go.kr/immigration/1518/subview.do
 
 **Verified-current layer:** 2026-10-06.  
 Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/legacy state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
