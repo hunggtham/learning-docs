@@ -253,21 +253,37 @@ phát hành/đối tác, và điều kiện đáo hạn hoặc gọi trước l�
 
 #### 10. Quỹ đầu tư vào quỹ, quỹ mẹ và sản phẩm nhiều lớp
 
-**Fund of funds** mua các quỹ con thay vì chọn từng cổ phiếu hoặc trái phiếu.
+**Fund of funds** (`재간접펀드`) mua các quỹ con thay vì chọn từng cổ phiếu hoặc trái phiếu.
 Ưu điểm là một quyết định có thể tạo đa dạng hóa theo nhiều nhà quản lý, chiến
 lược hoặc quốc gia. Nhược điểm là chi phí của quỹ mẹ cộng với chi phí ở quỹ con,
 và nhà đầu tư khó nhìn ngay rủi ro trùng lặp giữa các quỹ.
+
+Source đặt nhiều guardrail độc lập, nên không được gộp thành một câu “FoF được
+đầu tư tối đa 20%”:
+
+- quỹ do **cùng một công ty quản lý**: tổng tỷ trọng không vượt 50% tài sản quỹ
+  trong snapshot, với ngoại lệ source cho một số offshore fund/ETF;
+- **một quỹ con**: không vượt 20% trong rule chung của snapshot, với ngoại lệ ETF
+  mà source nêu riêng;
+- không đầu tư vào **một FoF khác** theo rule source;
+- đầu tư vào **private fund (`사모펀드`)** không vượt 5% trong snapshot;
+- phí bán hàng/chi phí qua hai tầng bị giới hạn trong source để giảm double fee.
+
+Các tỷ lệ 50%/20%/5% là **SOURCE / TEXTBOOK STATE**. Cơ chế bền vững hơn các
+con số là: hạn chế tập trung vào cùng manager/quỹ, chặn layering khó nhìn và
+kiểm soát phí chồng phí.
 
 **Quỹ mẹ (master fund)** gom nhiều quỹ con có mục tiêu tương tự để dùng chung một
 đội quản lý, hệ thống giao dịch và quản trị. Quy mô lớn có thể giảm chi phí vận
 hành, nhưng mức độ tập trung vào một nhà quản lý cũng tăng.
 
 **Quỹ nhiều lớp (multi-class fund)** là một danh mục có các lớp chứng chỉ với mức
-phí, kênh phân phối hoặc nhóm khách hàng khác nhau. A thường thu phí mua, B thu
-phí khi bán, C không thu phí trước nhưng phí quản lý có thể cao hơn; các mã S, P,
-W, F hoặc I là quy ước của sản phẩm cụ thể, không phải chuẩn chung cho
-mọi thị trường. Khi so sánh, dùng tổng chi phí theo đúng thời gian nắm giữ thay vì
-chỉ nhìn tên lớp.
+phí, kênh phân phối hoặc nhóm khách hàng khác nhau. Trong **source**, `A` là lớp
+có `선취수수료` (upfront sales charge), còn `S` là lớp dành cho kênh
+`펀드슈퍼마켓` (fund supermarket); đây là distinction được kiểm tra ở câu
+Đúng/Sai 11. B/C/D và các mã P/W/F/I có thể biểu diễn cơ chế phí/kênh khác theo
+từng sản phẩm, nên không biến mã lớp thành chuẩn phổ quát. Khi so sánh, dùng tổng
+chi phí theo đúng thời gian nắm giữ thay vì chỉ nhìn tên lớp.
 
 Ba cấu trúc liên quan cần tách:
 
