@@ -125,7 +125,7 @@ BF_3+NH_3\rightarrow F_3B\leftarrow NH_3
 
 Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
-> **Chuyển mạch:** Trong **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Species có số electron lẻ** tiếp nhận điểm tựa từ **Hệ thiếu electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ siêu hóa trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Species có số electron lẻ** nối từ **Hệ thiếu electron** sang **Hệ siêu hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Species có số electron lẻ
 
@@ -133,7 +133,7 @@ Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
 Các **gốc tự do (radicals / 라디칼)** thường có electron độc thân và có chemistry rất khác closed-shell molecules.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Hệ siêu hóa trị** tiếp nhận điểm tựa từ **Species có số electron lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Hệ siêu hóa trị** nối từ **Species có số electron lẻ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ siêu hóa trị
 
@@ -402,7 +402,7 @@ Không phải giải thích mặc định hiện đại cho main-group hypervale
 
 Thường không. Cần MO/electronic-state các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Mô hình tư duy** gom các mảnh từ **Hệ siêu hóa trị** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Mô hình tư duy** tổng hợp từ **Hệ siêu hóa trị** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

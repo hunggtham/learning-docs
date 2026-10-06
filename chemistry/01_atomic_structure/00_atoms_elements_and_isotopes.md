@@ -12,7 +12,7 @@ Khái niệm nguyên tử ban đầu xuất hiện như một câu hỏi triết
 
 Tuy nhiên, nguyên tử vẫn là đơn vị cực kỳ hữu ích trong Hóa học vì bản sắc hóa học của nguyên tố được bảo toàn ở cấp hạt nhân trong phần lớn phản ứng hóa học.
 
-> **Chuyển mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Proton quyết định bản sắc nguyên tố** tiếp nhận điểm tựa từ **Từ ý tưởng “nguyên tử” đến mô hình hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron quyết định phần lớn hành vi hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Proton quyết định bản sắc nguyên tố** nối từ **Từ ý tưởng “nguyên tử” đến mô hình hiện đại** sang **Electron quyết định phần lớn hành vi hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proton quyết định bản sắc nguyên tố
 
@@ -22,7 +22,7 @@ Hydrogen có `Z = 1`, carbon có `Z = 6`, oxygen có `Z = 8`. Nếu hạt nhân 
 
 Vì vậy một nguyên tố được xác định bởi **số proton**, không phải số electron hay số neutron.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Electron quyết định phần lớn hành vi hóa học** tiếp nhận điểm tựa từ **Proton quyết định bản sắc nguyên tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neutron và đồng vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Electron quyết định phần lớn hành vi hóa học** nối từ **Proton quyết định bản sắc nguyên tố** sang **Neutron và đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electron quyết định phần lớn hành vi hóa học
 
@@ -43,7 +43,7 @@ Ví dụ, một nguyên tử sodium trung hòa có 11 proton và 11 electron. Kh
 - **hạt nhân** quyết định bản sắc nguyên tố và chứa gần như toàn bộ khối lượng;
 - **cách electron sắp xếp** chi phối phần lớn hóa học của nguyên tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Neutron và đồng vị** tiếp nhận điểm tựa từ **Electron quyết định phần lớn hành vi hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng vị không phải ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Neutron và đồng vị** nối từ **Electron quyết định phần lớn hành vi hóa học** sang **Đồng vị không phải ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Neutron và đồng vị
 
@@ -75,7 +75,7 @@ Ví dụ carbon-14:
 
 có 6 proton và `14-6=8` neutron.
 
-> **Chuyển mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị không phải ion** tiếp nhận điểm tựa từ **Neutron và đồng vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng nguyên tử không đơn giản bằng số khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị không phải ion** nối từ **Neutron và đồng vị** sang **Khối lượng nguyên tử không đơn giản bằng số khối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị không phải ion
 
@@ -87,7 +87,7 @@ có 6 proton và `14-6=8` neutron.
 
 Hai sự khác biệt này nằm ở hai phần khác nhau của nguyên tử: hạt nhân và đám mây electron.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Khối lượng nguyên tử không đơn giản bằng số khối** tiếp nhận điểm tựa từ **Đồng vị không phải ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Khối lượng nguyên tử không đơn giản bằng số khối** nối từ **Đồng vị không phải ion** sang **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng nguyên tử không đơn giản bằng số khối
 
@@ -105,7 +105,7 @@ Proton và neutron có khối lượng hơi khác `1 u`, electron cũng có kh�
 
 Phần hóa học hạt nhân sẽ phát triển sâu hơn ý tưởng này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** tiếp nhận điểm tựa từ **Khối lượng nguyên tử không đơn giản bằng số khối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thang kích thước của nguyên tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** nối từ **Khối lượng nguyên tử không đơn giản bằng số khối** sang **Thang kích thước của nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?
 
@@ -138,7 +138,7 @@ Không nhất thiết tồn tại một nguyên tử X có khối lượng đún
 
 Đây là liên hệ trực tiếp giữa Hóa học và **trung bình có trọng số (weighted mean)** trong thống kê.
 
-> **Chuyển mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Thang kích thước của nguyên tử** tiếp nhận điểm tựa từ **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Thang kích thước của nguyên tử** nối từ **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** sang **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thang kích thước của nguyên tử
 
@@ -146,7 +146,7 @@ Hạt nhân có kích thước cỡ `10^-15 m`, còn toàn bộ nguyên tử th�
 
 Nếu phóng đại hạt nhân thành một hạt nhỏ vài millimeter, vùng electron có thể trải rộng tới hàng chục hoặc hàng trăm mét tùy phép so sánh. Điều này nhấn mạnh rằng nguyên tử phần lớn không chứa hạt nhân, nhưng không nên diễn giải “khoảng trống” theo nghĩa cổ điển tuyệt đối; electron được mô tả bằng trạng thái lượng tử và mật độ xác suất.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** tiếp nhận điểm tựa từ **Thang kích thước của nguyên tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự hình thành ion và hạch toán điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** nối từ **Thang kích thước của nguyên tử** sang **Sự hình thành ion và hạch toán điện tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?
 
@@ -158,7 +158,7 @@ Electron không được mô tả bằng quỹ đạo xác định như hành ti
 
 Ta sẽ đi tới mô hình này thông qua bức xạ và lượng tử hóa ở chương tiếp theo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Sự hình thành ion và hạch toán điện tích** tiếp nhận điểm tựa từ **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Sự hình thành ion và hạch toán điện tích** nối từ **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** sang **Tính chất hóa học của các đồng vị giống nhau tới mức nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự hình thành ion và hạch toán điện tích
 
@@ -182,7 +182,7 @@ Chloride `Cl^-` có 17 proton và 18 electron:
 
 Công thức rất đơn giản nhưng giúp tránh nhầm lẫn khi đọc ký hiệu ion.
 
-> **Chuyển mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** tiếp nhận điểm tựa từ **Sự hình thành ion và hạch toán điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng vị phóng xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** nối từ **Sự hình thành ion và hạch toán điện tích** sang **Đồng vị phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính chất hóa học của các đồng vị giống nhau tới mức nào?
 
@@ -192,7 +192,7 @@ Nhưng không hoàn toàn giống. Khác biệt khối lượng có thể ảnh 
 
 Do đó phát biểu “các đồng vị có hóa học giống hệt nhau” chỉ là một xấp xỉ hữu ích.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị phóng xạ** tiếp nhận điểm tựa từ **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị phóng xạ** nối từ **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị phóng xạ
 
@@ -202,7 +202,7 @@ Phóng xạ là **biến đổi hạt nhân (nuclear transformation)**, không p
 
 Đây là lý do định luật bảo toàn bản sắc nguyên tố đúng cho hóa học thông thường nhưng không thể áp dụng nguyên xi cho phản ứng hạt nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Mô hình tư duy** gom các mảnh từ **Đồng vị phóng xạ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Mô hình tư duy** tổng hợp từ **Đồng vị phóng xạ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -214,7 +214,7 @@ Hãy hình dung nguyên tử như một hệ có hai tầng chức năng:
 
 Mô hình tư duy này giúp phân biệt các câu hỏi thuộc hóa học hạt nhân với hóa học electron.
 
-> **Chuyển mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Các hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -234,7 +234,7 @@ Không. Số proton và neutron luôn là số nguyên. Giá trị thập phân 
 
 Không tuyệt đối. Cấu trúc electron rất giống nhau, nhưng khác biệt khối lượng có thể tạo hiệu ứng đồng vị.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 
