@@ -288,6 +288,17 @@ domains:
     scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
+  - id: computer_utilization_ability
+    title: 컴퓨터활용능력
+    group: Certifications
+    path: 컴퓨터활용능력/
+    entrypoint: 컴퓨터활용능력/README.md
+    status: canonical
+    last_reviewed: 2026-10-06
+    scope: Korean Computer Proficiency certification study map; initial canonical track covers 컴퓨터활용능력 2급 필기 and 실기 with version-aware exam structure.
+    prerequisites: []
+    related: [information_processing_engineer, sql]
+
   - id: sql
     title: SQLD / SQL
     group: Certifications
@@ -379,6 +390,7 @@ Professional
 
 Certifications
 ├── 정보처리기사
+├── 컴퓨터활용능력
 ├── SQLD / SQL
 └── KIIP / Korean Society
 
