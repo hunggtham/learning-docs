@@ -73,6 +73,14 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
 - Commit local đi kèm trước đó là `30ccc804`; không có thay đổi unrelated nào
   được stage hoặc commit trong checkpoint này.
 
+## Prompt contract checkpoint
+
+- `94ff05ad` cập nhật `prompt/COMMON_PROMPT.md`: `Nối mạch` là nhãn hiện tại,
+  `Chuyển mạch` là legacy; câu nối phải gọi tên topic thật, nói quan hệ thật và
+  lấy owner/vị trí từ README hoặc canonical map.
+- Prompt vẫn giữ yêu cầu giải thích tiếng Việt, không quiz và audit từng batch;
+  các batch sau phải dùng contract này.
+
 ## Cách cập nhật file này
 
 Sau mỗi batch tiếp theo, cập nhật snapshot số lượng, thêm hash commit mới và ghi
