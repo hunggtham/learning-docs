@@ -81,6 +81,15 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
 - Prompt vẫn giữ yêu cầu giải thích tiếng Việt, không quiz và audit từng batch;
   các batch sau phải dùng contract này.
 
+## Branch cleanup checkpoint
+
+- Local branch `codex/connection-sentence-updates` đã được xoá sau khi xác nhận
+  branch là ancestor của `main`, không có commit riêng và không có remote branch
+  tương ứng.
+- Worktree detached `/Users/mac/.codex/worktrees/507a/00.my-learning` vẫn được
+  giữ vì còn thư mục untracked `life/`; không xoá tự động dữ liệu chưa xác định
+  owner. Cần một chỉ dẫn riêng nếu muốn xoá toàn bộ worktree đó.
+
 ## Cách cập nhật file này
 
 Sau mỗi batch tiếp theo, cập nhật snapshot số lượng, thêm hash commit mới và ghi
