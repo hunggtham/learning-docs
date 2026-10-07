@@ -115,6 +115,9 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
   `feat/marxism-leninism-learning-module`, `feat/vietnamese-history-depth`.
 - Giữ các branch còn unique commit hoặc thuộc task khác; không xoá remote branch
   khi chưa xác định owner. Worktree detached có untracked `life/` vẫn được giữ.
+- Đã xoá thêm 4 remote branch merged tương ứng: `origin/feat/korean-history`,
+  `origin/feat/learning-docs-bilingual-continuity`,
+  `origin/feat/marxism-leninism-learning-module`, `origin/feat/vietnamese-history`.
 
 ## Cách cập nhật file này
 
