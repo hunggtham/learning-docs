@@ -12,6 +12,35 @@ const sectionBookmarksKey = doc => `study-shelf-section-bookmarks:${doc.path}`;
 const memoryStorage = new Map();
 let persistentStorage = true;
 
+async function copyTextToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {}
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.top = '0';
+  textarea.style.left = '0';
+  textarea.style.width = '1px';
+  textarea.style.height = '1px';
+  textarea.style.padding = '0';
+  textarea.style.border = '0';
+  textarea.style.opacity = '0';
+  document.body.append(textarea);
+  textarea.focus();
+  textarea.select();
+  textarea.setSelectionRange(0, text.length);
+  let copied = false;
+  try { copied = document.execCommand('copy'); } catch {}
+  textarea.remove();
+  return copied;
+}
+
 function storageGet(key) {
   try { return window.localStorage.getItem(key); }
   catch { persistentStorage = false; return memoryStorage.get(key) || null; }
@@ -249,7 +278,7 @@ async function renderReader(path, sectionId = '') {
         <header class="reader-header">
           <p class="eyebrow">${doc.type} · ${escapeHtml(doc.category)}</p>
           <h1>${escapeHtml(titleOf(doc))}</h1>
-          <p class="muted">${escapeHtml(doc.displayPath || doc.path)} · ${formatSize(doc.size)}</p>
+          <p class="muted reader-file-meta"><span class="reader-file-path">${escapeHtml(doc.displayPath || doc.path)}</span><button id="copy-file-path" class="copy-path-button" type="button" aria-label="Copy filepath" title="Copy filepath"><span aria-hidden="true">⧉</span><span class="copy-path-label">Copy filepath</span></button><span class="reader-file-size">· ${formatSize(doc.size)}</span><span id="copy-file-path-status" class="copy-path-status" role="status" aria-live="polite"></span></p>
           <div id="reader-toolbar" class="reader-toolbar"></div>
         </header>
         <div id="content"></div>
@@ -275,6 +304,22 @@ async function renderReader(path, sectionId = '') {
   document.querySelector('#toc-toggle').onclick = () => setDrawer(true);
   document.querySelector('#toc-close').onclick = () => setDrawer(false);
   overlay.onclick = () => setDrawer(false);
+
+  const copyPathButton = document.querySelector('#copy-file-path');
+  const copyPathStatus = document.querySelector('#copy-file-path-status');
+  const filePath = doc.displayPath || doc.path;
+  copyPathButton.onclick = async () => {
+    const copied = await copyTextToClipboard(filePath);
+    copyPathButton.classList.toggle('copied', copied);
+    copyPathButton.querySelector('.copy-path-label').textContent = copied ? 'Đã copy' : 'Copy lỗi';
+    copyPathStatus.textContent = copied ? 'Đã copy filepath.' : 'Không thể tự copy; hãy bôi đen và copy thủ công.';
+    window.clearTimeout(copyPathButton._resetTimer);
+    copyPathButton._resetTimer = window.setTimeout(() => {
+      copyPathButton.classList.remove('copied');
+      copyPathButton.querySelector('.copy-path-label').textContent = 'Copy filepath';
+      copyPathStatus.textContent = '';
+    }, 2400);
+  };
 
   if (doc.type === 'PDF') {
     document.querySelector('#toc').innerHTML = '<p class="toc-empty">Mục lục theo section hiện hỗ trợ tài liệu Markdown.</p>';

@@ -143,6 +143,12 @@ button { -webkit-tap-highlight-color:transparent; }
 .reader { min-width:0; }
 .reader-header { margin-bottom:30px; padding-bottom:27px; border-bottom:1px solid var(--line); }
 .reader-header h1 { margin:0 0 14px; overflow-wrap:anywhere; font-size:clamp(2rem,4vw,3.5rem); line-height:1.08; letter-spacing:-.055em; }
+.reader-file-meta { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:0; }
+.reader-file-path { min-width:0; overflow-wrap:anywhere; }
+.reader-file-size { flex:0 0 auto; }
+.copy-path-button { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-height:38px; padding:7px 11px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); cursor:pointer; font-size:.78rem; font-weight:750; touch-action:manipulation; }
+.copy-path-button:hover,.copy-path-button:focus-visible,.copy-path-button.copied { border-color:var(--accent); color:var(--accent); outline:0; }
+.copy-path-status { flex-basis:100%; color:var(--accent); font-size:.74rem; }
 .reader-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:18px; }
 .bookmark-button { min-height:38px; padding:7px 11px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); cursor:pointer; }
 .bookmark-button:hover:not(:disabled),.bookmark-button:focus-visible { border-color:var(--accent); color:var(--accent); }
@@ -228,6 +234,7 @@ button { -webkit-tap-highlight-color:transparent; }
   .doc-card h3 { margin:13px 0 8px; font-size:1.04rem; }
   .reader-header { margin-bottom:22px; padding-bottom:20px; }
   .reader-header h1 { font-size:2rem; }
+  .copy-path-button { min-height:44px; }
   .reader-toolbar { align-items:stretch; }
   .bookmark-button { flex:1 1 45%; }
   .bookmark-status { flex-basis:100%; }
