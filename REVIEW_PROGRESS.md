@@ -102,6 +102,9 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
 - Full audit sau khi khôi phục source còn **143 lỗi link**: chủ yếu là link
   generated-site trỏ ngược về source tree và link URL OCR trong raw Notion; đây
   là backlog cần xử lý riêng, không che bằng cách bỏ audit.
+- Cleanup checkpoint đã commit ở `32cf47e0`; unit tests `automation/test_repo_audit.py`
+  vẫn pass `6/6`. Một số trailing spaces trong Markdown là hard-break có chủ ý;
+  raw OCR đã được chuẩn hoá newline/whitespace thừa.
 
 ## Cách cập nhật file này
 
