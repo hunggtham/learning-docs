@@ -182,6 +182,12 @@
       "category": "World geography",
       "language": "vi-en",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "life",
+      "category": "Life knowledge",
+      "language": "vi-en",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [

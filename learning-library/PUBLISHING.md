@@ -16,7 +16,7 @@ The build runs `scripts/audit-library.mjs` and fails closed when a path is insid
 
 Phần này giải thích quyết định audit hiện tại, để người xuất bản hiểu tiêu chí nào đã được kiểm tra và bước tiếp theo cần làm trước khi phát hành.
 
-- Published: the author-confirmed technical notes and English grammar/exam guides listed in the manifest.
+- Published: the author-confirmed technical notes, English grammar/exam guides, and Life Knowledge library listed in the manifest.
 - Held back: all Korean material for now, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. The generated Korean lessons contain source quotations and provenance notes, so they need a separate rights review and rewriting pass before publication.
 - Held back: `pmp/raw` and `pmp/workflow-output` because the cleaned text includes a publisher copyright notice and “all rights reserved”.
 - English-language study materials are maintained in the separate `language-docs` repository; this repository does not store or publish English study Markdown files.
