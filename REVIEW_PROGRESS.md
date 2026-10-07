@@ -106,6 +106,16 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
   vẫn pass `6/6`. Một số trailing spaces trong Markdown là hard-break có chủ ý;
   raw OCR đã được chuẩn hoá newline/whitespace thừa.
 
+### Git cleanup
+
+- `main` đã merge/push tới `0fe25e33` và local/remote đang cùng revision.
+- Đã xoá 7 local branch merged/không còn commit riêng: `codex/kiip-main-merge`,
+  `codex/remove-selection-translation`, `codex/review-feature-branches`,
+  `feat/korean-history`, `feat/learning-docs-bilingual-continuity`,
+  `feat/marxism-leninism-learning-module`, `feat/vietnamese-history-depth`.
+- Giữ các branch còn unique commit hoặc thuộc task khác; không xoá remote branch
+  khi chưa xác định owner. Worktree detached có untracked `life/` vẫn được giữ.
+
 ## Cách cập nhật file này
 
 Sau mỗi batch tiếp theo, cập nhật snapshot số lượng, thêm hash commit mới và ghi
