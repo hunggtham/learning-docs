@@ -154,3 +154,7 @@ Một bài KIIP chỉ hoàn thành khi:
 - không có prose tiếng Anh không cần thiết;
 - không có câu lai hoặc từ bị hỏng;
 - các concept quan trọng được giải thích cả chiều sâu lẫn mạng liên hệ.
+
+## Điều phối task mới
+
+Trước mỗi task, đọc prompt/00_ORCHESTRATOR_PROMPT.md và task manifest. Với corpus có raw/source, chạy INGEST → PLAN → PILOT trước khi fan-out lesson. Dùng prompt/ACCEPTANCE_CONTRACT.md để tách content, evidence, Git và publication status.

@@ -105,8 +105,6 @@ Các vấn đề phân tán (distributed / 분산) thất bại (failure / 실�
 
 DevOps thư viện (library / 라이브러리) sử dụng những nền đó để trả lời câu hỏi áp dụng: “thiết kế delivery/nền tảng (platform / 플랫폼) ra sao để nhiều nhóm (team / 팀) thay đổi môi trường vận hành (production / 운영 환경) an toàn và tự chủ?”.
 
-[Thinking Toolkit](../thinking/README.md) là lớp reasoning bổ trợ cho problem framing, causal diagnosis, risk và incident decisions; DevOps vẫn giữ owner của runtime, platform contract và operational evidence.
-
 > **Chuyển mạch:** **Đích đến** khép README bằng mental model control loop và contract: lần theo thay đổi, runtime evidence, incident và cải thiện platform mà không phụ thuộc một công cụ cụ thể.
 
 ## Đích đến

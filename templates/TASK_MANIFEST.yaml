@@ -1,0 +1,20 @@
+task_id:
+agent_surface: codex
+worktree:
+branch:
+base_sha:
+owner:
+audience:
+learning_outcome:
+prerequisites: []
+non_goals: []
+allowed_paths: []
+forbidden_paths: []
+dependencies: []
+expected_artifacts: []
+validation_commands: []
+next_mode: INTAKE
+stop_conditions: []
+content_status: DRAFT
+git_status: UNCOMMITTED
+publication_status: NOT_PUBLISHED

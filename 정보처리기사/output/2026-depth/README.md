@@ -6,19 +6,14 @@ Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra co
 
 1. Đọc [`../00-2026-written-exam-master-guide.md`](../00-2026-written-exam-master-guide.md) để biết toàn bộ phạm vi.
 2. Học 5 deep-dive theo môn, không bỏ qua phần procedural lập luận (reasoning / 추론).
-3. Làm [Mixed Exam Drills](06-mixed-exam-drills.md) để kiểm tra khả năng chuyển ngữ cảnh (context / 맥락) giữa 5 môn.
-4. Đọc [Cross-Subject Connection Map](07-cross-subject-connection-map.md) để nối yêu cầu (requirement / 요구사항) → thiết kế (design / 설계) → mã (code / 코드) → DB → OS/mạng (network / 네트워크) → thao tác (operation / 연산)/bảo mật (security / 보안).
-5. Làm toàn bộ [Procedural Workbook](08-procedural-workbook.md) bằng tay; không tính là hoàn thành nếu chỉ đọc lời giải.
-6. Học [High-Risk Confusion Atlas](11-high-risk-confusion-atlas.md) để khóa ranh giới giữa các cặp khái niệm dễ bị distractor lợi dụng.
-7. Làm [Advanced Scenario Labs](12-advanced-scenario-labs.md) để luyện nguyên nhân gốc (root cause / 근본 원인), tầng (layer / 계층)/phạm vi (scope / 범위) và sự đánh đổi (trade-off / 트레이드오프) thay vì chọn từ khóa (keyword / 키워드).
-8. Dùng [Korean Term Bridge](13-korean-term-bridge.md) cho các concept đã hiểu bằng English/Vietnamese nhưng chưa nhận ra wording tiếng Hàn.
-9. Đọc [Edge-Case Coverage Supplement](15-edge-case-coverage-supplement.md) để bù các chi tiết có độ salience thấp nhưng vẫn nằm trong 21 chapter.
-10. Dùng [Active Recall Bank 250](17-active-recall-bank-250.md) để kiểm tra breadth mà không có lựa chọn A/B/C/D.
-11. Dùng [Coverage Audit & Closed-Book Recall](10-coverage-audit-and-recall.md) để kiểm tra đủ `Explain + Distinguish + Solve` cho 21 chapter.
-12. Làm [Full Mock Exam #1](09-full-mock-exam-100.md) trong một lượt và chấm riêng từng môn.
-13. Với mọi câu sai, dùng [Error Remediation Map](14-error-remediation-map.md) để phân loại lỗi và quay lại đúng tệp (file / 파일)/drill cần sửa.
-14. Chỉ sau remediation mới làm [Full Mock #2 — Hard Mode](16-full-mock-hard-mode-100.md), tránh overfit vào mock đầu.
-15. Một lỗi chỉ được đóng khi đạt `Explain → Distinguish → Reproduce → Transfer`, không làm đề liên tục chỉ để tăng cảm giác quen câu.
+3. Đọc [Cross-Subject Connection Map](07-cross-subject-connection-map.md) để nối yêu cầu (requirement / 요구사항) → thiết kế (design / 설계) → mã (code / 코드) → DB → OS/mạng (network / 네트워크) → thao tác (operation / 연산)/bảo mật (security / 보안).
+4. Làm toàn bộ [Procedural Workbook](08-procedural-workbook.md) bằng tay; không tính là hoàn thành nếu chỉ đọc lời giải.
+5. Học [High-Risk Confusion Atlas](11-high-risk-confusion-atlas.md) để khóa ranh giới giữa các cặp khái niệm dễ bị nhầm.
+6. Làm [Advanced Scenario Labs](12-advanced-scenario-labs.md) để luyện nguyên nhân gốc (root cause / 근본 원인), tầng (layer / 계층)/phạm vi (scope / 범위) và sự đánh đổi (trade-off / 트레이드오프).
+7. Dùng [Korean Term Bridge](13-korean-term-bridge.md) cho các concept đã hiểu bằng English/Vietnamese nhưng chưa nhận ra wording tiếng Hàn.
+8. Đọc [Edge-Case Coverage Supplement](15-edge-case-coverage-supplement.md) để bù các chi tiết có độ salience thấp nhưng vẫn nằm trong 21 chapter.
+9. Với điểm chưa chắc, dùng [Error Remediation Map](14-error-remediation-map.md) để phân loại lỗi và quay lại đúng tệp (file / 파일) cần sửa.
+10. Một lỗi chỉ được đóng khi đạt `Explain → Distinguish → Reproduce → Transfer`, không lặp lại một bộ câu cố định chỉ để tăng cảm giác quen.
 
 ## 5 môn
 
@@ -30,18 +25,13 @@ Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra co
 
 ## Practice + tích hợp (integration / 통합) + remediation tầng (layer / 계층)
 
-6. [Mixed Exam Drills — 40 câu luyện liên môn](06-mixed-exam-drills.md)
-7. [Cross-Subject Connection Map — nối kiến thức giữa 5 môn](07-cross-subject-connection-map.md)
-8. [Procedural Workbook — 35 bài tính/tracing/SQL/OS/network/security](08-procedural-workbook.md)
-9. [Full Mock Exam #1 — 100 câu, 20 câu/môn](09-full-mock-exam-100.md)
-10. [Coverage Audit & Closed-Book Recall — audit 21 chapter](10-coverage-audit-and-recall.md)
-11. [High-Risk Confusion Atlas — 50+ cặp/nhóm dễ nhầm](11-high-risk-confusion-atlas.md)
-12. [Advanced Scenario Labs — 25 lab + 3 mega-lab](12-advanced-scenario-labs.md)
-13. [Korean Term Bridge — Korean → English → Vietnamese → mechanism](13-korean-term-bridge.md)
-14. [Error Remediation Map — biến câu sai thành đường sửa cụ thể](14-error-remediation-map.md)
-15. [Edge-Case Coverage Supplement — 120 điểm nhỏ dễ bỏ sót](15-edge-case-coverage-supplement.md)
-16. [Full Mock #2 — Hard Mode 100](16-full-mock-hard-mode-100.md)
-17. [Active Recall Bank 250 — 50 câu/môn, không multiple-choice](17-active-recall-bank-250.md)
+6. [Cross-Subject Connection Map — nối kiến thức giữa 5 môn](07-cross-subject-connection-map.md)
+7. [Procedural Workbook — 35 bài tính/tracing/SQL/OS/network/security](08-procedural-workbook.md)
+8. [High-Risk Confusion Atlas — 50+ cặp/nhóm dễ nhầm](11-high-risk-confusion-atlas.md)
+9. [Advanced Scenario Labs — 25 lab + 3 mega-lab](12-advanced-scenario-labs.md)
+10. [Korean Term Bridge — Korean → English → Vietnamese → mechanism](13-korean-term-bridge.md)
+11. [Error Remediation Map — biến lỗi thành đường sửa cụ thể](14-error-remediation-map.md)
+12. [Edge-Case Coverage Supplement — 120 điểm nhỏ dễ bỏ sót](15-edge-case-coverage-supplement.md)
 
 ## Cách dùng với các lesson cũ
 
@@ -49,7 +39,7 @@ Không đọc tuần tự hàng trăm lesson cũ trước. Khi deep-dive, kiểm
 
 ## Lỗi (error / 오류) mô hình (model / 모델)
 
-Mọi lỗi trong mock/mixed drill nên được gán một primary mã (code / 코드):
+Mọi lỗi trong scenario hoặc procedural lab nên được gán một primary mã (code / 코드):
 
 ```text
 COV  = coverage hole
@@ -81,11 +71,9 @@ Một lỗi chỉ được coi là “đã sửa” khi đạt thêm:
 Toàn bộ nhánh học (track / 트랙) chỉ được coi là `ready` khi:
 
 - 21 chapter đều đạt `Explain + Distinguish + Solve`;
-- Edge-Case Supplement đạt ít nhất 24/30 ở closed-book check;
-- Active Recall đạt ít nhất 45/50 mỗi môn ở vòng cuối;
+- Edge-Case Supplement được đối chiếu đủ với các chapter sở hữu;
 - 50+ confusion pairs cốt lõi không còn phụ thuộc vào từ khóa (keyword / 키워드) đơn lẻ;
 - Procedural Workbook không còn dạng bài “biết lý thuyết nhưng không tự tính/dấu vết (trace / 추적) được”;
 - Advanced Scenario Labs trung bình đạt ít nhất mức 3/4 theo rubric trong tệp (file / 파일);
 - Korean terms quan trọng map được `Korean → English concept → mechanism`;
-- cả hai Full Mock đều không có môn nào dưới 8/20; mục tiêu học là ít nhất 14/20 mỗi môn ở mock tự viết;
 - mọi lỗi COV/CON/PRO/LAY/TERM quan trọng đã đi qua remediation và transfer kiểm thử (test / 테스트).

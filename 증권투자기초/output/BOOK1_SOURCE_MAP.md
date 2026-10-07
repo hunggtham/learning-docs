@@ -92,6 +92,14 @@ này dùng để kiểm tra độ phủ, không phải nội dung học thay th�
 
 ## Audit độ phủ và tính toàn vẹn
 
+### Trạng thái raw image sau cleanup
+
+Các ảnh JPG đánh số trong `raw/sach1/001.jpg`–`354.jpg` đã được dọn khỏi
+repository vì không còn là artifact cần phát hành. Các số trang/ảnh được nhắc
+trong checkpoint bên trên chỉ là provenance của lần đối chiếu trước cleanup,
+không phải link tới file ảnh còn tồn tại. Bản OCR và output học canonical vẫn là
+nguồn đọc chính; không phục hồi ảnh chỉ vì source map còn ghi số trang.
+
 | Hạng mục | Bằng chứng hiện tại | Kết quả |
 |---|---|---|
 | Phạm vi nguồn | mục lục `sach1.md` và ảnh 013–352 | bao phủ 제1장 và 제2장 của sách 1; ảnh bìa/phân cách không tính là nội dung |

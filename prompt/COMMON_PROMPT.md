@@ -61,3 +61,13 @@ Nếu chưa đủ bằng chứng, nói rõ giới hạn thay vì bịa hoặc é
 Giữ cấu trúc, naming và canonical ownership của repository. Kiểm tra diff, link và test phù hợp với phạm vi thay đổi; không tự ý chuẩn hóa cả thư mục hoặc xóa thay đổi không liên quan. `repo_audit.py` chỉ là công cụ QA cấu trúc, không thay thế việc đọc và biên tập nội dung bằng tay.
 
 Mọi prompt chuyên môn kế thừa contract này nhưng có thể chọn cách trình bày riêng cho domain. Prompt chuyên môn không được biến các nguyên tắc trên thành một template bắt buộc nếu nội dung không cần.
+
+## Điều phối task và bằng chứng
+
+Trước khi viết, sửa hoặc audit, đọc prompt/00_ORCHESTRATOR_PROMPT.md và task manifest hiện tại. Task phải có task_id, canonical owner, allowed_paths, base revision, audience, learning outcome, acceptance test và stop condition.
+
+Chọn đúng mode: INGEST để đăng ký nguồn; PLAN để lập semantic map; PILOT để kiểm tra hướng viết; AUTHOR để viết output; SELF_REVIEW để tự kiểm tra; LEARNER_REVIEW để xử lý feedback bằng delta nhỏ; ACCEPTANCE hoặc INTEGRATE để chốt evidence và revision.
+
+Không để raw/original/ bị rewrite. Source research, reference mới và unresolved claims đặt trong research/; derived extraction/OCR phải ghi provenance. Nội dung canonical trong output/ phải truy nguyên được về source unit.
+
+Ghi riêng content_status, evidence_status, git_status và publication_status. Không gọi tài liệu là hoàn thành chỉ vì checker xanh, agent đã dừng hoặc worktree đã tạo.

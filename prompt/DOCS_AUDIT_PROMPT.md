@@ -73,3 +73,11 @@ Trả theo thứ tự:
 5. các giới hạn chưa thể xác minh và việc cần người dùng quyết định.
 
 Không trả “đã pass” chỉ vì đã chạy một lệnh. Lệnh chỉ là bằng chứng cấu trúc; chất lượng nội dung phải được chứng minh bằng đoạn văn, nguồn và reasoning cụ thể.
+
+## Điều phối và đầu ra mới
+
+Trước audit, đọc prompt/00_ORCHESTRATOR_PROMPT.md, task manifest, source manifest và semantic map nếu corpus có các artifact đó. Ghi task id, owner, base/current revision, allowed paths và acceptance criteria.
+
+Khi FAIL, sửa section nhỏ nhất đủ khôi phục mental model; không mặc định rewrite toàn file. Trả changed sections và lý do sửa, trừ khi caller yêu cầu Markdown hoàn chỉnh để thay thế trực tiếp.
+
+Kết quả phải tách content status, evidence status, Git status và publication status theo prompt/ACCEPTANCE_CONTRACT.md. Repo audit, link check hoặc build pass chỉ chứng minh phạm vi kỹ thuật tương ứng, không tự chứng minh prose hoặc learner usability.

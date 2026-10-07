@@ -46,4 +46,12 @@ Nếu chưa đạt, trạng thái là `FAIL — cần review tiếp`, kèm một
 5. **Markdown hoàn chỉnh:** trả toàn bộ file đã sửa nếu file là đầu ra cần thay thế; không trả patch rời khiến người dùng phải đoán.
 6. **Giới hạn còn lại:** fact chưa xác minh, test chưa chạy hoặc quyết định cần người dùng.
 
+## Điều phối feedback và bounded delta
+
+Trước review, đọc prompt/00_ORCHESTRATOR_PROMPT.md và dùng skill learner-feedback-triage. Ghi task id, revision, allowed paths, semantic map hoặc owner map liên quan và acceptance criteria.
+
+Feedback phải được phân loại thành root cause có thể kiểm chứng: fact, stale source, prerequisite, distinction, example/test, reasoning, wording, ownership/link, scope hoặc unclear. Nếu unclear, giữ NEEDS_CLARIFICATION; không bịa lỗi.
+
+Mặc định chỉ trả changed sections, feedback triage, regression scope và evidence. Chỉ trả toàn bộ Markdown khi caller cần dùng trực tiếp để thay thế file. Ghi riêng content/evidence/Git/publication status; không dùng “đã sửa” thay cho bằng chứng.
+
 Chỉ trả `PASS` khi feedback đã được tái hiện hoặc kiểm tra bằng chứng tương đương, nội dung đã được đọc lại như một lesson hoàn chỉnh, và không còn issue `high`.

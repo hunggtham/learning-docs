@@ -1,0 +1,18 @@
+task_id:
+agent_surface:
+worktree:
+branch:
+base_sha:
+current_revision:
+changed_paths: []
+unchanged_paths: []
+artifacts: []
+validation:
+  commands: []
+  results: []
+content_status: DRAFT
+git_status: UNCOMMITTED
+publication_status: NOT_PUBLISHED
+known_issues: []
+next_action:
+safe_to_merge: false

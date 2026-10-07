@@ -1,19 +1,19 @@
-# Hướng dẫn đọc di tích và địa điểm — học lịch sử Việt Nam qua cảnh quan
+# Historical Places & Trường dữ liệu (field / 필드) Reading Guide — học lịch sử Việt Nam bằng landscape
 
 ## Mục tiêu
 
-Đây không phải danh sách du lịch. Mỗi địa điểm dưới đây là một **điểm kiểm tra kiến thức**: ta đến hoặc hình dung nó để thử một cơ chế lịch sử. Hãy bắt đầu từ tuyến 38, rồi dùng địa điểm tương ứng để kiểm tra điều chương niên đại đã giải thích.
+This is not a tourism checklist. Each place below is a **kiến thức (knowledge / 지식) checkpoint**: you visit/visualize it to kiểm thử (test / 테스트) a historical cơ chế (mechanism / 메커니즘).
 
-Hãy dùng bốn câu hỏi ở mọi địa điểm:
+Use four questions everywhere:
 
-1. Lớp vật chất nào thuộc đúng thời kỳ đang học?
-2. Phần nào được xây dựng hoặc trùng tu về sau?
-3. Vì sao địa điểm này nằm ở đây về mặt địa lý?
-4. Cơ chế kinh tế, chính trị hoặc xã hội nào hiện ra tại đây?
+1. What vật lý (physical / 물리적) tầng (layer / 계층) belongs to the studied period?
+2. What was rebuilt later?
+3. Why is the place located here geographically?
+4. Which economic/political/xã hội (social / 사회적) cơ chế (mechanism / 메커니즘) becomes visible here?
 
 ## Phú Thọ — Đền Hùng
 
-**Dùng để học:** truyền thống nguồn gốc, ký ức tập thể, nghi lễ và quá trình xây dựng quốc gia.
+**Use for:** origin tradition, collective bộ nhớ (memory / 메모리), ritual, nation-building.
 
 Do not use present temples as direct proof of literal Hùng chronology. Instead observe how landscape, festival and trạng thái (state / 상태)/community commemoration preserve and recreate Hùng bộ nhớ (memory / 메모리).
 
@@ -21,7 +21,7 @@ Read with chapters 04, 27 and 30.
 
 ## Đông Anh, Hà Nội — Cổ Loa
 
-**Dùng để học:** hình thành nhà nước sơ kỳ, công sự, huy động lao động và sản xuất quân sự bằng đồng.
+**Use for:** early trạng thái (state / 상태) formation, fortification, labor mobilization, bronze military môi trường vận hành (production / 운영 환경).
 
 Walk/inspect quy mô (scale / 규모) of ramparts and moat rather than only temple. Ask how many workers/food days/material flows monumental earthwork implies.
 
@@ -109,7 +109,7 @@ Read city as operating hệ thống (system / 시스템): gate hierarchy, imperi
 
 Connect 16, 27, 28 and 30.
 
-## An Giang/Kiên Giang — kênh Vĩnh Tế và cảnh quan kênh rạch Tây Nam
+## An Giang/Kiên Giang — kênh Vĩnh Tế and southwest canal landscape
 
 **Use for:** frontier tích hợp (integration / 통합), hydraulic hạ tầng (infrastructure / 인프라), labor and Mekong geography.
 
@@ -117,7 +117,7 @@ A canal is simultaneously vận chuyển (transport / 전송), settlement and st
 
 Connect 14, 16, 24, 28 and 29.
 
-## Thành phố Hồ Chí Minh — các lớp đô thị thuộc địa và hiện đại
+## Thành phố Hồ Chí Minh — colonial/hiện đại (modern / 현대적) urban layers
 
 **Use for:** colonial city, trade, hạ tầng (infrastructure / 인프라), war bộ nhớ (memory / 메모리) and Đổi Mới metropolis.
 
@@ -125,7 +125,7 @@ Rather than one site, read mạng (network / 네트워크): cổng (port / 포�
 
 Compare name/hàm (function / 함수) changes across Gia Định → Sài Gòn → Thành phố Hồ Chí Minh.
 
-## Hà Nội — khu phố thuộc địa và khu vực Long Biên
+## Hà Nội — colonial quarter and Long Biên area
 
 **Use for:** colonial urban planning, rail/cầu nối (bridge / 브리지), administrative modernization and later war damage/reconstruction.
 
@@ -183,31 +183,31 @@ Connect 22–25.
 
 ## Suggested field-learning routes
 
-### Tuyến A — hình thành nhà nước ở miền Bắc
+### Tuyến (route / 경로) A — Trạng thái (state / 상태) formation North
 
 Đền Hùng → Cổ Loa → Hoa Lư → Thăng Long → Văn Miếu.
 
 Question: how does authority move from bộ nhớ (memory / 메모리)/early polity to durable bureaucratic capital?
 
-### Tuyến B — duyên hải trung đại và cận đại
+### Tuyến (route / 경로) B — Medieval and early-modern coast
 
 Vân Đồn → Thăng Long → Hội An → Mỹ Sơn.
 
 Question: how does inland court connect to maritime Asia and non-Đại-Việt polities?
 
-### Tuyến C — nhà Nguyễn và hội nhập phương Nam
+### Tuyến (route / 경로) C — Nguyễn and southern tích hợp (integration / 통합)
 
 Huế → Hội An → Gia Định/HCMC → Vĩnh Tế/Mekong.
 
 Question: how does a long territory become connected through administration, di chuyển (migration / 마이그레이션) and water/road networks?
 
-### Tuyến D — chiến tranh và tái thiết thế kỷ XX
+### Tuyến (route / 경로) D — Twentieth-century war and reconstruction
 
 Hà Nội → Điện Biên → DMZ/Quảng Trị → HCMC.
 
 Question: how do logistics, international các hệ thống (systems / 시스템들) and urban society thay đổi (change / 변경) across 1945–1975?
 
-### Tuyến E — Đổi Mới và kinh tế hiện đại
+### Tuyến (route / 경로) E — Đổi Mới and hiện đại (modern / 현대적) economy
 
 HCMC/Bình Dương → Mekong Delta or Hà Nội/Bắc Ninh → Hải Phòng.
 

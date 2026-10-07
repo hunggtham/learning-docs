@@ -1,14 +1,14 @@
-# Óc Eo, Phù Nam và hạ lưu Mekong: thế giới đô thị–thương mại trước quốc gia hiện đại
+# Óc Eo, Phù Nam và Lower Mekong: một early urban–commercial world trước các quốc gia hiện đại
 
-## Vì sao hạ lưu Mekong cần được học như một hệ thống lịch sử riêng?
+## Vì sao Lower Mekong cần được học như một historical hệ thống (system / 시스템) riêng?
 
-Nếu bắt đầu lịch sử Việt Nam từ sông Hồng rồi đi dần xuống phía nam, người đọc dễ có cảm giác đồng bằng Mekong chỉ “bước vào lịch sử” khi Nguyễn mở rộng tới đó. Khảo cổ học cho thấy điều ngược lại: hạ lưu Mekong đã là vùng cư trú phức tạp, sản xuất và trao đổi đường dài từ rất sớm.
+Nếu bắt đầu lịch sử Việt Nam từ Red River rồi đi dần xuống phía nam, người đọc dễ có impression rằng Mekong Delta chỉ “bước vào lịch sử” khi Nguyễn expansion tới đó. Archaeology cho thấy điều ngược lại: Lower Mekong đã là một complex settlement, môi trường vận hành (production / 운영 환경) và long-distance exchange zone từ rất sớm.
 
-Chương này hỏi: **vì sao một vùng châu thổ ngập nước lại có thể hình thành trung tâm đô thị–thủ công và mạng thương mại quốc tế từ những thế kỷ đầu Công nguyên, và nên hiểu quan hệ giữa khảo cổ Óc Eo với chính thể thường gọi là Phù Nam thế nào?** Hãy nối nó với chương 14 về vùng biên phía Nam và chương 38 về đời sống sông nước, thay vì coi Mekong chỉ bắt đầu “được biết đến” khi Nguyễn mở rộng.
+Chapter này hỏi: **vì sao một vùng delta ngập nước lại có thể hình thành urban/craft centres và international trade mạng (network / 네트워크) từ những thế kỷ đầu Công nguyên, và relationship giữa archaeology Óc Eo với polity thường được gọi là Phù Nam (Funan) nên hiểu thế nào?**
 
-Điều quan trọng nhất là không dùng bản đồ quốc gia hiện đại để sở hữu quá khứ. Óc Eo hiện nằm trong Việt Nam; Angkor Borei hiện nằm trong Campuchia; nhưng hạ lưu Mekong thời sớm là một hệ thống khu vực có trước cả hai quốc gia hiện đại.
+Điều quan trọng nhất là không dùng hiện đại (modern / 현대적) national map để sở hữu quá khứ. Óc Eo hiện nằm trong Việt Nam; Angkor Borei hiện nằm trong Cambodia; nhưng early Lower Mekong là một regional hệ thống (system / 시스템) có trước cả hai nation-state hiện đại.
 
-## “Phù Nam” là tên từ kho văn bản, còn Óc Eo là phạm trù/địa điểm khảo cổ
+## “Phù Nam” là tên từ textual archive, còn Óc Eo là archaeological category/site
 
 **Funan / Phù Nam** được biết nhiều qua Chinese dynastic accounts mô tả một polity ở mainland Southeast Asia trong những thế kỷ đầu Công nguyên. **Óc Eo** là archaeological site/cultural complex ở Mekong Delta, nổi bật tại vùng Óc Eo–Ba Thê, An Giang.
 
@@ -50,7 +50,7 @@ regional circulation of food + goods
 
 Nước vừa tạo rủi ro (risk / 위험) vừa giảm vận chuyển (transport / 전송) chi phí (cost / 비용). Đây là reason ecology không nên được gọi đơn giản là “swamp waiting to be reclaimed”.
 
-## Hình thành nhà nước sơ kỳ không cần chờ “Ấn Độ hóa”
+## Early trạng thái (state / 상태) formation không cần chờ “Indianization”
 
 Một older explanation từng mô tả Funan như sản phẩm (product / 제품) của Indian cultural influence. Recent archaeology nhấn mạnh rằng Lower Mekong đã có cục bộ (local / 로컬) settlement traditions, agriculture và connectivity trước khi Indic religious/political forms trở nên visible mạnh.
 
@@ -104,7 +104,7 @@ Mediterranean / West Asia
 
 Historical significance nằm ở **mạng (network / 네트워크) reach**, không ở romantic story về direct voyage nếu bằng chứng (evidence / 증거) không đủ.
 
-## Tiếp xúc Ấn Độ–Đông Nam Á: thương mại, tôn giáo và công nghệ không đi cùng một tốc độ
+## India–Southeast Asia contact: trade, religion và technology đi cùng nhưng không cùng tốc độ
 
 Artifacts và religious forms cho thấy connections với South Asia. Sanskrit/Indic scripts, Hindu/Buddhist forms và craft techniques có thể circulate qua merchants, monks, specialists và elite diplomacy.
 
@@ -112,7 +112,7 @@ Nhưng adoption không simultaneous. Một community có thể dùng imported be
 
 Do đó “Indian influence” phải tách thành multiple channels: trade goods, scripts, ritual, political vocabulary, art style và technical practice.
 
-## Angkor Borei và hạ lưu Mekong không dừng ở biên giới hiện đại
+## Angkor Borei và Lower Mekong không dừng ở hiện đại (modern / 현대적) border
 
 Angkor Borei ở present-day Cambodia là một major early centre có quan hệ (relation / 관계) với broader Funan archaeology. Canal/waterway bằng chứng (evidence / 증거) và material phân phối (distribution / 분포) cho thấy Lower Mekong should be studied cross-border.
 
@@ -168,7 +168,7 @@ Vì vậy end of a named polity nên được hỏi bằng cơ chế (mechanism 
 
 “Dynasty B replaces A” hiếm khi đủ.
 
-## Óc Eo và lịch sử Khmer về sau
+## Óc Eo và later Khmer lịch sử (history / 이력)
 
 Không nên coi Óc Eo/Funan đơn giản là “Cambodia early” hoặc “Vietnam early”. Tuy nhiên Lower Mekong archaeology là crucial background cho later Khmer civilization và regional trạng thái (state / 상태) formation.
 
@@ -176,13 +176,13 @@ Continuity có thể qua settlement, religious concepts, agrarian-water kiến t
 
 Lịch sử (history / 이력) không cần force exclusive quyền sở hữu (ownership / 소유권) để acknowledge liên kết (connection / 연결).
 
-## Óc Eo và lịch sử Nam Bộ Việt Nam về sau
+## Óc Eo và later Vietnamese southern lịch sử (history / 이력)
 
 Tương tự, việc region sau này nằm trong Nguyễn/Vietnamese trạng thái (state / 상태) không biến Óc Eo thành early “Vietnamese national city”. Giá trị của site chính là nó buộc national lịch sử (history / 이력) mở rộng đơn vị (unit / 단위) of phân tích (analysis / 분석).
 
 Khi chapter 14 đi tới Gia Định, Hà Tiên và Mekong frontier, reader đã biết đây không phải blank ecological zone mà là landscape có deep historical layers.
 
-## Đọc địa điểm thực địa: Óc Eo–Ba Thê
+## Trường dữ liệu (field / 필드) reading: Óc Eo–Ba Thê
 
 Nếu tới **Óc Eo–Ba Thê, An Giang**, đừng tìm một intact stone city giống Angkor. Delta archaeology thường survive dưới dạng mound, foundation dấu vết (trace / 추적), sản phẩm tạo ra (artifact / 산출물) assemblage, canal line và buried tầng (layer / 계층).
 

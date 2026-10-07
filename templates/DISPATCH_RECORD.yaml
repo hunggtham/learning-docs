@@ -1,0 +1,11 @@
+task_id:
+agent_surface:
+dispatcher:
+worktree:
+base_sha:
+allowed_side_effects: []
+expected_artifacts: []
+validation_commands: []
+handoff_target:
+dispatched_at:
+status: PLANNED

@@ -35,7 +35,7 @@ Một topic chỉ đạt chuẩn khi người học có thể:
 3. phân biệt được khái niệm gần nhất;
 4. áp dụng được công thức, quy tắc, thuật toán hoặc mã (code / 코드);
 5. giải thích được vì sao đáp án đúng và các đáp án khác sai;
-6. tự ôn lại bằng một checklist hoặc câu hỏi ngắn.
+6. tự rà soát bằng một checklist và các tiêu chí phân biệt.
 
 Không đánh giá chất lượng chỉ bằng số lượng tệp (file / 파일). Ưu tiên tính đúng, tính nhất
 quán, độ phủ và khả năng truy hồi khi làm bài.
@@ -98,10 +98,10 @@ Khi review, bỏ qua một câu nối nếu câu đó không gọi tên ít nh�
 
 Áp dụng mạch này theo cấp heading trong lesson: tiêu đề `#` định vị topic và câu hỏi trung tâm; `##` nối topic với mục tiêu, từ khóa và kiến thức liên kết; `###`/`####` giải thích một khái niệm, cơ chế hoặc bẫy cụ thể rồi trả kết luận về `##` cha. Một heading con có bullet, bảng, công thức hoặc mã vẫn phải có câu hỏi cục bộ và câu nối với heading cha; không được coi cấp heading thấp là phần ghi chú rời.
 
-Không bản sao (copy / 복사) một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject đơn vị sở hữu (owner / 오너) cụ thể; với đầu ra (output / 출력) được generate, sửa generator/nguồn (source / 소스) rồi regenerate thay vì sửa tay từng tệp (file / 파일).
+Không sao chép một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject đơn vị sở hữu (owner / 오너) cụ thể; nếu một file cần sửa, đọc và viết lại chính đoạn đó theo nội dung thật, không chèn một câu chung bằng thao tác hàng loạt.
 
 ## 4. Quy tắc thuật ngữ và ngôn ngữ
-Phần “4. Quy tắc thuật ngữ và ngôn ngữ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+Mục này quy định cách giữ từ khóa Hàn/Anh để tra cứu nhưng vẫn giải thích bằng tiếng Việt; các quy tắc dưới đây áp dụng trực tiếp cho heading, prose, bảng và ví dụ của từng lesson.
 
 
 - Giữ nguyên thuật ngữ Hàn dùng trong đề.
@@ -121,11 +121,11 @@ Mẫu ưu tiên:
 Trước khi sửa hoặc thêm topic:
 
 1. đọc README của gốc (root / 루트) và môn;
-2. xác định nguồn (source / 소스) chuẩn gốc (canonical / 정본) và script generate;
+2. xác định nguồn (source / 소스) chuẩn gốc (canonical / 정본) và tài liệu owner;
 3. đối chiếu ít nhất hai nguồn nội bộ nếu topic có số liệu, tác giả, chuẩn hoặc
    công thức;
 4. đánh dấu mâu thuẫn thay vì tự hòa giải không có bằng chứng;
-5. sau khi sửa nguồn (source / 소스), regenerate đầu ra (output / 출력) và kiểm tra diff.
+5. sau khi sửa, đọc lại toàn bộ file, kiểm tra diff và ghi rõ nguồn/claim đã đối chiếu.
 
 Các thông tin phải kiểm chứng đặc biệt:
 
@@ -174,7 +174,7 @@ Luôn tách đối tượng, cơ chế, mục tiêu, dấu hiệu nhận biết 
 chống. Không gom nhiều attack có tên gần nhau vào cùng một định nghĩa.
 
 ## 7. Kiểm soát trùng lặp và độ phủ
-Phần “7. Kiểm soát trùng lặp và độ phủ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+Sau khi thống nhất thuật ngữ, cần kiểm tra xem mỗi khái niệm có đúng một owner và mỗi môn có đủ độ phủ hay không; mục này dùng để rà soát hai rủi ro đó.
 
 
 - Một khái niệm có một định nghĩa chuẩn gốc (canonical / 정본); topic khác liên kết thay vì chép
@@ -196,12 +196,12 @@ Chạy hoặc kiểm tra các điều sau:
 - lesson giữ đúng tên tệp (file / 파일) và numbering hiện tại;
 - full guide và lesson không lệch chủ đề;
 - `output/COVERAGE_MATRIX.md` phản ánh đúng số lesson, nguồn (source / 소스) chuẩn gốc (canonical / 정본) và phạm vi rà soát của từng môn;
-- đầu ra (output / 출력) regenerate được từ nguồn (source / 소스)/script;
+- nội dung đầu ra có thể truy nguyên thủ công về nguồn (source / 소스) và lịch sử review;
 - thay đổi không làm lộ raw, raw_md, PDF hoặc tài liệu nguồn chưa được phép;
 - web reader hiển thị được heading, danh sách (list / 목록), mã (code / 코드), bảng (table / 테이블) và link.
 
 ## 9. Mức ưu tiên sửa lỗi
-Phần “9. Mức ưu tiên sửa lỗi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+Khi các kiểm tra về link, thuật ngữ và độ phủ đã có kết quả, mục này sắp xếp thứ tự sửa theo mức ảnh hưởng đến độ đúng và khả năng học.
 
 
 - P0: lỗi kiến thức, công thức, đầu ra (output / 출력) mã (code / 코드)/SQL, sai ranh giới môn, link hỏng.
@@ -211,3 +211,7 @@ Phần “9. Mức ưu tiên sửa lỗi” nối kiến thức trước với n
 
 Khi có P0, phải sửa trước khi mở rộng thêm topic. Mỗi lần nâng cấp phải ghi
 ngắn gọn đã sửa gì, kiểm tra bằng lệnh nào và còn giới hạn nào chưa xử lý.
+
+## Điều phối task mới
+
+Trước mỗi task, đọc prompt/00_ORCHESTRATOR_PROMPT.md và task manifest. Dùng semantic map để tránh trùng owner; dùng pilot trước khi mở rộng batch lớn; ghi riêng content/evidence/Git/publication status theo prompt/ACCEPTANCE_CONTRACT.md. Với output sinh từ source hoặc generator, tuân thủ skill source-generated-integrity và không hand-edit generated output như nguồn chính.

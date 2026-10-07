@@ -82,12 +82,6 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "vietnam_history",
-      "category": "Vietnamese history",
-      "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
       "path": "world_history",
       "category": "World history",
       "language": "vi-en",
@@ -124,12 +118,6 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "personal-finance",
-      "category": "Personal Finance",
-      "language": "vi-en-ko",
-      "rights": "author-confirmed"
-    },
-    {
       "path": "korea_business_economy_knowledge_library",
       "category": "Korea business and economy",
       "language": "vi-en-ko",
@@ -138,12 +126,6 @@
     {
       "path": "research_methods",
       "category": "Research Methods",
-      "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "thinking",
-      "category": "Thinking",
       "language": "vi-en",
       "rights": "author-confirmed"
     },

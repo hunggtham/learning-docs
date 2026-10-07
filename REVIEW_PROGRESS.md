@@ -90,6 +90,19 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
   giữ vì còn thư mục untracked `life/`; không xoá tự động dữ liệu chưa xác định
   owner. Cần một chỉ dẫn riêng nếu muốn xoá toàn bộ worktree đó.
 
+## Project cleanup snapshot — 2026-10-07
+
+- Local cleanup hiện có **354 ảnh JPG** trong `증권투자기초/raw/sach1/` được xoá;
+  source map đã được ghi chú rằng các số trang/ảnh chỉ còn là provenance.
+- Có **145 file Markdown/text bị xoá** và **20 file được sửa** trong các nhóm
+  module cũ; các source canonical còn được tham chiếu (`automation` và raw
+  `sach2/sach3`) đã được khôi phục trước khi commit.
+- Có **10 artifact untracked có chủ đích** gồm prompt/skill/template/workflow
+  contracts; các thư mục `__pycache__` không được đưa vào commit.
+- Full audit sau khi khôi phục source còn **143 lỗi link**: chủ yếu là link
+  generated-site trỏ ngược về source tree và link URL OCR trong raw Notion; đây
+  là backlog cần xử lý riêng, không che bằng cách bỏ audit.
+
 ## Cách cập nhật file này
 
 Sau mỗi batch tiếp theo, cập nhật snapshot số lượng, thêm hash commit mới và ghi

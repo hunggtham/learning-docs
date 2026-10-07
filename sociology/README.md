@@ -73,8 +73,6 @@ Historical-comparative inference
 
 Similarity among peers không tự chứng minh peer influence; persistent inequality không tự chứng minh discrimination; organizational chính sách (policy / 정책) trên giấy không tự chứng minh hiện thực (implementation / 구현); cultural explanation phải chỉ ra transmission/sanctions thay vì dùng “culture” như residual category.
 
-[Thinking Toolkit](../thinking/README.md) cung cấp evidence mapping, causal reasoning và red-team workflow để kiểm tra claim xã hội; Sociology vẫn giữ owner của concepts, institutional context và comparative evidence.
-
 > **Chuyển mạch:** Trong **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **Cốt lõi (core / 핵심) analytical questions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mục tiêu cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cốt lõi (core / 핵심) analytical questions

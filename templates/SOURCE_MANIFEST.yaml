@@ -1,0 +1,16 @@
+# Copy to <corpus>/raw/SOURCE_MANIFEST.yaml and fill every applicable field.
+sources:
+  - source_id:
+    path:
+    source_type: pdf
+    origin: local-upload
+    source_url:
+    retrieved_at:
+    published_at:
+    language:
+    sha256:
+    extraction_method:
+    ocr_status: pending
+    source_state: unknown
+    trust_level: primary
+    notes:
