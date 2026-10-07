@@ -65,6 +65,14 @@ Mỗi commit dưới đây đã pass audit/test/diff-check trong phạm vi batch
 - `75ea7a1d`, `ce846235`: Kotlin/Swift.
 - `45f398bf`, `b83dfef8`: frontend/JavaScript.
 
+## Publication checkpoint
+
+- `main` đã đồng bộ với `origin/main` bằng `git merge --ff-only origin/main`;
+  kết quả: **Already up to date**.
+- `94d4781b` đã được push thành công lên `origin/main`.
+- Commit local đi kèm trước đó là `30ccc804`; không có thay đổi unrelated nào
+  được stage hoặc commit trong checkpoint này.
+
 ## Cách cập nhật file này
 
 Sau mỗi batch tiếp theo, cập nhật snapshot số lượng, thêm hash commit mới và ghi
