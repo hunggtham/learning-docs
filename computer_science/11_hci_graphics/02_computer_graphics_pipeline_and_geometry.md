@@ -10,7 +10,7 @@ Một 3D scene chứa hình học (geometry / 기하학), materials, lights, cam
 
 Do đó rendering là ánh xạ (mapping / 매핑) từ world mô hình (model / 모델) sang 2D samples.
 
-> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Coordinate spaces** tiếp nhận điểm tựa từ **Scene không phải ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scene mô tả vật thể trong không gian; coordinate spaces xác định cùng vật thể đó được biểu diễn ở từng stage. Từ các hệ tọa độ này, model transformation đưa object vào world.
 
 ## Coordinate spaces
 
@@ -24,7 +24,7 @@ Transformation matrices giúp compose translation, rotation, quy mô (scale / �
 
 Homogeneous coordinates dùng thêm dimension để translation trở thành phép nhân ma trận (matrix multiplication / 행렬 곱셈) và perspective projection có biểu diễn (representation / 표현) thống nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Mô hình (model / 모델) transformation** tiếp nhận điểm tựa từ **Coordinate spaces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **View transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Model transformation đặt object vào scene; view transformation đổi scene sang góc nhìn của camera. Hai phép biến đổi nối nhau thành một đường đi thay vì hai hệ tọa độ rời rạc.
 
 ## Mô hình (model / 모델) transformation
 
@@ -32,7 +32,7 @@ Cục bộ (local / 로컬) mô hình (model / 모델) coordinates thuận tiệ
 
 Nếu parent-child hierarchy, transformation compose: hand transform phụ thuộc arm, arm phụ thuộc body. Scene đồ thị (graph / 그래프) dùng cây (tree / 트리) để quản lý hierarchical transforms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **View transformation** tiếp nhận điểm tựa từ **Mô hình (model / 모델) transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+View transformation cố định camera trong một hệ quy chiếu thuận tiện. Projection tiếp tục ánh xạ hệ quy chiếu đó vào hình ảnh và quyết định hiệu ứng phối cảnh.
 
 ## View transformation
 
@@ -40,7 +40,7 @@ Camera transform đổi world coordinates sang coordinate frame nơi camera ở 
 
 Thay vì “di chuyển camera”, toán học thường tương đương transform world theo inverse camera transform.
 
-> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Projection** tiếp nhận điểm tựa từ **View transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Projection tạo ra frustum và depth; trước khi rasterize, pipeline phải loại hoặc cắt primitive nằm ngoài frustum để không tiêu tốn công việc cho vùng chắc chắn không thấy.
 
 ## Projection
 
@@ -50,7 +50,7 @@ Perspective divide sau clip-space transform tạo nonlinear độ sâu (depth / 
 
 Near/far planes ảnh hưởng độ sâu (depth / 깊이) precision; ratio quá lớn có thể gây z-fighting.
 
-> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Clipping** tiếp nhận điểm tựa từ **Projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rasterization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Clipping giữ phần primitive nằm trong frustum; rasterization biến phần hình học còn lại thành các sample trên lưới màn hình.
 
 ## Clipping
 
@@ -58,7 +58,7 @@ Hình học (geometry / 기하학) ngoài view frustum không cần rasterize. C
 
 Culling loại hình học (geometry / 기하학) chắc chắn không visible, như back-face culling hoặc frustum culling, giảm công việc (work / 작업).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Rasterization** tiếp nhận điểm tựa từ **Clipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vertex và fragment shaders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rasterization xác định sample nào thuộc primitive và nội suy thuộc tính cho từng sample. Vertex/fragment shaders là nơi chương trình hóa các phép biến đổi và tính màu trên dữ liệu đó.
 
 ## Rasterization
 
@@ -66,7 +66,7 @@ Rasterizer xác định pixels/samples covered bởi triangles và interpolate a
 
 Triangle là thành phần nguyên thủy (primitive / 기본 요소) phổ biến vì ba điểm luôn định nghĩa plane và hardware tối ưu mạnh.
 
-> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Vertex và fragment shaders** tiếp nhận điểm tựa từ **Rasterization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) buffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Shader tạo ra giá trị màu và depth, nhưng màu chỉ được giữ nếu sample đó thắng phép kiểm tra visibility. Depth buffer thực hiện phần quyết định này.
 
 ## Vertex và fragment shaders
 
@@ -74,7 +74,7 @@ Vertex shader xử lý per-vertex transformations/attributes. Fragment/điểm �
 
 Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인) programmable ở nhiều stages. Shader programs chạy massively parallel trên dữ liệu (data / 데이터) tương tự.
 
-> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Độ sâu (depth / 깊이) buffer** tiếp nhận điểm tựa từ **Vertex và fragment shaders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Depth buffer giải quyết bề mặt opaque gần nhất, nhưng không tự giải blending hay mọi vấn đề transparency. Những ngộ nhận sau đây giúp giữ đúng ranh giới của pipeline.
 
 ## Độ sâu (depth / 깊이) buffer
 
@@ -82,7 +82,7 @@ Z-buffer lưu độ sâu (depth / 깊이) gần nhất per điểm ảnh (pixel 
 
 Transparency phức tạp hơn vì blending phụ thuộc thứ tự (order / 순서); simple z-buffer không giải hoàn toàn overlapping translucent surfaces.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) buffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đều biến mất nếu theo dõi đường đi của biểu diễn: world geometry → camera/projection → samples → visibility và shading.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,13 +92,9 @@ Transparency phức tạp hơn vì blending phụ thuộc thứ tự (order / �
 
 **“ma trận (matrix / 행렬) là cú pháp (syntax / 문법) graphics.”** ma trận (matrix / 행렬) biểu diễn transformations composable; ý nghĩa hình học (geometry / 기하학) quan trọng hơn API.
 
-> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Rendering chuỗi xử lý (pipeline / 파이프라인) liên tục đổi biểu diễn (representation / 표현) để biến hình học (geometry / 기하학) trong world thành samples trên screen, giữ những properties cần và bỏ công việc (work / 작업) không visible.
-
-> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

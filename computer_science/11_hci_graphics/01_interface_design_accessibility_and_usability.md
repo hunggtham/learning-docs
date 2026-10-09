@@ -10,7 +10,7 @@ Một giao diện (interface / 인터페이스) nhanh cho expert operator có th
 
 Vì vậy “dễ dùng” luôn cần ngữ cảnh (context / 맥락): ai, làm tác vụ (task / 작업) gì, tần suất nào, lỗi (error / 오류) chi phí (cost / 비용) bao nhiêu.
 
-> **Chuyển mạch:** Trong **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Usability theo tác vụ (task / 작업) và người dùng (user / 사용자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Visual hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Biết ai dùng và dùng để làm gì giúp chọn cấu trúc điều hướng phù hợp. Vì vậy bước kế tiếp chuyển từ mục tiêu tác vụ sang information architecture.
 
 ## Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)
 
@@ -18,7 +18,7 @@ Vì vậy “dễ dùng” luôn cần ngữ cảnh (context / 맥락): ai, làm
 
 Card sorting, cây (tree / 트리) testing và tìm kiếm (search / 검색) logs có thể giúp kiểm mô hình (model / 모델) categories.
 
-> **Chuyển mạch:** Ở chặng này của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Visual hierarchy** tiếp nhận điểm tựa từ **Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Form thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Information architecture đặt các mục vào quan hệ có thể tìm thấy; visual hierarchy quyết định quan hệ đó được nhận ra nhanh đến đâu trên màn hình.
 
 ## Visual hierarchy
 
@@ -26,7 +26,7 @@ Kích thước (size / 크기), spacing, position, contrast và grouping hướn
 
 Visual hierarchy không chỉ aesthetic; nó encode priority và relationship.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Form thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Visual hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng tiếp cận (accessibility / 접근성) không phải add-on cuối dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hierarchy đã làm rõ thứ tự ưu tiên; form phải biến ưu tiên đó thành nhãn, ràng buộc và thông báo lỗi mà người dùng có thể hành động theo. Đây là điểm accessibility cần được thiết kế ngay từ đầu.
 
 ## Form thiết kế (design / 설계)
 
@@ -36,7 +36,7 @@ Kiểm tra hợp lệ (validation / 검증) sớm giúp phản hồi (feedback /
 
 Good lỗi (error / 오류) message nói điều gì sai và cách sửa, không chỉ “Invalid đầu vào (input / 입력)”.
 
-> **Chuyển mạch:** Trong **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Khả năng tiếp cận (accessibility / 접근성) không phải add-on cuối dự án** tiếp nhận điểm tựa từ **Form thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Keyboard và focus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Form đúng nghĩa không chỉ kiểm tra dữ liệu; nó còn phải công bố semantics và trạng thái cho công nghệ hỗ trợ. Keyboard và focus là phép thử trực tiếp cho hợp đồng đó.
 
 ## Khả năng tiếp cận (accessibility / 접근성) không phải add-on cuối dự án
 
@@ -44,7 +44,7 @@ Ngữ nghĩa (semantic / 의미적) HTML, keyboard điều hướng (navigation 
 
 Screen reader dựa cây khả năng tiếp cận (accessibility tree / 접근성 트리)/ngữ nghĩa (semantics / 의미론), không “nhìn điểm ảnh (pixel / 픽셀)” như người sighted.
 
-> **Chuyển mạch:** Ở chặng này của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Keyboard và focus** tiếp nhận điểm tựa từ **Khả năng tiếp cận (accessibility / 접근성) không phải add-on cuối dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Keyboard/focus bảo đảm hành động không phụ thuộc chuột; color bổ sung tín hiệu thị giác nhưng không được là kênh duy nhất để hiểu trạng thái.
 
 ## Keyboard và focus
 
@@ -52,7 +52,7 @@ Interactive controls phải reachable bằng keyboard nếu use trường hợp 
 
 Custom clickable `div` thường thiếu keyboard ngữ nghĩa (semantics / 의미론) và accessible role nếu nhà phát triển (developer / 개발자) không thêm đúng hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Color** tiếp nhận điểm tựa từ **Keyboard và focus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Responsive thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Màu cần đi cùng text, icon và contrast đủ dùng; khi viewport và thiết bị thay đổi, cả hierarchy lẫn cách thao tác cũng phải thích ứng.
 
 ## Color
 
@@ -60,7 +60,7 @@ Không nên dùng color là channel duy nhất truyền trạng thái vì color-
 
 Lỗi (error / 오류) có thể dùng icon/văn bản (text / 텍스트) + color. Contrast cần đủ theo khả năng tiếp cận (accessibility / 접근성) guidelines tương ứng, nhưng chính xác (exact / 정확한) threshold phụ thuộc tiêu chuẩn (standard / 표준)/ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Responsive thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Người dùng (user / 사용자) testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Responsive design là giả thuyết về cách bố cục phục vụ nhiều điều kiện. User testing kiểm tra giả thuyết đó bằng tác vụ và người dùng cụ thể.
 
 ## Responsive thiết kế (design / 설계)
 
@@ -68,7 +68,7 @@ Responsive không chỉ shrink desktop UI. Small touch screen có mục tiêu (t
 
 Bố cục (layout / 레이아웃)/content priority có thể cần thay đổi, không chỉ CSS scaling.
 
-> **Chuyển mạch:** Ở chặng này của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Người dùng (user / 사용자) testing** tiếp nhận điểm tựa từ **Responsive thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A/B testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quan sát tác vụ cho biết người dùng vấp ở đâu; A/B testing chỉ nên dùng sau đó khi câu hỏi cần so sánh nhân quả giữa các biến thể.
 
 ## Người dùng (user / 사용자) testing
 
@@ -76,7 +76,7 @@ Quan sát representative users làm representative tasks phát hiện mismatches
 
 5 users không phải magic number cho mọi research. cỡ mẫu (sample size / 표본 크기) phụ thuộc goal, variability và statistical vs qualitative phương thức (method / 메서드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **A/B testing** tiếp nhận điểm tựa từ **Người dùng (user / 사용자) testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dark patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+A/B test đo được metric đã chọn, không tự chứng minh trải nghiệm tốt hơn. Cần xem liệu biến thể thắng có đạt mục tiêu người dùng hay đang đẩy họ vào dark pattern.
 
 ## A/B testing
 
@@ -84,7 +84,7 @@ A/B kiểm thử (test / 테스트) đo nhân quả (causal / 인과적) tác đ
 
 Ví dụ tăng notification clicks không đồng nghĩa tăng người dùng (user / 사용자) well-being. chỉ số (metric / 지표) cần guardrails.
 
-> **Chuyển mạch:** Trong **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Dark patterns** tiếp nhận điểm tựa từ **A/B testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dark pattern cho thấy tối ưu chỉ số cục bộ có thể xung đột với quyền lựa chọn và lợi ích dài hạn. Các ngộ nhận sau đây đặt lại ranh giới đó.
 
 ## Dark patterns
 
@@ -92,7 +92,7 @@ Dark mẫu (pattern / 패턴) dùng asymmetry/confusion để steer người dù
 
 Đây là intersection HCI và ethics: thiết kế (design / 설계) effectiveness không tự đồng nghĩa thiết kế (design / 설계) responsibility.
 
-> **Chuyển mạch:** Ở chặng này của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Dark patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ví dụ trên cùng dẫn tới một mental model: interface là hợp đồng thông tin và hành động, phải còn dùng được qua nhiều cơ thể, thiết bị và công nghệ hỗ trợ.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,13 +102,9 @@ Dark mẫu (pattern / 패턴) dùng asymmetry/confusion để steer người dù
 
 **“A/B kiểm thử (test / 테스트) thắng nghĩa thiết kế (design / 설계) tốt hơn.”** Chỉ với chỉ số (metric / 지표)/horizon/population đã chọn; cần interpret broader effects.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > giao diện (interface / 인터페이스) là một information-and-action kiến trúc (architecture / 아키텍처). khả năng tiếp cận (accessibility / 접근성) tốt làm ngữ nghĩa (semantics / 의미론)/actions survive across different bodies, devices và assistive technologies.
-
-> **Chuyển mạch:** Trong **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

@@ -10,7 +10,7 @@ Trong interactive software, đầu ra (output / 출력) không kết thúc compu
 
 Vì vậy usability bug có thể trở thành tính đúng đắn (correctness / 정확성)/an toàn (safety / 안전) bug. Nếu banking UI làm người dùng (user / 사용자) nhầm beneficiary hoặc medical UI che warning quan trọng, bài toán (problem / 문제) không còn là “mỹ thuật”.
 
-> **Chuyển mạch:** User là một phần của system, nên mental model quyết định họ dự đoán gì; affordance và signifier nối dự đoán đó với hành động có thể nhận ra trên interface.
+Khi đã xem người dùng như một phần của vòng điều khiển, ta cần mô tả cách họ dự đoán trạng thái và kết quả của hệ thống. Đó là vai trò của mental model.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -18,7 +18,7 @@ Người dùng (user / 사용자) xây mô hình tư duy (mental model / 사고 
 
 Nếu button “Save” đôi lúc lưu cloud, đôi lúc cục bộ (local / 로컬) draft, mô hình tư duy (mental model / 사고 모델) không ổn định. Consistency giảm học tập (learning / 학습) chi phí (cost / 비용) vì cùng cue → cùng expectation.
 
-> **Chuyển mạch:** Ở chặng này của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Affordance và signifier** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model là dự đoán bên trong; affordance và signifier là những tín hiệu bên ngoài giúp người dùng hình thành dự đoán đó. Bước kế tiếp kiểm tra dự đoán bằng phản hồi sau hành động.
 
 ## Affordance và signifier
 
@@ -26,7 +26,7 @@ Affordance là hành động (action / 동작) possibilities của đối tượ
 
 Một icon không label có thể có affordance click nhưng signifier meaning kém. HCI quan tâm cả khả năng thao tác lẫn khả năng nhận biết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Affordance và signifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gulf of thực thi (execution / 실행) và evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Signifier cho biết có thể làm gì, còn feedback cho biết hệ thống đã làm gì. Khoảng cách giữa mục tiêu, thao tác và trạng thái quan sát được chính là gulf of execution/evaluation.
 
 ## Phản hồi (feedback / 피드백)
 
@@ -34,7 +34,7 @@ Hành động (action / 동작) cần phản hồi (feedback / 피드백) tươn
 
 Loading indicator, disabled button hoặc optimistic UI là các strategies khác nhau. phản hồi (feedback / 피드백) phải phản ánh bất định (uncertainty / 불확실성)/trạng thái (state / 상태) thật, không chỉ animation.
 
-> **Chuyển mạch:** Trong **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Gulf of thực thi (execution / 실행) và evaluation** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human attention và working bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Gulf được thu hẹp không chỉ bằng thêm nút hay thêm thông báo; giao diện còn phải đặt đúng lượng thông tin vào giới hạn chú ý và working memory.
 
 ## Gulf of thực thi (execution / 실행) và evaluation
 
@@ -42,7 +42,7 @@ Gulf of thực thi (execution / 실행) là khoảng cách giữa goal người 
 
 Good thiết kế (design / 설계) giảm cả hai: hành động (action / 동작) discoverable, kết quả (result / 결과) interpretable.
 
-> **Chuyển mạch:** Ở chặng này của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Human attention và working bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Gulf of thực thi (execution / 실행) và evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fitts's Law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi biết tài nguyên nhận thức hữu hạn, ta có thể phân tích một chi phí cụ thể hơn: thời gian đưa con trỏ tới mục tiêu, được mô tả bằng Fitts's Law.
 
 ## Human attention và working bộ nhớ (memory / 메모리)
 
@@ -52,7 +52,7 @@ Recognition thường dễ hơn recall. Dropdown/lịch sử (history / 이력)/
 
 Nhưng quá nhiều choices visible lại tăng visual/tìm kiếm (search / 검색) tải (load / 로드); thiết kế (design / 설계) phải balance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Fitts's Law** tiếp nhận điểm tựa từ **Human attention và working bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hick–Hyman intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fitts's Law nói về chi phí chọn một mục tiêu trong không gian; khi có nhiều lựa chọn, chi phí quyết định cũng thay đổi. Phần tiếp theo dùng Hick–Hyman để nhìn vào sự lựa chọn đó.
 
 ## Fitts's Law
 
@@ -66,13 +66,13 @@ với `D` là khoảng cách và `W` effective mục tiêu (target / 대상) wid
 
 Insight: mục tiêu (target / 대상) quan trọng nên đủ lớn và placement thuận tiện. Screen edges/corners có effective targeting advantage trong pointer interfaces vì cursor không overshoot ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Hick–Hyman intuition** tiếp nhận điểm tựa từ **Fitts's Law** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Errors: slips và mistakes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fitts và Hick–Hyman đều dự đoán chi phí thao tác, nhưng không nói người dùng có chọn đúng mục tiêu hay không. Vì vậy cần tách slip khỏi mistake để thiết kế cách phòng ngừa.
 
 ## Hick–Hyman intuition
 
 Quyết định (decision / 결정) thời gian (time / 시간) thường tăng khi number/bất định (uncertainty / 불확실성) của choices tăng. Nhưng không có nghĩa luôn giảm menu items; grouping, hierarchy và familiarity thay đổi effective quyết định (decision / 결정) độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Ở chặng này của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Errors: slips và mistakes** tiếp nhận điểm tựa từ **Hick–Hyman intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Direct manipulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân loại lỗi quyết định biện pháp sửa: undo và khoảng cách giúp giảm slip, còn mô hình và ràng buộc rõ giúp giảm mistake. Direct manipulation là một cách đưa trạng thái và hành động lại gần nhau hơn.
 
 ## Errors: slips và mistakes
 
@@ -80,7 +80,7 @@ Slip xảy ra khi goal đúng nhưng hành động (action / 동작) sai, như c
 
 Prevention khác nhau: slip giảm bằng spacing, undo, confirmation cho irreversible hành động (action / 동작); mistake giảm bằng clearer mô hình (model / 모델), explanation và các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Direct manipulation** tiếp nhận điểm tựa từ **Errors: slips và mistakes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Direct manipulation giảm khoảng cách giữa ý định và kết quả, nhưng không phải tác vụ nào cũng phù hợp với kéo-thả. Các ngộ nhận sau đây giúp nhận ra khi nào một lựa chọn UX đang tối ưu sai mục tiêu.
 
 ## Direct manipulation
 
@@ -88,7 +88,7 @@ Dragging đối tượng (object / 객체), resizing visual item và immediate p
 
 Command interfaces có học tập (learning / 학습) chi phí (cost / 비용) cao hơn nhưng composability/efficiency tốt cho experts. UI thiết kế (design / 설계) phải xem người dùng (user / 사용자)/tác vụ (task / 작업) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Direct manipulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những ngộ nhận này quy về một kết luận: giao diện là vòng phản hồi giữa trạng thái máy và cách con người hiểu, dự đoán, rồi hành động.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -98,13 +98,9 @@ Command interfaces có học tập (learning / 학습) chi phí (cost / 비용) 
 
 **“Ít click hơn luôn tốt.”** Một click nguy hiểm/khó hiểu có thể tệ hơn luồng (flow / 흐름) nhiều bước nhưng rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Interactive hệ thống (system / 시스템) là closed vòng phản hồi (feedback loop / 피드백 루프) giữa machine trạng thái (state / 상태) và human perception/hành động (action / 동작). thiết kế (design / 설계) tốt làm trạng thái (state / 상태), available actions và consequences legible.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
