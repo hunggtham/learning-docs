@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **35. 테스트 케이스 (Test Case)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **35. 테스트 케이스 (Test Case)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu biến hành vi cần kiểm tra thành test case với input, precondition, expected output và evidence; từ khóa khoanh vùng dữ liệu và oracle.
 
 ## 핵심 키워드 (Từ khóa)
 
 테스트, 케이스
 
-> **Chuyển mạch:** Ở chặng này của **35. 테스트 케이스 (Test Case)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt test case trên nền top-down flow và stub; cách đọc tiếp theo giúp giữ mỗi case cô lập nhưng vẫn phản ánh contract.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**에서 만든 기준을 이어받아 **35. 테스트 케이스 (Test Case)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **35. 테스트 케이스 (Test Case)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. 테스트 케이스 (Test Case)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần test case dùng khung đó để nối dữ liệu đầu vào với kết luận tái lập.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **35. 테스트 케이스 (Test Case)** 
 
 ---
 
-> **Chuyển mạch:** Trong **35. 테스트 케이스 (Test Case)**, **읽는 방법 (Cách đọc)** cho ta quy tắc; **35. 테스트 케이스 (Test Case)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần test case dùng khung đó để nối dữ liệu đầu vào với kết luận tái lập.
 
 ## 35. 테스트 케이스 (Test Case)
 

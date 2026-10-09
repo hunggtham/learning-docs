@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **43. 테스트 분류 방식 (Test Classification)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu giải thích các nguyên lý test như pesticide paradox, absence of errors và defect clustering; từ khóa khoanh vùng rủi ro và bằng chứng.
 
 ## 핵심 키워드 (Từ khóa)
 
 애플리케이션, 테스트, 원리, 관련, 용어
 
-> **Chuyển mạch:** Ở chặng này của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt nguyên lý test trên nền test case và oracle; cách đọc tiếp theo giúp nối nguyên lý với quyết định thiết kế suite.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **35. 테스트 케이스 (Test Case)**에서 만든 기준을 이어받아 **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần nguyên lý dùng khung đó để nối lựa chọn test với rủi ro còn sót.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **42. 애플리케이션 테스트 원�
 
 ---
 
-> **Chuyển mạch:** Trong **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giới hạn của mọi suite test; khi sang phân loại test, hãy chọn trục phân loại theo câu hỏi cần trả lời.
 
 ## 42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)
 
