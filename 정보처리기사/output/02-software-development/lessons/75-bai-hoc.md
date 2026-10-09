@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **21. 외계인 코드 (Alien Code)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **22. 정적 분석 도구 (Static Analysis Tools)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **21. 외계인 코드 (Alien Code)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu nhận diện alien code qua tên mơ hồ, phụ thuộc ẩn và hành vi khó đoán; từ khóa khoanh vùng smell, context và maintenance risk.
 
 ## 핵심 키워드 (Từ khóa)
 
 외계인, 코드
 
-> **Chuyển mạch:** Ở chặng này của **21. 외계인 코드 (Alien Code)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt alien code trên nền clean-code principles; cách đọc tiếp theo giúp tách lỗi thiết kế khỏi phần chỉ khác phong cách.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **19. 클린 코드 작성 원칙 (Clean Code Principles)**에서 만든 기준을 이어받아 **21. 외계인 코드 (Alien Code)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21. 외계인 코드 (Alien Code)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. 외계인 코드 (Alien Code)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần alien code dùng khung đó để nối smell với chi phí hiểu và sửa.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **21. 외계인 코드 (Alien Code)** nh
 
 ---
 
-> **Chuyển mạch:** Trong **21. 외계인 코드 (Alien Code)**, **21. 외계인 코드 (Alien Code)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng nguyên tắc không sửa mù trong code legacy; khi sang static analysis, hãy dùng tool để tạo evidence trước khi refactor.
 
 ## 21. 외계인 코드 (Alien Code)
 

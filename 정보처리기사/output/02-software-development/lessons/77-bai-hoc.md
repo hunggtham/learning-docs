@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **23. EAI 구축 유형 (Enterprise Application Integration Types)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **25. 트립와이어 (tripwire)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **23. EAI 구축 유형 (Enterprise Application Integration Types)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt các kiểu EAI theo nơi tích hợp, cách định tuyến và mức độ phụ thuộc; từ khóa khoanh vùng point-to-point, hub-and-spoke và message flow.
 
 ## 핵심 키워드 (Từ khóa)
 
 EAI, 구축, 유형
 
-> **Chuyển mạch:** Ở chặng này của **23. EAI 구축 유형 (Enterprise Application Integration Types)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt EAI trên nền boundary và static risk; cách đọc tiếp theo giúp theo dõi dữ liệu đi qua adapter hoặc broker nào.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **22. 정적 분석 도구 (Static Analysis Tools)**에서 만든 기준을 이어받아 **23. EAI 구축 유형 (Enterprise Application Integration Types)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **23. EAI 구축 유형 (Enterprise Application Integration Types)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. EAI 구축 유형 (Enterprise Application Integration Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần EAI dùng khung đó để nối topology với latency, coupling và failure handling.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ EAI, 구축, 유형
 
 ---
 
-> **Chuyển mạch:** Trong **23. EAI 구축 유형 (Enterprise Application Integration Types)**, **23. EAI 구축 유형 (Enterprise Application Integration Types)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa kết nối nhanh và coupling dài hạn; khi sang tripwire, hãy chuyển thành tín hiệu phát hiện vi phạm cụ thể.
 
 ## 23. EAI 구축 유형 (Enterprise Application Integration Types)
 
