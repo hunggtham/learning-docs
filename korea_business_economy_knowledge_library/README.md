@@ -4,6 +4,8 @@
 
 Thư viện này là một **hệ thống kiến thức (knowledge system)** để hiểu nền kinh tế và doanh nghiệp Hàn Quốc từ lịch sử hình thành đến cách một doanh nghiệp thực tế tạo doanh thu, lợi nhuận, dòng tiền và rủi ro. Đây không phải tài liệu học thuộc, danh sách các chaebol hay tập hợp sự kiện rời rạc.
 
+Official statistics, filings, market snapshots và policy currentness được định tuyến trong [Source Ledger](./SOURCES.md). Mọi số liệu/claim hiện hành phải có period/as-of, jurisdiction và source-specific evidence.
+
 Mô hình tư duy (mental model / 사고 모델) trung tâm là:
 
 ```text

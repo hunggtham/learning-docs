@@ -9,7 +9,7 @@
 
 “Nền tảng” không có nghĩa là sơ sài. Đây là lớp kiến thức tiên quyết (prerequisite) chung. Phần nâng cao không lặp lại toàn bộ kiến thức nền mà dựa trên những giả định đã được giải thích để đào sâu hơn.
 
-Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện ưu tiên tiếng Việt và giữ thuật ngữ tiếng Anh trong ngoặc khi cần. Xem [Coverage Audit](./COVERAGE_AUDIT.md) để biết lĩnh vực (domain / 도메인) nào đang mạnh, gap nào còn lại và quy tắc maintenance hiện tại.
+Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện ưu tiên tiếng Việt và giữ thuật ngữ tiếng Anh trong ngoặc khi cần. Xem [Coverage Audit](./COVERAGE_AUDIT.md) để biết lĩnh vực (domain / 도메인) nào đang mạnh, gap nào còn lại và quy tắc maintenance hiện tại. Source/specification, version và benchmark boundary nằm trong [Source Ledger](./SOURCES.md).
 
 ## Bản đồ Nền tảng → Nâng cao
 

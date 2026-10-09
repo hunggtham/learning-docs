@@ -4,6 +4,8 @@
 
 `economics/` là thư viện Economics độc lập của repository. Mục tiêu là giải thích cách cá nhân, doanh nghiệp, thị trường, nhà nước và các nền kinh tế lựa chọn và phối hợp dưới điều kiện khan hiếm, thông tin không hoàn hảo và ràng buộc thể chế. Economics ở đây là lĩnh vực (domain / 도메인) nền tảng; phần ứng dụng vào tài sản, doanh nghiệp và danh mục vẫn nằm ở [Investing](../investing/README.md).
 
+Theory, dataset, forecast vintage và causal-evidence boundary được quản lý trong [Source Ledger](./SOURCES.md); data portal hoặc forecast headline không tự chứng minh causal claim.
+
 ## Trạng thái hiện tại
 
 Economics cốt lõi (core / 핵심) hiện đã hoàn chỉnh ở cấp chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로):

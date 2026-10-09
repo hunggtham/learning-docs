@@ -10,6 +10,8 @@ question → concept → argument → premise → objection → implication → 
 
 Mục tiêu là giúp người đọc nhận ra một claim đang nói về **mô tả**, **giải thích**, **chuẩn tắc** hay **khái niệm**, sau đó đánh giá claim bằng lập luận và bằng chứng thích hợp. Triết học không thay thế khoa học thực nghiệm, nhưng làm rõ câu hỏi, tiêu chuẩn biện minh, giới hạn mô hình và hệ quả giá trị mà khoa học không tự quyết định được.
 
+Edition, primary-text provenance và interpretation boundary được ghi trong [Source Ledger](./SOURCES.md); một entry/overview không tự đại diện cho consensus toàn ngành.
+
 ## Những câu hỏi trung tâm
 
 - Ta biết một điều bằng cách nào? Bằng chứng (evidence / 증거) là gì? Một claim được justified ra sao?

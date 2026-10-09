@@ -6,6 +6,10 @@ Thư mục này không còn chứa worker sinh hoặc viết lại learning docs
 - [`../prompt/DOCS_AUDIT_PROMPT.md`](../prompt/DOCS_AUDIT_PROMPT.md) — audit trước khi chấp nhận;
 - [`../prompt/DOCS_REVIEW_PROMPT.md`](../prompt/DOCS_REVIEW_PROMPT.md) — review/fix sau khi người dùng test không đạt.
 
+## Provenance và runtime boundary
+
+[Source Ledger](./SOURCES.md) ghi version/runtime/config boundary cho Git, Python, Node và CI tools. Green CI hoặc script exit 0 chỉ chứng minh job/context đã chạy; không tự chứng minh live provider hay publication state.
+
 ## QA cấu trúc không sinh nội dung
 
 `repo_audit.py` chỉ kiểm tra catalog, đường dẫn và Markdown links; nó không sửa file và không tạo prose.
