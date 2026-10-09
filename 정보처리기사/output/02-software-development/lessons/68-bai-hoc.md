@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định query optimization cải thiện plan, index và chi phí thực thi ra sao; từ khóa khoanh vùng selectivity, join và execution plan.
 
 ## 핵심 키워드 (Từ khóa)
 
 쿼리, 성능, 최적화
 
-> **Chuyển mạch:** Ở chặng này của **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt query optimization trên nền trace và cost evidence; cách đọc tiếp theo giúp theo dõi thay đổi plan thay vì chỉ nhìn thời gian cuối.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **A+ Deep Dive: 알고리즘 trace와 테스트 판정**에서 만든 기준을 이어받아 **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần query optimization dùng khung đó để nối predicate, access path và cost.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **092-1: 쿼리 성능 최적화 (Query 
 
 ---
 
-> **Chuyển mạch:** Trong **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**, **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng điều kiện dữ liệu và workload ảnh hưởng cost; khi sang interface security, hãy chuyển từ hiệu năng truy vấn sang ranh giới bảo vệ mạng.
 
 ## 092-1: 쿼리 성능 최적화 (Query Performance Optimization)
 

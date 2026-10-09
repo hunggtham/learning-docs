@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **A+ Deep Dive: 알고리즘 trace와 테스트 판정** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu dùng algorithm trace để nối trạng thái trung gian với phán định test; từ khóa khoanh vùng invariant, expected state và evidence.
 
 ## 핵심 키워드 (Từ khóa)
 
 Deep, Dive, 알고리즘, 테스트, 판정
 
-> **Chuyển mạch:** Ở chặng này của **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt trace trên nền V-model levels và black-box/white-box; cách đọc tiếp theo giúp phân biệt trạng thái đúng với output cuối.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**에서 만든 기준을 이어받아 **A+ Deep Dive: 알고리즘 trace와 테스트 판정**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần trace dùng khung đó để nối từng bước chuyển trạng thái với oracle.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Deep, Dive, 알고리즘, 테스트, 판정
 
 ---
 
-> **Chuyển mạch:** Trong **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng cách ghi evidence đủ để tái kiểm tra phán định; khi sang query optimization, hãy chuyển trace từ thuật toán sang plan và cost.
 
 ## A+ Deep Dive: 알고리즘 trace와 테스트 판정
 
