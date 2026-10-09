@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **10. 이진 트리의 운행법 (Binary Tree Traversal)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **11. 수식의 표기법 (Expression Notation)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **10. 이진 트리의 운행법 (Binary Tree Traversal)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định preorder, inorder, postorder và stack trả lời câu hỏi nào; từ khóa khoanh vùng thứ tự duyệt trước khi nối sang kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 이진, 트리의, 운행법
 
-> **Chuyển mạch:** Ở chặng này của **10. 이진 트리의 운행법 (Binary Tree Traversal)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt traversal trên nền tree terms; cách đọc tiếp theo giúp chọn thứ tự theo dependency của bài toán.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **9. 트리 (Tree) 용어**에서 만든 기준을 이어받아 **10. 이진 트리의 운행법 (Binary Tree Traversal)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. 이진 트리의 운행법 (Binary Tree Traversal)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 이진 트리의 운행법 (Binary Tree Traversal)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần traversal dùng khung đó để nối thứ tự xử lý với output cần tìm.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **10. 이진 트리의 운행법 (Binary
 
 ---
 
-> **Chuyển mạch:** Trong **10. 이진 트리의 운행법 (Binary Tree Traversal)**, **10. 이진 트리의 운행법 (Binary Tree Traversal)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng quan hệ giữa thứ tự duyệt và câu hỏi thuật toán; khi sang expression notation, hãy giữ lại stack và dependency.
 
 ## 10. 이진 트리의 운행법 (Binary Tree Traversal)
 

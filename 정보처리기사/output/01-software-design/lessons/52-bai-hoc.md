@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **9. 트리 (Tree) 용어** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **10. 이진 트리의 운행법 (Binary Tree Traversal)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **9. 트리 (Tree) 용어**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định node, edge, root, leaf và height mô tả cây ra sao; từ khóa khoanh vùng vocabulary trước khi nối sang kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 트리
 
-> **Chuyển mạch:** Ở chặng này của **9. 트리 (Tree) 용어**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt tree terms trên nền data structures; cách đọc tiếp theo giúp phân biệt cấu trúc và vai trò của từng node.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**에서 만든 기준을 이어받아 **9. 트리 (Tree) 용어**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **9. 트리 (Tree) 용어**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 트리 (Tree) 용어** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần tree terms dùng khung đó để nối hình dạng với thao tác.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **9. 트리 (Tree) 용어** như một k
 
 ---
 
-> **Chuyển mạch:** Trong **9. 트리 (Tree) 용어**, **9. 트리 (Tree) 용어** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng từ vựng và boundary của cây; khi sang traversal, hãy giữ lại root, child và depth.
 
 ## 9. 트리 (Tree) 용어
 
