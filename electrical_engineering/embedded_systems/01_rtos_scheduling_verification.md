@@ -8,19 +8,19 @@ MCU chapter mô tả thời gian chạy (runtime / 런타임). Chapter này đi 
 
 Priority-based scheduler cần phân tích preemption, trọng yếu (critical / 중요) section, interrupt interference và priority inversion. Priority inheritance có thể giảm inversion nhưng không thay thế việc giới hạn khóa (lock / 잠금) hold thời gian (time / 시간).
 
-> **Chuyển mạch:** **1. Priority và blocking** xác định ai chờ ai; **2. WCET và deadline** định lượng khả năng đáp ứng, rồi **3. Memory và fault containment** giới hạn tác động khi task lỗi.
+Sau khi xác định quan hệ chờ và nguy cơ priority inversion, ta cần định lượng thời gian đáp ứng ở tình huống xấu nhất. Vì vậy phần tiếp theo chuyển sang WCET và deadline; sau đó các giới hạn bộ nhớ và fault containment sẽ cho biết một task lỗi có thể lan tới đâu.
 
 ## 2. WCET và deadline
 
 Worst-case thực thi (execution / 실행) thời gian (time / 시간) phải đo ở bộ nhớ đệm (cache / 캐시), branch, bus và trình biên dịch (compiler / 컴파일러) cấu hình (configuration / 구성) phù hợp. dấu vết (trace / 추적) average độ trễ (latency / 지연 시간) chỉ cho biết typical đường dẫn (path / 경로). Deadline miss cần chính sách (policy / 정책): skip mẫu (sample / 표본), degrade đầu ra (output / 출력), reset subsystem hay chuyển safe trạng thái (state / 상태).
 
-> **Chuyển mạch:** Từ deadline và fault containment, **4. Verification ladder** xếp kiểm thử từ unit đến timing, để claim an toàn có bằng chứng tương ứng.
+Deadline chỉ có ý nghĩa khi đi kèm bằng chứng. Từ các giới hạn thời gian và khả năng cô lập ở trên, phần **4. Verification ladder** sắp xếp kiểm thử từ unit đến timing để mỗi claim an toàn có mức kiểm chứng tương ứng.
 
 ## 3. bộ nhớ (memory / 메모리) và fault containment
 
 MPU/MMU, ngăn xếp (stack / 스택) watermark, vùng nhớ động (heap / 힙) chính sách (policy / 정책) và quyền sở hữu (ownership / 소유권) giúp một tác vụ (task / 작업) lỗi không phá toàn bộ hệ. động (dynamic / 동적) allocation trong real-time không sai tuyệt đối, nhưng fragmentation và unbounded độ trễ (latency / 지연 시간) phải được kiểm soát.
 
-> **Chuyển mạch:** **Verification ladder** kiểm tra các lớp thời gian, bộ nhớ và recovery; **Cầu nối** ghi điều kiện bàn giao sang firmware hoặc system audit.
+Verification ladder kết nối các lớp thời gian, bộ nhớ và recovery thành một chuỗi bằng chứng. Phần **Cầu nối** tiếp theo sẽ ghi rõ điều kiện bàn giao sang firmware hoặc system audit, nơi các quyền sở hữu và giới hạn runtime được theo dõi tiếp.
 
 ## 4. xác minh (verification / 확인) ladder
 
@@ -28,7 +28,7 @@ MPU/MMU, ngăn xếp (stack / 스택) watermark, vùng nhớ động (heap / 힙
 
 Kiểm thử (test / 테스트) phải bao gồm clock drift, hàng đợi (queue / 큐) full, DMA lỗi (error / 오류), watchdog, brownout và firmware quay lui (rollback / 롤백). Pass functional kiểm thử (test / 테스트) không chứng minh pass temporal/an toàn (safety / 안전) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** **Cầu nối** khép bài bằng cách nối priority, deadline, containment và test evidence thành một checklist RTOS có thể lặp.
+Như vậy, priority, deadline, containment và test evidence đã được đặt trong cùng một chu trình kiểm chứng. Có thể dùng **Cầu nối** như checklist RTOS lặp lại khi chuyển sang bus, firmware hoặc vòng điều khiển.
 
 ## Cầu nối (bridge / 브리지)
 
