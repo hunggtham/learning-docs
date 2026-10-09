@@ -16,7 +16,7 @@ Interactive media kết hợp rendering, audio/video, đầu vào (input / 입�
 
 Average FPS có thể cao nhưng frame-time spikes vẫn khó chịu; phân phối (distribution / 분포)/pacing quan trọng.
 
-> **Chuyển mạch:** Trong **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Game/kết xuất (render / 렌더링) vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **Frame tỷ lệ (rate / 비율) và frame thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Double buffering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Frame budget chỉ trở nên có thể thực thi khi được đặt vào game/render loop. Loop đó cũng xác định thời điểm buffer được tạo và trình bày.
 
 ## Game/kết xuất (render / 렌더링) vòng lặp (loop / 루프)
 
@@ -32,7 +32,7 @@ repeat
 
 Simulation timestep có thể variable theo frame delta hoặc fixed timestep. Fixed timestep ổn định physics/determinism hơn; rendering có thể interpolate giữa simulation states.
 
-> **Chuyển mạch:** Ở chặng này của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Double buffering** tiếp nhận điểm tựa từ **Game/kết xuất (render / 렌더링) vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu vào (input / 입력) độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Double buffering ngăn display đọc dữ liệu đang bị ghi, nhưng thêm buffer và chờ refresh cũng có thể tăng độ trễ. Vì vậy cần theo dõi input-to-display path.
 
 ## Double buffering
 
@@ -40,7 +40,7 @@ Nếu display đọc framebuffer trong khi GPU đang viết, tearing/inconsisten
 
 VSync đồng bộ present với display refresh để giảm tearing nhưng có độ trễ (latency / 지연 시간) trade-offs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Đầu vào (input / 입력) độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Double buffering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Animation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Độ trễ là đường đi từ input đến photon, không chỉ là thời gian render. Animation phải cập nhật theo đường đi đó mà vẫn giữ chuyển động ổn định.
 
 ## Đầu vào (input / 입력) độ trễ (latency / 지연 시간)
 
@@ -48,7 +48,7 @@ VSync đồng bộ present với display refresh để giảm tearing nhưng có
 
 Competitive/VR các hệ thống (systems / 시스템들) nhạy với end-to-end motion-to-photon/input-to-photon độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Trong **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Animation** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Audio sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Animation nội suy trạng thái theo thời gian; audio cũng là dữ liệu lấy mẫu theo thời gian. Hai đường thời gian này phải được đồng bộ khi media có cả hình và tiếng.
 
 ## Animation
 
@@ -56,7 +56,7 @@ Keyframe animation định nghĩa states tại times rồi interpolate. Skeletal
 
 Interpolation tuyến tính (linear / 선형) dễ tính nhưng orientation thường dùng quaternions/slerp để tránh artifacts của Euler angle interpolation.
 
-> **Chuyển mạch:** Ở chặng này của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Audio sampling** tiếp nhận điểm tựa từ **Animation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Audio/video synchronization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sampling rate và bit depth quyết định audio được biểu diễn ra sao; playback còn phải ghép clock audio với clock video để tránh drift.
 
 ## Audio sampling
 
@@ -64,7 +64,7 @@ Digital audio mẫu (sample / 표본) amplitude theo thời gian. mẫu (sample 
 
 Bit độ sâu (depth / 깊이) ảnh hưởng quantization động (dynamic / 동적) phạm vi (range / 범위)/noise. Compression codecs exploit psychoacoustic redundancy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Audio/video synchronization** tiếp nhận điểm tựa từ **Audio sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Video compression intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đồng bộ A/V xử lý sai khác clock và jitter bằng buffering, resampling hoặc điều chỉnh frame. Video compression lại tạo dependency giữa các frame, ảnh hưởng seek và khả năng khôi phục khi mất dữ liệu.
 
 ## Audio/video synchronization
 
@@ -72,7 +72,7 @@ Audio clock và video/kết xuất (render / 렌더링) clock có thể drift. P
 
 Mạng (network / 네트워크) streaming thêm jitter; jitter buffer đổi độ trễ (latency / 지연 시간) lấy smooth playback.
 
-> **Chuyển mạch:** Trong **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Video compression intuition** tiếp nhận điểm tựa từ **Audio/video synchronization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Real-time vs fast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+GOP và motion prediction đổi băng thông lấy dependency và độ trễ giải mã. Đánh đổi đó phải được đánh giá trong deadline của ứng dụng, không chỉ bằng tốc độ giải mã trung bình.
 
 ## Video compression intuition
 
@@ -80,7 +80,7 @@ Video codec không encode mỗi frame độc lập hoàn toàn. Intra frames enc
 
 Mất mát (loss / 손실) hoặc seek hành vi (behavior / 동작) phụ thuộc phụ thuộc (dependency / 의존성) cấu trúc (structure / 구조) giữa frames, giải thích keyframes/GOP.
 
-> **Chuyển mạch:** Ở chặng này của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Real-time vs fast** tiếp nhận điểm tựa từ **Video compression intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Real-time nghĩa là đáp ứng deadline đã cam kết, không phải luôn chạy nhanh nhất. Những ngộ nhận sau đây thường nhầm throughput với tính đúng đắn theo thời gian.
 
 ## Real-time vs fast
 
@@ -88,7 +88,7 @@ Real-time không nhất thiết nghĩa cực nhanh; nó nghĩa đáp ứng deadl
 
 Games/video lời gọi (call / 호출) thường soft real-time; industrial điều khiển (control / 제어) có thể hard/firm các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Real-time vs fast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ví dụ trên cùng chỉ về một nguyên tắc: media pipeline phải giữ cả nội dung lẫn thời điểm xuất hiện trong giới hạn deadline.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -98,13 +98,9 @@ Games/video lời gọi (call / 호출) thường soft real-time; industrial đi
 
 **“Video là chuỗi JPEG.”** hiện đại (modern / 현대적) codecs exploit temporal prediction mạnh.
 
-> **Chuyển mạch:** Trong **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Interactive media là chuỗi xử lý (pipeline / 파이프라인) có deadline. tính đúng đắn (correctness / 정확성) gồm cả nội dung và thời điểm dữ liệu xuất hiện.
-
-> **Chuyển mạch:** Ở chặng này của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
