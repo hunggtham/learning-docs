@@ -20,7 +20,7 @@ Phạm vi **chưa hoàn tất**. Snapshot live của checkout hiện tại:
 
 | Chỉ số | Giá trị |
 |---|---:|
-| File còn connector cũ `Chuyển mạch` | 916 |
+| File còn connector cũ `Chuyển mạch` | 913 |
 | File còn mẫu câu nối cũ (broad scan) | 1405 |
 | File còn connector malformed (loại trừ báo cáo này) | 0 |
 | File bị broad scan đánh dấu từ khóa quiz/self-check | 161 |
@@ -41,7 +41,7 @@ ngoài phạm vi review được giữ nguyên và không đưa vào những com
 | `electrical_engineering` | 28 |
 | `10_backend` | 27 |
 | `devops_platform_engineering` | 20 |
-| `data_engineering` | 20 |
+| `data_engineering` | 17 |
 | `economics` | 18 |
 | `sql` | 17 |
 | `linux` | 16 |
