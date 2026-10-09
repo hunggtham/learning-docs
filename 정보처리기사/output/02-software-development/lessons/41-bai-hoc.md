@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định package và installation manual chuyển artifact đã version thành bản cài đặt dùng được ra sao; từ khóa khoanh vùng dependency, cấu hình và rollback.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 패키징, 설치, 매뉴얼
 
-> **Chuyển mạch:** Ở chặng này của **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt packaging trên nền artifact và version tool; cách đọc tiếp theo giúp theo dõi dependency từ build đến cài đặt.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **116 & 117: 형상 관리 도구 (SVN vs Git)**에서 만든 기준을 이어받아 **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần packaging dùng khung đó để nối cấu hình gói với điều kiện môi trường.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **12. 소프트웨어 패키징 및 설�
 
 ---
 
-> **Chuyển mạch:** Trong **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí gói tái lập và cài đặt có thể khôi phục; khi sang packaging nâng cao, hãy đối chiếu thêm các ràng buộc triển khai.
 
 ## 12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)
 

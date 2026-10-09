@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **116 & 117: 형상 관리 도구 (SVN vs Git)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **116 & 117: 형상 관리 도구 (SVN vs Git)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu so sánh SVN và Git theo mô hình lưu trữ, branch và merge; từ khóa khoanh vùng repository, commit và lịch sử.
 
 ## 핵심 키워드 (Từ khóa)
 
 형상, 관리, 도구
 
-> **Chuyển mạch:** Ở chặng này của **116 & 117: 형상 관리 도구 (SVN vs Git)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt SVN/Git trên nền SCM và version process; cách đọc tiếp theo giúp đối chiếu nơi lưu lịch sử và nơi hợp nhất thay đổi.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**에서 만든 기준을 이어받아 **116 & 117: 형상 관리 도구 (SVN vs Git)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **116 & 117: 형상 관리 도구 (SVN vs Git)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116 & 117: 형상 관리 도구 (SVN vs Git)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần SVN/Git dùng khung đó để nối topology repository với cách phối hợp.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **116 & 117: 형상 관리 도구 (SVN v
 
 ---
 
-> **Chuyển mạch:** Trong **116 & 117: 형상 관리 도구 (SVN vs Git)**, **116 & 117: 형상 관리 도구 (SVN vs Git)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off tập trung và phân tán; khi sang packaging, hãy nối version artifact với gói phát hành.
 
 ## 116 & 117: 형상 관리 도구 (SVN vs Git)
 
