@@ -20,10 +20,10 @@ Phạm vi **chưa hoàn tất**. Snapshot live của checkout hiện tại:
 
 | Chỉ số | Giá trị |
 |---|---:|
-| File còn connector cũ `Chuyển mạch` | 1022 |
-| File còn mẫu câu nối cũ | 809 |
+| File còn connector cũ `Chuyển mạch` | 1020 |
+| File còn mẫu câu nối cũ | 800 |
 | File có connector malformed `Nối mạch:***` | 0 |
-| File bị broad scan đánh dấu từ khóa quiz/self-check | 121 |
+| File bị broad scan đánh dấu từ khóa quiz/self-check | 128 |
 
 Broad scan chỉ là danh sách cần rà lại; không phải mọi kết quả đều là quiz thực
 thụ. Các thay đổi dirty/staged ngoài phạm vi review được giữ nguyên và không đưa
@@ -33,7 +33,7 @@ vào những commit checkpoint.
 
 | Domain | Còn lại |
 |---|---:|
-| `computer_science` | 388 |
+| `computer_science` | 380 |
 | `정보처리기사` | 271 |
 | `korea_business_economy_knowledge_library` | 62 |
 | `philosophy` | 60 |
@@ -44,7 +44,7 @@ vào những commit checkpoint.
 | `economics` | 18 |
 | `sql` | 17 |
 | `linux` | 16 |
-| Các domain nhỏ còn lại | 89 |
+| Các domain nhỏ còn lại | 95 |
 
 ## Checkpoint đã commit
 
