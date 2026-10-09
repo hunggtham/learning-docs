@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt IDE vào vòng đời coding–build–debug–deploy. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại các thuật ngữ để theo dõi cách một công cụ gom những bước đó và giới hạn nào vẫn cần công cụ bên ngoài.
 
 ## 핵심 키워드 (Từ khóa)
 
 통합, 개발, 환경
 
-> **Chuyển mạch:** Ở chặng này của **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa mô tả IDE qua những bước trong vòng đời phát triển. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối vòng đời đó với procedural SQL ở bài trước, nơi logic và debugging cũng phải được kiểm soát bằng công cụ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **091-1: 절차형 SQL (Procedural SQL)**에서 만든 기준을 이어받아 **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối IDE với quy trình xử lý logic, **읽는 방법 (Cách đọc)** sẽ hướng dẫn đọc mỗi chức năng theo đầu vào, biến đổi và artifact đầu ra, để phân biệt tiện ích tích hợp với trách nhiệm thực sự của nhóm phát triển.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **097 & 120: 통합 개발 환경 (IDE -
 
 ---
 
-> **Chuyển mạch:** Trong **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** giải thích IDE qua bốn chức năng và ví dụ công cụ. Hãy giữ ranh giới giữa môi trường tích hợp và công cụ build/collaboration khi chuyển sang bài kế tiếp.
 
 ## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 

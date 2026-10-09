@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **120-1: 소프트웨어의 분류 (Software Classification)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **phần tổng hợp của môn** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **120-1: 소프트웨어의 분류 (Software Classification)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt software classification vào quan hệ giữa vai trò, người dùng và vòng đời. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại thuật ngữ để nhận diện các nhóm phần mềm trước khi xét mục đích cung cấp.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어의, 분류
 
-> **Chuyển mạch:** Ở chặng này của **120-1: 소프트웨어의 분류 (Software Classification)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa gọi tên việc phân loại, nhưng chưa cho biết tiêu chí chọn loại nào. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối tiêu chí đó với version-control tools ở bài trước, nơi mục đích sử dụng cũng quyết định cách quản lý phần mềm.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**에서 만든 기준을 이어받아 **120-1: 소프트웨어의 분류 (Software Classification)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **120-1: 소프트웨어의 분류 (Software Classification)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **120-1: 소프트웨어의 분류 (Software Classification)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối phân loại với cách quản lý phiên bản, **읽는 방법 (Cách đọc)** sẽ hướng dẫn nhận diện đối tượng phục vụ, cơ chế phân phối và giới hạn của từng nhóm thay vì chỉ ghi nhớ tên.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **120-1: 소프트웨어의 분류 (Soft
 
 ---
 
-> **Chuyển mạch:** Trong **120-1: 소프트웨어의 분류 (Software Classification)**, **120-1: 소프트웨어의 분류 (Software Classification)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **120-1: 소프트웨어의 분류 (Software Classification)** đối chiếu software thương mại với software cung cấp theo dịch vụ. Đây là điểm khép của subject 2; phần tổng hợp sẽ dùng các tiêu chí đã hình thành để nối các lesson.
 
 ## 120-1: 소프트웨어의 분류 (Software Classification)
 

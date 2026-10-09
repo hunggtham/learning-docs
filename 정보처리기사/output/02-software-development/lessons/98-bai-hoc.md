@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt build và collaboration tools vào nhiệm vụ biến mã thành artifact và phối hợp nhóm. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại thuật ngữ để phân biệt công cụ tạo sản phẩm với công cụ quản lý giao tiếp và công việc.
 
 ## 핵심 키워드 (Từ khóa)
 
 기타, 협업, 도구
 
-> **Chuyển mạch:** Ở chặng này của **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa cho thấy bài này có hai nhánh: build biến đổi mã, còn collaboration làm cho công việc và artifact được chia sẻ. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối hai nhánh đó với IDE ở bài trước.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**에서 만든 기준을 이어받아 **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi phân biệt IDE với công cụ build và phối hợp, **읽는 방법 (Cách đọc)** sẽ hướng dẫn theo dõi đầu vào, artifact, dependency và kênh giao tiếp để thấy mỗi công cụ giải quyết phần nào của pipeline.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **098 & 기타 협업 도구 (Build Tool
 
 ---
 
-> **Chuyển mạch:** Trong **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, **읽는 방법 (Cách đọc)** cho ta quy tắc; **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** lần lượt giải thích build tool và groupware bằng artifact, dependency và luồng phối hợp. Hãy giữ các tiêu chí đó khi chuyển sang software manuals.
 
 ## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
@@ -60,7 +60,7 @@ Ta vừa chốt **빌드 도구 (Build Tool)** bằng các điều kiện và đ
 
 ### 기타 협업 도구 (Groupware / Collaboration Tools)
 
-Các ý ngay dưới **기타 협업 도구 (Groupware / Collaboration Tools)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **기타 협업 도구 (Groupware / Collaboration Tools)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “기타 협업 도구 (Groupware / Collaboration Tools)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
