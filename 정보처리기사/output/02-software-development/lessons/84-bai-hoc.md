@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt hai công nghệ bộ nhớ vào cùng một bài toán so sánh. Phần **핵심 키워드 (Từ khóa)** tiếp theo chọn các thuật ngữ làm mốc cho phép so sánh dung lượng, cách lưu trữ và giới hạn phần cứng trước khi đi vào từng cơ chế.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 반도체, 기억소자, 자기, 코어
 
-> **Chuyển mạch:** Ở chặng này của **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa đã nêu những đại lượng và công nghệ cần phân biệt. Phần **선행·연결 개념 (Kiến thức liên kết)** nối chúng với RAM vừa học để người đọc thấy câu hỏi chuyển từ một loại bộ nhớ sang lịch sử và đánh đổi thiết kế của nhiều loại bộ nhớ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 110: RAM (Random Access Memory)**에서 만든 기준을 이어받아 **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã có mốc RAM để đối chiếu, phần **읽는 방법 (Cách đọc)** sẽ yêu cầu đọc từng công thức và mô tả theo quan hệ điều kiện–hệ quả, rồi dùng cùng tiêu chí đó để so sánh bán dẫn với lõi từ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 111 & 112: 반도체 기억소�
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**, **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi có trình tự đọc, phần **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** áp dụng nó vào phép tính dung lượng và cơ chế lõi từ. Hãy giữ lại khác biệt về tốc độ, độ bền dữ liệu và chi phí để làm tiêu chí chuyển sang bộ nhớ phụ và thời gian truy cập.
 
 ## 핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)
 
@@ -44,7 +44,7 @@ Từ **핵심 110: RAM (Random Access Memory)**, ta đã có điểm tựa để
 
 ### RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)
 
-Các ý ngay dưới **RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 

@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **38. 릴리즈 노트 (Release Note)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 110: RAM (Random Access Memory)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **38. 릴리즈 노트 (Release Note)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt release note vào vai trò tài liệu truyền đạt thay đổi. Phần **핵심 키워드 (Từ khóa)** tiếp theo cô đọng những thành phần cần có trong tài liệu đó, để ta có thể nhận diện một release note trước khi xét cách nó được tạo và sử dụng.
 
 ## 핵심 키워드 (Từ khóa)
 
 릴리즈, 노트
 
-> **Chuyển mạch:** Ở chặng này của **38. 릴리즈 노트 (Release Note)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa cho thấy release note phải mô tả phiên bản, thay đổi và ảnh hưởng một cách có cấu trúc. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối cấu trúc đó với DBMS ở bài trước, qua đó làm rõ vì sao thông tin thay đổi cần được ghi nhận và truyền đạt.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **33. DBMS (데이터베이스 관리 시스템)**에서 만든 기준을 이어받아 **38. 릴리즈 노트 (Release Note)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **38. 릴리즈 노트 (Release Note)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. 릴리즈 노트 (Release Note)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi đã nối release note với quy trình quản lý thay đổi, phần **읽는 방법 (Cách đọc)** sẽ hướng dẫn kiểm tra từng mục theo mục đích, điều kiện và ảnh hưởng, thay vì học thuộc một danh sách tiêu đề.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **38. 릴리즈 노트 (Release Note)** 
 
 ---
 
-> **Chuyển mạch:** Trong **38. 릴리즈 노트 (Release Note)**, **38. 릴리즈 노트 (Release Note)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với cách đọc vừa xác lập, phần **38. 릴리즈 노트 (Release Note)** lần lượt giải thích nội dung, người viết và ví dụ của tài liệu phát hành. Hãy đối chiếu từng thành phần với tác động mà nó cần làm rõ, rồi mang tiêu chí đó sang bài về RAM.
 
 ## 38. 릴리즈 노트 (Release Note)
 

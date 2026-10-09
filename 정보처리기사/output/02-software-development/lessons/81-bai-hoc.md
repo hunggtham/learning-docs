@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **33. DBMS (데이터베이스 관리 시스템)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **38. 릴리즈 노트 (Release Note)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **33. DBMS (데이터베이스 관리 시스템)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa xác định vai trò của DBMS và tiêu chí nhận diện nó. Vì vậy, phần **핵심 키워드 (Từ khóa)** ngay sau đây chỉ giữ lại những thuật ngữ cần thiết để gọi đúng các chức năng và phạm vi của hệ quản trị, trước khi nối chúng với kiến thức nền.
 
 ## 핵심 키워드 (Từ khóa)
 
 DBMS
 
-> **Chuyển mạch:** Ở chặng này của **33. DBMS (데이터베이스 관리 시스템)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa trên gọi tên đối tượng và ba nhóm chức năng của DBMS. Để hiểu vì sao những chức năng đó cần thiết, phần **선행·연결 개념 (Kiến thức liên kết)** sẽ đặt chúng cạnh cấu trúc dữ liệu đã học và chỉ ra câu hỏi mới mà DBMS phải giải quyết.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**에서 만든 기준을 이어받아 **33. DBMS (데이터베이스 관리 시스템)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **33. DBMS (데이터베이스 관리 시스템)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. DBMS (데이터베이스 관리 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã thấy DBMS mở rộng vấn đề tổ chức dữ liệu từ phần trước, **읽는 방법 (Cách đọc)** sẽ biến mối liên hệ đó thành một trình tự học cụ thể: xác định đối tượng, mục đích, điều kiện và hệ quả trước khi xem ví dụ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ DBMS
 
 ---
 
-> **Chuyển mạch:** Trong **33. DBMS (데이터베이스 관리 시스템)**, **33. DBMS (데이터베이스 관리 시스템)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi có cách đọc, phần **33. DBMS (데이터베이스 관리 시스템)** áp dụng trực tiếp trình tự đó vào định nghĩa, chức năng, ưu điểm và giới hạn của hệ quản trị. Hãy dùng các tiêu chí vừa đặt ra để nối từng ý nguồn với câu hỏi trung tâm, rồi giữ lại kết luận trước khi sang release note.
 
 ## 33. DBMS (데이터베이스 관리 시스템)
 
