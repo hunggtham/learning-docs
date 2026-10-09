@@ -8,7 +8,7 @@ Hai dataset có cùng column và cùng row nhưng hiệu năng (performance / �
 
 Vì vậy dữ liệu (data / 데이터) Engineer phải lập luận (reasoning / 추론) cả logical mô hình (model / 모델) lẫn vật lý (physical / 물리적) biểu diễn (representation / 표현).
 
-> **Chuyển mạch:** Trong **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **2. Row-oriented và column-oriented** tiếp nhận điểm tựa từ **1. Logical lược đồ (schema / 스키마) chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Parquet như một ví dụ về predicate pushdown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Logical schema chưa đủ để dự đoán chi phí đọc; phần tiếp theo chuyển sang row-oriented và column-oriented layout.
 
 ## 2. Row-oriented và column-oriented
 
@@ -18,7 +18,7 @@ Column-oriented bố cục (layout / 레이아웃) nhóm giá trị cùng column
 
 Columnar không có nghĩa là từng column luôn là một tệp (file / 파일) riêng. Format như Parquet tổ chức dữ liệu thành row group rồi lưu column chunk bên trong. Cấu trúc này cân bằng giữa scan theo column, siêu dữ liệu (metadata / 메타데이터) statistics và khả năng chia công việc (work / 작업).
 
-> **Chuyển mạch:** Ở chặng này của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **2. Row-oriented và column-oriented** cho ta quy tắc; **3. Parquet như một ví dụ về predicate pushdown** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. Compression là sự đánh đổi (trade-off / 트레이드오프) CPU và I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Row và column layout cho ta nguyên tắc tổ chức dữ liệu; tiếp theo dùng Parquet để thấy predicate pushdown hoạt động ra sao.
 
 ## 3. Parquet như một ví dụ về predicate pushdown
 
@@ -28,7 +28,7 @@ Một Parquet tệp (file / 파일) có siêu dữ liệu (metadata / 메타데�
 
 Vật lý (physical / 물리적) thứ tự (ordering / 순서) vì vậy có thể làm siêu dữ liệu (metadata / 메타데이터) trở nên hữu ích hơn, nhưng sorting cũng tốn compute và làm ingestion phức tạp hơn. Không có bố cục (layout / 레이아웃) miễn phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **3. Parquet như một ví dụ về predicate pushdown** cho ta quy tắc; **4. Compression là sự đánh đổi (trade-off / 트레이드오프) CPU và I/O** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. Partitioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Predicate pushdown chỉ hiệu quả khi layout cung cấp statistics phù hợp; phần sau cân bằng compression giữa CPU và I/O.
 
 ## 4. Compression là sự đánh đổi (trade-off / 트레이드오프) CPU và I/O
 
@@ -36,7 +36,7 @@ Compression giảm byte trên lưu trữ (storage / 저장소) và mạng (netwo
 
 Phải đo end-to-end: compressed kích thước (size / 크기), scan bytes, decode CPU, truy vấn (query / 쿼리) độ trễ (latency / 지연 시간) và chi phí (cost / 비용). Chọn codec chỉ theo compression ratio là tối ưu sai mục tiêu.
 
-> **Chuyển mạch:** Trong **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **5. Partitioning** tiếp nhận điểm tựa từ **4. Compression là sự đánh đổi (trade-off / 트레이드오프) CPU và I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Small-file bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Compression thay đổi cả bytes đọc lẫn CPU giải mã; tiếp theo chọn partition key dựa trên access pattern và lifecycle.
 
 ## 5. Partitioning
 
@@ -46,7 +46,7 @@ Partition quá thô khiến mỗi truy vấn (query / 쿼리) vẫn đọc nhi�
 
 Partition key phải xuất phát từ truy cập (access / 접근) mẫu (pattern / 패턴), volume và vòng đời (lifecycle / 생명주기) thao tác (operation / 연산), không phải từ việc column đó "quan trọng".
 
-> **Chuyển mạch:** Ở chặng này của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **6. Small-file bài toán (problem / 문제)** tiếp nhận điểm tựa từ **5. Partitioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. đối tượng (object / 객체) lưu trữ (storage / 저장소) không phải filesystem truyền thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Partitioning ảnh hưởng trực tiếp đến số lượng file; phần sau xem vì sao small-file problem làm tăng chi phí vận hành.
 
 ## 6. Small-file bài toán (problem / 문제)
 
@@ -56,7 +56,7 @@ Streaming/micro-batch ingestion dễ sinh tệp (file / 파일) nhỏ vì mỗi 
 
 Nhưng compaction cần coordination: không được làm reader nhìn thấy half-written trạng thái (state / 상태), không được mất concurrent writes và cần garbage-collect tệp (file / 파일) cũ an toàn. Đây là một trong các lý do bảng (table / 테이블) format hiện đại tồn tại trên đối tượng (object / 객체) lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **7. đối tượng (object / 객체) lưu trữ (storage / 저장소) không phải filesystem truyền thống** tiếp nhận điểm tựa từ **6. Small-file bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Warehouse, lake và lakehouse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Small files tạo overhead ở metadata và scheduling; tiếp theo là khác biệt giữa object storage và filesystem.
 
 ## 7. đối tượng (object / 객체) lưu trữ (storage / 저장소) không phải filesystem truyền thống
 
@@ -64,7 +64,7 @@ Nhưng compaction cần coordination: không được làm reader nhìn thấy h
 
 Thuật toán (algorithm / 알고리즘) được thiết kế dựa trên atomic rename của HDFS/cục bộ (local / 로컬) filesystem có thể hoạt động kém hoặc không đúng khi chuyển thẳng sang đối tượng (object / 객체) lưu trữ (storage / 저장소). hiện đại (modern / 현대적) bảng (table / 테이블) formats giải quyết vấn đề này bằng siêu dữ liệu (metadata / 메타데이터)/manifest và lần ghi nhận (commit / 커밋) giao thức (protocol / 프로토콜) phù hợp hơn.
 
-> **Chuyển mạch:** Trong **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **8. Warehouse, lake và lakehouse** tiếp nhận điểm tựa từ **7. đối tượng (object / 객체) lưu trữ (storage / 저장소) không phải filesystem truyền thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. lược đồ (schema / 스키마) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Object storage không hứa atomic rename như filesystem; phần sau giải thích cách warehouse, lake và lakehouse tổ chức các bảo đảm đó.
 
 ## 8. Warehouse, lake và lakehouse
 
@@ -72,7 +72,7 @@ Dữ liệu (data / 데이터) warehouse truyền thống cung cấp lưu trữ 
 
 Lakehouse cố gắng đưa bảng (table / 테이블) ngữ nghĩa (semantics / 의미론) như snapshot, lược đồ (schema / 스키마) evolution, transaction-like lần ghi nhận (commit / 커밋) và thời gian (time / 시간) travel lên đối tượng (object / 객체) lưu trữ (storage / 저장소)/open tệp (file / 파일) formats. Điểm cốt lõi không phải marketing term mà là separation giữa dữ liệu (data / 데이터) files và siêu dữ liệu (metadata / 메타데이터) tầng (layer / 계층) mô tả snapshot hợp lệ.
 
-> **Chuyển mạch:** Ở chặng này của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **9. lược đồ (schema / 스키마) evolution** tiếp nhận điểm tựa từ **8. Warehouse, lake và lakehouse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. chi phí (cost / 비용) lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Lakehouse đặt metadata và snapshot lên open files; tiếp theo kiểm tra schema evolution và compatibility của reader/writer.
 
 ## 9. lược đồ (schema / 스키마) evolution
 
@@ -80,7 +80,7 @@ Thêm column, đổi kiểu (type / 타입) hoặc rename trường dữ liệu 
 
 Safe evolution cần tính tương thích (compatibility / 호환성) chính sách (policy / 정책) và triển khai (deployment / 배포) thứ tự (order / 순서). Ví dụ producer thêm trường dữ liệu (field / 필드) optional trước, bên tiêu thụ (consumer / 소비자) được nâng cấp để đọc trường dữ liệu (field / 필드) đó, sau đó mới bắt đầu dựa vào trường dữ liệu (field / 필드). Breaking thay đổi (change / 변경) cần phiên bản (version / 버전) hoặc di chuyển (migration / 마이그레이션) tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **10. chi phí (cost / 비용) lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **9. lược đồ (schema / 스키마) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. bố cục (layout / 레이아웃) invariants và read amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Schema evolution an toàn cần nhìn cả compatibility lẫn chi phí; phần sau chuyển sang cách lập luận về cost.
 
 ## 10. chi phí (cost / 비용) lập luận (reasoning / 추론)
 
@@ -88,7 +88,7 @@ Trong cloud analytics, hiệu năng (performance / 성능) và chi phí (cost / 
 
 Tuy nhiên tối ưu lưu trữ (storage / 저장소) để giảm scan có thể tăng ingestion/maintenance chi phí (cost / 비용). Một hệ thống tốt tối ưu total chi phí (cost / 비용) of quyền sở hữu (ownership / 소유권), bao gồm compute, lưu trữ (storage / 저장소), mạng (network / 네트워크), operational độ phức tạp (complexity / 복잡도) và thời gian kỹ sư, thay vì chỉ tối thiểu một chỉ số (metric / 지표).
 
-> **Chuyển mạch:** Trong **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **11. bố cục (layout / 레이아웃) invariants và read amplification** tiếp nhận điểm tựa từ **10. chi phí (cost / 비용) lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. tệp (file / 파일) lần ghi nhận (commit / 커밋) và visibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Cost phải tính cả compute, storage, network và vận hành; tiếp theo dùng read amplification để đánh giá layout.
 
 ## 11. bố cục (layout / 레이아웃) invariants và read amplification
 
@@ -100,7 +100,7 @@ read amplification = bytes read / bytes returned or used
 
 Partition pruning và column pruning giảm read amplification. Nhưng statistics không đáng tin nếu row group quá lớn, dữ liệu không được cluster hoặc predicate có selectivity thấp. tệp (file / 파일) nhỏ hơn không mặc định tốt hơn nếu số yêu cầu (request / 요청) và siêu dữ liệu (metadata / 메타데이터) overhead tăng mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **12. tệp (file / 파일) lần ghi nhận (commit / 커밋) và visibility** tiếp nhận điểm tựa từ **11. bố cục (layout / 레이아웃) invariants và read amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Compaction và delete ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Read amplification cho biết bao nhiêu dữ liệu bị đọc thừa; phần sau đặt commit và visibility vào cùng một invariant.
 
 ## 12. tệp (file / 파일) lần ghi nhận (commit / 커밋) và visibility
 
@@ -108,7 +108,7 @@ Writer không nên ghi trực tiếp vào đường dẫn (path / 경로) mà re
 
 Khi thử lại (retry / 재시도), temporary files cũ phải có naming/phiên bản (version / 버전) và garbage-collection chính sách (policy / 정책). Nếu không, reader có thể double-count tệp (file / 파일) hoặc compaction gom cả đầu ra (output / 출력) chưa lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **13. Compaction và delete ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **12. tệp (file / 파일) lần ghi nhận (commit / 커밋) và visibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. lược đồ (schema / 스키마) định danh (identity / 식별자) và kiểu (type / 타입) widening** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Visibility chỉ nên mở sau khi commit hợp lệ; tiếp theo kiểm tra compaction và semantics của delete.
 
 ## 13. Compaction và delete ngữ nghĩa (semantics / 의미론)
 
@@ -116,7 +116,7 @@ Compaction rewrite dữ liệu (data / 데이터) files nhưng không được t
 
 Delete vật lý và delete lô-gic (logic / 논리) khác nhau. Tombstone bị compaction bỏ qua quá sớm có thể làm bản ghi (record / 레코드) đã xóa “sống lại” khi đọc snapshot cũ hoặc replay.
 
-> **Chuyển mạch:** Trong **03 — lưu trữ (storage / 저장소), tệp (file / 파일) format và analytical bố cục (layout / 레이아웃)**, **14. lược đồ (schema / 스키마) định danh (identity / 식별자) và kiểu (type / 타입) widening** tiếp nhận điểm tựa từ **13. Compaction và delete ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Compaction phải giữ nguyên logical result và tôn trọng retention; phần cuối phân biệt identity với type widening trong schema evolution.
 
 ## 14. lược đồ (schema / 스키마) định danh (identity / 식별자) và kiểu (type / 타입) widening
 

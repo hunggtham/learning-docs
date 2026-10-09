@@ -8,7 +8,7 @@ Sơ đồ `source → queue → processor → warehouse` che giấu phần khó 
 
 Nếu nguồn (source / 소스) đã phát sự kiện (event / 이벤트) nhưng bên tiêu thụ (consumer / 소비자) chưa ghi được sink, sự kiện (event / 이벤트) phải còn khả năng replay. Nếu sink đã ghi thành công nhưng acknowledgement bị mất, thử lại (retry / 재시도) không được làm sai kết quả. Vì vậy kiến trúc chuỗi xử lý (pipeline / 파이프라인) nên được đọc như chuỗi chuyển tiếp trạng thái (state transition / 상태 전이) có thất bại (failure / 실패) ranh giới (boundary / 경계), không phải chuỗi logo sản phẩm.
 
-> **Chuyển mạch:** Trong **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **1. chuỗi xử lý (pipeline / 파이프라인) là chuỗi chuyển tiếp trạng thái (state transition / 상태 전이)** xác định đầu vào; **2. ETL và ELT** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Full tải (load / 로드) và incremental tải (load / 로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Sau khi xem pipeline như chuỗi chuyển trạng thái, phần tiếp theo so sánh hai cách tổ chức biến đổi: ETL và ELT.
 
 ## 2. ETL và ELT
 
@@ -18,7 +18,7 @@ ELT trở nên phổ biến khi warehouse/lakehouse có compute mạnh và lưu 
 
 Sự đánh đổi (trade-off / 트레이드오프) thật sự nằm ở nơi đặt transformation ranh giới (boundary / 경계), khả năng replay và quản trị (governance / 거버넌스) chứ không nằm ở ba chữ viết tắt.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **3. Full tải (load / 로드) và incremental tải (load / 로드)** tiếp nhận điểm tựa từ **2. ETL và ELT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. CDC và giao dịch (transaction / 트랜잭션) log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** ETL/ELT là lựa chọn vị trí xử lý; tiếp theo là cách chọn full load hay incremental load theo trạng thái nguồn.
 
 ## 3. Full tải (load / 로드) và incremental tải (load / 로드)
 
@@ -28,7 +28,7 @@ Một filter kiểu `updated_at > last_run_time` có vẻ đơn giản nhưng c�
 
 Một incremental ranh giới (boundary / 경계) tốt thường cần overlap cửa sổ (window / 윈도우) cộng deduplication, monotonically increasing cursor đáng tin cậy, hoặc CDC log thay vì chỉ dựa vào wall-clock timestamp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **4. CDC và giao dịch (transaction / 트랜잭션) log** tiếp nhận điểm tựa từ **3. Full tải (load / 로드) và incremental tải (load / 로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. At-most-once, at-least-once và exactly-once** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Incremental load cần biết thay đổi phát sinh ở đâu; phần tiếp theo giới thiệu CDC và transaction log.
 
 ## 4. CDC và giao dịch (transaction / 트랜잭션) log
 
@@ -38,7 +38,7 @@ Nhưng CDC không phải magic. bên tiêu thụ (consumer / 소비자) cần hi
 
 Một thất bại (failure / 실패) môi trường vận hành (production / 운영 환경) phổ biến xảy ra khi connector ngừng lâu hơn log retention. Offset vẫn tồn tại nhưng log segment cần thiết đã bị xóa; lúc này không thể chỉ restart và mong chuỗi xử lý (pipeline / 파이프라인) tự bắt kịp. khôi phục (recovery / 복구) có thể cần snapshot/resync.
 
-> **Chuyển mạch:** Trong **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **5. At-most-once, at-least-once và exactly-once** tiếp nhận điểm tựa từ **4. CDC và giao dịch (transaction / 트랜잭션) log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Offset không phải nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** CDC đưa lịch sử thay đổi vào pipeline, nhưng delivery guarantee mới quyết định duplicate có thể xảy ra thế nào.
 
 ## 5. At-most-once, at-least-once và exactly-once
 
@@ -46,7 +46,7 @@ At-most-once ưu tiên không xử lý duplicate nhưng chấp nhận mất mess
 
 Trong thực tế, at-least-once cộng idempotent sink thường là mô hình dễ lập luận (reasoning / 추론) và robust. Ví dụ sink `MERGE` theo immutable `event_id` có thể hấp thụ thử lại (retry / 재시도). Tuy nhiên nếu nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트) không có định danh (identity / 식별자) ổn định, deduplication trở thành bài toán lĩnh vực (domain / 도메인) chứ không thể giải chỉ bằng khung phần mềm (framework / 프레임워크) setting.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **6. Offset không phải nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **5. At-most-once, at-least-once và exactly-once** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** At-most-once, at-least-once và exactly-once chỉ mô tả một đoạn đường; tiếp theo phân biệt offset với correctness nghiệp vụ.
 
 ## 6. Offset không phải nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)
 
@@ -56,7 +56,7 @@ Nếu bên tiêu thụ (consumer / 소비자) lần ghi nhận (commit / 커밋)
 
 Cấp cao (senior / 시니어) ghi chú (note / 노트): khi rà soát (review / 검토) chuỗi xử lý (pipeline / 파이프라인), luôn vẽ riêng `source position`, `processing state` và `sink commit`. Đừng gộp chúng thành một khái niệm "processed".
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **6. Offset không phải nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** xác định đầu vào; **7. sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Backfill và replay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Offset cho biết đã đọc đến đâu, không cho biết kết quả đúng; phần sau chuyển sang event time và processing time.
 
 ## 7. sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)
 
@@ -66,7 +66,7 @@ Ví dụ điện thoại offline ghi nhận purchase lúc 09:00 nhưng upload l�
 
 Streaming cửa sổ (window / 윈도우) theo sự kiện (event / 이벤트) thời gian (time / 시간) vì vậy phải chấp nhận dữ liệu đến muộn (late data / 지연 데이터). Watermark là tuyên bố thực dụng rằng hệ thống tin phần lớn sự kiện (event / 이벤트) trước một mốc đã đến và có thể finalize/cleanup trạng thái (state / 상태) theo chính sách (policy / 정책). Watermark không làm late sự kiện (event / 이벤트) biến mất; nó quyết định cách hệ thống đánh đổi completeness, độ trễ (latency / 지연 시간) và trạng thái (state / 상태) kích thước (size / 크기).
 
-> **Chuyển mạch:** Trong **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **7. sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** xác định đầu vào; **8. Backfill và replay** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Orchestration không phải processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi tách event time khỏi processing time, ta có cơ sở để xử lý dữ liệu đến muộn; tiếp theo là backfill và replay.
 
 ## 8. Backfill và replay
 
@@ -76,7 +76,7 @@ Một transformation thuần túy từ immutable đầu vào (input / 입력) sa
 
 Trước một backfill lớn phải xác định đầu vào (input / 입력) phiên bản (version / 버전), mã (code / 코드) phiên bản (version / 버전), mục tiêu (target / 대상) partitions, ghi (write / 쓰기) chế độ (mode / 모드), expected row counts, reconciliation quy tắc (rule / 규칙) và chiến lược quay lui (rollback strategy / 롤백 전략). "Chạy lại job" không phải một khôi phục (recovery / 복구) plan.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **8. Backfill và replay** xác định đầu vào; **9. Orchestration không phải processing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Failure-oriented thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Backfill và replay tái tạo dữ liệu ở những thời điểm khác nhau; phần sau làm rõ orchestration không thay thế processing.
 
 ## 9. Orchestration không phải processing
 
@@ -84,7 +84,7 @@ Orchestrator quản lý phụ thuộc (dependency / 의존성), scheduling, th�
 
 Một DAG xanh chỉ chứng minh tác vụ (task / 작업) tiến trình (process / 프로세스) trả về success theo điều kiện của nó. DAG không chứng minh nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) đúng. Vì vậy dữ liệu (data / 데이터) cổng chất lượng (quality gate / 품질 게이트) và reconciliation phải là một phần tường minh (explicit / 명시적) của workflow khi dataset quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **9. Orchestration không phải processing** xác định đầu vào; **10. Failure-oriented thiết kế (design / 설계)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Checkpoint, watermark và lần ghi nhận (commit / 커밋) marker không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Orchestration điều phối công việc, còn processing tạo ra dữ liệu; tiếp theo thiết kế pipeline từ các failure có thể xảy ra.
 
 ## 10. Failure-oriented thiết kế (design / 설계)
 
@@ -92,7 +92,7 @@ Thiết kế chuỗi xử lý (pipeline / 파이프라인) nên bắt đầu b�
 
 Cách lập luận (reasoning / 추론) này mạnh hơn việc chỉ đọc happy-path kiến trúc (architecture / 아키텍처) diagram, bởi môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) được định nghĩa phần lớn bởi hành vi (behavior / 동작) khi một phần của nó thất bại.
 
-> **Chuyển mạch:** Trong **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **11. Checkpoint, watermark và lần ghi nhận (commit / 커밋) marker không giống nhau** tiếp nhận điểm tựa từ **10. Failure-oriented thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약) và đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Failure-oriented design cần các mốc trạng thái rõ; phần sau phân biệt checkpoint, watermark và commit marker.
 
 ## 11. Checkpoint, watermark và lần ghi nhận (commit / 커밋) marker không giống nhau
 
@@ -104,7 +104,7 @@ Ba khái niệm thường bị gộp thành “đã chạy tới đâu”:
 
 Checkpoint có thể tiến trong khi sink chưa lần ghi nhận (commit / 커밋). Watermark có thể tiến dù một late sự kiện (event / 이벤트) còn đang trên đường đến. lần ghi nhận (commit / 커밋) marker chỉ nên được ghi sau reconciliation. Thiết kế sai ranh giới (boundary / 경계) này tạo chuỗi xử lý (pipeline / 파이프라인) xanh nhưng đầu ra (output / 출력) thiếu hoặc không thể replay.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **12. đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약) và đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **11. Checkpoint, watermark và lần ghi nhận (commit / 커밋) marker không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Ba loại marker có vai trò khác nhau trong tiến độ, thời gian và khả năng nhìn thấy kết quả; tiếp theo là contract của input và output.
 
 ## 12. đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약) và đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)
 
@@ -112,7 +112,7 @@ Checkpoint có thể tiến trong khi sink chưa lần ghi nhận (commit / 커�
 
 Một chuỗi xử lý (pipeline / 파이프라인) có thể “đọc được” payload nhưng vẫn vi phạm đặc tả hợp đồng (contract / 계약) nếu nguồn (source / 소스) đổi timezone, đổi currency hoặc đổi ý nghĩa enum. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) nên kiểm tra ngữ nghĩa (semantics / 의미론) representative, không chỉ parser.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)** tiếp nhận điểm tựa từ **12. đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약) và đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. chuỗi xử lý (pipeline / 파이프라인) rà soát (review / 검토) bằng máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Contract biến boundary thành điều kiện kiểm chứng; phần sau chọn sink pattern theo loại output cần phát hành.
 
 ## 13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)
 
@@ -126,7 +126,7 @@ Một chuỗi xử lý (pipeline / 파이프라인) có thể “đọc được
 
 Chọn sink mẫu (pattern / 패턴) trước khi chọn khung phần mềm (framework / 프레임워크). Cùng một engine có thể implement mọi mẫu (pattern / 패턴) nhưng guarantee và khôi phục (recovery / 복구) khác nhau.
 
-> **Chuyển mạch:** Trong **02 — Kiến trúc chuỗi xử lý (pipeline / 파이프라인) và processing ngữ nghĩa (semantics / 의미론)**, **13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)** xác định đầu vào; **14. chuỗi xử lý (pipeline / 파이프라인) rà soát (review / 검토) bằng máy trạng thái (state machine / 상태 머신)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Sink pattern phải phù hợp với tính chất output; phần cuối dùng state machine để rà soát toàn bộ pipeline.
 
 ## 14. chuỗi xử lý (pipeline / 파이프라인) rà soát (review / 검토) bằng máy trạng thái (state machine / 상태 머신)
 

@@ -10,7 +10,7 @@ Một ứng dụng có thể lưu hàng triệu giao dịch mà doanh nghiệp v
 
 Hãy tưởng tượng `orders` lưu trạng thái hiện tại của đơn hàng. Nếu một bản ghi (record / 레코드) hôm qua là `PENDING`, hôm nay thành `PAID`, cơ sở dữ liệu (database / 데이터베이스) vận hành có thể chỉ cần giá trị mới nhất. Nhưng câu hỏi "mỗi đơn hàng mất bao lâu để chuyển từ PENDING sang PAID trong sáu tháng qua?" cần lịch sử thay đổi. Một hệ thống tối ưu cho giao dịch (transaction / 트랜잭션) hiện tại không tự động trở thành hệ thống tối ưu cho historical analytics.
 
-> **Chuyển mạch:** Trong **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **1. Vấn đề thật sự không phải là "có dữ liệu"** nêu điều cần giải thích; **2. OLTP và OLAP là hai pressure khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Từ khác biệt giữa nhu cầu vận hành và nhu cầu phân tích, phần tiếp theo chuyển sang hai kiểu tải OLTP và OLAP.
 
 ## 2. OLTP và OLAP là hai pressure khác nhau
 
@@ -20,7 +20,7 @@ Xử lý phân tích trực tuyến (Online Analytical Processing, OLAP / 온라
 
 Sự khác biệt này giải thích vì sao "chỉ truy vấn (query / 쿼리) môi trường vận hành (production / 운영 환경) cơ sở dữ liệu (database / 데이터베이스)" thường không quy mô (scale / 규모) thành dữ liệu (data / 데이터) nền tảng (platform / 플랫폼). truy vấn (query / 쿼리) phân tích dài có thể tranh CPU, bộ nhớ (memory / 메모리), bộ nhớ đệm (cache / 캐시) và I/O với tải công việc (workload / 워크로드) phục vụ người dùng. Đồng thời lược đồ (schema / 스키마) chuẩn hóa cho giao dịch (transaction / 트랜잭션) không nhất thiết là hình dạng thuận tiện nhất cho analytics.
 
-> **Chuyển mạch:** Ở chặng này của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **2. OLTP và OLAP là hai pressure khác nhau** nêu điều cần giải thích; **3. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Batch và streaming không đơn giản là "chậm" và "nhanh"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi đã phân biệt hai kiểu tải, ta theo dõi dữ liệu qua toàn bộ vòng đời để thấy các ranh giới gây lỗi.
 
 ## 3. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)
 
@@ -28,7 +28,7 @@ Một cách nhìn hữu ích là theo vòng đời dữ liệu (data lifecycle /
 
 Mỗi ranh giới tạo ra một dạng thất bại (failure mode / 실패 모드) mới. nguồn (source / 소스) có thể thay lược đồ (schema / 스키마). mạng (network / 네트워크) có thể thử lại (retry / 재시도) và gửi duplicate. bên tiêu thụ (consumer / 소비자) có thể crash sau khi ghi đầu ra (output / 출력) nhưng trước khi xác nhận message. Một partition có thể đến muộn. Một transformation có thể chạy thành công nhưng dùng sai timezone. Vì vậy tính đúng đắn (correctness / 정확성) không phải thuộc tính của một tệp (file / 파일) hoặc một job; nó là thuộc tính end-to-end của cả vòng đời (lifecycle / 생명주기).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **3. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** nêu điều cần giải thích; **4. Batch và streaming không đơn giản là "chậm" và "nhanh"** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Vòng đời dữ liệu đặt ra câu hỏi về thời gian xử lý; tiếp theo là cách phân biệt batch với streaming.
 
 ## 4. Batch và streaming không đơn giản là "chậm" và "nhanh"
 
@@ -38,7 +38,7 @@ Batch processing gom một tập dữ liệu hữu hạn rồi xử lý nó như
 
 Một chuỗi xử lý (pipeline / 파이프라인) chạy mỗi năm phút vẫn có thể là micro-batch. Ngược lại, việc dùng Kafka không tự động biến toàn bộ kiến trúc (architecture / 아키텍처) thành streaming đúng nghĩa. Cần nhìn vào ngữ nghĩa (semantics / 의미론) của computation thay vì tên sản phẩm.
 
-> **Chuyển mạch:** Trong **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **5. tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **4. Batch và streaming không đơn giản là "chậm" và "nhanh"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) về ý nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Batch và streaming khác nhau ở trạng thái, thời gian và cách xử lý dữ liệu đến muộn; từ đó cần đặt tính đúng đắn trước tốc độ.
 
 ## 5. tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)
 
@@ -48,7 +48,7 @@ Giả sử chuỗi xử lý (pipeline / 파이프라인) đọc payment sự ki�
 
 Tính đúng đắn (correctness / 정확성) cũng không đồng nghĩa với "exactly-once" được ghi trên brochure. Exactly-once end-to-end phụ thuộc nguồn (source / 소스), vận chuyển (transport / 전송), processing và sink. Nếu một tầng không tham gia được vào giao dịch (transaction / 트랜잭션) hoặc deduplication giao thức (protocol / 프로토콜), guarantee của engine riêng lẻ không đủ để bảo đảm nghiệp vụ (business / 비즈니스) kết quả (result / 결과) exactly once.
 
-> **Chuyển mạch:** Ở chặng này của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **6. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) về ý nghĩa** tiếp nhận điểm tựa từ **5. tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. mô hình dữ liệu (data model / 데이터 모델) bắt đầu từ grain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Tính đúng đắn của pipeline phụ thuộc vào ý nghĩa của dữ liệu; phần tiếp theo xem schema như một contract giữa writer và reader.
 
 ## 6. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) về ý nghĩa
 
@@ -58,7 +58,7 @@ Lược đồ (schema / 스키마) không chỉ nói `amount` là `DECIMAL`. bê
 
 Cấp cao (senior / 시니어) lập luận (reasoning / 추론) vì vậy luôn tách lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) khỏi ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **6. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) về ý nghĩa** nêu điều cần giải thích; **7. mô hình dữ liệu (data model / 데이터 모델) bắt đầu từ grain** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Từ chuỗi xử lý (pipeline / 파이프라인) sang dữ liệu (data / 데이터) sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Một schema có ý nghĩa khi nó dẫn đến mô hình dữ liệu rõ grain; tiếp theo ta chuyển từ contract sang cách tổ chức bản ghi.
 
 ## 7. mô hình dữ liệu (data model / 데이터 모델) bắt đầu từ grain
 
@@ -68,7 +68,7 @@ Nếu grain không rõ, phép nối (join / 조인) rất dễ tạo fan-out. V�
 
 Đây là liên kết (connection / 연결) quan trọng giữa kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) và SQL: học SQL không chỉ là nhớ cú pháp `JOIN`; phải hiểu cardinality, grain và bất biến (invariant / 불변식) của mô hình dữ liệu (data model / 데이터 모델).
 
-> **Chuyển mạch:** Trong **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **7. mô hình dữ liệu (data model / 데이터 모델) bắt đầu từ grain** nêu điều cần giải thích; **8. Từ chuỗi xử lý (pipeline / 파이프라인) sang dữ liệu (data / 데이터) sản phẩm (product / 제품)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. bất biến (invariant / 불변식) là công cụ lập luận (reasoning / 추론) mạnh nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Grain và cardinality là nền tảng để biến pipeline thành data product có owner, SLO và người tiêu thụ rõ ràng.
 
 ## 8. Từ chuỗi xử lý (pipeline / 파이프라인) sang dữ liệu (data / 데이터) sản phẩm (product / 제품)
 
@@ -76,7 +76,7 @@ Chuỗi xử lý (pipeline / 파이프라인) chỉ mô tả đường xử lý.
 
 Mô hình tư duy (mental model / 사고 모델) này giúp tránh dữ liệu (data / 데이터) swamp: rất nhiều bảng (table / 테이블) tồn tại nhưng không ai biết bảng (table / 테이블) nào đáng tin, được tạo ra thế nào hoặc còn được sử dụng hay không.
 
-> **Chuyển mạch:** Ở chặng này của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **8. Từ chuỗi xử lý (pipeline / 파이프라인) sang dữ liệu (data / 데이터) sản phẩm (product / 제품)** nêu điều cần giải thích; **9. bất biến (invariant / 불변식) là công cụ lập luận (reasoning / 추론) mạnh nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Các lớp của tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Data product cần các bất biến có thể kiểm chứng; phần tiếp theo dùng invariant làm điểm tựa để đánh giá kiến trúc.
 
 ## 9. bất biến (invariant / 불변식) là công cụ lập luận (reasoning / 추론) mạnh nhất
 
@@ -84,7 +84,7 @@ Khi gặp một kiến trúc (architecture / 아키텍처) mới, đừng bắt 
 
 Sau đó hỏi từng thành phần (component / 컴포넌트) duy trì bất biến (invariant / 불변식) bằng cơ chế nào và bằng chứng (evidence / 증거) nào chứng minh điều đó trong môi trường vận hành (production / 운영 환경). Đây là cách đi từ sơ đồ kiến trúc (architecture / 아키텍처) đẹp sang kỹ thuật (engineering / 엔지니어링) có thể vận hành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **10. Các lớp của tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **9. bất biến (invariant / 불변식) là công cụ lập luận (reasoning / 추론) mạnh nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. ranh giới (boundary / 경계) của giao dịch (transaction / 트랜잭션) và publish** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Từ các invariant, ta tách tính đúng đắn thành các lớp để biết mỗi thành phần phải bảo vệ điều gì.
 
 ## 10. Các lớp của tính đúng đắn (correctness / 정확성)
 
@@ -100,7 +100,7 @@ Một dữ liệu (data / 데이터) sản phẩm (product / 제품) hiếm khi 
 
 Một chuỗi xử lý (pipeline / 파이프라인) có thể pass vận chuyển (transport / 전송) nhưng thất bại (fail / 실패) nghiệp vụ (business / 비즈니스). Ví dụ tất cả message đến đủ nhưng `refund` bị tính như `sale`. cổng chất lượng (quality gate / 품질 게이트) phải chỉ rõ đang bảo vệ lớp nào.
 
-> **Chuyển mạch:** Trong **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **10. Các lớp của tính đúng đắn (correctness / 정확성)** đã nêu tiêu chí phân biệt, còn **11. ranh giới (boundary / 경계) của giao dịch (transaction / 트랜잭션) và publish** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Worked example: thứ tự (order / 순서) revenue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Các lớp correctness làm rõ nơi cần kiểm tra; tiếp theo là ranh giới giao dịch và thời điểm publish.
 
 ## 11. ranh giới (boundary / 경계) của giao dịch (transaction / 트랜잭션) và publish
 
@@ -118,7 +118,7 @@ source commit
 
 Nếu crash giữa hai bước, khôi phục (recovery / 복구) phải biết bước nào đã hoàn tất. Idempotent ghi (write / 쓰기) hoặc giao dịch (transaction / 트랜잭션) coordinator nối các trạng thái (state / 상태) đó; offset riêng lẻ không làm được.
 
-> **Chuyển mạch:** Ở chặng này của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **11. ranh giới (boundary / 경계) của giao dịch (transaction / 트랜잭션) và publish** cho ta quy tắc; **12. Worked example: thứ tự (order / 순서) revenue** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. quyết định (decision / 결정) bản ghi (record / 레코드) tối thiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Ranh giới transaction/publish được kiểm nghiệm rõ nhất qua ví dụ doanh thu đơn hàng; phần sau đi qua một worked example.
 
 ## 12. Worked example: thứ tự (order / 순서) revenue
 
@@ -130,7 +130,7 @@ net_revenue = Σ captured_amount − Σ valid_refund_amount
 
 Muốn chứng minh chỉ số (metric / 지표) đúng cần định nghĩa `valid_refund`: refund có thể đến sau nhiều ngày, có thể partial, và có thể bị thử lại (retry / 재시도). mô hình (model / 모델) phải lưu sự kiện (event / 이벤트) định danh (identity / 식별자), currency, sự kiện (event / 이벤트) thời gian (time / 시간), nguồn (source / 소스) phiên bản (version / 버전) và trạng thái reconciliation. Chỉ kiểm tra row count sẽ không phát hiện double-capture.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) từ nguyên lý nền tảng (first principles / 제일 원리)**, **12. Worked example: thứ tự (order / 순서) revenue** cho ta quy tắc; **13. quyết định (decision / 결정) bản ghi (record / 레코드) tối thiểu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Worked example cho thấy mỗi record cần giữ thông tin tối thiểu nào; phần cuối khép lại bằng decision rule cho việc chọn record.
 
 ## 13. quyết định (decision / 결정) bản ghi (record / 레코드) tối thiểu
 
