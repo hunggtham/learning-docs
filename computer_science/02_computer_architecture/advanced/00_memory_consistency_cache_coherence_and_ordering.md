@@ -22,7 +22,7 @@ publish payload xong bằng release
 
 Thiết kế bộ nhớ (memory / 메모리) mô hình (model / 모델) là một thỏa hiệp: cho trình biên dịch (compiler / 컴파일러)/hardware đủ freedom để tối ưu nhưng vẫn cung cấp thành phần nguyên thủy (primitive / 기본 요소) đủ mạnh để software chứng minh tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Performance cần hardware freedom nhưng software cần contract; coherence giữ một cache line nhất quán, consistency quy định thứ tự quan sát giữa nhiều location, và store buffer tạo độ trễ visibility.
+Hardware cần trì hoãn và sắp xếp lại thao tác để che latency, còn software cần một contract về điều gì được quan sát. Coherence giữ lịch sử của từng location; consistency đặt giới hạn giữa nhiều location; store buffer giải thích vì sao visibility không tức thì.
 
 ## 2. Coherence và consistency trả lời hai câu hỏi khác nhau
 
@@ -34,7 +34,7 @@ Sequential consistency là mô hình (model / 모델) trực quan: kết quả n
 
 Điểm phải giữ: **coherence của từng location không tự tạo cross-location thứ tự (ordering / 순서)**. `payload` và `ready` có thể đều coherent nhưng reader không được suy luận `ready == true` kéo theo payload đã visible nếu giao thức (protocol / 프로토콜) thiếu synchronization đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **3. Store buffer giải thích vì sao store chưa chắc visible ngay** tiếp nhận điểm tựa từ **2. Coherence và consistency trả lời hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Message-passing kiểm thử (test / 테스트): publication cần một thứ tự (ordering / 순서) edge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Coherence và consistency mới chỉ nói những kết quả nào được phép; store buffer cho thấy một store có thể còn nằm trong đường đi nội bộ trước khi core khác quan sát. Từ đó, litmus test message-passing sẽ kiểm tra publication cần ordering edge nào.
 
 ## 3. Store buffer giải thích vì sao store chưa chắc visible ngay
 
@@ -54,7 +54,7 @@ Trực giác sequential dễ cho rằng `r1 = 0 && r2 = 0` “không thể”. N
 
 Litmus kiểm thử (test / 테스트) không phải mẹo phỏng vấn. Nó là cách cô lập đặc tả hợp đồng (contract / 계약): đưa một thực thi (execution / 실행) rất nhỏ, liệt kê kết quả (outcome / 결과) nào mô hình (model / 모델) cho phép, rồi so sánh ngôn ngữ (language / 언어) → trình biên dịch (compiler / 컴파일러) → ISA. Nếu một kết quả (outcome / 결과) bị cấm ở ngôn ngữ (language / 언어) mức (level / 수준) thì trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) phải phát mã máy (machine code / 기계어) đủ mạnh để cấm nó trên mục tiêu (target / 대상) ISA.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **4. Message-passing kiểm thử (test / 테스트): publication cần một thứ tự (ordering / 순서) edge** tiếp nhận điểm tựa từ **3. Store buffer giải thích vì sao store chưa chắc visible ngay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Invalidate hàng đợi (queue / 큐) và visibility không phải một sự kiện toàn cục tức thì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Store buffer giải thích vì sao hai thread có thể quan sát các store khác nhau. Message-passing đặt ra contract cụ thể hơn: reader chỉ được dùng payload sau khi publication tạo happens-before edge; phần tiếp theo truy vào độ trễ của coherence messages.
 
 ## 4. Message-passing kiểm thử (test / 테스트): publication cần một thứ tự (ordering / 순서) edge
 
@@ -73,7 +73,7 @@ Plain stores/loads không nhất thiết tạo bất biến (invariant / 불변�
 
 Điểm quan trọng là không hỏi “CPU có reorder hai instruction này không?” trước. Hãy hỏi **tầng mã nguồn (source-level / 소스 수준) giao thức (protocol / 프로토콜) có happens-before edge không?** Nếu không, việc mã (code / 코드) “chạy đúng trên máy tôi” không tạo guarantee.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **5. Invalidate hàng đợi (queue / 큐) và visibility không phải một sự kiện toàn cục tức thì** tiếp nhận điểm tựa từ **4. Message-passing kiểm thử (test / 테스트): publication cần một thứ tự (ordering / 순서) edge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Fence không phải lệnh “flush toàn bộ bộ nhớ đệm (cache / 캐시)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Message-passing cần một ordering edge, nhưng edge đó không có nghĩa mọi cache cùng cập nhật trong một khoảnh khắc. Invalidate queues và interconnect tạo ra khoảng thời gian visibility khác nhau; fence sau đó chỉ đặt ordering, không xóa khoảng thời gian ấy bằng một lệnh flush toàn cục.
 
 ## 5. Invalidate hàng đợi (queue / 큐) và visibility không phải một sự kiện toàn cục tức thì
 
@@ -83,7 +83,7 @@ Vì vậy câu “ghi (write / 쓰기) đã tới L1 nên mọi cốt lõi (core
 
 Tương tự, “bộ nhớ đệm (cache / 캐시) coherent” không nghĩa “tất cả cores có cùng snapshot tại cùng nanosecond”. Coherence là giao thức (protocol / 프로토콜) về thứ tự/quyền sở hữu (ownership / 소유권), không phải barrier toàn hệ thống sau mọi store.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **6. Fence không phải lệnh “flush toàn bộ bộ nhớ đệm (cache / 캐시)”** tiếp nhận điểm tựa từ **5. Invalidate hàng đợi (queue / 큐) và visibility không phải một sự kiện toàn cục tức thì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. trình biên dịch (compiler / 컴파일러) reordering và CPU reordering là hai tầng khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Invalidate và visibility có thể lệch thời điểm giữa các core. Fence biểu đạt ordering tối thiểu cho invariant cần giữ; để hiểu nó đúng, phải tách reordering của compiler khỏi reordering mà CPU cho phép theo ISA.
 
 ## 6. Fence không phải lệnh “flush toàn bộ bộ nhớ đệm (cache / 캐시)”
 
@@ -99,7 +99,7 @@ ordering tối thiểu nào đủ để giữ invariant?
 
 Dùng fence “cho chắc” có thể che giao thức (protocol / 프로토콜) yếu và tạo chi phí (cost / 비용) không cần thiết. Dùng fence quá yếu có thể giữ benchmark nhanh nhưng làm proof sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **7. trình biên dịch (compiler / 컴파일러) reordering và CPU reordering là hai tầng khác nhau** tiếp nhận điểm tựa từ **6. Fence không phải lệnh “flush toàn bộ bộ nhớ đệm (cache / 캐시)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Happens-before là lớp trừu tượng (abstraction / 추상화) software nên dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fence chỉ có tác dụng trong contract của ISA và language memory model. Compiler có thể đổi code trước khi CPU chạy, CPU có thể đổi thứ tự nội bộ sau khi đã nhận machine code; happens-before là abstraction để software không phải lập luận bằng từng reorder.
 
 ## 7. trình biên dịch (compiler / 컴파일러) reordering và CPU reordering là hai tầng khác nhau
 
@@ -113,7 +113,7 @@ Bất biến (invariant / 불변식) cần giữ không phải “assembly trên
 
 Đây là lý do mã (code / 코드) tự chế dựa vào hành vi (behavior / 동작) accidental của một kiến trúc (architecture / 아키텍처) có thể thất bại (fail / 실패) sau khi cổng (port / 포트), đổi trình biên dịch (compiler / 컴파일러) hoặc bật tối ưu hóa (optimization / 최적화) khác.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **8. Happens-before là lớp trừu tượng (abstraction / 추상화) software nên dùng** tiếp nhận điểm tựa từ **7. trình biên dịch (compiler / 컴파일러) reordering và CPU reordering là hai tầng khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Atomicity, visibility và thứ tự (ordering / 순서) phải được tách riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compiler và CPU có thể có những sequence khác nhau nhưng vẫn phải thực hiện cùng language contract. Happens-before gom program order và synchronization edges thành một proof; để tránh overclaim, proof đó cần tách atomicity, visibility và ordering.
 
 ## 8. Happens-before là lớp trừu tượng (abstraction / 추상화) software nên dùng
 
@@ -133,7 +133,7 @@ read data
 
 Lower tầng (layer / 계층) giải thích vì sao stale/reordered observation có thể xuất hiện; ngôn ngữ (language / 언어) mô hình (model / 모델) quyết định chương trình **được phép dựa vào điều gì**.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **9. Atomicity, visibility và thứ tự (ordering / 순서) phải được tách riêng** tiếp nhận điểm tựa từ **8. Happens-before là lớp trừu tượng (abstraction / 추상화) software nên dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Atomic RMW tạo serialization điểm (point / 지점) vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Happens-before mô tả quan hệ quan sát, còn atomicity hỏi một operation có bị chia cắt hay không. Khi cần một read-modify-write không bị interleave, ta phải xét primitive tạo serialization point chứ không suy ra nó chỉ từ visibility.
 
 ## 9. Atomicity, visibility và thứ tự (ordering / 순서) phải được tách riêng
 
@@ -149,7 +149,7 @@ Ordering    : reader được phép suy luận operation nào đứng trước/s
 
 Rất nhiều bug xuất phát từ việc lấy thành phần nguyên thủy (primitive / 기본 요소) giải một câu hỏi rồi giả định hai câu còn lại cũng được giải tự động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **10. Atomic RMW tạo serialization điểm (point / 지점) vật lý** tiếp nhận điểm tựa từ **9. Atomicity, visibility và thứ tự (ordering / 순서) phải được tách riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. False sharing: lô-gic (logic / 논리) độc lập nhưng vật lý vẫn tranh một bộ nhớ đệm (cache / 캐시) line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Atomic RMW giải quyết tranh chấp trên một location bằng serialization point. Nhưng hai biến độc lập vẫn có thể nằm chung cache line, nên hiệu năng có thể sụt dù logic không chia sẻ cùng một giá trị.
 
 ## 10. Atomic RMW tạo serialization điểm (point / 지점) vật lý
 
@@ -168,7 +168,7 @@ threads tăng
 
 Ở đây lower lớp trừu tượng (abstraction / 추상화) thực sự quyết định scalability là **coherence granularity + topology**, không phải ALU speed. Sharded/per-core counters, batching hoặc partitioned quyền sở hữu (ownership / 소유권) có thể tốt hơn một atomic toàn cục (global / 전역) counter tùy bất biến (invariant / 불변식).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **11. False sharing: lô-gic (logic / 논리) độc lập nhưng vật lý vẫn tranh một bộ nhớ đệm (cache / 캐시) line** tiếp nhận điểm tựa từ **10. Atomic RMW tạo serialization điểm (point / 지점) vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Lock-free không đồng nghĩa “không còn thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False sharing là cạnh tranh vật lý do coherence granularity, không phải lỗi atomicity của hai biến. Khi bỏ lock, bài toán còn mở rộng sang lifetime và reclamation: không bị block không có nghĩa pointer luôn an toàn.
 
 ## 11. False sharing: lô-gic (logic / 논리) độc lập nhưng vật lý vẫn tranh một bộ nhớ đệm (cache / 캐시) line
 
@@ -176,7 +176,7 @@ Hai threads sửa hai fields khác nhau nhưng nằm cùng bộ nhớ đệm (ca
 
 Padding/alignment hoặc thay dữ liệu (data / 데이터) bố cục (layout / 레이아웃) có thể sửa vì lớp trừu tượng (abstraction / 추상화) quyết định hành vi (behavior / 동작) là cache-line placement. Đây cũng là lời nhắc rằng hiệu năng (performance / 성능) bug có thể nằm dưới lớp trừu tượng (abstraction / 추상화) mà tính đúng đắn (correctness / 정확성) hoàn toàn đúng.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **12. Lock-free không đồng nghĩa “không còn thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제)”** tiếp nhận điểm tựa từ **11. False sharing: lô-gic (logic / 논리) độc lập nhưng vật lý vẫn tranh một bộ nhớ đệm (cache / 캐시) line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. NUMA làm “bộ nhớ (memory / 메모리)” không còn có một độ trễ (latency / 지연 시간) duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False sharing làm lộ chi phí của cache line; lock-free làm lộ chi phí của việc giữ object sống đủ lâu cho reader. Ở hệ nhiều socket, ngay cả một access hợp lệ còn có latency phụ thuộc vị trí, nên NUMA là bước tiếp theo.
 
 ## 12. Lock-free không đồng nghĩa “không còn thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제)”
 
@@ -194,7 +194,7 @@ CAS chỉ so sánh giá trị (value / 값) theo đặc tả hợp đồng (cont
 
 Lock-free chỉ hứa system-wide progress theo định nghĩa; một luồng thực thi (thread / 스레드) cụ thể vẫn có thể starve. Wait-free mạnh hơn nhưng proof burden cũng cao hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **13. NUMA làm “bộ nhớ (memory / 메모리)” không còn có một độ trễ (latency / 지연 시간) duy nhất** tiếp nhận điểm tựa từ **12. Lock-free không đồng nghĩa “không còn thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) thay đổi theo phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lock-free và false sharing đều cho thấy cơ chế lô-gic có thể chịu chi phí vật lý. NUMA thêm khoảng cách giữa core và memory node, khiến cùng một algorithm đổi latency theo placement và theo phase tải.
 
 ## 13. NUMA làm “bộ nhớ (memory / 메모리)” không còn có một độ trễ (latency / 지연 시간) duy nhất
 
@@ -204,7 +204,7 @@ Một toàn cục (global / 전역) khóa (lock / 잠금)/counter đúng về l�
 
 Đọc tiếp [NUMA, interconnects và scalable coherence](./04_numa_interconnects_and_scalable_coherence.md).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **14. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) thay đổi theo phase** tiếp nhận điểm tựa từ **13. NUMA làm “bộ nhớ (memory / 메모리)” không còn có một độ trễ (latency / 지연 시간) duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Vì sao bug có thể “chỉ xảy ra trên ARM” hoặc “chỉ khi tải cao”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NUMA biến placement thành một biến hiệu năng. Khi pressure tăng, queueing, cache misses và remote traffic có thể đổi phase; đó là lý do một bug hoặc timeout có thể chỉ lộ trên ARM hay dưới tải cao.
 
 ## 14. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) thay đổi theo phase
 
@@ -212,7 +212,7 @@ Một toàn cục (global / 전역) khóa (lock / 잠금)/counter đúng về l�
 
 Thứ tự (ordering / 순서) mạnh hơn có thể hạn chế trình biên dịch (compiler / 컴파일러)/hardware reordering; thứ tự (ordering / 순서) yếu hơn cho nhiều hiệu năng (performance / 성능) latitude nhưng tăng proof burden. tối ưu hóa (optimization / 최적화) đúng phải giữ bất biến (invariant / 불변식) và đo tải công việc (workload / 워크로드) thật, không chọn `relaxed` chỉ vì microbenchmark ngắn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **15. Vì sao bug có thể “chỉ xảy ra trên ARM” hoặc “chỉ khi tải cao”?** tiếp nhận điểm tựa từ **14. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) thay đổi theo phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. bằng chứng vận hành (production evidence / 운영 증거): chọn bằng chứng (evidence / 증거) theo tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khác biệt ISA, placement và tải cao đều là hypothesis về cơ chế, không phải lời giải tự thân. Muốn phân biệt chúng, cần chọn bằng chứng vận hành theo đúng tầng: language, compiler, CPU, memory system hay scheduler.
 
 ## 15. Vì sao bug có thể “chỉ xảy ra trên ARM” hoặc “chỉ khi tải cao”?
 
@@ -230,7 +230,7 @@ contention/interleaving window mở rộng
 
 Không nên kết luận “ARM có bug” hay “CPU quá tải làm sai dữ liệu”. Hãy kiểm tra đặc tả hợp đồng (contract / 계약) tầng mã nguồn (source-level / 소스 수준) trước, rồi dùng ISA/microarchitecture để giải thích tại sao symptom lộ ở môi trường đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **15. Vì sao bug có thể “chỉ xảy ra trên ARM” hoặc “chỉ khi tải cao”?** nêu điều cần giải thích; **16. bằng chứng vận hành (production evidence / 운영 증거): chọn bằng chứng (evidence / 증거) theo tầng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một hypothesis tốt phải dự đoán được tín hiệu quan sát: counter, trace, litmus outcome hoặc placement effect. Khi bằng chứng nằm khác tầng với claim, lập luận dễ thất bại; phần tiếp theo phân loại các lỗi suy luận đó.
 
 ## 16. bằng chứng vận hành (production evidence / 운영 증거): chọn bằng chứng (evidence / 증거) theo tầng
 
@@ -250,7 +250,7 @@ reproducible stress/litmus execution
 runtime/OS/hardware evidence
 ```
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **16. bằng chứng vận hành (production evidence / 운영 증거): chọn bằng chứng (evidence / 증거) theo tầng** nêu điều cần giải thích; **17. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Evidence chỉ có giá trị khi đo đúng layer sở hữu invariant. Từ các failure mode của việc nhầm layer, ta có thể rút ra mô hình tư duy dùng chung cho consistency, coherence và ordering.
 
 ## 17. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)
 
@@ -258,13 +258,13 @@ Nếu symptom là wrong giá trị (value / 값)/dữ liệu (data / 데이터) 
 
 Không xuống microarchitecture chỉ vì nó thú vị; xuống khi bằng chứng (evidence / 증거) cho thấy lớp trừu tượng (abstraction / 추상화) trên không đủ giải thích symptom.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **18. Mô hình tư duy** gom các mảnh từ **17. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình này tách bốn câu hỏi: location có coherent không, cross-location order nào được phép, synchronization edge nằm ở đâu và bằng chứng nào kiểm tra được giả thuyết. Kết nối cuối file đưa bốn câu hỏi đó về các owner cross-layer.
 
 ## 18. Mô hình tư duy
 
 > Coherence giữ lịch sử của một location không tự mâu thuẫn; ISA bộ nhớ (memory / 메모리) mô hình (model / 모델) giới hạn những observation phần cứng được phép; ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) biến chúng thành đặc tả hợp đồng (contract / 계약) tầng mã nguồn (source-level / 소스 수준); synchronization tạo happens-before; cache-line quyền sở hữu (ownership / 소유권) và NUMA quyết định nhiều chi phí (cost / 비용) vật lý. **Program tính đúng đắn (correctness / 정확성) phải được chứng minh ở lớp trừu tượng (abstraction / 추상화) sở hữu bất biến (invariant / 불변식), còn lower tầng (layer / 계층) giải thích vì sao bug hoặc bottleneck có thể xuất hiện.**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **Kết nối** gom các mảnh từ **18. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi phân biệt coherence, consistency, ordering và evidence, người học có thể chọn owner đúng thay vì gọi mọi lỗi là “cache stale”. Các liên kết cuối file mở rộng mô hình sang language memory model, concurrency và distributed ordering.
 
 ## Kết nối
 
