@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **1. 소프트웨어 아키텍처 (Software Architecture)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. 객체지향 (Hướng Đối Tượng - OOP)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **1. 소프트웨어 아키텍처 (Software Architecture)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định architecture bảo vệ boundary, component, quality attribute và evolution ra sao; từ khóa khoanh vùng các trade-off đó.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 아키텍처
 
-> **Chuyển mạch:** Ở chặng này của **1. 소프트웨어 아키텍처 (Software Architecture)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt software architecture trên nền requirements và design; cách đọc tiếp theo giữ rõ chất lượng cần đạt và ràng buộc hệ thống.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)**에서 만든 기준을 이어받아 **1. 소프트웨어 아키텍처 (Software Architecture)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1. 소프트웨어 아키텍처 (Software Architecture)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 아키텍처 (Software Architecture)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần architecture dùng khung đó để nối boundary, component và khả năng tiến hóa.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **1. 소프트웨어 아키텍처 (Softw
 
 ---
 
-> **Chuyển mạch:** Trong **1. 소프트웨어 아키텍처 (Software Architecture)**, **1. 소프트웨어 아키텍처 (Software Architecture)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí chọn cấu trúc và quality attribute; khi sang OOP, hãy giữ lại boundary và trách nhiệm của component.
 
 ## 1. 소프트웨어 아키텍처 (Software Architecture)
 

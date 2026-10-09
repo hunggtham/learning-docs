@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **2. 객체지향 (OOP - Object Oriented Programming)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **1. 객체지향 설계 5대 원칙 (SOLID)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **2. 객체지향 (OOP - Object Oriented Programming)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định OOP phân bổ object, encapsulation, inheritance và polymorphism ra sao; từ khóa khoanh vùng các trách nhiệm đó.
 
 ## 핵심 키워드 (Từ khóa)
 
 객체지향
 
-> **Chuyển mạch:** Ở chặng này của **2. 객체지향 (OOP - Object Oriented Programming)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt OOP trên nền architecture và design; cách đọc tiếp theo giúp tách state, behavior và boundary của object.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **6. 객체지향 (Hướng Đối Tượng - OOP)**에서 만든 기준을 이어받아 **2. 객체지향 (OOP - Object Oriented Programming)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. 객체지향 (OOP - Object Oriented Programming)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 객체지향 (OOP - Object Oriented Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần OOP dùng khung đó để giải thích trách nhiệm và khả năng thay đổi.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **2. 객체지향 (OOP - Object Oriented
 
 ---
 
-> **Chuyển mạch:** Trong **2. 객체지향 (OOP - Object Oriented Programming)**, **2. 객체지향 (OOP - Object Oriented Programming)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng boundary và trách nhiệm của object; khi sang SOLID hoặc module, hãy giữ lại tiêu chí cohesion và coupling.
 
 ## 2. 객체지향 (OOP - Object Oriented Programming)
 
