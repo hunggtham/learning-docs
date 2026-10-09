@@ -29,7 +29,7 @@ Các cặp phải luyện:
 `영주권 ↔ 국적`  
 `설날 ↔ 추석`  
 `호남 ↔ 영남`  
-`경찰 ↔ 검찰 ↔ 법원`.
+`수사기관 ↔ 공소청 ↔ 법원` (giáo trình cũ có thể ghi `경찰 ↔ 검찰 ↔ 법원`; mốc chuyển là `2026-10-02`).
 
 Cách học tốt nhất là viết một câu `A는 …, B는 …` thay vì thuộc hai định nghĩa rời.
 

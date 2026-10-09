@@ -2,7 +2,17 @@
 
 File này là bài giảng ngắn về cách đọc dữ liệu có thời hạn. Người mới thường gặp một con số trong PDF rồi ghi nhớ như một chân lý cố định, nhưng chính sách, thống kê và hạn mức pháp luật có thể đổi theo ngày ban hành. Vì vậy, mục tiêu ở đây là học **cách phân biệt fact cũ, fact hiện hành và fact ổn định**, chứ không chỉ thay một con số bằng con số khác.
 
-Các PDF người học cung cấp hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này tách rõ **“nội dung trong PDF”** và **“trạng thái đã kiểm tra đến 2026-10-06”**.
+Các PDF người học cung cấp hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này tách rõ **“nội dung trong PDF”** và **“trạng thái đã kiểm tra đến 2026-10-09”**. Những mục có ngày hiệu lực phải được đọc cùng notice mới nhất của cơ quan ban hành; ngày kiểm tra trong file không biến snapshot thành quy tắc vĩnh viễn.
+
+## 0. Nhật ký refresh ngày 2026-10-09
+
+Vòng rà soát này đối chiếu lại các claim dễ trôi bằng nguồn chính thức:
+
+- **Lịch đánh giá KIIP 2026:** thông báo của `kiiptest.org` ghi 20 đợt PBT (8 사전평가, 4 중간평가, 8 종합평가), đồng thời xác nhận CBT được vận hành thường xuyên; lịch có thể thay đổi hoặc bổ sung. Lịch này nói về **ngày đăng ký/thi**, không chốt số câu hay cấu trúc điểm cho mọi đợt. [Thông báo lịch 2026 (PDF)](https://www.kiiptest.org/api/file/download/e9e6de41-3db3-49a1-a962-b4ab725fb30b)
+- **Cải cách tư pháp hình sự:** từ `2026-10-02`, `검찰청` bị bãi bỏ; `공소청` phụ trách truy tố và duy trì công tố, còn `중대범죄수사청` phụ trách điều tra tội phạm nghiêm trọng. Luật tổ chức và quy định tổ chức thi hành có hiệu lực cùng ngày. [중대범죄수사청 조직 및 운영에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=&chrClsCd=010202&efYd=20261002&lsiSeq=290127&urlMode=lsInfoP) · [공소청과 그 소속기관 직제](https://law.go.kr/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20261002&lsiSeq=290251&urlMode=lsEfInfoR&viewCls=lsRvsDocInfoR)
+- **예금보호한도:** 금융위원회 vẫn xác nhận `1억원` (gồm gốc và lãi trong phạm vi bảo vệ) từ `2025-09-01`; mục này được giữ như current fact đã kiểm tra lại. [금융위원회](https://www.fsc.go.kr/no010101/85200)
+
+Kết luận thao tác: khi một bài nói về **cấu trúc hiện hành**, dùng lớp current ở đây; khi bài đang giải thích giáo trình cũ, giữ cả version cũ và mới, không âm thầm thay lịch sử nguồn.
 
 > Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. File này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
 
@@ -123,7 +133,7 @@ Sau khi học các trường hợp dễ thay đổi, ta cần một nhóm đối
 - câu hỏi dẫn tài liệu/thời điểm cũ: có thể gặp `경찰 ↔ 검찰 ↔ 법원`;  
 - đừng nói “검찰청 chỉ đổi tên thành 공소청”, vì **chức năng và cấu trúc quyền hạn cũng thay đổi**.
 
-Nguồn chính thức: 국가법령정보센터, `중대범죄수사청 조직 및 운영에 관한 법률`, 시행 2026-10-02. https://www.law.go.kr/lsRvsRsnListP.do?lsId=015090
+Nguồn chính thức: [국가법령정보센터 — 중대범죄수사청 조직 및 운영에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=&chrClsCd=010202&efYd=20261002&lsiSeq=290127&urlMode=lsInfoP), [공소청과 그 소속기관 직제](https://law.go.kr/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20261002&lsiSeq=290251&urlMode=lsEfInfoR&viewCls=lsRvsDocInfoR). Các nguồn này xác nhận ngày hiệu lực và sự phân tách chức năng; khi áp dụng vào vụ việc thật vẫn phải đọc luật hiện hành và hướng dẫn thủ tục cụ thể.
 
 ## 8. 식품 날짜표시 — 유통기한 → 소비기한
 

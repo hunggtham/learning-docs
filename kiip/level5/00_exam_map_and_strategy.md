@@ -32,7 +32,7 @@ Một tài liệu hướng dẫn đánh giá của Bộ Tư pháp mô tả một
 | 구술 | 구술형 | 5 | 10 phút | 25 |
 | **Tổng** |  | **45** | **70 phút** | **100** |
 
-Mốc đỗ **60/100** chỉ có giá trị trong tài liệu hướng dẫn tương ứng. Trước ngày thi phải kiểm tra notice trên `kiiptest.org`; trang chương trình hiện hành xác nhận phạm vi khóa học, không thay thế thông báo tổ chức kỳ thi.
+Mốc đỗ **60/100** chỉ có giá trị trong tài liệu hướng dẫn tương ứng. Trước ngày thi phải kiểm tra notice trên `kiiptest.org`; trang chương trình hiện hành xác nhận phạm vi khóa học, không thay thế thông báo tổ chức kỳ thi. Thông báo lịch **2026** hiện ghi 20 đợt PBT và CBT được vận hành thường xuyên, nhưng cũng nói lịch có thể thay đổi hoặc bổ sung; lịch thi không tự xác nhận số câu/điểm của từng đợt. Xem [PDF lịch 2026](https://www.kiiptest.org/api/file/download/e9e6de41-3db3-49a1-a962-b4ab725fb30b) trước khi chốt kế hoạch.
 
 Từ đó, điều cần chuẩn bị chắc chắn là nội dung và năng lực xử lý câu hỏi, không phải học thuộc một con số format tách khỏi notice.
 

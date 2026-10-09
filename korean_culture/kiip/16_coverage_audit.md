@@ -117,3 +117,51 @@ Phần này kiểm tra lớp kiến thức đã được đưa từ các chapter
 Lớp mở rộng được luyện qua 19 lab trong [`02_exam_concept_labs.md`](../../kiip/level5/90_cross_reference/02_exam_concept_labs.md), từ quyền–phúc lợi đến gia đình, nhà ở, lễ nghi, nghệ thuật, thành phố số, Hallyu và campus. Nếu một dòng mới chỉ có tên file mà chưa có **câu hỏi bản chất, giới hạn và câu trả lời mẫu**, nó chưa đạt chuẩn hoàn thiện.
 
 > **Bàn giao:** Sau **7. Coverage mở rộng từ Korean Culture master**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+
+## 8. Corpus review — snapshot 2026-10-09
+
+Vòng review này kiểm tra live checkout thay vì dùng lại số liệu của các batch cũ.
+
+### Evidence đã chạy
+
+- `find korean_culture/kiip/lessons -maxdepth 1 -name '*.md'`: đủ **50/50 lesson canonical**.
+- `python3 automation/repo_audit.py --root . --files-from <toàn bộ Markdown KIIP> --strict-links`: **errors=0, warnings=0**; đây là bằng chứng cấu trúc/link, không phải pass prose.
+- `python3 -m unittest automation/test_repo_audit.py`: **6/6 pass**.
+- `git diff --check`: pass trong batch đang review.
+- Đã đọc đại diện đủ 8 domain và đối chiếu các claim mutable về lịch thi 2026, hạn mức tiền gửi và cải cách tư pháp hình sự với nguồn chính thức.
+- Ba file index/reference (`kiip/level5/README.md`, `00_exam_scope_and_strategy.md`, `13_exam_question_patterns.md`) vẫn còn nhãn nối mạch legacy `Chuyển mạch`; đây là backlog wording riêng, không được coi là lỗi link hay lỗi current-facts.
+
+### Khoảng trống nội dung còn mở
+
+| Lớp cần có theo `KIIP_PROMPT` | Snapshot | Ý nghĩa xử lý |
+|---|---:|---|
+| Lesson canonical | 50/50 | Đủ file và numbering; không đồng nghĩa đủ chiều sâu. |
+| Lesson có output layer rõ (`keyword → contrast → câu Hàn → follow-up → lỗi`) | 50/50 | Tất cả lesson `01–50` đã có lớp chuyển kiến thức sang output KIIP; điều này chưa thay thế full prose/learner review. |
+| Lesson có mapping/provenance source paragraph | 50/50 | Tất cả lesson đều chỉ owner/domain và ranh giới nguồn; `25–29` và `45–50` dùng heading `Ranh giới nguồn...` thay vì heading `Source mapping`, nên còn một việc chuẩn hóa nhãn thủ công nhưng không phải mất provenance. |
+| Current-facts layer | Đã refresh 2026-10-09 | Lịch 2026, `예금보호한도`, và cơ cấu `공소청/중대범죄수사청` đã có nguồn và mốc hiệu lực; trước ngày thi vẫn phải kiểm tra notice mới. |
+
+### Batch đã cập nhật trong vòng này
+
+- **Pháp luật 36:** tách rõ mô hình trước/sau `2026-10-02`, cập nhật `수사기관 → 공소청 → 법원`, và thêm lớp output KIIP.
+- **Xã hội 02–08:** thêm lớp output theo đúng cặp `keyword → đối chiếu → câu Hàn → follow-up → lỗi`, nhưng giữ nguyên prose nền và ranh giới mutable của từng bài.
+- **Giáo dục 09–12:** thêm lớp output cho `보육`, `6-3-3`, `수능/수시/정시` và `평생교육`, đồng thời giữ các chính sách tuyển sinh/hỗ trợ ở current-facts boundary.
+- **Văn hóa 13–19:** thêm lớp output cho giá trị truyền thống, 의식주, nghi lễ, 명절, tôn giáo, Hallyu và 여가; tránh biến mô tả văn hóa thành định kiến hoặc fact pháp lý.
+- **Chính trị 20–24:** thêm lớp output cho dân chủ, Quốc hội, hành pháp, tư pháp–hiến pháp và bầu cử/địa phương; giữ mốc quyền bầu cử và cơ cấu hiện hành ở current-facts boundary.
+- **Kinh tế 25–29:** thêm lớp output cho thị trường, tăng trưởng, tiêu dùng, tài chính và việc làm; giữ số liệu/lãi suất/quyền lợi mutable ở current-facts boundary.
+- **Pháp luật 30–35, 37:** thêm lớp output cho các lane pháp lý, cư trú/quốc tịch, gia đình, bạo lực, hợp đồng và kênh khắc phục; giữ ranh giới “không phải tư vấn hồ sơ”.
+- **Địa lý 45–50:** thêm lớp output cho địa hình, 수도권 và sáu mạng vùng; tránh biến liên tưởng địa phương thành fact độc quyền hoặc định kiến.
+- **Lịch sử 38–44:** thêm output layer theo từng mạng khái niệm, giữ ranh giới giữa truyền thuyết–chứng cứ, `통일신라–발해`, `개항–대한제국`, `광복–휴전`.
+- **Domain summary 06_법:** đồng bộ cơ cấu hình sự hiện hành với canonical lesson 36 để summary không mâu thuẫn với lesson owner.
+
+### Trạng thái độc lập
+
+```text
+content_status: QA_PASS cho output layer 01–50; full prose/learner acceptance của corpus vẫn DRAFT
+evidence_status: TEST_BACKED + SOURCE_BACKED cho các claim đã nêu
+git_status: UNCOMMITTED (chưa commit hoặc publish)
+publication_status: NOT_PUBLISHED
+```
+
+### Next action có chủ đích
+
+Output layer hiện đã phủ đủ `01–50`. Bước tiếp theo là đọc lại toàn corpus như prose độc lập, chuẩn hóa 11 heading provenance còn khác kiểu và xử lý riêng ba file index còn `Chuyển mạch`; sau đó chạy learner/acceptance review. Không dùng tỷ lệ coverage hoặc structural audit để thay thế learner/prose review.

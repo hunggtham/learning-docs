@@ -2,9 +2,17 @@
 
 > **Mạch đọc:** [README](./README.md) đặt file này ở lớp kiểm tra dữ liệu thay đổi. Đọc từ hạn mức bảo vệ tiền gửi, lãi suất, thống kê xã hội đến thông tin KIIP; mỗi mục tách rõ mốc thời gian và điều cần nhớ.
 
-Các PDF người học cung cấp hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. Tệp này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái đã kiểm tra đến 2026-10-01”**; không dùng dữ liệu mới để âm thầm sửa bản cũ.
+Các PDF người học cung cấp hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. Tệp này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái đã kiểm tra đến 2026-10-09”**; không dùng dữ liệu mới để âm thầm sửa bản cũ.
 
 > Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. tệp (file / 파일) này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
+
+## 0. Refresh chính sách và lịch thi — 2026-10-09
+
+- **Lịch đánh giá 2026:** thông báo chính thức ghi 20 đợt PBT (8 사전평가, 4 중간평가, 8 종합평가) và CBT được vận hành thường xuyên; lịch có thể thay đổi hoặc bổ sung. Đây là lịch đăng ký/thi, không phải cam kết số câu hay cấu trúc điểm của mọi đợt. [PDF lịch 2026](https://www.kiiptest.org/api/file/download/e9e6de41-3db3-49a1-a962-b4ab725fb30b)
+- **Cơ cấu tư pháp hình sự:** từ `2026-10-02`, `검찰청` bị bãi bỏ; `공소청` phụ trách 공소 제기·유지 và `중대범죄수사청` phụ trách điều tra tội phạm nghiêm trọng. Đây là thay đổi về cơ quan và phân công, không chỉ đổi tên. [Luật tổ chức 중대범죄수사청](https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=&chrClsCd=010202&efYd=20261002&lsiSeq=290127&urlMode=lsInfoP) · [공소청 직제](https://law.go.kr/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20261002&lsiSeq=290251&urlMode=lsEfInfoR&viewCls=lsEfInfoR)
+- **Hạn mức bảo vệ tiền gửi:** `1억원` (gồm gốc và lãi trong phạm vi được bảo vệ) vẫn là current fact từ `2025-09-01`; xem chi tiết tại [`kiip/level5/00_current_facts_and_corrections.md`](../../kiip/level5/00_current_facts_and_corrections.md).
+
+Khi câu hỏi dẫn tài liệu cũ, giữ version cũ để nhận diện bẫy; khi hỏi `현재/현행`, dùng nguồn mới và ghi rõ ngày hiệu lực.
 
 ## 1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi
 
@@ -94,7 +102,7 @@ Trang Bộ Tư pháp hiện ghi:
 
 Điều này giải thích vì sao người học 국적 cần thêm nội dung sâu hơn, nhưng thư viện (library / 라이브러리) này vẫn dùng **một cây ghi chú (note / 노트) chung** và gắn `귀화용 심화` ngay trong lĩnh vực (domain / 도메인) thay vì tạo hai folder trùng lặp.
 
-Trang thông tin hiện hành: https://www.moj.go.kr/moj/369/subview.do
+Trang thông tin hiện hành (kiểm tra **2026-10-09**): https://www.moj.go.kr/moj/369/subview.do. Trang này hiện vẫn ghi `영주자격` 70 giờ và `국적취득` 100 giờ; lịch lớp thực tế và điều kiện đăng ký vẫn phải xem `socinet.go.kr`.
 
 > **Nối mạch:** Sau định dạng đánh giá, ta quay lại các fact chính trị có tính cấu trúc; đó là những điểm tương đối ổn định hơn các con số thống kê.
 

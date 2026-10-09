@@ -26,6 +26,7 @@ Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nộ
 - 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
 - 사회통합정보망: https://www.socinet.go.kr/
 - KIIP 평가: https://www.kiiptest.org/
+- 2026년 사회통합프로그램 평가 일정 (20회 PBT + CBT 안내): https://www.kiiptest.org/api/file/download/e9e6de41-3db3-49a1-a962-b4ab725fb30b
 - 법무부 평가 견본/자료: https://moj.go.kr/moj/415/subview.do
 - 심화 콘텐츠 보완 연구: https://www.moj.go.kr/bbs/immigration/43/440567/artclView.do
 - 한국사회 이해 기본 교재 구성: https://www.moj.go.kr/bbs/moj/164/205208/download.do
@@ -34,6 +35,7 @@ Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nộ
 - 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
 - 출입국관리법(외국인등록 90일): https://law.go.kr/LSW/lsInfoP.do?lsiSeq=271511
 - 2024 인구주택총조사(1인가구 36.1%): https://kostat.go.kr/boardDownload.es?bid=203&list_no=437767&seq=3
+- 형사사법 개편(2026-10-02): https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=&chrClsCd=010202&efYd=20261002&lsiSeq=290127&urlMode=lsInfoP
 - 중앙선거관리위원회: https://www.nec.go.kr/
 - 대한민국 국회: https://www.assembly.go.kr/
 
