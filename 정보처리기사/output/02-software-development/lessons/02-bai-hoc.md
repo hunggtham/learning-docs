@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **2. 스택 (Stack) 및 응용 (Applications)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **2. 스택 (Stack) 및 응용 (Applications)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định stack duy trì LIFO và hỗ trợ recursion, parsing, undo ra sao; từ khóa khoanh vùng invariant và ứng dụng.
 
 ## 핵심 키워드 (Từ khóa)
 
 스택
 
-> **Chuyển mạch:** Ở chặng này của **2. 스택 (Stack) 및 응용 (Applications)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt stack trên nền data-structure classification; cách đọc tiếp theo giúp nối LIFO với từng bài toán.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 자료 구조의 분류 (Classification of Data Structures)**에서 만든 기준을 이어받아 **2. 스택 (Stack) 및 응용 (Applications)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. 스택 (Stack) 및 응용 (Applications)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 스택 (Stack) 및 응용 (Applications)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần stack dùng khung đó để giải thích push/pop và trạng thái.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **2. 스택 (Stack) 및 응용 (Applicat
 
 ---
 
-> **Chuyển mạch:** Trong **2. 스택 (Stack) 및 응용 (Applications)**, **2. 스택 (Stack) 및 응용 (Applications)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng invariant LIFO; khi sang queue/deque, hãy đối chiếu thứ tự phục vụ.
 
 ## 2. 스택 (Stack) 및 응용 (Applications)
 

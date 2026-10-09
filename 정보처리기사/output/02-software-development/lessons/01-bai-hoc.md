@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **1. 자료 구조의 분류 (Classification of Data Structures)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. 스택 (Stack) 및 응용 (Applications)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **1. 자료 구조의 분류 (Classification of Data Structures)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định data structure được phân loại theo access pattern, memory layout và complexity ra sao; từ khóa khoanh vùng các tiêu chí đó.
 
 ## 핵심 키워드 (Từ khóa)
 
 자료, 구조의, 분류
 
-> **Chuyển mạch:** Ở chặng này của **1. 자료 구조의 분류 (Classification of Data Structures)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt classification trên nền data structures và workload; cách đọc tiếp theo giúp nối tên nhóm với cách dùng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 자료 구조의 분류 (Classification of Data Structures)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1. 자료 구조의 분류 (Classification of Data Structures)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 자료 구조의 분류 (Classification of Data Structures)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần classification dùng khung đó để chọn cấu trúc theo truy vấn.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **1. 자료 구조의 분류 (Classifica
 
 ---
 
-> **Chuyển mạch:** Trong **1. 자료 구조의 분류 (Classification of Data Structures)**, **1. 자료 구조의 분류 (Classification of Data Structures)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí chọn cấu trúc; khi sang stack, hãy giữ lại access pattern và invariant cần bảo vệ.
 
 ## 1. 자료 구조의 분류 (Classification of Data Structures)
 
