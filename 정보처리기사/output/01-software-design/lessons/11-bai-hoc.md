@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **1. 현행 시스템 분석 (Current System Analysis)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định cách chọn mô hình và kiểm chứng yêu cầu; từ khóa khoanh vùng các quyết định cần evidence trước khi nối sang kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 Deep, Dive, 개발, 모형, 선택과, 요구사항, 검증
 
-> **Chuyển mạch:** Ở chặng này của **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt deep dive trên nền SDLC và requirements; cách đọc tiếp theo giúp cân nhắc rủi ro, feedback và tiêu chí chấp nhận.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **12. 요구사항 (Requirements)**에서 만든 기준을 이어받아 **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần deep dive dùng khung đó để so sánh mô hình và bằng chứng validation.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Deep, Dive, 개발, 모형, 선택과, 요구사항, 검증
 
 ---
 
-> **Chuyển mạch:** Trong **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí chọn mô hình và xác minh yêu cầu; khi quay về route Môn 1, hãy giữ lại ranh giới evidence và rủi ro.
 
 ## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
 
