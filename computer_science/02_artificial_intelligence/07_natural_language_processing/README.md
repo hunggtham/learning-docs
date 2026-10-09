@@ -25,7 +25,7 @@ flowchart TD
     I --> J
 ```
 
-> **Chuyển mạch:** **Dependency map** đưa từ tokenization và representation đến modeling; **Mental model** giải thích NLP như chuỗi biến đổi tín hiệu, ngữ cảnh và mục tiêu đánh giá.
+Dependency map đi từ tokenization và representation tới modeling; mental model giải thích NLP như chuỗi biến đổi tín hiệu, ngữ cảnh và mục tiêu đánh giá.
 
 ## Chapters
 
@@ -49,7 +49,7 @@ flowchart TD
 
 **[09 — NLP Evaluation](./09_nlp_evaluation.md)** cover classification/NER metrics, BLEU/ROUGE/chrF/BERTScore/learned metrics, human/LLM judges, multilingual evaluation, contamination và lỗi (error / 오류) taxonomy.
 
-> **Chuyển mạch:** Ở chặng này của **Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp sang Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các chapter nối từ biểu diễn và context tới modeling, decoding và evaluation. Large Language Models mở rộng cùng chuỗi đó ở quy mô dữ liệu, compute và serving riêng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -67,7 +67,7 @@ Human language
 
 NLP hệ thống (system / 시스템) chất lượng (quality / 품질) không chỉ nằm ở neural kiến trúc (architecture / 아키텍처). Corpus, tokenizer, retrieval, đầu ra (output / 출력) lược đồ (schema / 스키마), decoding và chỉ số (metric / 지표) đều có thể là bottleneck.
 
-> **Chuyển mạch:** Khi mental model đã rõ về context và objective, **Large Language Models** mở rộng cùng chuỗi đó ở quy mô dữ liệu, compute và serving riêng.
+Khi context và objective đã rõ, Large Language Models được đọc như một mở rộng về quy mô và serving, không phải một khái niệm tách khỏi pipeline NLP.
 
 ## Chuyển tiếp sang Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 

@@ -26,7 +26,7 @@ flowchart TD
     ATT --> DIF
 ```
 
-> **Chuyển mạch:** **Dependency map** xác định prerequisite từ neural-network mechanics đến architecture; **Mental model** dùng các prerequisite đó để so sánh inductive bias, capacity và cost.
+Dependency map xác định prerequisite từ neural-network mechanics tới architecture; mental model dùng cùng vocabulary để so sánh inductive bias, capacity và cost.
 
 ## Chapters
 
@@ -50,7 +50,7 @@ flowchart TD
 
 **[09 — Diffusion Models](./09_diffusion_models.md)** derivation forward noising/reverse denoising, noise prediction, guidance, U-Net/DiT, samplers, latent diffusion và văn bản (text / 텍스트) conditioning.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) Architectures kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các chapter là những lựa chọn khác nhau cho biểu diễn và đường truyền tín hiệu. Mental model chung giúp cân bằng quality, trainability, compute và deployment trước khi đi sang hệ thống lớn hơn.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -69,7 +69,7 @@ Diffusion   → learn reverse path from noise to data
 
 Không nên đọc taxonomy này như các “thế hệ” thay thế nhau. hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) kết hợp chúng: diffusion mô hình (model / 모델) có Transformer/CNN attention blocks; multimodal hệ thống (system / 시스템) có vision encoder + Transformer decoder; latent diffusion dùng VAE + cross-attention + denoiser.
 
-> **Chuyển mạch:** **Mental model** khép architecture bằng trade-off giữa biểu diễn, trainability và deployment; phần kế tiếp có thể dùng trade-off đó để đọc systems và MLOps đúng owner.
+Trade-off giữa biểu diễn, trainability và deployment là ranh giới để đọc các systems và MLOps ở owner kế tiếp.
 
 ## Chuyển tiếp
 

@@ -26,7 +26,7 @@ flowchart TD
     I --> J
 ```
 
-> **Chuyển mạch:** **Dependency map** đưa người học từ tensor và gradient đến architecture; **Mental model của toàn tầng** giữ liên hệ giữa representation, optimization và failure mode.
+Dependency map đi từ tensor và gradient tới architecture; mental model của toàn tầng giữ cho representation, optimization và failure mode được đọc trong cùng một chuỗi.
 
 ## Chapters
 
@@ -50,7 +50,7 @@ flowchart TD
 
 **[09 — Training Dynamics](./09_deep_learning_training_dynamics.md)** tổng hợp học tập (learning / 학습) curves, cập nhật (update / 업데이트)/độ dốc (gradient / 기울기)/activation diagnostics, curriculum/dữ liệu (data / 데이터) mixture, catastrophic forgetting, checkpointing, phân tán (distributed / 분산) batch và systematic debugging.
 
-> **Chuyển mạch:** Ở chặng này của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các chapter đã đi từ neuron, layer và gradient tới dynamics, debugging và generalization. Deep-learning architectures mở rộng các cơ chế này bằng inductive bias và cấu trúc chuyên biệt, không xóa các failure mode nền.
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
@@ -72,7 +72,7 @@ Learned internal representation
 
 Kiến trúc (architecture / 아키텍처) quyết định đồ thị (graph / 그래프) và inductive độ lệch (bias / 편향). mất mát (loss / 손실) quyết định tín hiệu (signal / 신호). Backprop tính credit/blame. Optimizer quyết định cập nhật (update / 업데이트) trajectory. dữ liệu (data / 데이터) phân phối (distribution / 분포) quyết định experience. Generalization vẫn phải được chứng minh bằng evaluation ngoài huấn luyện (training / 학습) set.
 
-> **Chuyển mạch:** **Mental model** đã làm rõ layer, gradient và inductive bias; **Deep Learning Architectures** mở rộng chúng thành CNN, sequence và attention theo từng owner kỹ thuật.
+Mental model đã làm rõ layer, gradient và inductive bias; phần Deep Learning Architectures dùng chúng để so sánh CNN, sequence, attention và các owner kỹ thuật tương ứng.
 
 ## Chuyển tiếp sang Deep học tập (learning / 학습) Architectures
 
