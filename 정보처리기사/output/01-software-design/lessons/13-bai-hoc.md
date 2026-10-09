@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **3. 현행 시스템 파악 (Understanding Current System)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **3. 모델링 및 UML (Mô hình hóa và UML)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **3. 현행 시스템 파악 (Understanding Current System)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định cách đọc hệ thống hiện tại; từ khóa khoanh vùng as-is architecture, dependency và pain point trước khi nối sang kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 현행, 시스템, 파악
 
-> **Chuyển mạch:** Ở chặng này của **3. 현행 시스템 파악 (Understanding Current System)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt việc nắm bắt hiện trạng trên nền phân tích hệ thống; cách đọc tiếp theo giúp tách quan sát khỏi suy đoán.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 현행 시스템 분석 (Current System Analysis)**에서 만든 기준을 이어받아 **3. 현행 시스템 파악 (Understanding Current System)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **3. 현행 시스템 파악 (Understanding Current System)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 현행 시스템 파악 (Understanding Current System)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần current-system understanding dùng khung đó để định vị dependency và điểm đau thực tế.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **3. 현행 시스템 파악 (Understand
 
 ---
 
-> **Chuyển mạch:** Trong **3. 현행 시스템 파악 (Understanding Current System)**, **3. 현행 시스템 파악 (Understanding Current System)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng bản đồ hiện trạng và các điểm cần kiểm chứng; khi sang UML, hãy giữ lại boundary và dependency đã quan sát.
 
 ## 3. 현행 시스템 파악 (Understanding Current System)
 
