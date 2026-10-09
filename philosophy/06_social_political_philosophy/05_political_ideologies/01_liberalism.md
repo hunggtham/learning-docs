@@ -1,22 +1,18 @@
 # Liberalism — liberty, rights, pluralism và justified authority
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Liberalism — liberty, rights, pluralism và justified authority**. Route đi từ liberty và self-direction → rights/constitutional limits → pluralism, consent và authority → thiết kế thể chế bảo vệ tự do, để phân biệt tự do khỏi việc chỉ thiếu can thiệp trước mắt.
+Liberalism không phải một doctrine đơn nhất. Điểm chung mạnh nhất là **presumption in favor of liberty** và yêu cầu rằng coercive political authority phải được justified. Từ đây liberal traditions phân nhánh mạnh về property, redistribution, democracy, welfare và conception of freedom.
 
-Liberalism không phải một doctrine đơn nhất. Điểm chung mạnh nhất là **presumption in favor of liberty** và yêu cầu rằng coercive political authority phải được justified. Từ đây liberal traditions phân nhánh mạnh về thuộc tính (property / 속성), redistribution, democracy, welfare và conception of freedom.
+## Liberty như starting point
 
-## Liberty như starting điểm (point / 지점)
+Liberalism thường bắt đầu từ một individual có moral standing độc lập với collective purpose. State không được giả định có quyền chỉ vì nó là state; restriction cần justification. Đây là lý do rights, rule of law, due process, freedom of expression, religion và association trở thành institutions trung tâm trong nhiều liberal theories.
 
-Liberalism thường bắt đầu từ một individual có moral standing độc lập với collective purpose. Trạng thái (state / 상태) không được giả định có quyền chỉ vì nó là trạng thái (state / 상태); restriction cần justification. Đây là lý do rights, quy tắc (rule / 규칙) of law, due tiến trình (process / 프로세스), freedom of expression, religion và association trở thành institutions trung tâm trong nhiều liberal theories.
-
-Nhưng `liberty` không có một definition duy nhất. Classical liberalism thường nhấn mạnh protection khỏi coercion và phạm vi (scope / 범위) cho voluntary exchange. New/xã hội (social / 사회적) liberalism và liberal egalitarianism hỏi thêm liệu poverty, discrimination hoặc unequal opportunity có làm formal freedom trở nên quá mỏng hay không.
-
-> **Chuyển mạch:** Trong **Liberalism — liberty, rights, pluralism và justified authority**, **Liberty như starting điểm (point / 지점)** đã nêu tiêu chí phân biệt, còn **Rights và constitutional limits** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Pluralism và công khai (public / 공개) justification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nhưng `liberty` không có một definition duy nhất. Classical liberalism thường nhấn mạnh protection khỏi coercion và scope cho voluntary exchange. New/social liberalism và liberal egalitarianism hỏi thêm liệu poverty, discrimination hoặc unequal opportunity có làm formal freedom trở nên quá mỏng hay không.
 
 ## Rights và constitutional limits
 
-Rights hoạt động như các ràng buộc (constraints / 제약조건들): ngay cả majority quy tắc (rule / 규칙) cũng không tự động legitimate nếu majority có thể tước basic liberties của minority. Liberal constitutionalism vì vậy quan tâm separation of powers, independent adjudication, legal generality và procedures giúp power bị contest.
+Rights hoạt động như constraints: ngay cả majority rule cũng không tự động legitimate nếu majority có thể tước basic liberties của minority. Liberal constitutionalism vì vậy quan tâm separation of powers, independent adjudication, legal generality và procedures giúp power bị contest.
 
-Cơ chế (mechanism / 메커니즘) cần thấy rõ:
+Mechanism cần thấy rõ:
 
 ```text
 political power
@@ -26,64 +22,85 @@ political power
 → reduced arbitrary interference
 ```
 
-Ranh giới (boundary / 경계) là institutions không tự enforce. Courts, legislatures, press và civil society đều có incentive/sức chứa (capacity / 용량) các ràng buộc (constraints / 제약조건들); rule-of-law claim phải được kiểm tra bằng actual practice.
+Boundary là institutions không tự enforce. Courts, legislatures, press và civil society đều có incentive/capacity constraints; rule-of-law claim phải được kiểm tra bằng actual practice.
 
-> **Chuyển mạch:** Ở chặng này của **Liberalism — liberty, rights, pluralism và justified authority**, **Rights và constitutional limits** đã nêu tiêu chí phân biệt, còn **Pluralism và công khai (public / 공개) justification** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thuộc tính (property / 속성) và thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## Pluralism và public justification
 
-## Pluralism và công khai (public / 공개) justification
+Modern societies chứa nhiều religions, moral doctrines và life plans. Một liberal problem vì vậy là: political rule có thể được justified với citizens không chia sẻ cùng comprehensive worldview hay không? Rawlsian `political liberalism` là một influential response, nhưng không đại diện cho toàn bộ liberal tradition.
 
-Hiện đại (modern / 현대적) societies chứa nhiều religions, moral doctrines và life plans. Một liberal bài toán (problem / 문제) vì vậy là: political quy tắc (rule / 규칙) có thể được justified với citizens không chia sẻ cùng comprehensive worldview hay không? Rawlsian `political liberalism` là một influential phản hồi (response / 응답), nhưng không đại diện cho toàn bộ liberal tradition.
+Core idea là state không nên cần một single substantive conception of the good để govern every sphere of life. Từ đây xuất hiện toleration và public reason. Tuy nhiên toleration cũng có boundary: một liberal order phải xử lý groups hoặc practices xung đột với rights của members như thế nào?
 
-Cốt lõi (core / 핵심) idea là trạng thái (state / 상태) không nên cần một single substantive conception of the good để govern every sphere of life. Từ đây xuất hiện toleration và công khai (public / 공개) reason. Tuy nhiên toleration cũng có ranh giới (boundary / 경계): một liberal thứ tự (order / 순서) phải xử lý groups hoặc practices xung đột với rights của members như thế nào?
+## Property và market
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liberalism — liberty, rights, pluralism và justified authority**, **Thuộc tính (property / 속성) và thị trường (market / 시장)** tiếp nhận điểm tựa từ **Pluralism và công khai (public / 공개) justification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Equality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Liberalism historically gắn mạnh với private property, contract và market exchange, nhưng internal disagreement rất lớn. Classical liberals thường xem property và economic liberty như protection của autonomy và decentralized coordination. Social liberals và liberal egalitarians chấp nhận private markets nhưng cho rằng taxation, social insurance, public education, health provision hoặc regulation có thể cần thiết để bảo vệ fair opportunity và effective freedom.
 
-## Thuộc tính (property / 속성) và thị trường (market / 시장)
-
-Liberalism historically gắn mạnh với private thuộc tính (property / 속성), đặc tả hợp đồng (contract / 계약) và thị trường (market / 시장) exchange, nhưng nội bộ (internal / 내부) disagreement rất lớn. Classical liberals thường xem thuộc tính (property / 속성) và economic liberty như protection của autonomy và decentralized coordination. Xã hội (social / 사회적) liberals và liberal egalitarians chấp nhận private markets nhưng cho rằng taxation, xã hội (social / 사회적) insurance, công khai (public / 공개) education, health provision hoặc regulation có thể cần thiết để bảo vệ fair opportunity và effective freedom.
-
-Do đó không nên đồng nhất `liberalism = laissez-faire`. Cần phân biệt classical liberalism, libertarian strands, welfare/xã hội (social / 사회적) liberalism và egalitarian liberalism.
-
-> **Chuyển mạch:** Trong **Liberalism — liberty, rights, pluralism và justified authority**, **Equality** tiếp nhận điểm tựa từ **Thuộc tính (property / 속성) và thị trường (market / 시장)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Democracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Do đó không nên đồng nhất `liberalism = laissez-faire`. Cần phân biệt classical liberalism, libertarian strands, welfare/social liberalism và egalitarian liberalism.
 
 ## Equality
 
-Liberalism không nhất thiết hướng tới equal outcomes. Một baseline phổ biến hơn là equal moral status và equality before law. Từ baseline này, các nhánh khác nhau hỏi thêm về fair opportunity, discrimination, inherited advantage và phân phối (distribution / 분포).
+Liberalism không nhất thiết hướng tới equal outcomes. Một baseline phổ biến hơn là equal moral status và equality before law. Từ baseline này, các nhánh khác nhau hỏi thêm về fair opportunity, discrimination, inherited advantage và distribution.
 
-Rawlsian liberal egalitarianism cho rằng xã hội (social / 사회적) and economic inequalities cần justification dưới fair institutions; libertarian variants phản đối nhiều redistributive mechanisms vì coi chúng là coercive violations of holdings hoặc đặc tả hợp đồng (contract / 계약). Đây là disagreement nội bộ chứ không phải liberalism vs non-liberalism đơn giản.
-
-> **Chuyển mạch:** Ở chặng này của **Liberalism — liberty, rights, pluralism và justified authority**, **Democracy** tiếp nhận điểm tựa từ **Equality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thất bại (failure / 실패) modes mà liberalism tự phải đối mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rawlsian liberal egalitarianism cho rằng social and economic inequalities cần justification dưới fair institutions; libertarian variants phản đối nhiều redistributive mechanisms vì coi chúng là coercive violations of holdings hoặc contract. Đây là disagreement nội bộ chứ không phải liberalism vs non-liberalism đơn giản.
 
 ## Democracy
 
-Liberalism và democracy liên hệ nhưng không đồng nhất. Democracy trả lời ai có tiếng nói trong collective quyết định (decision / 결정); liberalism thêm các ràng buộc (constraints / 제약조건들) về rights và justification. `Liberal democracy` vì thế kết hợp popular quy tắc (rule / 규칙) với institutional limits.
+Liberalism và democracy liên hệ nhưng không đồng nhất. Democracy trả lời ai có tiếng nói trong collective decision; liberalism thêm constraints về rights và justification. `Liberal democracy` vì thế kết hợp popular rule với institutional limits.
 
-Tension xuất hiện khi majority preference xung đột individual rights, hoặc khi unelected courts/institutions constrain democratic choices. Đây là real institutional sự đánh đổi (trade-off / 트레이드오프) cần constitutional lý thuyết (theory / 이론), không thể giải bằng slogan.
+Tension xuất hiện khi majority preference xung đột individual rights, hoặc khi unelected courts/institutions constrain democratic choices. Đây là real institutional trade-off cần constitutional theory, không thể giải bằng slogan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liberalism — liberty, rights, pluralism và justified authority**, **Thất bại (failure / 실패) modes mà liberalism tự phải đối mặt** tiếp nhận điểm tựa từ **Democracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với libertarianism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## Constitutional design và welfare: liberty được làm cho có thể dùng
 
-## Thất bại (failure / 실패) modes mà liberalism tự phải đối mặt
+Liberal constitutionalism không chỉ là danh sách rights. Nó là cách phân bổ **veto points, voice và revision power** giữa citizens, legislature, executive, courts, local government và civil society. Một thiết kế phải trả lời ít nhất bốn câu hỏi: quyền nào không được majority rút lại; ai review executive action; emergency power hết hạn và bị kiểm tra thế nào; và citizens có thể sửa luật bằng con đường nào mà không cần phá toàn bộ order.
 
-Một liberal thứ tự (order / 순서) có thể bảo vệ formal rights nhưng vẫn có severe inequality, private concentration of power hoặc weak practical sức chứa (capacity / 용량). Ngược lại, attempts mở rộng substantive freedom qua trạng thái (state / 상태) intervention có thể tạo bureaucracy, paternalism hoặc capture. Nội bộ (internal / 내부) liberal debate xoay quanh việc giới hạn đồng thời **công khai (public / 공개) coercion** và **private domination** bằng cách nào.
+Các lựa chọn này tạo trade-off thật. Judicial review bảo vệ minority nhưng có thể chuyển quyền quyết định sang một cơ quan ít trực tiếp chịu trách nhiệm; federalism tạo thêm exit và experimentation nhưng có thể làm quyền cơ bản không đồng đều; proportional representation mở rộng voice nhưng có thể làm coalition bargaining khó hơn. Liberal claim vì vậy không phải “một constitution đúng cho mọi nơi”, mà là yêu cầu quyền lực phải reason-giving, contestable và revisable.
 
-> **Chuyển mạch:** Trong **Liberalism — liberty, rights, pluralism và justified authority**, **Thất bại (failure / 실패) modes mà liberalism tự phải đối mặt** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với libertarianism** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Welfare cũng nên được đọc trong grammar này. Education, healthcare, social insurance hoặc minimum income có thể mở rộng **effective freedom** bằng cách giảm risks làm một quyền trên giấy trở nên vô dụng. Nhưng public provision đồng thời tạo discretion, taxation và administrative dependency. Câu hỏi liberal là benefit có được cung cấp theo rules công khai, có appeal và có equal standing không — không phải state intervention tự động là liberal hay anti-liberal.
 
-## Ranh giới (boundary / 경계) với libertarianism
+## Historical implementation và evidence boundary
 
-Libertarianism thường được xem là một family có historical roots trong classical liberal tradition nhưng đặt individual freedom và strong thuộc tính (property / 속성)/đặc tả hợp đồng (contract / 계약) rights ở mức mạnh hơn. Mô-đun (module / 모듈) này vì vậy tách [Libertarianism](05_libertarianism.md) ra để không làm toàn bộ liberalism bị đồng nhất với minimal-state lý thuyết (theory / 이론).
+Không thể đánh giá liberalism chỉ bằng việc một state tự gọi mình là liberal democracy. Một historical implementation cần tách:
 
-> **Chuyển mạch:** Ở chặng này của **Liberalism — liberty, rights, pluralism và justified authority**, **Ranh giới (boundary / 경계) với libertarianism** đã nêu tiêu chí phân biệt, còn **Handoff** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Sources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+```text
+constitutional promise
+→ legal rule
+→ administrative capacity
+→ actual access
+→ distribution of protection
+→ contestation when excluded
+```
+
+Một order có thể bảo vệ speech và property nhưng loại trừ phụ nữ, racial minorities, migrants hoặc workers khỏi equal citizenship; một welfare reform có thể mở rộng opportunity nhưng vẫn để private concentration chuyển thành political influence. Vì vậy evidence phải kiểm tra rights enforcement, access, distribution và correction, không lấy một institutional label làm outcome.
+
+## Operationalizing liberal constraint
+
+Để kiểm tra một liberal order, không chỉ đếm số rights được ghi trong constitution. Hãy tách:
+
+```text
+right on paper
+→ scope of restriction
+→ enforcement capacity
+→ equal access to remedy
+→ private/public interference
+→ revision and minority protection
+```
+
+Một speech right có thể bị giới hạn bởi censorship nhà nước, nhưng cũng có thể bị làm rỗng bởi employer retaliation hoặc media concentration; một property right có thể được bảo vệ bình đẳng trên giấy nhưng access tới courts lại phụ thuộc income. Liberal evidence vì vậy phải kiểm tra cả vertical coercion lẫn private power, đồng thời ghi rõ khi nào rights conflict và ai có authority giải thích conflict đó.
+
+## Failure modes mà liberalism tự phải đối mặt
+
+Một liberal order có thể bảo vệ formal rights nhưng vẫn có severe inequality, private concentration of power hoặc weak practical capacity. Ngược lại, attempts mở rộng substantive freedom qua state intervention có thể tạo bureaucracy, paternalism hoặc capture. Internal liberal debate xoay quanh việc giới hạn đồng thời **public coercion** và **private domination** bằng cách nào.
+
+## Boundary với libertarianism
+
+Libertarianism thường được xem là một family có historical roots trong classical liberal tradition nhưng đặt individual freedom và strong property/contract rights ở mức mạnh hơn. Module này vì vậy tách [Libertarianism](05_libertarianism.md) ra để không làm toàn bộ liberalism bị đồng nhất với minimal-state theory.
 
 ## Handoff
 
-Liberalism cung cấp baseline tốt cho các chapter sau vì nó đặt burden of justification lên authority. [Conservatism](02_conservatism.md) sẽ challenge giả định (assumption / 가정) rằng abstract reason và universal principles đủ để redesign political thứ tự (order / 순서); [Socialism](03_socialism_and_social_democracy.md) sẽ challenge việc tập trung chủ yếu vào trạng thái (state / 상태) coercion mà không phân tích đầy đủ quyền sở hữu (ownership / 소유권) và workplace power.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liberalism — liberty, rights, pluralism và justified authority**, **Handoff** nêu điều cần giải thích; **Sources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Liberalism cung cấp baseline tốt cho các chapter sau vì nó đặt burden of justification lên authority. [Conservatism](02_conservatism.md) sẽ challenge assumption rằng abstract reason và universal principles đủ để redesign political order; [Socialism](03_socialism_and_social_democracy.md) sẽ challenge việc tập trung chủ yếu vào state coercion mà không phân tích đầy đủ ownership và workplace power.
 
 ## Sources
 
 - Stanford Encyclopedia of Philosophy, “Liberalism”: https://plato.stanford.edu/entries/liberalism/
 - Stanford Encyclopedia of Philosophy, “Political Legitimacy”: https://plato.stanford.edu/entries/legitimacy/
+- Stanford Encyclopedia of Philosophy, “Constitutionalism”: https://plato.stanford.edu/entries/constitutionalism/
 - [Democracy, rights và public reason](../01_democracy_rights_and_public_reason.md)
-
-> **Bàn giao:** Sau **Sources**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

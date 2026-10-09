@@ -1,22 +1,18 @@
 # Nationalism — nation, self-determination, solidarity và exclusion risks
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nationalism — nation, self-determination, solidarity và exclusion risks**. Route đi từ nation và state → identity, solidarity và self-determination → citizenship/borders → exclusion, hierarchy và conflict, để phân tích sức huy động cùng rủi ro loại trừ.
+**Nationalism (chủ nghĩa dân tộc, 민족주의/국가주의 tùy ngữ cảnh)** là một family of beliefs/movements xoay quanh national identity, special obligations giữa compatriots và claims về political self-determination. Nó có thể kết hợp với liberalism, conservatism, socialism hoặc religion; vì vậy nationalism không map cleanly lên một vị trí duy nhất trên left–right spectrum.
 
-**Nationalism (chủ nghĩa dân tộc, 민족주의/국가주의 tùy ngữ cảnh)** là một family of beliefs/movements xoay quanh national định danh (identity / 식별자), special obligations giữa compatriots và claims về political self-determination. Nó có thể kết hợp với liberalism, conservatism, socialism hoặc religion; vì vậy nationalism không map cleanly lên một vị trí duy nhất trên left–right spectrum.
+Prerequisite là [Republicanism](06_republicanism.md), [Global justice, identity and difference](../03_global_justice_identity_and_difference.md) và [Comparison framework](00_comparison_framework.md). Chapter này tách **nation**, **state**, **ethnicity** và **citizenship** trước khi phân tích normative claims.
 
-Prerequisite là [Republicanism](06_republicanism.md), [Global justice, identity and difference](../03_global_justice_identity_and_difference.md) và [Comparison framework](00_comparison_framework.md). Chapter này tách **nation**, **trạng thái (state / 상태)**, **ethnicity** và **citizenship** trước khi phân tích normative claims.
+## 1. Nation không đồng nghĩa state
 
-## 1. Nation không đồng nghĩa trạng thái (state / 상태)
+Một **state** là political institution có territorial jurisdiction và sovereign authority ở mức độ nào đó. Một **nation** là collective identity/community được hiểu qua history, culture, language, political memory, shared institutions hoặc self-understanding.
 
-Một **trạng thái (state / 상태)** là political institution có territorial jurisdiction và sovereign authority ở mức độ nào đó. Một **nation** là collective định danh (identity / 식별자)/community được hiểu qua lịch sử (history / 이력), culture, ngôn ngữ (language / 언어), political bộ nhớ (memory / 메모리), dùng chung (shared / 공유) institutions hoặc self-understanding.
+Có multinational states và stateless nations. Vì vậy “nation-state” là một possible alignment chứ không phải natural identity.
 
-Có multinational states và stateless nations. Vì vậy “nation-state” là một possible alignment chứ không phải natural định danh (identity / 식별자).
+## 2. National identity được tạo bởi gì?
 
-> **Chuyển mạch:** Trong **Nationalism — nation, self-determination, solidarity và exclusion risks**, **2. National định danh (identity / 식별자) được tạo bởi gì?** tiếp nhận điểm tựa từ **1. Nation không đồng nghĩa trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Self-determination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 2. National định danh (identity / 식별자) được tạo bởi gì?
-
-Nationalism có nội bộ (internal / 내부) disagreement giữa more mục tiêu (objective / 목표) và more voluntarist conceptions. Một số account nhấn mạnh ngôn ngữ (language / 언어), ancestry, culture; others nhấn mạnh dùng chung (shared / 공유) political commitment và continuing collective identification.
+Nationalism có internal disagreement giữa more objective và more voluntarist conceptions. Một số account nhấn mạnh language, ancestry, culture; others nhấn mạnh shared political commitment và continuing collective identification.
 
 Useful distinction:
 
@@ -25,37 +21,45 @@ ethno-cultural nation
 ↔ civic/political nation
 ```
 
-Real national identities thường mix elements. Nếu một definition dựa quá mạnh vào ancestry, ranh giới (boundary / 경계) membership trở nên exclusionary; nếu purely voluntary, nó có thể understate historical/cultural attachment mà citizens thực sự coi trọng.
-
-> **Chuyển mạch:** Ở chặng này của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **3. Self-determination** tiếp nhận điểm tựa từ **2. National định danh (identity / 식별자) được tạo bởi gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Solidarity và redistribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Real national identities thường mix elements. Nếu một definition dựa quá mạnh vào ancestry, boundary membership trở nên exclusionary; nếu purely voluntary, nó có thể understate historical/cultural attachment mà citizens thực sự coi trọng.
 
 ## 3. Self-determination
 
-Nationalist lý thuyết (theory / 이론) thường claim nations có political significance và một right/claim tới **self-determination**. Nhưng self-determination không always entail independent statehood. Nó có thể phạm vi (range / 범위) từ cultural autonomy, federal self-government tới sovereignty.
+Nationalist theory thường claim nations có political significance và một right/claim tới **self-determination**. Nhưng self-determination không always entail independent statehood. Nó có thể range từ cultural autonomy, federal self-government tới sovereignty.
 
-Normative bài toán (problem / 문제) xuất hiện khi territories overlap, populations mixed, hoặc multiple groups claim same không gian (space / 공간). Principle “mỗi nation một trạng thái (state / 상태)” không thể mechanically apply trong world với intermingled populations.
+Normative problem xuất hiện khi territories overlap, populations mixed, hoặc multiple groups claim same space. Principle “mỗi nation một state” không thể mechanically apply trong world với intermingled populations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **4. Solidarity và redistribution** tiếp nhận điểm tựa từ **3. Self-determination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Nationalism và democracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 4. Citizenship như institutional boundary
 
-## 4. Solidarity và redistribution
+National belonging chỉ trở thành political power khi được mã hóa thành **citizenship rules**: ai được gia nhập, ai có quyền cư trú, ai được vote, ai nhận welfare, ai chịu nghĩa vụ quân sự hoặc thuế, và ai có thể challenge quyết định về status của mình. Nation vì vậy không chỉ là identity; nó là một phân bổ rights, duties và access.
 
-National định danh (identity / 식별자) có thể tạo trust, willingness to share burdens và hỗ trợ (support / 지원) for công khai (public / 공개) institutions. Một argument in favor of national community là welfare/democracy cần sense of mutual obligation vượt purely transactional quan hệ (relation / 관계).
+Có thể tách hai tầng:
 
-Nhưng nhân quả (causal / 인과적) claim phải empirically kiểm thử (test / 테스트). National homogeneity không necessary điều kiện (condition / 조건) cho welfare trạng thái (state / 상태); nationalism cũng có thể undermine solidarity toward minorities/non-citizens. Question là **who is included in the circle of obligation**.
+```text
+membership narrative
+→ legal status
+→ substantive rights/services
+→ voice and representation
+→ route to inclusion or exclusion
+```
 
-> **Chuyển mạch:** Trong **Nationalism — nation, self-determination, solidarity và exclusion risks**, **5. Nationalism và democracy** tiếp nhận điểm tựa từ **4. Solidarity và redistribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Civic nationalism không automatically harmless** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một civic nation vẫn có thể tạo second-class membership nếu naturalization khó, language test tùy tiện hoặc migrant labor nhận nghĩa vụ nhưng thiếu voice. Một nation có lịch sử ethno-cultural vẫn có thể mở equal citizenship qua constitutional guarantees; nhãn không thay thế cho institutional evidence.
 
-## 5. Nationalism và democracy
+## 5. Solidarity và redistribution
 
-Self-rule có intuitive link với democracy: “people” phải có some collective định danh (identity / 식별자) để quy tắc (rule / 규칙) itself. Nhưng “the people” definition itself can be contested.
+National identity có thể tạo trust, willingness to share burdens và support for public institutions. Một argument in favor of national community là welfare/democracy cần sense of mutual obligation vượt purely transactional relation.
 
-If majority national định danh (identity / 식별자) is treated as sole đơn vị sở hữu (owner / 오너) of trạng thái (state / 상태), citizens with other identities may become conditional members. Liberal nationalism tries combine national self-determination với equal citizenship/rights; whether this balance works depends institutional safeguards, minority rights and citizenship rules.
+Nhưng causal claim phải empirically test. National homogeneity không necessary condition cho welfare state; nationalism cũng có thể undermine solidarity toward minorities/non-citizens. Question là **who is included in the circle of obligation**.
 
-> **Chuyển mạch:** Ở chặng này của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **6. Civic nationalism không automatically harmless** tiếp nhận điểm tựa từ **5. Nationalism và democracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Anti-colonial nationalism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 6. Nationalism và democracy
 
-## 6. Civic nationalism không automatically harmless
+Self-rule có intuitive link với democracy: “people” phải có some collective identity để rule itself. Nhưng “the people” definition itself can be contested.
 
-Civic membership based on constitution/values nghe inclusive hơn ethnicity, nhưng civic criteria cũng có thể be used as gatekeeping. Tests of loyalty, ngôn ngữ (language / 언어) or “values” can become exclusionary depending hiện thực (implementation / 구현).
+If majority national identity is treated as sole owner of state, citizens with other identities may become conditional members. Liberal nationalism tries combine national self-determination với equal citizenship/rights; whether this balance works depends institutional safeguards, minority rights and citizenship rules.
+
+## 7. Civic nationalism không automatically harmless
+
+Civic membership based on constitution/values nghe inclusive hơn ethnicity, nhưng civic criteria cũng có thể be used as gatekeeping. Tests of loyalty, language or “values” can become exclusionary depending implementation.
 
 Do đó analytical question không chỉ label civic/ethnic, mà là:
 
@@ -67,35 +71,27 @@ membership rule
 → cultural policy
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **7. Anti-colonial nationalism** tiếp nhận điểm tựa từ **6. Civic nationalism không automatically harmless** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nationalism và international thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 8. Anti-colonial nationalism
 
-## 7. Anti-colonial nationalism
+Nationalism historically cũng là language of anti-imperial self-determination. Colonized peoples used national identity to mobilize against foreign rule. Vì vậy nationalism cannot be reduced to dominant-state chauvinism.
 
-Nationalism historically cũng là ngôn ngữ (language / 언어) of anti-imperial self-determination. Colonized peoples used national định danh (identity / 식별자) to mobilize against foreign quy tắc (rule / 규칙). Vì vậy nationalism cannot be reduced to dominant-state chauvinism.
+Tuy nhiên postcolonial state-building then faces same question: how does liberation movement define internal minorities, regional identities and political opposition? External domination ending không tự động resolve internal domination.
 
-Tuy nhiên postcolonial state-building then faces same question: how does liberation movement define nội bộ (internal / 내부) minorities, regional identities and political opposition? Bên ngoài (external / 외부) domination ending không tự động resolve nội bộ (internal / 내부) domination.
+## 9. Nationalism và international order
 
-> **Chuyển mạch:** Trong **Nationalism — nation, self-determination, solidarity và exclusion risks**, **8. Nationalism và international thứ tự (order / 순서)** tiếp nhận điểm tựa từ **7. Anti-colonial nationalism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Nationalism, patriotism và chauvinism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+National self-determination supports sovereign equality but may conflict with global obligations về refugees, climate, trade or human rights. Cosmopolitan views emphasize equal moral status across borders; nationalist views allow special duties to compatriots.
 
-## 8. Nationalism và international thứ tự (order / 순서)
+Theoretical issue là degree, not binary: special duties can coexist with universal duties, nhưng boundaries must be justified.
 
-National self-determination supports sovereign equality but may xung đột (conflict / 충돌) with toàn cục (global / 전역) obligations về refugees, climate, trade or human rights. Cosmopolitan views emphasize equal moral status across borders; nationalist views allow special duties to compatriots.
+## 10. Nationalism, patriotism và chauvinism
 
-Theoretical issue là degree, not nhị phân (binary / 이진): special duties can coexist with universal duties, nhưng boundaries must be justified.
-
-> **Chuyển mạch:** Ở chặng này của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **9. Nationalism, patriotism và chauvinism** tiếp nhận điểm tựa từ **8. Nationalism và international thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Exclusion and escalation rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 9. Nationalism, patriotism và chauvinism
-
-**Patriotism** thường means attachment to country/political community; **nationalism** more strongly connects nation to political claims. **Chauvinism** implies aggressive/superiority-oriented attachment. Terms overlap in ordinary use but should not be treated as synonyms in phân tích (analysis / 분석).
+**Patriotism** thường means attachment to country/political community; **nationalism** more strongly connects nation to political claims. **Chauvinism** implies aggressive/superiority-oriented attachment. Terms overlap in ordinary use but should not be treated as synonyms in analysis.
 
 This distinction matters to avoid calling every national attachment “nationalist extremism” or, conversely, masking exclusionary supremacy as mere patriotism.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **10. Exclusion and escalation rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **9. Nationalism, patriotism và chauvinism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 11. Exclusion and escalation risk
 
-## 10. Exclusion and escalation rủi ro (risk / 위험)
-
-When national membership becomes morally hierarchical, out-groups may be treated as threats or lesser members. Cơ chế (mechanism / 메커니즘) can be:
+When national membership becomes morally hierarchical, out-groups may be treated as threats or lesser members. Mechanism can be:
 
 ```text
 identity boundary
@@ -105,13 +101,44 @@ identity boundary
 → exclusion/coercion
 ```
 
-This progression is not inevitable. Institutions, pluralism and rights can interrupt it. But it is a central dạng thất bại (failure mode / 실패 모드) to monitor.
+This progression is not inevitable. Institutions, pluralism and rights can interrupt it. But it is a central failure mode to monitor.
 
-> **Chuyển mạch:** Trong **Nationalism — nation, self-determination, solidarity và exclusion risks**, **Handoff** tiếp nhận điểm tựa từ **10. Exclusion and escalation rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## Historical implementation: liberation, state-building và minority protection
+
+Nationalist implementation nên được đọc theo hai giai đoạn thay vì một heroic story. Trong giai đoạn anti-colonial, national mobilization có thể tạo collective capacity để chấm dứt foreign rule; trong giai đoạn state-building, cùng grammar đó có thể biến thành centralized loyalty test, đồng nhất hóa culture hoặc suppress regional/autonomous identities. Câu hỏi evidence là quyền tự quyết của nation có được chuyển thành equal citizenship và accountable institutions hay không.
+
+Case analysis cần giữ:
+
+```text
+claimed people
+→ boundary-making institution
+→ citizenship allocation
+→ minority/indigenous status
+→ territorial policy
+→ dissent and external obligations
+```
+
+Không dùng thành công của một independence movement để miễn kiểm tra internal domination; cũng không dùng một exclusionary state để phủ nhận mọi anti-imperial self-determination claim.
+
+## Operationalizing nation, citizenship và self-determination
+
+Một claim nationalist phải chỉ rõ “people” đang được xác định bằng biến nào và quyền nào được yêu cầu. Dùng chuỗi:
+
+```text
+identity claim
+→ membership rule
+→ territorial jurisdiction
+→ citizenship / residency status
+→ political voice and public goods
+→ minority protection
+→ external obligation and exit
+```
+
+Một movement có thể giành self-rule nhưng vẫn tạo unequal citizenship; một civic test có thể mở inclusion cho nhóm này và loại nhóm khác; một border có thể bảo vệ sovereignty nhưng làm đứt livelihood networks. Evidence phải tách narrative, law, administrative practice và lived access, đồng thời ghi rõ ai không được đại diện trong dữ liệu.
 
 ## Handoff
 
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 nation concept
@@ -126,14 +153,10 @@ nation concept
 
 Chapter [Fascism](08_fascism.md) examines a historically specific far-right authoritarian family in which ultranationalism is joined with anti-pluralism, hierarchy, mass mobilization and leader-centered authority. Nationalism by itself must not be equated with fascism.
 
-> **Chuyển mạch:** Ở chặng này của **Nationalism — nation, self-determination, solidarity và exclusion risks**, **Handoff** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## Sources và reading anchors
 
 - Stanford Encyclopedia of Philosophy, “Nationalism”: https://plato.stanford.edu/entries/nationalism/
 - Stanford Encyclopedia of Philosophy, “Territorial Rights and Territorial Justice”: https://plato.stanford.edu/entries/territorial-rights/
 - [Global justice, identity and difference](../03_global_justice_identity_and_difference.md).
 
-Nguồn (source / 소스) discipline: specify whether a claim concerns national định danh (identity / 식별자), self-determination, trạng thái (state / 상태) chính sách (policy / 정책) or a specific nationalist movement.
-
-> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+Source discipline: specify whether a claim concerns national identity, self-determination, state policy or a specific nationalist movement.

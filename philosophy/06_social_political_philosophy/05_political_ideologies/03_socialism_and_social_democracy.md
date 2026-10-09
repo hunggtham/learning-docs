@@ -1,14 +1,12 @@
-# Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions
+# Socialism và social democracy — social control, equality, democracy và market institutions
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**. Route đi từ social power over production → equality và quan hệ sở hữu → democracy, welfare và market institutions → các biến thể social democracy, để phân biệt mục tiêu bình đẳng với cơ chế thực hiện.
+Module trước đã làm rõ liberalism và conservatism như hai traditions có internal diversity rất lớn. **Socialism (chủ nghĩa xã hội, 사회주의)** cũng phải được đọc theo cách tương tự: không phải một institutional blueprint duy nhất, mà là một family of views xoay quanh câu hỏi ai kiểm soát productive resources, production được tổ chức để phục vụ mục tiêu nào, và freedom/equality phải được hiểu thế nào khi economic power phân bổ không đều.
 
-Mô-đun (module / 모듈) trước đã làm rõ liberalism và conservatism như hai traditions có nội bộ (internal / 내부) diversity rất lớn. **Socialism (chủ nghĩa xã hội, 사회주의)** cũng phải được đọc theo cách tương tự: không phải một institutional blueprint duy nhất, mà là một family of views xoay quanh câu hỏi ai kiểm soát productive resources, môi trường vận hành (production / 운영 환경) được tổ chức để phục vụ mục tiêu nào, và freedom/equality phải được hiểu thế nào khi economic power phân bổ không đều.
+Prerequisite trực tiếp là [Comparison framework](00_comparison_framework.md), [Capitalism, labor và institutions](../02_capitalism_labor_and_institutions.md) và module [Marxism–Leninism](../04_marxism_leninism/README.md). Chapter này cố ý rộng hơn Marxism: socialism có lịch sử, arguments và institutional proposals không thể quy toàn bộ về Marx hoặc Soviet model.
 
-Prerequisite trực tiếp là [Comparison framework](00_comparison_framework.md), [Capitalism, labor và institutions](../02_capitalism_labor_and_institutions.md) và mô-đun (module / 모듈) [Marxism–Leninism](../04_marxism_leninism/README.md). Chapter này cố ý rộng hơn Marxism: socialism có lịch sử, arguments và institutional proposals không thể quy toàn bộ về Marx hoặc Soviet mô hình (model / 모델).
+## 1. Core concern: social power over production
 
-## 1. Cốt lõi (core / 핵심) concern: xã hội (social / 사회적) power over môi trường vận hành (production / 운영 환경)
-
-Một dùng chung (common / 공통) denominator tương đối an toàn của nhiều socialist traditions là lo ngại rằng quyền sở hữu (ownership / 소유권) và điều khiển (control / 제어) of productive assets tạo ra **economic power** có thể ảnh hưởng freedom, bargaining power và phân phối (distribution / 분포). Vì vậy socialism không chỉ hỏi “income có bằng nhau không?” mà hỏi sâu hơn:
+Một common denominator tương đối an toàn của nhiều socialist traditions là lo ngại rằng ownership và control of productive assets tạo ra **economic power** có thể ảnh hưởng freedom, bargaining power và distribution. Vì vậy socialism không chỉ hỏi “income có bằng nhau không?” mà hỏi sâu hơn:
 
 ```text
 ai sở hữu?
@@ -19,21 +17,17 @@ ai sở hữu?
 → ai phụ thuộc vào ai?
 ```
 
-Điểm này giải thích vì sao socialism thường quan tâm worker điều khiển (control / 제어), xã hội (social / 사회적) quyền sở hữu (ownership / 소유권), cooperative quyền sở hữu (ownership / 소유권) hoặc democratic điều khiển (control / 제어) of investment. Nhưng các socialist các mô hình (models / 모델들) khác nhau mạnh về việc xã hội (social / 사회적) điều khiển (control / 제어) đó nên đi qua trạng thái (state / 상태), cooperative, market-socialist institution, municipal quyền sở hữu (ownership / 소유권) hay những cơ chế khác.
+Điểm này giải thích vì sao socialism thường quan tâm worker control, social ownership, cooperative ownership hoặc democratic control of investment. Nhưng các socialist models khác nhau mạnh về việc social control đó nên đi qua state, cooperative, market-socialist institution, municipal ownership hay những cơ chế khác.
 
-> **Chuyển mạch:** Trong **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **2. Equality: phân phối (distribution / 분포) hay quan hệ (relation / 관계)?** tiếp nhận điểm tựa từ **1. Cốt lõi (core / 핵심) concern: xã hội (social / 사회적) power over môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Xã hội (social / 사회적) quyền sở hữu (ownership / 소유권) không đồng nghĩa quyền sở hữu trạng thái (state ownership / 상태 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 2. Equality: distribution hay relation?
 
-## 2. Equality: phân phối (distribution / 분포) hay quan hệ (relation / 관계)?
+Socialist arguments về equality không nhất thiết đồng nghĩa equal income. Một số dòng nhấn mạnh **distributional equality**; dòng khác quan tâm **relational equality** — không để một nhóm có quyền lực tùy ý lên nhóm khác chỉ vì ownership position.
 
-Socialist arguments về equality không nhất thiết đồng nghĩa equal income. Một số dòng nhấn mạnh **distributional equality**; dòng khác quan tâm **relational equality** — không để một nhóm có quyền lực tùy ý lên nhóm khác chỉ vì quyền sở hữu (ownership / 소유권) position.
+Ví dụ, hai người có thể có income không chênh quá lớn nhưng một người có quyền hire/fire, set conditions và control investment còn người kia phụ thuộc hoàn toàn vào việc bán labor. Với relational view, đây vẫn là một power relation cần phân tích.
 
-Ví dụ, hai người có thể có income không chênh quá lớn nhưng một người có quyền hire/fire, set conditions và điều khiển (control / 제어) investment còn người kia phụ thuộc hoàn toàn vào việc bán labor. Với relational view, đây vẫn là một power quan hệ (relation / 관계) cần phân tích.
+Từ đây socialism nối trực tiếp với [Justice, power và political legitimacy](../00_justice_power_and_legitimacy.md): equality không chỉ là số đo distribution mà còn là question về domination, dependency và institutional standing.
 
-Từ đây socialism nối trực tiếp với [Justice, power và political legitimacy](../00_justice_power_and_legitimacy.md): equality không chỉ là số đo phân phối (distribution / 분포) mà còn là question về domination, phụ thuộc (dependency / 의존성) và institutional standing.
-
-> **Chuyển mạch:** Ở chặng này của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, sau nội dung của **2. Equality: phân phối (distribution / 분포) hay quan hệ (relation / 관계)?**, **3. Xã hội (social / 사회적) quyền sở hữu (ownership / 소유권) không đồng nghĩa quyền sở hữu trạng thái (state ownership / 상태 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4. Planning, thị trường (market / 시장) và mixed coordination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 3. Xã hội (social / 사회적) quyền sở hữu (ownership / 소유권) không đồng nghĩa quyền sở hữu trạng thái (state ownership / 상태 소유권)
+## 3. Social ownership không đồng nghĩa state ownership
 
 Một lỗi phổ biến là map:
 
@@ -41,15 +35,13 @@ Một lỗi phổ biến là map:
 socialism = state owns everything
 ```
 
-Điều này quá hẹp. **Xã hội (social / 사회적) quyền sở hữu (ownership / 소유권)** có thể được thể chế hóa qua nhiều form: quyền sở hữu trạng thái (state ownership / 상태 소유권), worker cooperatives, municipal quyền sở hữu (ownership / 소유권), công khai (public / 공개) trusts, xã hội (social / 사회적) wealth funds hoặc combinations. Một hệ thống (system / 시스템) có thể giữ thị trường (market / 시장) exchange nhưng thay đổi quyền sở hữu (ownership / 소유권) kiến trúc (architecture / 아키텍처); đây là lý do **thị trường (market / 시장) socialism** tồn tại như một family nghiêm túc trong contemporary political philosophy.
+Điều này quá hẹp. **Social ownership** có thể được thể chế hóa qua nhiều form: state ownership, worker cooperatives, municipal ownership, public trusts, social wealth funds hoặc combinations. Một system có thể giữ market exchange nhưng thay đổi ownership architecture; đây là lý do **market socialism** tồn tại như một family nghiêm túc trong contemporary political philosophy.
 
-Câu hỏi quan trọng hơn label quyền sở hữu (ownership / 소유권) là **quyết định (decision / 결정) rights**. Quyền sở hữu trạng thái (state ownership / 상태 소유권) nhưng manager hoạt động như một insulated bureaucracy khác rất xa worker-controlled enterprise; cooperative quyền sở hữu (ownership / 소유권) khác trạng thái (state / 상태) ministry; xã hội (social / 사회적) wealth fund khác direct planning.
+Câu hỏi quan trọng hơn label ownership là **decision rights**. State ownership nhưng manager hoạt động như một insulated bureaucracy khác rất xa worker-controlled enterprise; cooperative ownership khác state ministry; social wealth fund khác direct planning.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **4. Planning, thị trường (market / 시장) và mixed coordination** tiếp nhận điểm tựa từ **3. Xã hội (social / 사회적) quyền sở hữu (ownership / 소유권) không đồng nghĩa quyền sở hữu trạng thái (state ownership / 상태 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Democratic socialism và xã hội (social / 사회적) democracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 4. Planning, market và mixed coordination
 
-## 4. Planning, thị trường (market / 시장) và mixed coordination
-
-Socialist traditions không thống nhất về thị trường (market / 시장). Historical command economies dùng extensive administrative planning; democratic socialist và market-socialist proposals có thể giữ price signals và decentralized firms nhưng socialise quyền sở hữu (ownership / 소유권) hoặc investment returns.
+Socialist traditions không thống nhất về market. Historical command economies dùng extensive administrative planning; democratic socialist và market-socialist proposals có thể giữ price signals và decentralized firms nhưng socialise ownership hoặc investment returns.
 
 Vì vậy cần tách hai axis:
 
@@ -58,83 +50,132 @@ ownership axis: private ↔ cooperative ↔ social/state
 coordination axis: market ↔ negotiated coordination ↔ administrative planning
 ```
 
-Hai axis không collapse vào nhau. Private firms có nội bộ (internal / 내부) planning; công khai (public / 공개) firms có thể bán trên competitive markets; cooperatives có thể dùng thị trường (market / 시장) prices.
+Hai axis không collapse vào nhau. Private firms có internal planning; public firms có thể bán trên competitive markets; cooperatives có thể dùng market prices.
 
-Cơ chế (mechanism / 메커니즘) phân tích (analysis / 분석) phải hỏi thông tin (information / 정보) đến từ đâu, incentives đặt ở đâu, investment được phân bổ thế nào, và lỗi (error / 오류) correction hoạt động qua exit, competition, vote, kiểm tra (audit / 감사) hay hierarchy.
+Mechanism analysis phải hỏi information đến từ đâu, incentives đặt ở đâu, investment được phân bổ thế nào, và error correction hoạt động qua exit, competition, vote, audit hay hierarchy.
 
-> **Chuyển mạch:** Trong **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **5. Democratic socialism và xã hội (social / 사회적) democracy** tiếp nhận điểm tựa từ **4. Planning, thị trường (market / 시장) và mixed coordination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Freedom: material sức chứa (capacity / 용량) và economic dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 5. Democratic socialism và social democracy
 
-## 5. Democratic socialism và xã hội (social / 사회적) democracy
+**Democratic socialism** thường muốn mở rộng democratic control từ political institutions sang economic power/ownership sâu hơn. **Social democracy** trong contemporary usage thường chấp nhận market economy và private ownership ở mức lớn nhưng dùng welfare state, collective bargaining, public services, progressive taxation, regulation và macroeconomic management để giảm insecurity và inequality.
 
-**Democratic socialism** thường muốn mở rộng democratic điều khiển (control / 제어) từ political institutions sang economic power/quyền sở hữu (ownership / 소유권) sâu hơn. **Xã hội (social / 사회적) democracy** trong contemporary usage thường chấp nhận thị trường (market / 시장) economy và private quyền sở hữu (ownership / 소유권) ở mức lớn nhưng dùng welfare trạng thái (state / 상태), collective bargaining, công khai (public / 공개) services, progressive taxation, regulation và macroeconomic management để giảm insecurity và inequality.
+Hai traditions overlap nhưng không phải synonyms. Social democracy có thể xem regulated capitalism là settlement tương đối ổn định; democratic socialism thường coi democratization of ownership/control là objective sâu hơn.
 
-Hai traditions overlap nhưng không phải synonyms. Xã hội (social / 사회적) democracy có thể xem regulated capitalism là settlement tương đối ổn định; democratic socialism thường coi democratization of quyền sở hữu (ownership / 소유권)/điều khiển (control / 제어) là mục tiêu (objective / 목표) sâu hơn.
+Cần tránh đọc các party labels hiện đại như canonical definition: party history, coalition strategy và national institutions có thể khiến một organization mang tên “social democratic” khác đáng kể với philosophical ideal type.
 
-Cần tránh đọc các party labels hiện đại như chuẩn gốc (canonical / 정본) definition: party lịch sử (history / 이력), coalition chiến lược (strategy / 전략) và national institutions có thể khiến một organization mang tên “xã hội (social / 사회적) democratic” khác đáng kể với philosophical ideal kiểu (type / 타입).
+## 6. Freedom: material capacity và economic dependence
 
-> **Chuyển mạch:** Ở chặng này của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **6. Freedom: material sức chứa (capacity / 용량) và economic dependence** tiếp nhận điểm tựa từ **5. Democratic socialism và xã hội (social / 사회적) democracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Incentives, innovation và investment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Socialist critique thường nói formal rights chưa đủ nếu material conditions làm người ta không có realistic alternatives. Freedom vì vậy bao gồm capacity để act: education, health, income security, bargaining power và access to productive resources có thể ảnh hưởng việc một legal right có usable hay không.
 
-## 6. Freedom: material sức chứa (capacity / 용량) và economic dependence
-
-Socialist critique thường nói formal rights chưa đủ nếu material conditions làm người ta không có realistic alternatives. Freedom vì vậy bao gồm sức chứa (capacity / 용량) để act: education, health, income bảo mật (security / 보안), bargaining power và truy cập (access / 접근) to productive resources có thể ảnh hưởng việc một legal right có usable hay không.
-
-Nhưng mở rộng material sức chứa (capacity / 용량) thông qua collective institutions lại tạo câu hỏi ngược: institutions đó có concentrated authority tới mức tạo công khai (public / 공개) domination không? Đây là tension trung tâm:
+Nhưng mở rộng material capacity thông qua collective institutions lại tạo câu hỏi ngược: institutions đó có concentrated authority tới mức tạo public domination không? Đây là tension trung tâm:
 
 ```text
 reduce private dependency
 without creating unchecked public authority
 ```
 
-Một socialist institutional thiết kế (design / 설계) không thể chỉ mô tả intended xã hội (social / 사회적) goal; nó phải giải accountability, pluralism, decentralization và limits on coercion.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **7. Incentives, innovation và investment** tiếp nhận điểm tựa từ **6. Freedom: material sức chứa (capacity / 용량) và economic dependence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Xã hội (social / 사회적) democracy như insurance kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một socialist institutional design không thể chỉ mô tả intended social goal; nó phải giải accountability, pluralism, decentralization và limits on coercion.
 
 ## 7. Incentives, innovation và investment
 
-Critics thường hỏi xã hội (social / 사회적) quyền sở hữu (ownership / 소유권) có làm yếu incentive hay investment discipline không. Socialist responses khác nhau: cooperative surplus-sharing, thị trường (market / 시장) competition, professional management, công khai (public / 공개) investment criteria hoặc xã hội (social / 사회적) wealth funds đều cố giải incentive theo cách khác.
+Critics thường hỏi social ownership có làm yếu incentive hay investment discipline không. Socialist responses khác nhau: cooperative surplus-sharing, market competition, professional management, public investment criteria hoặc social wealth funds đều cố giải incentive theo cách khác.
 
-Không có answer chung cho mọi mô hình (model / 모델). Worker cooperatives có thể align workers với firm hiệu năng (performance / 성능) nhưng cũng có rủi ro (risk / 위험) concentration và capital-raising problems. Trạng thái (state / 상태) firms có thể theo đuổi công khai (public / 공개) objectives nhưng gặp soft-budget các ràng buộc (constraints / 제약조건들) nếu thất bại (failure / 실패) không có consequence rõ. Private capital markets tạo strong selection pressure nhưng cũng có thể underprovide công khai (public / 공개) goods hoặc prioritize short-horizon returns.
+Không có answer chung cho mọi model. Worker cooperatives có thể align workers với firm performance nhưng cũng có risk concentration và capital-raising problems. State firms có thể theo đuổi public objectives nhưng gặp soft-budget constraints nếu failure không có consequence rõ. Private capital markets tạo strong selection pressure nhưng cũng có thể underprovide public goods hoặc prioritize short-horizon returns.
 
-Do đó “socialism có incentive bài toán (problem / 문제) không?” phải được hạ thành design-specific questions.
+Do đó “socialism có incentive problem không?” phải được hạ thành design-specific questions.
 
-> **Chuyển mạch:** Trong **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **8. Xã hội (social / 사회적) democracy như insurance kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **7. Incentives, innovation và investment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Nội bộ (internal / 내부) disagreements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 8. Social democracy như insurance architecture
 
-## 8. Xã hội (social / 사회적) democracy như insurance kiến trúc (architecture / 아키텍처)
+Một cách sâu hơn để hiểu welfare state là **social insurance**. Labor market luôn có risks: unemployment, sickness, disability, old age, family care và macro shocks. Social democracy chuyển một phần risk từ household sang collective pool qua tax, insurance và public provision.
 
-Một cách sâu hơn để hiểu welfare trạng thái (state / 상태) là **xã hội (social / 사회적) insurance**. Labor thị trường (market / 시장) luôn có risks: unemployment, sickness, disability, old age, family care và macro shocks. Xã hội (social / 사회적) democracy chuyển một phần rủi ro (risk / 위험) từ household sang collective pool qua tax, insurance và công khai (public / 공개) provision.
-
-Cơ chế (mechanism / 메커니즘) có benefit và chi phí (cost / 비용). Rủi ro (risk / 위험) pooling có thể tăng bảo mật (security / 보안) và bargaining freedom; financing tạo tax burden; benefit thiết kế (design / 설계) có thể ảnh hưởng labor supply; universal programs khác means-tested programs về take-up, stigma và fiscal chi phí (cost / 비용).
+Mechanism có benefit và cost. Risk pooling có thể tăng security và bargaining freedom; financing tạo tax burden; benefit design có thể ảnh hưởng labor supply; universal programs khác means-tested programs về take-up, stigma và fiscal cost.
 
 Các empirical claim thuộc [Economics](../../../economics/README.md) và comparative welfare-state research, không thể suy chỉ từ normative preference.
 
-> **Chuyển mạch:** Ở chặng này của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **9. Nội bộ (internal / 내부) disagreements** tiếp nhận điểm tựa từ **8. Xã hội (social / 사회적) democracy như insurance kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Thất bại (failure / 실패) modes phải phân tích đối xứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 9. Welfare, decommodification và public accountability
 
-## 9. Nội bộ (internal / 내부) disagreements
+Welfare không chỉ là transfer money. Khi một người có thể tiếp cận healthcare, education, childcare hoặc unemployment insurance mà không phải chấp nhận mọi điều kiện của một employer, bargaining position thay đổi. Có thể gọi đây là **decommodifying effect** theo nghĩa một phần khả năng sống không hoàn toàn phụ thuộc vào việc bán labor ngay tại thời điểm đó. Nhưng mức độ effect phụ thuộc eligibility, portability, service quality và khả năng appeal; một benefit trên giấy không tự tạo material freedom.
+
+Thiết kế phải giữ hai ledgers cùng lúc:
+
+```text
+private domination reduced
+→ income/security/voice expanded
+→ administrative discretion created
+→ public domination risk
+→ audit, plural provision, appeal and democratic control
+```
+
+Đây là lý do social democracy không thể được mô tả đơn giản là “nhà nước lớn”. Một hệ thống thuế cao nhưng service universal, minh bạch và contestable khác với một hệ thống phân phối tùy nghi, phụ thuộc patronage. Cũng vậy, collective bargaining có thể giảm power asymmetry nhưng vẫn cần quy tắc cho người không thuộc union, firm entry và macro adjustment.
+
+## 10. Public/private domination và historical implementation
+
+Socialist critique mạnh khi chỉ ra private ownership có thể biến thành authority trong workplace, housing, credit hoặc investment. Tuy nhiên chuyển quyền đó sang state không làm domination biến mất; nó đổi chủ thể có quyền ra lệnh. Vì vậy case study phải trace:
+
+```text
+ownership reform
+→ actual decision rights
+→ worker/citizen voice
+→ information and incentive flow
+→ exit or appeal
+→ distribution, productivity and welfare outcomes
+```
+
+Các case Soviet, China và Vietnam trong module Marxism–Leninism cung cấp worked examples cho grammar này. Chúng không phải verdict chung về socialism: cùng một label có thể chứa command planning, dual-track reform, cooperatives, public services và market coordination ở các giai đoạn khác nhau. Evidence phải giữ rõ country × period × institution và phân biệt intended egalitarian goal với outcome thực tế.
+
+## 11. Internal disagreements
 
 Socialism chứa disagreement về ít nhất bốn dimensions:
 
-- **quyền sở hữu (ownership / 소유권)**: trạng thái (state / 상태), cooperative, xã hội (social / 사회적) fund hay mixed;
+- **ownership**: state, cooperative, social fund hay mixed;
 - **coordination**: planning, markets hay hybrid;
-- **political chiến lược (strategy / 전략)**: reform, electoral transformation hay revolutionary break;
-- **phạm vi (scope / 범위) of equality**: income, wealth, workplace power, năng lực (capability / 역량) hay xã hội (social / 사회적) status.
+- **political strategy**: reform, electoral transformation hay revolutionary break;
+- **scope of equality**: income, wealth, workplace power, capability hay social status.
 
-Marxism chỉ là một major branch trong larger socialist family. Anarchist socialism, guild socialism, democratic socialism, thị trường (market / 시장) socialism và xã hội (social / 사회적) democracy có lô-gic (logic / 논리) khác nhau ở các axis trên.
+Marxism chỉ là một major branch trong larger socialist family. Anarchist socialism, guild socialism, democratic socialism, market socialism và social democracy có logic khác nhau ở các axis trên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **10. Thất bại (failure / 실패) modes phải phân tích đối xứng** tiếp nhận điểm tựa từ **9. Nội bộ (internal / 내부) disagreements** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 12. Party, union và cooperative: representation không tự động là control
 
-## 10. Thất bại (failure / 실패) modes phải phân tích đối xứng
+Socialist projects thường cần organizations để biến dispersed workplace interests thành collective voice: party tranh luận policy, union thương lượng điều kiện lao động, cooperative phân bổ decision rights trong firm. Nhưng organization có thể vừa đại diện vừa thay thế members. Khi leadership kiểm soát information, candidate selection hoặc access to resources, “collective control” có thể bị chuyển thành control của bureaucracy.
 
-Một phân tích (analysis / 분석) nghiêm túc phải giữ cả hai sides:
+Vì vậy nên tách ba quan hệ:
 
-Socialist/công khai (public / 공개) institutions có thể gặp bureaucracy, weak phản hồi (feedback / 피드백), politicized allocation, soft ngân sách (budget / 예산) các ràng buộc (constraints / 제약조건들) hoặc concentration of power. Thị trường (market / 시장)/private institutions có thể gặp monopoly, rent extraction, externality, unequal bargaining và wealth-to-political-power transmission.
+```text
+membership
+→ representation
+→ authorization
+→ accountability / recall
+```
 
-Không lấy ideal của một side so với thất bại (failure / 실패) của side kia. Đơn vị (unit / 단위) of phân tích (analysis / 분석) phải là institution cụ thể.
+Một union có membership rộng nhưng bargaining agenda đóng kín không giống worker democracy; một party thắng election nhưng không cho internal dissent không tự động tạo social control; một cooperative có vote nhưng capital, expertise hoặc exit quá tập trung vẫn có thể tái tạo hierarchy. Đây là điểm nối với [Party, state và revolution](../04_marxism_leninism/04_lenin_party_state_revolution_and_imperialism.md) và với [Anarchism](04_anarchism.md), nơi delegation, recall và federation được đặt ở trung tâm.
 
-> **Chuyển mạch:** Trong **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **Handoff** tiếp nhận điểm tựa từ **10. Thất bại (failure / 실패) modes phải phân tích đối xứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+## 13. Operationalizing social control
+
+Một institution chỉ nên được gọi là “social control” sau khi decision rights được quan sát, không phải chỉ vì state hoặc party dùng ngôn ngữ collective. Profile tối thiểu là:
+
+```text
+asset / workplace
+→ formal owner
+→ actual decision-maker
+→ residual income and downside
+→ worker/citizen voice
+→ information disclosure
+→ exit, recall or appeal
+→ measurable distribution and welfare outcome
+```
+
+Profile này giúp tách state ownership khỏi public accountability, cooperative vote khỏi effective control và welfare spending khỏi material security. Nó cũng giữ đối xứng với private institutions: cùng câu hỏi phải được đặt cho owner, manager, union, ministry và fund, không miễn trừ bên nào vì label ideological.
+
+## 14. Failure modes phải phân tích đối xứng
+
+Một analysis nghiêm túc phải giữ cả hai sides:
+
+Socialist/public institutions có thể gặp bureaucracy, weak feedback, politicized allocation, soft budget constraints hoặc concentration of power. Market/private institutions có thể gặp monopoly, rent extraction, externality, unequal bargaining và wealth-to-political-power transmission.
+
+Không lấy ideal của một side so với failure của side kia. Unit of analysis phải là institution cụ thể.
 
 ## Handoff
 
-Mô hình tư duy (mental model / 사고 모델) của chapter:
+Mental model của chapter:
 
 ```text
 economic power
@@ -147,16 +188,12 @@ economic power
 → failure mode
 ```
 
-Chapter tiếp theo, [Anarchism](04_anarchism.md), giữ nhiều concern về hierarchy và domination nhưng đẩy câu hỏi authority xa hơn: nếu centralized trạng thái (state / 상태) itself là nguồn (source / 소스) of domination, xã hội (social / 사회적) coordination có thể tổ chức qua voluntary/decentralized association đến mức nào?
-
-> **Chuyển mạch:** Ở chặng này của **Socialism và xã hội (social / 사회적) democracy — xã hội (social / 사회적) điều khiển (control / 제어), equality, democracy và thị trường (market / 시장) institutions**, **Handoff** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Chapter tiếp theo, [Anarchism](04_anarchism.md), giữ nhiều concern về hierarchy và domination nhưng đẩy câu hỏi authority xa hơn: nếu centralized state itself là source of domination, social coordination có thể tổ chức qua voluntary/decentralized association đến mức nào?
 
 ## Sources và reading anchors
 
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/
-- [Comparative political economy](../04_marxism_leninism/10_comparative_political_economy.md) là cầu nối (bridge / 브리지) sang quyền sở hữu (ownership / 소유권), coordination và institutional bằng chứng (evidence / 증거).
+- [Comparative political economy](../04_marxism_leninism/10_comparative_political_economy.md) là bridge sang ownership, coordination và institutional evidence.
 
-Nguồn (source / 소스) discipline: “socialism” không được đồng nhất tự động với Soviet planning; mỗi empirical claim phải specify mô hình (model / 모델), country, period và institution.
-
-> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+Source discipline: “socialism” không được đồng nhất tự động với Soviet planning; mỗi empirical claim phải specify model, country, period và institution.
