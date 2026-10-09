@@ -34,7 +34,7 @@ Phần này nối khái niệm vừa học với “Điểm dễ nhầm trong đ
 - **생명 주기 = 개발 방법론** (vòng đời = phương pháp phát triển) là sai. SDLC là khung các giai đoạn; Waterfall, Spiral, Agile là các mô hình/phương pháp tổ chức hoặc thực hiện các giai đoạn đó.
 - **생명 주기 = chỉ coding** là sai. Coding (구현, implementation) chỉ là một phần; yêu cầu, kiểm thử và bảo trì cũng thuộc vòng đời.
 
-> **Chuyển mạch:** Trong **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **2. 폭포수 모형 — Waterfall mô hình (model / 모델) — mô hình thác nước** tiếp nhận điểm tựa từ **1. 소프트웨어 생명 주기 — Software Development Life Cycle — vòng đời phát triển phần mềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 나선형 모형 — Spiral mô hình (model / 모델) — mô hình xoắn ốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SDLC xác định các giai đoạn; Waterfall biến chúng thành chuỗi tuần tự với ràng buộc phản hồi rõ. Bước tiếp theo là Spiral, nơi rủi ro được đánh giá lặp lại trước khi mở rộng phạm vi.
 
 ## 2. 폭포수 모형 — Waterfall mô hình (model / 모델) — mô hình thác nước
 
@@ -57,7 +57,7 @@ Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giú
 
 Waterfall phù hợp khi yêu cầu ổn định, phạm vi có thể mô tả đầy đủ từ đầu và việc thay đổi bị kiểm soát nghiêm ngặt, ví dụ một dự án có quy định/hợp đồng chặt chẽ. Đừng hiểu “không thể quay lại” theo nghĩa vật lý tuyệt đối: thực tế vẫn có thể quay lại, nhưng mô hình giả định việc quay lại là đắt và cần quy trình phê duyệt, nên đề thi thường đối lập nó với tính linh hoạt của Agile.
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **3. 나선형 모형 — Spiral mô hình (model / 모델) — mô hình xoắn ốc** tiếp nhận điểm tựa từ **2. 폭포수 모형 — Waterfall mô hình (model / 모델) — mô hình thác nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 애자일 모형 — Agile mô hình (model / 모델) — mô hình/phương pháp Agile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Spiral giữ các mốc của vòng đời nhưng đưa risk và feedback vào từng vòng. Agile đẩy việc học từ feedback vào các iteration ngắn hơn và ưu tiên giá trị bàn giao.
 
 ## 3. 나선형 모형 — Spiral mô hình (model / 모델) — mô hình xoắn ốc
 
@@ -80,7 +80,7 @@ Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giú
 
 Waterfall ưu tiên trình tự và sự ổn định của tài liệu; Spiral ưu tiên quản lý rủi ro qua các vòng lặp. Agile cũng lặp, nhưng trọng tâm nổi bật của Agile là phản hồi nhanh với thay đổi yêu cầu, còn đặc điểm nhận diện của Spiral trong đề là **위험 분석 (risk analysis, phân tích rủi ro)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **4. 애자일 모형 — Agile mô hình (model / 모델) — mô hình/phương pháp Agile** tiếp nhận điểm tựa từ **3. 나선형 모형 — Spiral mô hình (model / 모델) — mô hình xoắn ốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 스크럼 — Scrum — khung làm việc Scrum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Agile mô tả nguyên tắc thích ứng; Scrum cụ thể hóa nguyên tắc đó thành vai trò, sự kiện và artifact để nhóm kiểm tra tiến độ.
 
 ## 4. 애자일 모형 — Agile mô hình (model / 모델) — mô hình/phương pháp Agile
 
@@ -99,7 +99,7 @@ Agile không phủ nhận kế hoạch. Ý này có nghĩa khi thực tế thay 
 3. **계약 협상보다 고객과의 협업을 중시한다.** — Coi trọng hợp tác với khách hàng (customer collaboration, hợp tác khách hàng) hơn chỉ đàm phán hợp đồng.
 4. **계획을 따르기보다 변화에 대응하는 것을 중시한다.** — Coi trọng phản hồi với thay đổi (responding to change, ứng phó thay đổi) hơn bám kế hoạch cứng nhắc.
 
-> **Chuyển mạch:** Trong **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **5. 스크럼 — Scrum — khung làm việc Scrum** tiếp nhận điểm tựa từ **4. 애자일 모형 — Agile mô hình (model / 모델) — mô hình/phương pháp Agile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 스크럼 개발 프로세스 — Scrum tiến trình (process / 프로세스) — quy trình vận hành Scrum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scrum cung cấp khung quản trị; quy trình Scrum tiếp theo cho thấy các vai trò và nhịp sự kiện biến backlog thành increment như thế nào.
 
 ## 5. 스크럼 — Scrum — khung làm việc Scrum
 
@@ -115,7 +115,7 @@ Phần này nối khái niệm vừa học với “Vai trò và tạo tác”, 
 - **개발 팀 (Development Team, nhóm phát triển):** nhóm liên chức năng tạo phần tăng trưởng sản phẩm có thể sử dụng.
 - **스프린트 (Sprint, chu kỳ nước rút):** khoảng thời gian cố định, thường 2–4 tuần theo tài liệu nguồn, để tạo một phần sản phẩm hoàn chỉnh có thể xem xét.
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **5. 스크럼 — Scrum — khung làm việc Scrum** xác định đầu vào; **6. 스크럼 개발 프로세스 — Scrum tiến trình (process / 프로세스) — quy trình vận hành Scrum** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. XP — eXtreme Programming — lập trình cực hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scrum process làm rõ vòng lặp lập kế hoạch–thực thi–review; XP bổ sung các thực hành kỹ thuật để giữ chất lượng trong cùng nhịp phản hồi.
 
 ## 6. 스크럼 개발 프로세스 — Scrum tiến trình (process / 프로세스) — quy trình vận hành Scrum
 
@@ -125,7 +125,7 @@ Quy trình bắt đầu từ sản phẩm (product / 제품) Backlog. Trong Spri
 
 Kết thúc Sprint, Sprint rà soát (review / 검토) trình bày và kiểm tra kết quả với các bên liên quan để lấy phản hồi về sản phẩm. Sau đó Sprint Retrospective (스프린트 회고, hồi tưởng/cải tiến Sprint) nhìn lại cách cả nhóm làm việc và chọn cải tiến cho Sprint sau. Burn-down Chart (소멸 차트, biểu đồ công việc còn lại) cho thấy lượng công việc còn lại theo thời gian, nên hỗ trợ theo dõi xu hướng chứ không thay thế đánh giá chất lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 · Bài 01 — Vòng đời và phương pháp phát triển phần mềm**, **6. 스크럼 개발 프로세스 — Scrum tiến trình (process / 프로세스) — quy trình vận hành Scrum** xác định đầu vào; **7. XP — eXtreme Programming — lập trình cực hạn** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa kế hoạch, feedback, kỹ thuật và chất lượng; khi quay về route Môn 1, hãy chọn mô hình theo uncertainty và evidence.
 
 ## 7. XP — eXtreme Programming — lập trình cực hạn
 
