@@ -48,7 +48,7 @@ Tại sao lần đầu tới `v` là đường đi ngắn nhất (shortest path)
 
 Đây là chứng minh dựa trên **tầng bất biến** chứ không phải vì hàng đợi (queue / 큐) “thường dùng như vậy”.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **BFS như shortest-path theo số cạnh** xác định đầu vào; **BFS tầng cấu trúc (structure / 구조)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **nút cha cây và đường đi reconstruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi BFS được nhìn như bài toán khoảng cách theo số cạnh, mỗi lớp duyệt trở thành một mốc có thể kiểm chứng. Phần kế tiếp dùng cấu trúc các tầng đó để giải thích vì sao BFS tìm được khoảng cách ngắn nhất và cách lần ngược đường đi.
 
 ## BFS tầng cấu trúc (structure / 구조)
 
@@ -65,7 +65,7 @@ Mọi cạnh trong undirected đồ thị không trọng số chỉ nối các �
 
 tầng view hữu ích cho kiểm tra hai phía, đường đi ngắn nhất reconstruction, tầng aggregation và lập luận (reasoning / 추론) về sự lan truyền theo lớp sóng.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **nút cha cây và đường đi reconstruction** tiếp nhận điểm tựa từ **BFS tầng cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-source BFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khoảng cách chỉ cho biết độ dài; mảng parent giữ lại quyết định đã đưa ta đến mỗi đỉnh. Nếu có nhiều nguồn cùng lúc, ta mở rộng cùng cơ chế này bằng cách khởi tạo toàn bộ nguồn trong tầng đầu tiên.
 
 ## nút cha cây và đường đi reconstruction
 
@@ -91,7 +91,7 @@ Nếu đích unreachable, cần check `dist[target] == -1` trước.
 
 nút cha siêu dữ liệu biến answer từ “khoảng cách là 7” thành actual tuyến (route / 경로).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **nút cha cây và đường đi reconstruction** nêu điều cần giải thích; **Multi-source BFS** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Multi-target / early exit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Multi-source BFS xem nhiều điểm xuất phát như một frontier chung và vẫn bảo toàn bất biến khoảng cách. Khi chỉ cần một số đích, ta có thể dừng sớm nhưng phải xác định rõ điều kiện dừng còn đúng.
 
 ## Multi-source BFS
 
@@ -116,7 +116,7 @@ Voronoi-like partition trên unweighted graph
 
 Không cần thuật toán mới; chỉ thay initial frontier.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Multi-source BFS** nêu điều cần giải thích; **Multi-target / early exit** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bidirectional BFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Early exit giảm phần đồ thị cần duyệt khi mục tiêu đã rõ. Với một nguồn và một đích cụ thể, bidirectional BFS đi từ hai đầu để làm nhỏ frontier gặp nhau.
 
 ## Multi-target / early exit
 
@@ -126,7 +126,7 @@ Nhưng nếu cần all các khoảng cách hoặc các tính chất toàn thành
 
 Tối ưu hóa (optimization / 최적화) phải khớp required đầu ra.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **Bidirectional BFS** tiếp nhận điểm tựa từ **Multi-target / early exit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS trên grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Bidirectional BFS chỉ hiệu quả khi có thể mở rộng và kiểm tra hai frontier nhất quán. Trên grid, cách sinh láng giềng có cấu trúc đặc biệt nên ta có thể áp dụng cùng nguyên lý với kiểm tra biên và vật cản rõ ràng.
 
 ## Bidirectional BFS
 
@@ -145,7 +145,7 @@ phát hiện node/edge nơi hai search regions giao nhau
 
 Không phải đồ thị nào cũng được speedup giống nhau, nhưng mental mô hình là giảm tìm kiếm (search / 검색) độ sâu mỗi phía.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **BFS trên grid** tiếp nhận điểm tựa từ **Bidirectional BFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS và 0–1 BFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Grid biến mỗi bước di chuyển hợp lệ thành một cạnh có trọng số đồng nhất. Khi bước đi có hai chi phí 0 và 1, 0–1 BFS giữ tư duy frontier nhưng thay hàng đợi thường bằng deque.
 
 ## BFS trên grid
 
@@ -164,7 +164,7 @@ int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
 
 đã thăm trạng thái có thể encode bằng mảng 2D. Nếu trạng thái còn các khóa, direction, remaining breaks hoặc chế độ (mode / 모드), đã thăm dimension phải mở rộng tương ứng.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **BFS và 0–1 BFS** tiếp nhận điểm tựa từ **BFS trên grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DFS như một structural exploration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** 0–1 BFS cho thấy thứ tự mở rộng phụ thuộc vào chi phí cạnh chứ không chỉ vào số bước. Với mục tiêu khảo sát cấu trúc và không cần bất biến khoảng cách đó, DFS là lựa chọn tự nhiên hơn.
 
 ## BFS và 0–1 BFS
 
@@ -181,7 +181,7 @@ weight 1 -> push back
 
 Đây là example cho việc frontier cấu trúc dữ liệu encode mô hình chi phí.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **DFS như một structural exploration** tiếp nhận điểm tựa từ **BFS và 0–1 BFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DFS cây và forest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** DFS ưu tiên đi sâu, vì vậy cây tìm kiếm của nó ghi lại cấu trúc phân nhánh thay vì lớp khoảng cách. Khi đồ thị không liên thông, các cây này hợp thành một forest và cần được quản lý qua nhiều lần khởi động.
 
 ## DFS như một structural exploration
 
@@ -210,7 +210,7 @@ subtree-like reasoning trong DFS forest
 backtracking/state search
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **DFS cây và forest** tiếp nhận điểm tựa từ **DFS như một structural exploration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Directed phát hiện chu trình bằng color các trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Cây và forest cho ta parent relation, nhưng phát hiện chu trình cần biết một đỉnh đang ở trạng thái nào trong DFS. Với đồ thị có hướng, ba màu trắng–xám–đen phân biệt cạnh tới vùng đang mở rộng với cạnh tới vùng đã hoàn tất.
 
 ## DFS cây và forest
 
@@ -227,7 +227,7 @@ for (int u = 0; u < n; u++) {
 
 Mỗi nút gốc tương ứng một thành phần liên thông trong đồ thị vô hướng (undirected graph).
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Directed phát hiện chu trình bằng color các trạng thái** tiếp nhận điểm tựa từ **DFS cây và forest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Undirected phát hiện chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Trong đồ thị có hướng, cạnh quay về đỉnh xám là bằng chứng của chu trình. Đồ thị vô hướng có quy tắc khác vì cạnh quay về parent là bình thường, nên kiểm tra phải xét thêm parent edge.
 
 ## Directed phát hiện chu trình bằng color các trạng thái
 
@@ -259,7 +259,7 @@ boolean dfsCycle(int u) {
 
 trạng thái `finished` quan trọng vì cạnh tới một nút đã hoàn thành không chứng minh chu trình qua hiện tại recursion chuỗi (chain / 사슬).
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **Undirected phát hiện chu trình** tiếp nhận điểm tựa từ **Directed phát hiện chu trình bằng color các trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discovery và thời điểm kết thúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Phân biệt parent edge giúp tránh báo nhầm chu trình trong đồ thị vô hướng. Để mô tả thứ tự chính xác hơn, DFS ghi thời điểm khám phá và thời điểm hoàn tất của từng đỉnh.
 
 ## Undirected phát hiện chu trình
 
@@ -276,7 +276,7 @@ else if neighbor != parent:
 
 Nhưng multigraph cần cạnh id thay vì chỉ `neighbor != parent`, vì các cạnh song song giữa cùng endpoints có ngữ nghĩa (semantics / 의미론) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **Discovery và thời điểm kết thúc** tiếp nhận điểm tựa từ **Undirected phát hiện chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cạnh classification trong directed DFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Cặp thời điểm discovery/finish biến trạng thái đệ quy thành các khoảng thời gian lồng nhau. Từ quan hệ giữa các khoảng đó, ta phân loại được tree, back, forward và cross edge trong DFS có hướng.
 
 ## Discovery và thời điểm kết thúc
 
@@ -296,7 +296,7 @@ tin[u] <= tin[v] && tout[v] <= tout[u]
 
 Timestamps/low-link các giá trị là nền tảng cho bridges, các điểm khớp, SCC và topological lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **cạnh classification trong directed DFS** tiếp nhận điểm tựa từ **Discovery và thời điểm kết thúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thứ tự tô-pô từ thời điểm kết thúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Phân loại cạnh cho biết cấu trúc phụ thuộc và đặc biệt chỉ ra back edge. Khi không còn back edge, thứ tự hoàn tất giảm dần trở thành ứng viên cho sắp xếp tô-pô.
 
 ## cạnh classification trong directed DFS
 
@@ -311,7 +311,7 @@ cross edge   -> giữa branches/subtrees khác
 
 Không phải mọi thuật toán cần classification đầy đủ, nhưng distinction giúp hiểu tại sao directed phát hiện chu trình dùng back cạnh.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **thứ tự tô-pô từ thời điểm kết thúc** tiếp nhận điểm tựa từ **cạnh classification trong directed DFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterative DFS và continuation trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Topological order dựa trên thứ tự hoàn tất, nhưng triển khai đệ quy có thể gặp giới hạn stack. Iterative DFS mô phỏng continuation của mỗi frame bằng một stack tường minh.
 
 ## thứ tự tô-pô từ thời điểm kết thúc
 
@@ -321,7 +321,7 @@ Nếu có back cạnh/chu trình, thứ tự tô-pô không tồn tại.
 
 Do đó “reverse postorder” không phải trick; nó xuất phát từ phụ thuộc (dependency / 의존성) finish bất biến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **Iterative DFS và continuation trạng thái** tiếp nhận điểm tựa từ **thứ tự tô-pô từ thời điểm kết thúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recursion độ sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Iterative DFS kiểm soát được stack riêng và trạng thái continuation, nhưng vẫn có thể giữ nhiều frame khi đồ thị sâu. Vì vậy cần xem riêng giới hạn recursion depth và chiến lược bộ nhớ.
 
 ## Iterative DFS và continuation trạng thái
 
@@ -353,7 +353,7 @@ on EXIT:
 
 Điều này cho thấy hàm đệ quy frame thật ra chứa `u`, cục bộ variables và vị trí vòng lặp (loop / 루프) hiện tại.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Recursion độ sâu** tiếp nhận điểm tựa từ **Iterative DFS và continuation trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đã thăm: mark khi push hay khi pop?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Độ sâu đệ quy là ràng buộc vận hành, không phải tính chất của đồ thị. Một quyết định triển khai khác cũng ảnh hưởng trực tiếp đến kết quả là đánh dấu visited khi đưa trạng thái vào frontier hay khi lấy ra.
 
 ## Recursion độ sâu
 
@@ -363,7 +363,7 @@ C, Java và JavaScript đều có practical giới hạn đệ quy khác nhau. K
 
 Nếu đầu vào độ sâu không controlled, iterative DFS là safer lựa chọn kỹ thuật.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **đã thăm: mark khi push hay khi pop?** tiếp nhận điểm tựa từ **Recursion độ sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị trạng thái và đã thăm khóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Đánh dấu khi push thường ngăn duplicate frontier; đánh dấu khi pop cần cơ chế bỏ qua bản sao. Với đồ thị trạng thái, visited còn phải dùng đúng khóa định danh của trạng thái thay vì object identity ngẫu nhiên.
 
 ## đã thăm: mark khi push hay khi pop?
 
@@ -373,7 +373,7 @@ DFS iterative cũng thường mark khi push/khám phá tùy ngữ nghĩa.
 
 quy tắc phải nhất quán với bất biến “mỗi trạng thái được scheduled bao nhiêu lần?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **đồ thị trạng thái và đã thăm khóa** tiếp nhận điểm tựa từ **đã thăm: mark khi push hay khi pop?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS/DFS trên đồ thị ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi khóa visited biểu diễn đầy đủ trạng thái, thuật toán không lặp lại cùng một cấu hình dù nó được sinh qua nhiều đường. Nếu láng giềng không được lưu sẵn, BFS/DFS có thể gọi bộ sinh cạnh của đồ thị ẩn khi cần.
 
 ## đồ thị trạng thái và đã thăm khóa
 
@@ -389,7 +389,7 @@ thì `seen[node]` là sai; cần `seen[node][fuel]` hoặc chuẩn gốc (canoni
 
 Nếu hai histories dẫn tới cùng future-equivalent trạng thái, đã thăm có thể merge chúng. Đây là cùng concept với DP memoization.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **BFS/DFS trên đồ thị ẩn** tiếp nhận điểm tựa từ **đồ thị trạng thái và đã thăm khóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flood fill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Traversal trên đồ thị ẩn chỉ khác ở cách sinh láng giềng; các bất biến visited và frontier vẫn giữ nguyên. Flood fill là trường hợp cụ thể trên lưới hoặc miền ô, nơi vùng liên thông cần được tô hoặc đếm.
 
 ## BFS/DFS trên đồ thị ẩn
 
@@ -405,7 +405,7 @@ generate transitions khi cần.
 
 Độ phức tạp (complexity / 복잡도) khi đó nên đo theo số có thể tới các trạng thái và generated transitions, không nhất thiết theo một pre-existing `V,E` literal.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **Flood fill** tiếp nhận điểm tựa từ **BFS/DFS trên đồ thị ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bipartite check bằng BFS/DFS coloring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Flood fill cho thấy traversal có thể biến một vùng reachable thành kết quả hữu hình. Nếu mỗi cạnh phải nối hai màu khác nhau, cùng cơ chế duyệt trở thành phép kiểm tra bipartite bằng coloring.
 
 ## Flood fill
 
@@ -418,7 +418,7 @@ adjacent same-color/passable cells = edges
 
 Once mô hình đúng, connected-component toolkit áp dụng trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **Bipartite check bằng BFS/DFS coloring** tiếp nhận điểm tựa từ **Flood fill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thành phần siêu dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Bipartite coloring vừa gán nhãn vừa phát hiện cạnh nối hai đỉnh cùng màu, tức một bằng chứng của chu trình lẻ. Sau các kết luận cấu trúc, phần tiếp theo tách metadata khỏi kết quả thuật toán để kiểm tra tính đầy đủ của bản ghi.
 
 ## Bipartite check bằng BFS/DFS coloring
 
@@ -436,7 +436,7 @@ Odd chu trình là obstruction cho bipartiteness.
 
 Đây là example traversal + small siêu dữ liệu giải structural tính chất.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Bipartite check bằng BFS/DFS coloring** nêu điều cần giải thích; **thành phần siêu dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ phức tạp (complexity / 복잡도) thật sự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Metadata cần nói rõ nguồn, phạm vi và trạng thái của kết quả, nhưng không thay thế bất biến do traversal chứng minh. Từ đây ta đo chi phí thật sự của thuật toán theo số đỉnh, cạnh và thao tác sinh cạnh.
 
 ## thành phần siêu dữ liệu
 
@@ -452,7 +452,7 @@ edge count
 
 Nếu thành phần undirected có `V_c` các đỉnh và `E_c` các cạnh, cây thành phần thỏa `E_c = V_c - 1`; thêm cạnh có thể tạo chu trình.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **thành phần siêu dữ liệu** nêu điều cần giải thích; **Độ phức tạp (complexity / 복잡도) thật sự** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **bộ nhớ độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Time complexity phụ thuộc vào số trạng thái thực sự được thăm và số cạnh được duyệt, không chỉ vào nhãn thuật toán. Memory complexity tiếp tục câu hỏi đó bằng cách đếm frontier, visited, parent và dữ liệu tạm.
 
 ## Độ phức tạp (complexity / 복잡도) thật sự
 
@@ -468,7 +468,7 @@ Nhưng constants phụ thuộc cách biểu diễn. Object-heavy đồ thị có
 
 Big-O giống nhau không nghĩa môi trường chạy (runtime) giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **bộ nhớ độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도) thật sự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Bộ nhớ có thể là nút thắt dù time complexity giống nhau, đặc biệt trên đồ thị rộng hoặc trạng thái ẩn. Các hiểu lầm phổ biến dưới đây tập trung vào những kết luận sai thường xuất hiện khi bỏ qua điều kiện này.
 
 ## bộ nhớ độ phức tạp (complexity / 복잡도)
 
@@ -478,7 +478,7 @@ DFS ngăn xếp (stack / 스택) độ sâu có thể `O(V)` trên chuỗi (chai
 
 Vì vậy BFS vs DFS đôi khi được chọn vì bộ nhớ shape chứ không chỉ ngữ nghĩa.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **bộ nhớ độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Nhận diện hiểu lầm chỉ có giá trị khi chuyển được thành phép thử phản ví dụ. Vì vậy phần tiếp theo xây dựng test cho khoảng cách, parent, cycle, coloring và số thành phần.
 
 ## Những hiểu lầm phổ biến
 
@@ -492,7 +492,7 @@ Vì vậy BFS vs DFS đôi khi được chọn vì bộ nhớ shape chứ không
 
 “Undirected chu trình = gặp đã thăm nút” sai vì nút cha cạnh luôn quay về đã thăm nút cha.
 
-> **Chuyển mạch:** Ở chặng này của **BFS và DFS**, **kiểm thử traversal** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi chọn BFS, DFS hay priority-based tìm kiếm (search / 검색)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Test tốt kiểm tra bất biến và các trường hợp biên thay vì chỉ lặp lại ví dụ thuận lợi. Khi đã biết cách xác minh, ta có thể chọn BFS, DFS hay một frontier ưu tiên theo mục tiêu của truy vấn.
 
 ## kiểm thử traversal
 
@@ -509,7 +509,7 @@ component count đúng reference model
 
 ngẫu nhiên small các đồ thị có thể so BFS các khoảng cách với Floyd-Warshall tham chiếu để differential kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BFS và DFS**, **Khi chọn BFS, DFS hay priority-based tìm kiếm (search / 검색)?** tiếp nhận điểm tựa từ **kiểm thử traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Chọn traversal dựa trên invariant cần giữ: BFS cho lớp khoảng cách, DFS cho cấu trúc phụ thuộc, còn priority-based search cho frontier theo chi phí hoặc heuristic. Mô hình tư duy cuối cùng gom các lựa chọn này thành quy trình ra quyết định.
 
 ## Khi chọn BFS, DFS hay priority-based tìm kiếm (search / 검색)?
 
@@ -527,7 +527,7 @@ near-vs-deep exploration      -> frontier policy quyết định
 
 Traversal family thực chất khác nhau ở cách chọn **next frontier trạng thái**.
 
-> **Chuyển mạch:** Trong **BFS và DFS**, **Mô hình tư duy** gom các mảnh từ **Khi chọn BFS, DFS hay priority-based tìm kiếm (search / 검색)?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Mô hình tư duy nối mục tiêu truy vấn, cách sinh cạnh, invariant, bộ nhớ và cách kiểm thử. Nhờ vậy, việc chọn BFS hay DFS bắt đầu từ semantics của bài toán thay vì từ thói quen dùng một thuật toán quen thuộc.
 
 ## Mô hình tư duy
 

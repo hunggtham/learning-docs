@@ -36,7 +36,7 @@ dist[v] \leftarrow dist[u] + w
 
 Đây là thành phần nguyên thủy (primitive / 기본 요소) xuyên suốt BFS, Dijkstra, Bellman-Ford và DAG đường đi ngắn nhất.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, mô hình ở **Mô hình tư duy** chỉ đáng tin khi có cách kiểm tra; **đồ thị không trọng số: BFS là shortest-path thuật toán** chuyển nó thành tiêu chí, phép thử hoặc cách gỡ lỗi. Từ đây, **0–1 BFS: khi các trọng số chỉ là 0 hoặc 1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Một mô hình shortest path chỉ có giá trị khi invariant của nó kiểm tra được trên dữ liệu cụ thể. Với đồ thị không trọng số, BFS cung cấp tiêu chí cơ bản; khi cạnh có hai mức chi phí, 0–1 BFS mở rộng cùng ý tưởng bằng deque.
 
 ## đồ thị không trọng số: BFS là shortest-path thuật toán
 
@@ -61,7 +61,7 @@ O(V+E)
 
 Đây là một insight quan trọng: Dijkstra trên đồ thị không trọng số vẫn đúng nếu coi mọi cạnh trọng số = 1, nhưng vùng nhớ động (heap / 힙) là overhead không cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **đồ thị không trọng số: BFS là shortest-path thuật toán** xác định đầu vào; **0–1 BFS: khi các trọng số chỉ là 0 hoặc 1** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dijkstra: non-negative các trọng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** 0–1 BFS khai thác miền trọng số rất hẹp để sắp xếp frontier hiệu quả. Khi trọng số mở rộng thành mọi giá trị không âm, Dijkstra thay deque bằng priority queue nhưng vẫn dựa trên relaxation và nhãn khoảng cách tốt nhất hiện tại.
 
 ## 0–1 BFS: khi các trọng số chỉ là 0 hoặc 1
 
@@ -89,7 +89,7 @@ O(V+E)
 
 Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đơn vị; đi qua portal chi phí 0 nhưng bước thường chi phí 1; minimize số lần đổi chế độ (mode / 모드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **Dijkstra: non-negative các trọng số** tiếp nhận điểm tựa từ **0–1 BFS: khi các trọng số chỉ là 0 hoặc 1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao negative cạnh phá Dijkstra?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Dijkstra chốt một đỉnh khi khóa của nó là nhỏ nhất nhờ mọi cạnh không âm. Chỉ cần xuất hiện cạnh âm, một đỉnh đã khóa có thể còn đường rẻ hơn về sau; đó là lý do cần phân tích riêng failure này.
 
 ## Dijkstra: non-negative các trọng số
 
@@ -150,7 +150,7 @@ O((V+E)\log V)
 
 hoặc gần `O(E log V)` cho connected đồ thị thưa.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **Tại sao negative cạnh phá Dijkstra?** tiếp nhận điểm tựa từ **Dijkstra: non-negative các trọng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman-Ford: relaxation theo số các cạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Cạnh âm phá bất biến “đã chọn là tối ưu” của Dijkstra, nhưng không làm relaxation mất ý nghĩa. Bellman–Ford thay thứ tự ưu tiên bằng các lượt quét theo số cạnh để xử lý được trọng số âm.
 
 ## Tại sao negative cạnh phá Dijkstra?
 
@@ -168,7 +168,7 @@ Vấn đề không phải cách triển khai. giả định “một nút tốt 
 
 Đây là lý do điều kiện “non-negative trọng số” là phần của tính đúng đắn chứng minh, không chỉ là recommendation hiệu năng.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Bellman-Ford: relaxation theo số các cạnh** tiếp nhận điểm tựa từ **Tại sao negative cạnh phá Dijkstra?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negative chu trình ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Bellman–Ford cho phép một đường đi tốt dần theo số cạnh đã xét. Nếu sau đủ lượt vẫn còn relaxation, cần chuyển từ câu hỏi khoảng cách sang semantics của negative cycle và vùng đích bị ảnh hưởng.
 
 ## Bellman-Ford: relaxation theo số các cạnh
 
@@ -197,7 +197,7 @@ O(VE)
 
 Chậm hơn Dijkstra nhưng hỗ trợ (support / 지원) mô hình rộng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **Negative chu trình ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **Bellman-Ford: relaxation theo số các cạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SPFA: vì sao cần thận trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Negative cycle không đồng nghĩa mọi cặp source–target đều mất khoảng cách hữu hạn; chỉ các vùng reachable và chịu ảnh hưởng mới bị phá vỡ minimum. SPFA cố gắng lan truyền relaxation theo frontier, nhưng phải đánh giá thận trọng vì không có bảo đảm thời gian tốt trong trường hợp xấu.
 
 ## Negative chu trình ngữ nghĩa (semantics / 의미론)
 
@@ -214,7 +214,7 @@ negative cycle reachable + can reach target
 => shortest distance tới target không bị chặn dưới
 ```
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **SPFA: vì sao cần thận trọng** tiếp nhận điểm tựa từ **Negative chu trình ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DAG đường đi ngắn nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** SPFA hữu ích trong một số dữ liệu nhưng không nên được xem là Bellman–Ford luôn nhanh hơn. Nếu topology có dạng DAG, thứ tự tô-pô loại bỏ hoàn toàn nhu cầu lặp relaxation.
 
 ## SPFA: vì sao cần thận trọng
 
@@ -222,7 +222,7 @@ negative cycle reachable + can reach target
 
 Vì vậy không nên coi SPFA là “Bellman-Ford nhanh hơn” với bảo đảm tốt hơn. Dùng khi hiểu khối lượng công việc hoặc trong ngữ cảnh (context / 맥락) mà empirical hành vi được chấp nhận.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **DAG đường đi ngắn nhất** tiếp nhận điểm tựa từ **SPFA: vì sao cần thận trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **All-pairs các đường đi ngắn nhất và Floyd-Warshall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Trên DAG, mỗi cạnh được relaxation đúng một lần theo thứ tự topo, kể cả khi trọng số âm. Khi mục tiêu chuyển từ một nguồn sang mọi cặp đỉnh, ta cần một mô hình all-pairs như Floyd–Warshall.
 
 ## DAG đường đi ngắn nhất
 
@@ -238,7 +238,7 @@ O(V+E)
 
 Đây là ví dụ điển hình cho việc topology mạnh hơn trọng số giả định. Khi đồ thị acyclic, phụ thuộc (dependency / 의존성) thứ tự (order / 순서) loại nhu cầu lặp lại relaxation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **All-pairs các đường đi ngắn nhất và Floyd-Warshall** tiếp nhận điểm tựa từ **DAG đường đi ngắn nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Floyd-Warshall và negative các chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Floyd–Warshall cập nhật đáp án khi cho phép thêm từng đỉnh trung gian, nên không cần giả định DAG. Cùng recurrence đó cũng cung cấp dấu hiệu diagonal âm để nhận diện negative cycle.
 
 ## All-pairs các đường đi ngắn nhất và Floyd-Warshall
 
@@ -281,7 +281,7 @@ O(V^2)
 
 Nó rất phù hợp khi `V` nhỏ và cần nhiều pair các truy vấn, đặc biệt đồ thị dày.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **Floyd-Warshall và negative các chu trình** tiếp nhận điểm tựa từ **All-pairs các đường đi ngắn nhất và Floyd-Warshall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Johnson's thuật toán: all-pairs trên đồ thị thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Negative diagonal cho biết có chu trình âm, còn việc lan ảnh hưởng tới cặp nào vẫn cần xét reachability. Với đồ thị thưa, chi phí O(V³) của Floyd–Warshall thường lãng phí; Johnson kết hợp reweighting với Dijkstra để xử lý all-pairs hiệu quả hơn.
 
 ## Floyd-Warshall và negative các chu trình
 
@@ -303,7 +303,7 @@ negative cycle region reaches t
 
 Chỉ nhìn một diagonal âm mà tuyên bố mọi cặp không hợp lệ là sai.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Johnson's thuật toán: all-pairs trên đồ thị thưa** tiếp nhận điểm tựa từ **Floyd-Warshall và negative các chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đường đi reconstruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Johnson biến trọng số để loại bỏ cạnh âm nhưng bảo toàn thứ tự đường đi, rồi chạy Dijkstra từ nhiều nguồn. Khoảng cách không đủ để trả lời người dùng; ta cần lưu parent hoặc predecessor để tái dựng chính đường đi.
 
 ## Johnson's thuật toán: all-pairs trên đồ thị thưa
 
@@ -319,7 +319,7 @@ Nếu `h` được chọn từ Bellman-Ford potentials, `w' >= 0`.
 
 đường đi chi phí bị shift theo endpoints nhưng relative choice giữa các đường đi cùng nguồn/đích không đổi. Đây là một example đẹp của việc biến bài toán (problem / 문제) sang lĩnh vực (domain / 도메인) mà thuật toán mạnh hơn áp dụng được.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **đường đi reconstruction** tiếp nhận điểm tựa từ **Johnson's thuật toán: all-pairs trên đồ thị thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Counting các đường đi ngắn nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Reconstruction biến các relaxation thành chuỗi cạnh có thể trình bày và kiểm tra, nhưng parent tree chỉ chọn một đường khi có nhiều đường đồng hạng. Nếu cần số lượng đường tối ưu, ta phải duy trì thêm trạng thái đếm.
 
 ## đường đi reconstruction
 
@@ -341,7 +341,7 @@ Collections.reverse(path);
 
 Cần phân biệt `parent` cho cây đường đi ngắn nhất với đồ thị nút cha tổng quát. Nếu có nhiều các đường đi ngắn nhất cùng chi phí, quy tắc phân xử khi bằng nhau quyết định đường đi nào được lưu.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **Counting các đường đi ngắn nhất** tiếp nhận điểm tựa từ **đường đi reconstruction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-source đường đi ngắn nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Đếm đường ngắn nhất cần cập nhật count khi gặp khoảng cách tốt hơn hoặc bằng nhau, đồng thời tránh đếm sai trong chu trình zero hoặc cấu trúc không phù hợp. Với nhiều nguồn, ta có thể khởi tạo khoảng cách 0 cho tất cả nguồn trong cùng một lần chạy.
 
 ## Counting các đường đi ngắn nhất
 
@@ -358,7 +358,7 @@ new distance equal:
 
 Tính đúng đắn còn phụ thuộc vào thứ tự xử lý và các chu trình trọng số 0. Nếu tồn tại chu trình chi phí 0, số hành trình ngắn nhất có thể là vô hạn. Miền bài toán phải nói rõ đang đếm đường đi đơn, hành trình (walk), hay đường đi trong DAG hoặc đồ thị có trọng số dương.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Counting các đường đi ngắn nhất** nêu điều cần giải thích; **Multi-source đường đi ngắn nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Multi-target và early exit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Multi-source shortest path tương đương thêm một super-source với cạnh 0, miễn semantics của nguồn chung là đúng. Khi chỉ cần một nhóm đích, multi-target và early exit cắt bớt phần tính toán nhưng phải giữ invariant của priority queue.
 
 ## Multi-source đường đi ngắn nhất
 
@@ -370,7 +370,7 @@ Với non-negative đồ thị có trọng số, push tất cả sources vào Di
 
 Mô hình tư duy: tạo một virtual super-source nối tới mọi nguồn bằng cạnh trọng số 0.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **Multi-source đường đi ngắn nhất** nêu điều cần giải thích; **Multi-target và early exit** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **A: đường đi ngắn nhất với heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Early exit chỉ an toàn khi hàng đợi cho biết không còn đường rẻ hơn tới các đích chưa xử lý. Nếu muốn hướng tìm kiếm về đích trước, heuristic đưa thêm ước lượng vào priority nhưng phải thỏa điều kiện phù hợp.
 
 ## Multi-target và early exit
 
@@ -378,7 +378,7 @@ Trong Dijkstra, nếu chỉ cần một đích, có thể dừng khi đích đư
 
 Không nên dừng ngay khi đích lần đầu được được khám phá/relaxed; tentative khoảng cách có thể còn được cải thiện trước khi đích trở thành min frontier.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **A: đường đi ngắn nhất với heuristic** tiếp nhận điểm tựa từ **Multi-target và early exit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bidirectional tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Heuristic giúp A* ưu tiên vùng có triển vọng, còn tính tối ưu phụ thuộc admissibility và cách xử lý consistency. Bidirectional search là một hướng giảm không gian khác, dựa trên hai frontier thay vì dự đoán chi phí.
 
 ## A*: đường đi ngắn nhất với heuristic
 
@@ -396,7 +396,7 @@ Dijkstra chính là A* với `h(v)=0`.
 
 Trong routing/spatial tìm kiếm (search / 검색), heuristic tốt giúp bỏ rất nhiều vùng đồ thị không liên quan.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Bidirectional tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **A: đường đi ngắn nhất với heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tràn số và infinity cách biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Bidirectional search cần quy tắc gặp nhau và điều kiện dừng nhất quán giữa hai phía. Dù thuật toán đúng về mặt lý thuyết, biểu diễn infinity và phép cộng khoảng cách sai có thể làm hỏng chính invariant đó.
 
 ## Bidirectional tìm kiếm (search / 검색)
 
@@ -404,7 +404,7 @@ Nếu nguồn và đích đã biết, có thể tìm kiếm từ hai phía và g
 
 Weighted bidirectional Dijkstra phức tạp hơn vì stopping điều kiện phải đảm bảo cận dưới hai frontier đã đủ lớn; không thể chỉ dừng ở lần đầu hai searches chạm nhau một cách ngây thơ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **tràn số và infinity cách biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Bidirectional tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Floating-point các trọng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Infinity phải được chọn sao cho cộng và so sánh không gây overflow hoặc biến trạng thái unreachable thành reachable. Với trọng số số thực, sai số làm nảy sinh một lớp vấn đề khác về so sánh và tie-breaking.
 
 ## tràn số và infinity cách biểu diễn (representation / 표현)
 
@@ -436,7 +436,7 @@ JavaScript `Number` biểu diễn integer chính xác tới:
 
 Nếu đường đi sum có thể vượt vùng này, cân nhắc `BigInt` hoặc thay đổi mô hình dữ liệu.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **Floating-point các trọng số** tiếp nhận điểm tựa từ **tràn số và infinity cách biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparse vs đồ thị dày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Với floating-point, cần quy định epsilon, cách cộng dồn và tiêu chí đồng hạng thay vì so sánh tuyệt đối. Sau khi chốt tính đúng số học, lựa chọn cấu trúc chạy còn phụ thuộc đồ thị sparse hay dense.
 
 ## Floating-point các trọng số
 
@@ -444,7 +444,7 @@ Nếu các trọng số là `double`, equality kiểm thử (test / 테스트) v
 
 Nếu lĩnh vực (domain / 도메인) là tiền tệ hoặc fixed-scale chi phí, integer minor units thường an toàn hơn dấu phẩy động.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Sparse vs đồ thị dày** tiếp nhận điểm tựa từ **Floating-point các trọng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đường đi ngắn nhất cây không phải cây khung nhỏ nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Sparse graph thường hợp với adjacency list và heap, trong khi dense graph có thể hưởng lợi từ ma trận và thao tác tuyến tính. Dù representation nào được chọn, shortest-path tree vẫn phục vụ một nguồn và không đồng nghĩa với minimum spanning tree.
 
 ## Sparse vs đồ thị dày
 
@@ -454,7 +454,7 @@ ma trận kề cho cạnh tra cứu `O(1)` nhưng iteration các đỉnh kề `O
 
 Big-O phải gắn với cách biểu diễn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **đường đi ngắn nhất cây không phải cây khung nhỏ nhất** tiếp nhận điểm tựa từ **Sparse vs đồ thị dày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) bảng (table / 테이블)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Shortest-path tree tối ưu khoảng cách từ một nguồn, còn MST tối ưu tổng trọng số của toàn cây; hai mục tiêu có thể chọn các cạnh hoàn toàn khác nhau. Bảng quyết định dưới đây đặt các thuật toán cạnh nhau theo điều kiện đầu vào và mục tiêu.
 
 ## đường đi ngắn nhất cây không phải cây khung nhỏ nhất
 
@@ -471,7 +471,7 @@ MST                -> tối ưu total infrastructure cost
 
 Đừng chọn thuật toán chỉ vì cả hai “trông như chọn cạnh nhỏ”.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **Quyết định (decision / 결정) bảng (table / 테이블)** tiếp nhận điểm tựa từ **đường đi ngắn nhất cây không phải cây khung nhỏ nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Decision table biến khác biệt giữa BFS, Dijkstra, Bellman–Ford, DAG và Floyd–Warshall thành tiêu chí chọn có thể kiểm tra. Phần tiếp theo dùng các tiêu chí đó để xử lý những hiểu lầm thường làm chọn sai thuật toán.
 
 ## Quyết định (decision / 결정) bảng (table / 테이블)
 
@@ -490,7 +490,7 @@ Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học.
 
 Bảng này không thay chứng minh. Nó chỉ nhắc điều kiện mô hình.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) bảng (table / 테이블)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử shortest-path cách triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Một lựa chọn đúng trên giấy vẫn có thể sai do parent, overflow, negative cycle hoặc điều kiện unreachable. Vì vậy kiểm thử triển khai phải xác nhận cả đáp án, đường đi, trạng thái lỗi và trường hợp biên.
 
 ## Những hiểu lầm phổ biến
 
@@ -506,7 +506,7 @@ Bảng này không thay chứng minh. Nó chỉ nhắc điều kiện mô hình.
 
 **“PriorityQueue phần tử trùng mục làm Dijkstra sai.”** Không nếu dùng stale-entry check. Nó là cách triển khai sự đánh đổi (trade-off / 트레이드오프) phổ biến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **các đường đi ngắn nhất**, **Những hiểu lầm phổ biến** xác định đầu vào; **kiểm thử shortest-path cách triển khai** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên kết (connection / 연결) với các hệ thống thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Test implementation nên đối chiếu với brute force hoặc Floyd–Warshall trên đồ thị nhỏ, rồi mở rộng sang dữ liệu xấu và tải thực tế. Khi các invariant đã được bảo vệ, ta có thể nối shortest path với routing, dependency và scheduling trong hệ thống.
 
 ## kiểm thử shortest-path cách triển khai
 
@@ -536,7 +536,7 @@ Nếu nút cha đường đi được lưu, tổng trọng số trên nút cha c
 
 Trên đồ thị nhỏ, có thể differential-test Dijkstra non-negative với Floyd-Warshall tham chiếu.
 
-> **Chuyển mạch:** Trong **các đường đi ngắn nhất**, **kiểm thử shortest-path cách triển khai** xác định đầu vào; **Liên kết (connection / 연결) với các hệ thống thực tế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Hệ thống thực tế thường thêm thời gian, năng lực, mode di chuyển, ràng buộc và chi phí thay đổi; vì thế “đỉnh” có thể là một state tuple chứ không chỉ là location. Mô hình tư duy mở rộng giúp nhận ra khi nào shortest path cổ điển không còn đủ.
 
 ## Liên kết (connection / 연결) với các hệ thống thực tế
 
@@ -546,7 +546,7 @@ Nhưng hệ thống thực tế thường thêm các ràng buộc: time-dependen
 
 Đây là liên kết (connection / 연결) quan trọng với bài toán (problem / 문제) mô hình hóa: thuật toán có thể đúng nhưng trạng thái cách biểu diễn thiếu thông tin thì kết quả vẫn sai.
 
-> **Chuyển mạch:** Ở chặng này của **các đường đi ngắn nhất**, **Mô hình tư duy mở rộng** gom các mảnh từ **Liên kết (connection / 연결) với các hệ thống thực tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Mô hình mở rộng luôn bắt đầu bằng việc xác định state, transition, cost, nguồn–đích và invariant cần giữ. Khi năm yếu tố này rõ ràng, việc chọn thuật toán và cách kiểm thử trở thành hệ quả của mô hình thay vì một lựa chọn cảm tính.
 
 ## Mô hình tư duy mở rộng
 
