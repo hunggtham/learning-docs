@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 031: 모듈 구현 (Module Implementation)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 031: 모듈 구현 (Module Implementation)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định module được hiện thực từ contract và interface như thế nào; từ khóa khoanh vùng input, output và trách nhiệm.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 모듈, 구현
 
-> **Chuyển mạch:** Ở chặng này của **핵심 031: 모듈 구현 (Module Implementation)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt module implementation trên nền ranh giới module và IPC; cách đọc tiếp theo giúp kiểm tra contract trước khi chọn thuật toán.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**에서 만든 기준을 이어받아 **핵심 031: 모듈 구현 (Module Implementation)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 031: 모듈 구현 (Module Implementation)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 031: 모듈 구현 (Module Implementation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần hiện thực module dùng khung đó để nối contract với trạng thái và lỗi.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 031: 모듈 구현 (Module Impl
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 031: 모듈 구현 (Module Implementation)**, **핵심 031: 모듈 구현 (Module Implementation)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí module đúng contract và dễ kiểm thử; khi sang đặc tả, hãy chuyển các trách nhiệm thành điều kiện quan sát được.
 
 ## 핵심 031: 모듈 구현 (Module Implementation)
 
