@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **5. 수식의 표기법 변환 (Expression Notation Conversion)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định adjacency matrix và list biểu diễn degree, density và traversal ra sao; từ khóa khoanh vùng trade-off bộ nhớ và truy cập.
 
 ## 핵심 키워드 (Từ khóa)
 
 그래프, 인접, 행렬
 
-> **Chuyển mạch:** Ở chặng này của **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt graph representation trên nền topology; cách đọc tiếp theo giúp chọn matrix hoặc list theo workload.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **026: 그래프 (Graph / Đồ thị)**에서 만든 기준을 이어받아 **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần representation dùng khung đó để nối mật độ với chi phí thao tác.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **077: 그래프 및 인접 행렬 (Grap
 
 ---
 
-> **Chuyển mạch:** Trong **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí chọn representation; khi sang expression conversion, hãy giữ lại cấu trúc dữ liệu và invariant.
 
 ## 077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)
 

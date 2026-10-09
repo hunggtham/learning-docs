@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **026: 그래프 (Graph / Đồ thị)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **026: 그래프 (Graph / Đồ thị)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định graph biểu diễn vertex, edge, traversal và connectivity ra sao; từ khóa khoanh vùng mô hình quan hệ.
 
 ## 핵심 키워드 (Từ khóa)
 
 그래프
 
-> **Chuyển mạch:** Ở chặng này của **026: 그래프 (Graph / Đồ thị)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt graph trên nền tree và data structures; cách đọc tiếp theo giúp phân biệt quan hệ và thuật toán duyệt.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)**에서 만든 기준을 이어받아 **026: 그래프 (Graph / Đồ thị)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **026: 그래프 (Graph / Đồ thị)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **026: 그래프 (Graph / Đồ thị)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần graph dùng khung đó để nối topology với traversal.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **026: 그래프 (Graph / Đồ thị)**
 
 ---
 
-> **Chuyển mạch:** Trong **026: 그래프 (Graph / Đồ thị)**, **026: 그래프 (Graph / Đồ thị)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng mô hình quan hệ và boundary của graph; khi sang adjacency matrix, hãy giữ lại mật độ và chi phí truy cập.
 
 ## 026: 그래프 (Graph / Đồ thị)
 
