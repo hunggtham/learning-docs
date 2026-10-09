@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **14. 파레토 법칙 (Pareto Principle)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **14. 파레토 법칙 (Pareto Principle)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu dùng Pareto để ưu tiên nhóm nguyên nhân tạo phần lớn tác động; từ khóa khoanh vùng phân bố, trọng số và dữ liệu thực tế.
 
 ## 핵심 키워드 (Từ khóa)
 
 파레토, 법칙
 
-> **Chuyển mạch:** Ở chặng này của **14. 파레토 법칙 (Pareto Principle)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt Pareto trên nền schema và evidence vận hành; cách đọc tiếp theo giúp phân biệt ưu tiên có số liệu với trực giác.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **9. 스키마 3계층 (Three-Schema Architecture)**에서 만든 기준을 이어받아 **14. 파레토 법칙 (Pareto Principle)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14. 파레토 법칙 (Pareto Principle)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 파레토 법칙 (Pareto Principle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần Pareto dùng khung đó để nối tỷ trọng nguyên nhân với quyết định can thiệp.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **14. 파레토 법칙 (Pareto Principle
 
 ---
 
-> **Chuyển mạch:** Trong **14. 파레토 법칙 (Pareto Principle)**, **14. 파레토 법칙 (Pareto Principle)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giới hạn Pareto không phải định luật cố định; khi sang worst-case complexity, hãy chuyển ưu tiên định tính thành biên đo được.
 
 ## 14. 파레토 법칙 (Pareto Principle)
 

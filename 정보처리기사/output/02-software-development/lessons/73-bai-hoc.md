@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **19. 클린 코드 작성 원칙 (Clean Code Principles)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định worst-case complexity mô tả biên chi phí khi input bất lợi; từ khóa khoanh vùng Big-O, kích thước input và failure boundary.
 
 ## 핵심 키워드 (Từ khóa)
 
 최악의, 시간, 복잡도
 
-> **Chuyển mạch:** Ở chặng này của **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt worst-case trên nền ưu tiên Pareto và algorithm trace; cách đọc tiếp theo giúp tách chi phí trung bình khỏi biên xấu nhất.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **14. 파레토 법칙 (Pareto Principle)**에서 만든 기준을 이어받아 **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần complexity dùng khung đó để nối input pattern với số bước tối đa.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **18. 최악의 시간 복잡도 (Worst-
 
 ---
 
-> **Chuyển mạch:** Trong **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, **읽는 방법 (Cách đọc)** cho ta quy tắc; **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa biên an toàn và chi phí triển khai; khi sang clean code, hãy giữ khả năng đọc và đo được hành vi.
 
 ## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
 

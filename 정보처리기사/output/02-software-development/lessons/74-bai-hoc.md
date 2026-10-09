@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **19. 클린 코드 작성 원칙 (Clean Code Principles)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **21. 외계인 코드 (Alien Code)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **19. 클린 코드 작성 원칙 (Clean Code Principles)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định clean code giảm chi phí hiểu, sửa và kiểm thử qua tên, cấu trúc và trách nhiệm rõ; từ khóa khoanh vùng cohesion, coupling và smell.
 
 ## 핵심 키워드 (Từ khóa)
 
 클린, 코드, 작성, 원칙
 
-> **Chuyển mạch:** Ở chặng này của **19. 클린 코드 작성 원칙 (Clean Code Principles)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt clean code trên nền complexity và testability; cách đọc tiếp theo giúp nối nguyên tắc viết với chi phí thay đổi.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**에서 만든 기준을 이어받아 **19. 클린 코드 작성 원칙 (Clean Code Principles)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **19. 클린 코드 작성 원칙 (Clean Code Principles)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. 클린 코드 작성 원칙 (Clean Code Principles)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần clean code dùng khung đó để nối lựa chọn cấu trúc với khả năng kiểm chứng.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **19. 클린 코드 작성 원칙 (Clean
 
 ---
 
-> **Chuyển mạch:** Trong **19. 클린 코드 작성 원칙 (Clean Code Principles)**, **19. 클린 코드 작성 원칙 (Clean Code Principles)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng ranh giới clean code phụ thuộc ngữ cảnh; khi sang alien code, hãy nhận diện smell trước khi sửa.
 
 ## 19. 클린 코드 작성 원칙 (Clean Code Principles)
 
