@@ -10,7 +10,7 @@ Instruction có opcode và operands encoded theo ISA. Assembly viết symbolic m
 
 Assembly không phải nguồn (source / 소스) “gần CPU tuyệt đối”: hiện đại (modern / 현대적) CPU có micro-ops và out-of-order internals. Nó là biểu diễn (representation / 표현) gần **architectural ISA**.
 
-> **Chuyển mạch:** Machine code là encoding CPU thực thi, assembly là notation dễ đọc; ABI nối binary giữa module, còn calling convention quy định register, argument và stack frame.
+Machine code là encoding mà CPU thực thi, còn assembly là notation để con người đọc encoding đó. Khi nhiều module được biên dịch độc lập phối hợp, ABI và calling convention quy định cách registers, arguments và stack frame gặp nhau.
 
 ## Calling convention
 
@@ -35,7 +35,7 @@ callee:
 
 Details khác giữa x86-64 hệ thống (system / 시스템) V, Windows x64, AArch64 ABI.
 
-> **Chuyển mạch:** Ở chặng này của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Ngăn xếp (stack / 스택) frame** tiếp nhận điểm tựa từ **Calling convention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linker và symbols** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Calling convention quy định nơi đặt arguments và kết quả; stack frame hiện thực một phần quy ước đó khi hàm cần locals, saved registers hoặc return metadata. Sau khi các hàm đã có layout, linker phải nối references giữa các object files.
 
 ## Ngăn xếp (stack / 스택) frame
 
@@ -43,7 +43,7 @@ Hàm (function / 함수) may allocate ngăn xếp (stack / 스택) frame cho loc
 
 Ngăn xếp (stack / 스택) grows direction theo kiến trúc (architecture / 아키텍처)/ABI convention; đừng đồng nhất “ngăn xếp (stack / 스택)” lớp trừu tượng (abstraction / 추상화) với một address direction universal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Linker và symbols** tiếp nhận điểm tựa từ **Ngăn xếp (stack / 스택) frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ABI vs API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stack frame giải quyết layout trong một lời gọi. Linker và symbols giải quyết tên cùng địa chỉ giữa nhiều module, từ đó tạo binary có thể nạp; đây là chỗ cần phân biệt binary contract với source-level API.
 
 ## Linker và symbols
 
@@ -51,7 +51,7 @@ Trình biên dịch (compiler / 컴파일러) có thể tạo đối tượng (o
 
 Static linking bản sao (copy / 복사) needed mã (code / 코드) vào executable. động (dynamic / 동적) linking defer một phần tới tải (load / 로드)/thời gian chạy (runtime / 런타임) và share libraries. Position-independent mã (code / 코드) và relocation giúp binaries tải (load / 로드) ở varying addresses, quan trọng cho ASLR.
 
-> **Chuyển mạch:** Trong **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **ABI vs API** tiếp nhận điểm tựa từ **Linker và symbols** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Syscall convention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Linker có thể nối được symbols chỉ khi các module chia sẻ những giả định binary phù hợp. ABI mô tả các giả định ấy ở mức rộng hơn API, còn syscall convention cho thấy một ABI đặc biệt giữa user space và kernel.
 
 ## ABI vs API
 
@@ -59,25 +59,23 @@ API là tầng mã nguồn (source-level / 소스 수준) đặc tả hợp đ�
 
 Java/JVM ecosystem thường tương tác qua bytecode/lớp (class / 클래스) format thay vì bản địa (native / 네이티브) ABI ở ứng dụng (application / 애플리케이션) tầng (layer / 계층), nhưng JNI/bản địa (native / 네이티브) libraries vẫn quay lại nền tảng (platform / 플랫폼) ABI.
 
-> **Chuyển mạch:** Ở chặng này của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Syscall convention** tiếp nhận điểm tựa từ **ABI vs API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) symbols** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Syscall convention mở rộng binary contract qua ranh giới user/kernel: ngoài arguments còn có syscall number, trap và error convention. Khi quan sát một binary đã chạy, debug symbols giúp ánh xạ địa chỉ và registers ngược về những khái niệm này.
 
 ## Syscall convention
 
 Lời gọi hệ thống (system call / 시스템 호출) cũng dùng ABI-like đặc tả hợp đồng (contract / 계약): syscall number, argument registers, instruction/trap cơ chế (mechanism / 메커니즘) và return/lỗi (error / 오류) convention. người dùng (user / 사용자) thư viện (library / 라이브러리) như libc có thể wrap raw syscall bằng friendlier API.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Gỡ lỗi (debug / 디버그) symbols** tiếp nhận điểm tựa từ **Syscall convention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Debug symbols không thay đổi code đang thực thi; chúng thêm bản đồ để debugger và profiler đọc code đó. Bản đồ này hoàn tất chuỗi từ instruction bytes tới nguồn và dẫn vào mô hình build/runtime ở phần sau.
 
 ## Gỡ lỗi (debug / 디버그) symbols
 
 Mã máy (machine code / 기계어) không giữ đầy đủ names/types/nguồn (source / 소스) lines. gỡ lỗi (debug / 디버그) info như DWARF/PDB map addresses về nguồn (source / 소스) concepts. Strip symbols giảm nhị phân (binary / 이진) siêu dữ liệu (metadata / 메타데이터) nhưng làm debugging/profiling khó hơn.
 
-> **Chuyển mạch:** Trong **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Gỡ lỗi (debug / 디버그) symbols** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compiler, assembler, linker và loader nối các representation khác nhau thành một binary có thể chạy. Mô hình đó là nền để phân biệt các ngộ nhận về assembly, ABI và stack frame.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > trình biên dịch (compiler / 컴파일러) tạo mã (code / 코드), assembler encode instructions, linker nối symbols, loader map nhị phân (binary / 이진), ABI bảo đảm các pieces đồng ý về **nhị phân (binary / 이진) conversation**.
-
-> **Chuyển mạch:** Ở chặng này của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -87,7 +85,7 @@ Mã máy (machine code / 기계어) không giữ đầy đủ names/types/nguồ
 
 **“Mỗi nguồn (source / 소스) hàm (function / 함수) luôn có một ngăn xếp (stack / 스택) frame.”** tối ưu hóa (optimization / 최적화) có thể inline, tail-call, scalar-replace hoặc omit frame.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận trên đều nhầm representation hoặc contract ở một tầng với tầng khác. Kết nối cuối file đưa chuỗi này về CPU/ISA, compiler/JIT, syscall và build system, nơi từng contract có owner riêng.
 
 ## Kết nối
 
