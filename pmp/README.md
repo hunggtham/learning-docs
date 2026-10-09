@@ -1,5 +1,7 @@
 # PMP thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+Edition, exam boundary và phân biệt PMI standard với nội dung tự biên soạn được ghi trong [source ledger](./SOURCES.md).
+
 > **Mạch đọc:** README này là owner của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ mental model quản lý dự án → people, process và business environment → chapters theo lifecycle, uncertainty, value và governance → case/lab → references và cập nhật, để học PMP bằng lập luận thay vì mẹo đáp án.
 
 Thư viện này xây dựng một mô hình tư duy đầy đủ về quản lý dự án (project management / 프로젝트 관리) và đồng thời hỗ trợ chuẩn bị cho PMP®. Mục tiêu không phải ghi nhớ một danh sách tiến trình (process / 프로세스), đầu vào (input / 입력)/đầu ra (output / 출력) hay “mẹo chọn đáp án”, mà là hiểu vì sao một dự án cần được quản lý, tín hiệu nào cho thấy hệ thống đang lệch hướng, và người quản lý dự án phải lập luận (reasoning / 추론) như thế nào khi con người, giá trị, thời gian, tiền, rủi ro và bối cảnh kinh doanh cùng thay đổi.

@@ -1,5 +1,7 @@
 # Thư viện kiến thức Hóa học
 
+Xem [source ledger](./SOURCES.md) để phân biệt định nghĩa IUPAC, reference data NIST và diễn giải cơ chế của từng chapter.
+
 > **Mạch đọc:** [README](./README.md) là owner của **Thư viện kiến thức Hóa học**. Route học đi từ cấu trúc nguyên tử và liên kết → vật chất, năng lượng và tốc độ → cân bằng, phân tích, hữu cơ/vô cơ, sinh hóa và vật liệu → các connection liên ngành; mỗi chapter phải chỉ rõ prerequisite, cơ chế và giới hạn trước khi bàn giao sang owner kế tiếp.
 
 > **Hóa học (Chemistry / 화학)** nghiên cứu vật chất từ cấu trúc nguyên tử–electron đến phân tử, pha, phản ứng, năng lượng, tốc độ và vật liệu. Thư viện này được viết như một hệ thống học lâu dài cho người có thể đã quên gần như toàn bộ Hóa học phổ thông; mục tiêu là xây lại mô hình tư duy từ bản chất thay vì học thuộc công thức rời rạc.

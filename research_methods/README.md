@@ -1,5 +1,7 @@
 # Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+Đọc [source ledger](./SOURCES.md) khi dùng reporting guideline hoặc systematic-review method; checklist không thay thế đánh giá validity/evidence.
+
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của research methods, rồi nối câu hỏi, thiết kế, bằng chứng và giới hạn suy luận thành quy trình nghiên cứu.
 
 `research_methods/` là lĩnh vực (domain / 도메인) chuẩn gốc (canonical / 정본) về cách biến một câu hỏi thành nghiên cứu có thể kiểm tra, đo lường, thu thập bằng chứng (evidence / 증거), phân tích và báo cáo minh bạch. Nó nằm giữa Philosophy of Science, Statistics/Econometrics và các lĩnh vực (domain / 도메인) applied: không thay thế các công cụ (tool / 도구) thống kê chuyên sâu, mà xác định **question–thiết kế (design / 설계)–đo lường (measurement / 측정)–bằng chứng (evidence / 증거)–claim alignment**.

@@ -1,5 +1,7 @@
 # Thư viện Kiến thức Vật lý
 
+Nguồn cho constants, đơn vị và measurement boundary nằm trong [source ledger](./SOURCES.md); chapter-specific claims vẫn cần citation riêng.
+
 > **Mạch đọc:** Đây là README owner của **Thư viện Kiến thức Vật lý**. Route đọc đi từ foundations/mathematical language → mechanics/fields → thermal/quantum/relativity → matter/astrophysics → experiment/connections, để mỗi nhánh nối mô hình với phép đo và giới hạn áp dụng.
 
 Bộ tài liệu này là một **thư viện kiến thức (knowledge library / 지식 라이브러리) về Vật lý**, viết chủ yếu bằng tiếng Việt và tổ chức theo **sự phụ thuộc khái niệm (concept dependency)**. Mục tiêu không phải học thuộc công thức theo cấp độ Beginner → Advanced, mà đi theo chuỗi:

@@ -1,5 +1,7 @@
 # Master Kiến thức (knowledge / 지식) Book — Toán học
 
+Source/version boundary cho theorem, special functions và numerical examples nằm trong [source ledger](./SOURCES.md).
+
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Master Kiến thức (knowledge / 지식) Book — Toán học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Cách sử dụng** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của mathematics, rồi nối foundations, algebra, calculus, probability, discrete structures và applications.
 
 `mathematics/` là Mathematics Thư viện kiến thức (knowledge library / 지식 라이브러리) chuẩn gốc (canonical / 정본) của repository. Thư viện được tổ chức theo **conceptual phụ thuộc (dependency / 의존성)**, không theo Beginner → Intermediate → Advanced và không nhằm trở thành cheat sheet công thức.
