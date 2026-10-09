@@ -4,6 +4,8 @@
 
 Thư mục `11_native` chứa các bộ tài liệu bản địa (native / 네이티브) mobile theo hệ sinh thái. Mỗi bộ được tổ chức theo lộ trình từ nền tảng đến môi trường vận hành (production / 운영 환경)/master, đồng thời giữ các công nghệ legacy quan trọng để có thể đọc và maintain codebase thực tế.
 
+Platform/SDK version, device evidence, store policy và language boundary được ghi trong [Source Ledger](./SOURCES.md). Không coi docs live hoặc simulator output là proof cho mọi thiết bị/runtime.
+
 ## Swift & iOS
 
 Bộ Swift/iOS được đặt riêng trong [`swift_ios/`](swift_ios/README.md), sử dụng baseline hiện hành **Xcode 27 + Swift 6.4 + iOS 27 SDK** và vẫn giữ phần di chuyển (migration / 마이그레이션)/legacy để đọc codebase Swift 5.x, UIKit, Combine, cốt lõi (core / 핵심) dữ liệu (data / 데이터) và Objective-C interop.

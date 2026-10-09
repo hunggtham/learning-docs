@@ -12,6 +12,8 @@ trạng thái (state / 상태), khả năng tiếp cận (accessibility / 접근
 làm **điểm vào (entrypoint / 진입점) chuẩn gốc (canonical / 정본)** của Frontend. tệp (file / 파일) này là bản đồ cấp lĩnh vực (domain / 도메인): nó
 giải thích thứ tự học và quan hệ giữa các nhánh học (track / 트랙), nhưng không thay thế trục học (learning spine / 학습 축) JavaScript hay các tệp chuẩn gốc (canonical file / 정본 파일) của từng nhánh học (track / 트랙).
 
+Source, browser/framework version và currentness boundary được quản lý trong [Source Ledger](./SOURCES.md); khi chưa có compatibility hoặc runtime evidence, claim phải giữ `NEEDS_SOURCE`.
+
 ## Mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인)
 
 Frontend nên được đọc như một hệ thống có nhiều ranh giới (boundary / 경계) nối tiếp và có thể

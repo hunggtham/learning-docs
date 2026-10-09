@@ -4,6 +4,8 @@
 
 Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là một bài học độc lập, giữ lại toàn bộ giải thích và ví dụ SQL từ nguồn, đồng thời có tiêu đề, mục tiêu học tập và mạch giảng mở đầu → giải thích → bàn giao → kết thúc.
 
+Engine/version, exam-cycle và currentness boundary được quản lý trong [Source Ledger](../SOURCES.md). Ví dụ SQL phải tách relational concept khỏi vendor behavior; syllabus chưa có official notice cụ thể phải giữ `NEEDS_SOURCE`.
+
 > **Mạch nối:** Đi từ mô hình dữ liệu → JOIN/subquery/group/window → transaction/DDL/DCL → các truy vấn nâng cao. Mỗi bài dùng object, điều kiện hoặc thứ tự xử lý của bài trước; hãy quay lại ví dụ khi chuyển sang bài kế tiếp.
 
 ## Môn 1 – 데이터 모델링의 이해 / Mô hình dữ liệu

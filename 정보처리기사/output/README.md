@@ -4,6 +4,8 @@
 
 Tài liệu được chia thành 5 môn. Mỗi folder có một bài học đầy đủ và mục lục học tập; nguồn gốc được bảo toàn trong `raw` và `raw_md`. Mọi lesson và full guide đều được dựng với mạch mở đầu → giải thích → bàn giao → kết thúc; kiểm tra lại bằng `scripts/audit_learning_output.py`.
 
+Exam cycle, official notice và technology-version boundary được quản lý trong [Source Ledger](../SOURCES.md). Raw/source-derived content không tự chứng minh syllabus hiện hành; thiếu Q-Net notice cụ thể phải giữ `NEEDS_SOURCE`.
+
 ## Các môn
 
 Phần này là mục lục định hướng: chọn môn theo thứ tự học, rồi đi vào lesson để theo dõi mạch giải thích và phần bàn giao.
