@@ -307,7 +307,7 @@ supporting:
   - id: study_planner
     path: planner/
     status: support
-    scope: Planning application and study scheduling data.
+    scope: Archived planning exports and study scheduling data; the active Planner application is external to this repository.
   - id: study_library
     path: learning-library/
     status: support
