@@ -19,7 +19,7 @@ client
   → response + logs/metrics/traces
 ```
 
-> **Chuyển mạch:** Trong **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)**, **Mục tiêu** đặt câu hỏi cần giải quyết; **Bất biến (invariant / 불변식) cần giữ** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **Sync và async** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định câu hỏi cần giải quyết, còn các bất biến biến câu hỏi ấy thành điều kiện phải giữ trong thực hành. Khi đi tiếp sang **Sync và async**, ta sẽ thấy những điều kiện đó xuất hiện dưới dạng lựa chọn giữ công việc trong request hay chuyển nó sang job.
 
 ## Bất biến (invariant / 불변식) cần giữ
 
@@ -30,7 +30,7 @@ client
   đặc tả hợp đồng (contract / 계약) nói rõ nó được xử lý bất đồng bộ.
 - Mọi phụ thuộc (dependency / 의존성) bên ngoài có hết thời gian chờ (timeout / 타임아웃) hữu hạn; không để yêu cầu (request / 요청) chờ vô hạn.
 
-> **Chuyển mạch:** Các bất biến như correlation ID, authorization trước side effect và timeout hữu hạn quyết định khi nào xử lý đồng bộ còn phù hợp; **Sync và async** đưa những điều kiện đó vào hai mô hình vận hành khác nhau.
+Correlation ID, authorization trước side effect và timeout hữu hạn là các tiêu chí để quyết định xử lý đồng bộ còn phù hợp hay không. Phần **Sync và async** cụ thể hóa cùng một bộ tiêu chí ấy thành hai mô hình vận hành khác nhau.
 
 ## Sync và async
 
@@ -39,7 +39,7 @@ Async luồng (flow / 흐름) phù hợp cho email, export, webhook, indexing ho
 Đừng trả `200 OK` cho một side tác động (effect / 효과) chưa có đơn vị sở hữu (owner / 오너); dùng `202 Accepted` với job
 ID và trạng thái có thể truy vấn khi processing còn tiếp diễn.
 
-> **Chuyển mạch:** Sync/async chỉ mô tả cách giữ công việc trong request hoặc đẩy sang job; **Cách gỡ lỗi** kiểm tra xem deadline, queue và side effect thực tế đã giữ đúng bất biến hay chưa.
+Sync/async chỉ mô tả công việc nằm trong request hay được đẩy sang job. Khi gỡ lỗi, cần đối chiếu deadline, queue và side effect thực tế với các bất biến để biết mô hình đã được triển khai đúng chưa.
 
 ## Cách gỡ lỗi (debug / 디버그)
 
@@ -48,7 +48,7 @@ hàng đợi (queue / 큐), ứng dụng (application / 애플리케이션), cơ
 từng span thay vì đoán từ tổng thời gian. Một phản hồi (response / 응답) lỗi (error / 오류) không chứng minh
 giao dịch (transaction / 트랜잭션) đã quay lui (rollback / 롤백) nếu side tác động (effect / 효과) ngoài cơ sở dữ liệu (database / 데이터베이스) đã xảy ra.
 
-> **Chuyển mạch:** Cách gỡ lỗi giữ phạm vi application-level và trỏ các internals về owner chuẩn gốc; phần máy trạng thái tiếp theo dùng cùng request path để mô tả các chuyển tiếp có thể quan sát.
+Phần gỡ lỗi giữ phạm vi ở application-level và trỏ các internals về owner chuẩn gốc. Phần máy trạng thái tiếp theo dùng cùng request path để biểu diễn những chuyển tiếp có thể quan sát và kiểm chứng.
 
 ## Liên kết chuẩn gốc (canonical / 정본)
 
@@ -56,7 +56,7 @@ Chi tiết tiến trình (process / 프로세스), mạng (network / 네트워�
 Chapter này giữ application-level vòng đời (lifecycle / 생명주기) và cách đặt ranh giới (boundary / 경계), không mô tả
 lại TCP, scheduler hay WAL internals.
 
-> **Chuyển mạch:** Máy trạng thái biến request lifecycle thành các trạng thái và transition cụ thể; từ đó người học có thể kiểm tra timeout, retry, publish và rollback thay vì chỉ đọc một sơ đồ tuyến tính.
+Máy trạng thái biến request lifecycle thành các trạng thái và transition cụ thể. Nhờ vậy, timeout, retry, publish và rollback có thể được kiểm tra theo từng chuyển tiếp thay vì chỉ được suy ra từ một sơ đồ tuyến tính.
 
 ## Đào sâu: yêu cầu (request / 요청) như một máy trạng thái (state machine / 상태 머신)
 

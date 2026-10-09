@@ -23,7 +23,7 @@ không, và phản hồi (response / 응답) nào là authoritative.
 thị, thử lại (retry / 재시도), sửa đầu vào (input / 입력) hoặc báo sự cố (incident / 인시던트). lỗi (error / 오류) phản hồi (response / 응답) nên có mã (code / 코드) ổn định,
 message dành cho người đọc, trường dữ liệu (field / 필드) đường dẫn (path / 경로) (nếu validation) và yêu cầu (request / 요청) ID.
 
-> **Chuyển mạch:** API contract chỉ có giá trị khi retry và concurrent request không tạo side effect ngoài invariant; **Idempotency và concurrency** chuyển contract đó thành điều kiện có thể kiểm tra.
+API contract chỉ có giá trị khi retry và concurrent request không tạo side effect ngoài invariant. Phần **Idempotency và concurrency** chuyển yêu cầu đó thành các điều kiện có thể kiểm tra trong lưu trữ và xử lý request.
 
 ## Idempotency và tính đồng thời (concurrency / 동시성)
 
@@ -33,7 +33,7 @@ trọng, dùng `Idempotency-Key` được lưu cùng kết quả và yêu cầu 
 `ETag`/`If-Match` hoặc phiên bản (version / 버전) number giúp phát hiện lost cập nhật (update / 업데이트) thay vì âm thầm
 ghi đè thay đổi của máy khách (client / 클라이언트) khác.
 
-> **Chuyển mạch:** Khi idempotency và concurrency đã rõ, compatibility trả lời câu hỏi thay đổi contract mà client cũ vẫn có thể hiểu đến đâu; checklist sau đó biến câu hỏi thành bước review cụ thể.
+Sau khi idempotency và concurrency đã rõ, compatibility trả lời giới hạn thay đổi mà client cũ vẫn có thể hiểu. Checklist tiếp theo biến giới hạn ấy thành các bước review cụ thể.
 
 ## Tính tương thích (compatibility / 호환성)
 
@@ -43,7 +43,7 @@ không tạo phiên bản (version / 버전) mới chỉ vì hiện thực (impl
 dưới concurrent writes; cursor thường ít gây duplicate/skip hơn offset ở bảng
 lớn.
 
-> **Chuyển mạch:** Checklist rà soát các status, method, representation và failure contract; phần đào sâu compatibility giải thích vì sao một thay đổi nhỏ có thể phá client hoặc cache.
+Checklist rà soát status, method, representation và failure contract. Phần đào sâu compatibility giải thích cơ chế khiến một thay đổi nhỏ có thể phá client hoặc cache.
 
 ## Checklist rà soát (review / 검토)
 
@@ -52,7 +52,7 @@ lớn.
 - thử lại (retry / 재시도) cùng yêu cầu (request / 요청) có tạo duplicate không?
 - lược đồ (schema / 스키마) có backward/forward tính tương thích (compatibility / 호환성) và deprecation cửa sổ (window / 윈도우) không?
 
-> **Chuyển mạch:** Phần compatibility đặt quy tắc vào các thay đổi representation và version; bài tập suy luận dùng các quy tắc đó để phân biệt breaking change với thay đổi tương thích.
+Phần compatibility đặt quy tắc vào thay đổi representation và version. Bài tập suy luận dùng những quy tắc đó để phân biệt breaking change với thay đổi vẫn tương thích.
 
 ## Đào sâu: ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성)
 
@@ -68,7 +68,7 @@ ghi nếu phiên bản (version / 버전) còn khớp, rồi trả ETag mới. `
 precondition không đúng; `409 Conflict` thường dành cho xung đột (conflict / 충돌) lĩnh vực (domain / 도메인). Chọn
 một convention và ghi vào đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Bài tập suy luận buộc người học theo dõi contract qua một request cụ thể; phần security và traffic policy mở rộng cùng contract sang authorization, rate limit và trust boundary.
+Bài tập suy luận buộc người học theo dõi contract qua một request cụ thể. Phần security và traffic policy mở rộng cùng contract ấy sang authorization, rate limit và trust boundary.
 
 ## Bài tập suy luận
 
@@ -76,7 +76,7 @@ Thiết kế đặc tả hợp đồng (contract / 계약) cho `POST /exports` c
 cancel, duplicate `Idempotency-Key`, permission thay đổi (change / 변경) giữa chừng và retention
 của kết quả. Nếu máy khách (client / 클라이언트) mất mạng ngay sau `201`, nó tìm lại tài nguyên (resource / 자원) bằng gì?
 
-> **Chuyển mạch:** API semantics chỉ hoàn chỉnh khi request hợp lệ được gắn với principal và policy đúng; đây là điểm bàn giao sang security, không phải một checklist API riêng biệt.
+API semantics chỉ hoàn chỉnh khi request hợp lệ được gắn với principal và policy đúng. Đây là điểm nối sang security, vì authorization và traffic policy là điều kiện vận hành của contract chứ không phải một checklist API tách rời.
 
 ## Bảo mật (security / 보안) và traffic chính sách (policy / 정책) ở API ranh giới (boundary / 경계)
 
