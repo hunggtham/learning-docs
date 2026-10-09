@@ -1,0 +1,6 @@
+# Runtime dependencies for automation/app.py and automation/pipeline.py.
+# Keep this file pinned so a worker can be rebuilt without relying on the
+# packages installed in the host image.
+fastapi==0.115.6
+httpx==0.28.1
+uvicorn[standard]==0.34.0

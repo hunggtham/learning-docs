@@ -39,6 +39,40 @@ function displayPath(relative, manifestEntry) {
   return relative.split('/').filter(segment => segment.toLowerCase() !== 'output').join('/');
 }
 
+function localTargetPath(fromPath, rawTarget) {
+  const target = rawTarget.trim().replace(/^<|>$/g, '');
+  if (!target || /^(?:https?:|mailto:|tel:|data:|javascript:|#)/i.test(target)) return null;
+  const withoutHash = decodeURIComponent(target.split('#')[0]).replaceAll('\\', '/');
+  if (!withoutHash) return null;
+  return withoutHash.startsWith('/')
+    ? withoutHash.slice(1)
+    : path.posix.normalize(path.posix.join(path.posix.dirname(fromPath), withoutHash));
+}
+
+function scrubUnpublishedLinks(markdown, fromPath, publishedPaths) {
+  let removed = 0;
+  const scrub = (match, label, target) => {
+    const resolved = localTargetPath(fromPath, target);
+    const cleanTarget = target.trim().replace(/^<|>$/g, '');
+    const isDocument = /\.(?:md|pdf)(?:#.*)?$/i.test(cleanTarget);
+    const isDirectory = cleanTarget.endsWith('/') || cleanTarget.includes('/');
+    if (!resolved || (!isDocument && !isDirectory)) return match;
+    if (publishedPaths.has(resolved)) return match;
+    if (isDirectory) {
+      const directoryTarget = cleanTarget.replace(/\/?(?:#.*)?$/, '/README.md');
+      const directoryPath = localTargetPath(fromPath, directoryTarget);
+      if (directoryPath && publishedPaths.has(directoryPath)) return match.replace(target, directoryTarget);
+    }
+    removed += 1;
+    return label;
+  };
+
+  // Keep links to published documents and external URLs; flatten only local
+  // Markdown/PDF links whose source is intentionally outside the publication.
+  const inline = markdown.replace(/\[([^\]\n]+)\]\(([^)\n]+)\)/g, scrub);
+  return { markdown: inline, removed };
+}
+
 function stripMarkdown(markdown) {
   return markdown
     .replace(/```[\s\S]*?```/g, ' ')
@@ -130,7 +164,18 @@ const searchIndex = documents.map(document => {
 });
 
 const markdownDocuments = documents.filter(document => document.type === 'MD');
-const pathSet = new Set(markdownDocuments.map(document => document.path));
+const pathSet = new Set(documents.map(document => document.path));
+
+let scrubbedLinkCount = 0;
+for (const [relative, source] of markdownSources) {
+  const scrubbed = scrubUnpublishedLinks(source, relative, pathSet);
+  scrubbedLinkCount += scrubbed.removed;
+  markdownSources.set(relative, scrubbed.markdown);
+  if (scrubbed.markdown !== source) {
+    await writeFile(path.join(outRoot, 'files', relative), scrubbed.markdown);
+  }
+}
+
 const aliasMap = new Map();
 for (const document of markdownDocuments) {
   const aliases = [
@@ -194,3 +239,4 @@ await writeFile(path.join(outRoot, 'library.json'), JSON.stringify({ generatedAt
 await writeFile(path.join(outRoot, 'search-index.json'), JSON.stringify({ generatedAt, documents: searchIndex }));
 await writeFile(path.join(outRoot, 'graph.json'), JSON.stringify(graph));
 console.log(`Built library with ${documents.length} documents, ${searchIndex.length} search entries and ${edges.length} knowledge links.`);
+if (scrubbedLinkCount) console.log(`Publication boundary: flattened ${scrubbedLinkCount} links to withheld local files.`);

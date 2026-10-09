@@ -10,6 +10,21 @@ Thư mục này không còn chứa worker sinh hoặc viết lại learning docs
 
 `repo_audit.py` chỉ kiểm tra catalog, đường dẫn và Markdown links; nó không sửa file và không tạo prose.
 
+## Worker dependencies
+
+The optional `app.py` worker and `pipeline.py` require the pinned packages in
+[`requirements.txt`](./requirements.txt). Recreate the worker environment with:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r automation/requirements.txt
+python -m unittest discover -s automation -p 'test_*.py'
+```
+
+The repository auditor itself remains standard-library only, so CI can run its
+structural checks without installing the worker dependencies.
+
 ```bash
 python -m unittest automation/test_repo_audit.py
 python automation/repo_audit.py --root .

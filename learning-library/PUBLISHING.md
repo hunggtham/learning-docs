@@ -42,4 +42,10 @@ published navigation path; it does not move or duplicate the source files.
 
 Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; Markdown under an approved prefix is discovered automatically, while PDFs remain explicit per-file entries after redistribution rights are confirmed. `raw` and `raw_md` are always skipped, and `output` is flattened only for display.
 
+After the build, run `npm run audit:published-links`. The build keeps links to
+published documents, rewrites published directory links to their README when
+available, and renders links to withheld local raw/provenance files as plain
+text. This keeps the generated reader free of dead local links without
+changing canonical source files.
+
 > **Bàn giao:** Sau khi build, kiểm tra document count, search index và knowledge links; nếu nguồn nằm trong raw/imported thì quay lại canonical source hoặc generator thay vì đưa capture vào publication manifest.
