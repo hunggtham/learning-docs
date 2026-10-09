@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định người học cần giải thích gì; từ khóa thu hẹp phạm vi của SDLC và methodology trước khi đi vào kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 생명, 주기, 개발, 방법론
 
-> **Chuyển mạch:** Ở chặng này của **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt SDLC trong dependency với các phần khác; cách đọc tiếp theo biến dependency đó thành câu hỏi về đối tượng, mục đích và điều kiện áp dụng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt tiêu chí đối tượng–điều kiện–hệ quả; phần SDLC và methodology dùng tiêu chí đó để giải thích vòng đời, deliverable và trade-off.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **소프트웨어 생명 주기 및 개�
 
 ---
 
-> **Chuyển mạch:** Trong **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng cách áp dụng tiêu chí vừa đặt vào SDLC và methodology; khi sang bài kế tiếp, hãy giữ lại câu hỏi về giai đoạn, phản hồi và rủi ro.
 
 ## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
