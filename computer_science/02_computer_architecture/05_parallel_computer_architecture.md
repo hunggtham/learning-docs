@@ -10,7 +10,7 @@ Thay vì chờ instruction A đi hết fetch→decode→execute→bộ nhớ (me
 
 Hazards xuất hiện khi instructions phụ thuộc dữ liệu (data / 데이터), branch chưa biết direction hoặc cùng tranh tài nguyên (resource / 자원). Forwarding, stalling và branch prediction xử lý hazards.
 
-> **Chuyển mạch:** Pipelining chồng các stage; superscalar/out-of-order khai thác instruction-level parallelism, còn multicore nhân số execution contexts và đưa coherence/coordination thành chi phí mới.
+Pipelining tạo song song bên trong một instruction stream. Superscalar và out-of-order mở rộng song song đó ở mỗi cycle; khi thêm multicore, chi phí coherence và coordination trở thành một phần của bài toán.
 
 ## Superscalar và out-of-order
 
@@ -18,7 +18,7 @@ Superscalar CPU có thể issue nhiều operations mỗi cycle. Out-of-order th�
 
 Instruction-level parallelism bị giới hạn bởi phụ thuộc (dependency / 의존성) chains. mã (code / 코드) có nhiều independent công việc (work / 작업) dễ tận dụng hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Pipelining, multicore, SIMD và GPU**, **Multicore** tiếp nhận điểm tựa từ **Superscalar và out-of-order** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SIMD/vectorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Superscalar và out-of-order khai thác các instruction độc lập trong một core. Multicore nhân số luồng thực thi, nhưng speedup lúc này còn bị giới hạn bởi serial fraction và sự tranh chấp bộ nhớ.
 
 ## Multicore
 
@@ -32,7 +32,7 @@ với P là fraction parallelizable, N processors. Nếu 10% tải công việc 
 
 Formula nhắc rằng tối ưu hóa (optimization / 최적화) phải tìm actual serial bottleneck, không chỉ thêm threads.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pipelining, multicore, SIMD và GPU**, **SIMD/vectorization** tiếp nhận điểm tựa từ **Multicore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GPU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multicore tách công việc giữa các instruction streams. SIMD giữ một instruction nhưng áp dụng nó lên nhiều phần tử dữ liệu, nên hiệu quả phụ thuộc vào layout và khả năng bỏ rẽ nhánh.
 
 ## SIMD/vectorization
 
@@ -40,7 +40,7 @@ Single Instruction Multiple dữ liệu (data / 데이터) thực hiện cùng t
 
 Auto-vectorization của trình biên dịch (compiler / 컴파일러) phụ thuộc aliasing, alignment và phụ thuộc (dependency / 의존성) phân tích (analysis / 분석). SoA bố cục (layout / 레이아웃) thường thân thiện hơn AoS cho operations theo trường dữ liệu (field / 필드).
 
-> **Chuyển mạch:** Trong **Pipelining, multicore, SIMD và GPU**, **GPU** tiếp nhận điểm tựa từ **SIMD/vectorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) bandwidth và roofline intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SIMD khai thác các lanes gần nhau trong một core. GPU đẩy ý tưởng data-parallel lên hàng nghìn threads và một memory hierarchy riêng; vì vậy hiệu quả phải được đọc cùng bandwidth và chi phí chuyển dữ liệu.
 
 ## GPU
 
@@ -48,31 +48,29 @@ GPU có massive throughput-oriented parallelism, nhiều lightweight thực thi 
 
 Transfer dữ liệu (data / 데이터) CPU↔GPU có chi phí (cost / 비용), nên offload tiny thao tác (operation / 연산) có thể chậm hơn CPU.
 
-> **Chuyển mạch:** Ở chặng này của **Pipelining, multicore, SIMD và GPU**, **Bộ nhớ (memory / 메모리) bandwidth và roofline intuition** tiếp nhận điểm tựa từ **GPU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NUMA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+GPU và CPU đều có thể bị giới hạn bởi tốc độ đưa dữ liệu đến execution units. Roofline đặt compute và bandwidth trên cùng một khung; với nhiều socket, khoảng cách tới vùng memory cũng trở thành giới hạn cần tính.
 
 ## Bộ nhớ (memory / 메모리) bandwidth và roofline intuition
 
 Kernel có thể compute-bound hoặc memory-bound. Nếu mỗi byte tải (load / 로드) chỉ làm rất ít arithmetic, thêm ALUs không giúp vì bandwidth là bottleneck. Arithmetic intensity — operations per byte — giúp lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pipelining, multicore, SIMD và GPU**, **NUMA** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) bandwidth và roofline intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parallelism khác tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Roofline mô tả giới hạn bandwidth như một con số của kernel, còn NUMA thêm vị trí của vùng nhớ vào con số đó. Một access remote có thể làm cùng một kiểu song song trở nên đắt hơn đáng kể.
 
 ## NUMA
 
 Multi-socket/large các hệ thống (systems / 시스템들) có Non-Uniform bộ nhớ (memory / 메모리) truy cập (access / 접근): cốt lõi (core / 핵심) truy cập (access / 접근) cục bộ (local / 로컬) bộ nhớ (memory / 메모리) nhanh hơn remote nút (node / 노드). OS scheduling và allocation locality ảnh hưởng hiệu năng (performance / 성능). “RAM là dùng chung (shared / 공유) uniform pool” lại là lớp trừu tượng (abstraction / 추상화) không hoàn toàn đúng.
 
-> **Chuyển mạch:** Trong **Pipelining, multicore, SIMD và GPU**, **Parallelism khác tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **NUMA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NUMA cho thấy “chạy nhiều việc” chưa nói rõ các việc có thực sự chạy đồng thời hay chỉ cùng tiến triển theo thời gian. Phân biệt concurrency với parallelism giúp đọc đúng các số đo và chi phí synchronization.
 
 ## Parallelism khác tính đồng thời (concurrency / 동시성)
 
 Tính đồng thời (concurrency / 동시성) là nhiều tasks có progress overlapping về logical thời gian (time / 시간); parallelism là thực sự execute đồng thời. Single-core vòng lặp sự kiện (event loop / 이벤트 루프) concurrent nhưng không necessarily parallel. Multi-core workers có thể both.
 
-> **Chuyển mạch:** Ở chặng này của **Pipelining, multicore, SIMD và GPU**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Parallelism khác tính đồng thời (concurrency / 동시성)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Parallelism chỉ tạo speedup khi có công việc độc lập, dữ liệu đến kịp và chi phí phối hợp đủ nhỏ. Mô hình này là tiêu chuẩn để kiểm tra các ngộ nhận về core, GPU và concurrency.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Hardware cố **giữ nhiều thực thi (execution / 실행) resources bận cùng lúc**. Speedup chỉ xuất hiện nếu tải công việc (workload / 워크로드) có independent công việc (work / 작업) và dữ liệu (data / 데이터) đến đủ nhanh; phụ thuộc (dependency / 의존성), synchronization và bộ nhớ (memory / 메모리) bandwidth là giới hạn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pipelining, multicore, SIMD và GPU**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,7 +80,7 @@ Tính đồng thời (concurrency / 동시성) là nhiều tasks có progress ov
 
 **“tính đồng thời (concurrency / 동시성) và parallelism là một.”** tính đồng thời (concurrency / 동시성) là cấu trúc (structure / 구조) của overlapping tasks; parallelism là simultaneous vật lý (physical / 물리적) thực thi (execution / 실행).
 
-> **Chuyển mạch:** Trong **Pipelining, multicore, SIMD và GPU**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận trên đều bỏ qua một loại overhead hoặc một giới hạn của dữ liệu. Kết nối cuối file đưa mô hình này về scheduling, synchronization, scalability và data layout.
 
 ## Kết nối
 
