@@ -25,7 +25,7 @@ Camera chuỗi xử lý (pipeline / 파이프라인) biến photons thành elect
 
 Computer Vision phải infer ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조) từ đo lường (measurement / 측정) không hoàn hảo.
 
-> **Chuyển mạch:** Scene được lấy mẫu thành pixels trong một coordinate system; channels sau đó tách cường độ màu, depth hoặc modality để mô hình biết mỗi pixel mang loại tín hiệu nào.
+Scene được lấy mẫu trong một hệ tọa độ cụ thể; tiếp theo, các kênh tách cường độ màu, độ sâu hoặc modality để mô hình biết mỗi pixel đang mang loại tín hiệu nào.
 
 ## Coordinate hệ thống (system / 시스템)
 
@@ -39,7 +39,7 @@ y: row → down
 
 Bounding box có thể dùng `(x_min,y_min,x_max,y_max)` hoặc center-width-height. Format mismatch là nguồn (source / 소스) bug phổ biến.
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, **Channels** tiếp nhận điểm tựa từ **Coordinate hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resolution và thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi cố định cách đọc tọa độ, ta chuyển sang **Channels** để hỏi mỗi pixel chứa loại tín hiệu nào. Sự lựa chọn kênh sẽ dẫn trực tiếp đến câu chuyện về **Resolution và thông tin (information / 정보)**.
 
 ## Channels
 
@@ -53,7 +53,7 @@ RGB dùng 3 channels; grayscale 1. Other modalities:
 
 Biểu diễn (representation / 표현) phải match sensing tiến trình (process / 프로세스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Images as dữ liệu (data / 데이터)**, **Resolution và thông tin (information / 정보)** tiếp nhận điểm tựa từ **Channels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Channels cho biết tín hiệu được lưu như thế nào, còn **Resolution và thông tin (information / 정보)** cho biết tín hiệu đó được lấy mẫu ở mức chi tiết nào. Trước khi đưa các giá trị ấy vào mô hình, ta cần xét **Normalization**.
 
 ## Resolution và thông tin (information / 정보)
 
@@ -61,7 +61,7 @@ Resize ảnh nhỏ hơn giảm compute nhưng có thể mất tiny objects/văn 
 
 Điểm ảnh (pixel / 픽셀) count tăng quadratically theo spatial dimension. Doubling width/height → ~4× pixels.
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Normalization** tiếp nhận điểm tựa từ **Resolution và thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Color Spaces** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Resolution quyết định lượng chi tiết, còn **Normalization** quyết định cách các giá trị được đưa vào quá trình tối ưu hóa. Sau đó, **Color Spaces** mở rộng câu hỏi từ thang giá trị sang loại biểu diễn màu.
 
 ## Normalization
 
@@ -73,7 +73,7 @@ x'=(x-\mu)/\sigma
 
 Normalization ảnh hưởng tối ưu hóa (optimization / 최적화), không thay ngữ nghĩa (semantic / 의미적) content lý tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, **Color Spaces** tiếp nhận điểm tựa từ **Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh (image / 이미지) as tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Normalization giúp các kênh có thang đo phù hợp cho học máy; **Color Spaces** lại quyết định những đại lượng màu nào được đặt cạnh nhau. Từ lựa chọn đó, ta có thể nhìn ảnh như một **tín hiệu (signal / 신호)** hai chiều.
 
 ## Color Spaces
 
@@ -81,7 +81,7 @@ RGB thuận tiện display/sensors nhưng không phải biểu diễn (represent
 
 Choice color không gian (space / 공간) có thể simplify classical algorithms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Images as dữ liệu (data / 데이터)**, **Ảnh (image / 이미지) as tín hiệu (signal / 신호)** tiếp nhận điểm tựa từ **Color Spaces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spatial Frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi ảnh được xem như tín hiệu, các pixel lân cận không còn là những con số rời rạc mà tạo thành cấu trúc. **Spatial Frequency** cho ta ngôn ngữ để mô tả cấu trúc mịn, biên và texture đó.
 
 ## Ảnh (image / 이미지) as tín hiệu (signal / 신호)
 
@@ -89,13 +89,13 @@ Choice color không gian (space / 공간) có thể simplify classical algorithm
 
 Điều này giải thích inductive độ lệch (bias / 편향) của convolution: cục bộ (local / 로컬) patterns và translation cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Spatial Frequency** tiếp nhận điểm tựa từ **Ảnh (image / 이미지) as tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling và Aliasing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân tích theo tần số cho thấy chi tiết nhanh hay chậm biến đổi trong không gian. Nhưng những thành phần ấy có thể bị diễn giải sai khi lấy mẫu, nên bước tiếp theo là **Sampling và Aliasing**.
 
 ## Spatial Frequency
 
 Smooth regions chứa low-frequency cấu trúc (structure / 구조); edges/textures có high-frequency components. Fourier perspective giúp hiểu blur, sharpening và compression.
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, **Sampling và Aliasing** tiếp nhận điểm tựa từ **Spatial Frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Noise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sampling quyết định tần số nào được giữ lại và tần số nào biến thành aliasing. Ngay cả khi lấy mẫu đúng, quan sát vẫn chịu **Noise**, vì vậy ta cần tách nhiễu khỏi tín hiệu mong muốn.
 
 ## Sampling và Aliasing
 
@@ -103,19 +103,19 @@ Nếu downsample quá mạnh mà không low-pass filter, high-frequency details 
 
 Nyquist intuition: sampling tỷ lệ (rate / 비율) phải đủ cao relative to tín hiệu (signal / 신호) frequency.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Images as dữ liệu (data / 데이터)**, **Noise** tiếp nhận điểm tựa từ **Sampling và Aliasing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Aliasing là lỗi do cách lấy mẫu, còn noise là sai lệch trong chính phép quan sát. Cả hai đều nhắc rằng ảnh không phải cảnh thật; **Hình học (geometry / 기하학)** giải thích thêm cách cảnh được chiếu lên mặt phẳng ảnh.
 
 ## Noise
 
 Sensor noise, compression artifacts và motion blur làm observation khác true scene. Robust vision mô hình (model / 모델) cần dữ liệu (data / 데이터)/augmentation reflect triển khai (deployment / 배포) conditions.
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Noise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Annotation Types** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi tính đến nhiễu, ta phải tính đến biến đổi hình học do viewpoint và phép chiếu. Cách biểu diễn hình học này quyết định loại nhãn cần có trong **Annotation Types**.
 
 ## Hình học (geometry / 기하학)
 
 Perspective projection map 3D world onto 2D ảnh (image / 이미지). Same đối tượng (object / 객체) thay đổi apparent kích thước (size / 크기)/shape theo viewpoint. Vision vì vậy phải deal invariance/equivariance.
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, **Annotation Types** tiếp nhận điểm tựa từ **Hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) Augmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hình học của nhiệm vụ quyết định nhãn cần mô tả cả ảnh, hộp, mask hay keypoint. Từ loại nhãn đó, **Dữ liệu (data / 데이터) Augmentation** phải được thiết kế sao cho vẫn giữ nguyên ý nghĩa.
 
 ## Annotation Types
 
@@ -131,7 +131,7 @@ captioning → text
 
 Label biểu diễn (representation / 표현) quyết định supervision granularity và annotation chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Images as dữ liệu (data / 데이터)**, **Annotation Types** nêu điều cần giải thích; **Dữ liệu (data / 데이터) Augmentation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Train–triển khai (deployment / 배포) Gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Annotation xác định điều mô hình phải học, còn augmentation tạo thêm những biến thiên được xem là hợp lệ. Sự hợp lệ đó chỉ có ý nghĩa nếu phản ánh được **Train–triển khai (deployment / 배포) Gap**.
 
 ## Dữ liệu (data / 데이터) Augmentation
 
@@ -139,7 +139,7 @@ Transformations như crop, flip, color jitter, rotation tạo additional samples
 
 Nhưng augmentation phải semantics-preserving. Horizontal flip của traffic sign/văn bản (text / 텍스트) hoặc medical laterality có thể đổi meaning.
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Dữ liệu (data / 데이터) Augmentation** nêu điều cần giải thích; **Train–triển khai (deployment / 배포) Gap** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ảnh (image / 이미지) Tokens và Patches** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Augmentation có thể làm dữ liệu huấn luyện gần hơn với điều kiện triển khai, nhưng không loại bỏ mọi khác biệt về domain. Một cách biểu diễn khác, **Ảnh (image / 이미지) Tokens và Patches**, sẽ đưa ảnh vào các mô hình xử lý chuỗi.
 
 ## Train–triển khai (deployment / 배포) Gap
 
@@ -153,7 +153,7 @@ Vision rất sensitive lĩnh vực (domain / 도메인) shift:
 
 Chỉ số (metric / 지표) trên benchmark không tự đảm bảo triển khai (deployment / 배포) chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, **Ảnh (image / 이미지) Tokens và Patches** tiếp nhận điểm tựa từ **Train–triển khai (deployment / 배포) Gap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Patch là một cách gom các phép đo cục bộ thành token; kích thước patch đồng thời quyết định chi tiết và chi phí attention. Từ các lựa chọn biểu diễn ấy, **Mô hình tư duy (mental model / 사고 모델)** giúp gom lại điều Computer Vision thực sự đang suy luận.
 
 ## Ảnh (image / 이미지) Tokens và Patches
 
@@ -167,7 +167,7 @@ N=\frac{HW}{P^2}
 
 Smaller patch → more tokens → better fine detail but higher attention chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Images as dữ liệu (data / 데이터)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Ảnh (image / 이미지) Tokens và Patches** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy trên nối từ phép đo, biểu diễn đến suy luận về cấu trúc ẩn. Trước khi mở sang phần kế tiếp, hãy kiểm tra các **Dùng chung (common / 공통) Misconceptions** dễ làm lệch trực giác này.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -175,7 +175,7 @@ Smaller patch → more tokens → better fine detail but higher attention chi ph
 
 Một điểm ảnh (pixel / 픽셀) không “là” vật thể; ngữ nghĩa (semantic / 의미적) đối tượng (object / 객체) emerges từ spatial patterns, ngữ cảnh (context / 맥락) và learned representations.
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận trên đều xuất phát từ việc nhầm phép đo với thế giới hoặc nhầm biến đổi dữ liệu với thông tin mới. **Liên kết kiến thức (knowledge connection / 지식 연결)** dưới đây đặt chương này vào mạch học rộng hơn.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -191,7 +191,7 @@ Nó còn encode invariance các giả định (assumptions / 가정들).
 
 Camera processing và lighting ảnh hưởng đo lường (measurement / 측정).
 
-> **Chuyển mạch:** Ở chặng này của **Images as dữ liệu (data / 데이터)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau phần ngộ nhận, các liên kết tiếp theo chỉ ra nơi đào sâu về tín hiệu, đại số tuyến tính, hình học và deep learning. Hãy giữ lại ranh giới này: ảnh là phép đo có cấu trúc, không phải bản thân thế giới.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

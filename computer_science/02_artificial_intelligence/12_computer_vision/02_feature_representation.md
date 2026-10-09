@@ -24,7 +24,7 @@ Hai ảnh cùng một đối tượng (object / 객체) có thể khác mạnh �
 
 Một useful biểu diễn (representation / 표현) cần stable hơn với nuisance variation nhưng vẫn sensitive với ngữ nghĩa (semantic / 의미적) differences.
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Cục bộ (local / 로컬) Features** tiếp nhận điểm tựa từ **Tại sao raw pixels khó?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HOG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vì raw pixels thay đổi mạnh theo góc nhìn và điều kiện chụp, ta cần tìm những mẫu ổn định trong vùng lân cận. **Cục bộ (local / 로컬) Features** là bước đầu để xây dựng các mô tả như vậy, trước khi chuyển sang **HOG**.
 
 ## Cục bộ (local / 로컬) Features
 
@@ -42,7 +42,7 @@ find repeatable local points
 
 SIFT robust hơn raw patch matching dưới quy mô (scale / 규모)/rotation changes.
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **HOG** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) Features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bag of Visual Words** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SIFT mô tả một vùng quanh keypoint để tăng độ bền với scale và rotation; **HOG** khái quát hướng gradient trên các cell để nắm hình dạng. Khi số descriptor cục bộ thay đổi theo ảnh, **Bag of Visual Words** cung cấp một cách gom chúng thành biểu diễn có kích thước cố định.
 
 ## HOG
 
@@ -52,7 +52,7 @@ SIFT robust hơn raw patch matching dưới quy mô (scale / 규모)/rotation ch
 
 HOG từng rất effective cho pedestrian detection khi kết hợp tuyến tính (linear / 선형) SVM.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Bag of Visual Words** tiếp nhận điểm tựa từ **HOG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) Invariance vs Equivariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HOG giữ thông tin hướng biên theo vùng, còn Bag of Visual Words biến nhiều descriptor thành histogram từ vựng thị giác. Cả hai đều phải cân bằng việc bỏ biến thiên với việc giữ cấu trúc; đó là câu hỏi của **Tính năng (feature / 기능) Invariance vs Equivariance**.
 
 ## Bag of Visual Words
 
@@ -66,7 +66,7 @@ local patch descriptors → visual tokens → frequency vector
 
 Nhược điểm: mất phần lớn spatial bố cục (layout / 레이아웃).
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Tính năng (feature / 기능) Invariance vs Equivariance** tiếp nhận điểm tựa từ **Bag of Visual Words** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) Pyramid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bag of Visual Words có thể bất biến với nhiều thay đổi nhưng phải trả giá bằng thông tin không gian. Việc chọn invariance hay equivariance phụ thuộc tác vụ; **Tính năng (feature / 기능) Pyramid** tiếp tục giữ thông tin ở nhiều scale để hỗ trợ lựa chọn đó.
 
 ## Tính năng (feature / 기능) Invariance vs Equivariance
 
@@ -84,7 +84,7 @@ f(Tx)=T'f(x)
 
 Classification thường muốn invariance với translation nhỏ. Detection/segmentation cần giữ spatial correspondence, nên equivariance quan trọng hơn pure invariance.
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Tính năng (feature / 기능) Pyramid** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) Invariance vs Equivariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimensionality Reduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Feature pyramid giữ các mức chi tiết khác nhau để một detector có thể xử lý vật thể nhỏ lẫn lớn. Vì nhiều mức có thể tạo vector lớn, bước kế tiếp là xem **Dimensionality Reduction** có thể nén chúng ra sao mà không làm mất tín hiệu cần thiết.
 
 ## Tính năng (feature / 기능) Pyramid
 
@@ -92,7 +92,7 @@ Objects có nhiều scales. Classical các hệ thống (systems / 시스템들)
 
 Hiện đại (modern / 현대적) tính năng (feature / 기능) Pyramid Networks giữ multi-scale tính năng (feature / 기능) maps trong CNN.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Dimensionality Reduction** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) Pyramid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số (metric / 지표) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pyramid mở rộng biểu diễn theo scale, còn dimensionality reduction tìm một không gian gọn hơn để tính toán và quan sát. Không gian gọn có hữu ích hay không phải được đánh giá bằng **Chỉ số (metric / 지표) học tập (learning / 학습)** phù hợp với mục tiêu.
 
 ## Dimensionality Reduction
 
@@ -100,7 +100,7 @@ Descriptors high-dimensional có thể compress bằng PCA. PCA giữ directions
 
 Whitening có thể decorrelate dimensions nhưng đôi khi amplify low-variance noise.
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Chỉ số (metric / 지표) học tập (learning / 학습)** tiếp nhận điểm tựa từ **Dimensionality Reduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hand-Designed vs Learned Features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một phép nén có thể trông tốt theo reconstruction nhưng chưa chắc tách được nhãn. Vì vậy metric phải gắn với tác vụ; đây cũng là điểm so sánh quan trọng giữa **Hand-Designed vs Learned Features**.
 
 ## Chỉ số (metric / 지표) học tập (learning / 학습)
 
@@ -115,7 +115,7 @@ anchor-negative distance ↑
 
 Hiện đại (modern / 현대적) face recognition và ảnh (image / 이미지) retrieval dựa heavily vào learned chỉ số (metric / 지표) embeddings.
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Hand-Designed vs Learned Features** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transfer học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Feature thủ công mang prior rõ ràng và dễ kiểm soát; feature học được linh hoạt hơn nhưng cần dữ liệu và mục tiêu phù hợp. Khi biểu diễn đã học từ một nguồn lớn, **Transfer học tập (learning / 학습)** là cách kiểm tra khả năng tái sử dụng của nó.
 
 ## Hand-Designed vs Learned Features
 
@@ -138,7 +138,7 @@ pixels
 
 Không nên hiểu hierarchy này quá literal, nhưng nó là mô hình tư duy (mental model / 사고 모델) hữu ích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Transfer học tập (learning / 학습)** tiếp nhận điểm tựa từ **Hand-Designed vs Learned Features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-Supervised Visual biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Transfer learning cho phép giữ lại phần biểu diễn hữu ích rồi điều chỉnh theo domain mới, nhưng domain gap vẫn có thể lớn. Một hướng giảm phụ thuộc vào nhãn là **Self-Supervised Visual biểu diễn (representation / 표현)**.
 
 ## Transfer học tập (learning / 학습)
 
@@ -150,7 +150,7 @@ A pretrained visual backbone produces generic representations. Downstream tác v
 
 Biểu diễn (representation / 표현) chất lượng (quality / 품질) quyết định mẫu (sample / 표본) efficiency downstream.
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Self-Supervised Visual biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Transfer học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CLIP-Style biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Self-supervised learning dùng tín hiệu từ chính dữ liệu để học cấu trúc trước khi fine-tune. Khi tín hiệu đó đến từ cặp ảnh–văn bản và mục tiêu tương phản, ta có kiểu **CLIP-Style biểu diễn (representation / 표현)**.
 
 ## Self-Supervised Visual biểu diễn (representation / 표현)
 
@@ -165,7 +165,7 @@ views of different images → separated
 
 Masked ảnh (image / 이미지) modeling reconstruct/predict missing patches/features.
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **CLIP-Style biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Self-Supervised Visual biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) Collapse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CLIP-style training nối hai modality bằng không gian embedding chung, nhưng mục tiêu tương phản vẫn cần đủ đa dạng để tránh nghiệm tầm thường. Một rủi ro cần theo dõi là **Biểu diễn (representation / 표현) Collapse**.
 
 ## CLIP-Style biểu diễn (representation / 표현)
 
@@ -181,37 +181,37 @@ text embeddings of candidate labels
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang multimodal AI.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Biểu diễn (representation / 표현) Collapse** tiếp nhận điểm tựa từ **CLIP-Style biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) chất lượng (quality / 품질) is Task-Dependent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu mọi đầu vào bị ánh xạ gần như cùng một vector, embedding mất khả năng phân biệt dù loss có thể vẫn giảm. Vì thế, **Tính năng (feature / 기능) chất lượng (quality / 품질) is Task-Dependent** chứ không thể suy ra từ một chỉ số duy nhất.
 
 ## Biểu diễn (representation / 표현) Collapse
 
 Self-supervised objectives có rủi ro (risk / 위험) mô hình (model / 모델) đầu ra (output / 출력) same véc-tơ (vector / 벡터) cho everything. Methods cần negatives, predictors, stop-gradient hoặc variance/covariance các ràng buộc (constraints / 제약조건들) để tránh trivial solution.
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Tính năng (feature / 기능) chất lượng (quality / 품질) is Task-Dependent** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) Collapse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) Probe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chất lượng representation phải được hỏi trong ngữ cảnh classification, retrieval, detection hay robustness. **Tuyến tính (linear / 선형) Probe** là một phép thử đơn giản để xem thông tin của một tác vụ có còn dễ tách trong embedding hay không.
 
 ## Tính năng (feature / 기능) chất lượng (quality / 품질) is Task-Dependent
 
 Embedding tốt cho ngữ nghĩa (semantic / 의미적) retrieval chưa chắc tốt cho fine-grained defect inspection. “Good biểu diễn (representation / 표현)” luôn relative to downstream cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Tuyến tính (linear / 선형) Probe** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) chất lượng (quality / 품질) is Task-Dependent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Visualization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Linear probe đo khả năng dùng lại embedding với một head đơn giản, nhưng không phải bằng chứng đầy đủ về mọi năng lực. **Visualization** bổ sung một góc nhìn trực quan để kiểm tra các cụm và biến thiên trong không gian đó.
 
 ## Tuyến tính (linear / 선형) Probe
 
 Một cách kiểm thử (test / 테스트) biểu diễn (representation / 표현): freeze encoder, train tuyến tính (linear / 선형) classifier. Nếu simple tuyến tính (linear / 선형) head đạt tốt, ngữ nghĩa (semantic / 의미적) classes đã tương đối linearly separable trong tính năng (feature / 기능) không gian (space / 공간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Visualization** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) Probe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Explainability Caution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Visualization giúp phát hiện pattern và outlier, nhưng phép chiếu xuống hai hoặc ba chiều cũng có thể tạo ảo giác. Vì vậy cần giữ **Explainability Caution** khi diễn giải embedding hay activation.
 
 ## Visualization
 
 t-SNE/UMAP có thể visualize high-dimensional features nhưng 2D plots distort toàn cục (global / 전역) hình học (geometry / 기하학); không nên dùng cluster đẹp làm proof chất lượng.
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Explainability Caution** tiếp nhận điểm tựa từ **Visualization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một biểu đồ đẹp không chứng minh rằng feature có ý nghĩa nhân quả hoặc ổn định ngoài dữ liệu đã xem. **Mô hình tư duy (mental model / 사고 모델)** giúp đặt mọi phép đo representation vào đúng vai trò.
 
 ## Explainability Caution
 
 Activation map/nearest neighbors giúp inspect biểu diễn (representation / 표현) nhưng không cho complete nhân quả (causal / 인과적) explanation mô hình (model / 모델) quyết định (decision / 결정).
 
-> **Chuyển mạch:** Ở chặng này của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Explainability Caution** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Representation là một hệ tọa độ được học hoặc thiết kế để làm rõ những khác biệt quan trọng cho một mục tiêu. Trước khi kết luận, hãy đối chiếu mô hình này với các **Dùng chung (common / 공통) Misconceptions**.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -219,7 +219,7 @@ Activation map/nearest neighbors giúp inspect biểu diễn (representation / �
 
 Deep học tập (learning / 학습) mạnh vì nó học coordinate hệ thống (system / 시스템) cùng mục tiêu (objective / 목표) thay vì chỉ dùng features cố định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận sau nhắc rằng representation luôn phụ thuộc dữ liệu, objective và tác vụ. **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ nối các ý này với những chương liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -235,7 +235,7 @@ Distance phản ánh huấn luyện (training / 학습) mục tiêu (objective /
 
 Nếu transformation đổi label, invariance gây mất thông tin (information / 정보).
 
-> **Chuyển mạch:** Trong **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết cuối file chỉ ra nơi đào sâu về representation learning, dimensionality reduction và metric learning. Kết luận cần giữ là: một feature tốt là feature phục vụ đúng nhiệm vụ, không phải một vector “đúng” cho mọi ngữ cảnh.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
