@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **099: 소프트웨어 패키징 (Software Packaging)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **099: 소프트웨어 패키징 (Software Packaging)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định software packaging gom artifact và dependency thành gói triển khai ra sao; từ khóa khoanh vùng metadata, cấu hình và installation path.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 패키징
 
-> **Chuyển mạch:** Ở chặng này của **099: 소프트웨어 패키징 (Software Packaging)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt package trên nền DRM và artifact versioned; cách đọc tiếp theo giúp theo dõi thành phần nào phải đi cùng bản cài.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **39. DRM 패키징 과정 상세 (DRM Packaging Process)**에서 만든 기준을 이어받아 **099: 소프트웨어 패키징 (Software Packaging)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **099: 소프트웨어 패키징 (Software Packaging)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **099: 소프트웨어 패키징 (Software Packaging)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần software packaging dùng khung đó để nối artifact với install behavior.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **099: 소프트웨어 패키징 (Softwa
 
 ---
 
-> **Chuyển mạch:** Trong **099: 소프트웨어 패키징 (Software Packaging)**, **099: 소프트웨어 패키징 (Software Packaging)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí package đầy đủ và tái lập; khi sang packaging sequence, hãy chuyển thành các bước có thứ tự và điều kiện.
 
 ## 099: 소프트웨어 패키징 (Software Packaging)
 
