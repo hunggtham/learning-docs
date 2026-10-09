@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 117: 캐시 메모리 (Cache Memory)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt hai kỹ thuật vào cùng bài toán tối ưu truy cập bộ nhớ. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại các thuật ngữ cần để phân biệt tìm theo nội dung với phân tán địa chỉ, trước khi nối chúng với bài về thời gian truy cập.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 연관, 기억장치, 메모리, 인터리빙
 
-> **Chuyển mạch:** Ở chặng này của **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa cho thấy một kỹ thuật đổi cách tìm dữ liệu, còn kỹ thuật kia đổi cách phân bố truy cập. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối hai hướng tối ưu này với chi phí và độ trễ của bộ nhớ phụ ở bài trước.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)**에서 만든 기준을 이어받아 **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi có tiêu chí về độ trễ và băng thông, **읽는 방법 (Cách đọc)** sẽ hướng dẫn đặt từng kỹ thuật vào đúng câu hỏi: dữ liệu được định vị thế nào, truy cập song song ra sao và phải trả giá bằng tài nguyên gì.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 115 & 116: 연관 기억장치 
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**, **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** sẽ lần lượt giải thích CAM và interleaving bằng cơ chế, lợi ích và giới hạn cụ thể. Giữ các tiêu chí đó để thấy vì sao cache là bước nối kế tiếp.
 
 ## 핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)
 
@@ -60,7 +60,7 @@ Ta vừa chốt **연관 기억장치 (Associative Memory / CAM)** bằng các �
 
 ### 메모리 인터리빙 (Memory Interleaving)
 
-Các ý ngay dưới **메모리 인터리빙 (Memory Interleaving)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **메모리 인터리빙 (Memory Interleaving)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “메모리 인터리빙 (Memory Interleaving)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 

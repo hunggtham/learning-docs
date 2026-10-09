@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 117: 캐시 메모리 (Cache Memory)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 118: 가상 기억장치 (Virtual Memory)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 117: 캐시 메모리 (Cache Memory)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa xác định cache là lớp đệm giữa CPU và bộ nhớ chính. Phần **핵심 키워드 (Từ khóa)** tiếp theo chọn các thuật ngữ cần để theo dõi locality, hit ratio và cách cache ánh xạ dữ liệu.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 캐시, 메모리
 
-> **Chuyển mạch:** Ở chặng này của **핵심 117: 캐시 메모리 (Cache Memory)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa trên mô tả mục tiêu và phép đo hiệu quả của cache. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối chúng với CAM và interleaving để thấy cache thừa hưởng cách tìm nhanh và truy cập song song như thế nào.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**에서 만든 기준을 이어받아 **핵심 117: 캐시 메모리 (Cache Memory)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 117: 캐시 메모리 (Cache Memory)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 117: 캐시 메모리 (Cache Memory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã có nền về các kỹ thuật truy cập trước đó, **읽는 방법 (Cách đọc)** sẽ biến chúng thành trình tự phân tích cache: xác định dữ liệu gần, cách ánh xạ, chính sách ghi và tác động lên độ trễ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 117: 캐시 메모리 (Cache Me
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 117: 캐시 메모리 (Cache Memory)**, **핵심 117: 캐시 메모리 (Cache Memory)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi có cách đọc, phần **핵심 117: 캐시 메모리 (Cache Memory)** áp dụng các tiêu chí vào hit ratio, mapping và write policy. Hãy giữ lại sự đánh đổi giữa tốc độ, nhất quán và rủi ro để chuyển sang virtual memory.
 
 ## 핵심 117: 캐시 메모리 (Cache Memory)
 
@@ -50,7 +50,7 @@ Phần “핵심 117: 캐시 메모리 (Cache Memory)” được nối với n�
 
 ### 매핑 프로세스 (Mapping Process)
 
-Các ý ngay dưới **매핑 프로세스 (Mapping Process)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **매핑 프로세스 (Mapping Process)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “매핑 프로세스 (Mapping Process)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
