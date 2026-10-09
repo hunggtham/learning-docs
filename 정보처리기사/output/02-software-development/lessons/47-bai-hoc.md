@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt vai trò IDE với build tool trong chu trình phát triển; từ khóa khoanh vùng editor, compiler, runner và artifact.
 
 ## 핵심 키워드 (Từ khóa)
 
 IDE
 
-> **Chuyển mạch:** Ở chặng này của **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt IDE/build tools trên nền build pipeline; cách đọc tiếp theo giúp tách thao tác phát triển khỏi bước tạo artifact.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **10. 빌드 자동화 도구 (Build Automation Tools)**에서 만든 기준을 이어받아 **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần IDE/build dùng khung đó để nối cấu hình local với kết quả build.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ IDE
 
 ---
 
-> **Chuyển mạch:** Trong **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng ranh giới giữa convenience của IDE và tính tái lập của build; khi sang Jenkins/Gradle, hãy giữ lại contract của pipeline.
 
 ## 36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)
 
