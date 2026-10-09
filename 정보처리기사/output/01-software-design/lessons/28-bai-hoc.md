@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **1. 객체지향 설계 5대 원칙 (SOLID)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **1. 객체지향 설계 5대 원칙 (SOLID)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định SOLID dùng để bảo vệ trách nhiệm, thay đổi và phụ thuộc ra sao; từ khóa khoanh vùng các nguyên tắc trước khi nối sang kiến thức liên kết.
 
 ## 핵심 키워드 (Từ khóa)
 
 객체지향, 설계, 원칙
 
-> **Chuyển mạch:** Ở chặng này của **1. 객체지향 설계 5대 원칙 (SOLID)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt SOLID trên nền OOP và architecture; cách đọc tiếp theo giúp phân biệt nguyên tắc với mẹo áp dụng máy móc.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **2. 객체지향 (OOP - Object Oriented Programming)**에서 만든 기준을 이어받아 **1. 객체지향 설계 5대 원칙 (SOLID)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1. 객체지향 설계 5대 원칙 (SOLID)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 객체지향 설계 5대 원칙 (SOLID)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần SOLID dùng khung đó để nối coupling, cohesion và khả năng thay đổi.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **1. 객체지향 설계 5대 원칙 (SO
 
 ---
 
-> **Chuyển mạch:** Trong **1. 객체지향 설계 5대 원칙 (SOLID)**, **1. 객체지향 설계 5대 원칙 (SOLID)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí dùng SOLID theo boundary và dependency; khi sang module, hãy giữ lại lý do thay đổi cần được cô lập.
 
 ## 1. 객체지향 설계 5대 원칙 (SOLID)
 

@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **2. 모듈 (Module) & 독립성 (Independence)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **7. 공통 모듈 (Common Module)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **2. 모듈 (Module) & 독립성 (Independence)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định module giảm lan truyền thay đổi bằng boundary, interface và dependency ra sao; từ khóa khoanh vùng những trách nhiệm đó.
 
 ## 핵심 키워드 (Từ khóa)
 
 모듈
 
-> **Chuyển mạch:** Ở chặng này của **2. 모듈 (Module) & 독립성 (Independence)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt module independence trên nền OOP và architecture; cách đọc tiếp theo giúp theo dõi dependency và interface.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **3. 모듈 (Module)**에서 만든 기준을 이어받아 **2. 모듈 (Module) & 독립성 (Independence)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. 모듈 (Module) & 독립성 (Independence)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 모듈 (Module) & 독립성 (Independence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần module dùng khung đó để giải thích coupling, cohesion và boundary.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **2. 모듈 (Module) & 독립성 (Indepe
 
 ---
 
-> **Chuyển mạch:** Trong **2. 모듈 (Module) & 독립성 (Independence)**, **2. 모듈 (Module) & 독립성 (Independence)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí độc lập và hợp đồng interface; khi sang module design, hãy giữ lại dependency cần kiểm soát.
 
 ## 2. 모듈 (Module) & 독립성 (Independence)
 
