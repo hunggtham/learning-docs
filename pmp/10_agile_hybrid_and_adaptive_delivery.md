@@ -38,6 +38,26 @@ Empiricism còn phụ thuộc chất lượng (quality / 품질) của bằng ch
 
 > **Nối mạch:** **Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)** nối từ **Empiricism: transparency, inspection, adaptation** sang **Sản phẩm (product / 제품) backlog như một option set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Feedback validity: nhanh không đồng nghĩa đáng tin
+
+Adaptive delivery tối ưu tốc độ học, nhưng **feedback nhanh chỉ có giá trị khi feedback đại diện cho câu hỏi đang quyết định**. Demo cho stakeholder nội bộ có thể xác nhận interpretation của requirement nhưng không chứng minh end-user adoption. Pilot với power users có thể cho usability signal tốt nhưng overestimate performance của population ít kinh nghiệm. Early adopters cũng không đại diện toàn thị trường.
+
+Vì vậy mỗi feedback loop cần hỏi bốn điều: **ai tạo signal, trong điều kiện nào, metric nào được quan sát, và decision nào signal đó được phép thay đổi**. Nếu sample, environment hoặc measurement không match target population/use case, feedback vẫn hữu ích nhưng phạm vi suy luận phải hẹp hơn.
+
+Adaptive team cũng dễ gặp novelty effect, selection bias và survivorship bias. Người sẵn sàng tham gia beta thường khác người im lặng hoặc bỏ cuộc; chỉ đọc feedback của người còn ở lại có thể bỏ mất evidence quan trọng nhất. Tốc độ iteration không sửa sampling bias—nó có thể chỉ lặp bias nhanh hơn.
+
+Một cách giữ feedback honest là tách ba lớp:
+
+```text
+signal observed
+→ interpretation/hypothesis
+→ decision boundary
+```
+
+Nếu signal chỉ đủ để “investigate further”, không nên nâng nó thành evidence để scale toàn bộ release. Nếu signal đủ mạnh cho một reversible change nhỏ, không cần đòi certainty ở mức production-wide commitment.
+
+> **Nối mạch:** Empiricism cần evidence có validity chứ không chỉ cadence nhanh; **product goal** tiếp theo xác định hướng ổn định mà feedback có quyền điều chỉnh chứ không để mỗi signal mới kéo backlog theo một hướng khác.
+
 ## Sản phẩm (product / 제품) goal tạo stable direction cho adaptive phạm vi (scope / 범위)
 
 Adaptive phạm vi (scope / 범위) có thể thay nhưng hệ thống (system / 시스템) vẫn cần direction đủ ổn định. sản phẩm (product / 제품) goal/kết quả (outcome / 결과) tạo ràng buộc (constraint / 제약조건) cho cục bộ (local / 로컬) adaptation: backlog có thể đổi, nhưng mọi đổi phải giải thích vì sao giúp mục tiêu (objective / 목표) tốt hơn.

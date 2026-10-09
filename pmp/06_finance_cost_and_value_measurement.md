@@ -88,6 +88,18 @@ Reserve phân tích (analysis / 분석) nên theo trend của rủi ro (risk / �
 
 > **Nối mạch:** **Chi phí (cost / 비용) estimate cũng là phân phối (distribution / 분포)** nối từ **Reserve consumption phải nối với rủi ro (risk / 위험) retirement** sang **Estimate phạm vi (range / 범위) phải phản ánh nguồn (source / 소스) of bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Reserve sizing phải phản ánh correlation và tail exposure
+
+Reserve không nên được tạo bằng cách cộng một tỷ lệ phần trăm giống nhau lên mọi estimate. Cách đó ngầm giả định uncertainty đồng nhất và thường bỏ qua correlation. Nếu ba workstream cùng phụ thuộc một vendor, FX rate hoặc regulatory approval, chúng không phải ba risk độc lập; một common-cause event có thể làm nhiều cost component cùng tăng.
+
+Vì vậy reserve reasoning cần tách ít nhất ba lớp: **known event risk** có response/contingency rõ; **variability** của estimate ngay cả khi không có event riêng biệt; và **systemic/common-cause exposure** làm tail dày hơn. Monte Carlo hoặc scenario analysis chỉ là công cụ; mục tiêu là hiểu distribution của total cost và điều kiện nào đẩy dự án vào tail.
+
+Một reserve hợp lý cũng cần retirement logic. Khi uncertainty được giải quyết, reserve liên quan nên được release/re-estimate thay vì âm thầm trở thành “tiền dư để dùng”. Ngược lại, nếu evidence cho thấy correlation cao hơn giả định ban đầu, reserve có thể cần tăng ngay cả khi actual cost hiện tại vẫn green.
+
+Exam reasoning thường không yêu cầu tính distribution phức tạp. Điều cần nhận ra là: contingency không phải padding tùy ý; reserve phải trace về uncertainty model, ownership và trigger. Khi reserve bị dùng mà risk exposure không giảm, đó là dấu hiệu forecast quality đang xấu đi.
+
+> **Nối mạch:** Reserve sizing biến uncertainty thành financial protection có logic; phần **cost estimate distribution** tiếp theo đi sâu vào cách estimate range phản ánh uncertainty trước khi aggregate thành budget.
+
 ## Chi phí (cost / 비용) estimate cũng là phân phối (distribution / 분포)
 
 Một điểm (point / 지점) estimate như 500 triệu che bất định (uncertainty / 불확실성). phạm vi (range / 범위) 450–650 triệu với các giả định (assumptions / 가정들) rõ cung cấp thông tin (information / 정보) tốt hơn.
@@ -225,6 +237,30 @@ Không nên học formula mà quên giả định (assumption / 가정). Chọn 
 Worked examples chi tiết hơn nằm ở [Quantitative Reasoning](./15_quantitative_reasoning_worked_examples.md).
 
 > **Nối mạch:** **Bottom-up ETC khi cấu trúc (structure / 구조) đã thay đổi** nối từ **Forecast với EAC** sang **TCPI như câu hỏi về feasibility**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Forecast decomposition: đừng để một EAC che nhiều cơ chế
+
+Hai dự án có cùng EAC nhưng chất lượng forecast có thể rất khác. Một forecast nên được decomposition thành những nguồn thay đổi chính: **price/rate**, **quantity/scope**, **productivity**, **mix**, **timing**, **rework** và **remaining uncertainty**. Khi chỉ báo một số EAC tổng, stakeholder biết “điểm đến mới” nhưng không biết cơ chế nào đang kéo chi phí.
+
+Ví dụ EAC tăng 12% có thể do cloud unit price tăng, do team phải làm thêm scope, hoặc do defect rework. Ba cơ chế dẫn tới ba quyết định khác nhau: renegotiate/commercial action, change control/value trade-off, hoặc quality/root-cause action. Cùng variance nhưng actuator khác nhau.
+
+Forecast decomposition cũng giúp phát hiện **bias persistence**. Nếu mỗi tháng ETC lại tăng vì productivity assumption vẫn được giữ quá optimistic, việc cập nhật EAC mà không sửa model chỉ là rolling surprise. Một forecast tốt phải thay đổi assumption khi evidence lặp lại chống lại assumption cũ.
+
+Có thể dùng forecast bridge đơn giản:
+
+```text
+prior EAC
++ price effect
++ quantity/scope effect
++ productivity/rework effect
++ timing/financing effect
++ newly recognized uncertainty
+= current EAC
+```
+
+Bridge không cần chính xác tuyệt đối ở mọi tổ chức; giá trị của nó là ép explanation mang tính causal. Đây cũng là cách phân biệt **forecast change** với **performance variance**: forecast nhìn future total, variance attribution giải thích vì sao current/future state khác baseline.
+
+> **Nối mạch:** Forecast decomposition cho biết khi nào formula EAC không còn đủ; **Bottom-up ETC** tiếp theo là phản ứng thích hợp khi cấu trúc remaining work đã đổi đến mức model cũ mất validity.
 
 ## Bottom-up ETC khi cấu trúc (structure / 구조) đã thay đổi
 
@@ -397,6 +433,28 @@ Nếu revenue tăng sau go-live, không tự động chứng minh dự án (proj
 Benefit plan nên có baseline và, khi khả thi, counterfactual/comparison. dự án (project / 프로젝트) management không cần causal-inference textbook, nhưng cần tránh claim benefit chỉ vì chỉ số (metric / 지표) thay cùng thời điểm.
 
 > **Nối mạch:** **Benefit attribution và counterfactual** nêu quy tắc; **Living nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) và continuation threshold** thử quy tắc trong tình huống, rồi **Forecast phải được cập nhật (update / 업데이트) khi giả định (assumption / 가정) đổi** mở rộng hệ quả.
+
+## Benefit lag và adoption-adjusted value
+
+Deliverable hoàn thành không đồng nghĩa benefit xuất hiện ngay. Nhiều dự án có **benefit lag**: hệ thống go-live hôm nay nhưng người dùng cần migrate, học quy trình, thay hành vi và đạt adoption đủ lớn trước khi outcome cải thiện. Nếu business case giả định benefit bắt đầu ngay tại go-live, NPV/ROI có thể optimistic dù cost forecast hoàn toàn chính xác.
+
+Cần tách chuỗi:
+
+```text
+capability delivered
+→ capability adopted
+→ behavior/process changed
+→ outcome changed
+→ benefit measured
+```
+
+Mỗi mũi tên có delay, owner và failure mode. Một CRM mới có thể được triển khai đúng hạn nhưng sales vẫn ghi chép ngoài hệ thống; capability exists nhưng adoption thấp nên data quality và conversion benefit không materialize. Khi đó “project delivery success” và “business value success” tách nhau.
+
+Một mô hình sâu hơn là **adoption-adjusted value**: benefit forecast nên phụ thuộc adoption curve, not merely deployment date. Nếu adoption chậm, organization có thể tăng training/change support, simplify workflow hoặc điều chỉnh benefit horizon. Quyết định continuation vì vậy cần nhìn cả remaining project cost lẫn probability/timing của value realization.
+
+Điều này cũng thay đổi closure. Project team có thể close về delivery nhưng benefit owner phải tiếp tục measurement trong operations. Nếu không có owner sau transition, benefit assumption trở thành orphan và business case không còn cơ chế falsification.
+
+> **Nối mạch:** Benefit lag nối finance với change/adoption và closure; **living business case** tiếp theo dùng evidence mới để quyết định continue, pivot, re-scope hoặc stop thay vì bảo vệ business case ban đầu.
 
 ## Living nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) và continuation threshold
 

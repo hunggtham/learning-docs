@@ -599,6 +599,93 @@ Trước khi tin một đầu ra (output / 출력) phức tạp, hãy kiểm tra
 
 > **Nối mạch:** **Formula map theo meaning** nối từ **21. đơn vị (unit / 단위) và dimensional sanity check** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## 22. Reference class forecasting: dùng outside view để chống planning fallacy
+
+Estimate thường bắt đầu bằng **inside view**: nhìn WBS hiện tại, team hiện tại, plan hiện tại rồi cộng các duration/cost được cho là hợp lý. Cách này cần thiết nhưng dễ bị optimism bias vì mọi assumption đều được kể theo câu chuyện “project của mình”.
+
+**Reference class forecasting (RCF)** thêm **outside view**: thay vì hỏi chỉ “project này sẽ mất bao lâu?”, hỏi “những project đủ tương tự trước đây thực tế mất bao lâu?”. Ta chọn một reference class đủ gần về loại work/scale/complexity, xây empirical distribution của actual outcome, rồi đặt project hiện tại vào distribution đó.
+
+Ví dụ team estimate migration mới mất 10 tuần theo bottom-up plan. Historical data của 18 migration tương tự cho thấy:
+
+~~~text
+median actual = 13 tuần
+P80 actual    = 17 tuần
+~~~
+
+Điều đó không chứng minh project mới chắc chắn mất 13 hoặc 17 tuần. Nó tạo một **base-rate challenge** cho inside view. Nếu team vẫn giữ 10 tuần, họ phải giải thích evidence nào làm project này khác reference class: automation mới đã test, scope nhỏ hơn, dependency được remove, capability cao hơn, hoặc risk response đã thực sự thay distribution.
+
+RCF cũng có failure mode. Reference class quá rộng làm comparison vô nghĩa; quá hẹp làm sample yếu. Historical environment có thể đã đổi. Vì vậy outside view không thay bottom-up estimate; hai view nên challenge nhau:
+
+~~~text
+inside view  → causal plan của project cụ thể
+outside view → empirical outcome của project tương tự
+gap giữa hai view → assumption cần chứng minh
+~~~
+
+Nếu inside view nói 10 tuần nhưng outside view P80 là 17 tuần, câu hỏi tốt không phải “chọn số nào?” mà là “cơ chế nào đủ mạnh để justify uplift/downlift so với base rate?”.
+
+> **Nối mạch:** Reference class forecasting kiểm tra optimism/model bias từ bên ngoài; **uncertainty của chính probability estimate** tiếp theo kiểm tra false precision ngay bên trong risk model.
+
+## 23. Second-order uncertainty: probability estimate cũng là một estimate
+
+Risk register thường ghi một số như 30%, nhưng 30% hiếm khi là measurement chắc chắn. Nó thường là estimate dựa trên sparse data, expert judgment hoặc analogy. Vì vậy ngoài uncertainty của event còn có **uncertainty về chính probability parameter**.
+
+Giả sử risk “vendor certification trễ” được team đánh giá 30%, impact 400 triệu:
+
+~~~text
+EMV point estimate = 0.30 × 400 = 120 triệu
+~~~
+
+Nếu evidence thực tế chỉ đủ để nói probability plausible nằm khoảng 20–45%, EMV plausible sẽ là:
+
+~~~text
+0.20 × 400 = 80 triệu
+0.45 × 400 = 180 triệu
+~~~
+
+Report duy nhất “EMV = 120 triệu” tạo precision giả. Quyết định reserve hoặc mitigation có thể khác nhiều nếu threshold nằm trong vùng 80–180.
+
+Không phải mọi probability cần range phức tạp. Câu hỏi là **parameter uncertainty có thể làm decision đổi không?** Nếu mitigation chỉ đáng mua khi probability trên 35%, còn estimate hiện quanh 30–40%, thêm evidence rất có giá trị. Nếu mitigation vẫn hợp lý từ 10% đến 60%, tranh luận 30 hay 35% có ít leverage.
+
+Second-order uncertainty cũng cảnh báo việc cộng nhiều EMV point estimate như thể tất cả xác suất đều được biết chính xác. Khi input probability yếu, total expected value phải được đọc cùng confidence/assumption quality, correlation và tail exposure.
+
+> **Nối mạch:** Khi probability được nhìn như estimate thay vì fact, **evidence updating** tiếp theo giải thích cách probability phải thay khi project học được thông tin mới.
+
+## 24. Evidence updating: prior → evidence → posterior ở mức PMP cần dùng
+
+Một probability estimate tốt không nên đứng yên khi evidence thay đổi. Bayesian reasoning cung cấp mental model đơn giản:
+
+~~~text
+prior belief
++ diagnostic strength của evidence mới
+→ posterior belief
+~~~
+
+**Prior** có thể đến từ historical/reference-class data hoặc current expert estimate. Evidence mới không tự động thay prior 1:1; mức update phụ thuộc evidence đó có khả năng xuất hiện cao hơn bao nhiêu nếu hypothesis/risk thật sự tồn tại.
+
+Ví dụ trước integration test, historical data cho thấy khoảng 20% project dùng vendor này gặp serious compatibility issue. Một early test fail xuất hiện. Nếu loại failure này rất hiếm khi system thực sự compatible nhưng khá thường gặp khi incompatibility tồn tại, probability risk phải tăng đáng kể. Ngược lại, một warning rất noisy xuất hiện cả khi system tốt lẫn xấu không nên làm estimate nhảy mạnh.
+
+PMP learner không cần tính posterior bằng tay trong mọi scenario. Điều cần tránh là hai cực:
+
+- **base-rate neglect**: thấy một signal mới rồi quên hoàn toàn historical probability;
+- **prior inertia**: giữ risk rating cũ dù evidence mạnh đã xuất hiện.
+
+Một update discipline thực tế là:
+
+~~~text
+Current probability / confidence
+→ new evidence
+→ evidence reliability + relevance
+→ revised probability / range
+→ response / reserve / escalation có đổi không?
+~~~
+
+Ví dụ risk probability từ 20% tăng lên khoảng 55–70% sau repeated integration failures có thể làm response chuyển từ monitor sang mitigation/escalation. Ngược lại, một test pass đơn lẻ không nhất thiết đủ để đóng risk nếu test coverage hẹp.
+
+Điểm quan trọng nhất là **probability là state of knowledge**, không phải thuộc tính bất biến của risk. Project học được nhiều hơn thì quantitative model phải thay; nếu dashboard giữ nguyên probability chỉ vì “đã chốt lúc planning”, risk process đã mất feedback loop.
+
+> **Nối mạch:** Evidence updating nối historical base rate với current project signal; **Formula map** sau đó chỉ giữ những công thức cần nhớ và nhắc rằng arithmetic luôn nằm sau assumption/evidence.
+
 ## Formula map theo meaning
 
 ```text

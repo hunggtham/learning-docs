@@ -238,13 +238,35 @@ Một 2% lỗi (error / 오류) tỷ lệ (rate / 비율) có thể acceptable c
 
 Assessor phải rà soát (review / 검토) recommendation trước final quyết định (decision / 결정). Nhưng điều khiển (control / 제어) chỉ thật nếu tải công việc (workload / 워크로드) cho phép rà soát (review / 검토) meaningful. Nếu mục tiêu (target / 대상) productivity ép reviewer approve 100 trường hợp (case / 사례)/giờ, human-in-the-loop có thể thành theater.
 
+### Oversight capacity khi scale
+
+Pilot có 1.000 claim/tháng và 12% case cần human review; assessor có thể absorb queue. Nếu rollout lên 100.000 claim/tháng mà abstention/override rate vẫn 12%, manual review trở thành 12.000 case/tháng. “Human-in-the-loop” lúc pilot đúng nhưng operating model lúc scale có thể infeasible.
+
+Nhóm không nên giải bài toán bằng cách ép reviewer duyệt nhanh hơn để giữ productivity KPI. Cần model arrival rate, reviewer capacity, severity priority và SLA; sau đó có thể segment low-risk case, đổi automation threshold, reserve capacity cho high-risk case hoặc giới hạn rollout. Đây là ví dụ control effectiveness thay đổi theo scale dù model accuracy không đổi.
+
 ### Vendor/procurement
 
 Đặc tả hợp đồng (contract / 계약) cần dữ liệu (data / 데이터) handling, mô hình (model / 모델)/phiên bản (version / 버전) thay đổi (change / 변경) notification, sự cố (incident / 인시던트), availability, IP và exit/export. Cheap API price không phản ánh switching chi phí (cost / 비용) hoặc regulatory exposure.
 
+### Evaluation evidence sau vendor model update
+
+Hai tháng sau pilot, vendor phát hành model version mới với benchmark tổng thể tốt hơn. Điều này không tự động cho phép upgrade production. Evidence đã approve trước đó gắn với model/config, prompt, retrieval, claim segments và operating conditions cũ.
+
+PM cần hỏi change này invalidate evidence nào. Low-risk summarization test có thể chỉ cần regression nhỏ; high-risk medical-claim recommendation có thể cần re-validation đầy đủ ở segment đã từng là weak point. Nếu vendor không cho pin version, procurement risk và change-governance risk tăng vì organization khó giữ một evaluated configuration ổn định.
+
+Quyết định đúng vì vậy không phải “new model tốt hơn nên upgrade” hay “đừng bao giờ upgrade”, mà là trace `change → affected assumptions → evidence invalidated → re-evaluation → rollout/rollback rule`.
+
 ### Sustainability
 
 AI suy luận (inference / 추론) tăng compute spend. dự án (project / 프로젝트) có thể đo chi phí (cost / 비용)/năng lượng (energy / 에너지) proxy per claim và total volume. Nếu automation làm claim volume processed tăng mạnh, đơn vị (unit / 단위) efficiency không đủ để kết luận total footprint giảm.
+
+### Counterfactual sustainability claim
+
+Team báo inference energy per claim giảm 25% so với prototype cũ. Nhưng total claim volume sau automation dự kiến tăng 70% vì xử lý nhanh hơn và backlog được giải phóng. Claim “project giảm environmental impact 25%” vì vậy quá mạnh.
+
+Cần chọn counterfactual rõ: nếu không rollout AI, claim volume và manual processing sẽ diễn biến thế nào; nếu rollout, compute, human-review workload và rework thay đổi ra sao. Có thể kết luận unit efficiency tốt hơn nhưng total footprint tăng—hai statement cùng đúng.
+
+Go/no-go không cần một sustainability number “đẹp”; nó cần material impact đủ rõ, system boundary tường minh và claim strength phù hợp với evidence.
 
 ### Go/no-go
 
@@ -363,6 +385,53 @@ Rà soát (review / 검토) sau kết quả (outcome / 결과) phải hỏi thô
 Trường hợp (case / 사례) study nên được dùng để luyện chất lượng (quality / 품질) của lập luận (reasoning / 추론), không đo khả năng đoán kết quả.
 
 > **Nối mạch:** **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** nêu quy tắc; **Cách dùng trường hợp (case / 사례) study để tự luyện** thử quy tắc trong tình huống, rồi **Coverage của các trường hợp (case / 사례)** mở rộng hệ quả.
+
+## Cross-case synthesis: reconstruct state khi evidence mâu thuẫn
+
+Trong dự án thật, evidence hiếm khi hoàn toàn nhất quán. Contract có thể ghi một committed date, schedule có forecast khác, dashboard dùng dữ liệu hôm qua, meeting minutes ghi một target mới, còn stakeholder lại nói “đã thống nhất” một điều chưa từng được approve. Khi đó PM không nên chọn document mình thích nhất hoặc lấy trung bình các con số; phải **reconstruct project state**.
+
+Một reconstruction tốt đi theo bốn trục. Thứ nhất là **semantics**: mỗi artifact đang nói forecast, target, baseline, actual hay obligation? Thứ hai là **authority**: artifact nào có quyền tạo/đổi commitment? Thứ ba là **effective time/version**: thông tin nào đã superseded, thông tin nào chỉ stale? Thứ tư là **lineage**: con số/claim đi từ source nào qua transformation nào?
+
+Ví dụ trường hợp C có vendor contract cam kết API ngày 30/6, integrated schedule forecast 8/7 và steering note nói “aim 3/7”. Ba ngày không conflict theo cùng nghĩa: 30/6 là contractual obligation, 8/7 là current forecast, 3/7 là management target. Nếu PM sửa schedule về 3/7 để “align”, project state không tốt hơn; chỉ mất information quality. Nếu vendor nói 30/6 vẫn achievable nhưng integration evidence cho thấy P80 là 8/7, disagreement phải được trace về assumptions/evidence thay vì giải quyết bằng political compromise.
+
+Cùng logic áp dụng cho risk và quality. Register có thể ghi risk mitigated nhưng control test fail; “response completed” không thắng operational evidence. Dashboard có thể green trong khi exception register cho thấy compensating controls đã hết hạn; derived view không override source evidence.
+
+Mental model là:
+
+```text
+conflict → classify semantics → check authority/version → trace lineage
+→ reconstruct one coherent state → decide
+```
+
+Đây là năng lực nối trực tiếp scenario reasoning, artifact precedence, schedule semantics và governance. Khi state chưa được reconstruct, hành động mạnh thường premature vì PM chưa biết mình đang xử lý deviation thật hay chỉ xử lý disagreement giữa các representation.
+
+> **Nối mạch:** Sau khi hiểu cách reconstruct reality từ evidence mâu thuẫn, phần **Cách dùng case study** biến cùng kỹ thuật thành vòng luyện transfer thay vì học thuộc một answer pattern.
+
+## Cross-case synthesis: inside view, outside view và evidence update
+
+Nhiều case trong chapter này bắt đầu bằng một plan cụ thể, nhưng quantitative reasoning mạnh hơn khi giữ đồng thời ba lớp bằng chứng.
+
+**Inside view** giải thích causal mechanics của case hiện tại: WBS, dependency, team capacity, vendor plan, architecture, adoption hypothesis. **Outside view** hỏi project tương tự trước đây thực tế kết thúc ra sao. **Current evidence update** hỏi signal mới hôm nay có đủ mạnh để làm probability/forecast đổi không.
+
+Case D là ví dụ rõ. Recovery team có thể dựng lại schedule và tin ERP rollout cần thêm 4 tháng. Nhưng nếu historical recovery program tương tự thường mất 7–9 tháng, gap đó cần explanation. Có thể project hiện tại thật sự khác vì scope đã cắt mạnh và data migration đã xong; nếu không có mechanism cụ thể, 4 tháng có thể chỉ là optimism được trình bày bằng Gantt chi tiết.
+
+Case B cũng cần evidence update. Ban đầu team có prior từ product/category history rằng adoption đủ cao chỉ có xác suất trung bình. Một experiment nhỏ cho tín hiệu tốt phải được đọc theo diagnostic strength: sample có representative không, metric có gần business outcome không, và signal này mạnh tới đâu so với base rate? Một beta cohort tích cực không tự động biến probability thành gần 100%.
+
+Case C và E tương tự. Vendor đã từng ổn là prior; integration failure lặp lại là evidence mới. Model version trước đã pass là prior evidence; vendor update làm validity envelope đổi và buộc re-evaluation. Điểm chung là quantitative state phải di chuyển cùng evidence.
+
+Mental model:
+
+~~~text
+outside-view base rate
++ inside-view causal differences
++ current evidence
+→ revised forecast / probability
+→ decision threshold / action
+~~~
+
+Nếu ba lớp này conflict, conflict chính là nơi cần management attention. Không nên chọn lớp tạo con số dễ chịu nhất.
+
+> **Nối mạch:** Synthesis này nối quantitative chapter với scenario transfer; phần **Cách dùng case study** tiếp theo biến ba lớp bằng chứng thành deliberate-practice loop.
 
 ## Cách dùng trường hợp (case / 사례) study để tự luyện
 
