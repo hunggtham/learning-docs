@@ -36,7 +36,7 @@ flowchart TD
 
 Đây là phụ thuộc (dependency / 의존성) khuyến nghị, không phải syllabus cứng. Ví dụ có thể đọc Clustering trước SVM nếu đang làm unsupervised bài toán (problem / 문제). Tuy nhiên `00–04` nên đọc trước phần lớn algorithms vì chúng thiết lập vocabulary về mục tiêu (target / 대상), phân phối (distribution / 분포), split, mất mát (loss / 손실) và rủi ro (risk / 위험).
 
-> **Chuyển mạch:** **Dependency map** đặt thứ tự từ dữ liệu và objective đến model, training và evaluation; **Mental model của toàn tầng** giải thích vì sao mỗi chapter xuất hiện trong chuỗi đó.
+Dependency map đặt dữ liệu, objective, model, training và evaluation vào đúng quan hệ. Mental model của toàn tầng giải thích vì sao một thay đổi ở đầu chuỗi có thể làm sai kết luận ở cuối chuỗi.
 
 ## Các chapter
 
@@ -80,7 +80,7 @@ flowchart TD
 
 **[15 — Model Evaluation](./15_model_evaluation.md)** tổng hợp confusion ma trận (matrix / 행렬), ROC/PR, calibration, regression/ranking metrics, confidence intervals, subgroup evaluation, online/offline evaluation và cost-sensitive quyết định (decision / 결정) making.
 
-> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** gom các mảnh từ **Các chapter** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp sang Neural Networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các chapter đã đi từ biểu diễn và objective tới training, generalization và evaluation. Neural networks mở rộng cùng chuỗi đó bằng các mô hình biểu diễn linh hoạt hơn, không thay thế các điều kiện nền.
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
@@ -110,7 +110,7 @@ Production feedback / shift
 
 Một thuật toán (algorithm / 알고리즘) chỉ là một khối (block / 블록) trong luồng (flow / 흐름) này. Nếu dữ liệu (data / 데이터) mục tiêu (target / 대상) sai, leakage tồn tại hoặc chỉ số (metric / 지표) không phản ánh triển khai (deployment / 배포), đổi Random Forest thành neural mạng (network / 네트워크) không giải quyết nguyên nhân gốc (root cause / 근본 원인).
 
-> **Chuyển mạch:** Khi mental model đã tách representation, loss và generalization, **Neural Networks** tiếp nhận đúng phần cần mở rộng thay vì lặp lại toàn bộ machine-learning foundation.
+Khi representation, loss và generalization đã được tách rõ, Neural Networks có thể được đọc như phần mở rộng về cơ chế biểu diễn và tối ưu, thay vì lặp lại toàn bộ foundation.
 
 ## Chuyển tiếp sang Neural Networks
 

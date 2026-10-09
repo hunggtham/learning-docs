@@ -16,7 +16,7 @@ Các ideas ở đây không bị Machine học tập (learning / 학습) thay th
 6. [Planning](./05_planning.md) — hành động (action / 동작) preconditions/effects, STRIPS/PDDL, partial-order/HTN/temporal planning, kiểm tra hợp lệ (validation / 검증), thực thi (execution / 실행) và replanning.
 7. [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md) — expected utility, MDP/POMDP, Bellman equations, bandits, giá trị (value / 값) of thông tin (information / 정보) và rủi ro (risk / 위험).
 
-> **Chuyển mạch:** **Chapters** xây state space, heuristic và planning operators; **Dependency map** cho biết mỗi thuật toán cần giả định nào trước khi rút ra **mental model chung**.
+Các chapter xây state space, heuristic và planning operators; dependency map làm rõ giả định nào đứng trước mỗi thuật toán để mental model chung không bị đứt.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -38,7 +38,7 @@ flowchart TD
     P --> AG
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Một mô hình tư duy (mental model / 사고 모델) chung** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dependency map cho biết mỗi phương pháp đang giả định gì về state, action và uncertainty. Mental model chung này là cầu nối để đọc cách các hệ thống AI hiện đại học hoặc tìm kiếm trong cùng không gian bài toán.
 
 ## Một mô hình tư duy (mental model / 사고 모델) chung
 
@@ -82,7 +82,7 @@ Quyết định (decision / 결정) lý thuyết (theory / 이론) thêm probabi
 
 Machine học tập (learning / 학습) có thể học heuristic, chuyển tiếp (transition / 전이) mô hình (model / 모델), giá trị (value / 값) hoặc chính sách (policy / 정책) từ dữ liệu (data / 데이터), nhưng không thay đổi bản chất các bài toán (problem / 문제) structures ở trên.
 
-> **Chuyển mạch:** **Mental model chung** nối search và planning với modern AI qua state, objective và feedback; **Connections** ghi rõ phần nào thuộc owner của agent, RL hoặc systems.
+Search và planning gặp AI hiện đại ở state, objective và feedback; phần Connections tiếp tục đường đi đó tới owner của agents, reinforcement learning và systems.
 
 ## Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI
 
