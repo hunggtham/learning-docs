@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa xác định cấu trúc dữ liệu qua hiệu quả lưu trữ và thao tác. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại thuật ngữ trung tâm, trước khi nối nó với các cấu trúc tuyến tính và phi tuyến cụ thể.
 
 ## 핵심 키워드 (Từ khóa)
 
 자료구조
 
-> **Chuyển mạch:** Ở chặng này của **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ khóa trên gọi tên đối tượng chung của bài. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ đặt lựa chọn cấu trúc dữ liệu cạnh cách xử lý song song ở bài trước, để thấy thao tác và mô hình lưu trữ ảnh hưởng lẫn nhau.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)**에서 만든 기준을 이어받아 **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi có mối liên hệ với bài trước, **읽는 방법 (Cách đọc)** sẽ hướng dẫn so sánh từng cấu trúc bằng thao tác, điều kiện và chi phí, thay vì xem chúng như một danh sách tên gọi.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **023 & 024: 자료구조 (Data Structur
 
 ---
 
-> **Chuyển mạch:** Trong **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, **읽는 방법 (Cách đọc)** nêu điều cần giải thích; **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** sẽ đi từ định nghĩa sang cấu trúc tuyến tính và phi tuyến, rồi chốt bằng trade-off cụ thể. Hãy giữ các trade-off đó làm đầu vào khi sang thiết kế thuật toán.
 
 ## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
 
@@ -46,7 +46,7 @@ Từ **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's
 
 ### 선형 구조 (Linear - Nối tiếp nhau)
 
-Các ý ngay dưới **선형 구조 (Linear - Nối tiếp nhau)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **선형 구조 (Linear - Nối tiếp nhau)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “선형 구조 (Linear - Nối tiếp nhau)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 

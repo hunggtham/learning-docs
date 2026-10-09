@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt thiết kế thuật toán cạnh chi phí tính toán. Phần **핵심 키워드 (Từ khóa)** tiếp theo giữ lại các thuật ngữ để phân biệt những cách thiết kế và cách đo độ phức tạp trước khi đi vào ví dụ.
 
 ## 핵심 키워드 (Từ khóa)
 
 알고리즘, 설계, 기법과, 시간, 복잡도
 
-> **Chuyển mạch:** Ở chặng này của **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa trên tách hai câu hỏi: chọn chiến lược giải bài toán nào và chiến lược đó tốn bao nhiêu tài nguyên. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối hai câu hỏi này với các cấu trúc dữ liệu vừa học.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**에서 만든 기준을 이어받아 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối thuật toán với cấu trúc dữ liệu, **읽는 방법 (Cách đọc)** sẽ hướng dẫn theo dõi bất biến, điều kiện áp dụng và bậc tăng trưởng, để so sánh phương án bằng bằng chứng thay vì trực giác.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **027: 알고리즘 설계 기법과 시
 
 ---
 
-> **Chuyển mạch:** Trong **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** sẽ đối chiếu từng paradigm với độ phức tạp và giới hạn của nó. Hãy giữ tiêu chí chi phí và khả năng tái dùng khi chuyển sang kỹ thuật reuse.
 
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
