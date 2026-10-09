@@ -6,6 +6,8 @@ Thư viện này học DevOps và kỹ thuật nền tảng (platform engineerin
 
 DevOps ở đây được hiểu là mô hình kỹ thuật và tổ chức làm giảm khoảng cách giữa phát triển và vận hành. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) là bước tiếp theo khi các năng lực lặp lại được đóng gói thành một nền tảng nội bộ có giao diện tự phục vụ, đường đi chuẩn và guardrail để nhiều nhóm (team / 팀) sử dụng mà không phải trở thành chuyên gia hạ tầng.
 
+[Source Ledger](SOURCES.md) ghi source owner, product/version/provider/region boundary và quy trình refresh cho platform semantics, cloud/tool behavior và production evidence. Docs “current” không tự chứng minh default hay runtime behavior của mọi môi trường.
+
 Thư viện có conceptual ranh giới (boundary / 경계) riêng vì đối tượng nghiên cứu là **delivery hệ thống (system / 시스템) và operating nền tảng (platform / 플랫폼)**. Những cơ chế nền sâu hơn vẫn thuộc chuẩn gốc (canonical / 정본) `computer_science/`. Ví dụ, Linux tiến trình (process / 프로세스), không gian tên (namespace / 네임스페이스)/cgroup, TLS, phân tán (distributed / 분산) consensus, secrets, triển khai (deployment / 배포) lý thuyết (theory / 이론) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) không được viết lại từ đầu; chapter DevOps chỉ cung cấp mô hình tư duy (mental model / 사고 모델) đủ dùng rồi link sang chuẩn gốc (canonical / 정본) chapter tương ứng.
 
 ## Cách đọc

@@ -8,6 +8,8 @@ Thư viện này được tổ chức theo **khái niệm (concept), quan hệ p
 
 Một số miền có hai lớp tài liệu: **chapter nền tảng** cung cấp mô hình tư duy (mental model / 사고 모델) và thuật ngữ trước, sau đó **deep dive** đi vào cơ chế triển khai, accounting, dạng thất bại (failure mode / 실패 모드) và công cụ quan sát. Cách tách này giúp nội dung đủ sâu mà không biến một tệp (file / 파일) thành cuốn sách khổng lồ.
 
+Phân biệt kernel, POSIX, GNU user space, systemd và distro là điều kiện của mọi claim versioned; xem [Source Ledger](SOURCES.md) để biết source owner, release boundary và gap cần `NEEDS_SOURCE`.
+
 ## Bản đồ đọc và quan hệ phụ thuộc
 
 Linux nên được học như một hệ thống nhiều lớp: kernel tạo primitive, filesystem và process tổ chức tài nguyên, shell và networking đưa chúng vào thao tác, còn production kiểm tra hành vi dưới tải và lỗi. Sơ đồ dưới đây cho thấy thứ tự chuyển từ khái niệm tới vận hành.

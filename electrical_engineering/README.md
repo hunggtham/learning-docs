@@ -17,6 +17,8 @@ Physics
 
 Physics hiện đã có Maxwell, circuits, transmission line, semiconductor, MOSFET và tín hiệu (signal / 신호)/noise. Thư viện này không lặp lại các chapter đó; nó dùng chúng làm prerequisite rồi đi tiếp vào kỹ thuật (engineering / 엔지니어링) abstractions, sự đánh đổi (trade-off / 트레이드오프) và giao diện (interface / 인터페이스).
 
+Nguồn, version/edition và currentness boundary của standards, datasheet, measurement và lab nằm trong [Source Ledger](SOURCES.md). Nếu thiếu điều kiện đo hoặc authority phù hợp, giữ claim ở trạng thái `NEEDS_SOURCE`.
+
 ## Phạm vi chuẩn gốc (canonical / 정본)
 
 ```text
