@@ -1,5 +1,7 @@
 # Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc
 
+Mọi claim có thể thay đổi về luật, visa, lao động, nhà ở, thuế hoặc thủ tục phải đọc kèm [SOURCES — nguồn chính thức và chính sách cập nhật](./SOURCES.md).
+
 > **Mạch đọc:** README này là owner của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**. Route đi từ phạm vi và bản đồ nội dung → nhà nước, pháp luật, lao động, nhà ở, visa và đời sống → tình huống/checklist → cơ quan, nguồn chính thức và cập nhật, để người đọc đi từ hệ thống tới hành động cụ thể.
 
 > **Korea Law, Civic & Everyday Life thư viện kiến thức (knowledge library / 지식 라이브러리)**

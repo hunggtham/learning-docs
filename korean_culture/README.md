@@ -1,5 +1,7 @@
 # Korean Culture — Master kiến thức (knowledge / 지식) Book
 
+Provenance, source ownership và ranh giới currentness nằm trong [source ledger](./SOURCES.md); phần KIIP có ledger riêng tại [korean_culture/kiip/SOURCES.md](./kiip/SOURCES.md).
+
 > **Mạch đọc:** Đây là README owner của **Korean Culture — Master Knowledge Book**. Route đọc đi từ hệ thống văn hóa/lịch sử → quan hệ/ngôn ngữ/đời sống → vùng miền/truyền thông → biến đổi đương đại → glossary, naming và reference map.
 
 Bộ tài liệu Markdown chuyên sâu bằng tiếng Việt về **Văn hoá Hàn Quốc (한국문화 / Korean Culture)**, được tổ chức theo **quan hệ phụ thuộc khái niệm (conceptual dependency)** và **tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, không theo Beginner → Intermediate → Advanced.

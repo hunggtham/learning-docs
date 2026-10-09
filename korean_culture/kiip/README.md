@@ -1,5 +1,7 @@
 # KIIP exam notes — 한국사회 이해
 
+Phạm vi kỳ thi, policy và nguồn hiện tại được quản lý trong [Sources & Provenance](./SOURCES.md); PDF tóm tắt chỉ là đầu vào lịch sử/reference.
+
 > **Mạch đọc:** README này là owner của **KIIP exam notes — 한국사회 이해**. Bắt đầu ở **Cấu trúc hiện tại**, đi theo **Backbone 50 bài**, rồi dùng nhãn `공통`, `귀화용 심화`, `현재 확인` để chọn phạm vi và kiểm tra fact; quay lại README khi cần định vị bài học, nguồn hoặc chapter Korean Culture chiều sâu.
 
 Đây là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP trong repository**, nằm trực tiếp trong `korean_culture/`. Nội dung được tổng hợp theo chủ đề để học một mạch; **không chia theo mức (level / 수준), không tạo cây thư mục riêng cho từng loại kỳ thi**.

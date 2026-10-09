@@ -1,5 +1,13 @@
 # Sources & Provenance — KIIP inside Korean Culture
 
+| Trường | Giá trị |
+|---|---|
+| Owner | `korean_culture/kiip/` cho syllabus/lesson; file này giữ provenance và currentness |
+| Baseline review | 2026-10-09; các tài liệu/notice có ngày riêng bên dưới |
+| Claim types | exam scope/schedule, immigration/citizenship policy, statute, official statistics, learner-provided study summary |
+| Currentness boundary | lịch thi, giáo trình áp dụng kỳ thi, luật, visa, quốc tịch, lãi suất/bảo hiểm và statistic phải xác minh lại theo notice/nguồn đúng kỳ; PDF người dùng cung cấp là historical/reference, không tự chứng minh current |
+| Escalation | claim chưa có nguồn chính thức đúng phạm vi ghi `NEEDS_SOURCE`; claim có thể ảnh hưởng quyền thi/cư trú phải `REVIEW_REQUIRED` trước publication |
+
 > **Mạch đọc:** [README](./README.md) là owner của **Sources & Provenance — KIIP inside Korean Culture**; dùng README để phân biệt lesson owner với provenance owner. Từ **Uploaded KIIP study summaries** nối sang official/current references, correction notes và ngày xác minh, rồi quay lại bài học để giữ giải thích tiếng Việt nhưng không biến nguồn thành nội dung học thuộc.
 
 ## Uploaded KIIP study summaries

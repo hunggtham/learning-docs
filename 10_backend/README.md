@@ -1,5 +1,7 @@
 # Thư viện kiến thức phát triển phía máy chủ (backend development knowledge library / 백엔드 개발 지식 라이브러리)
 
+Nguồn chuẩn, version boundary và các claim cần kiểm tra lại nằm trong [source ledger](./SOURCES.md).
+
 > **Mạch đọc:** README này là owner cấp domain của **Thư viện kiến thức phát triển phía máy chủ**. **Cách đọc** xác định prerequisite và câu hỏi trung tâm; **Bản đồ nội dung** chỉ rõ chapter nào sở hữu cơ chế, còn các nhánh Java, Spring và Python chỉ là những hiện thực khác nhau của cùng contract backend.
 
 Đây là không gian tên (namespace / 네임스페이스) chuẩn gốc (canonical / 정본) cho Phát triển phía máy chủ (backend development / 백엔드 개발). `backend_core/` giữ các

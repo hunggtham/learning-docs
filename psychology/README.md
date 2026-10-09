@@ -1,5 +1,7 @@
 # Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+Đọc [source ledger](./SOURCES.md) cùng chapter khi claim liên quan evidence, mental health hoặc intervention; ledger ghi rõ giới hạn suy luận và trạng thái `NEEDS_SOURCE`.
+
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước bắt buộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của psychology, rồi nối các domain theo dependency thay vì danh sách môn rời.
 
 Thư viện này tổ chức Psychology theo **concept → phụ thuộc (dependency / 의존성) → cơ chế (mechanism / 메커니즘) → bằng chứng (evidence / 증거) → limitation → liên kết (connection / 연결)**, không chia Beginner/Intermediate/Advanced và không coi số lượng tệp (file / 파일) là mục tiêu.

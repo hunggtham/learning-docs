@@ -1,8 +1,16 @@
 # SOURCES — Nguồn chính thức và chính sách cập nhật
 
+| Trường | Giá trị |
+|---|---|
+| Owner | `korea_law_civic_life/` cho lesson; file này giữ source/currentness contract |
+| Baseline review | 2026-09-21 (các kiểm tra luật ghi ngày riêng trong từng mục); cổng luật được kiểm tra lại 2026-10-09 |
+| Claim types | statute/effective date, agency procedure, public-service route, explanatory secondary guidance |
+| Currentness boundary | claim về luật, visa, lao động, nhà ở, thuế, phúc lợi và thủ tục phải có văn bản/notice cụ thể, jurisdiction và ngày hiệu lực; trang chủ không đủ làm bằng chứng |
+| Escalation | chưa có nguồn cụ thể hoặc có thể ảnh hưởng quyền/nghĩa vụ/tiền/cư trú thì ghi `NEEDS_SOURCE`/`REVIEW_REQUIRED`, không suy đoán |
+
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **SOURCES — Nguồn chính thức và chính sách cập nhật**. Route đi từ pháp luật/pháp chế → cấu trúc nhà nước và civic → lao động, visa, thuế, nhà ở và đời sống → kiểm tra ngày, cơ quan và đường dẫn → cập nhật khi policy đổi, để provenance luôn đi cùng nội dung.
 
-**Lần kiểm tra nguồn:** 2026-09-21.
+**Lần kiểm tra claim-specific:** 2026-09-21; **kiểm tra lại cổng luật gốc:** 2026-10-09. Các claim cụ thể vẫn phải đọc ngày hiệu lực trong mục tương ứng.
 
 Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc, cơ quan tư pháp, cơ quan lập pháp và các tổ chức công có thẩm quyền. Link có thể thay đổi đường dẫn con; khi link con hỏng, hãy vào lĩnh vực (domain / 도메인) gốc và tìm bằng thuật ngữ Hàn trong tệp (file / 파일) tương ứng.
 

@@ -1,5 +1,7 @@
 # Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)
 
+Xem [source ledger](./SOURCES.md) để phân biệt protocol/invariant với implementation, version và dữ liệu time-sensitive.
+
 > **Mạch đọc:** README này là owner của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**. Route đi từ foundations và lifecycle → modeling/storage/transformation → batch/streaming/orchestration → reliability, governance, privacy và ML features → coverage/audit, để dữ liệu đi từ raw input tới sản phẩm có thể kiểm chứng.
 
 Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) là lĩnh vực xây dựng các hệ thống biến dữ liệu thô, phân tán và thường không đáng tin cậy thành dữ liệu có cấu trúc, có ngữ nghĩa, có thể kiểm chứng và đủ ổn định để phục vụ phân tích, sản phẩm dữ liệu, machine học tập (learning / 학습) và vận hành doanh nghiệp.
