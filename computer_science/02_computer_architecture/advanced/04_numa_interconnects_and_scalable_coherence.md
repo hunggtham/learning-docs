@@ -10,7 +10,7 @@ Nếu mọi lõi chia sẻ một bus bộ nhớ duy nhất, số lõi tăng sẽ
 
 Độ trễ truy cập từ xa không chỉ là một số nanosecond cố định cộng thêm. Nó còn phụ thuộc vào băng thông của interconnect, cấu trúc liên kết (topology), hàng đợi và lưu lượng do các lõi khác tạo ra.
 
-> **Chuyển mạch:** Uniform access không scale mãi vì distance và coherence traffic; first-touch đặt page gần nơi dùng, còn thread/CPU affinity giữ locality khi NUMA mở rộng.
+Uniform access không scale mãi vì distance, bandwidth và coherence traffic tăng theo số core/socket. Vì vậy first-touch quyết định page nằm ở đâu, còn thread/CPU affinity giữ computation gần dữ liệu sau khi placement đã được chọn.
 
 ## Chính sách chạm đầu tiên và vị trí dữ liệu
 
@@ -18,7 +18,7 @@ Hệ điều hành thường cấp trang vật lý theo **chính sách chạm đ
 
 Vì vậy chiến lược khởi tạo có thể ảnh hưởng hiệu năng không phải vì chi phí tính toán của bước khởi tạo, mà vì nó quyết định vị trí vật lý của dữ liệu. Khởi tạo song song đôi khi là cách phân bố trang bộ nhớ đúng theo nơi dữ liệu sẽ được xử lý.
 
-> **Chuyển mạch:** Ở chặng này của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Chính sách chạm đầu tiên và vị trí dữ liệu** nêu điều cần giải thích; **Gắn luồng với CPU** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Interconnect và thư mục nhất quán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+First-touch biến lúc khởi tạo thành quyết định placement lâu dài. Placement chỉ có ích nếu scheduler giữ thread gần page; khi locality và load balance xung đột, interconnect cùng coherence directory quyết định chi phí còn lại.
 
 ## Gắn luồng với CPU
 
@@ -26,7 +26,7 @@ Bộ lập lịch có thể di chuyển luồng giữa các lõi để cân bằ
 
 Không nên ghim mọi luồng một cách máy móc. Ghim sai có thể tạo mất cân bằng hoặc khiến bộ lập lịch không phản ứng được khi tải thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Interconnect và thư mục nhất quán** tiếp nhận điểm tựa từ **Gắn luồng với CPU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia sẻ giả ở cấp NUMA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CPU affinity giảm remote access bằng cách giữ thread gần dữ liệu, nhưng không xóa traffic giữa các node. Interconnect và directory phải xử lý traffic đó; cache line được nhiều node ghi sẽ lộ chi phí qua false sharing ở cấp NUMA.
 
 ## Interconnect và thư mục nhất quán
 
@@ -34,7 +34,7 @@ Cơ chế dò tìm quảng bá (snooping) đơn giản phải gửi yêu cầu n
 
 Thư mục cũng có chi phí: cần thêm siêu dữ liệu, thời gian tra cứu và lưu lượng khi một dòng được chia sẻ rộng. Một dòng bộ nhớ đệm (cache / 캐시) có thể ghi và được nhiều socket cùng truy cập có thể liên tục đổi quyền sở hữu giữa các nút, tạo hiện tượng “ping-pong” và trở thành nút thắt cổ chai.
 
-> **Chuyển mạch:** Trong **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Chia sẻ giả ở cấp NUMA** tiếp nhận điểm tựa từ **Interconnect và thư mục nhất quán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở dữ liệu và JVM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Directory làm coherence có thể mở rộng hơn snooping, nhưng ownership ping-pong vẫn đắt khi cùng line bị nhiều node cập nhật. Database buffer và JVM heap thường phơi bày pattern này ở workload thực.
 
 ## Chia sẻ giả ở cấp NUMA
 
@@ -42,7 +42,7 @@ Chia sẻ giả (false sharing) trong cùng một socket đã tốn kém; qua nh
 
 Đệm khoảng cách hoặc căn chỉnh dữ liệu (padding/alignment) có thể giúp với các bộ đếm rất nóng, nhưng làm tăng lượng bộ nhớ sử dụng. Quyết định này phải dựa trên đo lường thay vì áp dụng cho mọi cấu trúc.
 
-> **Chuyển mạch:** Ở chặng này của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Chia sẻ giả ở cấp NUMA** nêu điều cần giải thích; **Cơ sở dữ liệu và JVM** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mở rộng một máy và mở rộng nhiều máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False sharing biến topology thành chi phí của một biến tưởng như độc lập. Database và JVM có thể giảm chi phí bằng placement, allocator hoặc GC policy, nhưng khi mở rộng vượt một máy, network sẽ thay thế interconnect với latency lớn hơn.
 
 ## Cơ sở dữ liệu và JVM
 
@@ -50,7 +50,7 @@ Vùng đệm lớn của cơ sở dữ liệu, vùng nhớ động (heap / 힙) 
 
 Thu gom rác song song hoặc đồng thời cũng tương tác với topology: các luồng thu gom quét đối tượng ở nút từ xa sẽ tạo thêm lưu lượng băng thông. Vì vậy một số môi trường thực thi và bộ cấp phát cung cấp chính sách nhận biết NUMA để cải thiện tính cục bộ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Cơ sở dữ liệu và JVM** nêu điều cần giải thích; **Mở rộng một máy và mở rộng nhiều máy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DB buffer, JVM heap và GC thread đều biến placement thành một phần của performance contract. So sánh một máy với nhiều máy giúp thấy cùng nguyên tắc locality, ownership và giảm shared state ở hai quy mô khác nhau.
 
 ## Mở rộng một máy và mở rộng nhiều máy
 
@@ -58,7 +58,7 @@ NUMA cho thấy một máy chủ lớn không phải một khối đồng nhất
 
 Mở rộng ra nhiều máy qua mạng có độ trễ lớn hơn rất nhiều, nhưng mô hình tư duy tương tự: đặt tính toán gần dữ liệu, giảm trạng thái dùng chung có thể thay đổi và tránh giao tiếp không cần thiết.
 
-> **Chuyển mạch:** Trong **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Mô hình tư duy** gom các mảnh từ **Mở rộng một máy và mở rộng nhiều máy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+NUMA biến vị trí thành một biến của invariant hiệu năng: dữ liệu phải gần nơi dùng, và shared state phải trả chi phí theo topology. Mô hình đó là điểm nối để đọc các hệ thống phân tán mà không coi một máy lớn là một memory pool đồng nhất.
 
 ## Mô hình tư duy
 
