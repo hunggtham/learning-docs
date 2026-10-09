@@ -74,6 +74,29 @@
     const state = readDocState(path);
     return Math.max(0, Math.min(100, Number(state.progressPct) || 0));
   }
+
+  function renderContentRevisionNotice(path, header) {
+    const state = readDocState(path);
+    let notice = header.querySelector('#los-content-updated');
+    if (!state.contentUpdated) {
+      notice?.remove();
+      return;
+    }
+    if (!notice) {
+      notice = document.createElement('div');
+      notice.id = 'los-content-updated';
+      notice.className = 'los-content-updated';
+      header.append(notice);
+    }
+    const previous = Math.round(Number(state.previousProgressPct ?? state.progressPct) || 0);
+    notice.innerHTML = `<span>Nội dung đã cập nhật · tiến độ cũ ${previous}%</span><button class="los-action" type="button">Đặt lại 0%</button>`;
+    notice.querySelector('button').onclick = () => {
+      const current = readDocState(path);
+      writeDocState(path, { progressPct: 0, status: 'reading', contentUpdated: false, previousProgressPct: current.progressPct });
+      toast('Đã đặt lại tiến độ cho phiên bản mới.');
+      renderContentRevisionNotice(path, header);
+    };
+  }
   function lastOpenedFor(path) {
     const state = readDocState(path);
     const progress = progressFor(path);
@@ -904,6 +927,7 @@
       renderRelated(doc, content);
       enhanceSpeechReader(doc, content, path);
     }
+    renderContentRevisionNotice(path, header);
   }
 
   function exportSnapshot() {
@@ -1047,6 +1071,7 @@
     if (app) new MutationObserver(scheduleEnhance).observe(app, { childList: true, subtree: true });
     addEventListener('hashchange', scheduleEnhance);
     addEventListener('study-shelf-read-later-change', scheduleEnhance);
+    addEventListener('learning-progress:content-updated', scheduleEnhance);
     addEventListener('online', () => toast('Đã online trở lại.'));
     addEventListener('offline', () => toast('Đang offline. Tài liệu đã cache vẫn đọc được.'));
     addEventListener('beforeinstallprompt', event => { event.preventDefault(); LOS.installPrompt = event; });

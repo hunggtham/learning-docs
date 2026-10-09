@@ -34,13 +34,13 @@ npm run open:local
 
 Lệnh này tạo lại `site/library`, chạy server tại `http://localhost:4173/` và tự mở trình duyệt. Có thể đổi cổng bằng `PORT=5173 npm run open:local`.
 
-Study Library reuses the Supabase project already linked by `planner/study-planner` (`hunggtham/my-study-planner`), project ref `suvknhgjcgeudjqmgzwt`. The project URL therefore defaults to `https://suvknhgjcgeudjqmgzwt.supabase.co`. Without the existing Planner anon/publishable key, the UI stays `Local only` and continues using localStorage.
+Study Library uses the shared learning Supabase project (project ref `suvknhgjcgeudjqmgzwt`). The project URL therefore defaults to `https://suvknhgjcgeudjqmgzwt.supabase.co`. Without a publishable/anon client key, the UI stays `Local only` and continues using localStorage.
 
 To test cloud sync locally:
 
 ```bash
 cp .env.example .env
-# put the existing Study Planner anon/publishable key in .env
+# put the Supabase publishable key in .env
 set -a
 source .env
 set +a
@@ -56,13 +56,15 @@ npm run audit:library
 npm run build:library
 ```
 
+Stable document identity is kept in `content-ids.json`, not in the Markdown filenames. Run `npm run sync:content-ids` after adding or moving published files; it preserves known IDs, records detected aliases, and rebuilds the catalogue. The generated catalogue carries both `contentId` and a SHA-256 `contentRevision`. A moved document keeps its progress through the alias path; an edited document keeps its existing percentage but is marked as updated so the reader can reset it deliberately.
+
 ## Shared Supabase progress
 
 Apply `supabase/migrations/20260924111500_create_learning_progress.sql` to the same Supabase project used by Study Planner. The equivalent migration is also stored in `hunggtham/my-study-planner` as `supabase/migrations/20260924_shared_learning_progress.sql`, so it is part of the linked Planner project's migration chain. Do not create a separate Supabase project.
 
-The shared table is `public.learning_progress`; it is intentionally generic so `study-library`, `languages-docs`, and future apps can share it.
+The shared table is `public.learning_progress`; it is intentionally generic so `my-learning`, `languages-docs`, and future apps can share it.
 
-Study Library uses `app_id = "study-library"`. Document records use a namespace derived from the document category and `content_type = "document"`. If the catalogue provides an explicit `contentId`, it is used directly; otherwise Study Library derives a deterministic ID from stable document metadata, not from the URL/path. `content_path` is stored only as a migration/display hint.
+Study Library uses `app_id = "my-learning"`. Document records use a namespace derived from the document category and `content_type = "document"`. Each published document receives a stable `contentId` from `content-ids.json`; explicit `contentId`/`contentAliases` values in `library.config.json` can seed a new registry entry when needed. The app-id migration preserves the existing content-ID seed so existing progress rows continue to match. `content_path` is stored only as a migration/display hint, while `contentRevision` detects content changes without changing identity.
 
 The browser abstraction in `site/progress-sync.js` exposes:
 
@@ -81,7 +83,7 @@ Legacy localStorage is migrated automatically after the document catalogue loads
 
 Snapshot v2 uses `format = "shared-learning-progress"` and exports generic `learning_progress` records plus the legacy `study-shelf-*` values. It preserves `app_id`, `content_namespace`, `content_type`, `content_id`, `schema_version`, every common schema field present, and the complete `state` object.
 
-Unknown `state` keys are deep-preserved during merge. Records from another app such as `languages-docs` are cached and re-exported unchanged; Study Library only writes its own `state.study_library` keys. If the user is signed in, imported records are marked dirty and uploaded to the shared table. Old version-1 Study Shelf snapshot files remain importable.
+Unknown `state` keys are deep-preserved during merge. Records from another app such as `languages-docs` are cached and re-exported unchanged; Study Library writes its own `state.my_learning` keys and reads legacy `state.study_library` keys during migration. If the user is signed in, imported records are marked dirty and uploaded to the shared table. Old version-1 Study Shelf snapshot files remain importable.
 
 See `/SHARED_PROGRESS_SCHEMA.md` for the shared contract.
 
@@ -93,12 +95,13 @@ The migration enables RLS and grants authenticated users access only when `user_
 
 ## GitHub Pages configuration
 
-The Planner project URL is already used as the safe fallback. Add the existing Study Planner client key as a GitHub Actions Secret:
+The shared project URL is already used as the safe fallback. Add the Supabase publishable client key as a GitHub Actions Secret:
 
-- `VITE_SUPABASE_ANON_KEY` — required for cloud auth/sync
+- `VITE_SUPABASE_PUBLISHABLE_KEY` — preferred client key for cloud auth/sync
+- `VITE_SUPABASE_ANON_KEY` — legacy fallback for existing deployments
 - `VITE_SUPABASE_URL` — optional override; when absent the Planner project URL above is used
 
-The Pages workflow injects environment values only while generating `site/supabase-config.js`. That generated file is ignored by git. If the anon key is absent, deployment still succeeds in local-only mode.
+The Pages workflow injects environment values only while generating `site/supabase-config.js`. That generated file is ignored by git. If the client key is absent, deployment still succeeds in local-only mode.
 
 ## Publication safety
 
