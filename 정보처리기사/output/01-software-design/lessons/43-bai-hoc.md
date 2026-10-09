@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **1. 회복 (Recovery)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định SQL, view, catalog và transaction phối hợp ra sao; từ khóa khoanh vùng câu lệnh, metadata và tính nhất quán.
 
 ## 핵심 키워드 (Từ khóa)
 
 객체, 시스템, 개념
 
-> **Chuyển mạch:** Ở chặng này của **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt SQL trên nền database structure; cách đọc tiếp theo giúp tách metadata, object và transaction boundary.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)**에서 만든 기준을 이어받아 **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần SQL và transaction dùng khung đó để nối thao tác với consistency.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **6. SQL과 객체, 시스템 개념 (SQ
 
 ---
 
-> **Chuyển mạch:** Trong **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng ranh giới giữa câu lệnh, metadata và transaction; khi sang recovery, hãy giữ lại trạng thái cần bảo vệ.
 
 ## 6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)
 
