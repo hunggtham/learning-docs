@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định interface security bảo vệ luồng gọi qua mạng bằng xác thực, mã hóa và kiểm soát truy cập ra sao; từ khóa khoanh vùng endpoint và threat.
 
 ## 핵심 키워드 (Từ khóa)
 
 인터페이스, 보안, 네트워크, 영역
 
-> **Chuyển mạch:** Ở chặng này của **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt interface security trên nền query/service boundary; cách đọc tiếp theo giúp theo dõi tài sản, kẻ tấn công và lớp phòng vệ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**에서 만든 기준을 이어받아 **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần network security dùng khung đó để nối request với policy và failure response.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **24. 인터페이스 보안 - 네트워
 
 ---
 
-> **Chuyển mạch:** Trong **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng ranh giới giữa mã hóa kênh và authorization; khi sang verification tools, hãy kiểm tra cả cấu hình bảo mật lẫn hành vi endpoint.
 
 ## 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
 

@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **9. 스키마 3계층 (Three-Schema Architecture)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **14. 파레토 법칙 (Pareto Principle)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **9. 스키마 3계층 (Three-Schema Architecture)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt external, conceptual và internal schema theo lớp nhìn dữ liệu; từ khóa khoanh vùng mapping, independence và storage.
 
 ## 핵심 키워드 (Từ khóa)
 
 스키마, 계층
 
-> **Chuyển mạch:** Ở chặng này của **9. 스키마 3계층 (Three-Schema Architecture)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt three-schema architecture trên nền interface contract và verification; cách đọc tiếp theo giúp theo dõi thay đổi ở lớp nào.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**에서 만든 기준을 이어받아 **9. 스키마 3계층 (Three-Schema Architecture)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **9. 스키마 3계층 (Three-Schema Architecture)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 스키마 3계층 (Three-Schema Architecture)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần schema dùng khung đó để nối view người dùng với mô hình và lưu trữ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **9. 스키마 3계층 (Three-Schema Arc
 
 ---
 
-> **Chuyển mạch:** Trong **9. 스키마 3계층 (Three-Schema Architecture)**, **9. 스키마 3계층 (Three-Schema Architecture)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giá trị data independence và giới hạn mapping; khi sang Pareto, hãy chuyển từ kiến trúc dữ liệu sang cách ưu tiên nguyên nhân.
 
 ## 9. 스키마 3계층 (Three-Schema Architecture)
 

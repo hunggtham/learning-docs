@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 스키마 3계층 (Three-Schema Architecture)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định tool kiểm tra interface implementation đối chiếu contract, request/response và lỗi như thế nào; từ khóa khoanh vùng schema, stub và assertion.
 
 ## 핵심 키워드 (Từ khóa)
 
 인터페이스, 구현, 검증, 도구
 
-> **Chuyển mạch:** Ở chặng này của **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt verification tools trên nền interface security và test case; cách đọc tiếp theo giúp tách lỗi contract khỏi lỗi môi trường.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**에서 만든 기준을 이어받아 **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần verification tool dùng khung đó để nối input, assertion và evidence.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **26. 인터페이스 구현 검증 도�
 
 ---
 
-> **Chuyển mạch:** Trong **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giới hạn tool không thể thay thế review contract; khi sang schema architecture, hãy chuyển từ kiểm tra endpoint sang tổ chức dữ liệu.
 
 ## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
 
