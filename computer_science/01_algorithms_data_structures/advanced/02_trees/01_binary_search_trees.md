@@ -31,7 +31,7 @@ Nếu cây balanced, `h = O(log n)`. Nếu cây thoái hóa thành chuỗi (chai
 
 Đây là insight trung tâm: BST không bảo đảm logarithmic thời gian (time / 시간) chỉ nhờ bất biến thứ tự. Muốn trường hợp xấu nhất logarithmic còn cần balancing chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **Tìm kiếm (search / 검색) như một chứng minh bằng loại trừ** tiếp nhận điểm tựa từ **Từ tìm kiếm nhị phân trên mảng tới BST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Insert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Khi tìm kiếm chuyển từ mảng sang cây, mỗi phép so sánh loại bỏ một nửa hướng đi có thể có trong cây con hiện tại. Chèn phần tử tiếp theo chỉ là mở rộng cùng đường đi đó, đồng thời phải giữ bất biến thứ tự.
 
 ## Tìm kiếm (search / 검색) như một chứng minh bằng loại trừ
 
@@ -59,7 +59,7 @@ TreeNode *bst_search(TreeNode *root, int key) {
 
 Nếu thao tác chèn/xóa phá bất biến dù chỉ tại một nút, mã vẫn có thể biên dịch và chạy nhưng lập luận “bỏ qua cây con này là an toàn” không còn đúng.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **Insert** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) như một chứng minh bằng loại trừ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **phần tử trùng chính sách không phải chi tiết nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Insert đi theo đúng đường tìm kiếm rồi gắn nút mới tại vị trí rỗng; vì vậy thứ tự các khóa vẫn được bảo toàn. Với khóa trùng, đường đi không còn tự xác định, nên chính sách duplicate phải được chọn trước.
 
 ## Insert
 
@@ -83,7 +83,7 @@ Tính đúng đắn đến từ việc vị trí chèn được xác định b�
 
 Một cách nhìn hữu ích là mỗi nút chia numeric/thứ tự (order / 순서) không gian (space / 공간) thành các interval nhỏ hơn. đường tìm kiếm không chỉ đi qua các nút; nó liên tục thu hẹp interval hợp lệ của khóa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **phần tử trùng chính sách không phải chi tiết nhỏ** tiếp nhận điểm tựa từ **Insert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Minimum, maximum, successor, predecessor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Chính sách khóa trùng quyết định mỗi thao tác tìm và chèn sẽ đi về nhánh nào; nếu không nhất quán, cây không còn có ngữ nghĩa ordered set rõ ràng. Khi thứ tự đã được xác định, ta có thể tìm cực trị và phần tử kế trước/kế sau bằng các đường đi đơn giản.
 
 ## phần tử trùng chính sách không phải chi tiết nhỏ
 
@@ -99,7 +99,7 @@ Chính sách thứ hai thường rõ ràng hơn nếu khóa đại diện cho đ
 
 Trong hệ thống thực tế map/set sự trừu tượng (abstraction), khóa equality còn liên quan hợp đồng bộ so sánh. Nếu comparator cho rằng hai các khóa bằng nhau (`compare(a,b)==0`) thì ordered set/map thường coi chúng là cùng vị trí thứ tự (order / 순서), dù định danh đối tượng khác.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **Minimum, maximum, successor, predecessor** tiếp nhận điểm tựa từ **phần tử trùng chính sách không phải chi tiết nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delete là thao tác khó nhất của BST cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Các truy vấn cực trị và successor/predecessor chỉ dựa vào bất biến thứ tự và cấu trúc cây con. Xóa khó hơn vì nó phải thay thế một nút mà vẫn giữ đồng thời cả hai điều kiện đó.
 
 ## Minimum, maximum, successor, predecessor
 
@@ -115,7 +115,7 @@ Predecessor đối xứng.
 
 Các thao tác này là lý do ordered map/cây mạnh hơn bảng băm (hash table / 해시 테이블). bảng băm biết “khóa này có không?”, nhưng không tự nhiên biết “khóa gần nhất nhỏ hơn X là gì?”.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **Delete là thao tác khó nhất của BST cơ bản** tiếp nhận điểm tựa từ **Minimum, maximum, successor, predecessor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delete bằng transplant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Delete có ba hình dạng: nút lá, nút có một con, và nút có hai con. Phép transplant tách việc nối lại cây khỏi việc chọn successor, giúp kiểm soát rõ các con trỏ cần cập nhật.
 
 ## Delete là thao tác khó nhất của BST cơ bản
 
@@ -141,7 +141,7 @@ Tại sao successor an toàn?
 
 Có thể dùng predecessor đối xứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **Delete bằng transplant** tiếp nhận điểm tựa từ **Delete là thao tác khó nhất của BST cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inorder traversal và thứ tự đã sắp xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Transplant cho phép thay một nhánh mà không phá vỡ cấu trúc còn lại, nhưng điều đúng đắn cuối cùng vẫn phải được kiểm tra qua thứ tự khóa. Inorder là phép kiểm chứng trực tiếp vì nó phải trả về dãy đã sắp xếp.
 
 ## Delete bằng transplant
 
@@ -165,7 +165,7 @@ else:
 
 Cách này làm rõ bất biến hơn mã (code / 코드) gán con trỏ ad-hoc ở nhiều chỗ.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **Inorder traversal và thứ tự đã sắp xếp** tiếp nhận điểm tựa từ **Delete bằng transplant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **truy vấn khoảng (range query)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Inorder biến BST thành một dãy theo thứ tự mà không cần sao chép toàn bộ cây. Vì vậy range query có thể bỏ qua các cây con nằm hoàn toàn ngoài khoảng và chỉ duyệt phần có khả năng đóng góp.
 
 ## Inorder traversal và thứ tự đã sắp xếp
 
@@ -179,7 +179,7 @@ trả các khóa theo thứ tự đã sắp xếp vì mọi khóa bên trái nh�
 
 Đây là một theorem đơn giản nhưng cực quan trọng: cục bộ bất biến ở từng nút đủ để suy ra toàn cục thứ tự đã sắp xếp của toàn cây.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **truy vấn khoảng (range query)** tiếp nhận điểm tựa từ **Inorder traversal và thứ tự đã sắp xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BST shape phụ thuộc thứ tự chèn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Range query tận dụng thứ tự toàn cục, nhưng chi phí vẫn phụ thuộc chiều cao của cây. Chiều cao ấy không chỉ do số phần tử quyết định; thứ tự chèn có thể làm cùng một tập khóa tạo ra những hình dạng rất khác nhau.
 
 ## truy vấn khoảng (range query)
 
@@ -199,7 +199,7 @@ O(\log n + k)
 
 với `k` là số kết quả đầu ra. Đây là **nhạy theo kích thước đầu ra độ phức tạp (complexity / 복잡도)**: nếu truy vấn cần trả hàng triệu records, không cấu trúc (structure / 구조) nào tránh được chi phí tương ứng với số đầu ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **BST shape phụ thuộc thứ tự chèn** tiếp nhận điểm tựa từ **truy vấn khoảng (range query)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BST vs mảng đã sắp xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Hai BST chứa cùng khóa vẫn có thể có chiều cao khác nhau vì lịch sử chèn khác nhau. So sánh với mảng đã sắp xếp giúp thấy rõ đánh đổi giữa tìm kiếm theo cây, locality của mảng và chi phí cập nhật.
 
 ## BST shape phụ thuộc thứ tự chèn
 
@@ -227,7 +227,7 @@ Tìm kiếm (search / 검색) giờ là tuyến tính (linear / 선형). ngẫu 
 
 AVL, cây đỏ-đen (Red-Black Tree), Treap hoặc các cấu trúc ngẫu nhiên kiểu Skip danh sách (list / 목록) tồn tại vì ta cần kiểm soát cả hình dạng cây, không chỉ thứ tự khóa.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **BST vs mảng đã sắp xếp** tiếp nhận điểm tựa từ **BST shape phụ thuộc thứ tự chèn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BST vs HashMap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mảng đã sắp xếp mạnh ở locality và tìm kiếm chỉ mục, còn BST giữ lợi thế cập nhật theo thứ tự mà không phải dời cả đoạn. HashMap đặt ra một đối chiếu khác: lấy truy cập trung bình nhanh để đổi lấy việc không giữ thứ tự.
 
 ## BST vs mảng đã sắp xếp
 
@@ -253,7 +253,7 @@ node overhead + pointer chasing
 
 Nếu khối lượng công việc tĩnh và đọc nhiều, mảng đã sắp xếp có thể tốt hơn cây dù Big-O tra cứu giống nhau. Đây là ví dụ cho thấy tính cục bộ (locality) và sự thay đổi dữ liệu mẫu quan trọng ngang asymptotic độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **BST vs HashMap** tiếp nhận điểm tựa từ **BST vs mảng đã sắp xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **nút cha con trỏ, iterator và ordered traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** HashMap phù hợp khi chỉ cần ánh xạ khóa–giá trị, còn BST phù hợp khi cần thứ tự, predecessor hoặc range. Các nhu cầu ordered traversal kéo theo câu hỏi thực tế về parent pointer và iterator ổn định.
 
 ## BST vs HashMap
 
@@ -271,7 +271,7 @@ ordered traversal
 
 Câu hỏi đúng không phải “HashMap nhanh hơn TreeMap đúng không?” mà là “khối lượng công việc có cần thứ tự (order / 순서) ngữ nghĩa (semantics / 의미론) không?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **nút cha con trỏ, iterator và ordered traversal** tiếp nhận điểm tựa từ **BST vs HashMap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Augmented BST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Parent pointer giúp iterator đi lên và đi xuống mà không cần tìm lại từ gốc, nhưng mỗi cập nhật phải giữ thêm một liên kết đúng. Khi cần truy vấn giàu hơn, ta có thể lưu thêm summary ở mỗi nút và chuyển sang augmented BST.
 
 ## nút cha con trỏ, iterator và ordered traversal
 
@@ -279,7 +279,7 @@ Nếu nút có nút cha con trỏ, successor/predecessor có thể tìm bằng u
 
 Nhưng nút cha con trỏ tạo thêm bất biến: rotation, delete và transplant đều phải cập nhật nó chính xác. Nếu một trường không cần cho API/khối lượng công việc, đừng thêm chỉ vì “có vẻ tiện”.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **Augmented BST** tiếp nhận điểm tựa từ **nút cha con trỏ, iterator và ordered traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BST như một quyết định (decision / 결정) cây của các phép so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Augmentation biến mỗi nút thành bản tóm tắt của cây con, từ đó hỗ trợ rank, interval hoặc tổng đoạn với chi phí vẫn gắn với chiều cao. Để biết khi nào summary ấy hợp lệ, hãy nhìn BST như một chuỗi quyết định dựa trên các phép so sánh.
 
 ## Augmented BST
 
@@ -308,7 +308,7 @@ k > leftSize + 1  -> go right với k giảm
 
 Raw BST có thể làm được, nhưng muốn bảo đảm `O(log n)` vẫn cần balance.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **Augmented BST** đã nêu tiêu chí phân biệt, còn **BST như một quyết định (decision / 결정) cây của các phép so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Comparator và thứ tự toàn phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Summary chỉ có nghĩa khi mọi phép so sánh đưa một khóa vào đúng miền của nó; đó là bản chất của BST như cây quyết định. Comparator và thứ tự toàn phần tiếp theo sẽ làm rõ hợp đồng toán học đứng sau từng nhánh.
 
 ## BST như một quyết định (decision / 결정) cây của các phép so sánh
 
@@ -316,7 +316,7 @@ Mỗi đường tìm kiếm là một chuỗi (sequence / 시퀀스) các phép 
 
 Điều này nối BST với thông tin lý thuyết (theory / 이론): cây càng lệch, một số các khóa cần nhiều các phép so sánh. Self-balancing cây đang trả maintenance chi phí trong cập nhật để giữ quyết định (decision / 결정) cây không quá sâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **BST như một quyết định (decision / 결정) cây của các phép so sánh** đã nêu tiêu chí phân biệt, còn **Comparator và thứ tự toàn phần** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Persistent BST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Comparator xác định ranh giới của mọi cây con; nếu nó không nhất quán, cả đường tìm kiếm lẫn augmentation đều mất cơ sở. Khi hợp đồng thứ tự đã rõ, persistent BST có thể chia sẻ những cây con không đổi giữa các phiên bản.
 
 ## Comparator và thứ tự toàn phần
 
@@ -340,7 +340,7 @@ Comparator<User> byId = Comparator.comparingLong(User::id);
 
 Tránh comparator kiểu `a.id - b.id` nếu tràn số có thể xảy ra.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **Persistent BST** tiếp nhận điểm tựa từ **Comparator và thứ tự toàn phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성) ghi chú (note / 노트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Persistent BST dùng copy-on-write trên đường tìm kiếm nên các phiên bản cũ vẫn đọc được, miễn comparator và cấu trúc chia sẻ không bị vi phạm. Khi nhiều luồng cùng đọc/ghi, bài toán chuyển từ chia sẻ bất biến sang đồng bộ hóa và ghi chú concurrency.
 
 ## Persistent BST
 
@@ -348,7 +348,7 @@ Nếu cấu trúc (structure / 구조) bất biến sau khi tạo hoặc cần p
 
 Với balanced persistent cây, một cập nhật tạo `O(log n)` các nút mới thay vì bản sao (copy / 복사) cả cây. Đây là chia sẻ cấu trúc — rất quan trọng trong lập trình hàm, versioned dữ liệu (data / 데이터) và persistent trạng thái (state / 상태) các hệ thống.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **Tính đồng thời (concurrency / 동시성) ghi chú (note / 노트)** tiếp nhận điểm tựa từ **Persistent BST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Persistence giảm xung đột bằng cách không sửa các nút đã công bố, còn cấu trúc mutable phải định nghĩa rõ vùng khóa và thời điểm đọc thấy cập nhật. Những hiểu lầm phổ biến thường xuất phát từ việc bỏ qua khác biệt này.
 
 ## Tính đồng thời (concurrency / 동시성) ghi chú (note / 노트)
 
@@ -356,7 +356,7 @@ BST sự thay đổi dữ liệu có thể thay nhiều links và rotations. Con
 
 Trong hệ thống thực tế, concurrent các cây có thể dùng coarse-grained khóa (lock / 잠금), fine-grained khóa (lock / 잠금), optimistic techniques hoặc completely different structures. DSA bất biến vẫn là nền tảng, nhưng tính đồng thời (concurrency / 동시성) thêm một lớp bất biến về atomicity/visibility.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây tìm kiếm nhị phân**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) ghi chú (note / 노트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử BST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Không có bảo đảm `O(log n)` nếu cây lệch, không có thứ tự nếu comparator sai, và không có an toàn luồng chỉ vì thao tác đơn lẻ trông nguyên tử. Kiểm thử BST phải biến các ranh giới đó thành bất biến có thể kiểm tra.
 
 ## Những hiểu lầm phổ biến
 
@@ -370,7 +370,7 @@ Trong hệ thống thực tế, concurrent các cây có thể dùng coarse-grai
 
 “ngẫu nhiên BST thường tốt” không thay thế xác định bảo đảm nếu đầu vào có thể đối kháng.
 
-> **Chuyển mạch:** Trong **cây tìm kiếm nhị phân**, **kiểm thử BST** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Một bộ kiểm thử tốt kiểm tra thứ tự toàn cục, chính sách khóa trùng, cấu trúc sau xóa và các summary sau chuỗi cập nhật. Các kiểm tra đó dẫn tới mô hình tư duy ngắn gọn để chọn BST hay cấu trúc khác.
 
 ## kiểm thử BST
 
@@ -392,7 +392,7 @@ validate(node, low, high)
 
 thay vì chỉ check `left < node < right`, vì violation có thể nằm sâu hơn một tầng.
 
-> **Chuyển mạch:** Ở chặng này của **cây tìm kiếm nhị phân**, **Mô hình tư duy** gom các mảnh từ **kiểm thử BST** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khi chọn BST, hãy hỏi trước về thứ tự cần giữ, chiều cao được bảo đảm ra sao, và thao tác nào chiếm ưu thế trong workload. Những câu hỏi đó khép lại nền tảng BST và mở đường sang các cây cân bằng.
 
 ## Mô hình tư duy
 

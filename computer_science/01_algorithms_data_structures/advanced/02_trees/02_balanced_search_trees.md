@@ -33,7 +33,7 @@ Rotation tồn tại vì nó có thể sửa lớp thứ hai mà không phá l�
 
 Điểm này rất quan trọng: balancing không làm cây “sorted hơn”; nó chỉ ngăn đường tìm kiếm dài quá mức.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **2. Rotation bảo toàn thứ tự thế nào?** tiếp nhận điểm tựa từ **1. Hai lớp bất biến khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. siêu dữ liệu (metadata / 메타데이터) cập nhật (update / 업데이트) thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Cân bằng chiều cao chỉ có giá trị khi rotation vẫn giữ thứ tự khóa. Sau khi chứng minh điều đó, phần kế tiếp theo dõi metadata phải cập nhật thế nào để cả hai bất biến cùng tồn tại.
 
 ## 2. Rotation bảo toàn thứ tự thế nào?
 
@@ -57,7 +57,7 @@ Rotation chỉ đổi quan hệ cha–con cục bộ. Chính vì inorder thứ t
 
 Nếu nút (node / 노드) có siêu dữ liệu (metadata / 메타데이터) như `height`, `size`, `maxEnd`, `sum`, siêu dữ liệu (metadata / 메타데이터) phải được cập nhật đúng thứ tự sau rotation.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **2. Rotation bảo toàn thứ tự thế nào?** nêu điều cần giải thích; **3. siêu dữ liệu (metadata / 메타데이터) cập nhật (update / 업데이트) thứ tự (order / 순서)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. AVL cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Rotation đã giữ được thứ tự, nhưng height, color hoặc size không tự cập nhật theo nó. AVL là ví dụ đầu tiên cho thấy metadata địa phương có thể tạo ra bảo đảm chiều cao toàn cục.
 
 ## 3. siêu dữ liệu (metadata / 메타데이터) cập nhật (update / 업데이트) thứ tự (order / 순서)
 
@@ -75,7 +75,7 @@ Mẫu (pattern / 패턴) tổng quát:
 
 Sai thứ tự có thể tạo cây đúng về BST nhưng sai về augmentation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **3. siêu dữ liệu (metadata / 메타데이터) cập nhật (update / 업데이트) thứ tự (order / 순서)** nêu điều cần giải thích; **4. AVL cây (tree / 트리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Vì sao AVL có chiều cao logarithmic?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** AVL đặt quy tắc cập nhật balance factor vào một cấu trúc cụ thể. Để đánh giá quy tắc ấy, ta cần chứng minh vì sao giới hạn chênh lệch chiều cao dẫn đến chiều cao logarithmic.
 
 ## 4. AVL cây (tree / 트리)
 
@@ -95,7 +95,7 @@ BF(u)\in\{-1,0,1\}
 
 Đây là một bất biến (invariant / 불변식) cân bằng khá chặt.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **5. Vì sao AVL có chiều cao logarithmic?** tiếp nhận điểm tựa từ **4. AVL cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Bốn trường hợp (case / 사례) AVL thực chất là hai hình dạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Cận logarithmic của AVL đến từ truy hồi về cây nhỏ nhất ở mỗi chiều cao. Khi cập nhật làm mất cân bằng, bốn tên trường hợp thực ra quy về hai hình dạng lệch và phép sửa tương ứng.
 
 ## 5. Vì sao AVL có chiều cao logarithmic?
 
@@ -117,7 +117,7 @@ h=O(\log n)
 
 Đây là bản chất của bảo đảm chiều cao AVL.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **5. Vì sao AVL có chiều cao logarithmic?** cho ta quy tắc; **6. Bốn trường hợp (case / 사례) AVL thực chất là hai hình dạng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. AVL Insert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Phân loại hình dạng cho biết rotation nào khôi phục balance mà vẫn giữ thứ tự. AVL Insert là nơi áp dụng trực tiếp quyết định đó trên đường từ nút mới về gốc.
 
 ## 6. Bốn trường hợp (case / 사례) AVL thực chất là hai hình dạng
 
@@ -141,7 +141,7 @@ Không nên học bốn trường hợp (case / 사례) như bốn mẹo. Hãy n
 
 > zig-zag cần biến thành straight line trước, sau đó một rotation chính sửa được imbalance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **6. Bốn trường hợp (case / 사례) AVL thực chất là hai hình dạng** cho ta quy tắc; **7. AVL Insert** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. AVL Delete khó hơn Insert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Insert chỉ làm tăng chiều cao trên một đường đi nên có thể sửa từ dưới lên theo các trường hợp đã biết. Delete có thể làm giảm chiều cao ở nhiều tổ tiên liên tiếp, vì vậy cần một phân tích riêng.
 
 ## 7. AVL Insert
 
@@ -156,7 +156,7 @@ Quy trình:
 
 Insertion chỉ ảnh hưởng các tổ tiên của vị trí chèn.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **8. AVL Delete khó hơn Insert** tiếp nhận điểm tựa từ **7. AVL Insert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Red-Black cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** AVL Delete cho thấy bảo đảm chặt về chiều cao kéo theo nhiều cập nhật sau một lần xóa. Red-Black tree chọn bất biến khác để thường giảm số lần sửa, đổi một phần độ chặt lấy thao tác thực tế đơn giản hơn.
 
 ## 8. AVL Delete khó hơn Insert
 
@@ -171,7 +171,7 @@ insert -> height có thể tăng
 remove -> height có thể giảm dây chuyền
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **9. Red-Black cây (tree / 트리)** tiếp nhận điểm tựa từ **8. AVL Delete khó hơn Insert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Vì sao Red-Black cũng logarithmic?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Red-Black mã hóa trạng thái cân bằng bằng màu trên nút và lá giả. Để tin vào cấu trúc này, ta cần thấy các bất biến màu giới hạn số nút trên mọi đường gốc–lá.
 
 ## 9. Red-Black cây (tree / 트리)
 
@@ -187,7 +187,7 @@ Các bất biến (invariant / 불변식) phổ biến:
 
 Số nút (node / 노드) đen trên đường dẫn (path / 경로) được gọi là **black height**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **10. Vì sao Red-Black cũng logarithmic?** tiếp nhận điểm tựa từ **9. Red-Black cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Red-Black Insert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Bất biến Red-Black giới hạn chiều cao bằng cách ràng buộc black-height, dù không cân bằng chặt như AVL. Insert tiếp theo sửa vi phạm màu bằng các trường hợp cục bộ và rotation.
 
 ## 10. Vì sao Red-Black cũng logarithmic?
 
@@ -203,7 +203,7 @@ h=O(\log n)
 
 Red-Black cho phép hình dạng “lỏng” hơn AVL nhưng vẫn đủ giữ logarithmic bound.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **11. Red-Black Insert** tiếp nhận điểm tựa từ **10. Vì sao Red-Black cũng logarithmic?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Red-Black Delete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Insert tạo vi phạm chủ yếu khi hai nút đỏ đứng cạnh nhau, nên các trường hợp sửa có thể truyền lên theo màu của cha và chú. Delete khó hơn vì nó có thể làm mất một đơn vị black-height.
 
 ## 11. Red-Black Insert
 
@@ -225,7 +225,7 @@ Mô hình tư duy:
 
 > insertion repair bảo vệ đồng thời “không red-red” và “black height không đổi không hợp lệ”.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **12. Red-Black Delete** tiếp nhận điểm tựa từ **11. Red-Black Insert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. AVL vs Red-Black** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Red-Black Delete phải xử lý trạng thái “thiếu đen” và khôi phục cân bằng qua anh em, nên nhiều nhánh hơn Insert. Hai cấu trúc lúc này có đủ khác biệt để so sánh theo workload thay vì chỉ theo cận Big-O.
 
 ## 12. Red-Black Delete
 
@@ -243,7 +243,7 @@ phân phối lại black bằng rotation/recolor
 
 Nếu chỉ học trường hợp (case / 사례) mà không hiểu black-height deficit, hiện thực (implementation / 구현) rất khó nhớ và gỡ lỗi (debug / 디버그).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **13. AVL vs Red-Black** tiếp nhận điểm tựa từ **12. Red-Black Delete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Treap: Balance bằng Random Priority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** AVL thường giữ chiều cao chặt hơn, còn Red-Black thường giảm chi phí sửa; lựa chọn phụ thuộc tỷ lệ đọc, ghi và locality. Treap đưa ra một hướng khác: dùng priority ngẫu nhiên để đạt cân bằng kỳ vọng.
 
 ## 13. AVL vs Red-Black
 
@@ -260,7 +260,7 @@ concurrent ordered structure               -> có thể cân nhắc Skip List ho
 
 Không nên coi đây là luật tuyệt đối. bộ nhớ đệm (cache / 캐시) locality, allocator, comparator chi phí (cost / 비용) và hiện thực (implementation / 구현) chất lượng (quality / 품질) đều ảnh hưởng thực tế.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **14. Treap: Balance bằng Random Priority** tiếp nhận điểm tựa từ **13. AVL vs Red-Black** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Split và Merge trong Treap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Treap giữ thứ tự theo key và heap theo priority, nhờ vậy không cần lưu balance factor hay màu. Hai bất biến này cũng cho phép xây thao tác split và merge như những phép toán cơ bản.
 
 ## 14. Treap: Balance bằng Random Priority
 
@@ -275,7 +275,7 @@ Nếu priorities độc lập ngẫu nhiên, expected height là `O(log n)`.
 
 Treap cho thấy balance không nhất thiết đến từ deterministic siêu dữ liệu (metadata / 메타데이터) như height hoặc color. Randomness cũng có thể tạo expected balance.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **15. Split và Merge trong Treap** tiếp nhận điểm tựa từ **14. Treap: Balance bằng Random Priority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Implicit Treap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Split cắt theo key, merge ghép hai cây có miền khóa tách biệt; cả hai đều tái lập heap priority bằng đệ quy. Nếu thay key bằng vị trí inorder, cùng cơ chế đó trở thành implicit treap cho mảng động.
 
 ## 15. Split và Merge trong Treap
 
@@ -292,7 +292,7 @@ R: keys >= key
 
 Nhiều chuỗi (sequence / 시퀀스)/data-structure operations có thể xây từ split/merge thay vì viết insert/delete riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **16. Implicit Treap** tiếp nhận điểm tựa từ **15. Split và Merge trong Treap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Splay cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Implicit Treap dùng subtree size để định vị phần tử theo vị trí và lazy tag để cập nhật đoạn. Splay tree cũng thích nghi theo truy cập, nhưng dựa vào việc đưa nút vừa dùng lên gốc thay vì priority ngẫu nhiên.
 
 ## 16. Implicit Treap
 
@@ -310,7 +310,7 @@ range aggregate nếu augment
 
 Đây là cầu nối giữa balanced cây (tree / 트리) và động (dynamic / 동적) array/rope.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **17. Splay cây (tree / 트리)** tiếp nhận điểm tựa từ **16. Implicit Treap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Weight-Balanced cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Splay không giữ bất biến cân bằng cứng; bảo đảm amortized xuất hiện từ chuỗi truy cập và các rotation zig-zig/zig-zag. Weight-balanced tree quay lại một tiêu chí tường minh hơn: tỷ lệ kích thước các cây con.
 
 ## 17. Splay cây (tree / 트리)
 
@@ -322,7 +322,7 @@ Một thao tác có thể `O(n)`, nhưng amortized `O(log n)`.
 
 Splay cây (tree / 트리) minh họa sự đánh đổi (trade-off / 트레이드오프) giữa worst-case per thao tác (operation / 연산) và adaptive locality.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **18. Weight-Balanced cây (tree / 트리)** tiếp nhận điểm tựa từ **17. Splay cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Scapegoat cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Weight-balanced tree dùng size để kiểm soát chiều cao thay vì height hoặc color. Scapegoat tree đẩy ý tưởng này xa hơn: chỉ rebuild khi một đường đi cho thấy bất biến kích thước đã lệch quá xa.
 
 ## 18. Weight-Balanced cây (tree / 트리)
 
@@ -334,7 +334,7 @@ Ví dụ yêu cầu hai subtree không quá lệch theo tỷ lệ. Khi vi phạm
 
 > “Balanced” không chỉ có một định nghĩa; miễn bất biến (invariant / 불변식) đủ mạnh để bound height hoặc expected chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **19. Scapegoat cây (tree / 트리)** tiếp nhận điểm tựa từ **18. Weight-Balanced cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. B-Tree là Balanced tìm kiếm (search / 검색) cây (tree / 트리) cho Page I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Scapegoat trả chi phí rebuild theo đợt để tránh metadata cân bằng ở mọi nút. Trong bộ nhớ ngoài, mô hình chi phí lại bị chi phối bởi page I/O, nên B-Tree cần nhiều khóa trong một nút.
 
 ## 19. Scapegoat cây (tree / 트리)
 
@@ -344,7 +344,7 @@ Một cập nhật (update / 업데이트) riêng có thể đắt, nhưng amort
 
 Đây là ví dụ khác của deamortized-vs-amortized thiết kế (design / 설계) không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **20. B-Tree là Balanced tìm kiếm (search / 검색) cây (tree / 트리) cho Page I/O** tiếp nhận điểm tựa từ **19. Scapegoat cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Ordered Map năng lực (capability / 역량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** B-Tree giảm số lần đọc trang bằng cách tăng hệ số phân nhánh và giữ các nút trong giới hạn lấp đầy. Cấu trúc này vẫn cung cấp ordered map, với các năng lực vượt quá tra cứu khóa đơn thuần.
 
 ## 20. B-Tree là Balanced tìm kiếm (search / 검색) cây (tree / 트리) cho Page I/O
 
@@ -360,7 +360,7 @@ O(\log_B n)
 
 Balanced-tree thiết kế (design / 설계) phải khớp chi phí (cost / 비용) mô hình (model / 모델) của lưu trữ (storage / 저장소) medium.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **21. Ordered Map năng lực (capability / 역량)** tiếp nhận điểm tựa từ **20. B-Tree là Balanced tìm kiếm (search / 검색) cây (tree / 트리) cho Page I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Duplicate Keys** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Ordered map không chỉ tìm một khóa; nó còn cung cấp min/max, predecessor, range và thứ tự duyệt. Khi nhiều bản ghi có cùng khóa, từng năng lực ấy phụ thuộc vào chính sách duplicate rõ ràng.
 
 ## 21. Ordered Map năng lực (capability / 역량)
 
@@ -378,7 +378,7 @@ Bảng băm (hash table / 해시 테이블) không giữ toàn cục (global / �
 
 Đây là khác biệt năng lực (capability / 역량), không chỉ độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **22. Duplicate Keys** tiếp nhận điểm tựa từ **21. Ordered Map năng lực (capability / 역량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Comparator đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Duplicate có thể được lưu thành nhiều nút, gom vào bucket, hoặc tách bằng một tie-breaker; mỗi lựa chọn thay đổi iterator và delete. Comparator phải mô tả chính sách ấy thành một hợp đồng nhất quán.
 
 ## 22. Duplicate Keys
 
@@ -395,7 +395,7 @@ Nếu comparator trả `0`, ordered map thường xem hai key là cùng thứ t�
 
 Comparator ngữ nghĩa (semantics / 의미론) là một phần của định danh (identity / 식별자) trong cây (tree / 트리).
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **23. Comparator đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **22. Duplicate Keys** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Augmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Comparator không chỉ quyết định thứ tự hiển thị; nó quyết định đường đi và định danh logic của phần tử. Khi hợp đồng này ổn định, mỗi nút có thể mang summary để mở rộng năng lực của cây.
 
 ## 23. Comparator đặc tả hợp đồng (contract / 계약)
 
@@ -413,7 +413,7 @@ Tìm kiếm (search / 검색) đường dẫn (path / 경로) không còn có ng
 
 Một rotation hoàn hảo cũng không cứu được cây (tree / 트리) có comparator không tạo thứ tự (ordering / 순서) hợp lệ.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **24. Augmentation** tiếp nhận điểm tựa từ **23. Comparator đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. thứ tự (order / 순서) Statistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Augmentation lưu một hàm tổng hợp của cây con và phải được tính lại sau insert, delete hoặc rotation. Subtree size là trường hợp nền tảng, từ đó order statistics trả lời rank và phần tử thứ k.
 
 ## 24. Augmentation
 
@@ -431,7 +431,7 @@ custom aggregate
 
 Nếu summary được tính từ child trong `O(1)`, rotation chỉ cần recompute vài nút (node / 노드) cục bộ nên asymptotic cập nhật (update / 업데이트) thường vẫn `O(log n)`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **25. thứ tự (order / 순서) Statistics** tiếp nhận điểm tựa từ **24. Augmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Interval cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Với subtree size, mỗi bước đi có thể bỏ qua toàn bộ một cây con để tìm rank hoặc phần tử thứ k. Interval tree dùng cùng nguyên tắc summary, nhưng lưu `maxEnd` để loại bỏ những nhánh không thể giao.
 
 ## 25. thứ tự (order / 순서) Statistics
 
@@ -452,7 +452,7 @@ mỗi truy vấn (query / 쿼리) `O(log n)` trên balanced cây (tree / 트리)
 
 Đây là ví dụ augmentation biến ordered set thành order-statistic cây (tree / 트리).
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **26. Interval cây (tree / 트리)** tiếp nhận điểm tựa từ **25. thứ tự (order / 순서) Statistics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Persistent Balanced cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Interval tree phải bảo trì đồng thời bất biến cân bằng và summary `maxEnd`; một rotation đúng hình dạng nhưng sai summary vẫn cho kết quả sai. Persistent balanced tree giải quyết một chiều khác: giữ lại các summary của phiên bản cũ bằng chia sẻ cấu trúc.
 
 ## 26. Interval cây (tree / 트리)
 
@@ -462,7 +462,7 @@ Balanced bất biến (invariant / 불변식) giữ height; augmentation giữ s
 
 Hai lớp bất biến hoạt động độc lập nhưng phải cùng được bảo trì sau rotation.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **27. Persistent Balanced cây (tree / 트리)** tiếp nhận điểm tựa từ **26. Interval cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Parent Pointer và Iterator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Persistent update chỉ sao chép đường đi nên các phiên bản dùng chung những cây con bất biến; mọi metadata trên đường đó cũng phải được tính lại. Iterator trong cấu trúc mutable lại cần parent pointer và quy tắc invalidation rõ ràng.
 
 ## 27. Persistent Balanced cây (tree / 트리)
 
@@ -472,7 +472,7 @@ Nếu cây (tree / 트리) height `O(log n)`, một cập nhật (update / 업�
 
 Persistent Red-Black/AVL/Treap có thể hỗ trợ snapshot/versioning hiệu quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **28. Parent Pointer và Iterator** tiếp nhận điểm tựa từ **27. Persistent Balanced cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Parent pointer làm ordered iterator tiện hơn nhưng tăng số liên kết phải cập nhật sau rotation. Khi số nút lớn, chi phí pointer chasing và layout bộ nhớ có thể quan trọng không kém số phép so sánh.
 
 ## 28. Parent Pointer và Iterator
 
@@ -482,7 +482,7 @@ Nhưng mỗi rotation phải cập nhật parent pointer đúng.
 
 Nếu iterator giữ raw nút (node / 노드) tham chiếu (reference / 참조), delete/rotation/vô hiệu hóa (invalidation / 무효화) ngữ nghĩa (semantics / 의미론) phải được định nghĩa rõ.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **29. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **28. Parent Pointer và Iterator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Concurrent Balanced Trees** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Node-based tree thường trả giá bằng cache locality để đổi lấy cập nhật linh hoạt; mảng hoặc layout phẳng có thể đảo ngược đánh đổi đó. Khi nhiều luồng cùng chạm các node và rotation, bài toán concurrent balanced tree trở nên khó hơn nữa.
 
 ## 29. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃)
 
@@ -498,7 +498,7 @@ better cache locality
 
 Balanced cây (tree / 트리) đáng giá khi mutation/thứ tự (order / 순서) queries thực sự cần.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **30. Concurrent Balanced Trees** tiếp nhận điểm tựa từ **29. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Optimistic Read** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Rotation thay đổi nhiều liên kết cùng lúc, nên khóa tinh vi dễ gây deadlock và lock-free tree cần memory reclamation chặt chẽ. Optimistic read giảm contention bằng cách đọc trước rồi xác thực rằng cấu trúc chưa đổi.
 
 ## 30. Concurrent Balanced Trees
 
@@ -508,7 +508,7 @@ Fine-grained locking phải xác định khóa (lock / 잠금) thứ tự (order
 
 Đây là lý do concurrent ordered maps đôi khi dùng Skip danh sách (list / 목록): expected `O(log n)` nhưng cập nhật (update / 업데이트) topology cục bộ theo mức (level / 수준) có thể thuận lợi hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **31. Optimistic Read** tiếp nhận điểm tựa từ **30. Concurrent Balanced Trees** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Bulk bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Optimistic read chấp nhận retry để đổi lấy đường đọc không khóa, miễn việc kiểm tra phiên bản đủ mạnh. Nếu dữ liệu đã có sẵn theo thứ tự, bulk build lại đổi hướng tối ưu: xây toàn cây một lần thay vì cập nhật từng nút.
 
 ## 31. Optimistic Read
 
@@ -518,7 +518,7 @@ Mẫu này đánh đổi thử lại (retry / 재시도) để giảm contention
 
 Cấu trúc dữ liệu (data structure / 자료구조) tính đồng thời (concurrency / 동시성) không chỉ chọn khóa (lock / 잠금) hay no-lock; có cả optimistic kiểm tra hợp lệ (validation / 검증) và sao chép khi ghi (copy-on-write / 쓰기 시 복사).
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **32. Bulk bản dựng (build / 빌드)** tiếp nhận điểm tựa từ **31. Optimistic Read** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Join-Based Balanced Trees** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ sorted keys, chọn phần tử giữa làm gốc rồi dựng đệ quy đạt `O(n)`, tốt hơn nhiều lần insert `O(n log n)`. Các phép split/join tiếp theo mở rộng tinh thần xây theo cấu trúc thay vì theo từng thao tác đơn.
 
 ## 32. Bulk bản dựng (build / 빌드)
 
@@ -530,7 +530,7 @@ Nếu dùng insert lặp, dù mỗi insert `O(log n)`, total `O(n log n)`.
 
 Static/batch tải công việc (workload / 워크로드) thường cho phép construction tốt hơn online tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **33. Join-Based Balanced Trees** tiếp nhận điểm tựa từ **32. Bulk bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Set Union giữa hai Trees** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Join-based tree coi split và join là nguyên tử xây dựng, rồi dùng chúng để tạo thao tác giàu hơn. Set union giữa hai cây tận dụng chính các phép đó để tránh chèn tuần tự khi kích thước hai tập rất khác nhau.
 
 ## 33. Join-Based Balanced Trees
 
@@ -547,7 +547,7 @@ thì union/intersection/difference của ordered sets có thể được xây đ
 
 Cách nhìn này đặc biệt hữu ích trong functional/persistent trees.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **34. Set Union giữa hai Trees** tiếp nhận điểm tựa từ **33. Join-Based Balanced Trees** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. cây (tree / 트리) Validator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Union, intersection và difference phải giữ cả thứ tự lẫn metadata cân bằng; hiệu quả phụ thuộc tỷ lệ kích thước giữa hai cây. Validator là lớp bảo hiểm để phát hiện bất biến bị hỏng sau những thao tác phức tạp đó.
 
 ## 34. Set Union giữa hai Trees
 
@@ -557,7 +557,7 @@ Split/phép nối (join / 조인) algorithms có thể tận dụng cấu trúc 
 
 Đây là ví dụ thao tác (operation / 연산) set cao cấp có thể ảnh hưởng lựa chọn cây (tree / 트리) family.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **35. cây (tree / 트리) Validator** tiếp nhận điểm tựa từ **34. Set Union giữa hai Trees** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Differential Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Validator phải kiểm tra miền khóa toàn cục, chiều cao, màu hoặc balance factor, parent pointer và mọi summary được augment. Differential testing bổ sung một đối chứng độc lập để bắt lỗi mà validator cục bộ có thể bỏ sót.
 
 ## 35. cây (tree / 트리) Validator
 
@@ -584,7 +584,7 @@ Augmented cây (tree / 트리) còn phải kiểm tra siêu dữ liệu (metadat
 
 Validator sau random operations rất đáng giá khi tự implement.
 
-> **Chuyển mạch:** Ở chặng này của **Cây tìm kiếm cân bằng**, **36. Differential Testing** tiếp nhận điểm tựa từ **35. cây (tree / 트리) Validator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** So sánh với ordered map chuẩn sau mỗi thao tác và chạy chuỗi random dài giúp lộ lỗi rotation, delete hoặc iterator. Kết quả kiểm thử cũng làm rõ những hiểu lầm phổ biến về “balanced” và cận hiệu năng.
 
 ## 36. Differential Testing
 
@@ -601,7 +601,7 @@ Sau mỗi thao tác (operation / 연산), kiểm tra inorder đầu ra (output /
 
 Rotation bugs thường chỉ lộ sau chuỗi (sequence / 시퀀스) dài, nên stateful random testing rất hữu ích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây tìm kiếm cân bằng**, **37. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **36. Differential Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Không có cây cân bằng nào miễn phí: AVL, Red-Black, Treap và B-Tree giữ những bất biến khác nhau cho những mô hình chi phí khác nhau. Phần mô hình tư duy gom các đánh đổi ấy thành cách chọn cấu trúc theo workload.
 
 ## 37. Những hiểu lầm phổ biến
 
@@ -615,7 +615,7 @@ Rotation bugs thường chỉ lộ sau chuỗi (sequence / 시퀀스) dài, nên
 
 “Red-Black color chỉ là hiện thực (implementation / 구현) trick” — màu là encoding của bất biến (invariant / 불변식) giúp chứng minh height bound.
 
-> **Chuyển mạch:** Trong **Cây tìm kiếm cân bằng**, **Mô hình tư duy** gom các mảnh từ **37. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Hãy chọn cây bằng ba câu hỏi: cần thứ tự nào, cập nhật nào chiếm ưu thế, và chi phí vật lý nằm trong RAM hay page I/O? Câu trả lời quyết định bất biến cân bằng, metadata và kiểu kiểm thử cần giữ.
 
 ## Mô hình tư duy
 
