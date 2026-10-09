@@ -6,7 +6,7 @@
 
 Một câu hỏi triết học tốt thường hỏi về **điều kiện**, **ý nghĩa**, **biện minh** hoặc **hệ quả** của một claim. “Con người có tự do không?” không chỉ là câu hỏi về cảm giác chủ quan; nó yêu cầu phân biệt tự do khỏi ngẫu nhiên, cưỡng ép và khả năng hành động theo lý do. “bằng chứng (evidence / 증거) này chứng minh điều gì?” yêu cầu tách observation khỏi interpretation và conclusion.
 
-> **Chuyển mạch:** Câu hỏi xác định claim cần trả lời; argument anatomy tách premise, inference và conclusion, rồi disagreement cho biết bất đồng nằm ở fact, concept hay norm.
+> **Chuyển mạch:** Câu hỏi xác định claim cần trả lời. Từ đó, phần giải phẫu lập luận sẽ tách tiền đề, bước suy luận và kết luận; chỉ sau khi thấy rõ cấu trúc ấy ta mới biết bất đồng nằm ở dữ kiện, khái niệm hay chuẩn tắc.
 
 ## Giải phẫu một lập luận
 
@@ -18,7 +18,7 @@ premise 1 + premise 2 + hidden premise
 
 Khi đọc một argument, hãy viết lại bằng câu ngắn, tìm premise ẩn, kiểm tra premise có đúng không và xem conclusion có mạnh hơn điều các premise cho phép không. Validity là quan hệ hình thức giữa premise và conclusion; soundness còn cần premise đúng hoặc đáng tin.
 
-> **Chuyển mạch:** Argument anatomy separates premises, inference, and conclusion; classifying disagreement as factual, conceptual, inferential, or normative determines which kind of evidence the bridge should carry forward.
+> **Chuyển mạch:** Khi tiền đề, bước suy luận và kết luận đã được tách ra, ta có thể định vị bất đồng: tranh chấp về dữ kiện cần bằng chứng, tranh chấp khái niệm cần định nghĩa lại, còn tranh chấp suy luận cần kiểm tra quy tắc nối. Phân loại này mở đường cho mục tiếp theo về các kiểu bất đồng.
 
 ## Các loại bất đồng
 
@@ -29,13 +29,13 @@ Khi đọc một argument, hãy viết lại bằng câu ngắn, tìm premise �
 
 Phân loại đúng giúp biết nên tìm đo lường (measurement / 측정), sửa định nghĩa, kiểm tra suy luận (inference / 추론) hay tranh luận normative premise. Một argument có thể hợp lệ nhưng vẫn không đủ để kết luận nếu premise thực nghiệm chưa được xác lập.
 
-> **Chuyển mạch:** Disagreement classification tells us whether to seek data, clarify a concept, test an inference, or debate a value; the worked cognition claim combines all four and makes the burden of proof visible.
+> **Chuyển mạch:** Phân loại bất đồng cho biết ta nên tìm dữ liệu, làm rõ khái niệm, kiểm tra phép suy luận hay tranh luận về giá trị. Ví dụ về claim “công cụ X cải thiện cognition” sẽ ghép cả bốn lớp này và cho thấy nghĩa vụ chứng minh nằm ở đâu.
 
 ## Cầu nối
 
 Tiếp theo đọc [Knowledge, justification và evidence](../01_epistemology/00_knowledge_justification_and_evidence.md), rồi dùng [Models, explanation và causality](../03_philosophy_of_science/00_models_explanation_and_causality.md) để xem lập luận thay đổi thế nào khi đối tượng là một mô hình khoa học.
 
-> **Chuyển mạch:** The cognition example separates measurable behavior, causal attribution, durability, transfer, and the value criterion “improvement”; the checklist turns those separations into a repeatable conclusion gate.
+> **Chuyển mạch:** Ví dụ về cognition đã tách hành vi đo được, quy kết nhân quả, độ bền, khả năng chuyển giao và tiêu chí giá trị “cải thiện”. Checklist tiếp theo biến các phân biệt đó thành một cổng kiểm tra có thể lặp lại trước khi kết luận.
 
 ## Worked lập luận (reasoning / 추론): “Công cụ X cải thiện cognition”
 
@@ -50,7 +50,7 @@ X thay đổi behavior đo được
 
 Mỗi mũi tên có burden of proof khác nhau. kiểm thử (test / 테스트) có thể cho thấy score tăng nhưng không cho thấy transfer sang công việc; follow-up có thể cho thấy tác động (effect / 효과) giảm; randomized assignment giúp nhân quả (causal / 인과적) claim nhưng vẫn không quyết định “cải thiện” nếu chỉ số (metric / 지표) bỏ qua chi phí (cost / 비용) hoặc phụ thuộc (dependency / 의존성). Đây là ví dụ điển hình cho việc phân biệt conceptual, empirical và normative claim.
 
-> **Chuyển mạch:** The worked argument exposes where empirical and normative claims diverge; the final checklist asks for ambiguous terms, hidden values, counterexamples, and evidence that could lower confidence before closing the method.
+> **Chuyển mạch:** Lập luận mẫu cho thấy tiền đề thực nghiệm tách khỏi phán đoán chuẩn tắc ở điểm nào. Checklist cuối cùng sẽ buộc ta rà lại từ ngữ mơ hồ, giá trị ẩn, phản ví dụ và bằng chứng có thể làm giảm độ tin cậy trước khi khép phương pháp.
 
 ## Checklist trước khi kết luận
 

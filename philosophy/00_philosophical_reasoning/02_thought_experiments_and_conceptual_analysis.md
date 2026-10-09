@@ -14,7 +14,7 @@ Thought experiment không phải dữ liệu thực nghiệm. Nó là một các
 
 Brain-in-a-vat, trolley trường hợp (case / 사례) hoặc teletransportation hữu ích vì chúng ép ta phân biệt các tiêu chí thường bị trộn. Chúng không tự chứng minh một lý thuyết (theory / 이론) đúng; nếu trực giác khác nhau, kết quả có thể là khái niệm chưa đủ rõ hoặc moral intuition bị ngữ cảnh (context / 맥락) điều khiển.
 
-> **Chuyển mạch:** Thought experiment cần rule và scope để tránh intuition shopping; reflective equilibrium tiếp theo cân bằng case, principle và background judgment.
+> **Chuyển mạch:** Một thought experiment chỉ có ích khi quy tắc thay đổi và phạm vi của scenario được nói rõ, nhờ đó ta tránh chọn trực giác có lợi cho kết luận sẵn có. Bước tiếp theo dùng reflective equilibrium để đối chiếu case cụ thể với nguyên tắc và phán đoán nền.
 
 ## Equilibrium phản tư
 
