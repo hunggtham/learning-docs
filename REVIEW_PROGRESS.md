@@ -1,6 +1,6 @@
 # Tiến độ review câu nối tài liệu
 
-Cập nhật gần nhất: **2026-10-07 (Asia/Seoul)**
+Cập nhật gần nhất: **2026-10-09 (Asia/Seoul)**
 
 ## Tiêu chí Review prompt
 
@@ -20,7 +20,7 @@ Phạm vi **chưa hoàn tất**. Snapshot live của checkout hiện tại:
 
 | Chỉ số | Giá trị |
 |---|---:|
-| File còn connector cũ `Chuyển mạch` | 991 |
+| File còn connector cũ `Chuyển mạch` | 983 |
 | File còn mẫu câu nối cũ | 914 |
 | File có connector malformed `Nối mạch:***` | 0 |
 | File bị broad scan đánh dấu từ khóa quiz/self-check | 122 |
