@@ -25,7 +25,6 @@ Bộ ghi chú (note / 노트) cơ bản được dựng từ các tệp (file / 
 
 Tệp (file / 파일) DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài liệu, không chứa syllabus substantive nên không dùng làm nguồn học thuật.
 
-> **Nối mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, sau nội dung của **Uploaded KIIP study summaries**, **Official / hiện tại (current / 현재) references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nguồn (source / 소스) hierarchy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Official / hiện tại (current / 현재) references
 
@@ -47,7 +46,6 @@ Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nộ
 - 중앙선거관리위원회: https://www.nec.go.kr/
 - 대한민국 국회: https://www.assembly.go.kr/
 
-> **Nối mạch:** Ở chặng này của **Sources & Provenance — KIIP inside Korean Culture**, **Official / hiện tại (current / 현재) references** đặt vấn đề; **Nguồn (source / 소스) hierarchy** đối chiếu bằng chứng, rồi **Phiên bản (version / 버전) chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nguồn (source / 소스) hierarchy
 
@@ -60,7 +58,6 @@ Khi có xung đột (conflict / 충돌), ưu tiên:
 5. ghi chú (note / 노트) tổng hợp này;
 6. tài liệu community/thương mại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Sources & Provenance — KIIP inside Korean Culture**, **Nguồn (source / 소스) hierarchy** đặt vấn đề; **Phiên bản (version / 버전) chính sách (policy / 정책)** đối chiếu bằng chứng, rồi **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Phiên bản (version / 버전) chính sách (policy / 정책)
 
@@ -73,7 +70,6 @@ Không sửa âm thầm nguồn (source / 소스) cũ. Ví dụ:
 
 Cả hai được giữ để người học hiểu vì sao tài liệu cũ và thông tin hiện tại khác nhau.
 
-> **Nối mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** nối từ **Phiên bản (version / 버전) chính sách (policy / 정책)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Phạm vi (scope / 범위) tag chính sách (policy / 정책)
 
@@ -83,5 +79,3 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 - Nội dung thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
 - Dữ liệu pháp luật/statistic mới hơn không được sửa đè nguồn (source / 소스); dùng `현재 확인`.
 - Các tình huống luyện tập là **nội dung tự biên soạn**, không được mô tả như đề thật.
-
-> **Bàn giao:** Sau **Phạm vi (scope / 범위) tag chính sách (policy / 정책)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
