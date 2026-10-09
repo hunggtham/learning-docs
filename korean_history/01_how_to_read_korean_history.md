@@ -8,25 +8,21 @@ Một lịch sử tốt không chỉ trả lời “chuyện gì xảy ra”. N�
 
 **Primary nguồn (source / 소스)** là tài liệu được tạo gần thời điểm nghiên cứu: inscription, annal, letter, census, treaty, newspaper, photograph, oral testimony, sản phẩm tạo ra (artifact / 산출물). **Secondary nguồn (source / 소스)** là công trình phân tích của sử gia dựa trên nhiều nguồn. Một nguồn sơ cấp không tự động “đúng hơn”: court chronicle có thể thiên về court; police bản ghi (record / 레코드) có thể mô tả xã hội theo mục tiêu quản trị; memoir có thể sai ký ức.
 
-> **Chuyển mạch:** Lịch sử không chỉ là danh sách sự kiện: myth và memory cần được đối chiếu với nguồn, còn periodization là model giúp đặt nguyên nhân, thể chế và hệ quả vào cùng một khung.
 
 ## Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)
 
 Đàn Quân (단군 / Dangun) là ví dụ tốt để phân biệt ba lớp. Một origin myth có thể không cho phép ta xác nhận toàn bộ chi tiết như fact khảo cổ, nhưng nó vẫn là dữ liệu lịch sử về cách cộng đồng hình dung nguồn gốc và legitimacy. Sai lầm thường gặp là hoặc tin myth theo nghĩa literal, hoặc vứt bỏ myth hoàn toàn. Cách đúng là hỏi: văn bản được viết khi nào, bởi ai, trong bối cảnh nào và được dùng để tạo meaning gì.
 
-> **Chuyển mạch:** Myth, memory và history là các lớp chứng cứ khác nhau; periodization là model do historian chọn, còn Peninsula không thể đồng nhất với Republic of Korea.
 
 ## Periodization là mô hình (model / 모델) chứ không phải tự nhiên
 
 Tên như “Three Kingdoms”, “Tân La Thống nhất (통일신라 / Unified Silla)”, “Late Joseon” là **periodization (phân kỳ lịch sử / 시대구분)**. Chúng giúp compress lượng dữ liệu lớn thành mô hình (model / 모델), giống cách software engineer chia hệ thống (system / 시스템) thành mô-đun (module / 모듈). Nhưng ranh giới (boundary / 경계) của mô-đun (module / 모듈) có thể che khuất quá trình chuyển tiếp. Năm 1392 rất quan trọng vì triều nhà Triều Tiên (조선 / Joseon) được thành lập, nhưng không phải mọi cấu trúc xã hội Cao Ly (고려 / Goryeo) biến mất vào ngày hôm đó.
 
-> **Chuyển mạch:** Periodization is a chosen model; separating peninsula from Republic of Korea prevents anachronism, while causal graphs make actors, constraints and consequences explicit.
 
 ## Peninsula ≠ Republic of Korea
 
 Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **Korean Peninsula (bán đảo Triều Tiên / 한반도)**, **Republic of Korea (Đại Hàn Dân Quốc / 대한민국)** và **Democratic People's Republic of Korea (CHDCND Triều Tiên / 조선민주주의인민공화국)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
 
-> **Chuyển mạch:** Separating peninsula history from the modern Republic of Korea prevents teleology; a causal graph makes geography, technology, institutions, and actors explicit before each period is read through four evidence layers.
 
 ## Nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)
 
@@ -43,7 +39,6 @@ ideology ─> legitimacy ──────────┤
 
 Đồ thị (graph / 그래프) này không nói mọi xã hội đều đi cùng một đường. Nó chỉ buộc ta hỏi mỗi mũi tên có bằng chứng (evidence / 증거) nào và có biến trung gian nào bị bỏ quên.
 
-> **Chuyển mạch:** The causal graph supplies candidate mechanisms; chronology, economy/everyday life, Vietnam comparison, and physical places turn those mechanisms into evidence before the reader attempts a compact recall.
 
 ## Bốn lớp phải gắn vào mỗi giai đoạn
 
@@ -59,7 +54,6 @@ Từ đây, một chapter chỉ có sự kiện (event / 이벤트) và nhân v�
 
 Ba companion tệp (file / 파일) `33`–`35` được xây để cung cấp các tầng (layer / 계층) này xuyên suốt thư viện (library / 라이브러리), nhưng mục tiêu cuối cùng vẫn là đọc chapter chính như một nhân quả (causal / 인과적) story chứ không phải đổi sang học một checklist mới.
 
-> **Chuyển mạch:** The four layers establish what must be explained; the self-check reconstructs the causal flow from constraint to shock to institution and outcome, then the one-page sheet records that chain consistently.
 
 ## Một cách tự kiểm tra xem mình đã hiểu chưa
 
@@ -67,7 +61,6 @@ Sau một chapter, thử kể lại mà không nhìn sách bằng một luồng 
 
 Nếu chỉ nhớ được tên vua, battle và năm thì mới có coordinate. Nếu kể được luồng (flow / 흐름) trên, ta bắt đầu có historical mô hình (model / 모델).
 
-> **Chuyển mạch:** The self-check tests whether the causal story can be retold; the one-page sheet preserves its dates, constraints, evidence, and comparisons, which must then be labeled as fact, model, or memory in notes.
 
 ## Phiếu đọc một trang cho mỗi giai đoạn
 
@@ -87,7 +80,6 @@ Nếu chỉ nhớ được tên vua, battle và năm thì mới có coordinate. 
 
 Ví dụ, với mốc **1592**, câu trả lời tốt không dừng ở “Nhật Bản xâm lược Joseon”. Ta cần nối invasion với tình trạng quân sự và tài chính trước đó, đường biển và cảng, lương thực của hộ gia đình, vai trò của Lý Thuấn Thần (이순신 / Yi Sun-sin), Việt Nam thời Lê–Mạc và các địa điểm như Busan, Tongyeong hoặc pháo đài ven biển. Nếu chưa nói được ai chịu chi phí và bằng chứng ở đâu, ta mới có sự kiện chứ chưa có lời giải thích.
 
-> **Chuyển mạch:** The one-page sheet records claims and uncertainty; separating fact, interpretive model, and public memory prevents a source record from being mistaken for a timeless meaning, which the companion layers can then contextualize.
 
 ## Cách phân biệt fact, model và memory khi ghi chú
 
@@ -95,13 +87,11 @@ Một câu như “Gyeongbokgung là cung điện trung tâm của Joseon” có
 
 Ba lớp không loại trừ nhau. Tách chúng ra giúp người học vừa tôn trọng bằng chứng vật chất vừa không nhầm narrative hiện tại với ý định của người xưa.
 
-> **Chuyển mạch:** Once fact, model, and memory are labeled, the companion files add Vietnam chronology, economy, places, geography, and case labs; recurring misconceptions can then be checked against that fuller context.
 
 ## Cầu nối sang các lớp companion
 
 Nếu phiếu đọc thiếu mốc Việt Nam, mở [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md); nếu thiếu dòng nguồn lực và hộ gia đình, mở [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md); nếu thiếu địa điểm hoặc logistics, mở [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md) và [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md). Khi đã đi qua bốn lớp nhưng vẫn khó kể lại, luyện một tình huống trong [`37_historical_case_labs.md`](37_historical_case_labs.md) trước khi quay lại chapter chronology.
 
-> **Chuyển mạch:** Companion layers expose missing context; the misconceptions section turns those gaps into explicit guardrails, closing the method with claims that remain evidence-sensitive rather than memory-driven.
 
 ## Dùng chung (common / 공통) Misconceptions
 
