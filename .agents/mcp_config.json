@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "shared-context": {
+      "serverUrl": "http://localhost:3721/mcp"
+    }
+  }
+}

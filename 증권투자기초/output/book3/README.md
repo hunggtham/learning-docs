@@ -2,7 +2,7 @@
 
 Đây là learning route tiếng Việt được tái cấu trúc từ Sách 3 của `증권투자기초`. Sách có hai khối lớn: **포트폴리오 이론** (portfolio theory) ở Chương 1 và **금융파생상품** (financial derivatives) ở Chương 2. Mạch học đi từ đo lường bất định → danh mục → định giá cân bằng → đánh giá kết quả → hợp đồng phái sinh và cấu trúc payoff.
 
-Raw OCR chỉ là provenance, không phải bản học: [sach3.md](../../증권투자기초/sach3/raw_md/sach3.md). Bản đồ semantic và quyết định owner nằm ở [SOURCE_COVERAGE_BOOK3.md](../../증권투자기초/sach3/SOURCE_COVERAGE_BOOK3.md). Publication QA được tách thành [source-question map](../../증권투자기초/sach3/SOURCE_QUESTION_MAP_BOOK3.md), [OCR/source ambiguities](../../증권투자기초/sach3/SOURCE_AMBIGUITIES_BOOK3.md), [formula/table/figure audit](../../증권투자기초/sach3/FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md) và [terminology audit](../../증권투자기초/sach3/TERMINOLOGY_AUDIT_BOOK3.md).
+Raw OCR chỉ là provenance, không phải bản học: [sach3.md](../../sach3/raw_md/sach3.md). Bản đồ semantic và quyết định owner nằm ở [SOURCE_COVERAGE_BOOK3.md](../../sach3/SOURCE_COVERAGE_BOOK3.md). Publication QA được tách thành [source-question map](../../sach3/SOURCE_QUESTION_MAP_BOOK3.md), [OCR/source ambiguities](../../sach3/SOURCE_AMBIGUITIES_BOOK3.md), [formula/table/figure audit](../../sach3/FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md) và [terminology audit](../../sach3/TERMINOLOGY_AUDIT_BOOK3.md).
 
 ## Lộ trình
 

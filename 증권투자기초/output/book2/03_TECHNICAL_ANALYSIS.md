@@ -97,7 +97,7 @@ Source cũng dùng nguyên lý sóng cùng dãy Fibonacci `1, 1, 2, 3, 5, 8, ...
 
 ## 7. Quy trình kiểm thử một tín hiệu
 
-Trước khi dùng tín hiệu, ghi rõ: dữ liệu có sẵn tại thời điểm nào; quy tắc vào/ra; phí và trượt giá; regime nào làm tín hiệu thất bại; và benchmark nào để so sánh. Kiểm thử ngoài mẫu, tránh look-ahead và ghi nhật ký quyết định. Đây là chỗ nối tới [Systematic Risk, Backtest and Execution](../05_trading_derivatives/02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md), nơi phần phương pháp thuộc owner canonical được đào sâu.
+Trước khi dùng tín hiệu, ghi rõ: dữ liệu có sẵn tại thời điểm nào; quy tắc vào/ra; phí và trượt giá; regime nào làm tín hiệu thất bại; và benchmark nào để so sánh. Kiểm thử ngoài mẫu, tránh look-ahead và ghi nhật ký quyết định. Đây là chỗ nối tới [Systematic Risk, Backtest and Execution](../../../investing/05_trading_derivatives/02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md), nơi phần phương pháp thuộc owner canonical được đào sâu.
 
 ## 8. Worked signal reading
 

@@ -33,7 +33,7 @@ Nghiệm xấp xỉ là `y = 8%`, trong khi coupon rate chỉ là `60/1.000 = 6%
 
 Yield curve (수익률곡선) xếp lợi suất theo kỳ hạn. Source trình bày bốn cách giải thích: Expectations Theory (기대이론) coi lợi suất dài hạn phản ánh lãi suất ngắn hạn kỳ vọng; Liquidity Premium Theory (유동성프리미엄이론) cộng phần bù cho việc nắm giữ kỳ hạn dài; Market Segmentation Theory (시장분할이론) cho rằng cung–cầu mỗi bucket kỳ hạn tương đối tách biệt; Preferred Habitat Theory cho phép nhà đầu tư có kỳ hạn ưa thích nhưng dịch chuyển khi phần bù đủ lớn. Bốn theory là các lăng kính bổ sung, không phải bốn dự báo đồng nhất.
 
-Đường cong dốc lên có thể phản ánh tăng trưởng/lạm phát kỳ vọng hoặc term premium; đường cong đảo có thể phản ánh kỳ vọng hạ lãi suất. Không được đọc hình dạng mà bỏ qua regime, thanh khoản, cung trái phiếu và chính sách. Những kênh vĩ mô rộng hơn thuộc [Monetary System, Liquidity and Crisis Transmission](../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
+Đường cong dốc lên có thể phản ánh tăng trưởng/lạm phát kỳ vọng hoặc term premium; đường cong đảo có thể phản ánh kỳ vọng hạ lãi suất. Không được đọc hình dạng mà bỏ qua regime, thanh khoản, cung trái phiếu và chính sách. Những kênh vĩ mô rộng hơn thuộc [Monetary System, Liquidity and Crisis Transmission](../../../investing/04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
 
 ### Đặt bốn lý thuyết cạnh nhau
 
@@ -174,4 +174,4 @@ Primary market (발행시장) là nơi chứng khoán nợ được phát hành;
 
 ## Chốt toàn Sách 2
 
-Sách 2 tạo một knowledge graph: chu kỳ và chỉ báo ảnh hưởng dòng tiền; dòng tiền và rủi ro quyết định định giá; giá và khối lượng tạo tín hiệu; chiến lược biến tín hiệu thành exposure; trái phiếu biến thời hạn, tín dụng và funding thành lợi suất. Ranh giới cuối cùng là mô hình textbook không thay thế dữ liệu đúng thời điểm, prospectus hay quy định hiện hành. Để đi từ route này sang quy trình đầu tư hoàn chỉnh, quay lại [Investing README](../README.md) và [Full Investment Process](../07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md).
+Sách 2 tạo một knowledge graph: chu kỳ và chỉ báo ảnh hưởng dòng tiền; dòng tiền và rủi ro quyết định định giá; giá và khối lượng tạo tín hiệu; chiến lược biến tín hiệu thành exposure; trái phiếu biến thời hạn, tín dụng và funding thành lợi suất. Ranh giới cuối cùng là mô hình textbook không thay thế dữ liệu đúng thời điểm, prospectus hay quy định hiện hành. Để đi từ route này sang quy trình đầu tư hoàn chỉnh, quay lại [Investing README](../README.md) và [Full Investment Process](../../../investing/07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md).

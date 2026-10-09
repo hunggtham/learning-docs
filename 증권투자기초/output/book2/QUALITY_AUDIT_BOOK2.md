@@ -14,7 +14,7 @@ The content/publication audits are complete. Because the shell cannot resolve `g
 - No fake `raw_md/sach2.md` was created.
 - No normalized source layer was introduced because the existing raw Markdown is sufficient for all readable concepts; unreadable cells are quarantined as ambiguity.
 - Source/provenance/QA owner: `증권투자기초/sach2/`.
-- Learning owner: `investing/90_securities_book2/`.
+- Learning owner: `증권투자기초/output/book2/`.
 - Canonical domain owners remain `investing/01_foundations/` through `07_integrated_case_studies/`; cross-links do not count as source coverage.
 - Book 2 follows the same source/provenance-vs-learning separation used by Book 3. Book 1 remains the documented legacy layout under `증권투자기초/output/book1/`; no fourth layout was created.
 - Old branch `feat/securities-investment-book2-learning-edition` was not merged. It was only a prose/reference source.
@@ -23,7 +23,7 @@ Result: **PASS**.
 
 ## 2. SOURCE → output semantic audit
 
-Coverage owner: [SOURCE_COVERAGE_BOOK2.md](../../증권투자기초/sach2/SOURCE_COVERAGE_BOOK2.md).
+Coverage owner: [SOURCE_COVERAGE_BOOK2.md](../../sach2/SOURCE_COVERAGE_BOOK2.md).
 
 | Metric | Re-audited state |
 |---|---:|
@@ -51,7 +51,7 @@ Result: **PASS** because there are no PARTIAL/MISSING knowledge units and each r
 
 ## 3. SOURCE_AMBIGUITY / OCR audit
 
-Detailed owner: [SOURCE_AMBIGUITIES_BOOK2.md](../../증권투자기초/sach2/SOURCE_AMBIGUITIES_BOOK2.md).
+Detailed owner: [SOURCE_AMBIGUITIES_BOOK2.md](../../sach2/SOURCE_AMBIGUITIES_BOOK2.md).
 
 Unresolved records: **7 total**.
 
@@ -69,7 +69,7 @@ Result: **PASS WITH DECLARED AMBIGUITY**.
 
 ## 4. Korean / English terminology audit
 
-Detailed owner: [TERMINOLOGY_AUDIT_BOOK2.md](../../증권투자기초/sach2/TERMINOLOGY_AUDIT_BOOK2.md).
+Detailed owner: [TERMINOLOGY_AUDIT_BOOK2.md](../../sach2/TERMINOLOGY_AUDIT_BOOK2.md).
 
 - Audited terminology rows: **83**.
 - Exact Korean terms missing from the six-lesson route after audit: **0**.
@@ -91,7 +91,7 @@ Result: **PASS**.
 
 ## 5. Formula / table / figure audit
 
-Detailed owner: [FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md](../../증권투자기초/sach2/FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md).
+Detailed owner: [FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md](../../sach2/FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md).
 
 - Formula/quantitative-contract rows: **43 PASS**.
 - Knowledge-bearing table/figure rows: **21**.
@@ -109,7 +109,7 @@ Result: **PASS**.
 
 ## 6. Source-question test
 
-Detailed owner: [SOURCE_QUESTION_MAP_BOOK2.md](../../증권투자기초/sach2/SOURCE_QUESTION_MAP_BOOK2.md).
+Detailed owner: [SOURCE_QUESTION_MAP_BOOK2.md](../../sach2/SOURCE_QUESTION_MAP_BOOK2.md).
 
 - Recoverable question/concept clusters mapped: **31**.
 - PASS: **31**.
@@ -184,7 +184,7 @@ Result: **PASS**.
 Final branch checks on `fix/securities-book2-publication-pass-v3`:
 
 - latest-main status: **PASS** — branch was `ahead 16 / behind 0` immediately before this final audit commit;
-- changed-file scope: **PASS** — 14 changed files, all limited to `investing/90_securities_book2/` and `증권투자기초/sach2/`; no unrelated files from `feat/securities-investment-book2-learning-edition` were merged;
+- changed-file scope: **PASS** — 14 changed files, all limited to `증권투자기초/output/book2/` and `증권투자기초/sach2/`; no unrelated files from `feat/securities-investment-book2-learning-edition` were merged;
 - internal-link audit: **PASS** — every relative Markdown file target referenced by the changed files resolves on the branch;
 - heading/navigation audit: **PASS** — each changed Markdown file has exactly one H1, no heading-level jump was detected, and the six-lesson README route resolves;
 - changed-file whitespace/conflict scan: **PASS** — connector-fetched branch content has no trailing whitespace, no `space-before-tab` indentation violation, no extra blank-at-EOF, and no merge-conflict markers;

@@ -87,7 +87,7 @@ Mental model là `kỳ vọng → dữ liệu hoạt động → báo cáo tài 
 
 Phân tích cơ bản (fundamental analysis / 기본적 분석) đi từ ngành và môi trường kinh tế đến doanh nghiệp, rồi từ doanh thu đến lợi nhuận và dòng tiền. Báo cáo tài chính (financial statements / 재무제표) là ngôn ngữ đo lường của quá trình đó: bảng cân đối cho biết nguồn lực và nghĩa vụ tại một thời điểm; báo cáo kết quả kinh doanh cho biết doanh thu, chi phí và lợi nhuận trong kỳ; báo cáo lưu chuyển tiền tệ kiểm tra lợi nhuận có chuyển thành tiền hay không. Source nhấn mạnh IFRS (International Financial Reporting Standards), IASC/IAS và K-IFRS; đây là khuôn khổ ghi nhận và trình bày, không phải bảo đảm chất lượng kinh tế của doanh nghiệp.
 
-Khi đọc một khoản mục, cần giữ ba lớp: định nghĩa kế toán, cơ chế kinh tế và giới hạn so sánh. Doanh thu có thể tăng nhưng vốn lưu động hút tiền; lợi nhuận có thể tăng nhưng do đánh giá lại; tài sản ghi sổ có thể khác xa giá trị thay thế. Vì vậy, hãy đi từ báo cáo sang KPI ngành, chất lượng lợi nhuận và dòng tiền trước khi dùng multiple ở bài 2. Phần chuyên sâu thuộc owner [Financial Statements and Accounting](../03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md).
+Khi đọc một khoản mục, cần giữ ba lớp: định nghĩa kế toán, cơ chế kinh tế và giới hạn so sánh. Doanh thu có thể tăng nhưng vốn lưu động hút tiền; lợi nhuận có thể tăng nhưng do đánh giá lại; tài sản ghi sổ có thể khác xa giá trị thay thế. Vì vậy, hãy đi từ báo cáo sang KPI ngành, chất lượng lợi nhuận và dòng tiền trước khi dùng multiple ở bài 2. Phần chuyên sâu thuộc owner [Financial Statements and Accounting](../../../investing/03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md).
 
 Source còn đặt báo cáo vào một quy trình phân tích thay vì xem từng bảng riêng lẻ: bắt đầu ở ngành và vị thế cạnh tranh, đọc bảng cân đối để biết nguồn lực–nghĩa vụ, đọc kết quả kinh doanh để theo dõi doanh thu–chi phí–lợi nhuận, rồi đối chiếu lưu chuyển tiền tệ và thuyết minh. IFRS/IASC và K-IFRS định nghĩa cách ghi nhận, đo lường và trình bày; chúng giúp so sánh có kỷ luật nhưng không xóa khác biệt mô hình kinh doanh. Vì thế cùng một chỉ tiêu phải được hỏi thêm “được tạo ra bởi hoạt động nào, có lặp lại không, và chuyển thành tiền khi nào?”.
 
@@ -106,7 +106,7 @@ Khối industry analysis của source dùng life cycle để tách bốn pha th�
 
 ### Từ industry analysis sang company analysis
 
-Source tiếp tục từ ngành sang doanh nghiệp: định lượng quy mô/tăng trưởng và đặt cạnh các yếu tố định tính như vị thế cạnh tranh, cấu trúc chi phí, năng lực quản lý và chiến lược phân bổ vốn. Learning route dùng nguyên tắc `ngành → vị thế doanh nghiệp → báo cáo → tỷ số → định giá`; cross-link canonical sâu hơn nằm ở [Company Analysis](../03_company_analysis/README.md).
+Source tiếp tục từ ngành sang doanh nghiệp: định lượng quy mô/tăng trưởng và đặt cạnh các yếu tố định tính như vị thế cạnh tranh, cấu trúc chi phí, năng lực quản lý và chiến lược phân bổ vốn. Learning route dùng nguyên tắc `ngành → vị thế doanh nghiệp → báo cáo → tỷ số → định giá`; cross-link canonical sâu hơn nằm ở [Company Analysis](../../../investing/03_company_analysis/README.md).
 
 ### Ma trận BCG: vị thế cạnh tranh không đồng nghĩa chất lượng đầu tư
 

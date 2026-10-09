@@ -5,7 +5,7 @@
 - **Content authority:** [`../raw/sach2.md`](../raw/sach2.md).
 - Không tạo `raw_md/sach2.md` giả. Audit này đọc trực tiếp raw OCR hiện có.
 - Repo không có thư mục asset/image riêng cho Sách 2; vì vậy nơi OCR không đủ evidence được giữ là `SOURCE_AMBIGUITY`.
-- **Learning route:** [`../../investing/90_securities_book2/`](../../investing/90_securities_book2/README.md).
+- **Learning route:** [`../output/book2/`](../output/book2/README.md).
 - `FULL` chỉ được dùng khi unit giữ được meaning + relationship/condition/boundary cần thiết; keyword xuất hiện một mình không đủ.
 - Một hàng chỉ đại diện cho **một semantic unit có thể fail độc lập**. Product, formula, indicator, pattern, theory và auction mechanism không được gom thành mega-row.
 - Source questions được audit riêng trong [`SOURCE_QUESTION_MAP_BOOK2.md`](./SOURCE_QUESTION_MAP_BOOK2.md); câu hỏi không được dùng như semantic row để che nhiều concept.

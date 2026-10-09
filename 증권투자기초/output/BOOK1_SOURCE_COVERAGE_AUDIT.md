@@ -195,7 +195,7 @@ Ownership được tách rõ:
 `investing/README.md` đăng ký các source-book route của cả ba sách và giữ
 `investing/` làm canonical concept owner. Book 1 tiếp tục ở
 `증권투자기초/output/book1/`; Book 2/3 dùng
-`investing/90_securities_book2/` và `investing/90_securities_book3/`. Không di
+`book2/` và `book3/`. Không di
 chuyển Book 1 chỉ để đồng nhất path khi ba lớp ownership vẫn phân biệt rõ.
 
 ## 10. Diff hygiene

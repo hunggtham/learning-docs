@@ -18,7 +18,8 @@ E(r_p)=w_AE(r_A)+w_BE(r_B).
 
 Nếu A có kỳ vọng 10%, B 20%, tỷ trọng 40/60 thì danh mục có kỳ vọng 16%. Phần này tuyến tính; điều khó nằm ở rủi ro:
 
-Trong các công thức dưới đây, (w_i) là tỷ trọng vốn (không có đơn vị), (E(r_i)) là expected return theo cùng một kỳ và cùng scale (ví dụ 0,10 hoặc 10%, không trộn hai cách), (sigma_i) là độ lệch chuẩn cùng kỳ, (sigma_i^2) là phương sai và (ho_{AB}) là hệ số tương quan trong [-1,1]. Công thức hai tài sản giả định các đại lượng này được ước lượng cho cùng horizon; nếu covariance/correlation thay đổi theo regime, kết quả tối ưu cũng thay đổi.
+Trong các công thức dưới đây, (w_i) là tỷ trọng vốn (không có đơn vị), (E(r_i)) là expected return theo cùng một kỳ và cùng scale (ví dụ 0,10 hoặc 10%, không trộn hai cách), (sigma_i) là độ lệch chuẩn cùng kỳ, (sigma_i^2) là phương sai và (
+ho_{AB}) là hệ số tương quan trong [-1,1]. Công thức hai tài sản giả định các đại lượng này được ước lượng cho cùng horizon; nếu covariance/correlation thay đổi theo regime, kết quả tối ưu cũng thay đổi.
 
 \[
 \sigma_p^2=w_A^2\sigma_A^2+w_B^2\sigma_B^2
@@ -121,4 +122,4 @@ Source questions yêu cầu tính return gồm dividend và capital gain, phân 
 
 Mental model cần giữ lại là: **lợi suất danh mục là trung bình có trọng số; rủi ro danh mục là hàm của cả variance và covariance; efficient frontier là kết quả của việc loại các danh mục bị chi phối**. Phần CAPM tiếp theo hỏi thị trường định giá phần rủi ro còn lại này ra sao.
 
-Khi cần đi sâu vào allocation, rebalancing và portfolio construction hiện đại, hãy quay về [Portfolio risk, allocation and behavior](../01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md); lesson này giữ phần Markowitz vào đúng dependency của Sách 3.
+Khi cần đi sâu vào allocation, rebalancing và portfolio construction hiện đại, hãy quay về [Portfolio risk, allocation and behavior](../../../investing/01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md); lesson này giữ phần Markowitz vào đúng dependency của Sách 3.

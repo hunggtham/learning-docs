@@ -26,7 +26,7 @@ Claim cũ rằng `BOOK_MD_TO_LEARNING_DOCS_PROMPT.md` “không tồn tại tron
 
 Bản để học/đọc nằm tại:
 
-- [`../../investing/90_securities_book2/README.md`](../../investing/90_securities_book2/README.md)
+- [`../output/book2/README.md`](../output/book2/README.md)
 
 Coverage và các audit artifact nằm tại:
 

@@ -36,9 +36,9 @@ một parent path:
   learning output.
 - **Source-specific textbook learning route:** Sách 1 giữ route hiện tại tại
   [`book1/`](./book1/00-book1-index.md); Sách 2 nằm tại
-  [`../../investing/90_securities_book2/`](../../investing/90_securities_book2/README.md);
+  [`./book2/`](./book2/README.md);
   Sách 3 nằm tại
-  [`../../investing/90_securities_book3/`](../../investing/90_securities_book3/README.md).
+  [`./book3/`](./book3/README.md).
   Không di chuyển toàn bộ Sách 1 chỉ để đồng nhất path khi ownership và navigation
   hiện tại đã rõ.
 - **Canonical concept owner:** `../../investing/` giữ giải thích chuẩn theo

@@ -108,4 +108,4 @@ Quy trình đọc một bảng return nên là: (1) xác định đơn vị và 
 
 Người học phải tính được trung bình và độ lệch chuẩn của một con xúc xắc, kỳ vọng của trò chơi xác suất, tổng sinh lợi qua nhiều tháng, correlation từ covariance và hai độ dốc hồi quy. Khi làm, hãy ghi rõ dữ liệu là tổng thể hay mẫu và kiểm tra đơn vị. Nếu đã có các đại lượng này, phần kế tiếp dùng chúng để chứng minh diversification: **expected return là trung bình có trọng số, còn portfolio risk có thêm covariance**.
 
-Phần công thức danh mục chuyên sâu hơn nằm trong [Risk measurement & portfolio analytics](../01_foundations/04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md); file này chỉ giữ nền thống kê mà Sách 3 cần để đọc mạch tiếp.
+Phần công thức danh mục chuyên sâu hơn nằm trong [Risk measurement & portfolio analytics](../../../investing/01_foundations/04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md); file này chỉ giữ nền thống kê mà Sách 3 cần để đọc mạch tiếp.

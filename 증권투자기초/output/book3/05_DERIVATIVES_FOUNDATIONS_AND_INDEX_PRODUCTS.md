@@ -132,4 +132,4 @@ Người học phải tính basis, futures theoretical price, tick value, payoff
 
 Phần tiếp theo đổi underlying: interest rate, FX, credit và commodities. Giữ invariant: trước khi chọn contract, hãy viết exposure hiện tại, biến động nào gây lỗ, và payoff nào có dấu ngược lại.
 
-Phần canonical về contract mechanics, execution và risk controls nằm ở [Derivatives](../05_trading_derivatives/01_DERIVATIVES_FUTURES_OPTIONS_CFD.md); Sách 3 giữ thêm các ví dụ KOSPI200, basis và delta hedge để người mới nối lý thuyết với thị trường Hàn Quốc.
+Phần canonical về contract mechanics, execution và risk controls nằm ở [Derivatives](../../../investing/05_trading_derivatives/01_DERIVATIVES_FUTURES_OPTIONS_CFD.md); Sách 3 giữ thêm các ví dụ KOSPI200, basis và delta hedge để người mới nối lý thuyết với thị trường Hàn Quốc.

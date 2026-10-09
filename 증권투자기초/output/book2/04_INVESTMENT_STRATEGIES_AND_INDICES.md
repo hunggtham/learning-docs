@@ -40,7 +40,7 @@ nếu `ρ₁₂ = 0,2`, phương sai danh mục là `0,024`, nên volatility kho
 
 Ví dụ cũng cho thấy không thể suy luận “hai tài sản đều rủi ro 20% nên danh mục rủi ro 20%”. Cần ghi rõ cửa sổ đo, tần suất, currency, exposure ẩn và kịch bản correlation spike. Diversification là giảm covariance có điều kiện, không phải xóa rủi ro.
 
-Phần tính toán danh mục thuộc [Portfolio Risk, Allocation and Behavior](../01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md). Trong route Sách 2, chỉ cần giữ mental model: chiến lược tạo exposure, danh mục cộng exposure, benchmark dùng để kiểm tra exposure đó có đáng giá không.
+Phần tính toán danh mục thuộc [Portfolio Risk, Allocation and Behavior](../../../investing/01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md). Trong route Sách 2, chỉ cần giữ mental model: chiến lược tạo exposure, danh mục cộng exposure, benchmark dùng để kiểm tra exposure đó có đáng giá không.
 
 ## 4. Chỉ số giá cổ phiếu (stock-price index / 주가지수)
 

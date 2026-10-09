@@ -117,9 +117,9 @@ Các route `90_*` là **learning bridges từ giáo trình/source cụ thể**, 
 
 - [증권투자기초 — Sách 1](../증권투자기초/output/book1/00-book1-index.md): financial/securities market → instruments → issuance/listing → trading/venues → derivatives → tax/M&A → collective investment/funds. Provenance và coverage nằm tại [`../증권투자기초/output/`](../증권투자기초/output/README.md); raw authority là `../증권투자기초/raw_md/sach1.md` và `../증권투자기초/raw/sach1/`. Route này bảo toàn thứ tự giáo trình; canonical concept ownership vẫn thuộc các domain trong `investing/`.
 
-- [증권투자기초 — Sách 2](./90_securities_book2/README.md): macro/financial analysis → equity valuation → technical analysis → strategy/index → fixed income → yield/credit/duration/market. Provenance và coverage nằm tại [`../증권투자기초/sach2/`](../증권투자기초/sach2/README.md).
+- [증권투자기초 — Sách 2](./../증권투자기초/output/book2/README.md): macro/financial analysis → equity valuation → technical analysis → strategy/index → fixed income → yield/credit/duration/market. Provenance và coverage nằm tại [`../증권투자기초/sach2/`](../증권투자기초/sach2/README.md).
 
-- [증권투자기초 — Sách 3](./90_securities_book3/README.md): portfolio statistics → portfolio theory → CAPM/efficient markets → performance/valuation → derivatives → rates/FX/credit/commodity → OTC/structured products. Provenance, coverage và publication audit nằm tại [`../증권투자기초/sach3/`](../증권투자기초/sach3/README.md).
+- [증권투자기초 — Sách 3](./../증권투자기초/output/book3/README.md): portfolio statistics → portfolio theory → CAPM/efficient markets → performance/valuation → derivatives → rates/FX/credit/commodity → OTC/structured products. Provenance, coverage và publication audit nằm tại [`../증권투자기초/sach3/`](../증권투자기초/sach3/README.md).
 
 Quy tắc ownership: nếu một topic đã có owner trong `01–07`, route source-book giải thích đủ để thay source khi học rồi bàn giao sang owner; không duplicate một chapter chuyên sâu thứ hai và cũng không dùng cross-link để che source knowledge bị thiếu.
 

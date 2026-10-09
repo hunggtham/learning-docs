@@ -145,4 +145,4 @@ Một multiple chỉ có ý nghĩa khi driver, thời điểm và accounting pol
 
 Source-question test yêu cầu phân biệt money/time-weighted, arithmetic/geometric, Sharpe/Treynor/Jensen, hướng tác động của discount rate/growth/uncertainty, Gordon model, EVA và ROIC. Bàn giao: sau khi đã hiểu value và return trên tài sản cơ sở, ta mới có thể đọc phái sinh mà không nhầm premium, margin hay payoff với lợi suất “miễn phí”.
 
-Phần company-analysis canonical đi sâu hơn ở [DCF and multiples](../03_company_analysis/03_VALUATION_DCF_AND_MULTIPLES.md) và [financial statements](../03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md). Ở đây, các owner đó được giữ nguyên; Sách 3 chỉ cung cấp learning bridge từ CAPM sang valuation.
+Phần company-analysis canonical đi sâu hơn ở [DCF and multiples](../../../investing/03_company_analysis/03_VALUATION_DCF_AND_MULTIPLES.md) và [financial statements](../../../investing/03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md). Ở đây, các owner đó được giữ nguyên; Sách 3 chỉ cung cấp learning bridge từ CAPM sang valuation.

@@ -11,7 +11,7 @@ Publication pass ở đây có nghĩa: learning route có thể thay raw OCR cho
 ## 1. Architecture / canonical ownership
 
 - Source + provenance + coverage owner: `증권투자기초/sach3/`.
-- Canonical learning owner: `investing/90_securities_book3/`.
+- Canonical learning owner: `증권투자기초/output/book3/`.
 - Không tái tạo route mới vì dependency architecture hiện tại vẫn hợp lý.
 - Lesson 01–07 giữ source-derived learning content; lesson 08 là synthesis/reconstruction layer.
 - Enrichment/canonical bridge không được dùng để chứng minh source completeness. Ví dụ: FCFE bridge, BPV/DV01 label/worked hedge, một số execution/data-bias controls.
@@ -28,7 +28,7 @@ Result: **PASS**.
 | MISSING | not trustworthy under old granularity | **0** |
 | SOURCE_AMBIGUITY | not separated rigorously | **10** |
 
-Coverage owner: [SOURCE_COVERAGE_BOOK3.md](../../증권투자기초/sach3/SOURCE_COVERAGE_BOOK3.md).
+Coverage owner: [SOURCE_COVERAGE_BOOK3.md](../../sach3/SOURCE_COVERAGE_BOOK3.md).
 
 The split covers statistics, Markowitz/utility/diversification, CAPM/CML/SML, three EMH forms/tests/anomalies, performance, valuation, futures/options, rates, FX, credit, commodity and OTC/structured-product units without grouping independent distinctions into a single `FULL` row.
 
@@ -49,7 +49,7 @@ Remaining exact-source ambiguities: **10**.
 9. p.352 exact acronyms for some trust/deposit wrappers.
 10. p.357–359 exact cells/graph labels in structured-product prospectus figures.
 
-Exact locations and handling: [SOURCE_AMBIGUITIES_BOOK3.md](../../증권투자기초/sach3/SOURCE_AMBIGUITIES_BOOK3.md).
+Exact locations and handling: [SOURCE_AMBIGUITIES_BOOK3.md](../../sach3/SOURCE_AMBIGUITIES_BOOK3.md).
 
 Repository branch does not contain the original Book 3 PDF/image set required to visually recover these cells. None was reconstructed from outside knowledge. Mechanisms supported by surrounding prose are tracked in separate `FULL` rows.
 
@@ -57,7 +57,7 @@ Result: **PASS with 10 declared SOURCE_AMBIGUITY rows**.
 
 ## 4. Formula / table / figure audit
 
-[FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md](../../증권투자기초/sach3/FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md) contains:
+[FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md](../../sach3/FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md) contains:
 
 - **42 formula-contract rows**: 41 source-backed PASS + 1 explicitly labeled enrichment (BPV/DV01 bridge; source itself teaches duration).
 - **16 knowledge-bearing table/figure rows**.
@@ -69,7 +69,7 @@ Result: **PASS**.
 
 ## 5. Korean / English terminology audit
 
-[TERMINOLOGY_AUDIT_BOOK3.md](../../증권투자기초/sach3/TERMINOLOGY_AUDIT_BOOK3.md) verifies **117 source-confirmed Korean terms** that are now present at useful occurrences in the learning route; missing audited terms: **0**.
+[TERMINOLOGY_AUDIT_BOOK3.md](../../sach3/TERMINOLOGY_AUDIT_BOOK3.md) verifies **117 source-confirmed Korean terms** that are now present at useful occurrences in the learning route; missing audited terms: **0**.
 
 Examples newly normalized or made explicit include:
 
@@ -112,7 +112,7 @@ Result: **PASS**.
 
 ## 7. Source-question test
 
-[SOURCE_QUESTION_MAP_BOOK3.md](../../증권투자기초/sach3/SOURCE_QUESTION_MAP_BOOK3.md) maps **172** source review/exercise/comprehensive questions or validation items:
+[SOURCE_QUESTION_MAP_BOOK3.md](../../sach3/SOURCE_QUESTION_MAP_BOOK3.md) maps **172** source review/exercise/comprehensive questions or validation items:
 
 `source question → required semantic units → lesson/section`
 
