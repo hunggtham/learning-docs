@@ -1,9 +1,11 @@
+import { createHash } from 'node:crypto';
 import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { auditEntries, auditFile, contentRoot, loadConfig, normalizeEntry, projectRoot } from './audit-library.mjs';
 
 const outRoot = path.join(projectRoot, 'site/library');
 const config = await loadConfig();
+const contentIdsPath = path.join(projectRoot, 'content-ids.json');
 const audit = await auditEntries(config);
 if (audit.errors.length) {
   for (const error of audit.errors) console.error(`ERROR ${error}`);
@@ -17,11 +19,45 @@ const normalizeManifestEntry = entry => {
 };
 const allowedDocuments = new Map(config.allowedDocuments.map(normalizeManifestEntry).filter(Boolean).map(entry => [entry.path, entry]));
 const allowedPrefixes = (config.allowedPrefixes || []).map(normalizeManifestEntry).filter(Boolean);
+let contentIds = { version: 1, documents: [] };
+try {
+  contentIds = JSON.parse(await readFile(contentIdsPath, 'utf8'));
+} catch {}
+const contentIdEntries = Array.isArray(contentIds.documents) ? contentIds.documents : [];
+const contentIdByPath = new Map();
+const contentIdByAlias = new Map();
+for (const entry of contentIdEntries) {
+  if (!entry || typeof entry.contentId !== 'string') continue;
+  if (typeof entry.path === 'string') contentIdByPath.set(entry.path.replaceAll('\\', '/'), entry);
+  for (const alias of Array.isArray(entry.aliases) ? entry.aliases : []) {
+    if (typeof alias === 'string') contentIdByAlias.set(alias.replaceAll('\\', '/'), entry);
+  }
+}
 const excluded = new Set(['.git', 'node_modules', '.DS_Store', 'dist', 'learning-library', ...(config.ignoredSegments || [])]);
 const allowed = new Set(['.md', '.pdf']);
 const documents = [];
 const seen = new Set();
 const markdownSources = new Map();
+
+function normalizeNamespace(value) {
+  return String(value || 'general').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9가-힣]+/g, '-').replace(/^-+|-+$/g, '') || 'general';
+}
+
+function derivedContentId(document) {
+  const base = `my-learning-registry\u001f${document.path.normalize('NFC')}`;
+  return `doc_${createHash('sha256').update(base).digest('hex').slice(0, 40)}`;
+}
+
+function contentIdentity(relative, manifestEntry, title, type, category) {
+  const registry = contentIdByPath.get(relative) || contentIdByAlias.get(relative);
+  const contentId = manifestEntry?.contentId || registry?.contentId || derivedContentId({ path: relative, title, type, category, contentNamespace: manifestEntry?.contentNamespace, contentType: manifestEntry?.contentType });
+  const aliases = [...new Set([
+    ...(Array.isArray(manifestEntry?.contentAliases) ? manifestEntry.contentAliases : []),
+    ...(Array.isArray(registry?.aliases) ? registry.aliases : []),
+    registry?.path && registry.path !== relative ? registry.path : null
+  ].filter(alias => typeof alias === 'string' && alias !== relative))];
+  return { contentId, aliases };
+}
 
 function manifestFor(relative) {
   const explicit = allowedDocuments.get(relative);
@@ -114,16 +150,22 @@ async function walk(directory) {
       const info = await stat(absolute);
       const visiblePath = displayPath(relative, manifestEntry);
       const type = path.extname(entry.name).toLowerCase() === '.pdf' ? 'PDF' : 'MD';
+      const category = manifestEntry.category || relative.split('/')[0];
+      const title = manifestEntry.title || path.basename(entry.name, path.extname(entry.name));
+      const identity = contentIdentity(relative, manifestEntry, title, type, category);
       documents.push({
         path: relative,
         displayPath: visiblePath,
         folder: path.posix.dirname(visiblePath) === '.' ? '' : path.posix.dirname(visiblePath),
-        title: manifestEntry.title || path.basename(entry.name, path.extname(entry.name)),
+        title,
         type,
-        category: manifestEntry.category || relative.split('/')[0],
+        category,
         language: manifestEntry.language || 'vi',
         rights: manifestEntry.rights || 'author-confirmed',
-        size: info.size
+        size: info.size,
+        contentId: identity.contentId,
+        contentAliases: identity.aliases,
+        contentRevision: createHash('sha256').update(await readFile(absolute)).digest('hex')
       });
       if (type === 'MD') markdownSources.set(relative, await readFile(absolute, 'utf8'));
       seen.add(relative);
@@ -173,6 +215,8 @@ for (const [relative, source] of markdownSources) {
   markdownSources.set(relative, scrubbed.markdown);
   if (scrubbed.markdown !== source) {
     await writeFile(path.join(outRoot, 'files', relative), scrubbed.markdown);
+    const document = documents.find(item => item.path === relative);
+    if (document) document.contentRevision = createHash('sha256').update(scrubbed.markdown).digest('hex');
   }
 }
 

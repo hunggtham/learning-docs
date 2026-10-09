@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'study-shelf-shell-v7';
+const SHELL_CACHE = 'study-shelf-shell-v8';
 const CONTENT_CACHE = 'study-shelf-content-v6';
 const USER_CACHE = 'study-shelf-user-v1';
 const SHELL = [

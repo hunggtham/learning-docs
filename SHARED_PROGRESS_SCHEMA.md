@@ -2,15 +2,15 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)**. Route đi từ identity và ownership → common columns → state/metadata và forward compatibility → app integrations, để progress schema dùng chung mà không kéo logic riêng của từng ứng dụng vào lõi.
 
-`learning_progress` is the dùng chung (shared / 공유) progress bảng (table / 테이블) for `study-library`, `languages-docs`, and future học tập (learning / 학습) applications. It is intentionally application-neutral: app-specific dữ liệu (data / 데이터) belongs in `state`, while the dùng chung (common / 공통) columns remain stable across products.
+`learning_progress` is the dùng chung (shared / 공유) progress bảng (table / 테이블) for `my-learning`, `languages-docs`, and future học tập (learning / 학습) applications. It is intentionally application-neutral: app-specific dữ liệu (data / 데이터) belongs in `state`, while the dùng chung (common / 공통) columns remain stable across products.
 
 ## Định danh (identity / 식별자)
 
 A row is uniquely identified by `user_id + app_id + content_namespace + content_type + content_id`.
 
-`content_id` must be a stable application-level identifier and must not be a URL or tệp (file / 파일) đường dẫn (path / 경로). `content_path` is only the hiện tại (current / 현재) location hint used for display or di chuyển (migration / 마이그레이션). A máy khách (client / 클라이언트) may provide an tường minh (explicit / 명시적) content ID from its catalogue; otherwise its adapter must derive an ID from stable content siêu dữ liệu (metadata / 메타데이터) rather than a tuyến (route / 경로).
+`content_id` must be a stable application-level identifier and must not be a URL or tệp (file / 파일) đường dẫn (path / 경로). `content_path` is only the hiện tại (current / 현재) location hint used for display or di chuyển (migration / 마이그레이션). A máy khách (client / 클라이언트) may provide an tường minh (explicit / 명시적) content ID from its catalogue; the Study Library registry keeps this ID when a file moves and stores old paths as aliases. `content_revision` belongs in the application state, not in the identity key, so content updates can be detected without creating a new progress record.
 
-Study thư viện (library / 라이브러리) uses `app_id = "study-library"`, `content_type = "document"` for documents, and a separate `content_type = "settings"` bản ghi (record / 레코드) for app preferences. `languages-docs` should use its own `app_id` while reusing the same bảng (table / 테이블).
+Study thư viện (library / 라이브러리) uses `app_id = "my-learning"`, `content_type = "document"` for documents, and a separate `content_type = "settings"` bản ghi (record / 레코드) for app preferences. `languages-docs` should use its own `app_id` while reusing the same bảng (table / 테이블).
 
 > **Chuyển mạch:** Trong **Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)**, **Columns and forward tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **Định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trình duyệt (browser / 브라우저) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
@@ -18,7 +18,7 @@ Study thư viện (library / 라이브러리) uses `app_id = "study-library"`, `
 
 The dùng chung (shared / 공유) columns are `id`, `user_id`, `app_id`, `content_namespace`, `content_type`, `content_id`, `content_path`, `status`, `progress_pct`, `current_section`, `completed_sections`, `bookmarks`, `state`, `schema_version`, `last_opened_at`, `created_at`, and `updated_at`.
 
-`state` is the forward-compatible extension điểm (point / 지점). Clients must preserve every unknown key in `state` when they merge or cập nhật (update / 업데이트) a bản ghi (record / 레코드). A Study thư viện (library / 라이브러리) ghi (write / 쓰기) may cập nhật (update / 업데이트) `state.study_library`, but it must not discard keys owned by another phiên bản (version / 버전) or tích hợp (integration / 통합).
+`state` is the forward-compatible extension điểm (point / 지점). Clients must preserve every unknown key in `state` when they merge or cập nhật (update / 업데이트) a bản ghi (record / 레코드). A Study thư viện (library / 라이브러리) ghi (write / 쓰기) may cập nhật (update / 업데이트) `state.my_learning`; clients retain legacy `state.study_library` during migration and must not discard keys owned by another phiên bản (version / 버전) or tích hợp (integration / 통합).
 
 > **Chuyển mạch:** Ở chặng này của **Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)**, **Trình duyệt (browser / 브라우저) API** tiếp nhận điểm tựa từ **Columns and forward tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Merge rules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
