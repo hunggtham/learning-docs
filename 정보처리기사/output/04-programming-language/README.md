@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** **Bài học** đặt syntax, type và runtime semantics; **Các bài học theo chủ đề** gom chúng theo task Môn 4, rồi **Ghi chú học** chỉ rõ boundary.
+**Bài học** đặt syntax, type và runtime semantics; **Các bài học theo chủ đề** gom chúng theo task Môn 4, rồi **Ghi chú học** chỉ rõ boundary.
 
 ## Các bài học theo chủ đề
 
@@ -104,7 +104,7 @@
 90. [292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)](lessons/90-bai-hoc.md)
 91. [298. PCB (Process Control Block)](lessons/91-bai-hoc.md)
 
-> **Chuyển mạch:** **Ghi chú học** tách compile-time và runtime failure; **Mạch bài giảng** nối hai lớp đó trong một route giải thích tự nhiên.
+**Ghi chú học** tách compile-time và runtime failure; **Mạch bài giảng** nối hai lớp đó trong một route giải thích tự nhiên.
 
 ## Ghi chú học
 
@@ -114,13 +114,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** **Mạch bài giảng** chuyển syntax và semantics thành code path; **Checklist ôn tập** đối chiếu invariant và evidence thay vì kiểm tra thuộc lòng.
+**Mạch bài giảng** chuyển syntax và semantics thành code path; **Checklist ôn tập** đối chiếu invariant và evidence thay vì kiểm tra thuộc lòng.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** **Checklist ôn tập** khép Môn 4 bằng syntax/runtime boundary và link owner; phần chuyên sâu quay về chapter ngôn ngữ tương ứng.
+**Checklist ôn tập** khép Môn 4 bằng syntax/runtime boundary và link owner; phần chuyên sâu quay về chapter ngôn ngữ tương ứng.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 

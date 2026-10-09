@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** **Bài học** cung cấp concept và cơ chế; **Các bài học theo chủ đề** gom chúng theo task của Môn 2, rồi **Ghi chú học** giữ lại prerequisite và lỗi dễ nhầm.
+**Bài học** cung cấp concept và cơ chế; **Các bài học theo chủ đề** gom chúng theo task của Môn 2, rồi **Ghi chú học** giữ lại prerequisite và lỗi dễ nhầm.
 
 ## Các bài học theo chủ đề
 
@@ -114,7 +114,7 @@
 100. [113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)](lessons/100-bai-hoc.md)
 101. [120-1: 소프트웨어의 분류 (Software Classification)](lessons/101-bai-hoc.md)
 
-> **Chuyển mạch:** **Ghi chú học** nêu assumption và failure boundary của từng topic; **Mạch bài giảng** nối chúng thành một chuỗi giải thích bằng tiếng Việt.
+**Ghi chú học** nêu assumption và failure boundary của từng topic; **Mạch bài giảng** nối chúng thành một chuỗi giải thích bằng tiếng Việt.
 
 ## Ghi chú học
 
@@ -124,13 +124,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** **Mạch bài giảng** biến ghi chú thành route từ yêu cầu đến triển khai; **Checklist ôn tập** chỉ xác nhận các invariant và evidence cần giữ.
+**Mạch bài giảng** biến ghi chú thành route từ yêu cầu đến triển khai; **Checklist ôn tập** chỉ xác nhận các invariant và evidence cần giữ.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** **Checklist ôn tập** khép README bằng scope và evidence của Môn 2; chi tiết implementation quay về chapter canonical tương ứng.
+**Checklist ôn tập** khép README bằng scope và evidence của Môn 2; chi tiết implementation quay về chapter canonical tương ứng.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 
