@@ -7,6 +7,7 @@
     "build:library": "node scripts/build-library.mjs && node scripts/write-supabase-config.mjs",
     "audit:library": "node scripts/audit-library.mjs",
     "check:sync": "node --check site/progress-sync.js && node --check site/study-planner-auth.js && node --check scripts/write-supabase-config.mjs",
-    "serve": "python3 -m http.server 4173 --directory site"
+    "serve": "python3 -m http.server 4173 --directory site",
+    "open:local": "node scripts/open-local.mjs"
   }
 }

@@ -26,6 +26,14 @@ npm run build:library
 npm run serve
 ```
 
+Để build và mở trang local trong trình duyệt bằng một lệnh:
+
+```bash
+npm run open:local
+```
+
+Lệnh này tạo lại `site/library`, chạy server tại `http://localhost:4173/` và tự mở trình duyệt. Có thể đổi cổng bằng `PORT=5173 npm run open:local`.
+
 Study Library reuses the Supabase project already linked by `planner/study-planner` (`hunggtham/my-study-planner`), project ref `suvknhgjcgeudjqmgzwt`. The project URL therefore defaults to `https://suvknhgjcgeudjqmgzwt.supabase.co`. Without the existing Planner anon/publishable key, the UI stays `Local only` and continues using localStorage.
 
 To test cloud sync locally:
