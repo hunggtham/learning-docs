@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **127 ~ 129: 화이트박스 테스트 (White Box Test)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **130 & 131: 블랙박스 테스트 (Black Box Test)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **127 129: 화이트박스 테스트 (White Box Test)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu áp dụng white-box vào control flow, statement/branch và path; từ khóa khoanh vùng cấu trúc nội bộ và coverage evidence.
 
 ## 핵심 키워드 (Từ khóa)
 
 화이트박스, 테스트
 
-> **Chuyển mạch:** Ở chặng này của **127 129: 화이트박스 테스트 (White Box Test)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt white-box test trên nền application theory và coverage criteria; cách đọc tiếp theo giúp chọn path theo rủi ro.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**에서 만든 기준을 이어받아 **127 ~ 129: 화이트박스 테스트 (White Box Test)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **127 129: 화이트박스 테스트 (White Box Test)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127 129: 화이트박스 테스트 (White Box Test)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần white-box dùng khung đó để nối nhánh điều khiển với test data.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **127 ~ 129: 화이트박스 테스트 (
 
 ---
 
-> **Chuyển mạch:** Trong **127 129: 화이트박스 테스트 (White Box Test)**, **127 129: 화이트박스 테스트 (White Box Test)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giới hạn white-box khi behavior ngoài cấu trúc chưa được kiểm tra; khi sang black-box, hãy đổi điểm quan sát sang input/output.
 
 ## 127 ~ 129: 화이트박스 테스트 (White Box Test)
 

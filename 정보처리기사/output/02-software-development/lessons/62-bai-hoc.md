@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **105: 시각에 따른 테스트 (Verification vs Validation)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **105: 시각에 따른 테스트 (Verification vs Validation)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt verification “xây đúng sản phẩm” với validation “xây đúng thứ cần”; từ khóa khoanh vùng artifact, requirement và người dùng.
 
 ## 핵심 키워드 (Từ khóa)
 
 시각에, 따른, 테스트
 
-> **Chuyển mạch:** Ở chặng này của **105: 시각에 따른 테스트 (Verification vs Validation)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt verification/validation trên nền test process và traceability; cách đọc tiếp theo giúp chọn evidence theo câu hỏi chất lượng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**에서 만든 기준을 이어받아 **105: 시각에 따른 테스트 (Verification vs Validation)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **105: 시각에 따른 테스트 (Verification vs Validation)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **105: 시각에 따른 테스트 (Verification vs Validation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần này dùng khung đó để nối loại câu hỏi với cách thu thập bằng chứng.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **105: 시각에 따른 테스트 (Verif
 
 ---
 
-> **Chuyển mạch:** Trong **105: 시각에 따른 테스트 (Verification vs Validation)**, **105: 시각에 따른 테스트 (Verification vs Validation)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng việc hai góc nhìn bổ sung chứ không thay thế nhau; khi sang application test theory, hãy giữ cả artifact lẫn nhu cầu sử dụng.
 
 ## 105: 시각에 따른 테스트 (Verification vs Validation)
 
