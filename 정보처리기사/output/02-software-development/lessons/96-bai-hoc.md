@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **091-1: 절차형 SQL (Procedural SQL)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **091-1: 절차형 SQL (Procedural SQL)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt procedural SQL vào ranh giới giữa truy vấn dữ liệu và logic điều khiển. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại thuật ngữ để phân biệt procedure, trigger và function trước khi xét cách kiểm thử.
 
 ## 핵심 키워드 (Từ khóa)
 
 절차형, SQL
 
-> **Chuyển mạch:** Ở chặng này của **091-1: 절차형 SQL (Procedural SQL)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa trên cho thấy procedural SQL mở rộng SQL bằng trạng thái và luồng điều khiển. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối các thành phần đó với schema để xác định logic đang tác động lên lớp dữ liệu nào.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **091: 스키마 (Schema)**에서 만든 기준을 이어받아 **091-1: 절차형 SQL (Procedural SQL)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **091-1: 절차형 SQL (Procedural SQL)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **091-1: 절차형 SQL (Procedural SQL)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối procedural SQL với các lớp schema, **읽는 방법 (Cách đọc)** sẽ hướng dẫn theo dõi sự kiện, trạng thái và tác động của từng loại khối lệnh, rồi mới xem quy trình test và debug.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **091-1: 절차형 SQL (Procedural SQL)*
 
 ---
 
-> **Chuyển mạch:** Trong **091-1: 절차형 SQL (Procedural SQL)**, **091-1: 절차형 SQL (Procedural SQL)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **091-1: 절차형 SQL (Procedural SQL)** giải thích loại khối lệnh, điểm kích hoạt và cách kiểm thử có kiểm soát. Hãy giữ evidence và boundary của logic này khi chuyển sang IDE.
 
 ## 091-1: 절차형 SQL (Procedural SQL)
 
@@ -55,7 +55,7 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 
 ### 절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)
 
-Các ý ngay dưới **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -66,7 +66,7 @@ Phần “절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedura
 
 Các bullet của **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Với **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+Với **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức, với đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Điểm chốt của **091-1: 절차형 SQL (Procedural SQL)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 

@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **088-2: 데이터베이스 (Database) & 089: DBMS** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **090-1: 데이터의 독립성 (Data Independence)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **088-2: 데이터베이스 (Database) & 089: DBMS**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt database và DBMS vào cùng câu hỏi về tổ chức, truy vấn và kiểm soát dữ liệu. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại thuật ngữ trung tâm trước khi phân biệt đặc trưng của database với trách nhiệm của DBMS.
 
 ## 핵심 키워드 (Từ khóa)
 
 데이터베이스
 
-> **Chuyển mạch:** Ở chặng này của **088-2: 데이터베이스 (Database) & 089: DBMS**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ khóa trên gọi tên kho dữ liệu, còn phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối nó với kỹ thuật reuse ở bài trước để làm rõ khi nào dữ liệu và phần mềm quản lý có thể được dùng lại mà vẫn giữ quy tắc.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**에서 만든 기준을 이어받아 **088-2: 데이터베이스 (Database) & 089: DBMS**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **088-2: 데이터베이스 (Database) & 089: DBMS**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **088-2: 데이터베이스 (Database) & 089: DBMS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối database với tiêu chí tái sử dụng và kiểm soát, **읽는 방법 (Cách đọc)** sẽ hướng dẫn tách đối tượng, chức năng và hệ quả, để không trộn lẫn đặc trưng của database với chức năng của DBMS.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **088-2: 데이터베이스 (Database) &
 
 ---
 
-> **Chuyển mạch:** Trong **088-2: 데이터베이스 (Database) & 089: DBMS**, **088-2: 데이터베이스 (Database) & 089: DBMS** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **088-2: 데이터베이스 (Database) & 089: DBMS** lần lượt giải thích bốn đặc trưng của database và ba nhóm chức năng của DBMS. Hãy giữ ranh giới giữa dữ liệu và phần mềm quản lý khi chuyển sang data independence.
 
 ## 088-2: 데이터베이스 (Database) & 089: DBMS
 
@@ -44,7 +44,7 @@ Từ **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử d
 
 ### 데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)
 
-Các ý ngay dưới **데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để xác nhận cách hiểu.
 
 Phần “데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
