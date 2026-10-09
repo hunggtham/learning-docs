@@ -20,31 +20,32 @@ Phạm vi **chưa hoàn tất**. Snapshot live của checkout hiện tại:
 
 | Chỉ số | Giá trị |
 |---|---:|
-| File còn connector cũ `Chuyển mạch` | 1009 |
-| File còn mẫu câu nối cũ | 792 |
-| File có connector malformed `Nối mạch:***` | 0 |
-| File bị broad scan đánh dấu từ khóa quiz/self-check | 134 |
+| File còn connector cũ `Chuyển mạch` | 916 |
+| File còn mẫu câu nối cũ (broad scan) | 1405 |
+| File còn connector malformed (loại trừ báo cáo này) | 0 |
+| File bị broad scan đánh dấu từ khóa quiz/self-check | 161 |
 
 Broad scan chỉ là danh sách cần rà lại; không phải mọi kết quả đều là quiz thực
-thụ. Các thay đổi dirty/staged ngoài phạm vi review được giữ nguyên và không đưa
-vào những commit checkpoint.
+thụ. Chỉ số connector bao gồm cả một số README, handoff và báo cáo lịch sử; vì
+vậy không được coi là số lesson canonical đã nghiệm thu. Các thay đổi dirty/staged
+ngoài phạm vi review được giữ nguyên và không đưa vào những commit checkpoint.
 
 ### Phạm vi còn lại theo domain (file có connector cũ)
 
 | Domain | Còn lại |
 |---|---:|
-| `computer_science` | 363 |
-| `정보처리기사` | 271 |
-| `korea_business_economy_knowledge_library` | 62 |
+| `computer_science` | 360 |
+| `정보처리기사` | 148 |
+| `korea_business_economy_knowledge_library` | 59 |
 | `philosophy` | 60 |
-| `electrical_engineering` | 31 |
-| `10_backend` | 30 |
+| `electrical_engineering` | 28 |
+| `10_backend` | 27 |
 | `devops_platform_engineering` | 20 |
 | `data_engineering` | 20 |
 | `economics` | 18 |
 | `sql` | 17 |
 | `linux` | 16 |
-| Các domain nhỏ còn lại | 101 |
+| Các domain nhỏ còn lại (broad path scan) | 143 |
 
 ## Checkpoint đã commit
 
