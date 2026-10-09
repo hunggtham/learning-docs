@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **7. 이분 검색 (Binary Search)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định radix sort phân phối theo từng chữ số và giữ thứ tự ổn định ra sao; từ khóa khoanh vùng bucket và số lượt quét.
 
 ## 핵심 키워드 (Từ khóa)
 
 기수, 정렬
 
-> **Chuyển mạch:** Ở chặng này của **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt radix sort trên nền merge sort và phép phân phối; cách đọc tiếp theo giúp theo dõi điều kiện của khóa và bucket.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **086: 2-Way 합병 정렬 (Merge Sort)**에서 만든 기준을 이어받아 **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần radix sort dùng khung đó để nối tính ổn định với độ dài khóa.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **086-1: 기수 정렬 (Radix Sort / Buc
 
 ---
 
-> **Chuyển mạch:** Trong **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**, **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa số bucket và số chữ số; khi sang binary search, hãy đối chiếu phân phối khóa với điều kiện dữ liệu đã sắp xếp.
 
 ## 086-1: 기수 정렬 (Radix Sort / Bucket Sort)
 

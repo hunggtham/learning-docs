@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt tìm kiếm tuần tự, nhị phân và hashing theo điều kiện dữ liệu; từ khóa khoanh vùng phép so sánh và ánh xạ khóa.
 
 ## 핵심 키워드 (Từ khóa)
 
 검색, 알고리즘, 해싱
 
-> **Chuyển mạch:** Ở chặng này của **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt nhóm search/hash trên nền binary search và mô hình khóa–giá trị; cách đọc tiếp theo giúp chọn cơ chế theo dữ liệu.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **7. 이분 검색 (Binary Search)**에서 만든 기준을 이어받아 **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần search/hash dùng khung đó để nối cấu trúc dữ liệu với chi phí truy cập.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **029 & 030: 검색 알고리즘 및 해
 
 ---
 
-> **Chuyển mạch:** Trong **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa so sánh tuần tự, thứ tự và collision; khi sang binary search chuyên biệt, hãy giữ lại điều kiện đầu vào.
 
 ## 029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)
 
