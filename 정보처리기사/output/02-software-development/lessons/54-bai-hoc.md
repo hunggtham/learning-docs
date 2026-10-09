@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định oracle biến expected behavior thành kết luận test và tool thu thập bằng chứng ra sao; từ khóa khoanh vùng pass/fail, log và coverage.
 
 ## 핵심 키워드 (Từ khóa)
 
 테스트, 오라클, 도구
 
-> **Chuyển mạch:** Ở chặng này của **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt oracle/tools trên nền test phases và test case; cách đọc tiếp theo giúp phân biệt dữ liệu chạy với tiêu chí đánh giá.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **16. 소프트웨어 테스트 단계 (Software Testing Phases)**에서 만든 기준을 이어받아 **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần oracle/tools dùng khung đó để nối input, quan sát và quyết định pass/fail.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **17. 테스트 오라클 및 테스트 
 
 ---
 
-> **Chuyển mạch:** Trong **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**, **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng ranh giới oracle đầy đủ và oracle một phần; khi sang top-down integration, hãy thay thế module chưa có bằng stub có kiểm soát.
 
 ## 17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)
 

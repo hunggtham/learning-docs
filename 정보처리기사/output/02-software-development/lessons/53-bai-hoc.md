@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **16. 소프트웨어 테스트 단계 (Software Testing Phases)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu đặt white/black-box vào các phase phù hợp: unit, integration, system và acceptance; từ khóa khoanh vùng mục tiêu và evidence của từng tầng.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 테스트, 단계
 
-> **Chuyển mạch:** Ở chặng này của **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt test phases trên nền góc nhìn white/black-box; cách đọc tiếp theo giúp nối câu hỏi với tầng kiểm thử thích hợp.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)**에서 만든 기준을 이어받아 **16. 소프트웨어 테스트 단계 (Software Testing Phases)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. 소프트웨어 테스트 단계 (Software Testing Phases)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần phases dùng khung đó để nối phạm vi hệ thống với loại failure có thể quan sát.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **16. 소프트웨어 테스트 단계 (
 
 ---
 
-> **Chuyển mạch:** Trong **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, **16. 소프트웨어 테스트 단계 (Software Testing Phases)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng giới hạn coverage của từng phase; khi sang oracle/tools, hãy xác định bằng chứng nào đủ để kết luận.
 
 ## 16. 소프트웨어 테스트 단계 (Software Testing Phases)
 
