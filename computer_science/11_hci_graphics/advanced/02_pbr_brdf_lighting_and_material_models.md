@@ -10,7 +10,7 @@ Outgoing radiance tại một điểm phụ thuộc emitted light và integral c
 
 Điểm quan trọng là điểm ảnh (pixel / 픽셀) color không chỉ là “màu vật thể”; nó là kết quả tương tác (interaction / 상호작용) giữa hình học (geometry / 기하학), material, light và camera/exposure.
 
-> **Chuyển mạch:** Trong **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **BRDF** tiếp nhận điểm tựa từ **Rendering equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diffuse và specular** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rendering equation đặt câu hỏi tổng quát về ánh sáng; BRDF trả lời phần cục bộ: một bề mặt phân phối ánh sáng tới theo hướng nào. Từ đó có thể phân biệt diffuse và specular.
 
 ## BRDF
 
@@ -18,7 +18,7 @@ Outgoing radiance tại một điểm phụ thuộc emitted light và integral c
 
 BRDF vật lý hợp lý thường tôn trọng năng lượng (energy / 에너지) conservation và reciprocity trong mô hình (model / 모델) phù hợp: surface không tự phản xạ nhiều năng lượng hơn nhận được.
 
-> **Chuyển mạch:** Ở chặng này của **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Diffuse và specular** tiếp nhận điểm tựa từ **BRDF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Metallic workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+BRDF cho ta ngôn ngữ để mô tả highlight và tán xạ; material workflow biến các đặc tính đó thành tham số mà pipeline có thể lưu trữ và chỉnh sửa.
 
 ## Diffuse và specular
 
@@ -26,7 +26,7 @@ Diffuse thành phần (component / 컴포넌트) mô tả light tán xạ rộng
 
 Roughness điều khiển phân phối (distribution / 분포): surface rough làm highlight rộng/mờ; smooth làm highlight sắc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Diffuse và specular** xác định đầu vào; **Metallic workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Normal ánh xạ (mapping / 매핑)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metallic và roughness chọn mô hình phản xạ, còn normal map bổ sung hướng bề mặt ở mức shading mà không thay đổi hình học hay silhouette.
 
 ## Metallic workflow
 
@@ -34,7 +34,7 @@ Metal và dielectric phản ứng khác nhau. Dielectric thường có diffuse t
 
 PBR texture sets như cơ sở (base / 기반) color, metallic, roughness, normal không phải arbitrary filters; chúng parameterize material mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Metallic workflow** xác định đầu vào; **Normal ánh xạ (mapping / 매핑)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Image-based lighting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Normal map chỉ có ý nghĩa khi tangent basis đúng; sau khi xác định normal, renderer cần nguồn sáng của môi trường để tính phản xạ quan sát được.
 
 ## Normal ánh xạ (mapping / 매핑)
 
@@ -42,7 +42,7 @@ Normal map thay shading normal mà không thêm hình học (geometry / 기하�
 
 Tangent-space transformation phải đúng; sai handedness/normal convention tạo lighting sản phẩm tạo ra (artifact / 산출물) khó hiểu.
 
-> **Chuyển mạch:** Ở chặng này của **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Image-based lighting** tiếp nhận điểm tựa từ **Normal ánh xạ (mapping / 매핑)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tone ánh xạ (mapping / 매핑)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Image-based lighting đưa radiance từ môi trường vào cùng mô hình material. Vì giá trị tính toán thường ở HDR, bước tiếp theo phải đưa chúng về phạm vi hiển thị.
 
 ## Image-based lighting
 
@@ -50,15 +50,13 @@ Môi trường (environment / 환경) map cung cấp incoming light từ nhiều
 
 Đây là ví dụ đổi computation thời gian chạy (runtime / 런타임) lấy preprocessing/lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Tone ánh xạ (mapping / 매핑)** tiếp nhận điểm tựa từ **Image-based lighting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tone mapping hoàn tất đường đi từ radiance tới pixel nhìn thấy. Khi debug, cần tách lỗi material, ánh sáng, exposure và color pipeline thay vì đọc pixel như màu vật thể trực tiếp.
 
 ## Tone ánh xạ (mapping / 매핑)
 
 Lighting computation có thể tạo HDR values vượt display phạm vi (range / 범위). Tone ánh xạ (mapping / 매핑) ánh xạ động (dynamic / 동적) phạm vi (range / 범위) sang đầu ra (output / 출력) display trong khi cố giữ perceptual relationships.
 
 Nếu gỡ lỗi (debug / 디버그) material sau tone ánh xạ (mapping / 매핑)/exposure, cần nhớ visual kết quả (result / 결과) đã qua color chuỗi xử lý (pipeline / 파이프라인); linear-space giá trị (value / 값) và displayed điểm ảnh (pixel / 픽셀) không đồng nhất.
-
-> **Chuyển mạch:** Trong **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tone ánh xạ (mapping / 매핑)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
