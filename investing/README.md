@@ -2,6 +2,8 @@
 
 Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain / 도메인) thay vì gom vào một cuốn tổng hợp quá lớn. Mỗi thư mục có mục tiêu học rõ ràng, tài liệu nền tảng và các chương chuyên sâu để chuyển từ kiến thức sang phân tích thực tế.
 
+Provenance và ranh giới cập nhật nằm trong [source ledger](./SOURCES.md); các claim về quy định hoặc dữ liệu thị trường phải đọc kèm ledger này.
+
 Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một tệp (file / 파일) quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
 
 Để kiểm tra phần nào đã đủ sâu, phần nào time-sensitive và phần nào **không nên tiếp tục mở rộng chỉ để tăng số tệp (file / 파일)**, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Advanced Depth Path](./ADVANCED_DEPTH_PATH.md) và [Advanced Practice Workbook](./ADVANCED_PRACTICE_WORKBOOK.md) để chuyển kiến thức sang sản phẩm tạo ra (artifact / 산출물) có thể rà soát (review / 검토).

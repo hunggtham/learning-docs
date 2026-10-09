@@ -4,6 +4,8 @@
 
 Sinh học (Biology / 생물학) trong thư viện này được viết như một **hệ thống kiến thức liên tục**, không phải tập hợp ghi chú (tập hợp ghi chú (collection note)) hay cheat sheet. Người đọc được giả định có thể đã quên phần lớn Sinh học phổ thông, vì vậy mỗi chapter phải tự dựng nền cần thiết, giải thích vì sao concept xuất hiện, cơ chế (mechanism / 메커니즘) hoạt động ra sao, mô hình (model / 모델) nào giúp suy luận và khái niệm (concept) đó dẫn tự nhiên sang chapter nào tiếp theo.
 
+Provenance và boundary cho claim sinh học/sức khỏe nằm trong [source ledger](./SOURCES.md). Ledger không thay thế citation cụ thể ở chapter.
+
 Mục tiêu cuối cùng không phải nhớ thật nhiều thuật ngữ. Mục tiêu là nhìn thấy một số mẫu (pattern / 패턴) sâu lặp lại từ phân tử (molecule) đến biosphere: **dòng vật chất (matter flow), dòng năng lượng (energy flow), dòng thông tin (information flow), chênh lệch (gradient), phản hồi (feedback / 피드백), sự đánh đổi (trade-off / 트레이드오프), mạng lưới (network), selection và quy mô (scale / 규모)**.
 
 > **mô hình tư duy (mental model / 사고 모델) trung tâm:** sự sống là một hệ vật chất xa cân bằng nhiệt động, duy trì organization nhờ dòng vật chất và năng lượng, dùng thông tin (information / 정보) để điều phối và truyền heredity, tự điều chỉnh bằng phản hồi (feedback / 피드백), và thay đổi qua evolution dưới ràng buộc (constraint / 제약조건) của Physics, Chemistry và tính ngẫu nhiên lịch sử (historical contingency).
