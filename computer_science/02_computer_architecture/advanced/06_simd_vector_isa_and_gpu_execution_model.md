@@ -20,7 +20,7 @@ Nếu véc-tơ (vector / 벡터) register rộng 256 bit chứa tám số `float
 
 Điều này không có nghĩa CPU hoàn thành mọi thứ nhanh hơn đúng tám lần. tải (load / 로드)/store, phụ thuộc (dependency / 의존성), trượt bộ nhớ đệm (cache miss / 캐시 미스), instruction thông lượng (throughput / 처리량) và số thực thi (execution / 실행) cổng (port / 포트) vẫn giới hạn tốc độ.
 
-> **Chuyển mạch:** Scalar xử lý từng phần tử, data parallelism xử lý nhiều phần tử cùng instruction; vector register/lane hiện thực SIMD, còn GPU threads là mô hình khác với SIMD lanes.
+Scalar lặp qua từng phần tử, còn SIMD đóng gói nhiều phần tử vào một instruction. Vector lanes và GPU threads cùng khai thác data parallelism, nhưng chúng có execution model và chi phí điều phối khác nhau.
 
 ## 2. véc-tơ (vector / 벡터) register và lane
 
@@ -35,7 +35,7 @@ C = [c0 c1 c2 c3]
 
 Các ISA như SSE/AVX trên x86, NEON/SVE trên Arm cung cấp instruction véc-tơ (vector / 벡터) với width và ngữ nghĩa (semantics / 의미론) khác nhau. ISA là hợp đồng kiến trúc; số đơn vị thực thi (execution unit / 실행 유닛) vật lý bên dưới là vấn đề vi kiến trúc (microarchitecture).
 
-> **Chuyển mạch:** Ở chặng này của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **3. SIMD không đồng nghĩa nhiều luồng thực thi (thread / 스레드)** tiếp nhận điểm tựa từ **2. véc-tơ (vector / 벡터) register và lane** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Auto-vectorization và phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vector register cho biết một instruction chạm bao nhiêu lanes. Nhiều thread lại là nhiều control state; compiler phải chứng minh dependency giữa các iteration trước khi biến scalar loop thành vector instruction.
 
 ## 3. SIMD không đồng nghĩa nhiều luồng thực thi (thread / 스레드)
 
@@ -51,7 +51,7 @@ nhiều CPU core
 
 Vì vậy hiệu năng (performance / 성능) lập luận (reasoning / 추론) phải phân biệt thread-level parallelism với data-level parallelism.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **4. Auto-vectorization và phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **3. SIMD không đồng nghĩa nhiều luồng thực thi (thread / 스레드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) quyết định khả năng cấp dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SIMD và multithreading có thể xếp chồng, nhưng mỗi tầng cần một bằng chứng khác: dependency của loop cho vectorization, còn scheduling cho thread parallelism. Khi dependency đủ độc lập, layout quyết định phần cứng có cấp dữ liệu kịp hay không.
 
 ## 4. Auto-vectorization và phụ thuộc (dependency / 의존성)
 
@@ -77,7 +77,7 @@ Iteration sau phụ thuộc iteration trước. Vectorization trực tiếp có 
 
 Do đó trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화) phụ thuộc vào alias phân tích (analysis / 분석), phụ thuộc (dependency / 의존성) phân tích (analysis / 분석), alignment và mục tiêu (target / 대상) ISA chứ không đơn giản là “vòng lặp (loop / 루프) lớn thì dùng SIMD”.
 
-> **Chuyển mạch:** Trong **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **4. Auto-vectorization và phụ thuộc (dependency / 의존성)** nêu điều cần giải thích; **5. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) quyết định khả năng cấp dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Alignment, gather và scatter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compiler chỉ vectorize khi có thể bảo toàn semantics. Ngay cả loop độc lập cũng có thể chậm nếu layout khiến cache line và vector load chứa dữ liệu thừa; alignment, gather và scatter là các trường hợp cụ thể của đường cấp dữ liệu.
 
 ## 5. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) quyết định khả năng cấp dữ liệu
 
@@ -100,7 +100,7 @@ có thể phù hợp hơn cho véc-tơ (vector / 벡터) tải (load / 로드) l
 
 Đây là liên kết (connection / 연결) quan trọng giữa cấu trúc dữ liệu (data structure / 자료구조) và hardware: cùng một thuật toán Big-O nhưng bố cục (layout / 레이아웃) khác nhau có thể tạo bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) và SIMD efficiency rất khác.
 
-> **Chuyển mạch:** Ở chặng này của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **5. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) quyết định khả năng cấp dữ liệu** nêu điều cần giải thích; **6. Alignment, gather và scatter** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Masked thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Layout chọn cách dữ liệu đi qua cache và vector lanes. Khi phần tử không liên tục, gather/scatter phải xử lý nhiều địa chỉ; khi chỉ một phần lane hợp lệ, mask/predicate quyết định phần work bị bỏ trống.
 
 ## 6. Alignment, gather và scatter
 
@@ -108,7 +108,7 @@ Dữ liệu liên tục thường dễ vectorize nhất. Khi các phần tử n�
 
 Alignment từng quan trọng hơn trên ISA cũ; CPU hiện đại thường hỗ trợ unaligned truy cập (access / 접근) tốt hơn, nhưng truy cập (access / 접근) vượt cache-line/page ranh giới (boundary / 경계) vẫn có thể tăng chi phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **7. Masked thực thi (execution / 실행)** tiếp nhận điểm tựa từ **6. Alignment, gather và scatter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. GPU mở rộng dữ liệu (data / 데이터) parallelism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Gather/scatter giải quyết địa chỉ rải rác, còn mask giải quyết lane không hợp lệ trong cùng một vector. Cả hai đều có thể làm giảm utilization; GPU mở rộng bài toán bằng cách giữ nhiều work item sẵn sàng để che latency.
 
 ## 7. Masked thực thi (execution / 실행)
 
@@ -123,7 +123,7 @@ Instruction chỉ cập nhật lane được mask chọn. Điều này giúp x�
 
 Nhưng masked thực thi (execution / 실행) không làm công việc (work / 작업) miễn phí: lane không hoạt động có thể làm giảm mức sử dụng phần cứng.
 
-> **Chuyển mạch:** Trong **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **7. Masked thực thi (execution / 실행)** nêu điều cần giải thích; **8. GPU mở rộng dữ liệu (data / 데이터) parallelism** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. SIMT, warp và wavefront** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Masked execution giữ một instruction stream khi dữ liệu có điều kiện, nhưng lane inactive vẫn có thể tiêu hao issue width. GPU dùng nhiều work item và nhóm SIMT để đổi trade-off đó thành throughput, với divergence là giới hạn kế tiếp.
 
 ## 8. GPU mở rộng dữ liệu (data / 데이터) parallelism
 
@@ -138,7 +138,7 @@ GPU: tối ưu throughput của lượng lớn công việc tương tự
 
 Đây là xu hướng kiến trúc, không phải ranh giới tuyệt đối.
 
-> **Chuyển mạch:** Ở chặng này của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **8. GPU mở rộng dữ liệu (data / 데이터) parallelism** nêu điều cần giải thích; **9. SIMT, warp và wavefront** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. GPU bộ nhớ (memory / 메모리) hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+GPU đổi nhiều execution resources lấy throughput của work tương tự. SIMT/wavefront mô tả cách các thread được nhóm và chạy chung; branch divergence cho biết khi nhóm đó không còn cùng path.
 
 ## 9. SIMT, warp và wavefront
 
@@ -155,7 +155,7 @@ else:
 
 GPU có thể phải chạy đường dẫn (path / 경로) A cho một tập lane rồi đường dẫn (path / 경로) B cho tập còn lại. Hiện tượng này gọi là **branch divergence (phân kỳ nhánh)** và làm giảm utilization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **10. GPU bộ nhớ (memory / 메모리) hierarchy** tiếp nhận điểm tựa từ **9. SIMT, warp và wavefront** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Arithmetic intensity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SIMT divergence làm giảm số lane hữu ích trong một nhóm. Kể cả khi nhóm chạy đều, throughput còn phụ thuộc global/shared memory hierarchy và khả năng coalesce access; arithmetic intensity đặt compute cạnh chi phí đó.
 
 ## 10. GPU bộ nhớ (memory / 메모리) hierarchy
 
@@ -165,7 +165,7 @@ Toàn cục (global / 전역) bộ nhớ (memory / 메모리) có bandwidth lớ
 
 Nếu mỗi luồng thực thi (thread / 스레드) đọc địa chỉ ngẫu nhiên, bandwidth thực tế có thể thấp dù thông số phần cứng rất cao.
 
-> **Chuyển mạch:** Trong **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **11. Arithmetic intensity** tiếp nhận điểm tựa từ **10. GPU bộ nhớ (memory / 메모리) hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Transfer chi phí (cost / 비용) và accelerator ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+GPU memory hierarchy quyết định bytes có đến kịp lanes hay không. Arithmetic intensity cho biết mỗi byte mua được bao nhiêu phép tính; transfer qua accelerator boundary lại thêm một chi phí end-to-end khác.
 
 ## 11. Arithmetic intensity
 
@@ -177,7 +177,7 @@ arithmetic intensity = số phép tính / số byte chuyển qua memory hierarch
 
 Véc-tơ (vector / 벡터)/GPU tối ưu hóa (optimization / 최적화) vì vậy liên hệ trực tiếp với roofline mô hình (model / 모델): tải công việc (workload / 워크로드) memory-bound không tự nhiên nhanh hơn chỉ vì ALU mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **11. Arithmetic intensity** đã nêu tiêu chí phân biệt, còn **12. Transfer chi phí (cost / 비용) và accelerator ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Floating-point và reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Arithmetic intensity có thể cho thấy kernel đủ compute-bound để đáng offload, nhưng transfer và synchronization vẫn quyết định end-to-end speedup. Sau khi tính crossing cost, cần xét floating-point order và reproducibility của execution song song.
 
 ## 12. Transfer chi phí (cost / 비용) và accelerator ranh giới (boundary / 경계)
 
@@ -185,7 +185,7 @@ GPU rời có bộ nhớ (memory / 메모리) riêng. Chuyển dữ liệu CPU �
 
 Đây là cùng nguyên tắc xuất hiện trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들): tối ưu thành phần (component / 컴포넌트) không đảm bảo tối ưu toàn đường dẫn (path / 경로) nếu ranh giới (boundary / 경계) crossing đắt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **12. Transfer chi phí (cost / 비용) và accelerator ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **13. Floating-point và reproducibility** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Khi vectorization không giúp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Transfer overhead và synchronization có thể nuốt lợi ích của kernel nhanh. Ngay cả khi pipeline dữ liệu hiệu quả, thứ tự reduction khác nhau có thể làm kết quả floating-point lệch; đó là giới hạn của reproducibility, không phải của throughput riêng lẻ.
 
 ## 13. Floating-point và reproducibility
 
@@ -197,7 +197,7 @@ Parallel reduction có thể cộng số theo thứ tự khác scalar vòng lặ
 
 với một số giá trị do rounding. Vì vậy vectorization/GPU có thể tạo sai khác số học nhỏ dù thuật toán (algorithm / 알고리즘) lô-gic (logic / 논리) giống nhau. Scientific computing và ML cần hiểu tolerance thay vì mặc định bit-identical kết quả (result / 결과).
 
-> **Chuyển mạch:** Trong **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **14. Khi vectorization không giúp** tiếp nhận điểm tựa từ **13. Floating-point và reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Floating-point order cho thấy parallel execution có thể đổi semantics số học dù logic thuật toán giữ nguyên. Vì vậy vectorization phải được đánh giá cùng dependency, divergence, memory và transfer; phần ngộ nhận dưới đây gom các trường hợp đánh giá thiếu một tầng.
 
 ## 14. Khi vectorization không giúp
 
@@ -205,7 +205,7 @@ SIMD/GPU kém hiệu quả khi tải công việc (workload / 워크로드) có 
 
 Tối ưu hóa (optimization / 최적화) phải bắt đầu từ đo lường (measurement / 측정). “GPU nhanh hơn CPU” hay “AVX nhanh hơn scalar” không phải định luật độc lập với tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Ở chặng này của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **14. Khi vectorization không giúp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đều tách vector width hoặc số GPU cores khỏi đường đi dữ liệu và chi phí phối hợp. Mô hình tư duy sau đây giữ dependency, layout, execution lanes, bandwidth và end-to-end latency trong cùng một chuỗi.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -217,7 +217,7 @@ Tối ưu hóa (optimization / 최적화) phải bắt đầu từ đo lường 
 
 **“Big-O giống nhau thì hiệu năng (performance / 성능) gần nhau.”** Big-O bỏ qua bộ nhớ đệm (cache / 캐시) locality, vectorization và bộ nhớ (memory / 메모리) bandwidth — những yếu tố quyết định ở quy mô thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình đúng bắt đầu từ dependency và layout, đi qua compiler/vector ISA hoặc SIMT, rồi kiểm tra cache/bandwidth, synchronization và transfer. Kết nối cuối file đưa chuỗi đó về cache hierarchy, NUMA và compiler owner.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
