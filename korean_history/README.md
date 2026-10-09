@@ -6,6 +6,10 @@ Lịch sử ở đây được đọc theo First-Principles Thinking (제1원리
 
 Từ bản cập nhật hiện tại, mỗi giai đoạn còn được neo bằng bốn tầng (layer / 계층) thực tế: **mốc thời gian rõ ràng → economy và đời sống → Việt Nam cùng thời → di tích/địa điểm còn có thể quan sát hôm nay**. Mục tiêu là để người đọc không gặp một dynasty như một “tên lạ trên timeline”, mà hình dung được xã hội đó đang sản xuất gì, ai trả thuế, người thường sống trong ràng buộc (constraint / 제약조건) nào, Đông Á đang biến động ra sao và dấu vết vật chất của giai đoạn nằm ở đâu.
 
+## Provenance và currentness
+
+Các claim lịch sử, số liệu, tên riêng và di tích phải theo [Source Ledger](SOURCES.md); portal không thay thế item/record cụ thể. Khi chưa có source đủ mạnh, giữ `NEEDS_SOURCE` hoặc `REVIEW_REQUIRED` thay vì biến bản dịch hay tóm tắt thành authority.
+
 ## Quy ước tên riêng Việt – Hàn – Anh
 
 Trong toàn bộ thư viện (library / 라이브러리), tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.

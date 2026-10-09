@@ -13,7 +13,7 @@ Một thay đổi chỉ trở thành bước ngoặt khi nó làm đổi **khả
 
 ## Bắt đầu từ đâu
 
-Đọc theo [mục lục và dependency graph](00_index_and_dependency.md). Nếu muốn có lộ trình theo mục tiêu, dùng [Learning Route](LEARNING_ROUTE.md); nếu muốn biết phần nào đã mạnh/yếu, xem [Coverage Audit](COVERAGE_AUDIT.md). Chuỗi chính là:
+Đọc theo [mục lục và dependency graph](00_index_and_dependency.md). Nếu muốn có lộ trình theo mục tiêu, dùng [Learning Route](LEARNING_ROUTE.md); nếu muốn biết phần nào đã mạnh/yếu, xem [Coverage Audit](COVERAGE_AUDIT.md). Quy tắc provenance và currentness nằm trong [Source Ledger](SOURCES.md). Chuỗi chính là:
 
 ```text
 01 Human origins

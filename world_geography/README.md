@@ -8,7 +8,7 @@ Bộ tài liệu này được tổ chức theo **khái niệm (concept) → cơ
 
 ## Cách dùng thư viện (library / 라이브러리)
 
-Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md). Nếu muốn biết chỗ nào còn yếu, xem [Core Coverage Audit](./CORE_COVERAGE_AUDIT.md).
+Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md). Nếu muốn biết chỗ nào còn yếu, xem [Core Coverage Audit](./CORE_COVERAGE_AUDIT.md). Với nguồn dữ liệu, bản đồ và ranh giới currentness, xem [Source Ledger](./SOURCES.md).
 
 World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**, không phải tiêu chí completion. Một tệp (file / 파일) country ngắn không được tính là chapter hoàn chỉnh chỉ vì nó tồn tại.
 

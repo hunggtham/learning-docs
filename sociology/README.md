@@ -4,6 +4,10 @@
 
 `sociology/` là lĩnh vực (domain / 도메인) chuẩn gốc (canonical / 정본) về cách xã hội (social / 사회적) cấu trúc (structure / 구조), culture, groups, networks, organizations, stratification và institutions tạo ra các mẫu (pattern / 패턴) vượt ra ngoài từng cá nhân. Sociology ở đây không thay Psychology, Economics hay Lịch sử (history / 이력); nó tập trung vào **relations, positions, norms, power, organizations và population-level patterns** và cross-link các lĩnh vực (domain / 도메인) khác khi cơ chế (mechanism / 메커니즘) nằm ngoài ranh giới (boundary / 경계) của Sociology.
 
+## Provenance và currentness
+
+[Source Ledger](./SOURCES.md) quy định source route, sample/indicator metadata và boundary cho claim xã hội học. Audit coverage không thay thế kiểm tra design, causal inference hoặc tính đại diện của dữ liệu.
+
 ## Thứ tự học chuẩn gốc (canonical / 정본)
 
 1. [Sociological Imagination, Theory & Social Structure](./00_sociological_imagination_theory_and_social_structure.md) — agency/cấu trúc (structure / 구조), norms/roles/status, institutions, macro–meso–micro levels, functionalism, xung đột (conflict / 충돌), interactionism, mạng (network / 네트워크)/trường dữ liệu (field / 필드) perspectives, emergence và phản hồi (feedback / 피드백).
