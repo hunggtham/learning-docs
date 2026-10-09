@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **32. 추가 해싱 함수 (Additional Hashing Functions)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **32. 추가 해싱 함수 (Additional Hashing Functions)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu so sánh các hàm băm bổ sung theo cách phân bố khóa và xử lý collision; từ khóa khoanh vùng probing và bucket.
 
 ## 핵심 키워드 (Từ khóa)
 
 추가, 해싱, 함수
 
-> **Chuyển mạch:** Ở chặng này của **32. 추가 해싱 함수 (Additional Hashing Functions)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt các hàm băm bổ sung trên nền chỉ số và collision; cách đọc tiếp theo giúp theo dõi chuỗi thử và điều kiện dừng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **8. 주요 해싱 함수 (Hashing Functions)**에서 만든 기준을 이어받아 **32. 추가 해싱 함수 (Additional Hashing Functions)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **32. 추가 해싱 함수 (Additional Hashing Functions)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. 추가 해싱 함수 (Additional Hashing Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần này dùng khung đó để nối phương án collision với chi phí truy cập.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **32. 추가 해싱 함수 (Additional H
 
 ---
 
-> **Chuyển mạch:** Trong **32. 추가 해싱 함수 (Additional Hashing Functions)**, **32. 추가 해싱 함수 (Additional Hashing Functions)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa bộ nhớ, clustering và tốc độ; khi sang kho lưu trữ băm, hãy giữ lại quy tắc xử lý collision.
 
 ## 32. 추가 해싱 함수 (Additional Hashing Functions)
 

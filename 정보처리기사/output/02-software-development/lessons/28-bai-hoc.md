@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **8. 주요 해싱 함수 (Hashing Functions)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **32. 추가 해싱 함수 (Additional Hashing Functions)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **8. 주요 해싱 함수 (Hashing Functions)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định hàm băm biến khóa thành chỉ số và tạo collision như thế nào; từ khóa khoanh vùng modulo, folding và phân bố.
 
 ## 핵심 키워드 (Từ khóa)
 
 주요, 해싱, 함수
 
-> **Chuyển mạch:** Ở chặng này của **8. 주요 해싱 함수 (Hashing Functions)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt các hàm băm trên nền search và binary search; cách đọc tiếp theo giúp nối cách tính chỉ số với nguy cơ collision.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)**에서 만든 기준을 이어받아 **8. 주요 해싱 함수 (Hashing Functions)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **8. 주요 해싱 함수 (Hashing Functions)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 주요 해싱 함수 (Hashing Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần hash dùng khung đó để nối miền khóa với phân bố ô nhớ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **8. 주요 해싱 함수 (Hashing Funct
 
 ---
 
-> **Chuyển mạch:** Trong **8. 주요 해싱 함수 (Hashing Functions)**, **8. 주요 해싱 함수 (Hashing Functions)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí phân bố đều và xử lý collision; khi sang hàm băm bổ sung, hãy đối chiếu cùng mục tiêu với cách tính khác.
 
 ## 8. 주요 해싱 함수 (Hashing Functions)
 
