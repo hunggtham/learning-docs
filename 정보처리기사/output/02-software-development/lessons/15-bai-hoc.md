@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **028: 정렬 (Sorting / Thuật toán sắp xếp)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu mở rộng sorting bằng stability, in-place và complexity; từ khóa khoanh vùng các constraint cần so sánh.
 
 ## 핵심 키워드 (Từ khóa)
 
 추가, 정렬, 알고리즘
 
-> **Chuyển mạch:** Ở chặng này của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt các biến thể trên nền sorting cơ bản; cách đọc tiếp theo giúp gắn thuật toán với dữ liệu và ràng buộc.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **6. 정렬 알고리즘 (Sorting Algorithms)**에서 만든 기준을 이어받아 **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần bổ sung dùng khung đó để so sánh in-place, stability và cost.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **31. 추가 정렬 알고리즘 (Additi
 
 ---
 
-> **Chuyển mạch:** Trong **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng tiêu chí chọn biến thể sorting; khi sang search, hãy giữ lại workload và chi phí chuẩn bị dữ liệu.
 
 ## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
 
