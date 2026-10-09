@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **080: 수식의 표기법 (Expression Notation)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. 정렬 알고리즘 (Sorting Algorithms)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **080: 수식의 표기법 (Expression Notation)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu vừa đặt expression notation vào mối quan hệ giữa cú pháp và thứ tự thực thi. Phần **핵심 키워드 (Từ khóa)** sau đây giữ lại các thuật ngữ để phân biệt infix, prefix và postfix trước khi nối chúng với cây và stack.
 
 ## 핵심 키워드 (Từ khóa)
 
 수식의, 표기법
 
-> **Chuyển mạch:** Ở chặng này của **080: 수식의 표기법 (Expression Notation)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa cho thấy ba cách viết chỉ khác vị trí toán tử nhưng dẫn đến cách duyệt và cách tính khác nhau. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối quy tắc đó với phép chuyển đổi ở bài trước.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **5. 수식의 표기법 변환 (Expression Notation Conversion)**에서 만든 기준을 이어받아 **080: 수식의 표기법 (Expression Notation)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **080: 수식의 표기법 (Expression Notation)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **080: 수식의 표기법 (Expression Notation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi nối các dạng biểu thức với quy tắc chuyển đổi, **읽는 방법 (Cách đọc)** sẽ hướng dẫn theo dõi ưu tiên, ngoặc và vị trí toán tử để thấy vì sao postfix phù hợp với stack.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **080: 수식의 표기법 (Expression N
 
 ---
 
-> **Chuyển mạch:** Trong **080: 수식의 표기법 (Expression Notation)**, **080: 수식의 표기법 (Expression Notation)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với trình tự đọc vừa xác lập, phần **080: 수식의 표기법 (Expression Notation)** áp dụng các quy tắc vào chuyển infix sang postfix và giải thích vai trò của stack. Hãy giữ quan hệ giữa biểu thức và cấu trúc dữ liệu khi chuyển sang sorting.
 
 ## 080: 수식의 표기법 (Expression Notation)
 
@@ -62,7 +62,7 @@ Bây giờ ta đi vào nội dung của **Cách chuyển đổi Infix sang Postf
 
 Với **Cách chuyển đổi Infix sang Postfix**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
-Với **Cách chuyển đổi Infix sang Postfix**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+Với **Cách chuyển đổi Infix sang Postfix**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức, với đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Như vậy, **080: 수식의 표기법 (Expression Notation)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 정렬 알고리즘 (Sorting Algorithms)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
