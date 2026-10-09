@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu phân biệt SCM với các cách quản lý version qua baseline, branch và change control; từ khóa khoanh vùng lịch sử và trạng thái artifact.
 
 ## 핵심 키워드 (Từ khóa)
 
 형상, 관리
 
-> **Chuyển mạch:** Ở chặng này của **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt các phương thức version trên nền SCM; cách đọc tiếp theo giúp theo dõi thay đổi đi qua baseline nào.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **13. 형상 관리 (SCM - Software Configuration Management)**에서 만든 기준을 이어받아 **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần version control dùng khung đó để nối thao tác với khả năng truy nguyên.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **40. 형상 관리 (SCM) 및 버전 관
 
 ---
 
-> **Chuyển mạch:** Trong **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off giữa kiểm soát và tốc độ phối hợp; khi sang SCM/IDE, hãy đối chiếu quy trình với công cụ thực thi.
 
 ## 40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)
 
