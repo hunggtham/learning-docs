@@ -10,7 +10,7 @@ Một địa chỉ ảo thường được tách thành số trang ảo và đ�
 
 Trên nhiều kiến trúc, phần cứng có **bộ duyệt bảng trang (page walker)** thực hiện quá trình này. Các mục bảng trang mà bộ duyệt đọc lại có thể được lưu trong bộ nhớ đệm (cache / 캐시) CPU, vì vậy hiệu năng dịch địa chỉ liên hệ trực tiếp với phân cấp bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Trong **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **Phạm vi bao phủ của TLB** tiếp nhận điểm tựa từ **Dịch địa chỉ nằm trên đường thực thi quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trang lớn không miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Page walk biến một cache miss của địa chỉ thành nhiều memory access. TLB coverage quyết định tần suất phải walk; khi working set vượt coverage, huge pages có thể đổi trade-off giữa translation cost và quản lý bộ nhớ.
 
 ## Phạm vi bao phủ của TLB
 
@@ -18,7 +18,7 @@ Nếu TLB có `N` mục và kích thước trang là `P`, lượng bộ nhớ m�
 
 Đây là lý do cơ sở dữ liệu, vùng nhớ động (heap / 힙) JVM lớn và hệ thống phân tích có thể hưởng lợi từ **trang lớn (huge pages)**. Trang 2 MiB bao phủ vùng nhớ lớn hơn nhiều so với trang 4 KiB khi số mục TLB không đổi.
 
-> **Chuyển mạch:** Ở chặng này của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **Trang lớn không miễn phí** tiếp nhận điểm tựa từ **Phạm vi bao phủ của TLB** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vô hiệu hóa TLB giữa nhiều lõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TLB coverage tăng khi page size tăng, nhưng huge page cũng tăng phạm vi dữ liệu bị di chuyển hoặc phân mảnh. Khi mapping thay đổi trên nhiều core, lợi ích coverage phải được cân với chi phí shootdown.
 
 ## Trang lớn không miễn phí
 
@@ -26,7 +26,7 @@ Trang lớn giảm áp lực lên TLB nhưng tăng phân mảnh nội bộ, khi�
 
 Vì vậy trang lớn là sự đánh đổi giữa hiệu quả dịch địa chỉ và tính linh hoạt của quản lý bộ nhớ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **Vô hiệu hóa TLB giữa nhiều lõi** tiếp nhận điểm tựa từ **Trang lớn không miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảo hóa bổ sung thêm tầng dịch địa chỉ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Huge pages giảm số mapping cần giữ, nhưng mỗi thay đổi mapping vẫn phải làm các core bỏ entry cũ. TLB shootdown cho thấy một API thay đổi page table có thể gây coordination toàn máy; virtualization còn thêm một tầng mapping khác.
 
 ## Vô hiệu hóa TLB giữa nhiều lõi
 
@@ -34,7 +34,7 @@ Khi hệ điều hành thay đổi một ánh xạ có thể đang được lưu
 
 Một chương trình thay đổi ánh xạ thường xuyên có thể tạo chi phí không chỉ trên lõi gọi lời gọi hệ thống (system call / 시스템 호출) mà còn trên nhiều lõi khác. Đây là ví dụ điển hình cho việc một thao tác có vẻ “cục bộ” ở mức API lại có chi phí phối hợp trên toàn máy.
 
-> **Chuyển mạch:** Trong **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **Ảo hóa bổ sung thêm tầng dịch địa chỉ** tiếp nhận điểm tựa từ **Vô hiệu hóa TLB giữa nhiều lõi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IOMMU và thiết bị I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TLB shootdown phối hợp các core trong một address space; hypervisor phối hợp guest với host address space bằng nested translation. Khi DMA của thiết bị tham gia, IOMMU trở thành owner của một đường dịch và cô lập khác.
 
 ## Ảo hóa bổ sung thêm tầng dịch địa chỉ
 
@@ -42,13 +42,13 @@ Trong máy ảo, hệ điều hành khách quản lý địa chỉ vật lý kh�
 
 Nếu thực hiện ngây thơ, quá trình duyệt bảng trang của hệ điều hành khách kết hợp với dịch địa chỉ của máy chủ có thể tạo rất nhiều lần truy cập bộ nhớ. CPU hiện đại bổ sung bộ nhớ đệm (cache / 캐시) dịch địa chỉ và tối ưu bộ duyệt bảng trang để giảm chi phí, nhưng hệ thống ảo hóa vẫn có phân cấp dịch phức tạp hơn chạy trực tiếp trên phần cứng.
 
-> **Chuyển mạch:** Ở chặng này của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **IOMMU và thiết bị I/O** tiếp nhận điểm tựa từ **Ảo hóa bổ sung thêm tầng dịch địa chỉ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chẩn đoán trong hệ thống thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nested page tables làm translation path dài hơn, còn IOMMU dịch địa chỉ mà thiết bị dùng cho DMA. Cả hai có thể tạo cache miss, page-walk hoặc isolation cost; diagnosis phải phân biệt chúng bằng evidence của từng tầng.
 
 ## IOMMU và thiết bị I/O
 
 DMA của thiết bị cũng cần được cô lập. **Đơn vị quản lý bộ nhớ I/O (I/O Memory Management Unit — IOMMU)** dịch địa chỉ mà thiết bị nhìn thấy và ngăn thiết bị tùy ý đọc hoặc ghi toàn bộ bộ nhớ vật lý. Vai trò của nó tương tự MMU nhưng áp dụng cho thiết bị I/O, đặc biệt quan trọng trong ảo hóa, PCI passthrough và ranh giới bảo mật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, **Chẩn đoán trong hệ thống thực tế** tiếp nhận điểm tựa từ **IOMMU và thiết bị I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+IOMMU bảo vệ DMA nhưng thêm một translation boundary cần đo. Khi đọc counters, phải tách TLB miss, page fault, page-walk latency và IOMMU activity; mô hình cuối file gom chúng vào cùng đường đi địa chỉ.
 
 ## Chẩn đoán trong hệ thống thực tế
 
@@ -56,7 +56,7 @@ Nếu ứng dụng sử dụng CPU cao nhưng số lần trượt bộ nhớ đ�
 
 Khi đo lường cần phân biệt lỗi trang nhỏ/lớn (minor/major page fault) ở tầng hệ điều hành với trượt TLB ở tầng phần cứng. Chúng đều liên quan tới “trang”, nhưng là các hiện tượng khác nhau.
 
-> **Chuyển mạch:** Trong **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**, các dấu vết trong **Chẩn đoán trong hệ thống thực tế** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các dấu vết đều trả lời một câu hỏi: địa chỉ đang được dịch ở tầng nào, với page size nào và bằng cache nào? Giữ câu hỏi đó xuyên suốt giúp tránh đồng nhất TLB miss với page fault hoặc xem huge page là tối ưu miễn phí.
 
 ## Mô hình tư duy
 
