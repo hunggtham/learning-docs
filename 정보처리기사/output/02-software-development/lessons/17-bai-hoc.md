@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **081-2: 셸 정렬 (Shell Sort)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định insertion sort duy trì invariant bằng shift và tận dụng nearly-sorted input ra sao; từ khóa khoanh vùng trạng thái dữ liệu.
 
 ## 핵심 키워드 (Từ khóa)
 
 삽입, 정렬
 
-> **Chuyển mạch:** Ở chặng này của **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt insertion sort trên nền sorting và invariant; cách đọc tiếp theo giúp nối shift với chi phí thực tế.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **028: 정렬 (Sorting / Thuật toán sắp xếp)**에서 만든 기준을 이어받아 **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần insertion sort dùng khung đó để nối invariant với input order.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **081: 삽입 정렬 (Insertion Sort - S
 
 ---
 
-> **Chuyển mạch:** Trong **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**, **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng điều kiện insertion sort có lợi; khi sang selection sort, hãy đối chiếu shift với swap.
 
 ## 081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)
 
