@@ -36,7 +36,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [09 — Agent Evaluation](./09_agent_evaluation.md)
 - [10 — Reliable Agent Design](./10_reliable_agent_design.md)
 
-> **Chuyển mạch:** **Chapters** tách agent loop, tool use, memory và evaluation; **Core distinctions** biến các lớp đó thành mental model để phân biệt agent với workflow tự động.
+Các chapter tách agent loop, tool use, memory và evaluation; core distinctions biến chúng thành mental model để phân biệt agent với workflow tự động.
 
 ## Cốt lõi (core / 핵심) distinctions
 
@@ -54,7 +54,7 @@ Prompt Guardrail ≠ Security Boundary
 Model says “done” ≠ Verified completion
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Agents and AI các hệ thống (systems / 시스템들) — Reading Map**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cốt lõi (core / 핵심) distinctions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Prerequisites** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Core distinctions đã tách vòng lặp, state và agency; mental model tiếp theo cho biết agent cần những prerequisite nào để vận hành an toàn.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -75,7 +75,7 @@ Observations and verification
 
 Tác nhân (agent / 에이전트) kỹ thuật (engineering / 엔지니어링) vì vậy nằm ở intersection của AI, Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학), phân tán (distributed / 분산) các hệ thống (systems / 시스템들), Databases, bảo mật (security / 보안) và HCI.
 
-> **Chuyển mạch:** **Mental model** cho biết agent cần state, policy và feedback nào; **Prerequisites** trả từng nền tảng về owner của planning, programming languages và distributed systems.
+Mental model cho biết agent cần state, policy và feedback nào; Prerequisites trả từng nền tảng về owner planning, programming languages và distributed systems.
 
 ## Prerequisites
 

@@ -22,7 +22,7 @@ flowchart TD
     ADV --> EVAL[RAG Evaluation]
 ```
 
-> **Chuyển mạch:** **Dependency Map** đi từ corpus, chunking và retrieval đến generation; **Full mental model** giữ rõ evidence path và nơi hallucination có thể phát sinh.
+Dependency Map đi từ corpus, chunking và retrieval tới generation; Full mental model giữ rõ evidence path và nơi hallucination có thể phát sinh.
 
 ## Chapters
 
@@ -41,7 +41,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 09_rag_evaluation.md
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Full mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Important Distinctions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các chapter xây evidence path từ corpus tới generation. Important Distinctions tiếp theo tách lỗi retrieval khỏi lỗi sinh để biết kiểm tra ở đâu.
 
 ## Full mô hình tư duy (mental model / 사고 모델)
 
@@ -71,7 +71,7 @@ Citation / Verification / Abstention
 Evaluation + Monitoring
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Important Distinctions** gom các mảnh từ **Full mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) Principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ranh giới retrieval/generation vẫn phải đứng vững trong production, nơi latency, freshness, access control và observability cùng ảnh hưởng kết quả.
 
 ## Important Distinctions
 
@@ -88,7 +88,7 @@ newest source           ≠ authoritative source
 long context            ≠ retrieval replacement
 ```
 
-> **Chuyển mạch:** **Important Distinctions** tách retrieval quality khỏi generation quality; **Production Principle** đặt cả hai vào latency, freshness, access control và observability.
+Important Distinctions tách retrieval quality khỏi generation quality; Production Principle đặt cả hai vào latency, freshness, access control và observability.
 
 ## Môi trường vận hành (production / 운영 환경) Principle
 
@@ -104,7 +104,7 @@ LLM có use evidence faithfully không?
 citation có map đúng source không?
 ```
 
-> **Chuyển mạch:** **Production Principle** khép RAG bằng evidence và operational limits; phần tiếp theo quay về owner của search, data platform hoặc model serving khi cần đào sâu.
+Production Principle khép RAG bằng evidence và operational limits; phần tiếp theo quay về owner của search, data platform hoặc model serving khi cần đào sâu.
 
 ## Next
 

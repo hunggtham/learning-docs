@@ -29,7 +29,7 @@ flowchart TD
     EVAL --> LIM[Limitations]
 ```
 
-> **Chuyển mạch:** **Dependency Map** đặt token, training và serving theo prerequisite; **Reading logic** dùng route đó để giải thích mỗi capability bằng cơ chế thay vì tên model.
+Dependency Map đặt token, training và serving theo prerequisite; Reading logic dùng route đó để giải thích capability bằng cơ chế thay vì tên model.
 
 ## Chapters
 
@@ -54,13 +54,13 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 15_llm_limitations.md
 ```
 
-> **Chuyển mạch:** **Reading logic** nối data, objective và inference; **Mental model** chốt trade-off giữa capability, latency, cost và failure.
+Reading logic nối data, objective và inference; mental model chốt trade-off giữa capability, latency, cost và failure.
 
 ## Reading lô-gic (logic / 논리)
 
 Bốn chapter đầu giải thích đầu vào (input / 입력) biểu diễn (representation / 표현) và computation cốt lõi (core / 핵심). `04–09` giải thích mô hình (model / 모델) vòng đời (lifecycle / 생명주기) từ cơ sở (base / 기반) mô hình (model / 모델) tới assistant-aligned mô hình (model / 모델). `10–12` chuyển sang inference-time adaptation và lập luận (reasoning / 추론). `13–15` tập trung độ tin cậy (reliability / 신뢰성): hallucination, evaluation và structural limitations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reading lô-gic (logic / 논리)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cốt lõi (core / 핵심) Distinctions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reading logic đã nối vòng đời từ input tới inference; core distinctions tiếp theo đặt ranh giới giữa các cơ chế thường bị gọi chung là “LLM”.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -79,7 +79,7 @@ Raw text
 
 LLM ứng dụng (application / 애플리케이션) thực tế còn thêm retrieval, tools, bộ nhớ (memory / 메모리), kiểm tra hợp lệ (validation / 검증) và monitoring. Vì vậy folder này kết thúc ngay trước `09_retrieval_and_rag/` và `10_agents_and_ai_systems/`.
 
-> **Chuyển mạch:** Trong **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Cốt lõi (core / 핵심) Distinctions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Next** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Core distinctions giữ ranh giới của model, context và serving; phần Next bàn giao các ranh giới này cho owner RAG, MLOps và AI safety.
 
 ## Cốt lõi (core / 핵심) Distinctions
 
@@ -97,7 +97,7 @@ low temperature              ≠ factuality
 LLM                          ≠ complete AI system
 ```
 
-> **Chuyển mạch:** **Core distinctions** giữ ranh giới giữa pretraining, alignment và serving; **Next** bàn giao các ranh giới đó về owner của MLOps, RAG và AI safety.
+Core distinctions giữ ranh giới giữa pretraining, alignment và serving; Next bàn giao chúng về owner MLOps, RAG và AI safety.
 
 ## Next
 
