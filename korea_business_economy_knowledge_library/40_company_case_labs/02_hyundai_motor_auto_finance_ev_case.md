@@ -29,7 +29,7 @@ Một năm số xe bán đi ngang nhưng tỷ trọng SUV, Genesis hoặc phiên
 
 Bảng động lực đầu tiên nên trả lời: số xe tăng ở khu vực và mẫu nào, ASP tăng do giá thực hay do cơ cấu/tỷ giá, công ty phải chi bao nhiêu khuyến mại để giảm tồn kho, nhà máy đang chạy gần công suất hay bị sử dụng thấp, và chi phí chất lượng–bảo hành có tăng hay không.
 
-> **Chuyển mạch:** Trong **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **2. Kinh tế sản xuất và đòn bẩy hoạt động** tiếp nhận điểm tựa từ **1. Doanh thu không chỉ phụ thuộc số xe bán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Sau khi tách doanh thu khỏi chỉ tiêu số xe, phần **2. Kinh tế sản xuất và đòn bẩy hoạt động** giải thích vì sao cùng một sản lượng có thể tạo ra mức lợi nhuận rất khác; tiếp đó, **3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý** đưa phân tích vào kênh phân phối.
 
 ## 2. Kinh tế sản xuất và đòn bẩy hoạt động
 
@@ -56,7 +56,7 @@ Nếu cơ cấu sản phẩm hoặc giá làm ASP tăng lên 33 trong khi sản 
 
 Đó là lý do tồn kho và tỷ lệ sử dụng nhà máy quan trọng hơn một con số doanh số tiêu đề.
 
-> **Chuyển mạch:** Ở chặng này của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý** tiếp nhận điểm tựa từ **2. Kinh tế sản xuất và đòn bẩy hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tỷ giá không phải lợi ích một chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Đòn bẩy hoạt động chỉ có ý nghĩa khi biết hàng đang nằm ở đâu. Phần **3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý** làm rõ điểm đó, rồi **4. Tỷ giá không phải lợi ích một chiều** mở rộng câu chuyện sang doanh thu và chi phí theo tiền tệ.
 
 ## 3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý
 
@@ -76,7 +76,7 @@ Sản xuất > nhu cầu bán lẻ
 
 Vì vậy nếu lượng xe giao vẫn mạnh nhưng khuyến mại cũng tăng, cần hỏi tăng trưởng đến từ nhu cầu thật hay từ việc đẩy hàng vào kênh phân phối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **4. Tỷ giá không phải lợi ích một chiều** tiếp nhận điểm tựa từ **3. Tồn kho: bán sỉ, bán lẻ và kênh đại lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tài chính captive: bán xe và cung cấp tín dụng là hai cỗ máy kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Sau khi xem tồn kho và kênh bán, **4. Tỷ giá không phải lợi ích một chiều** nhắc rằng biên lợi nhuận còn phụ thuộc nơi sản xuất và nơi bán. Phần **5. Tài chính captive** tiếp tục bằng một nguồn lợi nhuận và rủi ro khác của tập đoàn.
 
 ## 4. Tỷ giá không phải lợi ích một chiều
 
@@ -99,7 +99,7 @@ Thay vào đó cần lập bản đồ:
 
 Mức phơi nhiễm này còn thay đổi theo cơ cấu khu vực và mức độ nội địa hóa sản xuất.
 
-> **Chuyển mạch:** Trong **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **5. Tài chính captive: bán xe và cung cấp tín dụng là hai cỗ máy kinh tế** tiếp nhận điểm tựa từ **4. Tỷ giá không phải lợi ích một chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Bảo hành và chất lượng: độ trễ kế toán của vấn đề kỹ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Tỷ giá cho thấy lợi nhuận có thể bị đọc sai nếu bỏ qua cấu trúc địa lý. **5. Tài chính captive** bổ sung cấu trúc tín dụng, trước khi **6. Bảo hành và chất lượng** nối kết hiệu quả vận hành với chi phí phát sinh về sau.
 
 ## 5. Tài chính captive: bán xe và cung cấp tín dụng là hai cỗ máy kinh tế
 
@@ -120,7 +120,7 @@ Lãi suất ↑ → khả năng chi trả mua xe ↓ → doanh số / khuyến m
 Lãi suất ↑ → chi phí vốn của công ty tài chính ↑ → biên tài chính / rủi ro xấu đi
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **6. Bảo hành và chất lượng: độ trễ kế toán của vấn đề kỹ thuật** tiếp nhận điểm tựa từ **5. Tài chính captive: bán xe và cung cấp tín dụng là hai cỗ máy kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chuyển đổi EV là bài toán phân bổ vốn cho hai hệ thống cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Khi tài chính captive đã được đặt đúng vị trí, **6. Bảo hành và chất lượng** cho thấy một vấn đề kỹ thuật có thể quay lại báo cáo tài chính với độ trễ. **7. Chuyển đổi EV** đặt bài toán đó vào quyết định phân bổ vốn.
 
 ## 6. Bảo hành và chất lượng: độ trễ kế toán của vấn đề kỹ thuật
 
@@ -137,7 +137,7 @@ dòng tiền sửa chữa / dịch vụ trong tương lai
 
 Một quý có dự phòng tăng mạnh không có nghĩa toàn bộ tiền đã chi ra trong quý đó. Đây là ví dụ rõ của kế toán dồn tích: sự kiện kinh tế, thời điểm ghi nhận kế toán và thời điểm dòng tiền xảy ra có thể khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **7. Chuyển đổi EV là bài toán phân bổ vốn cho hai hệ thống cùng lúc** tiếp nhận điểm tựa từ **6. Bảo hành và chất lượng: độ trễ kế toán của vấn đề kỹ thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Kinh tế pin và phối hợp dọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** **7. Chuyển đổi EV** cho thấy hãng phải duy trì hệ thống xe hiện hữu trong khi xây hệ thống mới. Phần **8. Kinh tế pin và phối hợp dọc** đi sâu vào nút thắt vật liệu, công nghệ và phối hợp trong chuỗi giá trị.
 
 ## 7. Chuyển đổi EV là bài toán phân bổ vốn cho hai hệ thống cùng lúc
 
@@ -161,7 +161,7 @@ Incremental\ ROIC_{EV/software} > chi phí (cost / 비용)\ of\ Capital?
 
 và công ty có đủ dòng tiền và sức khỏe bảng cân đối để chịu giai đoạn tăng công suất ban đầu hay không.
 
-> **Chuyển mạch:** Trong **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **8. Kinh tế pin và phối hợp dọc** tiếp nhận điểm tựa từ **7. Chuyển đổi EV là bài toán phân bổ vốn cho hai hệ thống cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Ví dụ cầu nối biên lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Sau khi xác định chi phí và phụ thuộc của pin, **8. Kinh tế pin và phối hợp dọc** được kiểm tra bằng **9. Ví dụ cầu nối biên lợi nhuận**, nơi các giả định vận hành được chuyển thành tác động tài chính cụ thể.
 
 ## 8. Kinh tế pin và phối hợp dọc
 
@@ -171,7 +171,7 @@ Nhưng phối hợp dọc không có nghĩa là kinh tế “miễn phí”. Nh�
 
 Khi đọc công bố về nhà máy pin, cần hỏi tỷ lệ sở hữu, nghĩa vụ góp vốn, công suất GWh, khách hàng hoặc hợp đồng mua đầu ra, tỷ lệ sử dụng kỳ vọng, mức phụ thuộc ưu đãi và thời điểm bắt đầu sản xuất.
 
-> **Chuyển mạch:** Ở chặng này của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **8. Kinh tế pin và phối hợp dọc** cho ta quy tắc; **9. Ví dụ cầu nối biên lợi nhuận** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Cơ cấu địa lý và rủi ro chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Ví dụ cầu nối ở **9.** biến câu chuyện pin và tích hợp dọc thành các dòng doanh thu, chi phí và biên lợi nhuận. **10. Cơ cấu địa lý và rủi ro chính sách** tiếp tục kiểm tra những giả định đó theo từng thị trường.
 
 ## 9. Ví dụ cầu nối biên lợi nhuận
 
@@ -197,7 +197,7 @@ Doanh thu vẫn tăng khoảng 2,6%. Nhưng nếu khuyến mại, bảo hành v�
 
 Bài học là **tăng trưởng doanh thu không đủ để giải thích kinh tế ngành ô tô**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **9. Ví dụ cầu nối biên lợi nhuận** cho ta quy tắc; **10. Cơ cấu địa lý và rủi ro chính sách** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Phân tích kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** **10. Cơ cấu địa lý và rủi ro chính sách** cho biết cùng một sản phẩm có thể chịu chi phí, thuế và rủi ro khác nhau theo nơi sản xuất. **11. Phân tích kịch bản** dùng các biến đó để thử nhiều kết quả thay vì khóa vào một dự báo.
 
 ## 10. Cơ cấu địa lý và rủi ro chính sách
 
@@ -217,7 +217,7 @@ Thuế quan
 
 Một cú sốc thuế quan có thể làm biên lợi nhuận ngắn hạn xấu hơn nhưng đồng thời thúc đẩy đầu tư nội địa hóa, từ đó tạo một cấu trúc công suất và chi phí cố định mới trong dài hạn.
 
-> **Chuyển mạch:** Trong **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **11. Phân tích kịch bản** tiếp nhận điểm tựa từ **10. Cơ cấu địa lý và rủi ro chính sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Định giá: chu kỳ + tài chính + chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Các kịch bản ở **11.** cung cấp biên độ cho doanh thu, biên lợi nhuận và vốn đầu tư. Phần **12. Định giá** đặt ba yếu tố ấy cạnh chu kỳ, tài chính captive và tốc độ chuyển đổi.
 
 ## 11. Phân tích kịch bản
 
@@ -261,7 +261,7 @@ Tổn thất tín dụng tài chính bình thường
 
 Trường hợp này cho thấy sản lượng không cần tăng mạnh để lợi nhuận cải thiện nếu cơ cấu sản phẩm và chi phí tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **12. Định giá: chu kỳ + tài chính + chuyển đổi** tiếp nhận điểm tựa từ **11. Phân tích kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Nhiệm vụ đọc DART/IR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** **12. Định giá** chỉ có giá trị khi người học biết kiểm tra giả định trong hồ sơ thực tế. **13. Nhiệm vụ đọc DART/IR** chuyển mô hình thành danh sách kiểm chứng trên DART và tài liệu IR.
 
 ## 12. Định giá: chu kỳ + tài chính + chuyển đổi
 
@@ -279,7 +279,7 @@ sức tạo lợi nhuận ô tô chuẩn hóa
 
 Không nhất thiết phải ép mọi thành phần thành một mức giá mục tiêu SOTP. Mục tiêu là biết thị trường đang trả tiền cho cỗ máy lợi nhuận nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **13. Nhiệm vụ đọc DART/IR** tiếp nhận điểm tựa từ **12. Định giá: chu kỳ + tài chính + chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Những yếu tố có thể phá vỡ luận điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Sau khi định giá và đối chiếu hồ sơ, **13. Nhiệm vụ đọc DART/IR** dẫn thẳng tới câu hỏi phản biện: điều gì có thể làm luận điểm ở **14. Những yếu tố có thể phá vỡ luận điểm** không còn đúng?
 
 ## 13. Nhiệm vụ đọc DART/IR
 
@@ -287,13 +287,13 @@ Khi nghiên cứu thực tế, hãy tìm số xe bán theo khu vực, doanh thu 
 
 Đặc biệt cần tách nợ của hoạt động sản xuất ô tô với nguồn vốn của công ty tài chính thay vì gom mọi khoản nợ thành một con số không có ngữ cảnh.
 
-> **Chuyển mạch:** Trong **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **14. Những yếu tố có thể phá vỡ luận điểm** tiếp nhận điểm tựa từ **13. Nhiệm vụ đọc DART/IR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Bài tập cuối trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** **14. Những yếu tố có thể phá vỡ luận điểm** gom các rủi ro cần theo dõi sau khi đọc DART/IR. **15. Bài tập cuối trường hợp** yêu cầu người học dùng chính khung đó để tự lập luận.
 
 ## 14. Những yếu tố có thể phá vỡ luận điểm
 
 Luận điểm tích cực có thể thất bại nếu khuyến mại tăng nhanh, có cú sốc chất lượng–bảo hành, công suất EV bị sử dụng thấp kéo dài, tổn thất tín dụng tài chính tăng hoặc chính sách làm cấu trúc chi phí xấu hơn. Luận điểm tiêu cực có thể thất bại nếu cơ cấu xe cao cấp–hybrid mạnh, nội địa hóa giảm gánh nặng thuế quan, kỷ luật chi phí tốt và đầu tư phần mềm–EV tạo lợi suất nhanh hơn dự kiến.
 
-> **Chuyển mạch:** Ở chặng này của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **14. Những yếu tố có thể phá vỡ luận điểm** cho ta quy tắc; **15. Bài tập cuối trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Tiếp theo:** Bài tập ở **15.** là bước thực hành cuối: dùng dữ liệu, kịch bản và rủi ro đã nêu để kiểm tra một luận điểm đầu tư. Phần **Liên kết** cung cấp các hướng đọc tiếp theo.
 
 ## 15. Bài tập cuối trường hợp (case / 사례)
 
@@ -313,7 +313,7 @@ Lợi nhuận hoạt động năm trước
 
 Không cần số hoàn hảo. Việc buộc thay đổi lợi nhuận vào từng cơ chế giúp phân biệt câu chuyện truyền thông với cơ chế kinh tế thực.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV**, **15. Bài tập cuối trường hợp (case / 사례)** cho ta quy tắc; **Liên kết** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Kết luận:** Sau bài tập, hãy giữ lại chuỗi kiểm tra từ sản lượng và cơ cấu sản phẩm đến tài chính captive, EV, định giá và rủi ro. **Liên kết** giúp quay về các chương nền tảng khi cần kiểm chứng sâu hơn.
 
 ## Liên kết
 
