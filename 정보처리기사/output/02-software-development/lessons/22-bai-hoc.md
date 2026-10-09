@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **085: 힙 정렬 (Heap Sort)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **086: 2-Way 합병 정렬 (Merge Sort)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **085: 힙 정렬 (Heap Sort)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu xác định heap sort dùng heapify và phần tử cực trị ra sao; từ khóa khoanh vùng invariant của heap và thao tác đổi chỗ.
 
 ## 핵심 키워드 (Từ khóa)
 
 정렬
 
-> **Chuyển mạch:** Ở chặng này của **085: 힙 정렬 (Heap Sort)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiến thức liên kết đặt heap sort trên nền cây heap và heapify; cách đọc tiếp theo giúp theo dõi invariant sau mỗi lần lấy cực trị.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **084: 퀵 정렬 (Quick Sort)**에서 만든 기준을 이어받아 **085: 힙 정렬 (Heap Sort)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **085: 힙 정렬 (Heap Sort)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **085: 힙 정렬 (Heap Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần heap sort dùng khung đó để nối heapify với chi phí O(n log n).
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **085: 힙 정렬 (Heap Sort)** như m�
 
 ---
 
-> **Chuyển mạch:** Trong **085: 힙 정렬 (Heap Sort)**, **085: 힙 정렬 (Heap Sort)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Phần này khép lại bằng trade-off của heap sort; khi sang merge sort, hãy đối chiếu heap tại chỗ với bộ nhớ phụ khi trộn.
 
 ## 085: 힙 정렬 (Heap Sort)
 
