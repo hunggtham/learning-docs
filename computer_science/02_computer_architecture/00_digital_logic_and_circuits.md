@@ -10,7 +10,7 @@ Transistor có thể hoạt động gần như switch được điều khiển. 
 
 NAND và NOR là functionally complete: chỉ một loại gate cũng có thể xây mọi Boolean hàm (function / 함수). Đây là ví dụ lớp trừu tượng (abstraction / 추상화) rất mạnh: từ thiết bị (device / 장치) physics → gate → combinational circuit → CPU datapath.
 
-> **Chuyển mạch:** Transistor tạo gate; combinational logic tính đầu ra chỉ từ đầu vào hiện tại, còn sequential logic thêm trạng thái để lưu nhớ và tạo mạch theo thời gian.
+Từ các gate này, ta tách hai cách mạch tạo ra kết quả: combinational logic chỉ nhìn đầu vào hiện tại, còn sequential logic giữ trạng thái để hành vi trải dài theo thời gian.
 
 ## Combinational lô-gic (logic / 논리)
 
@@ -20,7 +20,7 @@ Multiplexer chọn một đầu vào (input / 입력) theo select bits. Decoder 
 
 Boolean algebra và truth bảng (table / 테이블) cho phép chứng minh two circuits equivalent. Karnaugh map hoặc lô-gic (logic / 논리) synthesis tools tối giản biểu thức để giảm gates/delay/area.
 
-> **Chuyển mạch:** Ở chặng này của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Sequential lô-gic (logic / 논리): bộ nhớ (memory / 메모리) xuất hiện** tiếp nhận điểm tựa từ **Combinational lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clock và synchronous thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Combinational circuit không lưu lịch sử. Khi mạch cần nhớ trạng thái giữa hai lần tính, ta phải thêm phần tử lưu trữ và một cơ chế cập nhật. Đó là lý do phần tiếp theo chuyển sang sequential logic.
 
 ## Sequential lô-gic (logic / 논리): bộ nhớ (memory / 메모리) xuất hiện
 
@@ -30,7 +30,7 @@ Register là nhóm flip-flops lưu một word. Counter cập nhật trạng thá
 
 Đây là vật lý (physical / 물리적) realization của [state machine](../00_computation_information/03_logic_state_abstraction_and_invariants.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Clock và synchronous thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Sequential lô-gic (logic / 논리): bộ nhớ (memory / 메모리) xuất hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Arithmetic lô-gic (logic / 논리) đơn vị (unit / 단위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Có trạng thái thôi chưa đủ; mạch còn phải thống nhất thời điểm đọc và ghi trạng thái. Clock, setup/hold và giới hạn timing cung cấp quy ước đó. Khi nhịp đã rõ, ta có thể xem datapath thực hiện phép toán như thế nào.
 
 ## Clock và synchronous thiết kế (design / 설계)
 
@@ -38,7 +38,7 @@ Nhiều digital các hệ thống (systems / 시스템들) dùng clock để chi
 
 Setup/hold violations có thể dẫn tới metastability khi tín hiệu (signal / 신호) thay đổi gần sampling edge. Synchronizing signals giữa clock domains là một real hardware bài toán (problem / 문제), cho thấy digital 0/1 chỉ là lớp trừu tượng (abstraction / 추상화) trên analog reality.
 
-> **Chuyển mạch:** Trong **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Arithmetic lô-gic (logic / 논리) đơn vị (unit / 단위)** tiếp nhận điểm tựa từ **Clock và synchronous thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) cells và hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ALU cho thấy các gate và đường dữ liệu biến đầu vào thành kết quả có ý nghĩa với CPU. Nhưng kết quả chỉ hữu ích nếu mạch có nơi giữ operands, instructions và trạng thái giữa các chu kỳ. Vì vậy, bước kế tiếp là các ô nhớ và memory hierarchy.
 
 ## Arithmetic lô-gic (logic / 논리) đơn vị (unit / 단위)
 
@@ -46,7 +46,7 @@ ALU (Arithmetic Logic Unit / 산술 논리 장치) thực hiện operations như
 
 ALU không tự quyết thao tác (operation / 연산); điều khiển (control / 제어) lô-gic (logic / 논리) decode instruction và tuyến (route / 경로) operands/results qua datapath.
 
-> **Chuyển mạch:** Ở chặng này của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Bộ nhớ (memory / 메모리) cells và hierarchy** tiếp nhận điểm tựa từ **Arithmetic lô-gic (logic / 논리) đơn vị (unit / 단위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lô-gic (logic / 논리) và HDL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các loại memory khác nhau ở tốc độ, mật độ, giá thành và khả năng giữ dữ liệu khi mất điện. Để biến những đánh đổi ấy thành phần cứng cụ thể, người thiết kế cần một ngôn ngữ mô tả mạch và quan hệ đồng thời giữa các phần tử.
 
 ## Bộ nhớ (memory / 메모리) cells và hierarchy
 
@@ -54,7 +54,7 @@ Registers dùng fast circuits gần CPU thực thi (execution / 실행) units. S
 
 Hierarchy tồn tại vì không có một technology đồng thời nhanh nhất, rẻ nhất, dense nhất và non-volatile nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Lô-gic (logic / 논리) và HDL** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) cells và hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HDL gom các mảnh của file vào một mô hình thống nhất: dữ liệu đi qua combinational logic, trạng thái được giữ bởi storage elements, còn clock điều phối thời điểm cập nhật. Mô hình đó giúp ta kiểm tra các ngộ nhận thường gặp trước khi rút ra kết luận.
 
 ## Lô-gic (logic / 논리) và HDL
 
@@ -62,13 +62,9 @@ Hardware Description Languages như Verilog/SystemVerilog/VHDL mô tả circuits
 
 Điều này khác software compilation: hardware description có thể biểu diễn nhiều operations xảy ra song song thực sự.
 
-> **Chuyển mạch:** Trong **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lô-gic (logic / 논리) và HDL** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Digital computer là **máy trạng thái (state machine / 상태 머신) khổng lồ**: combinational lô-gic (logic / 논리) tính next values, lưu trữ (storage / 저장소) elements giữ trạng thái (state / 상태), clock phối hợp updates. Instructions ở CPU chỉ là một tầng lớp trừu tượng (abstraction / 추상화) trên cấu trúc đó.
-
-> **Chuyển mạch:** Ở chặng này của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -78,7 +74,7 @@ Hardware Description Languages như Verilog/SystemVerilog/VHDL mô tả circuits
 
 **“Hardware lô-gic (logic / 논리) chạy như mã (code / 코드) từng dòng.”** Nhiều parts của circuit hoạt động đồng thời; HDL ngữ nghĩa (semantics / 의미론) và timing khác imperative software.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Ba ngộ nhận trên đều xuất phát từ việc nhầm lớp trừu tượng với phần cứng bên dưới. Khi đã tách được mức logic, timing và sự đồng thời, ta có thể nối chapter này về các owner cơ chế thay vì coi digital logic là một hộp đen.
 
 ## Kết nối
 

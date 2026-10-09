@@ -10,7 +10,7 @@ Ta muốn bộ nhớ (memory / 메모리) vừa rất nhanh, rất lớn, rẻ, 
 
 Mỗi tầng gần CPU thường nhỏ hơn nhưng nhanh hơn. Cơ chế hiệu quả vì workloads có temporal và spatial locality.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Bộ nhớ đệm (cache / 캐시) line** tiếp nhận điểm tựa từ **Không có bộ nhớ (memory / 메모리) hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tag, set và associativity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trade-off giữa capacity và latency chỉ tạo lợi ích khi dữ liệu được đưa lên theo đơn vị phù hợp với access pattern. Cache line là đơn vị vận chuyển đó; từ nó, ta có thể phân tích cách address được ánh xạ vào cache.
 
 ## Bộ nhớ đệm (cache / 캐시) line
 
@@ -18,7 +18,7 @@ CPU bộ nhớ đệm (cache / 캐시) thường chuyển dữ liệu theo **b�
 
 Đây là lý do Big O giống nhau nhưng actual speed khác.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Tag, set và associativity** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hit và miss** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cache line đã có, nhưng cache vẫn cần quyết định line đó được đặt ở đâu và nhận diện bằng cách nào. Tag, set và associativity trả lời ba câu hỏi ấy; cách ánh xạ sẽ quyết định khả năng hit.
 
 ## Tag, set và associativity
 
@@ -26,7 +26,7 @@ Bộ nhớ đệm (cache / 캐시) cần biết bộ nhớ (memory / 메모리) 
 
 Xung đột (conflict / 충돌) misses xảy ra khi hot blocks map cùng set dù bộ nhớ đệm (cache / 캐시) tổng còn không gian (space / 공간). Replacement chính sách (policy / 정책) xấp xỉ LRU hoặc variants quyết định victim.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Hit và miss** tiếp nhận điểm tựa từ **Tag, set và associativity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghi (write / 쓰기) policies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mapping quyết định line có cơ hội nằm trong cache, còn hit hoặc miss quyết định chi phí quan sát được của mỗi truy cập. Từ tỷ lệ miss và miss penalty, ta chuyển sang câu hỏi dữ liệu được ghi xuống các tầng ra sao.
 
 ## Hit và miss
 
@@ -38,13 +38,13 @@ AMAT = hit\ thời gian (time / 시간) + miss\ tỷ lệ (rate / 비율) \times
 
 Nested bộ nhớ đệm (cache / 캐시) levels làm formula chi tiết hơn. Một miss tỷ lệ (rate / 비율) nhỏ vẫn đáng kể nếu penalty lớn.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Ghi (write / 쓰기) policies** tiếp nhận điểm tựa từ **Hit và miss** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm (cache / 캐시) coherence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Read miss cho thấy dữ liệu đi vào cache như thế nào; write policy quyết định khi nào thay đổi rời cache và trở thành trạng thái của tầng dưới. Trên multicore, chính những thay đổi đó cần được phối hợp giữa các bản sao.
 
 ## Ghi (write / 쓰기) policies
 
 Write-through gửi ghi (write / 쓰기) xuống lower mức (level / 수준) ngay, đơn giản consistency nhưng tăng traffic. Write-back chỉ cập nhật bộ nhớ đệm (cache / 캐시) line và đánh dirty, flush khi evict, giảm bandwidth nhưng phức tạp hơn. Write-allocate/no-write-allocate quyết định miss khi store có kéo line vào bộ nhớ đệm (cache / 캐시) không.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Bộ nhớ đệm (cache / 캐시) coherence** tiếp nhận điểm tựa từ **Ghi (write / 쓰기) policies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **False sharing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Write policy tạo ra các bản sao có thể khác thời điểm cập nhật. Coherence giữ cho những bản sao đó đi theo một giao thức, nhưng giao thức ấy cũng làm lộ chi phí vật lý của việc nhiều core chạm vào cùng cache line.
 
 ## Bộ nhớ đệm (cache / 캐시) coherence
 
@@ -52,7 +52,7 @@ Multicore CPUs có private caches. Nếu cốt lõi (core / 핵심) A ghi x còn
 
 Coherence không tự giải quyết mọi tính đồng thời (concurrency / 동시성) ngữ nghĩa (semantics / 의미론). ngôn ngữ (language / 언어)/ISA bộ nhớ (memory / 메모리) mô hình (model / 모델) còn quyết định thứ tự (ordering / 순서) và visibility; synchronization primitives tạo happens-before relationships.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **False sharing** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) coherence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLB và address translation bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Coherence hoạt động theo cache line, nên hai biến độc lập về mặt lô-gic vẫn có thể tranh chấp cùng một đơn vị vật lý. False sharing là trường hợp cụ thể của rò rỉ abstraction đó; sau đây ta xét một cache khác phục vụ việc dịch địa chỉ.
 
 ## False sharing
 
@@ -60,7 +60,7 @@ Hai threads cập nhật hai variables khác nhau nhưng cùng bộ nhớ đệm
 
 Đây là ví dụ lớp trừu tượng (abstraction / 추상화) leak từ variable-level program sang cache-line-level hardware.
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **TLB và address translation bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **False sharing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefetching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False sharing cho thấy access pattern phải được đọc cả ở mức layout vật lý. TLB cũng lưu dấu vết của access pattern, nhưng trên ánh xạ virtual-to-physical; chi phí dịch địa chỉ này cần được tính trước khi tối ưu việc kéo dữ liệu.
 
 ## TLB và address translation bộ nhớ đệm (cache / 캐시)
 
@@ -68,19 +68,17 @@ Virtual addresses phải translate qua page tables. Translation Lookaside Buffer
 
 Huge pages giảm number of TLB entries cần nhưng tăng allocation/internal-fragmentation trade-offs.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Prefetching** tiếp nhận điểm tựa từ **TLB và address translation bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TLB giảm chi phí dịch các địa chỉ được dùng lại. Khi địa chỉ đã sẵn sàng, prefetching có thể đưa dữ liệu đến cache trước lần truy cập dự kiến, nhưng chỉ có ích nếu dự đoán access pattern đủ chính xác.
 
 ## Prefetching
 
 Hardware/software prefetch đoán dữ liệu sắp dùng và kéo sớm. Sequential patterns dễ đoán; linked structures khó vì next address phụ thuộc tải (load / 로드) hiện tại. Prefetch sai lãng phí bandwidth/bộ nhớ đệm (cache / 캐시) sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Prefetching** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefetching chỉ là một cách khai thác locality. Mô hình đúng phải tính cả working set, cache line, TLB, core sharing và miss penalty trước khi kết luận một access pattern là nhanh.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hiệu năng (performance / 성능) bộ nhớ (memory / 메모리) phụ thuộc **working set + truy cập (access / 접근) mẫu (pattern / 패턴)**, không chỉ dữ liệu (data / 데이터) kích thước (size / 크기). Hãy hỏi dữ liệu có fit tầng nào, mỗi truy cập (access / 접근) dùng bao nhiêu của bộ nhớ đệm (cache / 캐시) line, có reuse không, và cores có tranh cùng lines không.
-
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -90,7 +88,7 @@ Hardware/software prefetch đoán dữ liệu sắp dùng và kéo sớm. Sequen
 
 **“Coherence làm concurrent mã (code / 코드) thread-safe.”** Coherence giữ copies coherent theo giao thức (protocol / 프로토콜); race-free ngữ nghĩa (semantics / 의미론) cần synchronization/bộ nhớ (memory / 메모리) thứ tự (ordering / 순서).
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận trên đều bỏ qua một tầng của đường đi dữ liệu. Kết nối cuối file đưa mô hình này sang data layout, virtual memory, concurrency và whole-system performance để kiểm chứng ở owner tương ứng.
 
 ## Kết nối
 
