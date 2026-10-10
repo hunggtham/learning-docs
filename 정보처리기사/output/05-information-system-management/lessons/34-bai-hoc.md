@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **9. 암호화 기술 (Công nghệ Mã hóa)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **암호화 기법 (Encryption Techniques)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **9. 암호화 기술 (Công nghệ Mã hóa)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mục tiêu của **9. 암호화 기술 (Công nghệ Mã hóa)**, ta chuyển sang **핵심 키워드 (Từ khóa)** để nhận diện các thuật ngữ sẽ được giải thích và đối chiếu trong bài.
 
 ## 핵심 키워드 (Từ khóa)
 
 암호화, 기술
 
-> **Chuyển mạch:** Ở chặng này của **9. 암호화 기술 (Công nghệ Mã hóa)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện các **핵심 키워드 (Từ khóa)**, hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để biết bài học nối tiếp tiêu chí nào từ phần trước; **읽는 방법 (Cách đọc)** sẽ mở ra cách kiểm tra các tiêu chí đó.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)**에서 만든 기준을 이어받아 **9. 암호화 기술 (Công nghệ Mã hóa)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **9. 암호화 기술 (Công nghệ Mã hóa)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 암호화 기술 (Công nghệ Mã hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** đặt mã hóa trong chuỗi kiến thức; từ đó, **읽는 방법 (Cách đọc)** hướng dẫn cách theo dõi thuật toán, điều kiện và hệ quả trong phần chính.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **9. 암호화 기술 (Công nghệ Mã 
 
 ---
 
-> **Chuyển mạch:** Trong **9. 암호화 기술 (Công nghệ Mã hóa)**, **9. 암호화 기술 (Công nghệ Mã hóa)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi xác định cách đọc, ta áp dụng các tiêu chí đó vào **9. 암호화 기술 (Công nghệ Mã hóa)**; hãy bắt đầu bằng vai trò của từng loại khóa rồi mới so sánh thuật toán, điều kiện dùng và giới hạn.
 
 ## 9. 암호화 기술 (Công nghệ Mã hóa)
 

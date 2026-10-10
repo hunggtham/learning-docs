@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **Python 제어문: while문 (While Loop)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로그래밍 언어의 분류 (Classification of Programming Languages)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **Python 제어문: while문 (While Loop)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mục tiêu của **Python 제어문: while문 (While Loop)**, ta chuyển sang **핵심 키워드 (Từ khóa)** để nhận diện các thuật ngữ sẽ điều khiển điều kiện và trạng thái của vòng lặp.
 
 ## 핵심 키워드 (Từ khóa)
 
 Python, 제어문
 
-> **Chuyển mạch:** Ở chặng này của **Python 제어문: while문 (While Loop)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện các **핵심 키워드 (Từ khóa)**, hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để biết vòng lặp dựa trên nền tảng nào; tiếp đó **읽는 방법 (Cách đọc)** sẽ biến nền tảng ấy thành tiêu chí kiểm tra điều kiện và trạng thái.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **Python 클래스와 함수 (Class and Functions)**에서 만든 기준을 이어받아 **Python 제어문: while문 (While Loop)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python 제어문: while문 (While Loop)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 제어문: while문 (While Loop)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** đặt vòng lặp trong chuỗi kiến thức; từ điểm tựa đó, **읽는 방법 (Cách đọc)** hướng dẫn cách theo dõi điều kiện, cập nhật trạng thái và điểm dừng trong phần chính.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Python, 제어문
 
 ---
 
-> **Chuyển mạch:** Trong **Python 제어문: while문 (While Loop)**, **Python 제어문: while문 (While Loop)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi xác định cách đọc, ta áp dụng các tiêu chí đó vào **Python 제어문: while문 (While Loop)**; hãy kiểm tra điều kiện trước mỗi vòng, trạng thái sau mỗi lần cập nhật và điểm dừng trước khi xem ví dụ.
 
 ## Python 제어문: while문 (While Loop)
 
