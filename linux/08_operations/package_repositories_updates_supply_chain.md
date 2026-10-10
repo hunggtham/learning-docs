@@ -25,7 +25,7 @@ apt install nginx
 
 không chỉ là tải nhị phân (binary / 이진) rồi bản sao (copy / 복사) vào `/usr/bin`.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Trình quản lý gói (package manager / 패키지 관리자) quản lý nhiều hơn tệp (file / 파일)** nêu điều cần giải thích; **Gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Trình quản lý gói (package manager / 패키지 관리자) tầng cao và tầng thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Package manager không chỉ chép file; nó duy trì metadata, dependency graph, version và trạng thái cài đặt. Vì vậy cần bắt đầu từ package database để biết hệ thống đang tin vào thông tin nào.
 
 ## Gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스)
 
@@ -53,7 +53,7 @@ rpm -qf /usr/sbin/nginx
 
 Kiến thức (knowledge / 지식) này rất hữu ích khi một tệp (file / 파일) hệ thống bị sửa thủ công và cần biết gói (package / 패키지) nào sẽ ghi đè nó khi upgrade.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **Trình quản lý gói (package manager / 패키지 관리자) tầng cao và tầng thấp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Repository là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Package database ghi version, dependency, checksum và trạng thái transaction của gói. Các package manager tầng cao và thấp đọc/biến đổi lớp metadata này theo những vai trò khác nhau.
 
 ## Trình quản lý gói (package manager / 패키지 관리자) tầng cao và tầng thấp
 
@@ -71,7 +71,7 @@ Tương tự, DNF nằm trên RPM ecosystem.
 
 Khi install `.deb` trực tiếp bằng `dpkg -i`, phụ thuộc (dependency / 의존성) có thể chưa được giải quyết như khi dùng APT.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Repository là gì?** tiếp nhận điểm tựa từ **Trình quản lý gói (package manager / 패키지 관리자) tầng cao và tầng thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **apt update thực sự làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tầng cao điều phối policy, dependency và transaction, còn tầng thấp thực hiện unpack/configure file cụ thể. Cả hai đều phụ thuộc repository để biết artifact nào có thể lấy và tin.
 
 ## Repository là gì?
 
@@ -91,7 +91,7 @@ Repository có thể là:
 - snapshot repository;
 - testing/staging repository.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **apt update thực sự làm gì?** tiếp nhận điểm tựa từ **Repository là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Candidate phiên bản (version / 버전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Repository là nguồn metadata và artifact có version, release channel và trust policy. `apt update` chủ yếu đồng bộ metadata; nó chưa tự cài hay nâng package.
 
 ## `apt update` thực sự làm gì?
 
@@ -112,7 +112,7 @@ khác với:
 sudo apt upgrade
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Candidate phiên bản (version / 버전)** tiếp nhận điểm tựa từ **apt update thực sự làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pinning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`apt update` làm mới index để solver nhìn thấy version và dependency hiện tại. Từ index đó, candidate version được chọn dựa trên policy, pinning và trạng thái hệ thống.
 
 ## Candidate phiên bản (version / 버전)
 
@@ -132,7 +132,7 @@ Version table: ...
 
 Nếu `apt install nginx` cài phiên bản (version / 버전) bất ngờ, hãy kiểm tra candidate và repository priority trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Pinning** tiếp nhận điểm tựa từ **Candidate phiên bản (version / 버전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hold gói (package / 패키지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Candidate version là lựa chọn hiện tại của solver, không phải cam kết sẽ được cài. Pinning thêm trọng số hoặc ưu tiên để kiểm soát version/source, nhưng phải có lý do và thời hạn rõ.
 
 ## Pinning
 
@@ -142,7 +142,7 @@ APT pinning cho phép ưu tiên hoặc giữ phiên bản (version / 버전) the
 
 Môi trường vận hành (production / 운영 환경) pinning nên đi kèm documentation về lý do và thời điểm bỏ pin.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Hold gói (package / 패키지)** tiếp nhận điểm tựa từ **Pinning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DNF versionlock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pinning có thể giữ một nguồn hoặc version được ưu tiên; hold là chặn một package khỏi thay đổi tự động. Hai cơ chế khác nhau về phạm vi và dễ tạo drift nếu không được inventory.
 
 ## Hold gói (package / 패키지)
 
@@ -157,7 +157,7 @@ Hold giúp tránh auto-upgrade gói (package / 패키지) nhạy cảm, nhưng c
 
 Hold là sự đánh đổi (trade-off / 트레이드오프), không phải trạng thái nên để vĩnh viễn mà không rà soát (review / 검토).
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **DNF versionlock** tiếp nhận điểm tựa từ **Hold gói (package / 패키지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) solver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hold giữ package khỏi transaction thông thường, còn DNF versionlock khóa các version được phép trong hệ sinh thái DNF. Sau policy version, solver vẫn phải giải dependency toàn graph.
 
 ## DNF versionlock
 
@@ -165,7 +165,7 @@ RHEL-family có plugin/versionlock cơ chế (mechanism / 메커니즘) tùy ph�
 
 Mục tiêu tương tự: giữ gói (package / 패키지) ở một phiên bản (version / 버전) hoặc mẫu (pattern / 패턴) xác định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Phụ thuộc (dependency / 의존성) solver** tiếp nhận điểm tựa từ **DNF versionlock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) trực tiếp và gián tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Versionlock giới hạn ứng viên nhưng không giải quyết xung đột dependency. Dependency solver cần tìm một tập version cùng tồn tại, và failure của nó phải được đọc như tín hiệu policy hoặc repository.
 
 ## Phụ thuộc (dependency / 의존성) solver
 
@@ -182,7 +182,7 @@ Xung đột (conflict / 충돌) có thể xảy ra khi hai packages yêu cầu r
 
 Đây là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) bài toán (problem / 문제) giống Maven/Gradle/npm, nhưng phạm vi là operating-system trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Phụ thuộc (dependency / 의존성) trực tiếp và gián tiếp** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) solver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recommended và suggested packages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Solver nhìn cả dependency trực tiếp và gián tiếp; một thay đổi nhỏ có thể kéo theo chain lớn. Inventory hai lớp này giúp đánh giá blast radius trước khi update.
 
 ## Phụ thuộc (dependency / 의존성) trực tiếp và gián tiếp
 
@@ -198,7 +198,7 @@ sudo apt autoremove
 
 Nhưng cần rà soát (review / 검토) kỹ trên môi trường vận hành (production / 운영 환경) vì gói (package / 패키지) được đánh dấu auto/manual không phải lúc nào cũng phản ánh nghiệp vụ (business / 비즈니스) phụ thuộc (dependency / 의존성) bạn mong muốn.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Recommended và suggested packages** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) trực tiếp và gián tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gói (package / 패키지) scripts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dependency trực tiếp là contract của package ứng dụng, còn dependency gián tiếp thường là nơi drift và surprise xuất hiện. Recommended/suggested packages thêm lựa chọn nhưng không luôn là runtime requirement.
 
 ## Recommended và suggested packages
 
@@ -212,7 +212,7 @@ apt-get install --no-install-recommends package
 
 Nhưng ảnh (image / 이미지) nhỏ hơn có thể thiếu utility mà debugging cần. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa minimal surface và operability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Gói (package / 패키지) scripts** tiếp nhận điểm tựa từ **Recommended và suggested packages** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu hình (configuration / 구성) files** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Recommended và suggested packages có semantics khác nhau giữa policy/dialect và có thể làm footprint thay đổi. Trước khi cài, cần hiểu package scripts vì chúng có thể tạo side effect ngoài file payload.
 
 ## Gói (package / 패키지) scripts
 
@@ -237,7 +237,7 @@ Vì vậy gói (package / 패키지) install có thể tạo side tác động (
 
 Trên môi trường vận hành (production / 운영 환경), cần biết upgrade gói (package / 패키지) có tự restart dịch vụ (service / 서비스) không.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Cấu hình (configuration / 구성) files** tiếp nhận điểm tựa từ **Gói (package / 패키지) scripts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conffile quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Package scripts can run during install, upgrade or removal and may mutate services, users, caches or databases. Configuration files are another boundary: payload ownership and local edits affect whether an update is safe.
 
 ## Cấu hình (configuration / 구성) files
 
@@ -247,7 +247,7 @@ Khi gói (package / 패키지) upgrade và tệp (file / 파일) cấu hình (co
 
 Trong unattended automation, xung đột (conflict / 충돌) này cần chính sách (policy / 정책) rõ; nếu không triển khai (deployment / 배포) có thể treo hoặc áp cấu hình (config / 설정) không mong muốn.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, sau nội dung của **Cấu hình (configuration / 구성) files**, **Conffile quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Verify gói (package / 패키지) files** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Configuration files carry local intent, so the package system must distinguish shipped defaults from administrator changes. Conffile ownership and three-way decisions determine whether an upgrade preserves or overwrites that intent.
 
 ## Conffile quyền sở hữu (ownership / 소유권)
 
@@ -261,7 +261,7 @@ có thể giúp xem cấu hình (config / 설정) files do gói (package / 패�
 
 Không nên coi toàn bộ `/etc` là “do trình quản lý gói (package manager / 패키지 관리자) sở hữu”; nhiều app/nội bộ (internal / 내부) configs được quản lý bằng cấu hình (configuration / 구성) management riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Verify gói (package / 패키지) files** tiếp nhận điểm tựa từ **Conffile quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Repository signing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conffile handling protects local configuration only when ownership and conflict decisions are visible. Verifying package files then checks what was installed, but it does not prove repository authenticity or runtime behavior.
 
 ## Verify gói (package / 패키지) files
 
@@ -277,7 +277,7 @@ rpm -V package-name
 
 Debian có thể dùng checksum siêu dữ liệu (metadata / 메타데이터) hoặc các công cụ (tool / 도구) bổ sung tùy gói (package / 패키지).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Repository signing** tiếp nhận điểm tựa từ **Verify gói (package / 패키지) files** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao curl | sudo bash là rủi ro?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+File verification can detect missing or modified payloads relative to package metadata. Repository signing establishes authenticity and integrity of metadata/artifacts before installation, a different link in the trust chain.
 
 ## Repository signing
 
@@ -295,7 +295,7 @@ package checksum
 package content
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Vì sao curl | sudo bash là rủi ro?** tiếp nhận điểm tựa từ **Repository signing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checksum khác signature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Repository signatures bind metadata to a trusted signing key and policy; bypassing that chain with `curl | sudo bash` gives a remote script direct privilege without equivalent review or transaction boundaries.
 
 ## Vì sao `curl | sudo bash` là rủi ro?
 
@@ -316,7 +316,7 @@ Cách an toàn hơn:
 3. inspect script;
 4. execute với privilege tối thiểu cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Checksum khác signature** tiếp nhận điểm tựa từ **Vì sao curl | sudo bash là rủi ro?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) mirror** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`curl | sudo bash` collapses download, interpretation and privileged execution into one opaque step. A checksum can detect bytes changed relative to a known digest, while a signature also authenticates who authorized those bytes.
 
 ## Checksum khác signature
 
@@ -324,7 +324,7 @@ Checksum như SHA-256 giúp phát hiện content thay đổi, nhưng nếu attac
 
 Digital signature dùng private/công khai (public / 공개) key trust mô hình (model / 모델) mạnh hơn khi key phân phối (distribution / 분포) an toàn.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Nội bộ (internal / 내부) mirror** tiếp nhận điểm tựa từ **Checksum khác signature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Snapshot repository** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Checksum proves content equality only if the digest came through a trusted channel; signature binds content or metadata to a key. Internal mirrors reduce external dependency but must preserve verification and provenance.
 
 ## Nội bộ (internal / 내부) mirror
 
@@ -339,7 +339,7 @@ Enterprise thường dùng repository mirror nội bộ để:
 
 Nhưng mirror phải được cập nhật và bảo vệ; mirror cũ có thể làm patching chậm.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Snapshot repository** tiếp nhận điểm tựa từ **Nội bộ (internal / 내부) mirror** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quay lui (rollback / 롤백) gói (package / 패키지) có đơn giản không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+An internal mirror centralizes availability and policy, but it can also become a single stale or compromised source. Snapshot repositories make the exact metadata/artifact set reproducible and support controlled rollback.
 
 ## Snapshot repository
 
@@ -357,7 +357,7 @@ prod build ngày 2026-09-20
 
 Điều này giúp rebuild máy chủ (server / 서버) giống nhau hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Quay lui (rollback / 롤백) gói (package / 패키지) có đơn giản không?** tiếp nhận điểm tựa từ **Snapshot repository** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kernel gói (package / 패키지) và reboot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Snapshots make rollback inputs reproducible, but package rollback is not automatically safe: scripts, schemas, user data and external state may not be reversible. Kernel updates add a reboot boundary and a second booted state.
 
 ## Quay lui (rollback / 롤백) gói (package / 패키지) có đơn giản không?
 
@@ -371,7 +371,7 @@ Downgrade nhị phân (binary / 이진) có thể không quay lui (rollback / �
 
 Gói (package / 패키지) quay lui (rollback / 롤백) chỉ là một phần của ứng dụng (application / 애플리케이션) quay lui (rollback / 롤백).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Kernel gói (package / 패키지) và reboot** tiếp nhận điểm tựa từ **Quay lui (rollback / 롤백) gói (package / 패키지) có đơn giản không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade và tiến trình (process / 프로세스) đang chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kernel rollback can require selecting an older boot artifact and validating modules, initramfs and hardware behavior. Shared libraries create a different boundary: running processes may keep old mappings while new processes load new code.
 
 ## Kernel gói (package / 패키지) và reboot
 
@@ -389,7 +389,7 @@ Có thể có nhiều kernel versions trên disk; bootloader chọn kernel khi r
 
 Bảo mật (security / 보안) patch kernel thường cần reboot hoặc live patch cơ chế (mechanism / 메커니즘) nếu được hỗ trợ.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Kernel gói (package / 패키지) và reboot** xác định đầu vào; **Dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade và tiến trình (process / 프로세스) đang chạy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Restart sau gói (package / 패키지) cập nhật (update / 업데이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Shared-library upgrades can leave a mixed process population, so package completion is not the same as runtime convergence. Restart policy determines when services actually begin using the patched library.
 
 ## Dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade và tiến trình (process / 프로세스) đang chạy
 
@@ -407,7 +407,7 @@ sudo lsof +L1
 
 có thể thấy mapped deleted files trong một số trường hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade và tiến trình (process / 프로세스) đang chạy** xác định đầu vào; **Restart sau gói (package / 패키지) cập nhật (update / 업데이트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **glibc và cốt lõi (core / 핵심) libraries** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Restarting after an update must be driven by process/library state and service criticality, not a blanket reboot habit. glibc and other core libraries raise the blast radius and require especially explicit validation.
 
 ## Restart sau gói (package / 패키지) cập nhật (update / 업데이트)
 
@@ -422,7 +422,7 @@ Có thể là:
 
 Không restart mọi thứ một cách mù quáng; cần thay đổi (change / 변경) plan và availability chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **glibc và cốt lõi (core / 핵심) libraries** tiếp nhận điểm tựa từ **Restart sau gói (package / 패키지) cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CVE không tự động nghĩa host có thể bị khai thác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Core-library updates can require coordinated service restarts, but restart scope should follow actual linkage and availability requirements. After runtime convergence, CVE assessment asks whether a published issue is exploitable in this host context.
 
 ## glibc và cốt lõi (core / 핵심) libraries
 
@@ -434,7 +434,7 @@ Trong một khoảng thời gian host có thể tồn tại mixed thời gian ch
 
 Đây là lý do reboot maintenance cửa sổ (window / 윈도우) đôi khi giúp đưa host về trạng thái đồng nhất sau large patch set.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **CVE không tự động nghĩa host có thể bị khai thác** tiếp nhận điểm tựa từ **glibc và cốt lõi (core / 핵심) libraries** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) advisory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+glibc and other core libraries amplify the consequence of a bad update, yet a CVE score alone does not prove exploitability. Advisory interpretation must combine affected version, reachable configuration, exposure and available mitigations.
 
 ## CVE không tự động nghĩa host có thể bị khai thác
 
@@ -444,7 +444,7 @@ Cần xem distro bảo mật (security / 보안) advisory, gói (package / 패�
 
 Không chỉ so ngữ nghĩa (semantic / 의미적) phiên bản (version / 버전) với upstream rồi kết luận vulnerable.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Bảo mật (security / 보안) advisory** tiếp nhận điểm tựa từ **CVE không tự động nghĩa host có thể bị khai thác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Unattended upgrade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+A CVE advisory is a risk signal with version and configuration conditions, not an automatic incident declaration. Unattended upgrades turn that signal into an automated lifecycle, so scope, timing and rollback evidence must be explicit.
 
 ## Bảo mật (security / 보안) advisory
 
@@ -459,7 +459,7 @@ Môi trường vận hành (production / 운영 환경) patching nên dựa trê
 - vendor/distro fix availability;
 - regression rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Unattended upgrade** tiếp nhận điểm tựa từ **Bảo mật (security / 보안) advisory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Immutable ảnh (image / 이미지) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Unattended upgrades reduce patch lag but can change packages without a human at the moment of execution. Immutable images shift the control point earlier: build and test a complete artifact, then replace rather than mutate hosts in place.
 
 ## Unattended upgrade
 
@@ -476,7 +476,7 @@ auto security updates
 
 Thay vì bật auto-upgrade đồng loạt trên toàn fleet.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Immutable ảnh (image / 이미지) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Unattended upgrade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SBOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Immutable images improve repeatability only when the image build inputs and provenance are controlled. SBOM records the components inside the artifact so a new advisory can be mapped to affected images and rebuild scope.
 
 ## Immutable ảnh (image / 이미지) mô hình (model / 모델)
 
@@ -501,7 +501,7 @@ Nhược điểm:
 - cần ảnh (image / 이미지) chuỗi xử lý (pipeline / 파이프라인);
 - patch khẩn cấp vẫn cần tốc độ bản dựng (build / 빌드)/deploy tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **SBOM** tiếp nhận điểm tựa từ **Immutable ảnh (image / 이미지) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gói (package / 패키지) và ảnh bộ chứa (container image / 컨테이너 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SBOM connects component inventory to remediation, but it does not prove a component is safe or present at runtime. Container images add another packaging boundary where host packages, image layers and runtime mounts must be distinguished.
 
 ## SBOM
 
@@ -515,7 +515,7 @@ SBOM hỗ trợ trả lời:
 
 Nó không tự động bảo đảm an toàn, nhưng tăng khả năng inventory và phản hồi (response / 응답).
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Gói (package / 패키지) và ảnh bộ chứa (container image / 컨테이너 이미지)** tiếp nhận điểm tựa từ **SBOM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-stage bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Container images may carry OS packages and application dependencies in layered form. Multi-stage builds reduce the final attack surface by separating build-time tools from the runtime artifact, but reproducibility still depends on pinned inputs.
 
 ## Gói (package / 패키지) và ảnh bộ chứa (container image / 컨테이너 이미지)
 
@@ -538,7 +538,7 @@ Dockerfile update
 → deploy image mới
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Multi-stage bản dựng (build / 빌드)** tiếp nhận điểm tựa từ **Gói (package / 패키지) và ảnh bộ chứa (container image / 컨테이너 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gói (package / 패키지) bộ nhớ đệm (cache / 캐시) và disk usage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multi-stage builds reduce unnecessary payload, while package caches trade speed for disk usage and stale or untrusted artifacts. Cache policy must define retention, provenance and eviction rather than treating cached bytes as neutral.
 
 ## Multi-stage bản dựng (build / 빌드)
 
@@ -548,7 +548,7 @@ Dockerfile update
 
 Nhưng debugging môi trường vận hành (production / 운영 환경) ảnh (image / 이미지) tối giản có thể khó hơn; cần khả năng quan sát (observability / 관측 가능성)/tooling chiến lược (strategy / 전략) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Gói (package / 패키지) bộ nhớ đệm (cache / 캐시) và disk usage** tiếp nhận điểm tựa từ **Multi-stage bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao dịch (transaction / 트랜잭션) lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Package caches can hide which artifact was fetched and consume enough disk to change upgrade behavior. Transaction history restores observability: it records requested changes, solver decisions and outcomes for audit or recovery.
 
 ## Gói (package / 패키지) bộ nhớ đệm (cache / 캐시) và disk usage
 
@@ -562,7 +562,7 @@ du -sh /var/cache/apt 2>/dev/null
 
 Cleanup cần dùng package-manager-aware commands thay vì xóa random cơ sở dữ liệu (database / 데이터베이스) files.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Giao dịch (transaction / 트랜잭션) lịch sử (history / 이력)** tiếp nhận điểm tựa từ **Gói (package / 패키지) bộ nhớ đệm (cache / 캐시) và disk usage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra trước upgrade môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Transaction history supports diagnosis but cannot replace a pre-upgrade check. Before production, validate disk, repository reachability, locks, service health, backups and a rollback path appropriate to the package change.
 
 ## Giao dịch (transaction / 트랜잭션) lịch sử (history / 이력)
 
@@ -581,7 +581,7 @@ less /var/log/apt/history.log
 
 Dòng thời gian gói (package / 패키지) changes rất hữu ích khi sự cố (incident / 인시던트) bắt đầu sau maintenance cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Kiểm tra trước upgrade môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **Giao dịch (transaction / 트랜잭션) lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một trường hợp (case / 사례): dịch vụ (service / 서비스) thất bại (fail / 실패) sau patch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pre-upgrade checks reduce avoidable failure, but production still has unknown interactions. A service failure after patch should be analyzed as a timeline linking package transaction, config, process state and external dependencies.
 
 ## Kiểm tra trước upgrade môi trường vận hành (production / 운영 환경)
 
@@ -601,7 +601,7 @@ inventory current versions
 
 Không chỉ chạy `apt upgrade -y` rồi coi như hoàn tất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Kiểm tra trước upgrade môi trường vận hành (production / 운영 환경)** cho ta quy tắc; **Một trường hợp (case / 사례): dịch vụ (service / 서비스) thất bại (fail / 실패) sau patch** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Một trường hợp (case / 사례): host A lỗi, host B khỏe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+A post-patch service failure needs a bounded rollback or forward-fix decision, with evidence preserved before changing more state. Host A/host B comparison provides a natural control when one host remains healthy.
 
 ## Một trường hợp (case / 사례): dịch vụ (service / 서비스) thất bại (fail / 실패) sau patch
 
@@ -621,7 +621,7 @@ Có thể gói (package / 패키지) cập nhật (update / 업데이트) đổi
 
 Quay lui (rollback / 롤백) cần xem phụ thuộc (dependency / 의존성) và cấu hình (config / 설정)/dữ liệu (data / 데이터) tính tương thích (compatibility / 호환성), không chỉ downgrade một gói (package / 패키지) riêng lẻ.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Một trường hợp (case / 사례): dịch vụ (service / 서비스) thất bại (fail / 실패) sau patch** cho ta quy tắc; **Một trường hợp (case / 사례): host A lỗi, host B khỏe** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cấu hình (configuration / 구성) drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Comparing a failed host with a healthy peer can separate package change from shared dependency or workload effects, but only if versions, traffic and configuration are comparable. Configuration drift is the next boundary to inventory.
 
 ## Một trường hợp (case / 사례): host A lỗi, host B khỏe
 
@@ -639,7 +639,7 @@ Sau đó diff giữa hosts.
 
 Nếu app sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) giống nhau nhưng gói (package / 패키지) set khác, OS drift trở thành hypothesis mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Một trường hợp (case / 사례): host A lỗi, host B khỏe** cho ta quy tắc; **Cấu hình (configuration / 구성) drift** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Configuration drift explains why nominally identical hosts can react differently to the same update. The mental model should therefore follow package metadata, trust chain, transaction, runtime state and evidence of convergence.
 
 ## Cấu hình (configuration / 구성) drift
 
@@ -653,7 +653,7 @@ In-place máy chủ (server / 서버) tồn tại lâu có thể tích lũy:
 
 Infrastructure-as-code hoặc immutable ảnh (image / 이미지) giảm drift bằng cách tái tạo thay vì sửa host mãi mãi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Mô hình tư duy** gom các mảnh từ **Cấu hình (configuration / 구성) drift** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy tốt nối package identity → verified source → dependency solve → transaction → runtime restart → observed health. Những hiểu lầm phổ biến thường bỏ qua một mắt xích và gọi package installation là hoàn tất.
 
 ## Mô hình tư duy
 
@@ -677,7 +677,7 @@ verification / restart / reboot
 
 Một cập nhật (update / 업데이트) chỉ hoàn tất khi thời gian chạy (runtime / 런타임) trạng thái (state / 상태) đã thực sự dùng mã (code / 코드) mới và ứng dụng (application / 애플리케이션) health được xác minh.
 
-> **Chuyển mạch:** Trong **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Misconceptions như checksum = signature, CVE = exploit, rollback = undo hay image = reproducibility đều làm sai boundary của supply chain. Sửa chúng giúp nối bài với provenance, SBOM và operational recovery.
 
 ## Những hiểu lầm phổ biến
 
@@ -693,7 +693,7 @@ Một cập nhật (update / 업데이트) chỉ hoàn tất khi thời gian ch�
 
 **“Auto-update luôn tốt hơn manual.”** Cần cân bằng bảo mật (security / 보안) speed và availability/thay đổi (change / 변경) điều khiển (control / 제어).
 
-> **Chuyển mạch:** Ở chặng này của **Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Package repositories nối metadata, trust, lifecycle và runtime operations thành một supply chain có thể audit. Kết luận chỉ đáng tin khi nêu rõ artifact, nguồn tin, state sau update và giới hạn rollback.
 
 ## Kết nối kiến thức
 
