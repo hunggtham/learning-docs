@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **237. 변수명 작성 규칙 (Variable Naming Rules)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu đã đặt câu hỏi về môi trường chạy lệnh; các **핵심 키워드 (Từ khóa)** tiếp theo thu hẹp câu hỏi đó vào biến môi trường, script và lệnh. Khi đọc, hãy giữ cả hai vế: biến được truyền vào tiến trình nào và lệnh sử dụng giá trị đó ra sao.
 
 ## 핵심 키워드 (Từ khóa)
 
 환경변수와, 스크립트, 명령어
 
-> **Chuyển mạch:** Ở chặng này của **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Ba từ khóa vừa nêu chỉ tên đối tượng; phần **선행·연결 개념 (Kiến thức liên kết)** đặt chúng vào quan hệ với kiểu dữ liệu và ngữ cảnh tiến trình. Sau đó, **읽는 방법 (Cách đọc)** sẽ biến quan hệ ấy thành các bước kiểm tra: giá trị ở đâu, phạm vi đến đâu và lệnh nào đọc được nó.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**에서 만든 기준을 이어받아 **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Kiến thức liên kết giải thích vì sao một lệnh chỉ có tác dụng trong shell hiện tại hoặc được truyền tiếp cho tiến trình con. Hãy dùng ba bước đọc vừa nêu để kiểm tra cơ chế đó trong **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, đặc biệt khi so sánh `set` với `export`.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **087. 환경변수와 쉘 스크립트 
 
 ---
 
-> **Chuyển mạch:** Trong **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khung đọc vừa thiết lập sẽ được kiểm chứng bằng các lệnh và ví dụ ở phần chính. Hãy theo dõi một giá trị từ lúc được đặt trong shell đến lúc lệnh hoặc tiến trình đọc nó; chuỗi đó là cầu nối để chuyển sang quy tắc đặt tên ở bài kế tiếp.
 
 ## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
 

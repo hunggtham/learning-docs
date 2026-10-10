@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **237. 변수명 작성 규칙 (Variable Naming Rules)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **연산자 (Operators)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **237. 변수명 작성 규칙 (Variable Naming Rules)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu đã xác định tên biến phải vừa hợp lệ vừa dễ đọc; các **핵심 키워드 (Từ khóa)** tiếp theo chỉ ra những thành phần tạo nên một tên. Hãy đọc chúng như tiêu chí kiểm tra mã, không như danh sách thuật ngữ tách rời.
 
 ## 핵심 키워드 (Từ khóa)
 
 변수명, 작성, 규칙
 
-> **Chuyển mạch:** Ở chặng này của **237. 변수명 작성 규칙 (Variable Naming Rules)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa cho biết ta cần kiểm tra ký tự, vị trí bắt đầu và từ dành riêng; phần **선행·연결 개념 (Kiến thức liên kết)** giải thích các quy tắc đó trong ngữ cảnh shell và mã chương trình. **읽는 방법 (Cách đọc)** tiếp theo sẽ giúp áp dụng chúng vào tên cụ thể.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**에서 만든 기준을 이어받아 **237. 변수명 작성 규칙 (Variable Naming Rules)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **237. 변수명 작성 규칙 (Variable Naming Rules)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **237. 변수명 작성 규칙 (Variable Naming Rules)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Khi đã biết bối cảnh của các quy tắc, hãy dùng **읽는 방법 (Cách đọc)** để kiểm tra từng tên theo chuỗi: ký tự → điều kiện hợp lệ → khả năng đọc và bảo trì. Phần **237. 변수명 작성 규칙 (Variable Naming Rules)** bên dưới cung cấp ví dụ để đối chiếu chuỗi này.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **237. 변수명 작성 규칙 (Variable
 
 ---
 
-> **Chuyển mạch:** Trong **237. 변수명 작성 규칙 (Variable Naming Rules)**, **237. 변수명 작성 규칙 (Variable Naming Rules)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Các bước đọc vừa nêu tạo khung cho phần ví dụ và quy tắc chính. Hãy dùng chúng để phân biệt tên hợp lệ với tên chỉ “trông có vẻ rõ”, rồi giữ lại tiêu chí đó khi chuyển sang bài về toán tử.
 
 ## 237. 변수명 작성 규칙 (Variable Naming Rules)
 

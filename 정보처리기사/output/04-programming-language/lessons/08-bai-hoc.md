@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **연산자 (Operators)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **연산자 심화 (Operators - Advanced)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **연산자 (Operators)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu đã đặt câu hỏi về cách toán tử biến đổi giá trị; từ khóa **연산자 (Toán tử)** thu gọn câu hỏi đó vào phép tính và điều kiện áp dụng. Hãy giữ ý nghĩa của biểu thức trước khi ghi nhớ ký hiệu.
 
 ## 핵심 키워드 (Từ khóa)
 
 연산자
 
-> **Chuyển mạch:** Ở chặng này của **연산자 (Operators)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa gọi tên đối tượng; phần **선행·연결 개념 (Kiến thức liên kết)** nối chúng với quy tắc đặt tên và giá trị của biến. **읽는 방법 (Cách đọc)** tiếp theo sẽ giúp kiểm tra một toán tử theo đầu vào, điều kiện và kết quả.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **237. 변수명 작성 규칙 (Variable Naming Rules)**에서 만든 기준을 이어받아 **연산자 (Operators)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **연산자 (Operators)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **연산자 (Operators)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Hãy dùng bối cảnh vừa nối để đọc mỗi toán tử như một quy tắc có điều kiện: giá trị nào đi vào, phép biến đổi nào xảy ra và kết quả được dùng ở đâu. Phần **연산자 (Operators)** bên dưới sẽ minh họa lần lượt các trường hợp đó.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **연산자 (Operators)** như một kh�
 
 ---
 
-> **Chuyển mạch:** Trong **연산자 (Operators)**, **연산자 (Operators)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khung đọc đã đủ để đi vào các nhóm toán tử và so sánh tác động của chúng. Hãy kiểm tra công thức bằng ví dụ trước, rồi dùng kết luận của phần chính làm nền cho **연산자 심화 (Operators - Advanced)**.
 
 ## 연산자 (Operators)
 
