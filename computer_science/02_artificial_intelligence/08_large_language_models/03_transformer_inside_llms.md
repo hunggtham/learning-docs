@@ -41,7 +41,7 @@ Feed-Forward / MLP sublayer
 
 và residual đường dẫn (path / 경로) chạy xuyên suốt.
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Residual stream như “dùng chung (shared / 공유) working biểu diễn (representation / 표현)”** tiếp nhận điểm tựa từ **Decoder-only ngăn xếp (stack / 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention trộn thông tin giữa positions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Decoder-only stack cho biết các block được xếp theo chiều sâu; residual stream giải thích thông tin được giữ và cập nhật xuyên qua từng block. Tiếp theo, ta xem attention trộn thông tin giữa các vị trí như thế nào.
 
 ## Residual stream như “dùng chung (shared / 공유) working biểu diễn (representation / 표현)”
 
@@ -59,7 +59,7 @@ Một cách nghĩ hữu ích là residual stream chứa biểu diễn (represent
 
 Đây là mô hình tư duy (mental model / 사고 모델), không phải claim rằng mô hình (model / 모델) có các “register” symbolic rõ ràng. Hidden thông tin (information / 정보) phân tán qua dimensions, layers và đơn vị từ (token / 토큰) positions.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Attention trộn thông tin giữa positions** tiếp nhận điểm tựa từ **Residual stream như “dùng chung (shared / 공유) working biểu diễn (representation / 표현)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-Head, GQA và MQA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Attention cho phép mỗi vị trí chọn lọc tín hiệu từ các vị trí khác trong residual stream. Khi đặt cơ chế này vào hệ thống LLM, số lượng đầu attention và cách dùng chung K/V trở thành điểm cần phân tích tiếp.
 
 ## Attention trộn thông tin giữa positions
 
@@ -79,7 +79,7 @@ O=softmax\left(\frac{QK^T}{\sqrt{d_h}}+M\right)V
 
 Điều quan trọng ở LLM quy mô (scale / 규모) không chỉ là công thức. Attention là nơi ngữ cảnh (context / 맥락) length tạo chi phí (cost / 비용) theo chuỗi (sequence / 시퀀스) length và là nơi KV bộ nhớ đệm (cache / 캐시) xuất hiện trong generation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Multi-Head, GQA và MQA** tiếp nhận điểm tựa từ **Attention trộn thông tin giữa positions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Feed-Forward mạng (network / 네트워크) chiếm rất nhiều parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MHA, GQA và MQA khác nhau chủ yếu ở cách các head dùng chung K/V, nên ảnh hưởng trực tiếp đến bộ nhớ và băng thông khi decode. Ngoài attention, phần feed-forward cũng chiếm một lượng lớn tham số của block.
 
 ## Multi-Head, GQA và MQA
 
@@ -109,7 +109,7 @@ Do đó hiện đại (modern / 현대적) LLMs thường dùng:
 
 GQA là compromise phổ biến: giảm KV bộ nhớ (memory / 메모리)/bandwidth trong khi giữ chất lượng (quality / 품질) gần multi-head attention.
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Feed-Forward mạng (network / 네트워크) chiếm rất nhiều parameters** tiếp nhận điểm tựa từ **Multi-Head, GQA và MQA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MLP đang làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Feed-forward network bổ sung biến đổi độc lập theo từng vị trí sau khi attention đã trộn ngữ cảnh, đồng thời thường chứa phần lớn tham số của block. Để hiểu vai trò của nó sâu hơn, ta xem MLP có thể biểu diễn và truy hồi đặc trưng như thế nào.
 
 ## Feed-Forward mạng (network / 네트워크) chiếm rất nhiều parameters
 
@@ -137,7 +137,7 @@ Ba projections tạo multiplicative gating. Intermediate width thường điều
 
 Attention thường được truyền thông nhiều vì dễ hình dung, nhưng FFN/MLP blocks chứa một phần rất lớn parameter và computation của dense LLM.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **MLP đang làm gì?** tiếp nhận điểm tựa từ **Feed-Forward mạng (network / 네트워크) chiếm rất nhiều parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RMSNorm và Pre-Norm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MLP có thể được xem như nơi biến đổi các đặc trưng đã được trộn, nhưng không nên gán mỗi neuron với một “fact” riêng lẻ. Cách đặt normalization quanh MLP và attention quyết định độ ổn định của toàn bộ stack.
 
 ## MLP đang làm gì?
 
@@ -145,7 +145,7 @@ Attention chủ yếu tuyến (route / 경로)/mix thông tin (information / 정
 
 Một perspective nghiên cứu xem MLP như associative/key-value-like bộ nhớ (memory / 메모리) cho learned features/facts, nhưng không nên literalize rằng mỗi neuron hay row là một fact. kiến thức (knowledge / 지식) phân tán (distributed / 분산) và có tương tác (interaction / 상호작용) qua many layers.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **RMSNorm và Pre-Norm** tiếp nhận điểm tựa từ **MLP đang làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rotary Position Embedding (RoPE)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RMSNorm và pre-norm điều chỉnh độ lớn biểu diễn và đường truyền gradient mà không thay đổi vai trò cơ bản của MLP. Sau normalization, mô hình vẫn cần mã hóa quan hệ vị trí giữa các token; đó là vai trò của RoPE.
 
 ## RMSNorm và Pre-Norm
 
@@ -163,7 +163,7 @@ Nó bỏ mean-centering của LayerNorm và giảm computation nhẹ.
 
 Pre-norm đặt norm trước sublayer, giúp độ dốc (gradient / 기울기) đi qua residual định danh (identity / 식별자) đường dẫn (path / 경로) ổn định hơn trong deep stacks.
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Rotary Position Embedding (RoPE)** tiếp nhận điểm tựa từ **RMSNorm và Pre-Norm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra (output / 출력) projection và weight tying** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RoPE đưa thông tin vị trí vào phép tính attention bằng cách xoay biểu diễn truy vấn và khóa theo vị trí. Sau khi các block xử lý xong, mô hình cần chiếu biểu diễn cuối cùng về không gian vocabulary để chọn token tiếp theo.
 
 ## Rotary Position Embedding (RoPE)
 
@@ -191,7 +191,7 @@ Key benefit: dot products after rotation encode relative positional differences 
 
 Ngữ cảnh (context / 맥락) extension methods may rescale/interpolate RoPE frequencies, but simply increasing ngữ cảnh (context / 맥락) cấu hình (config / 설정) can degrade position hành vi (behavior / 동작) nếu mô hình (model / 모델) chưa được trained/adapted appropriately.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Đầu ra (output / 출력) projection và weight tying** tiếp nhận điểm tựa từ **Rotary Position Embedding (RoPE)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefill và Decode là hai tải công việc (workload / 워크로드) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Output projection biến hidden state thành logits trên vocabulary; weight tying có thể dùng chung ma trận với embedding để giảm tham số. Khi triển khai, chi phí của bước này khác đáng kể giữa prefill và decode.
 
 ## Đầu ra (output / 출력) projection và weight tying
 
@@ -223,7 +223,7 @@ hoặc transpose tùy convention.
 
 Weight tying reduces parameters and creates dùng chung (shared / 공유) lexical hình học (geometry / 기하학), nhưng không phải yêu cầu (requirement / 요구사항) universal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Prefill và Decode là hai tải công việc (workload / 워크로드) khác nhau** tiếp nhận điểm tựa từ **Đầu ra (output / 출력) projection và weight tying** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KV bộ nhớ đệm (cache / 캐시) không phải mô hình (model / 모델) bộ nhớ (memory / 메모리) dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Output projection thường được tính trên cả prompt trong prefill và từng token mới trong decode, nhưng hai pha có đặc tính song song và độ trễ khác nhau. Decode dựa nhiều vào KV cache, vốn chỉ là trạng thái phục vụ một lần sinh cụ thể.
 
 ## Prefill và Decode là hai tải công việc (workload / 워크로드) khác nhau
 
@@ -245,7 +245,7 @@ vs
 decode latency / tokens per second
 ```
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **KV bộ nhớ đệm (cache / 캐시) không phải mô hình (model / 모델) bộ nhớ (memory / 메모리) dài hạn** tiếp nhận điểm tựa từ **Prefill và Decode là hai tải công việc (workload / 워크로드) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) length và attention chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+KV cache lưu các key và value đã tính cho ngữ cảnh hiện tại để tránh tính lại, không phải bộ nhớ dài hạn của mô hình. Vì cache tăng theo độ dài ngữ cảnh, ta cần xem riêng chi phí attention khi context kéo dài.
 
 ## KV bộ nhớ đệm (cache / 캐시) không phải mô hình (model / 모델) bộ nhớ (memory / 메모리) dài hạn
 
@@ -255,7 +255,7 @@ Nó không cập nhật (update / 업데이트) weights, không phải ngữ ngh
 
 Ứng dụng (application / 애플리케이션) “bộ nhớ (memory / 메모리)” cần persist văn bản (text / 텍스트)/structured trạng thái (state / 상태) externally rồi đưa lại ngữ cảnh (context / 맥락)/retrieval.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Ngữ cảnh (context / 맥락) length và attention chi phí (cost / 비용)** tiếp nhận điểm tựa từ **KV bộ nhớ đệm (cache / 캐시) không phải mô hình (model / 모델) bộ nhớ (memory / 메모리) dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FlashAttention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Độ dài context làm tăng cả lượng KV phải lưu và công việc attention phải xử lý, dù mức tăng cụ thể còn phụ thuộc kiến trúc. FlashAttention tối ưu đường truy cập bộ nhớ cho phép tính này mà không đổi kết quả toán học mục tiêu.
 
 ## Ngữ cảnh (context / 맥락) length và attention chi phí (cost / 비용)
 
@@ -265,7 +265,7 @@ Suy luận (inference / 추론) with KV bộ nhớ đệm (cache / 캐시) avoid
 
 Long-context mô hình (model / 모델) vì vậy có real các hệ thống (systems / 시스템들) chi phí (cost / 비용) even if API exposes huge ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **FlashAttention** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) length và attention chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixture of Experts (MoE) preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+FlashAttention giảm việc ghi và đọc tensor trung gian bằng cách tính theo các tile phù hợp với bộ nhớ GPU. Đây là tối ưu triển khai cho attention; phần tiếp theo chuyển sang một cách tiết kiệm compute khác là Mixture of Experts.
 
 ## FlashAttention
 
@@ -277,7 +277,7 @@ Cốt lõi (core / 핵심) lesson:
 
 This is a direct cầu nối (bridge / 브리지) from AI mathematics to GPU các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mixture of Experts (MoE) preview** tiếp nhận điểm tựa từ **FlashAttention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter count vs active parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MoE thay một số MLP dense bằng nhiều expert và một router chọn expert cho từng token. Vì chỉ một phần expert được kích hoạt, cần phân biệt tổng số tham số với số tham số thực sự chạy ở mỗi token.
 
 ## Mixture of Experts (MoE) preview
 
@@ -301,7 +301,7 @@ Challenges:
 
 MoE belongs to kiến trúc (architecture / 아키텍처)/compute specialization and will return in hạ tầng (infrastructure / 인프라) discussions.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Parameter count vs active parameters** tiếp nhận điểm tựa từ **Mixture of Experts (MoE) preview** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantization and kiến trúc (architecture / 아키텍처) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tổng số tham số quyết định phần lớn dung lượng checkpoint, còn active parameters liên quan trực tiếp hơn đến compute của một token. Quantization tiếp tục thay đổi dung lượng và băng thông, nên cần xem nó tương tác với kiến trúc ra sao.
 
 ## Parameter count vs active parameters
 
@@ -320,7 +320,7 @@ context?
 precision?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Quantization and kiến trúc (architecture / 아키텍처) tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **Parameter count vs active parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transformer khối (block / 블록) as repeated learned program** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quantization xấp xỉ các giá trị số trong mô hình để giảm dung lượng và chi phí di chuyển dữ liệu, nhưng mức ảnh hưởng phụ thuộc vào layer và phần cứng. Nhìn tổng thể, mỗi Transformer block có thể được xem như một chương trình học được lặp lại theo chiều sâu.
 
 ## Quantization and kiến trúc (architecture / 아키텍처) tương tác (interaction / 상호작용)
 
@@ -330,7 +330,7 @@ Kiến trúc (architecture / 아키텍처) determines quantization hành vi (beh
 
 Quantization does not conceptually thay đổi (change / 변경) Transformer hàm (function / 함수) mục tiêu (target / 대상), but approximates numeric thực thi (execution / 실행) to save bộ nhớ (memory / 메모리)/bandwidth.
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Transformer khối (block / 블록) as repeated learned program** tiếp nhận điểm tựa từ **Quantization and kiến trúc (architecture / 아키텍처) tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mỗi block lặp cùng một kiểu phép biến đổi nhưng dùng tham số riêng ở từng độ sâu, vì vậy biểu diễn được tinh chỉnh qua nhiều bước. Cách nhìn này giúp kiểm tra các ngộ nhận thường gặp về việc LLM “lưu” và “suy nghĩ” như thế nào.
 
 ## Transformer khối (block / 블록) as repeated learned program
 
@@ -346,7 +346,7 @@ After many layers, final biểu diễn (representation / 표현) has undergone i
 
 This is why next-token prediction can involve substantial nội bộ (internal / 내부) computation before one đơn vị từ (token / 토큰) is emitted.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Transformer khối (block / 블록) as repeated learned program** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những ngộ nhận về attention, neuron, tham số và MoE thường xuất hiện khi ta biến một phép ẩn dụ thành khẳng định literal. Mô hình tư duy sau đây gom các cơ chế vừa học thành một chuỗi suy luận có thể áp dụng lại.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -370,7 +370,7 @@ Usually same kiến trúc (architecture / 아키텍처)/hàm (function / 함수)
 
 Only subset experts active each đơn vị từ (token / 토큰), though bộ nhớ (memory / 메모리)/communication still substantial.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy này nối input token với residual stream, attention, MLP, normalization và output projection, đồng thời giữ rõ ranh giới giữa cơ chế và ẩn dụ. Phần cuối chỉ ra các tài liệu nền để người học tiếp tục đào sâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -386,7 +386,7 @@ Output head     = turn final state into next-token logits
 KV cache        = reuse current-context attention states during decode
 ```
 
-> **Chuyển mạch:** Trong **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết dưới đây đặt bài học vào mạch rộng hơn của LLM: từ token và embedding đến training, inference và evaluation. Nhờ đó, người học có thể quay lại đúng tài liệu khi cần kiểm tra một giả định kỹ thuật.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

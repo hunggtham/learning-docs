@@ -16,7 +16,7 @@ Mục tiêu (objective / 목표) này thưởng ngôn ngữ (language / 언어) 
 
 Vì vậy khi bị hỏi một chi tiết mà nó không biết chắc, mô hình (model / 모델) có thể tạo mẫu (pattern / 패턴) “có vẻ đúng” thay vì trả empty kết quả (result / 결과).
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Fluency và factuality là hai trục khác nhau** tiếp nhận điểm tựa từ **Vì sao hallucination xảy ra?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parametric kiến thức (knowledge / 지식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu sinh continuation giải thích vì sao câu trả lời có thể trôi chảy mà vẫn sai. Vì vậy, ta cần tách fluency khỏi factuality trước khi bàn đến nguồn tri thức mà mô hình dựa vào.
 
 ## Fluency và factuality là hai trục khác nhau
 
@@ -31,7 +31,7 @@ source support
 task usefulness
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Parametric kiến thức (knowledge / 지식)** tiếp nhận điểm tựa từ **Fluency và factuality là hai trục khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grounding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Parametric knowledge là những regularity được mã hóa trong weights, hữu ích cho mẫu ngôn ngữ nhưng không tự cung cấp nguồn kiểm chứng cho sự kiện mới. Vì thế, grounding phải đưa bằng chứng bên ngoài vào quy trình sinh.
 
 ## Parametric kiến thức (knowledge / 지식)
 
@@ -39,7 +39,7 @@ Facts learned trong weights được gọi informal là **parametric kiến th�
 
 Nếu người dùng (user / 사용자) hỏi “chính sách (policy / 정책) mới nhất của công ty”, weights không phải authoritative nguồn (source / 소스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Grounding** tiếp nhận điểm tựa từ **Parametric kiến thức (knowledge / 지식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Faithfulness vs tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Grounding bổ sung context hoặc công cụ truy hồi để câu trả lời có thể dựa trên nguồn được chọn. Nhưng “bám theo nguồn” và “nói đúng sự thật” là hai tiêu chí khác nhau, cần được đánh giá riêng.
 
 ## Grounding
 
@@ -53,7 +53,7 @@ Nếu người dùng (user / 사용자) hỏi “chính sách (policy / 정책) 
 
 RAG là một grounding kiến trúc (architecture / 아키텍처) quan trọng.
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Faithfulness vs tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Grounding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Retrieval không tự động loại hallucination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Faithfulness hỏi câu trả lời có phản ánh đúng bằng chứng đã đưa hay không, còn correctness hỏi chính bằng chứng hoặc kết luận có đúng với thực tế hay không. Ngay cả khi phân biệt được hai trục này, retrieval vẫn không tự động loại bỏ hallucination.
 
 ## Faithfulness vs tính đúng đắn (correctness / 정확성)
 
@@ -67,7 +67,7 @@ Một answer có thể correct by chance nhưng không faithful với nguồn (s
 
 Do đó nguồn (source / 소스) chất lượng (quality / 품질) cũng phải evaluate.
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Retrieval không tự động loại hallucination** tiếp nhận điểm tựa từ **Faithfulness vs tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Citation hallucination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Retriever có thể lấy nhầm, thiếu hoặc đưa các đoạn mâu thuẫn; mô hình vẫn có thể suy diễn quá mức từ context đó. Một failure mode dễ nhận biết là trích dẫn được tạo ra nhưng không thực sự hỗ trợ claim.
 
 ## Retrieval không tự động loại hallucination
 
@@ -84,7 +84,7 @@ source outdated
 
 RAG biến một phần bài toán (problem / 문제) từ “mô hình (model / 모델) nhớ fact không?” thành “retrieval + bằng chứng (evidence / 증거) use có đúng không?”, nhưng không loại bỏ bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Citation hallucination** tiếp nhận điểm tựa từ **Retrieval không tự động loại hallucination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Abstention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Citation hallucination xảy ra khi nguồn hoặc số liệu được nêu không tồn tại, không chứa claim, hoặc bị gán sai ngữ cảnh. Khi bằng chứng không đủ, hành vi an toàn hơn là nêu rõ giới hạn và abstain.
 
 ## Citation hallucination
 
@@ -98,7 +98,7 @@ retrieval returns source_id + text
 → renderer maps source_id to trusted metadata
 ```
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Abstention** tiếp nhận điểm tựa từ **Citation hallucination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conflicting sources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Abstention không chỉ là trả lời “không biết”, mà là một quyết định dựa trên ngưỡng bằng chứng và mức rủi ro của tác vụ. Khi các nguồn đưa ra kết luận khác nhau, hệ thống cần chuyển sang xử lý xung đột thay vì chọn bừa.
 
 ## Abstention
 
@@ -114,7 +114,7 @@ Abstention tốt thường cần combination:
 - verifier;
 - chính sách (policy / 정책) rules.
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Abstention** nêu điều cần giải thích; **Conflicting sources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Temporal hallucination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Với nguồn xung đột, hệ thống nên giữ lại provenance, thời điểm và phạm vi áp dụng của từng nguồn, rồi giải thích vì sao chọn hoặc chưa thể chọn một kết luận. Bước này đặc biệt quan trọng với claim phụ thuộc thời gian.
 
 ## Conflicting sources
 
@@ -122,7 +122,7 @@ Nếu nguồn (source / 소스) A nói chính sách (policy / 정책) cũ và ng
 
 Siêu dữ liệu (metadata / 메타데이터) như publication date, phiên bản (version / 버전), đơn vị sở hữu (owner / 오너) và document status trở thành first-class dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Conflicting sources** nêu điều cần giải thích; **Temporal hallucination** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Numerical hallucination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Temporal hallucination xuất hiện khi mô hình trộn lẫn các mốc thời gian, coi thông tin cũ là hiện tại hoặc dự đoán như sự kiện đã xảy ra. Sau thời gian, số liệu là một lớp lỗi khác cần kiểm tra bằng phép tính và nguồn gốc rõ ràng.
 
 ## Temporal hallucination
 
@@ -130,13 +130,13 @@ LLM có thể answer hiện tại (current / 현재) events bằng outdated prio
 
 Time-sensitive facts là trường hợp (case / 사례) điển hình mà bên ngoài (external / 외부) tools quan trọng hơn raw mô hình (model / 모델) quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Numerical hallucination** tiếp nhận điểm tựa từ **Temporal hallucination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thực thể (entity / 엔터티) hallucination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Số liệu có thể bị sao chép sai hoặc tính sai dù phần văn bản xung quanh vẫn nghe hợp lý. Với các giá trị quan trọng, cần chuyển phép tính sang calculator hoặc code rồi kiểm tra entity mà con số gắn với.
 
 ## Numerical hallucination
 
 LLM có thể bản sao (copy / 복사) numbers sai hoặc arithmetic sai. Với financial/kỹ thuật (engineering / 엔지니어링) outputs, calculations nên chuyển sang calculator/mã (code / 코드) và nguồn (source / 소스) values phải traceable.
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Thực thể (entity / 엔터티) hallucination** tiếp nhận điểm tựa từ **Numerical hallucination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hallucination và temperature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Entity hallucination là việc gán sai tên, vai trò, quan hệ hoặc định danh cho một thực thể. Knowledge graph và database thường phù hợp hơn văn bản tự do khi độ chính xác định danh là yêu cầu cốt lõi.
 
 ## Thực thể (entity / 엔터티) hallucination
 
@@ -144,7 +144,7 @@ Mô hình (model / 모델) có thể merge attributes của entities tên giốn
 
 Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)/cơ sở dữ liệu (database / 데이터베이스) thường tốt hơn plain văn bản (text / 텍스트) khi định danh (identity / 식별자) chính xác quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Hallucination và temperature** tiếp nhận điểm tựa từ **Thực thể (entity / 엔터티) hallucination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hallucination detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Temperature chỉ điều chỉnh độ ngẫu nhiên của sampling; hạ temperature không biến một nguồn sai thành nguồn đúng. Vì vậy cần các tín hiệu detection độc lập với decoding.
 
 ## Hallucination và temperature
 
@@ -152,7 +152,7 @@ Temperature thấp có thể giảm randomness nhưng không guarantee truth. m�
 
 Deterministic decoding ≠ factual decoding.
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Hallucination detection** tiếp nhận điểm tựa từ **Hallucination và temperature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grounded generation kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Detection có thể dựa trên kiểm tra entailment với nguồn, consistency giữa nhiều lần sinh, schema validation hoặc bộ kiểm tra chuyên biệt. Với tác vụ rủi ro cao, các tín hiệu này phải nằm ngoài lời tự đánh giá của chính LLM.
 
 ## Hallucination detection
 
@@ -160,7 +160,7 @@ Có thể dùng verifier mô hình (model / 모델), retrieval entailment check,
 
 High-stakes workflow cần authoritative kiểm tra hợp lệ (validation / 검증) ngoài LLM.
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Grounded generation kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Hallucination detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Grounded generation kết hợp truy hồi, xếp hạng nguồn, ràng buộc sinh và kiểm tra sau sinh thành một pipeline. Kiến trúc đó chỉ đáng tin khi từng lớp có provenance và tiêu chí lỗi rõ ràng; dữ liệu đầu vào cũng phải còn mới.
 
 ## Grounded generation kiến trúc (architecture / 아키텍처)
 
@@ -178,7 +178,7 @@ flowchart LR
 
 Trọng yếu (critical / 중요) idea: mô hình (model / 모델) không phải nguồn (source / 소스) of bản ghi (record / 레코드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Kiến thức (knowledge / 지식) freshness** tiếp nhận điểm tựa từ **Grounded generation kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Freshness là thuộc tính của nguồn và quy trình cập nhật, không phải đặc tính tự động của weights. Mental model tiếp theo sẽ gom các ranh giới đó thành cách suy luận khi thiết kế hệ thống.
 
 ## Kiến thức (knowledge / 지식) freshness
 
@@ -195,7 +195,7 @@ latest news
 
 Weights phù hợp cho ngôn ngữ (language / 언어)/general patterns; cơ sở dữ liệu (database / 데이터베이스)/API phù hợp cho động (dynamic / 동적) truth.
 
-> **Chuyển mạch:** Trong **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Kiến thức (knowledge / 지식) freshness** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy ở đây tách bốn câu hỏi: mô hình biết gì từ weights, nguồn nào được truy hồi, claim có được nguồn hỗ trợ không, và hệ thống xử lý bất định thế nào. Các ngộ nhận sau đây giúp kiểm tra bốn câu hỏi đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -203,7 +203,7 @@ Weights phù hợp cho ngôn ngữ (language / 언어)/general patterns; cơ s�
 
 Grounding làm bằng chứng (evidence / 증거) trở thành part of computation, nhưng độ tin cậy (reliability / 신뢰성) cuối cùng vẫn là hệ thống (system / 시스템) thuộc tính (property / 속성).
 
-> **Chuyển mạch:** Ở chặng này của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những ngộ nhận như “có citation là đã đúng” hoặc “temperature thấp thì hết hallucination” đều bỏ qua lớp kiểm chứng bên ngoài. Phần liên kết cuối cùng chỉ rõ nơi tiếp tục học về retrieval, evaluation và hệ thống nguồn.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -219,7 +219,7 @@ Không. Retrieval và evidence-use đều có thất bại (failure / 실패) mo
 
 Nó chỉ làm sampling ít random hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallucination và Grounding trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết dưới đây đặt hallucination và grounding vào mạch rộng hơn của LLM: từ retrieval và citation đến evaluation, safety và data freshness. Người học có thể dùng chúng để kiểm tra từng giả định thay vì xem grounding như một lời bảo đảm tuyệt đối.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
