@@ -18,7 +18,7 @@ C = compute budget
 
 Nếu mô hình (model / 모델) rất lớn nhưng dữ liệu (data / 데이터) quá ít, mô hình (model / 모델) bị **under-trained**. Nếu dữ liệu (data / 데이터) rất nhiều nhưng mô hình (model / 모델) quá nhỏ, sức chứa (capacity / 용량) có thể là bottleneck. Compute-optimal huấn luyện (training / 학습) tìm balance tốt hơn giữa `N` và `D` dưới ngân sách (budget / 예산) cố định.
 
-> **Chuyển mạch:** Trong **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất** tiếp nhận điểm tựa từ **Ba trục quy mô (scale / 규모) chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compute-optimal intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ba trục chỉ cho biết những đại lượng đang được phân bổ; bước tiếp theo là hỏi trong ngân sách cố định, mô hình và dữ liệu nên được cân bằng thế nào. Đó là trực giác của compute-optimal training.
 
 ## Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất
 
@@ -26,7 +26,7 @@ Tăng parameters mở rộng hàm (function / 함수) lớp (class / 클래스) 
 
 **Active parameters** cũng khác total parameters trong architectures như Mixture-of-Experts (MoE), nơi mỗi đơn vị từ (token / 토큰) chỉ đi qua một subset experts. Vì vậy “mô hình (model / 모델) 100B” không luôn có suy luận (inference / 추론) chi phí (cost / 비용) tương đương mô hình (model / 모델) dense 100B.
 
-> **Chuyển mạch:** Ở chặng này của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Compute-optimal intuition** tiếp nhận điểm tựa từ **Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Huấn luyện (training / 학습) tokens và epochs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compute-optimal chỉ có ý nghĩa khi biết mỗi token đã được dùng bao nhiêu lần và dữ liệu có còn thông tin mới hay không. Vì vậy cần chuyển từ kích thước mô hình sang token budget và số epoch thực tế.
 
 ## Compute-optimal intuition
 
@@ -36,7 +36,7 @@ Mô hình tư duy (mental model / 사고 모델):
 
 > quy mô (scale / 규모) hiệu quả là **mô hình (model / 모델) đủ lớn để hấp thụ cấu trúc (structure / 구조) trong dữ liệu (data / 데이터), và dữ liệu (data / 데이터) đủ nhiều để train mô hình (model / 모델) lớn đó đúng mức**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Huấn luyện (training / 학습) tokens và epochs** tiếp nhận điểm tựa từ **Compute-optimal intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mất mát (loss / 손실) scaling vs năng lực (capability / 역량) scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token và epoch mô tả lượng phơi nhiễm, nhưng không nói trực tiếp năng lực sẽ biểu hiện ra sao. Ta cần phân biệt đường giảm loss với đường tăng capability trước khi diễn giải một kết quả benchmark.
 
 ## Huấn luyện (training / 학습) tokens và epochs
 
@@ -44,7 +44,7 @@ Trong web-scale pretraining, corpus có thể được traversed một hoặc v�
 
 Do đó raw đơn vị từ (token / 토큰) count không bằng unique thông tin (information / 정보) content.
 
-> **Chuyển mạch:** Trong **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mất mát (loss / 손실) scaling vs năng lực (capability / 역량) scaling** tiếp nhận điểm tựa từ **Huấn luyện (training / 학습) tokens và epochs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) length là một quy mô (scale / 규모) dimension khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token và epoch mô tả lượng phơi nhiễm, nhưng không nói trực tiếp năng lực sẽ biểu hiện ra sao. Ta cần phân biệt đường giảm loss với đường tăng capability trước khi diễn giải một kết quả benchmark.
 
 ## Mất mát (loss / 손실) scaling vs năng lực (capability / 역량) scaling
 
@@ -52,7 +52,7 @@ Pretraining mất mát (loss / 손실) có thể giảm smooth, trong khi benchm
 
 Một số tác vụ (task / 작업) thực sự có nonlinear hành vi (behavior / 동작) do composition of learned skills, nhưng không nên gọi mọi jump là emergence mà không kiểm tra chỉ số (metric / 지표) granularity.
 
-> **Chuyển mạch:** Ở chặng này của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Ngữ cảnh (context / 맥락) length là một quy mô (scale / 규모) dimension khác** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) scaling vs năng lực (capability / 역량) scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inference-time compute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Loss và capability không đồng nhất, cũng như model scale không phải trục duy nhất. Độ dài context mở rộng lượng thông tin được điều kiện hóa, nhưng chi phí và hiệu quả của nó cần được xem như một chiều scale riêng.
 
 ## Ngữ cảnh (context / 맥락) length là một quy mô (scale / 규모) dimension khác
 
@@ -60,7 +60,7 @@ Longer ngữ cảnh (context / 맥락) cho phép mô hình (model / 모델) đi�
 
 Long-context năng lực (capability / 역량) còn phụ thuộc positional phương thức (method / 메서드), huấn luyện (training / 학습) phân phối (distribution / 분포), attention hiện thực (implementation / 구현) và evaluation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Inference-time compute** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) length là một quy mô (scale / 규모) dimension khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distillation và small các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Context dài hơn làm tăng không gian xử lý, còn inference-time compute cho phép chi thêm tài nguyên sau khi mô hình đã được huấn luyện. Khi độ trễ hoặc chi phí bị giới hạn, distillation là cách chuyển một phần lợi ích đó sang mô hình nhỏ hơn.
 
 ## Inference-time compute
 
@@ -75,7 +75,7 @@ Quy mô (scale / 규모) không chỉ nằm ở pretraining. mô hình (model / 
 
 Điều này tạo sự đánh đổi (trade-off / 트레이드오프) mới: cùng một cơ sở (base / 기반) mô hình (model / 모델), tăng inference-time compute có thể cải thiện accuracy nhưng tăng độ trễ (latency / 지연 시간)/chi phí (cost / 비용).
 
-> **Chuyển mạch:** Trong **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Distillation và small các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Inference-time compute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economics của quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Distillation biến compute và năng lực của teacher thành lựa chọn serving khác với việc luôn gọi teacher ở runtime. Để chọn giữa hai phương án, cần tính cả chi phí huấn luyện lẫn chi phí vận hành.
 
 ## Distillation và small các mô hình (models / 모델들)
 
@@ -83,7 +83,7 @@ Quy mô (scale / 규모) lớn có thể dùng để tạo teacher, sau đó dis
 
 Scaling laws không hàm ý mọi ứng dụng (application / 애플리케이션) nên dùng mô hình (model / 모델) lớn nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Economics của quy mô (scale / 규모)** tiếp nhận điểm tựa từ **Distillation và small các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diminishing returns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kinh tế của scale phụ thuộc vào nơi chi phí phát sinh: train một lần, hay inference lặp lại theo lưu lượng. Khi một trục tiếp tục tăng nhưng lợi ích biên giảm, ta gặp diminishing returns.
 
 ## Economics của quy mô (scale / 규모)
 
@@ -91,7 +91,7 @@ Huấn luyện (training / 학습) frontier mô hình (model / 모델) cần har
 
 Một kiến trúc (architecture / 아키텍처) tối ưu huấn luyện (training / 학습) chi phí (cost / 비용) chưa chắc tối ưu serving. KV bộ nhớ đệm (cache / 캐시), batchability, chuỗi (sequence / 시퀀스) length và decoding speed trở thành economic variables.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Diminishing returns** tiếp nhận điểm tựa từ **Economics của quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling và dữ liệu (data / 데이터) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Diminishing returns khiến câu hỏi “thêm bao nhiêu scale?” kém hữu ích nếu chưa kiểm tra chất lượng đầu vào. Vì vậy, bước kế tiếp đặt scale cạnh chất lượng và governance của dữ liệu.
 
 ## Diminishing returns
 
@@ -99,7 +99,7 @@ Power-law improvement nghĩa improvement tiếp theo thường đắt hơn. Nế
 
 Vì vậy hệ thống (system / 시스템) kỹ thuật (engineering / 엔지니어링) thường thắng raw scaling khi bài toán (problem / 문제) là freshness, grounding, công cụ (tool / 도구) truy cập (access / 접근) hoặc chính sách (policy / 정책). RAG có thể hiệu quả hơn train mô hình (model / 모델) lớn hơn chỉ để nhớ private documents.
 
-> **Chuyển mạch:** Trong **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Diminishing returns** nêu điều cần giải thích; **Scaling và dữ liệu (data / 데이터) chất lượng (quality / 품질)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Scaling và alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dữ liệu tốt giúp scale chuyển thành tín hiệu hữu ích thay vì khuếch đại nhiễu. Tuy nhiên, năng lực tăng vẫn không tự động tạo ra hành vi an toàn hoặc đúng mục tiêu; đó là vấn đề của alignment.
 
 ## Scaling và dữ liệu (data / 데이터) chất lượng (quality / 품질)
 
@@ -107,7 +107,7 @@ Khi mô hình (model / 모델) nhỏ, sức chứa (capacity / 용량) có thể
 
 Do đó quy mô (scale / 규모) làm dữ liệu (data / 데이터) quản trị (governance / 거버넌스) quan trọng hơn, không ít hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Scaling và dữ liệu (data / 데이터) chất lượng (quality / 품질)** nêu điều cần giải thích; **Scaling và alignment** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scaling làm tăng cả tiềm năng lẫn attack surface. Vì vậy cần một mental model giữ đồng thời capacity, dữ liệu, compute, context, hành vi và giới hạn vận hành.
 
 ## Scaling và alignment
 
@@ -115,7 +115,7 @@ Cơ sở (base / 기반) năng lực (capability / 역량) tăng không tự đ�
 
 Một mô hình (model / 모델) mạnh hơn có thể vừa hữu ích hơn vừa có thất bại (failure / 실패) modes phức tạp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Scaling và alignment** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model này giúp đặt câu hỏi đúng về bottleneck của tác vụ thay vì dùng parameter count làm đại diện cho mọi thứ. Các ngộ nhận sau đây là những cách thường gặp khiến scale bị diễn giải quá rộng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -128,7 +128,7 @@ Scale = model capacity + data + compute + context + inference strategy
 
 Câu hỏi đúng không phải “bao nhiêu B parameters?”, mà là **tài nguyên (resource / 자원) nào hiện là bottleneck của tác vụ (task / 작업)/hệ thống (system / 시스템) này?**
 
-> **Chuyển mạch:** Trong **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận trên đều bỏ qua một biến quan trọng: scale chỉ có ý nghĩa trong một tác vụ, dữ liệu và ngân sách cụ thể. Phần liên kết kiến thức nối các biến đó với owner về compute, optimization và pretraining.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -143,8 +143,6 @@ Mất mát (loss / 손실) là aggregate ngôn ngữ (language / 언어) modelin
 ### “ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) lớn = mô hình (model / 모델) nhớ và lập luận (reasoning / 추론) tốt trên toàn ngữ cảnh (context / 맥락)”
 
 Cửa sổ (window / 윈도우) sức chứa (capacity / 용량) và effective ngữ cảnh (context / 맥락) use là hai vấn đề khác nhau.
-
-> **Chuyển mạch:** Ở chặng này của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
