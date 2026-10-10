@@ -33,7 +33,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [07 — Vision Transformers](./07_vision_transformers.md)
 - [08 — Modern Visual Representation](./08_modern_visual_representation.md)
 
-> **Chuyển mạch:** Reading map đặt các distinctions—pixels, geometry, recognition, localization và representation—trước chapter; mental model giúp chọn nhánh theo câu hỏi thay vì chỉ theo tên kỹ thuật.
+> **Định hướng đọc:** Reading map đặt các distinctions—pixels, geometry, recognition, localization và representation—trước từng chapter. Khi đã xác định câu hỏi cần trả lời, hãy dùng mental model để chọn nhánh học phù hợp thay vì chỉ đi theo tên kỹ thuật.
 
 ## Cốt lõi (core / 핵심) distinctions
 
@@ -52,7 +52,7 @@ ViT ≠ Automatically Better Than CNN
 Foundation Model ≠ Domain Validation No Longer Needed
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Computer Vision — Reading Map**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cốt lõi (core / 핵심) distinctions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Kết luận trung gian:** Các distinctions ở trên giúp nhận ra loại thông tin mà mỗi bài toán thị giác giữ lại hoặc làm mất đi. **Mô hình tư duy (mental model / 사고 모델)** gom chúng thành một cách suy luận có thể dùng tiếp; phần **Connections** sẽ chỉ ra hệ quả và giới hạn của cách suy luận đó trong các prerequisite liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -69,7 +69,7 @@ Physical scene
 
 Computer Vision luôn là inverse bài toán (problem / 문제): infer hidden scene cấu trúc (structure / 구조) từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
 
-> **Chuyển mạch:** **Mô hình tư duy** xác định bài toán nhìn là suy luận từ tín hiệu; **Connections** nối biểu diễn, hình học và đánh giá để chọn đúng prerequisite cho từng loại lỗi.
+> **Cầu nối sang Connections:** **Mô hình tư duy** xác định bài toán nhìn là suy luận từ tín hiệu. Các liên kết tiếp theo nối biểu diễn, hình học và đánh giá, giúp chọn đúng prerequisite cho từng loại lỗi thay vì xử lý mọi lỗi như cùng một vấn đề.
 
 ## Connections
 
