@@ -36,7 +36,7 @@ application protocol
 
 Mỗi lớp có hàng đợi (queue / 큐), trạng thái (state / 상태) và dạng thất bại (failure mode / 실패 모드) riêng.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Mạng (network / 네트워크) ngăn xếp (stack / 스택) là một chuỗi xử lý (pipeline / 파이프라인) nhiều lớp** xác định đầu vào; **NIC nhận packet thế nào?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Receive ring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Packet-to-socket là một pipeline, nên cần bắt đầu từ nơi packet đi vào máy. NIC ghi descriptor vào receive ring; từ đó kernel mới có thể đưa packet qua các lớp xử lý tiếp theo.
 
 ## NIC nhận packet thế nào?
 
@@ -48,7 +48,7 @@ Driver quản lý descriptor ring giữa NIC và kernel bộ nhớ (memory / 메
 
 Xem nền tảng interrupt/DMA tại [Interrupt, softirq và device model](../00_foundations/interrupts_softirq_device_model.md).
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Receive ring** tiếp nhận điểm tựa từ **NIC nhận packet thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interrupt moderation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Receive ring là hàng đợi producer–consumer giữa NIC và driver, nên độ sâu, ownership và head/tail quyết định packet có bị drop hay không. Interrupt moderation điều chỉnh tần suất báo CPU để cân bằng latency với interrupt overhead.
 
 ## Receive ring
 
@@ -60,7 +60,7 @@ Nếu kernel không xử lý kịp và ring đầy, packet có thể bị drop n
 
 > ứng dụng (application / 애플리케이션) chưa hề thấy yêu cầu (request / 요청) nhưng host vẫn có thể drop traffic vì receive đường dẫn (path / 경로) bị quá tải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Interrupt moderation** tiếp nhận điểm tựa từ **Receive ring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NAPI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Interrupt moderation gom nhiều packet vào một lần notification, nhưng có thể tăng tail latency khi tải thấp. NAPI chuyển từ interrupt dồn dập sang polling có budget để kiểm soát phần việc mỗi lần poll.
 
 ## Interrupt moderation
 
@@ -79,7 +79,7 @@ interrupt ít hơn
 
 Vì vậy tuning mạng (network / 네트워크) luôn có sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)/thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **NAPI** tiếp nhận điểm tựa từ **Interrupt moderation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Softirq và NETRX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NAPI phối hợp trạng thái interrupt và poll, giới hạn số packet xử lý trong một vòng để nhường CPU cho công việc khác. Phần xử lý receive thường chạy qua NET_RX softirq, nơi budget và backlog tiếp tục tạo queueing.
 
 ## NAPI
 
@@ -94,7 +94,7 @@ Linux dùng **NAPI** cho nhiều mạng (network / 네트워크) driver để tr
 
 NAPI giúp hệ thống xử lý burst traffic hiệu quả hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Softirq và NETRX** tiếp nhận điểm tựa từ **NAPI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ksoftirqd** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NET_RX softirq xử lý packet trong ngữ cảnh không phải process user, nên backlog và softirq time cần được theo dõi riêng. Khi softirq không theo kịp, ksoftirqd có thể tiếp quản nhưng đó là tín hiệu CPU receive path đang chịu áp lực.
 
 ## Softirq và `NET_RX`
 
@@ -110,7 +110,7 @@ cat /proc/softirqs
 
 Nếu `NET_RX` tăng mạnh và CPU `si` cao, host có thể đang dành đáng kể CPU cho mạng (network / 네트워크) packet processing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **ksoftirqd** tiếp nhận điểm tựa từ **Softirq và NETRX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RSS: phân phối packet qua nhiều CPU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ksoftirqd không phải một đường tắt miễn phí; nếu thread này bận, packet latency và backlog có thể tăng. RSS phân phối receive queues theo hash flow để tận dụng nhiều CPU mà vẫn giữ các packet cùng flow có thứ tự.
 
 ## `ksoftirqd`
 
@@ -120,7 +120,7 @@ Nếu `ksoftirqd` dùng CPU cao, không nên kết luận đây là tiến trìn
 
 Cần kiểm tra packet tỷ lệ (rate / 비율), drop, NIC hàng đợi (queue / 큐) và ứng dụng (application / 애플리케이션) traffic.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **RSS: phân phối packet qua nhiều CPU** tiếp nhận điểm tựa từ **ksoftirqd** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RPS và RFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RSS chọn CPU ở phần cứng trước khi packet vào kernel, nên queue-to-CPU mapping và hash key ảnh hưởng locality. RPS/RFS bổ sung hoặc điều chỉnh phân phối ở software để đưa xử lý gần CPU của socket hoặc ứng dụng hơn.
 
 ## RSS: phân phối packet qua nhiều CPU
 
@@ -136,7 +136,7 @@ cat /proc/interrupts
 
 Nếu một NIC hàng đợi (queue / 큐) chỉ tăng trên một CPU, cần hiểu RSS/IRQ affinity trước khi kết luận “máy còn nhiều CPU nên mạng (network / 네트워크) không thể nghẽn”.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **RPS và RFS** tiếp nhận điểm tựa từ **RSS: phân phối packet qua nhiều CPU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Packet trở thành skb** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RPS chuyển packet giữa CPU bằng software queue, còn RFS cố hướng packet tới CPU đang chạy socket consumer; cả hai đều có chi phí enqueue và cache. Khi driver bàn giao ownership cho kernel, packet được biểu diễn thành `sk_buff`.
 
 ## RPS và RFS
 
@@ -144,7 +144,7 @@ Linux có software cơ chế (mechanism / 메커니즘) như **Receive Packet St
 
 Tuning các cơ chế này cần benchmark thực tế vì phân phối rộng hơn cũng tăng cross-CPU bộ nhớ đệm (cache / 캐시) traffic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Packet trở thành skb** tiếp nhận điểm tựa từ **RPS và RFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ethernet tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`sk_buff` mang metadata, offsets và các đoạn dữ liệu để packet đi qua nhiều lớp mà không nhất thiết copy toàn bộ payload. Lớp Ethernet đọc header và quyết định protocol handler tiếp theo.
 
 ## Packet trở thành `skb`
 
@@ -163,7 +163,7 @@ Siêu dữ liệu (metadata / 메타데이터) có thể gồm:
 
 Một packet không chỉ là mảng byte; kernel phải giữ ngữ cảnh xử lý xung quanh nó.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Ethernet tầng (layer / 계층)** tiếp nhận điểm tựa từ **Packet trở thành skb** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neighbor bảng (table / 테이블) / ARP / NDP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ethernet layer kiểm tra type, VLAN và địa chỉ link rồi chuyển skb lên IP hoặc handler tương ứng. Để quyết định next hop trên mạng cục bộ, kernel dùng neighbor table với ARP cho IPv4 và NDP cho IPv6.
 
 ## Ethernet tầng (layer / 계층)
 
@@ -173,7 +173,7 @@ MAC address có ý nghĩa trong cục bộ (local / 로컬) link. Khi packet ph�
 
 Đây là lý do không nên dùng MAC address để suy luận end-to-end Internet đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Neighbor bảng (table / 테이블) / ARP / NDP** tiếp nhận điểm tựa từ **Ethernet tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IP receive đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Neighbor table ánh xạ địa chỉ network-layer với địa chỉ link-layer, có trạng thái incomplete, reachable và stale cùng timer riêng. Sau khi link resolution hoặc lookup hoàn tất, IP receive path tiếp tục xử lý header và route.
 
 ## Neighbor bảng (table / 테이블) / ARP / NDP
 
@@ -189,7 +189,7 @@ ip neigh
 
 Nếu neighbor entry thất bại, routing bảng (table / 테이블) có thể đúng nhưng packet vẫn không rời host thành công.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Neighbor bảng (table / 테이블) / ARP / NDP** xác định đầu vào; **IP receive đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Routing không chỉ dành cho packet gửi ra ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+IP receive path kiểm tra version, length, checksum và xử lý reassembly hoặc protocol demultiplexing trước khi giao cho transport. Routing lookup không chỉ phục vụ packet đi ra; nó còn xác định packet nhận là local hay cần forward.
 
 ## IP receive đường dẫn (path / 경로)
 
@@ -203,7 +203,7 @@ Nếu packet do cục bộ (local / 로컬) tiến trình (process / 프로세�
 
 Đây là ba đường lô-gic (logic / 논리) khác nhau và firewall quy tắc (rule / 규칙) có thể áp dụng khác nhau.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **IP receive đường dẫn (path / 경로)** xác định đầu vào; **Routing không chỉ dành cho packet gửi ra ngoài** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Netfilter hooks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Routing quyết định local delivery, forwarding hoặc drop theo policy và namespace, nên cùng packet có thể đi các nhánh khác nhau. Trước khi transport nhận skb, netfilter hooks có thể quan sát, biến đổi hoặc chặn nó.
 
 ## Routing không chỉ dành cho packet gửi ra ngoài
 
@@ -217,7 +217,7 @@ ip route get <DESTINATION_IP>
 
 Nhưng packet thực tế còn chịu chính sách (policy / 정책) routing, không gian tên (namespace / 네임스페이스) và netfilter rules.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Netfilter hooks** tiếp nhận điểm tựa từ **Routing không chỉ dành cho packet gửi ra ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **nftables và iptables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Netfilter hook nằm ở các điểm khác nhau của receive, forward và output path, nên vị trí hook thay đổi ý nghĩa quan sát và policy. nftables/iptables biên dịch rule vào các hook đó, với stateful matching khi cần.
 
 ## Netfilter hooks
 
@@ -243,7 +243,7 @@ Packet được host forward đi qua FORWARD.
 
 Không nên coi đây là thứ tự tuyệt đối cho mọi subsystem/detail, nhưng mô hình tư duy (mental model / 사고 모델) này rất hữu ích khi đọc nftables/iptables.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **nftables và iptables** tiếp nhận điểm tựa từ **Netfilter hooks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conntrack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rule nftables/iptables trả lời packet có được accept, drop, reject, NAT hay mark, nhưng output phụ thuộc hook và thứ tự chain. Conntrack duy trì state của flow để rule phân biệt NEW, ESTABLISHED và RELATED.
 
 ## nftables và iptables
 
@@ -257,7 +257,7 @@ sudo nft list ruleset
 
 Khi troubleshooting, điều quan trọng là biết **chính sách (policy / 정책) thật đang được quản lý ở đâu**. Không nên thêm quy tắc (rule / 규칙) tạm một cách ngẫu nhiên rồi để cấu hình (configuration / 구성) drift.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Conntrack** tiếp nhận điểm tựa từ **nftables và iptables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TCP demultiplexing tới socket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conntrack là một bảng stateful riêng với socket state; entry timeout, table pressure và NAT mapping có thể tạo bottleneck trước khi ứng dụng nhận dữ liệu. TCP demultiplexing sau đó dùng tuple và listening/established tables để chọn socket.
 
 ## Conntrack
 
@@ -277,7 +277,7 @@ Nếu conntrack bảng (table / 테이블) đầy, liên kết (connection / 연
 
 Xem [IP routing, NAT và conntrack](./ip_routing_nat_conntrack.md).
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **TCP demultiplexing tới socket** tiếp nhận điểm tựa từ **Conntrack** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SYN tới listening socket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TCP demultiplexing ghép packet vào listening socket khi chưa có connection và vào established socket khi tuple đã tồn tại. Với connection mới, packet SYN khởi động riêng một đường state machine trước khi có child socket.
 
 ## TCP demultiplexing tới socket
 
@@ -295,7 +295,7 @@ Một listening socket trên `0.0.0.0:8080` có ngữ nghĩa (semantics / 의미
 
 Kernel dùng các bảng (table / 테이블)/băm (hash / 해시) cấu trúc (structure / 구조) để tìm đúng socket hiệu quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **SYN tới listening socket** tiếp nhận điểm tựa từ **TCP demultiplexing tới socket** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **listen(backlog)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SYN được kiểm tra theo local address/port và policy rồi đưa vào trạng thái handshake, chưa phải dữ liệu của một established socket. `listen(backlog)` quy định khả năng giữ các connection đang chờ hoàn tất hoặc chờ ứng dụng accept.
 
 ## SYN tới listening socket
 
@@ -324,7 +324,7 @@ Có hai khái niệm hàng đợi (queue / 큐) dễ bị gộp:
 
 Nếu ứng dụng (application / 애플리케이션) accept quá chậm hoặc backlog quá nhỏ, liên kết (connection / 연결) có thể gặp thất bại (failure / 실패) dù tiến trình (process / 프로세스) vẫn LISTEN.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **listen(backlog)** tiếp nhận điểm tựa từ **SYN tới listening socket** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SYN flood và SYN cookies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Backlog không phải một queue duy nhất cho mọi kernel path; phải phân biệt request đang bắt tay với connection đã hoàn tất nhưng chưa accept. SYN flood làm các queue này cạn nhanh, nên SYN cookies đổi cách lưu state để giảm phụ thuộc vào request queue.
 
 ## `listen(backlog)`
 
@@ -339,7 +339,7 @@ sysctl net.ipv4.tcp_max_syn_backlog
 
 Không nên tăng các giá trị theo công thức internet mà không xác định hàng đợi (queue / 큐) nào đang bão hòa.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **SYN flood và SYN cookies** tiếp nhận điểm tựa từ **listen(backlog)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Established socket và receive hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SYN cookies giảm state cần lưu trước khi handshake hoàn tất, nhưng không thay thế việc quan sát backlog và retransmission. Khi connection established, packet đi vào receive queue gắn với socket cụ thể.
 
 ## SYN flood và SYN cookies
 
@@ -353,7 +353,7 @@ sysctl net.ipv4.tcp_syncookies
 
 Đây là protection cơ chế (mechanism / 메커니즘), không phải cách giải quyết mọi liên kết (connection / 연결) overload.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Established socket và receive hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **SYN flood và SYN cookies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Socket buffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Established socket có receive queue chờ ứng dụng đọc; nếu queue đầy, kernel phải drop, signal backpressure hoặc áp dụng TCP flow control. Socket buffer và các limit liên quan quyết định queue có thể hấp thụ burst bao lâu.
 
 ## Established socket và receive hàng đợi (queue / 큐)
 
@@ -370,7 +370,7 @@ recv()
 
 Nếu ứng dụng (application / 애플리케이션) xử lý chậm, receive hàng đợi (queue / 큐) có thể tăng. TCP luồng (flow / 흐름) điều khiển (control / 제어) sẽ phản ánh khả năng nhận của receiver thông qua receive cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Socket buffer** tiếp nhận điểm tựa từ **Established socket và receive hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backpressure bắt đầu từ kernel nhưng lan lên ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Socket buffer không chỉ là một byte array: nó chứa skb, protocol bookkeeping và accounting theo memory pressure. Khi buffer và queue đầy, backpressure lan từ kernel qua TCP window hoặc syscall behavior lên application.
 
 ## Socket buffer
 
@@ -386,7 +386,7 @@ ss -tin
 
 Không nên tăng socket buffer chỉ vì “mạng (network / 네트워크) nhanh”. Buffer quá lớn có thể làm độ trễ (latency / 지연 시간) tăng do queueing.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Backpressure bắt đầu từ kernel nhưng lan lên ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **Socket buffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CLOSEWAIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Backpressure có thể biểu hiện thành read chậm, receive window nhỏ, queue growth hoặc packet drop, nên cần nối metric kernel với hành vi process. CLOSE_WAIT là một ví dụ nơi lifecycle socket và trách nhiệm ứng dụng trở thành bottleneck.
 
 ## Backpressure bắt đầu từ kernel nhưng lan lên ứng dụng (application / 애플리케이션)
 
@@ -403,7 +403,7 @@ application chậm
 
 Nếu ứng dụng (application / 애플리케이션)/khung phần mềm (framework / 프레임워크) thêm hàng đợi (queue / 큐) lớn phía trên, dữ liệu (data / 데이터) có thể tiếp tục tích tụ ở user-space và tăng độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리) thay vì tạo backpressure sớm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **CLOSEWAIT** tiếp nhận điểm tựa từ **Backpressure bắt đầu từ kernel nhưng lan lên ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TIMEWAIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CLOSE_WAIT cho biết peer đã đóng nhưng local application chưa close socket, nên nhiều entry thường là dấu hiệu leak hoặc không drain lifecycle. TIME_WAIT lại là state chủ động giữ sau close để bảo vệ khỏi packet cũ và xử lý kết nối mới an toàn.
 
 ## `CLOSE_WAIT`
 
@@ -413,7 +413,7 @@ Nếu ứng dụng (application / 애플리케이션) quên close, socket có th
 
 Nhiều `CLOSE-WAIT` thường là dấu hiệu vòng đời (lifecycle / 생명주기) ở ứng dụng (application / 애플리케이션), không phải TCP kernel tự quên đóng.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **TIMEWAIT** tiếp nhận điểm tựa từ **CLOSEWAIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Send đường dẫn (path / 경로) từ ứng dụng (application / 애플리케이션) xuống NIC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TIME_WAIT là một phần của TCP correctness, không đơn giản là memory leak; áp lực lớn cần xem port reuse, connection churn và timeout. Chiều ngược lại bắt đầu ở application send path rồi đi qua protocol, qdisc và NIC.
 
 ## `TIME_WAIT`
 
@@ -425,7 +425,7 @@ Cần xem liên kết (connection / 연결) churn, ephemeral cổng (port / 포�
 
 Xem [TCP congestion control](./tcp_congestion_control.md).
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **TIMEWAIT** xác định đầu vào; **Send đường dẫn (path / 경로) từ ứng dụng (application / 애플리케이션) xuống NIC** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **qdisc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Send path bắt đầu khi application ghi vào socket và TCP tạo skb, sau đó packet đi qua route, qdisc và driver trước khi tới TX ring. Qdisc là queueing point nơi shaping, scheduling và backlog có thể thêm latency.
 
 ## Send đường dẫn (path / 경로) từ ứng dụng (application / 애플리케이션) xuống NIC
 
@@ -451,7 +451,7 @@ NIC
 
 Một lần `write()` lớn không nhất thiết tạo một Ethernet frame duy nhất. TCP/IP ngăn xếp (stack / 스택) và offload có thể chia/gộp công việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Send đường dẫn (path / 경로) từ ứng dụng (application / 애플리케이션) xuống NIC** xác định đầu vào; **qdisc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **TSO, GSO, GRO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Qdisc quyết định skb nào được dequeue và khi nào, nên phải phân biệt application blocking với queueing delay ở kernel. Offload features như TSO/GSO/GRO thay đổi granularity packet mà các điểm quan sát nhìn thấy.
 
 ## qdisc
 
@@ -467,7 +467,7 @@ Qdisc ảnh hưởng queueing, shaping và độ trễ (latency / 지연 시간)
 
 Các thuật toán như fq, fq_codel có thể giúp kiểm soát hàng đợi (queue / 큐)/bufferbloat trong một số môi trường.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **TSO, GSO, GRO** tiếp nhận điểm tựa từ **qdisc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checksum offload** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TSO/GSO cho phép stack hoặc NIC xử lý segment lớn rồi phân chia ở layer phù hợp; GRO hợp các packet nhận thành aggregate để giảm per-packet overhead. Vì hình dạng skb đã thay đổi, checksum offload cần được hiểu cùng với các flags này.
 
 ## TSO, GSO, GRO
 
@@ -483,7 +483,7 @@ Vì vậy packet capture trên host có thể nhìn packet kích thước (size 
 
 Đây là điều cần nhớ khi đọc tcpdump/Wireshark.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Checksum offload** tiếp nhận điểm tựa từ **TSO, GSO, GRO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MTU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Checksum offload để phần cứng hoặc layer khác tính checksum, nên packet capture ở giữa path có thể thấy checksum chưa hoàn tất. MTU vẫn đặt giới hạn kích thước trên link và quyết định khi nào segment hoặc fragmentation xảy ra.
 
 ## Checksum offload
 
@@ -491,7 +491,7 @@ NIC có thể tính checksum. Packet capture trước khi NIC hoàn tất offloa
 
 Đây là một trap phổ biến khi phân tích pcap trên sending host.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **MTU** tiếp nhận điểm tựa từ **Checksum offload** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MTU là kích thước tối đa của packet trên interface/path, tính cả header liên quan; mismatch có thể tạo drop hoặc PMTU discovery failure. TCP dùng MSS để giới hạn payload mỗi segment thấp hơn MTU.
 
 ## MTU
 
@@ -503,7 +503,7 @@ ip link show
 
 Nếu đường dẫn (path / 경로) có MTU nhỏ hơn nhưng discovery bị chặn, liên kết (connection / 연결) có thể handshake được nhưng payload lớn bị treo — một dạng thất bại (failure mode / 실패 모드) khó chịu gọi gần với PMTU black hole.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **MSS** tiếp nhận điểm tựa từ **MTU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MSS thường được thương lượng từ MTU và header size, nên ảnh hưởng trực tiếp đến số segment, ACK và throughput. Nếu packet vẫn vượt MTU ở một path, IP fragmentation hoặc drop sẽ xuất hiện tùy policy và phiên bản IP.
 
 ## MSS
 
@@ -511,7 +511,7 @@ TCP **Maximum Segment kích thước (size / 크기) (MSS)** thường được 
 
 MTU và MSS liên quan nhưng không giống nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Fragmentation** tiếp nhận điểm tựa từ **MSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fragmentation tách packet thành nhiều mảnh và cần reassembly state, làm tăng overhead và failure surface; IPv6 thường yêu cầu sender xử lý PMTU thay vì router fragment. Network namespace tạo một boundary khác, nơi interface, route, neighbor và socket view có thể tách biệt.
 
 ## Fragmentation
 
@@ -521,7 +521,7 @@ Trong môi trường vận hành (production / 운영 환경) hiện đại thư
 
 Tunnels/VPN/bộ chứa (container / 컨테이너) overlay làm effective MTU càng quan trọng vì encapsulation thêm header.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **Fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **veth pair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Network namespace cô lập một phần network stack và cho phép container có route/table/interface riêng. veth pair nối hai namespace bằng hai đầu virtual Ethernet, biến boundary đó thành một đoạn packet path có queue và drop riêng.
 
 ## Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)
 
@@ -543,7 +543,7 @@ ip netns list
 
 Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) có thể quản lý không gian tên (namespace / 네임스페이스) theo cách không hiện trực tiếp dưới `ip netns`, nhưng khái niệm vẫn tương tự.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **veth pair** tiếp nhận điểm tựa từ **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linux cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+veth truyền skb giữa hai virtual interface, nên một packet crossing có thể đi qua nhiều queue và namespace context. Linux bridge học MAC rồi forward ở link layer, tương tự switch ảo trước khi packet tiếp tục lên IP.
 
 ## veth pair
 
@@ -559,7 +559,7 @@ Bộ chứa (container / 컨테이너) thường có một đầu veth trong b�
 
 Điều này giúp giải thích packet đường dẫn (path / 경로) Docker/Kubernetes cơ bản.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Linux cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **veth pair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Loopback đặc biệt thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bridge thêm FDB lookup, forwarding decision và có thể thêm netfilter bridge hooks vào path. Loopback bỏ qua physical NIC nhưng vẫn đi qua nhiều lớp kernel, nên là baseline hữu ích khi tách lỗi device khỏi lỗi stack.
 
 ## Linux cầu nối (bridge / 브리지)
 
@@ -572,7 +572,7 @@ bridge fdb show
 
 Docker cầu nối (bridge / 브리지) networking dùng khái niệm này cùng veth, routing/NAT tùy chế độ (mode / 모드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Loopback đặc biệt thế nào?** tiếp nhận điểm tựa từ **Linux cầu nối (bridge / 브리지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Packet drop có thể xảy ra ở nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Loopback có MTU, queue và counters riêng dù không truyền trên wire, nên một test localhost chưa chứng minh path vật lý hoạt động. Drop có thể xảy ra ở bất kỳ queue, policy hoặc limit nào từ NIC tới socket.
 
 ## Loopback đặc biệt thế nào?
 
@@ -586,7 +586,7 @@ curl localhost
 
 thành công chỉ chứng minh ứng dụng (application / 애플리케이션) + cục bộ (local / 로컬) ngăn xếp (stack / 스택) đường dẫn (path / 경로), không chứng minh NIC, bên ngoài (external / 외부) routing hay firewall ngoài host.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Packet drop có thể xảy ra ở nhiều lớp** tiếp nhận điểm tựa từ **Loopback đặc biệt thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan sát giao diện (interface / 인터페이스) counters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Drop location có thể là NIC ring overflow, driver/NAPI budget, qdisc, netfilter, route, conntrack, socket buffer hoặc application receive. Vì vậy cần đọc counters theo từng layer, bắt đầu từ interface statistics nhưng không dừng ở đó.
 
 ## Packet drop có thể xảy ra ở nhiều lớp
 
@@ -604,7 +604,7 @@ Một packet có thể bị drop vì:
 
 Vì vậy chỉ số (metric / 지표) “packet mất mát (loss / 손실)” cần xác định mất mát (loss / 손실) ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Quan sát giao diện (interface / 인터페이스) counters** tiếp nhận điểm tựa từ **Packet drop có thể xảy ra ở nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **netstat -s / ss -s** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Interface counters cho bytes, packets, errors, drops và carrier/device signals, nhưng tên và vị trí counter phụ thuộc driver. `netstat -s` và `ss -s` bổ sung protocol/socket aggregates để nối device symptoms với TCP state.
 
 ## Quan sát giao diện (interface / 인터페이스) counters
 
@@ -626,7 +626,7 @@ Tên counter phụ thuộc driver/NIC.
 
 Nếu `ip -s link` drop tăng, đó là bằng chứng gần host hơn ứng dụng (application / 애플리케이션) log.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **netstat -s / ss -s** tiếp nhận điểm tựa từ **Quan sát giao diện (interface / 인터페이스) counters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/net** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Protocol counters và socket summary cho biết aggregate symptoms, nhưng thường không chỉ ra queue hoặc process cụ thể. `/proc/net` và các file liên quan expose state kernel chi tiết hơn, với lưu ý rằng format có thể phụ thuộc phiên bản.
 
 ## `netstat -s` / `ss -s`
 
@@ -641,7 +641,7 @@ Có thể cung cấp retransmission, failed liên kết (connection / 연결), r
 
 Không đọc một counter tuyệt đối đơn lẻ. Hãy lấy tỷ lệ (rate / 비율) theo thời gian và so với traffic volume.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **/proc/net** tiếp nhận điểm tựa từ **netstat -s / ss -s** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Netlink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`/proc/net` là một cửa sổ đọc trạng thái, hữu ích cho chẩn đoán nhưng không phải API transaction để cấu hình. Netlink cung cấp kênh có cấu trúc hơn giữa user space và kernel cho link, route, address và nhiều object mạng.
 
 ## `/proc/net`
 
@@ -651,7 +651,7 @@ Các công cụ hiện đại như `ss`, `ip` dùng netlink thay vì yêu cầu 
 
 Mô hình tư duy (mental model / 사고 모델) quan trọng: command là máy khách (client / 클라이언트) của kernel trạng thái (state / 상태), không phải nguồn chân lý độc lập.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Netlink** tiếp nhận điểm tựa từ **/proc/net** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tcpdump bắt packet ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Netlink trả message có type, attribute và sequence để công cụ quan sát/cấu hình đọc state nhất quán hơn. Để xem packet thực sự đi qua đâu, tcpdump dùng packet-capture hook trong receive/send path, không phải Netlink.
 
 ## Netlink
 
@@ -661,7 +661,7 @@ Mô hình tư duy (mental model / 사고 모델) quan trọng: command là máy 
 
 Đây là lý do bộ công cụ `iproute2` có thể thao tác giao diện (interface / 인터페이스), tuyến (route / 경로), neighbor và không gian tên (namespace / 네임스페이스) theo cách nhất quán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **tcpdump bắt packet ở đâu?** tiếp nhận điểm tựa từ **Netlink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Packet capture không chứng minh ứng dụng (application / 애플리케이션) đã đọc dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tcpdump quan sát packet ở một điểm capture nhất định, thường qua packet socket/tap trước hoặc trong một phần của stack; vị trí đó phụ thuộc interface và offload. Vì vậy thấy packet trong capture không đồng nghĩa application đã consume nó.
 
 ## `tcpdump` bắt packet ở đâu?
 
@@ -679,7 +679,7 @@ Nếu host thấy SYN và SYN-ACK nhưng máy khách (client / 클라이언트) 
 
 Nếu handshake hoàn tất nhưng ứng dụng (application / 애플리케이션) hết thời gian chờ (timeout / 타임아웃), đi lên socket/ứng dụng (application / 애플리케이션) tầng (layer / 계층).
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **tcpdump bắt packet ở đâu?** nêu điều cần giải thích; **Packet capture không chứng minh ứng dụng (application / 애플리케이션) đã đọc dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CPU softirq saturation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Capture chứng minh packet chạm capture point, không chứng minh route, netfilter, socket queue hay `read()` đã thành công; cần ghép capture với socket counters và process behavior. Nếu receive path bị nghẽn, CPU softirq saturation là một giả thuyết cần kiểm tra.
 
 ## Packet capture không chứng minh ứng dụng (application / 애플리케이션) đã đọc dữ liệu
 
@@ -691,7 +691,7 @@ Tương tự, packet tới socket buffer chưa có nghĩa ứng dụng (applicat
 
 Cần phân biệt các tầng (layer / 계층) bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Packet capture không chứng minh ứng dụng (application / 애플리케이션) đã đọc dữ liệu** nêu điều cần giải thích; **CPU softirq saturation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **NUMA và NIC locality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Softirq saturation biểu hiện qua CPU busy, ksoftirqd backlog, NAPI budget exhaustion hoặc packet drops, nhưng phải phân biệt với user CPU saturation. Khi NIC và CPU nằm khác NUMA node, locality và memory traffic có thể làm bottleneck rõ hơn.
 
 ## CPU softirq saturation
 
@@ -710,7 +710,7 @@ Do đó khi phân tích network-intensive tải công việc (workload / 워크�
 mpstat -P ALL 1
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **NUMA và NIC locality** tiếp nhận điểm tựa từ **CPU softirq saturation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **XDP và eBPF ở receive đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NUMA/NIC locality ảnh hưởng nơi DMA buffer, skb metadata và application thread được xử lý; RSS/RPS chỉ tối ưu khi mapping phù hợp topology. XDP/eBPF cho phép chạy logic sớm hơn trong receive path để drop, redirect hoặc đếm packet với overhead thấp hơn.
 
 ## NUMA và NIC locality
 
@@ -718,7 +718,7 @@ Trên máy chủ (server / 서버) nhiều NUMA nút (node / 노드), NIC nằm 
 
 Đây là tối ưu hóa (optimization / 최적화) sâu chỉ cần khi có bằng chứng (evidence / 증거). Không nên pin IRQ/ứng dụng (application / 애플리케이션) theo cảm tính.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **NUMA và NIC locality** xác định đầu vào; **XDP và eBPF ở receive đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Socket API là lớp trừu tượng (abstraction / 추상화) cuối cùng cho ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+XDP/eBPF có thể bypass hoặc rút ngắn một phần stack, nhưng mỗi mode có semantics, helper và giới hạn riêng; packet bị redirect ở đó không nhất thiết tới socket. Socket API là abstraction cuối cùng biến kernel queue/state thành `recv`, `read` hoặc readiness cho application.
 
 ## XDP và eBPF ở receive đường dẫn (path / 경로)
 
@@ -735,7 +735,7 @@ Use trường hợp (case / 사례):
 
 Nhưng XDP/eBPF tăng độ phức tạp (complexity / 복잡도) và yêu cầu hiểu an toàn (safety / 안전)/verifier/tooling.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **XDP và eBPF ở receive đường dẫn (path / 경로)** xác định đầu vào; **Socket API là lớp trừu tượng (abstraction / 추상화) cuối cùng cho ứng dụng (application / 애플리케이션)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Blocking socket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Socket API che giấu phần lớn packet path nhưng giữ lại các contract như ordering, blocking, error và buffer visibility. Blocking socket khiến thread chờ khi chưa đủ dữ liệu hoặc khi send buffer chưa nhận thêm được.
 
 ## Socket API là lớp trừu tượng (abstraction / 추상화) cuối cùng cho ứng dụng (application / 애플리케이션)
 
@@ -756,7 +756,7 @@ Socket là ranh giới API cho phép mạng (network / 네트워크) ngăn xếp
 
 Đây là Unix lớp trừu tượng (abstraction / 추상화) rất mạnh: mạng (network / 네트워크) communication cuối cùng được tiến trình (process / 프로세스) thao tác thông qua tệp (file / 파일) descriptor-like handle.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Blocking socket** tiếp nhận điểm tựa từ **Socket API là lớp trừu tượng (abstraction / 추상화) cuối cùng cho ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Non-blocking socket và epoll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Blocking behavior đơn giản hóa logic nhưng một thread bị giữ có thể làm cạn concurrency pool. Non-blocking socket trả `EAGAIN` thay vì ngủ, và epoll gom readiness của nhiều fd để application điều phối event loop.
 
 ## Blocking socket
 
@@ -778,7 +778,7 @@ NIC interrupt
 
 Toàn bộ chuỗi giải thích độ trễ (latency / 지연 시간) từ packet đến ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Non-blocking socket và epoll** tiếp nhận điểm tựa từ **Blocking socket** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Edge-triggered và level-triggered** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Non-blocking + epoll tách việc phát hiện readiness khỏi việc drain dữ liệu; application vẫn phải đọc/ghi cho tới khi `EAGAIN` theo protocol. Edge-triggered chỉ báo khi state chuyển đổi, còn level-triggered tiếp tục báo khi condition vẫn còn.
 
 ## Non-blocking socket và `epoll`
 
@@ -798,7 +798,7 @@ application xử lý batch event
 
 Đây là nền tảng của event-driven máy chủ (server / 서버) như Nginx/Netty.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Edge-triggered và level-triggered** tiếp nhận điểm tựa từ **Non-blocking socket và epoll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java NIO và Linux epoll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Edge-triggered hiệu quả hơn khi event rate cao nhưng dễ mất tiến triển nếu không drain hết; level-triggered dễ reasoning hơn nhưng có thể wake lặp. Java NIO thường hiện thực selector trên epoll, nên semantics Java vẫn chịu các giới hạn của fd và kernel.
 
 ## Edge-triggered và level-triggered
 
@@ -806,7 +806,7 @@ application xử lý batch event
 
 Không cần dùng edge-triggered để có hiệu năng tốt trong mọi trường hợp. tính đúng đắn (correctness / 정확성) quan trọng hơn micro-optimization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Java NIO và Linux epoll** tiếp nhận điểm tựa từ **Edge-triggered và level-triggered** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SOREUSEADDR và SOREUSEPORT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Java NIO quản lý readiness, buffer và channel lifecycle ở lớp runtime, trong khi epoll quản lý watch list và wakeup ở kernel; tracing cần phân biệt hai lớp. Socket options như `SO_REUSEADDR` và `SO_REUSEPORT` thay đổi bind/accept topology, không chỉ là tối ưu throughput.
 
 ## Java NIO và Linux epoll
 
@@ -816,7 +816,7 @@ Netty cũng khai thác epoll/bản địa (native / 네이티브) vận chuyển
 
 Vì vậy khái niệm Selector ở Java không phải lớp trừu tượng (abstraction / 추상화) tách rời OS; bên dưới nó có thể nối trực tiếp với Linux sự kiện (event / 이벤트) notification.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **SOREUSEADDR và SOREUSEPORT** tiếp nhận điểm tựa từ **Java NIO và Linux epoll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) refused ở ngăn xếp (stack / 스택) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`SO_REUSEADDR` và `SO_REUSEPORT` có semantics khác nhau theo OS và protocol state; dùng sai có thể tạo bind conflict hoặc phân phối connection ngoài dự kiến. Khi client nhận connection refused, cần xác định refusal xảy ra ở listener, firewall, route hay một layer khác.
 
 ## `SO_REUSEADDR` và `SO_REUSEPORT`
 
@@ -826,7 +826,7 @@ Socket option này giải quyết các vấn đề khác nhau về bind/reuse t�
 
 Không nên bản sao (copy / 복사) option mà không hiểu ngữ nghĩa (semantics / 의미론) vì khác biệt nền tảng (platform / 플랫폼) có thể quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, sau nội dung của **SOREUSEADDR và SOREUSEPORT**, **Liên kết (connection / 연결) refused ở ngăn xếp (stack / 스택) nào?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hết thời gian chờ (timeout / 타임아웃) có thể do drop im lặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Connection refused thường phản ánh một RST hoặc không có listener, nhưng không thể suy ra chỉ từ một dòng client log; đối chiếu server socket, firewall và capture. Timeout là trạng thái khác, thường cho thấy packet bị drop hoặc reply không quay về.
 
 ## Liên kết (connection / 연결) refused ở ngăn xếp (stack / 스택) nào?
 
@@ -834,7 +834,7 @@ Nếu SYN tới host nhưng không có listener, kernel có thể trả RST. má
 
 Điều này nghĩa thất bại (failure / 실패) có thể xảy ra hoàn toàn trong kernel trước khi ứng dụng (application / 애플리케이션) mã (code / 코드) đích được chạy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Hết thời gian chờ (timeout / 타임아웃) có thể do drop im lặng** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) refused ở ngăn xếp (stack / 스택) nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Timeout có thể đến từ route, queue, firewall, retransmission, server overload hoặc application không đọc; mỗi nguyên nhân để lại dấu vết khác nhau. Mô hình tư duy cuối bài sẽ đi theo packet path và queue state trước khi kết luận.
 
 ## Hết thời gian chờ (timeout / 타임아웃) có thể do drop im lặng
 
@@ -849,7 +849,7 @@ DROP       → timeout lâu hơn
 
 Đây là lý do độ trễ (latency / 지연 시간) của thất bại (failure / 실패) chứa thông tin chẩn đoán.
 
-> **Chuyển mạch:** Trong **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Hết thời gian chờ (timeout / 타임아웃) có thể do drop im lặng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy là: xác định direction và capture point, lần theo queue/ownership qua NIC–kernel–socket, rồi ghép counters với process behavior. Các hiểu lầm phổ biến thường đánh đồng một triệu chứng ở lớp này với nguyên nhân ở lớp khác.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -870,7 +870,7 @@ wire
 
 Khi độ trễ (latency / 지연 시간) hoặc drop xảy ra, hãy hỏi **hàng đợi (queue / 큐) nào đang đầy, máy trạng thái (state machine / 상태 머신) nào chưa tiến triển, và bằng chứng (evidence / 증거) ở lớp nào chứng minh packet đã đi tới đó**.
 
-> **Chuyển mạch:** Ở chặng này của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Capture thấy packet không chứng minh application đã đọc; queue đầy không luôn do NIC; và `ss`/`netstat` summary không thay thế trace theo flow. Phần liên kết cuối bài đưa các observation point về tài liệu kernel, TCP và eBPF liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -886,7 +886,7 @@ Khi độ trễ (latency / 지연 시간) hoặc drop xảy ra, hãy hỏi **hà
 
 **“TIME_WAIT là liên kết (connection / 연결) leak.”** Nó thường là trạng thái (state / 상태) TCP bình thường sau active close.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux mạng (network / 네트워크) ngăn xếp (stack / 스택): từ packet tới socket**, sau nội dung của **Những hiểu lầm phổ biến**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết dưới đây nối packet path với queueing, TCP lifecycle, socket API và observability. Khi chẩn đoán, hãy chọn evidence phù hợp với layer thay vì dùng một công cụ để giải thích toàn bộ stack.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
