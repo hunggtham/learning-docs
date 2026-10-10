@@ -28,7 +28,6 @@ Z\in\mathbb{R}^{H\times W\times K}
 
 Mỗi điểm ảnh (pixel / 픽셀) được classify vào one of `K` classes.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Encoder–Decoder kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why Skip Connections Matter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Encoder–Decoder kiến trúc (architecture / 아키텍처)
 
@@ -45,13 +44,13 @@ image
 
 U-Net là classic kiến trúc (architecture / 아키텍처) với skip connections nối encoder features high-resolution sang decoder.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Why Skip Connections Matter** tiếp nhận điểm tựa từ **Encoder–Decoder kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Upsampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Encoder–decoder khôi phục hình học, nhưng phần chi tiết được truyền qua skip connection mới quyết định ranh giới mask có sắc hay không.
 
 ## Why Skip Connections Matter
 
 Deep features biết “đây là car” nhưng spatial ranh giới (boundary / 경계) coarse. Early features có edges/location chi tiết. Skip connections combine ngữ nghĩa (semantics / 의미론) + localization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Upsampling** tiếp nhận điểm tựa từ **Why Skip Connections Matter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Segmentation mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã giữ được chi tiết không gian, decoder vẫn phải phóng to feature map mà không tạo artefact.
 
 ## Upsampling
 
@@ -63,7 +62,7 @@ Options:
 
 Transposed convolution có thể tạo checkerboard artifacts nếu kernel/stride tương tác (interaction / 상호작용) không tốt.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Segmentation mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Upsampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lựa chọn upsampling ảnh hưởng trực tiếp đến mask cuối; hàm mất mát sẽ biến sai lệch pixel và overlap thành tín hiệu để tối ưu lựa chọn đó.
 
 ## Segmentation mất mát (loss / 손실)
 
@@ -89,13 +88,12 @@ IoU/Jaccard:
 IoU=\frac{|P\cap G|}{|P\cup G|}
 \]
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Segmentation mất mát (loss / 손실)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) chất lượng (quality / 품질)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Instance Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các metric overlap chưa nói hết chất lượng contour, nên ranh giới cần được xem như một tiêu chí riêng.
 
 ## Ranh giới (boundary / 경계) chất lượng (quality / 품질)
 
-Two masks có similar IoU nhưng ranh giới (boundary / 경계) hành vi (behavior / 동작) khác. Boundary-specific metrics/losses useful when contour precision matters, e.g. medical surgery or manufacturing.
+Two masks có similar IoU nhưng ranh giới (boundary / 경계) hành vi (behavior / 동작) khác. Boundary-specific metrics/losses useful when contour precision matters, e.g. medical surgery or manufacturing. Khi contour đã rõ, bài toán tiếp theo là phân biệt các object cùng class thay vì gộp chúng vào một mask.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Ranh giới (boundary / 경계) chất lượng (quality / 품질)** đã nêu tiêu chí phân biệt, còn **Instance Segmentation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Panoptic Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Instance Segmentation
 
@@ -107,9 +105,8 @@ region proposal
 → per-instance mask head
 ```
 
-Need assign pixels to distinct objects even if same lớp (class / 클래스) and overlapping.
+Need assign pixels to distinct objects even if same lớp (class / 클래스) and overlapping. Instance mask giải quyết từng object; panoptic segmentation mở rộng phạm vi sang cả vùng nền có ngữ nghĩa nhưng không có instance riêng.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Panoptic Segmentation** tiếp nhận điểm tựa từ **Instance Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fully Convolutional Networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Panoptic Segmentation
 
@@ -117,41 +114,35 @@ Need assign pixels to distinct objects even if same lớp (class / 클래스) an
 
 “Stuff” = amorphous regions như sky/road/grass.
 
-Panoptic segmentation seeks unified scene parse.
+Panoptic segmentation seeks unified scene parse. Để tạo dự đoán dày đặc cho scene parse, mạng cần giữ cấu trúc không gian trong suốt backbone thay vì nén thành một vector duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Fully Convolutional Networks** tiếp nhận điểm tựa từ **Panoptic Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atrous/Dilated Convolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fully Convolutional Networks
 
-FCN replaces dense classifier with convolutional operations to preserve spatial prediction and accept variable ảnh (image / 이미지) sizes more naturally.
+FCN replaces dense classifier with convolutional operations to preserve spatial prediction and accept variable ảnh (image / 이미지) sizes more naturally. FCN giữ dự đoán theo pixel; dilated convolution cho phép mở rộng vùng nhìn mà không phải giảm thêm độ phân giải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Atrous/Dilated Convolution** tiếp nhận điểm tựa từ **Fully Convolutional Networks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-Scale ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Atrous/Dilated Convolution
 
-Dilated convolution expands receptive trường dữ liệu (field / 필드) without reducing resolution. DeepLab-style architectures combine dilation + multi-scale ngữ cảnh (context / 맥락).
+Dilated convolution expands receptive trường dữ liệu (field / 필드) without reducing resolution. DeepLab-style architectures combine dilation + multi-scale ngữ cảnh (context / 맥락). Một receptive field đơn lẻ vẫn có thể thiếu ngữ cảnh; pyramid pooling hoặc ASPP vì vậy kết hợp nhiều scale.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Multi-Scale ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Atrous/Dilated Convolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transformer Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Multi-Scale ngữ cảnh (context / 맥락)
 
-Điểm ảnh (pixel / 픽셀) định danh (identity / 식별자) may depend on larger scene. A tiny gray patch could be road, wall or car based on ngữ cảnh (context / 맥락). Pyramid pooling/ASPP capture multiple receptive-field scales.
+Điểm ảnh (pixel / 픽셀) định danh (identity / 식별자) may depend on larger scene. A tiny gray patch could be road, wall or car based on ngữ cảnh (context / 맥락). Pyramid pooling/ASPP capture multiple receptive-field scales. Multi-scale context giúp pixel được diễn giải theo scene rộng hơn; transformer segmentation tiếp tục mô hình hóa các quan hệ toàn cục ấy.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Transformer Segmentation** tiếp nhận điểm tựa từ **Multi-Scale ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Promptable Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transformer Segmentation
 
-Vision transformers provide toàn cục (global / 전역) interactions. hiện đại (modern / 현대적) segmentation may use transformer encoder/decoder and mask queries, treating masks as set predictions similar DETR.
+Vision transformers provide toàn cục (global / 전역) interactions. hiện đại (modern / 현대적) segmentation may use transformer encoder/decoder and mask queries, treating masks as set predictions similar DETR. Ngữ cảnh toàn cục cải thiện việc tách vùng liên quan, còn promptable segmentation cho phép người dùng chỉ rõ vùng hoặc object cần tách.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Promptable Segmentation** tiếp nhận điểm tựa từ **Transformer Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Annotation chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Promptable Segmentation
 
 Foundation segmentation các mô hình (models / 모델들) can accept points, boxes, masks or text-like prompts to specify mục tiêu (target / 대상) đối tượng (object / 객체)/region. This changes tương tác (interaction / 상호작용) from fixed taxonomy to **conditional segmentation**.
 
-Still, mô hình (model / 모델) may thất bại (fail / 실패) on domain-specific imagery outside pretraining phân phối (distribution / 분포).
+Still, mô hình (model / 모델) may thất bại (fail / 실패) on domain-specific imagery outside pretraining phân phối (distribution / 분포). Prompt làm thay đổi cách chỉ định mục tiêu, nhưng không loại bỏ chi phí tạo và kiểm tra các mask dùng cho huấn luyện.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Annotation chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Promptable Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) Imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Annotation chi phí (cost / 비용)
 
@@ -164,25 +155,22 @@ Still, mô hình (model / 모델) may thất bại (fail / 실패) on domain-spe
 - interactive annotation;
 - foundation-model-assisted labeling.
 
-Label chất lượng (quality / 품질) at boundaries can be subjective.
+Label chất lượng (quality / 품질) at boundaries can be subjective. Sự khác biệt về chất lượng nhãn thường rõ nhất ở lớp hiếm và vùng nhỏ, nơi mất cân bằng class dễ che khuất lỗi.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Lớp (class / 클래스) Imbalance** tiếp nhận điểm tựa từ **Annotation chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Post-Processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp (class / 클래스) Imbalance
 
 Rare classes/small lesions can occupy tiny fraction. điểm ảnh (pixel / 픽셀) accuracy then misleading.
 
-Use class-wise IoU, Dice, recall and region-level metrics.
+Use class-wise IoU, Dice, recall and region-level metrics. Metric theo class cho biết mô hình đang bỏ sót vùng nào; post-processing chỉ nên xử lý nhiễu hình học sau khi tín hiệu học đã được đánh giá đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Lớp (class / 클래스) Imbalance** xác định đầu vào; **Post-Processing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3D Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Post-Processing
 
 Morphological cleanup, connected components, CRF-like refinement or lĩnh vực (domain / 도메인) các ràng buộc (constraints / 제약조건들) can remove isolated noise.
 
-Môi trường vận hành (production / 운영 환경) segmentation often hybrid neural + deterministic hình học (geometry / 기하학).
+Môi trường vận hành (production / 운영 환경) segmentation often hybrid neural + deterministic hình học (geometry / 기하학). Các quy tắc hình học này có thể áp dụng cho mask 2D; dữ liệu volume đòi hỏi tính thêm chiều sâu và ngân sách bộ nhớ.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Post-Processing** xác định đầu vào; **3D Segmentation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Temporal Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3D Segmentation
 
@@ -192,15 +180,13 @@ Medical CT/MRI uses volumes:
 X\in\mathbb{R}^{D\times H\times W\times C}
 \]
 
-3D convolutions capture volumetric ngữ cảnh (context / 맥락) but bộ nhớ (memory / 메모리) chi phí (cost / 비용) huge. 2.5D approaches tiến trình (process / 프로세스) slices with neighboring ngữ cảnh (context / 맥락).
+3D convolutions capture volumetric ngữ cảnh (context / 맥락) but bộ nhớ (memory / 메모리) chi phí (cost / 비용) huge. 2.5D approaches tiến trình (process / 프로세스) slices with neighboring ngữ cảnh (context / 맥락). Volume giữ ngữ cảnh không gian ba chiều, còn video đặt câu hỏi tương tự theo trục thời gian: mask có nhất quán giữa các frame hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Temporal Segmentation** tiếp nhận điểm tựa từ **3D Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Temporal Segmentation
 
-Video segmentation should preserve consistency across frames. Independent per-frame masks flicker; temporal các mô hình (models / 모델들)/tracking help.
+Video segmentation should preserve consistency across frames. Independent per-frame masks flicker; temporal các mô hình (models / 모델들)/tracking help. Vì vậy đánh giá video không chỉ đo từng mask riêng lẻ mà còn xem độ ổn định của chuỗi dự đoán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Evaluation** tiếp nhận điểm tựa từ **Temporal Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Evaluation
 
@@ -212,21 +198,19 @@ Dùng chung (common / 공통) metrics:
 - ranh giới (boundary / 경계) F-score;
 - panoptic chất lượng (quality / 품질).
 
-Chỉ số (metric / 지표) choice depends ứng dụng (application / 애플리케이션). In medical imaging, missing small lesion may be much worse than slight ranh giới (boundary / 경계) mismatch.
+Chỉ số (metric / 지표) choice depends ứng dụng (application / 애플리케이션). In medical imaging, missing small lesion may be much worse than slight ranh giới (boundary / 경계) mismatch. Metric phải phản ánh rủi ro của ứng dụng; confidence và uncertainty giúp tìm các dự đoán cần rà soát.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, **Bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bất định (uncertainty / 불확실성)
 
-Pixel-wise confidence maps can guide manual rà soát (review / 검토). But neighboring pixels correlated, so naive confidence interpretation may overstate certainty.
+Pixel-wise confidence maps can guide manual rà soát (review / 검토). But neighboring pixels correlated, so naive confidence interpretation may overstate certainty. Uncertainty không phải là bảo đảm đúng–sai tuyệt đối, nhưng là tín hiệu hữu ích để phân bổ việc kiểm tra và tạo mô hình tư duy đúng về segmentation.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Segmentation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Bất định (uncertainty / 불확실성)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Segmentation giữ spatial cấu trúc (structure / 구조) đến mức điểm ảnh (pixel / 픽셀); encoder học “cái gì”, decoder khôi phục “ở đâu chính xác”.**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Segmentation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình này giúp kiểm tra các ngộ nhận về accuracy, ground truth và khả năng phục hồi chi tiết.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -240,9 +224,8 @@ Human annotation boundaries có bất định (uncertainty / 불확실성).
 
 ### “Upsampling phục hồi detail đã mất”
 
-Nó chỉ reconstruct từ retained features/skip connections; thông tin (information / 정보) fully discarded không magically return.
+Nó chỉ reconstruct từ retained features/skip connections; thông tin (information / 정보) fully discarded không magically return. Những giới hạn trên nối segmentation với xử lý ảnh, biểu diễn đa scale, detection và transformer set prediction.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Segmentation**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
