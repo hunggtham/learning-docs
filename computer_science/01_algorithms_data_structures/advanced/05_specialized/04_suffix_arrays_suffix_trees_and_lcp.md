@@ -29,7 +29,7 @@ Có đúng `n` suffix, một suffix bắt đầu tại mỗi vị trí.
 
 Substring `s[l..r]` chính là prefix của suffix bắt đầu tại `l`. Đây là cầu nối từ bài toán substring sang suffix indexing.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **2. Suffix Array** tiếp nhận điểm tựa từ **1. Suffix là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Vì sao substring tìm kiếm (search / 검색) trở thành tìm kiếm nhị phân (binary search / 이진 탐색)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix của một text là một điểm bắt đầu kèm toàn bộ phần đuôi; so sánh chúng chính là so sánh các suffix lexicographic. Sắp các suffix theo thứ tự đó tạo ra suffix array, một index gọn hơn cây nhưng vẫn giữ thứ tự cần tìm.
 
 ## 2. Suffix Array
 
@@ -54,7 +54,7 @@ SA = [5, 3, 1, 0, 4, 2]
 
 Điểm quan trọng: SA chỉ lưu chỉ số, không lưu lại toàn bộ các suffix. Vì vậy biểu diễn (representation / 표현) gọn hơn rất nhiều so với materialize `n` string con.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **3. Vì sao substring tìm kiếm (search / 검색) trở thành tìm kiếm nhị phân (binary search / 이진 탐색)?** tiếp nhận điểm tựa từ **2. Suffix Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. So sánh suffix không nên tạo substring mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix array đặt mọi suffix trên một trục đã sắp xếp. Vì các suffix bắt đầu bằng cùng pattern tạo thành một đoạn liên tiếp, truy vấn substring có thể dùng binary search thay vì quét toàn văn bản.
 
 ## 3. Vì sao substring tìm kiếm (search / 검색) trở thành tìm kiếm nhị phân (binary search / 이진 탐색)?
 
@@ -77,7 +77,7 @@ O(m\log n)
 
 sau khi SA đã được xây.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **3. Vì sao substring tìm kiếm (search / 검색) trở thành tìm kiếm nhị phân (binary search / 이진 탐색)?** đã nêu tiêu chí phân biệt, còn **4. So sánh suffix không nên tạo substring mới** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Prefix-Doubling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Binary search chỉ hữu ích nếu phép so sánh suffix không tạo substring mới ở mỗi bước. So sánh trực tiếp theo offset giữ được memory và time bound, đồng thời dẫn tới prefix-doubling khi xây index.
 
 ## 4. So sánh suffix không nên tạo substring mới
 
@@ -87,7 +87,7 @@ Cách đúng về biểu diễn (representation / 표현) là giữ chỉ mục 
 
 Đây là một bài học hệ thống quan trọng: cùng một ý tưởng thuật toán nhưng materialization không cần thiết có thể phá cả bộ nhớ (memory / 메모리) lẫn hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **4. So sánh suffix không nên tạo substring mới** đã nêu tiêu chí phân biệt, còn **5. Prefix-Doubling** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Bất biến của Doubling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix-doubling xếp các prefix độ dài 1, 2, 4, ... bằng rank của hai nửa. Muốn tin kết quả, cần giữ invariant rằng rank hiện tại phản ánh đúng thứ tự của mọi prefix đã được xét.
 
 ## 5. Prefix-Doubling
 
@@ -107,7 +107,7 @@ Mỗi vòng tăng độ dài prefix đã biết thứ tự lên gấp đôi:
 
 Nếu sort cặp rank bằng comparison sort, độ phức tạp (complexity / 복잡도) thường `O(n log² n)`. Nếu rank là số nguyên và dùng radix/counting sort, có thể đạt `O(n log n)`.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **6. Bất biến của Doubling** tiếp nhận điểm tựa từ **5. Prefix-Doubling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Sentinel và ký tự kết thúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Invariant của doubling phụ thuộc việc cặp rank và thứ tự tie-break được định nghĩa nhất quán. Sentinel giúp mọi suffix có điểm kết thúc rõ ràng và tránh so sánh vượt biên khi các prefix có độ dài khác nhau.
 
 ## 6. Bất biến của Doubling
 
@@ -119,7 +119,7 @@ Khi xây vòng sau, cặp rank của hai nửa đủ quyết định thứ tự 
 
 Đây là một ví dụ đẹp của tư duy **nâng cấp tóm lược (summary refinement)**: thay vì so lại chuỗi dài, ta so hai summary đã được xác minh từ vòng trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **7. Sentinel và ký tự kết thúc** tiếp nhận điểm tựa từ **6. Bất biến của Doubling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Rank Array** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sentinel nhỏ hơn mọi ký tự làm suffix kết thúc có thứ tự duy nhất và khiến các phép so sánh dễ chứng minh hơn. Khi suffix đã được xếp, rank array cung cấp ánh xạ ngược từ vị trí text sang vị trí trong suffix array.
 
 ## 7. Sentinel và ký tự kết thúc
 
@@ -129,7 +129,7 @@ Một cách khác là thêm terminal symbol `$` nhỏ hơn mọi ký tự hợp 
 
 Sentinel không phải chi tiết nhỏ. Nó ảnh hưởng trực tiếp lexicographic thứ tự (order / 순서) và tính duy nhất của suffix.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **8. Rank Array** tiếp nhận điểm tựa từ **7. Sentinel và ký tự kết thúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. LCP Array** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rank array là inverse permutation của suffix array, nên biết một suffix bắt đầu ở đâu là biết vị trí của nó trong thứ tự lexicographic. Từ rank kề nhau, LCP array đo phần prefix chung giữa các suffix lân cận.
 
 ## 8. Rank Array
 
@@ -149,7 +149,7 @@ Rank giúp chuyển từ vị trí trong văn bản (text / 텍스트) sang vị
 
 Nó đặc biệt quan trọng trong Kasai và các bài cần hỏi quan hệ giữa suffix bắt đầu tại hai chỉ mục (index / 인덱스) gốc.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **9. LCP Array** tiếp nhận điểm tựa từ **8. Rank Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Longest Repeated Substring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LCP array ghi độ dài prefix chung của từng cặp suffix kề nhau, không phải toàn bộ substring. Các giá trị này biến câu hỏi về lặp lại thành bài toán cực đại trên LCP.
 
 ## 9. LCP Array
 
@@ -168,7 +168,7 @@ Một insight rất quan trọng:
 
 Vì vậy LCP biến nhiều bài substring thành bài trên mảng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **10. Longest Repeated Substring** tiếp nhận điểm tựa từ **9. LCP Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Kasai xây LCP trong O(n)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Longest repeated substring chính là prefix chung dài nhất của hai suffix khác nhau, nên có thể đọc từ max của LCP. Để xây LCP hiệu quả thay vì so từng cặp từ đầu, ta dùng Kasai với reuse của các match trước.
 
 ## 10. Longest Repeated Substring
 
@@ -184,7 +184,7 @@ longest repeated substring length = max(LCP)
 
 Nếu cần substring cụ thể, lấy vị trí tương ứng trong SA.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **11. Kasai xây LCP trong O(n)** tiếp nhận điểm tựa từ **10. Longest Repeated Substring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. LCP giữa hai suffix bất kỳ trở thành RMQ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kasai tận dụng việc suffix kế tiếp thường mất nhiều nhất một ký tự LCP khi dịch vị trí, nhờ đó tổng số bước tăng giảm là tuyến tính. Khi LCP đã có, truy vấn giữa hai suffix bất kỳ trở thành range minimum query.
 
 ## 11. Kasai xây LCP trong O(n)
 
@@ -202,7 +202,7 @@ O(n)
 
 Đây là một ví dụ rất hay của amortized phân tích (analysis / 분석) trong string algorithms.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **12. LCP giữa hai suffix bất kỳ trở thành RMQ** tiếp nhận điểm tựa từ **11. Kasai xây LCP trong O(n)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Số substring phân biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kasai tạo LCP ở không gian suffix array; RMQ trên đoạn LCP giữa hai rank trả về LCP của bất kỳ cặp suffix. Từ primitive này, ta đếm số substring phân biệt bằng cách trừ phần prefix đã xuất hiện.
 
 ## 12. LCP giữa hai suffix bất kỳ trở thành RMQ
 
@@ -225,7 +225,7 @@ Segment Tree -> O(log n) query
 
 Đây là ví dụ cross-domain rất đẹp giữa string indexing và range-query dữ liệu (data / 데이터) structures.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **13. Số substring phân biệt** tiếp nhận điểm tựa từ **12. LCP giữa hai suffix bất kỳ trở thành RMQ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Longest dùng chung (common / 공통) Substring giữa hai chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Số substring phân biệt bằng tổng độ dài suffix trừ tổng LCP kề nhau, vì mỗi LCP loại phần prefix trùng. Cùng cách nhìn prefix chung còn mở rộng tự nhiên sang longest common substring của hai chuỗi.
 
 ## 13. Số substring phân biệt
 
@@ -251,7 +251,7 @@ hay tương đương:
 
 LCP có thể được hiểu như lượng “trùng lặp thông tin” giữa suffix hiện tại và phần đã thấy trước đó.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **13. Số substring phân biệt** xác định đầu vào; **14. Longest dùng chung (common / 공통) Substring giữa hai chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Tìm tất cả occurrence của mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đếm substring phân biệt dùng suffix array để đếm, còn hai chuỗi cần thêm separator và phân biệt nguồn của suffix. LCP lớn nhất giữa suffix thuộc hai chuỗi cho longest common substring.
 
 ## 14. Longest dùng chung (common / 공통) Substring giữa hai chuỗi
 
@@ -267,7 +267,7 @@ Xây SA + LCP, sau đó xét các cặp suffix kề nhau thuộc hai nguồn kh�
 
 Nếu có nhiều hơn hai chuỗi, bài toán cần một cửa sổ trên SA chứa đủ nguồn và lấy min-LCP trong cửa sổ, kết hợp two pointers/RMQ tùy formulation.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **14. Longest dùng chung (common / 공통) Substring giữa hai chuỗi** xác định đầu vào; **15. Tìm tất cả occurrence của mẫu (pattern / 패턴)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. LCP-Accelerated tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Longest common substring xác định độ dài chung, nhưng tìm mọi occurrence của pattern cần tìm đoạn suffix có cùng prefix với pattern. Binary search trên suffix array cho khoảng ứng viên, sau đó kiểm tra boundary.
 
 ## 15. Tìm tất cả occurrence của mẫu (pattern / 패턴)
 
@@ -277,7 +277,7 @@ Kích thước đoạn chính là số occurrence theo vị trí bắt đầu.
 
 Nếu cần xuất vị trí theo thứ tự văn bản (text / 텍스트), các vị trí trong SA phạm vi (range / 범위) phải được sort hoặc xử lý bằng cấu trúc phụ vì SA thứ tự (order / 순서) là lexicographic, không phải văn bản (text / 텍스트) thứ tự (order / 순서).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **16. LCP-Accelerated tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **15. Tìm tất cả occurrence của mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Suffix cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi nhiều suffix có prefix dài giống nhau, binary search lặp lại cùng phép so sánh. LCP-accelerated search lưu LCP ở hai biên để bỏ qua phần đã biết và giảm số ký tự phải kiểm tra.
 
 ## 16. LCP-Accelerated tìm kiếm (search / 검색)
 
@@ -291,7 +291,7 @@ Có thể giữ LCP của mẫu (pattern / 패턴) với biên trái/phải đ�
 
 Đây là một motif tái sử dụng thông tin rất phổ biến trong string algorithms.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **17. Suffix cây (tree / 트리)** tiếp nhận điểm tựa từ **16. LCP-Accelerated tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. tìm kiếm (search / 검색) trong Suffix cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LCP giúp suffix array tìm nhanh nhưng vẫn lưu mảng chỉ số; suffix tree nén các cạnh có prefix chung thành cấu trúc explicit. Đổi lại, tree tăng khả năng truy vấn theo prefix với chi phí node và pointer lớn hơn.
 
 ## 17. Suffix cây (tree / 트리)
 
@@ -309,7 +309,7 @@ trỏ vào string gốc.
 
 Với terminal symbol và construction chuẩn, Suffix cây (tree / 트리) có số nút (node / 노드) tuyến tính theo `n`.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **18. tìm kiếm (search / 검색) trong Suffix cây (tree / 트리)** tiếp nhận điểm tựa từ **17. Suffix cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Ukkonen và vì sao Suffix cây (tree / 트리) khó cài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix tree trả lời prefix/path query bằng cách đi theo cạnh và có thể báo occurrence ở subtree. Cách tìm này mạnh, nhưng correctness phụ thuộc việc quản lý edge label, leaf và termination chính xác.
 
 ## 18. tìm kiếm (search / 검색) trong Suffix cây (tree / 트리)
 
@@ -325,7 +325,7 @@ O(m+k)
 
 với `k` là số occurrence phải xuất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **19. Ukkonen và vì sao Suffix cây (tree / 트리) khó cài** tiếp nhận điểm tựa từ **18. tìm kiếm (search / 검색) trong Suffix cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Suffix Link** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix tree có thể xây tuyến tính bằng Ukkonen, nhưng active point, suffix link và extension rule khiến implementation khó kiểm chứng. Hiểu suffix link là chìa khóa để thấy vì sao mỗi phase không phải bắt đầu lại từ root.
 
 ## 19. Ukkonen và vì sao Suffix cây (tree / 트리) khó cài
 
@@ -345,7 +345,7 @@ Hiện thực (implementation / 구현) rất tinh tế. Đây là ví dụ nơi
 
 Trong nhiều tải công việc (workload / 워크로드) văn bản (text / 텍스트) tĩnh, SA gọn hơn, dễ serialize hơn và cache-friendly hơn.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **20. Suffix Link** tiếp nhận điểm tựa từ **19. Ukkonen và vì sao Suffix cây (tree / 트리) khó cài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Suffix Automaton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix link nối node biểu diễn chuỗi `aX` với node biểu diễn `X`, cho phép chuyển nhanh giữa các suffix liên tiếp. Ý tưởng link và end-position equivalence được nén khác đi trong suffix automaton.
 
 ## 20. Suffix Link
 
@@ -364,7 +364,7 @@ Suffix Automaton suffix link
 
 Đây đều là cách tái sử dụng trạng thái của các prefix/suffix chồng lấn.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **21. Suffix Automaton** tiếp nhận điểm tựa từ **20. Suffix Link** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Ý nghĩa của Clone trong SAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix automaton biểu diễn mọi substring bằng DAG các state và transition, thường nhỏ hơn suffix tree cho nhiều truy vấn. Để duy trì invariant endpos khi tách state, cần hiểu vai trò của clone.
 
 ## 21. Suffix Automaton
 
@@ -380,7 +380,7 @@ next  -> transition theo ký tự
 
 Trạng thái (state / 상태) không đại diện một substring duy nhất mà đại diện một lớp substring có cùng tập vị trí kết thúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **22. Ý nghĩa của Clone trong SAM** tiếp nhận điểm tựa từ **21. Suffix Automaton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Số substring phân biệt bằng SAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Clone không phải substring mới trong text; nó là state copy để tách hai tập end positions mà vẫn giữ transition đúng. Sai clone sẽ phá invariant và làm hỏng cả count lẫn occurrence query.
 
 ## 22. Ý nghĩa của Clone trong SAM
 
@@ -390,7 +390,7 @@ Clone không tương ứng với một prefix mới của văn bản (text / 텍
 
 Đây là phần quan trọng để hiểu SAM không phải “một trie tối ưu hóa”.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **23. Số substring phân biệt bằng SAM** tiếp nhận điểm tựa từ **22. Ý nghĩa của Clone trong SAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Occurrence Count trong SAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SAM đếm substring phân biệt bằng tổng `len[v] - len[link[v]]` trên các state. Công thức này đếm các độ dài mới mà mỗi state đại diện, không cần liệt kê substring.
 
 ## 23. Số substring phân biệt bằng SAM
 
@@ -410,7 +410,7 @@ Trực giác: trạng thái (state / 상태) đại diện tất cả độ dài
 
 và các substring này thuộc cùng lớp end-position.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **24. Occurrence Count trong SAM** tiếp nhận điểm tựa từ **23. Số substring phân biệt bằng SAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Longest dùng chung (common / 공통) Substring với SAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Distinct-substring count kiểm tra phạm vi độ dài mà state đại diện; occurrence count lại cần propagate số lần kết thúc theo thứ tự topo của suffix links. Hai phép đếm dùng cùng SAM nhưng khác invariant.
 
 ## 24. Occurrence Count trong SAM
 
@@ -418,7 +418,7 @@ Nếu mỗi prefix-end trạng thái (state / 상태) được khởi tạo coun
 
 Khi đó có thể trả lời số lần xuất hiện của substring sau khi đi chuyển tiếp (transition / 전이) tới trạng thái (state / 상태) tương ứng, với caveat về cách substring được ánh xạ vào trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **25. Longest dùng chung (common / 공통) Substring với SAM** tiếp nhận điểm tựa từ **24. Occurrence Count trong SAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. SA, Suffix cây (tree / 트리) hay SAM?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Occurrence count trong SAM cho biết một substring xuất hiện bao nhiêu lần; để tìm longest common substring với chuỗi khác, ta duyệt chuỗi đó qua transition và giữ độ dài match tốt nhất.
 
 ## 25. Longest dùng chung (common / 공통) Substring với SAM
 
@@ -428,7 +428,7 @@ Xây SAM cho `A`, rồi quét `B`. Duy trì trạng thái (state / 상태) hiệ
 
 Đây là counterpart automaton của cách làm SA + LCP.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **26. SA, Suffix cây (tree / 트리) hay SAM?** tiếp nhận điểm tựa từ **25. Longest dùng chung (common / 공통) Substring với SAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. FM-Index và Burrows–Wheeler Transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Longest common substring với SAM cho thấy mỗi cấu trúc phục vụ một workload khác. Chọn SA, suffix tree hay SAM cần cân query, thời gian xây, memory và khả năng cập nhật thay vì chọn theo tên thuật toán.
 
 ## 26. SA, Suffix cây (tree / 트리) hay SAM?
 
@@ -442,7 +442,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Không có cấu trúc “mạnh nhất”. biểu diễn (representation / 표현) phù hợp phụ thuộc truy vấn (query / 쿼리) set, bộ nhớ (memory / 메모리) ngân sách (budget / 예산) và độ phức tạp hiện thực (implementation / 구현) chấp nhận được.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **27. FM-Index và Burrows–Wheeler Transform** tiếp nhận điểm tựa từ **26. SA, Suffix cây (tree / 트리) hay SAM?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. SA-IS và Linear-Time Construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix array gọn và thuận lợi cho binary search, suffix tree mạnh ở path query nhưng nặng pointer, còn SAM gọn cho substring/language queries. FM-index thêm một lựa chọn nén dựa trên BWT cho pattern search.
 
 ## 27. FM-Index và Burrows–Wheeler Transform
 
@@ -456,7 +456,7 @@ Mô hình tư duy mở rộng:
 
 > Suffix thứ tự (order / 순서) không chỉ hỗ trợ tìm kiếm nhị phân (binary search / 이진 탐색); nó còn làm lộ cấu trúc lặp của văn bản (text / 텍스트) để vừa nén vừa tìm kiếm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **28. SA-IS và Linear-Time Construction** tiếp nhận điểm tựa từ **27. FM-Index và Burrows–Wheeler Transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Alphabet và Unicode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+FM-index dùng BWT và LF-mapping để đi ngược pattern trong không gian nhỏ, thường phù hợp text lớn. Nếu chưa có suffix array, SA-IS cung cấp một đường xây tuyến tính theo các lớp suffix.
 
 ## 28. SA-IS và Linear-Time Construction
 
@@ -466,7 +466,7 @@ Chúng quan trọng về lý thuyết và trong hiện thực (implementation / 
 
 Không nên dùng thuật toán construction phức tạp hơn chỉ vì asymptotic tốt hơn nếu `n` và hệ số thực tế không yêu cầu.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **29. Alphabet và Unicode** tiếp nhận điểm tựa từ **28. SA-IS và Linear-Time Construction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SA-IS đạt linear-time dưới mô hình chi phí phù hợp bằng cách phân loại LMS và induce sort. Nhưng alphabet và cách mã hóa ký tự ảnh hưởng trực tiếp đến bucket, thứ tự và correctness.
 
 ## 29. Alphabet và Unicode
 
@@ -483,7 +483,7 @@ Suffix cấu trúc (structure / 구조) chỉ đúng theo alphabet mà comparato
 
 Trong Java, `char` là UTF-16 mã (code / 코드) đơn vị (unit / 단위). Trong JavaScript, chỉ mục (index / 인덱스) chuỗi cũng chủ yếu theo UTF-16 mã (code / 코드) đơn vị (unit / 단위). Nếu miền bài toán nói “ký tự người dùng nhìn thấy”, biểu diễn (representation / 표현) có thể phải khác.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **30. Bộ nhớ** tiếp nhận điểm tựa từ **29. Alphabet và Unicode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. bộ nhớ đệm (cache / 캐시) Locality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Alphabet không chỉ là số lượng ký tự; Unicode cần normalization, code point và comparator nhất quán. Những lựa chọn đó quyết định kích thước rank/bucket và kéo theo memory footprint.
 
 ## 30. Bộ nhớ
 
@@ -493,7 +493,7 @@ Suffix cây (tree / 트리)/SAM dùng nhiều nút (node / 노드)/trạng thái
 
 Cùng `O(n)` nhưng hệ số bộ nhớ có thể chênh rất lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **31. bộ nhớ đệm (cache / 캐시) Locality** tiếp nhận điểm tựa từ **30. Bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Static vs động (dynamic / 동적) văn bản (text / 텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix structures thường dùng nhiều mảng `O(n)` và có thể thêm LCP/RMQ hoặc transition. Sau khi tính đủ dung lượng, cần xem layout và cache locality để tránh tốc độ thực tế kém hơn bound lý thuyết.
 
 ## 31. bộ nhớ đệm (cache / 캐시) Locality
 
@@ -503,7 +503,7 @@ Suffix cây (tree / 트리) nhiều nút (node / 노드)/con trỏ dễ tạo po
 
 Đây là lý do SA thường rất thực dụng dù cây hậu tố có truy vấn (query / 쿼리) độ phức tạp (complexity / 복잡도) lý thuyết đẹp.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **32. Static vs động (dynamic / 동적) văn bản (text / 텍스트)** tiếp nhận điểm tựa từ **31. bộ nhớ đệm (cache / 캐시) Locality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Output-Sensitive Bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cache locality phụ thuộc việc mảng liên tục hay node/pointer phân tán. Với static text, có thể tối ưu layout mạnh; dynamic text lại buộc cân nhắc chi phí cập nhật và invalidation index.
 
 ## 32. Static vs động (dynamic / 동적) văn bản (text / 텍스트)
 
@@ -513,7 +513,7 @@ Suffix Array/cây (tree / 트리) cổ điển được tối ưu cho văn bản
 
 Nếu tải công việc (workload / 워크로드) là append-only stream, SAM có lợi thế vì construction online tự nhiên hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **33. Output-Sensitive Bound** tiếp nhận điểm tựa từ **32. Static vs động (dynamic / 동적) văn bản (text / 텍스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Kiểm thử Suffix Array** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Static index cho query nhanh sau một lần build, còn dynamic text cần rebuild, append strategy hoặc cấu trúc khác. Khi trả nhiều vị trí, complexity phải gắn với số output thay vì chỉ n và query time.
 
 ## 33. Output-Sensitive Bound
 
@@ -523,7 +523,7 @@ Một cấu trúc cho tìm kiếm (search / 검색) `O(m)` vẫn cần thêm `O(
 
 Đừng nhầm chi phí tìm vùng kết quả với chi phí materialize kết quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **34. Kiểm thử Suffix Array** tiếp nhận điểm tựa từ **33. Output-Sensitive Bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Kiểm thử Kasai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Output-sensitive bound mô tả chi phí `O(search + output)` khi kết quả nhiều hay ít. Kiểm thử suffix array cần chứng minh ordering và boundary trước khi tin vào benchmark.
 
 ## 34. Kiểm thử Suffix Array
 
@@ -544,7 +544,7 @@ rank[SA[i]] == i
 LCP[i] đúng với cặp kề
 ```
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **35. Kiểm thử Kasai** tiếp nhận điểm tựa từ **34. Kiểm thử Suffix Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Kiểm thử SAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Suffix array test nên so với danh sách suffix đã sort trực tiếp trên text nhỏ và kiểm tra permutation. Sau đó Kasai cần được kiểm chứng bằng LCP brute force để tách lỗi index khỏi lỗi construction.
 
 ## 35. Kiểm thử Kasai
 
@@ -562,7 +562,7 @@ Unicode theo đúng unit đã định nghĩa
 
 Chuỗi `aaaaa` đặc biệt tốt để bắt bug vì LCP rất dài và overlapping mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng hậu tố, cây hậu tố và LCP**, **36. Kiểm thử SAM** tiếp nhận điểm tựa từ **35. Kiểm thử Kasai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kasai test xác nhận LCP từng rank và invariant giảm khi dịch suffix; SAM test lại cần kiểm tra transition, suffix link, clone và count trên mọi substring của text nhỏ.
 
 ## 36. Kiểm thử SAM
 
@@ -577,7 +577,7 @@ occurrence count khớp oracle
 
 Clone-related bug thường lộ rõ qua random differential testing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng hậu tố, cây hậu tố và LCP**, **37. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **36. Kiểm thử SAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiểm thử SAM theo oracle brute force bắt được lỗi clone và end-position propagation. Những hiểu lầm phổ biến thường đến từ việc đánh đồng suffix array, suffix tree và SAM như cùng một cấu trúc.
 
 ## 37. Những hiểu lầm phổ biến
 
@@ -591,7 +591,7 @@ Clone-related bug thường lộ rõ qua random differential testing.
 
 “Coordinate của string luôn là ký tự Unicode thực” — sai nếu thời gian chạy (runtime / 런타임) chỉ mục (index / 인덱스) theo mã (code / 코드) đơn vị (unit / 단위)/byte.
 
-> **Chuyển mạch:** Trong **Mảng hậu tố, cây hậu tố và LCP**, **Mô hình tư duy** gom các mảnh từ **37. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Ba cấu trúc chia sẻ mục tiêu substring nhưng khác invariant, memory layout và query boundary. Mô hình tư duy cuối cùng nên bắt đầu từ workload rồi chọn representation, proof invariant và test oracle tương ứng.
 
 ## Mô hình tư duy
 
