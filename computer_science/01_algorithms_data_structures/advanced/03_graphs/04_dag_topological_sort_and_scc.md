@@ -20,7 +20,7 @@ B trước C
 C trước A
 ```
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **thứ tự tô-pô là gì?** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kahn's thuật toán: lập luận (reasoning / 추론) bằng indegree** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thứ tự tô-pô biến quan hệ phụ thuộc thành một thứ tự tuyến tính hợp lệ, còn mô hình tư duy cho biết khi nào thứ tự đó tồn tại. Cách xây dựng trực tiếp nhất là liên tục lấy đỉnh có indegree bằng không bằng thuật toán Kahn.
 
 ## thứ tự tô-pô là gì?
 
@@ -36,7 +36,7 @@ thứ tự tô-pô **không nhất thiết duy nhất**. Nếu hai tasks không 
 
 Điều này rất quan trọng trong scheduling: đồ thị chỉ encode các ràng buộc bắt buộc, không phải một schedule duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Kahn's thuật toán: lập luận (reasoning / 추론) bằng indegree** tiếp nhận điểm tựa từ **thứ tự tô-pô là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao Kahn phát hiện chu trình?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kahn duy trì frontier các đỉnh đã trở nên khả dụng sau khi xóa các cạnh vào, nên mỗi bước đều có thể giải thích bằng indegree. Nếu frontier cạn trước khi xử lý hết đỉnh, chính điều đó là bằng chứng có chu trình.
 
 ## Kahn's thuật toán: lập luận (reasoning / 추론) bằng indegree
 
@@ -91,7 +91,7 @@ O(V+E)
 
 vì mỗi đỉnh vào hàng đợi (queue / 큐) tối đa một lần và mỗi cạnh giảm indegree đúng một lần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Tại sao Kahn phát hiện chu trình?** tiếp nhận điểm tựa từ **Kahn's thuật toán: lập luận (reasoning / 추론) bằng indegree** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frontier cấu trúc dữ liệu quyết định secondary mục tiêu (objective / 목표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chu trình không có đỉnh bắt đầu hợp lệ vì mọi đỉnh trong chu trình đều còn một cạnh vào từ chu trình. Sau khi hiểu invariant này, ta có thể chọn cấu trúc frontier theo mục tiêu phụ như thứ tự từ điển hoặc tính ổn định.
 
 ## Tại sao Kahn phát hiện chu trình?
 
@@ -105,7 +105,7 @@ processedCount < V
 
 là certificate rằng đồ thị có directed chu trình.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Tại sao Kahn phát hiện chu trình?** nêu điều cần giải thích; **Frontier cấu trúc dữ liệu quyết định secondary mục tiêu (objective / 목표)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **DFS sắp xếp tô-pô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Queue, stack hoặc priority queue đều có thể làm frontier; chúng tạo ra các thứ tự tô-pô khác nhau nhưng cùng hợp lệ, trừ khi bài toán yêu cầu tie-break cụ thể. Một cách xây dựng khác là DFS và thứ tự hoàn tất của nó.
 
 ## Frontier cấu trúc dữ liệu quyết định secondary mục tiêu (objective / 목표)
 
@@ -120,7 +120,7 @@ tính đúng đắn vẫn giống nhau; cấu trúc dữ liệu chỉ thêm seco
 
 Nếu muốn maximize parallelism, thay vì lấy một nút, có thể lấy toàn bộ hiện tại frontier như một thực thi (execution / 실행) wave. Đây là basis cho xây dựng các hệ thống và workflow bộ lập lịchs.
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Frontier cấu trúc dữ liệu quyết định secondary mục tiêu (objective / 목표)** nêu điều cần giải thích; **DFS sắp xếp tô-pô** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **thứ tự tô-pô không phải “sort theo label”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DFS đẩy một đỉnh vào thứ tự khi đã duyệt hết các successor của nó, rồi đảo danh sách hoàn tất để có thứ tự tô-pô. Cách này làm rõ vì sao thứ tự tô-pô không đồng nghĩa với sắp xếp nhãn đỉnh.
 
 ## DFS sắp xếp tô-pô
 
@@ -157,7 +157,7 @@ Kahn -> repeatedly remove prerequisites-free nodes
 DFS  -> output node only after all descendants finish
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **DFS sắp xếp tô-pô** cho ta quy tắc; **thứ tự tô-pô không phải “sort theo label”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **DP trên DAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DFS cung cấp thứ tự thỏa quan hệ cạnh, còn label chỉ là dữ liệu phụ để phá hòa nếu được yêu cầu. Khi đã có thứ tự hợp lệ, mọi recurrence phụ thuộc acyclic có thể chạy bằng dynamic programming một lượt.
 
 ## thứ tự tô-pô không phải “sort theo label”
 
@@ -165,7 +165,7 @@ Tên “sort” dễ gây hiểu nhầm. sắp xếp tô-pô không so sánh kh�
 
 Nếu đồ thị có nhiều hợp lệ orders, thuật toán được phép trả bất kỳ thứ tự (order / 순서) nào trừ khi bài toán (problem / 문제) thêm quy tắc phân xử khi bằng nhau quy tắc.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **thứ tự tô-pô không phải “sort theo label”** cho ta quy tắc; **DP trên DAG** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Scheduling và trọng yếu (critical / 중요) đường đi phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DP trên DAG thay cho việc lặp vô hạn vì mỗi cạnh đi theo thứ tự đã biết; ví dụ điển hình là longest path trong đồ thị công việc. Mô hình đó dẫn tự nhiên đến scheduling và critical path.
 
 ## DP trên DAG
 
@@ -200,7 +200,7 @@ for u in topo:
 
 Không chu trình nghĩa là contribution chỉ chảy theo một chiều và không cần lặp lại relaxation.
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Scheduling và trọng yếu (critical / 중요) đường đi phương thức (method / 메서드)** tiếp nhận điểm tựa từ **DP trên DAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thành phần liên thông mạnh là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Critical path là một ứng dụng của longest-path DP khi phụ thuộc không có chu trình. Khi phụ thuộc có chu trình, cần gom các đỉnh mutually reachable thành strongly connected components trước.
 
 ## Scheduling và trọng yếu (critical / 중요) đường đi phương thức (method / 메서드)
 
@@ -216,7 +216,7 @@ Tác vụ (task / 작업) trên longest phụ thuộc (dependency / 의존성) c
 
 Đây là liên kết (connection / 연결) trực tiếp giữa DAG thuật toán và dự án (project / 프로젝트)/xây dựng scheduling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **thành phần liên thông mạnh là gì?** tiếp nhận điểm tựa từ **Scheduling và trọng yếu (critical / 중요) đường đi phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Condensation đồ thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SCC là tập cực đại trong đó mọi cặp đỉnh đi đến được nhau theo hướng. Co mỗi SCC thành một siêu đỉnh sẽ loại chu trình nội bộ và tạo ra condensation graph dạng DAG.
 
 ## thành phần liên thông mạnh là gì?
 
@@ -231,7 +231,7 @@ Từ “maximal” quan trọng: không thể thêm đỉnh ngoài vào mà vẫ
 
 SCC là cách nén những region mà directed reachability đã trở thành “hai chiều”.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Condensation đồ thị** tiếp nhận điểm tựa từ **thành phần liên thông mạnh là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kosaraju's thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Condensation graph giữ các cạnh giữa SCC khác nhau và luôn acyclic, nên các bài toán thứ tự và DP quay trở lại trên đồ thị rút gọn. Kosaraju tìm SCC bằng hai lượt DFS và transpose graph.
 
 ## Condensation đồ thị
 
@@ -253,7 +253,7 @@ collapse mutually-reachable regions
 solve easier problem on DAG
 ```
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Kosaraju's thuật toán** tiếp nhận điểm tựa từ **Condensation đồ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tarjan's SCC thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kosaraju dùng thứ tự hoàn tất của DFS trên graph gốc để quyết định thứ tự duyệt trên graph đảo. Tarjan đạt cùng mục tiêu trong một DFS bằng stack và low-link, phù hợp khi muốn tránh tạo graph transpose.
 
 ## Kosaraju's thuật toán
 
@@ -281,7 +281,7 @@ O(V+E)
 
 nhưng cần transpose đồ thị hoặc cách iterate reverse các cạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Tarjan's SCC thuật toán** tiếp nhận điểm tựa từ **Kosaraju's thuật toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Low-link trong Tarjan khác cầu nối (bridge / 브리지) low-link** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tarjan đánh dấu thời điểm vào stack và giá trị low-link để biết một subtree còn quay lại ancestor nào. Công thức này tương tự bridge-finding ở bề mặt, nhưng điều kiện tách SCC có ý nghĩa riêng trong đồ thị có hướng.
 
 ## Tarjan's SCC thuật toán
 
@@ -311,7 +311,7 @@ Vì vậy khi gặp cạnh tới đã thăm nút `v`, chỉ dùng `index[v]` đ�
 
 Đây là một bug kinh điển khi implement Tarjan.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Low-link trong Tarjan khác cầu nối (bridge / 브리지) low-link** tiếp nhận điểm tựa từ **Tarjan's SCC thuật toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java skeleton cho Tarjan SCC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong Tarjan SCC, low-link phản ánh khả năng quay về một vertex đang ở stack; không được bê nguyên điều kiện của bridge trong đồ thị vô hướng. Skeleton Java tiếp theo hiện thực đúng các trạng thái này.
 
 ## Low-link trong Tarjan khác cầu nối (bridge / 브리지) low-link
 
@@ -323,7 +323,7 @@ Trong Tarjan SCC, giá trị low-link biểu diễn chỉ số khám phá nhỏ 
 
 Không nên bản sao (copy / 복사) công thức giữa hai các thuật toán mà không hiểu bất biến (invariant / 불변식).
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Java skeleton cho Tarjan SCC** tiếp nhận điểm tựa từ **Low-link trong Tarjan khác cầu nối (bridge / 브리지) low-link** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SCC và phát hiện chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Skeleton chỉ an toàn khi cập nhật index, low-link, membership trong stack và thao tác pop theo đúng thứ tự. Sau khi có SCC, phát hiện chu trình trở thành kiểm tra kích thước SCC hoặc self-loop.
 
 ## Java skeleton cho Tarjan SCC
 
@@ -363,7 +363,7 @@ void dfs(int u) {
 
 Recursive DFS có thể stack-overflow trên đồ thị cực sâu. Trong hệ thống thực tế, cách triển khai có thể cần iterative traversal hoặc tăng ngăn xếp (stack / 스택) có chủ đích tùy môi trường chạy (runtime).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **SCC và phát hiện chu trình** tiếp nhận điểm tựa từ **Java skeleton cho Tarjan SCC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ứng dụng: phụ thuộc (dependency / 의존성) các hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một SCC có từ hai đỉnh hoặc một self-loop biểu thị chu trình có hướng; SCC đơn đỉnh không có self-loop là acyclic. Phép phân tích này hữu ích trực tiếp khi kiểm tra dependency của hệ thống.
 
 ## SCC và phát hiện chu trình
 
@@ -371,7 +371,7 @@ Một SCC có nhiều hơn một đỉnh chắc chắn chứa directed chu trìn
 
 Do đó SCC decomposition không chỉ nói “có chu trình không”, mà còn cho biết **chu trình clusters ở đâu** và cách chúng liên hệ với phần acyclic còn lại.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **ứng dụng: phụ thuộc (dependency / 의존성) các hệ thống** tiếp nhận điểm tựa từ **SCC và phát hiện chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2-SAT liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dependency graph dùng SCC để chỉ ra các module hoặc package tạo thành vòng phụ thuộc, sau đó condensation graph cho thứ tự xử lý phần còn lại. Cấu trúc SCC cũng là nền tảng của phép giải 2-SAT.
 
 ## ứng dụng: phụ thuộc (dependency / 의존성) các hệ thống
 
@@ -391,7 +391,7 @@ SCC là region mà các trạng thái có thể quay lại lẫn nhau. Một SCC
 
 SCC có thể biểu diễn communities với mutual reachability, dù đồ thị analytics hệ thống thực tế thường dùng thêm metrics khác.
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, sau nội dung của **ứng dụng: phụ thuộc (dependency / 의존성) các hệ thống**, **2-SAT liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **DAG transitive reduction và transitive closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong 2-SAT, SCC trên implication graph cho biết một biến và phủ định của nó có xung đột hay không, đồng thời quyết định thứ tự gán. Với quan hệ DAG, các phép closure và reduction trả lời một câu hỏi khác: cạnh nào là trực tiếp và cạnh nào là suy ra.
 
 ## 2-SAT liên kết (connection / 연결)
 
@@ -401,7 +401,7 @@ Sau SCC decomposition, condensation thứ tự (order / 순서) còn giúp deriv
 
 Đây là một example mạnh nơi lô-gic (logic / 논리) bài toán (problem / 문제) được biến thành directed reachability cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **DAG transitive reduction và transitive closure** tiếp nhận điểm tựa từ **2-SAT liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Uniqueness của thứ tự tô-pô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Transitive closure lưu mọi quan hệ có thể đi tới, còn transitive reduction giữ một tập cạnh tối thiểu nhưng vẫn bảo toàn reachability trong DAG. Khi nhìn vào reachability và indegree, ta có thể xác định thứ tự tô-pô có duy nhất hay không.
 
 ## DAG transitive reduction và transitive closure
 
@@ -423,7 +423,7 @@ cạnh `A -> C` là redundant về reachability.
 
 Trong phụ thuộc (dependency / 의존성) visualization, reduction giúp đồ thị dễ đọc hơn; closure giúp truy vấn reachability nhanh hơn nhưng có thể tốn `O(V^2)` không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Uniqueness của thứ tự tô-pô** tiếp nhận điểm tựa từ **DAG transitive reduction và transitive closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thứ tự tô-pô duy nhất khi tại mỗi bước chỉ có một đỉnh indegree bằng không trong đồ thị còn lại, tương đương với việc các ràng buộc xác định hoàn toàn thứ tự. Các ngộ nhận phổ biến thường xuất phát từ việc nhầm tính duy nhất với việc nhãn đã được sắp xếp.
 
 ## Uniqueness của thứ tự tô-pô
 
@@ -433,7 +433,7 @@ Góc nhìn tương đương: trong một thứ tự tô-pô unique, mỗi cặp 
 
 Đây là useful tính chất khi bài toán (problem / 문제) hỏi “schedule có duy nhất không?”.
 
-> **Chuyển mạch:** Ở chặng này của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Uniqueness của thứ tự tô-pô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các lỗi thường gặp gồm coi mọi graph là DAG, dùng DFS mà quên phát hiện back edge, hoặc dùng label để thay cho constraint. Kiểm thử cần tạo cả graph hợp lệ, graph có chu trình và trường hợp nhiều thứ tự hợp lệ.
 
 ## Những hiểu lầm phổ biến
 
@@ -449,7 +449,7 @@ Góc nhìn tương đương: trong một thứ tự tô-pô unique, mỗi cặp 
 
 **“Collapse SCC có thể vẫn còn chu trình.”** Không. Nếu còn chu trình, các thành phần trên chu trình phải là một SCC lớn hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **kiểm thử** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiểm thử nên đối chiếu mọi cạnh với vị trí trong output, kiểm tra đủ đỉnh và xác nhận chu trình được báo đúng. Mô hình tư duy mở rộng sau đây nối topological order, SCC và các ứng dụng vào cùng một chuỗi quyết định.
 
 ## kiểm thử
 
@@ -472,7 +472,7 @@ Cho SCC, kiểm:
 
 Property-based tests đặc biệt hữu ích với Tarjan vì bug `onStack` và low-link thường chỉ xuất hiện ở đồ thị shape cụ thể.
 
-> **Chuyển mạch:** Trong **DAG, sắp xếp tô-pô và Strongly Connected các thành phần**, **Mô hình tư duy mở rộng** gom các mảnh từ **kiểm thử** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy mở rộng là: xác định hướng cạnh, kiểm tra chu trình, chọn Kahn hoặc DFS, rồi co SCC nếu graph có các vòng liên thông mạnh. Các liên kết cuối bài đưa những nguyên tắc này về tài liệu nền và bài toán ứng dụng.
 
 ## Mô hình tư duy mở rộng
 
