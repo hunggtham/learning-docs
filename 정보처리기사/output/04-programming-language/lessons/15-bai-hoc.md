@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **074. 데이터 입출력 (Data Input/Output)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **074. 데이터 입출력 (Data Input/Output)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **074. 데이터 입출력 (Data Input/Output)**, **핵심 키워드 (Từ khóa)** chuyển mục tiêu học thành các thao tác dữ liệu cần theo dõi; **선행·연결 개념 (Kiến thức liên kết)** xác định nền tảng và giới hạn của chúng.
 
 ## 핵심 키워드 (Từ khóa)
 
 데이터, 입출력
 
-> **Chuyển mạch:** Ở chặng này của **074. 데이터 입출력 (Data Input/Output)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau các từ khóa, **선행·연결 개념 (Kiến thức liên kết)** cho biết bài này mở rộng tiêu chí nào từ input/output nâng cao; **읽는 방법 (Cách đọc)** biến tiêu chí đó thành cách đọc dữ liệu, format và escape.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **입출력 심화 (Input/Output - Advanced)**에서 만든 기준을 이어받아 **074. 데이터 입출력 (Data Input/Output)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **074. 데이터 입출력 (Data Input/Output)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **074. 데이터 입출력 (Data Input/Output)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** đặt bài này sau **입출력 심화 (Input/Output - Advanced)**; **읽는 방법 (Cách đọc)** dùng điểm tựa đó để kiểm tra dữ liệu vào, kiểu format và kết quả hiển thị.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **074. 데이터 입출력 (Data Input/O
 
 ---
 
-> **Chuyển mạch:** Trong **074. 데이터 입출력 (Data Input/Output)**, **074. 데이터 입출력 (Data Input/Output)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi xác định cách đọc, phần chính áp dụng khung **dữ liệu → định dạng → đầu ra** cho C, Java và Python, rồi bàn giao sang các hàm I/O và format chuyên sâu.
 
 ## 074. 데이터 입출력 (Data Input/Output)
 

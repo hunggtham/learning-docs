@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **245. 연산자 우선순위 (Operator Precedence)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **입출력 (Input/Output)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **245. 연산자 우선순위 (Operator Precedence)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **245. 연산자 우선순위 (Operator Precedence)**, **핵심 키워드 (Từ khóa)** chuyển mục tiêu học thành các quy tắc cần theo dõi; **선행·연결 개념 (Kiến thức liên kết)** xác định nền tảng và giới hạn của chúng.
 
 ## 핵심 키워드 (Từ khóa)
 
 연산자, 우선순위
 
-> **Chuyển mạch:** Ở chặng này của **245. 연산자 우선순위 (Operator Precedence)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau các từ khóa, **선행·연결 개념 (Kiến thức liên kết)** cho biết bài này kế thừa tiêu chí nào từ toán tử điều kiện; **읽는 방법 (Cách đọc)** biến tiêu chí đó thành cách đọc thứ tự đánh giá biểu thức.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **244. 조건(삼항) 연산자 (Ternary Operator)**에서 만든 기준을 이어받아 **245. 연산자 우선순위 (Operator Precedence)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **245. 연산자 우선순위 (Operator Precedence)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **245. 연산자 우선순위 (Operator Precedence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** đặt bài này sau **244. 조건(삼항) 연산자 (Ternary Operator)**; **읽는 방법 (Cách đọc)** dùng điểm tựa đó để kiểm tra ngoặc, loại toán tử và thứ tự thực thi.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **245. 연산자 우선순위 (Operator 
 
 ---
 
-> **Chuyển mạch:** Trong **245. 연산자 우선순위 (Operator Precedence)**, **245. 연산자 우선순위 (Operator Precedence)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi xác định cách đọc, phần chính áp dụng khung **biểu thức → thứ tự → kết quả** cho các nhóm toán tử, rồi bàn giao tiêu chí đó sang bài về input/output.
 
 ## 245. 연산자 우선순위 (Operator Precedence)
 
