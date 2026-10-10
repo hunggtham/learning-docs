@@ -32,7 +32,7 @@ In-context learning     → temporary behavior conditioned on prompt/context
 
 Ngữ cảnh (context / 맥락) hết thì adaptation đó không được lưu vĩnh viễn vào weights.
 
-> **Chuyển mạch:** Trong **In-Context học tập (learning / 학습)**, **Zero-shot, one-shot, few-shot** tiếp nhận điểm tựa từ **“học tập (learning / 학습)” nhưng không cập nhật (update / 업데이트) parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demonstrations làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ICL thay đổi theo ngữ cảnh nhưng không ghi thay đổi vào weights; ba chế độ zero-shot, one-shot và few-shot chỉ khác nhau ở lượng ví dụ được cung cấp.
 
 ## Zero-shot, one-shot, few-shot
 
@@ -44,7 +44,7 @@ Ngữ cảnh (context / 맥락) hết thì adaptation đó không được lưu 
 
 Few-shot hữu ích khi tác vụ (task / 작업) khó mô tả bằng quy tắc (rule / 규칙) nhưng dễ minh họa bằng examples.
 
-> **Chuyển mạch:** Ở chặng này của **In-Context học tập (learning / 학습)**, **Demonstrations làm gì?** tiếp nhận điểm tựa từ **Zero-shot, one-shot, few-shot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự (order / 순서) sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi phân biệt lượng ví dụ, cần hỏi demonstrations thực sự truyền những tín hiệu nào cho mô hình.
 
 ## Demonstrations làm gì?
 
@@ -59,7 +59,7 @@ Demonstrations có thể truyền nhiều loại thông tin (information / 정�
 
 Vì vậy example chất lượng (quality / 품질) quan trọng hơn chỉ số lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **In-Context học tập (learning / 학습)**, **Thứ tự (order / 순서) sensitivity** tiếp nhận điểm tựa từ **Demonstrations làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Label ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các tín hiệu đó còn phụ thuộc vào cách sắp xếp examples; vì thế thứ tự là một biến cần kiểm thử, không phải chi tiết trình bày.
 
 ## Thứ tự (order / 순서) sensitivity
 
@@ -67,7 +67,7 @@ ICL có thể sensitive với thứ tự examples. Recent examples đôi khi ả
 
 Đây là lý do prompt eval cần kiểm thử (test / 테스트) multiple example sets, không chỉ một handcrafted prompt.
 
-> **Chuyển mạch:** Trong **In-Context học tập (learning / 학습)**, **Thứ tự (order / 순서) sensitivity** cho ta quy tắc; **Label ngữ nghĩa (semantics / 의미론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ngữ cảnh (context / 맥락) as temporary program** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thứ tự có thể làm thay đổi cách mô hình diễn giải nhãn; phần tiếp theo làm rõ vì sao ý nghĩa của label cũng phải được học từ examples.
 
 ## Label ngữ nghĩa (semantics / 의미론)
 
@@ -77,7 +77,7 @@ Nếu example labels sai, mô hình (model / 모델) có thể follow demonstrat
 
 ICL vì vậy vừa là năng lực (capability / 역량) vừa là attack surface: malicious ngữ cảnh (context / 맥락) có thể steer hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **In-Context học tập (learning / 학습)**, **Label ngữ nghĩa (semantics / 의미론)** cho ta quy tắc; **Ngữ cảnh (context / 맥락) as temporary program** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Why ICL emerges** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi examples vừa gắn nhãn với ý nghĩa vừa mang instructions, toàn bộ prompt có thể được xem như một chương trình tạm thời.
 
 ## Ngữ cảnh (context / 맥락) as temporary program
 
@@ -95,7 +95,7 @@ Mô hình (model / 모델) weights là trình thông dịch (interpreter / 인�
 
 Analogy này không hoàn hảo vì LLM thực thi (execution / 실행) probabilistic và không có formal ngữ nghĩa (semantics / 의미론) như programming ngôn ngữ (language / 언어), nhưng hữu ích cho hệ thống (system / 시스템) thiết kế (design / 설계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **In-Context học tập (learning / 학습)**, **Why ICL emerges** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) as temporary program** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ICL vs Fine-Tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình chương trình tạm thời giúp mô tả hiện tượng; phần này chuyển sang các lý do khả dĩ khiến năng lực ICL xuất hiện trong một mô hình đã pretrained.
 
 ## Why ICL emerges
 
@@ -103,7 +103,7 @@ Trong pretraining, mô hình (model / 모델) quan sát rất nhiều văn bản
 
 Quy mô (scale / 규모) và tác vụ (task / 작업) diversity làm năng lực (capability / 역량) này mạnh hơn, nhưng chính xác (exact / 정확한) cơ chế (mechanism / 메커니즘) vẫn là active research topic. Không cần giả định mô hình (model / 모델) chạy hidden độ dốc (gradient / 기울기) descent để sử dụng ICL hiệu quả trong kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Trong **In-Context học tập (learning / 학습)**, **ICL vs Fine-Tuning** tiếp nhận điểm tựa từ **Why ICL emerges** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ICL vs RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giải thích cơ chế vẫn là chủ đề nghiên cứu, nhưng khác biệt vận hành giữa ICL và fine-tuning đã đủ rõ để chọn phương án triển khai.
 
 ## ICL vs Fine-Tuning
 
@@ -118,7 +118,7 @@ ICL          → flexible, no weight update, consumes context tokens
 Fine-tuning  → persistent behavior, training cost, less prompt overhead
 ```
 
-> **Chuyển mạch:** Ở chặng này của **In-Context học tập (learning / 학습)**, **ICL vs RAG** tiếp nhận điểm tựa từ **ICL vs Fine-Tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) length is not free** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fine-tuning lưu hành vi lâu dài, còn RAG đưa bằng chứng bên ngoài vào từng request; cả hai đều có thể kết hợp với ICL nhưng tiêu tốn ngân sách ngữ cảnh.
 
 ## ICL vs RAG
 
@@ -133,7 +133,7 @@ few-shot examples
 → answer
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **In-Context học tập (learning / 학습)**, **Ngữ cảnh (context / 맥락) length is not free** tiếp nhận điểm tựa từ **ICL vs RAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) few-shot selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vì cửa sổ ngữ cảnh có giới hạn và chi phí, hệ thống cần chọn examples động thay vì đưa toàn bộ kho dữ liệu vào prompt.
 
 ## Ngữ cảnh (context / 맥락) length is not free
 
@@ -141,7 +141,7 @@ Few-shot examples consume ngữ cảnh (context / 맥락) cửa sổ (window / �
 
 Selection therefore becomes retrieval bài toán (problem / 문제): chọn demonstrations relevant nhất thay vì nhét toàn bộ examples.
 
-> **Chuyển mạch:** Trong **In-Context học tập (learning / 학습)**, **Động (dynamic / 동적) few-shot selection** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) length is not free** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt contamination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Retrieval giúp chọn examples phù hợp, nhưng cũng đưa nội dung mới và có thể không đáng tin vào prompt; đó là điểm bắt đầu của rủi ro contamination.
 
 ## Động (dynamic / 동적) few-shot selection
 
@@ -149,7 +149,7 @@ Có thể embed người dùng (user / 사용자) truy vấn (query / 쿼리), r
 
 Nhưng similarity không luôn đồng nghĩa examples tốt nhất. Sometimes diversity hoặc coverage quan trọng hơn nearest neighbor.
 
-> **Chuyển mạch:** Ở chặng này của **In-Context học tập (learning / 학습)**, **Prompt contamination** tiếp nhận điểm tựa từ **Động (dynamic / 동적) few-shot selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ICL và lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi prompt chứa nội dung không đáng tin, examples lập luận có thể định hướng cả cách mô hình giải bài; vì vậy cần xem ICL hỗ trợ reasoning đến đâu.
 
 ## Prompt contamination
 
@@ -157,7 +157,7 @@ Retrieved/user-provided văn bản (text / 텍스트) có thể chứa instructi
 
 ICL năng lực (capability / 역량) chính là lý do **prompt injection** nguy hiểm: mô hình (model / 모델) naturally learns hành vi (behavior / 동작) from ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **In-Context học tập (learning / 학습)**, **ICL và lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Prompt contamination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ICL có thể gợi decomposition và cách trình bày, nhưng văn bản giống reasoning không bảo đảm đáp án đúng; cần một mô hình tư duy tổng hợp các giới hạn này.
 
 ## ICL và lập luận (reasoning / 추론)
 
@@ -165,7 +165,7 @@ Few-shot lập luận (reasoning / 추론) examples có thể improve hiệu nă
 
 Evaluation cần check answer tính đúng đắn (correctness / 정확성), not presence of reasoning-like prose.
 
-> **Chuyển mạch:** Trong **In-Context học tập (learning / 학습)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **ICL và lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy dưới đây gom các quan sát thành một nguyên tắc ngắn gọn trước khi kiểm tra những ngộ nhận thường gặp.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -173,7 +173,7 @@ Evaluation cần check answer tính đúng đắn (correctness / 정확성), not
 
 Mô hình (model / 모델) đọc prompt vừa như dữ liệu (data / 데이터) vừa như tác vụ (task / 작업) specification, vì vậy ngữ cảnh (context / 맥락) thiết kế (design / 설계) là một phần của programming AI hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **In-Context học tập (learning / 학습)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận trên đều bắt nguồn từ việc nhầm adaptation theo session với học lâu dài; phần liên kết kiến thức đặt ranh giới này cạnh các chủ đề liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -189,7 +189,6 @@ Không. ngữ cảnh (context / 맥락) chi phí (cost / 비용), redundancy và
 
 Không. Persistent hành vi (behavior / 동작) và session-specific conditioning giải quyết different problems.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **In-Context học tập (learning / 학습)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -20,7 +20,7 @@ allocate more inference tokens to transform the problem
 
 Tuy nhiên lập luận (reasoning / 추론) văn bản (text / 텍스트) dài không tự động đúng. mô hình (model / 모델) có thể tạo một explanation coherent cho answer sai.
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Decomposition** tiếp nhận điểm tựa từ **Direct answer vs intermediate computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chain-of-thought-like prompting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nhiều bước trung gian có thể cho mô hình thêm không gian thực hiện phép biến đổi, nhưng độ dài lời giải không tự bảo đảm tính đúng.
 
 ## Decomposition
 
@@ -37,7 +37,7 @@ understand goal
 
 Decomposition giảm effective tìm kiếm (search / 검색) độ phức tạp (complexity / 복잡도) nếu subproblems đúng. Nếu decomposition sai từ đầu, downstream steps có thể consistent nhưng wrong.
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Chain-of-thought-like prompting** tiếp nhận điểm tựa từ **Decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Decomposition xác định các bài toán con; chain-of-thought-like prompting là cách dẫn mô hình đi qua những bước đó bằng examples hoặc chỉ dẫn.
 
 ## Chain-of-thought-like prompting
 
@@ -45,7 +45,7 @@ Demonstrations có intermediate steps đôi khi cải thiện hiệu năng (perf
 
 Nhưng visible lập luận (reasoning / 추론) không nên được xem là guaranteed faithful transcript của nội bộ (internal / 내부) computation. đầu ra (output / 출력) explanation itself là generated văn bản (text / 텍스트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Self-consistency** tiếp nhận điểm tựa từ **Chain-of-thought-like prompting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) over lập luận (reasoning / 추론) paths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rationale nhìn thấy được có thể giúp định hướng quá trình sinh, nhưng không nên xem nó là bản ghi trung thực của computation bên trong.
 
 ## Self-consistency
 
@@ -53,7 +53,7 @@ Một chiến lược (strategy / 전략) là mẫu (sample / 표본) multiple l
 
 Chi phí (cost / 비용) tăng gần theo số samples. Nếu mô hình (model / 모델) có systematic misconception, self-consistency chỉ tạo nhiều phiên bản cùng một lỗi.
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Self-consistency** xác định đầu vào; **Tìm kiếm (search / 검색) over lập luận (reasoning / 추론) paths** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu nhiều đường suy luận có thể cho các đáp án khác nhau, self-consistency dùng việc lấy mẫu để giảm một phần sai số; khi cần kiểm soát rõ hơn, hệ thống có thể tìm kiếm trên các path.
 
 ## Tìm kiếm (search / 검색) over lập luận (reasoning / 추론) paths
 
@@ -68,7 +68,7 @@ search = choose paths to expand
 
 LLM trở thành proposal mô hình (model / 모델) bên trong tìm kiếm (search / 검색) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Tìm kiếm (search / 검색) over lập luận (reasoning / 추론) paths** xác định đầu vào; **Xác minh (verification / 확인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tool-augmented lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tìm kiếm tạo nhiều ứng viên, nhưng cần một tiêu chí độc lập để chấm hoặc loại chúng; đó là vai trò của verification.
 
 ## Xác minh (verification / 확인)
 
@@ -91,7 +91,7 @@ LLM proposes
 
 Đây thường đáng tin hơn “mô hình (model / 모델) tự tin hơn”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Tool-augmented lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) và latent computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Verification làm cho đề xuất của LLM có thể bị kiểm tra bằng quy tắc bên ngoài, và cũng mở đường cho việc gọi công cụ phù hợp.
 
 ## Tool-augmented lập luận (reasoning / 추론)
 
@@ -99,7 +99,7 @@ Một LLM không cần internalize mọi thao tác (operation / 연산). Với a
 
 Intelligence system-level đến từ việc chọn đúng công cụ (tool / 도구) và integrate kết quả (result / 결과) đúng cách.
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Lập luận (reasoning / 추론) và latent computation** tiếp nhận điểm tựa từ **Tool-augmented lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Test-time compute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Công cụ bên ngoài xử lý những phép tính mà mô hình không cần tự mô phỏng; đổi lại, hệ thống phải đưa kết quả tool vào pipeline một cách có kiểm soát.
 
 ## Lập luận (reasoning / 추론) và latent computation
 
@@ -107,7 +107,7 @@ Một phần computation xảy ra trong hidden states trước mỗi đơn vị 
 
 Kỹ thuật (engineering / 엔지니어링) evaluation nên đo tác vụ (task / 작업) success, xác minh (verification / 확인) và robustness, không đo “trông có vẻ suy nghĩ”.
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Test-time compute** tiếp nhận điểm tựa từ **Lập luận (reasoning / 추론) và latent computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning vs lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không phải mọi computation đều lộ ra trong rationale; vì vậy đánh giá nên tập trung vào tác vụ và kiểm chứng. Có thể tăng ngân sách suy luận ở thời điểm test để cải thiện độ tin cậy.
 
 ## Test-time compute
 
@@ -122,7 +122,7 @@ but → higher latency/cost
 
 Ứng dụng (application / 애플리케이션) cần chọn ngân sách (budget / 예산) theo tác vụ (task / 작업) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Planning vs lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Test-time compute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Arithmetic thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Test-time compute đổi thêm chi phí và độ trễ lấy khả năng thử lại hoặc xác minh; planning lại đặt câu hỏi rộng hơn về chuỗi hành động trong môi trường.
 
 ## Planning vs lập luận (reasoning / 추론)
 
@@ -132,7 +132,7 @@ LLM tác nhân (agent / 에이전트) có thể dùng lập luận (reasoning / 
 
 Xem: [Planning](../02_search_reasoning_and_planning/05_planning.md).
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Arithmetic thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Planning vs lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lô-gic (logic / 논리) thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Planning chọn hành động theo trạng thái và phản hồi, còn reasoning biến thông tin thành kết luận; sự khác nhau này giúp nhận ra các failure mode cụ thể như arithmetic.
 
 ## Arithmetic thất bại (failure / 실패)
 
@@ -140,7 +140,7 @@ LLM ngôn ngữ (language / 언어) modeling không đảm bảo chính xác (ex
 
 Calculator công cụ (tool / 도구) giải bài toán (problem / 문제) theo deterministic thuật toán (algorithm / 알고리즘). Đây là example rõ rằng stronger hệ thống (system / 시스템) không nhất thiết cần mô hình (model / 모델) tự làm mọi computation.
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Lô-gic (logic / 논리) thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Arithmetic thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Arithmetic là ví dụ rõ rằng mô hình ngôn ngữ không phải calculator; cùng một nguyên tắc giới hạn cũng xuất hiện trong các bài toán logic hình thức.
 
 ## Lô-gic (logic / 논리) thất bại (failure / 실패)
 
@@ -148,7 +148,7 @@ LLM có thể produce valid-sounding syllogism nhưng thất bại (fail / 실�
 
 Hybrid approach: mô hình (model / 모델) parse natural ngôn ngữ (language / 언어) → formal biểu diễn (representation / 표현) → solver verifies.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Lô-gic (logic / 논리) thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Faithfulness bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Logic failure cho thấy câu trả lời nghe hợp lý chưa đủ; với bài toán thiếu đáp án chắc chắn, hệ thống còn phải biểu diễn uncertainty.
 
 ## Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)
 
@@ -156,7 +156,7 @@ Không phải bài toán (problem / 문제) nào có one chính xác (exact / �
 
 Nếu quyết định (decision / 결정) high stakes, tường minh (explicit / 명시적) probabilistic mô hình (model / 모델) hoặc lĩnh vực (domain / 도메인) chính sách (policy / 정책) cần bổ sung.
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Faithfulness bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hidden scratchpad vs user-facing explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Uncertainty cần được biểu diễn bằng xác suất hoặc chính sách phù hợp; bên cạnh tính đúng của đáp án, ta còn phải hỏi rationale có faithful với computation hay không.
 
 ## Faithfulness bài toán (problem / 문제)
 
@@ -164,7 +164,7 @@ Generated rationale có thể là post-hoc explanation. mô hình (model / 모�
 
 Do đó không nên dùng chain-of-thought văn bản (text / 텍스트) làm sole kiểm tra (audit / 감사) trail cho regulated decisions.
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Hidden scratchpad vs user-facing explanation** tiếp nhận điểm tựa từ **Faithfulness bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) benchmarks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một rationale có thể là giải thích hậu nghiệm, nên quyết định quan trọng cần premises, nguồn và phép tính có thể kiểm chứng thay vì chỉ giữ raw scratchpad.
 
 ## Hidden scratchpad vs user-facing explanation
 
@@ -172,7 +172,7 @@ Một hệ thống (system / 시스템) có thể separate nội bộ (internal 
 
 Good explanation should cite premises, sources, calculations và bất định (uncertainty / 불확실성) relevant.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Lập luận (reasoning / 추론) benchmarks** tiếp nhận điểm tựa từ **Hidden scratchpad vs user-facing explanation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Explanation hướng tới người dùng và scratchpad nội bộ phục vụ hai mục tiêu khác nhau; benchmarks cung cấp một cách đo từng lát năng lực, nhưng không thay thế phân tích failure.
 
 ## Lập luận (reasoning / 추론) benchmarks
 
@@ -180,13 +180,13 @@ Benchmarks như math/mã (code / 코드)/logical tasks đo slices của lập lu
 
 Contamination, prompt sensitivity và verifier differences cũng ảnh hưởng score.
 
-> **Chuyển mạch:** Trong **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lập luận (reasoning / 추론) benchmarks** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Benchmarks cho biết một tập tác vụ cụ thể được giải ra sao, không chứng minh năng lực reasoning phổ quát; mô hình tư duy dưới đây giữ lại ranh giới đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > LLM lập luận (reasoning / 추론) đáng tin nhất khi được xem như **probabilistic proposal + structured decomposition + bên ngoài (external / 외부) xác minh (verification / 확인)/tìm kiếm (search / 검색)**, không phải một oracle suy luận hoàn hảo.
 
-> **Chuyển mạch:** Ở chặng này của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy này xem LLM như bộ đề xuất xác suất kết hợp decomposition và kiểm chứng bên ngoài; các ngộ nhận sau đây thường xuất hiện khi bỏ qua một trong các thành phần đó.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -202,7 +202,7 @@ Tools thường làm chính xác (exact / 정확한) tasks đáng tin và rẻ h
 
 Math, mã (code / 코드), nhân quả (causal / 인과적), planning và commonsense lập luận (reasoning / 추론) có thất bại (failure / 실패) modes khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lập luận (reasoning / 추론) trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận được giải quyết bằng cách tách độ dài rationale, nhu cầu dùng tool và từng loại reasoning; phần liên kết kiến thức đặt các ranh giới này cạnh những chủ đề nền tảng.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
