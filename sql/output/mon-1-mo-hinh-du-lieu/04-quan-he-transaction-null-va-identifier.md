@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ **Từ khóa cần nhớ (Keyword)**, **Mạch tư duy (Logic học)** chuyển các thuật ngữ quan hệ, transaction, NULL và identifier thành những câu hỏi cần kiểm tra; **Mạch nối của bài học** sẽ liên kết chúng thành một chuỗi nguyên nhân–hệ quả.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제2절 관계와 조인의 이해** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi đặt câu hỏi logic cho các thuật ngữ, **Mạch nối của bài học** chỉ ra thứ tự đọc; từ đó chuyển sang **제2절 관계와 조인의 이해** để xem quan hệ và JOIN hiện thực hóa các tiêu chí ấy thế nào.
 
 ## Mạch nối của bài học
 
@@ -38,7 +38,7 @@ Vậy ta đã có tiêu chí để đọc **Câu tổng kết tiếng Việt**. 
 
 Ta bắt đầu **제2절 관계와 조인의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **제2절 관계와 조인의 이해** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần 2: Quan hệ và JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mạch nối của bài học** đã đặt thứ tự khái niệm; **제2절 관계와 조인의 이해** chuyển sang phạm vi quan hệ và JOIN, rồi mở thành **Phần 2: Quan hệ và JOIN** để đọc ví dụ theo truy vấn.
 
 ## 제2절 관계와 조인의 이해
 
@@ -48,7 +48,7 @@ Vậy ta đã có tiêu chí để đọc **제2절 관계와 조인의 이해**
 
 Ta bắt đầu **Phần 2: Quan hệ và JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **Phần 2: Quan hệ và JOIN** tiếp nhận điểm tựa từ **제2절 관계와 조인의 이해** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 반정규화** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ khung **제2절 관계와 조인의 이해**, **Phần 2: Quan hệ và JOIN** đặt câu hỏi về bảng, khóa nối và kết quả; **1. 반정규화** sẽ cho thấy khi nào ta chủ động đổi mô hình để giảm chi phí JOIN.
 
 ## Phần 2: Quan hệ và JOIN
 
@@ -62,7 +62,7 @@ Vậy ta đã có tiêu chí để đọc **Phần 2: Quan hệ và JOIN**. Bây
 
 Ta bắt đầu **1. 반정규화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **1. 반정규화** tiếp nhận điểm tựa từ **Phần 2: Quan hệ và JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. Phi chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phần 2: Quan hệ và JOIN** cho thấy chi phí khi phải kết hợp bảng; **1. 반정규화** gọi tên quyết định thiết kế cho phép lặp hoặc gộp dữ liệu, rồi **1. Phi chuẩn hóa** giải thích quyết định ấy bằng tiếng Việt.
 
 ## 1. 반정규화
 
@@ -72,7 +72,7 @@ Vậy ta đã có tiêu chí để đọc **1. 반정규화**. Bây giờ chuy�
 
 Ta bắt đầu **1. Phi chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **1. Phi chuẩn hóa** tiếp nhận điểm tựa từ **1. 반정규화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Ví dụ 반정규화 trong hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt `반정규화` với mô hình chưa chuẩn hóa, **1. Phi chuẩn hóa** chuyển sang điều kiện, lợi ích và mặt trái; **2. Ví dụ 반정규화 trong hình** sẽ đặt nguyên tắc đó vào sơ đồ bảng.
 
 ## 1. Phi chuẩn hóa
 
@@ -172,7 +172,7 @@ Vậy ta đã có tiêu chí để đọc **1.3 Khi nào thực hiện 반정규
 
 Ta bắt đầu **2. Ví dụ 반정규화 trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **1. Phi chuẩn hóa** cho ta quy tắc; **2. Ví dụ 반정규화 trong hình** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **2. Ví dụ phi chuẩn hóa trong hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Phi chuẩn hóa** nêu đánh đổi giữa tốc độ đọc và chi phí cập nhật; **2. Ví dụ 반정규화 trong hình** minh họa đánh đổi ấy, sau đó **2. Ví dụ phi chuẩn hóa trong hình** diễn giải hình bằng dữ liệu cụ thể.
 
 ## 2. Ví dụ 반정규화 trong hình
 
@@ -182,7 +182,7 @@ Vậy ta đã có tiêu chí để đọc **2. Ví dụ 반정규화 trong hình
 
 Ta bắt đầu **2. Ví dụ phi chuẩn hóa trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **2. Ví dụ 반정규화 trong hình** cho ta quy tắc; **2. Ví dụ phi chuẩn hóa trong hình** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. 관계** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhìn thấy ví dụ phi chuẩn hóa, **3. 관계** quay về khái niệm quan hệ để xác định các bảng được liên kết bằng thuộc tính nào và vì sao JOIN vẫn cần thiết.
 
 ## 2. Ví dụ phi chuẩn hóa trong hình
 
@@ -259,7 +259,7 @@ Vậy ta đã có tiêu chí để đọc **부서 테이블 — Bảng phòng b
 
 Ta bắt đầu **3. 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **2. Ví dụ phi chuẩn hóa trong hình** cho ta quy tắc; **3. 관계** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Ví dụ phi chuẩn hóa trong hình** cho thấy JOIN KEY và dữ liệu lặp thay đổi truy vấn ra sao; **3. 관계** khái quát lại quan hệ giữa thực thể, thuộc tính và hành động, rồi **3. Quan hệ** diễn giải cùng mạch bằng tiếng Việt.
 
 ## 3. 관계
 
@@ -269,7 +269,7 @@ Vậy ta đã có tiêu chí để đọc **3. 관계**. Bây giờ chuyển san
 
 Ta bắt đầu **3. Quan hệ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **3. Quan hệ** tiếp nhận điểm tựa từ **3. 관계** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 식별관계와 비식별관계** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi xác định quan hệ là liên kết có ngữ nghĩa giữa các thực thể, **4. 식별관계와 비식별관계** hỏi khóa cha có trở thành một phần định danh của khóa con hay không.
 
 ## 3. Quan hệ
 
@@ -370,7 +370,7 @@ Vậy ta đã có tiêu chí để đọc **행위 관계**. Bây giờ chuyển
 
 Ta bắt đầu **4. 식별관계와 비식별관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **4. 식별관계와 비식별관계** tiếp nhận điểm tựa từ **3. Quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Quan hệ định danh và không định danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. 식별관계와 비식별관계** nêu tên hai kiểu quan hệ; **4. Quan hệ định danh và không định danh** chuyển thành tiêu chí thiết kế: khóa con phụ thuộc định danh vào cha hay chỉ tham chiếu đến cha.
 
 ## 4. 식별관계와 비식별관계
 
@@ -380,7 +380,7 @@ Vậy ta đã có tiêu chí để đọc **4. 식별관계와 비식별관계**
 
 Ta bắt đầu **4. Quan hệ định danh và không định danh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **4. Quan hệ định danh và không định danh** tiếp nhận điểm tựa từ **4. 식별관계와 비식별관계** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 조인** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt khóa định danh và khóa tham chiếu, **5. 조인** dùng quan hệ đó làm điều kiện kết hợp các bảng để tạo kết quả truy vấn.
 
 ## 4. Quan hệ định danh và không định danh
 
@@ -444,7 +444,7 @@ Vậy ta đã có tiêu chí để đọc **4.2 비식별관계**. Bây giờ ch
 
 Ta bắt đầu **5. 조인** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **5. 조인** tiếp nhận điểm tựa từ **4. Quan hệ định danh và không định danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. 조인** đặt thuật ngữ JOIN trong mạch quan hệ; **5. JOIN** trình bày cú pháp và hệ quả của việc ghép hàng bằng khóa chung.
 
 ## 5. 조인
 
@@ -454,7 +454,7 @@ Vậy ta đã có tiêu chí để đọc **5. 조인**. Bây giờ chuyển san
 
 Ta bắt đầu **5. JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **5. JOIN** tiếp nhận điểm tựa từ **5. 조인** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Self JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi hiểu JOIN giữa các bảng khác nhau, **6. Self JOIN** áp dụng cùng nguyên tắc lên một bảng tự liên kết để đọc quan hệ phân cấp hoặc so sánh giữa các dòng.
 
 ## 5. JOIN
 
@@ -554,7 +554,7 @@ Vậy ta đã có tiêu chí để đọc **5.2 JOIN trước và sau chuẩn h�
 
 Ta bắt đầu **6. Self JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **6. Self JOIN** tiếp nhận điểm tựa từ **5. JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tự JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. JOIN** đã xác định điều kiện ghép giữa các bảng; **6. Self JOIN** giữ nguyên cơ chế nhưng dùng hai bí danh cho cùng một bảng, rồi **6. Tự JOIN** giải thích tình huống ấy bằng tiếng Việt.
 
 ## 6. Self JOIN
 
@@ -564,7 +564,7 @@ Vậy ta đã có tiêu chí để đọc **6. Self JOIN**. Bây giờ chuyển 
 
 Ta bắt đầu **6. Tự JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **6. Tự JOIN** tiếp nhận điểm tựa từ **6. Self JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 상호 배타적 관계** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi đọc self join như quan hệ giữa các dòng trong cùng bảng, **7. 상호 배타적 관계** chuyển sang điều kiện loại trừ: một thực thể phải thuộc một nhánh này hoặc nhánh kia.
 
 ## 6. Tự JOIN
 
@@ -675,7 +675,7 @@ Vậy ta đã có tiêu chí để đọc **6.3 SQL Self JOIN**. Bây giờ chuy
 
 Ta bắt đầu **7. 상호 배타적 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **7. 상호 배타적 관계** tiếp nhận điểm tựa từ **6. Tự JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Quan hệ loại trừ lẫn nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. 상호 배타적 관계** nêu quan hệ mutually exclusive; **7. Quan hệ loại trừ lẫn nhau** chuyển nó thành dấu hiệu mô hình và điều kiện kiểm tra để tránh cho phép hai vai trò cùng tồn tại.
 
 ## 7. 상호 배타적 관계
 
@@ -685,7 +685,7 @@ Vậy ta đã có tiêu chí để đọc **7. 상호 배타적 관계**. Bây g
 
 Ta bắt đầu **7. Quan hệ loại trừ lẫn nhau** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **7. Quan hệ loại trừ lẫn nhau** tiếp nhận điểm tựa từ **7. 상호 배타적 관계** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KẾT LUẬN GHI NHỚ CUỐI BÀI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nắm điều kiện loại trừ và cấu trúc biểu diễn, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom lại các ranh giới giữa chuẩn hóa, quan hệ, JOIN và self join.
 
 ## 7. Quan hệ loại trừ lẫn nhau
 
@@ -790,7 +790,7 @@ Vậy ta đã có tiêu chí để đọc **7.2 Cấu trúc trong hình**. Bây 
 
 Ta bắt đầu **KẾT LUẬN GHI NHỚ CUỐI BÀI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom các mảnh từ **7. Quan hệ loại trừ lẫn nhau** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제3절 모델이 표현하는 트랜잭션의 이해** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **KẾT LUẬN GHI NHỚ CUỐI BÀI** chốt phần quan hệ và identifier; **제3절 모델이 표현하는 트랜잭션의 이해** chuyển cùng khung đối tượng–điều kiện–kết quả sang tính toàn vẹn của transaction.
 
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
 
@@ -903,7 +903,7 @@ Vậy ta đã có tiêu chí để đọc **5. Câu ghi nhớ cuối bài**. Bâ
 
 Ta bắt đầu **제3절 모델이 표현하는 트랜잭션의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **제3절 모델이 표현하는 트랜잭션의 이해** gom các mảnh từ **KẾT LUẬN GHI NHỚ CUỐI BÀI** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau phần tổng kết quan hệ và identifier, **제3절 모델이 표현하는 트랜잭션의 이해** đặt transaction vào mô hình; **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** chuyển khái niệm đó thành các bước và điều kiện kiểm chứng.
 
 ## 제3절 모델이 표현하는 트랜잭션의 이해
 
@@ -913,7 +913,7 @@ Vậy ta đã có tiêu chí để đọc **제3절 모델이 표현하는 트�
 
 Ta bắt đầu **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **제3절 모델이 표현하는 트랜잭션의 이해** nêu điều cần giải thích; **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **제3절 모델이 표현하는 트랜잭션의 이해** nêu phạm vi của transaction; **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** bắt đầu bằng nguyên tắc toàn bộ thao tác cùng thành công hoặc cùng bị hủy.
 
 ## Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu
 
@@ -1007,7 +1007,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 트랜잭션 — Transactio
 
 Ta bắt đầu **2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **Phần 3 — Hiểu Transaction được biểu diễn trong mô hình dữ liệu** nêu điều cần giải thích; **2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. 왜 ERD에서 트랜잭션이 중요한가?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau nguyên tắc all-or-nothing ở **2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다**, **3. 왜 ERD에서 트랜잭션이 중요한가?** giải thích vì sao ranh giới transaction phải được phản ánh trong ERD.
 
 ## 2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다
 
@@ -1115,7 +1115,7 @@ Vậy ta đã có tiêu chí để đọc **ROLLBACK**. Bây giờ chuyển sang
 
 Ta bắt đầu **3. 왜 ERD에서 트랜잭션이 중요한가?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **3. 왜 ERD에서 트랜잭션이 중요한가?** tiếp nhận điểm tựa từ **2. 트랜잭션은 모두 성공하거나 모두 취소되어야 한다** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao Transaction lại liên quan đến ERD?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. 왜 ERD에서 트랜잭션이 중요한가?** nối tính nguyên tử với cấu trúc quan hệ; **Tại sao Transaction lại liên quan đến ERD?** diễn giải cùng câu hỏi để người học nhận ra boundary của nghiệp vụ.
 
 ## 3. 왜 ERD에서 트랜잭션이 중요한가?
 
@@ -1125,7 +1125,7 @@ Vậy ta đã có tiêu chí để đọc **3. 왜 ERD에서 트랜잭션이 중
 
 Ta bắt đầu **Tại sao Transaction lại liên quan đến ERD?** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **Tại sao Transaction lại liên quan đến ERD?** tiếp nhận điểm tựa từ **3. 왜 ERD에서 트랜잭션이 중요한가?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 필수적 관계 vs 선택적 관계** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi thấy transaction gắn với quan hệ nghiệp vụ, **4. 필수적 관계 vs 선택적 관계** hỏi một phía có bắt buộc phải tham gia hay có thể vắng mặt trong quan hệ đó.
 
 ## Tại sao Transaction lại liên quan đến ERD?
 
@@ -1158,7 +1158,7 @@ Vậy ta đã có tiêu chí để đọc **Tại sao Transaction lại liên qu
 
 Ta bắt đầu **4. 필수적 관계 vs 선택적 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **4. 필수적 관계 vs 선택적 관계** tiếp nhận điểm tựa từ **Tại sao Transaction lại liên quan đến ERD?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. IE와 Barker 표기법** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. 필수적 관계 vs 선택적 관계** xác định cardinality và participation; **5. IE와 Barker 표기법** chuyển các ràng buộc ấy thành ký pháp để đọc trực tiếp trên ERD.
 
 ## 4. 필수적 관계 vs 선택적 관계
 
@@ -1236,7 +1236,7 @@ Vậy ta đã có tiêu chí để đọc **선택적 관계 — Optional Relati
 
 Ta bắt đầu **5. IE와 Barker 표기법** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **5. IE와 Barker 표기법** tiếp nhận điểm tựa từ **4. 필수적 관계 vs 선택적 관계** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 트랜잭션의 특징 — ACID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi đọc quan hệ bắt buộc/tùy chọn bằng IE và Barker, **6. 트랜잭션의 특징 — ACID** quay lại hệ quả vận hành: dữ liệu phải giữ tính nguyên tử, nhất quán, cô lập và bền vững.
 
 ## 5. IE와 Barker 표기법
 
@@ -1307,7 +1307,7 @@ Vậy ta đã có tiêu chí để đọc **Barker 표기법**. Bây giờ chuy�
 
 Ta bắt đầu **6. 트랜잭션의 특징 — ACID** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **6. 트랜잭션의 특징 — ACID** tiếp nhận điểm tựa từ **5. IE와 Barker 표기법** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. ② 일관성 Consistency — Tính nhất quán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. 트랜잭션의 특징 — ACID** nêu đủ bốn thuộc tính; **7. ② 일관성 Consistency — Tính nhất quán** đi sâu vào điều kiện trước và sau transaction để xác định dữ liệu vẫn hợp lệ.
 
 ## 6. 트랜잭션의 특징 — ACID
 
@@ -1395,7 +1395,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword nhớ nhanh**. Bây giờ ch
 
 Ta bắt đầu **7. ② 일관성 Consistency — Tính nhất quán** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **7. ② 일관성 Consistency — Tính nhất quán** tiếp nhận điểm tựa từ **6. 트랜잭션의 특징 — ACID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. ③ 격리성 Isolation — Tính cô lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ consistency trong **6. 트랜잭션의 특징 — ACID**, **8. ③ 격리성 Isolation — Tính cô lập** chuyển sang câu hỏi các transaction đồng thời được phép nhìn thấy thay đổi của nhau đến mức nào.
 
 ## 7. ② 일관성 Consistency — Tính nhất quán
 
@@ -1483,7 +1483,7 @@ Vậy ta đã có tiêu chí để đọc **Nhớ:**. Bây giờ chuyển sang *
 
 Ta bắt đầu **8. ③ 격리성 Isolation — Tính cô lập** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **8. ③ 격리성 Isolation — Tính cô lập** tiếp nhận điểm tựa từ **7. ② 일관성 Consistency — Tính nhất quán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ④ 영속성 / 지속성 Durability — Tính bền vững** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. ③ 격리성 Isolation — Tính cô lập** kiểm soát tương tác khi đang chạy; **9. ④ 영속성 / 지속성 Durability — Tính bền vững** hỏi điều gì còn tồn tại sau commit và sự cố hệ thống.
 
 ## 8. ③ 격리성 Isolation — Tính cô lập
 
@@ -1543,7 +1543,7 @@ Vậy ta đã có tiêu chí để đọc **8. ③ 격리성 Isolation — Tính
 
 Ta bắt đầu **9. ④ 영속성 / 지속성 Durability — Tính bền vững** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **9. ④ 영속성 / 지속성 Durability — Tính bền vững** tiếp nhận điểm tựa từ **8. ③ 격리성 Isolation — Tính cô lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **⭐ Tổng hợp ACID cực dễ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách cô lập khỏi bền vững, **⭐ Tổng hợp ACID cực dễ nhớ** gom bốn thuộc tính theo câu hỏi: transaction làm trọn vẹn gì, giữ điều kiện nào, che thay đổi ra sao và ghi kết quả ở đâu.
 
 ## 9. ④ 영속성 / 지속성 Durability — Tính bền vững
 
@@ -1589,7 +1589,7 @@ Vậy ta đã có tiêu chí để đọc **9. ④ 영속성 / 지속성 Durabil
 
 Ta bắt đầu **⭐ Tổng hợp ACID cực dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **⭐ Tổng hợp ACID cực dễ nhớ** gom các mảnh từ **9. ④ 영속성 / 지속성 Durability — Tính bền vững** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제4절 NULL 속성의 이해** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **⭐ Tổng hợp ACID cực dễ nhớ** khép mô hình transaction; **제4절 NULL 속성의 이해** chuyển sang semantics của giá trị thiếu, nơi phép tính và điều kiện không còn giống giá trị thông thường.
 
 ## ⭐ Tổng hợp ACID cực dễ nhớ
 
@@ -1619,7 +1619,7 @@ Vậy ta đã có tiêu chí để đọc **⭐ Tổng hợp ACID cực dễ nh�
 
 Ta bắt đầu **제4절 NULL 속성의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **제4절 NULL 속성의 이해** gom các mảnh từ **⭐ Tổng hợp ACID cực dễ nhớ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phần 4 — NULL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau phần tổng hợp ACID, **제4절 NULL 속성의 이해** giới thiệu NULL như một trạng thái “chưa biết/không có giá trị”; **Phần 4 — NULL** sẽ đưa semantics đó vào truy vấn.
 
 ## 제4절 NULL 속성의 이해
 
@@ -1629,7 +1629,7 @@ Vậy ta đã có tiêu chí để đọc **제4절 NULL 속성의 이해**. Bâ
 
 Ta bắt đầu **Phần 4 — NULL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **Phần 4 — NULL** tiếp nhận điểm tựa từ **제4절 NULL 속성의 이해** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. NULL trong phép toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phần 4 — NULL** đã xác định NULL không phải chuỗi rỗng hay số 0; **11. NULL trong phép toán** kiểm tra cách trạng thái chưa biết lan qua toán tử và biểu thức.
 
 ## Phần 4 — NULL
 
@@ -1698,7 +1698,7 @@ Vậy ta đã có tiêu chí để đọc **10. NULL là gì?**. Bây giờ chuy
 
 Ta bắt đầu **11. NULL trong phép toán** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **11. NULL trong phép toán** tiếp nhận điểm tựa từ **Phần 4 — NULL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. NVL và ISNULL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi thấy NULL lan truyền trong biểu thức, **12. NVL và ISNULL** chuyển sang cách thay thế giá trị để biến kết quả chưa biết thành giá trị có thể trình bày hoặc tính tiếp.
 
 ## 11. NULL trong phép toán
 
@@ -1748,7 +1748,7 @@ Vậy ta đã có tiêu chí để đọc **11. NULL trong phép toán**. Bây g
 
 Ta bắt đầu **12. NVL và ISNULL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **12. NVL và ISNULL** tiếp nhận điểm tựa từ **11. NULL trong phép toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. NULL không được so sánh bằng =** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. NVL và ISNULL** cho phép đặt giá trị thay thế theo dialect; **13. NULL không được so sánh bằng =** quay lại nguyên tắc ba giá trị để giải thích vì sao `=` không thể tìm NULL.
 
 ## 12. NVL và ISNULL
 
@@ -1806,7 +1806,7 @@ Vậy ta đã có tiêu chí để đọc **12. NVL và ISNULL**. Bây giờ chu
 
 Ta bắt đầu **13. NULL không được so sánh bằng =** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **12. NVL và ISNULL** đã nêu tiêu chí phân biệt, còn **13. NULL không được so sánh bằng =** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. NULL trong Aggregate Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi thấy `NULL = NULL` không cho kết quả TRUE, **14. NULL trong Aggregate Function** kiểm tra một ngữ cảnh khác: hàm tổng hợp bỏ qua hay giữ NULL trong phép tính.
 
 ## 13. NULL không được so sánh bằng =
 
@@ -1906,7 +1906,7 @@ Vậy ta đã có tiêu chí để đọc **Tại sao `NULL = NULL` không phả
 
 Ta bắt đầu **14. NULL trong Aggregate Function** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **13. NULL không được so sánh bằng =** đã nêu tiêu chí phân biệt, còn **14. NULL trong Aggregate Function** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. COUNT() khác COUNT(column)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. NULL trong Aggregate Function** cho thấy mỗi hàm có quy tắc xử lý NULL riêng; **15. COUNT() khác COUNT(column)** tập trung vào khác biệt dễ thi nhất giữa đếm dòng và đếm giá trị không NULL.
 
 ## 14. NULL trong Aggregate Function
 
@@ -2017,7 +2017,7 @@ Vậy ta đã có tiêu chí để đọc **AVG**. Bây giờ chuyển sang **15
 
 Ta bắt đầu **15. COUNT(*) khác COUNT(column)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **15. COUNT() khác COUNT(column)** tiếp nhận điểm tựa từ **14. NULL trong Aggregate Function** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Nếu column là PK?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt `COUNT(*)` với `COUNT(column)`, **16. Nếu column là PK?** hỏi điều kiện nào khiến hai kết quả trùng nhau: cột khóa chính không chứa NULL.
 
 ## 15. COUNT(*) khác COUNT(column)
 
@@ -2086,7 +2086,7 @@ Vậy ta đã có tiêu chí để đọc **⭐ Đây là một công thức SQL
 
 Ta bắt đầu **16. Nếu column là PK?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **16. Nếu column là PK?** tiếp nhận điểm tựa từ **15. COUNT() khác COUNT(column)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Trung bình trên toàn bộ số dòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Nếu column là PK?** dùng constraint để giải thích trường hợp đếm bằng nhau; **17. Trung bình trên toàn bộ số dòng** mở rộng câu hỏi sang mẫu số khi tính trung bình có NULL.
 
 ## 16. Nếu column là PK?
 
@@ -2126,7 +2126,7 @@ Vậy ta đã có tiêu chí để đọc **16. Nếu column là PK?**. Bây gi�
 
 Ta bắt đầu **17. Trung bình trên toàn bộ số dòng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **17. Trung bình trên toàn bộ số dòng** tiếp nhận điểm tựa từ **16. Nếu column là PK?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. NULL의 ERD 표기법** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi xác định mẫu số khi tính trung bình có NULL, **18. NULL의 ERD 표기법** chuyển sang cách biểu diễn khả năng vắng mặt của thuộc tính trong ERD.
 
 ## 17. Trung bình trên toàn bộ số dòng
 
@@ -2192,7 +2192,7 @@ Vậy ta đã có tiêu chí để đọc **SUM(column)/COUNT(*)**. Bây giờ c
 
 Ta bắt đầu **18. NULL의 ERD 표기법** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **18. NULL의 ERD 표기법** tiếp nhận điểm tựa từ **17. Trung bình trên toàn bộ số dòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제5절 본질식별자 vs 인조식별자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. NULL의 ERD 표기법** nối semantics giá trị thiếu với constraint trên mô hình; **제5절 본질식별자 vs 인조식별자** chuyển sang câu hỏi khóa định danh đến từ dữ liệu nghiệp vụ hay được tạo riêng.
 
 ## 18. NULL의 ERD 표기법
 
@@ -2248,7 +2248,7 @@ Vậy ta đã có tiêu chí để đọc **주문번호**. Bây giờ chuyển 
 
 Ta bắt đầu **제5절 본질식별자 vs 인조식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **제5절 본질식별자 vs 인조식별자** tiếp nhận điểm tựa từ **18. NULL의 ERD 표기법** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. 본질식별자 — Natural/Original Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi xác định NULL và ràng buộc trong ERD, **제5절 본질식별자 vs 인조식별자** đặt hai chiến lược định danh cạnh nhau; **19. 본질식별자 — Natural/Original Identifier** bắt đầu từ khóa có sẵn trong nghiệp vụ.
 
 ## 제5절 본질식별자 vs 인조식별자
 
@@ -2260,7 +2260,7 @@ Vậy ta đã có tiêu chí để đọc **제5절 본질식별자 vs 인조식
 
 Ta bắt đầu **19. 본질식별자 — Natural/Original Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **19. 본질식별자 — Natural/Original Identifier** tiếp nhận điểm tựa từ **제5절 본질식별자 vs 인조식별자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. 인조식별자 — Surrogate Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. 본질식별자 — Natural/Original Identifier** cho thấy khóa tự nhiên mang ý nghĩa nghiệp vụ; **20. 인조식별자 — Surrogate Key** đối chiếu với khóa sinh ra chỉ để định danh ổn định.
 
 ## 19. 본질식별자 — Natural/Original Identifier
 
@@ -2308,7 +2308,7 @@ Vậy ta đã có tiêu chí để đọc **19. 본질식별자 — Natural/Orig
 
 Ta bắt đầu **20. 인조식별자 — Surrogate Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **20. 인조식별자 — Surrogate Key** tiếp nhận điểm tựa từ **19. 본질식별자 — Natural/Original Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Tại sao cần 인조식별자?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi so sánh khóa tự nhiên với surrogate key, **21. Tại sao cần 인조식별자?** kiểm tra các lý do thực dụng: khóa nghiệp vụ dài, thay đổi hoặc khó bảo đảm duy nhất.
 
 ## 20. 인조식별자 — Surrogate Key
 
@@ -2361,7 +2361,7 @@ Vậy ta đã có tiêu chí để đọc **20. 인조식별자 — Surrogate Ke
 
 Ta bắt đầu **21. Tại sao cần 인조식별자?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **21. Tại sao cần 인조식별자?** tiếp nhận điểm tựa từ **20. 인조식별자 — Surrogate Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Giải pháp: 주문상세번호** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Tại sao cần 인조식별자?** nêu vấn đề ổn định và đơn giản của định danh; **22. Giải pháp: 주문상세번호** đưa nguyên tắc ấy vào một khóa chi tiết đơn hàng cụ thể.
 
 ## 21. Tại sao cần 인조식별자?
 
@@ -2422,7 +2422,7 @@ Vậy ta đã có tiêu chí để đọc **21. Tại sao cần 인조식별자?
 
 Ta bắt đầu **22. Giải pháp: 주문상세번호** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **22. Giải pháp: 주문상세번호** tiếp nhận điểm tựa từ **21. Tại sao cần 인조식별자?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Giải pháp: 주문상세번호** minh họa surrogate key bằng một định danh ổn định; **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** kiểm tra cái giá phải trả khi khóa kỹ thuật che khuất ý nghĩa nghiệp vụ.
 
 ## 22. Giải pháp: 주문상세번호
 
@@ -2491,7 +2491,7 @@ Vậy ta đã có tiêu chí để đọc **22. Giải pháp: 주문상세번호
 
 Ta bắt đầu **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** tiếp nhận điểm tựa từ **22. Giải pháp: 주문상세번호** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Đây chính là nhược điểm quan trọng của 인조식별자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau ví dụ 주문상세번호, **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** chuyển từ lợi ích ổn định sang rủi ro song song: vẫn phải bảo toàn quy tắc duy nhất của dữ liệu nghiệp vụ.
 
 ## 23. Nhưng 인조식별자 tạo ra một vấn đề lớn
 
@@ -2549,7 +2549,7 @@ Vậy ta đã có tiêu chí để đọc **23. Nhưng 인조식별자 tạo ra 
 
 Ta bắt đầu **24. Đây chính là nhược điểm quan trọng của 인조식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **24. Đây chính là nhược điểm quan trọng của 인조식별자** tiếp nhận điểm tựa từ **23. Nhưng 인조식별자 tạo ra một vấn đề lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. 인조식별자 có thể làm tăng Index** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Đây chính là nhược điểm quan trọng của 인조식별자** chốt việc phải giữ business uniqueness; **25. 인조식별자 có thể làm tăng Index** theo dõi hệ quả vật lý khi mỗi quan hệ vẫn cần index theo khóa nghiệp vụ.
 
 ## 24. Đây chính là nhược điểm quan trọng của 인조식별자
 
@@ -2599,7 +2599,7 @@ Vậy ta đã có tiêu chí để đọc **24. Đây chính là nhược điể
 
 Ta bắt đầu **25. 인조식별자 có thể làm tăng Index** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **25. 인조식별자 có thể làm tăng Index** tiếp nhận điểm tựa từ **24. Đây chính là nhược điểm quan trọng của 인조식별자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Một vấn đề khác: Query vẫn phải dùng business columns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi thấy surrogate key có thể làm tăng index, **26. Một vấn đề khác: Query vẫn phải dùng business columns** nhắc rằng truy vấn nghiệp vụ vẫn lọc theo thuộc tính có nghĩa, không chỉ theo khóa kỹ thuật.
 
 ## 25. 인조식별자 có thể làm tăng Index
 
@@ -2658,7 +2658,7 @@ Vậy ta đã có tiêu chí để đọc **25. 인조식별자 có thể làm t
 
 Ta bắt đầu **26. Một vấn đề khác: Query vẫn phải dùng business columns** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **26. Một vấn đề khác: Query vẫn phải dùng business columns** tiếp nhận điểm tựa từ **25. 인조식별자 có thể làm tăng Index** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. 인조식별자의 장점 — Ưu điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Một vấn đề khác: Query vẫn phải dùng business columns** cân bằng lại lợi ích và chi phí; **27. 인조식별자의 장점 — Ưu điểm** tổng hợp những trường hợp khóa kỹ thuật vẫn giúp mô hình ổn định hơn.
 
 ## 26. Một vấn đề khác: Query vẫn phải dùng business columns
 
@@ -2706,7 +2706,7 @@ Vậy ta đã có tiêu chí để đọc **26. Một vấn đề khác: Query v
 
 Ta bắt đầu **27. 인조식별자의 장점 — Ưu điểm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **27. 인조식별자의 장점 — Ưu điểm** tiếp nhận điểm tựa từ **26. Một vấn đề khác: Query vẫn phải dùng business columns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi cân bằng ưu điểm của surrogate key với business columns, **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** đặt ra nguyên tắc dùng có điều kiện: chỉ thêm khóa kỹ thuật khi lợi ích ổn định vượt chi phí và rủi ro.
 
 ## 27. 인조식별자의 장점 — Ưu điểm
 
@@ -2772,7 +2772,7 @@ Vậy ta đã có tiêu chí để đọc **27. 인조식별자의 장점 — Ư
 
 Ta bắt đầu **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** tiếp nhận điểm tựa từ **27. 인조식별자의 장점 — Ưu điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Nối toàn bộ phần này với kiến thức Key trước đó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** chốt tiêu chí lựa chọn có điều kiện; **29. Nối toàn bộ phần này với kiến thức Key trước đó** liên hệ surrogate key với primary key, candidate key và business key đã học.
 
 ## 28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?
 
@@ -2798,7 +2798,7 @@ Vậy ta đã có tiêu chí để đọc **28. Nhưng tại sao ảnh nói “�
 
 Ta bắt đầu **29. Nối toàn bộ phần này với kiến thức Key trước đó** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ, Transaction, NULL và Identifier**, **29. Nối toàn bộ phần này với kiến thức Key trước đó** tiếp nhận điểm tựa từ **28. Nhưng tại sao ảnh nói “꼭 필요한 경우에만”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Bức tranh tổng thể của 5 ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nối quyết định dùng surrogate key với các khái niệm khóa, **30. Bức tranh tổng thể của 5 ảnh** đặt toàn bộ quan hệ, NULL và identifier vào một sơ đồ đối chiếu duy nhất.
 
 ## 29. Nối toàn bộ phần này với kiến thức Key trước đó
 
@@ -2861,7 +2861,7 @@ Vậy ta đã có tiêu chí để đọc **29. Nối toàn bộ phần này v�
 
 Ta bắt đầu **30. Bức tranh tổng thể của 5 ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ, Transaction, NULL và Identifier**, **30. Bức tranh tổng thể của 5 ảnh** tiếp nhận điểm tựa từ **29. Nối toàn bộ phần này với kiến thức Key trước đó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **⭐ NOTE ÔN SQLD — Phần cần thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Bức tranh tổng thể của 5 ảnh** giúp nhìn các lựa chọn cạnh nhau theo cùng tiêu chí; **⭐ NOTE ÔN SQLD — Phần cần thuộc** rút thành các câu kiểm tra ngắn trước khi ôn thi.
 
 ## 30. Bức tranh tổng thể của 5 ảnh
 
@@ -2971,7 +2971,7 @@ Vậy ta đã có tiêu chí để đọc **Natural vs Surrogate trả lời:**.
 
 Ta bắt đầu **⭐ NOTE ÔN SQLD — Phần cần thuộc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Quan hệ, Transaction, NULL và Identifier**, **⭐ NOTE ÔN SQLD — Phần cần thuộc** tiếp nhận điểm tựa từ **30. Bức tranh tổng thể của 5 ảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau phần ghi nhớ, tài liệu đã khép vòng từ quan hệ và JOIN qua transaction, NULL đến identifier; khi ôn, hãy luôn kiểm tra đối tượng, điều kiện và hệ quả thay vì học các nhãn riêng lẻ.
 
 ## ⭐ NOTE ÔN SQLD — Phần cần thuộc
 
