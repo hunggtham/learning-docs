@@ -38,7 +38,7 @@ O(\log_B n)
 
 Sự khác biệt giữa `log2(n)` và `log200(n)` cực lớn khi mỗi tầng là một I/O.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Vì sao cây nhị phân không lý tưởng cho disk/page lưu trữ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **B-tree bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Binary tree có thể tạo nhiều pointer chase và page I/O khi lưu trên disk, trong khi một B-tree node gom nhiều key vào một page-sized search structure. Muốn đánh giá đúng, trước hết cần nắm các invariant giữ cây cân bằng.
 
 ## nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)
 
@@ -54,7 +54,7 @@ Các khóa trong nút được sắp xếp. Có thể dùng tìm kiếm tuyến 
 
 Do đó B-tree chủ động “làm nhiều việc trong một nút” để giảm chiều cao.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **B-tree bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+B-tree giữ node trong khoảng occupancy hợp lệ, các key có thứ tự và mọi leaf ở cùng độ sâu; internal separators phải phân hoạch đúng miền key. Từ các invariant đó, tìm kiếm chỉ cần đi qua một node ở mỗi level.
 
 ## B-tree bất biến (invariant / 불변식)
 
@@ -78,7 +78,7 @@ internal node có #children = #keys + 1
 
 chính xác convention khác nhau giữa sách và cách triển khai. Khi đọc mã (code / 코드), đừng học thuộc số trước; hãy xác định rõ “max các khóa”, “min các khóa”, “split threshold” mà cách triển khai dùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **B-tree bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Insert: tràn số và split** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Search binary-search trong từng node rồi đi theo child tương ứng, nên chi phí chủ yếu là số page đọc và một lần tìm trong page. Insert phải giữ các invariant này khi node đầy bằng cách split và đẩy separator lên parent.
 
 ## Tìm kiếm (search / 검색)
 
@@ -104,7 +104,7 @@ while node exists:
 
 Số page accesses là `O(height)`, trong khi phép so sánh count trong page có thể lớn hơn nhưng rẻ hơn nhiều.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Insert: tràn số và split** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao B-tree luôn balanced theo độ sâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Split chia node đầy thành các node hợp lệ và đưa một key phân cách lên level trên, có thể gây split dây chuyền đến root. Chính cơ chế này giữ mọi leaf cùng độ sâu, nên B-tree luôn balanced.
 
 ## Insert: tràn số và split
 
@@ -127,7 +127,7 @@ Nếu nút cha cũng full, split có thể propagate lên trên. Nếu nút gố
 
 Điểm quan trọng là split không phá sorted partition bất biến. Median trở thành separator giữa khoảng bên trái và khoảng bên phải.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Tại sao B-tree luôn balanced theo độ sâu?** tiếp nhận điểm tựa từ **Insert: tràn số và split** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xóa khó hơn chèn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Root split có thể tăng chiều cao thêm một level, nhưng không tạo leaf ở độ sâu khác nhau; đó là lý do insert không làm cây lệch. Delete khó hơn vì phải xử lý underflow và tái phân phối hoặc merge node.
 
 ## Tại sao B-tree luôn balanced theo độ sâu?
 
@@ -135,7 +135,7 @@ Insert chỉ split các nút; nó không thêm một nút lá sâu hơn riêng l
 
 Đây là khác biệt lớn với BST không cân bằng, nơi thứ tự chèn có thể làm một nhánh dài hơn rất nhiều so với các nhánh khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Xóa khó hơn chèn** tiếp nhận điểm tựa từ **Tại sao B-tree luôn balanced theo độ sâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **B+cây (tree / 트리) khác B-tree ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Delete có thể mượn key từ sibling qua parent hoặc merge hai node rồi kéo separator xuống; nếu root rỗng, chiều cao giảm. B+tree tách vai trò index và leaf để tối ưu scan, khác với B-tree nơi record có thể nằm ở internal node.
 
 ## Xóa khó hơn chèn
 
@@ -161,7 +161,7 @@ Nếu nút gốc cuối cùng không còn khóa và chỉ có một nút con, n�
 
 Mô hình tư duy của delete là: **trước khi đi xuống, đảm bảo nút con có đủ “room” để mất một khóa mà không vi phạm lower occupancy bound**.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **B+cây (tree / 트리) khác B-tree ở đâu?** tiếp nhận điểm tựa từ **Xóa khó hơn chèn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tra cứu theo quan hệ bằng nhau và quét theo khoảng có chi phí khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+B+tree giữ record hoặc pointer dữ liệu ở leaves và nối leaves theo thứ tự, còn internal nodes chỉ dẫn đường. Vì vậy equality lookup và range scan có cost profile khác nhau, dù cùng dựa trên tree height.
 
 ## B+cây (tree / 트리) khác B-tree ở đâu?
 
@@ -185,7 +185,7 @@ quét theo khoảng rất tự nhiên: tìm nút lá đầu tiên qua cây tìm 
 
 Đây là lý do B+cây (tree / 트리) đặc biệt phù hợp cơ sở dữ liệu indexes.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **tra cứu theo quan hệ bằng nhau và quét theo khoảng có chi phí khác nhau** tiếp nhận điểm tựa từ **B+cây (tree / 트리) khác B-tree ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục cụm và chỉ mục phụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Equality lookup thường dừng sau khi tìm một key, trong khi range scan tiếp tục đọc các leaf page liên tiếp; locality của leaves trở thành yếu tố quan trọng. Với table data, clustered và secondary index quyết định pointer phải đi thêm bao nhiêu bước.
 
 ## tra cứu theo quan hệ bằng nhau và quét theo khoảng có chi phí khác nhau
 
@@ -219,7 +219,7 @@ seek cost + number of leaf pages scanned
 
 Đây là lý do độ chọn lọc của khoảng ảnh hưởng tới kế hoạch truy vấn. Chỉ mục không thể làm một truy vấn trả về 80% bảng trở nên miễn phí; sau khi định vị vị trí bắt đầu, hệ thống vẫn phải đọc rất nhiều bản ghi hoặc trang.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Chỉ mục cụm và chỉ mục phụ** tiếp nhận điểm tựa từ **tra cứu theo quan hệ bằng nhau và quét theo khoảng có chi phí khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Composite chỉ mục (index / 인덱스) và thứ tự từ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Clustered index đặt thứ tự dữ liệu gần thứ tự key, còn secondary index thường phải truy tới row location; trade-off phụ thuộc workload đọc/ghi. Composite index mở rộng lựa chọn đó bằng lexicographic order của nhiều cột.
 
 ## Chỉ mục cụm và chỉ mục phụ
 
@@ -239,7 +239,7 @@ secondary B+Tree lookup
 
 Vì vậy một “chỉ mục (index / 인덱스) hit” không nhất thiết chỉ có một cây traversal.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Composite chỉ mục (index / 인덱스) và thứ tự từ điển** tiếp nhận điểm tựa từ **Chỉ mục cụm và chỉ mục phụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Covering chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Composite index dùng thứ tự từ điển: prefix cột đầu có thể được dùng để lọc hoặc range, nhưng điều kiện bỏ qua prefix thường không tận dụng tốt toàn bộ index. Nếu index chứa đủ cột cần trả về, nó trở thành covering index và tránh lookup dữ liệu.
 
 ## Composite chỉ mục (index / 인덱스) và thứ tự từ điển
 
@@ -263,7 +263,7 @@ country = 'KR' AND city = 'Seoul' AND created_at range
 
 Nhưng điều kiện `city = 'Seoul'` một mình không nhất thiết tạo thành một khoảng liên tiếp nhỏ trong thứ tự toàn cục của chỉ mục.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Covering chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **Composite chỉ mục (index / 인덱스) và thứ tự từ điển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Page split và ghi (write / 쓰기) amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Covering index giảm random lookup và có thể chỉ đọc các leaf pages, nhưng làm index rộng hơn và tốn chi phí ghi. Khi page đầy, insert có thể gây page split và write amplification.
 
 ## Covering chỉ mục (index / 인덱스)
 
@@ -280,7 +280,7 @@ cache residency có thể xấu hơn
 
 Tối ưu chỉ mục (index / 인덱스) là balancing giữa read đường đi và ghi (write / 쓰기)/lưu trữ chi phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Page split và ghi (write / 쓰기) amplification** tiếp nhận điểm tựa từ **Covering chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fill factor và occupancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Page split tạo thêm page và có thể cập nhật parent, log, sibling links hoặc nhiều bản sao storage; đó là write amplification. Fill factor và occupancy là các nút điều chỉnh giữa khoảng trống dự phòng, fan-out và tần suất split.
 
 ## Page split và ghi (write / 쓰기) amplification
 
@@ -290,7 +290,7 @@ Trong cơ sở dữ liệu thực, còn có logging, locking/latching, WAL và b
 
 ngẫu nhiên inserts vào clustered khóa có thể gây split rải rác. Monotonic increasing khóa thường append vào rightmost các nút lá, giảm ngẫu nhiên split mẫu nhưng có thể tạo tranh chấp tài nguyên hotspot trong concurrent khối lượng công việc.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Fill factor và occupancy** tiếp nhận điểm tựa từ **Page split và ghi (write / 쓰기) amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ đệm pool và effective mô hình chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fill factor thấp dành chỗ cho insert nhưng tăng kích thước index và số page cần đọc; occupancy cao tiết kiệm đọc nhưng dễ split khi workload ghi dồn. Buffer pool có thể làm chi phí thực tế khác xa số page lý thuyết.
 
 ## Fill factor và occupancy
 
@@ -305,7 +305,7 @@ higher fill factor -> compact hơn nhưng split risk cao hơn
 
 Không có một fill factor tối ưu cho mọi khối lượng công việc.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **bộ đệm pool và effective mô hình chi phí** tiếp nhận điểm tựa từ **Fill factor và occupancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequential quét vs chỉ mục (index / 인덱스) quét** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Buffer pool khiến page nóng có thể được phục vụ từ memory, trong khi page lạnh chịu I/O; vì vậy cost model phải tính cache hit, random access và scan bandwidth. Với range lớn, sequential scan đôi khi tốt hơn index scan.
 
 ## bộ đệm pool và effective mô hình chi phí
 
@@ -320,7 +320,7 @@ leaf/data pages quyết định nhiều cache misses hơn
 
 B+cây (tree / 트리) vẫn tốt vì shallow cấu trúc (structure / 구조) và page tính cục bộ (locality) giúp bộ nhớ đệm hierarchy hiệu quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Sequential quét vs chỉ mục (index / 인덱스) quét** tiếp nhận điểm tựa từ **bộ đệm pool và effective mô hình chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **chỉ mục băm vs B+cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sequential scan đọc page theo dòng và tận dụng locality, còn index scan thắng khi predicate chọn ít row hoặc hỗ trợ range tốt. Hash index thường tốt cho equality nhưng không cung cấp thứ tự để range scan như B+tree.
 
 ## Sequential quét vs chỉ mục (index / 인덱스) quét
 
@@ -338,7 +338,7 @@ sequential scan
 
 DSA chỉ cung cấp thành phần nguyên thủy (primitive / 기본 요소); system-level quyết định (decision / 결정) còn phụ thuộc dữ liệu (data / 데이터) phân phối và I/O mẫu.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **chỉ mục băm vs B+cây (tree / 트리)** tiếp nhận điểm tựa từ **Sequential quét vs chỉ mục (index / 인덱스) quét** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **External-memory độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hash index đổi equality lấy khả năng range và order, còn B+tree duy trì separator và leaves có thứ tự. Phân tích external-memory complexity tập trung vào số block/page transfer thay vì chỉ đếm phép so sánh CPU.
 
 ## chỉ mục băm vs B+cây (tree / 트리)
 
@@ -352,7 +352,7 @@ Nhưng cấu trúc đó không giữ thứ tự toàn phần tự nhiên. Vì v�
 
 B+cây (tree / 트리) trả thêm `log_B n` điều hướng (navigation / 내비게이션) chi phí để đổi lấy ordered ngữ nghĩa.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **External-memory độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **chỉ mục băm vs B+cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **B-Tree vs LSM cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong external-memory model, một phép I/O block đắt hơn nhiều phép tính trong memory; B-tree giảm số I/O nhờ fan-out lớn. LSM-tree lại gom ghi tuần tự và compaction, nên trade-off đọc/ghi khác B-tree.
 
 ## External-memory độ phức tạp (complexity / 복잡도)
 
@@ -362,7 +362,7 @@ Nếu khối (block / 블록) chứa `B` các khóa, một cây tìm kiếm có 
 
 Sắp xếp, quét, phép nối và xử lý đồ thị cũng có các biến thể cho bộ nhớ ngoài nhằm tối ưu số lần truyền khối dữ liệu. Đây là cách mở rộng Big-O truyền thống sang mô hình gần phần cứng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **B-Tree vs LSM cây** tiếp nhận điểm tựa từ **External-memory độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cache-aware và cache-oblivious thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+B-tree cập nhật in-place và tối ưu point/range lookup ổn định, còn LSM tận dụng sequential writes nhưng phải compaction và có thể đọc nhiều tầng. Cả hai đều cần suy nghĩ về cache, dù một cấu trúc biết rõ block size còn cấu trúc kia cố thích nghi theo hierarchy.
 
 ## B-Tree vs LSM cây
 
@@ -381,7 +381,7 @@ LSM: buffer/append writes, rồi merge sorted runs về sau
 
 Không có cấu trúc (structure / 구조) “tốt hơn tuyệt đối”; khối lượng công việc quyết định.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Cache-aware và cache-oblivious thinking** tiếp nhận điểm tựa từ **B-Tree vs LSM cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성) và ghép khóa chốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cache-aware design chọn fan-out và layout dựa trên page/cache cụ thể; cache-oblivious design tìm layout hoạt động hợp lý trên nhiều tầng mà không hard-code một kích thước. Khi nhiều thread cùng truy cập, layout tốt vẫn cần protocol khóa hoặc latch đúng.
 
 ## Cache-aware và cache-oblivious thinking
 
@@ -391,7 +391,7 @@ B-tree là cache-aware ở mức ta thường thiết kế nút phù hợp page/
 
 Ý tưởng tổng quát: cấu trúc dữ liệu hiệu năng có thể phụ thuộc cách byte được bố trí trên phân cấp bộ nhớ, không chỉ topology lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Tính đồng thời (concurrency / 동시성) và ghép khóa chốt** tiếp nhận điểm tựa từ **Cache-aware và cache-oblivious thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix compression và khóa compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Concurrent B-tree thường khóa theo node hoặc latch-coupling khi đi xuống, đồng thời phải xử lý split/delete mà không làm reader thấy cấu trúc nửa cập nhật. Giảm kích thước separator bằng prefix/key compression có thể làm giảm I/O nhưng tăng logic giải mã.
 
 ## Tính đồng thời (concurrency / 동시성) và ghép khóa chốt
 
@@ -409,7 +409,7 @@ lock/latch order có gây deadlock không?
 
 Lô-gic (logic / 논리) cây bất biến và tính đồng thời (concurrency / 동시성) bất biến phải cùng đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Prefix compression và khóa compression** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) và ghép khóa chốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variable-length records** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix compression lưu phần khác biệt giữa các key liền kề, còn key compression có thể rút gọn separator trong internal node; cả hai phải vẫn so sánh được chính xác. Record có độ dài biến thiên thêm bài toán slot directory, overflow và split theo byte thay vì theo số record.
 
 ## Prefix compression và khóa compression
 
@@ -419,7 +419,7 @@ Ví dụ nhiều URLs có tiền tố chung lớn; storing full strings trong m�
 
 Nén dữ liệu làm tăng công việc của CPU nhưng giảm kích thước trang và I/O — đây là một đánh đổi theo mô hình chi phí phần cứng.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Variable-length records** tiếp nhận điểm tựa từ **Prefix compression và khóa compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Variable-length records khiến occupancy phải đo theo bytes, và một record lớn có thể cần overflow pages hoặc quy tắc split riêng. Những hiểu lầm về B-tree thường bắt đầu khi áp dụng mô hình node cố định một cách máy móc.
 
 ## Variable-length records
 
@@ -427,7 +427,7 @@ Nếu các khóa/records variable-length, “nút chứa tối đa K các khóa�
 
 Do đó textbook B-tree với fixed number các khóa chỉ là conceptual cốt lõi (core / 핵심); hệ thống thực tế pages còn có ô các mảng, phân mảnh và compaction.
 
-> **Chuyển mạch:** Ở chặng này của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Variable-length records** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử B-tree các cách triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+B-tree không làm mọi truy vấn nhanh như nhau, không loại bỏ chi phí ghi, và “balanced” không có nghĩa mọi page đầy như nhau. Kiểm thử implementation phải quan sát invariant, I/O boundary, split/merge và dữ liệu biến độ dài.
 
 ## Những hiểu lầm phổ biến
 
@@ -441,7 +441,7 @@ Do đó textbook B-tree với fixed number các khóa chỉ là conceptual cốt
 
 “Page split chỉ tốn O(1)” đúng ở sự trừu tượng (abstraction) cục bộ nhưng hệ thống thực tế chi phí còn bao gồm logging, bộ nhớ đệm, locks và possible cascade.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **kiểm thử B-tree các cách triển khai** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Test nên kiểm tra search/insert/delete, split root, merge underflow, range scan, restart và tính đúng của parent/leaf links. Mô hình tư duy cuối bài sẽ nối các kiểm tra đó với workload external-memory.
 
 ## kiểm thử B-tree các cách triển khai
 
@@ -459,7 +459,7 @@ inorder/leaf scan sorted
 
 Xóa là nơi dễ phát sinh lỗi nhất; kiểm thử vi sai ngẫu nhiên với `TreeMap` hoặc mô hình tham chiếu đã sắp xếp rất hữu ích.
 
-> **Chuyển mạch:** Trong **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**, **Mô hình tư duy** gom các mảnh từ **kiểm thử B-tree các cách triển khai** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy của B-tree gồm page-sized nodes, invariant cân bằng, chi phí I/O, layout leaves, write amplification và protocol đồng thời. Các liên kết cuối bài giúp so sánh B-tree với heap, hash index, LSM và các cấu trúc lưu trữ khác.
 
 ## Mô hình tư duy
 
