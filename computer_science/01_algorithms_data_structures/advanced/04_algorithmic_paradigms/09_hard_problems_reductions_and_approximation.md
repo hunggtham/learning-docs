@@ -30,7 +30,7 @@ Mục tiêu chương này là dùng độ phức tạp (complexity / 복잡도) 
 
 Điều cần nhớ là **đầu vào (input / 입력) kích thước (size / 크기) thực** đôi khi không phải chỉ một biến `n`; độ lớn số được mã hóa bằng bao nhiêu bit cũng quan trọng.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Đầu vào (input / 입력) length và giá trị số** tiếp nhận điểm tựa từ **Polynomial và exponential khác nhau về bản chất tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) bài toán (problem / 문제) và tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân biệt polynomial và exponential mới chỉ nói tốc độ theo kích thước biểu diễn. Bước kế tiếp là làm rõ kích thước đó được đo bằng input length hay bằng giá trị số của các tham số.
 
 ## Đầu vào (input / 입력) length và giá trị số
 
@@ -42,7 +42,7 @@ Một thuật toán (algorithm / 알고리즘) `O(nW)` là polynomial theo **gi�
 
 Phân biệt này giải thích vì sao một bài NP-hard vẫn có DP rất thực dụng khi numeric parameter nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Quyết định (decision / 결정) bài toán (problem / 문제) và tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) length và giá trị số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) P** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Encoding quyết định một thuật toán pseudo-polynomial có thật sự polynomial hay không. Sau khi chốt input model, ta tách câu hỏi quyết định khỏi bài toán tối ưu để biết đang chứng minh loại kết quả nào.
 
 ## Quyết định (decision / 결정) bài toán (problem / 문제) và tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)
 
@@ -60,7 +60,7 @@ Nếu giải tối ưu hóa (optimization / 최적화) được, quyết định
 
 Việc chuyển sang quyết định (decision / 결정) phiên bản (version / 버전) giúp định nghĩa lớp P/NP và reduction rõ ràng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Lớp (class / 클래스) P** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) bài toán (problem / 문제) và tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) NP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Decision problem chỉ hỏi có/không, còn optimization problem cần một nghiệm tốt nhất hoặc giá trị tối ưu. Lớp P cung cấp baseline cho những bài quyết định có thể giải trong thời gian polynomial.
 
 ## Lớp (class / 클래스) P
 
@@ -78,7 +78,7 @@ bipartite matching
 
 “Polynomial” không đồng nghĩa “luôn nhanh”. `O(n^10)` vẫn polynomial nhưng có thể không practical. P là khái niệm về tốc độ tăng lý thuyết, không phải SLA môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Lớp (class / 클래스) NP** tiếp nhận điểm tựa từ **Lớp (class / 클래스) P** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NP-hard và NP-complete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+P là mốc tractability dựa trên bộ giải xác định nhanh. Để hiểu giới hạn của mốc này, cần xem NP: nghiệm có thể kiểm chứng nhanh dù chưa biết cách tìm nhanh.
 
 ## Lớp (class / 클래스) NP
 
@@ -94,7 +94,7 @@ P\subseteq NP
 
 vì nếu solve được polynomial thì hiển nhiên verify cũng polynomial.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **NP-hard và NP-complete** tiếp nhận điểm tựa từ **Lớp (class / 클래스) NP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NP-complete không có nghĩa mọi instance đều khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NP nói về khả năng kiểm chứng certificate, không đồng nghĩa với khó tuyệt đối. NP-hard và NP-complete thêm quan hệ reduction để đặt một bài toán vào vị trí hardness tương đối.
 
 ## NP-hard và NP-complete
 
@@ -112,7 +112,7 @@ Nếu có polynomial-time thuật toán (algorithm / 알고리즘) cho một NP-
 
 Điểm kỹ thuật (engineering / 엔지니어링) quan trọng không phải tranh luận lý thuyết, mà là: khi nhận ra bài toán tương đương một NP-hard cốt lõi (core / 핵심) quen thuộc, ta phải đổi chiến lược giải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **NP-complete không có nghĩa mọi instance đều khó** tiếp nhận điểm tựa từ **NP-hard và NP-complete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reduction: ngôn ngữ để so sánh độ khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NP-hard/NP-complete là nhãn cho bài toán và reduction, không tuyên bố mọi instance đều khó như nhau. Nhiều input nhỏ, cấu trúc đặc biệt hoặc parameter thuận lợi vẫn có thể giải nhanh.
 
 ## NP-complete không có nghĩa mọi instance đều khó
 
@@ -134,7 +134,7 @@ solver heuristic rất phù hợp
 
 Vì vậy “bài này NP-hard” không phải điểm kết thúc. Nó là tín hiệu để hỏi: **cấu trúc (structure / 구조) nào của instance thực tế có thể khai thác?**
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **NP-complete không có nghĩa mọi instance đều khó** đã nêu tiêu chí phân biệt, còn **Reduction: ngôn ngữ để so sánh độ khó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Reduction cần chứng minh hai chiều ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nhận ra easy instances chưa đủ để so sánh độ khó giữa các bài toán. Reduction cung cấp ngôn ngữ biến đổi một instance của bài này thành instance của bài kia với ý nghĩa được bảo toàn.
 
 ## Reduction: ngôn ngữ để so sánh độ khó
 
@@ -164,7 +164,7 @@ known hard A  ->  target B
 
 Nếu chỉ biết cách biến B thành A, điều đó cho thấy có thể dùng solver A để giải B; nó không chứng minh B hard.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Reduction: ngôn ngữ để so sánh độ khó** đã nêu tiêu chí phân biệt, còn **Reduction cần chứng minh hai chiều ngữ nghĩa (semantics / 의미론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Reduction không chỉ dùng để chứng minh hardness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một reduction chỉ có giá trị khi mapping và chiều suy luận được chứng minh đúng. Vì vậy cần kiểm tra hai chiều ngữ nghĩa, không chỉ cho thấy lời giải bên nguồn có thể tạo ra một object bên đích.
 
 ## Reduction cần chứng minh hai chiều ngữ nghĩa (semantics / 의미론)
 
@@ -179,7 +179,7 @@ Nếu chỉ chứng minh một chiều, transformation có thể tạo thêm l�
 
 Ngoài ra cần chứng minh transformation chạy polynomial và kích thước instance mới không phình exponential.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Reduction không chỉ dùng để chứng minh hardness** tiếp nhận điểm tựa từ **Reduction cần chứng minh hai chiều ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SAT như ngôn ngữ ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã giữ đúng ngữ nghĩa, reduction còn dùng để chuyển thuật toán, approximation và cấu trúc đặc biệt giữa các bài toán. SAT là ngôn ngữ ràng buộc tự nhiên để bắt đầu chuỗi hardness kinh điển đó.
 
 ## Reduction không chỉ dùng để chứng minh hardness
 
@@ -196,7 +196,7 @@ interval overlap           -> sweep line
 
 Khi reduce được bài mới về một thành phần nguyên thủy (primitive / 기본 요소) đã hiểu, ta tái sử dụng cả thuật toán (algorithm / 알고리즘), proof và hiện thực (implementation / 구현) mẫu (pattern / 패턴).
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **SAT như ngôn ngữ ràng buộc** tiếp nhận điểm tựa từ **Reduction không chỉ dùng để chứng minh hardness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3-SAT và 2-SAT: thay một chi tiết, landscape thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sử dụng reduction cho mục tiêu khác hardness giúp thấy nó là công cụ truyền cấu trúc, không chỉ nhãn khó. SAT gom các lựa chọn Boolean và ràng buộc, tạo nền cho các bài toán đồ thị và tối ưu tiếp theo.
 
 ## SAT như ngôn ngữ ràng buộc
 
@@ -214,7 +214,7 @@ SAT quan trọng vì rất nhiều bài combinatorial có thể encode thành Bo
 
 Hiện đại (modern / 현대적) SAT solver dùng nhiều kỹ thuật mạnh như propagation, clause học tập (learning / 학습) và branching heuristics, nên nhiều instance lớn có thể giải rất nhanh dù worst-case vẫn exponential.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **3-SAT và 2-SAT: thay một chi tiết, landscape thay đổi** tiếp nhận điểm tựa từ **SAT như ngôn ngữ ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clique, Independent Set và Vertex Cover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SAT làm lộ cách một thay đổi nhỏ trong dạng ràng buộc có thể đổi độ khó. So sánh 3-SAT và 2-SAT cho thấy cấu trúc của constraint, không chỉ số lượng biến, quyết định landscape.
 
 ## 3-SAT và 2-SAT: thay một chi tiết, landscape thay đổi
 
@@ -243,7 +243,7 @@ Bài học cực kỳ quan trọng:
 
 Do đó luôn tìm cấu trúc đặc biệt trước khi áp một solver tổng quát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Clique, Independent Set và Vertex Cover** tiếp nhận điểm tựa từ **3-SAT và 2-SAT: thay một chi tiết, landscape thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Knapsack và pseudo-polynomial DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ SAT constraints, reduction sang đồ thị tạo Clique, Independent Set và Vertex Cover. Ba bài này liên hệ qua phần bù hoặc biến đổi cạnh/đỉnh, giúp theo dõi hướng reduction và guarantee chính xác.
 
 ## Clique, Independent Set và Vertex Cover
 
@@ -259,7 +259,7 @@ Ba bài tưởng khác nhau nhưng liên kết chặt qua complement và set com
 
 Những quan hệ này giúp rèn khả năng nhìn “cùng một ràng buộc dưới biểu diễn khác”.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Knapsack và pseudo-polynomial DP** tiếp nhận điểm tựa từ **Clique, Independent Set và Vertex Cover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weakly và strongly NP-hard: trực giác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các bài đồ thị cho thấy hardness có thể chuyển sang bài tối ưu trên tập lựa chọn. Knapsack bổ sung một bài học quan trọng: DP có thể pseudo-polynomial dù bài toán vẫn NP-hard theo encoding nhị phân.
 
 ## Knapsack và pseudo-polynomial DP
 
@@ -275,7 +275,7 @@ Nếu `W` nhỏ, đây là cách cực kỳ thực dụng. Nếu `W` được bi
 
 Đây là lý do Knapsack vừa có hardness lý thuyết (theory / 이론) vừa có DP nổi tiếng mà không mâu thuẫn.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Weakly và strongly NP-hard: trực giác** tiếp nhận điểm tựa từ **Knapsack và pseudo-polynomial DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한) exponential thuật toán (algorithm / 알고리즘) vẫn rất có giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Knapsack phân biệt độ lớn giá trị số với số bit biểu diễn, nên dẫn tới trực giác weakly và strongly NP-hard. Phân biệt này quyết định khi nào DP theo giá trị còn là chiến lược hợp lý.
 
 ## Weakly và strongly NP-hard: trực giác
 
@@ -285,7 +285,7 @@ Strongly NP-hard problems vẫn hard ngay cả khi numeric values được giớ
 
 Không cần nhớ toàn bộ taxonomy; điều cần học là **numeric magnitude có thể là một parameter ẩn của độ phức tạp (complexity / 복잡도)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Chính xác (exact / 정확한) exponential thuật toán (algorithm / 알고리즘) vẫn rất có giá trị** tiếp nhận điểm tựa từ **Weakly và strongly NP-hard: trực giác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Meet-in-the-middle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Strong hardness không làm mọi thuật toán chính xác vô dụng; exponential có thể đủ nhanh cho n nhỏ hoặc cấu trúc đặc biệt. Meet-in-the-middle là ví dụ giảm số mũ thực tế bằng cách chia không gian tìm kiếm.
 
 ## Chính xác (exact / 정확한) exponential thuật toán (algorithm / 알고리즘) vẫn rất có giá trị
 
@@ -303,7 +303,7 @@ parameterized algorithm
 
 Nếu `n=25`, một `2^n` thuật toán (algorithm / 알고리즘) tốt có thể hoàn toàn hợp lý. Nếu nghiệp vụ (business / 비즈니스) yêu cầu chính xác (exact / 정확한) kết quả (result / 결과), approximation có thể không chấp nhận được.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Meet-in-the-middle** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) exponential thuật toán (algorithm / 알고리즘) vẫn rất có giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitmask DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Meet-in-the-middle đổi một bài toán 2^n thành hai nửa và ghép bằng sort/search. Bitmask DP dùng một cách biểu diễn khác để lưu trạng thái tập con và tái sử dụng các trạng thái đã tính.
 
 ## Meet-in-the-middle
 
@@ -327,7 +327,7 @@ Subset Sum với `n≈40` là ví dụ kinh điển.
 
 Meet-in-the-middle đổi thêm bộ nhớ (memory / 메모리) để giảm exponent của thời gian (time / 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Bitmask DP** tiếp nhận điểm tựa từ **Meet-in-the-middle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Branch and Bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitmask DP hữu ích khi số phần tử nhỏ và state là subset, nhưng vẫn tăng theo 2^n. Khi không gian state còn lớn, Branch and Bound có thể cắt nhánh bằng bound thay vì duyệt hết.
 
 ## Bitmask DP
 
@@ -353,7 +353,7 @@ Nó vẫn exponential, nhưng tốt hơn `n!` brute force rất nhiều.
 
 Điểm sâu hơn là trạng thái (state / 상태) compression: nhiều thứ tự lịch sử khác nhau được gộp nếu chúng có cùng `(mask,v)` và tương lai chỉ phụ thuộc hai thông tin đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Branch and Bound** tiếp nhận điểm tựa từ **Bitmask DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) thứ tự (ordering / 순서) và incumbent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Branch and Bound chỉ hiệu quả nếu bound và thứ tự khám phá tạo ra nhiều nhánh không thể thắng incumbent. Vì vậy ordering và chất lượng nghiệm tốt nhất hiện tại là phần cốt lõi của phép cắt.
 
 ## Branch and Bound
 
@@ -370,7 +370,7 @@ Bound phải **an toàn**. Nếu bound quá lạc quan, prune ít. Nếu bound s
 
 Thiết kế bound thường là phần khó nhất.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Tìm kiếm (search / 검색) thứ tự (ordering / 순서) và incumbent** tiếp nhận điểm tựa từ **Branch and Bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc (constraint / 제약조건) propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ordering tốt đưa nghiệm triển vọng lên sớm, làm incumbent mạnh hơn và tăng số nhánh bị loại. Constraint propagation bổ sung bằng cách thu hẹp miền khả thi trước khi tiếp tục search.
 
 ## Tìm kiếm (search / 검색) thứ tự (ordering / 순서) và incumbent
 
@@ -386,7 +386,7 @@ và
 practical search engineering
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Ràng buộc (constraint / 제약조건) propagation** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) thứ tự (ordering / 순서) và incumbent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Memoization trong tìm kiếm (search / 검색) khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Propagation suy ra các ràng buộc mới, nhưng nhiều state khác nhau vẫn có thể trùng một subproblem. Memoization trong tìm kiếm khó lưu kết quả theo state để tránh giải lại cùng phần.
 
 ## Ràng buộc (constraint / 제약조건) propagation
 
@@ -398,7 +398,7 @@ Propagation giúp phát hiện contradiction sớm, làm cây tìm kiếm (searc
 
 Backtracking “thô” và solver hiện đại khác nhau chủ yếu ở lượng thông tin được suy ra trước khi phải đoán tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Memoization trong tìm kiếm (search / 검색) khó** tiếp nhận điểm tựa từ **Ràng buộc (constraint / 제약조건) propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameterized độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Constraint propagation thu hẹp miền trước khi rẽ nhánh, còn memoization tái sử dụng các bài toán con đã giải. Hai kỹ thuật này tách việc cắt vì vô nghiệm khỏi việc dùng lại state trùng nhau.
 
 ## Memoization trong tìm kiếm (search / 검색) khó
 
@@ -415,7 +415,7 @@ DP/memoization = gom các lịch sử tương đương thành cùng node trạng
 
 Nếu số trạng thái (state / 상태) duy nhất nhỏ hơn rất nhiều số đường đi lịch sử, memoization tạo khác biệt lớn.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Parameterized độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Memoization trong tìm kiếm (search / 검색) khó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter đúng quan trọng hơn label NP-hard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Memoization vẫn có thể để lại số state tăng theo hàm mũ, nên câu hỏi tiếp theo là có parameter nhỏ nào kiểm soát sự bùng nổ hay không. Parameterized complexity làm rõ sự phụ thuộc đó thay vì che dưới một nhãn NP-hard.
 
 ## Parameterized độ phức tạp (complexity / 복잡도)
 
@@ -438,7 +438,7 @@ nhưng số vertex cần xóa chỉ k=10
 
 thì exponential theo `k` có thể tốt hơn exponential theo `n`.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Parameterized độ phức tạp (complexity / 복잡도)** cho ta quy tắc; **Parameter đúng quan trọng hơn label NP-hard** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kernelization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thuật toán parameterized có thể thực dụng khi k nhỏ dù n lớn. Parameter hữu ích phải chặn phần khó của bài toán, không phải chỉ là một con số bất kỳ gắn vào instance.
 
 ## Parameter đúng quan trọng hơn label NP-hard
 
@@ -460,7 +460,7 @@ Kỹ thuật (engineering / 엔지니어링) question nên là:
 
 > Hardness nằm ở chiều nào của instance, và chiều đó trong dữ liệu thật có nhỏ không?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Parameter đúng quan trọng hơn label NP-hard** cho ta quy tắc; **Kernelization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Treewidth: đồ thị (graph / 그래프) gần cây có thể dễ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi chọn đúng parameter, kernelization nén instance thành kernel tương đương có kích thước phụ thuộc vào k. Treewidth cung cấp một parameter cấu trúc tương tự cho các đồ thị gần cây.
 
 ## Kernelization
 
@@ -470,7 +470,7 @@ Mục tiêu là loại bỏ phần dữ liệu chắc chắn không ảnh hưở
 
 Có thể xem kernelization như **bài toán (problem / 문제) reduction theo parameter** trước khi chạy chính xác (exact / 정확한) tìm kiếm (search / 검색) đắt tiền.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Treewidth: đồ thị (graph / 그래프) gần cây có thể dễ hơn** tiếp nhận điểm tựa từ **Kernelization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximation thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kernelization giảm kích thước; treewidth bị chặn cho phép chạy dynamic programming trên một decomposition. Cả hai cho thấy hardness toàn cục có thể nhẹ hơn khi instance có cấu trúc khai thác được.
 
 ## Treewidth: đồ thị (graph / 그래프) gần cây có thể dễ hơn
 
@@ -484,7 +484,7 @@ Trực giác:
 
 Đây là một ví dụ sâu về việc cấu trúc (structure / 구조) của instance quan trọng hơn tên bài toán tổng quát.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Approximation thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **Treewidth: đồ thị (graph / 그래프) gần cây có thể dễ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vertex Cover 2-approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi thuật toán exact vẫn quá đắt, approximation tìm một nghiệm có quan hệ được chứng minh với optimum. Phải nêu guarantee trước khi bàn đến một ratio hoặc scheme cụ thể.
 
 ## Approximation thuật toán (algorithm / 알고리즘)
 
@@ -500,7 +500,7 @@ Với maximization, convention được viết theo hướng phù hợp để đ
 
 Điểm quan trọng là approximation thuật toán (algorithm / 알고리즘) có **guarantee trên mọi instance thuộc mô hình**, khác với heuristic chỉ “thường chạy tốt”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Vertex Cover 2-approximation** tiếp nhận điểm tựa từ **Approximation thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Set Cover và greedy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Maximal matching cho 2-approximation đơn giản cho Vertex Cover: lấy cả hai đầu mút của mỗi cạnh được chọn. Chứng minh dựa trên lower bound của matching, không chỉ dựa vào chất lượng quan sát được.
 
 ## Vertex Cover 2-approximation
 
@@ -519,7 +519,7 @@ Thuật toán (algorithm / 알고리즘) lấy `2k` đỉnh, nên kích thước
 
 Ví dụ này cho thấy approximation proof thường cần một **lower bound lên optimum** để so solution của thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Set Cover và greedy** tiếp nhận điểm tựa từ **Vertex Cover 2-approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số (metric / 지표) TSP và vai trò của triangle inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lựa chọn greedy của Set Cover có guarantee logarithmic gắn với số phần tử phủ được trên mỗi đơn vị chi phí. Điều này cho thấy greedy hữu ích khi có lập luận exchange hoặc charging chứng minh được bound.
 
 ## Set Cover và greedy
 
@@ -529,7 +529,7 @@ Nó có logarithmic approximation guarantee trong mô hình chuẩn.
 
 Điểm cần học không phải chỉ công thức guarantee, mà là kỹ thuật proof: mỗi bước phân bổ “giá” cho các phần tử mới được cover và so tổng charge với optimum.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Chỉ số (metric / 지표) TSP và vai trò của triangle inequality** tiếp nhận điểm tựa từ **Set Cover và greedy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PTAS và FPTAS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metric TSP cho phép approximation vì triangle inequality cho phép shortcut các đỉnh lặp mà không tăng chi phí. Thiếu bất đẳng thức đó, lập luận spanning tree tương tự không còn giữ được guarantee.
 
 ## Chỉ số (metric / 지표) TSP và vai trò của triangle inequality
 
@@ -543,7 +543,7 @@ Cấu trúc này cho phép dùng MST như lower bound và xây các approximatio
 
 Một restriction toán học nhỏ có thể thay approximation landscape rất mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **PTAS và FPTAS** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표) TSP và vai trò của triangle inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximation khác heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+PTAS và FPTAS tinh chỉnh approximation bằng cách làm rõ parameter độ chính xác và chi phí của nó. Phân biệt này quan trọng: approximation scheme có ratio hình thức, còn heuristic có thể không có guarantee worst-case.
 
 ## PTAS và FPTAS
 
@@ -555,7 +555,7 @@ Knapsack có FPTAS nổi tiếng dựa trên scaling DP values.
 
 Tư duy kỹ thuật (engineering / 엔지니어링): `ε` là một knob đổi thời gian chạy (runtime / 런타임) lấy chất lượng solution.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Approximation khác heuristic** tiếp nhận điểm tựa từ **PTAS và FPTAS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Approximation scheme nói rõ ε làm đổi thời gian chạy và chất lượng thế nào; heuristic thường chỉ mô tả hành vi quan sát được. Local search nằm giữa hai nhóm này, nên neighborhood và quy tắc dừng phải được phân tích riêng.
 
 ## Approximation khác heuristic
 
@@ -575,7 +575,7 @@ problem-specific neighborhood search
 
 Không nên coi heuristic là “sai”. Chỉ cần gọi đúng bản chất guarantee của nó.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Cục bộ (local / 로컬) tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Approximation khác heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomized heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Local search cải thiện candidate bằng các move lân cận nhưng có thể dừng ở local optimum. Randomized heuristic thêm restart hoặc lựa chọn ngẫu nhiên để khám phá nhiều basin hơn, đánh đổi khả năng truy vết xác định lấy độ phủ.
 
 ## Cục bộ (local / 로컬) tìm kiếm (search / 검색)
 
@@ -594,7 +594,7 @@ làm sao thoát local optimum?
 
 Cục bộ (local / 로컬) tìm kiếm (search / 검색) thường rất mạnh khi cần good solution nhanh trên instance lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Randomized heuristic** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ILP/MILP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ngẫu nhiên hóa có thể thoát local optimum kém, nhưng cần seed, budget và protocol đánh giá để so sánh các lần chạy công bằng. ILP/MILP cung cấp hướng khác bằng cách mã hóa cùng lựa chọn và ràng buộc cho exact solver.
 
 ## Randomized heuristic
 
@@ -604,7 +604,7 @@ Khi dùng randomness, nên đo phân phối (distribution / 분포) của soluti
 
 Trong môi trường vận hành (production / 운영 환경), reproducibility có thể cần seed được quản lý rõ.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **ILP/MILP** tiếp nhận điểm tựa từ **Randomized heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SAT, SMT và CP-SAT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ILP/MILP làm rõ objective và constraint, nhưng độ chặt của formulation quyết định hiệu năng solver. SAT, SMT và CP-SAT cung cấp các ngôn ngữ mô hình khác, với propagation và cơ chế chứng minh phù hợp những cấu trúc khác nhau.
 
 ## ILP/MILP
 
@@ -631,7 +631,7 @@ xử lý nhiều constraint business phức tạp
 
 Nhược điểm là hiệu năng (performance / 성능) khó dự đoán theo worst-case và cần solver/tooling phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **SAT, SMT và CP-SAT** tiếp nhận điểm tựa từ **ILP/MILP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Solver không loại bỏ nhu cầu mô hình hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chọn solver không thể cứu một model thiếu hoặc sai. Sau khi chọn SAT/SMT/CP-SAT, cần kiểm tra ý nghĩa của từng variable, clause và constraint trước khi tuning solver.
 
 ## SAT, SMT và CP-SAT
 
@@ -641,7 +641,7 @@ Thay vì tự viết backtracking khổng lồ, đôi khi encoding bài toán (p
 
 Câu hỏi là mô hình (model / 모델) nào diễn đạt ràng buộc (constraint / 제약조건) tự nhiên nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Solver không loại bỏ nhu cầu mô hình hóa** tiếp nhận điểm tựa từ **SAT, SMT và CP-SAT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetry breaking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Model quyết định feasible set; heuristic của solver chỉ hoạt động bên trong tập đó. Symmetry breaking loại các nghiệm tương đương để search tập trung vào một đại diện thay vì tìm lại nhiều bản sao.
 
 ## Solver không loại bỏ nhu cầu mô hình hóa
 
@@ -659,7 +659,7 @@ miền biến có thể thu hẹp trước không?
 
 Hardness không biến mất khi dùng solver; solver cung cấp một bộ tìm kiếm (search / 검색)/pruning engine rất mạnh.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Symmetry breaking** tiếp nhận điểm tựa từ **Solver không loại bỏ nhu cầu mô hình hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lower bound, upper bound và optimality gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Symmetry breaking giảm nhánh trùng nhưng phải giữ lại ít nhất một đại diện của mỗi nghiệm có ý nghĩa. Sau đó bounds định lượng phần còn có thể đạt được bằng lower bound, upper bound và optimality gap.
 
 ## Symmetry breaking
 
@@ -671,7 +671,7 @@ Thêm ràng buộc (constraint / 제약조건) cố định một số lựa ch�
 
 Đây là một dạng state-space reduction.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Lower bound, upper bound và optimality gap** tiếp nhận điểm tựa từ **Symmetry breaking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anytime thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Optimality gap đo khoảng cách có thể có giữa incumbent và giá trị tốt nhất đã chứng minh được. Anytime algorithm tận dụng thông tin này bằng cách trả nghiệm tốt nhất hiện có trong khi tiếp tục siết bounds.
 
 ## Lower bound, upper bound và optimality gap
 
@@ -688,7 +688,7 @@ Nếu chưa gặp, gap cho biết mức độ chưa chắc chắn.
 
 Solver tối ưu hóa (optimization / 최적화) hiện đại thường báo cả incumbent solution và best bound; đây là thông tin rất hữu ích để quyết định dừng sớm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Anytime thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **Lower bound, upper bound và optimality gap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên bỏ exactness?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Anytime search đưa ra đường cong chất lượng–thời gian thay vì một đáp án cuối duy nhất. Đường cong đó hỗ trợ quyết định khi nào exactness xứng đáng với chi phí thêm và khi nào guarantee hoặc nghiệm khả thi là đủ.
 
 ## Anytime thuật toán (algorithm / 알고리즘)
 
@@ -700,7 +700,7 @@ Trong hệ thống deadline-driven, đôi khi “solution tốt trong 2 giây”
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) trực tiếp giữa chất lượng (quality / 품질) và compute ngân sách (budget / 예산).
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Khi nào nên bỏ exactness?** tiếp nhận điểm tựa từ **Anytime thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên dùng brute force?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quyết định bỏ exactness phải dựa trên constraint, rủi ro và yêu cầu latency, không phải phản xạ theo nhãn hardness. Với n nhỏ hoặc deadline chặt, brute force vẫn có thể là baseline exact minh bạch nhất.
 
 ## Khi nào nên bỏ exactness?
 
@@ -718,7 +718,7 @@ Một quy trình thực dụng:
 
 Không nên nhảy thẳng sang heuristic chỉ vì thấy từ “NP-hard”.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Khi nào nên dùng brute force?** tiếp nhận điểm tựa từ **Khi nào nên bỏ exactness?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hardness và sản phẩm (product / 제품) requirements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Brute force là baseline tốt khi không gian nhỏ, cần oracle kiểm chứng hoặc muốn đo chất lượng heuristic. Từ baseline đó, quyết định triển khai phải quay về hardness và yêu cầu sản phẩm.
 
 ## Khi nào nên dùng brute force?
 
@@ -734,7 +734,7 @@ implementation đơn giản quan trọng hơn runtime
 
 Một brute-force solver nhỏ, rõ và đúng còn là tham chiếu (reference / 참조) mô hình (model / 모델) rất tốt cho differential testing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Hardness và sản phẩm (product / 제품) requirements** tiếp nhận điểm tựa từ **Khi nào nên dùng brute force?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một workflow nhận diện bài khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hardness chỉ là một thuộc tính lý thuyết; product còn có deadline, kích thước input, SLA, độ chính xác và khả năng bảo trì. Vì vậy cần một workflow biến các ràng buộc đó thành lựa chọn thuật toán.
 
 ## Hardness và sản phẩm (product / 제품) requirements
 
@@ -751,7 +751,7 @@ real-time answer -> offline preprocessing
 
 Thay yêu cầu (requirement / 요구사항) không phải “né thuật toán”; đôi khi đó là cách duy nhất biến một tối ưu hóa (optimization / 최적화) không khả thi thành hệ thống có SLA rõ.
 
-> **Chuyển mạch:** Trong **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Hardness và sản phẩm (product / 제품) requirements** xác định đầu vào; **Một workflow nhận diện bài khó** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Workflow nhận diện bài khó nên bắt đầu từ input model, decision version, reduction, parameter và guarantee. Những hiểu lầm phổ biến sau đây giúp tránh nhảy thẳng từ nhãn NP-hard sang kết luận “không thể giải”.
 
 ## Một workflow nhận diện bài khó
 
@@ -771,7 +771,7 @@ Solver SAT/ILP/CP có phù hợp không?
 
 Mục tiêu là nhận ra cấu trúc trước khi lao vào micro-optimization.
 
-> **Chuyển mạch:** Ở chặng này của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Một workflow nhận diện bài khó** xác định đầu vào; **Những hiểu lầm phổ biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các hiểu lầm về hardness, approximation và brute force thường nhầm guarantee với quan sát hoặc nhầm worst-case với mọi instance. Mô hình tư duy cuối file gom lại cách hỏi đúng trước khi chọn kỹ thuật.
 
 ## Những hiểu lầm phổ biến
 
@@ -789,7 +789,7 @@ Mục tiêu là nhận ra cấu trúc trước khi lao vào micro-optimization.
 
 “Exponential thuật toán (algorithm / 알고리즘) luôn tệ” — sai nếu parameter nhỏ hoặc exactness bắt buộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy này giữ ba lớp tách biệt: reduction cho biết độ khó, thuật toán cho biết chiến lược, còn guarantee và giới hạn cho biết ta được phép kỳ vọng gì. Đó là checklist để chọn exact, parameterized, approximation hay heuristic một cách có căn cứ.
 
 ## Mô hình tư duy
 
