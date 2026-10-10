@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mục tiêu của **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, ta chuyển sang **핵심 키워드 (Từ khóa)** để xác định phạm vi thuật ngữ trước khi tìm hiểu các mối liên hệ và giới hạn của chúng.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 개발, 방법론, 테일러링, 프레임워크
 
-> **Chuyển mạch:** Ở chặng này của **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện các **핵심 키워드 (Từ khóa)**, hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để thấy bài học kế thừa tiêu chí nào từ phần trước; **읽는 방법 (Cách đọc)** sẽ giúp kiểm tra các tiêu chí đó trong nội dung tiếp theo.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**에서 만든 기준을 이어받아 **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** cho biết tiêu chí của phần trước được mở rộng ra sao; từ đó, **읽는 방법 (Cách đọc)** hướng dẫn cách theo dõi đối tượng, điều kiện và hệ quả của việc tailoring trong phần chính.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **소프트웨어 개발 방법론 테�
 
 ---
 
-> **Chuyển mạch:** Trong **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi đã có cách đọc, ta đi vào **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** để xem một phương pháp được điều chỉnh theo bối cảnh bằng những điều kiện và tiêu chí nào.
 
 ## 소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)
 

@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mục tiêu của **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, ta chuyển sang **핵심 키워드 (Từ khóa)** để xác định phạm vi thuật ngữ trước khi tìm hiểu các mối liên hệ và giới hạn của chúng.
 
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 개발, 방법론, 프레임워크
 
-> **Chuyển mạch:** Ở chặng này của **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện các **핵심 키워드 (Từ khóa)**, hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để biết chúng dựa trên nền tảng nào và cần được đối chiếu ở đâu; tiếp đó **읽는 방법 (Cách đọc)** sẽ biến mối liên hệ ấy thành cách học cụ thể.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** cho biết bài học đứng ở đâu trong chuỗi kiến thức; từ điểm tựa đó, **읽는 방법 (Cách đọc)** hướng dẫn cách theo dõi đối tượng, điều kiện và hệ quả trong phần nội dung chính.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **1. 소프트웨어 개발 방법론 �
 
 ---
 
-> **Chuyển mạch:** Trong **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi đã có cách đọc, ta đi vào **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** để kiểm tra các khái niệm bằng dấu hiệu, điều kiện và ví dụ cụ thể.
 
 ## 1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)
 
