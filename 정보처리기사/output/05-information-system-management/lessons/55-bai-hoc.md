@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **라이브러리 및 예외 처리 (Libraries and Exception Handling)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **운영체제 (OS: Operating System) 기초** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **라이브러리 및 예외 처리 (Libraries and Exception Handling)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **라이브러리 및 예외 처리 (Libraries and Exception Handling)**, **핵심 키워드 (Từ khóa)** chuyển mục tiêu học thành hai đối tượng cần theo dõi; **선행·연결 개념 (Kiến thức liên kết)** xác định nền tảng và giới hạn của chúng.
 
 ## 핵심 키워드 (Từ khóa)
 
 라이브러리, 예외, 처리
 
-> **Chuyển mạch:** Ở chặng này của **라이브러리 및 예외 처리 (Libraries and Exception Handling)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau các từ khóa, **선행·연결 개념 (Kiến thức liên kết)** cho biết bài này kế thừa tiêu chí nào; **읽는 방법 (Cách đọc)** biến tiêu chí đó thành cách phân biệt thư viện và đường lỗi.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **프로그래밍 언어의 분류 (Classification of Programming Languages)**에서 만든 기준을 이어받아 **라이브러리 및 예외 처리 (Libraries and Exception Handling)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **라이브러리 및 예외 처리 (Libraries and Exception Handling)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **선행·연결 개념 (Kiến thức liên kết)** đặt bài này sau phân loại ngôn ngữ lập trình; **읽는 방법 (Cách đọc)** dùng điểm tựa đó để theo dõi hành vi có sẵn và cách chương trình phục hồi khi có exception.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **라이브러리 및 예외 처리 (Lib
 
 ---
 
-> **Chuyển mạch:** Trong **라이브러리 및 예외 처리 (Libraries and Exception Handling)**, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Sau khi xác định cách đọc, phần chính đối chiếu thư viện với xử lý exception bằng cùng khung **đối tượng → điều kiện → hệ quả**, rồi bàn giao tiêu chí đó cho bài về hệ điều hành.
 
 ## 라이브러리 및 예외 처리 (Libraries and Exception Handling)
 
