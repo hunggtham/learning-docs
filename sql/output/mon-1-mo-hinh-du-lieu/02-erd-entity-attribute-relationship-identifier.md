@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ khóa chỉ giúp định vị thuật ngữ; mạch tư duy cần biến chúng thành câu hỏi về thực thể, thuộc tính và quan hệ. Bước đầu là nối định nghĩa với cách người học kiểm tra mô hình.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 좋은 데이터 모델의 요소** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mạch tư duy giải thích cách đọc khái niệm, còn mạch nối biến cách đọc đó thành trình tự học và ra quyết định. Từ đây bài học đặt nền bằng các yếu tố của một mô hình dữ liệu tốt.
 
 ## Mạch nối của bài học
 
@@ -47,7 +47,7 @@ Công thức ghi nhớ:
 
 Ta bắt đầu **11. 좋은 데이터 모델의 요소** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. 좋은 데이터 모델의 요소** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 데이터 모델링의 이해관계자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một mô hình tốt không chỉ có đủ entity mà còn phải rõ grain, rule và khả năng kiểm chứng. Khi các tiêu chí này đã rõ, cần biết stakeholder nào cung cấp hoặc xác nhận từng yêu cầu.
 
 ## 11. 좋은 데이터 모델의 요소
 
@@ -570,7 +570,7 @@ Vậy ta đã có tiêu chí để đọc **Phân biệt 중복배제 và 통합
 
 Ta bắt đầu **12. 데이터 모델링의 이해관계자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **12. 데이터 모델링의 이해관계자** tiếp nhận điểm tựa từ **11. 좋은 데이터 모델의 요소** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ERD là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stakeholder cung cấp ngữ nghĩa nghiệp vụ và các ngoại lệ mà schema không thể tự suy ra. Khi yêu cầu đã được gom lại, ERD trở thành bản đồ để biểu diễn và kiểm tra chúng.
 
 ## 12. 데이터 모델링의 이해관계자
 
@@ -729,7 +729,7 @@ Vậy ta đã có tiêu chí để đọc **Hai câu quan trọng trong hình**.
 
 Ta bắt đầu **13. ERD là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **13. ERD là gì?** tiếp nhận điểm tựa từ **12. 데이터 모델링의 이해관계자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Trình tự lập ERD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ERD biểu diễn entity, relationship và constraint, nhưng bản vẽ chỉ có giá trị khi được lập theo một quy trình nhất quán. Vì vậy bước kế tiếp là trình tự đi từ phạm vi nghiệp vụ đến mô hình.
 
 ## 13. ERD là gì?
 
@@ -804,7 +804,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: Peter Chen**. Bây giờ ch
 
 Ta bắt đầu **14. Trình tự lập ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **14. Trình tự lập ERD** tiếp nhận điểm tựa từ **13. ERD là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. ERD 표기법 - Các ký pháp ERD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trình tự lập ERD giúp tránh vẽ quan hệ trước khi biết entity và rule. Sau khi xác định các thành phần, cần thống nhất ký pháp để cardinality, optionality và key không bị hiểu khác nhau.
 
 ## 14. Trình tự lập ERD
 
@@ -1184,7 +1184,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 선택 참여**. Bây giờ
 
 Ta bắt đầu **15. ERD 표기법 - Các ký pháp ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **15. ERD 표기법 - Các ký pháp ERD** tiếp nhận điểm tựa từ **14. Trình tự lập ERD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Entity là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ký pháp ERD là ngôn ngữ biểu diễn, không thay thế ngữ nghĩa nghiệp vụ. Khi đọc đúng đường nối và cardinality, ta mới có thể định nghĩa entity như một lớp đối tượng có identity riêng.
 
 ## 15. ERD 표기법 - Các ký pháp ERD
 
@@ -1267,7 +1267,7 @@ Vậy ta đã có tiêu chí để đọc **15.2. IE / Crow’s Foot notation**.
 
 Ta bắt đầu **16. Entity là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **16. Entity là gì?** tiếp nhận điểm tựa từ **15. ERD 표기법 - Các ký pháp ERD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Phân loại Entity theo hình thức tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Entity là thứ được quản lý hoặc cần phân biệt trong phạm vi nghiệp vụ; không phải mọi danh từ đều tự động thành bảng. Cách entity tồn tại trong thực tế là bước tiếp theo để kiểm tra ranh giới đó.
 
 ## 16. Entity là gì?
 
@@ -1369,7 +1369,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: Instance**. Bây giờ chuy
 
 Ta bắt đầu **17. Phân loại Entity theo hình thức tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **17. Phân loại Entity theo hình thức tồn tại** tiếp nhận điểm tựa từ **16. Entity là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Phân loại Entity theo thời điểm phát sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân loại entity theo hình thức tồn tại cho biết ta đang mô hình hóa người/vật, sự kiện hay khái niệm phụ thuộc. Phân loại theo thời điểm phát sinh bổ sung câu hỏi entity là ổn định hay được tạo theo giao dịch.
 
 ## 17. Phân loại Entity theo hình thức tồn tại
 
@@ -1633,7 +1633,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 의존**. Bây giờ chuy�
 
 Ta bắt đầu **18. Phân loại Entity theo thời điểm phát sinh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **18. Phân loại Entity theo thời điểm phát sinh** tiếp nhận điểm tựa từ **17. Phân loại Entity theo hình thức tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Sơ đồ quan hệ giữa các loại Entity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Entity có thể tồn tại thường trực, phát sinh theo sự kiện hoặc thay đổi theo kỳ; điều đó ảnh hưởng lifecycle và khóa. Đặt các loại cạnh nhau giúp nhìn ra quan hệ giữa chúng trong một sơ đồ chung.
 
 ## 18. Phân loại Entity theo thời điểm phát sinh
 
@@ -1808,7 +1808,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 행위 Entity**. Bây giờ
 
 Ta bắt đầu **19. Sơ đồ quan hệ giữa các loại Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **19. Sơ đồ quan hệ giữa các loại Entity** tiếp nhận điểm tựa từ **18. Phân loại Entity theo thời điểm phát sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Tổng hợp keyword của hai hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sơ đồ quan hệ giữa các loại entity gom các phân loại thành bức tranh tổng thể về ownership và dependency. Trước khi chuyển sang Attribute, cần chốt lại các keyword và ranh giới đã rút ra từ hai hình.
 
 ## 19. Sơ đồ quan hệ giữa các loại Entity
 
@@ -1850,7 +1850,7 @@ Vậy ta đã có tiêu chí để đọc **19. Sơ đồ quan hệ giữa các 
 
 Ta bắt đầu **20. Tổng hợp keyword của hai hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **20. Tổng hợp keyword của hai hình** gom các mảnh từ **19. Sơ đồ quan hệ giữa các loại Entity** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제 3절 속성 - Phần 3: Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tổng hợp hai hình chuyển danh sách phân loại thành vocabulary dùng chung cho ERD. Từ đây, Attribute được mở như một phần riêng vì thuộc tính chỉ có nghĩa khi gắn với entity và value.
 
 ## 20. Tổng hợp keyword của hai hình
 
@@ -1903,7 +1903,7 @@ Vậy ta đã có tiêu chí để đọc **Câu ghi nhớ cuối cùng**. Bây 
 
 Ta bắt đầu **제 3절 속성 - Phần 3: Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **제 3절 속성 - Phần 3: Attribute** gom các mảnh từ **20. Tổng hợp keyword của hai hình** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1. 속성의 정의 - Định nghĩa Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phần Attribute bắt đầu từ việc phân biệt thuộc tính với entity và relationship. Sau khung khái niệm, định nghĩa Attribute sẽ đặt điều kiện để một đặc tính trở thành dữ liệu cần lưu.
 
 ## 제 3절 속성 - Phần 3: Attribute
 
@@ -1913,7 +1913,7 @@ Vậy ta đã có tiêu chí để đọc **제 3절 속성 - Phần 3: Attribut
 
 Ta bắt đầu **1. 속성의 정의 - Định nghĩa Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **1. 속성의 정의 - Định nghĩa Attribute** tiếp nhận điểm tựa từ **제 3절 속성 - Phần 3: Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Attribute mô tả một khía cạnh của entity tại grain đã chọn, nhưng giá trị của nó phải có ngữ nghĩa và miền hợp lệ. Quan hệ giữa entity, instance, attribute và value giúp đặt từng giá trị vào đúng tầng.
 
 ## 1. 속성의 정의 - Định nghĩa Attribute
 
@@ -2088,7 +2088,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 최소 단위**. Bây giờ
 
 Ta bắt đầu **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** tiếp nhận điểm tựa từ **1. 속성의 정의 - Định nghĩa Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 속성의 특징 - Đặc điểm của Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân biệt entity, instance, attribute và attribute value ngăn việc biến một giá trị cụ thể thành cột hoặc bảng sai chỗ. Từ quan hệ đó, có thể rút ra các đặc điểm dùng để đánh giá chất lượng Attribute.
 
 ## 2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value
 
@@ -2325,7 +2325,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 원자성(Atomicity)**. Bâ
 
 Ta bắt đầu **3. 속성의 특징 - Đặc điểm của Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **3. 속성의 특징 - Đặc điểm của Attribute** tiếp nhận điểm tựa từ **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 속성의 명명 - Đặt tên Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đặc điểm của Attribute gồm tính đơn trị, ổn định, phụ thuộc và khả năng suy diễn; các đặc điểm này quyết định lưu trực tiếp hay tính ra. Trước khi chọn kiểu dữ liệu, cần đặt tên nhất quán để schema dễ đọc và ít mơ hồ.
 
 ## 3. 속성의 특징 - Đặc điểm của Attribute
 
@@ -2545,7 +2545,7 @@ Vậy ta đã có tiêu chí để đọc **3.4. Một Attribute chỉ có một
 
 Ta bắt đầu **4. 속성의 명명 - Đặt tên Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **4. 속성의 명명 - Đặt tên Attribute** tiếp nhận điểm tựa từ **3. 속성의 특징 - Đặc điểm của Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 속성의 표기법 - Ký pháp Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đặt tên Attribute phải phản ánh ý nghĩa, grain và đơn vị đo, tránh tên chung như value hoặc status. Khi tên đã rõ, ký pháp Attribute giúp biểu diễn domain, optionality và các ràng buộc liên quan.
 
 ## 4. 속성의 명명 - Đặt tên Attribute
 
@@ -2796,7 +2796,7 @@ Vậy ta đã có tiêu chí để đọc **Lưu ý**. Bây giờ chuyển sang 
 
 Ta bắt đầu **5. 속성의 표기법 - Ký pháp Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **5. 속성의 표기법 - Ký pháp Attribute** tiếp nhận điểm tựa từ **4. 속성의 명명 - Đặt tên Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 속성의 도메인 - Domain của Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ký pháp làm rõ Attribute đang bắt buộc, khóa hay đa trị, nhưng implementation vẫn cần domain cụ thể. Domain xác định tập giá trị hợp lệ, kiểu dữ liệu và các giới hạn phải kiểm tra.
 
 ## 5. 속성의 표기법 - Ký pháp Attribute
 
@@ -2890,7 +2890,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 표기법**. Bây giờ chu
 
 Ta bắt đầu **6. 속성의 도메인 - Domain của Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **6. 속성의 도메인 - Domain của Attribute** tiếp nhận điểm tựa từ **5. 속성의 표기법 - Ký pháp Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phân loại Attribute theo đặc tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Domain nối khái niệm nghiệp vụ với constraint triển khai như kiểu, range, format và nullability. Sau khi chốt domain, ta phân loại Attribute theo đặc tính để biết cách lưu và kiểm tra chúng.
 
 ## 6. 속성의 도메인 - Domain của Attribute
 
@@ -3012,7 +3012,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 제약조건**. Bây giờ 
 
 Ta bắt đầu **7. Phân loại Attribute theo đặc tính** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **7. Phân loại Attribute theo đặc tính** tiếp nhận điểm tựa từ **6. 속성의 도메인 - Domain của Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Phân loại Attribute theo cách Entity được cấu thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân loại theo đặc tính tách thuộc tính mô tả, định danh, dẫn xuất hoặc phụ thuộc thời gian. Một chiều khác là xem entity được cấu thành bởi Attribute đơn giản hay tổ hợp, để tránh flatten sai cấu trúc.
 
 ## 7. Phân loại Attribute theo đặc tính
 
@@ -3305,7 +3305,7 @@ Vậy ta đã có tiêu chí để đọc **7.6. “가급적 적게 정의” n
 
 Ta bắt đầu **8. Phân loại Attribute theo cách Entity được cấu thành** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **8. Phân loại Attribute theo cách Entity được cấu thành** tiếp nhận điểm tựa từ **7. Phân loại Attribute theo đặc tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Phân loại theo số lượng Attribute Value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Attribute có thể cấu thành entity trực tiếp, lồng trong cấu trúc hoặc đại diện cho một nhóm giá trị; cách phân loại ảnh hưởng decomposition. Tiếp theo cần hỏi mỗi Attribute có một value hay nhiều value trong một instance.
 
 ## 8. Phân loại Attribute theo cách Entity được cấu thành
 
@@ -3452,7 +3452,7 @@ Vậy ta đã có tiêu chí để đọc **8.3. 일반 속성 - General Attribu
 
 Ta bắt đầu **9. Phân loại theo số lượng Attribute Value** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **9. Phân loại theo số lượng Attribute Value** tiếp nhận điểm tựa từ **8. Phân loại Attribute theo cách Entity được cấu thành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Phân loại theo khả năng phân tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Số lượng Attribute Value quyết định cột đơn, bảng con hoặc quan hệ riêng khi chuyển sang relational schema. Sau cardinality theo value, khả năng phân tách cho biết một thuộc tính có nên tiếp tục tách thành thành phần nhỏ hơn.
 
 ## 9. Phân loại theo số lượng Attribute Value
 
@@ -3621,7 +3621,7 @@ Vậy ta đã có tiêu chí để đọc **Cách xử lý 2: Tạo Relationship
 
 Ta bắt đầu **10. Phân loại theo khả năng phân tách** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **10. Phân loại theo khả năng phân tách** tiếp nhận điểm tựa từ **9. Phân loại theo số lượng Attribute Value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Tổng hợp toàn bộ nội dung trong hai hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Attribute decomposition làm rõ khi nào một field phức hợp nên tách thành nhiều thuộc tính hoặc entity phụ. Sau khi phân loại đủ các chiều, phần tổng hợp kiểm tra chúng có tạo thành mô hình nhất quán hay chưa.
 
 ## 10. Phân loại theo khả năng phân tách
 
@@ -3748,7 +3748,7 @@ Vậy ta đã có tiêu chí để đọc **Có nên tách Composite Attribute k
 
 Ta bắt đầu **11. Tổng hợp toàn bộ nội dung trong hai hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. Tổng hợp toàn bộ nội dung trong hai hình** gom các mảnh từ **10. Phân loại theo khả năng phân tách** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제 4절 관계 - Phần 4: Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tổng hợp toàn bộ Attribute giúp đối chiếu domain, value cardinality và decomposition với các entity đã chọn. Khi chuyển sang Relationship, trọng tâm đổi từ “entity có gì” sang “entity liên hệ và phụ thuộc thế nào”.
 
 ## 11. Tổng hợp toàn bộ nội dung trong hai hình
 
@@ -3851,7 +3851,7 @@ Vậy ta đã có tiêu chí để đọc **Sơ đồ ghi nhớ**. Bây giờ ch
 
 Ta bắt đầu **제 4절 관계 - Phần 4: Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **제 4절 관계 - Phần 4: Relationship** gom các mảnh từ **11. Tổng hợp toàn bộ nội dung trong hai hình** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1. 관계의 정의 - Định nghĩa Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Relationship là phần nối các entity trong phạm vi và thời điểm cụ thể, nên phải đọc cùng cardinality và optionality. Bước đầu của phần này là định nghĩa chính xác relationship thay vì chỉ nhìn đường nối trên hình.
 
 ## 제 4절 관계 - Phần 4: Relationship
 
@@ -3861,7 +3861,7 @@ Vậy ta đã có tiêu chí để đọc **제 4절 관계 - Phần 4: Relation
 
 Ta bắt đầu **1. 관계의 정의 - Định nghĩa Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **1. 관계의 정의 - Định nghĩa Relationship** tiếp nhận điểm tựa từ **제 4절 관계 - Phần 4: Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 관계의 페어링 - Pairing của Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Định nghĩa Relationship xác định association có ý nghĩa gì và ở grain nào. Pairing tiếp theo làm rõ các entity tham gia, vai trò của từng phía và cách tránh quan hệ mơ hồ.
 
 ## 1. 관계의 정의 - Định nghĩa Relationship
 
@@ -3965,7 +3965,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: Instance Relationship**. B�
 
 Ta bắt đầu **2. 관계의 페어링 - Pairing của Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **2. 관계의 페어링 - Pairing của Relationship** tiếp nhận điểm tựa từ **1. 관계의 정의 - Định nghĩa Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Phân loại Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pairing cho biết relationship là unary, binary hay n-ary và mỗi phía đóng vai trò gì. Sau khi xác định cặp hoặc nhóm tham gia, cần phân loại relationship theo semantics nghiệp vụ.
 
 ## 2. 관계의 페어링 - Pairing của Relationship
 
@@ -4074,7 +4074,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 관계 집합**. Bây giờ
 
 Ta bắt đầu **3. Phân loại Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **3. Phân loại Relationship** tiếp nhận điểm tựa từ **2. 관계의 페어링 - Pairing của Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 존재에 의한 관계 - Relationship do sự tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân loại Relationship giúp tách quan hệ sở hữu, tham chiếu, giao dịch hoặc phụ thuộc. Một ranh giới quan trọng là relationship do sự tồn tại của entity hay do một hành động tạo ra.
 
 ## 3. Phân loại Relationship
 
@@ -4098,7 +4098,7 @@ Vậy ta đã có tiêu chí để đọc **3. Phân loại Relationship**. Bây
 
 Ta bắt đầu **4. 존재에 의한 관계 - Relationship do sự tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **4. 존재에 의한 관계 - Relationship do sự tồn tại** tiếp nhận điểm tựa từ **3. Phân loại Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 행위에 의한 관계 - Relationship do hành động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Relationship do sự tồn tại mô tả dependency khi một entity sống phụ thuộc entity khác, còn relationship do hành động gắn với event hoặc nghiệp vụ xảy ra. Phân biệt này ảnh hưởng thời điểm tạo row và khóa ngoại.
 
 ## 4. 존재에 의한 관계 - Relationship do sự tồn tại
 
@@ -4271,7 +4271,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 멤버변수(Member Variabl
 
 Ta bắt đầu **5. 행위에 의한 관계 - Relationship do hành động** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **5. 행위에 의한 관계 - Relationship do hành động** tiếp nhận điểm tựa từ **4. 존재에 의한 관계 - Relationship do sự tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 관계의 표기법 - Cách biểu diễn Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Relationship do hành động thường tạo dữ liệu giao dịch hoặc history, nên cardinality và thời gian phải được kiểm tra riêng. Sau semantics, ký pháp Relationship cho biết cách biểu diễn các constraint đó trên ERD.
 
 ## 5. 행위에 의한 관계 - Relationship do hành động
 
@@ -4510,7 +4510,7 @@ Vậy ta đã có tiêu chí để đọc **Lưu ý quan trọng trong ERD**. B�
 
 Ta bắt đầu **6. 관계의 표기법 - Cách biểu diễn Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **6. 관계의 표기법 - Cách biểu diễn Relationship** tiếp nhận điểm tựa từ **5. 행위에 의한 관계 - Relationship do hành động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Relationship Check - Kiểm tra Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cách biểu diễn Relationship phải làm rõ cardinality, optionality, identifying và hướng phụ thuộc. Relationship Check dùng các câu hỏi kiểm chứng để phát hiện đường nối thiếu, thừa hoặc không phù hợp với rule.
 
 ## 6. 관계의 표기법 - Cách biểu diễn Relationship
 
@@ -4773,7 +4773,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 선택참여관계**. Bây 
 
 Ta bắt đầu **7. Relationship Check - Kiểm tra Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **7. Relationship Check - Kiểm tra Relationship** tiếp nhận điểm tựa từ **6. 관계의 표기법 - Cách biểu diễn Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Quan hệ định danh và không định danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Relationship Check nối bản vẽ với kiểm tra nghiệp vụ: mỗi quan hệ phải có lý do, grain và miền tham gia. Từ đây cần phân biệt quan hệ định danh và không định danh vì chúng dẫn tới cách đặt khóa khác nhau.
 
 ## 7. Relationship Check - Kiểm tra Relationship
 
@@ -4912,7 +4912,7 @@ Vậy ta đã có tiêu chí để đọc **7.4. Có động từ mô tả Relat
 
 Ta bắt đầu **8. Quan hệ định danh và không định danh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **8. Quan hệ định danh và không định danh** tiếp nhận điểm tựa từ **7. Relationship Check - Kiểm tra Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 비식별자 관계 - Non-identifying Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quan hệ định danh đưa khóa của parent vào identity của child; quan hệ không định danh giữ identity độc lập và chỉ tham chiếu parent. Trước khi chọn kiểu cụ thể, cần xem non-identifying relationship vận hành ra sao trong schema.
 
 ## 8. Quan hệ định danh và không định danh
 
@@ -5117,7 +5117,7 @@ Vậy ta đã có tiêu chí để đọc **8.4. Khi nào cần giảm quan hệ
 
 Ta bắt đầu **9. 비식별자 관계 - Non-identifying Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **9. 비식별자 관계 - Non-identifying Relationship** tiếp nhận điểm tựa từ **8. Quan hệ định danh và không định danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 식별자 - Khái niệm Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quan hệ không định danh giữ khóa chính của child tách khỏi khóa parent, nhưng vẫn cần foreign key để bảo toàn referential integrity. Từ trường hợp này, phần Identifier mở rộng câu hỏi: identity của entity được xác lập bằng gì.
 
 ## 9. 비식별자 관계 - Non-identifying Relationship
 
@@ -5267,7 +5267,7 @@ Vậy ta đã có tiêu chí để đọc **4. Cần đơn giản hóa PK**. Bâ
 
 Ta bắt đầu **10. 식별자 - Khái niệm Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **10. 식별자 - Khái niệm Identifier** tiếp nhận điểm tựa từ **9. 비식별자 관계 - Non-identifying Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Đặc điểm của Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Identifier là thuộc tính hoặc tập thuộc tính phân biệt một instance trong đúng phạm vi entity. Sau khái niệm, cần kiểm tra các đặc điểm như ổn định, tối thiểu, duy nhất và phù hợp lifecycle.
 
 ## 10. 식별자 - Khái niệm Identifier
 
@@ -5376,7 +5376,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: Key**. Bây giờ chuyển 
 
 Ta bắt đầu **11. Đặc điểm của Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. Đặc điểm của Identifier** tiếp nhận điểm tựa từ **10. 식별자 - Khái niệm Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Phân loại Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một Identifier tốt phải duy nhất, tối thiểu, ổn định và không phụ thuộc dữ liệu dễ đổi. Các tiêu chí đó dẫn tới nhiều cách phân loại Identifier theo nguồn gốc và vai trò trong mô hình.
 
 ## 11. Đặc điểm của Identifier
 
@@ -5569,7 +5569,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 존재성**. Bây giờ chu
 
 Ta bắt đầu **12. Phân loại Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **12. Phân loại Identifier** tiếp nhận điểm tựa từ **11. Đặc điểm của Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 주식별자 và 보조식별자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân loại Identifier giúp tách tự nhiên/nghiệp vụ với nhân tạo/kỹ thuật, đơn với ghép và ổn định với biến động. Tiếp theo cần phân biệt primary identifier với secondary identifier trong cùng entity.
 
 ## 12. Phân loại Identifier
 
@@ -5643,7 +5643,7 @@ Vậy ta đã có tiêu chí để đọc **12.4. Theo nguồn gốc**. Bây gi�
 
 Ta bắt đầu **13. 주식별자 và 보조식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **13. 주식별자 và 보조식별자** tiếp nhận điểm tựa từ **12. Phân loại Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Các loại Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Primary identifier là lựa chọn chính để định danh instance; secondary identifier vẫn hữu ích cho tra cứu hoặc kiểm tra duy nhất. Các loại key trong schema triển khai là cách cụ thể hóa những vai trò này.
 
 ## 13. 주식별자 và 보조식별자
 
@@ -5709,7 +5709,7 @@ Vậy ta đã có tiêu chí để đọc **Lưu ý thuật ngữ**. Bây giờ 
 
 Ta bắt đầu **14. Các loại Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **14. Các loại Key** tiếp nhận điểm tựa từ **13. 주식별자 và 보조식별자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tiêu chí lựa chọn Primary Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Key có thể là candidate, primary, alternate, foreign hoặc composite; mỗi loại có constraint và hệ quả join khác nhau. Khi chọn primary identifier, cần cân bằng ổn định, độ ngắn, khả năng truyền qua quan hệ và chi phí triển khai.
 
 ## 14. Các loại Key
 
@@ -5849,7 +5849,7 @@ Vậy ta đã có tiêu chí để đọc **14.4. Alternate Key**. Bây giờ ch
 
 Ta bắt đầu **15. Tiêu chí lựa chọn Primary Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **15. Tiêu chí lựa chọn Primary Identifier** tiếp nhận điểm tựa từ **14. Các loại Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tiêu chí chọn primary identifier nối quyết định mô hình với index, foreign key và lifecycle của row. Sau đó cần so sánh trực tiếp identifying/non-identifying relationship để thấy khóa ảnh hưởng cấu trúc child thế nào.
 
 ## 15. Tiêu chí lựa chọn Primary Identifier
 
@@ -5983,7 +5983,7 @@ Vậy ta đã có tiêu chí để đọc **15.4. Hạn chế số lượng Attr
 
 Ta bắt đầu **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **15. Tiêu chí lựa chọn Primary Identifier** đã nêu tiêu chí phân biệt, còn **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Phân tích sơ đồ tổng hợp cuối hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+So sánh hai loại quan hệ cho thấy việc đưa parent key vào child identity là quyết định về ownership, không chỉ là ký pháp. Sơ đồ tổng hợp cuối hình sẽ kiểm tra các quyết định entity, attribute, relationship và identifier có nhất quán cùng nhau không.
 
 ## 16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm
 
@@ -6025,7 +6025,7 @@ Vậy ta đã có tiêu chí để đọc **Cách ghi nhớ**. Bây giờ chuy�
 
 Ta bắt đầu **17. Phân tích sơ đồ tổng hợp cuối hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** đã nêu tiêu chí phân biệt, còn **17. Phân tích sơ đồ tổng hợp cuối hình** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **KẾT LUẬN GHI NHỚ CUỐI BÀI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân tích sơ đồ tổng hợp cần lần lượt kiểm tra grain, cardinality, optionality, domain, key và đường phụ thuộc. Khi các lớp đã khớp, phần kết luận có thể cô đọng thành checklist áp dụng cho mô hình mới.
 
 ## 17. Phân tích sơ đồ tổng hợp cuối hình
 
@@ -6137,7 +6137,7 @@ Vậy ta đã có tiêu chí để đọc **17.4. Purchase Request**. Bây giờ
 
 Ta bắt đầu **KẾT LUẬN GHI NHỚ CUỐI BÀI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom các mảnh từ **17. Phân tích sơ đồ tổng hợp cuối hình** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+KẾT LUẬN GHI NHỚ nên giữ ranh giới giữa ngữ nghĩa nghiệp vụ, ERD và schema triển khai: một đường nối đúng hình chưa đủ nếu key hoặc cardinality sai. Checklist cuối cùng là kiểm tra identity, dependency, normalization và constraint trước khi tạo bảng.
 
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
 
