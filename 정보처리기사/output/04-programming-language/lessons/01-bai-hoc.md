@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Programming Language Basics)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **프로그래밍 언어 기초 (Programming Language Basics)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu vừa đặt ra cho ta tiêu chí đọc; các **핵심 키워드 (Từ khóa)** ngay sau đây thu hẹp tiêu chí đó thành những đối tượng cần nhận diện trong ngôn ngữ lập trình. Hãy dùng chúng để kiểm tra xem phần giải thích tiếp theo đang nói về thành phần nào.
 
 ## 핵심 키워드 (Từ khóa)
 
 프로그래밍, 언어, 기초
 
-> **Chuyển mạch:** Ở chặng này của **프로그래밍 언어 기초 (Programming Language Basics)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Các từ khóa mới chỉ là điểm nhận diện ban đầu. Phần **선행·연결 개념 (Kiến thức liên kết)** đặt chúng vào phạm vi của môn và chỉ ra nền tảng cần nối lại trước khi đi vào chi tiết; từ đó ta có đủ bối cảnh để chọn cách đọc phù hợp.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **프로그래밍 언어 기초 (Programming Language Basics)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **프로그래밍 언어 기초 (Programming Language Basics)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 기초 (Programming Language Basics)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Khi đã biết phần kiến thức này dựa trên nền tảng nào và có giới hạn gì, **읽는 방법 (Cách đọc)** giúp biến bối cảnh đó thành một trình tự học cụ thể. Hãy giữ các điều kiện vừa xác định khi bước vào nội dung chính của bài.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Program
 
 ---
 
-> **Chuyển mạch:** Trong **프로그래밍 언어 기초 (Programming Language Basics)**, **프로그래밍 언어 기초 (Programming Language Basics)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Cách đọc vừa nêu cung cấp khung để xem phần **프로그래밍 언어 기초 (Programming Language Basics)** bên dưới như một lời giải thích có thứ tự: trước hết xác định vấn đề, sau đó theo dõi điều kiện và hệ quả. Hãy đối chiếu từng ví dụ với khung này thay vì tách chúng thành các mẩu ghi nhớ riêng.
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 

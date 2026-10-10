@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu của phần mở rộng xác định điều cần giải thích; các **핵심 키워드 (Từ khóa)** tiếp theo biến mục tiêu ấy thành những điểm nhận diện cụ thể. Hãy dùng chúng để biết mình đang theo dõi cú pháp, kiểu dữ liệu, điều khiển hay phần runtime nào.
 
 ## 핵심 키워드 (Từ khóa)
 
 프로그래밍, 언어, 기초
 
-> **Chuyển mạch:** Ở chặng này của **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa giúp nhận diện phạm vi, còn **선행·연결 개념 (Kiến thức liên kết)** cho biết phần mở rộng đang kế thừa tiêu chí nào từ bài nền. Nắm được quan hệ đó sẽ giúp ta đọc các quy tắc mới như một bước phát triển, không phải một danh sách tách rời.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **프로그래밍 언어 기초 (Programming Language Basics)**에서 만든 기준을 이어받아 **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Sau khi xác định bài này mở rộng tiêu chí nào, **읽는 방법 (Cách đọc)** sắp xếp cách kiểm tra định nghĩa, điều kiện và ví dụ. Hãy dùng trình tự đó để phân biệt phần kế thừa từ bài nền với phần chỉ xuất hiện trong ngữ cảnh mở rộng.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Mở r�
 
 ---
 
-> **Chuyển mạch:** Trong **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khung đọc vừa chuẩn bị sẽ dẫn vào phần **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**. Khi theo dõi nội dung bên dưới, hãy luôn hỏi quy tắc này đang mở rộng điều gì, áp dụng trong điều kiện nào và tạo ra hệ quả nào.
 
 ## 프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)
 

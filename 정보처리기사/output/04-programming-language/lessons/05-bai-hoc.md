@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu của bài đặt câu hỏi về kích thước và giới hạn của từng kiểu dữ liệu; các **핵심 키워드 (Từ khóa)** tiếp theo chỉ ra những thuật ngữ cần theo dõi để trả lời câu hỏi đó. Hãy giữ mối liên hệ giữa kiểu nguyên thủy, số byte và phạm vi giá trị khi đọc phần nguồn.
 
 ## 핵심 키워드 (Từ khóa)
 
 데이터, 타입, 크기
 
-> **Chuyển mạch:** Ở chặng này của **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa giúp ta nhận diện các kiểu cần so sánh; **선행·연결 개념 (Kiến thức liên kết)** bổ sung bối cảnh để hiểu vì sao Java có quy ước kích thước riêng và vì sao không nên suy diễn mọi kiểu từ một ngôn ngữ khác. Bối cảnh này là tiền đề cho cách đọc tiếp theo.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**에서 만든 기준을 이어받아 **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Khi đã phân biệt được quy ước của Java với bối cảnh so sánh, **읽는 방법 (Cách đọc)** hướng ta kiểm tra từng kiểu theo kích thước, miền giá trị và điều kiện sử dụng. Hãy dùng các tiêu chí này trước khi đọc bảng hoặc ví dụ ở phần chính.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **235. JAVA의 데이터 타입 크기 (
 
 ---
 
-> **Chuyển mạch:** Trong **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Các tiêu chí vừa nêu tạo khung cho phần **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** bên dưới. Hãy đọc mỗi kiểu dữ liệu cùng kích thước và giới hạn của nó, rồi dùng ví dụ để kiểm tra xem kết luận có đúng trong Java hay không.
 
 ## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
 
