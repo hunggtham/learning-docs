@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 262: 포인터와 포인터 변수 (Pointer)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **포인터와 배열 (Pointer and Array)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 262: 포인터와 포인터 변수 (Pointer)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Sau khi xác định mục tiêu, hãy dùng **핵심 키워드 (Từ khóa)** để khoanh vào ba quan hệ cần kiểm tra: biến con trỏ lưu địa chỉ nào, phép `*` đọc hoặc ghi giá trị ra sao, và phép `&` lấy địa chỉ ở đâu. Các từ khóa này giúp nối khái niệm với ví dụ thay vì học thuộc ký hiệu riêng lẻ.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 포인터와, 포인터, 변수
 
-> **Chuyển mạch:** Ở chặng này của **핵심 262: 포인터와 포인터 변수 (Pointer)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Các từ khóa vừa nêu cần được đặt trên nền mảng chuỗi vừa học, nơi địa chỉ phần tử đầu tiên mở đường cho cách truy cập bằng con trỏ. Hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để biết bài này kế thừa điều gì và sẽ mở rộng sang quan hệ giữa con trỏ với mảng ở đâu.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **핵심 261: C언어의 문자열 배열**에서 만든 기준을 이어받아 **핵심 262: 포인터와 포인터 변수 (Pointer)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 262: 포인터와 포인터 변수 (Pointer)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 262: 포인터와 포인터 변수 (Pointer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Đã nối con trỏ với mảng và chuỗi, hãy chuyển sang **읽는 방법 (Cách đọc)**. Phần này biến sự khác nhau giữa địa chỉ và giá trị, cũng như điều kiện của phép giải tham chiếu, thành tiêu chí để kiểm tra từng khai báo và ví dụ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 262: 포인터와 포인터 변
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 262: 포인터와 포인터 변수 (Pointer)**, **핵심 262: 포인터와 포인터 변수 (Pointer)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> Cách đọc trên dẫn vào phần chính: hãy theo dõi mỗi dòng từ biến nào được tạo, địa chỉ nào được lưu đến giá trị nào bị thay đổi. Các ví dụ bên dưới sẽ làm rõ vai trò của `&` và `*` trước khi bài chuyển sang cách con trỏ đi qua các phần tử mảng.
 
 ## 핵심 262: 포인터와 포인터 변수 (Pointer)
 
