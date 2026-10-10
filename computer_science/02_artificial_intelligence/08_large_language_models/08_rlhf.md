@@ -17,7 +17,7 @@ A concise hơn B
 
 Human ranking chứa thông tin (information / 정보) mà single-target imitation không thể biểu diễn đầy đủ.
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Vì sao SFT chưa đủ?** xác định đầu vào; **Chuỗi xử lý (pipeline / 파이프라인) cổ điển** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chính sách (policy / 정책) tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Preference cho biết điều gì được ưu tiên; phần tiếp theo mô tả pipeline biến tín hiệu đó thành một reward model và một chính sách được cập nhật.
 
 ## Chuỗi xử lý (pipeline / 파이프라인) cổ điển
 
@@ -49,7 +49,7 @@ Reward mô hình (model / 모델) `r_\phi(x,y)` học score sao cho preferred an
 
 Reward mô hình (model / 모델) không phải oracle truth. Nó approximates preference phân phối (distribution / 분포) trong annotation dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Chuỗi xử lý (pipeline / 파이프라인) cổ điển** xác định đầu vào; **Chính sách (policy / 정책) tối ưu hóa (optimization / 최적화)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **PPO intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pipeline cho thấy reward chỉ là tín hiệu trung gian; bước kế tiếp phải tối ưu chính sách mà vẫn kiểm soát mức lệch khỏi mô hình tham chiếu.
 
 ## Chính sách (policy / 정책) tối ưu hóa (optimization / 최적화)
 
@@ -61,7 +61,7 @@ Chính sách (policy / 정책) LLM sau đó được optimized để maximize le
 
 KL term hạn chế chính sách (policy / 정책) drift quá xa khỏi mô hình (model / 모델) đã có ngôn ngữ (language / 언어) chất lượng (quality / 품질) tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **PPO intuition** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward hacking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+PPO biến mục tiêu chính sách thành các cập nhật nhỏ và ổn định hơn, nhưng một reward model không hoàn hảo vẫn có thể bị tối ưu theo cách ngoài ý muốn.
 
 ## PPO intuition
 
@@ -71,7 +71,7 @@ Trong LLM setting, “hành động (action / 동작)” là generated đơn v�
 
 Điều này làm credit assignment khó: reward tổng cho cả phản hồi (response / 응답) không nói rõ đơn vị từ (token / 토큰) nào đóng góp bao nhiêu.
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Reward hacking** tiếp nhận điểm tựa từ **PPO intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Preference không bằng truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reward hacking nhắc rằng điểm số không tự động là mục tiêu thật; vì vậy cần xem preference đang đo điều gì và không đo điều gì.
 
 ## Reward hacking
 
@@ -83,7 +83,7 @@ Ví dụ nếu reward mô hình (model / 모델) correlate verbosity với helpf
 
 > Optimizer sẽ tối ưu **chỉ số (metric / 지표) được cho**, không phải mục tiêu trong đầu designer.
 
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, sau nội dung của **Reward hacking**, **Preference không bằng truth** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Annotation thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu preference không phải truth, chất lượng của guideline và quy trình gắn nhãn trở thành một phần quyết định của hệ thống.
 
 ## Preference không bằng truth
 
@@ -93,7 +93,7 @@ Vì vậy RLHF có thể cải thiện helpfulness/style nhưng không guarantee
 
 Grounding, retrieval và xác minh (verification / 확인) vẫn cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Annotation thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Preference không bằng truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Helpful, Honest, Harmless là multi-objective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thiết kế annotation quyết định tín hiệu nào được ưu tiên; trong thực tế, tín hiệu đó thường phải cân bằng nhiều mục tiêu cùng lúc.
 
 ## Annotation thiết kế (design / 설계)
 
@@ -101,7 +101,7 @@ Preference guideline ảnh hưởng mô hình (model / 모델) hành vi (behavio
 
 Inter-annotator disagreement là tín hiệu (signal / 신호) quan trọng: bài toán (problem / 문제) có thể subjective hoặc guideline chưa đủ rõ.
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Helpful, Honest, Harmless là multi-objective** tiếp nhận điểm tựa từ **Annotation thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online vs offline preference tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thiết kế annotation quyết định tín hiệu nào được ưu tiên; trong thực tế, tín hiệu đó thường phải cân bằng nhiều mục tiêu cùng lúc.
 
 ## Helpful, Honest, Harmless là multi-objective
 
@@ -109,7 +109,7 @@ Một assistant thường phải balance nhiều objectives. Helpfulness và har
 
 Không có một scalar reward hoàn hảo biểu diễn mọi giá trị (value / 값). Practical các hệ thống (systems / 시스템들) dùng mixtures, policies và separate evaluations.
 
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, sau nội dung của **Helpful, Honest, Harmless là multi-objective**, **Online vs offline preference tối ưu hóa (optimization / 최적화)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **RLHF và an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Điểm khác giữa online và offline preference nằm ở việc chính sách có tạo dữ liệu mới trong vòng lặp hay chỉ học từ các cặp đã có; khác biệt này ảnh hưởng trực tiếp tới an toàn.
 
 ## Online vs offline preference tối ưu hóa (optimization / 최적화)
 
@@ -119,7 +119,7 @@ Các methods như DPO có thể optimize trực tiếp trên offline preference 
 
 Xem tiếp: [Preference Optimization and DPO](./09_preference_optimization_and_dpo.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **RLHF và an toàn (safety / 안전)** tiếp nhận điểm tựa từ **Online vs offline preference tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KL penalty như stability ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Preference training không thay thế các lớp phòng vệ lúc chạy; một ràng buộc KL là cơ chế ổn định quan trọng trong chính sách tối ưu hóa.
 
 ## RLHF và an toàn (safety / 안전)
 
@@ -127,7 +127,7 @@ An toàn (safety / 안전) preference dữ liệu (data / 데이터) có thể d
 
 Thời gian chạy (runtime / 런타임) defenses, đầu vào (input / 입력)/đầu ra (output / 출력) filters, công cụ (tool / 도구) permission boundaries và red teaming là system-level layers bổ sung.
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **KL penalty như stability ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **RLHF và an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward mô hình (model / 모델) overoptimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+KL penalty kiểm soát tốc độ rời khỏi reference, nhưng không thể sửa một reward model sai; tối ưu quá mạnh vẫn dẫn tới overoptimization.
 
 ## KL penalty như stability ràng buộc (constraint / 제약조건)
 
@@ -139,7 +139,7 @@ Nếu reward tối ưu hóa (optimization / 최적화) quá mạnh, mô hình (m
 
 Đây là một trust-region-like sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Reward mô hình (model / 모델) overoptimization** tiếp nhận điểm tựa từ **KL penalty như stability ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi điểm số của reward model bắt đầu tách khỏi đánh giá của con người, cần nhìn lại toàn bộ chuỗi tín hiệu bằng một mental model thống nhất.
 
 ## Reward mô hình (model / 모델) overoptimization
 
@@ -147,7 +147,7 @@ Khi optimize chính sách (policy / 정책) ngày càng mạnh against fixed rew
 
 Do đó reward-model score không nên là only evaluation after huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reward mô hình (model / 모델) overoptimization** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model này giúp phân biệt preference signal, policy update và hành vi quan sát được trước khi kiểm tra các ngộ nhận thường gặp.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -165,7 +165,7 @@ assistant behavior shifts
 
 RLHF là **hành vi (behavior / 동작) alignment under imperfect preference đo lường (measurement / 측정)**, không phải “upload human values vào mô hình (model / 모델)”.
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận trên đặt đúng giới hạn của RLHF; phần cuối nối pipeline này với reinforcement learning và các phương pháp preference optimization liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -180,8 +180,6 @@ Không. Nó là learned approximation có độ lệch (bias / 편향)/lỗi (er
 ### “RLHF = PPO”
 
 PPO là một tối ưu hóa (optimization / 최적화) choice. RLHF rộng hơn và preference tối ưu hóa (optimization / 최적화) có nhiều alternatives.
-
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
