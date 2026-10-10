@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau mục tiêu, hãy dùng **핵심 키워드 (Từ khóa)** để thu hẹp phạm vi của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**. Đọc liền hai mục sẽ cho thấy từ khóa nào trả lời câu hỏi trung tâm và từ khóa nào cần được kiểm tra thêm ở phần **선행·연결 개념 (Kiến thức liên kết)**.
 
 ## 핵심 키워드 (Từ khóa)
 
 프로세스, 품질, 표준
 
-> **Chuyển mạch:** Ở chặng này của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa đã xác định phạm vi; phần **선행·연결 개념 (Kiến thức liên kết)** tiếp tục chỉ ra chuẩn tham chiếu và vị trí cần quay lại khi muốn đào sâu. Sau đó, **읽는 방법 (Cách đọc)** biến mối liên hệ ấy thành một trình tự đọc có thể áp dụng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**에서 만든 기준을 이어받아 **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ chuẩn tham chiếu vừa xác định, **읽는 방법 (Cách đọc)** đặt ra cách tìm đối tượng, điều kiện và hệ quả trong **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**. Hãy giữ câu hỏi này khi bước vào phần nội dung chính để không biến các tiêu chuẩn thành danh sách rời.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **4. 프로세스 품질 표준 (Tiêu c
 
 ---
 
-> **Chuyển mạch:** Trong **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **읽는 방법 (Cách đọc)** xác định đầu vào; **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi xác định cách đọc, phần **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** sẽ cung cấp các tiêu chí và ví dụ cụ thể. Hãy dùng kết quả đọc để kiểm tra mỗi tiêu chuẩn đang đặt ra điều kiện nào và dẫn đến quyết định cải tiến nào.
 
 ## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
