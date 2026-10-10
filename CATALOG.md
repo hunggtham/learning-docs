@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-25
+last_reviewed: 2026-10-10
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -81,7 +81,7 @@ domains:
     path: computer_science/
     entrypoint: computer_science/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-10-10
     scope: Computing foundations, algorithms, systems, AI, databases, networks, security, software engineering, and professional connections.
     prerequisites: [mathematics]
     related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend]
@@ -274,7 +274,7 @@ domains:
     path: 정보처리기사/
     entrypoint: 정보처리기사/output/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-10-10
     scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
