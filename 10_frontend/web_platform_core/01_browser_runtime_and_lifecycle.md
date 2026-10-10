@@ -19,7 +19,7 @@ Khi một screen bị dispose, mọi listener, timer, subscription, yêu cầu (
 liên quan phải có đường cleanup. Giữ một closure sống lâu hơn document có thể
 giữ DOM subtree và dữ liệu (data / 데이터) trong bộ nhớ (memory / 메모리) dù người dùng không còn nhìn thấy nó.
 
-> **Nối mạch:** Host environment cung cấp task queue, timing và rendering opportunity; event loop quyết định khi nào callback được chạy và frame được tạo. Lifecycle contract tiếp theo kiểm tra các boundary khi document/page đổi trạng thái.
+Host environment cung cấp task queue, timing và rendering opportunity; event loop quyết định callback và frame, còn lifecycle contract kiểm tra boundary khi document hoặc page đổi trạng thái.
 
 ## Vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity
 
@@ -34,7 +34,7 @@ không phải cam kết frame luôn được tạo.
 với tác vụ (task / 작업), microtask, kết xuất (render / 렌더링) opportunity, mạng (network / 네트워크) phản hồi (response / 응답) và người dùng (user / 사용자) intent. Đây
 là cách phát hiện reentrancy, stale cập nhật (update / 업데이트) và long tác vụ (task / 작업).
 
-> **Nối mạch:** Event loop và rendering opportunity tạo ra các mốc execution có thể quan sát; lifecycle contract dùng chúng để định nghĩa cleanup, visibility và cancellation. Đây là ranh giới để các API phía sau không giữ state quá thời gian sống.
+Event loop và rendering opportunity tạo các mốc execution có thể quan sát; lifecycle contract dùng chúng để định nghĩa cleanup, visibility và cancellation, tránh giữ state quá thời gian sống.
 
 ## Vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약)
 

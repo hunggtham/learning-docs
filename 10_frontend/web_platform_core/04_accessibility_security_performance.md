@@ -14,7 +14,7 @@ ARIA chỉ bổ sung khi bản địa (native / 네이티브) element không đ�
 sai. Conditional rendering, portal, popup, WFrame, lazy loading và hydration
 đều phải giữ ngữ nghĩa (semantics / 의미론) và focus restoration.
 
-> **Nối mạch:** Accessibility đặt ra những user-visible constraints cho interface; security tiếp theo bảo vệ dữ liệu và capability trong cùng boundary. Performance phải được đo sau hai constraint đó, không được tối ưu bằng cách phá semantics.
+Accessibility đặt user-visible constraints cho interface; security bảo vệ data và capability trong cùng boundary, rồi performance phải được đo mà không phá semantics của hai trục trước.
 
 ## Bảo mật (security / 보안)
 
@@ -23,7 +23,7 @@ Tách kiểm tra hợp lệ (validation / 검증), encoding, sanitization và au
 được xác định. XSS, CSRF, CORS, cookie/đơn vị từ (token / 토큰), CSP/Trusted Types và phụ thuộc (dependency / 의존성)
 supply chuỗi (chain / 사슬) có dạng thất bại (failure mode / 실패 모드) khác nhau; UI kiểm tra hợp lệ (validation / 검증) không thay máy chủ (server / 서버) check.
 
-> **Nối mạch:** Security boundary xác định dữ liệu và hành động nào được phép; performance đo latency, work và resource cost trong boundary đó. Kết luận là một correctness claim chỉ có ý nghĩa khi cả ba trục cùng được giữ.
+Security boundary xác định data và action được phép; performance đo latency, work và resource cost bên trong boundary đó. Correctness chỉ trọn vẹn khi accessibility, security và performance cùng được giữ.
 
 ## Hiệu năng (performance / 성능)
 
