@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phần keyword đặt nền cho mục tiêu và thuật ngữ; tiếp theo cần biến chúng thành một mô hình logic để đọc quan hệ cha–con.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **🧠 Công thức nhớ 10 giây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mạch logic giúp định vị recursion và điểm dừng; công thức nhớ ngắn dưới đây nén quy tắc trước khi đi vào cú pháp Oracle.
 
 ## Mạch nối của bài học
 
@@ -105,7 +105,7 @@ Vậy ta đã có tiêu chí để đọc **⑪ WITH TIES**. Bây giờ chuyển
 
 Ta bắt đầu **🧠 Công thức nhớ 10 giây** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **🧠 Công thức nhớ 10 giây** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 계층형 질의 — Hierarchical Query là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Công thức nhớ chỉ có ích khi gắn với câu lệnh thật; phần đầu tiên xác định hierarchical query đang trả lời bài toán nào.
 
 ## 🧠 Công thức nhớ 10 giây
 
@@ -150,7 +150,7 @@ Vậy ta đã có tiêu chí để đọc **🧠 Công thức nhớ 10 giây**. 
 
 Ta bắt đầu **1. 계층형 질의 — Hierarchical Query là gì?** bằng câu hỏi: **quan hệ cha–con được bắt đầu, mở rộng và dừng lại theo điều kiện nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **1. 계층형 질의 — Hierarchical Query là gì?** tiếp nhận điểm tựa từ **🧠 Công thức nhớ 10 giây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 순환관계 데이터 모델 — Recursive Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định hierarchical query, cần mô tả dữ liệu quan hệ vòng và cách một row nối với parent hoặc child.
 
 ## 1. 계층형 질의 — Hierarchical Query là gì?
 
@@ -196,7 +196,7 @@ Vậy ta đã có tiêu chí để đọc **1. 계층형 질의 — Hierarchical
 
 Ta bắt đầu **2. 순환관계 데이터 모델 — Recursive Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **2. 순환관계 데이터 모델 — Recursive Relationship** tiếp nhận điểm tựa từ **1. 계층형 질의 — Hierarchical Query là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cú pháp cơ bản của Hierarchical Query ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình recursive relationship giải thích dữ liệu, còn cú pháp cho biết Oracle bắt đầu, mở rộng và dừng traversal ra sao.
 
 ## 2. 순환관계 데이터 모델 — Recursive Relationship
 
@@ -243,7 +243,7 @@ Vậy ta đã có tiêu chí để đọc **2. 순환관계 데이터 모델 —
 
 Ta bắt đầu **3. Cú pháp cơ bản của Hierarchical Query ⭐⭐⭐** bằng câu hỏi: **quan hệ cha–con được bắt đầu, mở rộng và dừng lại theo điều kiện nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **3. Cú pháp cơ bản của Hierarchical Query ⭐⭐⭐** tiếp nhận điểm tựa từ **2. 순환관계 데이터 모델 — Recursive Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. START WITH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cú pháp tổng quát đã rõ; `START WITH` là điểm chọn root nên nó quyết định tập cây nào được đưa vào truy vấn.
 
 ## 3. Cú pháp cơ bản của Hierarchical Query ⭐⭐⭐
 
@@ -271,7 +271,7 @@ Vậy ta đã có tiêu chí để đọc **3. Cú pháp cơ bản của Hierarc
 
 Ta bắt đầu **4. START WITH** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **4. START WITH** tiếp nhận điểm tựa từ **3. Cú pháp cơ bản của Hierarchical Query ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Root luôn có LEVEL = 1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Root tạo ra `LEVEL = 1`; từ mỗi root, `CONNECT BY PRIOR` mới xác định cạnh nối để mở rộng hierarchy.
 
 ## 4. START WITH
 
@@ -319,7 +319,7 @@ Vậy ta đã có tiêu chí để đọc **4. START WITH**. Bây giờ chuyển
 
 Ta bắt đầu **5. Root luôn có LEVEL = 1** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **5. Root luôn có LEVEL = 1** tiếp nhận điểm tựa từ **4. START WITH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. CONNECT BY PRIOR ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`CONNECT BY PRIOR` nêu quan hệ nối, nhưng ý nghĩa của `PRIOR` phụ thuộc biểu thức đặt ở phía nào; cần đọc nó như một phép ánh xạ giá trị.
 
 ## 5. Root luôn có LEVEL = 1
 
@@ -362,7 +362,7 @@ Vậy ta đã có tiêu chí để đọc **5. Root luôn có LEVEL = 1**. Bây 
 
 Ta bắt đầu **6. CONNECT BY PRIOR ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **6. CONNECT BY PRIOR ⭐⭐⭐** tiếp nhận điểm tựa từ **5. Root luôn có LEVEL = 1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. PRIOR nghĩa chính xác là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã hiểu vị trí của `PRIOR`, ta có thể suy luận chiều duyệt bằng một quy trình cố định thay vì học thuộc câu SQL.
 
 ## 6. CONNECT BY PRIOR ⭐⭐⭐
 
@@ -396,7 +396,7 @@ Vậy ta đã có tiêu chí để đọc **6. CONNECT BY PRIOR ⭐⭐⭐**. Bâ
 
 Ta bắt đầu **7. PRIOR nghĩa chính xác là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **7. PRIOR nghĩa chính xác là gì?** tiếp nhận điểm tựa từ **6. CONNECT BY PRIOR ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cách suy luận PRIOR dễ nhất ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quy trình suy luận cần được kiểm chứng trên một cây cụ thể; ví dụ chuẩn làm rõ row hiện tại, parent và child ở từng bước.
 
 ## 7. PRIOR nghĩa chính xác là gì?
 
@@ -458,7 +458,7 @@ Vậy ta đã có tiêu chí để đọc **7. PRIOR nghĩa chính xác là gì?
 
 Ta bắt đầu **8. Cách suy luận PRIOR dễ nhất ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **8. Cách suy luận PRIOR dễ nhất ⭐⭐⭐** tiếp nhận điểm tựa từ **7. PRIOR nghĩa chính xác là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Ví dụ chuẩn trong ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ chuẩn cho thấy điều kiện đúng tạo ra cây nào; đặt `PRIOR` sai sẽ đảo quan hệ hoặc mở nhầm nhánh, nên cần xem hậu quả riêng.
 
 ## 8. Cách suy luận PRIOR dễ nhất ⭐⭐⭐
 
@@ -494,7 +494,7 @@ Vậy ta đã có tiêu chí để đọc **8. Cách suy luận PRIOR dễ nhấ
 
 Ta bắt đầu **9. Ví dụ chuẩn trong ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **8. Cách suy luận PRIOR dễ nhất ⭐⭐⭐** cho ta quy tắc; **9. Ví dụ chuẩn trong ảnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Nếu đặt PRIOR sai vị trí thì sao? ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sai vị trí `PRIOR` làm thay đổi hướng nối; hướng duyệt xuôi/ngược là cách kiểm tra lại invariant cha–con trước khi lọc kết quả.
 
 ## 9. Ví dụ chuẩn trong ảnh
 
@@ -565,7 +565,7 @@ Vậy ta đã có tiêu chí để đọc **9. Ví dụ chuẩn trong ảnh**. B
 
 Ta bắt đầu **10. Nếu đặt PRIOR sai vị trí thì sao? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **9. Ví dụ chuẩn trong ảnh** cho ta quy tắc; **10. Nếu đặt PRIOR sai vị trí thì sao? ⭐⭐⭐** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Hướng duyệt xuôi và ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hướng traversal đã xác định, nhưng `WHERE` và `CONNECT BY` không có cùng vai trò; cần tách điều kiện mở cây khỏi điều kiện lọc row.
 
 ## 10. Nếu đặt PRIOR sai vị trí thì sao? ⭐⭐⭐
 
@@ -613,7 +613,7 @@ Vậy ta đã có tiêu chí để đọc **10. Nếu đặt PRIOR sai vị trí
 
 Ta bắt đầu **11. Hướng duyệt xuôi và ngược** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **11. Hướng duyệt xuôi và ngược** tiếp nhận điểm tựa từ **10. Nếu đặt PRIOR sai vị trí thì sao? ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`WHERE` lọc sau khi hierarchy được tạo, nên điều kiện như `AREA` có thể loại row mà không ngăn nhánh được mở; mục kế tiếp minh họa điểm này.
 
 ## 11. Hướng duyệt xuôi và ngược
 
@@ -707,7 +707,7 @@ Vậy ta đã có tiêu chí để đọc **Công thức dễ nhớ**. Bây gi�
 
 Ta bắt đầu **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** tiếp nhận điểm tựa từ **11. Hướng duyệt xuôi và ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Nếu AREA nằm trong WHERE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ lọc `AREA` cho thấy thứ tự xử lý quyết định kết quả; phần tiếp theo xếp các bước của Oracle thành một pipeline rõ ràng.
 
 ## 12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐
 
@@ -768,7 +768,7 @@ Vậy ta đã có tiêu chí để đọc **Điều kiện nằm trong CONNECT B
 
 Ta bắt đầu **13. Nếu AREA nằm trong WHERE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **13. Nếu AREA nằm trong WHERE** tiếp nhận điểm tựa từ **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Thứ tự xử lý quan trọng ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thứ tự `START WITH → CONNECT BY → WHERE` là invariant đọc query; khi cây có cycle, ta cần cơ chế dừng traversal thay vì chỉ lọc output.
 
 ## 13. Nếu AREA nằm trong WHERE
 
@@ -814,7 +814,7 @@ Vậy ta đã có tiêu chí để đọc **13. Nếu AREA nằm trong WHERE**. 
 
 Ta bắt đầu **14. Thứ tự xử lý quan trọng ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **14. Thứ tự xử lý quan trọng ⭐⭐⭐** tiếp nhận điểm tựa từ **13. Nếu AREA nằm trong WHERE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. NOCYCLE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`NOCYCLE` bổ sung điều kiện dừng cho dữ liệu vòng; ví dụ cycle làm rõ lỗi sẽ xảy ra thế nào nếu thiếu tùy chọn này.
 
 ## 14. Thứ tự xử lý quan trọng ⭐⭐⭐
 
@@ -847,7 +847,7 @@ Vậy ta đã có tiêu chí để đọc **14. Thứ tự xử lý quan trọng
 
 Ta bắt đầu **15. NOCYCLE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **15. NOCYCLE ⭐⭐⭐** tiếp nhận điểm tựa từ **14. Thứ tự xử lý quan trọng ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Ví dụ cycle trong ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ A → B → A biến nguy cơ loop thành dữ liệu quan sát được; `NOCYCLE` là quy tắc xử lý cần áp dụng cho trường hợp đó.
 
 ## 15. NOCYCLE ⭐⭐⭐
 
@@ -882,7 +882,7 @@ Vậy ta đã có tiêu chí để đọc **15. NOCYCLE ⭐⭐⭐**. Bây giờ 
 
 Ta bắt đầu **16. Ví dụ cycle trong ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **15. NOCYCLE ⭐⭐⭐** cho ta quy tắc; **16. Ví dụ cycle trong ảnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. NOCYCLE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ cho thấy cycle có thể khiến query lỗi; phần `NOCYCLE` tiếp theo phân biệt việc cho phép query chạy với việc đánh dấu row cycle.
 
 ## 16. Ví dụ cycle trong ảnh
 
@@ -933,7 +933,7 @@ Vậy ta đã có tiêu chí để đọc **16. Ví dụ cycle trong ảnh**. B�
 
 Ta bắt đầu **17. NOCYCLE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **16. Ví dụ cycle trong ảnh** cho ta quy tắc; **17. NOCYCLE** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. LEVEL ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`NOCYCLE` dừng việc đi tiếp qua vòng nhưng không sửa dữ liệu; `LEVEL` là pseudocolumn độc lập để mô tả độ sâu row đã duyệt.
 
 ## 17. NOCYCLE
 
@@ -962,7 +962,7 @@ Vậy ta đã có tiêu chí để đọc **17. NOCYCLE**. Bây giờ chuyển s
 
 Ta bắt đầu **18. LEVEL ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **18. LEVEL ⭐⭐⭐** tiếp nhận điểm tựa từ **17. NOCYCLE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. CONNECTBYISLEAF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`LEVEL` gắn root với 1 và tăng theo cạnh; từ độ sâu đó, `CONNECT_BY_ISLEAF` trả lời row hiện tại có còn child hay không.
 
 ## 18. LEVEL ⭐⭐⭐
 
@@ -999,7 +999,7 @@ Vậy ta đã có tiêu chí để đọc **18. LEVEL ⭐⭐⭐**. Bây giờ ch
 
 Ta bắt đầu **19. CONNECT_BY_ISLEAF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **19. CONNECTBYISLEAF** tiếp nhận điểm tựa từ **18. LEVEL ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. CONNECTBYROOT ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`CONNECT_BY_ISLEAF` mô tả trạng thái lá; `CONNECT_BY_ROOT` bổ sung nguồn gốc của row trong cùng một cây.
 
 ## 19. CONNECT_BY_ISLEAF
 
@@ -1041,7 +1041,7 @@ Vậy ta đã có tiêu chí để đọc **19. CONNECT_BY_ISLEAF**. Bây giờ 
 
 Ta bắt đầu **20. CONNECT_BY_ROOT ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **20. CONNECTBYROOT ⭐⭐⭐** tiếp nhận điểm tựa từ **19. CONNECTBYISLEAF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. SYSCONNECTBYPATH ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`CONNECT_BY_ROOT` giữ giá trị root theo từng row; `SYS_CONNECT_BY_PATH` mở rộng thông tin đó thành đường dẫn từ root đến current.
 
 ## 20. CONNECT_BY_ROOT ⭐⭐⭐
 
@@ -1085,7 +1085,7 @@ Vậy ta đã có tiêu chí để đọc **20. CONNECT_BY_ROOT ⭐⭐⭐**. Bâ
 
 Ta bắt đầu **21. SYS_CONNECT_BY_PATH ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **20. CONNECTBYROOT ⭐⭐⭐** xác định đầu vào; **21. SYSCONNECTBYPATH ⭐⭐⭐** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. Ví dụ kết hợp CONNECTBYROOT + PATH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`SYS_CONNECT_BY_PATH` tạo path dạng chuỗi; ví dụ kết hợp hai hàm cho thấy root identity và traversal path trả lời hai câu hỏi khác nhau.
 
 ## 21. SYS_CONNECT_BY_PATH ⭐⭐⭐
 
@@ -1138,7 +1138,7 @@ Vậy ta đã có tiêu chí để đọc **21. SYS_CONNECT_BY_PATH ⭐⭐⭐**.
 
 Ta bắt đầu **22. Ví dụ kết hợp CONNECT_BY_ROOT + PATH** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **21. SYSCONNECTBYPATH ⭐⭐⭐** cho ta quy tắc; **22. Ví dụ kết hợp CONNECTBYROOT + PATH** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. ORDER SIBLINGS BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ kết hợp đã có root và path; `ORDER SIBLINGS BY` sắp các node cùng cha mà không phá cấu trúc hierarchy.
 
 ## 22. Ví dụ kết hợp CONNECT_BY_ROOT + PATH
 
@@ -1181,7 +1181,7 @@ Vậy ta đã có tiêu chí để đọc **22. Ví dụ kết hợp CONNECT_BY_
 
 Ta bắt đầu **23. ORDER SIBLINGS BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **22. Ví dụ kết hợp CONNECTBYROOT + PATH** cho ta quy tắc; **23. ORDER SIBLINGS BY** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Vì sao không dùng ORDER BY bình thường?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`ORDER SIBLINGS BY` giữ quan hệ cha–con, khác với `ORDER BY` toàn kết quả; cần hiểu lý do không thể thay thế tùy tiện.
 
 ## 23. ORDER SIBLINGS BY
 
@@ -1227,7 +1227,7 @@ Vậy ta đã có tiêu chí để đọc **23. ORDER SIBLINGS BY**. Bây giờ 
 
 Ta bắt đầu **24. Vì sao không dùng ORDER BY bình thường?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **24. Vì sao không dùng ORDER BY bình thường?** tiếp nhận điểm tựa từ **23. ORDER SIBLINGS BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. CONNECTBYISCYCLE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sắp xếp sibling không được làm mất thứ tự cây; tiếp theo `CONNECT_BY_ISCYCLE` đánh dấu chính row/path liên quan đến cycle.
 
 ## 24. Vì sao không dùng ORDER BY bình thường?
 
@@ -1259,7 +1259,7 @@ Vậy ta đã có tiêu chí để đọc **24. Vì sao không dùng ORDER BY b�
 
 Ta bắt đầu **25. CONNECT_BY_ISCYCLE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **25. CONNECTBYISCYCLE ⭐⭐⭐** tiếp nhận điểm tựa từ **24. Vì sao không dùng ORDER BY bình thường?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. CONNECTBYISCYCLE khác NOCYCLE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`CONNECT_BY_ISCYCLE` báo nơi traversal gặp ancestor trên path; cần phân biệt rõ nó với `NOCYCLE`, vốn là tùy chọn cho phép query kết thúc.
 
 ## 25. CONNECT_BY_ISCYCLE ⭐⭐⭐
 
@@ -1303,7 +1303,7 @@ Vậy ta đã có tiêu chí để đọc **25. CONNECT_BY_ISCYCLE ⭐⭐⭐**. 
 
 Ta bắt đầu **26. CONNECT_BY_ISCYCLE khác NOCYCLE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **26. CONNECTBYISCYCLE khác NOCYCLE** tiếp nhận điểm tựa từ **25. CONNECTBYISCYCLE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Tổng hợp các pseudocolumn/hàm hierarchical** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`NOCYCLE` là cơ chế xử lý, còn `CONNECT_BY_ISCYCLE` là tín hiệu đánh dấu; bảng tổng hợp đặt các pseudocolumn cạnh nhau để chọn đúng công cụ.
 
 ## 26. CONNECT_BY_ISCYCLE khác NOCYCLE
 
@@ -1333,7 +1333,7 @@ Vậy ta đã có tiêu chí để đọc **26. CONNECT_BY_ISCYCLE khác NOCYCLE
 
 Ta bắt đầu **27. Tổng hợp các pseudocolumn/hàm hierarchical** bằng câu hỏi: **quan hệ cha–con được bắt đầu, mở rộng và dừng lại theo điều kiện nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **27. Tổng hợp các pseudocolumn/hàm hierarchical** gom các mảnh từ **26. CONNECTBYISCYCLE khác NOCYCLE** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **28. Cách giải bài PRIOR bằng tay ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bảng tổng hợp gom depth, leaf, root, path và cycle thành một bộ quan sát; tiếp theo dùng chúng để giải bài `PRIOR` bằng tay.
 
 ## 27. Tổng hợp các pseudocolumn/hàm hierarchical
 
@@ -1357,7 +1357,7 @@ Vậy ta đã có tiêu chí để đọc **27. Tổng hợp các pseudocolumn/h
 
 Ta bắt đầu **28. Cách giải bài PRIOR bằng tay ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **28. Cách giải bài PRIOR bằng tay ⭐⭐⭐** gom các mảnh từ **27. Tổng hợp các pseudocolumn/hàm hierarchical** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **29. Ví dụ tự tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giải tay `PRIOR` cần xác định current row, parent và điều kiện nối ở mỗi bước; ví dụ tự tính giúp kiểm tra quy trình trên dữ liệu cụ thể.
 
 ## 28. Cách giải bài PRIOR bằng tay ⭐⭐⭐
 
@@ -1444,7 +1444,7 @@ Vậy ta đã có tiêu chí để đọc **Bước 4**. Bây giờ chuyển san
 
 Ta bắt đầu **29. Ví dụ tự tính** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **28. Cách giải bài PRIOR bằng tay ⭐⭐⭐** cho ta quy tắc; **29. Ví dụ tự tính** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. Đảo PRIOR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ tự tính biến quy tắc thành các row và level cụ thể; đảo `PRIOR` là trường hợp đối chiếu để thấy hướng traversal đổi ra sao.
 
 ## 29. Ví dụ tự tính
 
@@ -1524,7 +1524,7 @@ Vậy ta đã có tiêu chí để đọc **29. Ví dụ tự tính**. Bây gi�
 
 Ta bắt đầu **30. Đảo PRIOR** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **29. Ví dụ tự tính** cho ta quy tắc; **30. Đảo PRIOR** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. Hierarchical Query và Self Join liên quan thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đảo `PRIOR` đổi chiều ánh xạ parent–child, nhưng không làm hierarchical query thành một loại dữ liệu khác; self join là mô hình quan hệ gần gũi để so sánh.
 
 ## 30. Đảo PRIOR
 
@@ -1588,7 +1588,7 @@ Vậy ta đã có tiêu chí để đọc **30. Đảo PRIOR**. Bây giờ chuy�
 
 Ta bắt đầu **31. Hierarchical Query và Self Join liên quan thế nào?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **31. Hierarchical Query và Self Join liên quan thế nào?** tiếp nhận điểm tựa từ **30. Đảo PRIOR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Self Join khác Hierarchical Query** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hierarchical query và self join đều có thể nối một bảng với chính nó, nhưng hierarchical query tự quản lý traversal, level và cycle theo cây.
 
 ## 31. Hierarchical Query và Self Join liên quan thế nào?
 
@@ -1643,7 +1643,7 @@ Vậy ta đã có tiêu chí để đọc **31. Hierarchical Query và Self Join
 
 Ta bắt đầu **32. Self Join khác Hierarchical Query** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **32. Self Join khác Hierarchical Query** tiếp nhận điểm tựa từ **31. Hierarchical Query và Self Join liên quan thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. START WITH có thể có nhiều root** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Self join yêu cầu quản lý recursion và điều kiện bằng tay; nhiều root trong `START WITH` cho thấy hierarchical query có thể dựng nhiều cây trong một kết quả.
 
 ## 32. Self Join khác Hierarchical Query
 
@@ -1685,7 +1685,7 @@ Vậy ta đã có tiêu chí để đọc **32. Self Join khác Hierarchical Que
 
 Ta bắt đầu **33. START WITH có thể có nhiều root** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **33. START WITH có thể có nhiều root** tiếp nhận điểm tựa từ **32. Self Join khác Hierarchical Query** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Một điểm dễ nhầm: LEVEL không phải depth tuyệt đối của table** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nhiều root tạo nhiều hierarchy độc lập; vì vậy `LEVEL` chỉ là độ sâu từ root đang xét, không phải depth tuyệt đối của toàn bảng.
 
 ## 33. START WITH có thể có nhiều root
 
@@ -1734,7 +1734,7 @@ Vậy ta đã có tiêu chí để đọc **33. START WITH có thể có nhiều
 
 Ta bắt đầu **34. Một điểm dễ nhầm: LEVEL không phải depth tuyệt đối của table** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **33. START WITH có thể có nhiều root** đã nêu tiêu chí phân biệt, còn **34. Một điểm dễ nhầm: LEVEL không phải depth tuyệt đối của table** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **35. START WITH vs WHERE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`LEVEL` phụ thuộc root và đường đi cụ thể; `START WITH` và `WHERE` cần được phân biệt lại khi chọn root so với lọc kết quả.
 
 ## 34. Một điểm dễ nhầm: LEVEL không phải depth tuyệt đối của table
 
@@ -1789,7 +1789,7 @@ Vậy ta đã có tiêu chí để đọc **34. Một điểm dễ nhầm: LEVEL
 
 Ta bắt đầu **35. START WITH vs WHERE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **34. Một điểm dễ nhầm: LEVEL không phải depth tuyệt đối của table** đã nêu tiêu chí phân biệt, còn **35. START WITH vs WHERE ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **36. CONNECT BY condition vs WHERE condition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`START WITH` chọn điểm bắt đầu, còn `WHERE` lọc sau traversal; tương tự, điều kiện `CONNECT BY` quyết định mở rộng cây chứ không chỉ lọc row.
 
 ## 35. START WITH vs WHERE ⭐⭐⭐
 
@@ -1821,7 +1821,7 @@ Vậy ta đã có tiêu chí để đọc **35. START WITH vs WHERE ⭐⭐⭐**.
 
 Ta bắt đầu **36. CONNECT BY condition vs WHERE condition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **36. CONNECT BY condition vs WHERE condition** tiếp nhận điểm tựa từ **35. START WITH vs WHERE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Cách hình dung toàn query** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ba lớp điều kiện tạo thành pipeline đọc query; hình dung toàn query theo thứ tự giúp tránh nhầm giữa generation và filtering.
 
 ## 36. CONNECT BY condition vs WHERE condition
 
@@ -1859,7 +1859,7 @@ Vậy ta đã có tiêu chí để đọc **36. CONNECT BY condition vs WHERE co
 
 Ta bắt đầu **37. Cách hình dung toàn query** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **37. Cách hình dung toàn query** tiếp nhận điểm tựa từ **36. CONNECT BY condition vs WHERE condition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Bẫy SQLD về PRIOR ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pipeline đó cũng giải thích các bẫy `PRIOR`: chỉ cần đổi phía biểu thức là hướng nối, termination và tập kết quả có thể đổi.
 
 ## 37. Cách hình dung toàn query
 
@@ -1902,7 +1902,7 @@ Vậy ta đã có tiêu chí để đọc **37. Cách hình dung toàn query**. 
 
 Ta bắt đầu **38. Bẫy SQLD về PRIOR ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Hierarchical Query**, **37. Cách hình dung toàn query** đã nêu tiêu chí phân biệt, còn **38. Bẫy SQLD về PRIOR ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **🔥 SQLD NOTE — 반드시 암기** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bẫy `PRIOR` cần được ghi nhớ cùng thứ tự xử lý, cycle và NULL semantics; SQLD note dưới đây cô đọng các điểm phải kiểm tra.
 
 ## 38. Bẫy SQLD về PRIOR ⭐⭐⭐
 
@@ -1958,7 +1958,7 @@ Vậy ta đã có tiêu chí để đọc **38. Bẫy SQLD về PRIOR ⭐⭐⭐*
 
 Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hierarchical Query**, **38. Bẫy SQLD về PRIOR ⭐⭐⭐** đã nêu tiêu chí phân biệt, còn **🔥 SQLD NOTE — 반드시 암기** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **🧠 Công thức nhớ 10 giây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SQLD note gom các quy tắc thi cử thành checklist; công thức 10 giây giúp gọi lại checklist khi đọc một hierarchical query mới.
 
 ## 🔥 SQLD NOTE — 반드시 암기
 
@@ -2212,7 +2212,7 @@ Vậy ta đã có tiêu chí để đọc **⑬ ORDER SIBLINGS BY**. Bây giờ 
 
 Ta bắt đầu **🧠 Công thức nhớ 10 giây** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Hierarchical Query**, **🧠 Công thức nhớ 10 giây** tiếp nhận điểm tựa từ **🔥 SQLD NOTE — 반드시 암기** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Công thức cuối nối keyword, root, traversal, filter và pseudocolumn thành một mạch; hãy giữ nó như ranh giới trước khi chuyển sang tài liệu khác.
 
 ## 🧠 Công thức nhớ 10 giây
 
