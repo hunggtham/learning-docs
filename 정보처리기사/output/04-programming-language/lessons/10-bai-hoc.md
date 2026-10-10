@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **239 - 243. 연산자 (Operators)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **244. 조건(삼항) 연산자 (Ternary Operator)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **239 - 243. 연산자 (Operators)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu của bài đặt câu hỏi về vai trò và giới hạn của **239 - 243. 연산자 (Operators)**; các **핵심 키워드 (Từ khóa)** tiếp theo thu hẹp câu hỏi đó vào những nhóm toán tử cần so sánh. Khi đã nhận diện từ khóa, hãy quay về **선행·연결 개념 (Kiến thức liên kết)** để biết tiêu chí nào được kế thừa trước khi đọc phần quy tắc.
 
 ## 핵심 키워드 (Từ khóa)
 
 연산자
 
-> **Chuyển mạch:** Ở chặng này của **239 - 243. 연산자 (Operators)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa **연산자** giúp nhận diện các phép biến đổi; **선행·연결 개념 (Kiến thức liên kết)** bổ sung nền từ **연산자 심화 (Operators - Advanced)** để biết vì sao từng nhóm cần được đặt trong cùng một khung so sánh. Sau đó, **읽는 방법 (Cách đọc)** hướng dẫn kiểm tra toán hạng, điều kiện và kết quả thay vì học tên rời rạc.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **연산자 심화 (Operators - Advanced)**에서 만든 기준을 이어받아 **239 - 243. 연산자 (Operators)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **239 - 243. 연산자 (Operators)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **239 - 243. 연산자 (Operators)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Tiêu chí kế thừa từ **연산자 심화 (Operators - Advanced)** tạo khung để **읽는 방법 (Cách đọc)** lần lượt kiểm tra toán tử số học, quan hệ, bit, logic và gán. Khi chuyển vào phần chính **239 - 243. 연산자 (Operators)**, hãy dùng cùng chuỗi đối tượng → điều kiện → hệ quả để đối chiếu các nhóm này.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **239 - 243. 연산자 (Operators)** nh�
 
 ---
 
-> **Chuyển mạch:** Trong **239 - 243. 연산자 (Operators)**, **239 - 243. 연산자 (Operators)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khung đọc vừa chuẩn bị dẫn vào phần **239 - 243. 연산자 (Operators)**. Hãy đọc mỗi nhóm theo toán hạng, điều kiện áp dụng và giá trị tạo ra; sau đó giữ tiêu chí so sánh này khi chuyển sang **244. 조건(삼항) 연산자 (Ternary Operator)**.
 
 ## 239 - 243. 연산자 (Operators)
 

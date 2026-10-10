@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **244. 조건(삼항) 연산자 (Ternary Operator)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **245. 연산자 우선순위 (Operator Precedence)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **244. 조건(삼항) 연산자 (Ternary Operator)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Mục tiêu của bài đặt câu hỏi về cách **244. 조건(삼항) 연산자 (Ternary Operator)** chọn một trong hai giá trị; các **핵심 키워드 (Từ khóa)** tiếp theo giúp theo dõi điều kiện, nhánh đúng–sai và kết quả trả về. Từ đó, **선행·연결 개념 (Kiến thức liên kết)** cho biết tiêu chí nào được kế thừa từ nhóm toán tử trước.
 
 ## 핵심 키워드 (Từ khóa)
 
 조건
 
-> **Chuyển mạch:** Ở chặng này của **244. 조건(삼항) 연산자 (Ternary Operator)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Từ khóa **조건** nhắc ta theo dõi cả điều kiện lẫn hai nhánh giá trị; **선행·연결 개념 (Kiến thức liên kết)** đặt chúng trên nền của **239 - 243. 연산자 (Operators)**. Sau đó, **읽는 방법 (Cách đọc)** giúp kiểm tra thứ tự đánh giá và hệ quả của từng nhánh trước khi rút gọn thành biểu thức một dòng.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **239 - 243. 연산자 (Operators)**에서 만든 기준을 이어받아 **244. 조건(삼항) 연산자 (Ternary Operator)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **244. 조건(삼항) 연산자 (Ternary Operator)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **244. 조건(삼항) 연산자 (Ternary Operator)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mối nối:** Tiêu chí từ **239 - 243. 연산자 (Operators)** tạo nền để **읽는 방법 (Cách đọc)** kiểm tra điều kiện, thứ tự chọn nhánh và giá trị trả về. Khi chuyển vào phần chính **244. 조건(삼항) 연산자 (Ternary Operator)**, hãy dùng chuỗi điều kiện → nhánh được chọn → kết quả để đọc công thức và ví dụ.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **244. 조건(삼항) 연산자 (Ternary
 
 ---
 
-> **Chuyển mạch:** Trong **244. 조건(삼항) 연산자 (Ternary Operator)**, **244. 조건(삼항) 연산자 (Ternary Operator)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mối nối:** Khung đọc vừa chuẩn bị dẫn vào phần **244. 조건(삼항) 연산자 (Ternary Operator)**. Hãy đối chiếu điều kiện với nhánh đúng–sai và giá trị nhận được, rồi mang hiểu biết về thứ tự đánh giá sang **245. 연산자 우선순위 (Operator Precedence)**.
 
 ## 244. 조건(삼항) 연산자 (Ternary Operator)
 
