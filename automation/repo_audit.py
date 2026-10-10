@@ -18,6 +18,7 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 INLINE_LINK_RE = re.compile(
     r"!?\[[^\]]*\]\(\s*(?P<target><[^>]+>|[^\s)]+)(?:\s+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?\s*\)"
 )
+INLINE_LINK_OPEN_RE = re.compile(r"!?\[[^\]]*\]\(\s*")
 REFERENCE_DEF_RE = re.compile(r"^\s*\[[^\]]+\]:\s*(?P<target><[^>]+>|\S+)", re.MULTILINE)
 FENCE_RE = re.compile(r"^\s*(```+|~~~+)")
 EXTERNAL_SCHEMES = {"http", "https", "mailto", "tel", "data", "javascript"}
@@ -311,13 +312,56 @@ def strip_fenced_code(text: str) -> str:
 def extract_markdown_targets(text: str) -> Iterable[tuple[str, int]]:
     clean = strip_fenced_code(text)
 
-    for regex in (INLINE_LINK_RE, REFERENCE_DEF_RE):
-        for match in regex.finditer(clean):
-            target = match.group("target").strip()
-            if target.startswith("<") and target.endswith(">"):
-                target = target[1:-1]
-            line = clean.count("\n", 0, match.start()) + 1
-            yield target, line
+    # A URL may contain balanced parentheses, especially when it points to
+    # exported files whose names include a section range such as `(0~72)`.
+    # A regex that stops at the first `)` truncates those targets and reports
+    # false missing-link errors. Scan the inline target while tracking nesting
+    # depth instead.
+    for match in INLINE_LINK_OPEN_RE.finditer(clean):
+        cursor = match.end()
+        if cursor >= len(clean):
+            continue
+
+        if clean[cursor] == "<":
+            end = clean.find(">", cursor + 1)
+            if end < 0:
+                continue
+            target = clean[cursor + 1 : end]
+            if clean.find(")", end + 1) < 0:
+                continue
+        else:
+            start = cursor
+            depth = 0
+            escaped = False
+            while cursor < len(clean):
+                char = clean[cursor]
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == "(":
+                    depth += 1
+                elif char == ")":
+                    if depth == 0:
+                        break
+                    depth -= 1
+                elif char.isspace() and depth == 0:
+                    break
+                cursor += 1
+
+            if cursor == start or cursor >= len(clean):
+                continue
+            target = clean[start:cursor]
+
+        line = clean.count("\n", 0, match.start()) + 1
+        yield target.strip(), line
+
+    for match in REFERENCE_DEF_RE.finditer(clean):
+        target = match.group("target").strip()
+        if target.startswith("<") and target.endswith(">"):
+            target = target[1:-1]
+        line = clean.count("\n", 0, match.start()) + 1
+        yield target, line
 
 
 def classify_local_target(target: str) -> str | None:

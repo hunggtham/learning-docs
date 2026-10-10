@@ -246,7 +246,7 @@
         
         ❌ Thay đổi nhỏ cũng gây lỗi dây chuyền
         
-        ![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2016.png)
+        ![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2016.png)
         
 
 ---
@@ -348,7 +348,7 @@
     - Fan-out: **내가 몇 개 부르나** → 낮을수록 좋음
     - Fan-in: **나를 몇 개가 부르나** → 높아도 괜찮음
     
-    ![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2017.png)
+    ![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2017.png)
     
 
 ---
@@ -380,7 +380,7 @@
     2. **선택:** 삼각형으로 분기되는 형태 (If-else)
     3. **반복:** 'ㄱ'자(L자) 형태로 감싸는 형태 (Loop)
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2018.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2018.png)
 
 ---
 
@@ -488,7 +488,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
 
 ---
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2019.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2019.png)
 
 ## 062. 코드(Code)의 개요
 
@@ -559,7 +559,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - 이처럼 구조를 미리 정해두면 코드만 보고도 "아, 2024년도 컴퓨터공학과 학생이구나"라고 식별할 수 있음
     - 
     
-    ![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2020.png)
+    ![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2020.png)
     
 
 ## 064. 디자인 패턴 (Design Pattern)의 개요
@@ -996,7 +996,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - **IFID-003 (은행 계좌 잔액 수신):** 회계 시스템 → 길벗은행, **Socket** 사용, **요청/응답** 방식, **실시간** 처리, **수시** 발생
     - 이처럼 각 기능(ID)별로 기술적 특성이 다르게 정의됨을 알 수 있음.
         
-        ![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2021.png)
+        ![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2021.png)
         
 
 ### 070-4. 송·수신 데이터 명세화 (Specification of Transmission/Reception Data)
@@ -1024,7 +1024,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - 이처럼 개인정보 보호법 등에 따라 **암호화**가 필요한 필드는 명세서 단계에서부터 확실히 정의해두어야 함.
 - 
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2022.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2022.png)
 
 ### 070-4. 오류 식별 및 처리 방안 명세화 (Error Identification & Processing Specification)
 
@@ -1047,7 +1047,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - **DB 조회 오류 (SD40001):** "송신 시스템에서 데이터 조회 실패" → 원인: DB 권한 문제나 테이블 삭제 등 → 해결: 권한 및 작동 여부 확인 후 재실행
 - **시사점:** 단순히 "에러 났다"고 끝내는 게 아니라, **'어디서(Where)', '왜(Why)', '어떻게(How)'** 해결할지를 미리 코드로 정의해두어야 운영 시 빠른 대응이 가능함.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2023.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2023.png)
 
 ## 071. 연계 매커니즘 구성요소
 
@@ -1243,7 +1243,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     2. **작성:** 엑셀 등에 [시스템: 계정계 / 구분: WAS / 솔루션명: WebLogic / 버전: 12c / 제조사: Oracle] 처럼 정리.
     3. **검증:** 개발팀장님이나 인프라 담당자에게 보여주고 "이거 맞나요? 빠진 거 없나요?" 확인 받음.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2024.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2024.png)
 
 ### 90. 미들웨어 솔루션 명세서 작성 (Preparation of Middleware Solution Specification)
 

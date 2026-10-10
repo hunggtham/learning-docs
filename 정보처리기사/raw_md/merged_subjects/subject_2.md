@@ -5920,7 +5920,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - 책의 페이지 번호와 같아서, 순차적으로 뒤질 필요 없이 "5번 데이터를 가져와"라고 하면 바로 접근 가능함.
     - 보통 0부터 시작함 (`a[0]`이 첫 번째 데이터)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image.png)
 
 ## 074. 선형 리스트(Linear List)
 
@@ -5956,9 +5956,9 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - **연속 리스트:** 영화관 지정석 (사람들이 다닥다닥 붙어있음. 중간에 한 명 끼워 넣으려면 다 일어나서 한 칸씩 옆으로 가야 함).
     - **연결 리스트:** 보물찾기 (첫 번째 쪽지가 두 번째 쪽지 위치를 알려줌. 중간에 코스를 바꾸려면 쪽지 내용만 고치면 됨).
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%201.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%201.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%202.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%202.png)
 
 ## 075. 스택(Stack)
 
@@ -5997,11 +5997,11 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
         8. POP A (출력: **A** / 스택: 비어있음)
     - 결과적으로 **BCDA**가 출력됨
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%203.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%203.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%204.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%204.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%205.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%205.png)
 
 ## 076. 큐(Queue)
 
@@ -6028,7 +6028,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - 데이터가 나가면(Dequeue) `Front`가 뒤로 한 칸 이동하여 따라감.
     - `Front`와 `Rear`가 같은 위치에 있으면 큐가 비어있는(Empty) 상태임.
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%206.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%206.png)
 
 ### 076-1. 데크 (Deque)
 
@@ -6074,7 +6074,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     - **G3:** 방향 그래프 (화살표 있음, 1→2와 2→1은 다름).
 - **트리 vs 그래프:** 모든 트리는 그래프이지만, 모든 그래프가 트리는 아님. (트리 ⊂ 그래프). 그래프에서 '순환(Cycle)'을 끊어내고 계층을 만들면 트리가 됨.
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%207.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%207.png)
 
 ## 077. 방향/무방향 그래프의 최대 간선 수
 
@@ -6233,13 +6233,13 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     ◦ $/A(B-C)$ $\rightarrow$ $A/(B-C)$
     ◦ 최종: *$A/(B-C) + D(E+F)$**
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%208.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%208.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%209.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%209.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2010.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2010.png)
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2011.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2011.png)
 
 ## 081. 삽입 정렬 (Insertion Sort)
 
@@ -6594,7 +6594,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
 - 제어 기능: 데이터 무결성 유지, 보안 및 권한 검사, 병행 수행 제어.
 - DBMS는 데이터의 독립성을 유지하여 소프트웨어 개발 생산성을 향상시킴.
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2012.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2012.png)
 
 ### 090-1. 데이터의 독립성 (Data Independence)
 
@@ -7237,7 +7237,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
 - **시험 팁:** "다음 중 성격이 다른 IDE 도구는?" 같은 문제에서 **OS 전용(Xcode, VS)** vs **범용(Eclipse, IDEA)**을 구분하거나, 지원 언어를 묻는 문제가 나올 수 있음.
 - 
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2013.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2013.png)
 
 ## 098. 빌드 도구 (Build Tool)
 
@@ -7418,7 +7418,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
     → 사용자 인증/권한 확인
     → 사용(재생/열람)
     
-    ![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2014.png)
+    ![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2014.png)
     
 
 ### 100-. 디지털 저작권 관리의 기술 요소 (DRM Technical Elements)
@@ -8606,7 +8606,7 @@ Phần “So sánh nhanh (rất nên nhớ)” được nối với nội dung k
     - **Condition (조건):** "로그인 페이지에서, 엔터키를 쳤을 때."
     - **Expected Result (기대 결과):** "메인 페이지로 이동하고, 상단에 '환영합니다' 메시지가 떠야 함."
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2015.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2015.png)
 
 ## 141. 애플리케이션 테스트 프로세스
 

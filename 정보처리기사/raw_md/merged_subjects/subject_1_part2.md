@@ -2478,7 +2478,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - **3단계:** 하드웨어 구성, 네트워크 구성 파악
 - 시스템 간 전달 정보와 사용되는 기술 요소를 명확히 파악하여 신규 시스템과의 호환성 및 개발 난이도 산정
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image.png)
 
 ### 011-1.시스템 구성 파악 (System Composition)
 
@@ -2552,7 +2552,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - 모든 시스템을 다 그리기 어려울 때는 조직의 가장 중요한 업무(기간 업무)를 수행하는 시스템이 기준이 됨
 - 이를 통해 향후 개발될 시스템이 기존 기술 환경과 호환되는지 검토할 수 있음
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%201.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%201.png)
 
 ### 011-5소프트웨어 구성 파악 (Software Configuration Analysis)
 
@@ -2943,7 +2943,7 @@ Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội
 - 한 문장 설명: 시스템 내의 자료 흐름을 시각적으로 표현하여 프로세스 간의 관계를 보여주는 도구이다.
 연관 설명: 018, 020
     
-    ![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%202.png)
+    ![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%202.png)
     
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
@@ -2955,7 +2955,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - 자료 저장소(Data Store): 파일이나 데이터베이스를 의미하며 평행선으로 표시한다.
 - 단말(Terminator): 외부 엔티티로 사각형으로 표시하며 정보의 생산자와 소비자를 나타낸다.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%203.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%203.png)
 
 ## 020. 자료 사전 (DD; Data Dictionary)
 
@@ -3180,7 +3180,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - 커뮤니케이션 다이어그램과 유사하지만, 순차 다이어그램은 시간 순서에 더 중점을 둔다.
 - 
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%204.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%204.png)
 
 ---
 
@@ -3228,7 +3228,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - OUI(Organic User Interface): 모든 사물과 사용자 간의 상호작용을 위해 현실 세계의 사물을 인터페이스로 활용한다.
 - VOI(Voice User Inverface): 사람의음성으로 기기를 조작하는 인터페이스
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%205.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%205.png)
 
 ## 032. 사용자 인터페이스의 기본 원칙
 
@@ -3348,15 +3348,15 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - 이식성(Portability): 소프트웨어를 다른 운영 환경으로 얼마나 쉽게 옮길 수 있는지의 정도이다.
 - 
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%206.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%206.png)
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%207.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%207.png)
 
 - 기타소프트웨어 품질관련 표준
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%208.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%208.png)
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%209.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%209.png)
 
 ### 036-1.기능성 (Functionality)
 
@@ -3666,7 +3666,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - 상위 설계가 먼저 이루어진 후 이를 바탕으로 하위 설계가 진행되는 하향식 흐름을 갖는다.
 - 
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2010.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2010.png)
 
 ### 038-0.소프트웨어 아키텍처의 설계 (Software Architecture Design)
 
@@ -3801,15 +3801,15 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 
 - 시스템 측면: 성능, 보안, 가용성, 확장성, 기능성, 사용성, 변경용이성, 기타 속성 등 기술적인 품질을 다룬다.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2011.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2011.png)
 
 - 비즈니스 측면: 출시 시기(Time to Market), 비용 및 혜택 등 경영적인 가치를 평가한다.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2012.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2012.png)
 
 - 아키텍처 측면: 개념적 무결성, 정확성, 완결성 등 설계 자체의 논리적 품질을 의미한다.
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2013.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2013.png)
 
 - 이를 통해 아키텍처가 실제 운영 환경에서 신뢰성을 가질 수 있는지 사전 검토한다.
 
@@ -4053,7 +4053,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội
 - **특징:** 복잡한 구조를 **단계적·계층적**으로 표현할 수 있으며, 멀티미디어 데이터 및 병렬 처리를 지원함
 - **주요 구성 요소:** 이미지 하단에 언급된 **객체(Object), 클래스(Class), 캡슐화(Encapsulation), 상속(Inheritance), 다형성(Polymorphism), 연관성(Relationship)**이 객체지향의 핵심 개념임
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2014.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2014.png)
 
 ## 046.객체 (Object)
 
@@ -4198,7 +4198,7 @@ Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội d
 - 특수화(Specialization): 상위 개념을 구체화
 - 관계 의미를 묻는 매칭 문제로 출제
 
-![image.png](1%EA%B3%BC%EB%AA%A9(0~72)%20(1)/image%2015.png)
+![image.png](../../raw/notion/정보처리기사(1과목)/1과목(0~72)%20(1)/image%2015.png)
 
 ---
 

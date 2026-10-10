@@ -150,7 +150,7 @@ Phần “So sánh nhanh (rất nên nhớ)” được nối với nội dung k
     - **Condition (조건):** "로그인 페이지에서, 엔터키를 쳤을 때."
     - **Expected Result (기대 결과):** "메인 페이지로 이동하고, 상단에 '환영합니다' 메시지가 떠야 함."
 
-![image.png](2%EA%B3%BC%EB%AA%A9(73~162)%20(1)/image%2015.png)
+![image.png](../../raw/notion/정보처리기사(2과목)/2과목(73~162)%20(1)/image%2015.png)
 
 ## 141. 애플리케이션 테스트 프로세스
 
