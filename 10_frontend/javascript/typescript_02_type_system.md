@@ -44,7 +44,7 @@ type UserId = string & {
 
 Đây là compile-time modeling, không tự thêm thời gian chạy (runtime / 런타임) tag. ranh giới (boundary / 경계) tạo `UserId` vẫn phải validate string format nếu format có bất biến (invariant / 불변식).
 
-> **Nối mạch:** Structural typing xác định compatibility theo shape; assignability mô tả checker dùng shape đó để quyết định nhận/gán. Generic tiếp theo giữ quan hệ giữa input/output thay vì hạ mọi thứ xuống `any`.
+Structural typing quyết định compatibility theo shape; assignability biến shape đó thành checker decision ở boundary cụ thể.
 
 ## 2. Assignability là câu hỏi trung tâm của checker
 
@@ -60,7 +60,7 @@ Target<TExpected>
 
 Sau đó tìm thuộc tính (property / 속성)/kiểu (type / 타입) parameter đầu tiên làm quan hệ vỡ. Đây hiệu quả hơn đọc hàng chục dòng nested diagnostic như prose.
 
-> **Nối mạch:** Assignability xác định checker có thể truyền type nào qua boundary; generic giữ quan hệ giữa các type parameter. Constraints tiếp theo giới hạn capability mà abstraction được phép yêu cầu.
+Assignability cho biết một type có thể đi qua boundary nào; generic giữ relationship giữa type parameters thay vì hạ mọi thứ xuống any.
 
 ## 3. Generic không phải “any có kiểu (type / 타입) đẹp hơn”
 
@@ -101,7 +101,7 @@ function logValue(value: unknown): void {
 }
 ```
 
-> **Nối mạch:** Generic giữ quan hệ giữa input/output, không phải `any`; constraint tiếp theo giới hạn capability và giúp inference lấy bằng chứng an toàn hơn.
+Generic giữ relationship input/output; constraints giới hạn capability mà abstraction được phép yêu cầu và giúp inference có evidence an toàn hơn.
 
 ## 4. ràng buộc (constraint / 제약조건): lớp trừu tượng (abstraction / 추상화) vẫn cần năng lực (capability / 역량)
 
@@ -133,7 +133,7 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 `K` không phải string tùy ý; nó bị ràng buộc (constraint / 제약조건) bởi key không gian (space / 공간) của T. Return kiểu (type / 타입) giữ chính xác kiểu (type / 타입) của thuộc tính (property / 속성) được chọn.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **4. ràng buộc (constraint / 제약조건): lớp trừu tượng (abstraction / 추상화) vẫn cần năng lực (capability / 역량)** đặt vấn đề; **5. Generic suy luận (inference / 추론) lấy bằng chứng (evidence / 증거) từ nhiều phía** đối chiếu bằng chứng, rồi **6. Variance: vì sao callback kiểu (type / 타입) có thể nguy hiểm** mở rộng hệ quả hoặc giới hạn liên quan.
+Constraint đặt capability boundary cho generic; generic inference tiếp theo xem evidence đến từ nhiều vị trí ra sao, trước khi variance kiểm tra chiều thay thế của callback.
 
 ## 5. Generic suy luận (inference / 추론) lấy bằng chứng (evidence / 증거) từ nhiều phía
 
@@ -155,7 +155,7 @@ function pair<A, B>(left: A, right: B): [A, B] {
 
 Đừng nới generic chỉ để trình biên dịch (compiler / 컴파일러) im; sửa relationship cho đúng intent.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **5. Generic suy luận (inference / 추론) lấy bằng chứng (evidence / 증거) từ nhiều phía** đặt vấn đề; **6. Variance: vì sao callback kiểu (type / 타입) có thể nguy hiểm** đối chiếu bằng chứng, rồi **7. keyof, indexed truy cập (access / 접근) và typeof là cầu nối cấu trúc (structure / 구조) → kiểu (type / 타입)** mở rộng hệ quả hoặc giới hạn liên quan.
+Generic inference phải giải thích evidence và priority giữa các vị trí; variance tiếp theo cho thấy callback substitution có thể làm boundary không an toàn.
 
 ## 6. Variance: vì sao callback kiểu (type / 타입) có thể nguy hiểm
 
@@ -183,7 +183,7 @@ Array là ví dụ JavaScript thực dụng khiến variance có trường hợp
 
 Cấp cao (senior / 시니어) lesson: variance không phải từ học thuật để nhớ. Nó trả lời “generic lớp trừu tượng (abstraction / 추상화) này cho phép dữ liệu (data / 데이터) chảy vào hay ra theo hướng nào?”.
 
-> **Nối mạch:** Variance cho thấy rủi ro khi thay thế callback; `keyof`, indexed access và `typeof` nối cấu trúc thời gian chạy với type space, rồi mapped types biến đổi từng property theo key.
+Variance chỉ ra rủi ro khi thay thế callback; keyof, indexed access và typeof nối runtime structure với type space, rồi mapped types biến đổi property theo key.
 
 ## 7. `keyof`, indexed truy cập (access / 접근) và `typeof` là cầu nối cấu trúc (structure / 구조) → kiểu (type / 타입)
 
@@ -217,7 +217,7 @@ type Config = typeof config;
 
 Đây là mẫu (pattern / 패턴) tốt khi thời gian chạy (runtime / 런타임) cấu hình (config / 설정) là nguồn chuẩn (source of truth / 정본) và bạn muốn derive kiểu (type / 타입) từ nó, thay vì maintain hai definitions dễ drift.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **8. Mapped kiểu (type / 타입): transform từng thuộc tính (property / 속성) theo key không gian (space / 공간)** nối từ **7. keyof, indexed truy cập (access / 접근) và typeof là cầu nối cấu trúc (structure / 구조) → kiểu (type / 타입)** sang **9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Mapped types biến đổi từng property theo key; conditional types thêm branch ở type level để chọn kết quả theo relationship của các type.
 
 ## 8. Mapped kiểu (type / 타입): transform từng thuộc tính (property / 속성) theo key không gian (space / 공간)
 
@@ -251,7 +251,7 @@ type Getters<T> = {
 
 Khi mapped kiểu (type / 타입) trở nên khó đọc hơn nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) nó mô tả, hãy cân nhắc tường minh (explicit / 명시적) giao diện (interface / 인터페이스). Type-level lớp trừu tượng (abstraction / 추상화) cũng có maintenance chi phí (cost / 비용).
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)** nối từ **8. Mapped kiểu (type / 타입): transform từng thuộc tính (property / 속성) theo key không gian (space / 공간)** sang **10. infer: đặt tên phần cấu trúc đang match**, vì cơ chế trước tạo đầu vào cho bước sau.
+Conditional types chọn nhánh ở type level; infer đặt tên phần structure đang match để biến pattern đó thành một type có thể tái sử dụng.
 
 ## 9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)
 
@@ -275,7 +275,7 @@ type ToArrayNonDistributed<T> = [T] extends [unknown] ? T[] : never;
 
 Phân phối (distribution / 분포) là nguồn của cả sức mạnh lẫn diagnostic độ phức tạp (complexity / 복잡도). Khi conditional kiểu (type / 타입) lồng sâu, luôn tự hỏi đầu vào (input / 입력) lĩnh vực (domain / 도메인) có thật sự cần type-level branching đó không.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **10. infer: đặt tên phần cấu trúc đang match** nối từ **9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)** sang **11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Infer trích phần structure đang match; template literal types đưa pattern vào string space để kiểm tra và xây type theo format.
 
 ## 10. `infer`: đặt tên phần cấu trúc đang match
 
@@ -293,7 +293,7 @@ type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 
 Khi nested promise/thenable ngữ nghĩa (semantics / 의미론) phức tạp, built-in `Awaited<T>` thường đúng hơn custom utility vì nó mô hình (model / 모델) edge cases chuẩn hơn.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)** nối từ **10. infer: đặt tên phần cấu trúc đang match** sang **12. Recursive kiểu (type / 타입) và giới hạn trình biên dịch (compiler / 컴파일러)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Template literal types mô hình hóa string pattern; recursive types mở rộng mô hình đệ quy nhưng phải chịu compiler depth và termination limits.
 
 ## 11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)
 
@@ -305,7 +305,7 @@ type HandlerName = `on${Capitalize<EventName>}`;
 
 Tính năng (feature / 기능) này hữu ích khi thời gian chạy (runtime / 런타임) API thật sự có naming convention ổn định. Nhưng nếu bạn tạo union hàng nghìn combination, trình biên dịch (compiler / 컴파일러) phải materialize/compare nhiều kiểu (type / 타입) hơn. Dùng template literal types để encode giao thức (protocol / 프로토콜) nhỏ, không để tạo “kiểu (type / 타입) programming ngôn ngữ (language / 언어)” vô hạn.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)** đặt tiêu chí; **12. Recursive kiểu (type / 타입) và giới hạn trình biên dịch (compiler / 컴파일러)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Utility types nên hiểu từ thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산)** mở rộng hệ quả.
+Template literal cho tiêu chí match; recursive types kiểm tra giới hạn compiler, còn utility types tái sử dụng các primitive operation đó ở API.
 
 ## 12. Recursive kiểu (type / 타입) và giới hạn trình biên dịch (compiler / 컴파일러)
 
@@ -323,7 +323,7 @@ type Json =
 
 Recursive conditional/mapped types mạnh hơn nhưng có thể chạm instantiation độ sâu (depth / 깊이), tăng bộ nhớ (memory / 메모리)/check thời gian (time / 시간) hoặc tạo diagnostic rất khó đọc. Đây là nơi hiệu năng (performance / 성능) pressure thay đổi thiết kế (design / 설계): kiểu (type / 타입) chính xác hơn một chút chưa chắc đáng đổi bản dựng (build / 빌드) độ trễ (latency / 지연 시간) và cognitive tải (load / 로드).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **12. Recursive kiểu (type / 타입) và giới hạn trình biên dịch (compiler / 컴파일러)** đặt tiêu chí; **13. Utility types nên hiểu từ thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. never trong conditional kiểu (type / 타입) và union filtering** mở rộng hệ quả.
+Recursive types làm rõ compiler boundary; utility types đóng gói phép biến đổi, rồi never giúp biểu diễn branch không thể xảy ra và lọc union.
 
 ## 13. Utility types nên hiểu từ thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산)
 
@@ -331,7 +331,7 @@ Recursive conditional/mapped types mạnh hơn nhưng có thể chạm instantia
 
 Không học utilities như flashcard. Hãy hỏi utility đang thao tác trên key không gian (space / 공간), union không gian (space / 공간) hay hàm (function / 함수) cấu trúc (structure / 구조).
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **14. never trong conditional kiểu (type / 타입) và union filtering** nối từ **13. Utility types nên hiểu từ thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산)** sang **15. unknown trong generic ranh giới (boundary / 경계) tốt hơn any**, vì cơ chế trước tạo đầu vào cho bước sau.
+Never đại diện cho nhánh không thể xảy ra hoặc union đã lọc; unknown giữ boundary an toàn hơn any khi dữ liệu chưa được chứng minh.
 
 ## 14. `never` trong conditional kiểu (type / 타입) và union filtering
 
@@ -344,7 +344,7 @@ type R = OnlyString<string | number | boolean>; // string
 
 Đây là nền của nhiều filter utilities. Khi kết quả bất ngờ thành `never`, dấu vết (trace / 추적) từng branch: đầu vào (input / 입력) kiểu (type / 타입) đã bị ràng buộc (constraint / 제약조건) quá hẹp, thuộc tính (property / 속성) intersection mâu thuẫn, hay conditional đã distribute ngoài ý muốn?
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **14. never trong conditional kiểu (type / 타입) và union filtering** đặt tiêu chí; **15. unknown trong generic ranh giới (boundary / 경계) tốt hơn any** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. hàm (function / 함수) overload và union/generic: chọn theo relationship** mở rộng hệ quả.
+Unknown giữ input chưa được chứng minh trong boundary; overload/union/generic tiếp theo chọn cách biểu diễn relationship giữa các trường hợp.
 
 ## 15. `unknown` trong generic ranh giới (boundary / 경계) tốt hơn `any`
 
@@ -368,7 +368,7 @@ function parse(raw: string): unknown {
 
 Sau đó validate/narrow ở ranh giới (boundary / 경계). Generic không nên được dùng để “teleport” bên ngoài (external / 외부) dữ liệu (data / 데이터) vào lĩnh vực (domain / 도메인) kiểu (type / 타입).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **15. unknown trong generic ranh giới (boundary / 경계) tốt hơn any** đặt tiêu chí; **16. hàm (function / 함수) overload và union/generic: chọn theo relationship** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Declaration merging và mô-đun (module / 모듈) augmentation: sức mạnh có toàn cục (global / 전역) chi phí (cost / 비용)** mở rộng hệ quả.
+Unknown bảo vệ boundary bằng yêu cầu narrowing; overload/union/generic phải chọn theo relationship, rồi declaration merging/augmentation mở rộng module với global cost.
 
 ## 16. hàm (function / 함수) overload và union/generic: chọn theo relationship
 
@@ -384,7 +384,7 @@ function parseValue(value: string | number): string | number {
 
 Nếu lời gọi (call / 호출) shapes có một generic quan hệ (relation / 관계) liên tục, generic thường quy mô (scale / 규모) tốt hơn. Nếu chỉ cần “A hoặc B” mà đầu ra (output / 출력) không phụ thuộc đầu vào (input / 입력) member, union đơn giản hơn overload. Đừng chọn overload chỉ vì trông “cấp cao (senior / 시니어)”.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **17. Declaration merging và mô-đun (module / 모듈) augmentation: sức mạnh có toàn cục (global / 전역) chi phí (cost / 비용)** nối từ **16. hàm (function / 함수) overload và union/generic: chọn theo relationship** sang **18. Exactness: TypeScript đối tượng (object / 객체) kiểu (type / 타입) thường là minimum requirements, không phải sealed đối tượng (object / 객체)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Declaration merging mạnh vì mở rộng contract ở nhiều nơi, nhưng global cost tăng; exactness nhắc rằng object type thường là minimum requirements chứ không sealed object.
 
 ## 17. Declaration merging và mô-đun (module / 모듈) augmentation: sức mạnh có toàn cục (global / 전역) chi phí (cost / 비용)
 
@@ -398,7 +398,7 @@ interface Window {
 
 Mô-đun (module / 모듈) augmentation cho phép bổ sung kiểu (type / 타입) vào mô-đun (module / 모듈) bên ngoài. Đây hữu ích cho plugin ecosystem nhưng có thể làm đặc tả hợp đồng (contract / 계약) xuất hiện “từ xa”, khó dấu vết (trace / 추적). ứng dụng (application / 애플리케이션) mã (code / 코드) nên giữ augmentation tập trung, tên tệp (file / 파일) rõ, kiểm thử (test / 테스트) compile và tránh dùng nó thay cho tường minh (explicit / 명시적) adapter.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **18. Exactness: TypeScript đối tượng (object / 객체) kiểu (type / 타입) thường là minimum requirements, không phải sealed đối tượng (object / 객체)** nối từ **17. Declaration merging và mô-đun (module / 모듈) augmentation: sức mạnh có toàn cục (global / 전역) chi phí (cost / 비용)** sang **19. noUncheckedIndexedAccess thay đổi mô hình tư duy (mental model / 사고 모델) của lookup**, vì cơ chế trước tạo đầu vào cho bước sau.
+Exactness không mặc định đóng object; noUncheckedIndexedAccess buộc lookup thừa nhận key có thể thiếu và thay đổi mental model của access.
 
 ## 18. Exactness: TypeScript đối tượng (object / 객체) kiểu (type / 타입) thường là minimum requirements, không phải sealed đối tượng (object / 객체)
 
@@ -406,7 +406,7 @@ Mô-đun (module / 모듈) augmentation cho phép bổ sung kiểu (type / 타�
 
 Nếu giao thức (protocol / 프로토콜) cần reject extra properties, đó là thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증)/lược đồ (schema / 스키마) concern. Đừng kỳ vọng kiểu (type / 타입) alias thay parser.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **19. noUncheckedIndexedAccess thay đổi mô hình tư duy (mental model / 사고 모델) của lookup** tổng hợp từ **18. Exactness: TypeScript đối tượng (object / 객체) kiểu (type / 타입) thường là minimum requirements, không phải sealed đối tượng (object / 객체)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **20. exactOptionalPropertyTypes làm optional gần ngữ nghĩa (semantics / 의미론) thời gian chạy (runtime / 런타임) hơn** mở rộng hệ quả hoặc giới hạn liên quan.
+NoUncheckedIndexedAccess làm missing key lộ ra ở type; exactOptionalPropertyTypes đưa optional gần semantics runtime hơn, nhất là distinction absent/undefined.
 
 ## 19. `noUncheckedIndexedAccess` thay đổi mô hình tư duy (mental model / 사고 모델) của lookup
 
@@ -421,13 +421,13 @@ if (!user) {
 
 Strict flag này làm mã (code / 코드) verbose hơn nhưng buộc missing-key bất biến (invariant / 불변식) trở thành tường minh (explicit / 명시적). Với cấu trúc dữ liệu (data structure / 자료구조) thật sự total, hãy mô hình (model / 모델) key không gian (space / 공간) hữu hạn hoặc xây lớp trừu tượng (abstraction / 추상화) chứng minh bất biến (invariant / 불변식) thay vì cast sau mỗi lookup.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **20. exactOptionalPropertyTypes làm optional gần ngữ nghĩa (semantics / 의미론) thời gian chạy (runtime / 런타임) hơn** tổng hợp từ **19. noUncheckedIndexedAccess thay đổi mô hình tư duy (mental model / 사고 모델) của lookup** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **21. kiểu (type / 타입) hiệu năng (performance / 성능): trình biên dịch (compiler / 컴파일러) cũng là một bên tiêu thụ (consumer / 소비자) của API thiết kế (design / 설계)** mở rộng hệ quả hoặc giới hạn liên quan.
+Exact optional semantics thay đổi contract của property; type performance nhắc rằng compiler cũng là consumer chịu chi phí của API type design.
 
 ## 20. `exactOptionalPropertyTypes` làm optional gần ngữ nghĩa (semantics / 의미론) thời gian chạy (runtime / 런타임) hơn
 
 Khi bật option này, `{ value?: string }` không còn tự động đồng nghĩa “giá trị (value / 값) có thể được gán undefined” theo cách rộng trước đây. Nó nhấn mạnh distinction giữa absent thuộc tính (property / 속성) và present-with-undefined, rất hữu ích cho PATCH payload, cấu hình (config / 설정) merge và serialization.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **21. kiểu (type / 타입) hiệu năng (performance / 성능): trình biên dịch (compiler / 컴파일러) cũng là một bên tiêu thụ (consumer / 소비자) của API thiết kế (design / 설계)** nối từ **20. exactOptionalPropertyTypes làm optional gần ngữ nghĩa (semantics / 의미론) thời gian chạy (runtime / 런타임) hơn** sang **22. API thiết kế (design / 설계): giữ generic ở ranh giới (boundary / 경계) nhỏ nhất có ích**, vì cơ chế trước tạo đầu vào cho bước sau.
+Type performance là một phần của API contract; giữ generic ở boundary nhỏ nhất có ích giúp compiler và người dùng cùng gánh ít complexity hơn.
 
 ## 21. kiểu (type / 타입) hiệu năng (performance / 성능): trình biên dịch (compiler / 컴파일러) cũng là một bên tiêu thụ (consumer / 소비자) của API thiết kế (design / 설계)
 
@@ -435,7 +435,7 @@ Một kiểu (type / 타입) definition có thể correct nhưng đắt. Dấu h
 
 Cấp cao (senior / 시니어) practice là profile trước khi tối ưu, rồi đơn giản hóa công khai (public / 공개) types, đặt alias cho intermediate kết quả (result / 결과), tránh union explosion, và đôi khi chấp nhận kiểu (type / 타입) ít “ma thuật” hơn để bản dựng (build / 빌드) predictable hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **21. kiểu (type / 타입) hiệu năng (performance / 성능): trình biên dịch (compiler / 컴파일러) cũng là một bên tiêu thụ (consumer / 소비자) của API thiết kế (design / 설계)** đặt tiêu chí; **22. API thiết kế (design / 설계): giữ generic ở ranh giới (boundary / 경계) nhỏ nhất có ích** dùng tiêu chí đó để kiểm tra ranh giới, rồi **23. cấp cao (senior / 시니어) ghi chú (note / 노트): hệ kiểu (type system / 타입 시스템) là công cụ mô hình hóa bất biến (invariant / 불변식)** mở rộng hệ quả.
+API design nên giữ generic ở boundary cần thiết; senior note mở rộng câu hỏi thành invariant, rồi control-flow analysis chứng minh invariant qua data-flow.
 
 ## 22. API thiết kế (design / 설계): giữ generic ở ranh giới (boundary / 경계) nhỏ nhất có ích
 
@@ -452,13 +452,13 @@ interface Repository<TEntity, TId> {
 
 Hai parameters có relationship rõ. Nếu thêm `TContext`, `TError`, `TOptions`, `TTransport`, `TMeta` chỉ để “future proof”, lớp trừu tượng (abstraction / 추상화) có thể đang vượt quá lĩnh vực (domain / 도메인) bằng chứng (evidence / 증거) hiện có.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **22. API thiết kế (design / 설계): giữ generic ở ranh giới (boundary / 경계) nhỏ nhất có ích** đặt tiêu chí; **23. cấp cao (senior / 시니어) ghi chú (note / 노트): hệ kiểu (type system / 타입 시스템) là công cụ mô hình hóa bất biến (invariant / 불변식)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **24. Control-flow phân tích (analysis / 분석) là data-flow proof, không chỉ là typeof** mở rộng hệ quả.
+Type-system invariant cần được kiểm tra qua control flow, không chỉ khai báo; API boundary nhỏ và generic có mục đích làm proof dễ theo dõi hơn.
 
 ## 23. cấp cao (senior / 시니어) ghi chú (note / 노트): hệ kiểu (type system / 타입 시스템) là công cụ mô hình hóa bất biến (invariant / 불변식)
 
 Một advanced kiểu (type / 타입) chỉ có giá trị nếu nó làm illegal trạng thái (state / 상태) khó represent hơn, giữ relationship quan trọng qua lớp trừu tượng (abstraction / 추상화), hoặc giúp refactor an toàn. Nếu người đọc phải chạy mental trình biên dịch (compiler / 컴파일러) để hiểu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙), bạn đã chuyển độ phức tạp (complexity / 복잡도) từ thời gian chạy (runtime / 런타임) sang nguồn (source / 소스) mà chưa chắc giảm tổng độ phức tạp (complexity / 복잡도).
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, biết phải giữ gì trong **23. cấp cao (senior / 시니어) ghi chú (note / 노트): hệ kiểu (type system / 타입 시스템) là công cụ mô hình hóa bất biến (invariant / 불변식)**, ta theo dõi trong **24. Control-flow phân tích (analysis / 분석) là data-flow proof, không chỉ là typeof** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **25. kiểu (type / 타입) predicate và assertion hàm (function / 함수): biến thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) thành proof có tên** mở rộng hệ quả hoặc giới hạn liên quan.
+Control-flow analysis là data-flow proof; type predicate/assertion đặt tên evidence runtime, rồi tuple đưa positional contract vào array-like value.
 
 ## 24. Control-flow phân tích (analysis / 분석) là data-flow proof, không chỉ là `typeof`
 
@@ -490,7 +490,7 @@ if (typeof value === "string") {
 
 Cấp cao (senior / 시니어) debugging nên hỏi: “fact nào khiến checker narrow ở đây, và thao tác (operation / 연산) nào làm fact đó hết đáng tin?” thay vì nghĩ kiểu (type / 타입) là một label cố định dán vào variable.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, cơ chế trong **24. Control-flow phân tích (analysis / 분석) là data-flow proof, không chỉ là typeof** cần được kiểm chứng bằng dấu vết cụ thể; **25. kiểu (type / 타입) predicate và assertion hàm (function / 함수): biến thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) thành proof có tên** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **26. Tuple: array có positional đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả hoặc giới hạn liên quan.
+Predicate/assertion biến runtime evidence thành proof có tên; tuple giữ positional contract, sau đó class typing tách instance side khỏi constructor side.
 
 ## 25. kiểu (type / 타입) predicate và assertion hàm (function / 함수): biến thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) thành proof có tên
 
@@ -530,7 +530,7 @@ Sau `assertUser(raw)`, `raw` được narrow thành `User`. mẫu (pattern / 패
 
 TypeScript từ 5.5 còn có thể suy ra kiểu (type / 타입) predicate trong một số hàm (function / 함수) đơn giản. Dù vậy, công khai (public / 공개) kiểm tra hợp lệ (validation / 검증) API nên ưu tiên signature dễ đọc và kiểm thử (test / 테스트) được thay vì dựa hoàn toàn vào suy luận (inference / 추론) tinh vi.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **25. kiểu (type / 타입) predicate và assertion hàm (function / 함수): biến thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) thành proof có tên** đặt vấn đề; **26. Tuple: array có positional đặc tả hợp đồng (contract / 계약)** đối chiếu bằng chứng, rồi **27. lớp (class / 클래스) typing: instance side khác constructor side** mở rộng hệ quả hoặc giới hạn liên quan.
+Tuple và predicate làm rõ shape/evidence ở boundary; class typing tiếp theo phân biệt instance side với constructor side để tránh nhầm static và instance contract.
 
 ## 26. Tuple: array có positional đặc tả hợp đồng (contract / 계약)
 
@@ -553,7 +553,7 @@ Tuple mạnh khi giao thức (protocol / 프로토콜) thực sự positional, n
 
 `readonly` tuple đặc biệt hữu ích cho suy luận (inference / 추론) literal và covariance-like read-only luồng (flow / 흐름). Nó không freeze thời gian chạy (runtime / 런타임) array.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **27. lớp (class / 클래스) typing: instance side khác constructor side** nối từ **26. Tuple: array có positional đặc tả hợp đồng (contract / 계약)** sang **28. this typing: JavaScript quyết định thời gian chạy (runtime / 런타임), TypeScript chỉ mô hình đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Class typing tách instance khỏi constructor side; this typing quay về JavaScript runtime để mô hình hóa receiver mà TypeScript không tự điều khiển.
 
 ## 27. lớp (class / 클래스) typing: instance side khác constructor side
 
@@ -583,7 +583,7 @@ function create<T>(Ctor: Constructor<T>): T {
 
 `abstract` lớp (class / 클래스) cũng là static đặc tả hợp đồng (contract / 계약): nó ngăn instantiate trực tiếp và yêu cầu subclass implement members, nhưng thời gian chạy (runtime / 런타임) inheritance vẫn là JavaScript prototype/lớp (class / 클래스) ngữ nghĩa (semantics / 의미론). Vì vậy mọi vấn đề về `this`, prototype chuỗi (chain / 사슬) và initialization thứ tự (order / 순서) vẫn quay về JavaScript chuẩn gốc (canonical / 정본) docs.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **28. this typing: JavaScript quyết định thời gian chạy (runtime / 런타임), TypeScript chỉ mô hình đặc tả hợp đồng (contract / 계약)** nối từ **27. lớp (class / 클래스) typing: instance side khác constructor side** sang **29. const kiểu (type / 타입) parameter: yêu cầu suy luận (inference / 추론) giữ literal thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
+This typing nhắc rằng JavaScript quyết định runtime receiver; const type parameters giúp inference giữ literal information khi API cần độ chính xác đó.
 
 ## 28. `this` typing: JavaScript quyết định thời gian chạy (runtime / 런타임), TypeScript chỉ mô hình đặc tả hợp đồng (contract / 계약)
 
@@ -603,7 +603,7 @@ Signature trên giúp checker yêu cầu cách gọi có `this` phù hợp, như
 
 Trong callback API, `this: void` có thể nói callback không được phụ thuộc receiver. Đây là type-level documentation cho một thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식), không phải cơ chế bind.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **29. const kiểu (type / 타입) parameter: yêu cầu suy luận (inference / 추론) giữ literal thông tin (information / 정보)** nối từ **28. this typing: JavaScript quyết định thời gian chạy (runtime / 런타임), TypeScript chỉ mô hình đặc tả hợp đồng (contract / 계약)** sang **30. NoInfer<T>: ngăn một vị trí tham gia suy luận generic**, vì cơ chế trước tạo đầu vào cho bước sau.
+Const type parameters giữ literal evidence trong inference; NoInfer ngăn một vị trí tham gia suy luận khi API cần ưu tiên nguồn type khác.
 
 ## 29. `const` kiểu (type / 타입) parameter: yêu cầu suy luận (inference / 추론) giữ literal thông tin (information / 정보)
 
@@ -622,7 +622,7 @@ const routes = defineRoutes(["/", "/users", "/settings"]);
 
 Dùng tính năng (feature / 기능) này cho config-builder, tuyến (route / 경로) definitions và schema-like APIs nơi literal định danh (identity / 식별자) mang meaning. Đừng thêm `const` vào mọi generic chỉ vì “chính xác hơn”; công khai (public / 공개) kiểu (type / 타입) càng literal-heavy càng dễ tạo union lớn và diagnostic dài.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **30. NoInfer<T>: ngăn một vị trí tham gia suy luận generic** nối từ **29. const kiểu (type / 타입) parameter: yêu cầu suy luận (inference / 추론) giữ literal thông tin (information / 정보)** sang **31. hàm (function / 함수) tính tương thích (compatibility / 호환성): parameter count, bivariance legacy và strictFunctionTypes**, vì cơ chế trước tạo đầu vào cho bước sau.
+NoInfer kiểm soát nguồn evidence của generic; function compatibility tiếp theo kiểm tra parameter count, bivariance legacy và strictFunctionTypes.
 
 ## 30. `NoInfer<T>`: ngăn một vị trí tham gia suy luận generic
 
@@ -642,7 +642,7 @@ createFSM(["open", "closed"] as const, "open");
 
 Mô hình tư duy (mental model / 사고 모델) là **điều khiển (control / 제어) suy luận (inference / 추론) direction**, không phải đổi assignability cuối cùng. Đây là công cụ API thiết kế (design / 설계) tốt hơn các generic phụ chỉ được tạo để “hack suy luận (inference / 추론)”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **31. hàm (function / 함수) tính tương thích (compatibility / 호환성): parameter count, bivariance legacy và strictFunctionTypes** nối từ **30. NoInfer<T>: ngăn một vị trí tham gia suy luận generic** sang **32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
+Function compatibility phụ thuộc chiều parameter và strictness; index signatures mở rộng promise sang mọi key, nên cần cảnh giác với “mọi string key”.
 
 ## 31. hàm (function / 함수) tính tương thích (compatibility / 호환성): parameter count, bivariance legacy và `strictFunctionTypes`
 
@@ -652,7 +652,7 @@ Một subtlety là phương thức (method / 메서드) cú pháp (syntax / 문�
 
 Cấp cao (senior / 시니어) lesson không phải thuộc từng exception, mà là: khi callback variance tạo diagnostic bất ngờ, kiểm tra **dữ liệu (data / 데이터) direction**, `strictFunctionTypes`, và xem signature được khai báo như phương thức (method / 메서드) hay hàm (function / 함수) thuộc tính (property / 속성). Đừng cast callback chỉ vì hai parameter “trông gần giống”.
 
-> **Nối mạch:** Trong **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn** nối từ **31. hàm (function / 함수) tính tương thích (compatibility / 호환성): parameter count, bivariance legacy và strictFunctionTypes** sang **33. Type-system dạng thất bại (failure mode / 실패 모드): proof quá mạnh hơn thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Index signature là lời hứa lớn về key space; failure modes xuất hiện khi proof type mạnh hơn runtime evidence hoặc khi boundary bị đánh giá quá rộng.
 
 ## 32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn
 
@@ -668,7 +668,7 @@ Nếu key không gian (space / 공간) hữu hạn, `Record<UserRole, Permission
 
 Chỉ mục (index / 인덱스) signature cũng constrain named properties: nếu mọi string thuộc tính (property / 속성) phải là `number`, một named thuộc tính (property / 속성) `name: string` sẽ mâu thuẫn. Đây là consequence trực tiếp của câu “mọi string key”.
 
-> **Nối mạch:** Ở chặng này của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn** đặt vấn đề; **33. Type-system dạng thất bại (failure mode / 실패 모드): proof quá mạnh hơn thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거)** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
+Failure mode là điểm kết thúc để đối chiếu type proof với runtime evidence. Đọc lại chapter theo chuỗi shape → constraint → inference → boundary → invariant.
 
 ## 33. Type-system dạng thất bại (failure mode / 실패 모드): proof quá mạnh hơn thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거)
 
