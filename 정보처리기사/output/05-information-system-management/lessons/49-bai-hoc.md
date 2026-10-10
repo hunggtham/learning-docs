@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **슬라이스 (Slice)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **Python 제어문 (Control Statements): if문, for문** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **슬라이스 (Slice)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ mục tiêu trên, ta thu hẹp câu hỏi vào từ khóa của bài. Hãy xem nó như dấu hiệu để nhận diện thao tác slice trước khi truy ngược về cấu trúc dữ liệu nền và cách đọc.
 
 ## 핵심 키워드 (Từ khóa)
 
 슬라이스
 
-> **Chuyển mạch:** Ở chặng này của **슬라이스 (Slice)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ khóa chỉ rõ thao tác, còn kiến thức liên kết giải thích thao tác ấy đang tác động lên loại dữ liệu nào. Vì vậy, phần kế tiếp đặt slice trên nền list và dictionary trước khi đi vào chỉ số và bước nhảy.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**에서 만든 기준을 이어받아 **슬라이스 (Slice)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **슬라이스 (Slice)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **슬라이스 (Slice)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định điểm tựa, hãy dùng cách đọc dưới đây để theo dõi đối tượng, điều kiện và hệ quả. Nhờ vậy, cú pháp `đầu:cuối:bước` được hiểu như một quy tắc chọn phần tử chứ không phải chuỗi ký hiệu cần học thuộc.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **슬라이스 (Slice)** như một khá
 
 ---
 
-> **Chuyển mạch:** Trong **슬라이스 (Slice)**, **슬라이스 (Slice)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với cách đọc này, ta đi vào phần chính của **슬라이스 (Slice)**. Hãy kiểm tra mỗi ví dụ theo cùng một trình tự: đối tượng nào được cắt, phạm vi bắt đầu–kết thúc ra sao và bước nhảy làm thay đổi kết quả thế nào.
 
 ## 슬라이스 (Slice)
 

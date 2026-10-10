@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **입력 값의 형변환 (Type Casting)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **입력 값의 형변환 (Type Casting)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ mục tiêu trên, ta thu hẹp câu hỏi vào các từ khóa của bài. Hãy xem chúng như những dấu hiệu để nhận diện type casting trước khi truy ngược về khái niệm nền và cách đọc.
 
 ## 핵심 키워드 (Từ khóa)
 
 입력, 값의, 형변환
 
-> **Chuyển mạch:** Ở chặng này của **입력 값의 형변환 (Type Casting)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các từ khóa chỉ có ý nghĩa khi đặt vào mối liên hệ với kiến thức đã học. Vì vậy, phần kế tiếp xác định điểm tựa từ Python input và cho biết bài này mở rộng điểm tựa đó bằng việc kiểm soát kiểu dữ liệu.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **Python 데이터 입·출력 함수 (Python Input/Output Functions)**에서 만든 기준을 이어받아 **입력 값의 형변환 (Type Casting)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **입력 값의 형변환 (Type Casting)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입력 값의 형변환 (Type Casting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định điểm tựa, hãy dùng cách đọc dưới đây để theo dõi đối tượng, điều kiện và hệ quả. Cách này giúp việc đổi kiểu từ chuỗi sang số gắn với tình huống sử dụng cụ thể.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **입력 값의 형변환 (Type Casting)
 
 ---
 
-> **Chuyển mạch:** Trong **입력 값의 형변환 (Type Casting)**, **입력 값의 형변환 (Type Casting)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Với cách đọc này, ta đi vào phần chính của **입력 값의 형변환 (Type Casting)**. Hãy kiểm tra mỗi cách chuyển đổi theo cùng một trình tự: dữ liệu đang ở kiểu nào, cần đổi vì mục đích gì và việc đổi kiểu tạo ra hệ quả nào.
 
 ## 입력 값의 형변환 (Type Casting)
 
