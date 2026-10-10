@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Window Functions**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Keyword chỉ giúp nhận diện thuật ngữ; mạch tư duy cần giải thích vì sao window function giữ từng row nhưng vẫn nhìn được tập liên quan. Từ đó bài học nối khái niệm với cú pháp và semantics.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 윈도우 함수 — Window Function ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mạch tư duy đặt câu hỏi về phạm vi và thứ tự tính toán, còn mạch nối biến câu hỏi ấy thành lộ trình đọc. Điểm vào đầu tiên là window function và sự khác aggregate query truyền thống.
 
 ## Mạch nối của bài học
 
@@ -28,7 +28,7 @@ Bài này không đứng riêng: hãy nối **Window Functions** với bài trư
 
 Ta bắt đầu **1. 윈도우 함수 — Window Function ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **1. 윈도우 함수 — Window Function ⭐⭐⭐** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Tại sao cần Window Function?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Window function tính trên một window nhưng không làm mất row detail. Hiểu đặc điểm này trước giúp thấy vì sao nó giải quyết các bài toán mà `GROUP BY` đơn thuần không thể giữ đủ ngữ cảnh.
 
 ## 1. 윈도우 함수 — Window Function ⭐⭐⭐
 
@@ -98,7 +98,7 @@ Vậy ta đã có tiêu chí để đọc **1. 윈도우 함수 — Window Funct
 
 Ta bắt đầu **2. Tại sao cần Window Function?** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **2. Tại sao cần Window Function?** tiếp nhận điểm tựa từ **1. 윈도우 함수 — Window Function ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cấu trúc Window Function ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Window function trả thêm giá trị theo từng dòng, nhưng lợi ích chỉ rõ khi so với nhu cầu thực tế như running total, ranking và so sánh trong nhóm. Cấu trúc `OVER()` là giao diện mô tả phạm vi đó.
 
 ## 2. Tại sao cần Window Function?
 
@@ -164,7 +164,7 @@ Vậy ta đã có tiêu chí để đọc **Cách 1 — Subquery**. Bây giờ c
 
 Ta bắt đầu **3. Cấu trúc Window Function ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **3. Cấu trúc Window Function ⭐⭐⭐** tiếp nhận điểm tựa từ **2. Tại sao cần Window Function?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. PARTITION BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`OVER()` tách partition, order và frame thành các lớp semantics khác nhau. Sau khi thấy cấu trúc tổng quát, cần cô lập `PARTITION BY` để hiểu ranh giới nhóm trước khi xét thứ tự.
 
 ## 3. Cấu trúc Window Function ⭐⭐⭐
 
@@ -207,7 +207,7 @@ Vậy ta đã có tiêu chí để đọc **3. Cấu trúc Window Function ⭐�
 
 Ta bắt đầu **4. PARTITION BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **4. PARTITION BY** tiếp nhận điểm tựa từ **3. Cấu trúc Window Function ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. ORDER BY bên trong OVER()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`PARTITION BY` chia các row thành những cửa sổ độc lập nhưng không tự sắp xếp bên trong. `ORDER BY` tiếp theo quyết định vị trí tương đối và hướng tính các hàm tuần tự.
 
 ## 4. PARTITION BY
 
@@ -265,7 +265,7 @@ Vậy ta đã có tiêu chí để đọc **4. PARTITION BY**. Bây giờ chuy�
 
 Ta bắt đầu **5. ORDER BY bên trong OVER()** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **5. ORDER BY bên trong OVER()** tiếp nhận điểm tựa từ **4. PARTITION BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Aggregate Function dùng như Window Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`ORDER BY` trong `OVER()` khác order của result set: nó định nghĩa logic cửa sổ chứ không nhất thiết đổi thứ tự output. Khi có thứ tự, aggregate cũng có thể trở thành running hoặc cumulative calculation.
 
 ## 5. ORDER BY bên trong OVER()
 
@@ -306,7 +306,7 @@ Vậy ta đã có tiêu chí để đọc **5. ORDER BY bên trong OVER()**. Bâ
 
 Ta bắt đầu **6. Aggregate Function dùng như Window Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **6. Aggregate Function dùng như Window Function** tiếp nhận điểm tựa từ **5. ORDER BY bên trong OVER()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. SUM() + ORDER BY = cumulative sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Aggregate dùng như window giữ từng row và tính trên frame tương ứng. Với `SUM()`, thêm `ORDER BY` thường biến tổng của cả partition thành cumulative sum, nhưng frame mặc định và ties vẫn phải được kiểm tra.
 
 ## 6. Aggregate Function dùng như Window Function
 
@@ -346,7 +346,7 @@ Vậy ta đã có tiêu chí để đọc **6. Aggregate Function dùng như Win
 
 Ta bắt đầu **7. SUM() + ORDER BY = cumulative sum** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **7. SUM() + ORDER BY = cumulative sum** tiếp nhận điểm tựa từ **6. Aggregate Function dùng như Window Function** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. AVG cũng tương tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Với `SUM()`, thêm `ORDER BY` thường tạo cumulative sum: frame mở rộng từ đầu partition đến row hiện tại. Kết quả còn phụ thuộc peer rows và frame mặc định, nên phải kiểm tra trước khi suy ra semantics.
 
 ## 7. SUM() + ORDER BY = cumulative sum
 
@@ -422,7 +422,7 @@ Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **
 
 Ta bắt đầu **8. AVG cũng tương tự** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **8. AVG cũng tương tự** tiếp nhận điểm tựa từ **7. SUM() + ORDER BY = cumulative sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Window Frame — ROWS / RANGE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cumulative sum cho thấy frame tiến dần theo order; `AVG()` dùng cùng cơ chế nhưng denominator thay đổi theo frame. Vì vậy bước kế tiếp phải làm rõ `ROWS` và `RANGE`, thay vì giả định mọi frame theo thứ tự đều giống nhau.
 
 ## 8. AVG cũng tương tự
 
@@ -469,7 +469,7 @@ Vậy ta đã có tiêu chí để đọc **8. AVG cũng tương tự**. Bây gi
 
 Ta bắt đầu **9. Window Frame — ROWS / RANGE ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **9. Window Frame — ROWS / RANGE ⭐⭐⭐** tiếp nhận điểm tựa từ **8. AVG cũng tương tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ROWS/RANGE xác định tập row thực sự đi vào mỗi phép tính. Đây là ranh giới quan trọng giữa vị trí vật lý và giá trị order, đặc biệt khi có peer rows hoặc duplicate sort keys.
 
 ## 9. Window Frame — ROWS / RANGE ⭐⭐⭐
 
@@ -571,7 +571,7 @@ Vậy ta đã có tiêu chí để đọc **`UNBOUNDED FOLLOWING`**. Bây giờ 
 
 Ta bắt đầu **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** tiếp nhận điểm tựa từ **9. Window Frame — ROWS / RANGE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` lấy từ đầu partition đến vị trí hiện tại theo row position. Khi muốn semantics theo giá trị và peer group, cần so sánh trực tiếp với `RANGE`.
 
 ## 10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 
@@ -623,7 +623,7 @@ Vậy ta đã có tiêu chí để đọc **10. ROWS BETWEEN UNBOUNDED PRECEDING
 
 Ta bắt đầu **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** tiếp nhận điểm tựa từ **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Default frame rất quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RANGE nhóm các peer có cùng giá trị order, còn ROWS đếm vị trí vật lý; vì vậy cùng cú pháp aggregate có thể cho kết quả khác. Mặc định frame của dialect phải được kiểm tra trước khi đọc output.
 
 ## 11. RANGE khác ROWS như thế nào? ⭐⭐⭐
 
@@ -745,7 +745,7 @@ Vậy ta đã có tiêu chí để đọc **Câu nhớ**. Bây giờ chuyển sa
 
 Ta bắt đầu **12. Default frame rất quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **12. Default frame rất quan trọng** tiếp nhận điểm tựa từ **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Toàn partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Default frame thường thay đổi khi có hoặc không có `ORDER BY`, và peer rows có thể cùng nhận một giá trị. Hiểu mặc định giúp giải thích vì sao `RANGE` xuất hiện dù query không ghi rõ frame.
 
 ## 12. Default frame rất quan trọng
 
@@ -795,7 +795,7 @@ Vậy ta đã có tiêu chí để đọc **12. Default frame rất quan trọng
 
 Ta bắt đầu **13. Toàn partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **13. Toàn partition** tiếp nhận điểm tựa từ **12. Default frame rất quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. FOLLOWING** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một frame có thể bao phủ toàn partition nếu bỏ order hoặc chọn boundary phù hợp, khi đó mỗi row nhận cùng aggregate. Từ toàn partition, `FOLLOWING` mở cửa sổ về phía các row tương lai.
 
 ## 13. Toàn partition
 
@@ -844,7 +844,7 @@ Vậy ta đã có tiêu chí để đọc **13. Toàn partition**. Bây giờ ch
 
 Ta bắt đầu **14. FOLLOWING** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **14. FOLLOWING** tiếp nhận điểm tựa từ **13. Toàn partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. LAG / LEAD ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`FOLLOWING` cho phép nhìn trước trong partition nhưng làm frame nhạy với biên cuối và NULL/tie ordering. Các hàm offset như `LAG` và `LEAD` giải quyết một dạng nhìn trước/nhìn sau khác, theo vị trí row.
 
 ## 14. FOLLOWING
 
@@ -885,7 +885,7 @@ Vậy ta đã có tiêu chí để đọc **14. FOLLOWING**. Bây giờ chuyển
 
 Ta bắt đầu **15. LAG / LEAD ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **15. LAG / LEAD ⭐⭐⭐** tiếp nhận điểm tựa từ **14. FOLLOWING** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cú pháp LAG/LEAD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`LAG` và `LEAD` lấy giá trị ở offset tương đối, không phải aggregate trên frame. Cú pháp offset, default value và order key cần được đọc cùng nhau để biết hành vi ở biên partition.
 
 ## 15. LAG / LEAD ⭐⭐⭐
 
@@ -950,7 +950,7 @@ Vậy ta đã có tiêu chí để đọc **LEAD**. Bây giờ chuyển sang **1
 
 Ta bắt đầu **16. Cú pháp LAG/LEAD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **16. Cú pháp LAG/LEAD** tiếp nhận điểm tựa từ **15. LAG / LEAD ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cú pháp `LAG/LEAD` quy định offset và giá trị thay thế khi không có row, nhưng semantics vẫn phụ thuộc order ổn định. Một `ORDER BY` đặt sai cột có thể tạo kết quả hợp lệ về cú pháp nhưng sai ý định.
 
 ## 16. Cú pháp LAG/LEAD
 
@@ -1018,7 +1018,7 @@ Vậy ta đã có tiêu chí để đọc **Default**. Bây giờ chuyển sang 
 
 Ta bắt đầu **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **16. Cú pháp LAG/LEAD** đã nêu tiêu chí phân biệt, còn **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. FIRSTVALUE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ORDER BY `DEPTNO` chỉ sắp xếp trong window; nó không tạo partition theo department. Khi cần so sánh trong từng nhóm, `PARTITION BY` phải được viết riêng trước khi chọn value đầu hoặc cuối.
 
 ## 17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition
 
@@ -1077,7 +1077,7 @@ Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **
 
 Ta bắt đầu **18. FIRST_VALUE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** đã nêu tiêu chí phân biệt, còn **18. FIRSTVALUE ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. FIRSTVALUE không phải MIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`FIRST_VALUE` trả value của row đầu theo frame/order, không phải giá trị nhỏ nhất. Phân biệt vị trí đầu với phép cực trị giúp tránh nhầm nó với `MIN()` khi dữ liệu có ties hoặc frame thay đổi.
 
 ## 18. FIRST_VALUE ⭐⭐⭐
 
@@ -1159,7 +1159,7 @@ Vậy ta đã có tiêu chí để đọc **Có thể lấy MAX bằng FIRST_VAL
 
 Ta bắt đầu **19. FIRST_VALUE không phải MIN** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **19. FIRSTVALUE không phải MIN** tiếp nhận điểm tựa từ **18. FIRSTVALUE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`FIRST_VALUE` phụ thuộc frame và thứ tự, còn `MIN()` chỉ xét giá trị trong tập. Đối xứng với bẫy này là `LAST_VALUE`, vì frame mặc định thường kết thúc ở current row chứ chưa tới cuối partition.
 
 ## 19. FIRST_VALUE không phải MIN
 
@@ -1205,7 +1205,7 @@ Vậy ta đã có tiêu chí để đọc **19. FIRST_VALUE không phải MIN**.
 
 Ta bắt đầu **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **19. FIRSTVALUE không phải MIN** đã nêu tiêu chí phân biệt, còn **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Muốn LASTVALUE thật sự lấy cuối partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`LAST_VALUE` theo frame mặc định thường trả chính row hiện tại, nên dễ bị tưởng là giá trị cuối nhóm. Muốn lấy last thật sự, phải mở frame tới `UNBOUNDED FOLLOWING` và kiểm tra order/ties.
 
 ## 20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐
 
@@ -1295,7 +1295,7 @@ Vậy ta đã có tiêu chí để đọc **Vì sao?**. Bây giờ chuyển sang
 
 Ta bắt đầu **21. Muốn LAST_VALUE thật sự lấy cuối partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** đã nêu tiêu chí phân biệt, còn **21. Muốn LASTVALUE thật sự lấy cuối partition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. NTILE(N) ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Để `LAST_VALUE` thật sự nhìn tới cuối partition, frame phải bao phủ phần còn lại chứ không dừng ở current row. Sau các frame theo vị trí, `NTILE(N)` chuyển sang chia các row đã order thành các bucket.
 
 ## 21. Muốn LAST_VALUE thật sự lấy cuối partition
 
@@ -1340,7 +1340,7 @@ Vậy ta đã có tiêu chí để đọc **Câu cực quan trọng**. Bây gi�
 
 Ta bắt đầu **22. NTILE(N) ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **22. NTILE(N) ⭐⭐⭐** tiếp nhận điểm tựa từ **21. Muốn LASTVALUE thật sự lấy cuối partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. NTILE bắt buộc ORDER BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NTILE chia thứ tự trong partition thành N nhóm gần đều, nên bucket boundary phụ thuộc số row, ties và order ổn định. Vì cần một thứ tự để chia, `NTILE` bắt buộc có `ORDER BY`.
 
 ## 22. NTILE(N) ⭐⭐⭐
 
@@ -1420,7 +1420,7 @@ Vậy ta đã có tiêu chí để đọc **Quy tắc**. Bây giờ chuyển san
 
 Ta bắt đầu **23. NTILE bắt buộc ORDER BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **23. NTILE bắt buộc ORDER BY** tiếp nhận điểm tựa từ **22. NTILE(N) ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. RATIOTOREPORT ⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NTILE chia bucket dựa trên thứ tự, nên phần tiếp theo cần nêu rõ vì sao thiếu `ORDER BY` làm semantics không xác định. Đây là boundary khác với các hàm chỉ aggregate theo partition.
 
 ## 23. NTILE bắt buộc ORDER BY
 
@@ -1451,7 +1451,7 @@ Vậy ta đã có tiêu chí để đọc **23. NTILE bắt buộc ORDER BY**. B
 
 Ta bắt đầu **24. RATIO_TO_REPORT ⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **24. RATIOTOREPORT ⭐⭐** tiếp nhận điểm tựa từ **23. NTILE bắt buộc ORDER BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. PERCENTRANK ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NTILE bắt buộc order để bucket có nghĩa; sau khi phân nhóm theo vị trí, `RATIO_TO_REPORT` chuyển câu hỏi sang tỷ trọng của mỗi row trong tổng partition.
 
 ## 24. RATIO_TO_REPORT ⭐⭐
 
@@ -1553,7 +1553,7 @@ Vậy ta đã có tiêu chí để đọc **Điểm cần nhớ**. Bây giờ ch
 
 Ta bắt đầu **25. PERCENT_RANK ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **25. PERCENTRANK ⭐⭐⭐** tiếp nhận điểm tựa từ **24. RATIOTOREPORT ⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. PERCENTRANK xử lý tie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`RATIO_TO_REPORT` trả phần đóng góp tương đối của row hoặc expression trong partition, không cần frame tuần tự như running sum. Để xếp hạng theo vị trí tương đối, dùng `PERCENT_RANK`.
 
 ## 25. PERCENT_RANK ⭐⭐⭐
 
@@ -1623,7 +1623,7 @@ Vậy ta đã có tiêu chí để đọc **25. PERCENT_RANK ⭐⭐⭐**. Bây g
 
 Ta bắt đầu **26. PERCENT_RANK xử lý tie** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **26. PERCENTRANK xử lý tie** tiếp nhận điểm tựa từ **25. PERCENTRANK ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. CUMEDIST ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`PERCENT_RANK` chuẩn hóa rank từ 0 đến 1 dựa trên số row và vị trí rank. Khi nhiều row đồng hạng, cần xem tie được gán rank chung và khoảng trống ra sao.
 
 ## 26. PERCENT_RANK xử lý tie
 
@@ -1670,7 +1670,7 @@ Vậy ta đã có tiêu chí để đọc **26. PERCENT_RANK xử lý tie**. Bâ
 
 Ta bắt đầu **27. CUME_DIST ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **27. CUMEDIST ⭐⭐⭐** tiếp nhận điểm tựa từ **26. PERCENTRANK xử lý tie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Ví dụ CUMEDIST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ties làm `PERCENT_RANK` giữ cùng rank cho peer rows, còn `CUME_DIST` đo tỷ lệ row có giá trị nhỏ hơn hoặc bằng current value. Vì vậy CUME_DIST cần được minh họa bằng dữ liệu có lặp.
 
 ## 27. CUME_DIST ⭐⭐⭐
 
@@ -1705,7 +1705,7 @@ Vậy ta đã có tiêu chí để đọc **27. CUME_DIST ⭐⭐⭐**. Bây gi�
 
 Ta bắt đầu **28. Ví dụ CUME_DIST** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **27. CUMEDIST ⭐⭐⭐** cho ta quy tắc; **28. Ví dụ CUMEDIST** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **29. CUMEDIST và tie ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`CUME_DIST` tăng theo cumulative population đến peer group hiện tại; ví dụ cụ thể giúp tách nó khỏi rank của một row đơn lẻ. Khi có tie, cả nhóm nhảy cùng một mốc phân phối.
 
 ## 28. Ví dụ CUME_DIST
 
@@ -1741,7 +1741,7 @@ Vậy ta đã có tiêu chí để đọc **28. Ví dụ CUME_DIST**. Bây giờ
 
 Ta bắt đầu **29. CUME_DIST và tie ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **28. Ví dụ CUMEDIST** cho ta quy tắc; **29. CUMEDIST và tie ⭐⭐⭐** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ CUME_DIST cho thấy peer rows cùng chia sẻ cumulative boundary. Từ đó có thể so sánh trực tiếp cách `PERCENT_RANK` và `CUME_DIST` phản ánh vị trí trong một partition.
 
 ## 29. CUME_DIST và tie ⭐⭐⭐
 
@@ -1784,7 +1784,7 @@ Vậy ta đã có tiêu chí để đọc **29. CUME_DIST và tie ⭐⭐⭐**. B
 
 Ta bắt đầu **30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** tiếp nhận điểm tựa từ **29. CUMEDIST và tie ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Đừng nhầm RANGE và CUMEDIST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`PERCENT_RANK` dựa trên rank và mẫu số `n-1`, còn `CUME_DIST` dựa trên số row không vượt quá giá trị hiện tại và mẫu số `n`. Hai hàm cùng chuẩn hóa nhưng không cùng semantics.
 
 ## 30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐
 
@@ -1862,7 +1862,7 @@ Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển s
 
 Ta bắt đầu **31. Đừng nhầm RANGE và CUME_DIST** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** đã nêu tiêu chí phân biệt, còn **31. Đừng nhầm RANGE và CUMEDIST** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **32. Sơ đồ tổng hợp Window Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+So sánh hai hàm ranking không nên lẫn với semantics của frame. `RANGE` xác định row đưa vào aggregate theo order value, còn `CUME_DIST` là một ranking distribution function.
 
 ## 31. Đừng nhầm RANGE và CUME_DIST
 
@@ -1901,7 +1901,7 @@ Vậy ta đã có tiêu chí để đọc **31. Đừng nhầm RANGE và CUME_DI
 
 Ta bắt đầu **32. Sơ đồ tổng hợp Window Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Window Functions**, **31. Đừng nhầm RANGE và CUMEDIST** đã nêu tiêu chí phân biệt, còn **32. Sơ đồ tổng hợp Window Function** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **33. Bảng phân loại các hàm trong ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`RANGE` và `CUME_DIST` đều nhạy với peer values nhưng giải quyết hai câu hỏi khác nhau: frame cho phép tính trên tập nào, còn CUME_DIST cho biết bao nhiêu row đã đạt tới value đó.
 
 ## 32. Sơ đồ tổng hợp Window Function
 
@@ -1983,7 +1983,7 @@ Vậy ta đã có tiêu chí để đọc **Bước 3 — ROWS**. Bây giờ chu
 
 Ta bắt đầu **33. Bảng phân loại các hàm trong ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **33. Bảng phân loại các hàm trong ảnh** gom các mảnh từ **32. Sơ đồ tổng hợp Window Function** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **🔥 SQLD NOTE — Phần phải thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sơ đồ tổng hợp nên đặt partition, order, frame và function family trên cùng các trục để đọc query boundary. Bảng phân loại sau đó giúp chọn hàm theo mục tiêu thay vì nhớ rời từng ví dụ.
 
 ## 33. Bảng phân loại các hàm trong ảnh
 
@@ -2009,7 +2009,7 @@ Vậy ta đã có tiêu chí để đọc **33. Bảng phân loại các hàm tr
 
 Ta bắt đầu **🔥 SQLD NOTE — Phần phải thuộc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **🔥 SQLD NOTE — Phần phải thuộc** tiếp nhận điểm tựa từ **33. Bảng phân loại các hàm trong ảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Bảng phân loại gom aggregate, offset, ranking và distribution functions theo semantics. SQLD note cuối bài chốt các bẫy phải kiểm tra: NULL, ties, default frame, order và dialect.
 
 ## 🔥 SQLD NOTE — Phần phải thuộc
 
