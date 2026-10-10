@@ -27,7 +27,7 @@ làm smooth cục bộ (local / 로컬) variation.
 
 Edge kernel như Sobel approximates spatial derivative. CNN sau này học kernels thay vì hand-design hoàn toàn.
 
-> **Chuyển mạch:** Convolution áp dụng kernel cục bộ; padding quyết định thông tin ở boundary, rồi blur/noise reduction cho thấy filter đánh đổi chi tiết lấy ổn định như thế nào.
+Convolution áp dụng kernel cục bộ; padding quyết định thông tin ở boundary. Từ cách xử lý vùng thiếu hàng xóm này, blur/noise reduction cho thấy filter đánh đổi chi tiết lấy ổn định như thế nào.
 
 ## Padding và ranh giới (boundary / 경계)
 
@@ -40,7 +40,7 @@ Kernel gần border thiếu neighbors. Strategies:
 
 Ranh giới (boundary / 경계) choice ảnh hưởng đầu ra (output / 출력) dimension và artifacts.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Padding và ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Blur và Noise Reduction** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Edges và Gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Padding và ranh giới đã nêu cách giữ hoặc làm mất thông tin ở mép ảnh; blur và noise reduction cho thấy lựa chọn đó ảnh hưởng đến chi tiết ra sao. Bước kế tiếp dùng edges và gradients để đo những thay đổi còn lại.
 
 ## Blur và Noise Reduction
 
@@ -54,7 +54,7 @@ G(x,y)=\frac{1}{2\pi\sigma^2}e^{-(x^2+y^2)/(2\sigma^2)}
 
 Nhưng blur cũng xóa edges/fine detail. Denoising luôn là signal-vs-detail sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Edges và Gradients** tiếp nhận điểm tựa từ **Blur và Noise Reduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Canny Edge Detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Blur giảm nhiễu nhưng cũng có thể làm mờ biên; edges và gradients biến sự thay đổi cường độ đó thành tín hiệu có thể đo. Canny Edge Detection tiếp tục tổ chức tín hiệu này thành một chuỗi phát hiện biên có kiểm soát.
 
 ## Edges và Gradients
 
@@ -74,7 +74,7 @@ Direction cho orientation của cục bộ (local / 로컬) thay đổi (change 
 
 Edges từng là cốt lõi (core / 핵심) thành phần nguyên thủy (primitive / 기본 요소) cho đối tượng (object / 객체) shape detection.
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Canny Edge Detection** tiếp nhận điểm tựa từ **Edges và Gradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thresholding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Canny tách việc làm trơn, đo gradient và nối các biên thành từng bước; thresholding sẽ đặt một tiêu chí rõ ràng để biến tín hiệu liên tục thành vùng nhị phân.
 
 ## Canny Edge Detection
 
@@ -90,7 +90,7 @@ Gaussian smoothing
 
 Điểm đáng học là chuỗi xử lý (pipeline / 파이프라인) separates noise suppression, cục bộ (local / 로컬) bằng chứng (evidence / 증거) và connectivity lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Thresholding** tiếp nhận điểm tựa từ **Canny Edge Detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Morphological Operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thresholding quyết định điểm ảnh nào thuộc foreground dựa trên mức cường độ; morphology dùng mask đó để sửa nhiễu nhỏ, lấp lỗ và nối các vùng theo hình dạng.
 
 ## Thresholding
 
@@ -104,7 +104,7 @@ Toàn cục (global / 전역) threshold thất bại (fail / 실패) nếu illum
 
 Otsu phương thức (method / 메서드) chọn threshold để separate classes theo between-class variance giả định (assumption / 가정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Morphological Operations** tiếp nhận điểm tựa từ **Thresholding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connected Components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Morphological operations thay đổi mask theo structuring element, nhưng chưa nói mỗi vùng thuộc về đối tượng nào. Connected components gắn các điểm ảnh liên thông thành những vùng có thể đo được.
 
 ## Morphological Operations
 
@@ -117,13 +117,13 @@ Với nhị phân (binary / 이진) mask và structuring element:
 
 Dùng để remove small noise, fill holes, connect components.
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Connected Components** tiếp nhận điểm tựa từ **Morphological Operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Histograms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Connected components cung cấp area, centroid và bounding box cho từng vùng; histogram bổ sung một góc nhìn khác bằng cách tóm tắt phân bố cường độ của toàn ảnh hoặc một vùng.
 
 ## Connected Components
 
 Nhị phân (binary / 이진) mask có thể được group thành connected regions. thành phần (component / 컴포넌트) properties như area, centroid, bounding box rất hữu ích cho OCR/inspection pipelines.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Histograms** tiếp nhận điểm tựa từ **Connected Components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geometric Transformations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Histogram cho biết phân bố cường độ và giúp đánh giá việc tăng tương phản; khi cần thay đổi vị trí hoặc hình học của ảnh, geometric transformations sẽ mô tả phép biến đổi tọa độ tương ứng.
 
 ## Histograms
 
@@ -131,7 +131,7 @@ Intensity histogram mô tả frequency của điểm ảnh (pixel / 픽셀) valu
 
 Nhưng contrast enhancement có thể amplify noise.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Geometric Transformations** tiếp nhận điểm tựa từ **Histograms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interpolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Geometric transformations di chuyển hoặc chiếu lại tọa độ; interpolation quyết định giá trị nào được gán cho các tọa độ không nguyên sinh ra sau phép biến đổi.
 
 ## Geometric Transformations
 
@@ -145,7 +145,7 @@ cover translation, rotation, quy mô (scale / 규모), shear.
 
 Perspective/homography cần projective transform để map planes under viewpoint thay đổi (change / 변경).
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Interpolation** tiếp nhận điểm tựa từ **Geometric Transformations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frequency lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Interpolation lấp các giá trị khi resize hoặc warp, đồng thời phải giữ đúng ngữ nghĩa của ảnh và mask. Frequency domain cho phép nhìn các thay đổi đó theo thành phần tần số.
 
 ## Interpolation
 
@@ -157,7 +157,7 @@ Resize/warp cần estimate điểm ảnh (pixel / 픽셀) values at non-integer 
 
 Nearest preserves labels for masks better; bilinear smoother for images. Dùng interpolation sai cho segmentation mask có thể tạo lớp (class / 클래스) IDs invalid.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Frequency lĩnh vực (domain / 도메인)** tiếp nhận điểm tựa từ **Interpolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JPEG Intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Interpolation chọn cách lấp giá trị cho tọa độ không nguyên và phải bảo toàn ngữ nghĩa của ảnh hoặc mask. Frequency domain cung cấp một cách nhìn khác để phân tích những biến đổi này theo thành phần tần số.
 
 ## Frequency lĩnh vực (domain / 도메인)
 
@@ -167,7 +167,7 @@ Low-pass filters smooth; high-pass emphasize edges.
 
 Frequency view giúp hiểu blur, periodic noise và compression.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **JPEG Intuition** tiếp nhận điểm tựa từ **Frequency lĩnh vực (domain / 도메인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Classical chuỗi xử lý (pipeline / 파이프라인) Example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Frequency domain tách biến thiên chậm và nhanh, giúp giải thích blur, noise và cạnh. JPEG intuition dùng chính sự phân tách đó để lý giải việc nén loại bỏ chi tiết như thế nào.
 
 ## JPEG Intuition
 
@@ -175,7 +175,7 @@ JPEG chia blocks, transform qua DCT, quantize frequency coefficients rồi entro
 
 Compression artifacts có thể ảnh hưởng mô hình (model / 모델) nếu train/kiểm thử (test / 테스트) compression khác nhau.
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **JPEG Intuition** cho ta quy tắc; **Classical chuỗi xử lý (pipeline / 파이프라인) Example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **When Classical Processing Still Wins** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+JPEG minh họa một chuỗi xử lý có chủ đích: giữ thành phần quan trọng và chấp nhận mất mát ở tần số cao. Ví dụ document scan cho thấy các phép xử lý cổ điển phối hợp ra sao trong một pipeline cụ thể.
 
 ## Classical chuỗi xử lý (pipeline / 파이프라인) Example
 
@@ -193,7 +193,7 @@ gray
 
 Một deep mô hình (model / 모델) có thể replace vài stage nhưng preprocessing vẫn hữu ích khi acquisition predictable.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Classical chuỗi xử lý (pipeline / 파이프라인) Example** cho ta quy tắc; **When Classical Processing Still Wins** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Differentiable ảnh (image / 이미지) Operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pipeline document scan cho thấy các phép cổ điển vẫn phù hợp khi đầu vào có cấu trúc và mục tiêu rõ. Khi cần học các phép biến đổi cùng mô hình, differentiable image operations mở rộng cùng nguyên lý đó vào quá trình huấn luyện.
 
 ## When Classical Processing Still Wins
 
@@ -208,19 +208,19 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Không phải mọi vision bài toán (problem / 문제) cần deep mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **When Classical Processing Still Wins** xác định đầu vào; **Differentiable ảnh (image / 이미지) Operations** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Classical processing thắng khi quy tắc hình học, ngân sách tính toán hoặc điều kiện thu nhận đã đủ ổn định. Differentiable image operations giữ trực giác này nhưng cho phép gradient đi qua các phép xử lý; mô hình tư duy ở cuối bài sẽ gom lại ranh giới đó.
 
 ## Differentiable ảnh (image / 이미지) Operations
 
 Nhiều processing operations có differentiable equivalents và trở thành layers/augmentations inside neural huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Differentiable ảnh (image / 이미지) Operations** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Differentiable operations cho thấy xử lý ảnh và học sâu có thể nằm trong cùng một chuỗi tối ưu. Mô hình tư duy dưới đây tóm tắt điều gì được đo, điều gì được học, và những giả định nào vẫn cần kiểm tra trước khi sang các ngộ nhận thường gặp.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **xử lý ảnh (image processing / 이미지 처리) thay đổi đo lường (measurement / 측정) để cấu trúc (structure / 구조) cần thiết trở nên dễ detect hơn. Deep học tập (learning / 학습) chủ yếu thay hand-designed tính năng (feature / 기능) extraction bằng learned representations, không xóa bỏ signal-processing foundations.**
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy giúp phân biệt thay đổi phép đo với việc học biểu diễn; các ngộ nhận tiếp theo kiểm tra những ranh giới này qua các ví dụ cụ thể. Sau đó, phần liên kết kiến thức sẽ đặt chúng vào lộ trình rộng hơn.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -236,7 +236,7 @@ Sharpen tăng cục bộ (local / 로컬) contrast; không tạo detail thật �
 
 Cùng đầu ra (output / 출력) mask nhưng các giả định (assumptions / 가정들)/năng lực (capability / 역량) rất khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý ảnh (image processing / 이미지 처리) Foundations**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận cho thấy preprocessing, thresholding và sharpening đều có giả định riêng; vì vậy, phần liên kết kiến thức sẽ chỉ rõ những nền tảng cần quay lại và nhánh học tiếp theo.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
