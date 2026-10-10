@@ -23,7 +23,7 @@ Một sorting thuật toán (algorithm / 알고리즘) đúng phải thỏa ít 
 
 Nếu sort bản ghi (record / 레코드), specification còn có thể gồm stability, null handling, secondary key hoặc tie-breaking.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Comparator định nghĩa thế giới thứ tự** tiếp nhận điểm tựa từ **Specification của sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Total thứ tự (order / 순서) và partial thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Specification xác định hai bất biến: output có thứ tự theo comparator và bảo toàn đúng multiset input; comparator là cơ chế hiện thực phần thứ nhất.
 
 ## Comparator định nghĩa thế giới thứ tự
 
@@ -66,7 +66,7 @@ Trong JavaScript, numeric sort cần comparator rõ:
 arr.sort((a, b) => a - b);
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Total thứ tự (order / 순서) và partial thứ tự (order / 순서)** tiếp nhận điểm tựa từ **Comparator định nghĩa thế giới thứ tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stable sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Comparator quyết định quan hệ giữa hai phần tử, nhưng quan hệ đó có thể là total order hoặc chỉ là partial order; việc chọn tie-breaker sẽ quyết định semantics đầu ra.
 
 ## Total thứ tự (order / 순서) và partial thứ tự (order / 순서)
 
@@ -84,7 +84,7 @@ nếu vẫn bằng nhau thì id tăng dần
 
 Việc thêm tie-breaker không chỉ để tránh comparator trả 0; nó xác định ngữ nghĩa (semantics / 의미론) của đầu ra (output / 출력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Stable sorting** tiếp nhận điểm tựa từ **Total thứ tự (order / 순서) và partial thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **In-place và out-of-place** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi nhiều phần tử có cùng thứ tự, stable sorting giữ lại thứ tự tương đối cũ; đó là thuộc tính ngữ nghĩa, không phải mặc định tốt hơn cho mọi workload.
 
 ## Stable sorting
 
@@ -103,7 +103,7 @@ pipeline dựa vào thứ tự trước đó
 
 Stable không phải tính chất “tốt hơn chung”; nó là một yêu cầu ngữ nghĩa (semantics / 의미론) có chi phí hiện thực (implementation / 구현) nhất định.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **In-place và out-of-place** tiếp nhận điểm tựa từ **Stable sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cận dưới của comparison sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stability thường phải đổi lấy buffer hoặc thao tác phụ; vì vậy cần đặt nó cạnh câu hỏi thuật toán có được phép dùng thêm bộ nhớ hay không.
 
 ## In-place và out-of-place
 
@@ -121,7 +121,7 @@ object movement
 GC pressure
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Cận dưới của comparison sorting** tiếp nhận điểm tựa từ **In-place và out-of-place** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Insertion Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Memory footprint là một ràng buộc riêng bên cạnh thời gian chạy; trước khi so sánh các implementation, cần nhớ cận dưới của comparison sorting.
 
 ## Cận dưới của comparison sorting
 
@@ -137,7 +137,7 @@ Do đó general comparison sorting không thể có worst-case `O(n)`.
 
 Counting Sort hoặc Radix Sort không mâu thuẫn với kết quả này vì chúng khai thác biểu diễn (representation / 표현) của key, không chỉ comparison.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Insertion Sort** tiếp nhận điểm tựa từ **Cận dưới của comparison sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inversion và tính adaptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cận dưới Ω(n log n) áp dụng cho thuật toán chỉ quan sát key qua comparison; Insertion Sort minh họa một lựa chọn đơn giản với invariant rõ nhưng worst-case bậc hai.
 
 ## Insertion Sort
 
@@ -155,7 +155,7 @@ Worst-case:
 
 nhưng trên dữ liệu gần sorted, số lần shift nhỏ.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Inversion và tính adaptive** tiếp nhận điểm tựa từ **Insertion Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Selection Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Insertion Sort trả chi phí theo số inversion còn lại; từ đó ta có khái niệm adaptive và có thể so sánh với thuật toán không tận dụng mức độ gần sorted.
 
 ## Inversion và tính adaptive
 
@@ -171,7 +171,7 @@ Insertion Sort thực hiện lượng công việc liên quan trực tiếp số
 
 Một thuật toán gọi là **adaptive** nếu nó tận dụng cấu trúc (structure / 구조) như “đã gần sorted”.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Selection Sort** tiếp nhận điểm tựa từ **Inversion và tính adaptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bubble Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Inversion giải thích vì sao Insertion Sort nhanh trên dữ liệu gần thứ tự, nhưng Selection Sort lại giữ số comparison gần cố định và đổi chi phí đó lấy ít phép ghi.
 
 ## Selection Sort
 
@@ -187,7 +187,7 @@ nên `Θ(n²)` kể cả đầu vào (input / 입력) đã sorted.
 
 Điểm đáng chú ý là số swap chỉ `O(n)`. Trong môi trường ghi (write / 쓰기) rất đắt, đặc tính này từng có ý nghĩa. Nhưng với software thông thường, quadratic comparisons làm Selection Sort ít hấp dẫn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Bubble Sort** tiếp nhận điểm tựa từ **Selection Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Merge Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Selection Sort ít swap nhưng luôn tốn Θ(n²) comparison; Bubble Sort cũng là thuật toán bậc hai nhưng làm rõ local repair và early termination.
 
 ## Bubble Sort
 
@@ -206,7 +206,7 @@ Trong môi trường vận hành (production / 운영 환경), nó hiếm khi l�
 
 Biết nhiều tên sorting thuật toán (algorithm / 알고리즘) không quan trọng bằng hiểu lý do một thuật toán phù hợp với một tải công việc (workload / 워크로드) cụ thể.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Merge Sort** tiếp nhận điểm tựa từ **Bubble Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao merge là thành phần nguyên thủy (primitive / 기본 요소) mạnh?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bubble Sort có giá trị minh họa invariant hơn là hiệu năng production; Merge Sort chuyển sang cách chia để đạt Θ(n log n) với merge tuyến tính.
 
 ## Merge Sort
 
@@ -222,7 +222,7 @@ Merge bất biến (invariant / 불변식):
 
 Một stable merge chọn phần tử bên trái trước khi hai key bằng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Vì sao merge là thành phần nguyên thủy (primitive / 기본 요소) mạnh?** tiếp nhận điểm tựa từ **Merge Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Merge Sort trên linked danh sách (list / 목록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merge Sort dựa vào bất biến của bước merge; chính phép merge tuyến tính này là primitive có thể tái sử dụng trong nhiều hệ thống khác.
 
 ## Vì sao merge là thành phần nguyên thủy (primitive / 기본 요소) mạnh?
 
@@ -241,7 +241,7 @@ stream processing
 
 Sorting biến nhiều so sánh rời rạc thành một lần quét tuyến tính có cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Merge Sort trên linked danh sách (list / 목록)** tiếp nhận điểm tựa từ **Vì sao merge là thành phần nguyên thủy (primitive / 기본 요소) mạnh?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quicksort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merge quét hai run đã sorted bằng các con trỏ đi một chiều; với linked list, việc nối lại node tự nhiên hơn việc cần random access.
 
 ## Merge Sort trên linked danh sách (list / 목록)
 
@@ -251,7 +251,7 @@ Vì vậy Merge Sort thường phù hợp Linked danh sách (list / 목록) hơn
 
 Dữ liệu (data / 데이터) biểu diễn (representation / 표현) ảnh hưởng thuật toán (algorithm / 알고리즘) choice.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Quicksort** tiếp nhận điểm tựa từ **Merge Sort trên linked danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partition là trung tâm của Quicksort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Linked list phù hợp Merge Sort vì split và merge không cần di chuyển payload; với array contiguous, Quicksort thường tận dụng locality và partition tại chỗ tốt hơn.
 
 ## Quicksort
 
@@ -271,7 +271,7 @@ O(n^2)
 
 Quicksort thường nhanh thực tế trên array vì partition quét dữ liệu contiguous và có locality tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Partition là trung tâm của Quicksort** tiếp nhận điểm tựa từ **Quicksort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Three-way partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quicksort có expected O(n log n) nhưng phụ thuộc chất lượng partition; vì vậy hợp đồng của partition là nơi cần kiểm chứng đầu tiên.
 
 ## Partition là trung tâm của Quicksort
 
@@ -297,7 +297,7 @@ Nó thường ít swap hơn nhưng đặc tả hợp đồng (contract / 계약)
 
 Một lỗi phổ biến là lấy partition mã (code / 코드) của một scheme nhưng dùng recursion ranh giới (boundary / 경계) của scheme khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Three-way partition** tiếp nhận điểm tựa từ **Partition là trung tâm của Quicksort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pivot selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Partition phải duy trì invariant rõ về vùng đã xử lý và vùng chưa xử lý; khi có nhiều key bằng pivot, three-way partition loại bỏ công việc đệ quy thừa.
 
 ## Three-way partition
 
@@ -313,7 +313,7 @@ Sau partition chỉ recurse hai vùng `<` và `>`.
 
 Nếu toàn bộ array bằng nhau, three-way partition có thể xử lý gần tuyến tính thay vì tạo nhiều recursive lời gọi (call / 호출) vô ích.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Pivot selection** tiếp nhận điểm tựa từ **Three-way partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngăn xếp (stack / 스택) độ sâu (depth / 깊이) của Quicksort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Three-way partition gom vùng bằng nhau, còn pivot selection quyết định khả năng tạo các vùng nhỏ cân bằng trong những input khác nhau.
 
 ## Pivot selection
 
@@ -329,7 +329,7 @@ sample nhiều phần tử
 
 Randomization không làm worst-case biến mất về toán học, nhưng làm fixed adversarial đầu vào (input / 입력) khó ép partition xấu nếu random nguồn (source / 소스) đủ tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Ngăn xếp (stack / 스택) độ sâu (depth / 깊이) của Quicksort** tiếp nhận điểm tựa từ **Pivot selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pivot tốt giảm nguy cơ partition lệch, nhưng vẫn phải kiểm soát recursion stack vì tổng thời gian và độ sâu stack là hai ràng buộc khác nhau.
 
 ## Ngăn xếp (stack / 스택) độ sâu (depth / 깊이) của Quicksort
 
@@ -339,7 +339,7 @@ Một kỹ thuật là recurse phía nhỏ hơn và lặp phía lớn hơn. Khi 
 
 Đây là ví dụ tối ưu ngăn xếp (stack / 스택) mà không thay ngữ nghĩa (semantics / 의미론) của partition.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Vùng nhớ vùng nhớ động (heap / 힙) Sort** tiếp nhận điểm tựa từ **Ngăn xếp (stack / 스택) độ sâu (depth / 깊이) của Quicksort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao build-heap là O(n)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giới hạn stack có thể cải thiện bằng recurse phía nhỏ hơn và lặp phía lớn hơn; Heap Sort đưa ra một lựa chọn khác với worst-case O(n log n) và auxiliary memory nhỏ.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) Sort
 
@@ -365,7 +365,7 @@ Sự đánh đổi (trade-off / 트레이드오프) là locality và branch hàn
 
 Vùng nhớ vùng nhớ động (heap / 힙) Sort không stable theo hiện thực (implementation / 구현) thông thường.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Vì sao build-heap là O(n)?** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Introsort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap Sort đổi locality lấy bound worst-case; để hiểu chi phí ban đầu, cần phân tích vì sao build-heap có thể là O(n) chứ không phải O(n log n).
 
 ## Vì sao build-heap là O(n)?
 
@@ -379,7 +379,7 @@ Phần lớn nút (node / 노드) gần lá và chỉ sift xuống rất ít. T�
 
 Đây là ví dụ quan trọng: không thể luôn lấy “số phần tử × worst chi phí (cost / 비용) của một phần tử” để có tight bound.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Introsort** tiếp nhận điểm tựa từ **Vì sao build-heap là O(n)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Timsort: tận dụng run có sẵn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Build-heap tuyến tính nhờ phần lớn node ở gần lá chỉ sift-down ít bước; Introsort dùng ý tưởng fallback để giữ tốc độ Quicksort nhưng chặn worst-case.
 
 ## Introsort
 
@@ -395,7 +395,7 @@ Mục tiêu là giữ ưu điểm average/locality của Quicksort nhưng bảo 
 
 Đây là triết lý phổ biến trong thư viện (library / 라이브러리) thuật toán (algorithm / 알고리즘): **hybrid hóa theo vùng đầu vào (input / 입력) mà mỗi thuật toán mạnh nhất**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Timsort: tận dụng run có sẵn** tiếp nhận điểm tựa từ **Introsort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Counting Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Introsort kết hợp các chiến lược theo trạng thái recursion; Timsort lại khai thác một cấu trúc khác của input là các run đã có thứ tự.
 
 ## Timsort: tận dụng run có sẵn
 
@@ -405,7 +405,7 @@ Nó đặc biệt hiệu quả với dữ liệu thực tế thường đã có 
 
 Timsort cho thấy một sorting thư viện (library / 라이브러리) tốt không nhất thiết giả định đầu vào (input / 입력) là random; nó có thể khai thác pre-existing thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Counting Sort** tiếp nhận điểm tựa từ **Timsort: tận dụng run có sẵn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stable Counting Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Timsort hưởng lợi từ dữ liệu gần sorted, còn Counting Sort bỏ qua comparison để khai thác miền key hữu hạn.
 
 ## Counting Sort
 
@@ -427,7 +427,7 @@ Nếu `k` lớn hơn rất nhiều `n`, bộ nhớ (memory / 메모리)/thời g
 
 Counting Sort mạnh khi **miền khóa nhỏ và dày đặc**.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Stable Counting Sort** tiếp nhận điểm tựa từ **Counting Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radix Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Counting Sort có thể đạt thời gian tuyến tính theo n và miền key, nhưng muốn giữ thứ tự tương đối thì cần một stable implementation.
 
 ## Stable Counting Sort
 
@@ -437,7 +437,7 @@ Ta chuyển count thành cumulative positions rồi đặt phần tử theo th�
 
 Điều này cho thấy stability có thể trở thành phụ thuộc (dependency / 의존성) tính đúng đắn (correctness / 정확성) của một thuật toán khác, không chỉ preference đầu ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Radix Sort** tiếp nhận điểm tựa từ **Stable Counting Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MSD Radix Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stable Counting Sort cung cấp bước ổn định cần cho radix; Radix Sort lặp stable pass trên từng chữ số hoặc nhóm bit.
 
 ## Radix Sort
 
@@ -455,7 +455,7 @@ Khi `d` nhỏ cố định, có thể gần tuyến tính theo `n`.
 
 Nhưng chi phí (cost / 비용) thật còn phụ thuộc biểu diễn (representation / 표현), cơ sở (base / 기반), bộ nhớ đệm (cache / 캐시) và bộ nhớ (memory / 메모리) bandwidth.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **MSD Radix Sort** tiếp nhận điểm tựa từ **Radix Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bucket Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Radix Sort dựa vào stable pass để bảo toàn thứ tự đã tạo ở các chữ số trước; MSD Radix Sort đổi hướng bằng cách phân hoạch từ chữ số có trọng số cao.
 
 ## MSD Radix Sort
 
@@ -465,7 +465,7 @@ Nó có thể phù hợp string/prefix-like dữ liệu (data / 데이터) và c
 
 LSD và MSD có ngữ nghĩa (semantics / 의미론)/hiện thực (implementation / 구현) sự đánh đổi (trade-off / 트레이드오프) khác nhau; không nên xem Radix Sort như một công thức duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Bucket Sort** tiếp nhận điểm tựa từ **MSD Radix Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bên ngoài (external / 외부) Sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MSD Radix Sort chia theo prefix và có thể dừng hoặc đệ quy theo từng bucket; Bucket Sort dùng phân phối key trực tiếp vào các vùng giá trị.
 
 ## Bucket Sort
 
@@ -475,7 +475,7 @@ Hiệu quả phụ thuộc phân phối (distribution / 분포). Nếu dữ li�
 
 Đây là ví dụ average-case dựa mạnh vào đầu vào (input / 입력) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Bên ngoài (external / 외부) Sorting** tiếp nhận điểm tựa từ **Bucket Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-way merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bucket Sort hiệu quả khi key phân bố tương đối phù hợp, nhưng dữ liệu quá lớn để vào RAM cần chuyển sang external sorting.
 
 ## Bên ngoài (external / 외부) Sorting
 
@@ -494,7 +494,7 @@ Mục tiêu là tối đa sequential I/O và giảm số pass trên lưu trữ (
 
 Một thuật toán `O(n log n)` trong RAM mô hình (model / 모델) chưa đủ để đánh giá bên ngoài (external / 외부) tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **K-way merge** tiếp nhận điểm tựa từ **Bên ngoài (external / 외부) Sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Merge phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+External Sorting trả chi phí I/O để xử lý dữ liệu vượt RAM: tạo các run đã sorted rồi hợp nhất chúng theo dòng.
 
 ## K-way merge
 
@@ -515,7 +515,7 @@ với `N` tổng số phần tử.
 
 Trong bên ngoài (external / 외부) sorting, `k` còn bị giới hạn bởi buffer bộ nhớ (memory / 메모리) và số stream I/O có thể quản lý hiệu quả.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Merge phép nối (join / 조인)** tiếp nhận điểm tựa từ **K-way merge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial sorting và Top-K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+K-way merge mở rộng merge tuyến tính từ hai run sang nhiều run bằng heap nhỏ; cùng primitive này cũng xuất hiện trong merge join.
 
 ## Merge phép nối (join / 조인)
 
@@ -525,7 +525,7 @@ Sort ban đầu tốn chi phí, nhưng nếu cùng thứ tự đó được tái
 
 Đây là ví dụ sorting như materialized cấu trúc (structure / 구조) cho chuỗi xử lý (pipeline / 파이프라인) sau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Partial sorting và Top-K** tiếp nhận điểm tựa từ **Merge phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quickselect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merge join tận dụng hai đầu vào đã ordered để quét tuyến tính theo key; khi chỉ cần một phần kết quả, partial sorting và Top-K tránh sort toàn bộ.
 
 ## Partial sorting và Top-K
 
@@ -542,7 +542,7 @@ counting/bucket        nếu key domain phù hợp
 
 Mục tiêu đầu ra (output / 출력) ảnh hưởng thuật toán. Không nên sort toàn bộ chỉ vì dữ liệu “cần lấy top”.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Quickselect** tiếp nhận điểm tựa từ **Partial sorting và Top-K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deterministic selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Top-K có thể dùng heap kích thước k hoặc selection; Quickselect khai thác lại partition để tìm rank mà không cần sắp xếp mọi phần tử.
 
 ## Quickselect
 
@@ -558,7 +558,7 @@ Worst-case vẫn `O(n²)` nếu partition liên tục tệ.
 
 Đây là ví dụ cùng thành phần nguyên thủy (primitive / 기본 요소) partition nhưng mục tiêu (objective / 목표) khác làm recursion cây (tree / 트리) thay đổi hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Deterministic selection** tiếp nhận điểm tựa từ **Quickselect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stable vs unstable: cách tạo stability bổ sung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quickselect có expected O(n) nhưng worst-case O(n²); deterministic selection dùng pivot được bảo đảm để giữ bound tuyến tính trong worst-case.
 
 ## Deterministic selection
 
@@ -566,7 +566,7 @@ Median-of-medians cho selection worst-case `O(n)` bằng cách chọn pivot bả
 
 Nó quan trọng về lý thuyết vì chứng minh selection tuyến tính worst-case là có thể, dù constant factor khiến hiện thực (implementation / 구현) thực tế thường ưu tiên randomized/select hybrid.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Stable vs unstable: cách tạo stability bổ sung** tiếp nhận điểm tựa từ **Deterministic selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sorting đối tượng (object / 객체) lớn và indirect sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Median-of-medians chứng minh bound lý thuyết, còn implementation thực tế thường cân bằng constant factor; nếu cần stability, có thể mã hóa tie order vào key.
 
 ## Stable vs unstable: cách tạo stability bổ sung
 
@@ -582,7 +582,7 @@ Sự đánh đổi (trade-off / 트레이드오프) là thêm bộ nhớ (memory
 
 Đây là kỹ thuật chung: khi cấu trúc (structure / 구조) không giữ một thuộc tính (property / 속성), ta có thể mã hóa thuộc tính (property / 속성) đó vào key.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Sorting đối tượng (object / 객체) lớn và indirect sorting** tiếp nhận điểm tựa từ **Stable vs unstable: cách tạo stability bổ sung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm (cache / 캐시) locality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Decorate key bằng original index biến stability thành một phần comparator; kỹ thuật này có chi phí, và sorting object lớn có thể cần indirect sorting để giảm data movement.
 
 ## Sorting đối tượng (object / 객체) lớn và indirect sorting
 
@@ -602,7 +602,7 @@ Indirect sorting giảm dữ liệu (data / 데이터) movement nhưng tăng poi
 
 Again, biểu diễn (representation / 표현) quyết định hiệu năng.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Bộ nhớ đệm (cache / 캐시) locality** tiếp nhận điểm tựa từ **Sorting đối tượng (object / 객체) lớn và indirect sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Branch prediction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Indirect sorting giảm việc copy record lớn bằng cách sort pointer hoặc index, nhưng thêm pointer chasing; cache locality quyết định trade-off này trên phần cứng thật.
 
 ## Bộ nhớ đệm (cache / 캐시) locality
 
@@ -612,7 +612,7 @@ Trên dữ liệu (data / 데이터) lớn, bộ nhớ (memory / 메모리) band
 
 Hai thuật toán cùng `O(n log n)` không nhất thiết chạy gần nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Branch prediction** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) locality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parallel Sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hai thuật toán cùng O(n log n) có thể khác xa do cache miss và memory bandwidth; branch prediction là một yếu tố khác mà Big-O không mô tả.
 
 ## Branch prediction
 
@@ -622,7 +622,7 @@ Dữ liệu (data / 데이터) phân phối (distribution / 분포) có thể l�
 
 Điểm cần học: Big-O không mô tả branch/bộ nhớ (memory / 메모리) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Parallel Sorting** tiếp nhận điểm tựa từ **Branch prediction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) Sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Branch behavior phụ thuộc phân phối dữ liệu và comparator; khi kích thước đủ lớn, parallel sorting còn phải trả chi phí chia chunk, merge và đồng bộ.
 
 ## Parallel Sorting
 
@@ -646,7 +646,7 @@ NUMA locality
 
 Sort nhỏ không đáng tạo luồng thực thi (thread / 스레드).
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Phân tán (distributed / 분산) Sorting** tiếp nhận điểm tựa từ **Parallel Sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Strings và Unicode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Parallel sorting chỉ có lợi khi workload đủ lớn để bù overhead; trên cluster, distributed sorting thêm network, partition boundary và data skew.
 
 ## Phân tán (distributed / 분산) Sorting
 
@@ -658,7 +658,7 @@ Dữ liệu (data / 데이터) skew có thể làm một worker nhận quá nhi�
 
 Sorting ở đây trở thành bài toán cả thuật toán (algorithm / 알고리즘) lẫn dữ liệu (data / 데이터) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Strings và Unicode** tiếp nhận điểm tựa từ **Phân tán (distributed / 분산) Sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Floating-point và NaN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Distributed sorting phải bảo đảm mọi key ở partition trước nhỏ hơn partition sau nếu cần global order; khi đã phân tán, representation của key như Unicode cũng trở thành specification.
 
 ## Strings và Unicode
 
@@ -678,7 +678,7 @@ normalized form nào?
 
 “Alphabetical thứ tự (order / 순서)” trong nghiệp vụ (business / 비즈니스) software là một specification phức tạp hơn numeric comparator.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Floating-point và NaN** tiếp nhận điểm tựa từ **Strings và Unicode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sorting và cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+String sorting có chi phí comparison phụ thuộc độ dài prefix và quy tắc collation; với floating-point, comparator còn phải định nghĩa NaN, signed zero và infinity.
 
 ## Floating-point và NaN
 
@@ -688,7 +688,7 @@ Comparator phải xác định thứ tự (order / 순서) rõ cho các giá tr�
 
 Thư viện (library / 라이브러리) thường đã có đặc tả hợp đồng (contract / 계약) cụ thể; custom comparator cần theo đúng ngữ nghĩa (semantics / 의미론) mong muốn.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Floating-point và NaN** nêu điều cần giải thích; **Sorting và cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sorting mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Floating-point comparator phải nhất quán với semantics đã chọn; khi dữ liệu cần truy vấn theo range, database index có thể materialize thứ tự thay vì sort lại mỗi query.
 
 ## Sorting và cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)
 
@@ -698,7 +698,7 @@ Nếu tải công việc (workload / 워크로드) chủ yếu đọc theo phạ
 
 Sorting và indexing là hai cách khác nhau để trả trước chi phí cho tương lai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Sorting và cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** nêu điều cần giải thích; **Sorting mạng (network / 네트워크)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Oblivious sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ordered database index trả trước chi phí xây dựng và cập nhật để phục vụ range access; sorting network lại chọn một cấu trúc cố định cho phần cứng hoặc secure computation.
 
 ## Sorting mạng (network / 네트워크)
 
@@ -710,7 +710,7 @@ Bitonic Sort là ví dụ nổi tiếng.
 
 Dù comparison count thường lớn hơn thuật toán (algorithm / 알고리즘) tốt trên CPU tuần tự, cấu trúc song song và deterministic có thể làm nó phù hợp môi trường đặc biệt.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Oblivious sorting** tiếp nhận điểm tựa từ **Sorting mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sorting network không phụ thuộc dữ liệu trong control flow; oblivious sorting mở rộng yêu cầu đó sang cả mẫu truy cập bộ nhớ để giảm rò rỉ.
 
 ## Oblivious sorting
 
@@ -720,7 +720,7 @@ Trong một số bảo mật (security / 보안) ngữ cảnh (context / 맥락)
 
 Đây là ví dụ tính đúng đắn (correctness / 정확성)/bảo mật (security / 보안) specification mở rộng vượt ra ngoài “mảng đã sorted”.
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Kiểm thử sorting** tiếp nhận điểm tựa từ **Oblivious sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benchmark sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Obliviousness là một phần của specification bảo mật, bên cạnh output order và permutation; kiểm thử sorting vì thế phải kiểm tra invariant chứ không chỉ nhìn dãy tăng.
 
 ## Kiểm thử sorting
 
@@ -754,7 +754,7 @@ extreme numeric values
 
 Quicksort cần kiểm thử (test / 테스트) kỹ partition boundaries và duplicate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Benchmark sorting** tiếp nhận điểm tựa từ **Kiểm thử sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chọn thuật toán theo tải công việc (workload / 워크로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Test cần kiểm tra ordered output, bảo toàn multiset và stability nếu yêu cầu; benchmark sau đó phải mô tả input distribution và chi phí thực tế.
 
 ## Benchmark sorting
 
@@ -783,7 +783,7 @@ write count
 
 Một “winner” trên random integers có thể không phải lựa chọn tốt nhất cho tải công việc (workload / 워크로드) thật.
 
-> **Chuyển mạch:** Trong **Sắp xếp**, **Chọn thuật toán theo tải công việc (workload / 워크로드)** tiếp nhận điểm tựa từ **Benchmark sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Benchmark chỉ có ý nghĩa khi bao phủ sorted, reverse, duplicate, record lớn và các dạng input thật; từ kết quả đó mới chọn thuật toán theo workload.
 
 ## Chọn thuật toán theo tải công việc (workload / 워크로드)
 
@@ -804,7 +804,7 @@ Một bảng định hướng:
 
 Bảng này không thay profiling và Đặc tả API (API contract / API 계약).
 
-> **Chuyển mạch:** Ở chặng này của **Sắp xếp**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Chọn thuật toán theo tải công việc (workload / 워크로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Workload table là định hướng ban đầu, không thay profiling hoặc API contract; các hiểu lầm phổ biến thường xuất phát từ việc biến một trade-off thành khẩu hiệu.
 
 ## Những hiểu lầm phổ biến
 
@@ -820,7 +820,7 @@ Bảng này không thay profiling và Đặc tả API (API contract / API 계약
 
 “thư viện (library / 라이브러리) sort dùng một thuật toán duy nhất” — nhiều thư viện dùng hybrid chiến lược (strategy / 전략) tùy kiểu dữ liệu, kích thước và thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắp xếp**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Những hiểu lầm về tốc độ, stability, cận dưới và Top-K đều bỏ qua invariant, representation hoặc workload; mô hình tư duy cuối file gom các ràng buộc đó thành quy trình chọn thuật toán.
 
 ## Mô hình tư duy
 
