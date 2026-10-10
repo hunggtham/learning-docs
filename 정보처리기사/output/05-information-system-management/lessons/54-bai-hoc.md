@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **프로그래밍 언어의 분류 (Classification of Programming Languages)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **라이브러리 및 예외 처리 (Libraries and Exception Handling)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **프로그래밍 언어의 분류 (Classification of Programming Languages)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Sau khi xác định mục tiêu, hãy dùng **핵심 키워드 (Từ khóa)** để khoanh phạm vi phân loại: ta sẽ so sánh ngôn ngữ theo paradigm, cách thực thi và mức độ trừu tượng, thay vì chỉ ghi nhớ tên từng ngôn ngữ. Những từ khóa này sẽ làm tiêu chí đối chiếu cho các ví dụ ở phần sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 프로그래밍, 언어의, 분류
 
-> **Chuyển mạch:** Ở chặng này của **프로그래밍 언어의 분류 (Classification of Programming Languages)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Các từ khóa chỉ có ý nghĩa khi đặt cạnh kiến thức về điều khiển chương trình và cách runtime thực thi mã. Hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để nhận ra bài này kế thừa tiêu chí nào từ phần trước, sau đó dùng **읽는 방법 (Cách đọc)** để theo dõi từng nhóm ngôn ngữ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **Python 제어문: while문 (While Loop)**에서 만든 기준을 이어받아 **프로그래밍 언어의 분류 (Classification of Programming Languages)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **프로그래밍 언어의 분류 (Classification of Programming Languages)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어의 분류 (Classification of Programming Languages)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Khi đã xác định được nền tảng và ranh giới của bài, hãy chuyển sang **읽는 방법 (Cách đọc)**. Phần này hướng người học tìm đối tượng, điều kiện và hệ quả trong từng ví dụ, để sự khác nhau giữa procedural, object-oriented, scripting và declarative trở thành một mạch lập luận.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **프로그래밍 언어의 분류 (Clas
 
 ---
 
-> **Chuyển mạch:** Trong **프로그래밍 언어의 분류 (Classification of Programming Languages)**, **프로그래밍 언어의 분류 (Classification of Programming Languages)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> Cách đọc trên là chiếc cầu vào phần phân loại chính. Hãy dùng cùng một tiêu chí — mô hình lập trình, cách vận hành và phạm vi sử dụng — khi đối chiếu bốn nhóm ngôn ngữ, rồi giữ lại giới hạn của từng nhóm trước khi chuyển sang thư viện và xử lý ngoại lệ.
 
 ## 프로그래밍 언어의 분류 (Classification of Programming Languages)
 

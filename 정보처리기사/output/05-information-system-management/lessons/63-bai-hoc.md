@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Sau khi xác định mục tiêu, hãy dùng **핵심 키워드 (Từ khóa)** để khoanh phạm vi của bài: hàng đợi, thời gian chờ, mức ưu tiên và độ trễ là các tiêu chí để so sánh cách CPU phân phối thời gian xử lý. Nhờ vậy, mỗi thuật toán được đọc qua đánh đổi cụ thể thay vì như một tên gọi riêng lẻ.
 
 ## 핵심 키워드 (Từ khóa)
 
 주요, 스케줄링, 알고리즘
 
-> **Chuyển mạch:** Ở chặng này của **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Các từ khóa trên cần được đặt vào nền tảng về process và thread, nơi ta đã biết CPU phục vụ các đơn vị công việc như thế nào. Hãy đọc **선행·연결 개념 (Kiến thức liên kết)** để nối nền tảng đó với bài này, rồi xác định cách quan sát thuật toán qua thời gian chờ và thứ tự phục vụ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **프로세스와 스레드 (Process and Thread)**에서 만든 기준을 이어받아 **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Sau khi đã nối thuật toán với process và thread, hãy chuyển sang **읽는 방법 (Cách đọc)**. Phần này yêu cầu theo dõi đối tượng, điều kiện chọn và hệ quả của từng chính sách, để ta có thể giải thích vì sao một thuật toán công bằng hơn hoặc nhanh hơn trong một workload nhất định.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **주요 스케줄링 알고리즘 (Majo
 
 ---
 
-> **Chuyển mạch:** Trong **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**, **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> Cách đọc trên là chiếc cầu vào phần thuật toán chính. Hãy áp dụng cùng một chuỗi đối tượng → điều kiện → hệ quả cho FCFS, SJF và HRN; phần nội dung dưới đây sẽ cho thấy mỗi chính sách cải thiện tiêu chí nào và tạo ra giới hạn nào.
 
 ## 주요 스케줄링 알고리즘 (Major Scheduling Algorithms)
 
