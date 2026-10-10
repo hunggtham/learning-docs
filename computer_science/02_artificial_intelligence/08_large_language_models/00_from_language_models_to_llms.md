@@ -20,7 +20,7 @@ Parameter count alone không đủ. dữ liệu (data / 데이터) chất lượ
 
 Một smaller well-trained mô hình (model / 모델) có thể outperform larger poorly trained mô hình (model / 모델) trên mục tiêu (target / 대상) lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델)** tiếp nhận điểm tựa từ **“Large” không có một threshold cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foundation mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quy mô chỉ có ý nghĩa khi nó tạo ra năng lực có thể dùng lại. Mục kế tiếp giải thích pretraining biến dữ liệu rộng thành một base model như thế nào.
 
 ## Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델)
 
@@ -42,7 +42,7 @@ Kết quả (result / 결과) **cơ sở (base / 기반) mô hình (model / 모�
 
 Cơ sở (base / 기반) mô hình (model / 모델) sees many styles/tasks embedded in văn bản (text / 텍스트) and may learn latent capabilities, nhưng giao diện (interface / 인터페이스) default vẫn “continue likely văn bản (text / 텍스트)”.
 
-> **Chuyển mạch:** Ở chặng này của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Foundation mô hình (model / 모델)** tiếp nhận điểm tựa từ **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Post-Training** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pretraining tạo ra biểu diễn rộng, nhưng sản phẩm ban đầu vẫn là một base model. Phần tiếp theo xác định khi nào base model có thể được xem như một foundation model.
 
 ## Foundation mô hình (model / 모델)
 
@@ -52,7 +52,7 @@ LLM thường là văn bản (text / 텍스트)/code-centered foundation mô hì
 
 Foundation status comes from reusable biểu diễn (representation / 표현)/năng lực (capability / 역량), not only kích thước (size / 크기).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Post-Training** tiếp nhận điểm tựa từ **Foundation mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lực (capability / 역량) vs hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Foundation model mô tả tính tái sử dụng của biểu diễn; để trở thành trợ lý hữu ích, nó còn cần được điều chỉnh cách phản hồi. Vì vậy, mục kế tiếp chuyển sang post-training.
 
 ## Post-Training
 
@@ -68,7 +68,7 @@ Pretrained base model
 
 Post-training changes hành vi (behavior / 동작) phân phối (distribution / 분포) without necessarily adding broad world kiến thức (knowledge / 지식) comparable pretraining quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Năng lực (capability / 역량) vs hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Post-Training** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **In-Context học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Post-training chủ yếu định hình cách mô hình biểu lộ và ưu tiên năng lực. Phân biệt capability với behavior giúp ta đọc đúng hiện tượng thích ứng trong ngữ cảnh ở mục sau.
 
 ## Năng lực (capability / 역량) vs hành vi (behavior / 동작)
 
@@ -85,7 +85,7 @@ post-training → how/when to express and prioritize behaviors
 
 not absolute, but good mô hình tư duy (mental model / 사고 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **In-Context học tập (learning / 학습)** tiếp nhận điểm tựa từ **Năng lực (capability / 역량) vs hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Emergent Capabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+In-context learning cho thấy cùng một năng lực có thể được gọi ra bằng prompt mà không cập nhật trọng số. Khi quy mô tăng, ta cần kiểm tra liệu những thay đổi quan sát được có thật sự là năng lực mới hay chỉ là ngưỡng đo lường.
 
 ## In-Context học tập (learning / 학습)
 
@@ -102,7 +102,7 @@ This differs fine-tuning:
 - in-context: temporary, context-bound, no weight cập nhật (update / 업데이트);
 - fine-tuning: parameter changes persist.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Emergent Capabilities** tiếp nhận điểm tựa từ **In-Context học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM kiến thức (knowledge / 지식) in Parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Emergent capability không nên được tách khỏi cách đo và ngưỡng nhiệm vụ. Mục kế tiếp đặt câu hỏi thực tế hơn: tri thức mà pretraining nén vào tham số có thể được truy xuất và cập nhật đến đâu.
 
 ## Emergent Capabilities
 
@@ -110,7 +110,7 @@ Some capabilities appear sharply as quy mô (scale / 규모) increases under dis
 
 Avoid mystical interpretation. Scaling can create qualitative practical changes when smooth improvements cross tác vụ (task / 작업) viability thresholds.
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **LLM kiến thức (knowledge / 지식) in Parameters** tiếp nhận điểm tựa từ **Emergent Capabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) as Temporary Working đầu vào (input / 입력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tri thức trong tham số là một dạng nén thống kê, không phải cơ sở dữ liệu có provenance rõ ràng. Vì vậy, ngữ cảnh làm việc và các nguồn bên ngoài trở thành cách bổ sung thông tin hiện thời.
 
 ## LLM kiến thức (knowledge / 지식) in Parameters
 
@@ -126,7 +126,7 @@ Consequences:
 
 RAG externalizes updateable kiến thức (knowledge / 지식).
 
-> **Chuyển mạch:** Ở chặng này của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Ngữ cảnh (context / 맥락) as Temporary Working đầu vào (input / 입력)** tiếp nhận điểm tựa từ **LLM kiến thức (knowledge / 지식) in Parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM không tự động là tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Context là working input tạm thời, còn agent là một vòng lặp có trạng thái và hành động. Phần tiếp theo tách rõ mô hình ngôn ngữ khỏi hệ thống tác nhân bao quanh nó.
 
 ## Ngữ cảnh (context / 맥락) as Temporary Working đầu vào (input / 입력)
 
@@ -141,7 +141,7 @@ Retrieval/tool → external dynamic knowledge/state
 Memory system → persisted application-level user/task state
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **LLM không tự động là tác nhân (agent / 에이전트)** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) as Temporary Working đầu vào (input / 입력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM không tự động là RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một agent có thể dùng LLM trong vòng lặp, nhưng bản thân LLM không tự tạo ra trạng thái hay hành động. Retrieval là một cơ chế bên ngoài khác, nên được xem xét riêng ở mục kế tiếp.
 
 ## LLM không tự động là tác nhân (agent / 에이전트)
 
@@ -158,7 +158,7 @@ goal
 
 LLM can be lập luận (reasoning / 추론)/planning thành phần (component / 컴포넌트) but tác nhân (agent / 에이전트) requires hệ thống (system / 시스템) orchestration.
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **LLM không tự động là RAG** tiếp nhận điểm tựa từ **LLM không tự động là tác nhân (agent / 에이전트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decoder-Only Dominance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RAG bổ sung pipeline truy hồi, không biến mọi câu trả lời thành hành vi của agent. Sau khi tách hai khái niệm này, ta quay về lý do decoder-only trở thành giao diện phổ biến.
 
 ## LLM không tự động là RAG
 
@@ -166,7 +166,7 @@ RAG adds bên ngoài (external / 외부) retrieval before/during generation. A p
 
 RAG chất lượng (quality / 품질) depends retriever/chunking/reranking/ngữ cảnh (context / 맥락) usage, not only mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Decoder-Only Dominance** tiếp nhận điểm tựa từ **LLM không tự động là RAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Decoder-only cung cấp một giao diện nhân quả thống nhất cho completion, chat và tool call. Trong chat, giao diện đó được hiện thực bằng cách tuần tự hóa các vai trò thành một token sequence.
 
 ## Decoder-Only Dominance
 
@@ -184,7 +184,7 @@ few-shot tasks
 
 Encoder/encoder-decoder các mô hình (models / 모델들) remain more efficient for many specialized tasks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Decoder-Only Dominance** xác định đầu vào; **Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **LLM ngăn xếp (stack / 스택) như một hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chat template quyết định cách role và ranh giới được mã hóa trong chuỗi. Để thấy toàn bộ đường đi từ ứng dụng đến kết quả, mục sau đặt giao thức ấy vào LLM stack.
 
 ## Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스)
 
@@ -200,7 +200,7 @@ Mô hình (model / 모델) still sees one đơn vị từ (token / 토큰) chu�
 
 Changing chat template can materially affect chất lượng (quality / 품질)/an toàn (safety / 안전).
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스)** xác định đầu vào; **LLM ngăn xếp (stack / 스택) như một hệ thống (system / 시스템)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chat chỉ là một lớp trong pipeline. Prompt builder, tokenizer, inference, decoding và tool validation đều có thể làm thay đổi chất lượng, nên cần một mental model bao quát toàn stack.
 
 ## LLM ngăn xếp (stack / 스택) như một hệ thống (system / 시스템)
 
@@ -224,13 +224,13 @@ Output
 
 Môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질) often limited by ngữ cảnh (context / 맥락) construction, công cụ (tool / 도구) errors, permissions, độ trễ (latency / 지연 시간) and evaluation — not mô hình (model / 모델) alone.
 
-> **Chuyển mạch:** Ở chặng này của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **LLM ngăn xếp (stack / 스택) như một hệ thống (system / 시스템)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model trên gom cơ chế, giao diện và ranh giới vận hành thành một chuỗi suy luận. Phần ngộ nhận chung sẽ dùng chuỗi đó để kiểm tra những diễn giải quá mức.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > LLM = large-scale pretrained chuỗi (sequence / 시퀀스) predictor whose learned representations are broad enough to be reused/adapted for many ngôn ngữ (language / 언어)/mã (code / 코드) tasks; assistant hành vi (behavior / 동작) is a post-trained hệ thống (system / 시스템) built on top.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đã nêu ranh giới giữa tham số, ngữ cảnh, agent và RAG. Phần liên kết kiến thức dưới đây chỉ rõ tài liệu owner để quay lại đào sâu từng ranh giới.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -250,7 +250,7 @@ Useful chat hành vi (behavior / 동작) requires post-training, prompting/giao 
 
 Ngữ cảnh (context / 맥락) is temporary đầu vào (input / 입력); persistent ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리) is separate hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết cuối cùng đặt bài này trong lộ trình rộng hơn: từ language modeling, qua foundation model và post-training, đến các hệ thống retrieval và agent. Hãy dùng README để chọn nhánh học tiếp theo.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
