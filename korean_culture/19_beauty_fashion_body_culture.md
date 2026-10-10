@@ -8,7 +8,7 @@ Văn hoá làm đẹp Hàn Quốc thường bị kể theo hai cực: hoặc “
 
 Nhưng tín hiệu không đồng nghĩa nghĩa vụ. Việc một chuẩn mực tồn tại không có nghĩa cá nhân phải tuân theo nó. Một cuốn sách văn hoá nên mô tả áp lực xã hội mà không biến áp lực đó thành lời khuyên “hãy đẹp theo chuẩn ấy”.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **외모관리: tại sao từ 관리 quan trọng?** tiếp nhận điểm tựa từ **Cơ thể là một bề mặt xã hội nhưng không phải tài sản công cộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cơ thể là một bề mặt xã hội nhưng không phải tài sản công cộng; từ ranh giới đó, ngoại hình được hiểu như một thực hành quản lý có chi phí và bối cảnh. Mục tiếp theo giải thích chữ `관리` mà không mặc định ai cũng theo cùng một chuẩn.
 
 ## 외모관리: tại sao từ `관리` quan trọng?
 
@@ -28,7 +28,7 @@ ngoại hình trở thành tín hiệu
 
 Đây là một **vòng phản hồi (feedback loop / 피드백 루프)**, không phải sở thích sinh học cố định.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức** tiếp nhận điểm tựa từ **외모관리: tại sao từ 관리 quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **자외선 차단: kem chống nắng là điểm giao giữa thẩm mỹ và y học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`관리` nhấn mạnh việc duy trì, điều chỉnh và quản lý hình ảnh hơn là một hành vi làm đẹp đơn lẻ. Khi đi vào da, ta cần tách nghi thức tiêu dùng khỏi tuyên bố y khoa và ghi rõ phạm vi bằng chứng.
 
 ## 피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức
 
@@ -41,7 +41,7 @@ Hiểu văn hoá tốt cần tách hai câu hỏi:
 1. sản phẩm này có ý nghĩa gì trong thị trường làm đẹp?
 2. tuyên bố sinh học của nó có mức bằng chứng nào?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **자외선 차단: kem chống nắng là điểm giao giữa thẩm mỹ và y học** tiếp nhận điểm tựa từ **피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **화장: trang điểm là công cụ xã hội chứ không chỉ trang trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chăm sóc da nằm giữa routine tiêu dùng, cảm nhận cá nhân và kiến thức sức khỏe; các lớp này không nên bị gộp thành một kết luận chung. Kem chống nắng là trường hợp rõ để phân biệt lợi ích bảo vệ da, thẩm mỹ và lời khuyên y học.
 
 ## 자외선 차단: kem chống nắng là điểm giao giữa thẩm mỹ và y học
 
@@ -49,7 +49,7 @@ Hiểu văn hoá tốt cần tách hai câu hỏi:
 
 Điều này cho thấy thực hành làm đẹp đôi khi có cơ chế sức khoẻ thật; ngược lại, không nên vì vậy mà biến mọi tuyên bố thẩm mỹ thành nhu cầu y khoa.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **화장: trang điểm là công cụ xã hội chứ không chỉ trang trí** tiếp nhận điểm tựa từ **자외선 차단: kem chống nắng là điểm giao giữa thẩm mỹ và y học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **쌩얼 và nghịch lý “trông tự nhiên”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kem chống nắng cho thấy một sản phẩm có thể đồng thời mang nghĩa phòng ngừa và làm đẹp, nhưng mức bằng chứng phụ thuộc loại tuyên bố. Trang điểm tiếp tục câu hỏi đó ở bình diện trình bày và tương tác xã hội.
 
 ## 화장: trang điểm là công cụ xã hội chứ không chỉ trang trí
 
@@ -57,7 +57,7 @@ Hiểu văn hoá tốt cần tách hai câu hỏi:
 
 Một yêu cầu không ghi trong mô tả công việc nhưng vẫn được xã hội thưởng/phạt cũng tạo chi phí. Đây là dạng lao động ẩn: thời gian, tiền bạc và tải nhận thức bỏ ra để đạt hình ảnh mong đợi.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **쌩얼 và nghịch lý “trông tự nhiên”** tiếp nhận điểm tựa từ **화장: trang điểm là công cụ xã hội chứ không chỉ trang trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **퍼스널컬러: phân loại giúp giảm bất định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trang điểm không chỉ thêm màu sắc mà còn điều chỉnh tín hiệu về vai trò, hoàn cảnh và mức chăm chút. Từ đó nảy sinh nghịch lý “tự nhiên”: vẻ tự nhiên trên camera thường là kết quả của một quy trình có chủ đích.
 
 ## 쌩얼 và nghịch lý “trông tự nhiên”
 
@@ -67,7 +67,7 @@ Nhưng thẩm mỹ `꾸안꾸` — “trông như không cố nhưng thực ra c
 
 Trong thiết kế giao diện cũng vậy: giao diện “đơn giản” thường cần kiến trúc phức tạp phía sau. Vẻ ngoài tự nhiên không đồng nghĩa không có can thiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **퍼스널컬러: phân loại giúp giảm bất định** tiếp nhận điểm tựa từ **쌩얼 và nghịch lý “trông tự nhiên”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **미용실: salon tóc như một thiết chế dịch vụ lặp lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`쌩얼` cho thấy chuẩn “không trang điểm” cũng là một chuẩn được sản xuất và đọc trong bối cảnh. Personal color chuyển từ trạng thái tự nhiên sang một hệ phân loại giúp người dùng giảm bất định khi chọn màu.
 
 ## 퍼스널컬러: phân loại giúp giảm bất định
 
@@ -77,7 +77,7 @@ Lợi ích tâm lý khá rõ: thay vì chọn giữa hàng trăm màu son hoặc
 
 Nhưng phân loại không phải định luật vật lý. Ánh sáng, tình trạng da, mục tiêu phong cách và sở thích chủ quan vẫn quan trọng. Nhóm màu có thể hữu ích như **quy tắc kinh nghiệm (heuristic)**, không nên trở thành ràng buộc danh tính.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **미용실: salon tóc như một thiết chế dịch vụ lặp lại** tiếp nhận điểm tựa từ **퍼스널컬러: phân loại giúp giảm bất định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네일, 속눈썹, 렌즈: các dịch vụ nhỏ quanh việc trình bày cơ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Personal color là một công cụ phân loại và diễn giải, không phải quy luật sinh học quyết định mọi lựa chọn. Salon tóc đưa logic quản lý ngoại hình vào dịch vụ lặp lại, nơi lịch hẹn, kỹ năng và quan hệ khách hàng cùng tác động.
 
 ## 미용실: salon tóc như một thiết chế dịch vụ lặp lại
 
@@ -87,7 +87,7 @@ Tư vấn tóc cũng có yếu tố ngữ cảnh cao: khách có thể đưa ả
 
 Thị trường salon cũng phân tầng mạnh theo khu vực, thương hiệu, chuyên môn và giá; không có một “kiểu tóc Hàn Quốc” duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **네일, 속눈썹, 렌즈: các dịch vụ nhỏ quanh việc trình bày cơ thể** tiếp nhận điểm tựa từ **미용실: salon tóc như một thiết chế dịch vụ lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **성형수술: độ hiển thị cao không đồng nghĩa ai cũng làm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Salon là thiết chế dịch vụ có nhịp lặp, còn nail, mi và lens là các can thiệp nhỏ hơn nhưng vẫn làm thay đổi cách cơ thể được trình bày. Không nên cộng chúng thành một “mức làm đẹp” chung; mỗi dịch vụ có chi phí và rủi ro khác nhau.
 
 ## 네일, 속눈썹, 렌즈: các dịch vụ nhỏ quanh việc trình bày cơ thể
 
@@ -95,7 +95,7 @@ Làm móng, dịch vụ lông mi và kính áp tròng thẩm mỹ cho thấy kin
 
 Điểm văn hoá không phải “người Hàn dùng nhiều dịch vụ”, mà là thị trường đô thị dày đặc + nền tảng đặt lịch + mạng xã hội cho phép dịch vụ ngách tồn tại nhờ nhu cầu tập trung.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **성형수술: độ hiển thị cao không đồng nghĩa ai cũng làm** tiếp nhận điểm tựa từ **네일, 속눈썹, 렌즈: các dịch vụ nhỏ quanh việc trình bày cơ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **시술: kinh tế thủ thuật và lô-gic (logic / 논리) bảo trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các dịch vụ nhỏ cho thấy độ hiển thị không đồng nghĩa với mức độ phổ biến. Phẫu thuật thẩm mỹ cần được đọc thận trọng hơn: hình ảnh truyền thông có thể nổi bật mà không đại diện cho hành vi của toàn dân số.
 
 ## 성형수술: độ hiển thị cao không đồng nghĩa ai cũng làm
 
@@ -111,7 +111,7 @@ Cần tách:
 
 Các nhóm khác nhau về người thực hiện, rủi ro, quy định và mức bằng chứng.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **시술: kinh tế thủ thuật và lô-gic (logic / 논리) bảo trì** tiếp nhận điểm tựa từ **성형수술: độ hiển thị cao không đồng nghĩa ai cũng làm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **강남: cụm thẩm mỹ không phải mức trung bình toàn quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phẫu thuật có độ xâm lấn và rủi ro khác với thủ thuật bảo trì định kỳ, dù cả hai có thể được quảng bá trong cùng một hệ sinh thái. Tách hai lớp này giúp phân tích kinh tế của thủ thuật mà không giản lược trải nghiệm y khoa.
 
 ## 시술: kinh tế thủ thuật và lô-gic (logic / 논리) bảo trì
 
@@ -119,7 +119,7 @@ Trong tiếng Hàn đời thường, `시술` có thể chỉ nhiều thủ thu�
 
 Điểm cần hiểu là **y khoa hoá ngoại hình (medicalization of appearance)**: một đặc điểm bình thường có thể được mô tả lại thành “vấn đề” có giải pháp bằng thủ thuật. Người tiêu dùng cần hỏi chỉ định, mức hiệu quả dự kiến, thời gian duy trì, tác dụng phụ và năng lực của người cung cấp dịch vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **강남: cụm thẩm mỹ không phải mức trung bình toàn quốc** tiếp nhận điểm tựa từ **시술: kinh tế thủ thuật và lô-gic (logic / 논리) bảo trì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사진, 증명사진 và cái tôi qua camera** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thủ thuật làm đẹp thường gắn với maintenance, lịch tái khám và chi phí lặp lại; đó là cơ chế kinh tế, không phải bằng chứng rằng một khu vực có hành vi đồng nhất. Gangnam vì vậy nên được đọc như một cụm cung dịch vụ có tính địa điểm.
 
 ## 강남: cụm thẩm mỹ không phải mức trung bình toàn quốc
 
@@ -127,7 +127,7 @@ Gangnam và một số quận có mật độ phòng khám cao. Cụm hình thà
 
 Nếu người quan sát chỉ đi qua phố phòng khám rồi suy “cả Hàn Quốc sống như vậy”, đó là **sai lệch lấy mẫu theo không gian (spatial sampling bias)**. Bản chất của cụm là làm một loại hoạt động trở nên cực kỳ dễ thấy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **사진, 증명사진 và cái tôi qua camera** tiếp nhận điểm tựa từ **강남: cụm thẩm mỹ không phải mức trung bình toàn quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인생네컷: buồng chụp ảnh như nghi thức bạn bè** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đọc Gangnam như một cụm địa lý giúp tránh suy rộng từ một khu vực có mật độ cung dịch vụ cao ra mức trung bình quốc gia. Khi cơ thể đi vào ảnh, camera tạo thêm một lớp lựa chọn và tự trình bày.
 
 ## 사진, 증명사진 và cái tôi qua camera
 
@@ -137,7 +137,7 @@ Nếu người quan sát chỉ đi qua phố phòng khám rồi suy “cả Hàn
 
 Khi ảnh có thể chỉnh sửa, chuẩn so sánh giữa “tôi ngoài đời” và “tôi trên ảnh” trở thành thứ phải thương lượng.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **인생네컷: buồng chụp ảnh như nghi thức bạn bè** tiếp nhận điểm tựa từ **사진, 증명사진 và cái tôi qua camera** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **필터 và ứng dụng làm đẹp: khi thuật toán tham gia tạo chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ảnh chân dung và ảnh chứng minh thư đặt cái tôi giữa quy chuẩn hành chính, ký ức và ánh nhìn của người khác. `인생네컷` biến việc chụp ảnh thành nghi thức bạn bè, nên ý nghĩa nằm ở hành động cùng tham gia chứ không chỉ ở khuôn mặt.
 
 ## 인생네컷: buồng chụp ảnh như nghi thức bạn bè
 
@@ -145,7 +145,7 @@ Khi ảnh có thể chỉnh sửa, chuẩn so sánh giữa “tôi ngoài đời
 
 Đây là văn hoá lai giữa tương tự và số: tư thế được học từ mạng xã hội, ảnh được in ra vật lý rồi lại chụp đăng lên nền tảng số.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **필터 và ứng dụng làm đẹp: khi thuật toán tham gia tạo chuẩn** tiếp nhận điểm tựa từ **인생네컷: buồng chụp ảnh như nghi thức bạn bè** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **패션: đồng bộ xu hướng và tốc độ chuỗi cung ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Buồng ảnh bạn bè cho thấy hình ảnh cơ thể được tạo trong một bối cảnh xã hội cụ thể. Filter và ứng dụng làm đẹp thêm một tác nhân kỹ thuật, có thể khuếch đại chuẩn nhưng không tự chứng minh người dùng thực sự tin hoặc làm theo chuẩn đó.
 
 ## 필터 và ứng dụng làm đẹp: khi thuật toán tham gia tạo chuẩn
 
@@ -162,7 +162,7 @@ chuẩn đẹp hiện có
 
 Đây là **khuếch đại chuẩn mực bằng thuật toán (algorithmic norm amplification)**. Công cụ không tự tạo chuẩn đẹp từ số 0, nhưng có thể làm chuẩn đó nhất quán và dễ thấy hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **필터 và ứng dụng làm đẹp: khi thuật toán tham gia tạo chuẩn** xác định đầu vào; **패션: đồng bộ xu hướng và tốc độ chuỗi cung ứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **온라인 쇼핑 và khám phá thời trang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Filter biến lựa chọn thẩm mỹ thành một pipeline có thuật toán tuyển chọn và mặc định hiển thị. Khi từ ảnh chuyển sang thời trang, cần phân biệt tốc độ lan truyền xu hướng với năng lực sản xuất và phân phối của ngành.
 
 ## 패션: đồng bộ xu hướng và tốc độ chuỗi cung ứng
 
@@ -172,7 +172,7 @@ Nhiều hệ sinh thái phong cách cùng tồn tại: tối giản công sở, 
 
 Thương mại điện tử và giao trong ngày/ngày hôm sau rút ngắn khoảng cách giữa “thấy xu hướng” và “mua được”. Chuỗi cung ứng làm văn hoá chuyển động nhanh hơn.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **패션: đồng bộ xu hướng và tốc độ chuỗi cung ứng** xác định đầu vào; **온라인 쇼핑 và khám phá thời trang** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **교복: đồng phục không xoá địa vị, nó chuyển kênh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thời trang nối tín hiệu văn hóa với chuỗi cung ứng, nên một xu hướng nhìn thấy trên mạng chưa đủ chứng minh mức tiêu dùng. Mua sắm trực tuyến là cơ chế khám phá và phân phối giúp xu hướng được tiếp cận, nhưng dữ liệu nền tảng cần được đọc theo phạm vi của nó.
 
 ## 온라인 쇼핑 và khám phá thời trang
 
@@ -180,7 +180,7 @@ Nền tảng thời trang biến việc tìm đồ thành quy trình dữ liệu
 
 Đánh giá kèm số đo cơ thể giúp giảm bất cân xứng thông tin nhưng cũng có thể tăng so sánh cơ thể. Thiết kế nền tảng vừa hỗ trợ quyết định về độ vừa vặn vừa tạo điểm tham chiếu xã hội mới.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **교복: đồng phục không xoá địa vị, nó chuyển kênh** tiếp nhận điểm tựa từ **온라인 쇼핑 và khám phá thời trang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **출근룩, 하객룩, 면접룩: giao thức ngoại hình theo bối cảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Online shopping làm giảm một số rào cản tìm kiếm nhưng cũng định hình lựa chọn bằng thuật toán, tồn kho và logistics. Đồng phục cho thấy trang phục có thể chuẩn hóa bề ngoài mà vẫn chuyển khác biệt địa vị sang kênh khác.
 
 ## 교복: đồng phục không xoá địa vị, nó chuyển kênh
 
@@ -190,7 +190,7 @@ Nền tảng thời trang biến việc tìm đồ thành quy trình dữ liệu
 
 Điều tương tự xảy ra với quy tắc ăn mặc công sở: trang phục cơ bản có thể ít khác biệt nhưng đồng hồ, túi, xe hoặc cách nói vẫn phát tín hiệu địa vị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **출근룩, 하객룩, 면접룩: giao thức ngoại hình theo bối cảnh** tiếp nhận điểm tựa từ **교복: đồng phục không xoá địa vị, nó chuyển kênh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **커플룩 và đồ đôi/đồ nhóm bạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đồng phục không xóa mọi khác biệt; nó thay đổi nơi khác biệt được biểu hiện và thương lượng. Các kiểu đồ theo bối cảnh như đi làm, dự cưới hay phỏng vấn làm rõ ngoại hình như một giao thức tình huống.
 
 ## 출근룩, 하객룩, 면접룩: giao thức ngoại hình theo bối cảnh
 
@@ -198,7 +198,7 @@ Nội dung thời trang Hàn Quốc thường dùng nhãn theo sự kiện: `출
 
 Hiểu thẩm mỹ vì vậy giống chọn giao thức: trang phục tốt không chỉ đẹp mà còn tương thích với không gian, vai trò và mức trang trọng được kỳ vọng.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **커플룩 và đồ đôi/đồ nhóm bạn** tiếp nhận điểm tựa từ **출근룩, 하객룩, 면접룩: giao thức ngoại hình theo bối cảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **등산복: chức năng trở thành phong cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giao thức ngoại hình cho thấy “đúng đồ” phụ thuộc occasion, vai trò và kỳ vọng của nhóm, không phải một chuẩn duy nhất. Đồ đôi và đồ nhóm bạn chuyển từ quy tắc bối cảnh sang tín hiệu thuộc về và đồng hành.
 
 ## 커플룩 và đồ đôi/đồ nhóm bạn
 
@@ -206,7 +206,7 @@ Hiểu thẩm mỹ vì vậy giống chọn giao thức: trang phục tốt khô
 
 Tín hiệu không cần quần áo giống hệt; chỉ cần một hoạ tiết hoặc yếu tố chung để người trong cuộc nhận ra kết nối.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **등산복: chức năng trở thành phong cách** tiếp nhận điểm tựa từ **커플룩 và đồ đôi/đồ nhóm bạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **다이어트: “diet” trong tiếng Hàn thường nghĩa một dự án giảm cân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đồ đôi/đồ nhóm dùng trang phục để phát tín hiệu quan hệ, nhưng không nên suy ra mọi người trẻ đều thực hành giống nhau. Đồ leo núi lại cho thấy chức năng kỹ thuật có thể được tái mã hóa thành phong cách ngoài bối cảnh ban đầu.
 
 ## 등산복: chức năng trở thành phong cách
 
@@ -214,7 +214,7 @@ Trang phục ngoài trời ở Hàn Quốc đi từ đồ leo núi sang đồ m�
 
 Khi sản phẩm chức năng được dùng ngoài môi trường ban đầu, nó chuyển thành dấu hiệu lối sống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **다이어트: “diet” trong tiếng Hàn thường nghĩa một dự án giảm cân** tiếp nhận điểm tựa từ **등산복: chức năng trở thành phong cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **바디프로필: thể lực, nhiếp ảnh và văn hoá dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trang phục outdoor cho thấy ranh giới giữa utility và style thay đổi theo người dùng và thị trường. Từ việc mặc để làm, bài học chuyển sang diet như một dự án quản lý cơ thể với mục tiêu, lịch trình và ngôn ngữ riêng.
 
 ## 다이어트: “diet” trong tiếng Hàn thường nghĩa một dự án giảm cân
 
@@ -228,7 +228,7 @@ mục tiêu sức khoẻ ≠ mục tiêu thẩm mỹ ≠ mục tiêu thành tíc
 
 Một con số cân nặng không nói đủ về thể lực tim mạch, sức mạnh, sức khoẻ chuyển hoá hay trạng thái tinh thần.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **바디프로필: thể lực, nhiếp ảnh và văn hoá dự án** tiếp nhận điểm tựa từ **다이어트: “diet” trong tiếng Hàn thường nghĩa một dự án giảm cân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **헬스장 và PT: quản lý cơ thể trở thành dịch vụ có lịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`Diet` trong tiếng Hàn thường chỉ một dự án giảm cân có kế hoạch, nhưng cách dùng không nên bị đồng nhất với một chuẩn thân hình duy nhất. Body profile làm rõ khi dự án cơ thể kết hợp luyện tập, nhiếp ảnh và mốc hoàn thành.
 
 ## 바디프로필: thể lực, nhiếp ảnh và văn hoá dự án
 
@@ -238,7 +238,7 @@ Cần nhìn hai mặt: dự án có thể thúc đẩy kỷ luật và vận đ�
 
 Phân tích văn hoá không nên biến trạng thái cơ thể tạm thời trong ngày chụp thành chuẩn sức khoẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **헬스장 và PT: quản lý cơ thể trở thành dịch vụ có lịch** tiếp nhận điểm tựa từ **바디프로필: thể lực, nhiếp ảnh và văn hoá dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **남성 미용: ranh giới giới đang mở nhưng chưa biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Body profile biến thay đổi thể lực thành một sản phẩm hình ảnh có deadline, huấn luyện và hậu kỳ; đây là một format văn hóa cụ thể, không phải thước đo sức khỏe chung. Phòng gym và PT cho thấy phần duy trì được tổ chức thành dịch vụ có lịch.
 
 ## 헬스장 và PT: quản lý cơ thể trở thành dịch vụ có lịch
 
@@ -246,7 +246,7 @@ Phòng gym `헬스장` và huấn luyện cá nhân `PT` tạo bài tập có c�
 
 Đo lường có lợi nhưng **Định luật Goodhart (Goodhart’s Law)** vẫn hữu ích: nếu một con số trở thành mục tiêu duy nhất, người dùng có thể tối ưu con số thay vì tối ưu toàn bộ hệ thống sức khoẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **남성 미용: ranh giới giới đang mở nhưng chưa biến mất** tiếp nhận điểm tựa từ **헬스장 và PT: quản lý cơ thể trở thành dịch vụ có lịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고령층 và làm đẹp: tuổi cao không xoá nhu cầu trình bày bản thân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Gym/PT cho thấy cơ thể được quản lý qua lịch, huấn luyện và dịch vụ, không chỉ qua ý chí cá nhân. Nam giới tham gia thị trường này theo những ranh giới giới đang mở nhưng vẫn chịu chuẩn và áp lực riêng.
 
 ## 남성 미용: ranh giới giới đang mở nhưng chưa biến mất
 
@@ -254,7 +254,7 @@ Chăm sóc da nam, tỉa lông mày, uốn tóc, trang điểm cho idol/camera v
 
 Điều này minh hoạ thay đổi văn hoá theo **khuếch tán theo từng lĩnh vực (domain-specific diffusion)**, không phải một lần “cả xã hội cùng đổi”.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **고령층 và làm đẹp: tuổi cao không xoá nhu cầu trình bày bản thân** tiếp nhận điểm tựa từ **남성 미용: ranh giới giới đang mở nhưng chưa biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lao động làm đẹp và bất bình đẳng thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nam giới làm đẹp mở rộng phạm vi khách hàng và cách nói về ngoại hình, nhưng không xóa các khác biệt giới trong rủi ro, kỳ vọng hay khả năng tiếp cận. Với người lớn tuổi, cần tránh giả định tuổi cao đồng nghĩa không còn nhu cầu trình bày bản thân.
 
 ## 고령층 và làm đẹp: tuổi cao không xoá nhu cầu trình bày bản thân
 
@@ -262,7 +262,7 @@ Thị trường làm đẹp không chỉ dành cho người trẻ. Nhuộm tóc,
 
 Xã hội già hoá có thể mở rộng nhu cầu làm đẹp/chăm sóc bản thân chứ không chỉ nhu cầu y tế.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **Lao động làm đẹp và bất bình đẳng thời gian** tiếp nhận điểm tựa từ **고령층 và làm đẹp: tuổi cao không xoá nhu cầu trình bày bản thân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cầu hoá K-beauty: thương hiệu văn hoá và công thức sản phẩm phải được tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Làm đẹp ở người lớn tuổi cần được đọc theo hoàn cảnh, thế hệ và khả năng tiếp cận, không như một nhu cầu đồng nhất. Khi chuyển từ người dùng sang người cung cấp dịch vụ, bất bình đẳng thời gian cho thấy ai đang gánh phần lao động vô hình.
 
 ## Lao động làm đẹp và bất bình đẳng thời gian
 
@@ -270,7 +270,7 @@ Nếu một nhóm phải dành nhiều thời gian hơn để đạt hình ảnh
 
 Chuẩn làm đẹp vì vậy có chiều kích tầng lớp: người có thu nhập/thời gian có thể mua dịch vụ và sản phẩm dễ hơn. “Trông tự nhiên và chỉn chu” đôi khi là một đầu ra đắt tiền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **Toàn cầu hoá K-beauty: thương hiệu văn hoá và công thức sản phẩm phải được tách** tiếp nhận điểm tựa từ **Lao động làm đẹp và bất bình đẳng thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất cân xứng thông tin: người mua nhìn thấy quảng cáo trước khi nhìn thấy rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lao động làm đẹp phân bổ thời gian, kỹ năng và chi phí không đều giữa giới, giai tầng và nghề nghiệp. Toàn cầu hóa K-beauty thêm một ranh giới khác: thương hiệu văn hóa phải tách khỏi công thức, bằng chứng và chuỗi sản phẩm cụ thể.
 
 ## Toàn cầu hoá K-beauty: thương hiệu văn hoá và công thức sản phẩm phải được tách
 
@@ -278,7 +278,7 @@ K-beauty xuất khẩu mạnh nhờ hiệu ứng lan toả từ Hallyu, bao bì,
 
 Nhưng quốc tịch không thay thế khoa học công thức. Hai serum cùng gắn nhãn K-beauty vẫn có thể khác nhau về thành phần, nồng độ, độ ổn định và mức bằng chứng.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Bất cân xứng thông tin: người mua nhìn thấy quảng cáo trước khi nhìn thấy rủi ro** tiếp nhận điểm tựa từ **Toàn cầu hoá K-beauty: thương hiệu văn hoá và công thức sản phẩm phải được tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh trước–sau: dữ liệu trực quan nhưng rất dễ thiên lệch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+K-beauty có thể được xuất khẩu như một câu chuyện thương hiệu, nhưng hiệu quả sản phẩm và claim phải được kiểm chứng riêng theo thị trường. Người mua thường gặp bất cân xứng thông tin vì quảng cáo đến trước dữ liệu rủi ro.
 
 ## Bất cân xứng thông tin: người mua nhìn thấy quảng cáo trước khi nhìn thấy rủi ro
 
@@ -297,7 +297,7 @@ lời hứa tiếp thị
 
 Nếu bốn lớp bị trộn, thuật ngữ nghe “khoa học” có thể tạo cảm giác chắc chắn lớn hơn mức bằng chứng thật.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **Bất cân xứng thông tin: người mua nhìn thấy quảng cáo trước khi nhìn thấy rủi ro** nêu điều cần giải thích; **Ảnh trước–sau: dữ liệu trực quan nhưng rất dễ thiên lệch** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Người ảnh hưởng và quảng cáo liên kết: kinh nghiệm cá nhân không phải bằng chứng độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bất cân xứng thông tin khiến người mua khó đánh giá chất lượng, an toàn và tính phù hợp từ quảng cáo đơn thuần. Ảnh trước–sau tạo cảm giác trực quan mạnh nhưng cần kiểm tra điều kiện chụp, chọn mẫu và khoảng thời gian.
 
 ## Ảnh trước–sau: dữ liệu trực quan nhưng rất dễ thiên lệch
 
@@ -319,7 +319,7 @@ Kết quả có thể bị ảnh hưởng bởi:
 
 Đây là **thiên lệch chọn mẫu (selection bias)** dưới dạng hình ảnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **Ảnh trước–sau: dữ liệu trực quan nhưng rất dễ thiên lệch** nêu điều cần giải thích; **Người ảnh hưởng và quảng cáo liên kết: kinh nghiệm cá nhân không phải bằng chứng độc lập** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ảnh trước–sau là dữ liệu trình bày, không tự động là bằng chứng nhân quả; góc chụp, ánh sáng và lựa chọn ca có thể đổi câu chuyện. Với influencer, cần tách kinh nghiệm cá nhân khỏi quảng cáo liên kết và lợi ích thương mại.
 
 ## Người ảnh hưởng và quảng cáo liên kết: kinh nghiệm cá nhân không phải bằng chứng độc lập
 
@@ -337,7 +337,7 @@ Ba loại có thể cùng xuất hiện trong một video nhưng không có cùn
 
 Một rà soát (review / 검토) chân thành vẫn có thể không đại diện cho người khác vì loại da, tiền sử, mục tiêu và cách dùng khác nhau.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Người ảnh hưởng và quảng cáo liên kết: kinh nghiệm cá nhân không phải bằng chứng độc lập** nêu điều cần giải thích; **Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **So sánh xã hội: camera biến bản thân thành đối tượng được đo liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Influencer có thể cung cấp trải nghiệm hữu ích nhưng không thay thế dữ liệu độc lập, nhất là khi có affiliate hoặc tài trợ. Thuật toán hình ảnh lại tác động ở cấp tuyển chọn, làm một chuẩn được lặp lại và nhìn như phổ biến hơn.
 
 ## Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn
 
@@ -353,7 +353,7 @@ một dạng hình ảnh nhận tương tác cao
 
 Đây là vòng phản hồi giữa sở thích, thuật toán và sản xuất nội dung. Nó có thể làm phổ thị giác hẹp hơn mức đa dạng thực tế ngoài đời.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, cơ chế trong **Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn** cần được kiểm chứng bằng dấu vết cụ thể; **So sánh xã hội: camera biến bản thân thành đối tượng được đo liên tục** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Ranh giới tiêu dùng–y khoa: cùng mục tiêu “đẹp hơn” nhưng mức rủi ro khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thuật toán có thể khuếch đại một chuẩn qua ranking, filter và tương tác, nhưng cơ chế đó cần được phân tích theo nền tảng và thời điểm cụ thể. So sánh xã hội mô tả hệ quả ở cấp người dùng khi camera biến bản thân thành đối tượng đo liên tục.
 
 ## So sánh xã hội: camera biến bản thân thành đối tượng được đo liên tục
 
@@ -363,7 +363,7 @@ So sánh không tự động có hại; nó có thể giúp học phong cách. N
 
 Điểm quan trọng về văn hoá là công nghệ làm **tần suất so sánh** tăng. Chuẩn đẹp không chỉ nằm trong tạp chí; nó đi theo người dùng trong điện thoại suốt ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **So sánh xã hội: camera biến bản thân thành đối tượng được đo liên tục** đã nêu tiêu chí phân biệt, còn **Ranh giới tiêu dùng–y khoa: cùng mục tiêu “đẹp hơn” nhưng mức rủi ro khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Đồng thuận hiểu biết: “đồng ý” không chỉ là ký giấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+So sánh xã hội không phải phản ứng giống nhau của mọi người; nó phụ thuộc nhóm tham chiếu, nền tảng và bối cảnh. Khi mục tiêu “đẹp hơn” chuyển sang sản phẩm hoặc thủ thuật y khoa, ranh giới rủi ro và nghĩa vụ thông tin thay đổi.
 
 ## Ranh giới tiêu dùng–y khoa: cùng mục tiêu “đẹp hơn” nhưng mức rủi ro khác nhau
 
@@ -383,7 +383,7 @@ Càng tiến về phía phải, yêu cầu về thông tin, năng lực người
 
 Một thị trường có giao diện đặt lịch giống nhau có thể làm người dùng cảm thấy các dịch vụ giống nhau về độ nghiêm trọng, trong khi hồ sơ rủi ro thực tế khác rất xa.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Đồng thuận hiểu biết: “đồng ý” không chỉ là ký giấy** tiếp nhận điểm tựa từ **Ranh giới tiêu dùng–y khoa: cùng mục tiêu “đẹp hơn” nhưng mức rủi ro khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đảo ngược và nợ bảo trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ranh giới tiêu dùng–y khoa yêu cầu tách claim thẩm mỹ khỏi chẩn đoán, điều trị và nguy cơ can thiệp. Từ đó, đồng thuận hiểu biết phải được xem như quá trình hiểu lựa chọn, hậu quả và phương án thay thế, không chỉ chữ ký.
 
 ## Đồng thuận hiểu biết: “đồng ý” không chỉ là ký giấy
 
@@ -393,7 +393,7 @@ Trong dịch vụ có rủi ro y khoa, **đồng thuận hiểu biết (informed
 
 Do đó, “tư vấn thân thiện” và “quyết định được thông tin đầy đủ” là hai tiêu chí khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **Tính đảo ngược và nợ bảo trì** tiếp nhận điểm tựa từ **Đồng thuận hiểu biết: “đồng ý” không chỉ là ký giấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đồng thuận hiểu biết chỉ có ý nghĩa khi thông tin phù hợp và người dùng còn khả năng lựa chọn thực sự. Tính đảo ngược đặt câu hỏi liệu có thể quay lại trạng thái trước hay phải sống với chi phí duy trì.
 
 ## Tính đảo ngược và nợ bảo trì
 
@@ -409,7 +409,7 @@ Ví dụ chung: kiểu tóc nhuộm cần dặm; một số thủ thuật có hi
 
 Giá ban đầu vì vậy không phải toàn bộ chi phí. Cần nhìn **tổng chi phí sở hữu (total cost of ownership)** của một thói quen làm đẹp, giống cách đánh giá phần mềm hoặc thiết bị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau** tiếp nhận điểm tựa từ **Tính đảo ngược và nợ bảo trì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá và chất lượng: đắt hơn không tạo bảo đảm tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tính đảo ngược và nợ bảo trì nhắc rằng kết quả thẩm mỹ không kết thúc ở ngày làm thủ thuật. Cần tách tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng vì chúng khác nhau về cơ chế và trách nhiệm xử lý.
 
 ## Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau
 
@@ -423,7 +423,7 @@ phản ứng dự kiến và thường gặp
 
 Ba nhóm khác nhau về nguyên nhân và cách xử lý. Việc phân biệt giúp tránh hai lỗi: coi mọi khó chịu nhỏ là thảm hoạ hoặc coi rủi ro nghiêm trọng chỉ là “chuyện bình thường”.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Giá và chất lượng: đắt hơn không tạo bảo đảm tuyến tính** tiếp nhận điểm tựa từ **Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ba loại kết quả này không thể gộp thành một câu chuyện “không hiệu quả”; bằng chứng, mức độ nghiêm trọng và cách khắc phục khác nhau. Giá cao cũng không tự tạo bảo đảm tuyến tính về chất lượng hoặc an toàn.
 
 ## Giá và chất lượng: đắt hơn không tạo bảo đảm tuyến tính
 
@@ -433,7 +433,7 @@ Ngược lại, giá rẻ bất thường cũng có thể đi kèm khuyến mãi
 
 Do đó giá là **tín hiệu (signal / 신호)** chứ không phải thước đo trực tiếp. Cần xem thêm chuyên môn, quy trình, thành phần, hồ sơ rủi ro và mức phù hợp với nhu cầu.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ** tiếp nhận điểm tựa từ **Giá và chất lượng: đắt hơn không tạo bảo đảm tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo “mức phổ biến” của làm đẹp: mẫu số quyết định câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giá có thể phản ánh vị trí, nhân lực, thương hiệu hoặc mức dịch vụ, nhưng không thay thế kiểm tra chất lượng và rủi ro. Khi người dùng đi du lịch làm đẹp, bất cân xứng thông tin tăng thêm bởi ngôn ngữ, quy định và chăm sóc sau đó.
 
 ## Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ
 
@@ -449,7 +449,7 @@ không tự động
 
 Trong quyết định có mức rủi ro cao, khả năng hỏi lại và nhận câu trả lời rõ quan trọng hơn lời quảng cáo được dịch trôi chảy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, **Đo “mức phổ biến” của làm đẹp: mẫu số quyết định câu chuyện** tiếp nhận điểm tựa từ **Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Du lịch làm đẹp nối giá và khả năng tiếp cận với rào cản thông tin xuyên biên giới; đánh giá một cơ sở cần chú ý nguồn và thời điểm. Để nói “phổ biến”, tiếp theo phải xác định mẫu số, dân số và cách đo.
 
 ## Đo “mức phổ biến” của làm đẹp: mẫu số quyết định câu chuyện
 
@@ -467,7 +467,7 @@ tự khai hay dữ liệu hành chính?
 
 Một tỷ lệ cao trong nhóm phụ nữ trẻ ở một quận thẩm mỹ không thể suy rộng thành “người Hàn nói chung”. Đây là lý do mọi số liệu về thẩm mỹ cần đi cùng định nghĩa quần thể.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi** tiếp nhận điểm tựa từ **Đo “mức phổ biến” của làm đẹp: mẫu số quyết định câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: quyết định làm đẹp như bài toán bằng chứng–rủi ro–khả năng đảo ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mức phổ biến phụ thuộc denominator, cách chọn mẫu và định nghĩa “làm đẹp”; con số khác nhau có thể cùng đúng trong phạm vi khác nhau. Từ phép đo đó, thị trường có thể được nhìn như hệ thống tín hiệu và phản hồi thay vì một xu hướng đơn tuyến.
 
 ## Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi
 
@@ -485,7 +485,7 @@ hình ảnh tham chiếu trên truyền thông
 
 Không nút nào một mình “gây ra chuẩn đẹp”. Chuẩn mực xuất hiện từ tương tác giữa ngành công nghiệp, truyền thông, nhóm xã hội, thiết chế và lựa chọn cá nhân.
 
-> **Chuyển mạch:** Ở chặng này của **Làm đẹp, thời trang và văn hoá cơ thể**, **Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi** nêu điều cần giải thích; **Liên hệ kiến thức: quyết định làm đẹp như bài toán bằng chứng–rủi ro–khả năng đảo ngược** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thị trường làm đẹp phản hồi qua quảng cáo, doanh số, review và điều chỉnh sản phẩm, nhưng mỗi tín hiệu có độ trễ và thiên lệch riêng. Quyết định cá nhân vì vậy nên được mô hình hóa như bài toán bằng chứng, rủi ro và khả năng đảo ngược.
 
 ## Liên hệ kiến thức: quyết định làm đẹp như bài toán bằng chứng–rủi ro–khả năng đảo ngược
 
@@ -503,13 +503,13 @@ lợi ích kỳ vọng
 
 Khung này không trả lời thay cá nhân nên hay không nên làm gì. Nó giúp tách mong muốn thật của bản thân khỏi quảng cáo, áp lực nhóm và cảm giác khẩn cấp do khuyến mãi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Làm đẹp, thời trang và văn hoá cơ thể**, các dấu vết trong **Liên hệ kiến thức: quyết định làm đẹp như bài toán bằng chứng–rủi ro–khả năng đảo ngược** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khung bằng chứng–rủi ro–đảo ngược giúp giữ distinction giữa chuẩn văn hóa, lựa chọn cá nhân và quyết định y khoa. Mô hình tư duy sau đây gom các lớp đó thành câu hỏi có thể áp dụng khi đọc trường hợp mới.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Văn hoá làm đẹp Hàn Quốc là một **thị trường tín hiệu trên cơ thể (signaling market) có bất cân xứng thông tin**. Ngành công nghiệp cung cấp công cụ; camera và nền tảng tạo điểm tham chiếu; nhóm xã hội tạo chuẩn mực; trường học và công sở thêm kỳ vọng; còn dịch vụ y khoa đưa thêm lớp bằng chứng, rủi ro và đồng thuận. Hiểu hệ thống không đồng nghĩa phải tuân theo lý tưởng của hệ thống.
 
-> **Chuyển mạch:** Trong **Làm đẹp, thời trang và văn hoá cơ thể**, **Hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy giữ lại các boundary về nguồn, thời điểm, mẫu số và mức độ khái quát. Những hiểu lầm phổ biến dưới đây giúp kiểm tra xem người đọc có biến một quan sát cục bộ thành kết luận chung hay không.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
