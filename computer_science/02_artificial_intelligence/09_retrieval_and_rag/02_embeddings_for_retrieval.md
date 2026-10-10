@@ -26,7 +26,7 @@ hoặc cosine similarity:
 
 Nếu vectors được L2-normalize, dot sản phẩm (product / 제품) và cosine ranking giống nhau.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **What Does the véc-tơ (vector / 벡터) Represent?** tiếp nhận điểm tựa từ **From văn bản (text / 텍스트) to véc-tơ (vector / 벡터)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ text, query và document được encode thành vectors; bước tiếp theo hỏi vector đang đại diện cho loại quan hệ relevance nào.
 
 ## What Does the véc-tơ (vector / 벡터) Represent?
 
@@ -41,7 +41,7 @@ positive doc: "Password recovery steps"
 
 Huấn luyện (training / 학습) nên đưa query-document positive pair kiểu này để hình học (geometry / 기하학) phản ánh retrieval intent.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Pooling** tiếp nhận điểm tựa từ **What Does the véc-tơ (vector / 벡터) Represent?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ý nghĩa của vector đến từ objective và dữ liệu huấn luyện, không phải từ bản thân tọa độ; pooling quyết định cách gom token thành một biểu diễn duy nhất.
 
 ## Pooling
 
@@ -54,7 +54,7 @@ Transformer tạo đơn vị từ (token / 토큰) representations. Để có on
 
 Pooling chiến lược (strategy / 전략) ảnh hưởng retrieval chất lượng (quality / 품질). Mean pooling simple nhưng có thể dilute key đơn vị từ (token / 토큰) trong long chunk.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **Normalization** tiếp nhận điểm tựa từ **Pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimensionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pooling giữ lại một vector cho chunk, còn normalization làm score giữa các vector ổn định hơn khi mô hình được huấn luyện theo giả định tương ứng.
 
 ## Normalization
 
@@ -66,7 +66,7 @@ Embedding normalization thường giúp score stable:
 
 Nhưng không phải mọi mô hình (model / 모델) được train với same giả định (assumption / 가정). Documentation của embedding mô hình (model / 모델) cần được follow.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Dimensionality** tiếp nhận điểm tựa từ **Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리)/Document Prefixes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Normalization giúp so sánh nhất quán trong một không gian, nhưng dimension vẫn quyết định capacity, bộ nhớ và chi phí index.
 
 ## Dimensionality
 
@@ -80,7 +80,7 @@ lưu trữ (storage / 저장소)\approx N\cdot d\cdot 4\ bytes
 
 Dimension reduction hoặc quantized chỉ mục (index / 인덱스) có thể giảm chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Truy vấn (query / 쿼리)/Document Prefixes** tiếp nhận điểm tựa từ **Dimensionality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chunk Embedding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dimension lớn có thể tăng sức chứa nhưng cũng tăng chi phí; sau khi chọn kích thước, pipeline còn phải tuân thủ prefix query/document của model.
 
 ## Truy vấn (query / 쿼리)/Document Prefixes
 
@@ -93,7 +93,7 @@ passage: ...
 
 Prefix không cosmetic; nó tín hiệu (signal / 신호) role trong asymmetric huấn luyện (training / 학습). Bỏ prefix có thể giảm hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **Chunk Embedding** tiếp nhận điểm tựa từ **Truy vấn (query / 쿼리)/Document Prefixes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dữ liệu (metadata / 메타데이터) in Embedding vs siêu dữ liệu (metadata / 메타데이터) as Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix mang tín hiệu về vai trò của text trong huấn luyện; khi encode thực tế, chunk cũng phải giữ đủ context cục bộ để vector có ích cho retrieval.
 
 ## Chunk Embedding
 
@@ -101,7 +101,7 @@ RAG thường embed chunks thay whole documents. Chunk véc-tơ (vector / 벡터
 
 Nếu chunk chỉ chứa một bảng (table / 테이블) row không header, embedding mất ngữ nghĩa (semantics / 의미론). Ingestion có thể prepend section title/document siêu dữ liệu (metadata / 메타데이터) trước embedding.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Chunk Embedding** nêu điều cần giải thích; **Siêu dữ liệu (metadata / 메타데이터) in Embedding vs siêu dữ liệu (metadata / 메타데이터) as Filter** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hard Negatives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chunk embedding cần biểu diễn nội dung đủ rõ, còn metadata authorization và version nên được giữ như filter deterministic thay vì nhồi tất cả vào vector.
 
 ## Siêu dữ liệu (metadata / 메타데이터) in Embedding vs siêu dữ liệu (metadata / 메타데이터) as Filter
 
@@ -115,7 +115,7 @@ Content: ...
 
 Nhưng deterministic các ràng buộc (constraints / 제약조건들) như truy cập (access / 접근) mức (level / 수준), tenant hoặc phiên bản (version / 버전) nên vẫn dùng filters. Không nên hy vọng véc-tơ (vector / 벡터) hình học (geometry / 기하학) enforce authorization.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Siêu dữ liệu (metadata / 메타데이터) in Embedding vs siêu dữ liệu (metadata / 메타데이터) as Filter** nêu điều cần giải thích; **Hard Negatives** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **In-Batch Negatives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metadata filter giữ các ràng buộc không thể suy ra an toàn từ similarity; hard negatives thì dạy model phân biệt các tài liệu gần nhau nhưng khác đáp án.
 
 ## Hard Negatives
 
@@ -123,7 +123,7 @@ Retriever fine-tuning cần hard negatives. Ví dụ truy vấn (query / 쿼리)
 
 Mô hình (model / 모델) học distinction trọng yếu (critical / 중요) mà general ngữ nghĩa (semantic / 의미적) similarity dễ bỏ qua.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **In-Batch Negatives** tiếp nhận điểm tựa từ **Hard Negatives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Matryoshka / Truncatable Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hard negatives tạo các cặp khó có chủ đích; in-batch negatives mở rộng số negative hiệu quả nhưng phải kiểm soát false negatives.
 
 ## In-Batch Negatives
 
@@ -131,13 +131,13 @@ Trong contrastive huấn luyện (training / 학습), other positives trong same
 
 Batch composition ảnh hưởng học tập (learning / 학습) tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Matryoshka / Truncatable Embeddings** tiếp nhận điểm tựa từ **In-Batch Negatives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multilingual Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+In-batch negatives phụ thuộc batch composition; Matryoshka embeddings đưa một trade-off khác bằng cách cho phép cắt vector theo ngân sách.
 
 ## Matryoshka / Truncatable Embeddings
 
 Một số các mô hình (models / 모델들) train để prefix dimensions vẫn usable, cho phép truncate véc-tơ (vector / 벡터) để trade chất lượng (quality / 품질) for lưu trữ (storage / 저장소)/độ trễ (latency / 지연 시간). Đây là kiến trúc (architecture / 아키텍처)/huấn luyện (training / 학습) thuộc tính (property / 속성), không áp dụng arbitrary cho mọi embedding véc-tơ (vector / 벡터).
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Multilingual Embeddings** tiếp nhận điểm tựa từ **Matryoshka / Truncatable Embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã (code / 코드) Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Truncatable embeddings chỉ hoạt động khi model được huấn luyện cho thuộc tính đó; multilingual embeddings lại tập trung vào việc căn chỉnh không gian giữa các ngôn ngữ.
 
 ## Multilingual Embeddings
 
@@ -153,13 +153,13 @@ có thể gần nhau.
 
 Nhưng cross-language retrieval cần eval riêng vì ngôn ngữ (language / 언어) imbalance trong huấn luyện (training / 학습) có thể tạo chất lượng (quality / 품질) gap.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **Mã (code / 코드) Embeddings** tiếp nhận điểm tựa từ **Multilingual Embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Similarity Thresholds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multilingual alignment cần được đo theo từng language pair; với mã nguồn, identifiers và cấu trúc hàm tạo ra một loại tín hiệu khác.
 
 ## Mã (code / 코드) Embeddings
 
 Mã (code / 코드) tìm kiếm (search / 검색) có ngữ nghĩa (semantics / 의미론) khác prose. hàm (function / 함수) signature, identifiers và hành vi (behavior / 동작) matter. Domain-specific mã (code / 코드) embedding mô hình (model / 모델) thường tốt hơn generic văn bản (text / 텍스트) embedding.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Similarity Thresholds** tiếp nhận điểm tựa từ **Mã (code / 코드) Embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Code embeddings cần giữ semantics của signature và hành vi; khi dùng similarity score cho quyết định retrieval, threshold phải được calibrate trên dữ liệu có nhãn.
 
 ## Similarity Thresholds
 
@@ -169,7 +169,7 @@ Threshold phải calibrate trên labeled retrieval dữ liệu (data / 데이터
 
 Top-k ranking thường more portable than absolute threshold, nhưng abstention/use-no-evidence decisions vẫn cần calibration.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Embedding Drift** tiếp nhận điểm tựa từ **Similarity Thresholds** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Threshold phụ thuộc model, corpus và query distribution; embedding drift có thể làm threshold cũ và index cũ mất ý nghĩa sau khi đổi model.
 
 ## Embedding Drift
 
@@ -177,7 +177,7 @@ Khi đổi embedding mô hình (model / 모델), old and new vectors thường k
 
 Di chuyển (migration / 마이그레이션) cần re-embed corpus hoặc dual-index chuyển tiếp (transition / 전이).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **Versioning** tiếp nhận điểm tựa từ **Embedding Drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Privacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi không gian embedding thay đổi, cần re-embed hoặc duy trì dual index; versioning ghi lại chuỗi pipeline để truy nguyên regression.
 
 ## Versioning
 
@@ -192,13 +192,13 @@ created_at
 
 Nếu retrieval regression xảy ra, nhóm (team / 팀) cần biết chỉ mục (index / 인덱스) được tạo bằng chuỗi xử lý (pipeline / 파이프라인) nào.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Privacy** tiếp nhận điểm tựa từ **Versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Versioning nối model với chunker và source snapshot; privacy là ranh giới tiếp theo vì vector có thể vẫn tiết lộ thông tin nguồn.
 
 ## Privacy
 
 Embedding không nên được assume irreversible. véc-tơ (vector / 벡터) có thể leak ngữ nghĩa (semantic / 의미적)/content thông tin (information / 정보). kiểm soát truy cập (access control / 접근 제어) cho véc-tơ (vector / 벡터) DB cần giống nguồn (source / 소스) dữ liệu (data / 데이터) sensitivity.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, **Evaluation** tiếp nhận điểm tựa từ **Privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Embedding không nên được coi là vô hại chỉ vì đã biến thành vector; evaluation phải đo retrieval task và các slice rủi ro thực tế.
 
 ## Evaluation
 
@@ -214,13 +214,13 @@ multilingual slices
 
 Visualization đẹp của vectors không đủ bằng chứng (evidence / 증거) môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings for Retrieval**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Evaluation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Evaluation cung cấp bằng chứng vận hành, còn mô hình tư duy tóm tắt vì sao distance chỉ có nghĩa trong một objective retrieval cụ thể.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Embedding là **learned coordinate hệ thống (system / 시스템) cho một retrieval mục tiêu (objective / 목표)**. Distance có meaning vì mô hình (model / 모델) được train để relevant things align, không vì véc-tơ (vector / 벡터) tự mang ngữ nghĩa (semantic / 의미적) truth.
 
-> **Chuyển mạch:** Trong **Embeddings for Retrieval**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy này đặt embedding như hệ tọa độ học được cho một mục tiêu truy hồi; các ngộ nhận sau đây kiểm tra những suy luận sai về vector.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -236,7 +236,7 @@ Không. chi phí (cost / 비용) tăng và useful tín hiệu (signal / 신호) 
 
 Không cho bảo mật (security / 보안)/phiên bản (version / 버전) các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings for Retrieval**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận thường nhầm embedding với hash, coi dimension là chất lượng tuyệt đối hoặc dùng vector thay authorization; phần liên kết kiến thức nối sang đại số tuyến tính, LLM embeddings và vector search.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

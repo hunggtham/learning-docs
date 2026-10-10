@@ -43,7 +43,7 @@ doc: "authentication failure"
 
 Nếu không share terms, lexical score thấp dù ngữ nghĩa (semantic / 의미적) quan hệ (relation / 관계) cao.
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Dense biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Sparse biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bi-Encoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sparse retrieval giữ được tín hiệu term và identifier rõ ràng, còn dense retrieval cố nối những câu khác từ bằng hình học biểu diễn.
 
 ## Dense biểu diễn (representation / 표현)
 
@@ -63,7 +63,7 @@ hoặc cosine similarity.
 
 Mô hình (model / 모델) được train sao cho relevant pairs gần nhau hơn non-relevant pairs.
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Bi-Encoder** tiếp nhận điểm tựa từ **Dense biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contrastive huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dense vectors cho phép tìm theo ngữ nghĩa, nhưng để truy hồi nhanh cần encoder xử lý query và document một cách phù hợp; bi-encoder tách hai lần encode.
 
 ## Bi-Encoder
 
@@ -78,7 +78,7 @@ Document vectors precompute được, nên retrieval nhanh bằng véc-tơ (vect
 
 Đây là kiến trúc (architecture / 아키텍처) phổ biến của dense first-stage retrieval.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, **Bi-Encoder** đã nêu tiêu chí phân biệt, còn **Contrastive huấn luyện (training / 학습)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Negative Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bi-encoder precompute document vectors nên phù hợp first-stage retrieval; contrastive training quyết định hình học nào được học từ positive và negative pairs.
 
 ## Contrastive huấn luyện (training / 학습)
 
@@ -92,7 +92,7 @@ P(d^+\mid q)=\frac{e^{s(q,d^+)}}{\sum_j e^{s(q,d_j)}}
 
 Mô hình (model / 모델) học hình học (geometry / 기하학) nơi relevant document có score cao.
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Contrastive huấn luyện (training / 학습)** đã nêu tiêu chí phân biệt, còn **Negative Sampling** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cross-Encoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Contrastive objective chỉ hiệu quả khi negative phản ánh lỗi retrieval thực tế; negative sampling vì thế quyết định model học distinction nào.
 
 ## Negative Sampling
 
@@ -102,7 +102,7 @@ Random negatives quá dễ: document hoàn toàn khác topic. Hard negatives nh�
 
 Nếu negative set chứa false negatives — documents thực ra relevant — huấn luyện (training / 학습) tín hiệu (signal / 신호) bị noisy.
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Cross-Encoder** tiếp nhận điểm tựa từ **Negative Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Late tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Negative set tạo áp lực học fine-grained, còn cross-encoder đánh giá từng cặp query–document với tương tác token sâu hơn.
 
 ## Cross-Encoder
 
@@ -116,7 +116,7 @@ Nó cho phép token-level tương tác (interaction / 상호작용) sâu nên ac
 
 Vì vậy cross-encoder thường dùng reranker sau candidate retrieval.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, **Late tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **Cross-Encoder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cross-encoder thường chính xác nhưng đắt khi chấm hàng triệu tài liệu; late interaction giữ thêm thông tin token mà vẫn pre-index được phần document.
 
 ## Late tương tác (interaction / 상호작용)
 
@@ -124,7 +124,7 @@ Các architectures như late tương tác (interaction / 상호작용) giữ mul
 
 Nó nằm giữa bi-encoder và cross-encoder về chi phí (cost / 비용)/chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Hybrid Retrieval** tiếp nhận điểm tựa từ **Late tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reciprocal Rank Fusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Late interaction đứng giữa tốc độ của bi-encoder và độ sâu của cross-encoder; hybrid retrieval lại kết hợp cả tín hiệu dense lẫn sparse.
 
 ## Hybrid Retrieval
 
@@ -138,7 +138,7 @@ Hoặc merge rankings bằng reciprocal rank fusion.
 
 Hybrid thường robust trong enterprise corpora vì ngữ nghĩa (semantic / 의미적) queries và chính xác (exact / 정확한) identifiers coexist.
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Reciprocal Rank Fusion** tiếp nhận điểm tựa từ **Hybrid Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) Drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hybrid cần đưa hai nguồn tín hiệu về cách kết hợp ổn định; reciprocal rank fusion dùng vị trí trong ranking để tránh phụ thuộc raw score scales.
 
 ## Reciprocal Rank Fusion
 
@@ -150,7 +150,7 @@ RRF(d)=\sum_r \frac{1}{k+rank_r(d)}
 
 Nó không cần calibrate raw scores giữa retrievers.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, **Ngữ nghĩa (semantic / 의미적) Drift** tiếp nhận điểm tựa từ **Reciprocal Rank Fusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exact-match Blind Spot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RRF không cần calibrate điểm thô, nhưng dense và sparse vẫn có thể lệch về loại lỗi; semantic drift là trường hợp dense gần về chủ đề nhưng sai chi tiết.
 
 ## Ngữ nghĩa (semantic / 의미적) Drift
 
@@ -160,7 +160,7 @@ Ví dụ truy vấn (query / 쿼리) hỏi `refund within 7 days`, retriever đ�
 
 Reranking/siêu dữ liệu (metadata / 메타데이터)/thời gian (time / 시간) filters cần xử lý fine distinction.
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Exact-match Blind Spot** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) Drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multilingual Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Semantic similarity có thể bỏ qua identifier và con số quan trọng; exact-match signal cần được giữ lại, đặc biệt trong corpus kỹ thuật.
 
 ## Exact-match Blind Spot
 
@@ -168,7 +168,7 @@ Embedding mô hình (model / 모델) có thể smooth rare strings. lỗi (error
 
 Sparse retrieval nên giữ chính xác (exact / 정확한) đơn vị từ (token / 토큰) tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Multilingual Retrieval** tiếp nhận điểm tựa từ **Exact-match Blind Spot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lĩnh vực (domain / 도메인) Adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exact-match bảo vệ token hiếm, còn multilingual retrieval mở rộng khả năng nối cùng intent giữa các ngôn ngữ; cả hai đều cần evaluation theo ngữ cảnh sử dụng.
 
 ## Multilingual Retrieval
 
@@ -176,7 +176,7 @@ Multilingual embedding mô hình (model / 모델) có thể map Korean/English/V
 
 Nhưng chất lượng (quality / 품질) không uniform giữa languages. Enterprise eval cần kiểm thử (test / 테스트) ngôn ngữ (language / 언어) pairs thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, **Lĩnh vực (domain / 도메인) Adaptation** tiếp nhận điểm tựa từ **Multilingual Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리) vs Document Encoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cross-language quality không đồng đều, nên domain adaptation cần xem xét thuật ngữ nội bộ và dữ liệu truy vấn của từng lĩnh vực.
 
 ## Lĩnh vực (domain / 도메인) Adaptation
 
@@ -184,13 +184,13 @@ General embedding mô hình (model / 모델) có thể không hiểu nội bộ 
 
 Siêu dữ liệu (metadata / 메타데이터)/lexical aliases cũng là solution simpler hơn trong nhiều cases.
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Truy vấn (query / 쿼리) vs Document Encoder** tiếp nhận điểm tựa từ **Lĩnh vực (domain / 도메인) Adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Candidate Count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Domain adaptation cải thiện encoder bằng dữ liệu đặc thù, nhưng query và document có thể cần vai trò hoặc phân phối khác nhau; đó là lý do chọn encoder đối xứng hay bất đối xứng.
 
 ## Truy vấn (query / 쿼리) vs Document Encoder
 
 Có thể share weights hoặc dùng asymmetric encoders. truy vấn (query / 쿼리) thường ngắn, document dài; asymmetric huấn luyện (training / 학습) có thể optimize roles khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Candidate Count** tiếp nhận điểm tựa từ **Truy vấn (query / 쿼리) vs Document Encoder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparse Learned Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi vai trò encoder đã rõ, số lượng candidate trở thành ngân sách trực tiếp cho recall và chi phí reranking.
 
 ## Candidate Count
 
@@ -200,7 +200,7 @@ Top `k` quá lớn → reranker/generator overload.
 
 Chọn `k` dựa retrieval recall curve và downstream ngân sách (budget / 예산), không arbitrary.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, **Sparse Learned Retrieval** tiếp nhận điểm tựa từ **Candidate Count** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Candidate count phải đủ lớn để không bỏ sót bằng chứng, nhưng quá lớn sẽ làm downstream quá tải; sparse learned retrieval là một điểm cân bằng khác giữa mở rộng ngữ nghĩa và hiệu quả index.
 
 ## Sparse Learned Retrieval
 
@@ -208,7 +208,7 @@ Có methods học sparse term weights bằng neural mô hình (model / 모델), 
 
 Conceptual điểm (point / 지점): sparse/dense không hoàn toàn đồng nghĩa classical/neural.
 
-> **Chuyển mạch:** Trong **Sparse Retrieval và Dense Retrieval**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Sparse Learned Retrieval** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sparse learned retrieval cho thấy sparse/dense không đồng nhất với classical/neural; mô hình tư duy dưới đây tóm tắt cách chọn representation theo corpus và query.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -220,7 +220,7 @@ Dense  → "có cùng meaning pattern không?"
 Hybrid → "dùng cả lexical evidence và semantic geometry"
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Sparse Retrieval và Dense Retrieval**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy đặt sparse, dense và hybrid cạnh nhau theo loại tín hiệu chúng sử dụng; các ngộ nhận sau đây giúp kiểm tra những ranh giới đó.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -236,7 +236,7 @@ Không. Score phân phối (distribution / 분포) depends mô hình (model / �
 
 Raw score scales có thể incompatible; normalization/RRF cần xem xét.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sparse Retrieval và Dense Retrieval**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận về dense, cosine và hybrid thường bỏ qua calibration, exact-match và score scale; phần liên kết kiến thức nối các lựa chọn này với embeddings và RAG.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
