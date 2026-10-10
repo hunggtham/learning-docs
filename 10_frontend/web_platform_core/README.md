@@ -33,7 +33,7 @@ bảo mật (security / 보안) và hiệu năng (performance / 성능) là tín
 WebSquare tổ chức những thành phần nguyên thủy (primitive / 기본 요소) này thành mô hình ứng dụng (application model / 애플리케이션 모델) riêng nhưng
 không thay đổi ngữ nghĩa (semantics / 의미론) của HTML, DOM, CSS hoặc trình duyệt (browser / 브라우저) ranh giới bảo mật (security boundary / 보안 경계).
 
-> **Nối mạch:** Conceptual spine xác định thứ tự từ browser runtime tới framework boundary; **Cách đọc** biến thứ tự đó thành route có prerequisite. Ranh giới và ownership tiếp theo ghi rõ phần nào thuộc web core, phần nào thuộc nhánh implementation.
+Conceptual spine dẫn từ browser runtime tới framework boundary; phần Cách đọc biến thứ tự đó thành route có prerequisite, rồi boundary/ownership phân biệt web core với implementation branch.
 
 ## Cách đọc
 
@@ -61,7 +61,7 @@ toàn bộ lớp cốt lõi (core / 핵심). Sau vòng đọc này, chọn nhán
 - [React](../react/00_index.md) và [WebSquare](../websquare/README.md) sở hữu
   khung phần mềm (framework / 프레임워크) vòng đời (lifecycle / 생명주기), composition, trạng thái (state / 상태) và môi trường vận hành (production / 운영 환경) tích hợp (integration / 통합).
 
-> **Nối mạch:** Route đã chỉ ra prerequisite và owner; phần boundary/ownership dùng chúng để ngăn duplicate giữa HTML, CSS, JavaScript, React và WebSquare. Đây là điều kiện để chọn nhánh học tiếp mà không mất mental model web platform.
+Route đã chỉ ra prerequisite và owner; boundary/ownership ngăn duplicate giữa HTML, CSS, JavaScript, React và WebSquare, giúp chọn nhánh học tiếp mà vẫn giữ mental model web platform.
 
 ## Ranh giới (boundary / 경계) và nguyên tắc quyền sở hữu (ownership / 소유권)
 

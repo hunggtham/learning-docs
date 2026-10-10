@@ -14,7 +14,7 @@ tính đồng thời (concurrency / 동시성) và các máy chủ (server / 서
 bản địa (native / 네이티브) events và chịu hydration/parser các ràng buộc (constraints / 제약조건들). gỡ lỗi (debug / 디버그) nên kiểm tra DOM,
 CSS, mạng (network / 네트워크) và sự kiện (event / 이벤트) timeline trước khi kết luận reconciliation là nguyên nhân.
 
-> **Nối mạch:** React và WebSquare cùng đặt UI trên web platform nhưng khác lifecycle, state model và ownership. Phần WebSquare làm rõ boundary riêng trước khi placement checklist chọn framework theo constraint thật.
+React và WebSquare cùng chạy trên web platform nhưng khác lifecycle, state model và ownership; phần WebSquare làm rõ boundary riêng trước khi placement checklist chọn framework theo constraint thực tế.
 
 ## WebSquare
 
@@ -24,7 +24,7 @@ submission thứ tự (ordering / 순서), grid định danh (identity / 식별�
 không gộp chúng với trình duyệt (browser / 브라우저) vòng đời (lifecycle / 생명주기). XML nguồn (source / 소스), thời gian chạy (runtime / 런타임) engine và W-Pack
 sản phẩm tạo ra (artifact / 산출물) cần được dấu vết (trace / 추적) như ba định danh (identity / 식별자) khác nhau.
 
-> **Nối mạch:** WebSquare boundary cung cấp các trade-off cụ thể về runtime và migration. Placement checklist dùng chúng cùng React/web-platform constraints để kết thúc bằng quyết định có owner, không phải bảng so sánh tính năng.
+WebSquare boundary cung cấp trade-off về runtime và migration; placement checklist ghép chúng với React và web-platform constraints để đưa ra quyết định có owner, không phải bảng so sánh feature.
 
 ## Khung phần mềm (framework / 프레임워크) placement checklist
 
