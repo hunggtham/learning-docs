@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **Python의 기본 문법 (Python Basic Syntax)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **Python 데이터 입·출력 함수 (Python Input/Output Functions)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **Python의 기본 문법 (Python Basic Syntax)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Python의 기본 문법 (Python Basic Syntax)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì mục tiêu đặt câu hỏi trung tâm còn từ khóa thu hẹp phạm vi cần kiểm tra.
 
 ## 핵심 키워드 (Từ khóa)
 
 기본, 문법
 
-> **Chuyển mạch:** Ở chặng này của **Python의 기본 문법 (Python Basic Syntax)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Python의 기본 문법 (Python Basic Syntax)**, **선행·연결 개념 (Kiến thức liên kết)** nối từ **핵심 키워드 (Từ khóa)** sang **읽는 방법 (Cách đọc)**, đồng thời chỉ rõ tài liệu chuẩn và vị trí sở hữu để biết chỗ đào sâu tiếp.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **포인터와 배열 (Pointer and Array)**에서 만든 기준을 이어받아 **Python의 기본 문법 (Python Basic Syntax)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python의 기본 문법 (Python Basic Syntax)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python의 기본 문법 (Python Basic Syntax)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Python의 기본 문법 (Python Basic Syntax)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang phần giải thích chính, vì tiêu chí đọc cần biến điểm tựa trước đó thành cách kiểm tra điều kiện và hệ quả.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **Python의 기본 문법 (Python Basic 
 
 ---
 
-> **Chuyển mạch:** Trong **Python의 기본 문법 (Python Basic Syntax)**, **Python의 기본 문법 (Python Basic Syntax)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Python의 기본 문법 (Python Basic Syntax)**, phần giải thích chính nối từ **읽는 방법 (Cách đọc)** sang các quy tắc và ví dụ, vì tiêu chí đọc vừa đặt ra sẽ giúp kiểm tra cú pháp theo điều kiện và hệ quả.
 
 ## Python의 기본 문법 (Python Basic Syntax)
 

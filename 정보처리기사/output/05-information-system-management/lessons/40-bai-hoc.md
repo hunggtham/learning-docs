@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **핵심 257: 분기/제어 (break, continue)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 258, 259, 260: 배열 (Array)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **핵심 257: 분기/제어 (break, continue)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **핵심 257: 분기/제어 (break, continue)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì mục tiêu đặt câu hỏi trung tâm còn từ khóa thu hẹp phạm vi cần kiểm tra.
 
 ## 핵심 키워드 (Từ khóa)
 
 핵심, 분기, 제어
 
-> **Chuyển mạch:** Ở chặng này của **핵심 257: 분기/제어 (break, continue)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **핵심 257: 분기/제어 (break, continue)**, **선행·연결 개념 (Kiến thức liên kết)** nối từ **핵심 키워드 (Từ khóa)** sang **읽는 방법 (Cách đọc)**, đồng thời chỉ rõ tài liệu chuẩn và vị trí sở hữu để biết chỗ đào sâu tiếp.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**에서 만든 기준을 이어받아 **핵심 257: 분기/제어 (break, continue)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **핵심 257: 분기/제어 (break, continue)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 257: 분기/제어 (break, continue)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **핵심 257: 분기/제어 (break, continue)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang phần giải thích chính, vì tiêu chí đọc cần biến điểm tựa trước đó thành cách kiểm tra điều kiện và hệ quả.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **핵심 257: 분기/제어 (break, cont
 
 ---
 
-> **Chuyển mạch:** Trong **핵심 257: 분기/제어 (break, continue)**, **핵심 257: 분기/제어 (break, continue)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **핵심 257: 분기/제어 (break, continue)**, phần giải thích chính nối từ **읽는 방법 (Cách đọc)** sang các quy tắc và ví dụ, vì tiêu chí đọc vừa đặt ra sẽ giúp kiểm tra break và continue theo điều kiện và hệ quả.
 
 ## 핵심 257: 분기/제어 (break, continue)
 
