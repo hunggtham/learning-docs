@@ -38,7 +38,7 @@ value/cost of consequences
 action choice
 ```
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Utility** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) chưa đủ để ra quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cost-sensitive classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Xác suất mô tả điều có thể xảy ra, nhưng utility quyết định kết quả nào đáng ưu tiên. Từ cặp belief–value này, ngưỡng hành động sẽ thay đổi theo chi phí sai lầm.
 
 ## Utility
 
@@ -64,7 +64,7 @@ a^*=\arg\max_a EU(a)
 
 Điều này không nói utility phải là money. Nó có thể encode an toàn (safety / 안전), thời gian (time / 시간), satisfaction hoặc combination.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Cost-sensitive classification** tiếp nhận điểm tựa từ **Utility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) neutrality vs rủi ro (risk / 위험) sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Expected utility trở thành ngưỡng cụ thể khi các kết quả là lớp dự đoán và chi phí false positive/negative khác nhau. Đó là lý do cost-sensitive classification không mặc định dùng threshold 0.5.
 
 ## Cost-sensitive classification
 
@@ -103,7 +103,7 @@ p>\frac{C_{FP}}{C_{FP}+C_{FN}}
 
 Threshold 0.5 only natural when costs symmetric.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Rủi ro (risk / 위험) neutrality vs rủi ro (risk / 위험) sensitivity** tiếp nhận điểm tựa từ **Cost-sensitive classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị (value / 값) of thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cost matrix mới mô tả từng lỗi; khi hậu quả phân bố theo nhiều mức độ và đuôi rủi ro, cần hỏi thêm người ra quyết định risk-neutral hay risk-sensitive.
 
 ## Rủi ro (risk / 위험) neutrality vs rủi ro (risk / 위험) sensitivity
 
@@ -121,7 +121,7 @@ for concave `U` via Jensen's inequality.
 
 AI các hệ thống (systems / 시스템들) may need tường minh (explicit / 명시적) rủi ro (risk / 위험) measures rather than average reward only.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Giá trị (value / 값) of thông tin (information / 정보)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) neutrality vs rủi ro (risk / 위험) sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequential decisions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Risk sensitivity cho biết cách cân hậu quả, còn thông tin mới có đáng mua hay không phụ thuộc khả năng nó làm đổi quyết định. Đây là điểm vào của value of information.
 
 ## Giá trị (value / 값) of thông tin (information / 정보)
 
@@ -139,7 +139,7 @@ It bounds how much one should pay for perfect thông tin (information / 정보) 
 
 Practical example: should medical AI yêu cầu (request / 요청) another kiểm thử (test / 테스트) before recommending hành động (action / 동작)? kiểm thử (test / 테스트) is valuable only if expected quyết định (decision / 결정) improvement exceeds kiểm thử (test / 테스트) chi phí (cost / 비용)/delay.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Sequential decisions** tiếp nhận điểm tựa từ **Giá trị (value / 값) of thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Markov thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+EVPI/EVSI nhìn một quyết định tại thời điểm hiện tại; nếu hành động còn thay đổi trạng thái tương lai, giá trị thông tin phải được xét trong chuỗi quyết định.
 
 ## Sequential decisions
 
@@ -151,7 +151,7 @@ Hành động (action / 동작) changes both immediate reward and future opportu
 
 This leads to **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Markov thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **Sequential decisions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MDP components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Để tính chuỗi đó mà không lưu toàn bộ lịch sử, ta cần state đủ thông tin cho tương lai có điều kiện. Đó là Markov property.
 
 ## Markov thuộc tính (property / 속성)
 
@@ -167,7 +167,7 @@ If trạng thái (state / 상태) omits relevant lịch sử (history / 이력),
 
 Example: if machine thất bại (failure / 실패) xác suất (probability / 확률) depends on accumulated usage but trạng thái (state / 상태) stores only hiện tại (current / 현재) temperature, trạng thái (state / 상태) is insufficient.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **MDP components** tiếp nhận điểm tựa từ **Markov thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Return** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Markov property là điều kiện về biểu diễn state; khi ghép state, action, transition, reward và discount, ta có MDP để tối ưu policy.
 
 ## MDP components
 
@@ -195,7 +195,7 @@ maps trạng thái (state / 상태) to hành động (action / 동작) phân ph�
 
 Goal: find chính sách (policy / 정책) maximizing expected return.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Return** tiếp nhận điểm tựa từ **MDP components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MDP định nghĩa thành phần và policy, nhưng cần một thước đo tích lũy để so sánh các policy. Return gom reward hiện tại và tương lai qua discount.
 
 ## Return
 
@@ -211,7 +211,7 @@ Discounting can represent thời gian (time / 시간) preference, bất định 
 
 For finite horizon, discount may be unnecessary.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Trạng thái (state / 상태) giá trị (value / 값)** tiếp nhận điểm tựa từ **Return** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành động (action / 동작) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Return là sample-level quantity cho một trajectory; lấy kỳ vọng theo policy từ một state sẽ cho state value.
 
 ## Trạng thái (state / 상태) giá trị (value / 값)
 
@@ -225,7 +225,7 @@ It answers:
 
 > Nếu bắt đầu ở trạng thái (state / 상태) này và tiếp tục theo chính sách (policy / 정책) π, expected long-term return là bao nhiêu?
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Hành động (action / 동작) giá trị (value / 값)** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+State value trả lời “đang ở đây thì kỳ vọng bao nhiêu”; để chọn bước kế tiếp, cần tách riêng giá trị của từng action, tức action value.
 
 ## Hành động (action / 동작) giá trị (value / 값)
 
@@ -243,7 +243,7 @@ Quyết định (decision / 결정):
 
 if deterministic greedy chính sách (policy / 정책) desired.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Bellman equation** tiếp nhận điểm tựa từ **Hành động (action / 동작) giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman optimality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Action value cho phép so sánh lựa chọn, nhưng chưa giải thích cách giá trị lan qua các bước. Bellman equation viết lại giá trị thành reward ngay cộng giá trị chiết khấu của state sau.
 
 ## Bellman equation
 
@@ -265,7 +265,7 @@ value now
 
 This recursion is one of most important structures in Reinforcement học tập (learning / 학습).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Bellman optimality** tiếp nhận điểm tựa từ **Bellman equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị (value / 값) iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bellman equation đánh giá một policy cụ thể; khi thay policy bằng lựa chọn tốt nhất ở mỗi state, ta nhận Bellman optimality.
 
 ## Bellman optimality
 
@@ -285,7 +285,7 @@ Q^*(s,a)=\sum_{s'}P(s'\mid s,a)
 
 This is stochastic generalization of shortest-path động (dynamic / 동적) programming.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Giá trị (value / 값) iteration** tiếp nhận điểm tựa từ **Bellman optimality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách (policy / 정책) iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Optimality equation là fixed point cần tìm. Value iteration lặp backup của phương trình này cho tới khi giá trị hội tụ rồi trích policy greedy.
 
 ## Giá trị (value / 값) iteration
 
@@ -300,7 +300,7 @@ Under discounted finite MDP conditions, contraction thuộc tính (property / �
 
 Then derive chính sách (policy / 정책) by greedy hành động (action / 동작) selection.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Chính sách (policy / 정책) iteration** tiếp nhận điểm tựa từ **Giá trị (value / 값) iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) vs MDP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Value iteration cập nhật value rồi chọn policy greedy ở mỗi vòng; policy iteration đổi nhịp bằng cách đánh giá một policy đầy đủ rồi cải thiện nó. Hai cách khác nhau ở chi phí mỗi vòng và tốc độ ổn định policy.
 
 ## Chính sách (policy / 정책) iteration
 
@@ -313,7 +313,7 @@ Repeat until chính sách (policy / 정책) stable.
 
 Chính sách (policy / 정책) iteration can converge in fewer outer iterations but evaluation step costly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Tìm kiếm (search / 검색) vs MDP** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Unknown chuyển tiếp (transition / 전이) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cả value/policy iteration đều giả định MDP đã biết. Khi so sánh với search, điểm cần giữ là search thường tối ưu một đồ thị chuyển tiếp đã mô tả, còn MDP tối ưu kỳ vọng trên các transition stochastic.
 
 ## Tìm kiếm (search / 검색) vs MDP
 
@@ -332,7 +332,7 @@ value V(s)           ↔ expected return-to-go
 
 Signs/objectives differ, but structural role similar.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Unknown chuyển tiếp (transition / 전이) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) vs MDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Search và MDP chia sẻ cấu trúc cost-to-go/value, nhưng planning cổ điển cần transition model. Khi mô hình `P` và `R` chưa biết hoặc quá đắt để xây dựng, bài toán chuyển sang học từ experience.
 
 ## Unknown chuyển tiếp (transition / 전이) mô hình (model / 모델)
 
@@ -349,7 +349,7 @@ unknown model + experience    → RL
 
 Model-based RL learns/estimates mô hình (model / 모델); model-free RL learns giá trị (value / 값)/chính sách (policy / 정책) without tường minh (explicit / 명시적) chuyển tiếp (transition / 전이) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Partial khả năng quan sát (observability / 관측 가능성)** tiếp nhận điểm tựa từ **Unknown chuyển tiếp (transition / 전이) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Belief cập nhật (update / 업데이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Unknown model đặt ra vấn đề học transition/reward; partial observability lại đặt ra vấn đề state thật không nhìn thấy đầy đủ. Khi agent chỉ nhận observation, nó phải duy trì belief thay vì dùng một state chắc chắn.
 
 ## Partial khả năng quan sát (observability / 관측 가능성)
 
@@ -367,7 +367,7 @@ Belief trạng thái (state / 상태) is a xác suất (probability / 확률) ph
 
 POMDP can be transformed conceptually into MDP over belief không gian (space / 공간), but belief không gian (space / 공간) continuous/high-dimensional and difficult.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Belief cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **Partial khả năng quan sát (observability / 관측 가능성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) estimation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+POMDP biểu diễn bất định về state bằng belief distribution. Belief này không tự có: sau mỗi action và observation, nó phải được cập nhật bằng Bayesian filtering.
 
 ## Belief cập nhật (update / 업데이트)
 
@@ -387,7 +387,7 @@ condition on new observation
 
 This is Bayes theorem operating sequentially.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Trạng thái (state / 상태) estimation** tiếp nhận điểm tựa từ **Belief cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) under mô hình (model / 모델) bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Belief update là phép suy luận xác suất trên lịch sử quan sát; trong hệ thống thực, ta cần một state estimate có thể tính ổn định để điều khiển và lập kế hoạch. Kalman filter và particle filter giải quyết lớp bài toán đó với các giả định khác nhau.
 
 ## Trạng thái (state / 상태) estimation
 
@@ -411,7 +411,7 @@ Extended/Unscented Kalman variants handle nonlinear approximations; particle fil
 
 Robotics perception/điều khiển (control / 제어) relies heavily on trạng thái (state / 상태) estimation before planning.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Quyết định (decision / 결정) under mô hình (model / 모델) bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) estimation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robust quyết định (decision / 결정) making** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+State estimation làm rõ state hiện tại đến mức nào, nhưng mô hình transition/reward và tham số của nó vẫn có thể sai. Vì vậy quyết định dưới model uncertainty phải tích hợp cả bất định epistemic.
 
 ## Quyết định (decision / 결정) under mô hình (model / 모델) bất định (uncertainty / 불확실성)
 
@@ -427,7 +427,7 @@ In practice chính xác (exact / 정확한) tích hợp (integration / 통합) o
 
 Ignoring epistemic bất định (uncertainty / 불확실성) can make hệ thống (system / 시스템) overconfident out-of-distribution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Robust quyết định (decision / 결정) making** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) under mô hình (model / 모델) bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chance các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Model uncertainty có thể được đưa vào posterior Bayesian, nhưng ta cũng có thể chọn policy an toàn trước một tập model khả dĩ. Đó là chuyển từ expected decision sang robust decision making.
 
 ## Robust quyết định (decision / 결정) making
 
@@ -441,7 +441,7 @@ This protects worst-case within bất định (uncertainty / 불확실성) set b
 
 Distributionally Robust tối ưu hóa (optimization / 최적화) similarly optimizes against distributions near empirical one according to chosen distance/divergence.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Chance các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **Robust quyết định (decision / 결정) making** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CVaR and tail rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Robust optimization bảo vệ trước model xấu trong tập bất định, thường phải đánh đổi tính bảo thủ. Một cách khác là đặt ràng buộc xác suất trực tiếp lên sự kiện không an toàn, tạo thành chance constraints.
 
 ## Chance các ràng buộc (constraints / 제약조건들)
 
@@ -455,7 +455,7 @@ Example autonomous hệ thống (system / 시스템): collision-risk ràng buộ
 
 Chance các ràng buộc (constraints / 제약조건들) convert bất định (uncertainty / 불확실성) into probabilistic an toàn (safety / 안전) requirements, but require trustworthy bất định (uncertainty / 불확실성) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **CVaR and tail rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Chance các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exploration vs exploitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chance constraint kiểm soát xác suất vượt ngưỡng nhưng chưa nói rõ các thất bại hiếm và cực đoan nặng đến đâu. Với tail risk, CVaR bổ sung góc nhìn về mức mất mát trung bình trong phần đuôi.
 
 ## CVaR and tail rủi ro (risk / 위험)
 
@@ -465,7 +465,7 @@ Value-at-Risk gives quantile; Conditional Value-at-Risk (CVaR) averages losses b
 
 Risk-sensitive RL can optimize CVaR-like objectives when rare catastrophic outcomes matter more than mean hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Exploration vs exploitation** tiếp nhận điểm tựa từ **CVaR and tail rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-Armed Bandit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CVaR làm nổi bật hậu quả hiếm nhưng nghiêm trọng; exploration–exploitation lại cân bằng lợi ích hành động hiện tại với thông tin học được cho tương lai. Cả hai đều mở rộng mục tiêu vượt khỏi mean reward.
 
 ## Exploration vs exploitation
 
@@ -480,7 +480,7 @@ Each arm has unknown reward phân phối (distribution / 분포). tác nhân (ag
 
 This is sequential giá trị (value / 값) of thông tin (information / 정보).
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Multi-Armed Bandit** tiếp nhận điểm tựa từ **Exploration vs exploitation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Upper Confidence Bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exploration–exploitation xuất hiện rõ nhất trong multi-armed bandit: mỗi arm có reward distribution chưa biết và agent phải vừa thử vừa khai thác. Bandit là trường hợp đơn giản để nghiên cứu regret trước khi thêm state chuyển tiếp.
 
 ## Multi-Armed Bandit
 
@@ -498,7 +498,7 @@ Algorithms include ε-greedy, UCB, Thompson Sampling.
 
 Bandits are relevant for recommendation, ads and online experimentation.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Upper Confidence Bound** tiếp nhận điểm tựa từ **Multi-Armed Bandit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thompson Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bandit đặt mục tiêu giảm regret tích lũy, còn Upper Confidence Bound thực hiện điều đó bằng optimism under uncertainty: arm ít được thử nhận exploration bonus lớn hơn.
 
 ## Upper Confidence Bound
 
@@ -512,7 +512,7 @@ First term exploitation. Second optimism under bất định (uncertainty / 불�
 
 This idea also appeared in MCTS selection.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Thompson Sampling** tiếp nhận điểm tựa từ **Upper Confidence Bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contextual bandits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+UCB thêm một bonus xác định từ độ ít được thử; Thompson Sampling thay bonus bằng việc lấy mẫu từ posterior. Vì vậy hành vi khám phá của Thompson phản ánh trực tiếp bất định Bayesian.
 
 ## Thompson Sampling
 
@@ -522,7 +522,7 @@ Uncertain arms get naturally explored because posterior wide.
 
 It converts Bayesian bất định (uncertainty / 불확실성) into stochastic hành động (action / 동작) selection.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Contextual bandits** tiếp nhận điểm tựa từ **Thompson Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Off-policy evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Thompson Sampling hoạt động trên các arm độc lập về context. Khi reward phụ thuộc người dùng hoặc hoàn cảnh, contextual bandits phải học policy theo context và chỉ quan sát feedback của action đã chọn.
 
 ## Contextual bandits
 
@@ -538,7 +538,7 @@ This introduces **partial phản hồi (feedback / 피드백)**: we do not see w
 
 Counterfactual evaluation becomes important.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Off-policy evaluation** tiếp nhận điểm tựa từ **Contextual bandits** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Partial feedback khiến log không chứa outcome của các recommendation bị bỏ qua. Off-policy evaluation dùng behavior policy và importance weighting để ước lượng policy mới mà chưa cần triển khai.
 
 ## Off-policy evaluation
 
@@ -556,7 +556,7 @@ But high variance when mục tiêu (target / 대상) chooses actions hành vi (b
 
 This connects Statistics, nhân quả (causal / 인과적) suy luận (inference / 추론) and RL evaluation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Reward thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Off-policy evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delayed consequences** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Off-policy evaluation cho biết policy có thể làm tốt đến đâu theo dữ liệu cũ, nhưng kết quả vẫn phụ thuộc reward được định nghĩa. Nếu reward là proxy lệch, tối ưu policy có thể khuếch đại sai mục tiêu.
 
 ## Reward thiết kế (design / 설계)
 
@@ -568,7 +568,7 @@ Sequential tối ưu hóa (optimization / 최적화) amplifies reward misspecifi
 
 This is direct cầu nối (bridge / 브리지) to AI Alignment.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Delayed consequences** tiếp nhận điểm tựa từ **Reward thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Credit assignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reward misspecification trở nên nguy hiểm khi hậu quả xuất hiện muộn. Delayed consequences buộc agent nhìn qua immediate reward và tính giá trị của trạng thái tương lai.
 
 ## Delayed consequences
 
@@ -580,7 +580,7 @@ Myopic quyết định (decision / 결정) maximizing immediate reward fails.
 
 Bellman recursion handles delayed consequences by future giá trị (value / 값).
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Credit assignment** tiếp nhận điểm tựa từ **Delayed consequences** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning under bất định (uncertainty / 불확실성) for agents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Delayed reward khiến khó biết action nào trong chuỗi đã tạo ra kết quả. Credit assignment giải quyết bằng cách phân bổ tín hiệu về các bước trước, thay vì chỉ thưởng hoặc phạt bước cuối.
 
 ## Credit assignment
 
@@ -592,7 +592,7 @@ Temporal Difference học tập (learning / 학습) propagates giá trị (value
 
 LLM tác nhân (agent / 에이전트) evaluation also faces credit assignment: tác vụ (task / 작업) success/thất bại (failure / 실패) after 20 công cụ (tool / 도구) calls does not directly identify which quyết định (decision / 결정) caused kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Planning under bất định (uncertainty / 불확실성) for agents** tiếp nhận điểm tựa từ **Credit assignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Irreversible actions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Credit assignment giúp học policy, nhưng agent còn phải chọn bước tiếp theo khi intent, observation và external state đều chưa chắc chắn. Planning under uncertainty kết hợp belief/state estimate với hành động có giá trị thông tin.
 
 ## Planning under bất định (uncertainty / 불확실성) for agents
 
@@ -621,7 +621,7 @@ continue/replan
 
 Sometimes best next hành động (action / 동작) is asking for missing thông tin (information / 정보) rather than committing to plan.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Irreversible actions** tiếp nhận điểm tựa từ **Planning under bất định (uncertainty / 불확실성) for agents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) bất định (uncertainty / 불확실성) vs môi trường (environment / 환경) randomness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong planning thực tế, payment, deletion, message sending hay deployment có thể không đảo ngược. Vì vậy irreversible actions cần validation, confirmation và decision boundary chặt hơn action rủi ro thấp.
 
 ## Irreversible actions
 
@@ -638,7 +638,7 @@ high-risk irreversible → stronger validation / confirmation
 
 This is utility/risk-aware planning, not just UX convention.
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Mô hình (model / 모델) bất định (uncertainty / 불확실성) vs môi trường (environment / 환경) randomness** tiếp nhận điểm tựa từ **Irreversible actions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Expected utility is not morality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân biệt action irreversible không đồng nghĩa mọi bất định đều cùng loại. Model uncertainty có thể giảm bằng dữ liệu hoặc calibration; environment randomness là nhiễu không thể triệt tiêu hoàn toàn.
 
 ## Mô hình (model / 모델) bất định (uncertainty / 불확실성) vs môi trường (environment / 환경) randomness
 
@@ -651,7 +651,7 @@ Quyết định (decision / 결정) chiến lược (strategy / 전략) differs.
 
 Exploration targets epistemic bất định (uncertainty / 불확실성); robust chính sách (policy / 정책) protects against uncertain mô hình (model / 모델); risk-sensitive utility handles consequence cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Expected utility is not morality** tiếp nhận điểm tựa từ **Mô hình (model / 모델) bất định (uncertainty / 불확실성) vs môi trường (environment / 환경) randomness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Biết nguồn bất định giúp chọn exploration, robust policy hay risk-sensitive utility phù hợp. Nhưng expected utility chỉ tối ưu những giá trị đã được mã hóa, không tự quyết định điều gì là đúng về mặt đạo đức.
 
 ## Expected utility is not morality
 
@@ -659,7 +659,7 @@ Encoding utility requires deciding whose outcomes count and how trade-offs measu
 
 For xã hội (social / 사회적)/high-impact AI, utility mô hình (model / 모델), fairness các ràng buộc (constraints / 제약조건들) and quản trị (governance / 거버넌스) are normative thiết kế (design / 설계) choices requiring human institutions.
 
-> **Chuyển mạch:** Trong **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Expected utility is not morality** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Expected utility không thay thế governance hay normative judgment. Mental model hữu ích là nối bối cảnh, cơ chế, quan sát, giới hạn và quyết định thành một chuỗi kiểm tra được.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -676,7 +676,7 @@ Exploration = act partly to learn
 Risk        = care about distribution/tails, not mean only
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model đó giúp nhận diện các misconception: probability không phải utility, state không luôn quan sát đầy đủ, và mean reward không phản ánh tail risk. Từ các sửa chữa này, ta có thể nối chapter với những chủ đề rộng hơn.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -696,7 +696,7 @@ Not necessarily. Mean mục tiêu (objective / 목표) can tolerate rare catastr
 
 If chuyển tiếp (transition / 전이)/reward mô hình (model / 모델) known and chính sách (policy / 정책) solved by DP, it is planning in an MDP. RL specifically learns from tương tác (interaction / 상호작용)/dữ liệu (data / 데이터) when relevant mô hình (model / 모델)/giá trị (value / 값)/chính sách (policy / 정책) unknown.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Những liên kết cuối cùng đặt decision-making under uncertainty giữa search/planning, MDP/POMDP và reinforcement learning. Đọc theo các cầu nối ấy giúp chọn đúng mô hình, thước đo và ranh giới an toàn cho bài toán tiếp theo.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
