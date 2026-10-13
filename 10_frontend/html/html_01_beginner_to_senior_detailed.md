@@ -2774,7 +2774,7 @@ Inline style hợp lệ, nhưng large ứng dụng (application / 애플리케�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **120. title** nối từ **119. style** sang **121. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 120. `title`
-Phần này nối mạch bài học với “120. `title`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`title` cung cấp gợi ý bổ sung nhưng không thay thế accessible name hay label; mục này đặt tooltip-like metadata vào đúng giới hạn của nó.
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -2791,7 +2791,7 @@ Không dùng nó làm accessible name duy nhất cho trọng yếu (critical / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **121. hidden** nối từ **120. title** sang **122. inert**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 121. `hidden`
-Phần này nối mạch bài học với “121. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`hidden` loại nội dung khỏi rendering thông thường; mục này phân biệt ẩn khỏi mọi người dùng với chỉ ẩn trực quan bằng CSS.
 
 ```html
 <section hidden>
@@ -2812,7 +2812,7 @@ Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **122. inert** nối từ **121. hidden** sang **123. tabindex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 122. `inert`
-Phần này nối mạch bài học với “122. `inert`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`inert` tạm thời loại subtree khỏi focus và tương tác; mục này phù hợp khi modal che nền nhưng không phải cơ chế phân quyền hay bảo mật.
 
 ```html
 <main inert>
@@ -2829,7 +2829,7 @@ Useful với custom overlay workflows, nhưng bản địa (native / 네이티�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **123. tabindex** nối từ **122. inert** sang **124. data-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 123. `tabindex`
-Phần này nối mạch bài học với “123. `tabindex`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`tabindex` điều chỉnh khả năng focus bằng bàn phím; mục này ưu tiên thứ tự DOM tự nhiên và cảnh báo việc tạo tabindex dương.
 
 ```html
 tabindex="0"
@@ -2856,7 +2856,7 @@ thường là anti-pattern vì phá natural focus thứ tự (order / 순서) v�
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **124. data-** nối từ **123. tabindex** sang **125. contenteditable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 124. `data-*`
-Phần này nối mạch bài học với “124. `data-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`data-*` mang metadata tuỳ chỉnh trên phần tử và đọc qua `dataset`; mục này phù hợp cho dữ liệu gắn với DOM nhưng không thay thế state model hay schema API.
 
 ```html
 <button
@@ -2878,7 +2878,7 @@ Không chứa secret/đơn vị từ (token / 토큰) vì DOM thuộc máy khác
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **125. contenteditable** nối từ **124. data-** sang **126. draggable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125. `contenteditable`
-Phần này nối mạch bài học với “125. `contenteditable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`contenteditable` biến subtree thành vùng sửa trực tiếp; mục này đặt các vấn đề về caret, markup sinh ra, sanitization và đồng bộ dữ liệu.
 
 ```html
 <div contenteditable="true">
@@ -2895,7 +2895,7 @@ Selection, paste sanitization, undo, trình duyệt (browser / 브라우저) dif
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **126. draggable** nối từ **125. contenteditable** sang **127. spellcheck, translate, autofocus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126. `draggable`
-Phần này nối mạch bài học với “126. `draggable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`draggable` bật cơ chế kéo-thả native; mục này phân biệt event model của HTML với trải nghiệm pointer và keyboard cần tự bổ sung.
 
 ```html
 <div draggable="true">
@@ -2954,7 +2954,7 @@ Script loading chiến lược (strategy / 전략) ảnh hưởng parser và hi�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **129. defer** nối từ **128. <script>** sang **130. async**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 129. `defer`
-Phần này nối mạch bài học với “129. `defer`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`defer` trì hoãn script đến sau khi parser hoàn tất nhưng giữ thứ tự các script cùng loại; mục này nối tải tài nguyên với thời điểm DOM sẵn sàng.
 
 ```html
 <script
@@ -2972,7 +2972,7 @@ Classic deferred script được download song song và execute sau document par
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **130. async** nối từ **129. defer** sang **131. type="module"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 130. `async`
-Phần này nối mạch bài học với “130. `async`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`async` cho phép script thực thi ngay khi tải xong, nên thứ tự giữa các script không được bảo đảm; mục này phù hợp code độc lập hơn là dependency chain.
 
 ```html
 <script
@@ -2990,7 +2990,7 @@ Phù hợp với independent scripts như analytics.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **131. type="module"** nối từ **130. async** sang **132. nomodule**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 131. `type="module"`
-Phần này nối mạch bài học với “131. `type="module"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`type="module"` đưa script vào module graph với scope riêng và defer mặc định; mục này là ranh giới giữa dependency browser-native và bundler pipeline.
 
 ```html
 <script
