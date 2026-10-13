@@ -1874,7 +1874,7 @@ Máy chủ (server / 서버) vẫn phải validate email/nghiệp vụ (business
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **81. number** nối từ **80. email** sang **82. search, tel, url**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. `number`
-Phần này nối mạch bài học với “81. `number`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `number` cung cấp affordance cho giá trị số nhưng không bảo đảm dữ liệu nghiệp vụ là hợp lệ; mục này tách parsing, range và validation phía máy chủ.
 
 ```html
 <input
@@ -1922,7 +1922,7 @@ URL:
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **83. checkbox** nối từ **82. search, tel, url** sang **84. radio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. `checkbox`
-Phần này nối mạch bài học với “83. `checkbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`checkbox` biểu diễn lựa chọn độc lập và chỉ gửi giá trị khi được chọn; mục này làm rõ trạng thái thiếu giá trị trong payload form.
 
 ```html
 <input
@@ -1946,7 +1946,7 @@ Nếu unchecked, trường dữ liệu (field / 필드) thường không có ent
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **84. radio** nối từ **83. checkbox** sang **85. Date/time types**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. `radio`
-Phần này nối mạch bài học với “84. `radio`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`radio` tạo một lựa chọn duy nhất trong cùng nhóm `name`; mục này đối chiếu semantics nhóm với cách checkbox biểu diễn nhiều lựa chọn.
 
 ```html
 <label>
@@ -1973,7 +1973,7 @@ Radio cùng `name` tạo group và thường chỉ một item được selected.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **85. Date/time types** nối từ **84. radio** sang **86. range**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. Date/time types
-Phần này nối mạch bài học với “85. Date/time types”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Date/time inputs chuẩn hoá affordance nhập ngày nhưng giá trị gửi đi vẫn phụ thuộc timezone và định dạng; mục này tách hiển thị cục bộ khỏi dữ liệu canonical.
 
 ```html
 <input type="date">
@@ -1994,7 +1994,7 @@ UI display cũng phụ thuộc locale/trình duyệt (browser / 브라우저).
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **86. range** nối từ **85. Date/time types** sang **87. color**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. `range`
-Phần này nối mạch bài học với “86. `range`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`range` biểu diễn một giá trị trên trục liên tục với min, max và step; mục này phù hợp điều chỉnh tương đối hơn là nhập số cần độ chính xác tuyệt đối.
 
 ```html
 <input
@@ -2013,7 +2013,7 @@ Nếu chính xác (exact / 정확한) giá trị (value / 값) quan trọng, nê
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **87. color** nối từ **86. range** sang **88. file**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. `color`
-Phần này nối mạch bài học với “87. `color`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`color` cung cấp bộ chọn màu và serialize thành giá trị chuẩn; mục này nhắc rằng ý nghĩa màu, tương phản và fallback vẫn thuộc trách nhiệm thiết kế.
 
 ```html
 <input
@@ -2028,7 +2028,7 @@ Bản địa (native / 네이티브) color picker trong supporting browsers.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **88. file** nối từ **87. color** sang **89. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 88. `file`
-Phần này nối mạch bài học với “88. `file`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`file` trao quyền chọn tệp từ thiết bị cho người dùng; mục này phân biệt metadata phía client với kiểm tra loại, kích thước và nội dung ở máy chủ.
 
 ```html
 <input
@@ -2053,7 +2053,7 @@ Multiple:
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **89. hidden** nối từ **88. file** sang **90. name**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. `hidden`
-Phần này nối mạch bài học với “89. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`hidden` gửi một giá trị không hiển thị trong form nhưng không phải cơ chế bảo mật; mục này cảnh báo mọi dữ liệu client gửi đều có thể bị sửa.
 
 ```html
 <input
@@ -2073,7 +2073,7 @@ Không bao giờ coi hidden giá trị (value / 값) là secret/trusted authoriz
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **90. name** nối từ **89. hidden** sang **91. value**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 90. `name`
-Phần này nối mạch bài học với “90. `name`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`name` là khoá để control tham gia form submission; mục này nối tên trường với payload mà server nhận, thay vì nhầm `id` là định danh serialize.
 
 ```html
 <input
@@ -2120,7 +2120,7 @@ vẫn phản ánh markup attribute `"Alice"`.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **92. required** nối từ **91. value** sang **93. disabled**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 92. `required`
-Phần này nối mạch bài học với “92. `required`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`required` bật constraint validation cho một control; mục này nhấn mạnh browser feedback hữu ích nhưng không thay thế validation nghiệp vụ phía máy chủ.
 
 ```html
 <input
@@ -2137,7 +2137,7 @@ Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **93. disabled** nối từ **92. required** sang **94. readonly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 93. `disabled`
-Phần này nối mạch bài học với “93. `disabled`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`disabled` loại control khỏi tương tác và submission; mục này phân biệt nó với `readonly`, vốn vẫn giữ dữ liệu trong payload.
 
 ```html
 <input disabled>
