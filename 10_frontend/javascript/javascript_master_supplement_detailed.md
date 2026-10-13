@@ -373,7 +373,7 @@ loop();
 Một chuỗi (chain / 사슬) microtasks không kết thúc có thể **starve** trình duyệt (browser / 브라우저) khỏi cơ hội xử lý tác vụ (task / 작업) khác hoặc kết xuất (render / 렌더링). Vì vậy “microtask chạy sớm hơn” không có nghĩa “microtask luôn tốt hơn”.
 
 ### `await` nằm ở đâu?
-Phần này nối mạch bài học với “`await` nằm ở đâu?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Microtask chain có thể starve browser; `await` tạo điểm nhường trong async function nhưng không dừng thread, nên phần tiếp theo đặt nó vào đúng execution timeline.
 
 ```js
 async function run() {
@@ -941,7 +941,7 @@ OS / native WebView container
 Điều này đặc biệt quan trọng với hybrid app. Chrome desktop mới nhất hỗ trợ (support / 지원) một Web API không có nghĩa Android WebView mà app đang ship cũng hỗ trợ (support / 지원). Và iOS WKWebView phiên bản (version / 버전) bị gắn với hệ điều hành/engine phân phối (distribution / 분포) khác Chrome.
 
 ### Compatibility matrix nên là project artifact
-Phần này nối mạch bài học với “Compatibility matrix nên là project artifact”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Web APIs có compatibility timeline riêng với ECMAScript; compatibility matrix biến khác biệt giữa browser, WebView và host thành artifact có thể kiểm tra.
 
 ```text
 feature
@@ -997,7 +997,7 @@ Enterprise các hệ thống (systems / 시스템들) thường chứa nhiều t
 JSON raw đặt provenance trước parsing; IIFE giải quyết scope, còn arguments → rest parameters chuyển trọng tâm sang input contract.
 
 ## IIFE thay module scope
-Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Legacy JSON/raw và scope boundary dẫn tự nhiên sang IIFE; phần này đối chiếu cách IIFE thay module scope trước khi chuyển sang input và object model.
 
 ```js
 (function () {
@@ -1450,7 +1450,7 @@ Mục tiêu không phải ghi nhớ như trivia. Khi gặp một hành vi (behav
 ---
 
 # 34. Coverage matrix sau audit
-Phần này nối mạch bài học với “34. Coverage matrix sau audit”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Coverage matrix tổng hợp những gì đã audit theo execution, types, scope, async và host boundary; dùng nó để phát hiện khoảng trống thay vì chỉ đếm số mục.
 
 | Nhóm kiến thức | chuẩn gốc (canonical / 정본) mức (level / 수준) chính | Trạng thái sau kiểm tra (audit / 감사) |
 | --- | --- | --- |

@@ -689,7 +689,7 @@ Trình duyệt (browser / 브라우저) có thể gửi auditing requests khi đ
 > **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** đặt vấn đề; **37. hreflang, alternate resources và SEO** đối chiếu bằng chứng, rồi **38. Responsive preload và priority hints** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. `hreflang`, alternate resources và SEO
-Phần này nối mạch bài học với “37. `hreflang`, alternate resources và SEO”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Ping và hyperlink auditing tạo một network behavior cần cân nhắc privacy; `hreflang` tiếp theo chuyển trọng tâm sang alternate resources và SEO semantics.
 
 ```html
 <link
@@ -753,7 +753,7 @@ Trình duyệt (browser / 브라우저) chỉ hỗ trợ những directives cụ
 > **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **41. meta name="color-scheme"** nối từ **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** sang **42. Document-level referrer chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. `meta name="color-scheme"`
-Phần này nối mạch bài học với “41. `meta name="color-scheme"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`meta http-equiv` chỉ mô phỏng một số directive; `color-scheme` tiếp theo đặt riêng contract về theme preference trước khi quay lại document-level policy.
 
 ```html
 <meta
@@ -830,7 +830,7 @@ Name trả lời “điều khiển (control / 제어) là gì”; description c
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **45. aria-expanded và aria-controls** nối từ **44. Accessible name và description** sang **46. aria-invalid và aria-errormessage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. `aria-expanded` và `aria-controls`
-Phần này nối mạch bài học với “45. `aria-expanded` và `aria-controls`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Accessible name và description trả lời control là gì; `aria-expanded` và `aria-controls` tiếp theo mô tả trạng thái mở/đóng và quan hệ điều khiển mà assistive technology cần biết.
 
 ```html
 <button
@@ -1177,7 +1177,7 @@ Mục tiêu là thấy nguồn (source / 소스) indentation không quyết đ�
 > **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **68. Attribute/property state** nối từ **67. Parser repair** sang **69. Checkbox trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Attribute/property state
-Phần này nối mạch bài học với “68. Attribute/property state”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Parser repair cho thấy source indentation không quyết định DOM; attribute/property state tiếp theo đối chiếu default value với current value và reset behavior.
 
 ```html
 <form id="f">
