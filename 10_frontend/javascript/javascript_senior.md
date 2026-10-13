@@ -1846,7 +1846,7 @@ Cấp cao (senior / 시니어) phải phiên bản (version / 버전) giao diệ
 ---
 
 # Chương 59 — Feature Flags và lifecycle của flag
-Phần này nối mạch bài học với “Chương 59 — Feature Flags và lifecycle của flag”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Feature flag biến một quyết định phát hành thành trạng thái có thể quan sát và thu hồi; phần này theo dõi vòng đời từ lúc tạo đến lúc xoá để tránh biến nhánh rollout tạm thời thành nợ mã lâu dài.
 
 ```js
 if (flags.newCheckout) {
