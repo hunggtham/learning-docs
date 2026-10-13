@@ -1259,7 +1259,7 @@ img {
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **53. loading** nối từ **52. width và height** sang **54. srcset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. `loading`
-Phần này nối mạch bài học với “53. `loading`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`loading` điều chỉnh thời điểm trình duyệt lấy ảnh; mục này cân bằng độ trễ tải với trải nghiệm và nhấn mạnh rằng lazy loading không thay thế việc khai báo kích thước.
 
 ```html
 <img
@@ -1277,7 +1277,7 @@ Không nên lazy-load hero/LCP ảnh (image / 이미지) một cách máy móc v
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **54. srcset** nối từ **53. loading** sang **55. sizes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. `srcset`
-Phần này nối mạch bài học với “54. `srcset`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`srcset` cho phép trình duyệt chọn biến thể ảnh theo độ phân giải và mật độ điểm ảnh; mục này đặt cơ sở cho lựa chọn tài nguyên thay vì nhúng một URL cố định.
 
 ```html
 <img
@@ -1296,7 +1296,7 @@ Bạn cung cấp ảnh (image / 이미지) candidates; trình duyệt (browser /
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **55. sizes** nối từ **54. srcset** sang **56. <picture>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. `sizes`
-Phần này nối mạch bài học với “55. `sizes`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`sizes` mô tả chiều rộng hiển thị dự kiến để trình duyệt chọn đúng candidate từ `srcset`; khai báo sai có thể làm tăng byte tải dù ảnh vẫn hiển thị đúng.
 
 ```html
 <img
@@ -1348,7 +1348,7 @@ Nếu `sizes` sai, trình duyệt (browser / 브라우저) có thể chọn tài
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **57. <figure> và <figcaption>** nối từ **56. <picture>** sang **58. <audio>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. `<figure>` và `<figcaption>`
-Phần này nối mạch bài học với “57. `<figure>` và `<figcaption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<figure>` gom media với chú thích có quan hệ ngữ nghĩa; mục này phân biệt caption của một đơn vị nội dung với đoạn văn đặt cạnh ảnh.
 
 ```html
 <figure>
@@ -1371,7 +1371,7 @@ Figure phù hợp với ảnh (image / 이미지), diagram, chart, mã (code / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **58. <audio>** nối từ **57. <figure> và <figcaption>** sang **59. <video>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. `<audio>`
-Phần này nối mạch bài học với “58. `<audio>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<audio>` đưa nội dung âm thanh vào tài liệu qua một phần tử điều khiển được; mục này tập trung vào fallback, controls và quyền tự động phát.
 
 ```html
 <audio
@@ -1399,7 +1399,7 @@ Autoplay có nhiều trình duyệt (browser / 브라우저) restrictions, đặ
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** nối từ **58. <audio>** sang **60. <source>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. `<video>`
-Phần này nối mạch bài học với “59. `<video>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<video>` mở rộng bài toán media sang khung hình, poster và phụ đề; mục này làm rõ vì sao playback phải đi cùng fallback và chính sách autoplay.
 
 ```html
 <video
@@ -1446,7 +1446,7 @@ Trình duyệt (browser / 브라우저) dùng năng lực (capability / 역량)/
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **60. <source>** đặt vấn đề; **61. <track>** đối chiếu bằng chứng, rồi **62. <iframe>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 61. `<track>`
-Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<track>` gắn phụ đề hoặc metadata theo thời gian vào video; mục này biến khả năng tiếp cận thành một phần của pipeline media thay vì chú thích rời.
 
 ```html
 <track
@@ -1463,7 +1463,7 @@ Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **62. <iframe>** nối từ **61. <track>** sang **63. sandbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. `<iframe>`
-Phần này nối mạch bài học với “62. `<iframe>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<iframe>` nhúng một browsing context độc lập; mục này đặt ranh giới giữa tài liệu cha, nội dung nhúng và các chính sách bảo mật liên quan.
 
 ```html
 <iframe
@@ -1481,7 +1481,7 @@ Iframe embed một browsing ngữ cảnh (context / 맥락) khác.
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **63. sandbox** nối từ **62. <iframe>** sang **64. allow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. `sandbox`
-Phần này nối mạch bài học với “63. `sandbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`sandbox` áp dụng tập quyền hạn chế cho nội dung trong iframe; mục này giải thích nguyên tắc mở dần capability thay vì tin cậy toàn bộ nội dung nhúng.
 
 ```html
 <iframe
@@ -1505,7 +1505,7 @@ Cấp cao (senior / 시니어) bảo mật (security / 보안) principle là **l
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **64. allow** nối từ **63. sandbox** sang **65. srcdoc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. `allow`
-Phần này nối mạch bài học với “64. `allow`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`allow` khai báo các capability được phép cho browsing context nhúng; mục này cần đọc cùng `sandbox` để tách quyền cấp phát khỏi nguồn gốc nội dung.
 
 ```html
 <iframe
