@@ -2465,7 +2465,7 @@ Dùng để group options theo category.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **107. <fieldset> và <legend>** nối từ **106. <optgroup>** sang **108. <button>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 107. `<fieldset>` và `<legend>`
-Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<fieldset>` nhóm các control liên quan và `<legend>` đặt tên cho nhóm; mục này cung cấp cấu trúc giúp form dài dễ hiểu và dễ điều hướng.
 
 ```html
 <fieldset>
@@ -2492,7 +2492,7 @@ Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **108. <button>** nối từ **107. <fieldset> và <legend>** sang **109. Multi-action form**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 108. `<button>`
-Phần này nối mạch bài học với “108. `<button>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<button>` là control hành động với type quyết định submit, reset hay hành vi tuỳ chỉnh; mục này tách semantics mặc định khỏi event handler JavaScript.
 
 ```html
 <button type="button">
@@ -2559,7 +2559,7 @@ Phần Master sẽ giải thích sâu submitter/form đơn vị sở hữu (owne
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **110. <output>** nối từ **109. Multi-action form** sang **111. <progress>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 110. `<output>`
-Phần này nối mạch bài học với “110. `<output>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<output>` hiển thị kết quả do phép tính hoặc tương tác tạo ra; mục này phân biệt kết quả trình bày với giá trị input được gửi lên server.
 
 ```html
 <output for="price quantity">
@@ -2574,7 +2574,7 @@ Biểu diễn kết quả (result / 결과) của calculation/người dùng (us
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **111. <progress>** nối từ **110. <output>** sang **112. <meter>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 111. `<progress>`
-Phần này nối mạch bài học với “111. `<progress>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<progress>` biểu diễn mức hoàn thành của một tiến trình; mục này nhấn mạnh nó khác `meter` ở chỗ có mục tiêu tiến độ rõ ràng.
 
 ```html
 <progress
@@ -2591,7 +2591,7 @@ Dùng cho tác vụ (task / 작업) progress.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **112. <meter>** nối từ **111. <progress>** sang **113. <details> và <summary>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 112. `<meter>`
-Phần này nối mạch bài học với “112. `<meter>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<meter>` biểu diễn một giá trị nằm trong khoảng đã biết như dung lượng hoặc điểm; mục này không nên dùng để giả lập tiến độ tải chưa xác định.
 
 ```html
 <meter
@@ -2611,7 +2611,7 @@ Dùng cho đo lường (measurement / 측정) trong known phạm vi (range / 범
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **113. <details> và <summary>** tổng hợp từ **112. <meter>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **114. <dialog>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 113. `<details>` và `<summary>`
-Phần này nối mạch bài học với “113. `<details>` và `<summary>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<details>` và `<summary>` cung cấp disclosure native với trạng thái mở/đóng; mục này đặt nền cho nội dung progressive disclosure không cần tự dựng nút.
 
 ```html
 <details>
@@ -2630,7 +2630,7 @@ Trước khi tự viết accordion bằng `div + onclick + aria-expanded`, hãy 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **114. <dialog>** tổng hợp từ **113. <details> và <summary>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **115. <form method="dialog">** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 114. `<dialog>`
-Phần này nối mạch bài học với “114. `<dialog>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<dialog>` mô hình hoá hộp thoại có vòng đời mở, đóng và modal; mục này phân biệt focus management native với overlay tự dựng.
 
 ```html
 <dialog id="confirm">
@@ -2725,7 +2725,7 @@ Tính năng (feature / 기능) này sẽ được giải thích sâu ở Master 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **117. id** nối từ **116. Popover** sang **118. class**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 117. `id`
-Phần này nối mạch bài học với “117. `id`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`id` cung cấp định danh duy nhất trong document và làm neo cho label, fragment hoặc script; mục này đặt quy tắc uniqueness trước khi bàn về selector.
 
 ```html
 <section id="pricing">
@@ -2742,7 +2742,7 @@ Duplicate IDs có thể gây khả năng tiếp cận (accessibility / 접근성
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **118. class** nối từ **117. id** sang **119. style**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 118. `class`
-Phần này nối mạch bài học với “118. `class`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`class` gắn phần tử với một hoặc nhiều nhóm phong cách/hành vi; mục này phân biệt taxonomy có thể lặp với `id` duy nhất.
 
 ```html
 <div class="card active">
@@ -2761,7 +2761,7 @@ element.classList
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **119. style** nối từ **118. class** sang **120. title**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 119. `style`
-Phần này nối mạch bài học với “119. `style`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`style` đặt declaration trực tiếp lên phần tử; mục này chỉ ra khi inline style hữu ích và khi nó làm yếu khả năng tái sử dụng, cascade hoặc CSP.
 
 ```html
 <div style="display:none">
