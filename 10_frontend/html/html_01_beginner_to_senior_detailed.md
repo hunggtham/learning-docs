@@ -281,7 +281,7 @@ Ví dụ tốt hơn:
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **10. Meta description** nối từ **9. <title>** sang **11. <link>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Meta description
-Phần này nối mạch bài học với “10. Meta description”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`meta description` cung cấp tín hiệu mô tả cho công cụ tìm kiếm; mục này tách nội dung hiển thị với metadata và chỉ ra giới hạn khi trình thu thập tự chọn đoạn trích.
 
 ```html
 <meta
@@ -867,7 +867,7 @@ Những tags này giúp technical documentation có ngữ nghĩa (semantics / �
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **35. <abbr>** nối từ **34. <code>, <pre>, <kbd>, <samp>, <var>** sang **36. <blockquote> và <q>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `<abbr>`
-Phần này nối mạch bài học với “35. `<abbr>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<abbr>` giữ dạng viết tắt trong nội dung nhưng cung cấp ngữ nghĩa đầy đủ qua `title`; mục này làm rõ lợi ích đọc hiểu và giới hạn hỗ trợ của trình duyệt.
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -920,7 +920,7 @@ Không phải generic “nguồn URL” tag.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **38. <time>** nối từ **37. <cite>** sang **39. <data>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. `<time>`
-Phần này nối mạch bài học với “38. `<time>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<time>` biến ngày hoặc thời lượng thành dữ liệu có ngữ nghĩa; mục này phân biệt phần máy đọc được với cách hiển thị thân thiện cho người dùng.
 
 ```html
 <time datetime="2026-09-12">
@@ -937,7 +937,7 @@ Date/thời gian (time / 시간) ngữ nghĩa (semantics / 의미론) hữu ích
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **39. <data>** nối từ **38. <time>** sang **40. <sub> và <sup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. `<data>`
-Phần này nối mạch bài học với “39. `<data>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<data>` ghép nhãn hiển thị với giá trị máy đọc được; mục này nêu khi nào thuộc tính `value` giúp giữ định danh ổn định và khi nào cần schema khác.
 
 ```html
 <data value="SKU-123">
@@ -954,7 +954,7 @@ Hữu ích trong sản phẩm (product / 제품)/danh mục (catalog / 카탈로
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **40. <sub> và <sup>** nối từ **39. <data>** sang **41. <bdi> và <bdo>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `<sub>` và `<sup>`
-Phần này nối mạch bài học với “40. `<sub>` và `<sup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<sub>` và `<sup>` biểu diễn chỉ số theo vị trí thị giác; mục này nhấn mạnh chúng không thay thế markup toán học hay cách đọc hỗ trợ tiếp cận.
 
 ```html
 H<sub>2</sub>O
@@ -1041,7 +1041,7 @@ Dùng `ol` khi thứ tự (order / 순서) mang meaning, `ul` khi thứ tự (or
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **44. Description list** nối từ **43. <ul>, <ol>, <li>** sang **45. <a>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Description list
-Phần này nối mạch bài học với “44. Description list”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Description list ghép thuật ngữ với một hoặc nhiều mô tả; mục này phân biệt quan hệ nhãn–giá trị với danh sách thứ tự hoặc danh sách không thứ tự.
 
 ```html
 <dl>
@@ -1118,7 +1118,7 @@ Không dùng `<a href="#">` để fake button nếu không có điều hướng 
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **47. target="blank"** nối từ **46. Link và button khác nhau ở bản chất** sang **48. rel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. `target="_blank"`
-Phần này nối mạch bài học với “47. `target="_blank"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`target="_blank"` mở tài nguyên ở browsing context mới; mục này đi cùng bài toán `noopener` và kỳ vọng điều hướng để tránh rò rỉ `window.opener`.
 
 ```html
 <a
@@ -1167,7 +1167,7 @@ SEO quan hệ (relation / 관계) tokens không phải bảo mật (security / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **49. download** nối từ **48. rel** sang **50. <img>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. `download`
-Phần này nối mạch bài học với “49. `download`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Thuộc tính `download` đề xuất tải tài nguyên thay vì điều hướng; mục này làm rõ sự phụ thuộc vào origin, header máy chủ và quyền quyết định của trình duyệt.
 
 ```html
 <a
@@ -1188,7 +1188,7 @@ Nó là trình duyệt (browser / 브라우저) hint cho download hành vi (beha
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **50. <img>** nối từ **49. download** sang **51. Viết alt đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. `<img>`
-Phần này nối mạch bài học với “50. `<img>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<img>` nối tài liệu với một tài nguyên hình ảnh bên ngoài; mục này đặt nền cho alt text, kích thước nội tại và các chiến lược tải ở phần sau.
 
 ```html
 <img
@@ -1231,7 +1231,7 @@ Alt tốt mô tả **purpose trong ngữ cảnh (context / 맥락)**, không ph�
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **52. width và height** nối từ **51. Viết alt đúng** sang **53. loading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. `width` và `height`
-Phần này nối mạch bài học với “52. `width` và `height`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`width` và `height` giúp trình duyệt giữ chỗ trước khi ảnh tải xong; mục này liên hệ kích thước khai báo với tránh layout shift, không phải chỉ với độ phân giải ảnh.
 
 ```html
 <img
