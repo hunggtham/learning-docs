@@ -2168,7 +2168,7 @@ Muốn false, remove attribute hoặc set DOM thuộc tính (property / 속성) 
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **94. readonly** nối từ **93. disabled** sang **95. checked và selected**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 94. `readonly`
-Phần này nối mạch bài học với “94. `readonly`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`readonly` giữ control không cho sửa trực tiếp nhưng vẫn cho phép giá trị được gửi; mục này đối chiếu nó với `disabled` ở cả UX và payload.
 
 ```html
 <input
@@ -2217,7 +2217,7 @@ phản ánh trạng thái hiện tại (current state / 현재 상태), còn mar
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **96. min, max, step** nối từ **95. checked và selected** sang **97. minlength, maxlength**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 96. `min`, `max`, `step`
-Phần này nối mạch bài học với “96. `min`, `max`, `step`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`min`, `max` và `step` tạo constraint validation cho giá trị số; mục này phân biệt giới hạn giao diện với invariant mà server phải kiểm tra lại.
 
 ```html
 <input
@@ -2236,7 +2236,7 @@ Các ràng buộc (constraints / 제약조건들) này áp dụng phù hợp the
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **97. minlength, maxlength** nối từ **96. min, max, step** sang **98. pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 97. `minlength`, `maxlength`
-Phần này nối mạch bài học với “97. `minlength`, `maxlength`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`minlength` và `maxlength` giới hạn độ dài chuỗi ở lớp form; mục này nhắc rằng độ dài byte, ký tự Unicode và quy tắc nghiệp vụ có thể khác nhau.
 
 ```html
 <input
@@ -2253,7 +2253,7 @@ Không thay máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **98. pattern** nối từ **97. minlength, maxlength** sang **99. multiple**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 98. `pattern`
-Phần này nối mạch bài học với “98. `pattern`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`pattern` kiểm tra chuỗi theo biểu thức regular expression của trình duyệt; mục này tách cú pháp kiểm tra khỏi việc thiết kế thông báo lỗi có ích.
 
 ```html
 <input
@@ -2330,7 +2330,7 @@ Không tắt autofill bừa chỉ vì “UI nhìn sạch hơn”.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **101. inputmode** nối từ **100. autocomplete** sang **102. enterkeyhint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 101. `inputmode`
-Phần này nối mạch bài học với “101. `inputmode`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`inputmode` gợi ý bàn phím phù hợp trên thiết bị cảm ứng nhưng không đổi kiểu dữ liệu hay validation; mục này là một affordance, không phải contract.
 
 ```html
 <input
@@ -2355,7 +2355,7 @@ Ví dụ postal mã (code / 코드) numeric-looking nhưng không phải number 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **102. enterkeyhint** nối từ **101. inputmode** sang **103. <datalist>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 102. `enterkeyhint`
-Phần này nối mạch bài học với “102. `enterkeyhint`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`enterkeyhint` điều chỉnh nhãn phím Enter theo hành động dự kiến; mục này cải thiện luồng nhập nhưng không tự xử lý submit hay navigation.
 
 ```html
 <input
@@ -2381,7 +2381,7 @@ send
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **103. <datalist>** nối từ **102. enterkeyhint** sang **104. <textarea>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 103. `<datalist>`
-Phần này nối mạch bài học với “103. `<datalist>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<datalist>` cung cấp gợi ý cho input mà vẫn cho phép giá trị ngoài danh sách; mục này khác select ở quyền tự do nhập và trách nhiệm validation.
 
 ```html
 <label for="city">City</label>
@@ -2408,7 +2408,7 @@ Người dùng (user / 사용자) vẫn có thể nhập giá trị (value / 값
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **104. <textarea>** nối từ **103. <datalist>** sang **105. <select> và <option>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 104. `<textarea>`
-Phần này nối mạch bài học với “104. `<textarea>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<textarea>` nhận văn bản nhiều dòng với nội dung nằm giữa cặp thẻ; mục này làm rõ khác biệt giữa giá trị mặc định, value property và giới hạn kích thước.
 
 ```html
 <textarea
@@ -2429,7 +2429,7 @@ không phải `value` attribute như đầu vào (input / 입력).
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **105. <select> và <option>** nối từ **104. <textarea>** sang **106. <optgroup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 105. `<select>` và `<option>`
-Phần này nối mạch bài học với “105. `<select>` và `<option>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<select>` và `<option>` biểu diễn lựa chọn từ tập giá trị được định nghĩa; mục này nối label hiển thị với value thực sự được serialize.
 
 ```html
 <select name="country">
@@ -2447,7 +2447,7 @@ Bản địa (native / 네이티브) select cung cấp keyboard/mobile/khả nă
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **106. <optgroup>** nối từ **105. <select> và <option>** sang **107. <fieldset> và <legend>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 106. `<optgroup>`
-Phần này nối mạch bài học với “106. `<optgroup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<optgroup>` nhóm các option theo taxonomy hiển thị mà không đổi value; mục này giúp danh sách dài dễ quét nhưng vẫn giữ một control duy nhất.
 
 ```html
 <select name="country">
