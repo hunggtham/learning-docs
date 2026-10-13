@@ -1523,7 +1523,7 @@ Permissions chính sách (policy / 정책) cho iframe capabilities.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **65. srcdoc** nối từ **64. allow** sang **66. <table>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. `srcdoc`
-Phần này nối mạch bài học với “65. `srcdoc`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`srcdoc` đặt markup trực tiếp vào iframe, tiện cho nội dung nhỏ nhưng làm ranh giới nguồn và chính sách bảo mật trở nên rõ ràng hơn; mục này phân tích trade-off đó.
 
 ```html
 <iframe
@@ -1558,7 +1558,7 @@ Hiện đại (modern / 현대적) bố cục (layout / 레이아웃) dùng CSS 
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **67. <caption>** nối từ **66. <table>** sang **68. Table structure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. `<caption>`
-Phần này nối mạch bài học với “67. `<caption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<caption>` cung cấp tên và ngữ cảnh cho bảng; mục này đặt caption trước khi đi vào cấu trúc hàng, cột và quan hệ header.
 
 ```html
 <table>
@@ -1574,7 +1574,7 @@ Caption mô tả mục đích/nội dung bảng (table / 테이블) và rất h�
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **68. Table structure** nối từ **67. <caption>** sang **69. scope**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Table structure
-Phần này nối mạch bài học với “68. Table structure”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Table structure xác định nhóm header, body và footer để máy đọc được quan hệ dữ liệu; mục này tránh xem bảng chỉ là lưới trình bày.
 
 ```html
 <table>
@@ -1605,7 +1605,7 @@ Trình duyệt (browser / 브라우저) parser có table-specific rules; nguồn
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **69. scope** nối từ **68. Table structure** sang **70. rowspan và colspan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. `scope`
-Phần này nối mạch bài học với “69. `scope`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`scope` khai báo header áp dụng cho hàng hay cột; mục này nối cấu trúc bảng với khả năng định hướng của công nghệ hỗ trợ.
 
 ```html
 <th scope="col">Price</th>
@@ -1626,7 +1626,7 @@ Complex bảng (table / 테이블) có thể cần `headers`/`id` strategies, nh
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **70. rowspan và colspan** nối từ **69. scope** sang **71. <form>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. `rowspan` và `colspan`
-Phần này nối mạch bài học với “70. `rowspan` và `colspan`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`rowspan` và `colspan` gộp ô nhưng cũng làm quan hệ bảng phức tạp hơn; mục này cân bằng layout với khả năng truy vấn header chính xác.
 
 ```html
 <td colspan="2">Total</td>
@@ -1647,7 +1647,7 @@ Merged bảng (table / 테이블) structures cần kiểm thử (test / 테스�
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **71. <form>** nối từ **70. rowspan và colspan** sang **72. action**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. `<form>`
-Phần này nối mạch bài học với “71. `<form>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<form>` gom các control thành một lần thu thập và gửi dữ liệu; mục này đặt ranh giới giữa semantics của form và logic xử lý ở máy chủ.
 
 ```html
 <form
@@ -1666,7 +1666,7 @@ Form không chỉ là visual wrapper. Nó là một cơ chế (mechanism / 메�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **72. action** nối từ **71. <form>** sang **73. method**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. `action`
-Phần này nối mạch bài học với “72. `action`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`action` xác định endpoint nhận submission; mục này cần đọc cùng method, encoding và chính sách điều hướng để tránh hiểu form như lời gọi API tuỳ ý.
 
 ```html
 <form action="/users">
@@ -1727,7 +1727,7 @@ Nếu quên multipart, tệp (file / 파일) dữ liệu (data / 데이터) sẽ
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** nêu quy tắc; **75. <label>** thử quy tắc trong tình huống, rồi **76. Placeholder không phải label** mở rộng hệ quả.
 
 ## 75. `<label>`
-Phần này nối mạch bài học với “75. `<label>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<label>` liên kết tên hiển thị với form control; mục này làm rõ vì sao nhãn là quan hệ ngữ nghĩa, không chỉ là văn bản đặt cạnh input.
 
 ```html
 <label for="email">
@@ -1822,7 +1822,7 @@ value
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **78. text** nối từ **77. <input>** sang **79. password**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `text`
-Phần này nối mạch bài học với “78. `text`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `text` nhận chuỗi tự do; mục này đặt nền cho validation, name/value serialization và các type chuyên biệt hơn.
 
 ```html
 <input
@@ -1837,7 +1837,7 @@ General single-line văn bản (text / 텍스트).
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **79. password** nối từ **78. text** sang **80. email**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `password`
-Phần này nối mạch bài học với “79. `password`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `password` che hiển thị ký tự nhưng không tự mã hoá hay bảo vệ dữ liệu; mục này tách affordance giao diện khỏi bảo mật đường truyền và lưu trữ.
 
 ```html
 <input
@@ -1855,7 +1855,7 @@ Bảo mật (security / 보안) vẫn phụ thuộc HTTPS, máy chủ (server / 
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **80. email** nối từ **79. password** sang **81. number**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. `email`
-Phần này nối mạch bài học với “80. `email`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `email` cung cấp hint về định dạng và bàn phím phù hợp; mục này nhấn mạnh validation phía client không thay thế kiểm tra phía máy chủ.
 
 ```html
 <input
