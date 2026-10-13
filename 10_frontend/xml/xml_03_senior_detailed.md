@@ -107,7 +107,7 @@ Nếu bạn dùng `xsl:for-each` cho mọi thứ, XSLT dễ biến thành impera
 > **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **4. xsl:value-of** nối từ **3. xsl:apply-templates** sang **5. xsl:for-each**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. `xsl:value-of`
-Phần này nối mạch bài học với “4. `xsl:value-of`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`xsl:value-of` là điểm rẽ từ template dispatch sang việc lấy một giá trị XPath cụ thể; phần này làm rõ khi nào việc làm phẳng thành chuỗi phù hợp và khi nào cần giữ cấu trúc bằng `xsl:apply-templates`.
 
 ```xml
 <xsl:value-of select="title"/>
@@ -128,7 +128,7 @@ và bạn muốn preserve markup ngữ nghĩa (semantics / 의미론), `apply-te
 > **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **5. xsl:for-each** nối từ **4. xsl:value-of** sang **6. Conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. `xsl:for-each`
-Phần này nối mạch bài học với “5. `xsl:for-each`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`xsl:for-each` biến một sequence thành các lần xử lý tuần tự, nhưng không tự thay thế template dispatch; phần này đặt giới hạn procedural của nó trước khi chuyển sang điều kiện và mode.
 
 ```xml
 <xsl:for-each select="book">
@@ -177,7 +177,7 @@ XSLT conditions dùng XPath expressions. Vì vậy hiểu XPath kiểu (type / �
 > **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **7. Variables trong XSLT** nối từ **6. Conditions** sang **8. Modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Variables trong XSLT
-Phần này nối mạch bài học với “7. Variables trong XSLT”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Variable binding giữ một giá trị hoặc sequence trong phạm vi transformation; hiểu nó là binding bất biến giúp nối điều kiện với các mode mà không nhầm XSLT với bộ nhớ mutable.
 
 ```xml
 <xsl:variable
