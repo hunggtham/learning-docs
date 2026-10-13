@@ -9,7 +9,7 @@
 Đây là tài liệu tra cứu sau Beginner: hãy đọc mỗi API theo chuỗi old → new → reason → migration, để quyết định dựa trên intent thay vì thay tên máy móc.
 
 ## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
-Phần này nối mạch bài học với “1A. Old pattern → new pattern → reason → migration → khi còn gặp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Phần 1A đặt quy tắc đọc legacy theo intent và migration; bảng kế tiếp sẽ áp dụng chuỗi old → new → reason → compatibility vào từng API.
 
 Bảng migration đặt intent trước tên API; phần component creation/composition tiếp theo áp dụng nguyên tắc đó cho createClass, mixins, HOC và render props.
 
@@ -66,7 +66,7 @@ const Counter = React.createClass({
 Mixins bản sao (copy / 복사) một nhóm methods/vòng đời (lifecycle / 생명주기) vào nhiều `createClass` components. Chúng dễ tạo name collision và hidden phụ thuộc (dependency / 의존성). Về lịch sử, HOC/kết xuất (render / 렌더링) props và sau đó Hooks là các cách composition rõ hơn.
 
 ### Higher-Order Component
-Phần này nối mạch bài học với “Higher-Order Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Mixins chia sẻ behavior nhưng dễ tạo collision và dependency ẩn; HOC giữ cùng mục tiêu composition bằng một wrapper contract rõ hơn.
 
 ```jsx
 const Enhanced =
@@ -76,7 +76,7 @@ const Enhanced =
 HOC không bị remove. Đây là mẫu (pattern / 패턴) vẫn có thể hợp lệ, đặc biệt khi thư viện (library / 라이브러리) API được thiết kế từ thời pre-Hooks.
 
 ### Render props
-Phần này nối mạch bài học với “Render props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+HOC bọc component để thêm behavior; render props đưa quyền quyết định output về caller, giúp data flow và ownership nhìn thấy rõ hơn.
 
 ```jsx
 <DataProvider>
@@ -148,7 +148,7 @@ Lifecycle giải thích khi component tồn tại và thay đổi; Refs giữ ha
 ## 5. Refs
 
 ### String refs
-Phần này nối mạch bài học với “String refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Lifecycle đã làm rõ thời điểm side effect; string refs là dạng imperative handle cũ nhất và cần được đọc như compatibility evidence.
 
 ```jsx
 <input ref="input" />
@@ -157,7 +157,7 @@ Phần này nối mạch bài học với “String refs”, nêu mục đích, 
 Đọc qua `this.refs.input`. Deprecated 16.3, removed 19.
 
 ### Callback refs
-Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+String refs phụ thuộc tên lookup trên component instance; callback refs chuyển sang callback ownership, trước khi createRef/useRef chuẩn hóa handle.
 
 ```jsx
 <input
@@ -356,7 +356,7 @@ Nên ưu tiên migrate khi old API đã bị remove ở mục tiêu (target / �
 Version table chốt API boundary theo mốc; nếu gặp claim ngoài phạm vi, quay về canonical React source thay vì suy luận từ legacy behavior.
 
 ## 15. Bảng version nhanh
-Phần này nối mạch bài học với “15. Bảng version nhanh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Migration checklist và legacy-retention policy đã xác định khi nào nên đổi; version table dưới đây chốt các mốc API để tra cứu thay vì suy luận từ trí nhớ.
 
 | API / khái niệm | Mốc phiên bản (version / 버전) cần nhớ |
 |---|---|
