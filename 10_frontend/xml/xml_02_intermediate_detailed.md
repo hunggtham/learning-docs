@@ -344,7 +344,7 @@ nghĩa là phone optional.
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **14. Choice** nối từ **13. Cardinality trong DTD** sang **15. #PCDATA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Choice
-Phần này nối mạch bài học với “14. Choice”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+XML content model đã phân biệt element và text; `choice` tiếp theo giới hạn các nhánh hợp lệ trong một vị trí.
 
 ```dtd
 <!ELEMENT contact (email|phone)>
@@ -357,7 +357,7 @@ nghĩa là contact chứa một trong hai branch.
 > **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **15. #PCDATA** nối từ **14. Choice** sang **16. ATTLIST**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. `#PCDATA`
-Phần này nối mạch bài học với “15. `#PCDATA`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`choice` mô hình hóa alternative branch; `#PCDATA` tiếp theo làm rõ text node nào được phép xuất hiện trong content model.
 
 ```dtd
 <!ELEMENT name (#PCDATA)>
@@ -543,7 +543,7 @@ Nếu đổi `email` trước `name`, có thể invalid.
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **23. xs:choice** nối từ **22. xs:sequence** sang **24. xs:all**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `xs:choice`
-Phần này nối mạch bài học với “23. `xs:choice`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`#PCDATA` đặt boundary cho text content; `xs:choice` chuyển cùng ý tưởng alternative sang XSD type system và validation.
 
 ```xml
 <xs:choice>
@@ -571,7 +571,7 @@ Choice rất hữu ích cho union-like structures nhưng nếu nested choice qu�
 > **Nối mạch:** Trong **XML — Intermediate**, **25. minOccurs và maxOccurs** nối từ **24. xs:all** sang **26. XSD attribute declaration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. `minOccurs` và `maxOccurs`
-Phần này nối mạch bài học với “25. `minOccurs` và `maxOccurs`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`xs:choice` mô tả các nhánh schema; `minOccurs` và `maxOccurs` tiếp theo định lượng số lần mỗi particle được phép xuất hiện.
 
 ```xml
 <xs:element
@@ -591,7 +591,7 @@ Nếu không ghi, nhiều declarations mặc định 1 occurrence.
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **26. XSD attribute declaration** nối từ **25. minOccurs và maxOccurs** sang **27. Restriction và facets**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. XSD attribute declaration
-Phần này nối mạch bài học với “26. XSD attribute declaration”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Occurrence constraints đặt cardinality cho element; XSD attribute declaration tiếp theo mô tả metadata nằm trên element thay vì child content.
 
 ```xml
 <xs:attribute
@@ -644,7 +644,7 @@ Facets là cách XSD biến generic kiểu (type / 타입) thành domain-specifi
 > **Nối mạch:** Trong **XML — Intermediate**, **28. Enumeration** nối từ **27. Restriction và facets** sang **29. Pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Enumeration
-Phần này nối mạch bài học với “28. Enumeration”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Attribute declaration bổ sung contract ngoài element content; enumeration tiếp theo giới hạn giá trị vào một tập có tên.
 
 ```xml
 <xs:simpleType name="Status">
@@ -665,7 +665,7 @@ Nhưng hãy nhớ rằng thêm hoặc xóa enum giá trị (value / 값) có th�
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **29. Pattern** nối từ **28. Enumeration** sang **30. Named kiểu (type / 타입) và anonymous kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Pattern
-Phần này nối mạch bài học với “29. Pattern”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Enumeration kiểm soát vocabulary hữu hạn; pattern tiếp theo mở rộng validation bằng quy tắc lexical thay vì liệt kê từng giá trị.
 
 ```xml
 <xs:pattern value="[A-Z]{2}[0-9]{4}"/>
@@ -887,7 +887,7 @@ Bạn nên hình dung XPath như “đường đi + điều kiện” trên cây
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **37. XPath là gì?** đặt đầu vào cho **38. Absolute path**, rồi **39. //** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. Absolute path
-Phần này nối mạch bài học với “38. Absolute path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+XML tree và namespace đã rõ; absolute XPath path bắt đầu truy vấn từ root context để kết quả không phụ thuộc vị trí tương đối.
 
 ```xpath
 /library/book
@@ -900,7 +900,7 @@ Phần này nối mạch bài học với “38. Absolute path”, nêu mục đ
 > **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **38. Absolute path** đặt đầu vào cho **39. //**, rồi **40. Attribute selection** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. `//`
-Phần này nối mạch bài học với “39. `//`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Absolute path cố định root-to-node route; `//` nới truy vấn thành descendant search nhưng cần kiểm soát scope và cost.
 
 ```xpath
 //book
@@ -915,7 +915,7 @@ Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (que
 > **Nối mạch:** Trong **XML — Intermediate**, **40. Attribute selection** nối từ **39. //** sang **41. Predicate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Attribute selection
-Phần này nối mạch bài học với “40. Attribute selection”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`//` tìm descendant theo nhiều mức; attribute selection thu hẹp kết quả vào metadata thay vì node content.
 
 ```xpath
 /library/book/@id
@@ -928,7 +928,7 @@ chọn `id` attributes.
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **41. Predicate** nối từ **40. Attribute selection** sang **42. Position**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Predicate
-Phần này nối mạch bài học với “41. Predicate”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Attribute selection cho biết query đang đọc metadata nào; predicate tiếp theo thêm điều kiện lọc dựa trên value hoặc node relationship.
 
 ```xpath
 /library/book[@id='2']
@@ -943,7 +943,7 @@ Predicate có thể dùng expression phức tạp hơn, không chỉ attribute e
 > **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **42. Position** nối từ **41. Predicate** sang **43. text()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Position
-Phần này nối mạch bài học với “42. Position”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Predicate lọc node theo điều kiện; position tiếp theo chọn thứ tự hoặc vị trí trong node set, không phải business identity.
 
 ```xpath
 /library/book[1]
@@ -964,7 +964,7 @@ Khi dùng position với `//` hoặc grouped expressions, ngữ cảnh (context 
 > **Nối mạch:** Trong **XML — Intermediate**, **43. text()** nối từ **42. Position** sang **44. Wildcard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. `text()`
-Phần này nối mạch bài học với “43. `text()`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Position phụ thuộc thứ tự của kết quả hiện tại; `text()` chuyển truy vấn từ element/attribute sang text node cụ thể.
 
 ```xpath
 /library/book/title/text()
@@ -989,7 +989,7 @@ String-value của `p` có thể là `"Hello world!"` theo XPath mô hình dữ 
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **44. Wildcard** nối từ **43. text()** sang **45. Các XPath functions thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Wildcard
-Phần này nối mạch bài học với “44. Wildcard”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`text()` lấy text node, còn wildcard mở rộng name test khi schema hoặc namespace không cần chỉ rõ tên element.
 
 ```xpath
 /library/*
@@ -1207,7 +1207,7 @@ Tuy nhiên đoạn mã (code / 코드) này chưa phải secure parser cấu hì
 > **Nối mạch:** Ở chặng này của **XML — Intermediate**, **52. Java DOM cơ bản** đặt đầu vào cho **53. Java XPath cơ bản**, rồi **54. Serialization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 53. Java XPath cơ bản
-Phần này nối mạch bài học với “53. Java XPath cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Wildcard giúp query linh hoạt nhưng làm scope rộng hơn; Java XPath cơ bản tiếp theo đưa các expression này vào API và lifecycle của một chương trình.
 
 ```java
 XPath xpath =
