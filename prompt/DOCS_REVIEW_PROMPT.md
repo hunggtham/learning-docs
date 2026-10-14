@@ -13,6 +13,8 @@ Nhận:
 
 Nếu feedback mơ hồ, nêu đúng điểm cần làm rõ; không tự bịa lỗi hoặc tự thay đổi phạm vi file.
 
+Không được bịa fact, citation, URL, page, công thức, code/SQL output, bản dịch hoặc ví dụ để làm feedback có vẻ đã xử lý. Claim chưa kiểm chứng phải giữ `UNVERIFIED`/`NEEDS_SOURCE`; không dùng output/draft AI làm source mới.
+
 ## 2. Cách review
 
 1. Đọc README/canonical map và toàn bộ section liên quan trước khi sửa.
@@ -36,6 +38,8 @@ Không dùng automation để dịch hàng loạt, thay thế thuật ngữ, ch�
 - các section kế cận không bị mâu thuẫn hoặc mất owner.
 
 Nếu chưa đạt, trạng thái là `FAIL — cần review tiếp`, kèm một danh sách hành động cụ thể. Không dùng “đã sửa” thay cho bằng chứng test.
+
+Không claim `accepted`, `published` hoặc `synced` từ một vòng review local; các trạng thái đó cần evidence riêng.
 
 ## 4. Đầu ra bắt buộc
 

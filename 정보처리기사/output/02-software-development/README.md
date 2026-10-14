@@ -1,14 +1,8 @@
 # Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài học** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các bài học theo chủ đề** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Software Development, rồi nối bài học, lộ trình và dependency.
-
-> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
-
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
-
-**Bài học** cung cấp concept và cơ chế; **Các bài học theo chủ đề** gom chúng theo task của Môn 2, rồi **Ghi chú học** giữ lại prerequisite và lỗi dễ nhầm.
 
 ## Các bài học theo chủ đề
 
@@ -113,32 +107,3 @@
 99. [104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)](lessons/99-bai-hoc.md)
 100. [113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)](lessons/100-bai-hoc.md)
 101. [120-1: 소프트웨어의 분류 (Software Classification)](lessons/101-bai-hoc.md)
-
-**Ghi chú học** nêu assumption và failure boundary của từng topic; **Mạch bài giảng** nối chúng thành một chuỗi giải thích bằng tiếng Việt.
-
-## Ghi chú học
-
-Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
-
-- Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
-- Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
-- Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
-
-**Mạch bài giảng** biến ghi chú thành route từ yêu cầu đến triển khai; **Checklist ôn tập** chỉ xác nhận các invariant và evidence cần giữ.
-
-## Mạch bài giảng
-
-Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
-
-**Checklist ôn tập** khép README bằng scope và evidence của Môn 2; chi tiết implementation quay về chapter canonical tương ứng.
-
-## 복습 체크리스트 (Checklist ôn tập)
-
-Checklist này khép lại bài bằng các tiêu chí tự rà soát; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
-
-- [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
-- [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
-- [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
-- [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
-
-> **Bàn giao:** Sau **복습 체크리스트 (Checklist ôn tập)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

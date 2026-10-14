@@ -2,6 +2,8 @@
 
 Acceptance là quyết định dựa trên bằng chứng, không phải xác nhận rằng agent đã chạy xong.
 
+AI có thể hỗ trợ draft hoặc triage, nhưng không thể tự accept output của chính mình. Không dùng số lượng heading, keyword, link, test xanh hoặc worker status làm bằng chứng cho prose, semantic coverage hoặc learner acceptance.
+
 ## Các lớp trạng thái
 
 Ghi độc lập:
@@ -30,6 +32,9 @@ publication_status: NOT_PUBLISHED | DEPLOYED | UNKNOWN
 - validation commands/results có artifact;
 - không còn conflict với task claim khác;
 - generated output được tái sinh từ canonical source nếu có;
+- không có claim/citation/example chưa xác minh bị trình bày như fact;
+- không có output, catalog, manifest hoặc draft AI bị dùng như canonical source;
+- không có private/proprietary source hoặc credential bị đưa vào external AI/API;
 - known issues và giới hạn đã được ghi.
 
 ## Báo cáo bắt buộc

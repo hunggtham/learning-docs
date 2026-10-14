@@ -1,65 +1,14 @@
 # 8. 디자인 패턴 (Design Patterns)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **8. 디자인 패턴 (Design Patterns)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối software configuration với version, environment, dependency và reproducibility, để thay đổi có thể truy nguyên.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **8. 디자인 패턴 (Design Patterns)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **8. 디자인 패턴 (Design Patterns)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **4. 디자인 패턴 (Design Patterns - GoF)** khi chuyển sang phần tiếp theo.
-
-> **Nối mạch:** Trong **8. 디자인 패턴 (Design Patterns)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
-## 핵심 키워드 (Từ khóa)
-
-디자인, 패턴
-
-> **Nối mạch:** Ở chặng này của **8. 디자인 패턴 (Design Patterns)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**에서 만든 기준을 이어받아 **8. 디자인 패턴 (Design Patterns)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **8. 디자인 패턴 (Design Patterns)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **8. 디자인 패턴 (Design Patterns)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-> **Nối mạch:** Trong **8. 디자인 패턴 (Design Patterns)**, **8. 디자인 패턴 (Design Patterns)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
-
 ## 8. 디자인 패턴 (Design Patterns)
 
-Sau khi đã đặt nền bằng **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, ta chuyển sang **8. 디자인 패턴 (Design Patterns)**. Đây là mắt xích 35/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
-
-Để đọc **8. 디자인 패턴 (Design Patterns)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Ta bắt đầu phần nội dung bằng **디자인 패턴 (Design Pattern) 개요**. Hãy xác định **디자인 패턴 (Design Pattern) 개요** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
-
 ### 디자인 패턴 (Design Pattern) 개요
-
-Phần nguồn của **디자인 패턴 (Design Pattern) 개요** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “디자인 패턴 (Design Pattern) 개요” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 세부적인 구현 방안을 설계할 때 참조할 수 있는 전형적인 해결 방식 또는 예제를 의미한다. (Là những phương pháp giải quyết hoặc ví dụ điển hình có thể tham khảo khi thiết계 chi tiết phương án triển khai.)
 - 3가지 유형 (3 Loại chính): 생성 패턴 (Creational), 구조 패턴 (Structural), 행위 패턴 (Behavioral).
 
-Các ý về **디자인 패턴 (Design Pattern) 개요** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
-
-Ta vừa chốt **디자인 패턴 (Design Pattern) 개요** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
 ### 생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại
-
-Các ý ngay dưới **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
-
 Phần “생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 객체 생성과 관련된 패턴. (Liên quan đến việc tạo đối tượng.)
@@ -70,15 +19,7 @@ Phần “생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại” 
 - **추상 팩토리 (Abstract Factory):** 서로 연관·의존하는 객체들의 그룹으로 생성하여 추상적으로 표현함. (Tạo ra một nhóm các đối tượng có liên quan với nhau thông qua interface).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **BFPSA** (Build - Fact - Pro - Sing - Ab): **Bạn Phải Phạt Sợ Ai**.
 
-Các bullet của **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Sau khi đọc **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại**, đừng bắt đầu lại từ số không. **구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
 ### 구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại
-
-Bây giờ ta đi vào nội dung của **구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 클래스나 객체를 조합해 더 큰 구조를 만드는 패턴. (Kết hợp lớp/đối tượng thành cấu trúc lớn hơn).
@@ -91,15 +32,7 @@ Phần “구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại” �
 - **프록시 (Proxy):** 접근이 어려운 객체와 여기에 연결하려는 객체 사이에서 인터페이스 역할을 수행하는 패턴. (Người đại diện, đứng giữa kiểm soát truy cập vào đối tượng thực).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **ABCDFFP** (Ad - Bri - Com - Dec - Fac - Fly - Pro): **Anh Bán Cơm Đĩa Phải Phạt Phi**.
 
-Các bullet của **구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-**구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại** vừa cho ta cách đặt câu hỏi. Bây giờ **행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
 ### 행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại
-
-Phần nguồn của **행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 객체 간의 상호작용이나 책임 분배에 대한 패턴. (Giao tiếp và phân bổ trách nhiệm giữa các đối tượng).
@@ -114,11 +47,3 @@ Phần “행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại” đ�
 - **전략 (Strategy):** 동일한 계열의 알고리즘들을 상호 교환할 수 있게 정의함. (Đóng gói thuật toán để có thể thay đổi linh hoạt lúc runtime).
 - **템플릿 메소드 (Template Method):** 하위 클래스에서 세부 처리를 구체화함. (Lớp cha định nghĩa khung thuật toán, lớp con implement chi tiết).
 - **방문자 (Visitor):** 처리 기능을 분리하여 별도의 클래스로 구성함. (Tách logic xử lý khỏi cấu trúc dữ liệu, đối tượng Visitor đi "thăm" các phần tử để xử lý).
-
-Các bullet của **행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Với **행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
-
-Ta có thể khép mục **8. 디자인 패턴 (Design Patterns)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 디자인 패턴 (Design Patterns - GoF)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
-
-> **Bàn giao:** Sau **8. 디자인 패턴 (Design Patterns)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

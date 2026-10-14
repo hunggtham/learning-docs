@@ -14,6 +14,8 @@ Trước khi đọc prose, xác định:
 
 Không coi một file có heading, link hoặc nhiều thuật ngữ là đã đạt. Không xoá thay đổi không liên quan và không tự ý chuẩn hoá cả thư mục khi chỉ được giao một file.
 
+Không được tự điền khoảng trống bằng suy đoán. Claim, citation, URL, quotation, page number, công thức, code/SQL output, bản dịch và ví dụ chưa kiểm chứng phải ghi `UNVERIFIED`/`NEEDS_SOURCE`. Không dùng generated/public output hoặc draft AI làm source mới; không sửa checker, count hoặc state để làm audit xanh.
+
 ## 2. Nghiên cứu nguồn chính thức trước khi kết luận
 
 Với mỗi claim quan trọng, mở nguồn chính thức phù hợp và ghi URL, tiêu đề, ngày truy cập/phiên bản và claim mà nguồn chứng minh. Ưu tiên theo thứ tự:
@@ -61,6 +63,8 @@ Với từng section, ghi bằng chứng cho bốn điểm:
 Trả về báo cáo gồm `PASS` hoặc `FAIL`, bảng issue với severity, vị trí, claim/evidence liên quan và hành động sửa. Nếu `FAIL`, không chỉ đưa danh sách lỗi: viết lại thủ công toàn bộ section bị ảnh hưởng, giữ nội dung đúng và link hợp lệ, thêm nguồn chính thức cần thiết, rồi audit lại chính đoạn vừa sửa. Không sửa bằng câu wrapper chung.
 
 Một file chỉ được `PASS` khi mọi issue `high` đã đóng, issue `medium` còn lại có lý do chấp nhận được, nguồn truy được, prose tự nhiên, không quiz và người học có thể đi từ câu hỏi đến kết luận mà không cần đoán.
+
+`PASS` không được dùng để ngầm xác nhận publication, authenticated sync hoặc currentness nếu các lớp đó chưa có evidence riêng.
 
 ## 5. Đầu ra
 

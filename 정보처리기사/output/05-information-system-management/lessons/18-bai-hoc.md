@@ -1,51 +1,8 @@
 # 5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối network/infrastructure với protocol, topology, compute và operations, để ứng dụng sống trong môi trường cụ thể.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **네트워크 관련 장비 (Network Equipment)** khi chuyển sang phần tiếp theo.
-
-> **Nối mạch:** Trong **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
-## 핵심 키워드 (Từ khóa)
-
-네트워크, 인프라, 기술
-
-> **Nối mạch:** Ở chặng này của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **2. 자원 처리 오류 (Resource Handling Errors)**에서 만든 기준을 이어받아 **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-> **Nối mạch:** Trong **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
-
 ## 5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)
 
-Từ **2. 자원 처리 오류 (Resource Handling Errors)**, ta đã có điểm tựa để bước vào **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/86 trước khi đi vào chi tiết.
-
-Để đọc **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Để không đọc **5.1 신기술 동향 (New Technologies)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
-
 ### 5.1 신기술 동향 (New Technologies)
-
-Các ý ngay dưới **5.1 신기술 동향 (New Technologies)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
-
 Phần “5.1 신기술 동향 (New Technologies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **SDN (Software Defined Networking):** 네트워크를 가상화하여 소프트웨어로 제어/관리.
@@ -64,15 +21,7 @@ Phần “5.1 신기술 동향 (New Technologies)” được nối với nội 
   - SSO: Đăng nhập một lần.
   - Zing: Giao tiếp không dây tầm cực gần, tốc độ cao.
 
-Các bullet của **5.1 신기술 동향 (New Technologies)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **5.1 신기술 동향 (New Technologies)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
 ### 5.2 LAN 표준 및 위상 (LAN Standards & Topology)
-
-Bây giờ ta đi vào nội dung của **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “5.2 LAN 표준 및 위상 (LAN Standards & Topology)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **CSMA/CD:** IEEE 802.3 유선 LAN 매체 접속 제어 방식 (충돌 감지).
@@ -87,15 +36,7 @@ Phần “5.2 LAN 표준 및 위상 (LAN Standards & Topology)” được nối
   - CSMA/CA: Tránh xung đột (Mạng không dây).
   - VLAN: Mạng LAN ảo, phân chia logic không phụ thuộc vật lý.
 
-Các bullet của **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Sau khi đọc **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**, đừng bắt đầu lại từ số không. **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
 ### 5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)
-
-Phần nguồn của **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **ARP (Address Resolution Protocol):** IP 주소를 MAC 주소로 변환.
@@ -107,11 +48,3 @@ Phần “5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow
   - RIP: Dựa trên số Hop (tối đa 15).
   - OSPF: Dựa trên trạng thái Link, tìm đường ngắn nhất.
   - Stop-and-Wait: Chờ phản hồi (ACK) rồi mới gửi tiếp.
-
-Các bullet của **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Như vậy, **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
-
-Điểm chốt của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **네트워크 관련 장비 (Network Equipment)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
-
-> **Bàn giao:** Sau **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

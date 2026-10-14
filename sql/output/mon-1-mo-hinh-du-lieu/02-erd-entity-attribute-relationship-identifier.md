@@ -1,31 +1,5 @@
 # ERD, Entity, Attribute, Relationship và Identifier
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **ERD, entity, attribute, relationship và identifier**. Route đi từ entity boundary → attributes → relationship cardinality → identifiers/keys → relational schema, để sơ đồ phản ánh đúng quy tắc dữ liệu.
-
-> **Mục tiêu:** Xây dựng ERD; phân loại entity/attribute/relationship; chọn và sử dụng identifier.
-
-## Từ khóa cần nhớ (Keyword)
-
-Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## Mạch tư duy (Logic học)
-
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 좋은 데이터 모델의 요소** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## Mạch nối của bài học
-
-Bài này không đứng riêng: hãy nối **ERD, Entity, Attribute, Relationship và Identifier** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
-
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
-
----
-
-Để học **ERD, Entity, Attribute, Relationship và Identifier** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến **Xây dựng ERD; phân loại entity/attribute/relationship; chọn và sử dụng identifier** thành cách đọc có thể áp dụng.
-
 Câu ghi nhớ quan trọng nhất:
 
 > **현실 세계를 추상화·단순화하여 일정한 표기법으로 명확하게 표현하는 것**
@@ -45,17 +19,7 @@ Công thức ghi nhớ:
 물리적 = Index và Storage
 ```
 
-Ta bắt đầu **11. 좋은 데이터 모델의 요소** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. 좋은 데이터 모델의 요소** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 데이터 모델링의 이해관계자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 11. 좋은 데이터 모델의 요소
-
-Khi gom phần **11. 좋은 데이터 모델의 요소** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11. 좋은 데이터 모델의 요소**. Bây giờ chuyển sang **11.1. 완전성 - Tính đầy đủ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.1. 완전성 - Tính đầy đủ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 11.1. 완전성 - Tính đầy đủ
 
@@ -66,12 +30,6 @@ Tính đầy đủ nghĩa là tất cả dữ liệu cần thiết trong nghiệ
 **업무에 필요한 데이터가 모델에서 누락되면 시스템이 업무를 정확하게 처리할 수 없다.**
 
 Nếu dữ liệu cần thiết cho nghiệp vụ bị thiếu trong mô hình thì hệ thống không thể xử lý nghiệp vụ chính xác.
-
-Khi gom phần **11.1. 완전성 - Tính đầy đủ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.1. 완전성 - Tính đầy đủ**. Bây giờ chuyển sang **Keyword: 완전성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 완전성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 완전성
 
@@ -109,12 +67,6 @@ PAYMENT
 DELIVERY
 ```
 
-Khi gom phần **Keyword: 완전성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 완전성**. Bây giờ chuyển sang **Cần phân biệt**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cần phân biệt** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cần phân biệt
 
 **완전성은 데이터를 많이 넣는 것이 아니라 업무에 필요한 데이터를 빠짐없이 정의하는 것이다.**
@@ -125,12 +77,6 @@ Không cần đưa vào các thông tin không liên quan chỉ để làm mô h
 
 ---
 
-Khi gom phần **Cần phân biệt** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cần phân biệt**. Bây giờ chuyển sang **11.2. 중복배제 - Loại bỏ trùng lặp**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.2. 중복배제 - Loại bỏ trùng lặp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.2. 중복배제 - Loại bỏ trùng lặp
 
 **중복배제란 하나의 데이터베이스 안에서 동일한 사실이 한 번만 기록되도록 설계하는 것이다.**
@@ -140,12 +86,6 @@ Loại bỏ trùng lặp là thiết kế sao cho cùng một sự thật chỉ 
 **동일한 데이터를 여러 테이블에 반복해서 저장하면 데이터 수정 시 불일치가 발생할 수 있다.**
 
 Nếu lưu cùng một dữ liệu lặp lại ở nhiều bảng thì có thể phát sinh sự không nhất quán khi cập nhật.
-
-Khi gom phần **11.2. 중복배제 - Loại bỏ trùng lặp** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.2. 중복배제 - Loại bỏ trùng lặp**. Bây giờ chuyển sang **Keyword: 중복배제**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 중복배제** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 중복배제
 
@@ -200,12 +140,6 @@ CUSTOMER_ID
 
 ---
 
-Khi gom phần **Keyword: 중복배제** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 중복배제**. Bây giờ chuyển sang **11.3. Trường hợp Foreign Key được phép lặp**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.3. Trường hợp Foreign Key được phép lặp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.3. Trường hợp Foreign Key được phép lặp
 
 Trong hình có ghi:
@@ -216,12 +150,6 @@ Trong hình có ghi:
 **외래키는 부모 테이블의 기본키 값을 자식 테이블에서 참조하기 위해 반복될 수 있다.**
 
 Foreign Key có thể được lặp lại trong bảng con để tham chiếu đến Primary Key của bảng cha.
-
-Khi gom phần **11.3. Trường hợp Foreign Key được phép lặp** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.3. Trường hợp Foreign Key được phép lặp**. Bây giờ chuyển sang **Keyword: FK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: FK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: FK
 
@@ -267,12 +195,6 @@ Lý do là một khách hàng có thể có nhiều đơn hàng:
 CUSTOMER 1 : N ORDERS
 ```
 
-Khi gom phần **Keyword: FK** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: FK**. Bây giờ chuyển sang **Điểm quan trọng**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Điểm quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Điểm quan trọng
 
 **외래키의 반복은 관계를 표현하기 위해 필요한 반복이므로 일반적인 중복과 구별해야 한다.**
@@ -289,12 +211,6 @@ CUSTOMER_ID lặp lại trong nhiều đơn hàng
 
 ---
 
-Khi gom phần **Điểm quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Điểm quan trọng**. Bây giờ chuyển sang **11.4. 업무규칙 - Quy tắc nghiệp vụ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.4. 업무규칙 - Quy tắc nghiệp vụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.4. 업무규칙 - Quy tắc nghiệp vụ
 
 **업무규칙이란 업무를 처리할 때 반드시 지켜야 하는 조건과 규칙이다.**
@@ -304,12 +220,6 @@ Quy tắc nghiệp vụ là các điều kiện và quy tắc bắt buộc phả
 **업무규칙은 데이터 모델에 표현되어야 하며 모든 사용자가 공유할 수 있어야 한다.**
 
 Quy tắc nghiệp vụ phải được thể hiện trong mô hình dữ liệu và phải được cung cấp để mọi người dùng cùng chia sẻ.
-
-Khi gom phần **11.4. 업무규칙 - Quy tắc nghiệp vụ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.4. 업무규칙 - Quy tắc nghiệp vụ**. Bây giờ chuyển sang **Keyword: 업무규칙**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 업무규칙** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 업무규칙
 
@@ -347,12 +257,6 @@ Trong đó:
 - `NOT NULL`: đơn hàng bắt buộc phải có khách hàng.
 - `FOREIGN KEY`: khách hàng phải tồn tại trong bảng `CUSTOMER`.
 
-Khi gom phần **Keyword: 업무규칙** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 업무규칙**. Bây giờ chuyển sang **Vì sao phải chia sẻ 업무규칙?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Vì sao phải chia sẻ 업무규칙?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Vì sao phải chia sẻ 업무규칙?
 
 **업무규칙이 모델에 명확하게 표현되면 개발자, DBA, 현업 담당자가 동일한 기준으로 업무를 이해할 수 있다.**
@@ -363,12 +267,6 @@ Nếu quy tắc chỉ nằm trong suy nghĩ của một nhân viên, khi ngườ
 
 ---
 
-Khi gom phần **Vì sao phải chia sẻ 업무규칙?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Vì sao phải chia sẻ 업무규칙?**. Bây giờ chuyển sang **11.5. 데이터 재사용 - Tái sử dụng dữ liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.5. 데이터 재사용 - Tái sử dụng dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.5. 데이터 재사용 - Tái sử dụng dữ liệu
 
 **데이터 재사용이란 데이터를 통합성과 독립성의 관점에서 설계하여 여러 업무 영역에서 공통으로 사용하는 것이다.**
@@ -378,12 +276,6 @@ Tái sử dụng dữ liệu là thiết kế dữ liệu theo hướng tích h�
 **공통 데이터는 회사 전체의 관점에서 도출하고 여러 업무 영역에서 참조할 수 있도록 설계해야 한다.**
 
 Dữ liệu dùng chung phải được xác định từ góc nhìn toàn công ty và thiết kế để nhiều lĩnh vực nghiệp vụ có thể tham chiếu.
-
-Khi gom phần **11.5. 데이터 재사용 - Tái sử dụng dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.5. 데이터 재사용 - Tái sử dụng dữ liệu**. Bây giờ chuyển sang **Keyword: 데이터 재사용**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 데이터 재사용** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 데이터 재사용
 
@@ -421,12 +313,6 @@ Giao hàng     → CUSTOMER
 Marketing     → CUSTOMER
 ```
 
-Khi gom phần **Keyword: 데이터 재사용** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 재사용**. Bây giờ chuyển sang **Vì sao dữ liệu cần độc lập?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Vì sao dữ liệu cần độc lập?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Vì sao dữ liệu cần độc lập?
 
 **데이터는 특정 프로그램에 종속되지 않고 여러 프로그램에서 활용될 수 있어야 한다.**
@@ -434,12 +320,6 @@ Ta bắt đầu **Vì sao dữ liệu cần độc lập?** bằng câu hỏi: *
 Dữ liệu không nên phụ thuộc vào một chương trình cụ thể mà phải có thể được sử dụng bởi nhiều chương trình.
 
 Ví dụ thông tin khách hàng không nên chỉ được lưu bên trong chương trình bán hàng, vì chương trình thanh toán và giao hàng cũng cần sử dụng.
-
-Khi gom phần **Vì sao dữ liệu cần độc lập?** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Vì sao dữ liệu cần độc lập?**. Bây giờ chuyển sang **Dòng quan trọng trong hình**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Dòng quan trọng trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Dòng quan trọng trong hình
 
@@ -452,12 +332,6 @@ Nếu tạo dữ liệu riêng theo từng phòng ban hoặc từng chương tr�
 
 ---
 
-Khi gom phần **Dòng quan trọng trong hình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Dòng quan trọng trong hình**. Bây giờ chuyển sang **11.6. 의사소통 - Khả năng giao tiếp**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.6. 의사소통 - Khả năng giao tiếp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.6. 의사소통 - Khả năng giao tiếp
 
 **의사소통이란 업무규칙을 엔터티, 서브타입, 속성, 관계 등의 형태로 자세히 표현하는 것이다.**
@@ -467,12 +341,6 @@ Khả năng giao tiếp là biểu diễn quy tắc nghiệp vụ một cách ch
 **모델을 본 관련자들이 동일한 의미로 이해하고 활용할 수 있어야 한다.**
 
 Những người liên quan khi xem mô hình phải có thể hiểu và sử dụng nó với cùng một ý nghĩa.
-
-Khi gom phần **11.6. 의사소통 - Khả năng giao tiếp** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.6. 의사소통 - Khả năng giao tiếp**. Bây giờ chuyển sang **Keyword: 의사소통**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 의사소통** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 의사소통
 
@@ -500,23 +368,11 @@ Nhờ đó:
 
 ---
 
-Khi gom phần **Keyword: 의사소통** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 의사소통**. Bây giờ chuyển sang **11.7. 통합성 - Tính tích hợp**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.7. 통합성 - Tính tích hợp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.7. 통합성 - Tính tích hợp
 
 **통합성이란 동일한 데이터는 조직 전체에서 한 번만 정의하고 다른 영역에서는 이를 참조하여 사용하는 것이다.**
 
 Tính tích hợp là cùng một dữ liệu chỉ được định nghĩa một lần trong toàn tổ chức, các khu vực khác tham chiếu và sử dụng dữ liệu đó.
-
-Khi gom phần **11.7. 통합성 - Tính tích hợp** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.7. 통합성 - Tính tích hợp**. Bây giờ chuyển sang **Keyword: 통합성**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 통합성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 통합성
 
@@ -539,12 +395,6 @@ Mã khách hàng `C001` phải có cùng ý nghĩa trong:
 
 Nếu mỗi hệ thống tự định nghĩa một mã khách hàng khác nhau thì việc đồng bộ dữ liệu sẽ khó khăn.
 
-Khi gom phần **Keyword: 통합성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 통합성**. Bây giờ chuyển sang **Phân biệt 중복배제 và 통합성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Phân biệt 중복배제 và 통합성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Phân biệt 중복배제 và 통합성
 
 **중복배제는 동일한 데이터의 반복 저장을 방지하는 원칙이다.**
@@ -564,33 +414,13 @@ Có thể ghi nhớ:
 
 ---
 
-Khi gom phần **Phân biệt 중복배제 và 통합성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Phân biệt 중복배제 và 통합성**. Bây giờ chuyển sang **12. 데이터 모델링의 이해관계자**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12. 데이터 모델링의 이해관계자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **12. 데이터 모델링의 이해관계자** tiếp nhận điểm tựa từ **11. 좋은 데이터 모델의 요소** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ERD là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 12. 데이터 모델링의 이해관계자
-
-Khi gom phần **12. 데이터 모델링의 이해관계자** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12. 데이터 모델링의 이해관계자**. Bây giờ chuyển sang **12.1. Mô hình dữ liệu là sản phẩm cuối cùng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.1. Mô hình dữ liệu là sản phẩm cuối cùng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 12.1. Mô hình dữ liệu là sản phẩm cuối cùng
 
 **데이터 모델은 대상 업무를 데이터 관점에서 분석하고 설계한 결과로 만들어지는 최종 산출물이다.**
 
 Mô hình dữ liệu là sản phẩm cuối cùng được tạo ra sau khi phân tích và thiết kế nghiệp vụ dưới góc nhìn dữ liệu.
-
-Khi gom phần **12.1. Mô hình dữ liệu là sản phẩm cuối cùng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.1. Mô hình dữ liệu là sản phẩm cuối cùng**. Bây giờ chuyển sang **Keyword: 최종 산출물**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 최종 산출물** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 최종 산출물
 
@@ -609,12 +439,6 @@ Mô hình dữ liệu không chỉ là tài liệu tham khảo, mà còn là cơ
 
 ---
 
-Khi gom phần **Keyword: 최종 산출물** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 최종 산출물**. Bây giờ chuyển sang **12.2. Các bên liên quan**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.2. Các bên liên quan** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 12.2. Các bên liên quan
 
 Hình thể hiện bốn nhóm chính:
@@ -632,12 +456,6 @@ DBA             - Quản trị cơ sở dữ liệu
 데이터 모델링
 ```
 
-Khi gom phần **12.2. Các bên liên quan** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.2. Các bên liên quan**. Bây giờ chuyển sang **1. 프로젝트 개발자**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. 프로젝트 개발자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 1. 프로젝트 개발자
 
 **프로젝트 개발자는 데이터 모델을 이해하고 필요하면 직접 작성할 수 있어야 한다.**
@@ -651,12 +469,6 @@ Họ cần biết:
 - Bảng nào liên kết với nhau.
 - Dữ liệu được thêm, sửa, xóa như thế nào.
 - SQL nào cần sử dụng.
-
-Khi gom phần **1. 프로젝트 개발자** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. 프로젝트 개발자**. Bây giờ chuyển sang **2. DBA**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. DBA** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### 2. DBA
 
@@ -674,12 +486,6 @@ DBA cần hiểu:
 - Performance.
 - User và quyền truy cập.
 
-Khi gom phần **2. DBA** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. DBA**. Bây giờ chuyển sang **3. 현업 전문가**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. 현업 전문가** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 3. 현업 전문가
 
 **현업 전문가는 실제 업무의 규칙과 처리 과정을 가장 잘 알고 있는 사람이다.**
@@ -693,23 +499,11 @@ Ví dụ:
 - Nhân viên bán hàng hiểu quy trình đặt hàng.
 - Nhân viên nhân sự hiểu quy tắc quản lý nhân viên.
 
-Khi gom phần **3. 현업 전문가** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. 현업 전문가**. Bây giờ chuyển sang **4. 전문 모델러**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. 전문 모델러** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 4. 전문 모델러
 
 **전문 모델러는 업무를 분석하고 데이터 구조와 데이터 간의 관계를 전문적으로 설계하는 사람이다.**
 
 Chuyên gia mô hình hóa là người chuyên phân tích nghiệp vụ và thiết kế cấu trúc dữ liệu cùng các mối quan hệ giữa dữ liệu.
-
-Khi gom phần **4. 전문 모델러** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. 전문 모델러**. Bây giờ chuyển sang **Hai câu quan trọng trong hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Hai câu quan trọng trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Hai câu quan trọng trong hình
 
@@ -723,21 +517,7 @@ Nhà phát triển dự án và chuyên gia mô hình hóa phải có khả năn
 
 ---
 
-Khi gom phần **Hai câu quan trọng trong hình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Hai câu quan trọng trong hình**. Bây giờ chuyển sang **13. ERD là gì?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13. ERD là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **13. ERD là gì?** tiếp nhận điểm tựa từ **12. 데이터 모델링의 이해관계자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Trình tự lập ERD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 13. ERD là gì?
-
-Khi gom phần **13. ERD là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13. ERD là gì?**. Bây giờ chuyển sang **13.1. Định nghĩa ERD**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13.1. Định nghĩa ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 13.1. Định nghĩa ERD
 
@@ -748,12 +528,6 @@ ERD là sơ đồ biểu diễn các Entity được rút ra từ phân tích ng
 **ERD는 데이터 흐름과 업무 프로세스 사이의 연관성을 표현하는 산출물이다.**
 
 ERD là sản phẩm thể hiện mối liên hệ giữa luồng dữ liệu và quy trình nghiệp vụ.
-
-Khi gom phần **13.1. Định nghĩa ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13.1. Định nghĩa ERD**. Bây giờ chuyển sang **Keyword: ERD**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: ERD
 
@@ -772,23 +546,11 @@ ERD giúp trả lời:
 
 ---
 
-Khi gom phần **Keyword: ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: ERD**. Bây giờ chuyển sang **13.2. Nguồn gốc ERD**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13.2. Nguồn gốc ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 13.2. Nguồn gốc ERD
 
 **1976년 Peter Chen이 Entity-Relationship Model이라는 표기법을 만들었다.**
 
 Năm 1976, Peter Chen đã tạo ra phương pháp ký hiệu gọi là Entity-Relationship Model.
-
-Khi gom phần **13.2. Nguồn gốc ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13.2. Nguồn gốc ERD**. Bây giờ chuyển sang **Keyword: Peter Chen**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Peter Chen** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Peter Chen
 
@@ -798,21 +560,7 @@ Peter Chen là người đề xuất mô hình ER, dùng Entity và Relationship
 
 ---
 
-Khi gom phần **Keyword: Peter Chen** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Peter Chen**. Bây giờ chuyển sang **14. Trình tự lập ERD**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14. Trình tự lập ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **14. Trình tự lập ERD** tiếp nhận điểm tựa từ **13. ERD là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. ERD 표기법 - Các ký pháp ERD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 14. Trình tự lập ERD
-
-Khi gom phần **14. Trình tự lập ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14. Trình tự lập ERD**. Bây giờ chuyển sang **14.1. Bước 1: Vẽ Entity**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.1. Bước 1: Vẽ Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 14.1. Bước 1: Vẽ Entity
 
@@ -829,12 +577,6 @@ ORDER
 PAYMENT
 ```
 
-Khi gom phần **14.1. Bước 1: Vẽ Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.1. Bước 1: Vẽ Entity**. Bây giờ chuyển sang **Keyword: 식별**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 식별** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 식별
 
 **식별은 업무에서 관리해야 할 대상을 찾아내는 것이다.**
@@ -842,12 +584,6 @@ Ta bắt đầu **Keyword: 식별** bằng câu hỏi: **khái niệm này giả
 Xác định là tìm ra những đối tượng cần được quản lý trong nghiệp vụ.
 
 ---
-
-Khi gom phần **Keyword: 식별** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 식별**. Bây giờ chuyển sang **14.2. Bước 2: Sắp xếp Entity**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.2. Bước 2: Sắp xếp Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 14.2. Bước 2: Sắp xếp Entity
 
@@ -858,12 +594,6 @@ Bước thứ hai là sắp xếp các Entity ở vị trí phù hợp để cá
 **선이 서로 꼬이지 않도록 하고 가장 중요한 엔터티는 왼쪽 상단에 배치하는 것이 좋다.**
 
 Nên tránh để các đường quan hệ bị chồng chéo và đặt Entity quan trọng nhất ở phía trên bên trái.
-
-Khi gom phần **14.2. Bước 2: Sắp xếp Entity** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.2. Bước 2: Sắp xếp Entity**. Bây giờ chuyển sang **Keyword: 배치**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 배치** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 배치
 
@@ -880,12 +610,6 @@ Mục tiêu:
 
 ---
 
-Khi gom phần **Keyword: 배치** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 배치**. Bây giờ chuyển sang **14.3. Bước 3: Thiết lập quan hệ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.3. Bước 3: Thiết lập quan hệ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.3. Bước 3: Thiết lập quan hệ
 
 **세 번째 단계는 엔터티 간의 업무 관계를 설정하는 것이다.**
@@ -895,12 +619,6 @@ Bước thứ ba là thiết lập quan hệ nghiệp vụ giữa các Entity.
 **식별자 관계를 우선적으로 설정한다.**
 
 Trước tiên nên thiết lập quan hệ định danh.
-
-Khi gom phần **14.3. Bước 3: Thiết lập quan hệ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.3. Bước 3: Thiết lập quan hệ**. Bây giờ chuyển sang **Keyword: 관계**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 관계
 
@@ -918,23 +636,11 @@ Nghĩa là một khách hàng có thể có nhiều đơn hàng.
 
 ---
 
-Khi gom phần **Keyword: 관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계**. Bây giờ chuyển sang **14.4. 식별자 관계 - Quan hệ định danh**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.4. 식별자 관계 - Quan hệ định danh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.4. 식별자 관계 - Quan hệ định danh
 
 **식별자 관계는 부모 엔터티의 기본키가 자식 엔터티의 기본키 일부가 되는 관계이다.**
 
 Quan hệ định danh là quan hệ trong đó Primary Key của Entity cha trở thành một phần Primary Key của Entity con.
-
-Khi gom phần **14.4. 식별자 관계 - Quan hệ định danh** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.4. 식별자 관계 - Quan hệ định danh**. Bây giờ chuyển sang **Keyword: 식별자 관계**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 식별자 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 식별자 관계
 
@@ -969,23 +675,11 @@ ORDER_ITEM의 PK = ORDER_ID + PRODUCT_ID
 
 ---
 
-Khi gom phần **Keyword: 식별자 관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 식별자 관계**. Bây giờ chuyển sang **14.5. Tránh vòng lặp quan hệ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.5. Tránh vòng lặp quan hệ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.5. Tránh vòng lặp quan hệ
 
 **가급적 순환 관계가 발생하지 않도록 관계를 설정해야 한다.**
 
 Nên thiết lập quan hệ sao cho hạn chế phát sinh quan hệ vòng lặp.
-
-Khi gom phần **14.5. Tránh vòng lặp quan hệ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.5. Tránh vòng lặp quan hệ**. Bây giờ chuyển sang **Keyword: 순환 관계**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 순환 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 순환 관계
 
@@ -1008,12 +702,6 @@ Quan hệ vòng có thể làm:
 
 ---
 
-Khi gom phần **Keyword: 순환 관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 순환 관계**. Bây giờ chuyển sang **14.6. Bước 4: Đặt tên quan hệ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.6. Bước 4: Đặt tên quan hệ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.6. Bước 4: Đặt tên quan hệ
 
 **네 번째 단계는 엔터티 간의 관계를 현재형 동사로 기술하는 것이다.**
@@ -1031,12 +719,6 @@ Ví dụ trong hình:
 철회한다 - Rút lại / hủy
 수강한다 - Đăng ký học
 ```
-
-Khi gom phần **14.6. Bước 4: Đặt tên quan hệ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.6. Bước 4: Đặt tên quan hệ**. Bây giờ chuyển sang **Keyword: 관계명**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계명** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 관계명
 
@@ -1064,12 +746,6 @@ trừ khi nghiệp vụ thực sự không thể diễn đạt cụ thể hơn.
 
 ---
 
-Khi gom phần **Keyword: 관계명** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계명**. Bây giờ chuyển sang **14.7. Bước 5: Ghi mức độ tham gia và Cardinality**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.7. Bước 5: Ghi mức độ tham gia và Cardinality** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.7. Bước 5: Ghi mức độ tham gia và Cardinality
 
 **다섯 번째 단계는 관계의 참여도와 관계차수를 기술하는 것이다.**
@@ -1079,12 +755,6 @@ Bước thứ năm là mô tả mức độ tham gia và số lượng trong qua
 **관계차수는 한 엔터티의 인스턴스가 다른 엔터티의 인스턴스와 몇 개까지 연결될 수 있는지를 의미한다.**
 
 Cardinality là số lượng Instance của một Entity có thể liên kết với Instance của Entity khác.
-
-Khi gom phần **14.7. Bước 5: Ghi mức độ tham gia và Cardinality** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.7. Bước 5: Ghi mức độ tham gia và Cardinality**. Bây giờ chuyển sang **Keyword: 관계차수 또는 Cardinality**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계차수 또는 Cardinality** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 관계차수 또는 Cardinality
 
@@ -1116,12 +786,6 @@ Trong ký pháp IE/Crow’s Foot, dùng chân quạ để biểu diễn “nhi�
 
 ---
 
-Khi gom phần **Keyword: 관계차수 또는 Cardinality** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계차수 또는 Cardinality**. Bây giờ chuyển sang **14.8. Bước 6: Ghi bắt buộc hoặc tùy chọn**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.8. Bước 6: Ghi bắt buộc hoặc tùy chọn** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.8. Bước 6: Ghi bắt buộc hoặc tùy chọn
 
 **여섯 번째 단계는 관계에 반드시 참여해야 하는지 선택적으로 참여할 수 있는지를 기술하는 것이다.**
@@ -1131,12 +795,6 @@ Bước thứ sáu là mô tả việc tham gia quan hệ là bắt buộc hay t
 **필수 여부는 IE 표기법에서 원으로 표현할 수 있다.**
 
 Tính bắt buộc có thể được biểu diễn bằng vòng tròn trong ký pháp IE.
-
-Khi gom phần **14.8. Bước 6: Ghi bắt buộc hoặc tùy chọn** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.8. Bước 6: Ghi bắt buộc hoặc tùy chọn**. Bây giờ chuyển sang **Keyword: 필수 참여**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 필수 참여** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 필수 참여
 
@@ -1156,12 +814,6 @@ Khi đó:
 ORDERS.CUSTOMER_ID NOT NULL
 ```
 
-Khi gom phần **Keyword: 필수 참여** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 필수 참여**. Bây giờ chuyển sang **Keyword: 선택 참여**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 선택 참여** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 선택 참여
 
 **선택 참여는 해당 엔터티의 인스턴스가 관계에 참여하지 않아도 된다는 의미이다.**
@@ -1178,21 +830,7 @@ Khi đó phía `CUSTOMER` có thể có số lượng Order bằng 0.
 
 ---
 
-Khi gom phần **Keyword: 선택 참여** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 선택 참여**. Bây giờ chuyển sang **15. ERD 표기법 - Các ký pháp ERD**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15. ERD 표기법 - Các ký pháp ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **15. ERD 표기법 - Các ký pháp ERD** tiếp nhận điểm tựa từ **14. Trình tự lập ERD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Entity là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 15. ERD 표기법 - Các ký pháp ERD
-
-Khi gom phần **15. ERD 표기법 - Các ký pháp ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15. ERD 표기법 - Các ký pháp ERD**. Bây giờ chuyển sang **15.1. Chen notation**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.1. Chen notation** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 15.1. Chen notation
 
@@ -1223,12 +861,6 @@ Một phòng ban có thể bao gồm nhiều nhân viên.
 Một nhân viên có thể thuộc một phòng ban.
 
 ---
-
-Khi gom phần **15.1. Chen notation** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.1. Chen notation**. Bây giờ chuyển sang **15.2. IE / Crow’s Foot notation**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.2. IE / Crow’s Foot notation** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 15.2. IE / Crow’s Foot notation
 
@@ -1261,21 +893,7 @@ Có thể hiểu là:
 
 ---
 
-Khi gom phần **15.2. IE / Crow’s Foot notation** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.2. IE / Crow’s Foot notation**. Bây giờ chuyển sang **16. Entity là gì?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **16. Entity là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **16. Entity là gì?** tiếp nhận điểm tựa từ **15. ERD 표기법 - Các ký pháp ERD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Phân loại Entity theo hình thức tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 16. Entity là gì?
-
-Khi gom phần **16. Entity là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **16. Entity là gì?**. Bây giờ chuyển sang **16.1. Định nghĩa**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **16.1. Định nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 16.1. Định nghĩa
 
@@ -1286,12 +904,6 @@ Entity là tập hợp dùng để lưu trữ và quản lý những thông tin 
 **엔터티는 인스턴스의 집합이다.**
 
 Entity là tập hợp các Instance.
-
-Khi gom phần **16.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **16.1. Định nghĩa**. Bây giờ chuyển sang **Keyword: Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Entity
 
@@ -1321,23 +933,11 @@ CUSTOMER = {C001, C002, C003}
 
 ---
 
-Khi gom phần **Keyword: Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Entity**. Bây giờ chuyển sang **16.2. Instance là gì?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **16.2. Instance là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 16.2. Instance là gì?
 
 **인스턴스는 엔터티에 실제로 존재하는 각각의 개별 데이터이다.**
 
 Instance là từng dữ liệu riêng lẻ thực sự tồn tại trong Entity.
-
-Khi gom phần **16.2. Instance là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **16.2. Instance là gì?**. Bây giờ chuyển sang **Keyword: Instance**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Instance** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Instance
 
@@ -1363,14 +963,6 @@ C002        | Trần Văn B
 
 ---
 
-Khi gom phần **Keyword: Instance** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Instance**. Bây giờ chuyển sang **17. Phân loại Entity theo hình thức tồn tại**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17. Phân loại Entity theo hình thức tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **17. Phân loại Entity theo hình thức tồn tại** tiếp nhận điểm tựa từ **16. Entity là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Phân loại Entity theo thời điểm phát sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 17. Phân loại Entity theo hình thức tồn tại
 
 Hình chia Entity theo “유무형에 따른 분류”, nghĩa là phân loại theo việc có tồn tại dưới dạng vật chất hay không.
@@ -1382,12 +974,6 @@ Gồm:
 3. 사건 Entity - Event Entity.
 
 ---
-
-Khi gom phần **17. Phân loại Entity theo hình thức tồn tại** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17. Phân loại Entity theo hình thức tồn tại**. Bây giờ chuyển sang **17.1. 유형 Entity - Entity hữu hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.1. 유형 Entity - Entity hữu hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 17.1. 유형 Entity - Entity hữu hình
 
@@ -1403,12 +989,6 @@ Ví dụ trong hình:
 물품 - Hàng hóa
 사원 - Nhân viên
 ```
-
-Khi gom phần **17.1. 유형 Entity - Entity hữu hình** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.1. 유형 Entity - Entity hữu hình**. Bây giờ chuyển sang **Keyword: 유형 Entity**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 유형 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 유형 Entity
 
@@ -1434,12 +1014,6 @@ PROFESSOR
 
 ---
 
-Khi gom phần **Keyword: 유형 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 유형 Entity**. Bây giờ chuyển sang **17.2. 개념 Entity - Entity khái niệm**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.2. 개념 Entity - Entity khái niệm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 17.2. 개념 Entity - Entity khái niệm
 
 **개념 엔터티는 물리적인 형태는 없지만 업무에서 관리해야 하는 개념적인 정보이다.**
@@ -1454,12 +1028,6 @@ Ví dụ trong hình:
 시스템 - Hệ thống
 조직 - Tổ chức
 ```
-
-Khi gom phần **17.2. 개념 Entity - Entity khái niệm** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.2. 개념 Entity - Entity khái niệm**. Bây giờ chuyển sang **Keyword: 개념 Entity**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 개념 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 개념 Entity
 
@@ -1480,12 +1048,6 @@ Một Department không phải là một vật thể đơn lẻ cần cầm nắ
 
 ---
 
-Khi gom phần **Keyword: 개념 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 개념 Entity**. Bây giờ chuyển sang **17.3. 사건 Entity - Entity sự kiện**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.3. 사건 Entity - Entity sự kiện** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 17.3. 사건 Entity - Entity sự kiện
 
 **사건 엔터티는 업무 수행 과정에서 발생하며 발생량이 비교적 많은 엔터티이다.**
@@ -1500,12 +1062,6 @@ Ví dụ trong hình:
 입금 - Nộp tiền / Thanh toán
 미납 - Chưa thanh toán
 ```
-
-Khi gom phần **17.3. 사건 Entity - Entity sự kiện** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.3. 사건 Entity - Entity sự kiện**. Bây giờ chuyển sang **Keyword: 사건 Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 사건 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 사건 Entity
 
@@ -1526,12 +1082,6 @@ ATTENDANCE
 Một khách hàng có thể đặt hàng nhiều lần, nên `ORDER` có thể phát sinh rất nhiều Instance.
 
 ---
-
-Khi gom phần **Keyword: 사건 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 사건 Entity**. Bây giờ chuyển sang **17.4. Khi nào sự kiện là Relationship, khi nào là Entity?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.4. Khi nào sự kiện là Relationship, khi nào là Entity?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 17.4. Khi nào sự kiện là Relationship, khi nào là Entity?
 
@@ -1569,12 +1119,6 @@ ATTENDANCE_RATE
 STATUS
 ```
 
-Khi gom phần **17.4. Khi nào sự kiện là Relationship, khi nào là Entity?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.4. Khi nào sự kiện là Relationship, khi nào là Entity?**. Bây giờ chuyển sang **Cách hiểu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách hiểu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách hiểu
 
 **관리해야 할 속성이 많으면 사건을 엔터티로 분리하는 것이 적절하다.**
@@ -1582,12 +1126,6 @@ Ta bắt đầu **Cách hiểu** bằng câu hỏi: **khái niệm này giải q
 Nếu sự kiện có nhiều Attribute cần quản lý thì nên tách nó thành Entity.
 
 ---
-
-Khi gom phần **Cách hiểu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách hiểu**. Bây giờ chuyển sang **17.5. Entity phụ thuộc**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.5. Entity phụ thuộc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 17.5. Entity phụ thuộc
 
@@ -1607,12 +1145,6 @@ Ví dụ trong hình:
 STUDENT + COURSE → ENROLLMENT
 ```
 
-Khi gom phần **17.5. Entity phụ thuộc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.5. Entity phụ thuộc**. Bây giờ chuyển sang **Keyword: 의존**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 의존** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 의존
 
 **의존한다는 것은 다른 엔터티가 존재해야 해당 엔터티도 존재할 수 있다는 의미이다.**
@@ -1627,14 +1159,6 @@ Ví dụ:
 
 ---
 
-Khi gom phần **Keyword: 의존** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 의존**. Bây giờ chuyển sang **18. Phân loại Entity theo thời điểm phát sinh**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **18. Phân loại Entity theo thời điểm phát sinh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **18. Phân loại Entity theo thời điểm phát sinh** tiếp nhận điểm tựa từ **17. Phân loại Entity theo hình thức tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Sơ đồ quan hệ giữa các loại Entity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 18. Phân loại Entity theo thời điểm phát sinh
 
 Hình chia thành:
@@ -1646,12 +1170,6 @@ Hình chia thành:
 ```
 
 ---
-
-Khi gom phần **18. Phân loại Entity theo thời điểm phát sinh** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **18. Phân loại Entity theo thời điểm phát sinh**. Bây giờ chuyển sang **18.1. 기본/키 Entity - Basic hoặc Key Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **18.1. 기본/키 Entity - Basic hoặc Key Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 18.1. 기본/키 Entity - Basic hoặc Key Entity
 
@@ -1672,12 +1190,6 @@ Ví dụ trong hình:
 상품 - Sản phẩm
 자재 - Vật tư
 ```
-
-Khi gom phần **18.1. 기본/키 Entity - Basic hoặc Key Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **18.1. 기본/키 Entity - Basic hoặc Key Entity**. Bây giờ chuyển sang **Keyword: 기본 Entity**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 기본 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 기본 Entity
 
@@ -1701,12 +1213,6 @@ Trước khi có đơn hàng, phải có:
 
 ---
 
-Khi gom phần **Keyword: 기본 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 기본 Entity**. Bây giờ chuyển sang **18.2. 중심 Entity - Entity trung tâm**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **18.2. 중심 Entity - Entity trung tâm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 18.2. 중심 Entity - Entity trung tâm
 
 **중심 엔터티는 기본 엔터티로부터 발생하고 업무의 중심적인 역할을 하는 엔터티이다.**
@@ -1729,12 +1235,6 @@ CUSTOMER → CONTRACT
 
 Một khách hàng tồn tại trước, sau đó có thể phát sinh đơn hàng hoặc hợp đồng.
 
-Khi gom phần **18.2. 중심 Entity - Entity trung tâm** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **18.2. 중심 Entity - Entity trung tâm**. Bây giờ chuyển sang **Keyword: 중심 Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 중심 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 중심 Entity
 
 **중심 엔터티는 업무 흐름에서 핵심적인 거래나 처리 대상을 나타낸다.**
@@ -1742,12 +1242,6 @@ Ta bắt đầu **Keyword: 중심 Entity** bằng câu hỏi: **khái niệm nà
 Entity trung tâm biểu diễn giao dịch hoặc đối tượng xử lý cốt lõi trong luồng nghiệp vụ.
 
 ---
-
-Khi gom phần **Keyword: 중심 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 중심 Entity**. Bây giờ chuyển sang **18.3. 행위 Entity - Entity hành vi**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **18.3. 행위 Entity - Entity hành vi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 18.3. 행위 Entity - Entity hành vi
 
@@ -1778,12 +1272,6 @@ ORDER + PRODUCT
 ORDER + PRODUCT → ORDER_ITEM
 ```
 
-Khi gom phần **18.3. 행위 Entity - Entity hành vi** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **18.3. 행위 Entity - Entity hành vi**. Bây giờ chuyển sang **Keyword: 행위 Entity**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 행위 Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 행위 Entity
 
 **행위 엔터티는 업무가 실행된 결과를 저장하며 일반적으로 발생 빈도가 높다.**
@@ -1802,16 +1290,7 @@ DELIVERY_HISTORY
 
 ---
 
-Khi gom phần **Keyword: 행위 Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 행위 Entity**. Bây giờ chuyển sang **19. Sơ đồ quan hệ giữa các loại Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **19. Sơ đồ quan hệ giữa các loại Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **19. Sơ đồ quan hệ giữa các loại Entity** tiếp nhận điểm tựa từ **18. Phân loại Entity theo thời điểm phát sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Tổng hợp keyword của hai hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 19. Sơ đồ quan hệ giữa các loại Entity
-
 Phần này nối mạch SQL với “19. Sơ đồ quan hệ giữa các loại Entity”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -1844,16 +1323,7 @@ Basic Entity tồn tại trước, tạo ra Central Entity, còn Action Entity �
 
 ---
 
-Khi gom phần **19. Sơ đồ quan hệ giữa các loại Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **19. Sơ đồ quan hệ giữa các loại Entity**. Bây giờ chuyển sang **20. Tổng hợp keyword của hai hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **20. Tổng hợp keyword của hai hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **20. Tổng hợp keyword của hai hình** gom các mảnh từ **19. Sơ đồ quan hệ giữa các loại Entity** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제 3절 속성 - Phần 3: Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 20. Tổng hợp keyword của hai hình
-
 Phần này nối mạch SQL với “20. Tổng hợp keyword của hai hình”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Keyword | Nghĩa tiếng Việt | Cách hiểu ngắn |
@@ -1877,12 +1347,6 @@ Phần này nối mạch SQL với “20. Tổng hợp keyword của hai hình�
 | 중심 Entity | Entity trung tâm | Hợp đồng, tiếp nhận |
 | 행위 Entity | Entity hành vi | Chi tiết đơn hàng, tiến hành hợp đồng |
 
-Khi gom phần **20. Tổng hợp keyword của hai hình** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **20. Tổng hợp keyword của hai hình**. Bây giờ chuyển sang **Câu ghi nhớ cuối cùng**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Câu ghi nhớ cuối cùng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Câu ghi nhớ cuối cùng
 
 **좋은 데이터 모델은 필요한 데이터를 빠짐없이 포함하고, 불필요한 중복을 제거하며, 업무규칙과 데이터 관계를 명확하게 표현해야 한다.**
@@ -1897,31 +1361,9 @@ ERD là sản phẩm trực quan hóa mô hình dữ liệu bằng các ký hi�
 
 Entity là đối tượng nghiệp vụ, còn Instance là từng dữ liệu thực tế được lưu trong Entity đó.
 
-Khi gom phần **Câu ghi nhớ cuối cùng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Câu ghi nhớ cuối cùng**. Bây giờ chuyển sang **제 3절 속성 - Phần 3: Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **제 3절 속성 - Phần 3: Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **제 3절 속성 - Phần 3: Attribute** gom các mảnh từ **20. Tổng hợp keyword của hai hình** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1. 속성의 정의 - Định nghĩa Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 제 3절 속성 - Phần 3: Attribute
 
-Khi gom phần **제 3절 속성 - Phần 3: Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **제 3절 속성 - Phần 3: Attribute**. Bây giờ chuyển sang **1. 속성의 정의 - Định nghĩa Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. 속성의 정의 - Định nghĩa Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **1. 속성의 정의 - Định nghĩa Attribute** tiếp nhận điểm tựa từ **제 3절 속성 - Phần 3: Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1. 속성의 정의 - Định nghĩa Attribute
-
-Khi gom phần **1. 속성의 정의 - Định nghĩa Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. 속성의 정의 - Định nghĩa Attribute**. Bây giờ chuyển sang **1.1. Định nghĩa trong tài liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.1. Định nghĩa trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1.1. Định nghĩa trong tài liệu
 
@@ -1932,12 +1374,6 @@ Attribute có nghĩa là đặc tính hoặc bản chất của một sự vật
 **데이터 모델링에서 속성은 업무에서 필요한 인스턴스의 관리 대상 중 더 이상 분리되지 않는 최소 단위의 데이터이다.**
 
 Trong mô hình hóa dữ liệu, Attribute là đơn vị dữ liệu nhỏ nhất không thể tiếp tục tách ra trong những thông tin của Instance mà nghiệp vụ cần quản lý.
-
-Khi gom phần **1.1. Định nghĩa trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.1. Định nghĩa trong tài liệu**. Bây giờ chuyển sang **Keyword: 속성(Attribute)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 속성(Attribute)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 속성(Attribute)
 
@@ -1971,23 +1407,11 @@ Instance  = 100번 홍길동 컴퓨터공학과 4.0
 
 ---
 
-Khi gom phần **Keyword: 속성(Attribute)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 속성(Attribute)**. Bây giờ chuyển sang **1.2. “Đơn vị dữ liệu nhỏ nhất” nghĩa là gì?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.2. “Đơn vị dữ liệu nhỏ nhất” nghĩa là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.2. “Đơn vị dữ liệu nhỏ nhất” nghĩa là gì?
 
 **속성은 업무적으로 의미가 있는 최소 단위까지 분리되어야 한다.**
 
 Attribute phải được phân tách đến đơn vị nhỏ nhất có ý nghĩa đối với nghiệp vụ.
-
-Khi gom phần **1.2. “Đơn vị dữ liệu nhỏ nhất” nghĩa là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.2. “Đơn vị dữ liệu nhỏ nhất” nghĩa là gì?**. Bây giờ chuyển sang **Ví dụ trong hình**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Ví dụ trong hình
 
@@ -2006,12 +1430,6 @@ Không nên gộp thành:
 ```
 
 vì `신상정보` chỉ là một khái niệm chung, chưa phải đơn vị dữ liệu nhỏ nhất.
-
-Khi gom phần **Ví dụ trong hình** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ trong hình**. Bây giờ chuyển sang **Ví dụ địa chỉ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ địa chỉ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Ví dụ địa chỉ
 
@@ -2040,12 +1458,6 @@ Nhưng trong hình tài liệu ghi rằng không phải lúc nào thông tin cá
 
 Nếu nghiệp vụ chỉ sử dụng địa chỉ như một giá trị duy nhất thì có thể quản lý địa chỉ bằng một Attribute duy nhất.
 
-Khi gom phần **Ví dụ địa chỉ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ địa chỉ**. Bây giờ chuyển sang **Cách quyết định có tách hay không**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách quyết định có tách hay không** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách quyết định có tách hay không
 
 **속성의 분리 여부는 업무에서 해당 데이터를 어떻게 조회하고 관리하는지에 따라 결정한다.**
@@ -2068,12 +1480,6 @@ Nếu chỉ cần hiển thị toàn bộ địa chỉ:
 
 thì có thể để thành một Attribute `ADDRESS`.
 
-Khi gom phần **Cách quyết định có tách hay không** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách quyết định có tách hay không**. Bây giờ chuyển sang **Keyword: 최소 단위**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 최소 단위** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 최소 단위
 
 **최소 단위란 더 이상 분리하지 않아도 업무적으로 독립된 의미를 유지하는 가장 작은 데이터 단위이다.**
@@ -2082,33 +1488,13 @@ Ta bắt đầu **Keyword: 최소 단위** bằng câu hỏi: **khái niệm nà
 
 ---
 
-Khi gom phần **Keyword: 최소 단위** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 최소 단위**. Bây giờ chuyển sang **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** tiếp nhận điểm tựa từ **1. 속성의 정의 - Định nghĩa Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 속성의 특징 - Đặc điểm của Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value
-
-Khi gom phần **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value**. Bây giờ chuyển sang **2.1. Một Entity phải có Instance**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2.1. Một Entity phải có Instance** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.1. Một Entity phải có Instance
 
 **하나의 엔터티는 두 개 이상의 인스턴스 집합이어야 한다.**
 
 Một Entity phải là tập hợp gồm từ hai Instance trở lên.
-
-Khi gom phần **2.1. Một Entity phải có Instance** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2.1. Một Entity phải có Instance**. Bây giờ chuyển sang **Keyword: Instance**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Instance** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Instance
 
@@ -2144,12 +1530,6 @@ Biểu diễn dưới dạng bảng:
 - Mỗi hàng là một Instance.
 - Toàn bộ các hàng tạo thành tập hợp Instance của Entity.
 
-Khi gom phần **Keyword: Instance** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Instance**. Bây giờ chuyển sang **Lưu ý quan trọng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Lưu ý quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Lưu ý quan trọng
 
 Trong tài liệu thi, câu “một Entity phải có từ hai Instance trở lên” thường được dùng để phân biệt Entity với một đối tượng đơn lẻ.
@@ -2167,12 +1547,6 @@ Lúc này bảng vẫn là Entity dù chưa có Instance. Vì vậy:
 Khi thi, hãy hiểu Entity là tập hợp các Instance, nhưng trong thực tế một Table vẫn có thể tồn tại khi chưa có Instance nào.
 
 ---
-
-Khi gom phần **Lưu ý quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Lưu ý quan trọng**. Bây giờ chuyển sang **2.2. Một Entity có từ hai Attribute trở lên**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2.2. Một Entity có từ hai Attribute trở lên** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.2. Một Entity có từ hai Attribute trở lên
 
@@ -2194,12 +1568,6 @@ Entity `학생` có bốn Attribute.
 
 Nếu chỉ có một thuộc tính duy nhất thì thường chưa đủ để mô tả một Entity có ý nghĩa.
 
-Khi gom phần **2.2. Một Entity có từ hai Attribute trở lên** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2.2. Một Entity có từ hai Attribute trở lên**. Bây giờ chuyển sang **Keyword: Entity 구성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Entity 구성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: Entity 구성
 
 **엔터티의 구성은 엔터티, 속성, 인스턴스의 관계로 이해해야 한다.**
@@ -2219,12 +1587,6 @@ Entity
 ```
 
 ---
-
-Khi gom phần **Keyword: Entity 구성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Entity 구성**. Bây giờ chuyển sang **2.3. Một Attribute có một Attribute Value**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2.3. Một Attribute có một Attribute Value** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.3. Một Attribute có một Attribute Value
 
@@ -2248,14 +1610,7 @@ Mỗi ô chỉ có một giá trị:
 학점 = 4.0
 ```
 
-Khi gom phần **2.3. Một Attribute có một Attribute Value** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2.3. Một Attribute có một Attribute Value**. Bây giờ chuyển sang **Ví dụ sai trong tài liệu**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ sai trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Ví dụ sai trong tài liệu
-
 Phần này nối mạch SQL với “Ví dụ sai trong tài liệu”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -2267,12 +1622,6 @@ Một ô không được chứa đồng thời hai giá trị `25` và `370`.
 **한 속성값에 25와 370을 함께 저장하면 하나의 속성이 여러 값을 가지게 되므로 원자성이 깨진다.**
 
 Nếu lưu đồng thời `25` và `370` trong một Attribute Value thì một Attribute có nhiều giá trị và tính nguyên tử bị phá vỡ.
-
-Khi gom phần **Ví dụ sai trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ sai trong tài liệu**. Bây giờ chuyển sang **Keyword: 원자성(Atomicity)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 원자성(Atomicity)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 원자성(Atomicity)
 
@@ -2319,33 +1668,13 @@ Trong thiết kế quan hệ và chuẩn hóa, cách tạo bảng riêng thườ
 
 ---
 
-Khi gom phần **Keyword: 원자성(Atomicity)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 원자성(Atomicity)**. Bây giờ chuyển sang **3. 속성의 특징 - Đặc điểm của Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. 속성의 특징 - Đặc điểm của Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **3. 속성의 특징 - Đặc điểm của Attribute** tiếp nhận điểm tựa từ **2. Quan hệ giữa Entity, Instance, Attribute và Attribute Value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 속성의 명명 - Đặt tên Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. 속성의 특징 - Đặc điểm của Attribute
-
-Khi gom phần **3. 속성의 특징 - Đặc điểm của Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. 속성의 특징 - Đặc điểm của Attribute**. Bây giờ chuyển sang **3.1. Attribute là thông tin cần quản lý trong nghiệp vụ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.1. Attribute là thông tin cần quản lý trong nghiệp vụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 3.1. Attribute là thông tin cần quản lý trong nghiệp vụ
 
 **속성은 해당 업무에서 필요하고 관리해야 하는 정보이다.**
 
 Attribute là thông tin cần thiết và phải được quản lý trong nghiệp vụ tương ứng.
-
-Khi gom phần **3.1. Attribute là thông tin cần quản lý trong nghiệp vụ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.1. Attribute là thông tin cần quản lý trong nghiệp vụ**. Bây giờ chuyển sang **Keyword: 업무 필요성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 업무 필요성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 업무 필요성
 
@@ -2376,23 +1705,11 @@ có thể không phải Attribute cần thiết nếu không phục vụ nghiệ
 
 ---
 
-Khi gom phần **Keyword: 업무 필요성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 업무 필요성**. Bây giờ chuyển sang **3.2. Attribute phải phụ thuộc hàm vào Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.2. Attribute phải phụ thuộc hàm vào Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 3.2. Attribute phải phụ thuộc hàm vào Identifier
 
 **속성은 정규화 이론에 근거하여 주식별자에 함수적으로 종속되어야 한다.**
 
 Theo lý thuyết chuẩn hóa, Attribute phải phụ thuộc hàm vào khóa định danh chính.
-
-Khi gom phần **3.2. Attribute phải phụ thuộc hàm vào Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.2. Attribute phải phụ thuộc hàm vào Identifier**. Bây giờ chuyển sang **Keyword: 주식별자**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 주식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 주식별자
 
@@ -2432,12 +1749,6 @@ Biểu diễn phụ thuộc hàm:
 학번 → 이름, 전공, 학점
 ```
 
-Khi gom phần **Keyword: 주식별자** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 주식별자**. Bây giờ chuyển sang **Keyword: 함수적 종속**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 함수적 종속** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 함수적 종속
 
 **함수적 종속은 어떤 속성값을 알면 다른 속성값을 유일하게 결정할 수 있는 관계이다.**
@@ -2459,12 +1770,6 @@ Nhưng:
 có thể không đúng vì có thể có nhiều người cùng tên.
 
 ---
-
-Khi gom phần **Keyword: 함수적 종속** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 함수적 종속**. Bây giờ chuyển sang **3.3. Attribute được quyết định bởi Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.3. Attribute được quyết định bởi Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 3.3. Attribute được quyết định bởi Identifier
 
@@ -2492,12 +1797,6 @@ Không nên có dữ liệu:
 nếu `학번` được định nghĩa là mã duy nhất của sinh viên.
 
 ---
-
-Khi gom phần **3.3. Attribute được quyết định bởi Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.3. Attribute được quyết định bởi Identifier**. Bây giờ chuyển sang **3.4. Một Attribute chỉ có một giá trị**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.4. Một Attribute chỉ có một giá trị** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 3.4. Một Attribute chỉ có một giá trị
 
@@ -2539,33 +1838,13 @@ Dữ liệu:
 
 ---
 
-Khi gom phần **3.4. Một Attribute chỉ có một giá trị** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.4. Một Attribute chỉ có một giá trị**. Bây giờ chuyển sang **4. 속성의 명명 - Đặt tên Attribute**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. 속성의 명명 - Đặt tên Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **4. 속성의 명명 - Đặt tên Attribute** tiếp nhận điểm tựa từ **3. 속성의 특징 - Đặc điểm của Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 속성의 표기법 - Ký pháp Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. 속성의 명명 - Đặt tên Attribute
-
-Khi gom phần **4. 속성의 명명 - Đặt tên Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. 속성의 명명 - Đặt tên Attribute**. Bây giờ chuyển sang **4.1. Sử dụng tên được dùng trong nghiệp vụ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.1. Sử dụng tên được dùng trong nghiệp vụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.1. Sử dụng tên được dùng trong nghiệp vụ
 
 **속성명은 해당 업무에서 실제로 사용하는 이름을 부여해야 한다.**
 
 Tên Attribute phải sử dụng tên thực tế được dùng trong nghiệp vụ.
-
-Khi gom phần **4.1. Sử dụng tên được dùng trong nghiệp vụ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.1. Sử dụng tên được dùng trong nghiệp vụ**. Bây giờ chuyển sang **Keyword: 속성명**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 속성명** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 속성명
 
@@ -2593,12 +1872,6 @@ HIRE_DATE
 ```
 
 ---
-
-Khi gom phần **Keyword: 속성명** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 속성명**. Bây giờ chuyển sang **4.2. Hạn chế sử dụng từ viết tắt**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.2. Hạn chế sử dụng từ viết tắt** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.2. Hạn chế sử dụng từ viết tắt
 
@@ -2631,12 +1904,6 @@ FK
 URL
 ```
 
-Khi gom phần **4.2. Hạn chế sử dụng từ viết tắt** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.2. Hạn chế sử dụng từ viết tắt**. Bây giờ chuyển sang **Keyword: 약어**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 약어** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 약어
 
 **약어는 긴 단어나 표현을 짧게 줄여서 사용하는 것이다.**
@@ -2646,12 +1913,6 @@ Từ viết tắt là cách rút ngắn một từ hoặc cụm từ dài.
 Trong SQLD, ý chính của tài liệu là tên Attribute phải dễ hiểu đối với nhiều người, không nên phụ thuộc vào cách viết tắt cá nhân.
 
 ---
-
-Khi gom phần **Keyword: 약어** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 약어**. Bây giờ chuyển sang **4.3. Dùng danh từ, tránh dùng câu mô tả**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.3. Dùng danh từ, tránh dùng câu mô tả** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.3. Dùng danh từ, tránh dùng câu mô tả
 
@@ -2673,12 +1934,6 @@ Ví dụ tốt:
 주문일자
 ```
 
-Khi gom phần **4.3. Dùng danh từ, tránh dùng câu mô tả** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.3. Dùng danh từ, tránh dùng câu mô tả**. Bây giờ chuyển sang **Keyword: 명사형**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 명사형** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 명사형
 
 **명사형 속성명은 데이터의 대상을 간결하게 나타내는 이름이다.**
@@ -2686,12 +1941,6 @@ Ta bắt đầu **Keyword: 명사형** bằng câu hỏi: **khái niệm này gi
 Tên Attribute dạng danh từ là tên ngắn gọn thể hiện đối tượng của dữ liệu.
 
 ---
-
-Khi gom phần **Keyword: 명사형** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 명사형**. Bây giờ chuyển sang **4.4. Tránh tên chứa công thức hoặc sở hữu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.4. Tránh tên chứa công thức hoặc sở hữu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.4. Tránh tên chứa công thức hoặc sở hữu
 
@@ -2729,23 +1978,11 @@ thì tên Attribute nên thể hiện kết quả nghiệp vụ:
 
 ---
 
-Khi gom phần **4.4. Tránh tên chứa công thức hoặc sở hữu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.4. Tránh tên chứa công thức hoặc sở hữu**. Bây giờ chuyển sang **4.5. Tên Attribute phải duy nhất trong toàn mô hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.5. Tên Attribute phải duy nhất trong toàn mô hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4.5. Tên Attribute phải duy nhất trong toàn mô hình
 
 **속성의 이름은 전체 데이터 모델에서 유일성을 확보해야 한다.**
 
 Tên Attribute phải bảo đảm tính duy nhất trong toàn bộ mô hình dữ liệu.
-
-Khi gom phần **4.5. Tên Attribute phải duy nhất trong toàn mô hình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.5. Tên Attribute phải duy nhất trong toàn mô hình**. Bây giờ chuyển sang **Keyword: 유일성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 유일성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 유일성
 
@@ -2778,25 +2015,11 @@ Vì:
 
 sẽ rõ nghĩa hơn `이름`.
 
-Khi gom phần **Keyword: 유일성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 유일성**. Bây giờ chuyển sang **Lưu ý**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Lưu ý** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Lưu ý
 
 Trong mỗi bảng, tên cột đương nhiên không được trùng nhau. Nhưng tài liệu đang nhấn mạnh phạm vi rộng hơn: toàn bộ mô hình dữ liệu cần có cách đặt tên nhất quán và không gây mơ hồ.
 
 ---
-
-Khi gom phần **Lưu ý** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Lưu ý**. Bây giờ chuyển sang **5. 속성의 표기법 - Ký pháp Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. 속성의 표기법 - Ký pháp Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **5. 속성의 표기법 - Ký pháp Attribute** tiếp nhận điểm tựa từ **4. 속성의 명명 - Đặt tên Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 속성의 도메인 - Domain của Attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. 속성의 표기법 - Ký pháp Attribute
 
@@ -2806,12 +2029,6 @@ Hình cho thấy hai cách biểu diễn:
 2. Barker 표기법.
 
 ---
-
-Khi gom phần **5. 속성의 표기법 - Ký pháp Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. 속성의 표기법 - Ký pháp Attribute**. Bây giờ chuyển sang **5.1. IE notation**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.1. IE notation** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 5.1. IE notation
 
@@ -2838,12 +2055,6 @@ Ví dụ:
 
 ---
 
-Khi gom phần **5.1. IE notation** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.1. IE notation**. Bây giờ chuyển sang **5.2. Barker notation**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.2. Barker notation** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 5.2. Barker notation
 
 **Barker 표기법에서는 속성의 종류를 기호로 구분하여 표현할 수 있다.**
@@ -2865,12 +2076,6 @@ Trong đó có thể hiểu:
 - `○`: Attribute tùy chọn hoặc có thể NULL.
 - Ký hiệu khác tùy theo quy ước của Barker notation.
 
-Khi gom phần **5.2. Barker notation** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.2. Barker notation**. Bây giờ chuyển sang **Keyword: 표기법**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 표기법** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 표기법
 
 **표기법은 데이터 모델의 구성 요소를 일정한 기호와 규칙으로 표현하는 방법이다.**
@@ -2884,21 +2089,7 @@ Ký pháp là phương pháp biểu diễn các thành phần của mô hình d�
 
 ---
 
-Khi gom phần **Keyword: 표기법** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 표기법**. Bây giờ chuyển sang **6. 속성의 도메인 - Domain của Attribute**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. 속성의 도메인 - Domain của Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **6. 속성의 도메인 - Domain của Attribute** tiếp nhận điểm tựa từ **5. 속성의 표기법 - Ký pháp Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phân loại Attribute theo đặc tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. 속성의 도메인 - Domain của Attribute
-
-Khi gom phần **6. 속성의 도메인 - Domain của Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6. 속성의 도메인 - Domain của Attribute**. Bây giờ chuyển sang **6.1. Định nghĩa**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.1. Định nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 6.1. Định nghĩa
 
@@ -2910,12 +2101,6 @@ Domain là phạm vi các giá trị mà một Attribute có thể nhận.
 
 Domain xác định kiểu dữ liệu, độ dài và các ràng buộc của Attribute.
 
-Khi gom phần **6.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.1. Định nghĩa**. Bây giờ chuyển sang **Keyword: 도메인(Domain)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 도메인(Domain)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 도메인(Domain)
 
 **도메인은 특정 속성에 입력할 수 있는 값의 규칙과 범위를 정의한 것이다.**
@@ -2924,19 +2109,7 @@ Domain là tập hợp các quy tắc và phạm vi định nghĩa những giá 
 
 ---
 
-Khi gom phần **Keyword: 도메인(Domain)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 도메인(Domain)**. Bây giờ chuyển sang **6.2. Ví dụ về Domain trong hình**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.2. Ví dụ về Domain trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 6.2. Ví dụ về Domain trong hình
-
-Khi gom phần **6.2. Ví dụ về Domain trong hình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.2. Ví dụ về Domain trong hình**. Bây giờ chuyển sang **Địa chỉ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Địa chỉ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Địa chỉ
 
@@ -2950,12 +2123,6 @@ Ví dụ Oracle:
 ADDRESS VARCHAR2(20)
 ```
 
-Khi gom phần **Địa chỉ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Địa chỉ**. Bây giờ chuyển sang **Điểm số**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Điểm số** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Điểm số
 
 **학점 속성의 도메인은 0.0 이상 4.5 이하의 실수로 정의할 수 있다.**
@@ -2968,12 +2135,6 @@ Ví dụ:
 GPA NUMBER(2,1)
 CHECK (GPA BETWEEN 0.0 AND 4.5)
 ```
-
-Khi gom phần **Điểm số** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Điểm số**. Bây giờ chuyển sang **Keyword: 제약조건**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 제약조건** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 제약조건
 
@@ -3006,14 +2167,6 @@ Các giá trị không hợp lệ:
 
 ---
 
-Khi gom phần **Keyword: 제약조건** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 제약조건**. Bây giờ chuyển sang **7. Phân loại Attribute theo đặc tính**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. Phân loại Attribute theo đặc tính** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **7. Phân loại Attribute theo đặc tính** tiếp nhận điểm tựa từ **6. 속성의 도메인 - Domain của Attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Phân loại Attribute theo cách Entity được cấu thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. Phân loại Attribute theo đặc tính
 
 Hình chia thành:
@@ -3025,12 +2178,6 @@ Hình chia thành:
 ```
 
 ---
-
-Khi gom phần **7. Phân loại Attribute theo đặc tính** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7. Phân loại Attribute theo đặc tính**. Bây giờ chuyển sang **7.1. 기본 속성 - Basic Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.1. 기본 속성 - Basic Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.1. 기본 속성 - Basic Attribute
 
@@ -3047,12 +2194,6 @@ Ví dụ trong hình:
 주문일자
 원금
 ```
-
-Khi gom phần **7.1. 기본 속성 - Basic Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.1. 기본 속성 - Basic Attribute**. Bây giờ chuyển sang **Keyword: 기본 속성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 기본 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 기본 속성
 
@@ -3074,23 +2215,11 @@ PRINCIPAL
 
 ---
 
-Khi gom phần **Keyword: 기본 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 기본 속성**. Bây giờ chuyển sang **7.2. 설계 속성 - Designed Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.2. 설계 속성 - Designed Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 7.2. 설계 속성 - Designed Attribute
 
 **설계 속성은 업무상 필요한 데이터 외에 데이터 모델링을 위해 새로 만들거나 변형하여 정의한 속성이다.**
 
 Designed Attribute là Attribute được tạo mới hoặc biến đổi để phục vụ mô hình hóa dữ liệu, ngoài dữ liệu vốn cần thiết trong nghiệp vụ.
-
-Khi gom phần **7.2. 설계 속성 - Designed Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.2. 설계 속성 - Designed Attribute**. Bây giờ chuyển sang **Keyword: 설계 속성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 설계 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 설계 속성
 
@@ -3114,14 +2243,7 @@ Một sản phẩm ngoài đời có thể không tự nhiên có `상품코드`
 - Làm Primary Key.
 - Liên kết với bảng khác.
 
-Khi gom phần **Keyword: 설계 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 설계 속성**. Bây giờ chuyển sang **Ví dụ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Ví dụ
-
 Phần này nối mạch SQL với “Ví dụ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -3135,12 +2257,6 @@ PRICE
 `PRODUCT_CODE` thường là Designed Attribute.
 
 ---
-
-Khi gom phần **Ví dụ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ**. Bây giờ chuyển sang **7.3. 설계 속성으로 만든 인조 식별자**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.3. 설계 속성으로 만든 인조 식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.3. 설계 속성으로 만든 인조 식별자
 
@@ -3160,12 +2276,6 @@ Các mã này có thể không phải dữ liệu tự nhiên từ thế giới 
 
 ---
 
-Khi gom phần **7.3. 설계 속성으로 만든 인조 식별자** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.3. 설계 속성으로 만든 인조 식별자**. Bây giờ chuyển sang **7.4. 파생 속성 - Derived Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.4. 파생 속성 - Derived Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 7.4. 파생 속성 - Derived Attribute
 
 **파생 속성은 다른 속성들로부터 유도되거나 계산되어 생성되는 속성이다.**
@@ -3183,12 +2293,6 @@ Ví dụ:
 총금액 = 각 상품 금액의 합계
 평균점수 = 점수의 합계 ÷ 과목 수
 ```
-
-Khi gom phần **7.4. 파생 속성 - Derived Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.4. 파생 속성 - Derived Attribute**. Bây giờ chuyển sang **Keyword: 파생 속성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 파생 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 파생 속성
 
@@ -3209,12 +2313,6 @@ ORDER_AMOUNT = 300
 
 ---
 
-Khi gom phần **Keyword: 파생 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 파생 속성**. Bây giờ chuyển sang **7.5. Có nên lưu Derived Attribute không?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.5. Có nên lưu Derived Attribute không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 7.5. Có nên lưu Derived Attribute không?
 
 **파생 속성은 조회 성능을 빠르게 하기 위해 원래 속성의 값을 계산하여 저장할 수 있다.**
@@ -3233,12 +2331,6 @@ ta lưu sẵn:
 ```
 ORDER_AMOUNT
 ```
-
-Khi gom phần **7.5. Có nên lưu Derived Attribute không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.5. Có nên lưu Derived Attribute không?**. Bây giờ chuyển sang **Nhưng có rủi ro**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Nhưng có rủi ro** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Nhưng có rủi ro
 
@@ -3261,12 +2353,6 @@ ORDER_AMOUNT = 300  -- Sai
 Thực tế phải là 500
 ```
 
-Khi gom phần **Nhưng có rủi ro** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Nhưng có rủi ro**. Bây giờ chuyển sang **Câu ghi nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Câu ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Câu ghi nhớ
 
 **파생 속성은 조회에는 편리하지만 원천 데이터가 변경될 때 일관성을 관리해야 한다.**
@@ -3274,12 +2360,6 @@ Ta bắt đầu **Câu ghi nhớ** bằng câu hỏi: **khái niệm này giải
 Derived Attribute thuận tiện khi truy vấn nhưng phải quản lý tính nhất quán khi dữ liệu nguồn thay đổi.
 
 ---
-
-Khi gom phần **Câu ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Câu ghi nhớ**. Bây giờ chuyển sang **7.6. “가급적 적게 정의” nghĩa là gì?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.6. “가급적 적게 정의” nghĩa là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.6. “가급적 적게 정의” nghĩa là gì?
 
@@ -3299,14 +2379,6 @@ Có thể sử dụng khi:
 
 ---
 
-Khi gom phần **7.6. “가급적 적게 정의” nghĩa là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.6. “가급적 적게 정의” nghĩa là gì?**. Bây giờ chuyển sang **8. Phân loại Attribute theo cách Entity được cấu thành**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8. Phân loại Attribute theo cách Entity được cấu thành** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **8. Phân loại Attribute theo cách Entity được cấu thành** tiếp nhận điểm tựa từ **7. Phân loại Attribute theo đặc tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Phân loại theo số lượng Attribute Value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Phân loại Attribute theo cách Entity được cấu thành
 
 Hình chia Attribute thành:
@@ -3319,23 +2391,11 @@ FK 속성
 
 ---
 
-Khi gom phần **8. Phân loại Attribute theo cách Entity được cấu thành** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8. Phân loại Attribute theo cách Entity được cấu thành**. Bây giờ chuyển sang **8.1. PK Attribute**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.1. PK Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 8.1. PK Attribute
 
 **기본키 속성은 엔터티의 인스턴스를 구별할 수 있는 속성이다.**
 
 Primary Key Attribute là Attribute có thể phân biệt các Instance của Entity.
-
-Khi gom phần **8.1. PK Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.1. PK Attribute**. Bây giờ chuyển sang **Keyword: 기본키(PK)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 기본키(PK)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 기본키(PK)
 
@@ -3366,12 +2426,6 @@ CREATE TABLE EMPLOYEE (
 
 ---
 
-Khi gom phần **Keyword: 기본키(PK)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 기본키(PK)**. Bây giờ chuyển sang **8.2. FK Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.2. FK Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 8.2. FK Attribute
 
 **외래키 속성은 다른 엔터티와의 관계에서 포함된 속성이다.**
@@ -3381,12 +2435,6 @@ Foreign Key Attribute là Attribute được chứa trong quan hệ với Entity
 **외래키는 다른 테이블의 기본키를 참조하여 엔터티 간의 관계를 표현한다.**
 
 Foreign Key tham chiếu Primary Key của bảng khác để biểu diễn quan hệ giữa các Entity.
-
-Khi gom phần **8.2. FK Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.2. FK Attribute**. Bây giờ chuyển sang **Keyword: 외래키(FK)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 외래키(FK)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 외래키(FK)
 
@@ -3420,12 +2468,6 @@ REFERENCES DEPARTMENT(DEPARTMENT_CODE)
 
 ---
 
-Khi gom phần **Keyword: 외래키(FK)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 외래키(FK)**. Bây giờ chuyển sang **8.3. 일반 속성 - General Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.3. 일반 속성 - General Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 8.3. 일반 속성 - General Attribute
 
 **일반 속성은 기본키와 외래키에 포함되지 않는 일반적인 속성이다.**
@@ -3446,21 +2488,7 @@ ADDRESS          일반 속성
 
 ---
 
-Khi gom phần **8.3. 일반 속성 - General Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.3. 일반 속성 - General Attribute**. Bây giờ chuyển sang **9. Phân loại theo số lượng Attribute Value**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9. Phân loại theo số lượng Attribute Value** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **9. Phân loại theo số lượng Attribute Value** tiếp nhận điểm tựa từ **8. Phân loại Attribute theo cách Entity được cấu thành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Phân loại theo khả năng phân tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Phân loại theo số lượng Attribute Value
-
-Khi gom phần **9. Phân loại theo số lượng Attribute Value** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9. Phân loại theo số lượng Attribute Value**. Bây giờ chuyển sang **9.1. Single Value Attribute**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.1. Single Value Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.1. Single Value Attribute
 
@@ -3474,12 +2502,6 @@ Ví dụ:
 나이 = 25
 이름 = 홍길동
 ```
-
-Khi gom phần **9.1. Single Value Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.1. Single Value Attribute**. Bây giờ chuyển sang **Keyword: 단일값 속성**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 단일값 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 단일값 속성
 
@@ -3496,12 +2518,6 @@ STUDENT_NAME = 홍길동
 
 ---
 
-Khi gom phần **Keyword: 단일값 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 단일값 속성**. Bây giờ chuyển sang **9.2. Multi Value Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.2. Multi Value Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 9.2. Multi Value Attribute
 
 **다중값 속성은 하나의 속성이 여러 개의 값을 가지는 속성이다.**
@@ -3513,12 +2529,6 @@ Ví dụ trong hình:
 ```
 취미 = 독서, 여행, 영화감상
 ```
-
-Khi gom phần **9.2. Multi Value Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.2. Multi Value Attribute**. Bây giờ chuyển sang **Keyword: 다중값 속성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 다중값 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 다중값 속성
 
@@ -3536,12 +2546,6 @@ Ví dụ:
 ```
 
 ---
-
-Khi gom phần **Keyword: 다중값 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 다중값 속성**. Bây giờ chuyển sang **9.3. Vì sao Multi Value Attribute là vấn đề?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.3. Vì sao Multi Value Attribute là vấn đề?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.3. Vì sao Multi Value Attribute là vấn đề?
 
@@ -3564,12 +2568,6 @@ WHERE HOBBY = '여행'
 ```
 
 Không thể truy vấn chính xác nếu nhiều giá trị được nhét vào một chuỗi.
-
-Khi gom phần **9.3. Vì sao Multi Value Attribute là vấn đề?** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.3. Vì sao Multi Value Attribute là vấn đề?**. Bây giờ chuyển sang **Cách xử lý 1: Chuẩn hóa thành Entity riêng**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách xử lý 1: Chuẩn hóa thành Entity riêng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Cách xử lý 1: Chuẩn hóa thành Entity riêng
 
@@ -3597,12 +2595,6 @@ Dữ liệu:
 | 100 | 여행 |
 | 100 | 영화감상 |
 
-Khi gom phần **Cách xử lý 1: Chuẩn hóa thành Entity riêng** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách xử lý 1: Chuẩn hóa thành Entity riêng**. Bây giờ chuyển sang **Cách xử lý 2: Tạo Relationship**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách xử lý 2: Tạo Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách xử lý 2: Tạo Relationship
 
 **분리한 엔터티는 원래 엔터티와 관계를 통해 연결해야 한다.**
@@ -3615,21 +2607,7 @@ STUDENT 1 ─── N STUDENT_HOBBY
 
 ---
 
-Khi gom phần **Cách xử lý 2: Tạo Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách xử lý 2: Tạo Relationship**. Bây giờ chuyển sang **10. Phân loại theo khả năng phân tách**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10. Phân loại theo khả năng phân tách** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **10. Phân loại theo khả năng phân tách** tiếp nhận điểm tựa từ **9. Phân loại theo số lượng Attribute Value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Tổng hợp toàn bộ nội dung trong hai hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. Phân loại theo khả năng phân tách
-
-Khi gom phần **10. Phân loại theo khả năng phân tách** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10. Phân loại theo khả năng phân tách**. Bây giờ chuyển sang **10.1. Simple Attribute**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10.1. Simple Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 10.1. Simple Attribute
 
@@ -3648,12 +2626,6 @@ Ví dụ trong hình:
 나이
 ```
 
-Khi gom phần **10.1. Simple Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10.1. Simple Attribute**. Bây giờ chuyển sang **Keyword: 단순 속성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 단순 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 단순 속성
 
 **단순 속성은 업무적으로 더 이상 나눌 필요가 없는 하나의 기본적인 데이터 항목이다.**
@@ -3669,12 +2641,6 @@ Ví dụ:
 Thông thường không cần tách `25` thành các Attribute nhỏ hơn.
 
 ---
-
-Khi gom phần **Keyword: 단순 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 단순 속성**. Bây giờ chuyển sang **10.2. Composite Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10.2. Composite Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 10.2. Composite Attribute
 
@@ -3692,12 +2658,6 @@ Ví dụ trong hình:
 └── 번지
 ```
 
-Khi gom phần **10.2. Composite Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10.2. Composite Attribute**. Bây giờ chuyển sang **Keyword: 복합 속성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 복합 속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 복합 속성
 
 **복합 속성은 하나의 큰 의미를 가지지만 내부적으로 여러 세부 항목으로 나눌 수 있는 속성이다.**
@@ -3713,12 +2673,6 @@ ADDRESS
 ├── STREET
 └── BUILDING_NUMBER
 ```
-
-Khi gom phần **Keyword: 복합 속성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 복합 속성**. Bây giờ chuyển sang **Có nên tách Composite Attribute không?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Có nên tách Composite Attribute không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Có nên tách Composite Attribute không?
 
@@ -3741,14 +2695,6 @@ ADDRESS = 서울시 종로구 종로 1
 ```
 
 ---
-
-Khi gom phần **Có nên tách Composite Attribute không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Có nên tách Composite Attribute không?**. Bây giờ chuyển sang **11. Tổng hợp toàn bộ nội dung trong hai hình**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11. Tổng hợp toàn bộ nội dung trong hai hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. Tổng hợp toàn bộ nội dung trong hai hình** gom các mảnh từ **10. Phân loại theo khả năng phân tách** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **제 4절 관계 - Phần 4: Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Tổng hợp toàn bộ nội dung trong hai hình
 
@@ -3784,14 +2730,7 @@ Theo số lượng giá trị, Attribute được chia thành Single Value và M
 
 Theo khả năng phân tách, Attribute được chia thành Simple và Composite Attribute.
 
-Khi gom phần **11. Tổng hợp toàn bộ nội dung trong hai hình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11. Tổng hợp toàn bộ nội dung trong hai hình**. Bây giờ chuyển sang **Sơ đồ ghi nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Sơ đồ ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Sơ đồ ghi nhớ
-
 Phần này nối mạch SQL với “Sơ đồ ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -3845,43 +2784,15 @@ Câu ghi nhớ quan trọng nhất:
 
 ---
 
-Khi gom phần **Sơ đồ ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Sơ đồ ghi nhớ**. Bây giờ chuyển sang **제 4절 관계 - Phần 4: Relationship**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **제 4절 관계 - Phần 4: Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **제 4절 관계 - Phần 4: Relationship** gom các mảnh từ **11. Tổng hợp toàn bộ nội dung trong hai hình** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1. 관계의 정의 - Định nghĩa Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 제 4절 관계 - Phần 4: Relationship
 
-Khi gom phần **제 4절 관계 - Phần 4: Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **제 4절 관계 - Phần 4: Relationship**. Bây giờ chuyển sang **1. 관계의 정의 - Định nghĩa Relationship**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. 관계의 정의 - Định nghĩa Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **1. 관계의 정의 - Định nghĩa Relationship** tiếp nhận điểm tựa từ **제 4절 관계 - Phần 4: Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 관계의 페어링 - Pairing của Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1. 관계의 정의 - Định nghĩa Relationship
-
-Khi gom phần **1. 관계의 정의 - Định nghĩa Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. 관계의 정의 - Định nghĩa Relationship**. Bây giờ chuyển sang **1.1. Định nghĩa trong tài liệu**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.1. Định nghĩa trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1.1. Định nghĩa trong tài liệu
 
 **관계는 엔터티의 인스턴스 사이에 논리적인 연관성이 존재하거나 행위로서 서로에게 연관성이 부여된 상태이다.**
 
 Relationship là trạng thái trong đó giữa các Instance của Entity tồn tại sự liên quan về mặt logic hoặc sự liên quan được tạo ra thông qua một hành động.
-
-Khi gom phần **1.1. Định nghĩa trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.1. Định nghĩa trong tài liệu**. Bây giờ chuyển sang **Keyword: 관계(Relationship)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계(Relationship)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 관계(Relationship)
 
@@ -3911,12 +2822,6 @@ Giảng viên dạy học viên.
 
 ---
 
-Khi gom phần **Keyword: 관계(Relationship)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계(Relationship)**. Bây giờ chuyển sang **1.2. Relationship ở cấp Entity và Instance**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.2. Relationship ở cấp Entity và Instance** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.2. Relationship ở cấp Entity và Instance
 
 **엔터티 간의 관계는 실제로는 각 엔터티에 속한 인스턴스 간의 관계로 구성된다.**
@@ -3945,12 +2850,6 @@ Các mối quan hệ thực tế:
 
 Như vậy, không phải toàn bộ giảng viên đều nhất thiết dạy toàn bộ học viên. Quan hệ phải được xác định ở cấp từng Instance.
 
-Khi gom phần **1.2. Relationship ở cấp Entity và Instance** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.2. Relationship ở cấp Entity và Instance**. Bây giờ chuyển sang **Keyword: Instance Relationship**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Instance Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: Instance Relationship
 
 **인스턴스 관계는 실제 데이터 행과 행 사이에 존재하는 구체적인 관계이다.**
@@ -3959,21 +2858,7 @@ Instance Relationship là mối quan hệ cụ thể tồn tại giữa các dò
 
 ---
 
-Khi gom phần **Keyword: Instance Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Instance Relationship**. Bây giờ chuyển sang **2. 관계의 페어링 - Pairing của Relationship**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. 관계의 페어링 - Pairing của Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **2. 관계의 페어링 - Pairing của Relationship** tiếp nhận điểm tựa từ **1. 관계의 정의 - Định nghĩa Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Phân loại Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. 관계의 페어링 - Pairing của Relationship
-
-Khi gom phần **2. 관계의 페어링 - Pairing của Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. 관계의 페어링 - Pairing của Relationship**. Bây giờ chuyển sang **2.1. Định nghĩa Pairing**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2.1. Định nghĩa Pairing** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.1. Định nghĩa Pairing
 
@@ -4001,12 +2886,6 @@ Một khả năng Pairing:
 강사2 - 학생2
 ```
 
-Khi gom phần **2.1. Định nghĩa Pairing** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2.1. Định nghĩa Pairing**. Bây giờ chuyển sang **Keyword: 페어링(Pairing)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 페어링(Pairing)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 페어링(Pairing)
 
 **페어링은 어떤 인스턴스가 어떤 다른 인스턴스와 연결되는지를 나타내는 조합이다.**
@@ -4014,12 +2893,6 @@ Ta bắt đầu **Keyword: 페어링(Pairing)** bằng câu hỏi: **khái niệ
 Pairing là tổ hợp cho biết Instance nào được liên kết với Instance nào.
 
 ---
-
-Khi gom phần **Keyword: 페어링(Pairing)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 페어링(Pairing)**. Bây giờ chuyển sang **2.2. Quan hệ và tập hợp Pairing**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2.2. Quan hệ và tập hợp Pairing** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.2. Quan hệ và tập hợp Pairing
 
@@ -4040,12 +2913,6 @@ Ba Pairing này hợp lại tạo thành Relationship:
 ```
 강사는 수강생을 가르친다.
 ```
-
-Khi gom phần **2.2. Quan hệ và tập hợp Pairing** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2.2. Quan hệ và tập hợp Pairing**. Bây giờ chuyển sang **Keyword: 관계 집합**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계 집합** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 관계 집합
 
@@ -4068,14 +2935,6 @@ Nếu Entity là tập hợp các Instance thì Relationship là tập hợp cá
 
 ---
 
-Khi gom phần **Keyword: 관계 집합** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계 집합**. Bây giờ chuyển sang **3. Phân loại Relationship**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. Phân loại Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **3. Phân loại Relationship** tiếp nhận điểm tựa từ **2. 관계의 페어링 - Pairing của Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 존재에 의한 관계 - Relationship do sự tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Phân loại Relationship
 
 Tài liệu phân loại Relationship dựa trên mục đích liên kết:
@@ -4092,21 +2951,7 @@ Nghĩa là:
 
 ---
 
-Khi gom phần **3. Phân loại Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. Phân loại Relationship**. Bây giờ chuyển sang **4. 존재에 의한 관계 - Relationship do sự tồn tại**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. 존재에 의한 관계 - Relationship do sự tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **4. 존재에 의한 관계 - Relationship do sự tồn tại** tiếp nhận điểm tựa từ **3. Phân loại Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 행위에 의한 관계 - Relationship do hành động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. 존재에 의한 관계 - Relationship do sự tồn tại
-
-Khi gom phần **4. 존재에 의한 관계 - Relationship do sự tồn tại** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. 존재에 의한 관계 - Relationship do sự tồn tại**. Bây giờ chuyển sang **4.1. Nội dung trong tài liệu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.1. Nội dung trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.1. Nội dung trong tài liệu
 
@@ -4126,12 +2971,6 @@ Trong hình:
 
 Một nhân viên thuộc về một phòng ban.
 
-Khi gom phần **4.1. Nội dung trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.1. Nội dung trong tài liệu**. Bây giờ chuyển sang **Keyword: 존재에 의한 관계**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 존재에 의한 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 존재에 의한 관계
 
 **존재 관계는 어떤 행위가 발생하지 않아도 엔터티의 존재 사실만으로 성립하는 관계이다.**
@@ -4147,12 +2986,6 @@ EMPLOYEE thuộc DEPARTMENT.
 Quan hệ này tồn tại vì nhân viên được tổ chức phân vào phòng ban, không nhất thiết phải có một giao dịch cụ thể như đặt hàng hay thanh toán.
 
 ---
-
-Khi gom phần **Keyword: 존재에 의한 관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 존재에 의한 관계**. Bây giờ chuyển sang **4.2. Đặc điểm của Relationship do sự tồn tại**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.2. Đặc điểm của Relationship do sự tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.2. Đặc điểm của Relationship do sự tồn tại
 
@@ -4170,35 +3003,17 @@ EMPLOYEE
 - Một phòng ban có thể tồn tại dù hiện tại chưa có nhân viên.
 - Một nhân viên có thể được tạo ra trước khi được phân vào phòng ban, tùy theo quy tắc nghiệp vụ.
 
-Khi gom phần **4.2. Đặc điểm của Relationship do sự tồn tại** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.2. Đặc điểm của Relationship do sự tồn tại**. Bây giờ chuyển sang **Lưu ý**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Lưu ý** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Lưu ý
 
 Nếu nghiệp vụ quy định nhân viên bắt buộc phải thuộc một phòng ban thì quan hệ vẫn là Relationship tồn tại, nhưng phía nhân viên có thể là quan hệ bắt buộc.
 
 ---
 
-Khi gom phần **Lưu ý** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Lưu ý**. Bây giờ chuyển sang **4.3. Biểu diễn trong UML**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.3. Biểu diễn trong UML** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4.3. Biểu diễn trong UML
 
 **UML에서는 존재에 의한 관계를 연관관계라고 표현하고 실선으로 표시한다.**
 
 Trong UML, Relationship do sự tồn tại được biểu diễn là Association và dùng đường liền.
-
-Khi gom phần **4.3. Biểu diễn trong UML** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.3. Biểu diễn trong UML**. Bây giờ chuyển sang **Keyword: 연관관계(Association)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 연관관계(Association)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 연관관계(Association)
 
@@ -4215,12 +3030,6 @@ Department ───── Employee
 Đường liền cho biết hai đối tượng có mối liên hệ ổn định.
 
 ---
-
-Khi gom phần **Keyword: 연관관계(Association)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 연관관계(Association)**. Bây giờ chuyển sang **4.4. Biểu diễn trong Source Code**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.4. Biểu diễn trong Source Code** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.4. Biểu diễn trong Source Code
 
@@ -4251,12 +3060,6 @@ class Department {
 
 Điều này thể hiện một phòng ban có danh sách nhân viên.
 
-Khi gom phần **4.4. Biểu diễn trong Source Code** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.4. Biểu diễn trong Source Code**. Bây giờ chuyển sang **Keyword: 멤버변수(Member Variable)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 멤버변수(Member Variable)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 멤버변수(Member Variable)
 
 **멤버변수는 클래스 내부에 선언되어 객체의 상태나 다른 객체와의 연결을 저장하는 변수이다.**
@@ -4265,21 +3068,7 @@ Member Variable là biến được khai báo bên trong Class để lưu trạn
 
 ---
 
-Khi gom phần **Keyword: 멤버변수(Member Variable)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 멤버변수(Member Variable)**. Bây giờ chuyển sang **5. 행위에 의한 관계 - Relationship do hành động**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. 행위에 의한 관계 - Relationship do hành động** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **5. 행위에 의한 관계 - Relationship do hành động** tiếp nhận điểm tựa từ **4. 존재에 의한 관계 - Relationship do sự tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 관계의 표기법 - Cách biểu diễn Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. 행위에 의한 관계 - Relationship do hành động
-
-Khi gom phần **5. 행위에 의한 관계 - Relationship do hành động** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. 행위에 의한 관계 - Relationship do hành động**. Bây giờ chuyển sang **5.1. Nội dung trong tài liệu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.1. Nội dung trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 5.1. Nội dung trong tài liệu
 
@@ -4299,12 +3088,6 @@ Ví dụ trong hình:
 
 Đơn hàng `CTA024` được tạo ra thông qua hành động đặt hàng của khách hàng Kim Cheol-su.
 
-Khi gom phần **5.1. Nội dung trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.1. Nội dung trong tài liệu**. Bây giờ chuyển sang **Keyword: 행위에 의한 관계**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 행위에 의한 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 행위에 의한 관계
 
 **행위 관계는 업무 활동이나 거래가 발생한 결과로 만들어지는 관계이다.**
@@ -4321,12 +3104,6 @@ Khách hàng thanh toán.
 ```
 
 ---
-
-Khi gom phần **Keyword: 행위에 의한 관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 행위에 의한 관계**. Bây giờ chuyển sang **5.2. Event Entity thường không tồn tại độc lập**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.2. Event Entity thường không tồn tại độc lập** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 5.2. Event Entity thường không tồn tại độc lập
 
@@ -4357,12 +3134,6 @@ ENROLLMENT
 
 nếu không có sinh viên, môn học và hành động đăng ký.
 
-Khi gom phần **5.2. Event Entity thường không tồn tại độc lập** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.2. Event Entity thường không tồn tại độc lập**. Bây giờ chuyển sang **Keyword: 사건 엔터티(Event Entity)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 사건 엔터티(Event Entity)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 사건 엔터티(Event Entity)
 
 **사건 엔터티는 업무가 수행될 때마다 발생하는 거래나 사건을 저장하는 엔터티이다.**
@@ -4381,23 +3152,11 @@ DELIVERY
 
 ---
 
-Khi gom phần **Keyword: 사건 엔터티(Event Entity)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 사건 엔터티(Event Entity)**. Bây giờ chuyển sang **5.3. Biểu diễn trong UML**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.3. Biểu diễn trong UML** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 5.3. Biểu diễn trong UML
 
 **UML에서는 행위에 의한 관계를 의존관계로 표현하고 점선으로 표시한다.**
 
 Trong UML, Relationship do hành động được biểu diễn là Dependency và dùng đường nét đứt.
-
-Khi gom phần **5.3. Biểu diễn trong UML** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.3. Biểu diễn trong UML**. Bây giờ chuyển sang **Keyword: 의존관계(Dependency)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 의존관계(Dependency)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 의존관계(Dependency)
 
@@ -4417,12 +3176,6 @@ Customer ─ ─ ─ ─ > Order
 - Khi khách hàng thực hiện hành động đặt hàng thì Order được tạo ra.
 
 ---
-
-Khi gom phần **Keyword: 의존관계(Dependency)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 의존관계(Dependency)**. Bây giờ chuyển sang **5.4. Biểu diễn trong Operation**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.4. Biểu diễn trong Operation** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 5.4. Biểu diễn trong Operation
 
@@ -4446,12 +3199,6 @@ class Customer {
 - `Product product` là Parameter.
 - Hành động của Customer có thể tạo ra hoặc tác động đến Order.
 
-Khi gom phần **5.4. Biểu diễn trong Operation** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.4. Biểu diễn trong Operation**. Bây giờ chuyển sang **Keyword: 오퍼레이션(Operation)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 오퍼레이션(Operation)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 오퍼레이션(Operation)
 
 **오퍼레이션은 객체가 수행할 수 있는 동작이나 기능이다.**
@@ -4459,12 +3206,6 @@ Ta bắt đầu **Keyword: 오퍼레이션(Operation)** bằng câu hỏi: **kh�
 Operation là hành động hoặc chức năng mà một đối tượng có thể thực hiện.
 
 ---
-
-Khi gom phần **Keyword: 오퍼레이션(Operation)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 오퍼레이션(Operation)**. Bây giờ chuyển sang **5.5. Ví dụ trong tài liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.5. Ví dụ trong tài liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 5.5. Ví dụ trong tài liệu
 
@@ -4482,12 +3223,6 @@ Chuỗi nghiệp vụ:
 주문 CTA024 생성
 ```
 
-Khi gom phần **5.5. Ví dụ trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.5. Ví dụ trong tài liệu**. Bây giờ chuyển sang **Lưu ý quan trọng trong ERD**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Lưu ý quan trọng trong ERD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Lưu ý quan trọng trong ERD
 
 **ERD에서는 UML과 달리 존재 관계와 행위 관계를 별도의 기호로 구분하지 않고 표현한다.**
@@ -4504,21 +3239,7 @@ Nghĩa là trong ERD:
 
 ---
 
-Khi gom phần **Lưu ý quan trọng trong ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Lưu ý quan trọng trong ERD**. Bây giờ chuyển sang **6. 관계의 표기법 - Cách biểu diễn Relationship**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. 관계의 표기법 - Cách biểu diễn Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **6. 관계의 표기법 - Cách biểu diễn Relationship** tiếp nhận điểm tựa từ **5. 행위에 의한 관계 - Relationship do hành động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Relationship Check - Kiểm tra Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. 관계의 표기법 - Cách biểu diễn Relationship
-
-Khi gom phần **6. 관계의 표기법 - Cách biểu diễn Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6. 관계의 표기법 - Cách biểu diễn Relationship**. Bây giờ chuyển sang **6.1. 관계명 - Tên Relationship**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.1. 관계명 - Tên Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 6.1. 관계명 - Tên Relationship
 
@@ -4529,12 +3250,6 @@ Relationship Name là tên mô tả quan hệ giữa các Entity.
 **관계명은 애매한 동사를 피하고 현재형으로 표현해야 한다.**
 
 Tên Relationship phải tránh động từ mơ hồ và được viết ở thì hiện tại.
-
-Khi gom phần **6.1. 관계명 - Tên Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.1. 관계명 - Tên Relationship**. Bây giờ chuyển sang **Ví dụ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Ví dụ
 
@@ -4556,12 +3271,6 @@ Không nên dùng từ quá mơ hồ:
 관계된다
 ```
 
-Khi gom phần **Ví dụ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ**. Bây giờ chuyển sang **Keyword: 관계명**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계명** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 관계명
 
 **관계명은 두 엔터티 사이에서 어떤 업무가 진행되는지 명확히 보여주는 동사이다.**
@@ -4577,12 +3286,6 @@ EMPLOYEE ── 소속된다 ── DEPARTMENT
 ```
 
 ---
-
-Khi gom phần **Keyword: 관계명** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계명**. Bây giờ chuyển sang **6.2. Quan hệ phải đọc được từ cả hai phía**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.2. Quan hệ phải đọc được từ cả hai phía** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 6.2. Quan hệ phải đọc được từ cả hai phía
 
@@ -4610,12 +3313,6 @@ Khách hàng đặt hàng.
 
 ---
 
-Khi gom phần **6.2. Quan hệ phải đọc được từ cả hai phía** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.2. Quan hệ phải đọc được từ cả hai phía**. Bây giờ chuyển sang **6.3. 관계차수 - Cardinality**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.3. 관계차수 - Cardinality** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 6.3. 관계차수 - Cardinality
 
 **관계차수는 각 관계에 참여할 수 있는 인스턴스의 수이다.**
@@ -4630,12 +3327,6 @@ Trong hình:
 M:N
 ```
 
-Khi gom phần **6.3. 관계차수 - Cardinality** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.3. 관계차수 - Cardinality**. Bây giờ chuyển sang **Keyword: 관계차수(Cardinality)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 관계차수(Cardinality)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 관계차수(Cardinality)
 
 **관계차수는 한 인스턴스가 상대 엔터티의 몇 개 인스턴스와 연결될 수 있는지를 나타낸다.**
@@ -4644,14 +3335,7 @@ Cardinality cho biết một Instance có thể liên kết với bao nhiêu Ins
 
 Ví dụ:
 
-Khi gom phần **Keyword: 관계차수(Cardinality)** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 관계차수(Cardinality)**. Bây giờ chuyển sang **1:1**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1:1** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 1:1
-
 Phần này nối mạch SQL với “1:1”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -4660,14 +3344,7 @@ PERSON 1 ─── 1 PASSPORT
 
 Một người có một hộ chiếu và một hộ chiếu thuộc về một người.
 
-Khi gom phần **1:1** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1:1**. Bây giờ chuyển sang **1:N**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1:N** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 1:N
-
 Phần này nối mạch SQL với “1:N”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -4676,14 +3353,7 @@ DEPARTMENT 1 ─── N EMPLOYEE
 
 Một phòng ban có nhiều nhân viên.
 
-Khi gom phần **1:N** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1:N**. Bây giờ chuyển sang **M:N**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **M:N** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### M:N
-
 Phần này nối mạch SQL với “M:N”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -4703,12 +3373,6 @@ COURSE_ID
 
 ---
 
-Khi gom phần **M:N** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **M:N**. Bây giờ chuyển sang **6.4. Quan hệ tùy chọn hoặc bắt buộc**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.4. Quan hệ tùy chọn hoặc bắt buộc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 6.4. Quan hệ tùy chọn hoặc bắt buộc
 
 **관계선택사양은 관계에 반드시 참여해야 하는지 선택적으로 참여할 수 있는지를 나타낸다.**
@@ -4721,12 +3385,6 @@ Trong hình:
 필수참여관계: |
 선택참여관계: O
 ```
-
-Khi gom phần **6.4. Quan hệ tùy chọn hoặc bắt buộc** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.4. Quan hệ tùy chọn hoặc bắt buộc**. Bây giờ chuyển sang **Keyword: 필수참여관계**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 필수참여관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 필수참여관계
 
@@ -4746,12 +3404,6 @@ Khi đó:
 EMPLOYEE.DEPARTMENT_ID NOT NULL
 ```
 
-Khi gom phần **Keyword: 필수참여관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 필수참여관계**. Bây giờ chuyển sang **Keyword: 선택참여관계**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 선택참여관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 선택참여관계
 
 **선택참여관계는 해당 엔터티의 인스턴스가 관계에 참여하지 않아도 되는 관계이다.**
@@ -4767,23 +3419,9 @@ Một Customer có thể chưa tạo Order.
 
 ---
 
-Khi gom phần **Keyword: 선택참여관계** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 선택참여관계**. Bây giờ chuyển sang **7. Relationship Check - Kiểm tra Relationship**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. Relationship Check - Kiểm tra Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **7. Relationship Check - Kiểm tra Relationship** tiếp nhận điểm tựa từ **6. 관계의 표기법 - Cách biểu diễn Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Quan hệ định danh và không định danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. Relationship Check - Kiểm tra Relationship
 
-Tài liệu đưa ra bốn tiêu chí tự rà soát.
-
-Khi gom phần **7. Relationship Check - Kiểm tra Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7. Relationship Check - Kiểm tra Relationship**. Bây giờ chuyển sang **7.1. Có quy tắc liên quan giữa hai Entity không?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.1. Có quy tắc liên quan giữa hai Entity không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+Tài liệu đưa ra bốn câu hỏi kiểm tra.
 
 ### 7.1. Có quy tắc liên quan giữa hai Entity không?
 
@@ -4806,12 +3444,6 @@ Khách hàng tạo đơn hàng.
 Nếu hai Entity hoàn toàn không có liên hệ nghiệp vụ thì không nên tạo Relationship chỉ vì chúng cùng nằm trong một hệ thống.
 
 ---
-
-Khi gom phần **7.1. Có quy tắc liên quan giữa hai Entity không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.1. Có quy tắc liên quan giữa hai Entity không?**. Bây giờ chuyển sang **7.2. Có phát sinh sự kết hợp thông tin giữa hai Entity không?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.2. Có phát sinh sự kết hợp thông tin giữa hai Entity không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.2. Có phát sinh sự kết hợp thông tin giữa hai Entity không?
 
@@ -4836,23 +3468,11 @@ Khi sinh viên đăng ký môn học, một thông tin mới phát sinh:
 
 ---
 
-Khi gom phần **7.2. Có phát sinh sự kết hợp thông tin giữa hai Entity không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.2. Có phát sinh sự kết hợp thông tin giữa hai Entity không?**. Bây giờ chuyển sang **7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?
 
 **업무기술서나 장표에 엔터티 간의 관계 연결 규칙이 서술되어 있는지 확인해야 한다.**
 
 Phải kiểm tra xem quy tắc liên kết giữa các Entity có được mô tả trong tài liệu nghiệp vụ hay không.
-
-Khi gom phần **7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?**. Bây giờ chuyển sang **Keyword: 업무기술서**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 업무기술서** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 업무기술서
 
@@ -4871,12 +3491,6 @@ Các tài liệu cần kiểm tra:
 - Tài liệu giao diện.
 
 ---
-
-Khi gom phần **Keyword: 업무기술서** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 업무기술서**. Bây giờ chuyển sang **7.4. Có động từ mô tả Relationship không?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.4. Có động từ mô tả Relationship không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.4. Có động từ mô tả Relationship không?
 
@@ -4906,25 +3520,11 @@ giúp xác định Relationship.
 
 ---
 
-Khi gom phần **7.4. Có động từ mô tả Relationship không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.4. Có động từ mô tả Relationship không?**. Bây giờ chuyển sang **8. Quan hệ định danh và không định danh**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8. Quan hệ định danh và không định danh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **8. Quan hệ định danh và không định danh** tiếp nhận điểm tựa từ **7. Relationship Check - Kiểm tra Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 비식별자 관계 - Non-identifying Relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Quan hệ định danh và không định danh
 
 Đây là phần quan trọng vì liên quan trực tiếp đến Primary Key, Foreign Key và Strong Entity/Weak Entity.
 
 ---
-
-Khi gom phần **8. Quan hệ định danh và không định danh** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8. Quan hệ định danh và không định danh**. Bây giờ chuyển sang **8.1. 식별자 관계 - Identifying Relationship**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.1. 식별자 관계 - Identifying Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 8.1. 식별자 관계 - Identifying Relationship
 
@@ -4936,14 +3536,7 @@ Trong Identifying Relationship, Primary Key của Entity cha được bao gồm 
 
 Entity cha bắt buộc phải được tạo trước thì Entity con mới có thể được tạo.
 
-Khi gom phần **8.1. 식별자 관계 - Identifying Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.1. 식별자 관계 - Identifying Relationship**. Bây giờ chuyển sang **Ví dụ trong hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ trong hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Ví dụ trong hình
-
 Phần này nối mạch SQL với “Ví dụ trong hình”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -4967,12 +3560,6 @@ Nếu `수강` là Entity con và `학번` được đưa vào Primary Key của
 
 thì đây là Identifying Relationship.
 
-Khi gom phần **Ví dụ trong hình** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ trong hình**. Bây giờ chuyển sang **Keyword: 식별자 관계**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 식별자 관계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 식별자 관계
 
 **식별자 관계는 부모의 주식별자가 자식의 주식별자 역할까지 수행하는 강한 관계이다.**
@@ -4980,12 +3567,6 @@ Ta bắt đầu **Keyword: 식별자 관계** bằng câu hỏi: **khái niệm 
 Identifying Relationship là quan hệ mạnh, trong đó Primary Key của cha đồng thời đóng vai trò trong Primary Key của con.
 
 ---
-
-Khi gom phần **Keyword: 식별자 관계** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 식별자 관계**. Bây giờ chuyển sang **8.2. Đặc điểm của Identifying Relationship**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.2. Đặc điểm của Identifying Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 8.2. Đặc điểm của Identifying Relationship
 
@@ -5001,14 +3582,7 @@ STUDENT + COURSE → ENROLLMENT
 
 Nếu `ENROLLMENT` dùng `STUDENT_ID` trong Primary Key, thì không thể tạo đăng ký môn học nếu không có sinh viên.
 
-Khi gom phần **8.2. Đặc điểm của Identifying Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.2. Đặc điểm của Identifying Relationship**. Bây giờ chuyển sang **Ví dụ khóa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ khóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Ví dụ khóa
-
 Phần này nối mạch SQL với “Ví dụ khóa”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5027,12 +3601,6 @@ GRADE
 
 ---
 
-Khi gom phần **Ví dụ khóa** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ khóa**. Bây giờ chuyển sang **8.3. Strong Entity và Weak Entity**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.3. Strong Entity và Weak Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 8.3. Strong Entity và Weak Entity
 
 **식별자 관계에서 부모 엔터티는 Strong Entity이고 자식 엔터티는 Weak Entity로 볼 수 있다.**
@@ -5042,12 +3610,6 @@ Trong Identifying Relationship, Entity cha có thể được xem là Strong Ent
 **Weak Entity는 부모 엔터티 없이는 독립적으로 존재하기 어렵다.**
 
 Weak Entity khó có thể tồn tại độc lập nếu không có Entity cha.
-
-Khi gom phần **8.3. Strong Entity và Weak Entity** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.3. Strong Entity và Weak Entity**. Bây giờ chuyển sang **Keyword: Strong Entity**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Strong Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Strong Entity
 
@@ -5063,12 +3625,6 @@ CUSTOMER
 DEPARTMENT
 ```
 
-Khi gom phần **Keyword: Strong Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Strong Entity**. Bây giờ chuyển sang **Keyword: Weak Entity**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Weak Entity** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: Weak Entity
 
 **Weak Entity는 부모 엔터티의 식별자나 존재에 의존하여 생성되고 관리되는 엔터티이다.**
@@ -5083,12 +3639,6 @@ ENROLLMENT
 ```
 
 ---
-
-Khi gom phần **Keyword: Weak Entity** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Weak Entity**. Bây giờ chuyển sang **8.4. Khi nào cần giảm quan hệ định danh?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8.4. Khi nào cần giảm quan hệ định danh?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 8.4. Khi nào cần giảm quan hệ định danh?
 
@@ -5111,21 +3661,7 @@ Mục tiêu là:
 
 ---
 
-Khi gom phần **8.4. Khi nào cần giảm quan hệ định danh?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8.4. Khi nào cần giảm quan hệ định danh?**. Bây giờ chuyển sang **9. 비식별자 관계 - Non-identifying Relationship**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9. 비식별자 관계 - Non-identifying Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **9. 비식별자 관계 - Non-identifying Relationship** tiếp nhận điểm tựa từ **8. Quan hệ định danh và không định danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 식별자 - Khái niệm Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. 비식별자 관계 - Non-identifying Relationship
-
-Khi gom phần **9. 비식별자 관계 - Non-identifying Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9. 비식별자 관계 - Non-identifying Relationship**. Bây giờ chuyển sang **9.1. Định nghĩa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.1. Định nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.1. Định nghĩa
 
@@ -5137,14 +3673,7 @@ Trong Non-identifying Relationship, Primary Key của cha được kế thừa t
 
 Trong Non-identifying Relationship, Entity con có thể được tạo mà không cần Entity cha.
 
-Khi gom phần **9.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.1. Định nghĩa**. Bây giờ chuyển sang **Ví dụ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ví dụ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Ví dụ
-
 Phần này nối mạch SQL với “Ví dụ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5168,14 +3697,7 @@ DEPARTMENT_ID FK
 
 ---
 
-Khi gom phần **Ví dụ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ví dụ**. Bây giờ chuyển sang **9.2. So sánh hai loại Relationship**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.2. So sánh hai loại Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 9.2. So sánh hai loại Relationship
-
 Phần này nối mạch SQL với “9.2. So sánh hai loại Relationship”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Nội dung | 식별자 관계 | 비식별자 관계 |
@@ -5190,21 +3712,9 @@ Phần này nối mạch SQL với “9.2. So sánh hai loại Relationship”, 
 
 ---
 
-Khi gom phần **9.2. So sánh hai loại Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.2. So sánh hai loại Relationship**. Bây giờ chuyển sang **9.3. Khi nào dùng Non-identifying Relationship?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.3. Khi nào dùng Non-identifying Relationship?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 9.3. Khi nào dùng Non-identifying Relationship?
 
 Tài liệu nêu các trường hợp:
-
-Khi gom phần **9.3. Khi nào dùng Non-identifying Relationship?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.3. Khi nào dùng Non-identifying Relationship?**. Bây giờ chuyển sang **1. Entity con cần khóa riêng**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. Entity con cần khóa riêng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### 1. Entity con cần khóa riêng
 
@@ -5219,12 +3729,6 @@ EMPLOYEE_ID PK
 DEPARTMENT_ID FK
 ```
 
-Khi gom phần **1. Entity con cần khóa riêng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. Entity con cần khóa riêng**. Bây giờ chuyển sang **2. Quan hệ cha-con tương đối yếu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. Quan hệ cha-con tương đối yếu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 2. Quan hệ cha-con tương đối yếu
 
 **부모와 자식 엔터티 간의 관계가 약한 경우 비식별자 관계를 사용할 수 있다.**
@@ -5232,12 +3736,6 @@ Ta bắt đầu **2. Quan hệ cha-con tương đối yếu** bằng câu hỏi:
 Có thể dùng Non-identifying Relationship khi quan hệ giữa cha và con tương đối yếu.
 
 Ví dụ nhân viên có thể được tạo trước, sau đó mới được phân vào phòng ban.
-
-Khi gom phần **2. Quan hệ cha-con tương đối yếu** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. Quan hệ cha-con tương đối yếu**. Bây giờ chuyển sang **3. Cha bị xóa trước con**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. Cha bị xóa trước con** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### 3. Cha bị xóa trước con
 
@@ -5247,12 +3745,6 @@ Có thể cân nhắc Non-identifying Relationship khi Instance của cha có th
 
 Lưu ý: trong database thực tế, việc xóa cha trước con còn phụ thuộc vào Foreign Key, `ON DELETE CASCADE`, `ON DELETE SET NULL` và quy tắc nghiệp vụ.
 
-Khi gom phần **3. Cha bị xóa trước con** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. Cha bị xóa trước con**. Bây giờ chuyển sang **4. Cần đơn giản hóa PK**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. Cần đơn giản hóa PK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### 4. Cần đơn giản hóa PK
 
 **PK 속성의 단순화가 필요한 경우 비식별자 관계를 사용하여 복합키를 줄일 수 있다.**
@@ -5261,21 +3753,7 @@ Khi cần đơn giản hóa Primary Key, có thể dùng Non-identifying Relatio
 
 ---
 
-Khi gom phần **4. Cần đơn giản hóa PK** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. Cần đơn giản hóa PK**. Bây giờ chuyển sang **10. 식별자 - Khái niệm Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10. 식별자 - Khái niệm Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **10. 식별자 - Khái niệm Identifier** tiếp nhận điểm tựa từ **9. 비식별자 관계 - Non-identifying Relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Đặc điểm của Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. 식별자 - Khái niệm Identifier
-
-Khi gom phần **10. 식별자 - Khái niệm Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10. 식별자 - Khái niệm Identifier**. Bây giờ chuyển sang **10.1. Định nghĩa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10.1. Định nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 10.1. Định nghĩa
 
@@ -5286,12 +3764,6 @@ Identifier là Attribute đại diện cho Entity trong số nhiều Attribute c
 **하나의 엔터티에는 반드시 하나의 유일한 식별자가 존재해야 한다.**
 
 Một Entity nhất định phải có một Identifier duy nhất.
-
-Khi gom phần **10.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10.1. Định nghĩa**. Bây giờ chuyển sang **Keyword: 식별자(Identifier)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 식별자(Identifier)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 식별자(Identifier)
 
@@ -5314,12 +3786,6 @@ GPA
 
 ---
 
-Khi gom phần **Keyword: 식별자(Identifier)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 식별자(Identifier)**. Bây giờ chuyển sang **10.2. Identifier và Key khác nhau thế nào?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10.2. Identifier và Key khác nhau thế nào?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 10.2. Identifier và Key khác nhau thế nào?
 
 Tài liệu phân biệt:
@@ -5332,23 +3798,11 @@ Identifier là thuật ngữ được sử dụng ở giai đoạn mô hình hó
 
 Key là phương tiện truy cập bảng database, được sử dụng ở giai đoạn mô hình hóa dữ liệu vật lý.
 
-Khi gom phần **10.2. Identifier và Key khác nhau thế nào?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10.2. Identifier và Key khác nhau thế nào?**. Bây giờ chuyển sang **Keyword: Identifier**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: Identifier
 
 **식별자는 업무와 논리 모델의 관점에서 엔터티를 구분하는 개념이다.**
 
 Identifier là khái niệm phân biệt Entity dưới góc nhìn nghiệp vụ và mô hình logic.
-
-Khi gom phần **Keyword: Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Identifier**. Bây giờ chuyển sang **Keyword: Key**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: Key
 
@@ -5370,33 +3824,13 @@ Trong thực tế hai khái niệm thường được dùng gần như tương �
 
 ---
 
-Khi gom phần **Keyword: Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: Key**. Bây giờ chuyển sang **11. Đặc điểm của Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11. Đặc điểm của Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **11. Đặc điểm của Identifier** tiếp nhận điểm tựa từ **10. 식별자 - Khái niệm Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Phân loại Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 11. Đặc điểm của Identifier
-
-Khi gom phần **11. Đặc điểm của Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11. Đặc điểm của Identifier**. Bây giờ chuyển sang **11.1. 유일성 - Tính duy nhất**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.1. 유일성 - Tính duy nhất** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 11.1. 유일성 - Tính duy nhất
 
 **주식별자에 의해 엔터티 내의 모든 인스턴스를 유일하게 구분할 수 있어야 한다.**
 
 Dựa vào Primary Identifier phải có thể phân biệt duy nhất tất cả Instance trong Entity.
-
-Khi gom phần **11.1. 유일성 - Tính duy nhất** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.1. 유일성 - Tính duy nhất**. Bây giờ chuyển sang **Keyword: 유일성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 유일성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 유일성
 
@@ -5425,12 +3859,6 @@ nếu `STUDENT_ID` là Primary Key.
 
 ---
 
-Khi gom phần **Keyword: 유일성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 유일성**. Bây giờ chuyển sang **11.2. 최소성 - Tính tối thiểu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.2. 최소성 - Tính tối thiểu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.2. 최소성 - Tính tối thiểu
 
 **최소성은 하나의 속성으로 충분히 식별할 수 있다면 다른 속성을 추가하지 않는 것이다.**
@@ -5450,12 +3878,6 @@ STUDENT_ID + STUDENT_NAME + PHONE
 ```
 
 làm khóa.
-
-Khi gom phần **11.2. 최소성 - Tính tối thiểu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.2. 최소성 - Tính tối thiểu**. Bây giờ chuyển sang **Keyword: 최소성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 최소성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 최소성
 
@@ -5479,23 +3901,11 @@ nếu chỉ `STUDENT_ID` đã duy nhất.
 
 ---
 
-Khi gom phần **Keyword: 최소성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 최소성**. Bây giờ chuyển sang **11.3. 불변성 - Tính bất biến**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.3. 불변성 - Tính bất biến** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.3. 불변성 - Tính bất biến
 
 **주식별자가 한 번 특정 엔터티에 지정되면 그 식별자의 값은 변경되면 안 된다.**
 
 Khi một Primary Identifier đã được gán cho một Entity cụ thể thì giá trị Identifier đó không nên thay đổi.
-
-Khi gom phần **11.3. 불변성 - Tính bất biến** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.3. 불변성 - Tính bất biến**. Bây giờ chuyển sang **Keyword: 불변성**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 불변성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 불변성
 
@@ -5525,23 +3935,11 @@ Việc này có thể làm hỏng:
 
 ---
 
-Khi gom phần **Keyword: 불변성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 불변성**. Bây giờ chuyển sang **11.4. 존재성 - Tính tồn tại**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11.4. 존재성 - Tính tồn tại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 11.4. 존재성 - Tính tồn tại
 
 **주식별자가 지정되면 반드시 데이터 값이 존재해야 하며 NULL을 허용하지 않는다.**
 
 Khi đã chỉ định Primary Identifier thì giá trị dữ liệu bắt buộc phải tồn tại và không được phép là NULL.
-
-Khi gom phần **11.4. 존재성 - Tính tồn tại** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11.4. 존재성 - Tính tồn tại**. Bây giờ chuyển sang **Keyword: 존재성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 존재성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 존재성
 
@@ -5563,26 +3961,11 @@ Primary Key trong Oracle có các đặc tính:
 
 ---
 
-Khi gom phần **Keyword: 존재성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 존재성**. Bây giờ chuyển sang **12. Phân loại Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12. Phân loại Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **12. Phân loại Identifier** tiếp nhận điểm tựa từ **11. Đặc điểm của Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 주식별자 và 보조식별자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 12. Phân loại Identifier
 
 Tài liệu phân loại theo nhiều tiêu chí.
 
-Khi gom phần **12. Phân loại Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12. Phân loại Identifier**. Bây giờ chuyển sang **12.1. Theo tính đại diện**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.1. Theo tính đại diện** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 12.1. Theo tính đại diện
-
 Phần này nối mạch SQL với “12.1. Theo tính đại diện”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5590,14 +3973,7 @@ Phần này nối mạch SQL với “12.1. Theo tính đại diện”, giải 
 보조식별자 - Candidate Key
 ```
 
-Khi gom phần **12.1. Theo tính đại diện** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.1. Theo tính đại diện**. Bây giờ chuyển sang **12.2. Theo cách tạo ra**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.2. Theo cách tạo ra** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 12.2. Theo cách tạo ra
-
 Phần này nối mạch SQL với “12.2. Theo cách tạo ra”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5605,14 +3981,7 @@ Phần này nối mạch SQL với “12.2. Theo cách tạo ra”, giải thíc
 외부식별자 - Foreign Key
 ```
 
-Khi gom phần **12.2. Theo cách tạo ra** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.2. Theo cách tạo ra**. Bây giờ chuyển sang **12.3. Theo số lượng Attribute**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.3. Theo số lượng Attribute** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 12.3. Theo số lượng Attribute
-
 Phần này nối mạch SQL với “12.3. Theo số lượng Attribute”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5620,14 +3989,7 @@ Phần này nối mạch SQL với “12.3. Theo số lượng Attribute”, gi�
 복합식별자 - Composite Identifier
 ```
 
-Khi gom phần **12.3. Theo số lượng Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.3. Theo số lượng Attribute**. Bây giờ chuyển sang **12.4. Theo nguồn gốc**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12.4. Theo nguồn gốc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 12.4. Theo nguồn gốc
-
 Phần này nối mạch SQL với “12.4. Theo nguồn gốc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5637,21 +3999,7 @@ Phần này nối mạch SQL với “12.4. Theo nguồn gốc”, giải thích
 
 ---
 
-Khi gom phần **12.4. Theo nguồn gốc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12.4. Theo nguồn gốc**. Bây giờ chuyển sang **13. 주식별자 và 보조식별자**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13. 주식별자 và 보조식별자** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **13. 주식별자 và 보조식별자** tiếp nhận điểm tựa từ **12. Phân loại Identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Các loại Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 13. 주식별자 và 보조식별자
-
-Khi gom phần **13. 주식별자 và 보조식별자** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13. 주식별자 và 보조식별자**. Bây giờ chuyển sang **13.1. 주식별자 - Primary Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13.1. 주식별자 - Primary Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 13.1. 주식별자 - Primary Identifier
 
@@ -5667,12 +4015,6 @@ Trong database:
 
 ---
 
-Khi gom phần **13.1. 주식별자 - Primary Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13.1. 주식별자 - Primary Identifier**. Bây giờ chuyển sang **13.2. 보조식별자 - Candidate Identifier**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13.2. 보조식별자 - Candidate Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 13.2. 보조식별자 - Candidate Identifier
 
 **보조식별자는 엔터티 내에서 각 인스턴스를 구분할 수 있지만 대표성을 갖지 못하여 참조관계 연결이 불가능한 식별자이다.**
@@ -5684,12 +4026,6 @@ Tài liệu gọi là:
 ```
 후보 키(Candidate Key)
 ```
-
-Khi gom phần **13.2. 보조식별자 - Candidate Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13.2. 보조식별자 - Candidate Identifier**. Bây giờ chuyển sang **Lưu ý thuật ngữ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Lưu ý thuật ngữ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Lưu ý thuật ngữ
 
@@ -5703,21 +4039,7 @@ Tài liệu sử dụng cách gọi `보조식별자` trong ngữ cảnh phân l
 
 ---
 
-Khi gom phần **Lưu ý thuật ngữ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Lưu ý thuật ngữ**. Bây giờ chuyển sang **14. Các loại Key**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14. Các loại Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **14. Các loại Key** tiếp nhận điểm tựa từ **13. 주식별자 và 보조식별자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tiêu chí lựa chọn Primary Identifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 14. Các loại Key
-
-Khi gom phần **14. Các loại Key** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14. Các loại Key**. Bây giờ chuyển sang **14.1. Candidate Key**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.1. Candidate Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 14.1. Candidate Key
 
@@ -5750,12 +4072,6 @@ Nếu `STUDENT_ID`, `RESIDENT_NUMBER` và `EMAIL` đều duy nhất, có thể c
 
 ---
 
-Khi gom phần **14.1. Candidate Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.1. Candidate Key**. Bây giờ chuyển sang **14.2. Primary Key**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.2. Primary Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 14.2. Primary Key
 
 **기본키는 후보 키 중에서 엔터티를 대표하는 키로 선택된 키이다.**
@@ -5771,12 +4087,6 @@ Primary Key = STUDENT_ID
 Các Candidate Key còn lại có thể trở thành Alternate Key.
 
 ---
-
-Khi gom phần **14.2. Primary Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.2. Primary Key**. Bây giờ chuyển sang **14.3. Super Key**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.3. Super Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 14.3. Super Key
 
@@ -5794,14 +4104,7 @@ Ví dụ:
 
 Nếu `STUDENT_ID` đã đủ xác định duy nhất, thì các tổ hợp có thêm Attribute vẫn là Super Key nhưng không phải Candidate Key vì không tối thiểu.
 
-Khi gom phần **14.3. Super Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.3. Super Key**. Bây giờ chuyển sang **Quan hệ giữa các Key**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Quan hệ giữa các Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Quan hệ giữa các Key
-
 Phần này nối mạch SQL với “Quan hệ giữa các Key”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -5812,12 +4115,6 @@ Super Key
 ```
 
 ---
-
-Khi gom phần **Quan hệ giữa các Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Quan hệ giữa các Key**. Bây giờ chuyển sang **14.4. Alternate Key**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14.4. Alternate Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 14.4. Alternate Key
 
@@ -5843,21 +4140,7 @@ Alternate Keys:
 
 ---
 
-Khi gom phần **14.4. Alternate Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14.4. Alternate Key**. Bây giờ chuyển sang **15. Tiêu chí lựa chọn Primary Identifier**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15. Tiêu chí lựa chọn Primary Identifier** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **15. Tiêu chí lựa chọn Primary Identifier** tiếp nhận điểm tựa từ **14. Các loại Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 15. Tiêu chí lựa chọn Primary Identifier
-
-Khi gom phần **15. Tiêu chí lựa chọn Primary Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15. Tiêu chí lựa chọn Primary Identifier**. Bây giờ chuyển sang **15.1. Chọn Attribute được sử dụng thường xuyên**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.1. Chọn Attribute được sử dụng thường xuyên** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 15.1. Chọn Attribute được sử dụng thường xuyên
 
@@ -5879,12 +4162,6 @@ CUSTOMER_ID
 - Tra cứu lịch sử.
 
 ---
-
-Khi gom phần **15.1. Chọn Attribute được sử dụng thường xuyên** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.1. Chọn Attribute được sử dụng thường xuyên**. Bây giờ chuyển sang **15.2. Chọn giá trị ít thay đổi**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.2. Chọn giá trị ít thay đổi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 15.2. Chọn giá trị ít thay đổi
 
@@ -5914,12 +4191,6 @@ nếu chúng được duy trì ổn định.
 
 ---
 
-Khi gom phần **15.2. Chọn giá trị ít thay đổi** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.2. Chọn giá trị ít thay đổi**. Bây giờ chuyển sang **15.3. Tránh tên hoặc nội dung mô tả**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.3. Tránh tên hoặc nội dung mô tả** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 15.3. Tránh tên hoặc nội dung mô tả
 
 **이름이나 내역처럼 서술형으로 표현되는 속성은 가급적 주식별자로 사용하지 않는 것이 좋다.**
@@ -5942,12 +4213,6 @@ Lý do:
 - So sánh chuỗi tốn chi phí hơn mã số.
 
 ---
-
-Khi gom phần **15.3. Tránh tên hoặc nội dung mô tả** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.3. Tránh tên hoặc nội dung mô tả**. Bây giờ chuyển sang **15.4. Hạn chế số lượng Attribute trong Composite Key**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15.4. Hạn chế số lượng Attribute trong Composite Key** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 15.4. Hạn chế số lượng Attribute trong Composite Key
 
@@ -5977,16 +4242,7 @@ Một khóa ghép quá dài sẽ:
 
 ---
 
-Khi gom phần **15.4. Hạn chế số lượng Attribute trong Composite Key** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15.4. Hạn chế số lượng Attribute trong Composite Key**. Bây giờ chuyển sang **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **ERD, Entity, Attribute, Relationship và Identifier**, **15. Tiêu chí lựa chọn Primary Identifier** đã nêu tiêu chí phân biệt, còn **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Phân tích sơ đồ tổng hợp cuối hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm
-
 Phần này nối mạch SQL với “16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Tiêu chí | 식별자 관계 | 비식별자 관계 |
@@ -5999,14 +4255,7 @@ Phần này nối mạch SQL với “16. 식별자 관계 và 비식별자 관�
 | Mục tiêu | Thể hiện phụ thuộc định danh | Giảm phức tạp khóa |
 | Ví dụ | `STUDENT - ENROLLMENT` | `DEPARTMENT - EMPLOYEE` |
 
-Khi gom phần **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm**. Bây giờ chuyển sang **Cách ghi nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách ghi nhớ
-
 Phần này nối mạch SQL với “Cách ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -6018,14 +4267,6 @@ Con có Identifier riêng, cha chỉ cung cấp FK.
 ```
 
 ---
-
-Khi gom phần **Cách ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách ghi nhớ**. Bây giờ chuyển sang **17. Phân tích sơ đồ tổng hợp cuối hình**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17. Phân tích sơ đồ tổng hợp cuối hình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ERD, Entity, Attribute, Relationship và Identifier**, **16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm** đã nêu tiêu chí phân biệt, còn **17. Phân tích sơ đồ tổng hợp cuối hình** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **KẾT LUẬN GHI NHỚ CUỐI BÀI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Phân tích sơ đồ tổng hợp cuối hình
 
@@ -6050,12 +4291,6 @@ Trong sơ đồ cuối:
 - 주문일자
 ```
 
-Khi gom phần **17. Phân tích sơ đồ tổng hợp cuối hình** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17. Phân tích sơ đồ tổng hợp cuối hình**. Bây giờ chuyển sang **17.1. Department**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.1. Department** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 17.1. Department
 
 **부서번호는 부서 엔터티의 주식별자이면서 내부식별자, 단일식별자, 원조식별자이다.**
@@ -6069,12 +4304,6 @@ Giải thích:
 - Chỉ một Attribute cũng đủ xác định phòng ban.
 - Nó có thể là mã nghiệp vụ tự nhiên.
 
-Khi gom phần **17.1. Department** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.1. Department**. Bây giờ chuyển sang **17.2. Employee**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.2. Employee** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 17.2. Employee
 
 **사번은 사원 엔터티의 주식별자이며 주민등록번호는 보조식별자로 볼 수 있다.**
@@ -6084,12 +4313,6 @@ Ta bắt đầu **17.2. Employee** bằng câu hỏi: **khái niệm này giải
 **부서번호는 부서 엔터티에서 물려받은 외부식별자이다.**
 
 `DEPARTMENT_ID` là External Identifier được kế thừa từ Entity Department.
-
-Khi gom phần **17.2. Employee** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.2. Employee**. Bây giờ chuyển sang **17.3. Education History**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.3. Education History** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 17.3. Education History
 
@@ -6104,12 +4327,6 @@ Nếu `교육이력` dùng:
 ```
 
 làm khóa thì có thể là Composite Identifier.
-
-Khi gom phần **17.3. Education History** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.3. Education History**. Bây giờ chuyển sang **17.4. Purchase Request**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17.4. Purchase Request** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 17.4. Purchase Request
 
@@ -6131,21 +4348,7 @@ Ví dụ:
 
 ---
 
-Khi gom phần **17.4. Purchase Request** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17.4. Purchase Request**. Bây giờ chuyển sang **KẾT LUẬN GHI NHỚ CUỐI BÀI**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **KẾT LUẬN GHI NHỚ CUỐI BÀI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **ERD, Entity, Attribute, Relationship và Identifier**, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom các mảnh từ **17. Phân tích sơ đồ tổng hợp cuối hình** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
-
-Khi gom phần **KẾT LUẬN GHI NHỚ CUỐI BÀI** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **KẾT LUẬN GHI NHỚ CUỐI BÀI**. Bây giờ chuyển sang **1. Bản chất của Relationship**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. Bản chất của Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1. Bản chất của Relationship
 
@@ -6160,14 +4363,7 @@ Relationship = Tập hợp Pairing
 
 ---
 
-Khi gom phần **1. Bản chất của Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. Bản chất của Relationship**. Bây giờ chuyển sang **2. Hai loại Relationship chính**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. Hai loại Relationship chính** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 2. Hai loại Relationship chính
-
 Phần này nối mạch SQL với “2. Hai loại Relationship chính”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | Tiếng Việt | Đặc điểm |
@@ -6182,14 +4378,7 @@ Phần này nối mạch SQL với “2. Hai loại Relationship chính”, gi�
 
 ---
 
-Khi gom phần **2. Hai loại Relationship chính** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. Hai loại Relationship chính**. Bây giờ chuyển sang **3. Quan hệ trong UML**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. Quan hệ trong UML** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 3. Quan hệ trong UML
-
 Phần này nối mạch SQL với “3. Quan hệ trong UML”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Quan hệ | Ký pháp UML | Ý nghĩa |
@@ -6205,14 +4394,7 @@ Trong ERD, khác với UML, Relationship tồn tại và Relationship hành đ�
 
 ---
 
-Khi gom phần **3. Quan hệ trong UML** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. Quan hệ trong UML**. Bây giờ chuyển sang **4. Các thành phần cần ghi trên Relationship**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. Các thành phần cần ghi trên Relationship** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4. Các thành phần cần ghi trên Relationship
-
 Phần này nối mạch SQL với “4. Các thành phần cần ghi trên Relationship”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -6235,9 +4417,3 @@ Một Employee thuộc một Department.
 ```
 
 ---
-
-Khi gom phần **4. Các thành phần cần ghi trên Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Như vậy, **4. Các thành phần cần ghi trên Relationship** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
-
-> **Bàn giao:** Sau **KẾT LUẬN GHI NHỚ CUỐI BÀI**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

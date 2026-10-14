@@ -1,14 +1,8 @@
 # Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài học** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các bài học theo chủ đề** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Software Design, rồi nối lifecycle, requirements, modeling, architecture và quality.
-
-> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
-
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
-
-> **Nối mạch:** **Bài học** đặt requirement, architecture và design principle; **Các bài học theo chủ đề** gom chúng theo task Môn 1, rồi **Ghi chú học** nêu boundary và trade-off.
 
 ## Các bài học theo chủ đề
 
@@ -81,40 +75,3 @@
 67. [6. N-S 차트 (Nassi-Schneiderman Chart)](lessons/67-bai-hoc.md)
 68. [8. 재사용 (Reuse)](lessons/68-bai-hoc.md)
 69. [10. 코드 (Code) 개요 & 종류](lessons/69-bai-hoc.md)
-
-> **Nối mạch:** **Ghi chú học** giải thích constraint và failure của design choice; **Mạch bài giảng** nối chúng thành reasoning từ yêu cầu đến cấu trúc.
-
-## Ghi chú học
-
-Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
-
-- Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
-- Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
-- Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
-
-> **Nối mạch:** **Mạch bài giảng** biến design mechanism thành route có thể truy dấu; **Checklist ôn tập** đối chiếu invariant, owner và evidence.
-
-## Mạch bài giảng
-
-Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
-
-> **Nối mạch:** **Checklist ôn tập** xác nhận design boundary và link canonical; **Bài học bổ sung / Deep Dive** chỉ mở khi cần cơ chế sâu hơn.
-
-## 복습 체크리스트 (Checklist ôn tập)
-
-Checklist này khép lại bài bằng các tiêu chí tự rà soát; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
-
-- [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
-- [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
-- [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
-- [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
-
-> **Nối mạch:** **Deep Dive** khép Môn 1 bằng owner và boundary rõ; chi tiết pattern hoặc architecture quay về chapter chuyên môn tương ứng.
-
-## Bài học bổ sung / Deep Dive
-
-Phần này mở rộng một chủ đề đã có trong lesson chính; hãy dùng nó để kiểm tra cơ chế và trường hợp biên sau khi đã nắm khung cơ bản.
-
-- [Vòng đời và phương pháp phát triển phần mềm](01-vong-doi-va-phuong-phap-phat-trien.md)
-
-> **Bàn giao:** Sau **Bài học bổ sung / Deep Dive**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

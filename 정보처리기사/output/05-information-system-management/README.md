@@ -1,14 +1,8 @@
 # Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài học** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các bài học theo chủ đề** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Information System Management, rồi nối methodology, security, network, OS và DB.
-
-> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
-
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
-
-> **Nối mạch:** **Bài học** đặt lifecycle, governance và system risk; **Các bài học theo chủ đề** tổ chức chúng theo task Môn 5, rồi **Ghi chú học** nêu control và failure.
 
 ## Các bài học theo chủ đề
 
@@ -98,32 +92,3 @@
 84. [1. 인증 기술 (Authentication Types)](lessons/84-bai-hoc.md)
 85. [2. 접근 제어 정책 (Access Control Policies)](lessons/85-bai-hoc.md)
 86. [318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)](lessons/86-bai-hoc.md)
-
-> **Nối mạch:** **Ghi chú học** chỉ ra assumption và control boundary; **Mạch bài giảng** nối chúng thành route từ requirements đến vận hành.
-
-## Ghi chú học
-
-Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
-
-- Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
-- Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
-- Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
-
-> **Nối mạch:** **Mạch bài giảng** biến governance và risk thành cơ chế có thể truy dấu; **Checklist ôn tập** đối chiếu owner, link và evidence.
-
-## Mạch bài giảng
-
-Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
-
-> **Nối mạch:** **Checklist ôn tập** khép Môn 5 bằng governance boundary và canonical links; chi tiết control quay về chapter chuyên môn.
-
-## 복습 체크리스트 (Checklist ôn tập)
-
-Checklist này khép lại bài bằng các tiêu chí tự rà soát; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
-
-- [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
-- [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
-- [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
-- [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
-
-> **Bàn giao:** Sau **복습 체크리스트 (Checklist ôn tập)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,35 +1,5 @@
 # Window Functions
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Window functions**. Route đi từ partition/order → frame semantics → rank/lag/lead → running aggregates → pagination and analytics, để tính theo cửa sổ không làm mất từng dòng gốc.
-
-> **Mục tiêu:** OVER, PARTITION BY, window frame, ranking và các hàm phân tích.
-
-## Từ khóa cần nhớ (Keyword)
-
-Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
-
-> **Chuyển mạch:** Trong **Window Functions**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## Mạch tư duy (Logic học)
-
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 윈도우 함수 — Window Function ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## Mạch nối của bài học
-
-Bài này không đứng riêng: hãy nối **Window Functions** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
-
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
-
----
-
-Để học **Window Functions** như một mạch suy luận, trước hết hãy giữ câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Mục đích của bài là biến **OVER, PARTITION BY, window frame, ranking và các hàm phân tích** thành cách đọc có thể áp dụng.
-
-Ta bắt đầu **1. 윈도우 함수 — Window Function ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **1. 윈도우 함수 — Window Function ⭐⭐⭐** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Tại sao cần Window Function?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1. 윈도우 함수 — Window Function ⭐⭐⭐
 
 **KR:** 집계 함수는 여러 행을 하나의 결과 행으로 집계하기 때문에 원본 데이터의 개별 행 정보가 사라질 수 있다.
@@ -92,14 +62,6 @@ MILLER     10    1300    8750
 
 ---
 
-Khi gom phần **1. 윈도우 함수 — Window Function ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. 윈도우 함수 — Window Function ⭐⭐⭐**. Bây giờ chuyển sang **2. Tại sao cần Window Function?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. Tại sao cần Window Function?** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **2. Tại sao cần Window Function?** tiếp nhận điểm tựa từ **1. 윈도우 함수 — Window Function ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cấu trúc Window Function ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. Tại sao cần Window Function?
 
 Ảnh đưa ví dụ:
@@ -120,14 +82,7 @@ Không thể đặt trực tiếp chúng cạnh nhau nếu không có cách grou
 
 ---
 
-Khi gom phần **2. Tại sao cần Window Function?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. Tại sao cần Window Function?**. Bây giờ chuyển sang **Cách 1 — Subquery**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách 1 — Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Cách 1 — Subquery
-
 Phần này nối mạch SQL với “Cách 1 — Subquery”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -157,14 +112,6 @@ FROM EMP;
 Không có `PARTITION BY` → toàn bộ tập row là một partition.
 
 ---
-
-Khi gom phần **Cách 1 — Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách 1 — Subquery**. Bây giờ chuyển sang **3. Cấu trúc Window Function ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. Cấu trúc Window Function ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **3. Cấu trúc Window Function ⭐⭐⭐** tiếp nhận điểm tựa từ **2. Tại sao cần Window Function?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. PARTITION BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Cấu trúc Window Function ⭐⭐⭐
 
@@ -200,14 +147,6 @@ OVER(
 ❌ Sai.
 
 ---
-
-Khi gom phần **3. Cấu trúc Window Function ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. Cấu trúc Window Function ⭐⭐⭐**. Bây giờ chuyển sang **4. PARTITION BY**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. PARTITION BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **4. PARTITION BY** tiếp nhận điểm tựa từ **3. Cấu trúc Window Function ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. ORDER BY bên trong OVER()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. PARTITION BY
 
@@ -259,14 +198,6 @@ Mỗi department là một **window partition** riêng.
 
 ---
 
-Khi gom phần **4. PARTITION BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. PARTITION BY**. Bây giờ chuyển sang **5. ORDER BY bên trong OVER()**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. ORDER BY bên trong OVER()** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **5. ORDER BY bên trong OVER()** tiếp nhận điểm tựa từ **4. PARTITION BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Aggregate Function dùng như Window Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. ORDER BY bên trong OVER()
 
 Đây không phải `ORDER BY` cuối query.
@@ -300,14 +231,6 @@ Hai thứ hoàn toàn khác nhau.
 
 ---
 
-Khi gom phần **5. ORDER BY bên trong OVER()** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. ORDER BY bên trong OVER()**. Bây giờ chuyển sang **6. Aggregate Function dùng như Window Function**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. Aggregate Function dùng như Window Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **6. Aggregate Function dùng như Window Function** tiếp nhận điểm tựa từ **5. ORDER BY bên trong OVER()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. SUM() + ORDER BY = cumulative sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Aggregate Function dùng như Window Function
 
 Các hàm:
@@ -339,14 +262,6 @@ FROM BOOKSHELF;
 Điểm quan trọng nằm ở `ORDER BY`.
 
 ---
-
-Khi gom phần **6. Aggregate Function dùng như Window Function** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6. Aggregate Function dùng như Window Function**. Bây giờ chuyển sang **7. SUM() + ORDER BY = cumulative sum**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. SUM() + ORDER BY = cumulative sum** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **7. SUM() + ORDER BY = cumulative sum** tiếp nhận điểm tựa từ **6. Aggregate Function dùng như Window Function** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. AVG cũng tương tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. SUM() + ORDER BY = cumulative sum
 
@@ -396,14 +311,7 @@ thì cả hai row đều nhận:
 29000
 ```
 
-Khi gom phần **7. SUM() + ORDER BY = cumulative sum** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7. SUM() + ORDER BY = cumulative sum**. Bây giờ chuyển sang **Nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Nhớ
-
 Phần này nối mạch SQL với “Nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -415,14 +323,6 @@ SUM(...) OVER(PARTITION BY A ORDER BY B)
 ```
 
 ---
-
-Khi gom phần **Nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **8. AVG cũng tương tự**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8. AVG cũng tương tự** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **8. AVG cũng tương tự** tiếp nhận điểm tựa từ **7. SUM() + ORDER BY = cumulative sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Window Frame — ROWS / RANGE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. AVG cũng tương tự
 
@@ -463,14 +363,6 @@ ta có:
 
 ---
 
-Khi gom phần **8. AVG cũng tương tự** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8. AVG cũng tương tự**. Bây giờ chuyển sang **9. Window Frame — ROWS / RANGE ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9. Window Frame — ROWS / RANGE ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **9. Window Frame — ROWS / RANGE ⭐⭐⭐** tiếp nhận điểm tựa từ **8. AVG cũng tương tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Window Frame — ROWS / RANGE ⭐⭐⭐
 
 Đây là phần cực dễ nhầm.
@@ -503,61 +395,25 @@ UNBOUNDED FOLLOWING
 
 ---
 
-Khi gom phần **9. Window Frame — ROWS / RANGE ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9. Window Frame — ROWS / RANGE ⭐⭐⭐**. Bây giờ chuyển sang **Ý nghĩa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Ý nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Ý nghĩa
-
-Khi gom phần **Ý nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Ý nghĩa**. Bây giờ chuyển sang **`UNBOUNDED PRECEDING`**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **`UNBOUNDED PRECEDING`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### `UNBOUNDED PRECEDING`
 
 **KR:** 파티션의 첫 행부터.
 **VI:** Từ row đầu tiên của partition.
 
-Khi gom phần **`UNBOUNDED PRECEDING`** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **`UNBOUNDED PRECEDING`**. Bây giờ chuyển sang **`CURRENT ROW`**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **`CURRENT ROW`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### `CURRENT ROW`
 
 **KR:** 현재 행까지.
 **VI:** Đến row hiện tại.
 
-Khi gom phần **`CURRENT ROW`** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **`CURRENT ROW`**. Bây giờ chuyển sang **`1 PRECEDING`**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **`1 PRECEDING`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### `1 PRECEDING`
 
 Row ngay trước.
 
-Khi gom phần **`1 PRECEDING`** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **`1 PRECEDING`**. Bây giờ chuyển sang **`1 FOLLOWING`**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **`1 FOLLOWING`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### `1 FOLLOWING`
 
 Row ngay sau.
-
-Khi gom phần **`1 FOLLOWING`** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **`1 FOLLOWING`**. Bây giờ chuyển sang **`UNBOUNDED FOLLOWING`**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **`UNBOUNDED FOLLOWING`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### `UNBOUNDED FOLLOWING`
 
@@ -565,16 +421,7 @@ Row cuối cùng của partition.
 
 ---
 
-Khi gom phần **`UNBOUNDED FOLLOWING`** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **`UNBOUNDED FOLLOWING`**. Bây giờ chuyển sang **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** tiếp nhận điểm tựa từ **9. Window Frame — ROWS / RANGE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-
 Phần này nối mạch SQL với “10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -617,14 +464,6 @@ Kết quả:
 
 ---
 
-Khi gom phần **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW**. Bây giờ chuyển sang **11. RANGE khác ROWS như thế nào? ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** tiếp nhận điểm tựa từ **10. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Default frame rất quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 11. RANGE khác ROWS như thế nào? ⭐⭐⭐
 
 Đây là phần cần hiểu thật chắc.
@@ -649,14 +488,7 @@ SAL
 
 ---
 
-Khi gom phần **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **11. RANGE khác ROWS như thế nào? ⭐⭐⭐**. Bây giờ chuyển sang **ROWS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**ROWS** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
-
 ### ROWS
-
 Phần này nối mạch SQL với “ROWS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -682,14 +514,7 @@ Hai `1250` khác nhau.
 
 ---
 
-Khi gom phần **ROWS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **ROWS**. Bây giờ chuyển sang **RANGE**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**RANGE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
-
 ### RANGE
-
 Phần này nối mạch SQL với “RANGE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -723,12 +548,6 @@ Kết quả:
 1250 → 5350
 ```
 
-Khi gom phần **RANGE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **RANGE**. Bây giờ chuyển sang **Câu nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Câu nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Câu nhớ
 
 > **ROWS = 행을 본다 — nhìn ROW.**
@@ -738,14 +557,6 @@ Ta bắt đầu **Câu nhớ** bằng câu hỏi: **khái niệm này giải quy
 Đây là cách nhớ rất hiệu quả cho SQLD.
 
 ---
-
-Khi gom phần **Câu nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Câu nhớ**. Bây giờ chuyển sang **12. Default frame rất quan trọng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **12. Default frame rất quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **12. Default frame rất quan trọng** tiếp nhận điểm tựa từ **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Toàn partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Default frame rất quan trọng
 
@@ -789,16 +600,7 @@ ROWS BETWEEN UNBOUNDED PRECEDING
 
 ---
 
-Khi gom phần **12. Default frame rất quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **12. Default frame rất quan trọng**. Bây giờ chuyển sang **13. Toàn partition**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **13. Toàn partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **13. Toàn partition** tiếp nhận điểm tựa từ **12. Default frame rất quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. FOLLOWING** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 13. Toàn partition
-
 Phần này nối mạch SQL với “13. Toàn partition”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -838,14 +640,6 @@ Nếu tổng là `6650`, tất cả row:
 
 ---
 
-Khi gom phần **13. Toàn partition** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **13. Toàn partition**. Bây giờ chuyển sang **14. FOLLOWING**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **14. FOLLOWING** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **14. FOLLOWING** tiếp nhận điểm tựa từ **13. Toàn partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. LAG / LEAD ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 14. FOLLOWING
 
 Ví dụ ảnh:
@@ -879,23 +673,9 @@ Cách đọc:
 
 ---
 
-Khi gom phần **14. FOLLOWING** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **14. FOLLOWING**. Bây giờ chuyển sang **15. LAG / LEAD ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **15. LAG / LEAD ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **15. LAG / LEAD ⭐⭐⭐** tiếp nhận điểm tựa từ **14. FOLLOWING** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cú pháp LAG/LEAD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 15. LAG / LEAD ⭐⭐⭐
 
 Hai hàm này dùng để lấy giá trị của row trước/sau mà không cần self join.
-
-Khi gom phần **15. LAG / LEAD ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **15. LAG / LEAD ⭐⭐⭐**. Bây giờ chuyển sang **LAG**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**LAG** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
 ### LAG
 
@@ -913,12 +693,6 @@ Hình dung:
 ```
 
 ---
-
-Khi gom phần **LAG** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **LAG**. Bây giờ chuyển sang **LEAD**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**LEAD** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
 ### LEAD
 
@@ -943,14 +717,6 @@ HIREDATE       SAL    LEAD(SAL)
 Row cuối không còn row sau → `NULL`.
 
 ---
-
-Khi gom phần **LEAD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **LEAD**. Bây giờ chuyển sang **16. Cú pháp LAG/LEAD**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **16. Cú pháp LAG/LEAD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **16. Cú pháp LAG/LEAD** tiếp nhận điểm tựa từ **15. LAG / LEAD ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Cú pháp LAG/LEAD
 
@@ -990,12 +756,6 @@ SAL
 4000 → 2000
 ```
 
-Khi gom phần **16. Cú pháp LAG/LEAD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **16. Cú pháp LAG/LEAD**. Bây giờ chuyển sang **Default**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Default** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Default
 
 Nếu không viết offset:
@@ -1011,14 +771,6 @@ offset = 1
 ```
 
 ---
-
-Khi gom phần **Default** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Default**. Bây giờ chuyển sang **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **16. Cú pháp LAG/LEAD** đã nêu tiêu chí phân biệt, còn **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. FIRSTVALUE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition
 
@@ -1055,12 +807,6 @@ LAG(SAL) OVER(
 )
 ```
 
-Khi gom phần **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition**. Bây giờ chuyển sang **Nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Nhớ
 
 > `ORDER BY DEPTNO` ≠ `PARTITION BY DEPTNO`
@@ -1070,14 +816,6 @@ Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết 
 `PARTITION BY` mới **chia nhóm/reset window**.
 
 ---
-
-Khi gom phần **Nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **18. FIRST_VALUE ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **18. FIRST_VALUE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **17. Một bẫy trong ảnh: ORDER BY DEPTNO không có nghĩa partition** đã nêu tiêu chí phân biệt, còn **18. FIRSTVALUE ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. FIRSTVALUE không phải MIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. FIRST_VALUE ⭐⭐⭐
 
@@ -1114,14 +852,7 @@ Vì first value theo `SAL ASC` luôn là `1300`.
 
 ---
 
-Khi gom phần **18. FIRST_VALUE ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **18. FIRST_VALUE ⭐⭐⭐**. Bây giờ chuyển sang **Có thể lấy MAX bằng FIRST_VALUE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Có thể lấy MAX bằng FIRST_VALUE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Có thể lấy MAX bằng FIRST_VALUE
-
 Phần này nối mạch SQL với “Có thể lấy MAX bằng FIRST_VALUE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -1152,14 +883,6 @@ FIRST_VALUE + DESC → maximum
 trong ngữ cảnh lấy SAL.
 
 ---
-
-Khi gom phần **Có thể lấy MAX bằng FIRST_VALUE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Có thể lấy MAX bằng FIRST_VALUE**. Bây giờ chuyển sang **19. FIRST_VALUE không phải MIN**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **19. FIRST_VALUE không phải MIN** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **19. FIRSTVALUE không phải MIN** tiếp nhận điểm tựa từ **18. FIRSTVALUE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. FIRST_VALUE không phải MIN
 
@@ -1199,14 +922,6 @@ FIRST_VALUE(ENAME) OVER(ORDER BY SAL DESC)
 
 ---
 
-Khi gom phần **19. FIRST_VALUE không phải MIN** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **19. FIRST_VALUE không phải MIN**. Bây giờ chuyển sang **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **19. FIRSTVALUE không phải MIN** đã nêu tiêu chí phân biệt, còn **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Muốn LASTVALUE thật sự lấy cuối partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐
 
 **KR:** `LAST_VALUE`는 현재 윈도우 범위에서 마지막 값을 반환한다.
@@ -1228,12 +943,6 @@ và nghĩ:
 Không nhất thiết.
 
 ---
-
-Khi gom phần **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐**. Bây giờ chuyển sang **Vì sao?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Vì sao?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Vì sao?
 
@@ -1289,14 +998,6 @@ Trông gần như column SAL ban đầu.
 
 ---
 
-Khi gom phần **Vì sao?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Vì sao?**. Bây giờ chuyển sang **21. Muốn LAST_VALUE thật sự lấy cuối partition**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **21. Muốn LAST_VALUE thật sự lấy cuối partition** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **20. LASTVALUE — bẫy rất lớn ⭐⭐⭐** đã nêu tiêu chí phân biệt, còn **21. Muốn LASTVALUE thật sự lấy cuối partition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. NTILE(N) ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 21. Muốn LAST_VALUE thật sự lấy cuối partition
 
 Phải mở window đến cuối:
@@ -1320,12 +1021,6 @@ SAL     LAST_VALUE
 5000       5000
 ```
 
-Khi gom phần **21. Muốn LAST_VALUE thật sự lấy cuối partition** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **21. Muốn LAST_VALUE thật sự lấy cuối partition**. Bây giờ chuyển sang **Câu cực quan trọng**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Câu cực quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Câu cực quan trọng
 
 > **LAST_VALUE + ORDER BY → luôn kiểm tra window frame.**
@@ -1333,14 +1028,6 @@ Ta bắt đầu **Câu cực quan trọng** bằng câu hỏi: **khái niệm n�
 Đây là một trong những bẫy Window Function đáng nhớ nhất.
 
 ---
-
-Khi gom phần **Câu cực quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Câu cực quan trọng**. Bây giờ chuyển sang **22. NTILE(N) ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **22. NTILE(N) ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **22. NTILE(N) ⭐⭐⭐** tiếp nhận điểm tựa từ **21. Muốn LASTVALUE thật sự lấy cuối partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. NTILE bắt buộc ORDER BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. NTILE(N) ⭐⭐⭐
 
@@ -1354,12 +1041,6 @@ NTILE(2) OVER(ORDER BY SAL)
 → chia thành 2 nhóm.
 
 ---
-
-Khi gom phần **22. NTILE(N) ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **22. NTILE(N) ⭐⭐⭐**. Bây giờ chuyển sang **Nếu không chia đều?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Nếu không chia đều?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Nếu không chia đều?
 
@@ -1383,12 +1064,6 @@ Group 1 → 5
 Group 2 → 5
 Group 3 → 4
 ```
-
-Khi gom phần **Nếu không chia đều?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Nếu không chia đều?**. Bây giờ chuyển sang **Quy tắc**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Quy tắc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Quy tắc
 
@@ -1414,14 +1089,6 @@ Không phải:
 
 ---
 
-Khi gom phần **Quy tắc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Quy tắc**. Bây giờ chuyển sang **23. NTILE bắt buộc ORDER BY**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **23. NTILE bắt buộc ORDER BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **23. NTILE bắt buộc ORDER BY** tiếp nhận điểm tựa từ **22. NTILE(N) ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. RATIOTOREPORT ⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 23. NTILE bắt buộc ORDER BY
 
 Vì phải biết:
@@ -1444,14 +1111,6 @@ Bottom 25%
 Nhưng đây là **chia số row**, không phải trực tiếp tính percentile thống kê.
 
 ---
-
-Khi gom phần **23. NTILE bắt buộc ORDER BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **23. NTILE bắt buộc ORDER BY**. Bây giờ chuyển sang **24. RATIO_TO_REPORT ⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **24. RATIO_TO_REPORT ⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **24. RATIOTOREPORT ⭐⭐** tiếp nhận điểm tựa từ **23. NTILE bắt buộc ORDER BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. PERCENTRANK ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. RATIO_TO_REPORT ⭐⭐
 
@@ -1504,14 +1163,7 @@ Tổng tất cả ratio:
 
 ---
 
-Khi gom phần **24. RATIO_TO_REPORT ⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **24. RATIO_TO_REPORT ⭐⭐**. Bây giờ chuyển sang **PARTITION BY**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**PARTITION BY** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
-
 ### PARTITION BY
-
 Phần này nối mạch SQL với “PARTITION BY”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -1529,12 +1181,6 @@ OVER()
 
 → tỷ lệ trên toàn bộ tập dữ liệu sau các bước lọc liên quan.
 
-Khi gom phần **PARTITION BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **PARTITION BY**. Bây giờ chuyển sang **Điểm cần nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Điểm cần nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Điểm cần nhớ
 
 Theo nội dung SQLD trong ảnh:
@@ -1546,14 +1192,6 @@ RATIO_TO_REPORT
 ```
 
 ---
-
-Khi gom phần **Điểm cần nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Điểm cần nhớ**. Bây giờ chuyển sang **25. PERCENT_RANK ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **25. PERCENT_RANK ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **25. PERCENTRANK ⭐⭐⭐** tiếp nhận điểm tựa từ **24. RATIOTOREPORT ⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. PERCENTRANK xử lý tie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. PERCENT_RANK ⭐⭐⭐
 
@@ -1617,14 +1255,6 @@ MILLER:
 
 ---
 
-Khi gom phần **25. PERCENT_RANK ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **25. PERCENT_RANK ⭐⭐⭐**. Bây giờ chuyển sang **26. PERCENT_RANK xử lý tie**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **26. PERCENT_RANK xử lý tie** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **26. PERCENTRANK xử lý tie** tiếp nhận điểm tựa từ **25. PERCENTRANK ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. CUMEDIST ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 26. PERCENT_RANK xử lý tie
 
 Ví dụ:
@@ -1664,14 +1294,6 @@ Vậy tie có cùng `PERCENT_RANK`.
 
 ---
 
-Khi gom phần **26. PERCENT_RANK xử lý tie** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **26. PERCENT_RANK xử lý tie**. Bây giờ chuyển sang **27. CUME_DIST ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **27. CUME_DIST ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **27. CUMEDIST ⭐⭐⭐** tiếp nhận điểm tựa từ **26. PERCENTRANK xử lý tie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Ví dụ CUMEDIST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 27. CUME_DIST ⭐⭐⭐
 
 **KR:** `CUME_DIST`는 현재 행까지 포함된 행의 누적 비율을 반환한다.
@@ -1698,14 +1320,6 @@ Khác `PERCENT_RANK`:
 ```
 
 ---
-
-Khi gom phần **27. CUME_DIST ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **27. CUME_DIST ⭐⭐⭐**. Bây giờ chuyển sang **28. Ví dụ CUME_DIST**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **28. Ví dụ CUME_DIST** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **27. CUMEDIST ⭐⭐⭐** cho ta quy tắc; **28. Ví dụ CUMEDIST** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **29. CUMEDIST và tie ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Ví dụ CUME_DIST
 
@@ -1734,14 +1348,6 @@ thì:
 Đây chính là kết quả trong ảnh.
 
 ---
-
-Khi gom phần **28. Ví dụ CUME_DIST** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **28. Ví dụ CUME_DIST**. Bây giờ chuyển sang **29. CUME_DIST và tie ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **29. CUME_DIST và tie ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **28. Ví dụ CUMEDIST** cho ta quy tắc; **29. CUMEDIST và tie ⭐⭐⭐** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. CUME_DIST và tie ⭐⭐⭐
 
@@ -1778,14 +1384,6 @@ Sau đó:
 
 ---
 
-Khi gom phần **29. CUME_DIST và tie ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **29. CUME_DIST và tie ⭐⭐⭐**. Bây giờ chuyển sang **30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** tiếp nhận điểm tựa từ **29. CUMEDIST và tie ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Đừng nhầm RANGE và CUMEDIST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐
 
 Lấy:
@@ -1797,12 +1395,6 @@ Lấy:
 1100
 800
 ```
-
-Khi gom phần **30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **30. PERCENT_RANK vs CUME_DIST ⭐⭐⭐**. Bây giờ chuyển sang **PERCENT_RANK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**PERCENT_RANK** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
 #### PERCENT_RANK
 
@@ -1822,12 +1414,6 @@ Dựa trên:
 800  → 1
 ```
 
-Khi gom phần **PERCENT_RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **PERCENT_RANK**. Bây giờ chuyển sang **CUME_DIST**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-**CUME_DIST** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
-
 #### CUME_DIST
 
 Dựa trên tỷ lệ row tích lũy:
@@ -1840,12 +1426,6 @@ Dựa trên tỷ lệ row tích lũy:
 800  → 1
 ```
 
-Khi gom phần **CUME_DIST** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **CUME_DIST**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
-
 #### Cách nhớ
 
 > **PERCENT_RANK = 내 순위가 어디인가?**
@@ -1855,14 +1435,6 @@ Vậy ta đã có tiêu chí để đọc **CUME_DIST**. Bây giờ chuyển san
 > Đến vị trí này đã bao phủ bao nhiêu % row?
 
 ---
-
-Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **31. Đừng nhầm RANGE và CUME_DIST**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **31. Đừng nhầm RANGE và CUME_DIST** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **30. PERCENTRANK vs CUMEDIST ⭐⭐⭐** đã nêu tiêu chí phân biệt, còn **31. Đừng nhầm RANGE và CUMEDIST** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **32. Sơ đồ tổng hợp Window Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Đừng nhầm RANGE và CUME_DIST
 
@@ -1895,14 +1467,6 @@ khi phù hợp với mục đích nghiệp vụ.
 
 ---
 
-Khi gom phần **31. Đừng nhầm RANGE và CUME_DIST** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **31. Đừng nhầm RANGE và CUME_DIST**. Bây giờ chuyển sang **32. Sơ đồ tổng hợp Window Function**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **32. Sơ đồ tổng hợp Window Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Window Functions**, **31. Đừng nhầm RANGE và CUMEDIST** đã nêu tiêu chí phân biệt, còn **32. Sơ đồ tổng hợp Window Function** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **33. Bảng phân loại các hàm trong ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 32. Sơ đồ tổng hợp Window Function
 
 Hãy hình dung câu:
@@ -1918,14 +1482,7 @@ SUM(SAL) OVER(
 
 theo 3 bước.
 
-Khi gom phần **32. Sơ đồ tổng hợp Window Function** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **32. Sơ đồ tổng hợp Window Function**. Bây giờ chuyển sang **Bước 1 — PARTITION BY**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Bước 1 — PARTITION BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Bước 1 — PARTITION BY
-
 Phần này nối mạch SQL với “Bước 1 — PARTITION BY”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -1933,12 +1490,6 @@ DEPT 10 | DEPT 20 | DEPT 30
 ```
 
 Chia dữ liệu.
-
-Khi gom phần **Bước 1 — PARTITION BY** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Bước 1 — PARTITION BY**. Bây giờ chuyển sang **Bước 2 — ORDER BY**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Bước 2 — ORDER BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Bước 2 — ORDER BY
 
@@ -1953,12 +1504,6 @@ new hire
 ```
 
 Sắp thứ tự.
-
-Khi gom phần **Bước 2 — ORDER BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Bước 2 — ORDER BY**. Bây giờ chuyển sang **Bước 3 — ROWS**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Bước 3 — ROWS** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Bước 3 — ROWS
 
@@ -1977,16 +1522,7 @@ Sau đó chuyển sang row tiếp theo.
 
 ---
 
-Khi gom phần **Bước 3 — ROWS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Bước 3 — ROWS**. Bây giờ chuyển sang **33. Bảng phân loại các hàm trong ảnh**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **33. Bảng phân loại các hàm trong ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Window Functions**, **33. Bảng phân loại các hàm trong ảnh** gom các mảnh từ **32. Sơ đồ tổng hợp Window Function** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **🔥 SQLD NOTE — Phần phải thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 33. Bảng phân loại các hàm trong ảnh
-
 Phần này nối mạch SQL với “33. Bảng phân loại các hàm trong ảnh”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Hàm               | Ý nghĩa dễ nhớ                               | ORDER BY               |
@@ -2003,24 +1539,9 @@ Phần này nối mạch SQL với “33. Bảng phân loại các hàm trong �
 
 ---
 
-Khi gom phần **33. Bảng phân loại các hàm trong ảnh** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **33. Bảng phân loại các hàm trong ảnh**. Bây giờ chuyển sang **🔥 SQLD NOTE — Phần phải thuộc**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **🔥 SQLD NOTE — Phần phải thuộc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Window Functions**, **🔥 SQLD NOTE — Phần phải thuộc** tiếp nhận điểm tựa từ **33. Bảng phân loại các hàm trong ảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## 🔥 SQLD NOTE — Phần phải thuộc
 
-Khi gom phần **🔥 SQLD NOTE — Phần phải thuộc** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **🔥 SQLD NOTE — Phần phải thuộc**. Bây giờ chuyển sang **① Bản chất**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **① Bản chất** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ① Bản chất
-
 Phần này nối mạch SQL với “① Bản chất”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2032,14 +1553,7 @@ WINDOW FUNCTION
 → tính toán giữa các row
 ```
 
-Khi gom phần **① Bản chất** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **① Bản chất**. Bây giờ chuyển sang **② Cấu trúc**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **② Cấu trúc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ② Cấu trúc
-
 Phần này nối mạch SQL với “② Cấu trúc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -2059,14 +1573,7 @@ PARTITION
 → ROWS/RANGE
 ```
 
-Khi gom phần **② Cấu trúc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **② Cấu trúc**. Bây giờ chuyển sang **③ PARTITION BY**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **③ PARTITION BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ③ PARTITION BY
-
 Phần này nối mạch SQL với “③ PARTITION BY”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2079,14 +1586,7 @@ nhưng:
 không làm mất row.
 ```
 
-Khi gom phần **③ PARTITION BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **③ PARTITION BY**. Bây giờ chuyển sang **④ Aggregate + ORDER BY**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **④ Aggregate + ORDER BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ④ Aggregate + ORDER BY
-
 Phần này nối mạch SQL với “④ Aggregate + ORDER BY”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
@@ -2095,14 +1595,7 @@ SUM(SAL) OVER(ORDER BY ...)
 
 → thường tạo **누적합 / cumulative sum**.
 
-Khi gom phần **④ Aggregate + ORDER BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **④ Aggregate + ORDER BY**. Bây giờ chuyển sang **⑤ ROWS vs RANGE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑤ ROWS vs RANGE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑤ ROWS vs RANGE
-
 Phần này nối mạch SQL với “⑤ ROWS vs RANGE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2116,14 +1609,7 @@ RANGE
 
 Đây là trọng tâm thi.
 
-Khi gom phần **⑤ ROWS vs RANGE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑤ ROWS vs RANGE**. Bây giờ chuyển sang **⑥ Window frame**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑥ Window frame** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑥ Window frame
-
 Phần này nối mạch SQL với “⑥ Window frame”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2143,14 +1629,7 @@ UNBOUNDED FOLLOWING
 = đến cuối
 ```
 
-Khi gom phần **⑥ Window frame** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑥ Window frame**. Bây giờ chuyển sang **⑦ LAG / LEAD**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑦ LAG / LEAD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑦ LAG / LEAD
-
 Phần này nối mạch SQL với “⑦ LAG / LEAD”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2161,14 +1640,7 @@ LAG  ← CURRENT → LEAD
 
 `LEAD` = next.
 
-Khi gom phần **⑦ LAG / LEAD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑦ LAG / LEAD**. Bây giờ chuyển sang **⑧ FIRST_VALUE / LAST_VALUE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑧ FIRST_VALUE / LAST_VALUE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑧ FIRST_VALUE / LAST_VALUE
-
 Phần này nối mạch SQL với “⑧ FIRST_VALUE / LAST_VALUE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2181,14 +1653,7 @@ LAST_VALUE
 
 ⚠️ `LAST_VALUE` đặc biệt phải kiểm tra **window frame**.
 
-Khi gom phần **⑧ FIRST_VALUE / LAST_VALUE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑧ FIRST_VALUE / LAST_VALUE**. Bây giờ chuyển sang **⑨ NTILE**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑨ NTILE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑨ NTILE
-
 Phần này nối mạch SQL với “⑨ NTILE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2201,14 +1666,7 @@ NTILE(N)
 
 Phần dư được đưa cho **nhóm phía trước**.
 
-Khi gom phần **⑨ NTILE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑨ NTILE**. Bây giờ chuyển sang **⑩ PERCENT_RANK**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑩ PERCENT_RANK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑩ PERCENT_RANK
-
 Phần này nối mạch SQL với “⑩ PERCENT_RANK”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
@@ -2225,23 +1683,10 @@ Range:
 
 Row đứng đầu → `0`.
 
-Khi gom phần **⑩ PERCENT_RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **⑩ PERCENT_RANK**. Bây giờ chuyển sang **⑪ CUME_DIST**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **⑪ CUME_DIST** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### ⑪ CUME_DIST
-
 Phần này nối mạch SQL với “⑪ CUME_DIST”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 cumulative rows
 ---------------
 total rows
-
-Khi gom phần **⑪ CUME_DIST** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Như vậy, **⑪ CUME_DIST** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
-
-> **Bàn giao:** Sau **🔥 SQLD NOTE — Phần phải thuộc**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

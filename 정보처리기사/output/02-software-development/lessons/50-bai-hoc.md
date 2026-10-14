@@ -1,45 +1,6 @@
 # 11. DRM (디지털 저작권 관리, Digital Rights Management)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **11. DRM (디지털 저작권 관리, Digital Rights Management)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối DRM với license, key, encryption và playback, để quyền sử dụng đi cùng cơ chế kỹ thuật.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **11. DRM (디지털 저작권 관리, Digital Rights Management)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **11. DRM (디지털 저작권 관리, Digital Rights Management)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)** khi chuyển sang phần tiếp theo.
-
-Mục tiêu xác định DRM kiểm soát quyền truy cập và sử dụng nội dung số qua policy, license và client ra sao; từ khóa khoanh vùng encryption và authorization.
-
-## 핵심 키워드 (Từ khóa)
-
-DRM
-
-Kiến thức liên kết đặt DRM trên nền build artifact và DRM packaging; cách đọc tiếp theo giúp phân biệt bảo vệ, cấp quyền và thu hồi.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**에서 만든 기준을 이어받아 **11. DRM (디지털 저작권 관리, Digital Rights Management)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần DRM dùng khung đó để nối danh tính, policy và quyết định cho phép.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-Phần này khép lại bằng ranh giới giữa mã hóa và quyền sử dụng; khi sang bản quyền/DRM chi tiết, hãy đối chiếu cơ chế với trách nhiệm pháp lý.
-
 ## 11. DRM (디지털 저작권 관리, Digital Rights Management)
-
-Sau khi đã đặt nền bằng **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**, ta chuyển sang **11. DRM (디지털 저작권 관리, Digital Rights Management)**. Đây là mắt xích 50/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
-
-Để đọc **11. DRM (디지털 저작권 관리, Digital Rights Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **구성 요소 (Components)**, **기술 요소 (Technologies)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
 Phần “11. DRM (디지털 저작권 관리, Digital Rights Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **구성 요소 (Components)**: 클리어링 하우스 (Clearing House - 권한/결제 관리), 콘텐츠 제공자 (Contents Provider), 패키저 (Packager - 암호화), 콘텐츠 분배자 (Distributor), DRM 컨트롤러 (Controller - 이용 권한 통제).
@@ -47,7 +8,3 @@ Phần “11. DRM (디지털 저작권 관리, Digital Rights Management)” đ�
 * **VI (Vietnamese) (Tiếng Việt):** Quản lý bản quyền kỹ thuật số. Clearing House xử lý thanh toán/cấp phép. Packager mã hóa nội dung.
 * **Example**: 넷플릭스 영상이 녹화가 안 되거나 불법 복제가 안 되는 것이 DRM 기술 덕분입니다.
 * 💡 **Mẹo ghi nhớ**: Clearing House = Ngân hàng/Trung tâm kiểm duyệt. Packager = Người đóng gói/Mã hóa.
-
-Ta có thể khép mục **11. DRM (디지털 저작권 관리, Digital Rights Management)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
-
-> **Bàn giao:** Sau **11. DRM (디지털 저작권 관리, Digital Rights Management)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

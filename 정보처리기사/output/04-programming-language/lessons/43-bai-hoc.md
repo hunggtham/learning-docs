@@ -1,79 +1,19 @@
 # 네트워크 통신 (Network Communication)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **네트워크 통신 (Network Communication)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy nối ứng dụng, giao thức, địa chỉ và kênh truyền để thấy dữ liệu đi từ chương trình này sang chương trình khác ra sao.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **네트워크 통신 (Network Communication)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **네트워크 통신 (Network Communication)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** khi chuyển sang phần tiếp theo.
-
-> **Chuyển mạch:** Trong **네트워크 통신 (Network Communication)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 핵심 키워드 (Từ khóa)
-
-네트워크, 통신
-
-> **Chuyển mạch:** Ở chặng này của **네트워크 통신 (Network Communication)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**에서 만든 기준을 이어받아 **네트워크 통신 (Network Communication)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **네트워크 통신 (Network Communication)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네트워크 통신 (Network Communication)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-> **Chuyển mạch:** Trong **네트워크 통신 (Network Communication)**, **네트워크 통신 (Network Communication)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## 네트워크 통신 (Network Communication)
-
-Ở bước 43/91, **네트워크 통신 (Network Communication)** xuất hiện như phần tiếp nối của **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
-
-Để đọc **네트워크 통신 (Network Communication)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **209. 데이터 링크 계층 (Data Link)**, **210. 네트워크 계층 (Network)**, **211. 전송 계층 (Transport)**, **212. 세션 계층 (Session)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Trước hết, ta đặt **207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
-
 ### 207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)
-
-Bây giờ ta đi vào nội dung của **207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 8비트씩 4부분, 총 32비트 (4 phần, mỗi phần 8 bit -> 32 bit). A~E 클래스.
 
-Các bullet của **207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
 ### 208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)
-
-Phần nguồn của **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 16비트씩 8부분, 총 128비트 (8 phần, mỗi phần 16 bit -> 128 bit, dùng hệ Hex).
 - 유니캐스트(Unicast), 멀티캐스트(Multicast), 애니캐스트(Anycast).
   - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`).
 
-Với **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Sau khi đọc **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)**, đừng bắt đầu lại từ số không. **OSI 7계층 (OSI 7 Layers)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **OSI 7계층 (OSI 7 Layers)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
 ### OSI 7계층 (OSI 7 Layers)
-
-Các ý ngay dưới **OSI 7계층 (OSI 7 Layers)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
 Phần “OSI 7계층 (OSI 7 Layers)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **209. 데이터 링크 계층 (Data Link)**: 인접 시스템 간 신뢰성 있는 전송. 흐름/오류 제어 (HDLC, PPP). (Truyền tải tin cậy giữa các nút lân cận).
@@ -82,15 +22,7 @@ Phần “OSI 7계층 (OSI 7 Layers)” được nối với nội dung kế ti�
 - **212. 세션 계층 (Session)**: 대화 제어, 동기화 (Quản lý phiên, đồng bộ hóa hội thoại).
   - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token.
 
-Với **OSI 7계층 (OSI 7 Layers)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-**OSI 7계층 (OSI 7 Layers)** vừa cho ta cách đặt câu hỏi. Bây giờ **213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
 ### 213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)
-
-Bây giờ ta đi vào nội dung của **213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **리피터 (Repeater)**: 신호 재생 (Khuếch đại tín hiệu).
@@ -99,26 +31,10 @@ Phần “213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị
 - **스위치 (Switch)**: 여러 랜선 연결 (Chuyển mạch mạng LAN).
 - **브라우터 (Brouter)**: Bridge + Router.
 
-Các bullet của **213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TCP/IP 프로토콜 (TCP/IP Protocols)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **TCP/IP 프로토콜 (TCP/IP Protocols)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
 ### TCP/IP 프로토콜 (TCP/IP Protocols)
-
-Phần nguồn của **TCP/IP 프로토콜 (TCP/IP Protocols)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “TCP/IP 프로토콜 (TCP/IP Protocols)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **214. MQTT**: IoT에서 사용하는 발행-구독 메시징 (Giao thức Publish/Subscribe cho IoT).
 - **215. TCP**: 신뢰성 있는 양방향 연결형 서비스 (Kết nối hai chiều, đáng tin cậy).
 - **216. UDP**: 비연결형, 빠른 속도, 실시간 전송 유리 (Không kết nối, truyền nhanh, hợp với Real-time).
   - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).
-
-Với **TCP/IP 프로토콜 (TCP/IP Protocols)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Điểm chốt của **TCP/IP 프로토콜 (TCP/IP Protocols)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Như vậy, **네트워크 통신 (Network Communication)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
-> **Bàn giao:** Sau **네트워크 통신 (Network Communication)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

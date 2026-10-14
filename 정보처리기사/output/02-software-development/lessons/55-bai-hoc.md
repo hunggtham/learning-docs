@@ -1,45 +1,6 @@
 # 20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối top-down integration với stub, driver và dependency, để kiểm thử tích hợp đi từ lớp điều phối xuống.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **35. 테스트 케이스 (Test Case)** khi chuyển sang phần tiếp theo.
-
-Mục tiêu xác định top-down integration đi từ module điều phối xuống và dùng test stub để cô lập phần chưa sẵn sàng; từ khóa khoanh vùng call order và observable result.
-
-## 핵심 키워드 (Từ khóa)
-
-하향식, 통합, 테스트와, 테스트, 스텁
-
-Kiến thức liên kết đặt top-down test trên nền oracle và module boundary; cách đọc tiếp theo giúp theo dõi stub trả gì và che khuất rủi ro nào.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**에서 만든 기준을 이어받아 **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần top-down/stub dùng khung đó để nối thứ tự gọi với kết quả quan sát.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-Phần này khép lại bằng giới hạn của stub so với module thật; khi sang test case, hãy chuyển hành vi quan sát được thành dữ liệu tái lập.
-
 ## 20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)
-
-Ở bước 55/101, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** xuất hiện như phần tiếp nối của **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
-
-Để đọc **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **테스트 스텁 (Test Stub)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
 Phần “20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **테스트 스텁 (Test Stub)**: 상향식에서 드라이버를 쓰듯, 하향식 통합 테스트에서는 '스텁(Stub)'이라는 가짜 하위 모듈을 사용.
@@ -48,7 +9,3 @@ Phần “20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integrati
 * **VI (Vietnamese) (Tiếng Việt):** Test Stub là module giả lập cấp dưới, dùng trong kiểm thử tích hợp từ trên xuống (Top-down).
 * **Example**: 로그인 기능을 먼저 테스트하기 위해, DB 연결 모듈 대신 무조건 "성공"을 반환하는 스텁을 만듭니다.
 * 💡 **Mẹo ghi nhớ**: Top-down dùng Stub (T-S), Bottom-up dùng Driver (B-D).
-
-Như vậy, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **35. 테스트 케이스 (Test Case)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
-> **Bàn giao:** Sau **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

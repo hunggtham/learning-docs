@@ -6,6 +6,8 @@ Thư mục này không còn chứa worker sinh hoặc viết lại learning docs
 - [`../prompt/DOCS_AUDIT_PROMPT.md`](../prompt/DOCS_AUDIT_PROMPT.md) — audit trước khi chấp nhận;
 - [`../prompt/DOCS_REVIEW_PROMPT.md`](../prompt/DOCS_REVIEW_PROMPT.md) — review/fix sau khi người dùng test không đạt.
 
+AI draft không phải canonical content. Không dùng worker/script để chèn prose, dịch hàng loạt, thay thuật ngữ, tạo citation/example, hoặc tự đánh dấu acceptance. Không upload private/proprietary source, secret hay credential lên external AI/API.
+
 ## Provenance và runtime boundary
 
 [Source Ledger](./SOURCES.md) ghi version/runtime/config boundary cho Git, Python, Node và CI tools. Green CI hoặc script exit 0 chỉ chứng minh job/context đã chạy; không tự chứng minh live provider hay publication state.

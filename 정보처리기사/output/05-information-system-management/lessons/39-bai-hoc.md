@@ -1,51 +1,8 @@
 # 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối bổ sung/nâng cao với thuật ngữ, case và liên hệ, để kiến thức mở rộng vẫn có owner.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 257: 분기/제어 (break, continue)** khi chuyển sang phần tiếp theo.
-
-> **Chuyển mạch:** Trong **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 핵심 키워드 (Từ khóa)
-
-보충, 심화, 내용
-
-> **Chuyển mạch:** Ở chặng này của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**에서 만든 기준을 이어받아 **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-> **Chuyển mạch:** Trong **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
 
-Từ **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**, ta đã có điểm tựa để bước vào **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/86 trước khi đi vào chi tiết.
-
-Để đọc **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Để không đọc **11.1 소프트웨어 프레임워크 및 개발 심화** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
-
 ### 11.1 소프트웨어 프레임워크 및 개발 심화
-
-Các ý ngay dưới **11.1 소프트웨어 프레임워크 및 개발 심화** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
 Phần “11.1 소프트웨어 프레임워크 및 개발 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **프레임워크의 특성 (Framework Characteristics):**
@@ -59,15 +16,7 @@ Phần “11.1 소프트웨어 프레임워크 및 개발 심화” được n�
   - **닷넷 (.NET):** 마이크로소프트의 Windows 개발 및 실행 환경.
 - **Tiếng Việt:** Đặc điểm của Framework: Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
 
-Các bullet của **11.1 소프트웨어 프레임워크 및 개발 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **11.1 소프트웨어 프레임워크 및 개발 심화** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **11.2 네트워크 구조 및 표준 심화** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **11.2 네트워크 구조 및 표준 심화**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
 ### 11.2 네트워크 구조 및 표준 심화
-
-Bây giờ ta đi vào nội dung của **11.2 네트워크 구조 및 표준 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “11.2 네트워크 구조 및 표준 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **네트워크 토폴로지 (Network Topology):**
@@ -93,15 +42,7 @@ Phần “11.2 네트워크 구조 및 표준 심화” được nối với n�
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
   - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
 
-Với **11.2 네트워크 구조 및 표준 심화**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Sau khi đọc **11.2 네트워크 구조 및 표준 심화**, đừng bắt đầu lại từ số không. **11.3 데이터베이스 동시성 및 교착상태 심화** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **11.3 데이터베이스 동시성 및 교착상태 심화**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
 ### 11.3 데이터베이스 동시성 및 교착상태 심화
-
-Phần nguồn của **11.3 데이터베이스 동시성 및 교착상태 심화** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
 Phần “11.3 데이터베이스 동시성 및 교착상태 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **교착상태 해결 방법 (Deadlock Handling):**
@@ -116,15 +57,7 @@ Phần “11.3 데이터베이스 동시성 및 교착상태 심화” được 
   - **검사점 기법 (Check Point):** 검사점부터 회복하여 시간 절약.
 - **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check Point.
 
-Các bullet của **11.3 데이터베이스 동시성 및 교착상태 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-**11.3 데이터베이스 동시성 및 교착상태 심화** vừa cho ta cách đặt câu hỏi. Bây giờ **11.4 암호화 및 해시 알고리즘 심화** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **11.4 암호화 및 해시 알고리즘 심화** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
 ### 11.4 암호화 및 해시 알고리즘 심화
-
-Các ý ngay dưới **11.4 암호화 및 해시 알고리즘 심화** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
 Phần “11.4 암호화 및 해시 알고리즘 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **암호화 키 개수 (Key Count):**
@@ -141,15 +74,7 @@ Phần “11.4 암호화 및 해시 알고리즘 심화” được nối với 
   - **N-NASH, SNEFRU.**
 - **Tiếng Việt:** Thuật toán mã hóa Hàn Quốc: SEED, ARIA. Thuật toán quốc tế: DES, AES, RSA. Số lượng khóa đối xứng = n(n-1)/2. Số lượng khóa bất đối xứng = 2n.
 
-Với **11.4 암호화 및 해시 알고리즘 심화**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Ta vừa chốt **11.4 암호화 및 해시 알고리즘 심화** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **11.5 기타 보안 및 공격 기법 심화** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **11.5 기타 보안 및 공격 기법 심화**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
 ### 11.5 기타 보안 및 공격 기법 심화
-
-Bây giờ ta đi vào nội dung của **11.5 기타 보안 및 공격 기법 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
 Phần “11.5 기타 보안 및 공격 기법 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **Secure SDLC 방법론:**
@@ -173,11 +98,3 @@ Phần “11.5 기타 보안 및 공격 기법 심화” được nối với n�
   - Smishing: Phishing qua tin nhắn SMS.
   - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
   - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
-
-Các bullet của **11.5 기타 보안 및 공격 기법 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Điểm chốt của **11.5 기타 보안 및 공격 기법 심화** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Điểm chốt của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **핵심 257: 분기/제어 (break, continue)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
-
-> **Bàn giao:** Sau **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

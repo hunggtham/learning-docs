@@ -1,45 +1,6 @@
 # 핵심 118: 가상 기억장치 (Virtual Memory)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **핵심 118: 가상 기억장치 (Virtual Memory)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối virtual memory với address space, paging và replacement, để tiến trình thấy không gian liên tục dù RAM hữu hạn.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 118: 가상 기억장치 (Virtual Memory)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **핵심 118: 가상 기억장치 (Virtual Memory)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** khi chuyển sang phần tiếp theo.
-
-Mục tiêu vừa đặt virtual memory vào bài toán mở rộng không gian địa chỉ khi RAM hữu hạn. Phần **핵심 키워드 (Từ khóa)** tiếp theo giữ lại các thuật ngữ cần để theo dõi địa chỉ ảo, trang và ánh xạ.
-
-## 핵심 키워드 (Từ khóa)
-
-핵심, 가상, 기억장치
-
-Các từ khóa cho thấy virtual memory không chỉ là “RAM mở rộng” mà là một cơ chế ánh xạ giữa hai không gian địa chỉ. Phần **선행·연결 개념 (Kiến thức liên kết)** sẽ nối cơ chế đó với cache để làm rõ điểm giống và khác về vị trí, tốc độ và chi phí.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **핵심 117: 캐시 메모리 (Cache Memory)**에서 만든 기준을 이어받아 **핵심 118: 가상 기억장치 (Virtual Memory)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-Sau khi phân biệt cache với virtual memory, **읽는 방법 (Cách đọc)** sẽ hướng dẫn lần theo địa chỉ, page fault và bước ánh xạ để thấy cơ chế vận hành cùng giới hạn của nó.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-Với trình tự đọc vừa xác lập, phần **핵심 118: 가상 기억장치 (Virtual Memory)** giải thích không gian địa chỉ, page fault và ánh xạ bằng chuỗi nguyên nhân–hệ quả. Hãy giữ lại tiêu chí về phân bổ tài nguyên khi chuyển sang các kỹ thuật xử lý song song.
-
 ## 핵심 118: 가상 기억장치 (Virtual Memory)
-
-Ở bước 88/101, **핵심 118: 가상 기억장치 (Virtual Memory)** xuất hiện như phần tiếp nối của **핵심 117: 캐시 메모리 (Cache Memory)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
-
-Để đọc **핵심 118: 가상 기억장치 (Virtual Memory)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
 Phần “핵심 118: 가상 기억장치 (Virtual Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 기억 용량이 작은 주기억장치를 마치 큰 용량을 가진 것처럼 사용할 수 있도록 하는 운영체제의 메모리 운영 기법. (Lấy một phần ổ cứng ảo hóa thành RAM, giúp máy tính chạy được các chương trình nặng hơn dung lượng RAM thực tế.)
@@ -54,7 +15,3 @@ Phần “핵심 118: 가상 기억장치 (Virtual Memory)” được nối v�
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Virtual = Đĩa cứng đóng giả làm RAM. Page Fault (Lỗi trang) = Trang chưa nạp, phải đợi.
 
 ---
-
-Như vậy, **핵심 118: 가상 기억장치 (Virtual Memory)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
-> **Bàn giao:** Sau **핵심 118: 가상 기억장치 (Virtual Memory)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

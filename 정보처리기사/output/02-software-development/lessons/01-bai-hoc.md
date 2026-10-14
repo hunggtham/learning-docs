@@ -1,45 +1,6 @@
 # 1. 자료 구조의 분류 (Classification of Data Structures)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **1. 자료 구조의 분류 (Classification of Data Structures)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối phân loại data structures với access pattern, memory layout và complexity, để tên nhóm gắn với cách dùng.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **1. 자료 구조의 분류 (Classification of Data Structures)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **1. 자료 구조의 분류 (Classification of Data Structures)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. 스택 (Stack) 및 응용 (Applications)** khi chuyển sang phần tiếp theo.
-
-Mục tiêu xác định data structure được phân loại theo access pattern, memory layout và complexity ra sao; từ khóa khoanh vùng các tiêu chí đó.
-
-## 핵심 키워드 (Từ khóa)
-
-자료, 구조의, 분류
-
-Kiến thức liên kết đặt classification trên nền data structures và workload; cách đọc tiếp theo giúp nối tên nhóm với cách dùng.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **1. 자료 구조의 분류 (Classification of Data Structures)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
-
-Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần classification dùng khung đó để chọn cấu trúc theo truy vấn.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-Phần này khép lại bằng tiêu chí chọn cấu trúc; khi sang stack, hãy giữ lại access pattern và invariant cần bảo vệ.
-
 ## 1. 자료 구조의 분류 (Classification of Data Structures)
-
-Chúng ta bắt đầu mạch học bằng **1. 자료 구조의 분류 (Classification of Data Structures)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/101 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
-
-Để đọc **1. 자료 구조의 분류 (Classification of Data Structures)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **선형 구조 (Linear Structure)**, **비선형 구조 (Non-linear Structure)**, **방향/무방향 그래프의 최대 간선 수 (Maximum edges in graphs)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
 Phần “1. 자료 구조의 분류 (Classification of Data Structures)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **선형 구조 (Linear Structure)**: 배열(Array), 선형 리스트(Linear List), 스택(Stack), 큐(Queue), 데크(Deque)
@@ -53,7 +14,3 @@ Phần “1. 자료 구조의 분류 (Classification of Data Structures)” đư
   * Số cạnh tối đa: Đồ thị vô hướng là n(n-1)/2, có hướng là n(n-1).
 * **Example**: 노드가 4개인 무방향 그래프의 최대 간선 수는 4(4-1)/2 = 6개입니다. (Với đồ thị vô hướng có 4 đỉnh, số cạnh tối đa là 6).
 * 💡 **Mẹo ghi nhớ**: Tuyến tính (Linear) là một đường thẳng (Mảng, Stack, Queue). Phi tuyến là rẽ nhánh (Cây, Đồ thị).
-
-Như vậy, **1. 자료 구조의 분류 (Classification of Data Structures)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 스택 (Stack) 및 응용 (Applications)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
-> **Bàn giao:** Sau **1. 자료 구조의 분류 (Classification of Data Structures)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

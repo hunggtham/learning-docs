@@ -1,56 +1,16 @@
 # SQL Style Guide và SQL dễ đọc cho pipeline AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **SQL Style Guide và SQL dễ đọc cho pipeline AI**. Route đi từ naming/formatting → semantic clarity → portability/schema choices → review checks → reproducible pipeline use, để style phục vụ bảo trì và kiểm chứng.
-
-> **Mục tiêu:** Quy ước đặt tên, căn lề, tính portable, thiết kế schema và checklist review SQL trong pipeline.
-
-## Từ khóa cần nhớ (Keyword)
-
-Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
-
-> **Chuyển mạch:** Từ keyword về style, **Mạch tư duy** hỏi quy ước nào làm query dễ đọc và dễ kiểm tra; **Mạch nối của bài học** đưa câu trả lời vào pipeline AI, review và bảo trì.
-
-## Mạch tư duy (Logic học)
-
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
-
-> **Chuyển mạch:** Sau khi thống nhất quy ước, **Mạch nối của bài học** kiểm tra chúng bằng ví dụ query, lỗi thường gặp và tiêu chí review để style phục vụ đúng mục đích.
-
-## Mạch nối của bài học
-
-Bài này không đứng riêng: hãy nối **SQL Style Guide và SQL dễ đọc cho pipeline AI** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
-
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
-
----
-
-Để học **SQL Style Guide và SQL dễ đọc cho pipeline AI** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến **Quy ước đặt tên, căn lề, tính portable, thiết kế schema và checklist review SQL trong pipeline** thành cách đọc có thể áp dụng.
-
-Ta bắt đầu **SQL Style Guide là gì?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### SQL Style Guide là gì?
 
 Một câu SQL có thể chạy đúng nhưng vẫn khó đọc, khó review và khó sửa. Trong pipeline dữ liệu, query thường trở thành một model được chạy lại nhiều lần, được nối với các model khác và được người khác tiếp quản sau vài tháng. Vì vậy style không chỉ là chuyện trình bày: nó là một phần của khả năng đọc, kiểm thử và bảo trì SQL.
 
 SQL Style Guide của Simon Holywell là một bộ quy ước ngắn, có tính định hướng và tương thích với nhiều ý tưởng trong *SQL Programming Style* của Joe Celko. Tác giả nói rõ đây là một guide, không phải luật: có thể dùng nguyên bản, fork để sửa, hoặc lấy nó làm điểm xuất phát cho quy ước riêng. Bất biến quan trọng nhất là chọn một style rồi áp dụng nhất quán trong cùng repository.
 
-Khi gom phần **SQL Style Guide là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **SQL Style Guide là gì?**. Bây giờ chuyển sang **Cách đọc nguồn và phạm vi áp dụng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách đọc nguồn và phạm vi áp dụng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Cách đọc nguồn và phạm vi áp dụng
 
 Bản gốc có [bản tiếng Anh](https://www.sqlstyle.guide/) và [bản dịch tiếng Việt](https://www.sqlstyle.guide/vn/). Tài liệu được phát hành theo giấy phép **Creative Commons Attribution-ShareAlike 4.0 International**; nếu sao chép hoặc sửa thành quy ước của project, cần giữ attribution và điều kiện chia sẻ tương tự. Nguồn cũng cung cấp Markdown để đặt vào repository, nhưng khi đưa vào project thật nên ghi rõ phần nào là quy ước upstream, phần nào là quyết định riêng của team.
 
 Đọc guide theo ba lớp: (1) tên và schema để người đọc đoán đúng ý nghĩa dữ liệu, (2) hình thức query để mắt quét được cấu trúc, và (3) lựa chọn cú pháp để giảm phụ thuộc vendor. Ba lớp này hỗ trợ nhau nhưng không thay thế nhau: query được căn lề đẹp vẫn có thể sai grain, sai `JOIN` hoặc sai xử lý `NULL`.
-
-Khi gom phần **Cách đọc nguồn và phạm vi áp dụng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách đọc nguồn và phạm vi áp dụng**. Bây giờ chuyển sang **Đặt tên: ưu tiên ngữ nghĩa ổn định**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Đặt tên: ưu tiên ngữ nghĩa ổn định** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Đặt tên: ưu tiên ngữ nghĩa ổn định
 
@@ -61,12 +21,6 @@ Giới hạn 30 **bytes** là quy ước của guide; với bộ ký tự một 
 Đối với bảng, guide ưu tiên danh từ tập hợp tự nhiên như `staff`, sau đó mới đến dạng số nhiều như `employees`. Đối với cột, dùng danh từ số ít và tránh cột chỉ tên `id` nếu tên có ngữ nghĩa rõ hơn. Không đặt bảng trùng tên với một cột của chính nó. Bảng quan hệ nên có tên biểu đạt quan hệ nghiệp vụ thay vì ghép cơ học hai tên bảng, chẳng hạn `services` thay vì `cars_mechanics` khi đó thực sự là dịch vụ bảo dưỡng.
 
 Alias nên liên quan đến đối tượng đang đại diện; có thể dùng chữ cái đầu của các từ và thêm số nếu bị trùng. Guide khuyến nghị viết rõ `AS`, nhất là với alias của biểu thức tính toán. Tuy nhiên, `AS` cho table alias khác nhau giữa dialect; ví dụ Oracle truyền thống không chấp nhận `AS` cho alias bảng. Trong project đa engine, hãy ghi ngoại lệ này trong quy ước dialect thay vì âm thầm trộn hai phong cách.
-
-Khi gom phần **Đặt tên: ưu tiên ngữ nghĩa ổn định** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Đặt tên: ưu tiên ngữ nghĩa ổn định**. Bây giờ chuyển sang **Hậu tố thống nhất và giới hạn của chúng**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Hậu tố thống nhất và giới hạn của chúng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Hậu tố thống nhất và giới hạn của chúng
 
@@ -86,12 +40,6 @@ Các hậu tố giúp đọc nhanh vai trò của cột:
 | `_addr` | địa chỉ vật lý hoặc logic | `ip_addr` |
 
 Hậu tố là metadata ngữ nghĩa, không phải type annotation. `file_size` có thể là `INTEGER`, `BIGINT` hoặc `NUMERIC` tùy miền giá trị; `release_date` còn phải phân biệt `DATE` với `TIMESTAMP` và múi giờ. Vì vậy hãy dùng hậu tố cùng với DDL, data contract và kiểm tra kiểu, không dùng tên cột để đoán chắc kiểu vật lý.
-
-Khi gom phần **Hậu tố thống nhất và giới hạn của chúng** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Hậu tố thống nhất và giới hạn của chúng**. Bây giờ chuyển sang **Từ khóa, khoảng trắng và “dòng sông” của query**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Từ khóa, khoảng trắng và “dòng sông” của query** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Từ khóa, khoảng trắng và “dòng sông” của query
 
@@ -114,12 +62,6 @@ Trong style này, đặt khoảng trắng quanh toán tử, sau dấu phẩy và
 
 Khoảng trắng không sửa được lỗi logic. Với `LEFT JOIN`, điều kiện lọc đặt trong `WHERE` có thể biến kết quả thành gần như `INNER JOIN`; với window function, `ORDER BY` và window frame vẫn quyết định kết quả dù query đã căn lề hoàn hảo. Vì vậy style phải đi cùng kiểm tra grain, cardinality và kế hoạch thực thi.
 
-Khi gom phần **Từ khóa, khoảng trắng và “dòng sông” của query** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Từ khóa, khoảng trắng và “dòng sông” của query**. Bây giờ chuyển sang **Idiom truy vấn và tính portable**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Idiom truy vấn và tính portable** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Idiom truy vấn và tính portable
 
 Guide khuyến nghị dùng `BETWEEN` khi thật sự diễn đạt một khoảng có hai đầu mút, `IN` cho một tập giá trị và `CASE` khi cần diễn giải giá trị ngay trong database. Ba lựa chọn này làm ý định rõ hơn, nhưng không được thay thế việc hiểu semantics:
@@ -140,12 +82,6 @@ Trong ví dụ ngày, dùng nửa khoảng `[start, end)` thường an toàn hơ
 
 Ưu tiên hàm, kiểu dữ liệu và cú pháp chuẩn SQL khi khả thi để giảm chi phí chuyển engine. Khi buộc dùng `DATE_TRUNC`, `QUALIFY`, `CONNECT BY`, `TOP`, `PIVOT` hoặc kiểu dữ liệu riêng của vendor, hãy đặt phần đó ở ranh giới dialect, ghi rõ engine/version và có test tương ứng. Ngày giờ nên dùng biểu diễn ISO 8601 và phải thống nhất timezone, precision, cũng như quy tắc chuyển đổi trước khi ghi vào warehouse; chuỗi nhìn giống ISO không tự bảo đảm semantics đúng.
 
-Khi gom phần **Idiom truy vấn và tính portable** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Idiom truy vấn và tính portable**. Bây giờ chuyển sang **CREATE TABLE, kiểu dữ liệu và constraints**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **CREATE TABLE, kiểu dữ liệu và constraints** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### CREATE TABLE, kiểu dữ liệu và constraints
 
 DDL cũng cần đọc được như query. Nhóm các cột liên quan, đặt khóa chính và constraints ở vị trí ổn định, thụt định nghĩa cột bốn spaces theo guide, đặt default cùng kiểu với cột và dùng `CHECK` cho miền giá trị biết trước. Với số cần tính chính xác, ưu tiên `NUMERIC`/`DECIMAL` thay vì `REAL`/`FLOAT` trừ khi thực sự cần số thực gần đúng.
@@ -163,23 +99,11 @@ CREATE TABLE order_item (
 
 Tên constraint, thứ tự cột và kiểu dữ liệu nên được quyết định cùng data model chứ không chỉ để đẹp mắt. Khóa phải cân bằng tính duy nhất, ổn định kiểu dữ liệu, khả năng kiểm tra và độ đơn giản; compound key vẫn hợp lý khi phản ánh đúng nghiệp vụ. Đây là điểm nối trực tiếp tới các bài về khóa, chuẩn hóa và constraints trong mục SQLD.
 
-Khi gom phần **CREATE TABLE, kiểu dữ liệu và constraints** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **CREATE TABLE, kiểu dữ liệu và constraints**. Bây giờ chuyển sang **Những thiết kế nên xem xét lại**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Những thiết kế nên xem xét lại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Những thiết kế nên xem xét lại
 
 Guide cảnh báo bốn mùi thiết kế thường làm query khó hiểu hoặc khó tối ưu: áp mô hình object của application thẳng vào schema quan hệ; tách giá trị và đơn vị thành hai cột khiến mọi consumer phải ghép lại; dùng Entity–Attribute–Value (EAV) cho dữ liệu lẽ ra có schema rõ; và chia một bảng thành nhiều bảng theo năm, địa điểm hoặc quy ước tùy tiện khiến mọi truy vấn phải `UNION` lại.
 
 Đây là heuristic, không phải lệnh cấm. Partitioning, archival table, EAV có kiểm soát hoặc schema phục vụ ORM có thể có lý do vận hành rõ ràng. Khi chọn ngoại lệ, hãy ghi lại grain, workload, retention, cách truy vấn và chi phí migration; đừng dùng style guide để thay thế phân tích yêu cầu.
-
-Khi gom phần **Những thiết kế nên xem xét lại** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Những thiết kế nên xem xét lại**. Bây giờ chuyển sang **Quy ước bổ sung cho SQL trong pipeline AI**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Quy ước bổ sung cho SQL trong pipeline AI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Quy ước bổ sung cho SQL trong pipeline AI
 
@@ -210,30 +134,12 @@ SELECT  o.order_id,
 
 Style làm AI dễ đọc hơn vì cấu trúc và tên nhất quán, nhưng không biến AI thành bộ kiểm định. Vẫn cần test dữ liệu, snapshot kết quả quan trọng, kiểm tra schema và review của người hiểu domain.
 
-Khi gom phần **Quy ước bổ sung cho SQL trong pipeline AI** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Quy ước bổ sung cho SQL trong pipeline AI**. Bây giờ chuyển sang **Checklist áp dụng trong repository**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Checklist áp dụng trong repository** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Checklist áp dụng trong repository
 
 Trước khi merge một file SQL, hãy kiểm tra: tên có nhất quán và không trùng keyword không; từ khóa, alias, `JOIN` và điều kiện đã có format chung chưa; query có nêu rõ grain và cột đầu ra không; `NULL`, khoảng thời gian và duplicate có test không; cú pháp vendor-specific đã ghi dialect/version chưa; và linter/formatter có chạy cùng CI không. Nếu lệch guide vì lý do chính đáng, ghi lý do ngay cạnh quyết định hoặc trong tài liệu của project.
 
 Phụ lục của guide liệt kê reserved words của ANSI SQL cùng các phiên bản cũ của MySQL, PostgreSQL, SQL Server, ODBC và Oracle. Đây là điểm khởi đầu tốt để tránh đặt tên trùng keyword, nhưng không phải danh sách hiện hành cho mọi engine. Khi tạo schema mới, hãy kiểm tra tài liệu reserved words của đúng engine/version và để migration test bắt lỗi sớm.
 
-Khi gom phần **Checklist áp dụng trong repository** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Checklist áp dụng trong repository**. Bây giờ chuyển sang **Kết luận và đường học tiếp**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Kết luận và đường học tiếp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### Kết luận và đường học tiếp
 
 SQL Style Guide cung cấp một default thực dụng: tên có ngữ nghĩa, query có “dòng sông” dễ quét, schema có constraints và cú pháp ưu tiên tính portable. Hai điểm nên áp dụng ngay cho pipeline là căn lề nhất quán và hậu tố có nghĩa; hai điểm phải luôn kiểm tra lại là semantics (`NULL`, biên thời gian, grain) và ngoại lệ dialect. Sau bài này, quay lại các bài `JOIN`, `Subquery`, `Group Functions`, `Window Functions` và `DDL/Constraints` để áp style vào query thật, rồi dùng checklist ở trên khi review model dài trong pull request.
-
-Khi gom phần **Kết luận và đường học tiếp** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Như vậy, **Kết luận và đường học tiếp** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
-
-> **Bàn giao:** Sau **Mạch nối của bài học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

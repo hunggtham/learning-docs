@@ -1,64 +1,14 @@
 # Nền tảng mô hình hóa dữ liệu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng mô hình hóa dữ liệu**. Route đi từ business rule → entity/relationship → logical schema → physical choices → integrity and query consequences, để mô hình nối yêu cầu nghiệp vụ với dữ liệu chạy thật.
-
-> **Mục tiêu:** Khái niệm, mục tiêu, đặc điểm, góc nhìn, ba cấp độ và tính độc lập dữ liệu.
-
-## Từ khóa cần nhớ (Keyword)
-
-Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
-
-> **Chuyển mạch:** **Từ khóa cần nhớ** gọi tên đối tượng và ràng buộc; **Mạch tư duy** giải thích vì sao chúng cần mô hình, rồi **Mạch nối của bài học** đưa reasoning đó vào các phần SQL.
-
-## Mạch tư duy (Logic học)
-
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
-
-> **Chuyển mạch:** Khi đã có câu hỏi về đối tượng và ràng buộc, **Mạch nối của bài học** chuyển sang **I. 데이터 모델링의 이해** để xác định phạm vi và sản phẩm của mô hình hóa.
-
-## Mạch nối của bài học
-
-Bài này không đứng riêng: hãy nối **Nền tảng mô hình hóa dữ liệu** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
-
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
-
----
-
-Để học **Nền tảng mô hình hóa dữ liệu** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến **Khái niệm, mục tiêu, đặc điểm, góc nhìn, ba cấp độ và tính độc lập dữ liệu** thành cách đọc có thể áp dụng.
-
-Ta bắt đầu **I. 데이터 모델링의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** **I. 데이터 모델링의 이해** xác định mô hình hóa phục vụ ai và ở mức nào; **1. 데이터 모델링이란 무엇인가?** tiếp tục bằng định nghĩa và các lớp khái niệm.
-
 ## I. 데이터 모델링의 이해
 
-Khi gom phần **I. 데이터 모델링의 이해** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **I. 데이터 모델링의 이해**. Bây giờ chuyển sang **1. 데이터 모델링이란 무엇인가?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1. 데이터 모델링이란 무엇인가?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Sau khi biết mô hình hóa là gì, **2. Mục đích của 데이터 모델링** trả lời nó giảm mơ hồ, hỗ trợ giao tiếp và bảo vệ tính nhất quán bằng cách nào.
-
 ## 1. 데이터 모델링이란 무엇인가?
-
-Khi gom phần **1. 데이터 모델링이란 무엇인가?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. 데이터 모델링이란 무엇인가?**. Bây giờ chuyển sang **1.1. Định nghĩa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.1. Định nghĩa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1.1. Định nghĩa
 
 **데이터 모델링은 복잡한 현실 세계를 추상화하고 단순화하여 일정한 표기법으로 명확하게 표현하는 과정이다.**
 
 Mô hình hóa dữ liệu là quá trình trừu tượng hóa và đơn giản hóa thế giới thực phức tạp, sau đó biểu diễn nó một cách rõ ràng bằng một hệ thống ký hiệu nhất định.
-
-Khi gom phần **1.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.1. Định nghĩa**. Bây giờ chuyển sang **Keyword: 데이터 모델링**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 데이터 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 데이터 모델링
 
@@ -89,23 +39,11 @@ PRODUCT  1 ─── N ORDER_ITEM
 
 ---
 
-Khi gom phần **Keyword: 데이터 모델링** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 모델링**. Bây giờ chuyển sang **1.2. 현실 세계 - Thế giới thực**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.2. 현실 세계 - Thế giới thực** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.2. 현실 세계 - Thế giới thực
 
 **현실 세계는 사람, 상품, 주문, 결제, 직원과 같은 실제 업무 대상과 업무 활동이 존재하는 세계이다.**
 
 Thế giới thực là nơi tồn tại các đối tượng và hoạt động nghiệp vụ như con người, sản phẩm, đơn hàng, thanh toán và nhân viên.
-
-Khi gom phần **1.2. 현실 세계 - Thế giới thực** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.2. 현실 세계 - Thế giới thực**. Bây giờ chuyển sang **Keyword: 현실 세계**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 현실 세계** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 현실 세계
 
@@ -128,23 +66,11 @@ Nếu ghi lại mọi chi tiết của cửa hàng thì dữ liệu sẽ rất p
 
 ---
 
-Khi gom phần **Keyword: 현실 세계** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 현실 세계**. Bây giờ chuyển sang **1.3. 추상화 - Trừu tượng hóa**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.3. 추상화 - Trừu tượng hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.3. 추상화 - Trừu tượng hóa
 
 **추상화란 현실 세계의 모든 세부 정보를 표현하지 않고 업무에 필요한 핵심 정보만 선택하여 표현하는 것이다.**
 
 Trừu tượng hóa là không biểu diễn tất cả chi tiết của thế giới thực mà chỉ chọn và biểu diễn những thông tin cốt lõi cần cho nghiệp vụ.
-
-Khi gom phần **1.3. 추상화 - Trừu tượng hóa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.3. 추상화 - Trừu tượng hóa**. Bây giờ chuyển sang **Keyword: 추상화**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 추상화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 추상화
 
@@ -172,14 +98,7 @@ Phương tiện nhân viên dùng để đi làm
 
 Những thông tin này tồn tại trong thực tế nhưng không cần thiết cho mục tiêu quản lý nhân sự.
 
-Khi gom phần **Keyword: 추상화** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 추상화**. Bây giờ chuyển sang **Cách hiểu dễ nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách hiểu dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách hiểu dễ nhớ
-
 Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -188,23 +107,11 @@ Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích 
 
 ---
 
-Khi gom phần **Cách hiểu dễ nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách hiểu dễ nhớ**. Bây giờ chuyển sang **1.4. 단순화 - Đơn giản hóa**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.4. 단순화 - Đơn giản hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.4. 단순화 - Đơn giản hóa
 
 **단순화란 복잡한 현실을 제한된 규칙과 표현 방식으로 간결하게 나타내는 것이다.**
 
 Đơn giản hóa là biểu diễn thế giới thực phức tạp bằng các quy tắc và phương thức biểu diễn giới hạn, ngắn gọn hơn.
-
-Khi gom phần **1.4. 단순화 - Đơn giản hóa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.4. 단순화 - Đơn giản hóa**. Bây giờ chuyển sang **Keyword: 단순화**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 단순화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 단순화
 
@@ -234,14 +141,7 @@ ORDER_ITEM
 PRODUCT
 ```
 
-Khi gom phần **Keyword: 단순화** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 단순화**. Bây giờ chuyển sang **Cách hiểu dễ nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách hiểu dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách hiểu dễ nhớ
-
 Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -250,23 +150,11 @@ Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích 
 
 ---
 
-Khi gom phần **Cách hiểu dễ nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách hiểu dễ nhớ**. Bây giờ chuyển sang **1.5. 명확화 - Làm rõ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **1.5. 명확화 - Làm rõ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 1.5. 명확화 - Làm rõ
 
 **명확화란 업무 규칙과 데이터 간의 관계에서 애매모호함을 제거하고 정확하게 표현하는 것이다.**
 
 Làm rõ là loại bỏ sự mơ hồ trong quy tắc nghiệp vụ và mối quan hệ giữa các dữ liệu, sau đó biểu diễn chúng một cách chính xác.
-
-Khi gom phần **1.5. 명확화 - Làm rõ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1.5. 명확화 - Làm rõ**. Bây giờ chuyển sang **Keyword: 명확화**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 명확화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 명확화
 
@@ -298,14 +186,7 @@ DEPARTMENT 1 ─── N EMPLOYEE
 - Một nhân viên thuộc một phòng ban.
 - `EMPLOYEE.DEPARTMENT_ID` có thể là Foreign Key.
 
-Khi gom phần **Keyword: 명확화** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 명확화**. Bây giờ chuyển sang **Cách hiểu dễ nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách hiểu dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách hiểu dễ nhớ
-
 Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -314,37 +195,17 @@ Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích 
 
 ---
 
-Khi gom phần **Cách hiểu dễ nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách hiểu dễ nhớ**. Bây giờ chuyển sang **2. Mục đích của 데이터 모델링**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. Mục đích của 데이터 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Khi mục đích đã rõ, **3. Đặc điểm của mô hình hóa dữ liệu** chỉ ra tiêu chí nhận biết một mô hình dùng được: đúng ngữ nghĩa, nhất quán và đủ để truy nguyên quyết định.
-
 ## 2. Mục đích của 데이터 모델링
 
 **데이터 모델링은 데이터베이스를 구축하기 위한 분석과 설계의 과정이다.**
 
 Mô hình hóa dữ liệu là quá trình phân tích và thiết kế để xây dựng cơ sở dữ liệu.
 
-Khi gom phần **2. Mục đích của 데이터 모델링** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. Mục đích của 데이터 모델링**. Bây giờ chuyển sang **Keyword: 분석 - Phân tích**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 분석 - Phân tích** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 분석 - Phân tích
 
 **분석은 업무에서 어떤 데이터가 필요하고 그 데이터가 어떻게 사용되는지 파악하는 과정이다.**
 
 Phân tích là quá trình xác định nghiệp vụ cần dữ liệu nào và dữ liệu đó được sử dụng như thế nào.
-
-Khi gom phần **Keyword: 분석 - Phân tích** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 분석 - Phân tích**. Bây giờ chuyển sang **Keyword: 설계 - Thiết kế**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 설계 - Thiết kế** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 설계 - Thiết kế
 
@@ -367,14 +228,6 @@ Phân tích nghiệp vụ
 
 ---
 
-Khi gom phần **Keyword: 설계 - Thiết kế** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 설계 - Thiết kế**. Bây giờ chuyển sang **3. Đặc điểm của mô hình hóa dữ liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. Đặc điểm của mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **2. Mục đích của 데이터 모델링** nêu điều cần giải thích; **3. Đặc điểm của mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Các góc nhìn của mô hình hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Đặc điểm của mô hình hóa dữ liệu
 
 Tài liệu nêu ba đặc điểm chính:
@@ -385,23 +238,11 @@ Tài liệu nêu ba đặc điểm chính:
 명확화
 ```
 
-Khi gom phần **3. Đặc điểm của mô hình hóa dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. Đặc điểm của mô hình hóa dữ liệu**. Bây giờ chuyển sang **3.1. 추상화**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.1. 추상화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 3.1. 추상화
 
 **추상화는 현실 세계를 일정한 형식에 맞추어 간략하게 표현하는 것이다.**
 
 Trừu tượng hóa là biểu diễn thế giới thực một cách ngắn gọn theo một hình thức nhất định.
-
-Khi gom phần **3.1. 추상화** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.1. 추상화**. Bây giờ chuyển sang **Giải thích lại keyword**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Giải thích lại keyword
 
@@ -411,23 +252,11 @@ Trong trừu tượng hóa, ta không lưu tất cả yếu tố của thế gi�
 
 ---
 
-Khi gom phần **Giải thích lại keyword** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Giải thích lại keyword**. Bây giờ chuyển sang **3.2. 단순화**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.2. 단순화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 3.2. 단순화
 
 **단순화는 약속된 규약과 제한된 언어를 사용하여 업무 내용을 간결하게 표현하는 것이다.**
 
 Đơn giản hóa là biểu diễn nội dung nghiệp vụ một cách ngắn gọn bằng các quy ước và ngôn ngữ giới hạn đã thống nhất.
-
-Khi gom phần **3.2. 단순화** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.2. 단순화**. Bây giờ chuyển sang **Giải thích lại keyword**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Giải thích lại keyword
 
@@ -437,23 +266,11 @@ Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệ
 
 ---
 
-Khi gom phần **Giải thích lại keyword** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Giải thích lại keyword**. Bây giờ chuyển sang **3.3. 명확화**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3.3. 명확화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 3.3. 명확화
 
 **명확화는 애매한 업무 규칙을 제거하고 데이터와 데이터의 관계를 정확하게 정의하는 것이다.**
 
 Làm rõ là loại bỏ các quy tắc nghiệp vụ mơ hồ và định nghĩa chính xác quan hệ giữa các dữ liệu.
-
-Khi gom phần **3.3. 명확화** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3.3. 명확화**. Bây giờ chuyển sang **Giải thích lại keyword**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Giải thích lại keyword
 
@@ -462,14 +279,6 @@ Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệ
 Khi việc làm rõ được thực hiện, nhà phát triển và người dùng có thể hiểu cùng một quy tắc nghiệp vụ.
 
 ---
-
-Khi gom phần **Giải thích lại keyword** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Giải thích lại keyword**. Bây giờ chuyển sang **4. Các góc nhìn của mô hình hóa**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. Các góc nhìn của mô hình hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **3. Đặc điểm của mô hình hóa dữ liệu** nêu điều cần giải thích; **4. Các góc nhìn của mô hình hóa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Tầm quan trọng của mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Các góc nhìn của mô hình hóa
 
@@ -483,12 +292,6 @@ Tài liệu chia thành ba góc nhìn:
 
 ---
 
-Khi gom phần **4. Các góc nhìn của mô hình hóa** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. Các góc nhìn của mô hình hóa**. Bây giờ chuyển sang **4.1. 데이터 관점 - Góc nhìn dữ liệu**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.1. 데이터 관점 - Góc nhìn dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4.1. 데이터 관점 - Góc nhìn dữ liệu
 
 **데이터 관점은 “무엇이 필요한가?”에 관심을 두는 관점이다.**
@@ -498,12 +301,6 @@ Góc nhìn dữ liệu quan tâm đến câu hỏi: “Cần những dữ liệu
 **데이터 관점에서는 업무와 데이터의 관계, 데이터와 데이터의 관계를 모델링한다.**
 
 Ở góc nhìn dữ liệu, ta mô hình hóa quan hệ giữa nghiệp vụ và dữ liệu, cũng như quan hệ giữa dữ liệu với dữ liệu.
-
-Khi gom phần **4.1. 데이터 관점 - Góc nhìn dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.1. 데이터 관점 - Góc nhìn dữ liệu**. Bây giờ chuyển sang **Keyword: 데이터 관점**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 데이터 관점** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 데이터 관점
 
@@ -530,12 +327,6 @@ Câu hỏi của góc nhìn dữ liệu:
 
 ---
 
-Khi gom phần **Keyword: 데이터 관점** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 관점**. Bây giờ chuyển sang **4.2. 프로세스 관점 - Góc nhìn quy trình**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.2. 프로세스 관점 - Góc nhìn quy trình** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4.2. 프로세스 관점 - Góc nhìn quy trình
 
 **프로세스 관점은 “어떤 절차와 순서로 업무가 이루어지는가?”에 관심을 두는 관점이다.**
@@ -545,12 +336,6 @@ Góc nhìn quy trình quan tâm đến câu hỏi: “Nghiệp vụ được th�
 **프로세스 관점에서는 업무가 실제로 수행되는 과정과 수행되어야 하는 작업을 모델링한다.**
 
 Ở góc nhìn quy trình, ta mô hình hóa công việc đang được thực hiện và công việc cần phải thực hiện.
-
-Khi gom phần **4.2. 프로세스 관점 - Góc nhìn quy trình** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.2. 프로세스 관점 - Góc nhìn quy trình**. Bây giờ chuyển sang **Keyword: 프로세스 관점**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 프로세스 관점** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 프로세스 관점
 
@@ -572,23 +357,11 @@ Sản phẩm được chọn
 
 ---
 
-Khi gom phần **Keyword: 프로세스 관점** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 프로세스 관점**. Bây giờ chuyển sang **4.3. 데이터와 프로세스의 상관관점**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4.3. 데이터와 프로세스의 상관관점** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 4.3. 데이터와 프로세스의 상관관점
 
 **상호작용 관점은 업무 처리 방법에 따라 데이터가 어떻게 생성되고 변경되는지를 분석하는 관점이다.**
 
 Góc nhìn tương tác phân tích dữ liệu được tạo ra và thay đổi như thế nào tùy theo cách xử lý nghiệp vụ.
-
-Khi gom phần **4.3. 데이터와 프로세스의 상관관점** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4.3. 데이터와 프로세스의 상관관점**. Bây giờ chuyển sang **Keyword: 상호작용**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 상호작용** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 상호작용
 
@@ -606,14 +379,7 @@ Ví dụ:
 | Giao hàng | UPDATE trạng thái đơn |
 | Hủy đơn | UPDATE trạng thái, hoàn kho |
 
-Khi gom phần **Keyword: 상호작용** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 상호작용**. Bây giờ chuyển sang **Cách ghi nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Cách ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Cách ghi nhớ
-
 Phần này nối mạch SQL với “Cách ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -624,14 +390,6 @@ Phần này nối mạch SQL với “Cách ghi nhớ”, giải thích dữ li�
 
 ---
 
-Khi gom phần **Cách ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Cách ghi nhớ**. Bây giờ chuyển sang **5. Tầm quan trọng của mô hình hóa dữ liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. Tầm quan trọng của mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **4. Các góc nhìn của mô hình hóa** nêu điều cần giải thích; **5. Tầm quan trọng của mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Ba vấn đề cần tránh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. Tầm quan trọng của mô hình hóa dữ liệu
 
 **데이터 모델링의 중요성은 파급효과, 간결한 표현, 데이터 품질 유지에 있다.**
@@ -640,23 +398,11 @@ Tầm quan trọng của mô hình hóa dữ liệu nằm ở ảnh hưởng lan
 
 ---
 
-Khi gom phần **5. Tầm quan trọng của mô hình hóa dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. Tầm quan trọng của mô hình hóa dữ liệu**. Bây giờ chuyển sang **5.1. 파급효과 - Ảnh hưởng lan tỏa**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.1. 파급효과 - Ảnh hưởng lan tỏa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 5.1. 파급효과 - Ảnh hưởng lan tỏa
 
 **데이터 모델은 애플리케이션, 보고서, 분석 시스템과 연결되므로 변경의 파급효과가 크다.**
 
 Mô hình dữ liệu liên kết với ứng dụng, báo cáo và hệ thống phân tích nên một thay đổi có thể tạo ra ảnh hưởng lan tỏa lớn.
-
-Khi gom phần **5.1. 파급효과 - Ảnh hưởng lan tỏa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.1. 파급효과 - Ảnh hưởng lan tỏa**. Bây giờ chuyển sang **Keyword: 파급효과**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 파급효과** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 파급효과
 
@@ -674,23 +420,11 @@ Ví dụ nếu thiết kế sai quan hệ khách hàng và đơn hàng:
 
 ---
 
-Khi gom phần **Keyword: 파급효과** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 파급효과**. Bây giờ chuyển sang **5.2. 간결한 표현 - Biểu diễn ngắn gọn**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.2. 간결한 표현 - Biểu diễn ngắn gọn** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 5.2. 간결한 표현 - Biểu diễn ngắn gọn
 
 **데이터 모델링은 복잡한 업무를 엔터티와 관계로 표현하여 이해하기 쉽게 만든다.**
 
 Mô hình hóa dữ liệu biểu diễn nghiệp vụ phức tạp bằng Entity và Relationship, từ đó làm cho nó dễ hiểu hơn.
-
-Khi gom phần **5.2. 간결한 표현 - Biểu diễn ngắn gọn** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.2. 간결한 표현 - Biểu diễn ngắn gọn**. Bây giờ chuyển sang **Keyword: 간결한 표현**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 간결한 표현** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 간결한 표현
 
@@ -711,23 +445,11 @@ Có thể thay thế cho câu:
 
 ---
 
-Khi gom phần **Keyword: 간결한 표현** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 간결한 표현**. Bây giờ chuyển sang **5.3. 데이터 품질 유지 - Duy trì chất lượng dữ liệu**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5.3. 데이터 품질 유지 - Duy trì chất lượng dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 5.3. 데이터 품질 유지 - Duy trì chất lượng dữ liệu
 
 **좋은 데이터 모델은 데이터 중복과 불일치를 줄이고 데이터의 정확성과 일관성을 유지한다.**
 
 Một mô hình dữ liệu tốt làm giảm sự trùng lặp và không nhất quán, đồng thời duy trì tính chính xác và nhất quán của dữ liệu.
-
-Khi gom phần **5.3. 데이터 품질 유지 - Duy trì chất lượng dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5.3. 데이터 품질 유지 - Duy trì chất lượng dữ liệu**. Bây giờ chuyển sang **Keyword: 데이터 품질**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 데이터 품질** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 데이터 품질
 
@@ -737,21 +459,7 @@ Chất lượng dữ liệu là mức độ dữ liệu chính xác, nhất quá
 
 ---
 
-Khi gom phần **Keyword: 데이터 품질** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 품질**. Bây giờ chuyển sang **6. Ba vấn đề cần tránh**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. Ba vấn đề cần tránh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **5. Tầm quan trọng của mô hình hóa dữ liệu** nêu điều cần giải thích; **6. Ba vấn đề cần tránh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Ba giai đoạn mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Ba vấn đề cần tránh
-
-Khi gom phần **6. Ba vấn đề cần tránh** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6. Ba vấn đề cần tránh**. Bây giờ chuyển sang **6.1. 중복 - Trùng lặp**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.1. 중복 - Trùng lặp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 6.1. 중복 - Trùng lặp
 
@@ -778,12 +486,6 @@ CUSTOMER_NAME
 
 `CUSTOMER_NAME` bị lưu ở nhiều bảng.
 
-Khi gom phần **6.1. 중복 - Trùng lặp** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.1. 중복 - Trùng lặp**. Bây giờ chuyển sang **Keyword: 중복**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 중복** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 중복
 
 **불필요한 중복은 저장 공간을 낭비하고 데이터 수정 시 오류를 발생시킨다.**
@@ -801,23 +503,11 @@ Khi đó dữ liệu không còn thống nhất.
 
 ---
 
-Khi gom phần **Keyword: 중복** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 중복**. Bây giờ chuyển sang **6.2. 비유연성 - Không linh hoạt**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.2. 비유연성 - Không linh hoạt** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 6.2. 비유연성 - Không linh hoạt
 
 **비유연성은 작은 업무 변경에도 데이터 모델을 자주 수정해야 하는 문제이다.**
 
 Không linh hoạt là vấn đề phải thường xuyên sửa mô hình dữ liệu ngay cả khi nghiệp vụ chỉ thay đổi nhỏ.
-
-Khi gom phần **6.2. 비유연성 - Không linh hoạt** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.2. 비유연성 - Không linh hoạt**. Bây giờ chuyển sang **Keyword: 비유연성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 비유연성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 비유연성
 
@@ -852,23 +542,11 @@ Khi có năm mới, chỉ cần thêm dòng dữ liệu.
 
 ---
 
-Khi gom phần **Keyword: 비유연성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 비유연성**. Bây giờ chuyển sang **6.3. 비일관성 - Không nhất quán**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6.3. 비일관성 - Không nhất quán** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 6.3. 비일관성 - Không nhất quán
 
 **비일관성은 서로 관련된 데이터가 서로 다른 값을 가지는 현상이다.**
 
 Không nhất quán là hiện tượng các dữ liệu có liên quan nhưng lại chứa những giá trị khác nhau.
-
-Khi gom phần **6.3. 비일관성 - Không nhất quán** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6.3. 비일관성 - Không nhất quán**. Bây giờ chuyển sang **Keyword: 비일관성**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 비일관성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 비일관성
 
@@ -893,14 +571,6 @@ REFERENCES CUSTOMER(CUSTOMER_ID)
 
 ---
 
-Khi gom phần **Keyword: 비일관성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 비일관성**. Bây giờ chuyển sang **7. Ba giai đoạn mô hình hóa dữ liệu**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. Ba giai đoạn mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **6. Ba vấn đề cần tránh** nêu điều cần giải thích; **7. Ba giai đoạn mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. So sánh ba cấp độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. Ba giai đoạn mô hình hóa dữ liệu
 
 **데이터 모델링은 개념적 모델링, 논리적 모델링, 물리적 모델링의 3단계로 진행된다.**
@@ -915,12 +585,6 @@ Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: mô hình 
 
 ---
 
-Khi gom phần **7. Ba giai đoạn mô hình hóa dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7. Ba giai đoạn mô hình hóa dữ liệu**. Bây giờ chuyển sang **7.1. 개념적 모델링 - Mô hình hóa khái niệm**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.1. 개념적 모델링 - Mô hình hóa khái niệm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 ### 7.1. 개념적 모델링 - Mô hình hóa khái niệm
 
 **개념적 모델링은 업무 중심적이고 포괄적인 수준에서 핵심 엔터티와 관계를 도출하는 단계이다.**
@@ -930,12 +594,6 @@ Mô hình hóa khái niệm là giai đoạn trích xuất các Entity và Relat
 **개념적 모델링은 세 단계 중 추상화 수준이 가장 높다.**
 
 Mô hình hóa khái niệm có mức độ trừu tượng cao nhất trong ba giai đoạn.
-
-Khi gom phần **7.1. 개념적 모델링 - Mô hình hóa khái niệm** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.1. 개념적 모델링 - Mô hình hóa khái niệm**. Bây giờ chuyển sang **Keyword: 개념적 모델링**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 개념적 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 개념적 모델링
 
@@ -959,14 +617,7 @@ CUSTOMER_ID NUMBER(10)
 CUSTOMER_NAME VARCHAR2(100)
 ```
 
-Khi gom phần **Keyword: 개념적 모델링** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 개념적 모델링**. Bây giờ chuyển sang **Đặc điểm ghi nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Đặc điểm ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Đặc điểm ghi nhớ
-
 Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -974,12 +625,6 @@ Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích
 ```
 
 ---
-
-Khi gom phần **Đặc điểm ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Đặc điểm ghi nhớ**. Bây giờ chuyển sang **7.2. 논리적 모델링 - Mô hình hóa logic**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.2. 논리적 모델링 - Mô hình hóa logic** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.2. 논리적 모델링 - Mô hình hóa logic
 
@@ -990,12 +635,6 @@ Mô hình hóa logic là giai đoạn chuyển Entity thành bảng và xác đ�
 **논리적 모델링에서는 정규화를 적용하여 데이터의 중복과 불일치를 줄인다.**
 
 Trong mô hình hóa logic, ta áp dụng chuẩn hóa để giảm trùng lặp và không nhất quán dữ liệu.
-
-Khi gom phần **7.2. 논리적 모델링 - Mô hình hóa logic** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.2. 논리적 모델링 - Mô hình hóa logic**. Bây giờ chuyển sang **Keyword: 논리적 모델링**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 논리적 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 논리적 모델링
 
@@ -1017,14 +656,7 @@ Key:
 - Primary Key: CUSTOMER_ID
 ```
 
-Khi gom phần **Keyword: 논리적 모델링** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 논리적 모델링**. Bây giờ chuyển sang **Đặc điểm ghi nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Đặc điểm ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Đặc điểm ghi nhớ
-
 Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -1032,12 +664,6 @@ Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích
 ```
 
 ---
-
-Khi gom phần **Đặc điểm ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Đặc điểm ghi nhớ**. Bây giờ chuyển sang **7.3. 물리적 모델링 - Mô hình hóa vật lý**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7.3. 물리적 모델링 - Mô hình hóa vật lý** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 7.3. 물리적 모델링 - Mô hình hóa vật lý
 
@@ -1048,12 +674,6 @@ Mô hình hóa vật lý là giai đoạn thiết kế Index, phương thức l�
 **물리적 모델링에서는 데이터 타입, 인덱스, 파티션, 테이블스페이스와 같은 실제 구현 요소를 고려한다.**
 
 Trong mô hình hóa vật lý, ta xem xét các yếu tố triển khai thực tế như kiểu dữ liệu, Index, Partition và Tablespace.
-
-Khi gom phần **7.3. 물리적 모델링 - Mô hình hóa vật lý** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **7.3. 물리적 모델링 - Mô hình hóa vật lý**. Bây giờ chuyển sang **Keyword: 물리적 모델링**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 물리적 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 물리적 모델링
 
@@ -1073,14 +693,7 @@ CREATE INDEX IDX_CUSTOMER_NAME
 ON CUSTOMER(CUSTOMER_NAME);
 ```
 
-Khi gom phần **Keyword: 물리적 모델링** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 물리적 모델링**. Bây giờ chuyển sang **Đặc điểm ghi nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Đặc điểm ghi nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Đặc điểm ghi nhớ
-
 Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -1089,16 +702,7 @@ Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích
 
 ---
 
-Khi gom phần **Đặc điểm ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Đặc điểm ghi nhớ**. Bây giờ chuyển sang **8. So sánh ba cấp độ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **8. So sánh ba cấp độ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **7. Ba giai đoạn mô hình hóa dữ liệu** đã nêu tiêu chí phân biệt, còn **8. So sánh ba cấp độ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Tính độc lập của dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. So sánh ba cấp độ
-
 Phần này nối mạch SQL với “8. So sánh ba cấp độ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | Tiếng Việt | Keyword chính |
@@ -1123,25 +727,11 @@ Mô hình hóa vật lý tập trung vào Index và phương thức lưu trữ.
 
 ---
 
-Khi gom phần **8. So sánh ba cấp độ** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **8. So sánh ba cấp độ**. Bây giờ chuyển sang **9. Tính độc lập của dữ liệu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9. Tính độc lập của dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **8. So sánh ba cấp độ** đã nêu tiêu chí phân biệt, còn **9. Tính độc lập của dữ liệu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Nếu không duy trì tính độc lập dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Tính độc lập của dữ liệu
 
 **데이터 독립성이란 데이터 구조가 변경되어도 응용 프로그램이 반드시 변경될 필요가 없는 성질이다.**
 
 Tính độc lập dữ liệu là đặc tính trong đó chương trình ứng dụng không nhất thiết phải thay đổi khi cấu trúc dữ liệu thay đổi.
-
-Khi gom phần **9. Tính độc lập của dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9. Tính độc lập của dữ liệu**. Bây giờ chuyển sang **Keyword: 데이터 독립성**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 데이터 독립성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 데이터 독립성
 
@@ -1150,12 +740,6 @@ Ta bắt đầu **Keyword: 데이터 독립성** bằng câu hỏi: **khái ni�
 Tính độc lập dữ liệu là khái niệm giảm thiểu ảnh hưởng giữa các tầng khi một tầng của database thay đổi.
 
 ---
-
-Khi gom phần **Keyword: 데이터 독립성** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 독립성**. Bây giờ chuyển sang **9.1. 물리적 독립성 - Độc lập dữ liệu vật lý**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.1. 물리적 독립성 - Độc lập dữ liệu vật lý** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.1. 물리적 독립성 - Độc lập dữ liệu vật lý
 
@@ -1178,14 +762,7 @@ SELECT *
 FROM CUSTOMER;
 ```
 
-Khi gom phần **9.1. 물리적 독립성 - Độc lập dữ liệu vật lý** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.1. 물리적 독립성 - Độc lập dữ liệu vật lý**. Bây giờ chuyển sang **Keyword: 물리적 독립성**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 물리적 독립성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 물리적 독립성
-
 Phần này nối mạch SQL với “Keyword: 물리적 독립성”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -1194,12 +771,6 @@ Thay đổi cách lưu trên đĩa
 ```
 
 ---
-
-Khi gom phần **Keyword: 물리적 독립성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 물리적 독립성**. Bây giờ chuyển sang **9.2. 논리적 독립성 - Độc lập dữ liệu logic**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **9.2. 논리적 독립성 - Độc lập dữ liệu logic** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.2. 논리적 독립성 - Độc lập dữ liệu logic
 
@@ -1240,14 +811,7 @@ SELECT CUSTOMER_ID,
 FROM CUSTOMER;
 ```
 
-Khi gom phần **9.2. 논리적 독립성 - Độc lập dữ liệu logic** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **9.2. 논리적 독립성 - Độc lập dữ liệu logic**. Bây giờ chuyển sang **Keyword: 논리적 독립성**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 논리적 독립성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
 #### Keyword: 논리적 독립성
-
 Phần này nối mạch SQL với “Keyword: 논리적 독립성”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
@@ -1256,14 +820,6 @@ Thay đổi cấu trúc logic
 ```
 
 ---
-
-Khi gom phần **Keyword: 논리적 독립성** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 논리적 독립성**. Bây giờ chuyển sang **10. Nếu không duy trì tính độc lập dữ liệu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **10. Nếu không duy trì tính độc lập dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **9. Tính độc lập của dữ liệu** nêu điều cần giải thích; **10. Nếu không duy trì tính độc lập dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Tóm tắt toàn bộ hai trang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Nếu không duy trì tính độc lập dữ liệu
 
@@ -1274,12 +830,6 @@ Nếu không duy trì tính độc lập dữ liệu thì sự trùng lặp và 
 **또한 요구사항에 대응하기 어려워지고 데이터 유지보수 비용이 증가한다.**
 
 Ngoài ra, việc đáp ứng yêu cầu trở nên khó khăn và chi phí bảo trì dữ liệu tăng lên.
-
-Khi gom phần **10. Nếu không duy trì tính độc lập dữ liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **10. Nếu không duy trì tính độc lập dữ liệu**. Bây giờ chuyển sang **Keyword: 유지보수 비용**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **Keyword: 유지보수 비용** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Keyword: 유지보수 비용
 
@@ -1299,14 +849,6 @@ Cấu trúc dữ liệu thay đổi
 ```
 
 ---
-
-Khi gom phần **Keyword: 유지보수 비용** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **Keyword: 유지보수 비용**. Bây giờ chuyển sang **11. Tóm tắt toàn bộ hai trang**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **11. Tóm tắt toàn bộ hai trang** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-> **Chuyển mạch:** **10. Nếu không duy trì tính độc lập dữ liệu** cho thấy chi phí khi schema và ứng dụng khóa chặt nhau; **11. Tóm tắt toàn bộ hai trang** gom lại tiêu chí để mang sang bài thiết kế tiếp theo.
 
 ## 11. Tóm tắt toàn bộ hai trang
 
@@ -1329,9 +871,3 @@ Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: khái ni�
 **좋은 데이터 모델은 중복, 비유연성, 비일관성을 줄이고 데이터 품질과 데이터 독립성을 유지한다.**
 
 Một mô hình dữ liệu tốt làm giảm trùng lặp, không linh hoạt và không nhất quán, đồng thời duy trì chất lượng và tính độc lập dữ liệu.
-
-Khi gom phần **11. Tóm tắt toàn bộ hai trang** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Như vậy, **11. Tóm tắt toàn bộ hai trang** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
-
-> **Bàn giao:** Sau **11. Tóm tắt toàn bộ hai trang**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

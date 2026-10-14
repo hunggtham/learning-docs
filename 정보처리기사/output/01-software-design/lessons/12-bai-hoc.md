@@ -1,52 +1,9 @@
 # 1. 현행 시스템 분석 (Current System Analysis)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **1. 현행 시스템 분석 (Current System Analysis)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối information systems với data, process, boundary và users, để hệ thống được mô hình hóa trước khi triển khai.
-
-## 학습 목표 (Mục tiêu)
-
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **1. 현행 시스템 분석 (Current System Analysis)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
-
-Mục đích của bài này là hiểu **1. 현행 시스템 분석 (Current System Analysis)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **3. 현행 시스템 파악 (Understanding Current System)** khi chuyển sang phần tiếp theo.
-
-Mục tiêu xác định hệ thống hiện tại cần được hiểu đến mức nào; từ khóa khoanh vùng data, process, boundary và user trước khi nối sang kiến thức liên kết.
-
-## 핵심 키워드 (Từ khóa)
-
-현행, 시스템, 분석
-
-Kiến thức liên kết đặt current-system analysis trên nền yêu cầu và kiến trúc; cách đọc tiếp theo giữ rõ quan sát, giả định và bằng chứng.
-
-## 선행·연결 개념 (Kiến thức liên kết)
-
-이 단원은 **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**에서 만든 기준을 이어받아 **1. 현행 시스템 분석 (Current System Analysis)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
-
-Cách đọc đã đặt khung đối tượng–điều kiện–hệ quả; phần phân tích hiện trạng dùng khung đó để mô hình hóa hệ thống trước khi thay đổi.
-
-## 읽는 방법 (Cách đọc)
-
-1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
-3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
-
-> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
-
----
-
-Phần này khép lại bằng ranh giới của hệ thống hiện tại và bằng chứng quan sát; khi sang bài kế tiếp, hãy giữ lại các dependency cần xác minh.
-
 ## 1. 현행 시스템 분석 (Current System Analysis)
-
-Từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, ta đã có điểm tựa để bước vào **1. 현행 시스템 분석 (Current System Analysis)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/69 trước khi đi vào chi tiết.
-
-Để đọc **1. 현행 시스템 분석 (Current System Analysis)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **플랫폼 성능 (Platform Performance)**, **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
 Phần “1. 현행 시스템 분석 (Current System Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **플랫폼 성능 (Platform Performance)**:
   - 가용성 (Availability), 경과 시간 (Turnaround Time), 응답 시간 (Response Time), 사용률 (Utilization).
 - **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)**:
   - 신뢰도 (Reliability), 성능 (Performance), 기술 지원 (Tech Support), 주변 기기 (Peripherals), 구축 비용 (Cost), 상호 호환성 (Compatibility).
-
-Điểm chốt của **1. 현행 시스템 분석 (Current System Analysis)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 현행 시스템 파악 (Understanding Current System)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
-
-> **Bàn giao:** Sau **1. 현행 시스템 분석 (Current System Analysis)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

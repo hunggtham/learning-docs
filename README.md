@@ -49,6 +49,10 @@ Các quy ước dưới đây giải thích cách đọc, cách cập nhật và
 - Giữ thuật ngữ gốc để đối chiếu đề thi, kèm English và nghĩa tiếng Việt khi có thể.
 - Trình bày theo thứ tự: khái niệm → cơ chế/quy tắc → so sánh → ví dụ → ôn tập.
 - Không sửa nguồn thô; mọi bản học được tạo lại bằng script tương ứng trong `scripts/`.
+- Không dùng script hoặc Python để tự chèn prose, câu nối, giải thích, ví dụ hay summary máy móc. Script chỉ được xử lý cấu trúc, link, index, metadata và audit; prose mới phải được viết thủ công theo topic thật.
+- Không bịa fact, citation, URL, page number, công thức, code/SQL output, bản dịch hoặc ví dụ; claim chưa xác minh phải ghi `UNVERIFIED`/`NEEDS_SOURCE`.
+- Không dùng output/generated/public hoặc draft AI làm source mới; không upload private/proprietary source, secret hoặc credential lên external AI/API.
+- Không mở rộng task ngoài allowed paths; không sửa checker/count/state để làm pass; build, audit hoặc worker status không tự chứng minh acceptance.
 
 > **Chuyển mạch:** **Lecture contract** chốt object, mechanism, evidence và boundary; các README domain dùng contract đó để giải thích bằng tiếng Việt mà vẫn giữ owner riêng.
 

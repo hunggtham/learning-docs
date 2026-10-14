@@ -5,6 +5,14 @@
 thức, bám cách hỏi của kỳ thi, dễ ôn lại, có nguồn và không làm mất format hiện
 tại.
 
+Không dùng Python, template, regex, worker hoặc generator để chèn wrapper, câu nối,
+giải thích, ví dụ, kết luận hoặc boilerplate vào lesson. AI có thể đề xuất draft,
+nhưng lesson chỉ là canonical sau human review.
+
+Không bịa thuật ngữ Hàn/Anh, công thức, output code/SQL, đáp án, nguồn, citation,
+page number hoặc ví dụ. Claim chưa đối chiếu phải ghi `UNVERIFIED`/`NEEDS_SOURCE`;
+không dùng output/generated/public hoặc draft AI làm source mới.
+
 ## 1. Phạm vi và cấu trúc chuẩn gốc (canonical / 정본)
 
 Chuẩn gốc (canonical / 정본) đầu ra (output / 출력) là 정보처리기사/đầu ra (output / 출력)/. Giữ nguyên cấu trúc hiện tại:

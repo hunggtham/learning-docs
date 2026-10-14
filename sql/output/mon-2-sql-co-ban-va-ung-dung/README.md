@@ -1,15 +1,5 @@
 # Môn 2 – SQL 기본 및 활용
 
-> **Mạch đọc:** Đây là README owner của **Môn 2 – SQL 기본 및 활용**. Route đọc đi từ SELECT/filter → JOIN/subquery/aggregation → analytic/hierarchical queries → DML/TCL/DDL/DCL → style and portability, để kỹ thuật truy vấn nối với semantics và vận hành.
-
-Nên học JOIN trước, sau đó đến Subquery/Group Function và các kỹ thuật truy vấn nâng cao; kết thúc bằng SQL Style Guide để áp dụng các quy ước vào model trong pipeline.
-
-## Mạch bài giảng
-
-Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua các section nguồn bằng câu nối, rồi chốt quan hệ giữa đầu vào, điều kiện xử lý và kết quả trước khi bàn giao sang bài kế tiếp.
-
-> **Chuyển mạch:** **Mạch bài giảng** đặt thứ tự từ truy vấn đến tối ưu; **Danh sách bài học** chỉ ra file nào chịu trách nhiệm cho từng kỹ năng và đường quay lại README khi cần kiểm tra phạm vi.
-
 ## Danh sách bài học
 
 1. [SQL cơ bản: SELECT, hàm, lọc, nhóm và sắp xếp](00-sql-select-ham-va-loc.md) — SELECT, WHERE, hàm, GROUP BY/HAVING và ORDER BY.
@@ -27,5 +17,3 @@ Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua
 13. [DCL, quyền và Role](12-dcl-quyen-va-role.md) — GRANT, REVOKE, ROLE, WITH GRANT OPTION và WITH ADMIN OPTION.
 14. [PIVOT, UNPIVOT và Regular Expression](13-pivot-unpivot-va-regexp.md) — Chuyển đổi cấu trúc dữ liệu và regex Oracle.
 15. [SQL Style Guide và SQL dễ đọc cho pipeline AI](14-sql-style-guide.md) — Quy ước đặt tên, căn lề, tính portable, thiết kế schema và checklist review SQL trong pipeline.
-
-> **Bàn giao:** Sau **Danh sách bài học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
