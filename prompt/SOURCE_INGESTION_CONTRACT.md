@@ -31,6 +31,10 @@ Mục tiêu là đưa nguồn vào repository mà vẫn phân biệt được b�
 4. Cùng một source dùng cho nhiều corpus phải có \`source_id\` ổn định và provenance, không tạo các bản copy không thể phân biệt.
 5. Không tạo output learning trước khi source quality và semantic coverage được ghi nhận.
 
+6. Không upload raw/private/proprietary source, export, secret hoặc credential lên external AI/API chỉ để trích xuất hay dịch.
+7. Không dùng extracted/OCR/AI-research/previous output làm canonical source nếu chưa có provenance và review.
+8. Không sửa raw/original, source manifest, hash hoặc OCR status để che lỗi hoặc làm ingestion pass.
+
 ## Source manifest tối thiểu
 
 \`\`\`yaml

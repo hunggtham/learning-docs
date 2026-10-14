@@ -2,6 +2,25 @@
 
 Áp dụng file này làm contract tối thiểu cho tài liệu học và mọi thay đổi nội dung trong repository. Đây không phải template văn phong: người viết tự chọn độ dài, cấu trúc, thứ tự giải thích và mức độ chi tiết phù hợp với topic.
 
+## Cấm tự động chèn prose
+
+- Không sử dụng Python, JavaScript, regex, template, worker, generator hoặc automation để tự viết, chèn, nhân bản hay rewrite prose hướng người học: câu mở đầu, câu nối, câu chốt, giải thích, ví dụ, summary hoặc handoff.
+- Script chỉ được làm việc cấu trúc: đọc nguồn chuẩn, giữ nguyên nội dung nguồn, chuẩn hóa markup, tách/sắp xếp file, tạo link/index và ghi metadata hoặc audit report.
+- Nếu generator hiện tại tạo prose, phải gỡ logic đó trước khi regenerate. Không coi output được sinh tự động là nguồn để tiếp tục nhân bản câu chữ.
+- Mọi prose mới phải được viết thủ công theo topic thật và review semantic; checker cấu trúc/link không chứng minh prose tự nhiên.
+
+## Cấm bịa, vượt nguồn và tự xác nhận
+
+- Không bịa fact, current claim, citation, URL, quotation, page number, số liệu, công thức, code/SQL output, bản dịch hoặc ví dụ.
+- Nếu chưa xác minh, ghi rõ `UNVERIFIED` hoặc `NEEDS_SOURCE`; không dùng suy đoán để lấp chỗ trống.
+- Không dùng output/generated/public file, catalog, manifest hoặc bản nháp AI làm source mới; phải quay về canonical source và giữ provenance.
+- Không upload private notes, ebook/tài liệu có bản quyền, export, secret, API key hoặc credential lên AI/API bên ngoài.
+- Không xóa, overwrite, rename, reorder hoặc regenerate ngoài allowed paths và diff manifest của task. Không mở rộng từ một file/batch sang topic, subject hoặc corpus khác nếu chưa được cho phép.
+- Không sửa checker, count, metadata hoặc state để biến lỗi thành pass. Không tự tuyên bố `accepted`, `validated`, `published` hoặc `synced` nếu chưa có evidence tương ứng.
+- Ví dụ có người, tổ chức, sự kiện, số liệu hoặc claim tự tạo phải được ghi rõ là hypothetical; không trình bày như bằng chứng thật.
+- Không copy hoặc paraphrase nhẹ định nghĩa, bản dịch, ví dụ hay phần giải thích từ nguồn tham khảo/proprietary. Chỉ dùng nguồn để kiểm chứng rồi viết prose gốc.
+- Không dịch, paraphrase, đổi register hoặc normalize hàng loạt bằng script/regex; mỗi thay đổi ngữ nghĩa phải được review theo topic.
+
 ## Nguyên tắc nền
 
 - Đọc README/canonical map, owner và các link liên quan trước khi sửa hoặc viết.

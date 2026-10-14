@@ -2,6 +2,11 @@
 
 Áp dụng prompt này cho toàn bộ tài liệu trong `korean_culture/kiip/`, đồng thời tuân thủ `prompt/COMMON_PROMPT.md`.
 
+AI chỉ được đề xuất draft; không được tự accept lesson. Không bịa nhân vật, mốc thời gian,
+attribution, địa vị pháp lý, citation, URL, bản dịch hoặc ví dụ. Claim chưa đối chiếu phải
+ghi `UNVERIFIED`/`NEEDS_SOURCE`; không dùng output/generated/public hoặc draft AI làm source
+mới, không upload source riêng tư/proprietary hoặc credential lên external AI/API.
+
 ## 1. Mục tiêu
 
 Xây KIIP thành một nền tảng kiến thức về xã hội Hàn Quốc có thể đọc như giáo trình độc lập, không phải bộ note học thuộc. Người học phải hiểu đủ sâu để vừa thi KIIP, vừa hiểu bối cảnh mà một người Hàn có giáo dục phổ thông thường liên tưởng khi gặp khái niệm đó.

@@ -14,6 +14,8 @@
 
 Nếu thiếu owner, source boundary hoặc allowed paths, dừng ở \`INTAKE_REQUIRED\`; không tự mở rộng phạm vi.
 
+Không được bắt đầu authoring nếu chưa xác định source/currentness boundary. Không bịa source, claim, citation, URL, page, công thức, code/SQL output, bản dịch hoặc ví dụ; dùng `UNVERIFIED`/`NEEDS_SOURCE` cho khoảng trống. Không upload source riêng tư, tài liệu có bản quyền hoặc credential lên AI/API ngoài. Không dùng output/generated/public hoặc draft AI làm canonical source.
+
 ## 2. Các mode
 
 | Mode | Mục tiêu | Đầu ra tối thiểu |
@@ -46,6 +48,8 @@ Khi task audit bản nháp, dùng thêm \`DOCS_AUDIT_PROMPT.md\`. Khi task có p
 - ChatGPT Web: source research, decision memo và learner/prose review.
 
 Mỗi surface phải ghi \`agent_surface\`, revision/SHA và artifact trong handoff. Không coi trạng thái của một app là bằng chứng thay cho Git hoặc test.
+
+AI-generated prose luôn là draft cho đến khi human review đóng source, evidence và learner-flow issues. Không sửa checker/count/state để đạt pass; không claim acceptance, publication hoặc sync nếu chưa có evidence tương ứng.
 
 ## 5. Trạng thái độc lập
 
