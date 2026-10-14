@@ -16,6 +16,13 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "sql/output",
+      "displayPrefix": "cert/sqld",
+      "category": "cert",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend/python",
       "category": "Python",
       "language": "vi-en",
