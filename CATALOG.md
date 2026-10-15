@@ -279,13 +279,13 @@ domains:
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
   - id: computer_utilization_ability
-    title: 컴퓨터활용능력
+    title: 컴퓨터활용능력 2급 (필기 + 실기)
     group: Certifications
     path: 컴퓨터활용능력/
     entrypoint: 컴퓨터활용능력/README.md
     status: canonical
-    last_reviewed: 2026-10-06
-    scope: Korean Computer Proficiency certification study map; initial canonical track covers 컴퓨터활용능력 2급 필기 and 실기 with version-aware exam structure.
+    last_reviewed: 2026-10-15
+    scope: Korean Computer Proficiency (컴퓨터활용능력 2급) certification study map; covers 필기 (컴퓨터 일반, 스프레드시트 일반) and 실기 (스프레드시트 실무 Excel) with version-aware exam structure.
     prerequisites: []
     related: [information_processing_engineer, sql]
 
@@ -379,7 +379,7 @@ Professional
 
 Certifications
 ├── 정보처리기사
-├── 컴퓨터활용능력
+├── 컴퓨터활용능력 2급 (필기 + 실기)
 ├── SQLD / SQL
 └── KIIP / Korean Society
 
