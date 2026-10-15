@@ -18,7 +18,7 @@ Cross-price elasticity giúp đo substitution:
 
 Nếu sản phẩm (product / 제품) j tăng giá làm demand i tăng mạnh, chúng là close substitutes.
 
-> **Chuyển mạch:** Market definition asks which products substitute empirically; concentration alone does not prove conduct, so demand estimation must recover substitution before markups or merger claims.
+Market definition asks which products constrain one another in the observed data. That substitution evidence is needed before interpreting concentration, because a concentrated market is not itself proof of anti-competitive conduct.
 
 ## 2. Concentration is not conduct
 
@@ -26,7 +26,7 @@ HHI/concentration mô tả cấu trúc (structure / 구조) nhưng không tự c
 
 High concentration có thể đến từ economies of quy mô (scale / 규모)/productivity; low concentration vẫn có cục bộ (local / 로컬)/nền tảng (platform / 플랫폼) power.
 
-> **Chuyển mạch:** Concentration is descriptive, not conduct; demand estimation recovers substitution and markups, with discrete-choice assumptions making the identification boundary explicit.
+Concentration describes structure, not the behavior or causal mechanism producing prices. Demand estimation identifies substitution and willingness to pay, but its assumptions become explicit in the discrete-choice model.
 
 ## 3. Demand estimation
 
@@ -34,7 +34,7 @@ Firm-level pricing/merger phân tích (analysis / 분석) cần own- and cross-p
 
 Simple demand regression bị endogeneity vì price phản ứng demand shocks. Instruments có thể dùng chi phí (cost / 비용) shifters hoặc rival characteristics dưới các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **4. Discrete choice** tiếp nhận điểm tựa từ **3. Demand estimation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Diversion ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Demand estimation needs a model of how consumers choose among differentiated products. Discrete choice makes alternatives and outside options explicit, allowing diversion and merger predictions to be tied to an identifiable substitution pattern.
 
 ## 4. Discrete choice
 
@@ -44,7 +44,7 @@ Logit các mô hình (models / 모델들) map utility to choice probabilities; r
 
 IIA restriction của simple logit can be unrealistic.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **5. Diversion ratio** tiếp nhận điểm tựa từ **4. Discrete choice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Marginal chi phí (cost / 비용) and markup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Discrete-choice probabilities imply how demand shifts when one option changes. Diversion ratio summarizes where lost sales go, which connects demand estimates to unilateral incentives and likely markup effects.
 
 ## 5. Diversion ratio
 
@@ -52,7 +52,7 @@ Diversion ratio hỏi khi sản phẩm (product / 제품) A mất một customer
 
 It is central for merger unilateral-effects phân tích (analysis / 분석) because close substitutes create stronger post-merger pricing incentive.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **6. Marginal chi phí (cost / 비용) and markup** tiếp nhận điểm tựa từ **5. Diversion ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Lerner chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Diversion shows which alternatives compete for a marginal customer; markup analysis additionally requires marginal cost and conduct assumptions. Separating the two prevents demand substitution from being mistaken for observed market power.
 
 ## 6. Marginal chi phí (cost / 비용) and markup
 
@@ -60,7 +60,7 @@ Under differentiated Bertrand, estimated demand + first-order pricing conditions
 
 Observed accounting margin is not the same as economic markup.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **7. Lerner chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **6. Marginal chi phí (cost / 비용) and markup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pass-through** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Markup is the gap between price and marginal cost under a conduct model. The Lerner index normalizes that gap by price, but its interpretation depends on elasticity, multi-product incentives and the same cost assumptions.
 
 ## 7. Lerner chỉ mục (index / 인덱스)
 
@@ -70,7 +70,7 @@ L = (P − MC) / P
 
 In simple monopoly it relates to inverse elasticity, but empirical use requires credible MC/demand estimates.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **8. Pass-through** tiếp nhận điểm tựa từ **7. Lerner chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Entry các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lerner index summarizes price-cost margin relative to demand elasticity, not a universal measure of abuse. Pass-through asks how a cost shock changes price and therefore tests a different mechanism.
 
 ## 8. Pass-through
 
@@ -78,7 +78,7 @@ How taxes/đầu vào (input / 입력) costs move into prices reveals thị trư
 
 Pass-through can exceed or fall below 100%; one-for-one is not universal.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **9. Entry các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **8. Pass-through** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Sunk costs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pass-through links marginal cost changes to prices and can vary with demand curvature and strategic interaction. Entry models then ask how a new firm changes those incentives and equilibrium outcomes.
 
 ## 9. Entry các mô hình (models / 모델들)
 
@@ -88,7 +88,7 @@ Observed number of firms reflects thị trường (market / 시장) kích thư�
 
 Entry thresholds across markets can identify competitive effects but thị trường (market / 시장) heterogeneity matters.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **10. Sunk costs** tiếp nhận điểm tựa từ **9. Entry các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Sản phẩm (product / 제품) differentiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Entry analysis is not just counting firms; fixed costs, demand, conduct and post-entry competition determine whether entry is profitable. Sunk costs make timing and exit asymmetric, so they must be separated from recoverable operating costs.
 
 ## 10. Sunk costs
 
@@ -96,7 +96,7 @@ Advertising, R&D, mạng (network / 네트워크) building and regulation can be
 
 High fixed chi phí (cost / 비용) alone does not equal barrier if recoverable.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **11. Sản phẩm (product / 제품) differentiation** tiếp nhận điểm tựa từ **10. Sunk costs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chất lượng (quality / 품질) choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sunk costs can deter entry even when current margins look attractive, because an entrant cannot recover them on exit. Product differentiation then shapes both the size of the market and how strongly firms compete after entry.
 
 ## 11. Sản phẩm (product / 제품) differentiation
 
@@ -104,7 +104,7 @@ Horizontal differentiation reflects taste; vertical differentiation reflects ch�
 
 Differentiation softens price competition but can increase variety and bên tiêu thụ (consumer / 소비자) surplus.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **12. Chất lượng (quality / 품질) choice** tiếp nhận điểm tựa từ **11. Sản phẩm (product / 제품) differentiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Price discrimination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Differentiation changes substitution and gives firms room to choose prices or qualities. Quality choice is an additional strategic margin whose welfare effect cannot be inferred from price alone.
 
 ## 12. Chất lượng (quality / 품질) choice
 
@@ -112,7 +112,7 @@ Firms may compete on chất lượng (quality / 품질), dịch vụ (service / 
 
 Merger effects can therefore include nonprice dimensions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **13. Price discrimination** tiếp nhận điểm tựa từ **12. Chất lượng (quality / 품질) choice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Switching costs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quality may improve consumer value while raising cost or excluding some buyers. Price discrimination uses information about willingness to pay to vary prices, so its welfare and policy effect depends on coverage, output and redistribution.
 
 ## 13. Price discrimination
 
@@ -120,7 +120,7 @@ IO estimates whether segments differ in elasticity and whether discrimination ex
 
 Digital personalization raises đo lường (measurement / 측정) and privacy questions.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **14. Switching costs** tiếp nhận điểm tựa từ **13. Price discrimination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Mạng (network / 네트워크) effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Price discrimination requires segment information or observable differences in willingness to pay, and can change output as well as distribution. Switching costs instead shape competition across time by making past choices affect future demand.
 
 ## 14. Switching costs
 
@@ -128,7 +128,7 @@ Contracts, dữ liệu (data / 데이터) portability, học tập (learning / �
 
 Switching chi phí (cost / 비용) can hỗ trợ (support / 지원) investment but also entrench incumbent.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **15. Mạng (network / 네트워크) effects** tiếp nhận điểm tựa từ **14. Switching costs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Two-sided platforms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Switching costs can create lock-in, installed-base incentives and a wedge between acquisition and retention prices. Network effects add feedback: the value of joining depends on how many compatible users or complements already exist.
 
 ## 15. Mạng (network / 네트워크) effects
 
@@ -136,7 +136,7 @@ Nền tảng (platform / 플랫폼) giá trị (value / 값) can rise with users
 
 Need distinguish direct mạng (network / 네트워크) benefit from nền tảng (platform / 플랫폼) thị trường (market / 시장) power.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **16. Two-sided platforms** tiếp nhận điểm tựa từ **15. Mạng (network / 네트워크) effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Most-favored-nation and parity clauses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Network effects can produce tipping or coordination problems, while two-sided platforms must balance participation on multiple sides. Platform pricing cannot be read from one side’s posted price without accounting for cross-side demand.
 
 ## 16. Two-sided platforms
 
@@ -146,7 +146,7 @@ Price on one side may be zero/subsidized because it attracts participation valua
 
 Single-sided markup lô-gic (logic / 논리) can mislead.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **17. Most-favored-nation and parity clauses** tiếp nhận điểm tựa từ **16. Two-sided platforms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Vertical relationships** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Two-sided pricing creates incentives to subsidize one side and monetize another; parity clauses can constrain where sellers set prices across channels. Most-favored-nation clauses therefore require an effects analysis, not a label alone.
 
 ## 17. Most-favored-nation and parity clauses
 
@@ -154,7 +154,7 @@ Single-sided markup lô-gic (logic / 논리) can mislead.
 
 Tác động (effect / 효과) is context-specific.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **18. Vertical relationships** tiếp nhận điểm tựa từ **17. Most-favored-nation and parity clauses** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Double marginalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MFN/parity clauses may prevent visible price differences while changing entry and platform bargaining. Vertical relationships similarly move the analysis from horizontal substitution to contracts, incentives and foreclosure mechanisms.
 
 ## 18. Vertical relationships
 
@@ -162,7 +162,7 @@ Manufacturer-retailer relationships create double marginalization, resale pricin
 
 Vertical tích hợp (integration / 통합) can eliminate double markups but may disadvantage rivals.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **19. Double marginalization** tiếp nhận điểm tựa từ **18. Vertical relationships** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Exclusive dealing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vertical contracts can coordinate complementary stages but may also create double marginalization when both levels mark up. Identifying the mechanism matters before calling integration or restraint efficient or harmful.
 
 ## 19. Double marginalization
 
@@ -170,7 +170,7 @@ If upstream and downstream each add monopoly markup, final price can exceed inte
 
 Vertical tích hợp (integration / 통합) may lower prices even while increasing điều khiển (control / 제어).
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **20. Exclusive dealing** tiếp nhận điểm tựa từ **19. Double marginalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Tying and bundling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Double marginalization is one rationale for vertical integration or restraints, but exclusive dealing can additionally limit rivals’ access to inputs, outlets or demand. Its effect depends on coverage, duration and realistic alternatives.
 
 ## 20. Exclusive dealing
 
@@ -178,7 +178,7 @@ Exclusivity can protect relationship-specific investment or foreclose rivals fro
 
 Assess duration, coverage, alternatives and quy mô (scale / 규모) needed for entry.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **21. Tying and bundling** tiếp nhận điểm tựa từ **20. Exclusive dealing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Merger phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exclusive dealing may protect investment or foreclose an efficient rival; tying and bundling ask whether products are linked through demand, cost or strategic leverage. The policy boundary depends on counterfactual availability and entry.
 
 ## 21. Tying and bundling
 
@@ -186,7 +186,7 @@ Bundling can price discriminate, reduce giao dịch (transaction / 트랜잭션)
 
 Competitive tác động (effect / 효과) depends on demand correlation and foreclosure cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **22. Merger phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **21. Tying and bundling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Merger simulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tying/bundling can change demand and costs across products, while merger analysis asks how ownership changes incentives and constraints. A merger claim therefore needs a counterfactual, not just a larger combined share.
 
 ## 22. Merger phân tích (analysis / 분석)
 
@@ -194,7 +194,7 @@ A horizontal merger may increase unilateral pricing incentive by internalizing d
 
 Countervailing effects include marginal-cost efficiencies, repositioning, entry and buyer power.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **23. Merger simulation** tiếp nhận điểm tựa từ **22. Merger phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Sự kiện (event / 이벤트) studies around mergers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merger analysis identifies possible unilateral or coordinated effects; merger simulation quantifies them only under a specified demand, conduct and efficiency model. Results should be stress-tested against identification and policy assumptions.
 
 ## 23. Merger simulation
 
@@ -202,7 +202,7 @@ Estimated demand + conduct các giả định (assumptions / 가정들) + effici
 
 Simulation is conditional counterfactual, not fact; results depend on demand form, conduct and chi phí (cost / 비용) các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **24. Sự kiện (event / 이벤트) studies around mergers** tiếp nhận điểm tựa từ **23. Merger simulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Cartels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merger simulation predicts a counterfactual equilibrium, whereas event studies estimate realized changes around an observed merger. Event-study validity depends on timing, parallel trends and separating the merger from other shocks.
 
 ## 24. Sự kiện (event / 이벤트) studies around mergers
 
@@ -210,7 +210,7 @@ Stock-market reactions can reflect expected profit thay đổi (change / 변경)
 
 Product-level post-merger price studies can complement structural simulation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **25. Cartels** tiếp nhận điểm tựa từ **24. Sự kiện (event / 이벤트) studies around mergers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Procurement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Event studies provide evidence about effects after a merger but do not by themselves identify the mechanism or future market power. Cartel analysis turns to coordination among firms and the evidence of agreement, communication or parallel conduct.
 
 ## 25. Cartels
 
@@ -218,7 +218,7 @@ Cartels restrict competition through price/quantity/customer allocation. Empiric
 
 Parallel pricing alone is insufficient proof.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **26. Procurement** tiếp nhận điểm tựa từ **25. Cartels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Động (dynamic / 동적) competition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cartel analysis separates explicit coordination from conduct that merely looks parallel under common costs or demand. Procurement adds a setting where auction rules, bidder incentives and observable bids make coordination and screening especially consequential.
 
 ## 26. Procurement
 
@@ -226,7 +226,7 @@ Procurement IO studies bidding, entry and scoring rules. Lowest bid may not mini
 
 Auction các mô hình (models / 모델들) identify costs under các giả định (assumptions / 가정들) about bidder values and competition.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **27. Động (dynamic / 동적) competition** tiếp nhận điểm tựa từ **26. Procurement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Innovation and competition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Procurement outcomes depend on reserve rules, entry, bid formats and private information, not only the lowest observed bid. Dynamic competition adds time: firms invest, learn and build positions that affect future entry and pricing.
 
 ## 27. Động (dynamic / 동적) competition
 
@@ -234,7 +234,7 @@ R&D, sức chứa (capacity / 용량), installed cơ sở (base / 기반) and h�
 
 Static markup may understate or overstate long-run welfare tác động (effect / 효과) if innovation phản hồi (response / 응답) large.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **28. Innovation and competition** tiếp nhận điểm tựa từ **27. Động (dynamic / 동적) competition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Patents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dynamic competition makes today’s price or investment part of a continuation game. Innovation can be an endogenous response to rivalry, so static concentration measures may miss both harm and pro-competitive investment.
 
 ## 28. Innovation and competition
 
@@ -242,7 +242,7 @@ Competition can increase innovation by escape-from-competition incentives or red
 
 Relationship may be heterogeneous/non-monotonic.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **29. Patents** tiếp nhận điểm tựa từ **28. Innovation and competition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Innovation changes future product quality, cost and market boundaries; patents trade temporary exclusion for incentives to disclose or invest. Policy must compare expected innovation gains with access and competition costs.
 
 ## 29. Patents
 
@@ -250,7 +250,7 @@ Patents trade temporary exclusion against innovation incentive and disclosure.
 
 Patent count/chất lượng (quality / 품질) is an imperfect innovation measure.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **30. Regulation** tiếp nhận điểm tựa từ **29. Patents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Natural monopoly and utilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Patents create a legal exclusion right, but their economic effect depends on substitutes, licensing, enforcement and cumulative innovation. Regulation enters when private incentives alone do not protect competition, access or safety.
 
 ## 30. Regulation
 
@@ -258,7 +258,7 @@ Price caps, licensing, standards and truy cập (access / 접근) rules alter en
 
 Regulatory capture and thông tin (information / 정보) asymmetry can create government thất bại (failure / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **31. Natural monopoly and utilities** tiếp nhận điểm tựa từ **30. Regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Telecom and interoperability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Regulation can target conduct, entry, price or interoperability, but each tool has information and capture costs. Natural monopoly is a case where duplicated infrastructure may be inefficient, making utility design and rate-setting central.
 
 ## 31. Natural monopoly and utilities
 
@@ -266,13 +266,13 @@ Mạng (network / 네트워크) industries with large fixed costs may require pr
 
 Marginal-cost pricing can thất bại (fail / 실패) to cover fixed chi phí (cost / 비용); average-cost regulation can weaken cost-reduction incentives.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **32. Telecom and interoperability** tiếp nhận điểm tựa từ **31. Natural monopoly and utilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Digital markets and zero price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Natural monopoly regulation balances cost recovery, affordability and investment incentives. Telecom adds network infrastructure and interoperability, so access rules can change both competition and innovation.
 
 ## 32. Telecom and interoperability
 
 Interconnection terms determine whether entrants can reach incumbent networks. Standards can expand mạng (network / 네트워크) giá trị (value / 값) while affecting nền tảng (platform / 플랫폼) điều khiển (control / 제어).
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **33. Digital markets and zero price** tiếp nhận điểm tựa từ **32. Telecom and interoperability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Algorithmic pricing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Telecom interoperability can lower switching barriers while creating coordination and security obligations. Digital markets add zero monetary prices, where quality, attention, data and cross-side effects replace a simple price signal.
 
 ## 33. Digital markets and zero price
 
@@ -280,7 +280,7 @@ Bên tiêu thụ (consumer / 소비자) price of zero does not imply zero thị 
 
 Thị trường (market / 시장) definition needs nonprice substitution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **34. Algorithmic pricing** tiếp nhận điểm tựa từ **33. Digital markets and zero price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Self-preferencing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Zero price does not mean zero economic cost or zero market power; attention, data and quality can be traded implicitly. Algorithmic pricing adds an adaptive decision layer whose outcomes depend on data, objectives and strategic feedback.
 
 ## 34. Algorithmic pricing
 
@@ -288,7 +288,7 @@ Pricing algorithms can react rapidly and may facilitate parallel conduct without
 
 Empirical attribution requires more than observed synchronization.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **35. Self-preferencing** tiếp nhận điểm tựa từ **34. Algorithmic pricing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Essential facilities and kiểm soát truy cập (access control / 접근 제어) over hạ tầng (infrastructure / 인프라)/dữ liệu (data / 데이터)/phân phối (distribution / 분포) can create bottleneck. Mandatory truy cập (access / 접근) may promote entry but reduce investment incentive.** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Algorithmic pricing may improve matching or facilitate rapid coordination, but a correlation in prices is not proof of an algorithmic cartel. Self-preferencing asks whether a platform uses control of ranking or access to favor its own service.
 
 ## 35. Self-preferencing
 
@@ -296,13 +296,13 @@ Integrated nền tảng (platform / 플랫폼) may rank own products/services pr
 
 Need measure traffic diversion, chất lượng (quality / 품질) and entry effects.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **35. Self-preferencing** nêu điều cần giải thích; **36. Essential facilities and kiểm soát truy cập (access control / 접근 제어) over hạ tầng (infrastructure / 인프라)/dữ liệu (data / 데이터)/phân phối (distribution / 분포) can create bottleneck. Mandatory truy cập (access / 접근) may promote entry but reduce investment incentive.** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **37. Structural vs reduced-form IO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Self-preferencing can be efficiency-enhancing integration or discriminatory use of a bottleneck, depending on alternatives and counterfactual access. Essential-facilities analysis makes the access duty, feasibility and investment trade-off explicit.
 
 ## 36. Essential facilities and kiểm soát truy cập (access control / 접근 제어) over hạ tầng (infrastructure / 인프라)/dữ liệu (data / 데이터)/phân phối (distribution / 분포) can create bottleneck. Mandatory truy cập (access / 접근) may promote entry but reduce investment incentive.
 
 Chính sách (policy / 정책) must assess feasible duplication and pricing/truy cập (access / 접근) terms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **36. Essential facilities and kiểm soát truy cập (access control / 접근 제어) over hạ tầng (infrastructure / 인프라)/dữ liệu (data / 데이터)/phân phối (distribution / 분포) can create bottleneck. Mandatory truy cập (access / 접근) may promote entry but reduce investment incentive.** nêu điều cần giải thích; **37. Structural vs reduced-form IO** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **38. Dùng chung (common / 공통) empirical designs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Essential-facilities claims require a real bottleneck, non-duplication or feasibility showing, and a remedy that does not destroy investment incentives. Structural and reduced-form IO provide different evidence about these mechanisms.
 
 ## 37. Structural vs reduced-form IO
 
@@ -312,7 +312,7 @@ Structural các mô hình (models / 모델들) estimate primitives to simulate c
 
 Structural approach gains extrapolation at chi phí (cost / 비용) of stronger các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **38. Dùng chung (common / 공통) empirical designs** tiếp nhận điểm tựa từ **37. Structural vs reduced-form IO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Welfare accounting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Structural IO specifies demand, cost and conduct to simulate counterfactuals; reduced-form designs estimate effects with fewer behavioral assumptions. Their credibility depends on the identification strategy and the question being asked.
 
 ## 38. Dùng chung (common / 공통) empirical designs
 
@@ -324,7 +324,7 @@ Structural approach gains extrapolation at chi phí (cost / 비용) of stronger 
 - nền tảng (platform / 플랫폼) chính sách (policy / 정책) experiments;
 - natural experiments in sức chứa (capacity / 용량)/đầu vào (input / 입력) costs.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **39. Welfare accounting** tiếp nhận điểm tựa từ **38. Dùng chung (common / 공통) empirical designs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Empirical designs should state treatment, comparison, timing, measurement and threats such as selection or anticipation. Welfare accounting then maps estimated effects to consumers, firms, workers and dynamic innovation rather than one headline metric.
 
 ## 39. Welfare accounting
 
@@ -342,7 +342,7 @@ privacy/data costs
 
 One short-run price tác động (effect / 효과) is not always whole welfare story.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **40. Thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **39. Welfare accounting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Applied phân tích (analysis / 분석) template** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Welfare accounting makes distribution and transfers visible, but it cannot repair an unidentified causal effect. Failure modes include market misdefinition, omitted alternatives, weak counterfactuals and policy conclusions beyond the evidence.
 
 ## 40. Thất bại (failure / 실패) modes
 
@@ -356,7 +356,7 @@ Sai lầm thứ tư là evaluate merger only by HHI or only by one post-merger p
 
 Sai lầm thứ năm là use single-sided price lô-gic (logic / 논리) for multi-sided platforms.
 
-> **Chuyển mạch:** Trong **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **41. Applied phân tích (analysis / 분석) template** tiếp nhận điểm tựa từ **40. Thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Failure modes are a final boundary check. An applied IO template should state market, mechanism, counterfactual, evidence, uncertainty, welfare groups and policy caveats before claiming a result.
 
 ## 41. Applied phân tích (analysis / 분석) template
 

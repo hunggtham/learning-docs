@@ -28,7 +28,7 @@ Bit `i = 1` nghĩa flag `i` đang bật.
 
 Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên tập bit (bitset) tạo **song song ở mức từ máy** tự nhiên.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Các phép cơ bản** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **AND, OR, XOR như set các thao tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình boolean theo word tạo cơ sở cho các phép bit; phần cơ bản dưới đây biến từng vị trí thành thao tác kiểm tra, bật, xóa hoặc đảo.
 
 ## Các phép cơ bản
 
@@ -81,7 +81,7 @@ x ^= (1u << k);
 
 Điểm quan trọng là kiểu (type / 타입)/width. `1 << k` dùng kiểu (type / 타입) của literal `1`; nếu cần shift tới bit cao của 64-bit giá trị trong C/Java, dùng literal phù hợp như `1ULL << k` hoặc `1L << k`.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **AND, OR, XOR như set các thao tác** tiếp nhận điểm tựa từ **Các phép cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **XOR algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các phép AND, OR và XOR không chỉ là toán tử số; khi mỗi bit là một membership, chúng trở thành intersection, union và symmetric difference.
 
 ## AND, OR, XOR như set các thao tác
 
@@ -96,7 +96,7 @@ A & ~B -> A \ B
 
 Đây là lý do bitsets rất mạnh cho đồ thị/set các thuật toán: một machine word có thể xử lý 64 memberships cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **XOR algebra** tiếp nhận điểm tựa từ **AND, OR, XOR như set các thao tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Two's Complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Set algebra giải thích ý nghĩa của XOR, còn các tính chất triệt tiêu của nó cho phép chứng minh những identity thường được dùng trong bit tricks.
 
 ## XOR algebra
 
@@ -128,7 +128,7 @@ làm các pairs triệt tiêu, để lại unique giá trị.
 
 Nếu có ba lần, hoặc nhiều unique các giá trị, cùng trick không còn đủ thông tin.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Two's Complement** tiếp nhận điểm tựa từ **XOR algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Least Significant Set Bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+XOR dựa trên mẫu bit và phép triệt tiêu; để hiểu các identity liên quan đến số âm, cần đặt chúng trên nền two's complement.
 
 ## Two's Complement
 
@@ -142,7 +142,7 @@ Trong fixed width:
 
 Đây là cơ sở của nhiều bit identities, nhưng ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) vẫn phải được tôn trọng.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Least Significant Set Bit** tiếp nhận điểm tựa từ **Two's Complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xóa bit 1 thấp nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Two's complement biến phép đảo cộng một thành cách biểu diễn số âm; từ đó `x & -x` có thể cô lập bit 1 thấp nhất.
 
 ## Least Significant Set Bit
 
@@ -166,7 +166,7 @@ cây Fenwick (Fenwick Tree) dùng giá trị này làm khối (block / 블록) k
 
 Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo mẫu phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Xóa bit 1 thấp nhất** tiếp nhận điểm tựa từ **Least Significant Set Bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra lũy thừa của hai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đã lấy được lowest set bit, phép `x & (x - 1)` cho phép xóa nó mà không cần duyệt toàn bộ độ rộng word.
 
 ## Xóa bit 1 thấp nhất
 
@@ -194,7 +194,7 @@ Số iterations bằng số set bits, không phải độ rộng bit.
 
 Trong hệ thống thực tế, ưu tiên trình biên dịch/thư viện (library / 라이브러리) intrinsic như `Integer.bitCount`, `Long.bitCount`, `std::popcount` nếu available vì có thể map tới hardware POPCNT.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Kiểm tra lũy thừa của hai** tiếp nhận điểm tựa từ **Xóa bit 1 thấp nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitmask subset cách biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Popcount theo số bit 1 có thể được dùng để kiểm tra một số chỉ chứa duy nhất một bit; đó là điều kiện của lũy thừa hai.
 
 ## Kiểm tra lũy thừa của hai
 
@@ -208,7 +208,7 @@ Phải có `x > 0`; zero cũng thỏa expression thứ hai nhưng không phải 
 
 Đây là ví dụ các ràng buộc nhỏ làm bit trick đúng hay sai.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Bitmask subset cách biểu diễn** tiếp nhận điểm tựa từ **Kiểm tra lũy thừa của hai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Enumerating submasks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Power-of-two test là ví dụ nhỏ của invariant bit; khi nhiều boolean state cần được mã hóa, cùng ý tưởng mở rộng thành bitmask subset.
 
 ## Bitmask subset cách biểu diễn
 
@@ -230,7 +230,7 @@ Bitmask không biến exponential bài toán (problem / 문제) thành polynomia
 
 Nếu cần enumerate `2^n` subsets, đầu ra/không gian tìm kiếm vẫn exponential.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Enumerating submasks** tiếp nhận điểm tựa từ **Bitmask subset cách biểu diễn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tổng (mask, submask) pairs là 3^n?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitmask biểu diễn subset gọn nhưng không làm mất số lượng trạng thái; enumerating submasks là cách duyệt có cấu trúc các trạng thái con.
 
 ## Enumerating submasks
 
@@ -248,7 +248,7 @@ mẫu này đi qua submasks theo descending numeric thứ tự (order / 순서).
 
 Muốn include rỗng submask, xử lý `0` riêng hoặc dùng vòng lặp (loop / 루프) có break rõ ràng để tránh unsigned tràn dưới vòng lặp (loop / 루프).
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Vì sao tổng (mask, submask) pairs là 3^n?** tiếp nhận điểm tựa từ **Enumerating submasks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Superset enumeration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mỗi mask/submask pair có thể đếm theo trạng thái độc lập của từng bit, dẫn tới cận `3^n`; cận này cũng định hướng các vòng lặp superset.
 
 ## Vì sao tổng `(mask, submask)` pairs là `3^n`?
 
@@ -268,7 +268,7 @@ Vậy tổng combinations:
 
 Đây là lý do vòng lặp lồng nhau over masks and submasks thường `O(3^n)`, không phải `O(4^n)` nếu cấu trúc (structure / 구조) đúng.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Superset enumeration** tiếp nhận điểm tựa từ **Vì sao tổng (mask, submask) pairs là 3^n?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gray mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Superset enumeration chỉ thay đổi tập bit bắt buộc và tự do; Gray code đi xa hơn bằng cách bảo đảm mỗi bước chỉ đổi một bit.
 
 ## Superset enumeration
 
@@ -276,7 +276,7 @@ Nếu mặt nạ toàn miền có `n` bit và cần liệt kê các siêu tập 
 
 Mô hình tư duy tốt hơn memorizing cú pháp (syntax / 문법) là: tách **các bit bắt buộc cố định** và **các bit tự do**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Gray mã (code / 코드)** tiếp nhận điểm tựa từ **Superset enumeration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitmask quy hoạch động (dynamic programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Gray code kiểm soát khoảng cách giữa hai trạng thái liên tiếp; bitmask DP dùng chính các trạng thái đó làm chỉ mục cho bài toán subset.
 
 ## Gray mã (code / 코드)
 
@@ -290,7 +290,7 @@ g(i)=i\oplus(i>>1)
 
 Hữu ích khi chuyển trạng thái mà chỉ muốn một bit thay đổi mỗi bước, hardware encoders, combinatorial generation và một số DP/enumeration optimizations.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Bitmask quy hoạch động (dynamic programming)** tiếp nhận điểm tựa từ **Gray mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SOS DP / Subset DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitmask DP làm state identity gọn nhưng vẫn có số trạng thái mũ; SOS DP tối ưu một lớp chuyển trạng thái bằng cách tái sử dụng tổng trên submask.
 
 ## Bitmask quy hoạch động (dynamic programming)
 
@@ -316,7 +316,7 @@ Transitions có thể đưa total tới `O(2^n n^2)`.
 
 Bitmask làm trạng thái định danh (identity / 식별자) gọn; nó không loại exponential dependence vào `n`.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **SOS DP / Subset DP** tiếp nhận điểm tựa từ **Bitmask quy hoạch động (dynamic programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tập bit là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SOS DP cho thấy biểu diễn nhị phân có thể định nghĩa chiều của state transition; khi universe lớn hơn một machine word, cần một bitset gồm nhiều word.
 
 ## SOS DP / Subset DP
 
@@ -336,7 +336,7 @@ bằng cách lần lượt cho phép từng bit đóng góp.
 
 Đây là một example mạnh nơi nhị phân (binary / 이진) cách biểu diễn định nghĩa dimensions của DP trạng thái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **tập bit là gì?** tiếp nhận điểm tựa từ **SOS DP / Subset DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java tập bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitset nhiều word thực hiện set operations theo từng word và giảm hằng số nhờ xử lý song song mức word; Java cung cấp abstraction sẵn cho việc này.
 
 ## tập bit là gì?
 
@@ -359,7 +359,7 @@ Set các thao tác chạy word-by-word.
 
 Nếu universe có 6400 các phần tử, intersection cần khoảng 100 64-bit AND các thao tác thay vì kiểm 6400 booleans riêng lẻ.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Java tập bit** tiếp nhận điểm tựa từ **tập bit là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JavaScript bitwise operators chỉ 32-bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Java BitSet quản lý mảng word và các operation phổ biến; khi chuyển sang JavaScript, phải nhớ toán tử bitwise Number chỉ coercion về 32 bit.
 
 ## Java tập bit
 
@@ -381,7 +381,7 @@ a.and(b);
 
 Nếu cần tập cờ dày đặc có kích thước cố định, `BitSet` thường tiết kiệm bộ nhớ hơn `HashSet<Integer>` rất nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **JavaScript bitwise operators chỉ 32-bit** tiếp nhận điểm tựa từ **Java tập bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BigInt bitmasks trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+JavaScript 32-bit bitwise không đại diện mask lớn tùy ý; BigInt mở rộng độ rộng nhưng có quy tắc kiểu và chi phí khác.
 
 ## JavaScript bitwise operators chỉ 32-bit
 
@@ -397,7 +397,7 @@ Các phép toán này sử dụng ngữ nghĩa số nguyên có dấu 32 bit; s�
 
 Không thể dùng toán tử bit trên `Number` cho các mặt nạ 53 bit tùy ý như thể chúng là số nguyên 64 bit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **BigInt bitmasks trong JavaScript** tiếp nhận điểm tựa từ **JavaScript bitwise operators chỉ 32-bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java shift ngữ nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+BigInt cho phép bitmask vượt 32 bit, nhưng không trộn trực tiếp với Number; Java shift semantics lại nhấn mạnh một dạng khác của giới hạn width và signedness.
 
 ## BigInt bitmasks trong JavaScript
 
@@ -418,7 +418,7 @@ BigInt phù hợp mask lớn nhưng hiệu năng/mô hình chi phí khác typed-
 
 Nếu universe hàng nghìn bits và các thao tác bulk, `Uint32Array`/custom word tập bit có thể thực dụng hơn một giant BigInt tùy engine/khối lượng công việc.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Java shift ngữ nghĩa** tiếp nhận điểm tựa từ **BigInt bitmasks trong JavaScript** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **C shift caveats** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Java phân biệt arithmetic và logical right shift, đồng thời giới hạn shift distance theo width; C có thêm các trường hợp undefined hoặc implementation-defined cần tránh.
 
 ## Java shift ngữ nghĩa
 
@@ -439,7 +439,7 @@ System.out.println(x >>> 1); // large positive
 
 Shift khoảng cách của `int` chỉ dùng low 5 bits; của `long` dùng low 6 bits. Vì vậy shift >= width không có ngữ nghĩa giống toán học naïve.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **C shift caveats** tiếp nhận điểm tựa từ **Java shift ngữ nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Endianness không phải bit numbering trong integer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+C shift caveats khiến unsigned fixed-width types trở thành lựa chọn an toàn hơn cho bit thô; sau đó cần tách numeric bit numbering khỏi byte order trong bộ nhớ.
 
 ## C shift caveats
 
@@ -454,7 +454,7 @@ uint64_t
 
 và constants nên có unsigned/wide suffix phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Endianness không phải bit numbering trong integer** tiếp nhận điểm tựa từ **C shift caveats** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Signed vs Unsigned Interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Endianness chỉ chi phối thứ tự byte khi serialize hoặc đọc memory, không đổi ý nghĩa least-significant bit của numeric value; signedness lại đổi cách diễn giải cùng bit pattern.
 
 ## Endianness không phải bit numbering trong integer
 
@@ -464,7 +464,7 @@ Endianness trở nên quan trọng khi serialize/interpret multi-byte bộ nhớ
 
 Đừng trộn “bit thấp” với “byte nằm ở address thấp”.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Signed vs Unsigned Interpretation** tiếp nhận điểm tựa từ **Endianness không phải bit numbering trong integer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một bit pattern có thể là số dương hoặc âm tùy signed interpretation; khi các bit là ô trên bàn cờ, bitboard dùng pattern ấy như trạng thái hình học.
 
 ## Signed vs Unsigned Interpretation
 
@@ -478,7 +478,7 @@ là 255 nếu unsigned 8-bit, -1 nếu signed two's complement 8-bit.
 
 Bitwise transform làm việc trên mẫu; phép so sánh/arithmetic sau đó phụ thuộc signedness.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Bitboard** tiếp nhận điểm tựa từ **Signed vs Unsigned Interpretation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị bằng Bitsets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitboard cho thấy word-level parallelism trong một state nhỏ; đồ thị dày cũng có thể biểu diễn adjacency row bằng bitset để giao các tập đỉnh thật nhanh.
 
 ## Bitboard
 
@@ -488,7 +488,7 @@ Move generation có thể dùng shifts, masks và AND để tính nhiều square
 
 Đây là example song song ở mức từ máy rất thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **đồ thị bằng Bitsets** tiếp nhận điểm tựa từ **Bitboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tập bit DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitset graph operations giảm nhiều vòng lặp boolean thành AND/OR theo word; trong DP, cùng primitive shift và OR có thể cập nhật hàng loạt trạng thái.
 
 ## đồ thị bằng Bitsets
 
@@ -504,7 +504,7 @@ adj[u] & adj[v]
 
 Bài toán khả đạt Boolean kiểu Floyd–Warshall có thể được tối ưu bằng bitset: nếu `i` reaches `k`, OR row `k` vào row `i`, giảm constant factor mạnh so với per-vertex boolean loops.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **tập bit DP** tiếp nhận điểm tựa từ **đồ thị bằng Bitsets** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ lọc Bloom liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitset DP tận dụng shift+OR để xử lý nhiều sum/state cùng lúc; khác với một bitset chính xác, Bloom filter chấp nhận false positive để tiết kiệm bộ nhớ.
 
 ## tập bit DP
 
@@ -526,7 +526,7 @@ Một shift+OR xử lý nhiều các trạng thái cùng lúc.
 
 Trong languages/libraries hỗ trợ (support / 지원) efficient arbitrary tập bit shift, điều này có thể tăng tốc rất lớn so với các vòng lặp lồng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, sau nội dung của **tập bit DP**, **bộ lọc Bloom liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Flags và Permissions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bloom filter xây trên bit array nhưng thêm hashing và xác suất; flags và permissions lại cần semantics chính xác và assignment ổn định.
 
 ## bộ lọc Bloom liên kết (connection / 연결)
 
@@ -536,7 +536,7 @@ tập bit ở đây là lưu trữ thành phần nguyên thủy (primitive / 기
 
 Xem [Probabilistic Data Structures](./06_probabilistic_data_structures.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Flags và Permissions** tiếp nhận điểm tựa từ **bộ lọc Bloom liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bit packing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Permission flags biến OR thành phép gộp quyền và AND thành phép kiểm tra; khi nhiều giá trị nhỏ được đóng gói, bit packing tiếp tục tối ưu footprint.
 
 ## Flags và Permissions
 
@@ -562,7 +562,7 @@ Check:
 
 Nếu trường là enum flags trong giao thức (protocol / 프로토콜)/cơ sở dữ liệu, cần document bit assignments ổn định để tính tương thích (compatibility / 호환성) không bị phá.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Bit packing** tiếp nhận điểm tựa từ **Flags và Permissions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mask tạo từ k các bit thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bit packing giảm memory và bandwidth bằng shift/mask, nhưng làm representation phụ thuộc layout; mask tạo từ k bit thấp là primitive cần cho việc trích xuất đó.
 
 ## Bit packing
 
@@ -582,7 +582,7 @@ Extract green:
 
 Packing giảm bộ nhớ/bandwidth nhưng tăng độ phức tạp (complexity / 복잡도) và coupling vào bit bố trí. Trong hệ thống thực tế, serialization còn phải định nghĩa endianness/versioning.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Mask tạo từ k các bit thấp** tiếp nhận điểm tựa từ **Bit packing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rotate vs Shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mask `(1 << k) - 1` cần xử lý riêng trường hợp k bằng word width; sau khi định nghĩa width rõ, rotate và shift cho hai semantics khác nhau.
 
 ## Mask tạo từ `k` các bit thấp
 
@@ -596,7 +596,7 @@ Tuy nhiên cần cẩn thận khi `k` bằng đúng độ rộng từ máy, vì 
 
 Với độ rộng cố định types, special-case full width hoặc dùng thư viện (library / 라이브러리) helper.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Rotate vs Shift** tiếp nhận điểm tựa từ **Mask tạo từ k các bit thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finding Highest/Lowest Set Bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Shift làm mất bit ở một đầu, còn rotate đưa chúng quay lại; các thao tác tìm highest/lowest set bit lại trả về vị trí cấu trúc thay vì biến đổi toàn bộ word.
 
 ## Rotate vs Shift
 
@@ -608,7 +608,7 @@ C++20 có `std::rotl`/`std::rotr`; Java có `Integer.rotateLeft/Right` và `Long
 
 Đừng implement rotate bằng shifts mà quên width/signedness các trường hợp biên (edge cases).
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Finding Highest/Lowest Set Bit** tiếp nhận điểm tựa từ **Rotate vs Shift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Next lũy thừa của hai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CLZ/CTZ và bit length cho phép suy ra log2, cấp phát power-of-two hoặc quét bitset; các hàm next power-of-two dùng chính thông tin vị trí này.
 
 ## Finding Highest/Lowest Set Bit
 
@@ -634,7 +634,7 @@ bitset scanning
 
 Nếu thư viện có intrinsic phù hợp, nên dùng nó thay cho vòng lặp viết tay khi điều đó cải thiện độ rõ ràng hoặc hiệu năng.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Next lũy thừa của hai** tiếp nhận điểm tựa từ **Finding Highest/Lowest Set Bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bit Hacks không nên thay clarity vô điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Next power-of-two hữu ích cho capacity và mask modulo, nhưng trick chỉ đúng khi invariant capacity thật sự là lũy thừa hai; clarity và intrinsic nên được ưu tiên hơn mẹo khó đọc.
 
 ## Next lũy thừa của hai
 
@@ -657,7 +657,7 @@ index & (capacity - 1)
 
 chỉ khi sức chứa (capacity / 용량) thực sự là lũy thừa của hai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **Bit Hacks không nên thay clarity vô điều kiện** tiếp nhận điểm tựa từ **Next lũy thừa của hai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) considerations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bit hack chỉ đáng dùng khi identity được chứng minh và map tốt tới hardware/library; trong mã nhạy cảm, còn phải xem xét side channel và constant-time.
 
 ## Bit Hacks không nên thay clarity vô điều kiện
 
@@ -675,7 +675,7 @@ map tốt tới library/hardware
 
 không phải để mã (code / 코드) trông “low-level”.
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Bảo mật (security / 보안) considerations** tiếp nhận điểm tựa từ **Bit Hacks không nên thay clarity vô điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitwise branchless không tự động là constant-time, và tự viết primitive mật mã rất rủi ro; phần security đặt giới hạn của kỹ thuật này trước các ngộ nhận thường gặp.
 
 ## Bảo mật (security / 보안) considerations
 
@@ -685,7 +685,7 @@ Constant-time programming là chuyên biệt bảo mật (security / 보안) dis
 
 Không nên tự thiết kế cryptographic thành phần nguyên thủy (primitive / 기본 요소) chỉ vì hiểu bitwise operators.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Bảo mật (security / 보안) considerations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử Bit mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận về O(1), width, shift và Bloom filter đều bỏ qua representation hoặc semantics của language; kiểm thử cần nhắm đúng các boundary đó.
 
 ## Những hiểu lầm phổ biến
 
@@ -701,7 +701,7 @@ Không nên tự thiết kế cryptographic thành phần nguyên thủy (primit
 
 **“tập bit = bộ lọc Bloom.”** tập bit thường chính xác flags; bộ lọc Bloom thêm hashing và probabilistic các dương tính giả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **thao tác bit và Bitsets**, **kiểm thử Bit mã (code / 코드)** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào thao tác bit thật sự đáng dùng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bit code phải kiểm tra zero/all-one mask, highest bit, shift tại width và tương đương với reference set operations; sau khi correctness rõ mới đo khi nào bitset đáng dùng.
 
 ## kiểm thử Bit mã (code / 코드)
 
@@ -730,7 +730,7 @@ submask loop chỉ sinh subsets của mask và không duplicate
 bitset AND tương đương set intersection reference
 ```
 
-> **Chuyển mạch:** Trong **thao tác bit và Bitsets**, **Khi nào thao tác bit thật sự đáng dùng?** tiếp nhận điểm tựa từ **kiểm thử Bit mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bit manipulation mạnh khi universe dense, state là boolean và word-level batch operations có lợi; với key sparse hoặc động, cấu trúc khác có thể phù hợp hơn.
 
 ## Khi nào thao tác bit thật sự đáng dùng?
 
@@ -748,7 +748,7 @@ Nếu lĩnh vực (domain / 도메인) các khóa sparse, huge hoặc động la
 
 Roaring Bitmap, chẳng hạn, chia miền giá trị thành các khối và chọn cách biểu diễn dày hoặc thưa theo lực lượng cục bộ. Đây là một ví dụ thực tế vượt khỏi lựa chọn đơn giản “bitset hay set” bằng một cấu trúc lai.
 
-> **Chuyển mạch:** Ở chặng này của **thao tác bit và Bitsets**, **Mô hình tư duy mở rộng** gom các mảnh từ **Khi nào thao tác bit thật sự đáng dùng?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình mở rộng gom bit thao tác thành bài toán thiết kế representation: chứng minh identity, kiểm soát width/signedness và xác nhận trạng thái thật sự là dense boolean vector.
 
 ## Mô hình tư duy mở rộng
 

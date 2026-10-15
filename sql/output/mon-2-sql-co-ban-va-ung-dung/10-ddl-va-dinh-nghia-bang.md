@@ -11,7 +11,7 @@
 
 Để học **DDL và định nghĩa bảng** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 90–94.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 90–94.
 >
 > **Liên kết bài trước:** DML thay đổi các hàng; DDL định nghĩa hoặc thay đổi cấu trúc chứa các hàng đó. Vì thế DDL được xử lý auto-commit và không quay lui (rollback / 롤백) như DML chưa lần ghi nhận (commit / 커밋).
 

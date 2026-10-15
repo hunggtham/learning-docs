@@ -589,7 +589,7 @@ Callback tồn tại trong lớp (class / 클래스) API cũ nhưng Hook setter 
 Yêu cầu thành phần (component / 컴포넌트) re-render dù React không được báo trạng thái (state / 상태) thay đổi (change / 변경) thông thường. Đây là escape hatch. Nếu app cần `forceUpdate` thường xuyên, có thể dữ liệu (data / 데이터) nguồn (source / 소스) nằm ngoài React mà không có subscription đúng. Với bên ngoài (external / 외부) store hiện đại, `useSyncExternalStore` là lớp trừu tượng (abstraction / 추상화) phù hợp hơn.
 
 ### Class lifecycle reference
-Phần này nối mạch bài học với “Class lifecycle reference”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Class APIs và error boundaries đã đặt các phase quan trọng; lifecycle reference dưới đây dùng thứ tự mount/update/unmount để đối chiếu side effect và các tên legacy.
 
 ```text
 constructor
@@ -630,7 +630,7 @@ Các tên không có `UNSAFE_` từng tồn tại trong mã (code / 코드) cũ 
 `createFactory` và old DOM factories là legacy/removed như đã giải thích.
 
 ### Ref APIs theo thời đại
-Phần này nối mạch bài học với “Ref APIs theo thời đại”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Ref evolution cho thấy mỗi API đổi cả ownership lẫn lifecycle; đọc theo chuỗi string ref → callback ref → createRef → useRef để chọn escape hatch phù hợp.
 
 ```text
 string ref
@@ -644,7 +644,7 @@ string ref
 Không phải bước sau luôn “xóa” bước trước. Callback ref vẫn hữu ích; `createRef` vẫn phù hợp lớp (class / 클래스); `forwardRef` vẫn quan trọng cho React 18 tính tương thích (compatibility / 호환성); ref-as-prop là API mới cho hàm (function / 함수) thành phần (component / 컴포넌트) React 19.
 
 ### ReactDOM legacy root APIs
-Phần này nối mạch bài học với “ReactDOM legacy root APIs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Refs giải quyết imperative handle, còn ReactDOM legacy root APIs quyết định cách mount, hydrate và unmount ở host; phần này là điểm bắt đầu của migration root hiện đại.
 
 ```jsx
 ReactDOM.render(element, container);
@@ -656,7 +656,7 @@ ReactDOM.findDOMNode(component);
 Các API này là dấu hiệu rõ nhất của codebase pre-modern gốc (root / 루트). React 18 deprecate gốc (root / 루트) legacy APIs và React 19 remove chúng. di chuyển (migration / 마이그레이션) mục tiêu (target / 대상) là `createRoot`, `hydrateRoot`, `root.unmount` và tường minh (explicit / 명시적) refs.
 
 ### Legacy Context
-Phần này nối mạch bài học với “Legacy Context”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+ReactDOM legacy APIs đặt component vào root nhưng không thay thế context contract; Legacy Context tiếp theo cho thấy vì sao dependency implicit khó kiểm soát.
 
 ```text
 childContextTypes
@@ -905,7 +905,7 @@ useEffect(() => {
 Thường nên gọi `save()` từ sự kiện (event / 이벤트)/hành động (action / 동작).
 
 ### Mirrored props
-Phần này nối mạch bài học với “Mirrored props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Mirrored props chỉ phù hợp khi có local draft semantics rõ; nếu không, effect/save nên bắt đầu từ user action thay vì sao chép prop vào state.
 
 ```jsx
 const [value, setValue] = useState(propValue);
@@ -914,7 +914,7 @@ const [value, setValue] = useState(propValue);
 mà không có ngữ nghĩa (semantics / 의미론) cục bộ (local / 로컬) draft rõ.
 
 ### Global mutable singleton
-Phần này nối mạch bài học với “Global mutable singleton”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Global mutable singleton làm ownership và subscription mơ hồ; component đọc object trực tiếp không tạo ra reactive update, nên state cần một boundary sở hữu rõ.
 
 ```js
 export const state = {};
@@ -1013,7 +1013,7 @@ React bản địa (native / 네이티브) cần học host môi trường (envi
 > **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **41. Bản đồ API quan trọng** nối từ **40. Lộ trình sau React cốt lõi (core / 핵심)** sang **Versioning principles cần mang theo sau khi học xong**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Bản đồ API quan trọng
-Phần này nối mạch bài học với “41. Bản đồ API quan trọng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+API map gom các contract chính sau khi học React core; dùng nó để chọn nhóm component, state, context hay escape hatch cần đào sâu tiếp.
 
 | Nhóm | API / thành phần | Vai trò |
 |---|---|---|

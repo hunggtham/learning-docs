@@ -22,7 +22,7 @@ Bất biến (invariant / 불변식) này chỉ tạo **thứ tự bộ phận**
 
 Đó chính là lý do vùng nhớ động (heap / 힙) có thể duy trì extreme nhanh hơn việc giữ toàn bộ collection sorted.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Mô hình tư duy** gom các mảnh từ **Vùng nhớ vùng nhớ động (heap / 힙) tính chất và thứ tự bộ phận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **đống nhị phân và complete cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap property cho biết phần tử nào được ưu tiên, còn mental model giúp nối property đó với thao tác và chi phí. Cách triển khai phổ biến nhất là binary heap trên một complete tree.
 
 ## Mô hình tư duy
 
@@ -30,7 +30,7 @@ Bất biến (invariant / 불변식) này chỉ tạo **thứ tự bộ phận**
 
 Nếu tải công việc cần phần tử liền trước/liền sau hoặc duyệt có thứ tự theo khoảng, vùng nhớ động (heap / 힙) không phù hợp. Nếu liên tục cần `min`, `max`, `top-k` hoặc “tác vụ có độ ưu tiên cao nhất tiếp theo”, vùng nhớ động (heap / 힙) là lựa chọn tự nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **đống nhị phân và complete cây** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chèn: giữ hình dạng trước, sửa thứ tự sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Binary heap dùng mảng để biểu diễn complete tree, nhờ đó chiều cao là logarithmic và không cần con trỏ node. Khi chèn, ta thêm phần tử ở vị trí cuối để giữ hình dạng rồi sửa heap order bằng bubble-up.
 
 ## đống nhị phân và complete cây
 
@@ -52,7 +52,7 @@ nút cha(i)=\left\lfloor\frac{i-1}{2}\right\rfloor
 
 Nhờ đó vùng nhớ động (heap / 힙) có tính cục bộ (locality) tốt hơn pointer-based các cây, chỉ cần một contiguous/mảng động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Chèn: giữ hình dạng trước, sửa thứ tự sau** tiếp nhận điểm tựa từ **đống nhị phân và complete cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extract-min: sửa nút gốc bằng last phần tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Insertion chỉ cần di chuyển phần tử mới lên dọc một đường từ lá đến root, nên tốn O(log n). Chiều ngược lại, extract-min đưa phần tử cuối lên root rồi dùng bubble-down để khôi phục thứ tự.
 
 ## Chèn: giữ hình dạng trước, sửa thứ tự sau
 
@@ -106,7 +106,7 @@ class MinHeap {
 
 Comparator phải tạo thứ tự (ordering / 순서) nhất quán. Nếu comparator không transitive, vùng nhớ động (heap / 힙) tính chất không còn meaningful.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Extract-min: sửa nút gốc bằng last phần tử** tiếp nhận điểm tựa từ **Chèn: giữ hình dạng trước, sửa thứ tự sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **xây dựng vùng nhớ động (heap / 힙): vì sao O(n) chứ không phải O(n log n)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Extract-min giữ root là phần tử nhỏ nhất hoặc lớn nhất theo heap type, đồng thời giữ complete shape bằng cách lấp chỗ trống từ cuối mảng. Với nhiều phần tử ban đầu, ta có thể heapify bottom-up thay vì chèn từng phần tử.
 
 ## Extract-min: sửa nút gốc bằng last phần tử
 
@@ -148,7 +148,7 @@ pop() {
 
 `peek()` là `O(1)`, còn `push()` và `pop()` là `O(log n)`.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **xây dựng vùng nhớ động (heap / 힙): vì sao O(n) chứ không phải O(n log n)?** tiếp nhận điểm tựa từ **Extract-min: sửa nút gốc bằng last phần tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **hàng đợi ưu tiên là sự trừu tượng (abstraction), vùng nhớ động (heap / 힙) là cách triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bottom-up heapify tốn O(n) vì các node gần lá có chiều cao nhỏ và số lượng lớn, còn node cao thì rất ít. Heap là một implementation; priority queue mới là abstraction mà API ứng dụng nhìn thấy.
 
 ## xây dựng vùng nhớ động (heap / 힙): vì sao `O(n)` chứ không phải `O(n log n)`?
 
@@ -164,7 +164,7 @@ n\left(\frac{1}{4}\cdot1+\frac{1}{8}\cdot2+\frac{1}{16}\cdot3+\cdots\right)=O(n)
 
 Đây là ví dụ quan trọng của **aggregate phân tích (analysis / 분석)**: không thể lấy worst chi phí của một nút rồi nhân cho mọi nút nếu phân phối của công việc (work / 작업) rất không đều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **hàng đợi ưu tiên là sự trừu tượng (abstraction), vùng nhớ động (heap / 힙) là cách triển khai** tiếp nhận điểm tựa từ **xây dựng vùng nhớ động (heap / 힙): vì sao O(n) chứ không phải O(n log n)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Comparator pitfalls trong Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Priority queue chỉ yêu cầu peek, insert và extract theo thứ tự ưu tiên; heap là lựa chọn cân bằng tốt cho các thao tác đó. Trong Java, comparator phải nhất quán và không được overflow khi dùng phép trừ để so sánh.
 
 ## hàng đợi ưu tiên là sự trừu tượng (abstraction), vùng nhớ động (heap / 힙) là cách triển khai
 
@@ -195,7 +195,7 @@ PriorityQueue<Integer> max =
     new PriorityQueue<>(Comparator.reverseOrder());
 ```
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Comparator pitfalls trong Java** tiếp nhận điểm tựa từ **hàng đợi ưu tiên là sự trừu tượng (abstraction), vùng nhớ động (heap / 힙) là cách triển khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) không hỗ trợ tìm kiếm tùy ý tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Comparator an toàn cần phản ánh thứ tự ba ngôi, xử lý tie rõ ràng và tránh `a - b` khi miền số có thể tràn. Ngay cả khi heap order đúng, heap vẫn không phải cấu trúc phù hợp cho tìm kiếm tùy ý.
 
 ## Comparator pitfalls trong Java
 
@@ -215,7 +215,7 @@ hoặc `Integer.compare(a.cost, b.cost)`.
 
 Nếu độ ưu tiên là `long`, dùng `Comparator.comparingLong`.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Vùng nhớ vùng nhớ động (heap / 힙) không hỗ trợ tìm kiếm tùy ý tốt** tiếp nhận điểm tựa từ **Comparator pitfalls trong Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap chỉ bảo đảm quan hệ với parent, không sắp xếp toàn bộ subtree, nên tìm một khóa bất kỳ có thể cần duyệt nhiều node. Nếu mục tiêu là sắp xếp toàn bộ dữ liệu, ta có thể dùng heap sort.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) không hỗ trợ tìm kiếm tùy ý tốt
 
@@ -227,7 +227,7 @@ O(n)
 
 Đây là khác biệt bản chất với BST. vùng nhớ động (heap / 힙) tối ưu **extreme retrieval**, BST tối ưu **ordered tìm kiếm (search / 검색) theo khóa**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Vùng nhớ vùng nhớ động (heap / 힙) Sort** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) không hỗ trợ tìm kiếm tùy ý tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Top-K và bounded bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap sort lặp extract-root để tạo thứ tự, đạt O(n log n) với bộ nhớ phụ nhỏ nhưng thường kém cache-friendly hơn quicksort. Khi chỉ cần K phần tử tốt nhất, không cần sắp xếp toàn bộ mà dùng bounded heap.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) Sort
 
@@ -249,7 +249,7 @@ Vùng nhớ vùng nhớ động (heap / 힙) sort có trường hợp xấu nh�
 
 Điểm đáng học là vùng nhớ động (heap / 힙) sort cho thấy cùng bất biến “nút gốc là extreme” có thể được dùng để xác định phần tử cuối của hậu tố đã sắp xếp từng bước.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Top-K và bounded bộ nhớ** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-way merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Top-K duy trì heap kích thước K, nên chi phí thường là O(n log K) và bộ nhớ không phụ thuộc toàn bộ input. Cùng nguyên tắc chọn phần tử nhỏ nhất kế tiếp được dùng để trộn K dãy đã sắp xếp.
 
 ## Top-K và bounded bộ nhớ
 
@@ -277,7 +277,7 @@ O(k)
 
 Khi `k << n`, đây là cải thiện quan trọng cả về thời gian lẫn bộ nhớ. Mẫu này xuất hiện trong xếp hạng ứng viên, giám sát, hệ gợi ý, tổng hợp kết quả tìm kiếm và các giai đoạn Top-K phân tán.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **K-way merge** tiếp nhận điểm tựa từ **Top-K và bounded bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra và decrease-key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+K-way merge đặt head của mỗi dãy vào min-heap và sau mỗi lần lấy ra lại đưa phần tử kế tiếp vào, đạt O(N log K). Dijkstra cũng dùng priority queue để chọn ứng viên nhỏ nhất, nhưng cần xử lý decrease-key hoặc stale entries.
 
 ## K-way merge
 
@@ -291,7 +291,7 @@ O(N\log k)
 
 Đây là cốt lõi (core / 핵심) idea của bên ngoài sắp xếp trộn, merge SSTables, merge log streams và nhiều chuỗi xử lý xử lý sorted runs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Dijkstra và decrease-key** tiếp nhận điểm tựa từ **K-way merge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scheduler và sự kiện simulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dijkstra lấy đỉnh có tentative distance nhỏ nhất và nới lỏng cạnh, nên comparator phải phản ánh distance hiện tại. Scheduler dùng cùng mẫu event nhỏ nhất trước, nhưng khóa ưu tiên là thời điểm và tie-break của sự kiện.
 
 ## Dijkstra và decrease-key
 
@@ -323,7 +323,7 @@ Mỗi swap phải cập nhật `position`. Khi độ ưu tiên thay đổi, tìm
 
 mẫu này hữu ích khi độ ưu tiên cập nhật rất thường xuyên và định danh (identity / 식별자) của item quan trọng.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Scheduler và sự kiện simulation** tiếp nhận điểm tựa từ **Dijkstra và decrease-key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Median trực tuyến bằng hai heaps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Event simulation xử lý sự kiện sớm nhất rồi có thể phát sinh sự kiện mới, nên cần quy định rõ tính đơn điệu và thứ tự khi bằng thời điểm. Một bài toán trực tuyến khác dùng hai heap để duy trì median sau mỗi lần thêm.
 
 ## Scheduler và sự kiện simulation
 
@@ -331,7 +331,7 @@ hàng đợi ưu tiên không chỉ dùng trong các thuật toán đồ thị. 
 
 Điểm chung là tải công việc không cần toàn bộ sự kiện được sắp xếp hoàn chỉnh; nó chỉ liên tục cần **phần tử tốt nhất tiếp theo**.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Median trực tuyến bằng hai heaps** tiếp nhận điểm tựa từ **Scheduler và sự kiện simulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **D-ary vùng nhớ động (heap / 힙) và branching-factor sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Median online chia dữ liệu thành max-heap nửa dưới và min-heap nửa trên, giữ kích thước chênh tối đa một. Khi số con của mỗi node thay đổi, d-ary heap đổi chiều cao lấy chi phí sift-down nhiều nhánh hơn.
 
 ## Median trực tuyến bằng hai heaps
 
@@ -355,7 +355,7 @@ Mỗi insert `O(log n)`, median truy vấn `O(1)`.
 
 Đây là ví dụ composition: hai heaps phối hợp để duy trì một ranh giới thống kê thứ tự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **D-ary vùng nhớ động (heap / 힙) và branching-factor sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Median trực tuyến bằng hai heaps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tính ổn định và quy tắc phân xử khi bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+D-ary heap giảm số tầng và có thể cải thiện locality, nhưng mỗi lần sift-down phải so sánh nhiều child hơn. Nếu priority bằng nhau, tính ổn định và tie-break cần được xác định ở lớp abstraction.
 
 ## D-ary vùng nhớ động (heap / 힙) và branching-factor sự đánh đổi (trade-off / 트레이드오프)
 
@@ -369,7 +369,7 @@ nhưng sift-down phải inspect tới `d` các nút con để chọn best. khố
 
 cấu trúc dữ liệu thiết kế (design / 설계) không phải chỉ chọn “vùng nhớ động (heap / 힙) hay không”, mà còn chọn cách biểu diễn phù hợp thao tác mix.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **tính ổn định và quy tắc phân xử khi bằng nhau** tiếp nhận điểm tựa từ **D-ary vùng nhớ động (heap / 힙) và branching-factor sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **có thể thay đổi độ ưu tiên các đối tượng: một bug phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu comparator chỉ nhìn priority, hai phần tử bằng nhau có thể đổi thứ tự giữa các lần chạy; muốn stable cần thêm sequence number. Một lỗi phổ biến hơn là sửa priority của object trong heap mà không reheapify.
 
 ## tính ổn định và quy tắc phân xử khi bằng nhau
 
@@ -381,7 +381,7 @@ hàng đợi ưu tiên thường không đảm bảo ổn định thứ tự (or
 
 Ví dụ job bộ lập lịch có thể cần “độ ưu tiên cao trước; nếu bằng nhau, tác vụ (task / 작업) đến trước chạy trước”. quy tắc phân xử khi bằng nhau là part của lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론), không phải chi tiết phụ.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **có thể thay đổi độ ưu tiên các đối tượng: một bug phổ biến** tiếp nhận điểm tựa từ **tính ổn định và quy tắc phân xử khi bằng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) với C: quyền sở hữu (ownership / 소유권) và sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Priority queue thường không tự biết một object đã đổi khóa; cần remove/reinsert, decrease-key hỗ trợ trực tiếp hoặc dùng lazy deletion. Khi tự triển khai bằng C, những vấn đề tương tự mở rộng sang ownership và capacity.
 
 ## có thể thay đổi độ ưu tiên các đối tượng: một bug phổ biến
 
@@ -395,7 +395,7 @@ Do đó hoặc:
 
 Trong Java, mutate đối tượng đang ở `PriorityQueue` không khiến hàng đợi (queue / 큐) reheapify tự động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, sau nội dung của **có thể thay đổi độ ưu tiên các đối tượng: một bug phổ biến**, **Vùng nhớ vùng nhớ động (heap / 힙) với C: quyền sở hữu (ownership / 소유권) và sức chứa (capacity / 용량)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap C phải quản lý vùng nhớ, kích thước hợp lệ và việc mở rộng mảng mà không làm mất phần tử; comparator cũng phải giữ invariant sau mỗi thao tác. Những hiểu lầm phổ biến thường che khuất chính các điều kiện này.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) với C: quyền sở hữu (ownership / 소유권) và sức chứa (capacity / 용량)
 
@@ -413,7 +413,7 @@ Ngoài vùng nhớ động (heap / 힙) bất biến, cách triển khai phải 
 
 Nếu item lớn, có thể vùng nhớ động (heap / 힙) các con trỏ thay vì bản sao (copy / 복사) structs, nhưng tính cục bộ và quyền sở hữu ngữ nghĩa thay đổi.
 
-> **Chuyển mạch:** Trong **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) với C: quyền sở hữu (ownership / 소유권) và sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử vùng nhớ động (heap / 힙) bằng bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap không phải sorted array, extract không đồng nghĩa xóa phần tử tùy ý, và `O(log n)` chỉ áp dụng cho đường sửa heap chứ không phải mọi truy vấn. Kiểm thử bằng invariant sẽ bắt các lỗi này tốt hơn so với chỉ kiểm tra vài output.
 
 ## Những hiểu lầm phổ biến
 
@@ -427,7 +427,7 @@ Nếu item lớn, có thể vùng nhớ động (heap / 힙) các con trỏ thay
 
 **“vùng nhớ động (heap / 힙) luôn tốt hơn mảng đã sắp xếp cho min.”** Nếu dataset tĩnh và cần iterate thứ tự đã sắp xếp nhiều lần, sort một lần có thể tốt hơn. vùng nhớ động (heap / 힙) hữu ích khi collection mutate và lặp lại cần extreme.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **kiểm thử vùng nhớ động (heap / 힙) bằng bất biến** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Invariant chính là complete shape, parent-child order, đúng kích thước và đúng phần tử sau mỗi insert/extract. Mô hình tư duy mở rộng sẽ nối các invariant đó với lựa chọn cấu trúc trong ứng dụng.
 
 ## kiểm thử vùng nhớ động (heap / 힙) bằng bất biến
 
@@ -447,7 +447,7 @@ heap[i] = item
 
 Lỗi vùng nhớ động (heap / 힙) thường xuất hiện ở các trường hợp biên: rỗng, chỉ một phần tử, chỉ có nút con trái, các phần tử có cùng độ ưu tiên, trường hợp bộ so sánh trả hòa và lần đổi chỗ cuối cùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**, **Mô hình tư duy mở rộng** gom các mảnh từ **kiểm thử vùng nhớ động (heap / 힙) bằng bất biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy của heap gồm thứ tự ưu tiên, complete shape, thao tác sửa cục bộ, chi phí khấu hao và contract của priority queue. Các liên kết cuối bài đặt những lựa chọn này vào mạch rộng hơn của graph, scheduling và sorting.
 
 ## Mô hình tư duy mở rộng
 

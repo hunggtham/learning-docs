@@ -11,7 +11,7 @@
 
 Để học **PIVOT, UNPIVOT và Regular Expression** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 81–84.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 81–84.
 >
 > **Liên kết bài trước:** Đây là bước biến đổi hình dạng kết quả sau khi đã biết `SELECT`, `GROUP BY` và `JOIN`; nó không thay thế mô hình dữ liệu chuẩn hóa.
 

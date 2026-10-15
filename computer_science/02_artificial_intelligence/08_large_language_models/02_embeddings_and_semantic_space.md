@@ -18,7 +18,7 @@ x_t=E[token_t]
 
 This véc-tơ (vector / 벡터) is context-independent initial biểu diễn (representation / 표현). Contextualization happens through Transformer layers.
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Contextual Hidden trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) đơn vị từ (token / 토큰) Embedding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra (output / 출력) / Unembedding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token embedding chỉ là điểm khởi đầu; các lớp Transformer biến nó thành hidden state phụ thuộc ngữ cảnh. Mục tiếp theo theo dõi cách hidden state đó được ánh xạ ngược thành logits đầu ra.
 
 ## Contextual Hidden trạng thái (state / 상태)
 
@@ -32,7 +32,7 @@ depends other allowed tokens. Same đơn vị từ (token / 토큰) has differen
 
 Nội bộ (internal / 내부) hidden states optimized for next-token mục tiêu (objective / 목표), not necessarily cosine sentence tìm kiếm (search / 검색).
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Đầu ra (output / 출력) / Unembedding** tiếp nhận điểm tựa từ **Contextual Hidden trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bên ngoài (external / 외부) Embedding mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Unembedding phục vụ next-token prediction, không mặc nhiên tối ưu cho tìm kiếm câu hoặc đoạn. Vì vậy retrieval thường dùng embedding model bên ngoài với mục tiêu tương đồng riêng.
 
 ## Đầu ra (output / 출력) / Unembedding
 
@@ -48,7 +48,7 @@ Dot sản phẩm (product / 제품) hidden trạng thái (state / 상태) with �
 
 This creates interesting geometric quan hệ (relation / 관계) between hidden không gian (space / 공간) and vocabulary, but softmax hành vi (behavior / 동작) is contextual/composed through layers.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Bên ngoài (external / 외부) Embedding mô hình (model / 모델)** tiếp nhận điểm tựa từ **Đầu ra (output / 출력) / Unembedding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) không gian (space / 공간) không phải dictionary of concepts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Embedding retrieval có hình học được học cho một nhiệm vụ, không phải một từ điển khái niệm chung. Mục tiếp theo giải thích vì sao từng tọa độ không có ý nghĩa cố định.
 
 ## Bên ngoài (external / 외부) Embedding mô hình (model / 모델)
 
@@ -62,7 +62,7 @@ trained with contrastive/retrieval mục tiêu (objective / 목표) so véc-tơ 
 
 A chat LLM's last hidden trạng thái (state / 상태) is not automatically good retrieval embedding. Dedicated embedding mô hình (model / 모델) usually better/cheaper.
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Ngữ nghĩa (semantic / 의미적) không gian (space / 공간) không phải dictionary of concepts** tiếp nhận điểm tựa từ **Bên ngoài (external / 외부) Embedding mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cosine vs Dot sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi ý nghĩa nằm trong quan hệ và hướng tương đối, phép đo khoảng cách trở thành một phần của semantics. Cosine và dot product cho những giả định khác nhau về norm, nên phải chọn metric phù hợp.
 
 ## Ngữ nghĩa (semantic / 의미적) không gian (space / 공간) không phải dictionary of concepts
 
@@ -70,7 +70,7 @@ A véc-tơ (vector / 벡터) has no meaning independent mô hình (model / 모�
 
 Meaning lies relationships/subspaces and downstream computation.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Cosine vs Dot sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) không gian (space / 공간) không phải dictionary of concepts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Matryoshka / Truncatable Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metric đã chọn sẽ quyết định cách đọc similarity score. Một số mô hình được huấn luyện để prefix dimensions vẫn hữu ích, mở đường cho truncation có kiểm soát.
 
 ## Cosine vs Dot sản phẩm (product / 제품)
 
@@ -84,7 +84,7 @@ If not normalized, dot-product includes magnitude. Some embedding các mô hình
 
 Véc-tơ (vector / 벡터) DB chỉ số (metric / 지표) must match huấn luyện (training / 학습) mục tiêu (objective / 목표).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Matryoshka / Truncatable Embeddings** tiếp nhận điểm tựa từ **Cosine vs Dot sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Dimension sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Truncation chỉ an toàn khi được mô hình và benchmark hỗ trợ. Nếu không, giảm dimension là đánh đổi trực tiếp chất lượng lấy storage và tốc độ.
 
 ## Matryoshka / Truncatable Embeddings
 
@@ -92,7 +92,7 @@ Some các mô hình (models / 모델들) train embedding so prefix dimensions re
 
 Benefit lưu trữ (storage / 저장소)/ANN speed. This thuộc tính (property / 속성) must be trained/validated; arbitrary truncating generic embedding may destroy chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embedding Dimension sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Matryoshka / Truncatable Embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Normalization và Quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dimension cao tăng sức chứa nhưng kéo theo chi phí lưu trữ, bandwidth và ANN. Khi ngân sách bị giới hạn, normalization và quantization là hai cách tối ưu tiếp theo cần đánh giá.
 
 ## Embedding Dimension sự đánh đổi (trade-off / 트레이드오프)
 
@@ -106,7 +106,7 @@ Higher dimension increases sức chứa (capacity / 용량) but also:
 
 Beyond a điểm (point / 지점), chất lượng (quality / 품질) gain may small. Evaluate mục tiêu (target / 대상) corpus.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embedding Normalization và Quantization** tiếp nhận điểm tựa từ **Embedding Dimension sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Normalization và quantization thay đổi hình học hoặc độ chính xác số, nên phải đo recall sau nén. Các quyết định đó chỉ có ý nghĩa khi đặt trong toàn bộ semantic-search pipeline.
 
 ## Embedding Normalization và Quantization
 
@@ -114,7 +114,7 @@ Large véc-tơ (vector / 벡터) corpora can store FP16/int8/product-quantized c
 
 Quantization of embeddings/chỉ mục (index / 인덱스) is separate from LLM weight quantization, though principles numerical approximation related.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embedding Normalization và Quantization** xác định đầu vào; **Ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Asymmetric Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pipeline nối document, chunk, embedding, index và query; lỗi ở bất kỳ bước nào đều có thể làm giảm recall. Một trường hợp đặc biệt là query và passage có vai trò khác nhau, dẫn đến asymmetric retrieval.
 
 ## Ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chuỗi xử lý (pipeline / 파이프라인)
 
@@ -134,7 +134,7 @@ Query
 
 Mix embedding mô hình (model / 모델) versions corrupts hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Asymmetric Retrieval** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hybrid tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Asymmetric retrieval yêu cầu đúng prefix hoặc encoder cho từng vai trò. Khi dense signal yếu với ID, tên và số, hybrid retrieval bổ sung tín hiệu lexical.
 
 ## Asymmetric Retrieval
 
@@ -147,7 +147,7 @@ passage: ...
 
 or separate encoders/projections. Ignoring required prefixes lowers chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Hybrid tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Asymmetric Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Fine-Tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hybrid search kết hợp dense similarity với exact lexical matching để bù điểm yếu của mỗi tín hiệu. Nếu domain có ranh giới riêng, fine-tuning embedding có thể học các hard negative phù hợp hơn.
 
 ## Hybrid tìm kiếm (search / 검색)
 
@@ -155,7 +155,7 @@ Dense embeddings struggle chính xác (exact / 정확한) IDs/names/numbers some
 
 Hybrid retrieval fuses sparse + dense signals, especially enterprise mã (code / 코드)/sản phẩm (product / 제품)/legal docs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embedding Fine-Tuning** tiếp nhận điểm tựa từ **Hybrid tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embeddings and Privacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fine-tuning cần cặp positive/negative đại diện cho quyết định retrieval thực tế, đồng thời kiểm soát false negatives. Khi hình học thay đổi, dữ liệu và quyền truy cập cũng phải được xem như một phần của thiết kế.
 
 ## Embedding Fine-Tuning
 
@@ -172,7 +172,7 @@ Semantically close but task-irrelevant, forcing mô hình (model / 모델) learn
 
 False negatives must be controlled.
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embeddings and Privacy** tiếp nhận điểm tựa từ **Embedding Fine-Tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Embedding là dữ liệu dẫn xuất, không phải dữ liệu vô danh mặc định. Vì vậy cần xem xét khả năng suy luận ngược và rủi ro lộ thuộc tính trong mục kế tiếp.
 
 ## Embeddings and Privacy
 
@@ -180,13 +180,13 @@ Vectors are not guaranteed anonymous. Embeddings can leak attributes/membership/
 
 Do not expose véc-tơ (vector / 벡터) store assuming “only numbers”. kiểm soát truy cập (access control / 접근 제어) and encryption remain needed.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Embedding Inversion** tiếp nhận điểm tựa từ **Embeddings and Privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM bộ nhớ (memory / 메모리) vs véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Embedding inversion cho thấy vector store vẫn cần policy bảo vệ như nguồn văn bản. Tiếp theo, ta phân biệt bộ nhớ ứng dụng lưu bằng vector với tri thức nằm trong trọng số LLM.
 
 ## Embedding Inversion
 
 Research can sometimes reconstruct or infer nguồn (source / 소스) văn bản (text / 텍스트)/attributes from embeddings. chính xác (exact / 정확한) feasibility depends mô hình (model / 모델)/truy cập (access / 접근), but principle: embedding is derived sensitive dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **LLM bộ nhớ (memory / 메모리) vs véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Embedding Inversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) + Embedding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vector memory là state bên ngoài được truy hồi vào context; thêm record không cập nhật weights. Khi cần quan hệ tường minh, graph và embedding có thể bổ sung cho nhau.
 
 ## LLM bộ nhớ (memory / 메모리) vs véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)
 
@@ -206,7 +206,7 @@ future query
 
 This distinction prevents anthropomorphic “LLM remembered permanently” confusion.
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) + Embedding** tiếp nhận điểm tựa từ **LLM bộ nhớ (memory / 메모리) vs véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Graph giữ entity và relation rõ ràng, còn embedding hỗ trợ matching mềm và tìm passage gần nghĩa. Mental model sau đây đặt hai dạng biểu diễn cạnh nhau theo mục tiêu của chúng.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) + Embedding
 
@@ -214,7 +214,7 @@ Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) stores tườ
 
 Tường minh (explicit / 명시적) quan hệ (relation / 관계) and dense similarity complement each other.
 
-> **Chuyển mạch:** Ở chặng này của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) + Embedding** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model phân biệt token embedding, contextual hidden state và retrieval embedding bằng mục tiêu huấn luyện. Phần ngộ nhận chung sẽ kiểm tra các cách đánh đồng ba loại vector này.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -228,7 +228,7 @@ Retrieval embedding  = compressed text representation trained so distance is use
 
 All are vectors, but véc-tơ (vector / 벡터) purpose comes from mục tiêu (objective / 목표).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đã làm rõ metric, dimension, privacy và mục tiêu retrieval. Phần liên kết kiến thức dưới đây chỉ ra owner để quay lại các prerequisite liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -248,7 +248,7 @@ No. Treat embeddings derived from sensitive dữ liệu (data / 데이터) as se
 
 Chất lượng (quality / 품질)/lưu trữ (storage / 저장소)/ANN sự đánh đổi (trade-off / 트레이드오프); retrieval errors often dominated chunking/dữ liệu (data / 데이터)/reranking rather than dimension.
 
-> **Chuyển mạch:** Trong **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết cuối cùng nối embedding với contextual NLP, information retrieval và RAG. Quay về README để chọn nhánh tiếp theo theo mục tiêu sử dụng vector.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

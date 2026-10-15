@@ -31,7 +31,7 @@ image
 → task head
 ```
 
-> **Chuyển mạch:** Patch tokenization biến ảnh thành chuỗi token nhưng làm mất vị trí; positional information khôi phục trật tự không gian, rồi CLS token gom tín hiệu cho classification.
+Patch tokenization tạo chuỗi đầu vào; để chuỗi vẫn phản ánh bố cục ảnh, ViT phải thêm thông tin vị trí trước khi attention xử lý các token.
 
 ## Vì sao cần Positional thông tin (information / 정보)?
 
@@ -39,7 +39,7 @@ Self-attention nguyên bản không biết patch nào ở top-left hay bottom-ri
 
 Positional embeddings thêm spatial thứ tự (order / 순서). Có thể learned absolute, relative hoặc 2D variants.
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **CLS đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **Vì sao cần Positional thông tin (information / 정보)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-Attention trong ảnh (image / 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vị trí giúp attention phân biệt các patch có nội dung giống nhau nhưng nằm ở nơi khác; `[CLS]` sau đó cung cấp một điểm gom thông tin cho classification.
 
 ## CLS đơn vị từ (token / 토큰)
 
@@ -47,7 +47,7 @@ Original ViT thêm learnable `[CLS]` đơn vị từ (token / 토큰) vào chu�
 
 Alternatives dùng toàn cục (global / 전역) average pooling trên patch features.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **Self-Attention trong ảnh (image / 이미지)** tiếp nhận điểm tựa từ **CLS đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi có token tổng hợp, self-attention mới quyết định mỗi patch trao đổi thông tin với các patch còn lại như thế nào.
 
 ## Self-Attention trong ảnh (image / 이미지)
 
@@ -61,7 +61,7 @@ cho mỗi patch aggregate thông tin (information / 정보) từ mọi patch kh�
 
 Điểm mạnh: long-range interactions accessible ngay một tầng (layer / 계층), không cần ngăn xếp (stack / 스택) many cục bộ (local / 로컬) convs để receptive trường dữ liệu (field / 필드) lan rộng.
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Self-Attention trong ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CNN vs ViT Inductive độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đổi lại, attention toàn cục phải tính nhiều cặp token; chi phí này là giới hạn chính khi ảnh có độ phân giải cao.
 
 ## Độ phức tạp (complexity / 복잡도)
 
@@ -77,7 +77,7 @@ Ví dụ doubling both H and W → patches ~4× → attention ma trận (matrix 
 
 Do đó high-resolution ViT cần hierarchical/windowed/sparse attention variants.
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **CNN vs ViT Inductive độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Giới hạn token giải thích vì sao ViT phải cân bằng giữa inductive bias của CNN và khả năng học quan hệ linh hoạt từ dữ liệu.
 
 ## CNN vs ViT Inductive độ lệch (bias / 편향)
 
@@ -89,7 +89,7 @@ CNN hard-code:
 
 ViT hard-code ít hơn, cho mô hình (model / 모델) learn relations from dữ liệu (data / 데이터). Điều này từng khiến ViT cần large-scale pretraining hơn CNN, nhưng hiện đại (modern / 현대적) huấn luyện (training / 학습)/augmentation architectures thu hẹp gap.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **CNN vs ViT Inductive độ lệch (bias / 편향)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) quy mô (scale / 규모)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hierarchical Vision Transformers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bias yếu hơn làm tăng nhu cầu về dữ liệu và regularization; quy mô pretraining là biến quyết định khả năng học cấu trúc hữu ích.
 
 ## Dữ liệu (data / 데이터) quy mô (scale / 규모)
 
@@ -99,7 +99,7 @@ Weaker inductive độ lệch (bias / 편향) means mô hình (model / 모델) m
 
 > stronger prior → potentially better mẫu (sample / 표본) efficiency; weaker prior → more flexibility if dữ liệu (data / 데이터)/compute abundant.
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Dữ liệu (data / 데이터) quy mô (scale / 규모)** nêu điều cần giải thích; **Hierarchical Vision Transformers** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Windowed Attention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Để giảm chi phí attention mà vẫn giữ biểu diễn nhiều độ phân giải, các kiến trúc hierarchical chia quá trình xử lý thành nhiều stage.
 
 ## Hierarchical Vision Transformers
 
@@ -114,7 +114,7 @@ fine patches
 
 Điều này recover multi-scale cấu trúc (structure / 구조) useful detection/segmentation và reduce quadratic chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **Windowed Attention** tiếp nhận điểm tựa từ **Hierarchical Vision Transformers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Windowed attention là cơ chế cụ thể để giới hạn các cặp tương tác trong mỗi stage; shifted windows giúp thông tin vẫn đi qua ranh giới cửa sổ.
 
 ## Windowed Attention
 
@@ -122,7 +122,7 @@ Attention chỉ trong cục bộ (local / 로컬) windows giảm độ phức t�
 
 Sự đánh đổi (trade-off / 트레이드오프) gần CNN: locality introduced lại để gain efficiency.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **Hybrid các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Windowed Attention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Masked ảnh (image / 이미지) Modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Locality giúp tính toán hiệu quả, nhưng các mô hình hybrid cho phép kết hợp lợi thế đó với quan hệ toàn cục của transformer.
 
 ## Hybrid các mô hình (models / 모델들)
 
@@ -130,7 +130,7 @@ CNN stem + Transformer body hoặc convolution inside transformer khối (block 
 
 Hiện đại (modern / 현대적) vision architectures không còn nhị phân (binary / 이진) CNN vs Transformer; ideas mix widely.
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Masked ảnh (image / 이미지) Modeling** tiếp nhận điểm tựa từ **Hybrid các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distillation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một hướng tận dụng backbone transformer là pretraining bằng cách che patch và yêu cầu mô hình khôi phục phần bị ẩn.
 
 ## Masked ảnh (image / 이미지) Modeling
 
@@ -138,25 +138,25 @@ ViT naturally supports masked-patch pretraining. Hide large fraction patches, tr
 
 This resembles masked ngôn ngữ (language / 언어) modeling nhưng ảnh (image / 이미지) patches have high redundancy, nên masking ratios/objectives khác NLP.
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **Distillation** tiếp nhận điểm tựa từ **Masked ảnh (image / 이미지) Modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Detection with Transformers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Masked modeling học từ tín hiệu tự tạo; distillation bổ sung tín hiệu từ một teacher để định hướng biểu diễn và cải thiện hiệu quả dữ liệu.
 
 ## Distillation
 
 Teacher mô hình (model / 모델) can transfer lớp (class / 클래스)/biểu diễn (representation / 표현) signals to ViT, improving dữ liệu (data / 데이터) efficiency.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **Detection with Transformers** tiếp nhận điểm tựa từ **Distillation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Segmentation with Transformers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các biểu diễn đã học có thể phục vụ cả detection, nơi transformer thay chuỗi anchor/NMS bằng dự đoán một tập object.
 
 ## Detection with Transformers
 
 DETR uses CNN/ViT-like features + Transformer encoder-decoder + learned đối tượng (object / 객체) queries. Detection becomes set prediction rather than anchor/NMS chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Segmentation with Transformers** tiếp nhận điểm tựa từ **Detection with Transformers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Position Resolution Transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Với segmentation, các token cũng có thể được giải mã thành mask; bài toán này đòi hỏi giữ lại chi tiết ở nhiều độ phân giải.
 
 ## Segmentation with Transformers
 
 Patch features can be decoded into masks. toàn cục (global / 전역) ngữ cảnh (context / 맥락) helps scene parsing; multi-scale/hierarchical features important ranh giới (boundary / 경계)/detail.
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **Position Resolution Transfer** tiếp nhận điểm tựa từ **Segmentation with Transformers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention Maps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi đổi độ phân giải lúc fine-tune, positional embeddings phải được nội suy phù hợp để bố cục mới không phá vỡ biểu diễn đã học.
 
 ## Position Resolution Transfer
 
@@ -164,13 +164,13 @@ Fine-tuning at different ảnh (image / 이미지) resolution may require interp
 
 This is an hiện thực (implementation / 구현) consequence of learned positional bảng (table / 테이블).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **Attention Maps** tiếp nhận điểm tựa từ **Position Resolution Transfer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Patch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Attention map có thể giúp quan sát tương tác giữa patch, nhưng việc quan sát đó không tự động trở thành lời giải thích nhân quả.
 
 ## Attention Maps
 
 Visualizing attention weights can show đơn vị từ (token / 토큰) tương tác (interaction / 상호작용) but should not be treated as chính xác (exact / 정확한) nhân quả (causal / 인과적) explanation. Multiple heads/layers and residual pathways contribute.
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Patch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Attention Maps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vision Transformer và Multimodal AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kích thước patch vì thế là một lựa chọn triển khai: patch nhỏ giữ chi tiết hơn nhưng làm số token và chi phí tăng.
 
 ## Patch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)
 
@@ -192,7 +192,7 @@ better local granularity
 
 Tác vụ (task / 작업) and hardware determine sweet spot.
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **Vision Transformer và Multimodal AI** tiếp nhận điểm tựa từ **Patch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foundation Vision các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi patch đã trở thành token, cùng một giao diện có thể nối encoder ảnh với token văn bản trong các hệ thống multimodal.
 
 ## Vision Transformer và Multimodal AI
 
@@ -204,19 +204,19 @@ Once ảnh (image / 이미지) becomes chuỗi (sequence / 시퀀스) of embeddi
 
 ViT therefore is a cốt lõi (core / 핵심) cầu nối (bridge / 브리지) to vision-language các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, **Foundation Vision các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Vision Transformer và Multimodal AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các encoder thị giác được pretrain ở quy mô lớn vì vậy trở thành foundation model có thể chuyển sang nhiều task và mục tiêu khác nhau.
 
 ## Foundation Vision các mô hình (models / 모델들)
 
 Large pretrained visual encoders learn representations transferable across classification, detection, segmentation and multimodal alignment. Pretraining objectives may be supervised, contrastive, masked or multimodal.
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Foundation Vision các mô hình (models / 모델들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy sau đây tóm tắt sự đánh đổi cốt lõi giữa patch sequence của ViT và locality được mã hóa sẵn của CNN.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **ViT xem ảnh (image / 이미지) như một set/chuỗi (sequence / 시퀀스) patches cần học quan hệ (relation / 관계) toàn cục; CNN xem ảnh (image / 이미지) như một spatial tín hiệu (signal / 신호) nơi cục bộ (local / 로컬) mẫu (pattern / 패턴) sharing được hard-code mạnh hơn.**
 
-> **Chuyển mạch:** Ở chặng này của **Vision Transformers**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ mô hình này, có thể kiểm tra ba ngộ nhận về spatial bias, attention toàn cục và quan hệ giữa transformer với CNN.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -232,7 +232,7 @@ Toàn cục (global / 전역) attention expensive và không phải mọi tác v
 
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) sử dụng cả hai families và hybrid designs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vision Transformers**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các giới hạn đó nối ViT với attention và transformer tổng quát, đồng thời mở sang biểu diễn thị giác hiện đại.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

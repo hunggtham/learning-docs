@@ -21,7 +21,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 09_incident_response_and_lifecycle.md
 ```
 
-> **Chuyển mạch:** **Thứ tự đọc** đi từ data/model đến serving và feedback; **Bản đồ phụ thuộc** giải thích prerequisite nào phải được owner giữ ổn định trước khi vận hành MLOps hoặc LLMOps.
+Thứ tự này đi từ data/model đến serving và feedback. Khi đọc tiếp, hãy giữ **Bản đồ phụ thuộc** như một câu hỏi kiểm tra: prerequisite nào phải được owner giữ ổn định trước khi vận hành MLOps hoặc LLMOps?
 
 ## Bản đồ phụ thuộc
 
@@ -43,7 +43,7 @@ flowchart TD
     L --> I
 ```
 
-> **Chuyển mạch:** Ở chặng này của **MLOps & LLMOps**, **Mô hình tư duy** gom các mảnh từ **Bản đồ phụ thuộc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Từ **Bản đồ phụ thuộc**, **Mô hình tư duy** gom các quan hệ thành một chuỗi quyết định có thể mang sang phần kế tiếp. Đọc tiếp **Những phân biệt cần giữ** để thấy các quan hệ ấy có giới hạn ở đâu.
 
 ## Mô hình tư duy
 
@@ -60,7 +60,7 @@ Xây evidence
 → retrain / rollback / retire có chủ đích
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MLOps & LLMOps**, **Những phân biệt cần giữ** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+**Những phân biệt cần giữ** biến chuỗi trong **Mô hình tư duy** thành các ranh giới kiểm tra được: chúng cho biết một tín hiệu không nên bị diễn giải quá mức nào. **Liên kết kiến thức** tiếp theo trả những ranh giới đó về các owner canonical để đào sâu.
 
 ## Những phân biệt cần giữ
 
@@ -78,7 +78,7 @@ Prompt version                    ≠ toàn bộ LLM app version
 HTTP 200                          ≠ AI task success
 ```
 
-> **Chuyển mạch:** **Những phân biệt cần giữ** tách model quality, data quality và serving risk; **Liên kết kiến thức** trả từng risk về canonical owner để đào sâu mà không duplicate.
+**Những phân biệt cần giữ** tách model quality, data quality và serving risk. Vì vậy, các liên kết bên dưới trả từng risk về canonical owner để đào sâu mà không duplicate nội dung.
 
 ## Liên kết kiến thức
 

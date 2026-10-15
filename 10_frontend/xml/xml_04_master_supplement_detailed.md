@@ -1001,7 +1001,7 @@ Canonicalization có thứ tự (ordering / 순서) quy tắc (rule / 규칙) ri
 > **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **56. Empty element lexical form** nối từ **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** sang **57. thực thể (entity / 엔터티) references có thể không được preserve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Empty element lexical form
-Phần này nối mạch bài học với “56. Empty element lexical form”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Mục này phân biệt hai cách viết empty element ở tầng cú pháp với cùng một ý nghĩa XML; distinction đó là tiền đề để đọc các khác biệt lexical mà không nhầm chúng với thay đổi semantic.
 
 ```xml
 <a/>

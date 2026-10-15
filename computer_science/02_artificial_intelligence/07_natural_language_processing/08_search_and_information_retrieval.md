@@ -24,7 +24,7 @@ Truy vấn (query / 쿼리) không scan mọi documents. Inverted chỉ mục (i
 
 Positions enable phrase/proximity tìm kiếm (search / 검색).
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Boolean Retrieval** tiếp nhận điểm tựa từ **Inverted chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TF-IDF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Inverted index làm cho việc lấy các tài liệu chứa term trở nên khả thi trên corpus lớn. Boolean retrieval sử dụng chính postings list đó để biểu diễn các điều kiện AND, OR và NOT.
 
 ## Boolean Retrieval
 
@@ -37,7 +37,7 @@ transformer NOT electrical
 
 Precise but no ranking by graded relevance and vocabulary mismatch problematic.
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **TF-IDF** tiếp nhận điểm tựa từ **Boolean Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BM25** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Boolean retrieval lọc chính xác nhưng không xếp hạng mức độ phù hợp. TF-IDF bổ sung trọng số cho term dựa trên tần suất trong tài liệu và độ hiếm trong toàn corpus.
 
 ## TF-IDF
 
@@ -55,7 +55,7 @@ IDF(t)=\log\frac{N}{DF(t)}
 
 Sparse document/truy vấn (query / 쿼리) vectors can use cosine similarity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **BM25** tiếp nhận điểm tựa từ **TF-IDF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vocabulary Mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> TF-IDF là baseline thưa và dễ giải thích, nhưng chưa chuẩn hóa đầy đủ ảnh hưởng của độ dài tài liệu và tần suất lặp. BM25 điều chỉnh hai yếu tố đó để tạo ranking thực dụng hơn.
 
 ## BM25
 
@@ -77,7 +77,7 @@ Important intuition:
 
 BM25 remains highly competitive for chính xác (exact / 정확한) names, codes, identifiers and rare terminology.
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Vocabulary Mismatch** tiếp nhận điểm tựa từ **BM25** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dense Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> BM25 xử lý tốt từ khóa hiếm và tên chính xác, nhưng vẫn phụ thuộc vào overlap bề mặt. Khi truy vấn và tài liệu dùng từ khác nhau cho cùng ý, vocabulary mismatch xuất hiện.
 
 ## Vocabulary Mismatch
 
@@ -85,7 +85,7 @@ Truy vấn (query / 쿼리) `car repair` may need document `automobile maintenan
 
 Dense retrieval uses learned embeddings to capture ngữ nghĩa (semantic / 의미적) quan hệ (relation / 관계).
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Dense Retrieval** tiếp nhận điểm tựa từ **Vocabulary Mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximate Nearest Neighbor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Vocabulary mismatch là động lực cho dense retrieval: thay vì chỉ so khớp term, hệ thống so sánh các biểu diễn học được. Cách này đưa bài toán từ postings list sang khoảng cách trong không gian vector.
 
 ## Dense Retrieval
 
@@ -105,7 +105,7 @@ Precompute document embeddings. truy vấn (query / 쿼리) véc-tơ (vector / �
 
 This trades chính xác (exact / 정확한) lexical matching for learned ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Approximate Nearest Neighbor** tiếp nhận điểm tựa từ **Dense Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HNSW intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Dense retrieval cho phép tìm theo ngữ nghĩa nhưng cần truy vấn hàng triệu vector với chi phí chấp nhận được. Approximate nearest neighbor dùng chỉ mục gần đúng để đổi một phần recall lấy tốc độ.
 
 ## Approximate Nearest Neighbor
 
@@ -120,7 +120,7 @@ Dùng chung (common / 공통) concepts:
 
 ANN has recall/độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프). “véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스)” wraps indexing, filtering, persistence, siêu dữ liệu (metadata / 메타데이터) and operations around these mechanisms.
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **HNSW intuition** tiếp nhận điểm tựa từ **Approximate Nearest Neighbor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> ANN là họ kỹ thuật; HNSW minh họa rõ cách một đồ thị nhiều tầng dẫn đường tới các láng giềng gần. Hiểu trực giác này giúp đọc các tham số recall và latency như đánh đổi hệ thống.
 
 ## HNSW intuition
 
@@ -128,7 +128,7 @@ Hierarchical Navigable Small World đồ thị (graph / 그래프) connects vect
 
 Hyperparameters điều khiển (control / 제어) đồ thị (graph / 그래프) degree/construction/tìm kiếm (search / 검색) breadth. Higher tìm kiếm (search / 검색) effort improves recall but increases độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Hybrid Retrieval** tiếp nhận điểm tựa từ **HNSW intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reranking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> HNSW và các ANN index tối ưu truy hồi dense, còn lexical retrieval vẫn mạnh với mã, tên và thuật ngữ hiếm. Hybrid retrieval kết hợp hai nguồn ứng viên trước khi chấm điểm đắt hơn.
 
 ## Hybrid Retrieval
 
@@ -147,7 +147,7 @@ RRF(d)=\sum_r\frac1{k+rank_r(d)}
 
 avoids raw score calibration across retrievers.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Reranking** tiếp nhận điểm tựa từ **Hybrid Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리) Expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Hybrid retrieval mở rộng recall bằng cách trộn tín hiệu lexical và dense, nhưng danh sách ứng viên vẫn chưa được đọc sâu theo cặp query–document. Reranking đảm nhiệm bước chấm điểm chính xác hơn trên tập nhỏ.
 
 ## Reranking
 
@@ -164,7 +164,7 @@ Corpus millions
 
 This cascade concentrates expensive computation on small candidate set.
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Truy vấn (query / 쿼리) Expansion** tiếp nhận điểm tựa từ **Reranking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chunking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Reranking dành compute cho vài chục ứng viên nên có thể dùng cross-encoder, nhưng vẫn bị giới hạn bởi cách query được diễn đạt. Query expansion thử thêm các cách diễn đạt để giảm bỏ sót.
 
 ## Truy vấn (query / 쿼리) Expansion
 
@@ -172,7 +172,7 @@ Add synonyms/related terms to cầu nối (bridge / 브리지) mismatch. Classic
 
 Hiện đại (modern / 현대적) LLM can rewrite/expand truy vấn (query / 쿼리), but may drift intent. Original truy vấn (query / 쿼리) should remain and expansion evaluated.
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Chunking** tiếp nhận điểm tựa từ **Truy vấn (query / 쿼리) Expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parent–Child Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Query expansion có thể bù khác biệt từ vựng, nhưng rewrite sai sẽ làm lệch ý định ban đầu. Sau khi truy hồi được nhiều kết quả, chunking quyết định đơn vị nào được lập chỉ mục và gửi đi.
 
 ## Chunking
 
@@ -186,7 +186,7 @@ Sự đánh đổi (trade-off / 트레이드오프):
 
 Chunk should preserve ngữ nghĩa (semantic / 의미적) units: headings, paragraphs, tables/mã (code / 코드) blocks when possible.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Parent–Child Retrieval** tiếp nhận điểm tựa từ **Chunking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dữ liệu (metadata / 메타데이터) Filtering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Chunk nhỏ tăng độ chính xác cục bộ nhưng dễ mất ngữ cảnh; chunk lớn giữ nhiều ngữ cảnh nhưng làm loãng tín hiệu. Parent–child retrieval tách đơn vị matching khỏi đơn vị context được trả về.
 
 ## Parent–Child Retrieval
 
@@ -199,7 +199,7 @@ parent section         → send LLM
 
 This separates retrieval granularity from generation ngữ cảnh (context / 맥락) granularity.
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Parent–Child Retrieval** nêu điều cần giải thích; **Siêu dữ liệu (metadata / 메타데이터) Filtering** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Parent–child retrieval giải quyết độ hạt của nội dung, nhưng chưa quyết định ai được phép thấy tài liệu nào. Metadata filtering đưa quyền, phiên bản và phạm vi nghiệp vụ vào trước hoặc trong truy hồi.
 
 ## Siêu dữ liệu (metadata / 메타데이터) Filtering
 
@@ -216,7 +216,7 @@ version/status
 
 Siêu dữ liệu (metadata / 메타데이터) filtering before/within ANN is trọng yếu (critical / 중요) enterprise RAG. Retrieving unauthorized document is bảo mật (security / 보안) thất bại (failure / 실패) even if mô hình (model / 모델) never quotes it.
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Siêu dữ liệu (metadata / 메타데이터) Filtering** nêu điều cần giải thích; **Freshness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Relevance Labels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Metadata filter có thể loại tài liệu không hợp lệ ngay cả khi chúng rất giống về ngữ nghĩa. Sau đó, freshness xác định liệu những tài liệu còn lại có phản ánh trạng thái hiện tại hay không.
 
 ## Freshness
 
@@ -224,7 +224,7 @@ Chỉ mục (index / 인덱스) cập nhật (update / 업데이트) chuỗi x�
 
 Tìm kiếm (search / 검색) hệ thống (system / 시스템) should nhánh học (track / 트랙) document phiên bản (version / 버전) and deletion. “RAG has real-time kiến thức (knowledge / 지식)” only if ingestion is real-time enough.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Freshness** cho ta quy tắc; **Relevance Labels** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Retrieval Metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Freshness là thuộc tính của pipeline ingestion và deletion, không phải lời hứa tự động của RAG. Để đo relevance trên pipeline đó, cần các nhãn phản ánh phán đoán và hành vi người dùng.
 
 ## Relevance Labels
 
@@ -237,7 +237,7 @@ Huấn luyện (training / 학습)/evaluation query-document relevance can be:
 
 Click dữ liệu (data / 데이터) has position/exposure độ lệch (bias / 편향). Documents not shown cannot be clicked, creating vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Relevance Labels** cho ta quy tắc; **Retrieval Metrics** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Retrieval vs Answer chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Relevance labels cung cấp mục tiêu cho huấn luyện và đánh giá, nhưng click log chịu position bias và feedback loop. Retrieval metrics biến các nhãn ấy thành các con số như recall, MRR và NDCG.
 
 ## Retrieval Metrics
 
@@ -257,7 +257,7 @@ NDCG handles graded relevance and rank discounts.
 
 For RAG, **retrieval recall** often trọng yếu (critical / 중요): if correct bằng chứng (evidence / 증거) never retrieved, generator cannot ground answer from it.
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Retrieval vs Answer chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Retrieval Metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) as Multi-Stage hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Retrieval metrics cho biết bằng chứng có lọt vào top-k hay không, nhưng chưa đảm bảo câu trả lời cuối cùng dùng đúng bằng chứng. Vì vậy cần tách retrieval quality khỏi answer quality.
 
 ## Retrieval vs Answer chất lượng (quality / 품질)
 
@@ -272,7 +272,7 @@ generation faithfulness
 end-to-end answer correctness
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Tìm kiếm (search / 검색) as Multi-Stage hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Retrieval vs Answer chất lượng (quality / 품질)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Answer quality phụ thuộc cả việc truy hồi, lắp context và khả năng bám nguồn của generator. Nhìn toàn bộ chuỗi giúp chuyển từ metric riêng lẻ sang thiết kế multi-stage system.
 
 ## Tìm kiếm (search / 검색) as Multi-Stage hệ thống (system / 시스템)
 
@@ -296,13 +296,13 @@ Answer / result UI
 
 Optimizing only embedding mô hình (model / 모델) ignores most hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tìm kiếm (search / 검색) as Multi-Stage hệ thống (system / 시스템)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Multi-stage search phân bổ chi phí theo tầng: mở rộng ứng viên trước, lọc và rerank sau, rồi mới lắp context. Mental model dạng funnel dưới đây tóm tắt vì sao thứ tự ấy quan trọng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Retrieval is a funnel: cheap broad methods maximize chance relevant bằng chứng (evidence / 증거) survives early stages; expensive precise methods improve thứ tự (ordering / 순서) later.
 
-> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Mental model funnel nhấn mạnh rằng mỗi tầng bảo vệ recall hoặc cải thiện precision ở một mức chi phí khác nhau. Các ngộ nhận sau đây thường xuất hiện khi chỉ nhìn vào một tầng.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -322,7 +322,7 @@ Similarity ≠ relevance/authority/freshness; reranking/filtering help.
 
 Nguyên nhân gốc (root cause / 근본 원인) may be retrieval miss, bad chunk, stale chỉ mục (index / 인덱스) or ngữ cảnh (context / 맥락) assembly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> Các ngộ nhận cho thấy vector database, embedding và LLM không tự thay thế query understanding, freshness, filtering hay đánh giá. Các liên kết cuối file đưa những phần này về các owner tài liệu để tiếp tục học và kiểm chứng.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

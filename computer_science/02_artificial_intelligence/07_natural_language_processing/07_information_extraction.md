@@ -27,7 +27,7 @@ Seoul   B-LOC
 
 Subword tokenization complicates alignment; evaluation nên entity-span mức (level / 수준) thay đơn vị từ (token / 토큰) accuracy.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Thực thể (entity / 엔터티) Types phụ thuộc lĩnh vực (domain / 도메인)** tiếp nhận điểm tựa từ **Named thực thể (entity / 엔터티) Recognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) Labeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> NER không chỉ tìm span; nó cần một bộ type phản ánh mục đích sử dụng. Vì vậy, sau khi nhận diện mention, ta phải quyết định schema theo domain trước khi chọn cách gán nhãn.
 
 ## Thực thể (entity / 엔터티) Types phụ thuộc lĩnh vực (domain / 도메인)
 
@@ -39,7 +39,7 @@ Medical: DISEASE, DRUG, DOSAGE.
 
 Lược đồ (schema / 스키마) thiết kế (design / 설계) defines what “correct extraction” means. Too broad loses utility; too granular creates annotation inconsistency.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Thực thể (entity / 엔터티) Types phụ thuộc lĩnh vực (domain / 도메인)** cho ta quy tắc; **Chuỗi (sequence / 시퀀스) Labeling** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quan hệ (relation / 관계) Extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Schema domain trả lời câu hỏi cần trích xuất loại thực thể nào. Sequence labeling biến quyết định đó thành nhãn theo từng token và làm lộ các ràng buộc ở ranh giới span.
 
 ## Chuỗi (sequence / 시퀀스) Labeling
 
@@ -49,7 +49,7 @@ Independent đơn vị từ (token / 토큰) softmax may produce invalid sequenc
 
 Hiện đại (modern / 현대적) large encoders often perform well without CRF, but structured decoding can still help small/lĩnh vực (domain / 도메인) tasks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Chuỗi (sequence / 시퀀스) Labeling** cho ta quy tắc; **Quan hệ (relation / 관계) Extraction** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sự kiện (event / 이벤트) Extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Sequence labeling xác định các thực thể, nhưng chưa nói chúng liên hệ với nhau ra sao. Relation extraction nối các span đã nhận diện thành các cạnh có hướng và có ý nghĩa.
 
 ## Quan hệ (relation / 관계) Extraction
 
@@ -70,7 +70,7 @@ Methods:
 
 Quan hệ (relation / 관계) direction matters.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Sự kiện (event / 이벤트) Extraction** tiếp nhận điểm tựa từ **Quan hệ (relation / 관계) Extraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coreference Resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Quan hệ giữa hai thực thể là nền cho nhiều sự kiện, nhưng sự kiện còn cần trigger, vai trò và thời điểm. Event extraction vì thế mở rộng cạnh tĩnh thành một cấu trúc có ngữ cảnh.
 
 ## Sự kiện (event / 이벤트) Extraction
 
@@ -96,7 +96,7 @@ Sự kiện (event / 이벤트):
 
 Sự kiện (event / 이벤트) extraction needs role assignment and sometimes cross-sentence ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, sau nội dung của **Sự kiện (event / 이벤트) Extraction**, **Coreference Resolution** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Slot Filling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Event extraction có thể trải qua nhiều câu, nơi đại từ hoặc mention rút gọn trỏ về cùng một đối tượng. Coreference resolution gom các mention đó trước khi điền vai trò và sự kiện đầy đủ.
 
 ## Coreference Resolution
 
@@ -112,7 +112,7 @@ Coreference creates thực thể (entity / 엔터티) clusters across mentions, 
 
 LLMs handle many cases via ngữ cảnh (context / 맥락) but formal coreference evaluation still useful.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Slot Filling** tiếp nhận điểm tựa từ **Coreference Resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extractive vs Generative IE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Khi các mention đã được gom thành một thực thể, hệ thống có thể điền những trường nghiệp vụ cụ thể. Slot filling biến cấu trúc tham chiếu ấy thành các giá trị mà quy trình downstream cần.
 
 ## Slot Filling
 
@@ -130,7 +130,7 @@ This is constrained extraction. OCR/bố cục (layout / 레이아웃) + NLP may
 
 Structured lược đồ (schema / 스키마) + kiểm tra hợp lệ (validation / 검증) often more important than open-ended answer chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Extractive vs Generative IE** tiếp nhận điểm tựa từ **Slot Filling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thực thể (entity / 엔터티) Linking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Slot filling thường có schema hẹp và tiêu chí kiểm tra rõ, nên cần cân nhắc lấy nguyên văn hay sinh giá trị đã chuẩn hóa. Đó là điểm phân chia giữa extractive và generative IE.
 
 ## Extractive vs Generative IE
 
@@ -147,7 +147,7 @@ LLM proposes structured extraction
 → deterministic business rules / human review
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Thực thể (entity / 엔터티) Linking** tiếp nhận điểm tựa từ **Extractive vs Generative IE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Generative IE linh hoạt nhưng có thể tạo giá trị không xuất hiện trong nguồn; extractive IE giữ được bằng chứng nguyên văn. Dù chọn cách nào, các mention vẫn cần được map về thực thể chuẩn để nối dữ liệu.
 
 ## Thực thể (entity / 엔터티) Linking
 
@@ -162,7 +162,7 @@ Thực thể (entity / 엔터티) linking requires candidate generation + disamb
 
 Chuẩn gốc (canonical / 정본) IDs let extracted facts phép nối (join / 조인) databases/kiến thức (knowledge / 지식) graphs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Normalization** tiếp nhận điểm tựa từ **Thực thể (entity / 엔터티) Linking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Document bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Entity linking xác định ID chuẩn, còn normalization quy định biểu diễn thống nhất của ngày, tiền tệ và các giá trị. Hai bước này bổ sung cho nhau: cùng một thực thể có thể xuất hiện với nhiều cách viết.
 
 ## Normalization
 
@@ -175,7 +175,7 @@ Extracted string may need normalized giá trị (value / 값):
 
 Normalization should be deterministic when possible and retain original văn bản (text / 텍스트)/provenance.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Document bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weak Supervision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Normalization nên giữ lại chuỗi gốc và provenance để có thể kiểm tra ngược. Với tài liệu biểu mẫu, muốn chuẩn hóa đúng còn phải biết giá trị nằm ở ô, hàng hay cột nào trong layout.
 
 ## Document bố cục (layout / 레이아웃)
 
@@ -185,7 +185,7 @@ Plain OCR văn bản (text / 텍스트) can lose quan hệ (relation / 관계). 
 
 Multimodal document AI combines vision + NLP.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Weak Supervision** tiếp nhận điểm tựa từ **Document bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distant Supervision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Layout cung cấp tín hiệu không gian mà văn bản phẳng làm mất, nhưng nhãn layout thủ công tốn kém. Weak supervision cho phép tạo nhãn ban đầu từ quy tắc và nguồn nhiễu để mở rộng dữ liệu.
 
 ## Weak Supervision
 
@@ -193,7 +193,7 @@ Manual IE annotation expensive. Weak supervision uses rules/distant KB matches/h
 
 Need mô hình (model / 모델)/techniques account label noise; evaluation still requires clean gold set.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Distant Supervision** tiếp nhận điểm tựa từ **Weak Supervision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Precision vs Recall in Extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Weak supervision tạo nhãn từ nhiều tín hiệu không hoàn hảo, trong đó distant supervision là trường hợp dựa vào tri thức ngoài như knowledge base. Cách này tăng quy mô nhưng đưa thêm nhiễu có hệ thống.
 
 ## Distant Supervision
 
@@ -201,7 +201,7 @@ If kiến thức (knowledge / 지식) cơ sở (base / 기반) says `(CompanyA, 
 
 This trades annotation quy mô (scale / 규모) for noise.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Precision vs Recall in Extraction** tiếp nhận điểm tựa từ **Distant Supervision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Distant supervision đánh đổi chi phí gán nhãn lấy false positive do giả định xa. Vì vậy, ngưỡng precision–recall phải được chọn theo việc dữ liệu trích xuất sẽ được dùng tiếp như thế nào.
 
 ## Precision vs Recall in Extraction
 
@@ -209,7 +209,7 @@ High precision may be preferred when extracted facts automatically enter DB. Hig
 
 Threshold and workflow should reflect downstream chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Evaluation** tiếp nhận điểm tựa từ **Precision vs Recall in Extraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) Construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Precision và recall mô tả đánh đổi vận hành, nhưng cần một bộ metric và giao thức đánh giá để biết lỗi nằm ở span, type, relation hay role. Phần Evaluation đặt các lựa chọn đó vào phép đo cụ thể.
 
 ## Evaluation
 
@@ -227,7 +227,7 @@ Partial overlaps can be separately analyzed but should not silently count as ch�
 
 Quan hệ (relation / 관계)/sự kiện (event / 이벤트) metrics require entities + labels + roles correct; lan truyền lỗi (error propagation / 오류 전파) matters.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) Construction** tiếp nhận điểm tựa từ **Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM Structured Extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Evaluation cho biết pipeline làm đúng đến đâu và lỗi lan truyền qua các tầng thế nào. Khi các span, link và quan hệ đã đủ tin cậy, chúng có thể được ghép thành knowledge graph có provenance.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) Construction
 
@@ -245,7 +245,7 @@ Documents
 
 Every edge should ideally carry nguồn (source / 소스) bằng chứng (evidence / 증거)/thời gian (time / 시간)/confidence, not only triple.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **LLM Structured Extraction** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) Construction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Knowledge graph không chỉ là tập triple; mỗi cạnh cần bằng chứng, thời gian và độ tin cậy. LLM structured extraction có thể giúp tạo cấu trúc nhanh, nhưng phải chịu các ràng buộc đó ngay từ đầu.
 
 ## LLM Structured Extraction
 
@@ -260,13 +260,13 @@ LLMs can few-shot extract new schemas quickly. But robust môi trường vận h
 
 “Valid JSON” is not same as “correct extraction”.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **LLM Structured Extraction** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> LLM có thể sinh JSON hợp lệ mà vẫn trích xuất sai hoặc bịa giá trị. Vì vậy, mental model của IE phải đặt schema, bằng chứng và validation cùng một chuỗi kiểm soát.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > thông tin (information / 정보) Extraction converts ngôn ngữ (language / 언어) into typed claims tied to nguồn (source / 소스) bằng chứng (evidence / 증거). The nguồn (source / 소스)/provenance is part of the dữ liệu (data / 데이터), not optional siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> Mental model này xem extraction là chuyển ngôn ngữ thành claim có type và provenance, không phải chỉ là sinh văn bản. Các ngộ nhận sau đây kiểm tra những điểm dễ bị bỏ qua trong chuỗi đó.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -286,7 +286,7 @@ It may fabricate; extraction should be grounded to nguồn (source / 소스).
 
 Need thực thể (entity / 엔터티) resolution, temporal/provenance/confidence and contradiction handling.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> Các ngộ nhận cho thấy chất lượng IE phụ thuộc schema, bằng chứng, resolution và xử lý mâu thuẫn, không chỉ phụ thuộc model. Phần liên kết kiến thức đặt những nguyên tắc này cạnh các chủ đề NLP liên quan để học tiếp có định hướng.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

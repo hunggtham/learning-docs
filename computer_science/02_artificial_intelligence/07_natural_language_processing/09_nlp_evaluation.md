@@ -19,7 +19,7 @@ Pred: [National University]
 
 count wrong dù overlap. Có thể thêm partial-match phân tích (analysis / 분석) nhưng report convention rõ.
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Macro vs Micro F1** tiếp nhận điểm tựa từ **Classification / NER** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BLEU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Với nhãn rõ như classification/NER, câu hỏi tiếp theo là dữ liệu lệch lớp làm thay đổi cách đọc F1 ra sao. Macro và micro trả lời hai góc nhìn đó; sau phần này, BLEU mở rộng vấn đề sang đầu ra có nhiều cách diễn đạt.
 
 ## Macro vs Micro F1
 
@@ -31,7 +31,7 @@ Weighted macro uses hỗ trợ (support / 지원) weights.
 
 NLP label distributions often imbalanced, nên report more than one view.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **BLEU** tiếp nhận điểm tựa từ **Macro vs Micro F1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ROUGE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Macro/micro F1 vẫn đánh giá dựa trên nhãn hoặc quyết định rời rạc. Khi đầu ra là câu dịch, BLEU chuyển sang đo mức trùng khớp n-gram với các bản tham chiếu, vì vậy cần đọc kèm giới hạn của nó.
 
 ## BLEU
 
@@ -48,7 +48,7 @@ Limitations:
 
 BLEU should compare same setup, not become universal language-quality score.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **ROUGE** tiếp nhận điểm tựa từ **BLEU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **METEOR / chrF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** BLEU thiên về precision của n-gram, còn ROUGE nhấn mạnh lượng nội dung được thu hồi từ bản tham chiếu. Sự đổi trọng tâm này hữu ích cho tóm tắt, nhưng vẫn chưa giải quyết paraphrase hay factuality.
 
 ## ROUGE
 
@@ -58,7 +58,7 @@ ROUGE-L uses longest dùng chung (common / 공통) subsequence. It rewards conte
 
 Extractive các hệ thống (systems / 시스템들) often score well because wording overlaps nguồn (source / 소스).
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **METEOR / chrF** tiếp nhận điểm tựa từ **ROUGE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BERTScore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi overlap bề mặt của ROUGE chưa đủ, METEOR và chrF bổ sung alignment, stemming hoặc character n-gram để bớt phụ thuộc cách tách từ. Những cải tiến này vẫn là tín hiệu tự động, không thay thế phân tích lỗi theo tác vụ.
 
 ## METEOR / chrF
 
@@ -68,7 +68,7 @@ chrF uses character n-gram F-score and works well morphologically rich languages
 
 No chỉ số (metric / 지표) removes need for task-specific lỗi (error / 오류) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **BERTScore** tiếp nhận điểm tựa từ **METEOR / chrF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Learned Metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** BERTScore đi thêm một bước: so khớp token bằng biểu diễn ngữ cảnh để nhận ra paraphrase mà n-gram bỏ sót. Đổi lại, điểm số vẫn có thể cao dù nội dung sai sự thật.
 
 ## BERTScore
 
@@ -78,7 +78,7 @@ It captures paraphrases better than surface overlap.
 
 But depends pretrained encoder and can reward semantically similar yet factually wrong outputs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Learned Metrics** tiếp nhận điểm tựa từ **BERTScore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Perplexity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Learned metrics dùng mô hình đã học từ đánh giá của con người để ước lượng chất lượng gần hơn với phán đoán thực tế. Vì chúng cũng có bias và drift, perplexity ở mục kế tiếp sẽ quay về tín hiệu nội tại, dễ tái lập hơn nhưng hẹp hơn.
 
 ## Learned Metrics
 
@@ -93,7 +93,7 @@ Risks:
 
 Chỉ số (metric / 지표) is another mô hình (model / 모델) requiring kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Perplexity** tiếp nhận điểm tựa từ **Learned Metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한) Match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Perplexity đo độ phù hợp dự đoán token tiếp theo, không đo trực tiếp ích lợi của đầu ra. Với QA hoặc trích xuất có đáp án chuẩn, exact match đặt ra một tiêu chí hẹp nhưng minh bạch hơn.
 
 ## Perplexity
 
@@ -105,7 +105,7 @@ PPL=\exp(crossentropy)
 
 Useful compare same tokenization/kiểm thử (test / 테스트) corpus. It measures next-token predictive fit, not downstream instruction/helpfulness directly.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Chính xác (exact / 정확한) Match** tiếp nhận điểm tựa từ **Perplexity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) QA Metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Exact match phù hợp khi đáp án có dạng chuẩn và phải khớp nghiêm ngặt; nó trở nên quá cứng khi chấp nhận paraphrase. Vì thế QA ngữ nghĩa cần thêm các phép đo nhận ra tương đồng nghĩa và vẫn kiểm tra đúng factuality.
 
 ## Chính xác (exact / 정확한) Match
 
@@ -115,7 +115,7 @@ Good when chuẩn gốc (canonical / 정본) answer strict, bad when formatting/
 
 Normalization can lowercase/remove punctuation/articles but chính sách (policy / 정책) must match tác vụ (task / 작업) and languages.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Ngữ nghĩa (semantic / 의미적) QA Metrics** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Faithfulness vs chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Các metric ngữ nghĩa nới rộng phép đo vượt khỏi chuỗi ký tự, nhưng tương đồng ngữ nghĩa vẫn có thể bỏ sót một chi tiết sai. Đó là lý do đánh giá faithfulness cần tách riêng khả năng bám nguồn khỏi độ trôi chảy.
 
 ## Ngữ nghĩa (semantic / 의미적) QA Metrics
 
@@ -123,7 +123,7 @@ Normalization can lowercase/remove punctuation/articles but chính sách (policy
 
 A semantically similar answer can still contain one dangerous wrong number; aggregate embedding similarity may miss it.
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Faithfulness vs chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) QA Metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Faithfulness và chất lượng bề mặt là hai trục khác nhau: câu có thể trôi chảy nhưng không trung thành với nguồn. Khi nhiều trục cùng quan trọng, human evaluation giúp xem xét những khác biệt mà metric tự động khó biểu diễn.
 
 ## Faithfulness vs chất lượng (quality / 품질)
 
@@ -141,7 +141,7 @@ style/format
 
 One overall score hides trade-offs.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Human Evaluation** tiếp nhận điểm tựa từ **Faithfulness vs chất lượng (quality / 품질)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM-as-a-Judge Preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Đánh giá con người cung cấp phán đoán giàu ngữ cảnh, nhưng cũng chịu variance và bias. LLM-as-a-judge có thể mở rộng quy mô chấm, với điều kiện được hiệu chuẩn và đối chiếu bằng nhãn người.
 
 ## Human Evaluation
 
@@ -158,7 +158,7 @@ Need:
 
 Pairwise preference often easier/more reliable than absolute 1–5 score.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **LLM-as-a-Judge Preview** tiếp nhận điểm tựa từ **Human Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) Contamination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** LLM-as-a-judge giảm chi phí chấm các rubric hoặc so sánh cặp, nhưng bản thân nó là một bộ đánh giá có bias. Trước khi tin vào điểm số, cần xem benchmark có bị nhiễm dữ liệu huấn luyện hay không.
 
 ## LLM-as-a-Judge Preview
 
@@ -175,7 +175,7 @@ But judge has biases:
 
 Use calibrated judge against human labels and structured bằng chứng (evidence / 증거) where possible.
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **LLM-as-a-Judge Preview** nêu điều cần giải thích; **Dữ liệu (data / 데이터) Contamination** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Challenge Sets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Contamination khiến điểm benchmark có thể phản ánh ghi nhớ thay vì năng lực khái quát. Challenge set bổ sung các trường hợp được thiết kế để buộc mô hình bộc lộ năng lực hoặc lỗi cụ thể.
 
 ## Dữ liệu (data / 데이터) Contamination
 
@@ -185,7 +185,7 @@ Contamination hard prove for closed dữ liệu huấn luyện (training data / 
 
 LLM era makes benchmark vòng đời (lifecycle / 생명주기) important.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Dữ liệu (data / 데이터) Contamination** nêu điều cần giải thích; **Challenge Sets** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Robustness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Challenge set biến những nghi ngờ chung về benchmark thành các phép thử hiện tượng cụ thể. Sau đó robustness kiểm tra liệu kết quả có giữ ổn định trước biến đổi đầu vào vẫn bảo toàn nghĩa hay không.
 
 ## Challenge Sets
 
@@ -204,7 +204,7 @@ ambiguity
 
 Each tests specific năng lực (capability / 역량)/dạng thất bại (failure mode / 실패 모드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Robustness** tiếp nhận điểm tựa từ **Challenge Sets** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multilingual Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Robustness không chỉ là thêm nhiễu; phép biến đổi phải giữ nguyên yêu cầu của tác vụ. Khi đánh giá nhiều ngôn ngữ, cần kiểm tra riêng tác động của tokenization, văn hóa và dữ liệu bản địa thay vì suy ra từ một ngôn ngữ.
 
 ## Robustness
 
@@ -222,7 +222,7 @@ Prediction should remain stable if tác vụ (task / 작업) bất biến (invar
 
 But perturbation must genuinely preserve ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Multilingual Evaluation** tiếp nhận điểm tựa từ **Robustness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statistical bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Multilingual evaluation đòi hỏi bộ dữ liệu và người chấm phù hợp từng ngôn ngữ, không chỉ bản dịch của benchmark tiếng Anh. Để biết chênh lệch điểm có đáng tin hay không, phần tiếp theo lượng hóa bất định của ước lượng.
 
 ## Multilingual Evaluation
 
@@ -232,7 +232,7 @@ Use native-language datasets/raters and report per-language metrics.
 
 For Korean/Vietnamese, spacing/morphology/tokenization can affect chính xác (exact / 정확한)/overlap metrics; character or ngữ nghĩa (semantic / 의미적) metrics may complement.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Statistical bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Multilingual Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khoảng tin cậy và đơn vị bootstrap cho biết một chênh lệch nhỏ có thể chỉ là nhiễu lấy mẫu. Nhưng score offline vẫn chưa nói hết trải nghiệm thực tế; online evaluation nối kết quả đo với hành vi người dùng.
 
 ## Statistical bất định (uncertainty / 불확실성)
 
@@ -242,7 +242,7 @@ If samples grouped by người dùng (user / 사용자)/document, resample at in
 
 Tiny score difference without bất định (uncertainty / 불확실성) should not drive triển khai (deployment / 배포) quyết định (decision / 결정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Online Evaluation** tiếp nhận điểm tựa từ **Statistical bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi (error / 오류) Taxonomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Online evaluation quan sát hoàn thành tác vụ và tương tác thật, đồng thời phải đề phòng metric thúc đẩy hành vi xấu. Khi một chỉ số không giải thích được kết quả, error taxonomy giúp biến thất bại thành nhóm nguyên nhân có thể sửa.
 
 ## Online Evaluation
 
@@ -256,7 +256,7 @@ Offline NLP chỉ số (metric / 지표) does not capture người dùng (user /
 
 But online chỉ số (metric / 지표) can incentivize bad hành vi (behavior / 동작) (clickbait, verbosity). Guardrails needed.
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Lỗi (error / 오류) Taxonomy** tiếp nhận điểm tựa từ **Online Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducible Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Error taxonomy cho biết mô hình sai ở đâu thay vì chỉ cho biết điểm tổng là bao nhiêu. Muốn so sánh hoặc sửa chữa đáng tin, quy trình tái lập cũng phải ghi lại dữ liệu, mã, phiên bản và cấu hình.
 
 ## Lỗi (error / 오류) Taxonomy
 
@@ -276,7 +276,7 @@ retrieval grounding failure
 
 Lỗi (error / 오류) counts guide kỹ thuật (engineering / 엔지니어링) much more actionable than one BLEU/ROUGE score.
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Reproducible Evaluation** tiếp nhận điểm tựa từ **Lỗi (error / 오류) Taxonomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Reproducible evaluation biến kết quả thành một phép đo có thể kiểm tra lại, đồng thời làm rõ tác động của prompt và generation settings. Từ các mảnh đó, mô hình tư duy ở phần sau gom lại nguyên tắc chọn metric.
 
 ## Reproducible Evaluation
 
@@ -295,13 +295,13 @@ retrieval index/version if used
 
 Generation settings can materially thay đổi (change / 변경) score.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reproducible Evaluation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Mô hình tư duy cốt lõi là: định nghĩa hành vi tốt trước, rồi dùng nhiều phép đo để xấp xỉ nó. Hai ngộ nhận ở phần tiếp theo cho thấy điều gì xảy ra khi đảo ngược thứ tự này.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > NLP evaluation is đo lường (measurement / 측정) thiết kế (design / 설계). First define what “good ngôn ngữ (language / 언어) hành vi (behavior / 동작)” means for the tác vụ (task / 작업); only then choose multiple measurements that approximate it.
 
-> **Chuyển mạch:** Trong **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Mạch nối:** Khi đã xác định metric chỉ là phép đo gần đúng, ta có thể nhận diện hai ngộ nhận phổ biến thay vì đồng nhất điểm số với chất lượng. Phần liên kết cuối sẽ chỉ đường quay lại các tài liệu nền tảng.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -321,7 +321,7 @@ Humans disagree and have biases; rubric/thiết kế (design / 설계) matter.
 
 It is hiệu năng (performance / 성능) on a sampled benchmark under specific prompt/eval giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Ở chặng này của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Mạch nối:** Các ngộ nhận trên đều bắt nguồn từ việc tách điểm số khỏi mục tiêu và điều kiện đo. Phần liên kết dưới đây đặt NLP evaluation cạnh tài liệu model evaluation và các lớp đánh giá LLM/RAG để tiếp tục đào sâu.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

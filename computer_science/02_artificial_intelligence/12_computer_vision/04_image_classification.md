@@ -28,7 +28,7 @@ Huấn luyện (training / 학습) thường dùng cross-entropy:
 L=-\log p_y
 \]
 
-> **Chuyển mạch:** Single-label dùng một target class, multi-label cho phép nhiều nhãn đồng thời; class probability là model belief cần calibration, không phải truth probability của thế giới.
+Single-label buộc mỗi ảnh chọn một target class, còn multi-label cho phép nhiều nhãn đồng thời. Vì vậy, xác suất lớp cần được hiểu là niềm tin của mô hình và phải được calibration, không phải xác suất chân lý của thế giới.
 
 ## Multi-Label Classification
 
@@ -42,19 +42,19 @@ p_k=\sigma(z_k)
 
 và nhị phân (binary / 이진) cross-entropy per label.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Multi-Label Classification** cho ta quy tắc; **Lớp (class / 클래스) xác suất (probability / 확률) không phải Truth xác suất (probability / 확률)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dữ liệu (data / 데이터) Splitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multi-label chỉ mô tả cách gán nhãn; điểm xác suất vẫn có thể lệch khỏi tần suất đúng thực tế. Vì thế, trước khi đánh giá calibration, cần chia dữ liệu sao cho các tập train và kiểm thử đại diện cho tình huống triển khai.
 
 ## Lớp (class / 클래스) xác suất (probability / 확률) không phải Truth xác suất (probability / 확률)
 
 Softmax score có thể overconfident, đặc biệt under phân phối (distribution / 분포) shift. Calibration cần evaluate riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Lớp (class / 클래스) xác suất (probability / 확률) không phải Truth xác suất (probability / 확률)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) Splitting** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lớp (class / 클래스) Imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Calibration chỉ đáng tin khi phép đo không bị rò rỉ hoặc lệch phân phối; data splitting cung cấp điều kiện kiểm chứng đó. Sau khi chia đúng, class imbalance cho thấy vì sao accuracy tổng thể vẫn có thể đánh lạc hướng.
 
 ## Dữ liệu (data / 데이터) Splitting
 
 Random ảnh (image / 이미지) split có thể leak near-duplicate frames từ cùng video/person/sản phẩm (product / 제품) vào train/kiểm thử (test / 테스트). Grouped split theo patient/thiết bị (device / 장치)/scene thường cần để estimate generalization đúng.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Dữ liệu (data / 데이터) Splitting** nêu điều cần giải thích; **Lớp (class / 클래스) Imbalance** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Top-k Accuracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Data splitting giúp ước lượng generalization, nhưng phân bố lớp trong mỗi split vẫn quyết định metric có ý nghĩa hay không. Khi mất cân bằng lớp đã được nhận diện, top-k accuracy là một metric bổ sung cho các metric theo lớp.
 
 ## Lớp (class / 클래스) Imbalance
 
@@ -68,19 +68,19 @@ Nếu rare defect 0.1%, accuracy vô nghĩa. Metrics phù hợp:
 
 Lớp (class / 클래스) weighting/focal mất mát (loss / 손실) có thể đổi huấn luyện (training / 학습) emphasis nhưng không substitute representative dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Top-k Accuracy** tiếp nhận điểm tựa từ **Lớp (class / 클래스) Imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Confusion ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Class imbalance nhắc ta không nên chỉ nhìn một con số; top-k cho biết nhãn đúng có nằm trong nhóm dự đoán cao nhất hay không. Confusion matrix sẽ đi sâu hơn, chỉ ra những cặp lớp cụ thể mà mô hình thường nhầm.
 
 ## Top-k Accuracy
 
 Top-1 yêu cầu correct lớp (class / 클래스) highest score. Top-5 tính đúng nếu label nằm trong 5 classes score cao nhất. Top-k hữu ích large-taxonomy tasks nhưng có thể irrelevant cho môi trường vận hành (production / 운영 환경) hành động (action / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Confusion ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Top-k Accuracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transfer học tập (learning / 학습) chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Top-k chỉ kiểm tra thứ hạng của nhãn đúng, còn confusion matrix giải thích cấu trúc của lỗi. Những lỗi có hệ thống này là tín hiệu để thiết kế transfer-learning pipeline phù hợp với miền dữ liệu.
 
 ## Confusion ma trận (matrix / 행렬)
 
 Cho biết lớp (class / 클래스) nào mô hình (model / 모델) nhầm với lớp (class / 클래스) nào. Aggregate accuracy không reveal systematic thất bại (failure / 실패) between similar categories.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Confusion ma trận (matrix / 행렬)** xác định đầu vào; **Transfer học tập (learning / 학습) chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Freeze vs Fine-Tune** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Confusion matrix cho biết mô hình đang nhầm ở đâu; transfer-learning pipeline cung cấp cách bắt đầu từ backbone đã học và thay classifier head. Tiếp theo, freeze hay fine-tune quyết định mức độ cập nhật backbone.
 
 ## Transfer học tập (learning / 학습) chuỗi xử lý (pipeline / 파이프라인)
 
@@ -95,7 +95,7 @@ pretrained backbone
 
 Học tập (learning / 학습) tỷ lệ (rate / 비율) cho pretrained layers thường nhỏ hơn newly initialized head.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Transfer học tập (learning / 학습) chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Freeze vs Fine-Tune** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Augmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Transfer learning đặt backbone pretrained làm điểm xuất phát; freeze hoặc fine-tune kiểm soát mức thích nghi với miền mới. Augmentation sau đó tác động lên chính dữ liệu huấn luyện để cải thiện khả năng khái quát.
 
 ## Freeze vs Fine-Tune
 
@@ -103,7 +103,7 @@ Freeze khi dữ liệu (data / 데이터) ít/compute hạn chế/lĩnh vực (d
 
 Full fine-tuning có rủi ro (risk / 위험) catastrophic forgetting/overfit. Parameter-efficient approaches có thể useful.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Augmentation** tiếp nhận điểm tựa từ **Freeze vs Fine-Tune** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Label Smoothing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Freeze/fine-tune quyết định tham số nào được học lại, còn augmentation thay đổi các quan sát mà mô hình phải chịu. Label smoothing điều chỉnh mục tiêu huấn luyện để giảm việc bám quá mức vào nhãn one-hot.
 
 ## Augmentation
 
@@ -130,19 +130,19 @@ encouraging smoother quyết định (decision / 결정) boundaries.
 
 CutMix replaces region from another ảnh (image / 이미지) and mixes labels proportional area, preserving cục bộ (local / 로컬) visual statistics better than pure điểm ảnh (pixel / 픽셀) interpolation.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Augmentation** cho ta quy tắc; **Label Smoothing** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Fine-Grained Classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Augmentation tạo ra các biến thể hợp lệ của ảnh; label smoothing làm mềm tín hiệu mục tiêu thay vì ép mô hình vào xác suất one-hot. Fine-grained classification tiếp tục đặt ra bài toán khó hơn: phân biệt những khác biệt thị giác rất nhỏ.
 
 ## Label Smoothing
 
 Replace one-hot mục tiêu (target / 대상) with slightly softened phân phối (distribution / 분포). Can reduce overconfidence but may affect calibration/rare-class học tập (learning / 학습).
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Label Smoothing** cho ta quy tắc; **Fine-Grained Classification** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hierarchical Taxonomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Label smoothing có thể giảm overconfidence, nhưng không tự tạo ra đặc trưng cần thiết cho các lớp gần nhau. Fine-grained classification thường cần crop, độ phân giải và dữ liệu chuyên biệt; hierarchical taxonomy bổ sung cấu trúc quan hệ giữa các nhãn.
 
 ## Fine-Grained Classification
 
 Distinguishing bird species/sản phẩm (product / 제품) variants requires subtle cục bộ (local / 로컬) features. High-resolution crops, attention/localization and domain-specific dữ liệu (data / 데이터) become important.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Hierarchical Taxonomy** tiếp nhận điểm tựa từ **Fine-Grained Classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Open-Set Recognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fine-grained classification cần phân biệt các biến thể gần nhau; taxonomy phân cấp cho phép mô hình và metric biểu diễn quan hệ cha–con giữa chúng. Open-set recognition mở rộng câu hỏi: điều gì xảy ra khi ảnh không thuộc bất kỳ lớp đã biết nào?
 
 ## Hierarchical Taxonomy
 
@@ -154,7 +154,7 @@ animal → bird → eagle
 
 Flat classifier ignores ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조). Hierarchical losses/routing can exploit taxonomy, but evaluation must handle parent/child errors meaningfully.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Open-Set Recognition** tiếp nhận điểm tựa từ **Hierarchical Taxonomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Zero-Shot Classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Taxonomy giúp diễn tả mức độ gần nhau của các lớp đã biết, còn open-set recognition phải phát hiện cả trường hợp không có nhãn phù hợp. Zero-shot classification tiếp cận lớp chưa thấy bằng mô tả văn bản và biểu diễn đa phương thức.
 
 ## Open-Set Recognition
 
@@ -162,7 +162,7 @@ Tiêu chuẩn (standard / 표준) classifier assumes đầu vào (input / 입력
 
 High softmax confidence does not guarantee in-distribution.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Zero-Shot Classification** tiếp nhận điểm tựa từ **Open-Set Recognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Data-Centric lỗi (error / 오류) phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Open-set recognition hỏi mô hình có biết nói “không biết” hay không; zero-shot thay classifier cố định bằng đối sánh ảnh–văn bản. Khi kết quả zero-shot không như mong đợi, data-centric error analysis giúp phân biệt lỗi nhãn, dữ liệu và prompt.
 
 ## Zero-Shot Classification
 
@@ -170,7 +170,7 @@ Vision-language các mô hình (models / 모델들) can compare ảnh (image / �
 
 But hiệu năng (performance / 성능) depends prompt wording, lớp (class / 클래스) ngữ nghĩa (semantics / 의미론) and pretraining coverage.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Data-Centric lỗi (error / 오류) phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Zero-Shot Classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shortcut học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Zero-shot phụ thuộc vào mô tả lớp và độ phủ của pretraining; error analysis cần kiểm tra cả những yếu tố đó thay vì chỉ đổi kiến trúc. Một dạng lỗi đặc biệt là shortcut learning, khi mô hình dùng tín hiệu phụ thay cho đối tượng cần nhận biết.
 
 ## Data-Centric lỗi (error / 오류) phân tích (analysis / 분석)
 
@@ -185,7 +185,7 @@ For each lỗi (error / 오류) cluster ask:
 
 Mô hình (model / 모델) thay đổi (change / 변경) is only one lever.
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Shortcut học tập (learning / 학습)** tiếp nhận điểm tựa từ **Data-Centric lỗi (error / 오류) phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Saliency and CAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Error analysis có thể phát hiện mô hình dựa vào nền, watermark hoặc thiết bị thay vì vật thể; đó là shortcut learning. Saliency và CAM cung cấp một cách quan sát vùng ảnh đang góp phần vào điểm lớp, dù không phải bằng chứng nhân quả.
 
 ## Shortcut học tập (learning / 학습)
 
@@ -193,7 +193,7 @@ Mô hình (model / 모델) may classify “cow” from green pasture background 
 
 Counterfactual/background-balanced dữ liệu (data / 데이터) helps detect shortcut reliance.
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Saliency and CAM** tiếp nhận điểm tựa từ **Shortcut học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial / Natural Robustness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Shortcut learning cho thấy mô hình có thể dựa vào tín hiệu sai; saliency và CAM giúp kiểm tra giả thuyết đó trên từng dự đoán. Robustness evaluation tiếp tục hỏi liệu dự đoán có giữ được khi ảnh bị nhiễu hoặc thay đổi điều kiện tự nhiên hay không.
 
 ## Saliency and CAM
 
@@ -201,13 +201,13 @@ Lớp (class / 클래스) Activation Maps highlight regions contributing to lớ
 
 If mô hình (model / 모델) consistently focuses watermark/corner, dataset leakage likely.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Adversarial / Natural Robustness** tiếp nhận điểm tựa từ **Saliency and CAM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Confidence Threshold and Abstention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Saliency cho biết vùng mô hình sử dụng, còn robustness cho biết quyết định có bền trước perturbation và corruption hay không. Khi độ tin cậy không đủ, confidence threshold và abstention chuyển phần rủi ro còn lại thành một chính sách vận hành.
 
 ## Adversarial / Natural Robustness
 
 Small perturbation or dùng chung (common / 공통) corruptions can degrade mô hình (model / 모델). Robust evaluation should include blur, noise, brightness, compression and viewpoint changes relevant triển khai (deployment / 배포).
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Confidence Threshold and Abstention** tiếp nhận điểm tựa từ **Adversarial / Natural Robustness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Robustness không loại bỏ mọi dự đoán không chắc chắn; threshold và abstention cho phép hệ thống chuyển các trường hợp rủi ro sang người hoặc quy trình khác. Mô hình tư duy dưới đây tóm tắt classification như một quyết định toàn cục có giới hạn không gian.
 
 ## Confidence Threshold and Abstention
 
@@ -219,7 +219,7 @@ Selective rủi ro (risk / 위험):
 higher threshold → fewer automated predictions, potentially higher precision
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Ảnh (image / 이미지) Classification**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Confidence Threshold and Abstention** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Abstention bổ sung một lớp quyết định cho classifier: mô hình không chỉ chọn nhãn mà còn có thể từ chối khi rủi ro cao. Các ngộ nhận tiếp theo kiểm tra những giả định thường bị bỏ qua trong chuỗi quyết định đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -227,7 +227,7 @@ higher threshold → fewer automated predictions, potentially higher precision
 
 Detection/segmentation add spatial outputs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ảnh (image / 이미지) Classification**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy đặt classification trong ranh giới “biết có gì” thay vì “biết ở đâu”; các ngộ nhận cho thấy vì sao metric và confidence không thể tách khỏi bối cảnh vận hành. Phần liên kết kiến thức sẽ nối ranh giới này sang detection.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -243,7 +243,7 @@ Only if calibrated on mục tiêu (target / 대상) phân phối (distribution /
 
 Invalid augmentations can destroy label ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các ngộ nhận đã làm rõ giới hạn của accuracy, calibration và augmentation; phần liên kết kiến thức đặt classification cạnh transfer learning và detection để chọn nhánh học tiếp theo.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

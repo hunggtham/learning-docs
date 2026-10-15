@@ -12,7 +12,7 @@ Prompt tốt có thể unlock mô hình năng lực (capability model / 역량 �
 
 Nếu mô hình (model / 모델) không có truy cập (access / 접근) tới hiện tại (current / 현재) cơ sở dữ liệu (database / 데이터베이스), prompt “hãy chắc chắn dùng dữ liệu mới nhất” không magically cung cấp dữ liệu (data / 데이터) mới.
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Instruction hierarchy** tiếp nhận điểm tựa từ **Prompt không thay mô hình (model / 모델) năng lực (capability / 역량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Specificity và ambiguity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prompt chỉ định hướng được năng lực sẵn có; để dùng năng lực đó an toàn, hệ thống trước hết phải xác định instruction nào có thẩm quyền hơn.
 
 ## Instruction hierarchy
 
@@ -30,7 +30,7 @@ Tuy nhiên Transformer chỉ nhận đơn vị từ (token / 토큰) chuỗi (se
 
 Vì vậy untrusted dữ liệu (data / 데이터) nên được clearly delimited và không được cấp quyền công cụ (tool / 도구) chỉ vì văn bản (text / 텍스트) trong document yêu cầu.
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Specificity và ambiguity** tiếp nhận điểm tựa từ **Instruction hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delimiters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi thứ tự ưu tiên đã rõ, prompt vẫn cần đủ cụ thể để giảm cách hiểu mơ hồ; delimiter là một kỹ thuật hỗ trợ ranh giới đó.
 
 ## Specificity và ambiguity
 
@@ -44,7 +44,7 @@ Prompt tốt thường specify:
 
 Không cần biến mọi prompt thành template dài. Nếu tác vụ (task / 작업) đơn giản, concise instruction thường tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Specificity và ambiguity** đã nêu tiêu chí phân biệt, còn **Delimiters** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Structured outputs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Specificity giúp mô hình biết cần làm gì, còn delimiter giúp phân biệt dữ liệu với instruction; bước kế tiếp đưa ranh giới ấy vào định dạng đầu ra có thể kiểm tra.
 
 ## Delimiters
 
@@ -59,7 +59,7 @@ Use the following document as evidence.
 
 Delimiter không phải ranh giới bảo mật (security boundary / 보안 경계) tuyệt đối; malicious content bên trong vẫn có thể influence mô hình (model / 모델). bảo mật (security / 보안) cần thời gian chạy (runtime / 런타임) controls.
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Delimiters** đã nêu tiêu chí phân biệt, còn **Structured outputs** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Few-shot prompting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Delimiter chỉ tạo tín hiệu phân cách, không phải boundary bảo mật; cấu trúc đầu ra cần được schema hoặc runtime validation bảo vệ. Khi format chưa mô tả đủ, examples sẽ bổ sung phần ngữ nghĩa còn thiếu.
 
 ## Structured outputs
 
@@ -72,7 +72,7 @@ Prompt asks for structure.
 Runtime enforces structure.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Few-shot prompting** tiếp nhận điểm tựa từ **Structured outputs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) selection > ngữ cảnh (context / 맥락) volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Few-shot examples dạy những quy ước khó diễn đạt bằng schema, nhưng mỗi example cũng chiếm chỗ trong cửa sổ ngữ cảnh; vì vậy chất lượng quan trọng hơn số lượng.
 
 ## Few-shot prompting
 
@@ -80,7 +80,7 @@ Examples đặc biệt hữu ích khi đầu ra (output / 출력) ngữ nghĩa (
 
 Examples nên representative nhưng không expose sensitive dữ liệu (data / 데이터) và không chứa accidental biases.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Ngữ cảnh (context / 맥락) selection > ngữ cảnh (context / 맥락) volume** tiếp nhận điểm tựa từ **Few-shot prompting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chọn context liên quan giúp tăng signal-to-noise, nhưng phần được chọn vẫn phải chia sẻ một ngân sách hữu hạn với lịch sử, tools và output.
 
 ## Ngữ cảnh (context / 맥락) selection > ngữ cảnh (context / 맥락) volume
 
@@ -88,7 +88,7 @@ Long ngữ cảnh (context / 맥락) có thể chứa nhiều irrelevant văn b�
 
 Đây là cốt lõi (core / 핵심) reason RAG cần retrieval/reranking thay vì simply append whole kiến thức (knowledge / 지식) cơ sở (base / 기반).
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) selection > ngữ cảnh (context / 맥락) volume** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conversation summarization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi ngân sách được phân bổ theo từng nguồn, lịch sử dài cần được nén có chủ đích; summarization là cách giảm tải nhưng có thể làm mất thông tin.
 
 ## Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) ngân sách (budget / 예산)
 
@@ -106,7 +106,7 @@ reserved output tokens
 
 Nếu không quản lý ngân sách (budget / 예산), documents quan trọng có thể bị truncation.
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Conversation summarization** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt templates và versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Summary có thể làm prompt ngắn hơn nhưng cũng làm thay đổi trạng thái mà mô hình nhìn thấy; vì vậy prompt và summary đều phải được version, kiểm thử và ghi log.
 
 ## Conversation summarization
 
@@ -116,7 +116,7 @@ Nhưng summarization is lossy. Nếu summary bỏ một ràng buộc (constraint
 
 High-value structured trạng thái (state / 상태) nên lưu tường minh (explicit / 명시적) hơn summary prose.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Prompt templates và versioning** tiếp nhận điểm tựa từ **Conversation summarization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt chaining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Versioning cho phép phát hiện regression khi prompt thay đổi; với tác vụ phức tạp, có thể chia pipeline thành các bước rõ ràng bằng prompt chaining.
 
 ## Prompt templates và versioning
 
@@ -126,7 +126,7 @@ Một prompt thay đổi (change / 변경) có thể làm chỉ số (metric / �
 
 Evaluation dataset nên chạy trước triển khai (deployment / 배포) để detect regression.
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Prompt chaining** tiếp nhận điểm tựa từ **Prompt templates và versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chaining làm từng bước dễ quan sát hơn nhưng tăng latency và điểm lan truyền lỗi; compression là một lựa chọn khác để giảm kích thước context trước khi gọi mô hình.
 
 ## Prompt chaining
 
@@ -143,7 +143,7 @@ Chaining tăng controllability nhưng cũng tăng độ trễ (latency / 지연 
 
 Không nên chia tác vụ (task / 작업) thành nhiều calls nếu single lời gọi (call / 호출) đã stable.
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Ngữ cảnh (context / 맥락) compression** tiếp nhận điểm tựa từ **Prompt chaining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compression tiết kiệm token nhưng tạo thêm một bước lossy; mọi dữ liệu được nén vẫn phải được coi là đầu vào có thể ảnh hưởng đến instruction và cần kiểm soát injection.
 
 ## Ngữ cảnh (context / 맥락) compression
 
@@ -151,7 +151,7 @@ Retrieved material có thể được summarized/extracted trước khi đưa m�
 
 Compression phù hợp khi nguồn (source / 소스) rất dài và truy vấn (query / 쿼리) chỉ cần subset thông tin (information / 정보).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Prompt injection** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) poisoning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prompt injection là trường hợp nội dung không đáng tin cố chiếm quyền điều khiển. Ngay cả khi không có câu lệnh tấn công rõ ràng, dữ liệu xấu vẫn có thể làm nhiễm độc context.
 
 ## Prompt injection
 
@@ -170,13 +170,13 @@ Vấn đề không thể giải quyết hoàn toàn bằng prompt “ignore mali
 - minimal permissions;
 - confirmation for risky actions.
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Ngữ cảnh (context / 맥락) poisoning** tiếp nhận điểm tựa từ **Prompt injection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompts và mô hình (model / 모델) versions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Poisoning nhấn mạnh rằng provenance và freshness của dữ liệu quan trọng ngay cả khi không có injection; khi nguồn hoặc mô hình thay đổi, kết quả cũng cần được đánh giá lại.
 
 ## Ngữ cảnh (context / 맥락) poisoning
 
 Ngay cả không có tường minh (explicit / 명시적) injection, retrieved bad dữ liệu (data / 데이터) có thể poison answer. RAG cần nguồn (source / 소스) chất lượng (quality / 품질), provenance và freshness checks.
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Prompts và mô hình (model / 모델) versions** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) poisoning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temperature và decoding không phải prompt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một prompt không có tính di động tuyệt đối giữa các model; sau khi kiểm soát phiên bản model, cần tách riêng ảnh hưởng của các tham số decoding.
 
 ## Prompts và mô hình (model / 모델) versions
 
@@ -184,7 +184,7 @@ Một prompt tối ưu cho mô hình (model / 모델) A có thể không tối �
 
 Vì vậy mô hình (model / 모델) upgrade cần regression tests, không chỉ swap endpoint.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Temperature và decoding không phải prompt** tiếp nhận điểm tựa từ **Prompts và mô hình (model / 모델) versions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) trong tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Temperature và decoding quyết định cách lấy mẫu ở runtime, không thay thế cho prompt; trong agent, các tham số này chỉ là một phần của trạng thái cần đưa vào context.
 
 ## Temperature và decoding không phải prompt
 
@@ -192,7 +192,7 @@ Generation hành vi (behavior / 동작) còn phụ thuộc decoding settings nh�
 
 Prompt + decoding + mô hình (model / 모델) phiên bản (version / 버전) cùng xác định đầu ra (output / 출력) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) trong tác nhân (agent / 에이전트)** tiếp nhận điểm tựa từ **Temperature và decoding không phải prompt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong agent, context gồm cả tool schema, observations, kế hoạch và kết quả thực thi; chất lượng biểu diễn trạng thái thường quan trọng hơn việc kéo dài prompt.
 
 ## Ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) trong tác nhân (agent / 에이전트)
 
@@ -200,14 +200,14 @@ Tác nhân (agent / 에이전트) ngữ cảnh (context / 맥락) còn có công
 
 Một tác nhân (agent / 에이전트) tốt không cần prompt dài nếu trạng thái (state / 상태) biểu diễn (representation / 표현) tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) trong tác nhân (agent / 에이전트)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy này phân biệt viết instruction với thiết kế toàn bộ thông tin mà quá trình suy luận được phép nhìn thấy; phần tiếp theo kiểm tra các ngộ nhận thường gặp.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Prompting = viết instruction tốt.  
 > ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) = thiết kế **thông tin (information / 정보) kiến trúc (architecture / 아키텍처) của suy luận (inference / 추론)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận này đều bỏ qua giới hạn của model, ngân sách context hoặc boundary bảo mật; phần liên kết cuối file đặt chúng vào lộ trình kiến thức rộng hơn.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -223,7 +223,6 @@ Không. Irrelevant ngữ cảnh (context / 맥락) làm tăng chi phí (cost / �
 
 Không đủ. Đây là bảo mật (security / 보안) kiến trúc (architecture / 아키텍처) bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Prompting và ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

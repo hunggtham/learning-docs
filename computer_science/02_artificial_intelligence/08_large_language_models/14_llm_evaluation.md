@@ -16,7 +16,7 @@ Nhưng perplexity không trực tiếp đo instruction following, factuality, co
 
 Mô hình (model / 모델) A có perplexity tốt hơn nhưng ứng dụng (application / 애플리케이션) hiệu năng (performance / 성능) có thể kém hơn mô hình (model / 모델) B do post-training khác.
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Năng lực (capability / 역량) benchmarks** tiếp nhận điểm tựa từ **Perplexity không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contamination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Perplexity đo một khía cạnh của dự đoán token, còn benchmark capability đặt mô hình vào một tác vụ cụ thể. Trước khi diễn giải điểm benchmark, cần kiểm tra dữ liệu có thể đã xuất hiện trong training hay chưa.
 
 ## Năng lực (capability / 역량) benchmarks
 
@@ -24,7 +24,7 @@ Benchmarks đo slices như mathematics, coding, kiến thức (knowledge / 지�
 
 Một benchmark score chỉ valid cho dataset, prompt giao thức (protocol / 프로토콜), evaluator và mô hình (model / 모델) phiên bản (version / 버전) cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Contamination** tiếp nhận điểm tựa từ **Năng lực (capability / 역량) benchmarks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한) match vs ngữ nghĩa (semantic / 의미적) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Contamination có thể làm điểm benchmark cao hơn khả năng khái quát thật, nhất là khi dữ liệu huấn luyện hoặc bản sao gần của đề đã bị lộ. Sau khi xem xét contamination, ta vẫn phải chọn tiêu chí chấm phù hợp với mục tiêu của task.
 
 ## Contamination
 
@@ -32,7 +32,7 @@ Nếu benchmark examples hoặc near-duplicates xuất hiện trong dữ liệu 
 
 Contamination khó phát hiện hoàn toàn với proprietary huấn luyện (training / 학습) corpora. Vì vậy fresh/private eval sets có giá trị lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Chính xác (exact / 정확한) match vs ngữ nghĩa (semantic / 의미적) chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Contamination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pairwise evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exact match phù hợp với đầu ra có quy tắc rõ, còn semantic quality cần xét nghĩa, lập luận hoặc mức hữu ích. Khi không có một đáp án duy nhất, pairwise evaluation thường cho tín hiệu dễ so sánh hơn.
 
 ## Chính xác (exact / 정확한) match vs ngữ nghĩa (semantic / 의미적) chất lượng (quality / 품질)
 
@@ -42,7 +42,7 @@ LLM-as-judge có thể score relevance/tính đúng đắn (correctness / 정확
 
 Human evaluation vẫn quan trọng cho ambiguous/high-value tasks.
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Pairwise evaluation** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) match vs ngữ nghĩa (semantic / 의미적) chất lượng (quality / 품질)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Task-specific evals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pairwise evaluation yêu cầu người hoặc judge chọn câu trả lời tốt hơn trong cùng một prompt, nhưng kết quả phụ thuộc thứ tự, tiêu chí và cách xử lý tie. Nó chỉ có ý nghĩa khi task cụ thể và rubric được mô tả rõ.
 
 ## Pairwise evaluation
 
@@ -50,7 +50,7 @@ Thay vì chấm absolute score, evaluator chọn phản hồi (response / 응답
 
 Nhưng thứ tự (ordering / 순서) độ lệch (bias / 편향) và tie handling cần điều khiển (control / 제어).
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Task-specific evals** tiếp nhận điểm tựa từ **Pairwise evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Golden set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Task-specific evals mô phỏng chính các quyết định mà sản phẩm cần hỗ trợ, vì vậy thường hữu ích hơn một điểm tổng quát. Để giữ chuẩn đánh giá ổn định qua các lần sửa, nhóm cần một golden set được quản lý như tài sản kiểm thử.
 
 ## Task-specific evals
 
@@ -67,7 +67,7 @@ cost
 
 Generic benchmark không thay thế tác vụ (task / 작업) eval.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Golden set** tiếp nhận điểm tựa từ **Task-specific evals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi (error / 오류) taxonomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Golden set giúp so sánh các phiên bản trên những trường hợp đại diện đã được xem xét kỹ, nhưng không nên bị dùng đi dùng lại để tune đến mức mất tính độc lập. Khi phát hiện điểm yếu, cần phân loại lỗi thay vì chỉ nhìn một con số tổng.
 
 ## Golden set
 
@@ -75,7 +75,7 @@ Một curated **golden set** gồm representative cases, edge cases và known fa
 
 Không nên tune liên tục trên same golden set rồi vẫn gọi nó unbiased kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Lỗi (error / 오류) taxonomy** tiếp nhận điểm tựa từ **Golden set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation ngăn xếp (stack / 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Error taxonomy biến các failure thành nhóm có thể hành động, chẳng hạn factuality, instruction following, safety hoặc tool use. Những nhóm này tạo thành các lớp của evaluation stack từ dữ liệu đến hành vi sản phẩm.
 
 ## Lỗi (error / 오류) taxonomy
 
@@ -92,7 +92,7 @@ Aggregate score che thất bại (failure / 실패) modes. Nên categorize error
 
 Taxonomy giúp biết tầng (layer / 계층) nào cần fix.
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Evaluation ngăn xếp (stack / 스택)** tiếp nhận điểm tựa từ **Lỗi (error / 오류) taxonomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Offline và online evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Evaluation stack có thể gồm unit/model checks, task suites, safety tests, system integration và production outcomes. Không có lớp nào thay thế hoàn toàn lớp khác, nên cần nối offline với online evaluation.
 
 ## Evaluation ngăn xếp (stack / 스택)
 
@@ -109,7 +109,7 @@ human review
 
 Không có một benchmark duy nhất cover tất cả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Offline và online evaluation** tiếp nhận điểm tựa từ **Evaluation ngăn xếp (stack / 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM-as-judge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Offline evaluation cho phép lặp nhanh trên dữ liệu cố định; online evaluation đo hành vi trong traffic thật nhưng chịu nhiễu và rủi ro sản phẩm. LLM-as-judge có thể mở rộng chấm điểm, miễn là được hiệu chuẩn với human labels.
 
 ## Offline và online evaluation
 
@@ -117,7 +117,7 @@ Offline eval reproducible và safe. Online eval phản ánh real traffic nhưng 
 
 A/B testing đo sản phẩm (product / 제품) kết quả (outcome / 결과) nhưng cần cỡ mẫu (sample size / 표본 크기), guardrails và careful interpretation.
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **LLM-as-judge** tiếp nhận điểm tựa từ **Offline và online evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Factuality eval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LLM-as-judge tiết kiệm công sức khi so sánh nhiều đầu ra, nhưng có thể thiên vị phong cách, verbosity hoặc model family. Cần kiểm tra judge trên một tập nhãn người trước khi dùng nó để đánh giá factuality.
 
 ## LLM-as-judge
 
@@ -135,7 +135,7 @@ prompt sensitivity
 
 Calibration với human labels giúp biết judge đáng tin ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Factuality eval** tiếp nhận điểm tựa từ **LLM-as-judge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tool-use eval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Factuality evaluation phải kiểm tra claim với bằng chứng hoặc nguồn chuẩn, thay vì chỉ hỏi câu trả lời có nghe thuyết phục không. Với agent, factuality còn phụ thuộc việc công cụ được gọi đúng và kết quả công cụ được dùng đúng.
 
 ## Factuality eval
 
@@ -143,7 +143,7 @@ Nếu answer phải grounded, evaluator nên check claims against nguồn (sourc
 
 Một overall “looks correct” score thường quá coarse.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Tool-use eval** tiếp nhận điểm tựa từ **Factuality eval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An toàn (safety / 안전) evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tool-use evaluation nên đo task success, lựa chọn công cụ, tham số, thứ tự gọi và cách xử lý lỗi, chứ không chỉ đếm cú pháp tool call. Những hành vi đó cũng cần được đặt trong safety evaluation.
 
 ## Tool-use eval
 
@@ -160,7 +160,7 @@ final answer based on result
 
 Tác vụ (task / 작업) success quan trọng hơn tool-call cú pháp (syntax / 문법) đơn thuần.
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **An toàn (safety / 안전) evaluation** tiếp nhận điểm tựa từ **Tool-use eval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robustness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Safety evaluation bao gồm cả khả năng từ chối đúng và tránh over-refusal trên tác vụ lành tính. Một hệ thống an toàn cũng cần giữ hiệu năng khi prompt, context hoặc nguồn dữ liệu bị thay đổi.
 
 ## An toàn (safety / 안전) evaluation
 
@@ -168,7 +168,7 @@ An toàn (safety / 안전) eval cần benign + adversarial prompts, multilingual
 
 Đồng thời phải đo over-refusal trên benign tasks.
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Robustness** tiếp nhận điểm tựa từ **An toàn (safety / 안전) evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statistical bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Robustness tests các biến thể như typo, context dài, distraction và bằng chứng mâu thuẫn để xem kết luận có thay đổi bất thường không. Vì mỗi phép đo vẫn có nhiễu, cần lượng hóa bất định thống kê khi so sánh model.
 
 ## Robustness
 
@@ -176,7 +176,7 @@ Paraphrase cùng yêu cầu (request / 요청) nhiều cách. Nếu score biến
 
 Perturbation tests gồm typo, long ngữ cảnh (context / 맥락), irrelevant distraction và conflicting bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Statistical bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Robustness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cost-quality frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Confidence interval, bootstrap hoặc repeated runs giúp phân biệt cải thiện thật với dao động lấy mẫu. Khi đã biết độ bất định, ta có thể đặt chất lượng cạnh chi phí và độ trễ để chọn operating point.
 
 ## Statistical bất định (uncertainty / 불확실성)
 
@@ -184,7 +184,7 @@ Benchmark score là estimate từ finite samples. Difference nhỏ có thể kh�
 
 Confidence interval hoặc bootstrap hữu ích khi compare các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Cost-quality frontier** tiếp nhận điểm tựa từ **Statistical bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eval-driven development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cost-quality frontier biểu diễn các lựa chọn đánh đổi giữa chất lượng, latency và chi phí, thay vì giả định model lớn nhất luôn tốt nhất. Những phép đo này trở nên hữu ích nhất khi được đưa vào vòng lặp phát triển hằng ngày.
 
 ## Cost-quality frontier
 
@@ -198,7 +198,7 @@ Mô hình (model / 모델) tốt nhất về benchmark có thể không tốt nh
 
 Plot chất lượng (quality / 품질) vs chi phí (cost / 비용)/độ trễ (latency / 지연 시간) giúp chọn Pareto frontier.
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Eval-driven development** tiếp nhận điểm tựa từ **Cost-quality frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Eval-driven development biến failure đã quan sát thành test hồi quy, rồi dùng kết quả test để hướng dẫn thay đổi tiếp theo. Mô hình tư duy sau đây tóm tắt cách đọc một con số evaluation mà không tách nó khỏi giao thức và bối cảnh.
 
 ## Eval-driven development
 
@@ -215,13 +215,13 @@ collect failures
 
 Evaluation không phải final stage; nó là vòng phản hồi (feedback loop / 피드백 루프) của AI kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Eval-driven development** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model đúng là: chọn task và population, cố định protocol, đo nhiều lớp, xem bất định, rồi nối điểm đo với quyết định sản phẩm. Các ngộ nhận sau đây thường phá vỡ một trong những bước đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Một mô hình (model / 모델) không có “chất lượng” tuyệt đối. Chất lượng luôn là **hiệu năng (performance / 성능) phân phối (distribution / 분포) trên một tác vụ (task / 작업)/population under a giao thức (protocol / 프로토콜)**.
 
-> **Chuyển mạch:** Trong **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không có benchmark duy nhất đại diện cho “chất lượng tổng thể”, và một score không thể tách khỏi dataset, prompt, evaluator và phiên bản model. Phần cuối nối các lớp đánh giá này với tài liệu rộng hơn về LLM engineering.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -237,7 +237,7 @@ Không. Judge cần calibration và kiểm tra (audit / 감사).
 
 Nếu nhóm (team / 팀) tune theo nó, nó trở thành development tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết dưới đây đặt evaluation vào mạch rộng hơn của prompting, grounding, safety và MLOps. Người học có thể lần theo chúng để biến một phép đo thành quyết định có thể kiểm chứng trong hệ thống.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

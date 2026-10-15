@@ -281,7 +281,7 @@ Ví dụ tốt hơn:
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **10. Meta description** nối từ **9. <title>** sang **11. <link>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Meta description
-Phần này nối mạch bài học với “10. Meta description”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`meta description` cung cấp tín hiệu mô tả cho công cụ tìm kiếm; mục này tách nội dung hiển thị với metadata và chỉ ra giới hạn khi trình thu thập tự chọn đoạn trích.
 
 ```html
 <meta
@@ -867,7 +867,7 @@ Những tags này giúp technical documentation có ngữ nghĩa (semantics / �
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **35. <abbr>** nối từ **34. <code>, <pre>, <kbd>, <samp>, <var>** sang **36. <blockquote> và <q>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `<abbr>`
-Phần này nối mạch bài học với “35. `<abbr>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<abbr>` giữ dạng viết tắt trong nội dung nhưng cung cấp ngữ nghĩa đầy đủ qua `title`; mục này làm rõ lợi ích đọc hiểu và giới hạn hỗ trợ của trình duyệt.
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -920,7 +920,7 @@ Không phải generic “nguồn URL” tag.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **38. <time>** nối từ **37. <cite>** sang **39. <data>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. `<time>`
-Phần này nối mạch bài học với “38. `<time>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<time>` biến ngày hoặc thời lượng thành dữ liệu có ngữ nghĩa; mục này phân biệt phần máy đọc được với cách hiển thị thân thiện cho người dùng.
 
 ```html
 <time datetime="2026-09-12">
@@ -937,7 +937,7 @@ Date/thời gian (time / 시간) ngữ nghĩa (semantics / 의미론) hữu ích
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **39. <data>** nối từ **38. <time>** sang **40. <sub> và <sup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. `<data>`
-Phần này nối mạch bài học với “39. `<data>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<data>` ghép nhãn hiển thị với giá trị máy đọc được; mục này nêu khi nào thuộc tính `value` giúp giữ định danh ổn định và khi nào cần schema khác.
 
 ```html
 <data value="SKU-123">
@@ -954,7 +954,7 @@ Hữu ích trong sản phẩm (product / 제품)/danh mục (catalog / 카탈로
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **40. <sub> và <sup>** nối từ **39. <data>** sang **41. <bdi> và <bdo>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `<sub>` và `<sup>`
-Phần này nối mạch bài học với “40. `<sub>` và `<sup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<sub>` và `<sup>` biểu diễn chỉ số theo vị trí thị giác; mục này nhấn mạnh chúng không thay thế markup toán học hay cách đọc hỗ trợ tiếp cận.
 
 ```html
 H<sub>2</sub>O
@@ -1041,7 +1041,7 @@ Dùng `ol` khi thứ tự (order / 순서) mang meaning, `ul` khi thứ tự (or
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **44. Description list** nối từ **43. <ul>, <ol>, <li>** sang **45. <a>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Description list
-Phần này nối mạch bài học với “44. Description list”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Description list ghép thuật ngữ với một hoặc nhiều mô tả; mục này phân biệt quan hệ nhãn–giá trị với danh sách thứ tự hoặc danh sách không thứ tự.
 
 ```html
 <dl>
@@ -1118,7 +1118,7 @@ Không dùng `<a href="#">` để fake button nếu không có điều hướng 
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **47. target="blank"** nối từ **46. Link và button khác nhau ở bản chất** sang **48. rel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. `target="_blank"`
-Phần này nối mạch bài học với “47. `target="_blank"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`target="_blank"` mở tài nguyên ở browsing context mới; mục này đi cùng bài toán `noopener` và kỳ vọng điều hướng để tránh rò rỉ `window.opener`.
 
 ```html
 <a
@@ -1167,7 +1167,7 @@ SEO quan hệ (relation / 관계) tokens không phải bảo mật (security / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **49. download** nối từ **48. rel** sang **50. <img>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. `download`
-Phần này nối mạch bài học với “49. `download`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Thuộc tính `download` đề xuất tải tài nguyên thay vì điều hướng; mục này làm rõ sự phụ thuộc vào origin, header máy chủ và quyền quyết định của trình duyệt.
 
 ```html
 <a
@@ -1188,7 +1188,7 @@ Nó là trình duyệt (browser / 브라우저) hint cho download hành vi (beha
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **50. <img>** nối từ **49. download** sang **51. Viết alt đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. `<img>`
-Phần này nối mạch bài học với “50. `<img>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<img>` nối tài liệu với một tài nguyên hình ảnh bên ngoài; mục này đặt nền cho alt text, kích thước nội tại và các chiến lược tải ở phần sau.
 
 ```html
 <img
@@ -1231,7 +1231,7 @@ Alt tốt mô tả **purpose trong ngữ cảnh (context / 맥락)**, không ph�
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **52. width và height** nối từ **51. Viết alt đúng** sang **53. loading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. `width` và `height`
-Phần này nối mạch bài học với “52. `width` và `height`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`width` và `height` giúp trình duyệt giữ chỗ trước khi ảnh tải xong; mục này liên hệ kích thước khai báo với tránh layout shift, không phải chỉ với độ phân giải ảnh.
 
 ```html
 <img
@@ -1259,7 +1259,7 @@ img {
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **53. loading** nối từ **52. width và height** sang **54. srcset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. `loading`
-Phần này nối mạch bài học với “53. `loading`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`loading` điều chỉnh thời điểm trình duyệt lấy ảnh; mục này cân bằng độ trễ tải với trải nghiệm và nhấn mạnh rằng lazy loading không thay thế việc khai báo kích thước.
 
 ```html
 <img
@@ -1277,7 +1277,7 @@ Không nên lazy-load hero/LCP ảnh (image / 이미지) một cách máy móc v
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **54. srcset** nối từ **53. loading** sang **55. sizes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. `srcset`
-Phần này nối mạch bài học với “54. `srcset`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`srcset` cho phép trình duyệt chọn biến thể ảnh theo độ phân giải và mật độ điểm ảnh; mục này đặt cơ sở cho lựa chọn tài nguyên thay vì nhúng một URL cố định.
 
 ```html
 <img
@@ -1296,7 +1296,7 @@ Bạn cung cấp ảnh (image / 이미지) candidates; trình duyệt (browser /
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **55. sizes** nối từ **54. srcset** sang **56. <picture>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. `sizes`
-Phần này nối mạch bài học với “55. `sizes`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`sizes` mô tả chiều rộng hiển thị dự kiến để trình duyệt chọn đúng candidate từ `srcset`; khai báo sai có thể làm tăng byte tải dù ảnh vẫn hiển thị đúng.
 
 ```html
 <img
@@ -1348,7 +1348,7 @@ Nếu `sizes` sai, trình duyệt (browser / 브라우저) có thể chọn tài
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **57. <figure> và <figcaption>** nối từ **56. <picture>** sang **58. <audio>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. `<figure>` và `<figcaption>`
-Phần này nối mạch bài học với “57. `<figure>` và `<figcaption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<figure>` gom media với chú thích có quan hệ ngữ nghĩa; mục này phân biệt caption của một đơn vị nội dung với đoạn văn đặt cạnh ảnh.
 
 ```html
 <figure>
@@ -1371,7 +1371,7 @@ Figure phù hợp với ảnh (image / 이미지), diagram, chart, mã (code / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **58. <audio>** nối từ **57. <figure> và <figcaption>** sang **59. <video>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. `<audio>`
-Phần này nối mạch bài học với “58. `<audio>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<audio>` đưa nội dung âm thanh vào tài liệu qua một phần tử điều khiển được; mục này tập trung vào fallback, controls và quyền tự động phát.
 
 ```html
 <audio
@@ -1399,7 +1399,7 @@ Autoplay có nhiều trình duyệt (browser / 브라우저) restrictions, đặ
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** nối từ **58. <audio>** sang **60. <source>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. `<video>`
-Phần này nối mạch bài học với “59. `<video>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<video>` mở rộng bài toán media sang khung hình, poster và phụ đề; mục này làm rõ vì sao playback phải đi cùng fallback và chính sách autoplay.
 
 ```html
 <video
@@ -1446,7 +1446,7 @@ Trình duyệt (browser / 브라우저) dùng năng lực (capability / 역량)/
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **60. <source>** đặt vấn đề; **61. <track>** đối chiếu bằng chứng, rồi **62. <iframe>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 61. `<track>`
-Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<track>` gắn phụ đề hoặc metadata theo thời gian vào video; mục này biến khả năng tiếp cận thành một phần của pipeline media thay vì chú thích rời.
 
 ```html
 <track
@@ -1463,7 +1463,7 @@ Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **62. <iframe>** nối từ **61. <track>** sang **63. sandbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. `<iframe>`
-Phần này nối mạch bài học với “62. `<iframe>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<iframe>` nhúng một browsing context độc lập; mục này đặt ranh giới giữa tài liệu cha, nội dung nhúng và các chính sách bảo mật liên quan.
 
 ```html
 <iframe
@@ -1481,7 +1481,7 @@ Iframe embed một browsing ngữ cảnh (context / 맥락) khác.
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **63. sandbox** nối từ **62. <iframe>** sang **64. allow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. `sandbox`
-Phần này nối mạch bài học với “63. `sandbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`sandbox` áp dụng tập quyền hạn chế cho nội dung trong iframe; mục này giải thích nguyên tắc mở dần capability thay vì tin cậy toàn bộ nội dung nhúng.
 
 ```html
 <iframe
@@ -1505,7 +1505,7 @@ Cấp cao (senior / 시니어) bảo mật (security / 보안) principle là **l
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **64. allow** nối từ **63. sandbox** sang **65. srcdoc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. `allow`
-Phần này nối mạch bài học với “64. `allow`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`allow` khai báo các capability được phép cho browsing context nhúng; mục này cần đọc cùng `sandbox` để tách quyền cấp phát khỏi nguồn gốc nội dung.
 
 ```html
 <iframe
@@ -1523,7 +1523,7 @@ Permissions chính sách (policy / 정책) cho iframe capabilities.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **65. srcdoc** nối từ **64. allow** sang **66. <table>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. `srcdoc`
-Phần này nối mạch bài học với “65. `srcdoc`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`srcdoc` đặt markup trực tiếp vào iframe, tiện cho nội dung nhỏ nhưng làm ranh giới nguồn và chính sách bảo mật trở nên rõ ràng hơn; mục này phân tích trade-off đó.
 
 ```html
 <iframe
@@ -1558,7 +1558,7 @@ Hiện đại (modern / 현대적) bố cục (layout / 레이아웃) dùng CSS 
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **67. <caption>** nối từ **66. <table>** sang **68. Table structure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. `<caption>`
-Phần này nối mạch bài học với “67. `<caption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<caption>` cung cấp tên và ngữ cảnh cho bảng; mục này đặt caption trước khi đi vào cấu trúc hàng, cột và quan hệ header.
 
 ```html
 <table>
@@ -1574,7 +1574,7 @@ Caption mô tả mục đích/nội dung bảng (table / 테이블) và rất h�
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **68. Table structure** nối từ **67. <caption>** sang **69. scope**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Table structure
-Phần này nối mạch bài học với “68. Table structure”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Table structure xác định nhóm header, body và footer để máy đọc được quan hệ dữ liệu; mục này tránh xem bảng chỉ là lưới trình bày.
 
 ```html
 <table>
@@ -1605,7 +1605,7 @@ Trình duyệt (browser / 브라우저) parser có table-specific rules; nguồn
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **69. scope** nối từ **68. Table structure** sang **70. rowspan và colspan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. `scope`
-Phần này nối mạch bài học với “69. `scope`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`scope` khai báo header áp dụng cho hàng hay cột; mục này nối cấu trúc bảng với khả năng định hướng của công nghệ hỗ trợ.
 
 ```html
 <th scope="col">Price</th>
@@ -1626,7 +1626,7 @@ Complex bảng (table / 테이블) có thể cần `headers`/`id` strategies, nh
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **70. rowspan và colspan** nối từ **69. scope** sang **71. <form>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. `rowspan` và `colspan`
-Phần này nối mạch bài học với “70. `rowspan` và `colspan`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`rowspan` và `colspan` gộp ô nhưng cũng làm quan hệ bảng phức tạp hơn; mục này cân bằng layout với khả năng truy vấn header chính xác.
 
 ```html
 <td colspan="2">Total</td>
@@ -1647,7 +1647,7 @@ Merged bảng (table / 테이블) structures cần kiểm thử (test / 테스�
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **71. <form>** nối từ **70. rowspan và colspan** sang **72. action**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. `<form>`
-Phần này nối mạch bài học với “71. `<form>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<form>` gom các control thành một lần thu thập và gửi dữ liệu; mục này đặt ranh giới giữa semantics của form và logic xử lý ở máy chủ.
 
 ```html
 <form
@@ -1666,7 +1666,7 @@ Form không chỉ là visual wrapper. Nó là một cơ chế (mechanism / 메�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **72. action** nối từ **71. <form>** sang **73. method**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. `action`
-Phần này nối mạch bài học với “72. `action`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`action` xác định endpoint nhận submission; mục này cần đọc cùng method, encoding và chính sách điều hướng để tránh hiểu form như lời gọi API tuỳ ý.
 
 ```html
 <form action="/users">
@@ -1727,7 +1727,7 @@ Nếu quên multipart, tệp (file / 파일) dữ liệu (data / 데이터) sẽ
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** nêu quy tắc; **75. <label>** thử quy tắc trong tình huống, rồi **76. Placeholder không phải label** mở rộng hệ quả.
 
 ## 75. `<label>`
-Phần này nối mạch bài học với “75. `<label>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<label>` liên kết tên hiển thị với form control; mục này làm rõ vì sao nhãn là quan hệ ngữ nghĩa, không chỉ là văn bản đặt cạnh input.
 
 ```html
 <label for="email">
@@ -1822,7 +1822,7 @@ value
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **78. text** nối từ **77. <input>** sang **79. password**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `text`
-Phần này nối mạch bài học với “78. `text`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `text` nhận chuỗi tự do; mục này đặt nền cho validation, name/value serialization và các type chuyên biệt hơn.
 
 ```html
 <input
@@ -1837,7 +1837,7 @@ General single-line văn bản (text / 텍스트).
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **79. password** nối từ **78. text** sang **80. email**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `password`
-Phần này nối mạch bài học với “79. `password`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `password` che hiển thị ký tự nhưng không tự mã hoá hay bảo vệ dữ liệu; mục này tách affordance giao diện khỏi bảo mật đường truyền và lưu trữ.
 
 ```html
 <input
@@ -1855,7 +1855,7 @@ Bảo mật (security / 보안) vẫn phụ thuộc HTTPS, máy chủ (server / 
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **80. email** nối từ **79. password** sang **81. number**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. `email`
-Phần này nối mạch bài học với “80. `email`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `email` cung cấp hint về định dạng và bàn phím phù hợp; mục này nhấn mạnh validation phía client không thay thế kiểm tra phía máy chủ.
 
 ```html
 <input
@@ -1874,7 +1874,7 @@ Máy chủ (server / 서버) vẫn phải validate email/nghiệp vụ (business
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **81. number** nối từ **80. email** sang **82. search, tel, url**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. `number`
-Phần này nối mạch bài học với “81. `number`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Input type `number` cung cấp affordance cho giá trị số nhưng không bảo đảm dữ liệu nghiệp vụ là hợp lệ; mục này tách parsing, range và validation phía máy chủ.
 
 ```html
 <input
@@ -1922,7 +1922,7 @@ URL:
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **83. checkbox** nối từ **82. search, tel, url** sang **84. radio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. `checkbox`
-Phần này nối mạch bài học với “83. `checkbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`checkbox` biểu diễn lựa chọn độc lập và chỉ gửi giá trị khi được chọn; mục này làm rõ trạng thái thiếu giá trị trong payload form.
 
 ```html
 <input
@@ -1946,7 +1946,7 @@ Nếu unchecked, trường dữ liệu (field / 필드) thường không có ent
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **84. radio** nối từ **83. checkbox** sang **85. Date/time types**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. `radio`
-Phần này nối mạch bài học với “84. `radio`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`radio` tạo một lựa chọn duy nhất trong cùng nhóm `name`; mục này đối chiếu semantics nhóm với cách checkbox biểu diễn nhiều lựa chọn.
 
 ```html
 <label>
@@ -1973,7 +1973,7 @@ Radio cùng `name` tạo group và thường chỉ một item được selected.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **85. Date/time types** nối từ **84. radio** sang **86. range**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. Date/time types
-Phần này nối mạch bài học với “85. Date/time types”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Date/time inputs chuẩn hoá affordance nhập ngày nhưng giá trị gửi đi vẫn phụ thuộc timezone và định dạng; mục này tách hiển thị cục bộ khỏi dữ liệu canonical.
 
 ```html
 <input type="date">
@@ -1994,7 +1994,7 @@ UI display cũng phụ thuộc locale/trình duyệt (browser / 브라우저).
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **86. range** nối từ **85. Date/time types** sang **87. color**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. `range`
-Phần này nối mạch bài học với “86. `range`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`range` biểu diễn một giá trị trên trục liên tục với min, max và step; mục này phù hợp điều chỉnh tương đối hơn là nhập số cần độ chính xác tuyệt đối.
 
 ```html
 <input
@@ -2013,7 +2013,7 @@ Nếu chính xác (exact / 정확한) giá trị (value / 값) quan trọng, nê
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **87. color** nối từ **86. range** sang **88. file**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. `color`
-Phần này nối mạch bài học với “87. `color`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`color` cung cấp bộ chọn màu và serialize thành giá trị chuẩn; mục này nhắc rằng ý nghĩa màu, tương phản và fallback vẫn thuộc trách nhiệm thiết kế.
 
 ```html
 <input
@@ -2028,7 +2028,7 @@ Bản địa (native / 네이티브) color picker trong supporting browsers.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **88. file** nối từ **87. color** sang **89. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 88. `file`
-Phần này nối mạch bài học với “88. `file`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`file` trao quyền chọn tệp từ thiết bị cho người dùng; mục này phân biệt metadata phía client với kiểm tra loại, kích thước và nội dung ở máy chủ.
 
 ```html
 <input
@@ -2053,7 +2053,7 @@ Multiple:
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **89. hidden** nối từ **88. file** sang **90. name**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. `hidden`
-Phần này nối mạch bài học với “89. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`hidden` gửi một giá trị không hiển thị trong form nhưng không phải cơ chế bảo mật; mục này cảnh báo mọi dữ liệu client gửi đều có thể bị sửa.
 
 ```html
 <input
@@ -2073,7 +2073,7 @@ Không bao giờ coi hidden giá trị (value / 값) là secret/trusted authoriz
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **90. name** nối từ **89. hidden** sang **91. value**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 90. `name`
-Phần này nối mạch bài học với “90. `name`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`name` là khoá để control tham gia form submission; mục này nối tên trường với payload mà server nhận, thay vì nhầm `id` là định danh serialize.
 
 ```html
 <input
@@ -2120,7 +2120,7 @@ vẫn phản ánh markup attribute `"Alice"`.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **92. required** nối từ **91. value** sang **93. disabled**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 92. `required`
-Phần này nối mạch bài học với “92. `required`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`required` bật constraint validation cho một control; mục này nhấn mạnh browser feedback hữu ích nhưng không thay thế validation nghiệp vụ phía máy chủ.
 
 ```html
 <input
@@ -2137,7 +2137,7 @@ Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **93. disabled** nối từ **92. required** sang **94. readonly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 93. `disabled`
-Phần này nối mạch bài học với “93. `disabled`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`disabled` loại control khỏi tương tác và submission; mục này phân biệt nó với `readonly`, vốn vẫn giữ dữ liệu trong payload.
 
 ```html
 <input disabled>
@@ -2168,7 +2168,7 @@ Muốn false, remove attribute hoặc set DOM thuộc tính (property / 속성) 
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **94. readonly** nối từ **93. disabled** sang **95. checked và selected**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 94. `readonly`
-Phần này nối mạch bài học với “94. `readonly`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`readonly` giữ control không cho sửa trực tiếp nhưng vẫn cho phép giá trị được gửi; mục này đối chiếu nó với `disabled` ở cả UX và payload.
 
 ```html
 <input
@@ -2217,7 +2217,7 @@ phản ánh trạng thái hiện tại (current state / 현재 상태), còn mar
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **96. min, max, step** nối từ **95. checked và selected** sang **97. minlength, maxlength**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 96. `min`, `max`, `step`
-Phần này nối mạch bài học với “96. `min`, `max`, `step`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`min`, `max` và `step` tạo constraint validation cho giá trị số; mục này phân biệt giới hạn giao diện với invariant mà server phải kiểm tra lại.
 
 ```html
 <input
@@ -2236,7 +2236,7 @@ Các ràng buộc (constraints / 제약조건들) này áp dụng phù hợp the
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **97. minlength, maxlength** nối từ **96. min, max, step** sang **98. pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 97. `minlength`, `maxlength`
-Phần này nối mạch bài học với “97. `minlength`, `maxlength`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`minlength` và `maxlength` giới hạn độ dài chuỗi ở lớp form; mục này nhắc rằng độ dài byte, ký tự Unicode và quy tắc nghiệp vụ có thể khác nhau.
 
 ```html
 <input
@@ -2253,7 +2253,7 @@ Không thay máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **98. pattern** nối từ **97. minlength, maxlength** sang **99. multiple**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 98. `pattern`
-Phần này nối mạch bài học với “98. `pattern`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`pattern` kiểm tra chuỗi theo biểu thức regular expression của trình duyệt; mục này tách cú pháp kiểm tra khỏi việc thiết kế thông báo lỗi có ích.
 
 ```html
 <input
@@ -2330,7 +2330,7 @@ Không tắt autofill bừa chỉ vì “UI nhìn sạch hơn”.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **101. inputmode** nối từ **100. autocomplete** sang **102. enterkeyhint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 101. `inputmode`
-Phần này nối mạch bài học với “101. `inputmode`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`inputmode` gợi ý bàn phím phù hợp trên thiết bị cảm ứng nhưng không đổi kiểu dữ liệu hay validation; mục này là một affordance, không phải contract.
 
 ```html
 <input
@@ -2355,7 +2355,7 @@ Ví dụ postal mã (code / 코드) numeric-looking nhưng không phải number 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **102. enterkeyhint** nối từ **101. inputmode** sang **103. <datalist>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 102. `enterkeyhint`
-Phần này nối mạch bài học với “102. `enterkeyhint`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`enterkeyhint` điều chỉnh nhãn phím Enter theo hành động dự kiến; mục này cải thiện luồng nhập nhưng không tự xử lý submit hay navigation.
 
 ```html
 <input
@@ -2381,7 +2381,7 @@ send
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **103. <datalist>** nối từ **102. enterkeyhint** sang **104. <textarea>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 103. `<datalist>`
-Phần này nối mạch bài học với “103. `<datalist>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<datalist>` cung cấp gợi ý cho input mà vẫn cho phép giá trị ngoài danh sách; mục này khác select ở quyền tự do nhập và trách nhiệm validation.
 
 ```html
 <label for="city">City</label>
@@ -2408,7 +2408,7 @@ Người dùng (user / 사용자) vẫn có thể nhập giá trị (value / 값
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **104. <textarea>** nối từ **103. <datalist>** sang **105. <select> và <option>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 104. `<textarea>`
-Phần này nối mạch bài học với “104. `<textarea>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<textarea>` nhận văn bản nhiều dòng với nội dung nằm giữa cặp thẻ; mục này làm rõ khác biệt giữa giá trị mặc định, value property và giới hạn kích thước.
 
 ```html
 <textarea
@@ -2429,7 +2429,7 @@ không phải `value` attribute như đầu vào (input / 입력).
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **105. <select> và <option>** nối từ **104. <textarea>** sang **106. <optgroup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 105. `<select>` và `<option>`
-Phần này nối mạch bài học với “105. `<select>` và `<option>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<select>` và `<option>` biểu diễn lựa chọn từ tập giá trị được định nghĩa; mục này nối label hiển thị với value thực sự được serialize.
 
 ```html
 <select name="country">
@@ -2447,7 +2447,7 @@ Bản địa (native / 네이티브) select cung cấp keyboard/mobile/khả nă
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **106. <optgroup>** nối từ **105. <select> và <option>** sang **107. <fieldset> và <legend>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 106. `<optgroup>`
-Phần này nối mạch bài học với “106. `<optgroup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<optgroup>` nhóm các option theo taxonomy hiển thị mà không đổi value; mục này giúp danh sách dài dễ quét nhưng vẫn giữ một control duy nhất.
 
 ```html
 <select name="country">
@@ -2465,7 +2465,7 @@ Dùng để group options theo category.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **107. <fieldset> và <legend>** nối từ **106. <optgroup>** sang **108. <button>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 107. `<fieldset>` và `<legend>`
-Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<fieldset>` nhóm các control liên quan và `<legend>` đặt tên cho nhóm; mục này cung cấp cấu trúc giúp form dài dễ hiểu và dễ điều hướng.
 
 ```html
 <fieldset>
@@ -2492,7 +2492,7 @@ Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **108. <button>** nối từ **107. <fieldset> và <legend>** sang **109. Multi-action form**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 108. `<button>`
-Phần này nối mạch bài học với “108. `<button>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<button>` là control hành động với type quyết định submit, reset hay hành vi tuỳ chỉnh; mục này tách semantics mặc định khỏi event handler JavaScript.
 
 ```html
 <button type="button">
@@ -2559,7 +2559,7 @@ Phần Master sẽ giải thích sâu submitter/form đơn vị sở hữu (owne
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **110. <output>** nối từ **109. Multi-action form** sang **111. <progress>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 110. `<output>`
-Phần này nối mạch bài học với “110. `<output>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<output>` hiển thị kết quả do phép tính hoặc tương tác tạo ra; mục này phân biệt kết quả trình bày với giá trị input được gửi lên server.
 
 ```html
 <output for="price quantity">
@@ -2574,7 +2574,7 @@ Biểu diễn kết quả (result / 결과) của calculation/người dùng (us
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **111. <progress>** nối từ **110. <output>** sang **112. <meter>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 111. `<progress>`
-Phần này nối mạch bài học với “111. `<progress>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<progress>` biểu diễn mức hoàn thành của một tiến trình; mục này nhấn mạnh nó khác `meter` ở chỗ có mục tiêu tiến độ rõ ràng.
 
 ```html
 <progress
@@ -2591,7 +2591,7 @@ Dùng cho tác vụ (task / 작업) progress.
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **112. <meter>** nối từ **111. <progress>** sang **113. <details> và <summary>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 112. `<meter>`
-Phần này nối mạch bài học với “112. `<meter>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<meter>` biểu diễn một giá trị nằm trong khoảng đã biết như dung lượng hoặc điểm; mục này không nên dùng để giả lập tiến độ tải chưa xác định.
 
 ```html
 <meter
@@ -2611,7 +2611,7 @@ Dùng cho đo lường (measurement / 측정) trong known phạm vi (range / 범
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **113. <details> và <summary>** tổng hợp từ **112. <meter>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **114. <dialog>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 113. `<details>` và `<summary>`
-Phần này nối mạch bài học với “113. `<details>` và `<summary>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<details>` và `<summary>` cung cấp disclosure native với trạng thái mở/đóng; mục này đặt nền cho nội dung progressive disclosure không cần tự dựng nút.
 
 ```html
 <details>
@@ -2630,7 +2630,7 @@ Trước khi tự viết accordion bằng `div + onclick + aria-expanded`, hãy 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **114. <dialog>** tổng hợp từ **113. <details> và <summary>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **115. <form method="dialog">** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 114. `<dialog>`
-Phần này nối mạch bài học với “114. `<dialog>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<dialog>` mô hình hoá hộp thoại có vòng đời mở, đóng và modal; mục này phân biệt focus management native với overlay tự dựng.
 
 ```html
 <dialog id="confirm">
@@ -2725,7 +2725,7 @@ Tính năng (feature / 기능) này sẽ được giải thích sâu ở Master 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **117. id** nối từ **116. Popover** sang **118. class**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 117. `id`
-Phần này nối mạch bài học với “117. `id`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`id` cung cấp định danh duy nhất trong document và làm neo cho label, fragment hoặc script; mục này đặt quy tắc uniqueness trước khi bàn về selector.
 
 ```html
 <section id="pricing">
@@ -2742,7 +2742,7 @@ Duplicate IDs có thể gây khả năng tiếp cận (accessibility / 접근성
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **118. class** nối từ **117. id** sang **119. style**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 118. `class`
-Phần này nối mạch bài học với “118. `class`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`class` gắn phần tử với một hoặc nhiều nhóm phong cách/hành vi; mục này phân biệt taxonomy có thể lặp với `id` duy nhất.
 
 ```html
 <div class="card active">
@@ -2761,7 +2761,7 @@ element.classList
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **119. style** nối từ **118. class** sang **120. title**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 119. `style`
-Phần này nối mạch bài học với “119. `style`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`style` đặt declaration trực tiếp lên phần tử; mục này chỉ ra khi inline style hữu ích và khi nó làm yếu khả năng tái sử dụng, cascade hoặc CSP.
 
 ```html
 <div style="display:none">
@@ -2774,7 +2774,7 @@ Inline style hợp lệ, nhưng large ứng dụng (application / 애플리케�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **120. title** nối từ **119. style** sang **121. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 120. `title`
-Phần này nối mạch bài học với “120. `title`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`title` cung cấp gợi ý bổ sung nhưng không thay thế accessible name hay label; mục này đặt tooltip-like metadata vào đúng giới hạn của nó.
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -2791,7 +2791,7 @@ Không dùng nó làm accessible name duy nhất cho trọng yếu (critical / �
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **121. hidden** nối từ **120. title** sang **122. inert**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 121. `hidden`
-Phần này nối mạch bài học với “121. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`hidden` loại nội dung khỏi rendering thông thường; mục này phân biệt ẩn khỏi mọi người dùng với chỉ ẩn trực quan bằng CSS.
 
 ```html
 <section hidden>
@@ -2812,7 +2812,7 @@ Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **122. inert** nối từ **121. hidden** sang **123. tabindex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 122. `inert`
-Phần này nối mạch bài học với “122. `inert`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`inert` tạm thời loại subtree khỏi focus và tương tác; mục này phù hợp khi modal che nền nhưng không phải cơ chế phân quyền hay bảo mật.
 
 ```html
 <main inert>
@@ -2829,7 +2829,7 @@ Useful với custom overlay workflows, nhưng bản địa (native / 네이티�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **123. tabindex** nối từ **122. inert** sang **124. data-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 123. `tabindex`
-Phần này nối mạch bài học với “123. `tabindex`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`tabindex` điều chỉnh khả năng focus bằng bàn phím; mục này ưu tiên thứ tự DOM tự nhiên và cảnh báo việc tạo tabindex dương.
 
 ```html
 tabindex="0"
@@ -2856,7 +2856,7 @@ thường là anti-pattern vì phá natural focus thứ tự (order / 순서) v�
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **124. data-** nối từ **123. tabindex** sang **125. contenteditable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 124. `data-*`
-Phần này nối mạch bài học với “124. `data-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`data-*` mang metadata tuỳ chỉnh trên phần tử và đọc qua `dataset`; mục này phù hợp cho dữ liệu gắn với DOM nhưng không thay thế state model hay schema API.
 
 ```html
 <button
@@ -2878,7 +2878,7 @@ Không chứa secret/đơn vị từ (token / 토큰) vì DOM thuộc máy khác
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **125. contenteditable** nối từ **124. data-** sang **126. draggable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125. `contenteditable`
-Phần này nối mạch bài học với “125. `contenteditable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`contenteditable` biến subtree thành vùng sửa trực tiếp; mục này đặt các vấn đề về caret, markup sinh ra, sanitization và đồng bộ dữ liệu.
 
 ```html
 <div contenteditable="true">
@@ -2895,7 +2895,7 @@ Selection, paste sanitization, undo, trình duyệt (browser / 브라우저) dif
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **126. draggable** nối từ **125. contenteditable** sang **127. spellcheck, translate, autofocus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126. `draggable`
-Phần này nối mạch bài học với “126. `draggable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`draggable` bật cơ chế kéo-thả native; mục này phân biệt event model của HTML với trải nghiệm pointer và keyboard cần tự bổ sung.
 
 ```html
 <div draggable="true">
@@ -2954,7 +2954,7 @@ Script loading chiến lược (strategy / 전략) ảnh hưởng parser và hi�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **129. defer** nối từ **128. <script>** sang **130. async**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 129. `defer`
-Phần này nối mạch bài học với “129. `defer`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`defer` trì hoãn script đến sau khi parser hoàn tất nhưng giữ thứ tự các script cùng loại; mục này nối tải tài nguyên với thời điểm DOM sẵn sàng.
 
 ```html
 <script
@@ -2972,7 +2972,7 @@ Classic deferred script được download song song và execute sau document par
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **130. async** nối từ **129. defer** sang **131. type="module"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 130. `async`
-Phần này nối mạch bài học với “130. `async`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`async` cho phép script thực thi ngay khi tải xong, nên thứ tự giữa các script không được bảo đảm; mục này phù hợp code độc lập hơn là dependency chain.
 
 ```html
 <script
@@ -2990,7 +2990,7 @@ Phù hợp với independent scripts như analytics.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **131. type="module"** nối từ **130. async** sang **132. nomodule**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 131. `type="module"`
-Phần này nối mạch bài học với “131. `type="module"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`type="module"` đưa script vào module graph với scope riêng và defer mặc định; mục này là ranh giới giữa dependency browser-native và bundler pipeline.
 
 ```html
 <script
@@ -3010,7 +3010,7 @@ Hiện đại (modern / 현대적) frontend cần hiểu mô-đun (module / 모�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **132. nomodule** nối từ **131. type="module"** sang **133. integrity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 132. `nomodule`
-Phần này nối mạch bài học với “132. `nomodule`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`nomodule` là fallback cho trình duyệt chưa hỗ trợ module; mục này đặt chiến lược tương thích cạnh module graph hiện đại và tránh tải trùng code.
 
 ```html
 <script
@@ -3028,7 +3028,7 @@ Ngày nay nhiều projects không cần nữa, nhưng cấp cao (senior / 시니
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **133. integrity** nối từ **132. nomodule** sang **134. nonce**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 133. `integrity`
-Phần này nối mạch bài học với “133. `integrity`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`integrity` xác minh hash của tài nguyên bên ngoài; mục này nối CDN delivery với kiểm tra toàn vẹn, không phải với xác thực danh tính máy chủ.
 
 ```html
 <script
@@ -3047,7 +3047,7 @@ Hữu ích với pinned third-party CDN resources.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **134. nonce** nối từ **133. integrity** sang **135. <noscript>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 134. `nonce`
-Phần này nối mạch bài học với “134. `nonce`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`nonce` cho phép một inline script cụ thể dưới CSP; mục này nhấn mạnh nonce phải ngẫu nhiên, dùng một lần và gắn với response hiện tại.
 
 ```html
 <script nonce="RANDOM_PER_RESPONSE">
@@ -3062,7 +3062,7 @@ Nonce phải unpredictable và phù hợp chính sách (policy / 정책). Hardco
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **135. <noscript>** nối từ **134. nonce** sang **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 135. `<noscript>`
-Phần này nối mạch bài học với “135. `<noscript>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`<noscript>` cung cấp nội dung thay thế khi script không chạy; mục này phân biệt progressive enhancement với việc giả định JavaScript luôn sẵn sàng.
 
 ```html
 <noscript>
@@ -3103,7 +3103,7 @@ Tìm kiếm (search / 검색) engine phải hiểu content thật.
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, sau nội dung của **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)**, **137. Canonical** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **138. Robots metadata** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 137. Canonical
-Phần này nối mạch bài học với “137. Canonical”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Canonical URL chỉ ra đại diện ưu tiên của một tài liệu; mục này giúp công cụ tìm kiếm hợp nhất tín hiệu nhưng không tự giải quyết nội dung trùng lặp.
 
 ```html
 <link
@@ -3120,7 +3120,7 @@ Nó không phải redirect và không phải bảo mật (security / 보안) quy
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **138. Robots metadata** nối từ **137. Canonical** sang **139. Open Graph**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 138. Robots metadata
-Phần này nối mạch bài học với “138. Robots metadata”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Robots metadata truyền chỉ dẫn crawl/index cho công cụ tìm kiếm; mục này tách điều khiển lập chỉ mục khỏi quyền truy cập bảo mật.
 
 ```html
 <meta
@@ -3137,7 +3137,7 @@ Nó không bảo vệ private admin page. Private page phải có authentication
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **139. Open Graph** nối từ **138. Robots metadata** sang **140. JSON-LD structured data**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 139. Open Graph
-Phần này nối mạch bài học với “139. Open Graph”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Open Graph cung cấp title, image và description cho rich preview; mục này phục vụ nền tảng chia sẻ chứ không thay thế metadata SEO cốt lõi.
 
 ```html
 <meta
@@ -3160,7 +3160,7 @@ Dùng để tạo xã hội (social / 사회적) sharing previews trong supporti
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **140. JSON-LD structured data** nối từ **139. Open Graph** sang **141. bản địa (native / 네이티브) HTML trước ARIA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 140. JSON-LD structured data
-Phần này nối mạch bài học với “140. JSON-LD structured data”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+JSON-LD mô tả entity và quan hệ dưới dạng dữ liệu có cấu trúc; mục này nhấn mạnh schema phải phản ánh nội dung thật, không phải lời hứa hiển thị.
 
 ```html
 <script type="application/ld+json">
@@ -3239,7 +3239,7 @@ Nếu visible văn bản (text / 텍스트) tồn tại, ưu tiên để accessi
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **142. Accessible name** nêu quy tắc; **143. aria-labelledby** thử quy tắc trong tình huống, rồi **144. aria-describedby** mở rộng hệ quả.
 
 ## 143. `aria-labelledby`
-Phần này nối mạch bài học với “143. `aria-labelledby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`aria-labelledby` lấy accessible name từ nội dung của phần tử được tham chiếu; mục này ưu tiên quan hệ label rõ ràng thay vì lặp văn bản trong ARIA.
 
 ```html
 <h2 id="dialog-title">
@@ -3260,7 +3260,7 @@ Accessible name lấy từ element khác.
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **143. aria-labelledby** nêu quy tắc; **144. aria-describedby** thử quy tắc trong tình huống, rồi **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## 144. `aria-describedby`
-Phần này nối mạch bài học với “144. `aria-describedby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`aria-describedby` bổ sung mô tả hoặc hướng dẫn cho control; mục này phân biệt accessible description với tên ngắn dùng để nhận diện.
 
 ```html
 <label for="password">
@@ -3303,7 +3303,7 @@ ARIA trạng thái (state / 상태) không tự sync với visual trạng thái 
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **146. aria-current** nối từ **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** sang **147. Live regions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 146. `aria-current`
-Phần này nối mạch bài học với “146. `aria-current`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`aria-current` đánh dấu mục hiện tại trong một tập điều hướng; mục này truyền trạng thái ngữ nghĩa mà CSS highlight không tự cung cấp.
 
 ```html
 <a
@@ -3320,7 +3320,7 @@ Cho assistive technology biết item hiện tại.
 > **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **147. Live regions** nối từ **146. aria-current** sang **148. Keyboard kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 147. Live regions
-Phần này nối mạch bài học với “147. Live regions”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Live region thông báo thay đổi động cho công nghệ hỗ trợ; mục này yêu cầu chọn mức độ politeness phù hợp để không biến mọi cập nhật thành gián đoạn.
 
 ```html
 <div
@@ -3414,7 +3414,7 @@ Attribute thể hiện markup/default giá trị (value / 값) relationship; thu
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **151. checked** nối từ **150. value** sang **152. href**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 151. `checked`
-Phần này nối mạch bài học với “151. `checked`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`checked` phản ánh trạng thái lựa chọn ban đầu hoặc hiện tại tuỳ thuộc attribute/property; mục này làm rõ khác biệt đó trong form state.
 
 ```html
 <input
@@ -3437,7 +3437,7 @@ input.checked
 > **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **152. href** nối từ **151. checked** sang **153. Boolean attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 152. `href`
-Phần này nối mạch bài học với “152. `href`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`href` biến anchor thành liên kết có đích; mục này phân biệt navigation native với phần tử giả button gắn click handler.
 
 ```html
 <a href="/users">
@@ -3666,7 +3666,7 @@ preconnect đúng origin
 > **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** đặt vấn đề; **163. fetchpriority** đối chiếu bằng chứng, rồi **164. Preconnect và preload** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 163. `fetchpriority`
-Phần này nối mạch bài học với “163. `fetchpriority`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`fetchpriority` gợi ý mức ưu tiên tải cho tài nguyên; mục này đặt hint đó trong toàn bộ network waterfall, không xem nó là mệnh lệnh tuyệt đối.
 
 ```html
 <img
@@ -3783,7 +3783,7 @@ Nếu bạn có thể trả lời những câu này, bạn đang rà soát (revi
 ---
 
 # PHẦN 25 — PRODUCTION PAGE HOÀN CHỈNH
-Phần này nối mạch bài học với “PHẦN 25 — PRODUCTION PAGE HOÀN CHỈNH”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Phần production page ghép các primitive trước thành một luồng hoàn chỉnh; mục này kiểm tra liệu semantics, accessibility, performance và security có còn nhất quán khi đi cùng nhau.
 
 ```html
 <!doctype html>

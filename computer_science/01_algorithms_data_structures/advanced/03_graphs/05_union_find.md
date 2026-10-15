@@ -24,7 +24,7 @@ find(a) == find(b)
 
 thì `a` và `b` đã connected theo quan hệ merge hiện tại.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Mô hình tư duy** gom các mảnh từ **Hai thao tác cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **cách biểu diễn (representation / 표현) bằng nút cha forest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Union-Find duy trì các lớp tương đương bằng hai thao tác find và union. Để hiểu chi phí và bất biến của chúng, trước hết cần nhìn vào forest các nút cha mà cấu trúc dữ liệu lưu trữ.
 
 ## Mô hình tư duy
 
@@ -32,7 +32,7 @@ thì `a` và `b` đã connected theo quan hệ merge hiện tại.
 
 Điểm mạnh của DSU đến từ việc nó từ chối lưu thông tin không cần thiết. Nếu bài toán chỉ hỏi connectivity dưới thao tác merge, đường đi chi tiết là overhead.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **cách biểu diễn (representation / 표현) bằng nút cha forest** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cách đơn giản union có vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mỗi component là một cây hướng lên root, và find trả về root đại diện; union nối hai root để giữ mỗi component là một cây. Nếu luôn nối tùy ý, chiều cao cây có thể tăng tuyến tính.
 
 ## cách biểu diễn (representation / 표현) bằng nút cha forest
 
@@ -70,7 +70,7 @@ sau `union(0,2)`:
 
 Tất cả các nút trong cùng cây có cùng representative nút gốc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Cách đơn giản union có vấn đề gì?** tiếp nhận điểm tựa từ **cách biểu diễn (representation / 표현) bằng nút cha forest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Union by kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Union đơn giản có thể tạo chain dài, khiến find lặp qua nhiều parent trước khi tới root. Union by size khắc phục phần này bằng cách luôn gắn cây nhỏ hơn vào cây lớn hơn.
 
 ## Cách đơn giản union có vấn đề gì?
 
@@ -87,7 +87,7 @@ DSU hiệu quả nhờ hai tối ưu hóa (optimization / 최적화) phối hợ
 1. **union by kích thước (size / 크기)/rank (크기/랭크 기준 합치기)**;
 2. **đường đi compression (경로 압축)**.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Union by kích thước (size / 크기)** tiếp nhận điểm tựa từ **Cách đơn giản union có vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đường đi compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Union by size giới hạn chiều cao khi chỉ xét các lần merge, nhưng find vẫn có thể đi qua nhiều tầng đã tồn tại. Path compression làm phẳng đường đi trong chính lúc truy vấn.
 
 ## Union by kích thước (size / 크기)
 
@@ -118,7 +118,7 @@ Mỗi khi độ sâu của một nút tăng 1 do cây của nó bị gắn dư�
 
 Một nút không thể trải qua quá `log2 n` lần mà “kích thước thành phần ít nhất tăng gấp đôi”. Vì vậy chỉ riêng union-by-size đã chặn chiều cao cây ở `O(log n)`.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **đường đi compression** tiếp nhận điểm tựa từ **Union by kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterative find trong C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Path compression cho mọi nút trên đường find trỏ thẳng về root, không làm thay đổi partition. Khi viết trong C, dạng iterative giúp tránh phụ thuộc vào độ sâu đệ quy và làm rõ cập nhật parent.
 
 ## đường đi compression
 
@@ -151,7 +151,7 @@ sau `find(7)` có thể thành:
 
 Một thao tác hiện tại trả thêm maintenance chi phí để tương lai các thao tác rẻ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Iterative find trong C** tiếp nhận điểm tựa từ **đường đi compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **O(alpha(n)) thực sự nghĩa là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Iterative find vẫn giữ cùng invariant root và nén đúng các nút đã đi qua. Khi kết hợp union by size/rank với path compression, chi phí trung bình khấu hao được mô tả bằng inverse Ackermann.
 
 ## Iterative find trong C
 
@@ -177,7 +177,7 @@ int dsu_find(DSU *d, int x) {
 
 Pass đầu tìm nút gốc; pass sau compress đường đi. Iterative form tránh recursion độ sâu concern và làm sự thay đổi dữ liệu luồng (flow / 흐름) rõ ràng.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **O(alpha(n)) thực sự nghĩa là gì?** tiếp nhận điểm tựa từ **Iterative find trong C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **phân tích khấu hao ở đây đến từ đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`alpha(n)` tăng cực chậm trong mọi kích thước thực tế, nhưng đây là bound khấu hao trên một chuỗi thao tác chứ không phải lời hứa mỗi lệnh đều có thời gian hằng số. Phần tiếp theo giải thích trực giác của phân tích đó.
 
 ## `O(alpha(n))` thực sự nghĩa là gì?
 
@@ -195,7 +195,7 @@ Nhưng nói “DSU là O(1)” về mặt lý thuyết là không chính xác. C
 
 > amortized gần constant trong mọi kích thước đầu vào thực tế, với bound `O(alpha(n))`.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **phân tích khấu hao ở đây đến từ đâu?** tiếp nhận điểm tựa từ **O(alpha(n)) thực sự nghĩa là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DSU trong Kruskal MST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân tích khấu hao tính tổng công việc của nhiều lần union/find và dùng cấu trúc cấp bậc để giới hạn số lần một nút bị nâng hoặc nén. Ứng dụng kinh điển của bound này là DSU trong Kruskal MST.
 
 ## phân tích khấu hao ở đây đến từ đâu?
 
@@ -203,7 +203,7 @@ Một `find` riêng lẻ vẫn có thể đi qua nhiều các nút. Nhưng mỗi
 
 Đây là cùng family lập luận (reasoning / 추론) với mảng động resize: một thao tác đắt được “trả” bởi việc làm nhiều thao tác tương lai rẻ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **DSU trong Kruskal MST** tiếp nhận điểm tựa từ **phân tích khấu hao ở đây đến từ đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **phát hiện chu trình khi add undirected các cạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kruskal sắp xếp cạnh rồi dùng DSU để kiểm tra hai đầu cạnh đã cùng component hay chưa; nếu khác, cạnh đó được nhận và hai component được merge. Chính phép kiểm tra này cũng phát hiện chu trình trong đồ thị vô hướng.
 
 ## DSU trong Kruskal MST
 
@@ -221,7 +221,7 @@ Nếu representatives giống nhau, cạnh đóng chu trình và bỏ qua.
 
 DSU ở đây không tìm chu trình bằng traversal. Nó chỉ trả lời “hai endpoints đã connected bởi các cạnh trước chưa?”.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **phát hiện chu trình khi add undirected các cạnh** tiếp nhận điểm tựa từ **DSU trong Kruskal MST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connected các thành phần dưới merge-only các cập nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu hai đầu cạnh đã cùng root, thêm cạnh sẽ tạo chu trình; nếu khác root, cạnh nối hai component. Với các cập nhật chỉ merge, DSU còn trả lời connectivity online và số component rất hiệu quả.
 
 ## phát hiện chu trình khi add undirected các cạnh
 
@@ -237,7 +237,7 @@ for edge (u,v):
 
 Lưu ý đây là lập luận (reasoning / 추론) cho **undirected** connectivity. Directed phát hiện chu trình không thể dùng DSU theo cách này vì directed reachability không phải quan hệ tương đương đơn giản.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Connected các thành phần dưới merge-only các cập nhật** tiếp nhận điểm tựa từ **phát hiện chu trình khi add undirected các cạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thành phần siêu dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merge-only connectivity phù hợp với mạng hoặc quan hệ tăng dần vì DSU không cần tách component. Khi mỗi component cần lưu thêm thông tin, ta gắn metadata vào root và cập nhật có chủ đích khi merge.
 
 ## Connected các thành phần dưới merge-only các cập nhật
 
@@ -257,7 +257,7 @@ componentCount--
 
 Ta có thể truy vấn số các thành phần `O(1)`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Connected các thành phần dưới merge-only các cập nhật** nêu điều cần giải thích; **thành phần siêu dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **ngoại tuyến threshold các truy vấn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metadata ở root có thể là size, tổng, min/max hoặc đại diện ứng dụng, nhưng phải xác định phép gộp là kết hợp được. Với truy vấn threshold đã biết trước, sắp xếp sự kiện ngoại tuyến cho phép tái sử dụng cùng invariant merge-only.
 
 ## thành phần siêu dữ liệu
 
@@ -282,7 +282,7 @@ sum[ra] += sum[rb];
 
 Nguyên tắc là siêu dữ liệu phải thuộc representative hiện tại; không nên đọc `size[x]` cho non-root nếu cách triển khai không giữ nó cập nhật.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **thành phần siêu dữ liệu** nêu điều cần giải thích; **ngoại tuyến threshold các truy vấn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kruskal Reconstruction cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Offline threshold queries thường sắp xếp cạnh và truy vấn theo ngưỡng, thêm dần cạnh rồi trả lời khi hai đỉnh cùng component. Kruskal Reconstruction Tree lưu lịch sử merge để biến các truy vấn đó thành truy vấn trên một cây.
 
 ## ngoại tuyến threshold các truy vấn
 
@@ -303,7 +303,7 @@ answer = find(a) == find(b)
 
 Mỗi cạnh chỉ được add một lần. Đây là ví dụ của **ngoại tuyến thuật toán**: biết trước toàn bộ các truy vấn cho phép reorder xử lý để dùng DSU hiệu quả.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Kruskal Reconstruction cây** tiếp nhận điểm tựa từ **ngoại tuyến threshold các truy vấn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DSU với parity / bipartite các ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kruskal Reconstruction Tree ghi mỗi lần merge thành một node có trọng số ngưỡng, nhờ đó LCA có thể trả lời bottleneck connectivity. Nếu quan hệ cần lưu chẵn/lẻ, DSU phải mở rộng bằng parity trên parent path.
 
 ## Kruskal Reconstruction cây
 
@@ -313,7 +313,7 @@ Sau khi xây dựng, các truy vấn như “minimum threshold để u và v con
 
 Insight này cho thấy DSU không chỉ là endpoint thuật toán; nó còn có thể xây một hierarchy từ merge lịch sử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **DSU với parity / bipartite các ràng buộc** tiếp nhận điểm tựa từ **Kruskal Reconstruction cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weighted / Potential DSU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DSU parity lưu quan hệ khác màu hoặc cùng màu giữa một nút và root, nên có thể phát hiện mâu thuẫn bipartite khi merge. Cùng khuôn mẫu đó, weighted/potential DSU lưu một đại lượng tương đối thay vì chỉ một bit.
 
 ## DSU với parity / bipartite các ràng buộc
 
@@ -331,7 +331,7 @@ và detect contradiction khi thêm các cạnh trong trực tuyến bipartitenes
 
 Nguyên tắc tổng quát: DSU có thể duy trì **relative potential** giữa nút và representative nếu quan hệ (relation / 관계) compose được.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Weighted / Potential DSU** tiếp nhận điểm tựa từ **DSU với parity / bipartite các ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Weighted DSU cộng hoặc trừ potential trên đường lên root, rồi suy ra hiệu giữa hai phần tử khi chúng cùng component. Thiết kế này vẫn giả định thao tác chỉ merge; xóa hoặc tách sẽ phá cấu trúc parent đã nén.
 
 ## Weighted / Potential DSU
 
@@ -347,7 +347,7 @@ hoặc một group-like quan hệ (relation / 관계) tương tự. Khi union ha
 
 Đây là bước nâng cao: đường đi compression không chỉ đổi nút cha; mọi siêu dữ liệu relative-to-parent phải được cập nhật tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?** tiếp nhận điểm tựa từ **Weighted / Potential DSU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quay lui (rollback / 롤백) DSU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DSU chuẩn không lưu đủ lịch sử để tách một merge, và path compression làm lịch sử đó khó hoàn tác. Rollback DSU vì thế thường bỏ path compression, ghi snapshot các thay đổi và khôi phục theo stack.
 
 ## Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?
 
@@ -359,7 +359,7 @@ Nếu xóa một cạnh đã từng làm các thành phần merge, DSU không bi
 
 > DSU nhanh vì nó quên đường đi cấu trúc (structure / 구조). Muốn hỗ trợ (support / 지원) deletion, bạn cần giữ thêm thông tin hoặc đổi thuật toán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Quay lui (rollback / 롤백) DSU** tiếp nhận điểm tựa từ **Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **động connectivity ngoại tuyến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rollback DSU hoàn tác theo checkpoint, nên mỗi lần merge cần ghi đúng parent, size và metadata đã thay đổi. Kết hợp với segment tree trên trục thời gian, nó giải được dynamic connectivity ngoại tuyến.
 
 ## Quay lui (rollback / 롤백) DSU
 
@@ -390,7 +390,7 @@ rollback():
 
 Tối ưu hóa (optimization / 최적화) không tồn tại trong chân không: đường đi compression tốt cho forward các truy vấn nhưng xung đột với reversibility.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **động connectivity ngoại tuyến** tiếp nhận điểm tựa từ **Quay lui (rollback / 롤백) DSU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Persistent / Partially Persistent DSU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dynamic connectivity offline đưa mỗi cạnh vào các khoảng thời gian tồn tại, rồi DFS trên cấu trúc khoảng và rollback khi rời nhánh. Nếu cần truy vấn nhiều phiên bản theo thời gian mà không biết trước toàn bộ lịch sử, persistent DSU là một hướng khác.
 
 ## động connectivity ngoại tuyến
 
@@ -408,7 +408,7 @@ Mỗi truy vấn sees đúng tập các cạnh active tại timestamp của nó.
 
 Đây là một example nâng cao của việc kết hợp các cấu trúc dữ liệu: cây đoạn quản thời gian (time / 시간) intervals, quay lui (rollback / 롤백) DSU quản connectivity trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Persistent / Partially Persistent DSU** tiếp nhận điểm tựa từ **động connectivity ngoại tuyến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **gộp nhỏ vào lớn khác DSU thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Persistent hoặc partially persistent DSU giữ khả năng truy vấn các trạng thái cũ, với chi phí và cấu trúc bộ nhớ khác rollback. Điều này cần phân biệt với kỹ thuật gộp nhỏ vào lớn, vốn không phải DSU dù cùng dùng phân tích khấu hao.
 
 ## Persistent / Partially Persistent DSU
 
@@ -416,7 +416,7 @@ Một hướng khác là giữ lịch sử để truy vấn connectivity ở phi
 
 Điểm conceptual là DSU có thể được mở rộng theo trục **thời gian (time / 시간)**, nhưng tiêu chuẩn (standard / 표준) cách triển khai chỉ đại diện trạng thái hiện tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **gộp nhỏ vào lớn khác DSU thế nào?** tiếp nhận điểm tựa từ **Persistent / Partially Persistent DSU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java cách triển khai đầy đủ cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Small-to-large chuyển các phần tử từ container nhỏ sang container lớn, còn DSU nối root và không duyệt lại toàn bộ component. Hai kỹ thuật có trực giác amortization tương tự nhưng invariant và API khác nhau; ta bắt đầu bằng implementation Java cơ bản.
 
 ## gộp nhỏ vào lớn khác DSU thế nào?
 
@@ -426,7 +426,7 @@ Kỹ thuật này dùng cùng lập luận nhân đôi để chặn số lần m
 
 Cùng chứng minh mẫu không đồng nghĩa cùng cấu trúc dữ liệu.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Java cách triển khai đầy đủ cơ bản** tiếp nhận điểm tựa từ **gộp nhỏ vào lớn khác DSU thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JavaScript cách triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Implementation Java cần khởi tạo parent/size, nén đường đi trong find và chỉ merge hai root khác nhau. Cùng invariant đó có thể chuyển sang JavaScript, với lưu ý riêng về kiểu số và biểu diễn mảng.
 
 ## Java cách triển khai đầy đủ cơ bản
 
@@ -494,7 +494,7 @@ final class DSU {
 }
 ```
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **JavaScript cách triển khai** tiếp nhận điểm tựa từ **Java cách triển khai đầy đủ cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bản JavaScript giữ nguyên hai bất biến: parent cuối cùng của root là chính nó và size chỉ cập nhật ở root mới. Trước khi dùng trong bài toán lớn, cần rà các ngộ nhận về path compression, delete và complexity.
 
 ## JavaScript cách triển khai
 
@@ -537,7 +537,7 @@ class DSU {
 }
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **JavaScript cách triển khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử DSU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không nên gọi `find` là O(1) cho từng lệnh, dùng DSU cho phép xóa trực tiếp, hoặc bỏ qua khác biệt giữa merge-only và dynamic deletion. Kiểm thử DSU phải làm lộ các lỗi này bằng sequence thao tác có trạng thái biết trước.
 
 ## Những hiểu lầm phổ biến
 
@@ -553,7 +553,7 @@ class DSU {
 
 **“Gần O(1) nghĩa là trường hợp xấu nhất O(1).”** Không. Bound chuẩn là amortized `O(alpha(n))` với hai optimizations.
 
-> **Chuyển mạch:** Trong **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **kiểm thử DSU** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) với các lớp tương đương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiểm thử nên bao gồm self-union, merge lặp, chain dài, nhiều component, metadata và parity/potential nếu có. Những trường hợp này nối DSU với khái niệm rộng hơn về các lớp tương đương.
 
 ## kiểm thử DSU
 
@@ -571,7 +571,7 @@ connected là equivalence relation
 
 quan hệ tương đương nghĩa là reflexive, symmetric và transitive. Đây cũng là lý do DSU hợp với partition problems.
 
-> **Chuyển mạch:** Ở chặng này của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Liên kết (connection / 연결) với các lớp tương đương** tiếp nhận điểm tựa từ **kiểm thử DSU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DSU là cấu trúc đại diện cho một quan hệ tương đương được xây dần: phản xạ, đối xứng và bắc cầu được mã hóa qua root chung. Mô hình tư duy mở rộng sẽ đặt giới hạn này cạnh các biến thể rollback, weighted và persistent.
 
 ## Liên kết (connection / 연결) với các lớp tương đương
 
@@ -585,7 +585,7 @@ x ~ y và y ~ z => x ~ z   transitive
 
 Connected các thành phần của đồ thị vô hướng (undirected graph), account merging theo định danh dùng chung, synonym groups, clustering dưới merge các quy tắc đều có thể được nhìn như các lớp tương đương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**, **Mô hình tư duy mở rộng** gom các mảnh từ **Liên kết (connection / 연결) với các lớp tương đương** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy của DSU là: xác định quan hệ merge-only, chọn root representation, giữ invariant sau union/find, rồi chọn extension theo truy vấn thời gian hoặc ràng buộc. Các liên kết cuối bài giúp đối chiếu những lựa chọn đó với Kruskal và các cấu trúc đồ thị khác.
 
 ## Mô hình tư duy mở rộng
 

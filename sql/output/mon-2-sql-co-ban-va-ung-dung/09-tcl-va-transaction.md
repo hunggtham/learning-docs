@@ -11,7 +11,7 @@
 
 Để học **TCL và Transaction** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 87–89.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 87–89.
 >
 > **Liên kết bài trước:** DML thay đổi dữ liệu; TCL quyết định khi nào các thay đổi đó trở thành dữ liệu chính thức hoặc bị hủy.
 

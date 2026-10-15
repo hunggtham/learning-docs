@@ -22,7 +22,7 @@ h_i=f_\theta(x_1,...,x_T,i)
 
 Cùng đơn vị từ (token / 토큰) ID ở position/ngữ cảnh (context / 맥락) khác có `h_i` khác.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **ELMo: contextualization bằng bidirectional LM** tiếp nhận điểm tựa từ **Static vs Contextual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BERT representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Biểu diễn tĩnh chỉ có một véc-tơ cho mỗi kiểu từ, còn contextual embedding cần một trạng thái phụ thuộc cả câu. ELMo thực hiện điều đó bằng mô hình ngôn ngữ hai chiều; BERT mở rộng ý tưởng với kiến trúc Transformer.
 
 ## ELMo: contextualization bằng bidirectional LM
 
@@ -30,7 +30,7 @@ ELMo là milestone trước Transformer. Nó dùng stacked bidirectional LSTMs; 
 
 Insight: different layers capture different linguistic thông tin (information / 정보), and context-sensitive đơn vị từ (token / 토큰) biểu diễn (representation / 표현) improves downstream tasks.
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **BERT representations** tiếp nhận điểm tựa từ **ELMo: contextualization bằng bidirectional LM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰) biểu diễn (representation / 표현) vs Sentence biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+ELMo và BERT đều tạo trạng thái theo ngữ cảnh, nhưng BERT biểu diễn từng token qua các tầng Transformer. Muốn dùng các trạng thái ấy cho truy hồi hoặc phân loại câu, cần phân biệt token representation với sentence representation.
 
 ## BERT representations
 
@@ -42,7 +42,7 @@ After each Transformer tầng (layer / 계층), đơn vị từ (token / 토큰)
 
 Final/selected layers feed classification, QA, NER etc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Đơn vị từ (token / 토큰) biểu diễn (representation / 표현) vs Sentence biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **BERT representations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sentence-BERT / Contrastive Sentence Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một ma trận trạng thái theo token chưa phải một véc-tơ câu tốt. Sentence-BERT dùng pooling và mục tiêu tương phản để biến các câu thành biểu diễn có thể so sánh trực tiếp.
 
 ## Đơn vị từ (token / 토큰) biểu diễn (representation / 표현) vs Sentence biểu diễn (representation / 표현)
 
@@ -58,7 +58,7 @@ Sentence/document tasks need pooling:
 
 Raw BERT `[CLS]` is not automatically ideal ngữ nghĩa (semantic / 의미적) sentence embedding. mục tiêu (objective / 목표) matters.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Đơn vị từ (token / 토큰) biểu diễn (representation / 표현) vs Sentence biểu diễn (representation / 표현)** đã nêu tiêu chí phân biệt, còn **Sentence-BERT / Contrastive Sentence Embeddings** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bi-Encoder vs Cross-Encoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Contrastive learning làm cho sentence embedding phù hợp với similarity và retrieval, nhưng cách tính điểm vẫn là một lựa chọn kiến trúc. Bi-encoder và cross-encoder minh họa rõ đánh đổi giữa tốc độ truy hồi và khả năng tương tác sâu giữa hai câu.
 
 ## Sentence-BERT / Contrastive Sentence Embeddings
 
@@ -80,7 +80,7 @@ allows precompute document vectors + ANN tìm kiếm (search / 검색).
 
 Sentence-BERT-style contrastive huấn luyện (training / 학습) makes pooled embeddings suitable ngữ nghĩa (semantic / 의미적) similarity/retrieval.
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Sentence-BERT / Contrastive Sentence Embeddings** đã nêu tiêu chí phân biệt, còn **Bi-Encoder vs Cross-Encoder** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bi-encoder mã hóa độc lập nên nhanh và có thể lập chỉ mục; cross-encoder đọc cặp đầu vào cùng lúc nên thường chính xác hơn nhưng đắt hơn. Cả hai đều dựa trên hình học của các trạng thái contextual, vì vậy phần tiếp theo xem hình học đó nên được hiểu ra sao.
 
 ## Bi-Encoder vs Cross-Encoder
 
@@ -113,7 +113,7 @@ bi-encoder retrieve top K
 
 This kiến trúc (architecture / 아키텍처) is cốt lõi (core / 핵심) RAG retrieval ngăn xếp (stack / 스택).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Bi-Encoder vs Cross-Encoder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tầng (layer / 계층) Selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khoảng cách giữa các trạng thái contextual phụ thuộc vị trí trong mạng và mục tiêu đã huấn luyện; khả năng giải mã một thuộc tính không chứng minh mô hình dùng nó theo cách nhân quả. Vì vậy, chọn tầng cần gắn với tác vụ và đánh giá thực nghiệm.
 
 ## Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)
 
@@ -121,7 +121,7 @@ A đơn vị từ (token / 토큰)'s hidden trạng thái (state / 상태) encod
 
 Probing studies can decode linguistic attributes from hidden states, but decodability does not prove nhân quả (causal / 인과적) use.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Tầng (layer / 계층) Selection** tiếp nhận điểm tựa từ **Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pooling and Length độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các tầng giữa và cuối có thể hữu ích cho những thông tin khác nhau, nên “tầng cuối luôn tốt nhất” là một quy tắc thiếu căn cứ. Sau khi chọn tầng, bước pooling còn quyết định cách độ dài câu ảnh hưởng đến véc-tơ.
 
 ## Tầng (layer / 계층) Selection
 
@@ -131,7 +131,7 @@ Some methods concatenate/learn weighted mixture across layers.
 
 No universal “last tầng (layer / 계층) always best”.
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Pooling and Length độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Tầng (layer / 계층) Selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mean pooling, attention pooling và các chiến lược theo đoạn tạo ra các phân bố độ dài khác nhau. Normalization là bước tiếp theo để kiểm soát ảnh hưởng về độ lớn trước khi so sánh hoặc lập chỉ mục.
 
 ## Pooling and Length độ lệch (bias / 편향)
 
@@ -141,7 +141,7 @@ For long document retrieval, chunk-level embeddings often better than one véc-t
 
 Chunking introduces segmentation/provenance trade-offs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Normalization** tiếp nhận điểm tựa từ **Pooling and Length độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contrastive huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Normalization không thể sửa một biểu diễn đã học sai mục tiêu; nó chỉ thay đổi cách các véc-tơ được so sánh. Muốn hình học phản ánh quan hệ cần dùng, contrastive training phải cung cấp cặp dương, cặp âm và tín hiệu đánh giá phù hợp.
 
 ## Normalization
 
@@ -159,7 +159,7 @@ Then dot sản phẩm (product / 제품) equals cosine similarity:
 
 ANN indexes may assume one chỉ số (metric / 지표); preprocessing must match mô hình (model / 모델) huấn luyện (training / 학습)/recommendation.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Normalization** đã nêu tiêu chí phân biệt, còn **Contrastive huấn luyện (training / 학습)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Lĩnh vực (domain / 도메인) Adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Contrastive objective kéo các cặp được xem là tương tự lại gần và đẩy các cặp âm ra xa; hard negative giúp kiểm tra ranh giới khó. Khi dữ liệu huấn luyện thay đổi theo lĩnh vực, cần đánh giá nguy cơ chuyên biệt hóa quá mức.
 
 ## Contrastive huấn luyện (training / 학습)
 
@@ -176,7 +176,7 @@ In-batch negatives provide efficiency, but false negatives (actually relevant do
 
 Hard negatives improve discrimination near quyết định (decision / 결정) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Contrastive huấn luyện (training / 학습)** đã nêu tiêu chí phân biệt, còn **Lĩnh vực (domain / 도메인) Adaptation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Multilingual Embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Domain adaptation có thể tăng recall trong một lĩnh vực nhưng làm giảm khả năng khái quát. Khi mở rộng sang nhiều ngôn ngữ, sự khác biệt tokenizer, dữ liệu và mức độ căn chỉnh tạo thêm một lớp đánh đổi.
 
 ## Lĩnh vực (domain / 도메인) Adaptation
 
@@ -184,7 +184,7 @@ General embedding mô hình (model / 모델) may thất bại (fail / 실패) sp
 
 However overfitting narrow lĩnh vực (domain / 도메인) may reduce general ngữ nghĩa (semantic / 의미적) hành vi (behavior / 동작). Evaluation needs representative queries.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Multilingual Embeddings** tiếp nhận điểm tựa từ **Lĩnh vực (domain / 도메인) Adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) Length** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multilingual embedding có thể chia sẻ không gian giữa các ngôn ngữ, nhưng chất lượng không đồng đều và không bảo đảm chuyển giao cho mọi cặp ngôn ngữ. Giới hạn độ dài ngữ cảnh tiếp tục quyết định phần thông tin nào còn hiện diện khi mã hóa.
 
 ## Multilingual Embeddings
 
@@ -198,7 +198,7 @@ Vietnamese query
 
 Alignment chất lượng (quality / 품질) varies languages/domains and tokenizer efficiency.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Ngữ cảnh (context / 맥락) Length** tiếp nhận điểm tựa từ **Multilingual Embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding Drift và Versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Context window dài hơn không tự động tạo hiểu biết tốt hơn: cắt đoạn có thể làm mất liên kết, còn giữ toàn bộ văn bản làm tăng chi phí. Khi mô hình hoặc cách cắt thay đổi, index đã tạo cũng có thể không còn tương thích.
 
 ## Ngữ cảnh (context / 맥락) Length
 
@@ -212,7 +212,7 @@ chunk / summarize / hierarchical encode
 track source span
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Embedding Drift và Versioning** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) Length** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) Similarity ≠ Relevance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Embedding drift là lý do cần lưu phiên bản mô hình, tokenizer, preprocessing và thời điểm lập index. Ngay cả khi véc-tơ ổn định, similarity vẫn chỉ là tín hiệu ngữ nghĩa; relevance còn phụ thuộc nhu cầu truy vấn và ràng buộc nghiệp vụ.
 
 ## Embedding Drift và Versioning
 
@@ -220,7 +220,7 @@ Thay đổi (change / 변경) embedding mô hình (model / 모델)/phiên bản 
 
 Re-embedding/re-indexing can be costly; mô hình (model / 모델) phiên bản (version / 버전) must live in vector-store siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Ngữ nghĩa (semantic / 의미적) Similarity ≠ Relevance** tiếp nhận điểm tựa từ **Embedding Drift và Versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Similarity đo gần nhau trong không gian biểu diễn, còn relevance là phán đoán theo nhiệm vụ. Vì thế hệ thống truy hồi thường kết hợp dense embedding với lexical search, bộ lọc hoặc reranker. Mô hình tư duy sau đây tóm tắt chuỗi quyết định đó.
 
 ## Ngữ nghĩa (semantic / 의미적) Similarity ≠ Relevance
 
@@ -228,7 +228,7 @@ Two texts can be semantically similar but irrelevant to truy vấn (query / 쿼�
 
 Dense embedding should combine with lexical tìm kiếm (search / 검색), filters/rerankers when appropriate.
 
-> **Chuyển mạch:** Trong **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Ngữ nghĩa (semantic / 의미적) Similarity ≠ Relevance** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mô hình tư duy nối từ trạng thái theo ngữ cảnh đến pooling, similarity và đánh giá theo nhiệm vụ. Các ngộ nhận cuối bài kiểm tra những điểm thường bị bỏ qua trong chuỗi này.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -236,7 +236,7 @@ Dense embedding should combine with lexical tìm kiếm (search / 검색), filte
 
 For retrieval, sentence embedding further asks “nén toàn bộ văn bản (text / 텍스트) thành véc-tơ (vector / 벡터) nào để similarity phản ánh relevance mục tiêu (objective / 목표)?”.
 
-> **Chuyển mạch:** Ở chặng này của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận cho thấy contextual không đồng nghĩa với “hiểu đúng” và similarity không đồng nghĩa với relevance. Liên kết kiến thức cuối bài chỉ ra nơi quay lại để kiểm tra từng giả định.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -256,7 +256,7 @@ Similarity score không calibrated xác suất (probability / 확률).
 
 Huấn luyện (training / 학습) balance/tokenization/dữ liệu (data / 데이터) chất lượng (quality / 품질) lead uneven hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết dưới đây nối contextual embeddings với các bài về biểu diễn, retrieval và sequence models; hãy dùng chúng để chọn nhánh học tiếp theo thay vì xem một phép đo đơn lẻ là kết luận cuối cùng.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

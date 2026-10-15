@@ -64,7 +64,7 @@ Concurrent rendering không thay định danh (identity / 식별자) rules; nó 
 > **Nối mạch:** Concurrent reconciliation tách render work; `useTransition`/`startTransition` tiếp theo hạ priority cho update không khẩn cấp, còn `useDeferredValue` trì hoãn giá trị đọc.
 
 ## 5. `useTransition` và `startTransition`
-Phần này nối mạch bài học với “5. `useTransition` và `startTransition`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Concurrent reconciliation tách render work khỏi priority; `useTransition`/`startTransition` hạ priority cho update không khẩn cấp, còn deferred value xử lý phía consumer.
 
 ```jsx
 const [isPending, startTransition] = useTransition();
@@ -84,7 +84,7 @@ Chuyển tiếp (transition / 전이) không phải debounce. Debounce trì hoã
 > **Nối mạch:** `startTransition` lowers update priority; `useDeferredValue` lets a consumer lag, while debounce controls input frequency rather than render priority.
 
 ## 6. `useDeferredValue`
-Phần này nối mạch bài học với “6. `useDeferredValue`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`startTransition` biểu đạt render priority, không debounce input; `useDeferredValue` cho consumer lag có chủ đích, nên phần tiếp theo đặt các công cụ này cạnh Suspense.
 
 ```jsx
 const deferredQuery = useDeferredValue(query);
@@ -108,7 +108,7 @@ Ví dụ tìm kiếm (search / 검색) box có thể cập nhật văn bản (te
 > **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7. Suspense nâng cao** nối từ **6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau** sang **8. use**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Suspense nâng cao
-Phần này nối mạch bài học với “7. Suspense nâng cao”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Transition, deferred value và debounce giải quyết ba vấn đề khác nhau; Suspense tiếp theo thêm boundary cho trạng thái chờ của dữ liệu hoặc code.
 
 ```jsx
 <Suspense fallback={<Skeleton />}>
@@ -157,7 +157,7 @@ Không phải cứ viết `"use server"` trong Vite SPA là có máy chủ (serv
 > **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10. useActionState** nối từ **9. Actions và form APIs React 19** sang **11. useFormStatus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. `useActionState`
-Phần này nối mạch bài học với “10. `useActionState`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+React 19 Actions và form APIs đặt nền cho async submission; `useActionState` tiếp theo gom kết quả action, state và pending status vào một contract.
 
 ```jsx
 const [state, submitAction, isPending] =
@@ -200,7 +200,7 @@ Thành phần (component / 컴포넌트) đọc status phải nằm trong form n
 > **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **12. useOptimistic** nối từ **11. useFormStatus** sang **13. useEffectEvent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. `useOptimistic`
-Phần này nối mạch bài học với “12. `useOptimistic`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`useFormStatus` cung cấp status trong đúng form context; `useOptimistic` tiếp theo thêm provisional state và cần policy rõ cho commit hoặc rollback.
 
 ```jsx
 const [optimisticMessages, addOptimisticMessage] =
@@ -315,7 +315,7 @@ Fragment refs giải quyết trường hợp một hành vi (behavior / 동작) 
 > **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **17. External store và useSyncExternalStore** nối từ **16. Fragment refs trong React 19.3** sang **18. useInsertionEffect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. External store và `useSyncExternalStore`
-Phần này nối mạch bài học với “17. External store và `useSyncExternalStore`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Fragment refs thao tác một nhóm sibling mà không thêm wrapper; external store tiếp theo chuyển trọng tâm sang snapshot nhất quán và subscription an toàn.
 
 ```jsx
 const snapshot = useSyncExternalStore(
@@ -365,7 +365,7 @@ const load = cache(async url => {
 > **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **19. useImperativeHandle** nối từ **18. useInsertionEffect** sang **20. lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. `useImperativeHandle`
-Phần này nối mạch bài học với “19. `useImperativeHandle`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`useInsertionEffect` phục vụ các thư viện cần chèn style đúng thời điểm; `useImperativeHandle` tiếp theo giới hạn imperative surface mà component expose cho parent.
 
 ```jsx
 function MyInput({ ref }) {
@@ -925,7 +925,7 @@ Không nên nhìn cột “thay thế” như một bảng search-and-replace. V
 Giả sử cần subscribe một room theo `roomId`.
 
 ### React Class Component
-Phần này nối mạch bài học với “React Class Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Migration case bắt đầu từ cùng một feature qua nhiều thế hệ; class component cho thấy lifecycle subscription được sở hữu và cleanup ra sao.
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -973,7 +973,7 @@ class ChatRoom extends React.Component {
 ```
 
 ### Function Component với Hooks
-Phần này nối mạch bài học với “Function Component với Hooks”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Class component đặt subscription trong lifecycle; function component với Hooks giữ cùng intent bằng effect và dependency, nhưng phải kiểm tra cleanup và stale closure.
 
 ```jsx
 function ChatRoom({

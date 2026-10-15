@@ -21,7 +21,7 @@ kiểm tra bảo mật / static analysis
 
 Một chuỗi xử lý (pipeline / 파이프라인) có thể thất bại dù mã nguồn biên dịch bình thường nếu lược đồ (schema / 스키마) upstream thay đổi hoặc phân phối đặc trưng bất thường.
 
-> **Chuyển mạch:** Trong **CI/CD/CT cho Hệ thống AI**, **Tích hợp liên tục** nêu điều cần giải thích; **Kiểm tra dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Smoke kiểm thử (test / 테스트) cho Huấn luyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các kiểm tra mã nguồn chỉ là lớp đầu tiên; với AI, tính hợp lệ của dữ liệu cũng quyết định pipeline có đáng tin hay không. Vì vậy, bước kế tiếp là kiểm tra các đặc tính có thể làm thay đổi đầu vào huấn luyện.
 
 ## Kiểm tra dữ liệu
 
@@ -37,7 +37,7 @@ Ví dụ:
 
 Kiểm tra dữ liệu không chứng minh dữ liệu “đúng hoàn toàn”, nhưng giúp chặn nhiều thất bại (failure / 실패) phổ biến trước khi huấn luyện.
 
-> **Chuyển mạch:** Ở chặng này của **CI/CD/CT cho Hệ thống AI**, **Kiểm tra dữ liệu** nêu điều cần giải thích; **Smoke kiểm thử (test / 테스트) cho Huấn luyện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân phối liên tục và Triển khai liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kiểm tra dữ liệu giúp chặn lỗi sớm nhưng không thay thế việc chạy thử toàn bộ chuỗi xử lý. Một smoke test nhỏ là cách rẻ để xác nhận pipeline vẫn thực thi và tạo ra artifact có thể dùng được.
 
 ## Smoke kiểm thử (test / 테스트) cho Huấn luyện
 
@@ -45,7 +45,7 @@ Không cần huấn luyện toàn bộ mô hình trong CI. Có thể chạy trê
 
 Huấn luyện đầy đủ thường chạy ở một job điều phối riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CI/CD/CT cho Hệ thống AI**, **Phân phối liên tục và Triển khai liên tục** tiếp nhận điểm tựa từ **Smoke kiểm thử (test / 테스트) cho Huấn luyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng cho Triển khai Mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Smoke test xác nhận khả năng chạy; delivery và deployment quyết định cách đưa artifact đã xác nhận qua các môi trường. Trước khi tự động hóa bước đó, cần nêu rõ cổng chất lượng và quyền phê duyệt.
 
 ## Phân phối liên tục và Triển khai liên tục
 
@@ -55,7 +55,7 @@ Huấn luyện đầy đủ thường chạy ở một job điều phối riêng
 
 Với AI có rủi ro cao, delivery kết hợp phê duyệt có kiểm soát thường phù hợp hơn triển khai hoàn toàn tự động.
 
-> **Chuyển mạch:** Trong **CI/CD/CT cho Hệ thống AI**, **Cổng cho Triển khai Mô hình** tiếp nhận điểm tựa từ **Phân phối liên tục và Triển khai liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Huấn luyện liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các gate biến yêu cầu triển khai thành quyết định có thể kiểm tra, còn huấn luyện liên tục tạo ra các ứng viên mới. Hai vòng này cần nối với nhau nhưng không được coi là cùng một quyết định.
 
 ## Cổng cho Triển khai Mô hình
 
@@ -72,7 +72,7 @@ cổng shadow / canary
 
 Ngưỡng của gate nên được phiên bản (version / 버전) hóa và có thể rà soát (review / 검토).
 
-> **Chuyển mạch:** Ở chặng này của **CI/CD/CT cho Hệ thống AI**, **Huấn luyện liên tục** tiếp nhận điểm tựa từ **Cổng cho Triển khai Mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trigger Huấn luyện lại và Trigger Triển khai lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CT có thể tạo ra một artifact mới sau mỗi trigger, nhưng artifact đó vẫn phải đi qua đánh giá và phê duyệt. Vì thế cần phân biệt rõ điều gì kích hoạt huấn luyện lại và điều gì kích hoạt rollout.
 
 ## Huấn luyện liên tục
 
@@ -94,7 +94,7 @@ kích hoạt huấn luyện
 → phê duyệt / thăng cấp
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CI/CD/CT cho Hệ thống AI**, **Trigger Huấn luyện lại và Trigger Triển khai lại** tiếp nhận điểm tựa từ **Huấn luyện liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hai trigger tách biệt giúp tránh huấn luyện lại ngoài ý muốn hoặc triển khai một artifact chưa được đánh giá. Khi rollout không đạt yêu cầu, quy trình cần có đường quay về bản phát hành tương thích trước đó.
 
 ## Trigger Huấn luyện lại và Trigger Triển khai lại
 
@@ -102,13 +102,13 @@ Có thể huấn luyện lại nhưng không triển khai nếu mô hình mới 
 
 Tách hai khái niệm này làm vòng đời rõ hơn.
 
-> **Chuyển mạch:** Trong **CI/CD/CT cho Hệ thống AI**, **Quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **Trigger Huấn luyện lại và Trigger Triển khai lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triển khai Canary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rollback bảo vệ người dùng khi phiên bản mới có vấn đề, nhưng vẫn cần quan sát phiên bản mới trong phạm vi nhỏ trước khi mở rộng. Canary cung cấp một cơ chế kiểm chứng như vậy.
 
 ## Quay lui (rollback / 롤백)
 
 Quay lui (rollback / 롤백) cần khôi phục bộ mô hình, tokenizer/preprocessor, prompt và cấu hình tương thích. Nếu cơ sở dữ liệu (database / 데이터베이스) hoặc chỉ mục (index / 인덱스) lược đồ (schema / 스키마) đã migrate theo cách không tương thích, chỉ quay lui (rollback / 롤백) mô hình có thể vẫn thất bại.
 
-> **Chuyển mạch:** Ở chặng này của **CI/CD/CT cho Hệ thống AI**, **Triển khai Canary** tiếp nhận điểm tựa từ **Quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triển khai Shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Canary cho phép phiên bản mới ảnh hưởng một phần traffic và có thể quay lui nhanh. Nếu muốn quan sát mà không ảnh hưởng đầu ra người dùng, ta dùng shadow deployment.
 
 ## Triển khai Canary
 
@@ -116,7 +116,7 @@ Chỉ chuyển một tỷ lệ traffic tới ứng viên rồi theo dõi chỉ s
 
 Canary cần chú ý thiên lệch lựa chọn (selection bias): tập traffic phải đủ đại diện hoặc kết quả phải được diễn giải đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CI/CD/CT cho Hệ thống AI**, **Triển khai Shadow** tiếp nhận điểm tựa từ **Triển khai Canary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CI/CD cho LLM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Shadow giữ đầu ra của ứng viên ngoài luồng người dùng, nên phù hợp để đo hành vi trên traffic thật trước khi quyết định. Với LLM, phép đo đó cần mở rộng từ độ trễ sang chất lượng và an toàn của đầu ra.
 
 ## Triển khai Shadow
 
@@ -124,7 +124,7 @@ Canary cần chú ý thiên lệch lựa chọn (selection bias): tập traffic 
 
 Shadow có thể gần như nhân đôi chi phí suy luận và vẫn phải tuân thủ kiểm soát quyền riêng tư.
 
-> **Chuyển mạch:** Trong **CI/CD/CT cho Hệ thống AI**, **CI/CD cho LLM** tiếp nhận điểm tựa từ **Triển khai Shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi xử lý (pipeline / 파이프라인) như Mã nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LLM đưa thêm prompt, retrieval và tool vào bề mặt thay đổi, nên bộ kiểm thử phải bao quát cả hành vi. Những thành phần này cũng cần được versioning và review như mã nguồn.
 
 ## CI/CD cho LLM
 
@@ -142,7 +142,7 @@ chi phí / độ trễ
 
 So sánh chuỗi chính xác thường quá giòn với đầu ra (output / 출력) sinh nội dung; nên dùng kiểm tra có cấu trúc hoặc đánh giá bằng verifier khi phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **CI/CD/CT cho Hệ thống AI**, **CI/CD cho LLM** nêu điều cần giải thích; **Chuỗi xử lý (pipeline / 파이프라인) như Mã nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Secret và Môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Versioning pipeline giúp xem diff và tái lập một lần chạy, nhưng pipeline vẫn hoạt động trong các môi trường chứa secret và quyền khác nhau. Vì vậy, kiểm soát secret phải là một phần của cùng hợp đồng triển khai.
 
 ## Chuỗi xử lý (pipeline / 파이프라인) như Mã nguồn
 
@@ -150,13 +150,13 @@ Chuỗi xử lý (pipeline / 파이프라인) huấn luyện và triển khai n�
 
 Cấu hình chỉ tồn tại trong UI thủ công dễ tạo trạng thái ẩn khó truy vết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CI/CD/CT cho Hệ thống AI**, **Chuỗi xử lý (pipeline / 파이프라인) như Mã nguồn** nêu điều cần giải thích; **Secret và Môi trường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tách secret và môi trường làm giảm nguy cơ lộ credential và giúp mỗi bước được cấp đúng quyền. Các phần trên có thể được cô đọng thành ba vai trò: kiểm tra, tạo artifact và đưa artifact đi qua môi trường.
 
 ## Secret và Môi trường
 
 Log của huấn luyện (training / 학습) hoặc CI không được làm lộ API key, credential hoặc dữ liệu nhạy cảm. Quyền giữa dev, staging và môi trường vận hành (production / 운영 환경) nên được tách rõ.
 
-> **Chuyển mạch:** Trong **CI/CD/CT cho Hệ thống AI**, **Mô hình tư duy** gom các mảnh từ **Secret và Môi trường** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sơ đồ này tách CI, CT và CD theo việc chúng chứng minh, tạo ra và phân phối điều gì. Các hiểu lầm sau thường xuất hiện khi ba vai trò bị gộp thành một nút “tự động triển khai”.
 
 ## Mô hình tư duy
 
@@ -168,7 +168,7 @@ CT → tạo artifact đã học mới
 CD → đưa artifact đã được phê duyệt qua các môi trường một cách an toàn
 ```
 
-> **Chuyển mạch:** Ở chặng này của **CI/CD/CT cho Hệ thống AI**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ví dụ trên cho thấy tự động hóa chỉ đáng tin khi mỗi gate, artifact và môi trường đều có bằng chứng tương ứng. Các liên kết dưới đây nối mạch CI/CD/CT với registry, monitoring, drift và LLMOps.
 
 ## Những nhầm lẫn thường gặp
 
@@ -184,7 +184,6 @@ Không. Phân phối môi trường vận hành (production / 운영 환경) và
 
 Không. Regression về hành vi, bảo mật và retrieval mới là phần khó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CI/CD/CT cho Hệ thống AI**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức
 

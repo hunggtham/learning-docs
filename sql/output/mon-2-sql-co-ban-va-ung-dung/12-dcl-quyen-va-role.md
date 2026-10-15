@@ -11,7 +11,7 @@
 
 Để học **DCL, quyền và Role** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 100–103.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 100–103.
 >
 > **Liên kết bài trước:** bảng (table / 테이블), view, chuỗi (sequence / 시퀀스) và synonym là các đối tượng (object / 객체) cần được bảo vệ. DCL xác định tài khoản nào có thể làm gì với từng đối tượng (object / 객체) hoặc với hệ thống.
 

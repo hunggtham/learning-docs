@@ -23,7 +23,7 @@ API/token cost
 multilingual UX
 ```
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Vocabulary kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰) là đơn vị compute của LLM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Byte-Level BPE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token là đơn vị tính toán, còn vocabulary quyết định cách chuỗi được chia thành các token. Mục tiếp theo cho thấy byte-level BPE xây dựng vocabulary đó bằng các phép gộp như thế nào.
 
 ## Vocabulary kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)
 
@@ -42,7 +42,7 @@ Small vocabulary:
 
 Optimal depends mô hình (model / 모델) kích thước (size / 크기)/dữ liệu (data / 데이터)/languages.
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Byte-Level BPE** tiếp nhận điểm tựa từ **Vocabulary kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰) Fertility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Byte-level BPE giúp tokenizer bao phủ nhiều script, nhưng số token cần cho cùng một nội dung vẫn thay đổi theo ngôn ngữ. Vì vậy, mục tiếp theo đo chi phí thực tế bằng token fertility.
 
 ## Byte-Level BPE
 
@@ -50,7 +50,7 @@ Many GPT-like tokenizers start bytes then merge frequent sequences. Any Unicode 
 
 But scripts using multi-byte UTF-8 may need more cơ sở (base / 기반) units before merges. Underrepresented ngôn ngữ (language / 언어) gets fewer efficient merges.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Đơn vị từ (token / 토큰) Fertility** tiếp nhận điểm tựa từ **Byte-Level BPE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korean/Vietnamese practical tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token fertility biến khác biệt tokenizer thành chi phí và độ dài ngữ cảnh có thể đo. Tiếp theo, hãy xem các khác biệt đó ảnh hưởng cụ thể ra sao với tiếng Hàn và tiếng Việt.
 
 ## Đơn vị từ (token / 토큰) Fertility
 
@@ -60,7 +60,7 @@ Higher fertility ngôn ngữ (language / 언어) consumes more ngữ cảnh (con
 
 For multilingual triển khai (deployment / 배포), measure fertility separately Korean, Vietnamese, English and lĩnh vực (domain / 도메인) mã (code / 코드)/dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Korean/Vietnamese practical tác động (effect / 효과)** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰) Fertility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chat Templates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tác động ngôn ngữ xác nhận rằng không nên dùng heuristic tiếng Anh cho mọi corpus. Chat template là một lớp khác cũng biến cùng văn bản thành chuỗi token khác nhau, nên được xét ngay sau đây.
 
 ## Korean/Vietnamese practical tác động (effect / 효과)
 
@@ -70,7 +70,7 @@ Vietnamese words may span syllables separated spaces; tokenizer may or may not m
 
 Do not assume 4 characters/đơn vị từ (token / 토큰) English heuristic across languages.
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Chat Templates** tiếp nhận điểm tựa từ **Korean/Vietnamese practical tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BOS/EOS and Stop Conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chat template quy định role markers và thứ tự serialization mà mô hình đã được huấn luyện để đọc. Những marker này liên quan trực tiếp đến điều kiện bắt đầu, kết thúc và dừng sinh.
 
 ## Chat Templates
 
@@ -88,7 +88,7 @@ If ứng dụng (application / 애플리케이션) manually builds prompt with w
 
 Always use official tokenizer/chat-template hiện thực (implementation / 구현) when possible.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **BOS/EOS and Stop Conditions** tiếp nhận điểm tựa từ **Chat Templates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰) Healing / ranh giới (boundary / 경계) Effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+BOS/EOS và stop condition là ranh giới giao thức, không chỉ là chuỗi ký tự tùy ý. Khi ranh giới token và ranh giới chuỗi lệch nhau, token healing có thể làm thay đổi kết quả tiếp nối.
 
 ## BOS/EOS and Stop Conditions
 
@@ -96,7 +96,7 @@ Beginning/end tokens affect generation boundaries. Chat turn may use special end
 
 Suy luận (inference / 추론) máy chủ (server / 서버) stop lô-gic (logic / 논리) must align tokens/strings. Stopping by substring can truncate legitimate văn bản (text / 텍스트) or thất bại (fail / 실패) with đơn vị từ (token / 토큰) ranh giới (boundary / 경계) differences.
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **BOS/EOS and Stop Conditions** đã nêu tiêu chí phân biệt, còn **Đơn vị từ (token / 토큰) Healing / ranh giới (boundary / 경계) Effects** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tokenization and Numbers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Token healing làm rõ vì sao cùng một prefix có thể được phân đoạn khác nhau khi autocomplete. Với số và dữ liệu có cấu trúc, ta cần kiểm tra thêm các quy tắc biểu diễn thay vì dựa vào trực giác token.
 
 ## Đơn vị từ (token / 토큰) Healing / ranh giới (boundary / 경계) Effects
 
@@ -104,7 +104,7 @@ Prompt ending inside a tokenizable word or with awkward whitespace can create to
 
 This matters autocomplete/mã (code / 코드) completion more than normal chat.
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Đơn vị từ (token / 토큰) Healing / ranh giới (boundary / 경계) Effects** đã nêu tiêu chí phân biệt, còn **Tokenization and Numbers** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Structured dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Số học và tokenization có thể không đồng nhất: một số được tạo từ nhiều mảnh token không mang giá trị số trực tiếp. Vì vậy, structured data cần schema và validation rõ ràng khi đi qua mô hình.
 
 ## Tokenization and Numbers
 
@@ -112,7 +112,7 @@ Numbers split into digit chunks unpredictably. This partly explains weak chính 
 
 Tools/mã (code / 코드)/calculators should handle chính xác (exact / 정확한) arithmetic when độ tin cậy (reliability / 신뢰성) required.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Tokenization and Numbers** nêu điều cần giải thích; **Structured dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tokenizer and Embedding ma trận (matrix / 행렬) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Structured output giữ tính đúng của dữ liệu bằng quy tắc bên ngoài chuỗi token tự do. Khi tokenizer và embedding matrix không cùng vocabulary hoặc kích thước, pipeline sẽ hỏng trước cả bước sinh.
 
 ## Structured dữ liệu (data / 데이터)
 
@@ -120,7 +120,7 @@ JSON/XML/mã (code / 코드) punctuation can consume many tokens. Minified forma
 
 Lược đồ (schema / 스키마) thiết kế (design / 설계) can optimize both validity and đơn vị từ (token / 토큰) chi phí (cost / 비용). Repeated long trường dữ liệu (field / 필드) names increase đầu ra (output / 출력) tokens.
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Structured dữ liệu (data / 데이터)** nêu điều cần giải thích; **Tokenizer and Embedding ma trận (matrix / 행렬) tính tương thích (compatibility / 호환성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Special Tokens as Attack Surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tokenizer và embedding matrix là một cặp phiên bản: token ID chỉ có nghĩa trong vocabulary mà embedding đã học. Special tokens mở rộng giao thức và tạo thêm ranh giới cần bảo vệ.
 
 ## Tokenizer and Embedding ma trận (matrix / 행렬) tính tương thích (compatibility / 호환성)
 
@@ -134,7 +134,7 @@ Swap tokenizer destroys ngữ nghĩa (semantics / 의미론) even if vocab kích
 
 Adding new tokens requires resize embedding/đầu ra (output / 출력) matrices and huấn luyện (training / 학습) those rows; naive addition does not teach meaning.
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Special Tokens as Attack Surface** tiếp nhận điểm tựa từ **Tokenizer and Embedding ma trận (matrix / 행렬) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) ngân sách (budget / 예산) Planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Special token có thể thay đổi role, stop behavior hoặc cấu trúc output, nên phải được coi như một phần của attack surface. Sau khi xác định ranh giới giao thức, ta lập kế hoạch ngân sách context.
 
 ## Special Tokens as Attack Surface
 
@@ -144,7 +144,7 @@ Robust chat APIs should separate roles structurally and escape/encode người d
 
 Tokenizer/giao thức (protocol / 프로토콜) bảo mật (security / 보안) connects prompt injection.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Ngữ cảnh (context / 맥락) ngân sách (budget / 예산) Planning** tiếp nhận điểm tựa từ **Special Tokens as Attack Surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt Caching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Context budget phân bổ giới hạn giữa instruction, dữ liệu truy hồi và output. Những phần ổn định có thể được cache, nhưng chỉ khi serialization và semantics vẫn giữ nguyên.
 
 ## Ngữ cảnh (context / 맥락) ngân sách (budget / 예산) Planning
 
@@ -162,7 +162,7 @@ system instructions
 
 If ngân sách (budget / 예산) exceeded, hệ thống (system / 시스템) needs truncate/summarize/retrieve selectively. Silent truncation may remove hệ thống (system / 시스템) instruction or crucial bằng chứng (evidence / 증거) depending hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Prompt Caching** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) ngân sách (budget / 예산) Planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu vào (input / 입력) vs đầu ra (output / 출력) đơn vị từ (token / 토큰) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prompt caching biến phần input lặp lại thành yếu tố economics có thể tối ưu. Để đánh giá đúng, cần tách token input khỏi token output vì hai loại có hành vi và chi phí khác nhau.
 
 ## Prompt Caching
 
@@ -170,7 +170,7 @@ Repeated prefix tokens can be cached by suy luận (inference / 추론) provider
 
 Stable hệ thống (system / 시스템) prompt/lược đồ (schema / 스키마) organization can improve economics.
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Đầu vào (input / 입력) vs đầu ra (output / 출력) đơn vị từ (token / 토큰) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Prompt Caching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân biệt input và output token giúp nối tokenization với latency, context window và chi phí. Mental model sau đây tóm tắt các ranh giới đó thành một cách suy luận có thể tái dùng.
 
 ## Đầu vào (input / 입력) vs đầu ra (output / 출력) đơn vị từ (token / 토큰) chi phí (cost / 비용)
 
@@ -180,13 +180,13 @@ Long đầu vào (input / 입력) increases prefill and KV bộ nhớ đệm (ca
 
 Hệ thống (system / 시스템) tối ưu hóa (optimization / 최적화) distinguishes both.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Đầu vào (input / 입력) vs đầu ra (output / 출력) đơn vị từ (token / 토큰) chi phí (cost / 비용)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model coi tokenizer như ABI giữa chuỗi người dùng và tensor computation. Các ngộ nhận chung sẽ kiểm tra những suy luận sai về ID, chi phí và tính tương thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Tokenizer is the ABI between human strings and LLM tensor computation. It defines chuỗi (sequence / 시퀀스) granularity, chi phí (cost / 비용) and giao thức (protocol / 프로토콜) boundaries; changing it is closer to changing mô hình (model / 모델) giao diện (interface / 인터페이스) than changing a văn bản (text / 텍스트) preprocessing option.
 
-> **Chuyển mạch:** Trong **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đã tách bạch token ID, embedding, protocol và economics. Phần liên kết kiến thức tiếp theo chỉ rõ tài liệu owner để kiểm tra sâu hơn từng lớp.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -206,7 +206,7 @@ They are serialized through model-specific special đơn vị từ (token / 토�
 
 New embedding must be trained; ID alone has no ý nghĩa (semantic meaning / 의미적 뜻).
 
-> **Chuyển mạch:** Ở chặng này của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết cuối cùng nối tokenization với language modeling, chat protocol và retrieval. Hãy quay về README để chọn bài tiếp theo theo mục tiêu học tập.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -11,7 +11,7 @@
 
 Ta sẽ đi từ nhóm lệnh DML, lần lượt qua `INSERT`, `UPDATE`, `DELETE`, `MERGE`, rồi quay lại `SELECT` và các toán tử. Trình tự này có chủ ý: trước hết hiểu cách tác động lên hàng dữ liệu, sau đó học cách kiểm tra và tạo biểu thức từ chính dữ liệu đó. Phần kiểm soát việc lưu hay hoàn tác sẽ được bàn giao cho bài **TCL và Transaction**.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 85–86.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 85–86.
 
 > **Chuyển mạch:** Trong **DML và toán tử**, **Bắt đầu từ câu hỏi nghiệp vụ** nêu điều cần giải thích; **1. DML: nhóm lệnh tác động lên dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. SELECT và toán tử: đọc, tính và biểu diễn kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 

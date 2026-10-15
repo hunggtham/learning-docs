@@ -27,7 +27,7 @@ Bất định (uncertainty / 불확실성) can come from:
 
 A single xác suất (probability / 확률) number may mix several sources. Good hệ thống (system / 시스템) thiết kế (design / 설계) tries separate what can be reduced by more thông tin (information / 정보) from what is irreducible.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Bayesian cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **Bất định (uncertainty / 불확실성) is not ignorance alone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Odds form** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Probability không chỉ nói “chưa biết” mà mô tả phân phối belief về các khả năng. Bayesian updating biến evidence mới thành thay đổi có định lượng trong belief đó.
 
 ## Bayesian cập nhật (update / 업데이트)
 
@@ -49,7 +49,7 @@ posterior belief
 
 Normalization `P(E)` makes probabilities sum to 1.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Odds form** tiếp nhận điểm tựa từ **Bayesian cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bayesian update dễ thấy hơn ở odds: posterior odds bằng prior odds nhân likelihood ratio. Dạng này làm rõ evidence đã đẩy niềm tin về một hypothesis theo hướng nào.
 
 ## Odds form
 
@@ -67,7 +67,7 @@ Likelihood ratio tells how strongly bằng chứng (evidence / 증거) shifts od
 
 This is useful in medical testing and bằng chứng (evidence / 증거) accumulation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** tiếp nhận điểm tựa từ **Odds form** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multiple bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Odds chỉ diễn tả mức tin tương đối; prior/base rate quyết định điểm xuất phát. Bỏ qua base rate có thể khiến likelihood mạnh nhưng hiếm bị diễn giải quá mức.
 
 ## Cơ sở (base / 기반) tỷ lệ (rate / 비율) matters
 
@@ -77,7 +77,7 @@ Even high sensitivity/specificity may yield low posterior positive xác suất (
 
 Fraud, anomaly detection and bảo mật (security / 보안) alerts require careful cơ sở (base / 기반) rates; otherwise false positives dominate.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** nêu điều cần giải thích; **Multiple bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Naive Bayes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Base rate là một phần của prior, còn nhiều bằng chứng cần được kết hợp theo cấu trúc phụ thuộc của chúng. Nếu đếm cùng một tín hiệu nhiều lần, posterior sẽ bị tự tin giả.
 
 ## Multiple bằng chứng (evidence / 증거)
 
@@ -93,7 +93,7 @@ But naive independence các giả định (assumptions / 가정들) can double-c
 
 Example two fraud signals derived from same IP reputation nguồn (source / 소스) are not independent just because represented as separate features.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Multiple bằng chứng (evidence / 증거)** nêu điều cần giải thích; **Naive Bayes** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Generative vs discriminative modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multiple evidence cần likelihood joint hoặc điều kiện độc lập được biện minh. Naive Bayes biến giả định độc lập thành một mô hình đơn giản, nhanh và dễ kiểm tra.
 
 ## Naive Bayes
 
@@ -113,7 +113,7 @@ Giả định (assumption / 가정) often false, yet classifier can công việc
 
 This is lesson: mô hình (model / 모델) các giả định (assumptions / 가정들) can be wrong literally but useful operationally.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Generative vs discriminative modeling** tiếp nhận điểm tựa từ **Naive Bayes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Latent variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Naive Bayes tối ưu posterior theo một generative factorization cụ thể. So sánh generative và discriminative modeling giúp thấy khi nào cần mô hình hóa dữ liệu đầu vào, khi nào chỉ cần ranh giới dự đoán.
 
 ## Generative vs discriminative modeling
 
@@ -133,7 +133,7 @@ Naive Bayes generative; logistic regression discriminative.
 
 Generative mô hình (model / 모델) can mẫu (sample / 표본)/mô hình (model / 모델) đầu vào (input / 입력) conditional on lớp (class / 클래스); discriminative focuses quyết định (decision / 결정) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Latent variables** tiếp nhận điểm tựa từ **Generative vs discriminative modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Marginalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Generative model có thể suy ra cấu trúc sinh dữ liệu, nhưng nhiều nguyên nhân không quan sát trực tiếp. Latent variables cho phép biểu diễn các yếu tố ẩn và truyền uncertainty của chúng vào inference.
 
 ## Latent variables
 
@@ -153,7 +153,7 @@ Examples:
 
 Latent variables compress explanatory cấu trúc (structure / 구조) but introduce suy luận (inference / 추론) challenge.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Marginalization** tiếp nhận điểm tựa từ **Latent variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Latent variables thường không cần được quyết định thành một giá trị duy nhất. Marginalization cộng xác suất trên các trạng thái ẩn để giữ lại uncertainty thay vì chọn một giả thuyết sớm.
 
 ## Marginalization
 
@@ -167,7 +167,7 @@ This “sum over possibilities” can be computationally expensive when many hid
 
 Probabilistic suy luận (inference / 추론) độ phức tạp (complexity / 복잡도) often comes from exponential number joint assignments.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Conditioning** tiếp nhận điểm tựa từ **Marginalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Explaining away** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Marginalization loại bỏ biến bằng cách cộng hoặc tích phân, còn conditioning cập nhật phân phối khi đã biết evidence. Hai phép toán này là nền tảng để tách prior, likelihood và posterior.
 
 ## Conditioning
 
@@ -181,7 +181,7 @@ In graphical các mô hình (models / 모델들), bằng chứng (evidence / 증
 
 Observation can make previously independent variables dependent — phenomenon called **explaining away**.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Explaining away** tiếp nhận điểm tựa từ **Conditioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditional independence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conditioning có thể tạo explaining away: khi đã biết một nguyên nhân của effect, bằng chứng về nguyên nhân khác có thể giảm. Hiện tượng này chỉ đúng khi cấu trúc phụ thuộc trong model cho phép.
 
 ## Explaining away
 
@@ -197,7 +197,7 @@ After observe `A=true`, học tập (learning / 학습) `B=true` reduces need to
 
 Collider cấu trúc (structure / 구조) is central in probabilistic/nhân quả (causal / 인과적) graphs.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Conditional independence** tiếp nhận điểm tựa từ **Explaining away** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Explaining away cho thấy phụ thuộc có điều kiện không giống độc lập biên. Ghi rõ conditional independence giúp biết biến nào có thể bỏ khỏi phép tính mà không đổi semantics.
 
 ## Conditional independence
 
@@ -219,7 +219,7 @@ Without factorization, joint bảng (table / 테이블) over `n` nhị phân (bi
 
 entries.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Factorization** tiếp nhận điểm tựa từ **Conditional independence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한) suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conditional independence cho phép factorization joint distribution thành các factor nhỏ hơn. Factorization là cây cầu từ semantics xác suất sang thuật toán inference có thể chạy được.
 
 ## Factorization
 
@@ -239,7 +239,7 @@ Bayesian mạng (network / 네트워크) factors conditional distributions; Mark
 
 Factorization is the probabilistic equivalent of exploiting cấu trúc (structure / 구조) instead of brute force enumeration.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Chính xác (exact / 정확한) suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Factorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variable elimination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Factorization làm giảm kích thước biểu thức nhưng không bảo đảm mọi query đều rẻ. Exact inference vẫn phải xem graph structure và treewidth trước khi chọn thuật toán.
 
 ## Chính xác (exact / 정확한) suy luận (inference / 추론)
 
@@ -253,7 +253,7 @@ Chính xác (exact / 정확한) methods compute posterior exactly under mô hìn
 
 Dense dependencies can make chính xác (exact / 정확한) suy luận (inference / 추론) exponential.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Variable elimination** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximate suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exact inference khai thác cấu trúc nhân tử để trả lời đúng, nhưng variable elimination có thể kiểm soát thứ tự loại biến nhằm giảm intermediate factor.
 
 ## Variable elimination
 
@@ -269,7 +269,7 @@ Elimination thứ tự (order / 순서) strongly affects kích thước (size / 
 
 This resembles cơ sở dữ liệu (database / 데이터베이스) join-order tối ưu hóa (optimization / 최적화): mathematically same kết quả (result / 결과), computational chi phí (cost / 비용) can vary dramatically.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Approximate suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Variable elimination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Variable elimination cho kết quả chính xác khi còn khả thi; với graph lớn hoặc liên tục, approximate inference đổi guarantee lấy chi phí và thời gian có giới hạn.
 
 ## Approximate suy luận (inference / 추론)
 
@@ -285,7 +285,7 @@ Approximation trades tính đúng đắn (correctness / 정확성) exactness for
 
 Need monitor convergence/lỗi (error / 오류); “thuật toán (algorithm / 알고리즘) returned number” does not mean posterior accurate.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Monte Carlo** tiếp nhận điểm tựa từ **Approximate suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Importance sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Approximate inference mở ra nhiều họ phương pháp; Monte Carlo dùng samples để xấp xỉ kỳ vọng hoặc phân phối mà không cần giải toàn bộ biểu thức symbolically.
 
 ## Monte Carlo
 
@@ -303,7 +303,7 @@ estimate expectation:
 
 Lỗi (error / 오류) typically shrinks around `O(1/√N)` under tiêu chuẩn (standard / 표준) independent sampling, making high precision expensive.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Importance sampling** tiếp nhận điểm tựa từ **Monte Carlo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Markov chuỗi (chain / 사슬) Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Monte Carlo hội tụ theo số sample nhưng sample từ proposal không phù hợp sẽ lãng phí. Importance sampling reweight sample để ước lượng target từ một distribution dễ lấy mẫu hơn.
 
 ## Importance sampling
 
@@ -319,7 +319,7 @@ Importance weights explode if `q` poorly covers regions where `p` has mass, caus
 
 This theme appears again in off-policy RL.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Importance sampling** xác định đầu vào; **Markov chuỗi (chain / 사슬) Monte Carlo** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Variational suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Importance sampling nhạy với trọng số cực lớn khi proposal bỏ sót vùng quan trọng. Markov chain Monte Carlo thay cách lấy mẫu độc lập bằng chain có stationary distribution là target.
 
 ## Markov chuỗi (chain / 사슬) Monte Carlo
 
@@ -331,7 +331,7 @@ Samples correlated; burn-in/mixing/convergence diagnostic matter.
 
 High-dimensional multimodal distributions can mix slowly.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Markov chuỗi (chain / 사슬) Monte Carlo** xác định đầu vào; **Variational suy luận (inference / 추론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Maximum likelihood and Bayesian suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MCMC không cần proposal bao phủ hoàn hảo nhưng phải kiểm tra mixing, burn-in và autocorrelation. Variational inference tiếp cận khác: tối ưu một họ phân phối đơn giản để gần posterior.
 
 ## Variational suy luận (inference / 추론)
 
@@ -352,7 +352,7 @@ Equivalent maximize ELBO:
 
 Variational suy luận (inference / 추론) turns suy luận (inference / 추론) into tối ưu hóa (optimization / 최적화), usually faster but introduces approximation độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Maximum likelihood and Bayesian suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Variational suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Predictive phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Variational inference thường nhanh và có objective rõ, nhưng approximation family có thể bỏ sót uncertainty. So sánh với maximum likelihood và Bayesian inference giúp tách point estimate khỏi posterior.
 
 ## Maximum likelihood and Bayesian suy luận (inference / 추론)
 
@@ -372,7 +372,7 @@ Full posterior expresses parameter bất định (uncertainty / 불확실성) bu
 
 Approximate Bayesian deep học tập (learning / 학습) uses ensembles, variational methods or other bất định (uncertainty / 불확실성) approximations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Predictive phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Maximum likelihood and Bayesian suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Maximum likelihood chọn tham số làm dữ liệu quan sát có khả năng nhất, còn Bayesian inference giữ prior và posterior trên tham số. Predictive distribution tích hợp bất định đó khi dự đoán dữ liệu mới.
 
 ## Predictive phân phối (distribution / 분포)
 
@@ -386,7 +386,7 @@ Rather than lần ghi nhận (commit / 커밋) to one `θ`, average predictions 
 
 Deep ensembles approximate mô hình (model / 모델) bất định (uncertainty / 불확실성) differently by huấn luyện (training / 학습) multiple các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Calibration** tiếp nhận điểm tựa từ **Predictive phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) and likelihood are model-dependent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Predictive distribution trả lời không chỉ “giá trị nào có khả năng nhất” mà còn “độ tin cậy phân bố ra sao”. Calibration kiểm tra liệu xác suất dự báo có khớp tần suất thực tế hay không.
 
 ## Calibration
 
@@ -396,7 +396,7 @@ Calibration can degrade under phân phối (distribution / 분포) shift.
 
 A mô hình (model / 모델) calibrated on US customers may be miscalibrated on Korean customers if conditional relationships differ.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Calibration** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) and likelihood are model-dependent** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Prior sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Calibration phụ thuộc vào target và dữ liệu đánh giá; likelihood hay evidence không tự có nghĩa nếu model và sample space chưa rõ. Vì thế evidence luôn phải được đọc cùng với assumptions của model.
 
 ## Bằng chứng (evidence / 증거) and likelihood are model-dependent
 
@@ -406,7 +406,7 @@ Bayes theorem itself is mathematically chính xác (exact / 정확한), but wron
 
 This mirrors formal lô-gic (logic / 논리): valid suy luận (inference / 추론) from false premises is still formal-valid but real-world wrong.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Bằng chứng (evidence / 증거) and likelihood are model-dependent** nêu điều cần giải thích; **Prior sensitivity** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bayesian quyết định (decision / 결정) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Evidence model-dependent làm prior trở thành một phần minh bạch của posterior, không phải chi tiết có thể giấu. Prior sensitivity kiểm tra kết luận thay đổi bao nhiêu khi lựa chọn prior hợp lý thay đổi.
 
 ## Prior sensitivity
 
@@ -416,7 +416,7 @@ In high-dimensional các mô hình (models / 모델들), “uninformative prior�
 
 Prior encodes inductive độ lệch (bias / 편향), not something to hide.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Bayesian quyết định (decision / 결정) lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **Prior sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probabilistic graphical các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prior sensitivity tells us whether posterior conclusions are robust enough to support action. Bayesian decision theory adds utility and loss so uncertainty can be turned into a decision boundary.
 
 ## Bayesian quyết định (decision / 결정) lý thuyết (theory / 이론)
 
@@ -428,7 +428,7 @@ a^*=\arg\min_a\mathbb{E}_{\theta\mid D}[L(a,\theta)]
 
 This connects probabilistic suy luận (inference / 추론) to [Decision Making Under Uncertainty](../02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md).
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Probabilistic graphical các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Bayesian quyết định (decision / 결정) lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HMM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bayesian decision theory separates belief about outcomes from the cost of actions. Probabilistic graphical models provide a compact structure for representing the dependencies needed to compute those beliefs.
 
 ## Probabilistic graphical các mô hình (models / 모델들)
 
@@ -442,7 +442,7 @@ Factor đồ thị (graph / 그래프) explicitly separates variable and factor 
 
 These representations expose conditional cấu trúc (structure / 구조) for suy luận (inference / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **HMM** tiếp nhận điểm tựa từ **Probabilistic graphical các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kalman Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Graphical models express nodes and conditional dependencies; HMM specializes them to a latent state sequence with observations over time. Kalman Filter is the linear-Gaussian continuous-state case of that broader family.
 
 ## HMM
 
@@ -470,7 +470,7 @@ Algorithms:
 
 HMM historically central in speech/NLP before Deep học tập (learning / 학습).
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Kalman Filter** tiếp nhận điểm tựa từ **HMM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probabilistic programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HMM and Kalman Filter both separate hidden state from observation, but their assumptions differ: discrete states versus linear-Gaussian dynamics. Probabilistic programming lets users express such models and delegate inference.
 
 ## Kalman Filter
 
@@ -482,7 +482,7 @@ Kalman gain balances mô hình (model / 모델) bất định (uncertainty / 불
 
 This is probabilistic lập luận (reasoning / 추론) deployed in điều hướng (navigation / 내비게이션)/tracking/điều khiển (control / 제어).
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Probabilistic programming** tiếp nhận điểm tựa từ **Kalman Filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất định (uncertainty / 불확실성) in LLMs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Probabilistic programming makes model structure explicit while hiding much of the inference plumbing. Its guarantees still depend on the chosen model, which matters when representing uncertainty in LLM outputs.
 
 ## Probabilistic programming
 
@@ -492,7 +492,7 @@ This separates mô hình (model / 모델) specification from bộ máy suy luậ
 
 But suy luận (inference / 추론) chất lượng (quality / 품질)/computation still depend mô hình (model / 모델) hình học (geometry / 기하학) and thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Bất định (uncertainty / 불확실성) in LLMs** tiếp nhận điểm tựa từ **Probabilistic programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-reported confidence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LLM uncertainty is not only sampling randomness; it can reflect missing knowledge, distribution shift or ambiguity in the prompt. Self-reported confidence must therefore be tested against outcomes rather than accepted as calibrated probability.
 
 ## Bất định (uncertainty / 불확실성) in LLMs
 
@@ -510,7 +510,7 @@ P(statement is true | world evidence)
 
 This distinction is fundamental to hallucination/grounding.
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Self-reported confidence** tiếp nhận điểm tựa từ **Bất định (uncertainty / 불확실성) in LLMs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probabilistic RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+A model’s verbal confidence is a claim about its own reliability, not automatically a posterior probability. Probabilistic RAG can ground generation with retrieved evidence and expose uncertainty over sources and answers.
 
 ## Self-reported confidence
 
@@ -518,7 +518,7 @@ Asking LLM “How confident are you?” produces văn bản (text / 텍스트) g
 
 Confidence estimation requires tường minh (explicit / 명시적) evaluation/calibration methods, ensembles, consistency signals, bên ngoài (external / 외부) xác minh (verification / 확인) or task-specific các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Probabilistic RAG** tiếp nhận điểm tựa từ **Self-reported confidence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Probabilistic RAG should propagate retrieval scores, source quality and answer uncertainty instead of presenting one deterministic citation. Mental model cuối chương gom belief, evidence, calibration và action boundary.
 
 ## Probabilistic RAG
 
@@ -535,7 +535,7 @@ Reliable RAG should treat retrieval score as ranking tín hiệu (signal / 신�
 
 Reranking, citations and nguồn (source / 소스) kiểm tra hợp lệ (validation / 검증) reduce bất định (uncertainty / 불확실성) at different stages.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Probabilistic RAG** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model hữu ích là đi từ prior và evidence qua posterior, calibration đến quyết định có utility rõ. Chuỗi này giúp nhận ra các misconception về xác suất và tránh overconfidence.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -551,7 +551,7 @@ Approximation → trade exactness for tractability
 Decision      → combine posterior with utility/cost
 ```
 
-> **Chuyển mạch:** Trong **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những misconception phổ biến gồm nhầm probability với confidence, coi calibration là accuracy, hoặc bỏ qua base rate và model dependence. Sửa chúng giúp nối probabilistic reasoning với các phần AI kế tiếp.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -571,7 +571,7 @@ Chính xác (exact / 정확한) may be infeasible; approximate suy luận (infer
 
 They can be dependent marginally but independent given a third variable.
 
-> **Chuyển mạch:** Ở chặng này của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Probabilistic reasoning nối Bayesian inference, graphical models, calibration và RAG thành một workflow: biểu diễn uncertainty, cập nhật bằng evidence, kiểm tra dự báo rồi quyết định trong ranh giới an toàn.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -36,7 +36,7 @@ Leaf còn thường liên kết tuần tự, nên phạm vi (range / 범위) sca
 
 Đây là ví dụ kinh điển cho việc cùng Big-O nhưng **mô hình chi phí I/O** làm thay đổi lựa chọn cấu trúc.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **1. B+cây (tree / 트리) trong cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** nêu điều cần giải thích; **2. Clustered và Secondary chỉ mục (index / 인덱스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Composite chỉ mục (index / 인덱스) và Lexicographic thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+B+ cây cho thấy chỉ mục phải tối ưu page I/O và range scan, không chỉ chiều cao cây. Từ đó cần tách tiếp việc dữ liệu nằm cùng page với chỉ mục hay phải quay lại bảng chính.
 
 ## 2. Clustered và Secondary chỉ mục (index / 인덱스)
 
@@ -54,7 +54,7 @@ selectivity
 covering index hay không
 ```
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **3. Composite chỉ mục (index / 인덱스) và Lexicographic thứ tự (order / 순서)** tiếp nhận điểm tựa từ **2. Clustered và Secondary chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. băm (hash / 해시) chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Clustered/secondary quyết định locality và số lần truy cập bản ghi. Khi nhiều cột cùng tham gia predicate, thứ tự từ điển của composite key sẽ quyết định vùng tìm kiếm có còn liên tục hay không.
 
 ## 3. Composite chỉ mục (index / 인덱스) và Lexicographic thứ tự (order / 순서)
 
@@ -70,7 +70,7 @@ nếu b bằng nhau -> so c
 
 Không nên học “leftmost prefix quy tắc (rule / 규칙)” như mẹo riêng của SQL; nó xuất phát trực tiếp từ thứ tự (ordering / 순서) bất biến (invariant / 불변식) của tuple key.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **4. băm (hash / 해시) chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **3. Composite chỉ mục (index / 인덱스) và Lexicographic thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. băm (hash / 해시) phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lexicographic order giữ được range và prefix, còn hash chỉ giữ quan hệ bằng nhau. Đối chiếu hai invariant này sẽ làm rõ khi nào một chỉ mục nên đổi từ truy vấn có thứ tự sang phép tra cứu equality.
 
 ## 4. băm (hash / 해시) chỉ mục (index / 인덱스)
 
@@ -91,7 +91,7 @@ cần thứ tự (order / 순서) ngữ nghĩa (semantics / 의미론), nên B+c
 
 Một chỉ mục (index / 인덱스) chỉ có giá trị nếu bất biến (invariant / 불변식) của nó khớp predicate của truy vấn (query / 쿼리).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **5. băm (hash / 해시) phép nối (join / 조인)** tiếp nhận điểm tựa từ **4. băm (hash / 해시) chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Sort-Merge phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hash index tối ưu một khóa đơn, còn hash join đưa cùng ý tưởng phân vùng vào hai tập dữ liệu. Vì vậy bước kế tiếp là xem hash join tận dụng bộ nhớ và chi phí I/O như thế nào.
 
 ## 5. băm (hash / 해시) phép nối (join / 조인)
 
@@ -110,7 +110,7 @@ nếu băm (hash / 해시) tốt và dữ liệu đủ nằm trong bộ nhớ (m
 
 Nếu bản dựng (build / 빌드) side vượt bộ nhớ (memory / 메모리), engine có thể partition dữ liệu và thực hiện nhiều pass qua disk. Khi đó external-memory chi phí (cost / 비용) trở thành phần quan trọng hơn Big-O RAM mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **6. Sort-Merge phép nối (join / 조인)** tiếp nhận điểm tựa từ **5. băm (hash / 해시) phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Nested-Loop phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hash join có lợi khi build side vừa bộ nhớ; khi phải phân vùng ra đĩa, thứ tự và sequential I/O trở nên quan trọng. Đó là bối cảnh để Sort-Merge join phát huy lợi thế của dữ liệu đã ordered.
 
 ## 6. Sort-Merge phép nối (join / 조인)
 
@@ -128,7 +128,7 @@ external sorting có thể tận dụng sequential I/O
 
 Một chỉ mục (index / 인덱스) có thứ tự có thể đồng thời phục vụ tìm kiếm (search / 검색), order-by và merge phép nối (join / 조인). Đây là ví dụ một bất biến (invariant / 불변식) được tái sử dụng cho nhiều operator.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **7. Nested-Loop phép nối (join / 조인)** tiếp nhận điểm tựa từ **6. Sort-Merge phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. truy vấn (query / 쿼리) Optimizer là bài toán tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sort-Merge trả chi phí cho việc sắp thứ tự nhưng sau đó merge tuyến tính và thân thiện với external storage. Nested-Loop lại thắng khi outer side nhỏ và inner lookup có chỉ mục rẻ, nên optimizer phải chọn theo workload.
 
 ## 7. Nested-Loop phép nối (join / 조인)
 
@@ -143,7 +143,7 @@ thì chi phí thực có thể rất tốt.
 
 Do đó tên “hai vòng lặp” không đủ để suy độ phức tạp (complexity / 복잡도); phải nhìn chi phí (cost / 비용) của inner thao tác (operation / 연산).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **8. truy vấn (query / 쿼리) Optimizer là bài toán tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **7. Nested-Loop phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cardinality Estimation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ba chiến lược join minh họa rằng tên thuật toán chưa đủ để quyết định kế hoạch. Optimizer phải tìm kiếm giữa join order, access path và operator dưới một mô hình chi phí thống nhất.
 
 ## 8. truy vấn (query / 쿼리) Optimizer là bài toán tìm kiếm (search / 검색)
 
@@ -163,7 +163,7 @@ Optimizer dùng động (dynamic / 동적) programming, memoization, pruning và
 
 Truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) tối ưu hóa (optimization / 최적화) là DSA/tìm kiếm (search / 검색) ở cấp hệ thống, không chỉ là rule-based rewriting.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **9. Cardinality Estimation** tiếp nhận điểm tựa từ **8. truy vấn (query / 쿼리) Optimizer là bài toán tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Buffer Pool** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không gian plan chỉ được đánh giá tốt nếu cardinality trung gian đủ đáng tin. Vì vậy sau bài toán tìm kiếm của optimizer, cần kiểm tra cách histogram, sample và sketch ước lượng số dòng.
 
 ## 9. Cardinality Estimation
 
@@ -173,7 +173,7 @@ Histogram, samples và sketches là các cấu trúc tóm lược để ước l
 
 Đây là kết nối giữa probabilistic structures và truy vấn (query / 쿼리) planning.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **10. Buffer Pool** tiếp nhận điểm tựa từ **9. Cardinality Estimation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. LRU, LFU và Admission chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cardinality sai có thể chọn nhầm join algorithm và làm tăng số page đọc. Khi kế hoạch đã phát sinh I/O, buffer pool trở thành lớp giữ lại page nóng và quyết định chi phí vật lý thực tế.
 
 ## 10. Buffer Pool
 
@@ -192,7 +192,7 @@ Chính xác (exact / 정확한) lookup thường dùng bảng băm (hash table /
 
 Một buffer pool là composition giữa **định danh (identity / 식별자) lookup** và **replacement thứ tự (ordering / 순서)/approximation**.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **11. LRU, LFU và Admission chính sách (policy / 정책)** tiếp nhận điểm tựa từ **10. Buffer Pool** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. TTL và Expiration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Buffer pool vừa cần lookup page nhanh vừa phải thay thế frame hợp lý. Từ đây, câu hỏi chuyển sang LRU/LFU và admission: page nào được nhận vào, page nào đáng bị đẩy ra.
 
 ## 11. LRU, LFU và Admission chính sách (policy / 정책)
 
@@ -206,7 +206,7 @@ Một lesson quan trọng:
 
 Không phải mọi đối tượng (object / 객체) vừa được đọc đều đáng đẩy đối tượng (object / 객체) đang hot ra khỏi bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **12. TTL và Expiration** tiếp nhận điểm tựa từ **11. LRU, LFU và Admission chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Write-Ahead Log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Admission và eviction tách hai quyết định: cache policy chọn dữ liệu có giá trị, còn TTL quyết định dữ liệu còn hợp lệ đến khi nào. Vì vậy expiration cần một cấu trúc lịch riêng thay vì chỉ mở rộng LRU.
 
 ## 12. TTL và Expiration
 
@@ -223,7 +223,7 @@ update/cancel frequency
 latency requirement
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **13. Write-Ahead Log** tiếp nhận điểm tựa từ **12. TTL và Expiration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. LSM cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TTL đưa thời gian sống vào cache state, còn WAL đưa thứ tự ghi vào persistent state. Khi update phải sống qua crash, ta cần append log và replay trước khi tối ưu cấu trúc lưu trữ.
 
 ## 13. Write-Ahead Log
 
@@ -233,7 +233,7 @@ Append tuần tự thường rẻ hơn random page cập nhật (update / 업데
 
 Ở đây DSA không thể tách khỏi durability: biểu diễn (representation / 표현) phải cho phép replay/redo sau crash.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **14. LSM cây (tree / 트리)** tiếp nhận điểm tựa từ **13. Write-Ahead Log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Bloom Filter trong LSM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+WAL biến ghi ngẫu nhiên thành dòng append có thể replay. LSM tree tiếp tục đẩy ý tưởng đó vào write path bằng cách gom ghi, rồi đánh đổi read amplification và compaction.
 
 ## 14. LSM cây (tree / 트리)
 
@@ -255,7 +255,7 @@ write nhanh và sequential hơn
 đổi lại read amplification + compaction cost
 ```
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **15. Bloom Filter trong LSM** tiếp nhận điểm tựa từ **14. LSM cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Compaction và Merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+LSM giảm chi phí ghi bằng nhiều tầng dữ liệu; Bloom Filter giúp tránh đọc những SSTable chắc chắn không chứa key. False positive vẫn phải chấp nhận, còn false negative là vi phạm invariant.
 
 ## 15. Bloom Filter trong LSM
 
@@ -265,7 +265,7 @@ Nếu filter nói “chắc chắn không có”, engine bỏ qua tệp (file / 
 
 Đây là ví dụ rất đẹp của approximate cấu trúc dữ liệu (data structure / 자료구조) được đặt trước chính xác (exact / 정확한) lưu trữ (storage / 저장소) để tối ưu I/O mà không làm sai kết quả cuối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **16. Compaction và Merge** tiếp nhận điểm tựa từ **15. Bloom Filter trong LSM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. MVCC và Versioned trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bloom Filter giảm read amplification nhưng không loại bỏ các bản ghi cũ và các tầng chồng lấn. Compaction/Merge sẽ tái tổ chức chúng, đổi chi phí đọc hiện tại lấy chi phí ghi nền.
 
 ## 16. Compaction và Merge
 
@@ -282,7 +282,7 @@ snapshot visibility
 
 Comparator không chỉ sắp người dùng (user / 사용자) key mà có thể còn sắp theo phiên bản (version / 버전) nội bộ.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **17. MVCC và Versioned trạng thái (state / 상태)** tiếp nhận điểm tựa từ **16. Compaction và Merge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Filesystem Directory và B-Tree/băm (hash / 해시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Compaction làm dữ liệu được sắp xếp và hợp nhất, nhưng trong hệ thống có phiên bản cần giữ đúng visibility. MVCC vì vậy đặt version và snapshot boundary lên trên cấu trúc lưu trữ.
 
 ## 17. MVCC và Versioned trạng thái (state / 상태)
 
@@ -292,7 +292,7 @@ Conceptually đây là một dạng versioned/persistent trạng thái (state / 
 
 Bài toán không còn chỉ `key -> value`; key lô-gic (logic / 논리) có thêm chiều thời gian/phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **18. Filesystem Directory và B-Tree/băm (hash / 해시)** tiếp nhận điểm tựa từ **17. MVCC và Versioned trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Free-Space Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MVCC biến một bản ghi thành nhiều version có quy tắc nhìn thấy; filesystem cũng phải ánh xạ tên, inode và block qua các cấu trúc bền vững. Từ database state, ta chuyển sang directory state.
 
 ## 18. Filesystem Directory và B-Tree/băm (hash / 해시)
 
@@ -302,7 +302,7 @@ Extent cây (tree / 트리) biểu diễn các vùng khối (block / 블록) li�
 
 Đây là ví dụ của **run-length-like structural compression** trong lưu trữ (storage / 저장소) siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **19. Free-Space Management** tiếp nhận điểm tựa từ **18. Filesystem Directory và B-Tree/băm (hash / 해시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Buddy Allocator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Directory cần tra cứu tên và cập nhật block mà vẫn giữ locality, còn free-space management quyết định nơi dữ liệu mới có thể đi. Hai bài toán cùng phụ thuộc metadata và invariant của layout.
 
 ## 19. Free-Space Management
 
@@ -320,7 +320,7 @@ size-segregated lists
 
 Lựa chọn phụ thuộc loại truy vấn (query / 쿼리): tìm khối (block / 블록) bất kỳ, khối (block / 블록) đủ lớn, contiguous phạm vi (range / 범위), alignment, merge khi free.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **20. Buddy Allocator** tiếp nhận điểm tựa từ **19. Free-Space Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Networking: Routing là đồ thị (graph / 그래프) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Free-space management phải chọn block nhanh mà hạn chế phân mảnh. Buddy allocator cụ thể hóa trade-off đó bằng các khối kích thước lũy thừa của hai và phép split/coalesce có invariant rõ.
 
 ## 20. Buddy Allocator
 
@@ -332,7 +332,7 @@ Sự đánh đổi (trade-off / 트레이드오프) là quản lý nhanh nhưng 
 
 Đây là một ứng dụng rất thực của power-of-two decomposition.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **21. Networking: Routing là đồ thị (graph / 그래프) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **20. Buddy Allocator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Longest-Prefix Match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Buddy allocator tối ưu cấp phát bộ nhớ; ở lớp mạng, ta cũng phân bổ đường đi và tải trên một đồ thị. Routing bắt đầu bằng việc mô hình hóa node, edge và chính sách đường đi.
 
 ## 21. Networking: Routing là đồ thị (graph / 그래프) bài toán (problem / 문제)
 
@@ -350,7 +350,7 @@ loop prevention
 
 Shortest-path thuật toán (algorithm / 알고리즘) chỉ là thành phần nguyên thủy (primitive / 기본 요소) toán học bên dưới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **22. Longest-Prefix Match** tiếp nhận điểm tựa từ **21. Networking: Routing là đồ thị (graph / 그래프) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Packet Classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Routing chọn đường trên đồ thị, nhưng forwarding từng packet cần một phép tra cứu nhanh theo địa chỉ đích. Longest-Prefix Match biến quyết định đường đi thành bài toán tìm prefix cụ thể nhất.
 
 ## 22. Longest-Prefix Match
 
@@ -360,7 +360,7 @@ Trie, Radix cây (tree / 트리) hoặc Patricia Trie mã hóa prefix relationsh
 
 Hardware có thể dùng TCAM hoặc specialized cấu trúc (structure / 구조), nhưng yêu cầu (requirement / 요구사항) vẫn là prefix tìm kiếm (search / 검색).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **23. Packet Classification** tiếp nhận điểm tựa từ **22. Longest-Prefix Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Packet hàng đợi (queue / 큐) và Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Longest-Prefix Match xử lý một chiều của policy: prefix địa chỉ. Khi rule còn xét port, protocol hoặc nhiều trường cùng lúc, ta cần packet classification đa chiều.
 
 ## 23. Packet Classification
 
@@ -376,7 +376,7 @@ protocol
 
 Bài toán cho thấy khi key có nhiều chiều, một chỉ mục (index / 인덱스) đơn chiều có thể không còn đủ.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **24. Packet hàng đợi (queue / 큐) và Scheduling** tiếp nhận điểm tựa từ **23. Packet Classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Packet classification mở rộng từ một prefix sang tập rule có thể chồng lấn. Sau khi quyết định packet thuộc lớp nào, hệ thống phải xếp nó vào queue và phân bổ lịch phục vụ.
 
 ## 24. Packet hàng đợi (queue / 큐) và Scheduling
 
@@ -386,7 +386,7 @@ Nếu luôn phục vụ priority cao nhất, traffic thấp priority có thể s
 
 Cấu trúc dữ liệu (data structure / 자료구조) chọn “phần tử tiếp theo” chính là chính sách hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **25. Backpressure** tiếp nhận điểm tựa từ **24. Packet hàng đợi (queue / 큐) và Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Consistent Hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Queue và scheduling giữ ổn định khi tốc độ đến vượt tốc độ phục vụ trong giới hạn. Khi backlog tiếp tục tăng, backpressure phải truyền tín hiệu ngược để hạn chế nguồn phát.
 
 ## 25. Backpressure
 
@@ -404,7 +404,7 @@ scale consumer
 
 Hàng đợi (queue / 큐) sức chứa (capacity / 용량) là một phần của độ tin cậy (reliability / 신뢰성) chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **26. Consistent Hashing** tiếp nhận điểm tựa từ **25. Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Rendezvous Hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Backpressure biến quá tải thành tín hiệu kiểm soát, nhưng phân tán còn cần chia request đều giữa node. Consistent hashing giảm số key phải remap khi membership thay đổi.
 
 ## 26. Consistent Hashing
 
@@ -414,7 +414,7 @@ Consistent hashing đặt nút (node / 노드)/key trên một vòng băm (hash 
 
 Virtual nodes giúp phân phối tải (load / 로드) đều hơn.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **27. Rendezvous Hashing** tiếp nhận điểm tựa từ **26. Consistent Hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. tải (load / 로드) Balancing và Power of Two Choices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Consistent hashing giữ phần lớn ownership khi node thêm hoặc mất, nhưng lựa chọn node cụ thể vẫn cần một quy tắc cân bằng. Rendezvous hashing diễn đạt lựa chọn đó bằng cách xếp hạng ứng viên.
 
 ## 27. Rendezvous Hashing
 
@@ -424,7 +424,7 @@ Một lựa chọn khác là tính score cho mỗi `(key,node)` rồi chọn nú
 
 Consistent hashing và rendezvous hashing đều giải bài **stable partitioning dưới membership thay đổi (change / 변경)** nhưng bằng biểu diễn (representation / 표현) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **28. tải (load / 로드) Balancing và Power of Two Choices** tiếp nhận điểm tựa từ **27. Rendezvous Hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. tỷ lệ (rate / 비율) Limiter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rendezvous hashing chọn node có điểm cao nhất mà không cần ring; sau đó load balancing có thể thêm Power of Two Choices để giảm lệch tải dưới quan sát hiện tại.
 
 ## 28. tải (load / 로드) Balancing và Power of Two Choices
 
@@ -434,7 +434,7 @@ Một thay đổi nhỏ trong selection chính sách (policy / 정책) có thể
 
 Đây là ví dụ randomized thuật toán (algorithm / 알고리즘) xuất hiện trực tiếp trong hệ thống phân tán.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **28. tải (load / 로드) Balancing và Power of Two Choices** đã nêu tiêu chí phân biệt, còn **29. tỷ lệ (rate / 비율) Limiter** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **30. Scheduler của OS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Load balancing phân phối công việc, còn rate limiter giới hạn tốc độ tổng hoặc theo principal. Hai lớp cùng dùng state và thời gian, nhưng một lớp tối ưu fairness còn lớp kia bảo vệ capacity.
 
 ## 29. tỷ lệ (rate / 비율) Limiter
 
@@ -442,7 +442,7 @@ Một thay đổi nhỏ trong selection chính sách (policy / 정책) có thể
 
 Cùng yêu cầu (requirement / 요구사항) “giới hạn yêu cầu (request / 요청)” có nhiều biểu diễn (representation / 표현) với sự đánh đổi (trade-off / 트레이드오프) precision/bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **29. tỷ lệ (rate / 비율) Limiter** đã nêu tiêu chí phân biệt, còn **30. Scheduler của OS** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **31. Timer Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rate limiter bảo vệ capacity của dịch vụ; trong OS, scheduler phân phối CPU giữa các task theo fairness, priority và affinity. Cả hai đều là quyết định cấp phát tài nguyên có state.
 
 ## 30. Scheduler của OS
 
@@ -452,7 +452,7 @@ Một scheduler tốt không chỉ tìm tác vụ (task / 작업) priority cao n
 
 Cấu trúc dữ liệu (data structure / 자료구조) encode chính sách (policy / 정책) chọn tác vụ (task / 작업) tiếp theo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **31. Timer Management** tiếp nhận điểm tựa từ **30. Scheduler của OS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Git là DAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scheduler cần biết khi nào task được đánh thức hoặc deadline đến. Timer management cung cấp hàng đợi thời gian và vì vậy nối trực tiếp policy CPU với cấu trúc dữ liệu sự kiện.
 
 ## 31. Timer Management
 
@@ -462,7 +462,7 @@ Min-heap cho timer sắp hết hạn nhưng cập nhật (update / 업데이트)
 
 Đây là ví dụ tải công việc (workload / 워크로드) đặc biệt cho phép cấu trúc (structure / 구조) chuyên biệt vượt generic priority hàng đợi (queue / 큐).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **32. Git là DAG** tiếp nhận điểm tựa từ **31. Timer Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. hệ thống dựng (build system / 빌드 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quản lý timer sắp xếp sự kiện tương lai và phải xử lý hủy hoặc hết hạn đúng một lần. Git áp dụng một bất biến phụ thuộc tương tự cho commit: mỗi commit trỏ về các commit cha, tạo thành một DAG.
 
 ## 32. Git là DAG
 
@@ -481,7 +481,7 @@ reachability
 
 Generation number và commit-graph chỉ mục (index / 인덱스) giúp prune traversal. Bloom-filter-like siêu dữ liệu (metadata / 메타데이터) có thể giảm kiểm tra đường dẫn (path / 경로) lịch sử (history / 이력) trong một số workflow.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **33. hệ thống dựng (build system / 빌드 시스템)** tiếp nhận điểm tựa từ **32. Git là DAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. trình biên dịch (compiler / 컴파일러): AST, Symbol bảng (table / 테이블) và CFG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+DAG của Git làm tường minh quan hệ tổ tiên và phụ thuộc; hệ thống build dùng cùng thứ tự bộ phận để chỉ dựng lại target bị ảnh hưởng. Lớp kế tiếp biến build graph đó thành các artifact của compiler.
 
 ## 33. hệ thống dựng (build system / 빌드 시스템)
 
@@ -493,7 +493,7 @@ Hệ thống dựng (build system / 빌드 시스템) thực tế còn bộ nh�
 
 Ở đây DAG + hashing + memoization kết hợp thành incremental bản dựng (build / 빌드) engine.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **34. trình biên dịch (compiler / 컴파일러): AST, Symbol bảng (table / 테이블) và CFG** tiếp nhận điểm tựa từ **33. hệ thống dựng (build system / 빌드 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Garbage Collector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cạnh trong build graph quyết định khi nào mỗi bước compiler được chạy. Bên trong compiler, AST, symbol table và CFG giữ các bất biến khác nhau cho tên, cú pháp và luồng điều khiển.
 
 ## 34. trình biên dịch (compiler / 컴파일러): AST, Symbol bảng (table / 테이블) và CFG
 
@@ -501,7 +501,7 @@ Parser tạo AST — một cây (tree / 트리). Symbol bảng (table / 테이�
 
 Trình biên dịch (compiler / 컴파일러) là ví dụ nơi gần như toàn bộ DSA cốt lõi (core / 핵심) xuất hiện trong cùng một chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **35. Garbage Collector** tiếp nhận điểm tựa từ **34. trình biên dịch (compiler / 컴파일러): AST, Symbol bảng (table / 테이블) và CFG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. tìm kiếm (search / 검색) Engine Inverted chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân tích compiler duyệt đồ thị và duy trì map hoặc bitset qua nhiều phase. Garbage collection dùng lại ý tưởng reachability, nhưng đồ thị ở đây là object heap và bất biến cần giữ là thu hồi an toàn.
 
 ## 35. Garbage Collector
 
@@ -511,7 +511,7 @@ Generational GC khai thác giả thuyết rằng đối tượng (object / 객�
 
 Remembered set/card bảng (table / 테이블) là cấu trúc phụ để không phải scan toàn vùng nhớ động (heap / 힙) khi tìm tham chiếu (reference / 참조) giữa các thế hệ.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **36. tìm kiếm (search / 검색) Engine Inverted chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **35. Garbage Collector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Full-Text chỉ mục (index / 인덱스) và Suffix/FM Structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tracing GC phân loại object theo reachability và metadata đã ghi nhớ. Search engine cũng materialize quan hệ term–document; vì vậy inverted index là cách tiếp theo dùng postings và merge ở một lớp khác.
 
 ## 36. tìm kiếm (search / 검색) Engine Inverted chỉ mục (index / 인덱스)
 
@@ -521,7 +521,7 @@ Posting danh sách (list / 목록) được sắp xếp, cho phép giao nhiều 
 
 Dictionary term có thể dùng trie/FST. Ranking dùng vùng nhớ động (heap / 힙) cho Top-K. bộ nhớ đệm (cache / 캐시) và compression lại thêm các lớp cấu trúc (structure / 구조) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **37. Full-Text chỉ mục (index / 인덱스) và Suffix/FM Structures** tiếp nhận điểm tựa từ **36. tìm kiếm (search / 검색) Engine Inverted chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. khả năng quan sát (observability / 관측 가능성) và Sketches** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Inverted postings tận dụng list đã sắp xếp để giao và xếp hạng. Full-text search chọn inverted, suffix hay FM structure tùy truy vấn dựa trên term hay substring.
 
 ## 37. Full-Text chỉ mục (index / 인덱스) và Suffix/FM Structures
 
@@ -531,7 +531,7 @@ Inverted chỉ mục (index / 인덱스) mạnh cho đơn vị từ (token / 토
 
 Chỉ mục (index / 인덱스) phải khớp truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **38. khả năng quan sát (observability / 관측 가능성) và Sketches** tiếp nhận điểm tựa từ **37. Full-Text chỉ mục (index / 인덱스) và Suffix/FM Structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Top-K trong Streaming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cấu trúc full-text trả lời predicate văn bản xác định; observability thường cần summary xấp xỉ nhỏ trên keyspace rất lớn. Sketch đánh đổi tính chính xác lấy khả năng merge và giới hạn bộ nhớ.
 
 ## 38. khả năng quan sát (observability / 관측 가능성) và Sketches
 
@@ -541,7 +541,7 @@ HyperLogLog, Count-Min Sketch và heavy-hitter algorithms giúp giữ summary nh
 
 Sketch có thể merge giữa worker nên rất phù hợp phân tán (distributed / 분산) aggregation.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **39. Top-K trong Streaming** tiếp nhận điểm tựa từ **38. khả năng quan sát (observability / 관측 가능성) và Sketches** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. bộ nhớ (memory / 메모리) Allocator và Free danh sách (list / 목록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sketch tóm tắt count và cardinality, còn Top-K thêm mục tiêu thứ tự: giữ các candidate lớn nhất trong stream. Heap kết hợp sketch là composition của các bất biến này.
 
 ## 39. Top-K trong Streaming
 
@@ -549,7 +549,7 @@ Nếu muốn giữ các chỉ số (metric / 지표) lớn nhất liên tục, c
 
 Chính xác (exact / 정확한) và approximate cấu trúc (structure / 구조) có thể phối hợp nhiều tầng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **40. bộ nhớ (memory / 메모리) Allocator và Free danh sách (list / 목록)** tiếp nhận điểm tựa từ **39. Top-K trong Streaming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Lock-Free Structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Top-K có thể giữ một heap bị giới hạn kích thước, nhưng mỗi lần insert hoặc eviction vẫn cần bộ nhớ. Allocator và free list quyết định hot path đó phải trả giá bao nhiêu cho phân mảnh, lock và locality của cache.
 
 ## 40. bộ nhớ (memory / 메모리) Allocator và Free danh sách (list / 목록)
 
@@ -567,7 +567,7 @@ metadata overhead
 
 Đây là data-structure selection dưới ràng buộc cực thấp cấp.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **41. Lock-Free Structures** tiếp nhận điểm tựa từ **40. bộ nhớ (memory / 메모리) Allocator và Free danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Crash Consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metadata của allocator là shared mutable state, nên contention và reclamation quan trọng không kém việc chọn block. Lock-free structure làm rõ các bất biến đồng thời bằng CAS, memory ordering và quy tắc lifetime an toàn.
 
 ## 41. Lock-Free Structures
 
@@ -584,7 +584,7 @@ Hazard pointer hoặc epoch reclamation là cấu trúc/phương thức quản l
 
 DSA concurrent là DSA + bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **42. Crash Consistency** tiếp nhận điểm tựa từ **41. Lock-Free Structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Merkle cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tính đúng đắn của lock-free bao gồm linearization và thu hồi bộ nhớ khi process đang chạy. Crash consistency thêm một boundary thứ hai: sau restart, persistent state vẫn phải thỏa bất biến của nó.
 
 ## 42. Crash Consistency
 
@@ -594,7 +594,7 @@ Một cập nhật (update / 업데이트) nhiều bước có thể để lưu 
 
 Đây là phiên bản persistence của transactional cập nhật (update / 업데이트) bất biến (invariant / 불변식).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **43. Merkle cây (tree / 트리)** tiếp nhận điểm tựa từ **42. Crash Consistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Bloom Filter, Merkle cây (tree / 트리) và chỉ mục (index / 인덱스) giải các câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Crash consistency xác định commit point bền vững cho update nhiều bước. Merkle tree mở rộng tính toàn vẹn giữa các replica bằng cách cam kết nội dung cả cây trong một root hash.
 
 ## 43. Merkle cây (tree / 트리)
 
@@ -611,7 +611,7 @@ versioned storage
 
 Proof đường dẫn (path / 경로) chỉ cần `O(log n)` băm (hash / 해시) để chứng minh một leaf thuộc cây (tree / 트리) cân bằng.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **44. Bloom Filter, Merkle cây (tree / 트리) và chỉ mục (index / 인덱스) giải các câu hỏi khác nhau** tiếp nhận điểm tựa từ **43. Merkle cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Hệ thống thực tế tối ưu dữ liệu (data / 데이터) movement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Merkle proof trả lời câu hỏi membership và snapshot có nhất quán hay không, chứ không trả lời vị trí hoặc sự vắng mặt trong một range. So sánh Bloom Filter, Merkle tree và B+ tree giúp làm rõ boundary ngữ nghĩa.
 
 ## 44. Bloom Filter, Merkle cây (tree / 트리) và chỉ mục (index / 인덱스) giải các câu hỏi khác nhau
 
@@ -623,7 +623,7 @@ B+cây (tree / 트리): “key này nằm ở đâu, phạm vi (range / 범위) 
 
 Cả ba đều là siêu dữ liệu (metadata / 메타데이터) structures nhưng phục vụ ngữ nghĩa (semantic / 의미적) hoàn toàn khác.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **44. Bloom Filter, Merkle cây (tree / 트리) và chỉ mục (index / 인덱스) giải các câu hỏi khác nhau** nêu điều cần giải thích; **45. Hệ thống thực tế tối ưu dữ liệu (data / 데이터) movement** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **46. Một trường hợp (case / 사례) study: Read đường dẫn (path / 경로) của Key-Value Store** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các cấu trúc này đều lưu metadata, nhưng mỗi cấu trúc tránh một thao tác đắt khác nhau: đọc đĩa, so sánh replica hoặc tìm kiếm có thứ tự. Vì vậy ở cấp hệ thống phải hỏi bao nhiêu byte và page cần được di chuyển.
 
 ## 45. Hệ thống thực tế tối ưu dữ liệu (data / 데이터) movement
 
@@ -642,7 +642,7 @@ locks contended
 
 Không nên dừng phân tích ở số comparison.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **45. Hệ thống thực tế tối ưu dữ liệu (data / 데이터) movement** cho ta quy tắc; **46. Một trường hợp (case / 사례) study: Read đường dẫn (path / 경로) của Key-Value Store** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **47. Một trường hợp (case / 사례) study: Scheduler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Data movement thường là chi phí chi phối, nên read path của key-value xếp routing, cache, filter, index và SSTable thành nhiều lớp. Case study làm cụ thể từng invariant cho việc loại sớm và lookup.
 
 ## 46. Một trường hợp (case / 사례) study: Read đường dẫn (path / 경로) của Key-Value Store
 
@@ -663,7 +663,7 @@ Mỗi tầng dùng cấu trúc (structure / 구조) khác để giảm chi phí 
 
 Câu hỏi kiến trúc là: **lọc càng sớm càng tốt bằng siêu dữ liệu (metadata / 메타데이터) rẻ hơn có đáng không?**
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **46. Một trường hợp (case / 사례) study: Read đường dẫn (path / 경로) của Key-Value Store** cho ta quy tắc; **47. Một trường hợp (case / 사례) study: Scheduler** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **48. Từ DSA sang hệ thống (system / 시스템) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Read path của key-value composition nhiều filter và cấu trúc lưu trữ để tránh lần đọc đắt. Scheduler cũng composition ready set, timer và priority để tránh phân bổ CPU bất công hoặc để CPU nhàn rỗi.
 
 ## 47. Một trường hợp (case / 사례) study: Scheduler
 
@@ -680,7 +680,7 @@ Một vùng nhớ động (heap / 힙) duy nhất hiếm khi đủ. Có thể c�
 
 Môi trường vận hành (production / 운영 환경) DSA thường là composition theo nhiều truy vấn (query / 쿼리) cùng lúc.
 
-> **Chuyển mạch:** Ở chặng này của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **47. Một trường hợp (case / 사례) study: Scheduler** cho ta quy tắc; **48. Từ DSA sang hệ thống (system / 시스템) thiết kế (design / 설계)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **49. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hai case study cho thấy hệ thống thật kết hợp nhiều cấu trúc quanh một bất biến tài nguyên. Workflow thiết kế làm điều đó tường minh bằng cách hỏi state, query, metadata và failure boundary nào là quan trọng.
 
 ## 48. Từ DSA sang hệ thống (system / 시스템) thiết kế (design / 설계)
 
@@ -697,7 +697,7 @@ chi phí thật là CPU, memory, I/O hay network?
 
 Đây là cùng workflow của DSA nhưng mở rộng sang hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **49. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **48. Từ DSA sang hệ thống (system / 시스템) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi workflow đã rõ, ta dễ bác bỏ các hiểu lầm phổ biến: chỉ Big-O, một HashMap hay một thuật toán đồ thị đơn lẻ đều không mô tả được chi phí và bất biến xuyên lớp.
 
 ## 49. Những hiểu lầm phổ biến
 
@@ -711,7 +711,7 @@ chi phí thật là CPU, memory, I/O hay network?
 
 “hệ thống phân tán (distributed system / 분산 시스템) không còn liên quan cấu trúc dữ liệu” — partitioning, queues, sketches, logs và indexes đều là DSA ở quy mô khác.
 
-> **Chuyển mạch:** Trong **DSA trong cơ sở dữ liệu, mạng và hệ thống**, **Mô hình tư duy** gom các mảnh từ **49. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các hiểu lầm này quy về một quy tắc: chọn cấu trúc theo công việc đắt mà nó ngăn được, bất biến mà nó duy trì và boundary ownership mà nó phục vụ. Mô hình tư duy dưới đây biến quy tắc đó thành checklist review có thể tái sử dụng.
 
 ## Mô hình tư duy
 

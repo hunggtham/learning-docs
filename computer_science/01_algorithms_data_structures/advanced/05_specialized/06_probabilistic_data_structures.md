@@ -40,7 +40,7 @@ Nếu kết quả quyết định trực tiếp kế toán, authorization hoặc
 
 **lỗi (error / 오류) ngân sách (budget / 예산) phải đi từ nghiệp vụ (business / 비즈니스) yêu cầu (requirement / 요구사항) xuống cấu trúc dữ liệu, không phải ngược lại.**
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Ba loại guarantee cần phân biệt** tiếp nhận điểm tựa từ **Khi nào approximation đáng giá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bloom Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Approximation chỉ đáng giá khi ta nói rõ guarantee nào được giữ và sai số chấp nhận được. Bloom filter là ví dụ đầu tiên: nó đổi bộ nhớ lấy một câu trả lời membership có thể có false positive.
 
 ## Ba loại guarantee cần phân biệt
 
@@ -59,7 +59,7 @@ Hai cấu trúc cùng “sai số 1%” có thể mang nghĩa hoàn toàn khác 
 
 Ví dụ Bloom Filter có one-sided membership lỗi (error / 오류). HyperLogLog ước lượng cardinality với sai số tương đối thống kê. Count-Min Sketch cho additive over-estimation trong mô hình chuẩn.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Bloom Filter** tiếp nhận điểm tựa từ **Ba loại guarantee cần phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất false positive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bloom filter dùng nhiều hash để set bit khi insert; query chỉ có thể phủ định membership khi một bit bị thiếu, không thể khẳng định tuyệt đối khi tất cả đều bật. Xác suất false positive cần được tính từ số bit, số hash và số phần tử.
 
 ## Bloom Filter
 
@@ -87,7 +87,7 @@ nếu tất cả bằng 1 -> có thể có
 
 Trong mô hình chuẩn chỉ chèn, Bloom Filter có **false positive** nhưng không có **false negative**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Xác suất false positive** tiếp nhận điểm tựa từ **Bloom Filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chọn k và m** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False positive xảy ra khi các bit cần kiểm tra đã bị các phần tử khác set, còn false negative không xảy ra nếu không có deletion sai. Từ công thức đó, ta chọn số bit `m` và số hash `k` theo ngân sách bộ nhớ và error target.
 
 ## Xác suất false positive
 
@@ -113,7 +113,7 @@ p\approx\left(1-e^{-kn/m}\right)^k
 
 Điều này cho thấy Bloom Filter không có một “accuracy cố định” độc lập số phần tử. Khi `n` tăng mà `m` không đổi, filter dần bão hòa.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Chọn k và m** tiếp nhận điểm tựa từ **Xác suất false positive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Double hashing để sinh nhiều vị trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tăng `m` giảm va chạm bit, còn `k` quá nhỏ hoặc quá lớn đều làm false-positive rate xấu đi; có một điểm gần tối ưu theo `m/n`. Khi triển khai nhiều vị trí, double hashing tạo các offset từ hai hàm cơ sở mà không cần lưu k hàm độc lập.
 
 ## Chọn k và m
 
@@ -144,7 +144,7 @@ memory budget
 CPU/hash budget
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Double hashing để sinh nhiều vị trí** tiếp nhận điểm tựa từ **Chọn k và m** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bloom Filter chỉ là prefilter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Double hashing cần hằng số bước không suy biến và phải giữ cùng quy tắc cho insert/query. Dù xác suất được kiểm soát, Bloom filter chỉ là prefilter: hit vẫn cần kiểm tra nguồn dữ liệu chính xác.
 
 ## Double hashing để sinh nhiều vị trí
 
@@ -158,7 +158,7 @@ modulo kích thước bảng dưới một construction phù hợp.
 
 Mục tiêu là giảm CPU chi phí (cost / 비용) trong khi vẫn có phân bố đủ tốt cho guarantee thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Bloom Filter chỉ là prefilter** tiếp nhận điểm tựa từ **Double hashing để sinh nhiều vị trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Counting Bloom Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefilter giúp loại nhanh phần lớn miss nhưng không được dùng như bằng chứng cuối cùng, nhất là trong security hoặc billing. Khi cần deletion, counting Bloom filter thay bit bằng counter để theo dõi số lần set.
 
 ## Bloom Filter chỉ là prefilter
 
@@ -179,7 +179,7 @@ False positive chỉ làm phát sinh thêm một chính xác (exact / 정확한)
 
 Đây là lý do Bloom Filter đặc biệt phù hợp làm tầng lọc trước lưu trữ (storage / 저장소) đắt.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Counting Bloom Filter** tiếp nhận điểm tựa từ **Bloom Filter chỉ là prefilter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scalable Bloom Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Counting filter cho phép giảm counter khi xóa, nhưng counter có thể overflow và footprint lớn hơn bit filter. Khi số phần tử tăng vượt dự báo, scalable Bloom filter mở thêm các tầng thay vì phá vỡ toàn bộ ngân sách error.
 
 ## Counting Bloom Filter
 
@@ -196,7 +196,7 @@ Delete chỉ an toàn nếu ứng dụng (application / 애플리케이션) bi�
 
 Counter còn làm bộ nhớ (memory / 메모리) tăng và cần xử lý saturation/overflow.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Counting Bloom Filter** cho ta quy tắc; **Scalable Bloom Filter** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Stable Bloom Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Scalable Bloom filter thêm filter mới theo growth policy và phối hợp query qua các tầng, nên cần tính error budget tổng. Stable Bloom filter chọn ngẫu nhiên counter để giảm nhằm giữ cửa sổ thông tin gần đây với bộ nhớ cố định.
 
 ## Scalable Bloom Filter
 
@@ -214,7 +214,7 @@ memory tăng theo thời gian
 
 Không nên gọi mọi biến thể là “Bloom Filter” rồi giả định cùng một guarantee.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Scalable Bloom Filter** cho ta quy tắc; **Stable Bloom Filter** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cuckoo Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stable filter phù hợp membership gần đây nhưng có thể tạo false negative do cơ chế aging, nên guarantee khác Bloom filter cổ điển. Cuckoo filter lưu fingerprint trong bucket và hỗ trợ deletion tự nhiên hơn.
 
 ## Stable Bloom Filter
 
@@ -226,7 +226,7 @@ Stable Bloom Filter duy trì kích thước bounded bằng cách giảm/xóa m�
 
 Đây là ví dụ lỗi (error / 오류) mô hình (model / 모델) thay đổi trực tiếp khi thêm yêu cầu bounded-memory trên stream vô hạn.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Cuckoo Filter** tiếp nhận điểm tựa từ **Stable Bloom Filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **XOR Filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cuckoo filter di chuyển fingerprint giữa các bucket khi insert, và insertion có thể thất bại khi bảng gần đầy hoặc chuỗi kick quá dài. XOR filter xây tĩnh theo ba vị trí và thường tối ưu lookup read-only, nhưng không linh hoạt như cuckoo khi cập nhật.
 
 ## Cuckoo Filter
 
@@ -252,7 +252,7 @@ capacity/load factor có giới hạn thực tế
 
 False positive xảy ra do fingerprint collision.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **XOR Filter** tiếp nhận điểm tựa từ **Cuckoo Filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Count-Min Sketch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+XOR filter giải membership bằng XOR các fingerprint tại vị trí được hash và cần construction thành công trước khi publish. Nếu câu hỏi chuyển từ membership sang tần suất theo luồng, Count-Min Sketch dùng các counter theo nhiều hàng hash.
 
 ## XOR Filter
 
@@ -264,7 +264,7 @@ Bài học:
 
 > Static tải công việc (workload / 워크로드) và động (dynamic / 동적) tải công việc (workload / 워크로드) dẫn tới cấu trúc xác suất khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Count-Min Sketch** tiếp nhận điểm tựa từ **XOR Filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao lấy minimum?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Count-Min Sketch cập nhật một counter trong mỗi row cho mỗi key và lấy các counter tương ứng khi query. Việc lấy minimum biến mọi overcount do collision thành một upper bound, thay vì chọn một hàng bất kỳ.
 
 ## Count-Min Sketch
 
@@ -286,7 +286,7 @@ estimate(x) = min(counter[r][h_r(x)])
 
 Trong mô hình cập nhật (update / 업데이트) không âm, collision chỉ cộng noise dương, nên estimate không nhỏ hơn count thật.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Vì sao lấy minimum?** tiếp nhận điểm tựa từ **Count-Min Sketch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tham số ε và δ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mỗi counter của CMS không nhỏ hơn tần suất thật vì update chỉ tăng theo hash collision; minimum do đó vẫn là upper bound và thường gần giá trị thật nhất. Chiều rộng và số hàng chuyển bound đó thành các tham số `ε` và `δ`.
 
 ## Vì sao lấy minimum?
 
@@ -302,7 +302,7 @@ Lấy minimum chọn hàng ít bị collision noise nhất.
 
 Lấy average sẽ cộng ảnh hưởng của các hàng nhiễu nhiều hơn và không giữ one-sided interpretation tương tự.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Tham số ε và δ** tiếp nhận điểm tựa từ **Vì sao lấy minimum?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conservative cập nhật (update / 업데이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+`ε` kiểm soát sai số tương đối còn `δ` kiểm soát xác suất guarantee thất bại; chúng quyết định chiều rộng và số hàng cần cấp phát. Conservative update giảm overcount bằng cách chỉ tăng những counter nhỏ nhất trong các vị trí của key.
 
 ## Tham số ε và δ
 
@@ -328,7 +328,7 @@ width lớn -> ít collision hơn -> giảm độ lớn error
 depth lớn -> có nhiều cơ hội có ít nhất một hàng sạch -> tăng confidence
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Conservative cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **Tham số ε và δ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CMS không tự tìm ra heavy hitter định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conservative update thường giảm bias do collision nhưng làm logic cập nhật phụ thuộc toàn bộ counter candidates và vẫn giữ upper-bound semantics. CMS trả lời frequency của key đã biết, không tự lưu danh sách định danh heavy hitter; cần cấu trúc theo dõi candidate riêng.
 
 ## Conservative cập nhật (update / 업데이트)
 
@@ -338,7 +338,7 @@ Mục tiêu là tránh đẩy những counter đã bị noise cao lên thêm n�
 
 Thực tế có thể giảm over-estimation, nhưng phải phân biệt guarantee của biến thể với theorem của CMS chuẩn.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **CMS không tự tìm ra heavy hitter định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Conservative cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Misra–Gries** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Misra–Gries lưu một số candidate và giảm đồng loạt khi bảng đầy, nên có bound rõ cho các item có tần suất lớn. Nó phù hợp với mô hình cập nhật chỉ tăng, nhưng không tự giải quyết mọi truy vấn frequency như CMS.
 
 ## CMS không tự tìm ra heavy hitter định danh (identity / 식별자)
 
@@ -352,7 +352,7 @@ thì cần thêm candidate cấu trúc (structure / 구조), ví dụ vùng nh�
 
 Một sketch không lưu định danh (identity / 식별자) đầy đủ nên không thể tự “sinh ra” mọi key đã thấy.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Misra–Gries** tiếp nhận điểm tựa từ **CMS không tự tìm ra heavy hitter định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Space-Saving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Misra–Gries dùng decrement toàn bộ counters để loại bỏ mass của các item không thể là heavy hitter. Space-Saving thay bước đó bằng việc thay candidate ít đếm nhất và điều chỉnh estimate để tận dụng không gian hiệu quả hơn.
 
 ## Misra–Gries
 
@@ -370,7 +370,7 @@ Nó bảo đảm các item có frequency đủ lớn không bị bỏ mất kh�
 
 Đây là một cách khác CMS: thay vì estimate mọi key đã biết, nó tập trung giữ định danh (identity / 식별자) của một tập candidate nhỏ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Space-Saving** tiếp nhận điểm tựa từ **Misra–Gries** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cập nhật (update / 업데이트) âm và turnstile mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Space-Saving thường giữ estimate và error của candidate để xếp hạng heavy hitter với bộ nhớ cố định. Nếu stream có update âm hoặc delete, cần turnstile-compatible sketch thay vì giả định counters chỉ tăng.
 
 ## Space-Saving
 
@@ -385,7 +385,7 @@ point frequency query -> CMS
 heavy hitter identity -> Misra–Gries / Space-Saving / hybrid
 ```
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Cập nhật (update / 업데이트) âm và turnstile mô hình (model / 모델)** tiếp nhận điểm tựa từ **Space-Saving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HyperLogLog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Turnstile model cho phép increment và decrement, nên cần linear sketch hoặc signed counters với guarantee tương ứng; thuật toán dương-only có thể mất tính đúng. HyperLogLog chuyển sang bài toán ước lượng số distinct.
 
 ## Cập nhật (update / 업데이트) âm và turnstile mô hình (model / 모델)
 
@@ -402,7 +402,7 @@ Một theorem cho insertion-only stream không thể áp dụng nguyên trạng 
 
 **lỗi (error / 오류) guarantee luôn gắn với cập nhật (update / 업데이트) mô hình (model / 모델).**
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **HyperLogLog** tiếp nhận điểm tựa từ **Cập nhật (update / 업데이트) âm và turnstile mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Register của HLL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HLL hash mỗi item thành vị trí register và rank của phần suffix zero; các rank lớn cung cấp tín hiệu về cardinality. Register chỉ cần lưu rank lớn nhất quan sát được, nên footprint nhỏ và merge được.
 
 ## HyperLogLog
 
@@ -412,7 +412,7 @@ HyperLogLog ước lượng **số phần tử phân biệt (cardinality)**.
 
 HLL chia băm (hash / 해시) không gian (space / 공간) thành nhiều register để giảm variance thay vì chỉ giữ một maximum toàn cục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Register của HLL** tiếp nhận điểm tựa từ **HyperLogLog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao cần nhiều register?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mỗi register đại diện cho một bucket của hash space và ghi maximum rank đã thấy; estimator kết hợp tất cả register thay vì một quan sát đơn. Nhiều register làm giảm variance nhờ averaging nhưng tiêu tốn memory.
 
 ## Register của HLL
 
@@ -424,7 +424,7 @@ Nếu stream có nhiều distinct values, khả năng quan sát các mẫu (patt
 
 Final estimator kết hợp nhiều register qua một dạng harmonic mean có correction constants.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Vì sao cần nhiều register?** tiếp nhận điểm tựa từ **Register của HLL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Small-range và large-range correction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nhiều register giúp các bucket độc lập hơn và làm ước lượng ổn định hơn theo căn bậc hai số register. Nhưng estimator cơ bản có bias ở cardinality nhỏ và saturation ở miền rất lớn, nên cần correction theo range.
 
 ## Vì sao cần nhiều register?
 
@@ -442,7 +442,7 @@ Trong HLL kinh điển, hằng số thường được nhắc khoảng `1.04/√
 
 Điều cần nhớ: tăng bộ nhớ (memory / 메모리) theo số register để giảm lỗi (error / 오류) theo căn bậc hai.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Small-range và large-range correction** tiếp nhận điểm tựa từ **Vì sao cần nhiều register?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mergeability của HLL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Small-range correction dùng số register zero để nhận diện khi quan sát còn thưa; large-range correction bù saturation hoặc giới hạn miền hash. Sau khi estimator ổn định, khả năng merge register theo phép max là một guarantee triển khai quan trọng.
 
 ## Small-range và large-range correction
 
@@ -457,7 +457,7 @@ cardinality rất lớn -> hash space saturation effects
 
 Do đó không nên tự implement HLL môi trường vận hành (production / 운영 환경) chỉ từ một công thức rút gọn nếu accuracy quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Mergeability của HLL** tiếp nhận điểm tựa từ **Small-range và large-range correction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MinHash** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HLL merge bằng cách lấy maximum tương ứng của từng register, nhưng chỉ hợp lệ khi các sketch dùng cùng hash, precision và encoding. MinHash cũng dựa vào phép gộp trạng thái để ước lượng độ tương đồng giữa tập.
 
 ## Mergeability của HLL
 
@@ -473,7 +473,7 @@ Ta có thể tính sketch trên nhiều shard rồi merge mà không gửi raw I
 
 **Mergeability là một tính năng (feature / 기능) hệ thống cực kỳ quan trọng của probabilistic summary.**
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **MinHash** tiếp nhận điểm tựa từ **Mergeability của HLL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MinHash và LSH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MinHash giữ các giá trị hash nhỏ nhất của các shingle, và xác suất hai signature trùng nhau xấp xỉ Jaccard similarity. LSH chia signature thành bands để biến tương đồng thành candidate retrieval với false-positive/negative trade-off.
 
 ## MinHash
 
@@ -496,7 +496,7 @@ recommendation candidate generation
 web-page deduplication
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **MinHash và LSH** tiếp nhận điểm tựa từ **MinHash** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reservoir Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MinHash cung cấp signature compact, còn LSH chỉ là lớp truy hồi candidate và vẫn cần bước similarity chính xác nếu false match đắt. Khi cần lấy mẫu stream không biết trước độ dài, reservoir sampling giải quyết bài toán khác bằng invariant xác suất.
 
 ## MinHash và LSH
 
@@ -518,7 +518,7 @@ exact/expensive similarity trên candidate
 
 Đây là cùng triết lý với Bloom Filter: approximation dùng để giảm không gian candidate trước bước chính xác đắt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Reservoir Sampling** tiếp nhận điểm tựa từ **MinHash và LSH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao Reservoir Sampling đồng đều?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reservoir sampling giữ đúng K item trong một stream chưa biết chiều dài bằng cách thay thế với xác suất phụ thuộc vị trí hiện tại. Tính đồng đều không phải trực giác may rủi; nó đến từ invariant mỗi item đã thấy có cùng xác suất nằm trong reservoir.
 
 ## Reservoir Sampling
 
@@ -528,7 +528,7 @@ Reservoir Sampling giữ `k` item đầu, sau đó với item thứ `i` chọn n
 
 Với `k=1`, item thứ `i` được chọn với xác suất `1/i`.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Vì sao Reservoir Sampling đồng đều?** tiếp nhận điểm tựa từ **Reservoir Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weighted Reservoir Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ở bước thứ `i`, mỗi item cũ có xác suất sống sót đúng bằng xác suất item mới được chọn và không đẩy nó ra; induction giữ invariant đồng đều qua toàn stream. Nếu item có trọng số khác nhau, ta cần weighted reservoir thay cho uniform sampling.
 
 ## Vì sao Reservoir Sampling đồng đều?
 
@@ -556,7 +556,7 @@ cho mọi item.
 
 Đây là ví dụ đẹp của induction/xác suất (probability / 확률) proof cho streaming thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Weighted Reservoir Sampling** tiếp nhận điểm tựa từ **Vì sao Reservoir Sampling đồng đều?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantile sketch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Weighted reservoir biến trọng số thành key hoặc priority ngẫu nhiên, rồi giữ K item có priority tốt nhất; cần chứng minh phân phối mục tiêu chứ không chỉ nhân xác suất tùy ý. Quantile sketch cũng tóm tắt stream, nhưng mục tiêu là truy vấn thứ hạng thay vì giữ sample cụ thể.
 
 ## Weighted Reservoir Sampling
 
@@ -572,7 +572,7 @@ trọng số có thay đổi theo thời gian không?
 
 Sampling ngữ nghĩa (semantics / 의미론) phải là một phần specification.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Quantile sketch** tiếp nhận điểm tựa từ **Weighted Reservoir Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao p99 cần sketch chuyên biệt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Quantile sketch lưu một summary có thứ tự và guarantee rank/error để trả median, percentile hoặc threshold mà không giữ toàn bộ stream. p99 nằm ở tail nhạy cảm, nên một sketch tối ưu trung tâm có thể không đủ chính xác ở đuôi.
 
 ## Quantile sketch
 
@@ -591,7 +591,7 @@ large-scale analytics
 
 Các sketch khác nhau có lỗi (error / 오류) mô hình (model / 모델) khác nhau, ví dụ rank lỗi (error / 오류) hoặc relative lỗi (error / 오류) ở tail. Khi chọn thư viện (library / 라이브러리), phải đọc guarantee cụ thể chứ không chỉ tên “quantile sketch”.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Tại sao p99 cần sketch chuyên biệt?** tiếp nhận điểm tựa từ **Quantile sketch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mergeability là dimension thiết kế riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+p99 có thể bị chi phối bởi ít quan sát cực lớn, và sai số rank nhỏ chưa chắc tạo sai số value nhỏ ở tail. Vì vậy phải chọn sketch theo phân phối, query và khả năng merge, không chỉ theo một con số memory.
 
 ## Tại sao p99 cần sketch chuyên biệt?
 
@@ -601,7 +601,7 @@ Một quantile sketch đổi một lượng lỗi (error / 오류) có kiểm so
 
 Đây là ví dụ sản phẩm (product / 제품) yêu cầu (requirement / 요구사항) trực tiếp dẫn tới approximate cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Mergeability là dimension thiết kế riêng** tiếp nhận điểm tựa từ **Tại sao p99 cần sketch chuyên biệt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monoid perspective của sketch merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mergeability phải được thiết kế cùng estimator: merge hai summary phải tương đương với chạy summary trên union stream trong giới hạn guarantee. Nhìn phép merge như một operation kết hợp giúp kiểm tra tính đúng qua monoid perspective.
 
 ## Mergeability là dimension thiết kế riêng
 
@@ -619,7 +619,7 @@ Các cấu trúc như HLL và nhiều frequency/quantile sketch được thiết
 
 Một summary nhỏ nhưng không merge được có thể kém hữu ích trong phân tán (distributed / 분산) chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Monoid perspective của sketch merge** tiếp nhận điểm tựa từ **Mergeability là dimension thiết kế riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băm (hash / 해시) independence các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một sketch merge tốt có identity cho stream rỗng và operation associative đủ gần với phép hợp nhất dữ liệu; nếu không, thứ tự merge trong hệ phân tán sẽ làm kết quả trôi. Các guarantee đó vẫn phụ thuộc giả định về hash independence.
 
 ## Monoid perspective của sketch merge
 
@@ -635,7 +635,7 @@ thì ta có thể aggregate theo cây (tree / 트리), shard hoặc batch bất 
 
 Algebraic properties không chỉ là lý thuyết; chúng quyết định khả năng quy mô (scale / 규모) hệ thống.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Băm (hash / 해시) independence các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **Monoid perspective của sketch merge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial đầu vào (input / 입력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hash family cần đủ độc lập hoặc đủ gần với giả định của phân tích; dùng hash yếu hoặc seed không đổi sai cách có thể tạo bias. Với input adversarial, collision có thể bị cố ý điều khiển nên seed và nguồn entropy trở thành một phần của thiết kế.
 
 ## Băm (hash / 해시) independence các giả định (assumptions / 가정들)
 
@@ -647,7 +647,7 @@ Nếu key có mẫu (pattern / 패턴) xấu, attacker-controlled đầu vào (i
 
 Vì vậy môi trường vận hành (production / 운영 환경) sketch nên dùng băm (hash / 해시) hàm (function / 함수)/thư viện (library / 라이브러리) đã được đánh giá phù hợp thay vì tự nghĩ một mixing hàm (function / 함수) đơn giản.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Adversarial đầu vào (input / 입력)** tiếp nhận điểm tựa từ **Băm (hash / 해시) independence các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deletion không phải tính năng (feature / 기능) miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Adversarial input có thể làm Bloom collision, sketch overcount hoặc LSH candidate set lệch khỏi phân phối kỳ vọng; cần keyed hash, randomized seed hoặc mitigation ở lớp nguồn. Deletion lại đặt một giới hạn khác: nhiều cấu trúc không thể hoàn tác chỉ bằng cách trừ một bit.
 
 ## Adversarial đầu vào (input / 입력)
 
@@ -663,7 +663,7 @@ sai số chỉ ảnh hưởng analytics hay ảnh hưởng security decision?
 
 Một sketch phù hợp telemetry nội bộ chưa chắc phù hợp kiểm soát truy cập (access control / 접근 제어).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Deletion không phải tính năng (feature / 기능) miễn phí** tiếp nhận điểm tựa từ **Adversarial đầu vào (input / 입력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sliding cửa sổ (window / 윈도우) và thời gian (time / 시간) decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bloom filter thường không hỗ trợ delete vì không biết bit thuộc về item nào; counting hoặc generation filters đổi memory/guarantee để có aging. Sliding window và time decay cung cấp semantics “gần đây” thay vì giả vờ xóa chính xác khỏi summary.
 
 ## Deletion không phải tính năng (feature / 기능) miễn phí
 
@@ -681,7 +681,7 @@ exact side structure
 
 Một summary nén mạnh thường mất thông tin cần để đảo ngược cập nhật (update / 업데이트).
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Sliding cửa sổ (window / 윈도우) và thời gian (time / 시간) decay** tiếp nhận điểm tựa từ **Deletion không phải tính năng (feature / 기능) miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cardinality của union và intersection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sliding window có thể chia bucket theo thời gian rồi hết hạn cả bucket, còn decay giảm ảnh hưởng dần theo tuổi; mỗi cách cho error và latency khác nhau. Khi có nhiều tập, các signature cardinality có thể ước lượng union/intersection nhưng phải giữ tương quan hash nhất quán.
 
 ## Sliding cửa sổ (window / 윈도우) và thời gian (time / 시간) decay
 
@@ -700,7 +700,7 @@ Ví dụ giữ HLL theo từng minute rồi merge vài bucket gần nhất. sự
 
 Thời gian (time / 시간) ngữ nghĩa (semantics / 의미론) là một dimension khác ngoài giá trị (value / 값) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Cardinality của union và intersection** tiếp nhận điểm tựa từ **Sliding cửa sổ (window / 윈도우) và thời gian (time / 시간) decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lan truyền lỗi (error propagation / 오류 전파)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+HLL union merge được bằng register-wise max; intersection thường suy ra từ inclusion–exclusion nên sai số có thể khuếch đại khi các số gần nhau. Vì vậy cần theo dõi error propagation thay vì cộng các error bound một cách máy móc.
 
 ## Cardinality của union và intersection
 
@@ -718,7 +718,7 @@ MinHash thường phù hợp hơn nếu mục tiêu chính là similarity/inters
 
 Chọn sketch theo truy vấn (query / 쿼리), không chỉ theo loại dữ liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Lan truyền lỗi (error propagation / 오류 전파)** tiếp nhận điểm tựa từ **Cardinality của union và intersection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) ngân sách (budget / 예산) trước, lỗi (error / 오류) sau — hay ngược lại?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi kết hợp nhiều sketch hoặc nhiều phép biến đổi, bias, variance và correlation có thể truyền qua nhau không tuyến tính. Chọn memory budget trước hay error target trước là quyết định workload; cần ghi lại cả hai cùng assumption.
 
 ## Lan truyền lỗi (error propagation / 오류 전파)
 
@@ -734,7 +734,7 @@ Không nên giả định mỗi stage “1% lỗi (error / 오류)” nghĩa to�
 
 Cần hiểu lỗi (error / 오류) direction, independence và cách downstream thao tác (operation / 연산) khuếch đại sai số.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Bộ nhớ (memory / 메모리) ngân sách (budget / 예산) trước, lỗi (error / 오류) sau — hay ngược lại?** tiếp nhận điểm tựa từ **Lan truyền lỗi (error propagation / 오류 전파)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Serialization và tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không có lựa chọn phổ quát: nếu SLO đặt error trước, ta suy ra memory và throughput; nếu giới hạn memory cứng, ta báo error envelope thực tế. Một sketch đã triển khai còn phải serialize seed, precision, layout và version để merge tương thích.
 
 ## Bộ nhớ (memory / 메모리) ngân sách (budget / 예산) trước, lỗi (error / 오류) sau — hay ngược lại?
 
@@ -749,7 +749,7 @@ Ví dụ Bloom Filter cho phép chuyển giữa `n`, `p`, `m` tương đối tr�
 
 Việc ghi rõ phương trình sizing biến thiết kế (design / 설계) từ “chọn đại 10 MB” thành một quyết định có thể rà soát (review / 검토).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Serialization và tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) ngân sách (budget / 예산) trước, lỗi (error / 오류) sau — hay ngược lại?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Determinism và reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Serialization phải bảo toàn các tham số ảnh hưởng semantics, không chỉ các counter hiện tại; khác hash seed hoặc endian có thể làm hai sketch không merge được. Determinism và reproducibility giúp phân biệt thay đổi thuật toán với dao động ngẫu nhiên.
 
 ## Serialization và tính tương thích (compatibility / 호환성)
 
@@ -767,7 +767,7 @@ Hai HLL khác precision hoặc băm (hash / 해시) scheme không thể merge t�
 
 Versioning của sketch format là một phần của phân tán (distributed / 분산) tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Determinism và reproducibility** tiếp nhận điểm tựa từ **Serialization và tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reproducible experiment cần seed, input order, version và configuration được ghi rõ; deterministic không đồng nghĩa chính xác nếu estimator có bias. Khi update từ nhiều worker, concurrency lại có thể làm mất update hoặc phá invariant nếu merge không atomic.
 
 ## Determinism và reproducibility
 
@@ -783,7 +783,7 @@ cross-node merge compatibility
 adversarial resistance
 ```
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **Determinism và reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm (cache / 캐시) locality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Concurrent sketch có thể dùng thread-local summaries rồi merge, hoặc atomic update với contention cao; lựa chọn phụ thuộc write rate và mergeability. Layout và cache locality quyết định throughput thực tế của các counter/register này.
 
 ## Tính đồng thời (concurrency / 동시성)
 
@@ -802,7 +802,7 @@ Thread-local + merge thường hấp dẫn nếu merge thao tác (operation / �
 
 Đây là một ví dụ algebraic merge giúp thiết kế concurrent kiến trúc (architecture / 아키텍처) đơn giản hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Bộ nhớ đệm (cache / 캐시) locality** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không phải approximation nào cũng probabilistic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Packed counters, contiguous registers và batch update thường tận dụng cache tốt hơn các node pointer-rich, nhưng có thể tăng chi phí merge hoặc false sharing. Approximation tiếp theo cần phân biệt có random error hay chỉ là heuristic/deterministic bound.
 
 ## Bộ nhớ đệm (cache / 캐시) locality
 
@@ -812,7 +812,7 @@ Một trong những lý do sketch nhanh không chỉ là ít thao tác (operatio
 
 Approximation đôi khi mua cả bộ nhớ (memory / 메모리) lẫn CPU efficiency qua bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Không phải approximation nào cũng probabilistic** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) locality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chọn cấu trúc theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một cấu trúc có thể xấp xỉ do sampling, hash randomness, quantization hoặc do heuristic nén nhưng không có guarantee xác suất. Vì vậy chọn data structure phải bắt đầu từ query, update model, error semantics và operational constraints.
 
 ## Không phải approximation nào cũng probabilistic
 
@@ -829,7 +829,7 @@ probability of failure
 
 Không nên dùng “probabilistic” như một từ thay thế chung cho “không chính xác”.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Chọn cấu trúc theo câu hỏi** tiếp nhận điểm tựa từ **Không phải approximation nào cũng probabilistic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử cấu trúc xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Membership, frequency, cardinality, similarity, quantile và sampling có invariant khác nhau, nên Bloom filter không thay CMS và HLL không thay quantile sketch. Sau khi chọn cấu trúc, test phải kiểm tra đúng guarantee thay vì chỉ so một vài output.
 
 ## Chọn cấu trúc theo câu hỏi
 
@@ -847,7 +847,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Bảng này chỉ là điểm khởi đầu; cập nhật (update / 업데이트)/delete/merge/lỗi (error / 오류) mô hình (model / 모델) mới quyết định cuối cùng.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Kiểm thử cấu trúc xác suất** tiếp nhận điểm tựa từ **Chọn cấu trúc theo câu hỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential và simulation testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Test sketch cần đo bias, variance, false-positive rate, rank error, merge behavior và saturation trên nhiều phân phối. Differential testing đối chiếu với oracle chính xác; simulation testing kiểm tra envelope qua nhiều seed và stream.
 
 ## Kiểm thử cấu trúc xác suất
 
@@ -876,7 +876,7 @@ chạy nhiều trial với cardinality đã biết
 
 Không nên kiểm thử xác suất (probability / 확률) bằng 10 mẫu (sample / 표본) rồi kết luận guarantee đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Differential và simulation testing** tiếp nhận điểm tựa từ **Kiểm thử cấu trúc xác suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Differential test cho biết implementation lệch oracle ở đâu, còn simulation cho biết tần suất lệch có phù hợp guarantee qua nhiều workload không. Các hiểu lầm còn lại thường biến bound xác suất thành lời hứa tuyệt đối.
 
 ## Differential và simulation testing
 
@@ -892,7 +892,7 @@ Sau đó chạy nhiều seed/tải công việc (workload / 워크로드) để 
 
 Đây là cách nối lý thuyết (theory / 이론) với hiện thực (implementation / 구현) thực tế.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Differential và simulation testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+False positive không phải false negative, merge không phải cộng state tùy tiện, và `ε/δ` không phải một độ chính xác cố định cho mọi input. Mô hình tư duy cuối bài gom guarantee, resource budget và operational evidence vào cùng một quy trình.
 
 ## Những hiểu lầm phổ biến
 
@@ -910,7 +910,7 @@ Sau đó chạy nhiều seed/tải công việc (workload / 워크로드) để 
 
 “Merge hai sketch cùng loại luôn hợp lệ” — sai nếu precision/băm (hash / 해시)/phiên bản (version / 버전) khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy là: xác định câu hỏi, chọn invariant và guarantee, tính error/memory budget, kiểm tra merge và adversarial behavior, rồi đo lại trên workload thật. Các liên kết cuối bài giúp đối chiếu từng họ cấu trúc với bài toán streaming tương ứng.
 
 ## Mô hình tư duy
 

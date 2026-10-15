@@ -15,7 +15,7 @@ khác nhau; delegation phải giữ mục tiêu (target / 대상), currentTarget
 hành vi (behavior / 동작). khung phần mềm (framework / 프레임워크) sự kiện (event / 이벤트) lớp trừu tượng (abstraction / 추상화) chỉ là lớp dispatch thêm, không xóa
 capture/bubble hoặc bản địa (native / 네이티브) default hành động (action / 동작).
 
-> **Nối mạch:** Event semantics quyết định intent và ordering; request/stale result kiểm tra điều gì xảy ra khi response về muộn hoặc bị lặp. Source of truth tiếp theo chọn nơi sở hữu state để tránh race giữa UI và network.
+Event semantics quyết định intent và ordering; request/stale result kiểm tra response đến muộn hoặc bị lặp ra sao, rồi source of truth chọn nơi sở hữu state để tránh race giữa UI và network.
 
 ## Yêu cầu (request / 요청) và stale kết quả (result / 결과)
 
@@ -29,7 +29,7 @@ Thử lại (retry / 재시도), bộ nhớ đệm (cache / 캐시) và optimist
 quay lui (rollback / 롤백)/reconciliation. HTTP status hoặc lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) là đặc tả hợp đồng (contract / 계약) với
 backend, không phải authorization của máy khách (client / 클라이언트).
 
-> **Nối mạch:** Khi stale response đã được mô tả, source of truth biến nó thành policy cụ thể cho cache, optimistic update và rollback. Đây là điều kiện để phần state ownership kết thúc bằng một invariant kiểm tra được.
+Khi stale response đã được mô tả, source of truth biến nó thành policy cho cache, optimistic update và rollback; state ownership chỉ hoàn tất khi policy đó tạo được invariant kiểm tra.
 
 ## Chọn nguồn chuẩn (source of truth / 정본)
 

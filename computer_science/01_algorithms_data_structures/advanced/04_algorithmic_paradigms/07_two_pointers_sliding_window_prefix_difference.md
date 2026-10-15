@@ -35,7 +35,7 @@ Nếu tổng quá lớn, giảm `R` theo lập luận (reasoning / 추론) đố
 
 Mỗi pointer chỉ di chuyển một chiều, nên quét là `O(n)` sau khi dữ liệu đã được sắp xếp.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **1. Hai con trỏ trên dữ liệu đã sắp xếp** nêu điều cần giải thích; **2. bất biến (invariant / 불변식) của Two Pointers** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Chi phí sorting phải được tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hai con trỏ chỉ tiến một chiều khi thứ tự dữ liệu cho phép loại bỏ một vùng chắc chắn không còn cần xét. Invariant đó phải được viết rõ trước khi tính số lần di chuyển.
 
 ## 2. bất biến (invariant / 불변식) của Two Pointers
 
@@ -49,7 +49,7 @@ Mỗi lần tăng `L` hoặc giảm `R`, ta phải chứng minh toàn bộ các 
 
 Đây là dạng **candidate elimination** giống tìm kiếm nhị phân (binary search / 이진 탐색) nhưng thay vì loại nửa khoảng bằng một phép so sánh, ta loại một hàng/cột ứng viên nhờ monotonic thứ tự (order / 순서).
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **3. Chi phí sorting phải được tính** tiếp nhận điểm tựa từ **2. bất biến (invariant / 불변식) của Two Pointers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Các dạng Two Pointers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi invariant phụ thuộc dữ liệu đã sắp xếp, chi phí sorting không thể bị ẩn trong nhãn O(n). Tổng chi phí gồm cả sắp xếp và lượt quét, rồi mới so với các dạng two pointers khác.
 
 ## 3. Chi phí sorting phải được tính
 
@@ -65,7 +65,7 @@ Với Two Sum một lần, băm (hash / 해시) Map expected `O(n)` có thể t�
 
 Luôn phân tích toàn chuỗi xử lý (pipeline / 파이프라인), không chỉ phase quét.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **4. Các dạng Two Pointers** tiếp nhận điểm tựa từ **3. Chi phí sorting phải được tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Read/ghi (write / 쓰기) Pointer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chi phí sorting quyết định có nên đổi một lần sắp xếp lấy nhiều truy vấn nhanh hay không. Từ đây cần phân biệt các dạng con trỏ: hội tụ, cùng chiều, hoặc một con trỏ đọc–một con trỏ ghi.
 
 ## 4. Các dạng Two Pointers
 
@@ -96,7 +96,7 @@ Hai pointer chạy tốc độ khác nhau trên linked cấu trúc (structure / 
 
 Điểm chung là mỗi pointer có nghĩa trong một bất biến (invariant / 불변식) cụ thể.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **5. Read/ghi (write / 쓰기) Pointer** tiếp nhận điểm tựa từ **4. Các dạng Two Pointers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Stable vs Unstable Compaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Read/write pointer không tìm cặp giá trị mà duy trì vùng đã xử lý và vùng chưa xử lý. Với thao tác tại chỗ, câu hỏi tiếp theo là phần tử hợp lệ có giữ nguyên thứ tự hay chấp nhận compaction không ổn định.
 
 ## 5. Read/ghi (write / 쓰기) Pointer
 
@@ -120,7 +120,7 @@ Bất biến:
 
 Mẫu (pattern / 패턴) này dùng cho filter-in-place, remove element, partition và stream compaction.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **6. Stable vs Unstable Compaction** tiếp nhận điểm tựa từ **5. Read/ghi (write / 쓰기) Pointer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Fast/Slow Pointer trên Linked danh sách (list / 목록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Stable compaction giữ thứ tự nên thường phải trả thêm di chuyển; unstable compaction có thể đổi phần tử với cuối vùng để giảm ghi. Trên linked list, cặp fast/slow lại diễn đạt invariant khoảng cách thay vì vị trí mảng.
 
 ## 6. Stable vs Unstable Compaction
 
@@ -130,7 +130,7 @@ Nếu không cần giữ thứ tự (order / 순서), có thể swap phần tử
 
 Yêu cầu ổn định là một phần của đầu ra (output / 출력) ngữ nghĩa (semantics / 의미론), không phải chỉ hiện thực (implementation / 구현) detail.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **7. Fast/Slow Pointer trên Linked danh sách (list / 목록)** tiếp nhận điểm tựa từ **6. Stable vs Unstable Compaction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Vì sao Floyd gặp nhau?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fast/slow pointer trên linked list dùng tốc độ khác nhau để phát hiện cấu trúc chu kỳ hoặc tìm midpoint. Floyd gặp nhau không phải do may mắn mà do khoảng cách tương đối modulo độ dài chu kỳ.
 
 ## 7. Fast/Slow Pointer trên Linked danh sách (list / 목록)
 
@@ -147,7 +147,7 @@ Tìm middle nút (node / 노드) cũng dùng fast/slow: khi fast đi hết, slow
 
 Ở linked danh sách (list / 목록) không có random truy cập (access / 접근), quan hệ (relation / 관계) về tốc độ thay thế arithmetic chỉ mục (index / 인덱스).
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **8. Vì sao Floyd gặp nhau?** tiếp nhận điểm tựa từ **7. Fast/Slow Pointer trên Linked danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tìm điểm bắt đầu chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi fast và slow gặp, ta mới biết có chu kỳ chứ chưa biết entry. Đặt lại một con trỏ về head và tiến cùng tốc độ sẽ biến invariant khoảng cách thành vị trí bắt đầu chu trình.
 
 ## 8. Vì sao Floyd gặp nhau?
 
@@ -159,7 +159,7 @@ Do đó sau tối đa `C` bước, khoảng cách trở thành 0 và hai pointer
 
 Đây là một chứng minh dùng modular arithmetic chứ không phải “fast chắc chắn đuổi kịp slow” theo trực giác mơ hồ.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **9. Tìm điểm bắt đầu chu trình** tiếp nhận điểm tựa từ **8. Vì sao Floyd gặp nhau?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Fixed-Size Sliding cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chứng minh Floyd gặp nhau dựa trên khoảng cách tương đối modulo độ dài chu kỳ. Từ điểm gặp đó, bước tiếp theo là suy ra entry của chu trình bằng cách đặt một con trỏ lại tại head.
 
 ## 9. Tìm điểm bắt đầu chu trình
 
@@ -175,7 +175,7 @@ vị trí gặp modulo cycle length
 
 Đây là ví dụ nơi hiểu đại số giúp nhớ thuật toán tốt hơn học thuộc bước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **10. Fixed-Size Sliding cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **9. Tìm điểm bắt đầu chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Variable-Size Sliding cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định entry của chu trình, ta quay lại dãy tuyến tính và giữ một cửa sổ có độ dài cố định. Mỗi lần dịch chỉ thêm phần tử mới và loại phần tử cũ.
 
 ## 10. Fixed-Size Sliding cửa sổ (window / 윈도우)
 
@@ -193,7 +193,7 @@ Sau initial `O(k)`, mỗi shift `O(1)`, tổng `O(n)`.
 
 Cửa sổ trượt chính là **incremental maintenance** của summary.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **11. Variable-Size Sliding cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **10. Fixed-Size Sliding cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sliding cửa sổ (window / 윈도우) cần tính đơn điệu của tính hợp lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fixed-size window có độ dài cố định, còn variable-size window thay đổi hai biên để khôi phục điều kiện. Cách co trái chỉ đúng khi việc mở rộng hoặc thu hẹp làm tính hợp lệ biến đổi đơn điệu.
 
 ## 11. Variable-Size Sliding cửa sổ (window / 윈도우)
 
@@ -214,7 +214,7 @@ Do đó ngay cả có `while` lồng trong `for`, tổng số bước dịch poi
 
 Đây là amortized lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **12. Sliding cửa sổ (window / 윈도우) cần tính đơn điệu của tính hợp lệ** tiếp nhận điểm tựa từ **11. Variable-Size Sliding cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vì sao số âm phá mẫu (pattern / 패턴) sum đơn giản?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Variable-size window cần chứng minh rằng khi cửa sổ đã vi phạm, tăng L sẽ khôi phục tính hợp lệ mà không bỏ sót nghiệm. Nếu tính hợp lệ không đơn điệu, mẫu hai con trỏ có thể sai.
 
 ## 12. Sliding cửa sổ (window / 윈도우) cần tính đơn điệu của tính hợp lệ
 
@@ -226,7 +226,7 @@ Predicate “sum <= K” có quan hệ monotonic với hai biên, nên có thể
 
 Đây là điều kiện bản chất; cú pháp (syntax / 문법) hai pointer chỉ là biểu hiện bên ngoài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **13. Vì sao số âm phá mẫu (pattern / 패턴) sum đơn giản?** tiếp nhận điểm tựa từ **12. Sliding cửa sổ (window / 윈도우) cần tính đơn điệu của tính hợp lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. cửa sổ (window / 윈도우) trạng thái (state / 상태) có thể phức tạp hơn Sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Âm số phá tính đơn điệu của tổng: thêm phần tử có thể làm tổng giảm, nên không thể tùy ý co cửa sổ khi sum vượt ngưỡng. Khi đó phải chuyển sang prefix sum, deque đơn điệu hoặc cấu trúc phù hợp khác.
 
 ## 13. Vì sao số âm phá mẫu (pattern / 패턴) sum đơn giản?
 
@@ -250,7 +250,7 @@ binary search trên prefix theo structure đặc biệt
 
 Đừng dùng sliding cửa sổ (window / 윈도우) chỉ vì bài hỏi subarray.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **14. cửa sổ (window / 윈도우) trạng thái (state / 상태) có thể phức tạp hơn Sum** tiếp nhận điểm tựa từ **13. Vì sao số âm phá mẫu (pattern / 패턴) sum đơn giản?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Longest Substring Without Repeating Characters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Với số âm, state của cửa sổ không thể chỉ là sum vì việc mở rộng và thu hẹp không còn đơn điệu. Cần mô hình hóa đủ state để kiểm tra validity trước khi chọn hướng di chuyển.
 
 ## 14. cửa sổ (window / 윈도우) trạng thái (state / 상태) có thể phức tạp hơn Sum
 
@@ -269,7 +269,7 @@ multiset/order-statistic structure
 
 Nếu mỗi add/remove là `O(1)` expected và hai biên đơn điệu, tổng vẫn thường `O(n)`.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **15. Longest Substring Without Repeating Characters** tiếp nhận điểm tựa từ **14. cửa sổ (window / 윈도우) trạng thái (state / 상태) có thể phức tạp hơn Sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Minimum cửa sổ (window / 윈도우) Substring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Để xử lý cửa sổ có state phức tạp, cần xác định dữ liệu đủ để kiểm tra validity khi L hoặc R dịch chuyển. Longest Substring Without Repeating Characters dùng tần suất hoặc last-seen của từng ký tự.
 
 ## 15. Longest Substring Without Repeating Characters
 
@@ -290,7 +290,7 @@ Ta nhảy `L` trực tiếp thay vì tăng từng bước.
 
 Đây là ví dụ summary mạnh hơn có thể giảm số cập nhật (update / 업데이트) trạng thái (state / 상태) dù asymptotic vẫn `O(n)`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **16. Minimum cửa sổ (window / 윈도우) Substring** tiếp nhận điểm tựa từ **15. Longest Substring Without Repeating Characters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. At-Most → Exactly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Longest substring duy trì invariant không ký tự lặp trong [L,R], rồi tăng L đến khi hợp lệ sau mỗi lần tăng R. Minimum Window Substring đảo mục tiêu: cần đủ mọi nhu cầu, nên state phải theo dõi thiếu/thừa.
 
 ## 16. Minimum cửa sổ (window / 윈도우) Substring
 
@@ -307,7 +307,7 @@ Một biến `formed` hoặc số yêu cầu (requirement / 요구사항) đã t
 
 Bản chất là giữ một predicate “cửa sổ (window / 윈도우) covers mục tiêu (target / 대상) multiset”.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **17. At-Most → Exactly** tiếp nhận điểm tựa từ **16. Minimum cửa sổ (window / 윈도우) Substring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Counting Windows: tại sao cộng R-L+1?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Minimum Window cho thấy cùng sliding window nhưng điều kiện và mục tiêu khác nhau: tìm ngắn nhất thay vì dài nhất. Kỹ thuật At-Most → Exactly biến một số bài đếm “đúng bằng” thành hiệu của hai bài “không vượt quá”.
 
 ## 17. At-Most → Exactly
 
@@ -328,7 +328,7 @@ binary subarray với sum đúng K trong một số formulation
 
 Đây là phép biến đổi từ ràng buộc (constraint / 제약조건) chính xác khó thành hai ràng buộc (constraint / 제약조건) tích lũy dễ hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **18. Counting Windows: tại sao cộng R-L+1?** tiếp nhận điểm tựa từ **17. At-Most → Exactly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Sliding cửa sổ (window / 윈도우) Maximum cần Deque đơn điệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+At-Most(K) - At-Most(K-1) loại các cửa sổ có số lượng đúng bằng K. Khi đã xác định mỗi R có bao nhiêu L hợp lệ, bài toán đếm cần giải thích vì sao số lựa chọn là R-L+1.
 
 ## 18. Counting Windows: tại sao cộng `R-L+1`?
 
@@ -348,7 +348,7 @@ R-L+1
 
 Hiểu lý do combinatorial này tốt hơn học công thức thuộc lòng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **19. Sliding cửa sổ (window / 윈도우) Maximum cần Deque đơn điệu** tiếp nhận điểm tựa từ **18. Counting Windows: tại sao cộng R-L+1?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Median trong Sliding cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+R-L+1 đếm mọi cửa sổ kết thúc tại R khi tính hợp lệ được bảo toàn lúc dịch L. Với bài hỏi cực đại trên từng cửa sổ, ta không đếm mà giữ candidate tốt nhất bằng deque đơn điệu.
 
 ## 19. Sliding cửa sổ (window / 윈도우) Maximum cần Deque đơn điệu
 
@@ -367,7 +367,7 @@ Front luôn là max hiện tại.
 
 Mỗi chỉ mục (index / 인덱스) vào/ra deque tối đa một lần, nên `O(n)`.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **20. Median trong Sliding cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **19. Sliding cửa sổ (window / 윈도우) Maximum cần Deque đơn điệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Prefix Sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deque đơn điệu loại các phần tử không thể trở thành maximum trong tương lai, và mỗi phần tử vào/ra nhiều nhất một lần. Median không có phép loại đơn giản như vậy, nên cần hai nửa có cân bằng.
 
 ## 20. Median trong Sliding cửa sổ (window / 윈도우)
 
@@ -384,7 +384,7 @@ Fenwick trên compressed values nếu domain phù hợp
 
 Đây là ví dụ cùng “cửa sổ (window / 윈도우)” nhưng truy vấn (query / 쿼리) summary khác làm cấu trúc phụ thay đổi hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **21. Prefix Sum** tiếp nhận điểm tựa từ **20. Median trong Sliding cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Prefix Technique dựa trên phép nghịch đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Median window cần duy trì thứ tự và xóa phần tử rời cửa sổ, thường bằng hai heap hoặc cấu trúc có lazy deletion. Khi chuyển từ thứ tự động sang truy vấn tổng, prefix sum cung cấp một biểu diễn tĩnh khác.
 
 ## 21. Prefix Sum
 
@@ -405,7 +405,7 @@ Preprocessing `O(n)`, truy vấn (query / 쿼리) `O(1)`.
 
 Prefix array là biểu diễn (representation / 표현) của **trạng thái tích lũy sau mỗi prefix**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **22. Prefix Technique dựa trên phép nghịch đảo** tiếp nhận điểm tựa từ **21. Prefix Sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Prefix Frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix sum mã hóa tổng đoạn bằng hiệu của hai prefix, biến truy vấn O(n) thành O(1) sau tiền xử lý. Ý tưởng tổng quát hơn là chọn một phép nghịch đảo để khôi phục đại lượng của đoạn.
 
 ## 22. Prefix Technique dựa trên phép nghịch đảo
 
@@ -425,7 +425,7 @@ Nhưng `min` không có inverse tương tự; không thể lấy phạm vi (rang
 
 Hiểu tính chất đại số giúp biết khi nào prefix truy vấn (query / 쿼리) `O(1)` khả thi.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **23. Prefix Frequency** tiếp nhận điểm tựa từ **22. Prefix Technique dựa trên phép nghịch đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Prefix Sum + băm (hash / 해시) Map cho Subarray Sum K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix technique dựa trên phép nghịch đảo cần biết state prefix nào ghép được với prefix hiện tại. Khi nhiều prefix có cùng giá trị hoặc residue, frequency map trở thành cấu trúc đếm tự nhiên.
 
 ## 23. Prefix Frequency
 
@@ -450,7 +450,7 @@ query histogram nhanh
 
 Kỹ thuật này rất hữu ích cho string/phạm vi (range / 범위) counting khi `σ` nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **24. Prefix Sum + băm (hash / 해시) Map cho Subarray Sum K** tiếp nhận điểm tựa từ **23. Prefix Frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Longest Subarray với Sum K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix frequency đếm trạng thái, còn Subarray Sum K dùng prefix + hash map để truy vấn state đối nghịch. Từ đó, câu hỏi “dài nhất” chuyển trọng tâm sang việc giữ prefix cũ phù hợp nhất.
 
 ## 24. Prefix Sum + băm (hash / 해시) Map cho Subarray Sum K
 
@@ -478,7 +478,7 @@ Expected `O(n)` kể cả đầu vào (input / 입력) có số âm.
 
 Đây là một mẫu (pattern / 패턴) cực quan trọng: biến subarray thành **quan hệ giữa hai prefix states**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **25. Longest Subarray với Sum K** tiếp nhận điểm tựa từ **24. Prefix Sum + băm (hash / 해시) Map cho Subarray Sum K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Prefix Minimum và Maximum Subarray** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hash map cho biết với prefix hiện tại P, cần tìm P-K đã xuất hiện trước đó. Nếu mục tiêu là longest subarray, ta phải giữ vị trí xuất hiện sớm nhất thay vì chỉ đếm số lần.
 
 ## 25. Longest Subarray với Sum K
 
@@ -494,7 +494,7 @@ longest -> earliest index
 shortest -> latest index hoặc cấu trúc khác tùy bài
 ```
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **26. Prefix Minimum và Maximum Subarray** tiếp nhận điểm tựa từ **25. Longest Subarray với Sum K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Kadane dưới góc nhìn Incremental trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Để tối đa độ dài với tổng K, giữ vị trí sớm nhất của mỗi prefix là đủ vì vị trí càng sớm thì đoạn càng dài. Với các mục tiêu min/max tổng đoạn khác, prefix minimum và maximum cung cấp invariant tương ứng.
 
 ## 26. Prefix Minimum và Maximum Subarray
 
@@ -508,7 +508,7 @@ Khi quét `R`, chỉ cần giữ minimum prefix trước đó.
 
 Đây là ví dụ prefix summary vẫn hữu ích dù `min` không invertible cho arbitrary phạm vi (range / 범위) truy vấn (query / 쿼리).
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **27. Kadane dưới góc nhìn Incremental trạng thái (state / 상태)** tiếp nhận điểm tựa từ **26. Prefix Minimum và Maximum Subarray** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. 2D Prefix Sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix min/max biến bài toán tổng đoạn thành so sánh một prefix hiện tại với các prefix trước đó. Kadane có thể được nhìn như cập nhật incremental của cùng trạng thái: giữ best ending here và best toàn cục.
 
 ## 27. Kadane dưới góc nhìn Incremental trạng thái (state / 상태)
 
@@ -531,7 +531,7 @@ Kadane và prefix-min là hai cách nhìn cùng cấu trúc tối ưu hóa.
 
 Việc liên hệ hai formulation giúp hiểu thuật toán thay vì học tên riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **28. 2D Prefix Sum** tiếp nhận điểm tựa từ **27. Kadane dưới góc nhìn Incremental trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Higher-Dimensional Prefix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kadane là trạng thái một chiều; khi truy vấn mở rộng thành hình chữ nhật, cần hai chiều prefix để lấy tổng vùng bằng bốn điểm. 2D Prefix Sum là bước nâng chiều có quy tắc bao hàm–loại trừ rõ.
 
 ## 28. 2D Prefix Sum
 
@@ -549,7 +549,7 @@ P[r2][c2]-P[r1][c2]-P[r2][c1]+P[r1][c1]
 
 Đây là inclusion-exclusion: trừ hai vùng thừa và cộng lại vùng bị trừ hai lần.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **29. Higher-Dimensional Prefix** tiếp nhận điểm tựa từ **28. 2D Prefix Sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Difference Array** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+2D Prefix Sum trả lời rectangle query O(1) sau O(RC) tiền xử lý. Ở nhiều chiều hơn, cùng công thức inclusion–exclusion vẫn đúng nhưng chi phí bộ nhớ và số hạng tăng theo số chiều.
 
 ## 29. Higher-Dimensional Prefix
 
@@ -559,7 +559,7 @@ Nhưng số term tăng theo `2^d`, nên practical chủ yếu khi số chiều n
 
 Đây là ví dụ độ phức tạp (complexity / 복잡도) phụ thuộc **số chiều**, không chỉ số phần tử.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **30. Difference Array** tiếp nhận điểm tựa từ **29. Higher-Dimensional Prefix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Difference Array như sự kiện (event / 이벤트) Encoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Higher-dimensional prefix làm rõ giới hạn của tiền xử lý: truy vấn nhanh đổi lấy state lớn. Khi thao tác ngược lại là nhiều cập nhật đoạn rồi mới đọc, Difference Array thường là biểu diễn rẻ hơn.
 
 ## 30. Difference Array
 
@@ -582,7 +582,7 @@ Sau mọi cập nhật (update / 업데이트), prefix sum của `diff` khôi ph
 
 Ta chuyển `O(length)` công việc (work / 작업) của mỗi phạm vi (range / 범위) cập nhật (update / 업데이트) thành hai ranh giới (boundary / 경계) updates.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **31. Difference Array như sự kiện (event / 이벤트) Encoding** tiếp nhận điểm tựa từ **30. Difference Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. 2D Difference** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Difference Array mã hóa update trên [L,R] bằng hai sự kiện tại L và R+1, rồi lấy prefix để khôi phục giá trị. Cách nhìn theo sự kiện giúp nối range update với một chuỗi điểm thay đổi.
 
 ## 31. Difference Array như sự kiện (event / 이벤트) Encoding
 
@@ -592,7 +592,7 @@ Do đó difference array chính là một sweep-line sự kiện (event / 이벤
 
 Prefix sum là bước tích phân các thay đổi đó.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **32. 2D Difference** tiếp nhận điểm tựa từ **31. Difference Array như sự kiện (event / 이벤트) Encoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Prefix và Difference là hai cách biểu diễn đối ngẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Difference Array như event encoding đặt phần bắt đầu và kết thúc của update ở các boundary. Với lưới, mỗi rectangle update cần bốn corner event, tạo thành 2D Difference.
 
 ## 32. 2D Difference
 
@@ -602,7 +602,7 @@ Kỹ thuật này rất mạnh khi có nhiều rectangle updates nhưng chỉ c�
 
 Nếu xen kẽ cập nhật (update / 업데이트)/truy vấn (query / 쿼리) online, cần Fenwick/Segment cây (tree / 트리) 2D hoặc cấu trúc (structure / 구조) khác.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **33. Prefix và Difference là hai cách biểu diễn đối ngẫu** tiếp nhận điểm tựa từ **32. 2D Difference** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Imos phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+2D Difference mở rộng hai điểm thành bốn góc theo inclusion–exclusion, sau đó prefix hai chiều khôi phục ma trận. Các phép biến đổi này cho thấy prefix và difference là hai hướng của cùng một biểu diễn.
 
 ## 33. Prefix và Difference là hai cách biểu diễn đối ngẫu
 
@@ -619,7 +619,7 @@ Một bên tối ưu truy vấn (query / 쿼리) aggregate, bên kia tối ưu p
 
 Hiểu mối quan hệ này giúp nhớ kỹ thuật một cách tự nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **34. Imos phương thức (method / 메서드)** tiếp nhận điểm tựa từ **33. Prefix và Difference là hai cách biểu diễn đối ngẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Circular cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prefix là phép tích lũy để trả lời query; difference là phép đạo hàm rời rạc để ghi nhận update. Hiểu chúng đối ngẫu giúp chọn biểu diễn theo thao tác chi phối, thay vì học hai mẹo rời nhau.
 
 ## 34. Imos phương thức (method / 메서드)
 
@@ -635,7 +635,7 @@ prefix -> số lớp phủ tại mỗi vị trí
 
 Bản chất vẫn là sự kiện (event / 이벤트) accumulation.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **35. Circular cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **34. Imos phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Two Pointers trên Hai Mảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Imos method tổ chức nhiều range update thành event rồi quét prefix để lấy trạng thái cuối. Sau kỹ thuật tuyến tính này, circular window đặt lại câu hỏi về boundary khi đầu và cuối dãy nối với nhau.
 
 ## 35. Circular cửa sổ (window / 윈도우)
 
@@ -651,7 +651,7 @@ Nhưng phải giới hạn cửa sổ (window / 윈도우) length không vượt
 
 Circularity thường làm ranh giới phức tạp hơn, không thay bản chất cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **36. Two Pointers trên Hai Mảng** tiếp nhận điểm tựa từ **35. Circular cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. K-Way Merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Circular window biến wrap-around thành một đoạn liên tục trên dãy nhân đôi hoặc hai đoạn ghép. Khi hai dãy đã có thứ tự riêng, two pointers có thể ghép chúng mà không cần tạo toàn bộ tích Descartes.
 
 ## 36. Two Pointers trên Hai Mảng
 
@@ -663,7 +663,7 @@ Mỗi pointer chỉ tăng, nên `O(n+m)`.
 
 Đây là same-direction two pointers nhưng trên hai chuỗi (sequence / 시퀀스) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **37. K-Way Merge** tiếp nhận điểm tựa từ **36. Two Pointers trên Hai Mảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. tìm kiếm nhị phân (binary search / 이진 탐색) vs Two Pointers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Two pointers trên hai mảng tăng khai thác thứ tự để tiến con trỏ nhỏ hơn và loại các cặp đã chắc chắn không tối ưu. Với nhiều hơn hai nguồn đã sắp xếp, K-way Merge tổng quát hóa bằng heap.
 
 ## 37. K-Way Merge
 
@@ -679,7 +679,7 @@ với `N` tổng số phần tử.
 
 Đây là ví dụ “two pointers” mở rộng thành frontier có nhiều candidate, và vùng nhớ động (heap / 힙) trở thành cấu trúc (structure / 구조) chọn candidate nhỏ nhất tiếp theo.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **38. tìm kiếm nhị phân (binary search / 이진 탐색) vs Two Pointers** tiếp nhận điểm tựa từ **37. K-Way Merge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Monotonicity là tín hiệu quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+K-way Merge giữ phần tử nhỏ nhất hiện tại của mỗi nguồn trong heap, khác với two pointers chỉ có hai frontier. Khi chỉ còn một dãy hoặc một predicate đơn điệu, binary search có thể phù hợp hơn.
 
 ## 38. tìm kiếm nhị phân (binary search / 이진 탐색) vs Two Pointers
 
@@ -687,7 +687,7 @@ Nếu cần tìm pair cho một truy vấn (query / 쿼리), có thể với m�
 
 Tìm kiếm nhị phân (binary search / 이진 탐색) loại ứng viên theo một chiều độc lập; two pointers khai thác quan hệ hai chiều mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **39. Monotonicity là tín hiệu quan trọng** tiếp nhận điểm tựa từ **38. tìm kiếm nhị phân (binary search / 이진 탐색) vs Two Pointers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Offline truy vấn (query / 쿼리) và Prefix Precomputation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Binary search và two pointers đều khai thác monotonicity nhưng trả giá khác nhau: một bên chia đôi miền, một bên quét và loại vùng. Chọn đúng cần nhìn predicate và số truy vấn, không chỉ nhìn độ phức tạp danh nghĩa.
 
 ## 39. Monotonicity là tín hiệu quan trọng
 
@@ -702,7 +702,7 @@ Nếu validity nhảy lên xuống không có cấu trúc, pointer monotonic kh�
 
 Hãy tìm **đơn điệu của không gian ứng viên**, không tìm từ khóa (keyword / 키워드) “subarray”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **40. Offline truy vấn (query / 쿼리) và Prefix Precomputation** tiếp nhận điểm tựa từ **39. Monotonicity là tín hiệu quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Overflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Monotonicity là tín hiệu cho phép chứng minh pointer không quay lui hoặc ngưỡng tìm kiếm thu hẹp. Khi có nhiều truy vấn trên cùng dữ liệu, offline processing và prefix precomputation có thể materialize thông tin dùng chung.
 
 ## 40. Offline truy vấn (query / 쿼리) và Prefix Precomputation
 
@@ -712,7 +712,7 @@ Nếu truy vấn (query / 쿼리) đến online sau mỗi cập nhật (update /
 
 Tính online/offline là một chiều thiết kế quan trọng thường bị bỏ qua khi học kỹ thuật này.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **40. Offline truy vấn (query / 쿼리) và Prefix Precomputation** xác định đầu vào; **41. Overflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **42. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Offline query đổi thứ tự xử lý để tận dụng prefix hoặc sort, nhưng tiền xử lý phải chọn kiểu số đủ rộng. Prefix lớn, difference update và tích lũy nhiều lần đều có thể gây overflow trước khi kết quả cuối được kiểm tra.
 
 ## 41. Overflow
 
@@ -724,7 +724,7 @@ Nếu `a[i]` là `int`, tổng có thể cần `long`.
 
 Kiểu số phải chọn theo cận tổng, không theo cận của một phần tử.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **41. Overflow** xác định đầu vào; **42. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **43. Kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Overflow là lỗi semantics chứ không chỉ lỗi hiệu năng; dùng kiểu rộng hơn hoặc modular arithmetic phải phù hợp với contract. Sau đó cần cân đối bộ nhớ: prefix toàn mảng nhanh nhưng tốn RAM, còn streaming hoặc nén có thể giảm footprint.
 
 ## 42. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프)
 
@@ -734,7 +734,7 @@ Nếu có nhiều loại truy vấn (query / 쿼리), có thể phải lưu nhi�
 
 Cấu trúc dữ liệu (data structure / 자료구조) thiết kế (design / 설계) luôn là sự đánh đổi (trade-off / 트레이드오프) giữa recomputation và materialized summaries.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **43. Kiểm thử** tiếp nhận điểm tựa từ **42. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Memory trade-off quyết định có lưu toàn bộ prefix, deque, map hoặc heap hay không. Kiểm thử phải bao phủ cả kết quả và giới hạn tài nguyên, đặc biệt các case buộc cấu trúc phình đến sát capacity.
 
 ## 43. Kiểm thử
 
@@ -755,7 +755,7 @@ Unicode nếu window trên string
 
 Với cửa sổ (window / 윈도우), nên differential-test trên `n` nhỏ bằng brute-force enumerate mọi subarray.
 
-> **Chuyển mạch:** Trong **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **44. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **43. Kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Test nên kiểm tra invariant, boundary, số âm, overflow, wrap-around và trạng thái rỗng thay vì chỉ vài ví dụ dương. Những hiểu lầm phổ biến thường bắt đầu từ việc áp dụng window hoặc prefix khi điều kiện đơn điệu không tồn tại.
 
 ## 44. Những hiểu lầm phổ biến
 
@@ -769,7 +769,7 @@ Với cửa sổ (window / 윈도우), nên differential-test trên `n` nhỏ b�
 
 “Two pointers luôn cần sorted array” — không; fast/slow, read/ghi (write / 쓰기) và variable cửa sổ (window / 윈도우) không nhất thiết cần sorting.
 
-> **Chuyển mạch:** Ở chặng này của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**, **Mô hình tư duy** gom các mảnh từ **44. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các hiểu lầm như “hai con trỏ luôn O(n)” hoặc “prefix sum giải được mọi subarray” đều bỏ qua invariant và semantics dữ liệu. Mô hình tư duy cuối file gom lại cách chọn biểu diễn theo update, query và tính đơn điệu.
 
 ## Mô hình tư duy
 

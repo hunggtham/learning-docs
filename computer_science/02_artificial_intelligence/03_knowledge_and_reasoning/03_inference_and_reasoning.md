@@ -38,7 +38,7 @@ If premises true and suy luận (inference / 추론) valid, conclusion must be t
 
 Deduction is truth-preserving relative to formal ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Induction** tiếp nhận điểm tựa từ **Deduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Abduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deduction bảo toàn tính đúng khi premises đã đủ, còn induction khái quát từ nhiều quan sát và luôn mang bất định. Vì vậy chuyển từ rule sang dữ liệu kéo theo câu hỏi về độ tin cậy của generalization.
 
 ## Induction
 
@@ -58,7 +58,7 @@ Machine học tập (learning / 학습) is largely inductive: finite dữ liệu
 
 Statistics provides khung phần mềm (framework / 프레임워크) to quantify bất định (uncertainty / 불확실성)/generalization.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Abduction** tiếp nhận điểm tựa từ **Induction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deduction, induction, abduction together** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Induction tìm pattern có thể áp dụng rộng hơn dữ liệu đã thấy; abduction đi ngược lại để tìm giả thuyết tốt nhất giải thích evidence. Hai hướng khác nhau ở việc dự đoán quy luật hay chọn nguyên nhân khả dĩ.
 
 ## Abduction
 
@@ -76,7 +76,7 @@ Medical diagnosis often abductive: symptoms → candidate causes.
 
 Abduction generates hypotheses; xác suất (probability / 확률)/nhân quả (causal / 인과적) kiến thức (knowledge / 지식) ranks them.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Deduction, induction, abduction together** tiếp nhận điểm tựa từ **Abduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Soundness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deduction, induction và abduction không cạnh tranh tuyệt đối: hệ thống thường dùng cả ba ở các bước khác nhau của một task. Muốn đánh giá kết quả suy luận, trước hết cần tách soundness khỏi các tiêu chí khác.
 
 ## Deduction, induction, abduction together
 
@@ -91,7 +91,7 @@ Observation: compare with reality
 
 These are complementary, not competing schools.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Soundness** tiếp nhận điểm tựa từ **Deduction, induction, abduction together** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Completeness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Soundness bảo đảm hệ thống không suy ra kết luận sai từ knowledge hợp lệ. Completeness đặt câu hỏi ngược lại: mọi kết luận được phép suy ra có được tìm thấy hay không.
 
 ## Soundness
 
@@ -105,7 +105,7 @@ Everything it proves is semantically entailed.
 
 A sound theorem prover does not invent invalid proof conclusions relative to formal hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Completeness** tiếp nhận điểm tựa từ **Soundness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đúng đắn (correctness / 정확성) vs tractability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Soundness và completeness là hai mặt của correctness, nhưng đạt cả hai chưa nói gì về chi phí tính toán. Trong hệ thống thực, tractability quyết định liệu guarantee đó có dùng được ở quy mô cần thiết.
 
 ## Completeness
 
@@ -119,7 +119,7 @@ Every ngữ nghĩa (semantic / 의미적) consequence can in principle be proved
 
 Soundness and completeness do not imply efficiency. tìm kiếm (search / 검색) for proof can be enormous or non-terminating in expressive logics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Tính đúng đắn (correctness / 정확성) vs tractability** tiếp nhận điểm tựa từ **Completeness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward chaining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trade-off giữa correctness và tractability dẫn trực tiếp đến chiến lược inference. Forward chaining khởi đầu từ facts và lan các rule có thể kích hoạt, phù hợp khi dữ liệu mới liên tục đến.
 
 ## Tính đúng đắn (correctness / 정확성) vs tractability
 
@@ -135,7 +135,7 @@ maintainability
 
 A restricted quy tắc (rule / 규칙) ngôn ngữ (language / 언어) may be preferable to full FOL because predictable suy luận (inference / 추론) matters in môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Forward chaining** tiếp nhận điểm tựa từ **Tính đúng đắn (correctness / 정확성) vs tractability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backward chaining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Forward chaining là data-driven; backward chaining là goal-driven, bắt đầu từ query rồi truy ngược các premise cần chứng minh. Chọn hướng nào phụ thuộc branching factor, số query và độ ổn định của facts.
 
 ## Forward chaining
 
@@ -163,7 +163,7 @@ Derive badge and truy cập (access / 접근).
 
 Forward chaining useful when facts arrive and many conclusions may be queried.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Backward chaining** tiếp nhận điểm tựa từ **Forward chaining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Memoization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Backward chaining thường gặp cùng một subgoal qua nhiều nhánh proof. Memoization lưu kết quả trung gian để tránh lặp, nhưng cache phải gắn với version của knowledge và điều kiện suy luận.
 
 ## Backward chaining
 
@@ -183,7 +183,7 @@ To prove `CanEnterLobby(Alice)`, reduce to `HasBadge(Alice)`, then `Employee(Ali
 
 Efficient when truy vấn (query / 쿼리) narrow compared with all possible consequences.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Memoization** tiếp nhận điểm tựa từ **Backward chaining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fixed-point lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Memoization giảm công việc lặp tại từng query, còn fixed-point reasoning mô tả việc lặp rule cho tới khi không sinh thêm fact. Hai ý tưởng gặp nhau khi hệ thống cần closure ổn định của một knowledge base.
 
 ## Memoization
 
@@ -197,7 +197,7 @@ Tabling in lô-gic (logic / 논리) programming avoids loops/repeated computatio
 
 This is same dynamic-programming idea across AI.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Fixed-point lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Memoization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc (rule / 규칙) xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Fixed point cho ta tập consequence đã hội tụ, nhưng nhiều rule có thể cùng áp dụng và dẫn tới kết luận xung đột. Vì vậy inference engine cần conflict policy và provenance để biết vì sao mỗi kết luận xuất hiện.
 
 ## Fixed-point lập luận (reasoning / 추론)
 
@@ -221,7 +221,7 @@ K_{i+1}=K_i
 
 This least fixed điểm (point / 지점) defines ngữ nghĩa (semantics / 의미론) for many positive recursive quy tắc (rule / 규칙) programs.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Quy tắc (rule / 규칙) xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **Fixed-point lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monotonic lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Conflict resolution quyết định cách xử lý nhiều rule cùng kích hoạt, nhưng trong logic monotonic, thêm facts không được làm mất conclusion đã có. Khi thế giới có exception, giả định này bắt đầu trở nên quá mạnh.
 
 ## Quy tắc (rule / 규칙) xung đột (conflict / 충돌)
 
@@ -246,7 +246,7 @@ Need xung đột (conflict / 충돌) chính sách (policy / 정책):
 
 Formal quy tắc (rule / 규칙) ngữ nghĩa (semantics / 의미론) should specify this explicitly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Monotonic lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Quy tắc (rule / 규칙) xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Non-monotonic lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Monotonic reasoning thuận tiện cho proof và cache vì knowledge tăng chỉ mở rộng consequence. Non-monotonic reasoning cần cho các default có thể bị rút lại khi evidence mới xuất hiện.
 
 ## Monotonic lập luận (reasoning / 추론)
 
@@ -266,7 +266,7 @@ Classical lô-gic (logic / 논리) monotonic.
 
 Real-world default lập luận (reasoning / 추론) often not.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Non-monotonic lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Monotonic lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Default lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Non-monotonic reasoning cho phép retract conclusion khi exception xuất hiện. Default logic là một cách viết rõ điều kiện áp dụng và điều kiện rút lại của những conclusion tạm thời ấy.
 
 ## Non-monotonic lập luận (reasoning / 추론)
 
@@ -290,7 +290,7 @@ Need retract previous default conclusion.
 
 Non-monotonic lập luận (reasoning / 추론) các mô hình (models / 모델들) revisable conclusions.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Default lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Non-monotonic lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Circumscription** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Default logic biểu diễn “thường đúng nếu chưa biết ngoại lệ”, còn circumscription chọn mô hình bằng cách tối thiểu hóa các abnormality. Cả hai đều biến phần ngầm thành assumption có thể kiểm tra.
 
 ## Default lô-gic (logic / 논리)
 
@@ -305,7 +305,7 @@ This differs from strict implication.
 
 Many nghiệp vụ (business / 비즈니스) rules implicitly use defaults; encoding them as strict FOL creates exceptions bài toán (problem / 문제).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Circumscription** tiếp nhận điểm tựa từ **Default lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closed-world suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Circumscription điều khiển abnormal predicates trong một semantics hình thức; closed-world inference thường suy ra false từ việc không tìm thấy fact. Điểm chung là dùng absence, nhưng failure boundary của chúng khác nhau.
 
 ## Circumscription
 
@@ -321,7 +321,7 @@ Assume as few objects abnormal as possible consistent with kiến thức (knowle
 
 It formalizes “things are normal unless bằng chứng (evidence / 증거) otherwise”.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Closed-world suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Circumscription** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truth maintenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Closed-world assumption có thể tạo kết luận hữu ích trong database, nhưng khi knowledge cập nhật, kết luận cũ phải được rút lại hoặc đánh dấu stale. Truth maintenance giữ các dependency để thực hiện việc đó.
 
 ## Closed-world suy luận (inference / 추론)
 
@@ -337,7 +337,7 @@ For medical records, absence of diagnosis may not mean patient does not have dis
 
 Closed-world chính sách (policy / 정책) should be predicate/domain-specific, not universal habit.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Truth maintenance** tiếp nhận điểm tựa từ **Closed-world suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Truth maintenance ghi lại premise và justification của từng belief, nhờ vậy hệ thống biết conclusion nào bị ảnh hưởng khi một fact đổi. Explanation xây trên dấu vết ấy để trả lời vì sao hệ thống tin một điều.
 
 ## Truth maintenance
 
@@ -353,7 +353,7 @@ If A removed, C may need removal unless another justification exists.
 
 Hiện đại (modern / 현대적) dữ liệu (data / 데이터) pipelines similarly need lineage/incremental recomputation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Explanation** tiếp nhận điểm tựa từ **Truth maintenance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) under inconsistent kiến thức (knowledge / 지식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Explanation không chỉ phục vụ giao diện; nó còn làm lộ khi các justification mâu thuẫn nhau. Khi knowledge inconsistent, engine phải giới hạn blast radius thay vì để một contradiction làm mọi kết luận trở nên đúng.
 
 ## Explanation
 
@@ -370,7 +370,7 @@ This is stronger than post-hoc “tính năng (feature / 기능) importance” b
 
 But explanation only as good as rules/premises.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Lập luận (reasoning / 추론) under inconsistent kiến thức (knowledge / 지식)** tiếp nhận điểm tựa từ **Explanation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Inconsistent knowledge là xung đột giữa các claim, còn uncertainty là thiếu chắc chắn về claim hoặc world. Hai vấn đề cần cơ chế khác nhau: paraconsistent handling không thay thế calibrated probability.
 
 ## Lập luận (reasoning / 추론) under inconsistent kiến thức (knowledge / 지식)
 
@@ -382,7 +382,7 @@ Môi trường vận hành (production / 운영 환경) kiến thức (knowledge
 
 Another kỹ thuật (engineering / 엔지니어링) approach: preserve provenance and avoid merging conflicts into single unquestioned truth.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Lập luận (reasoning / 추론) under inconsistent kiến thức (knowledge / 지식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận nhân quả (causal reasoning / 인과적 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Uncertainty mô tả mức tin vào khả năng xảy ra, nhưng causal reasoning hỏi điều gì thay đổi nếu ta can thiệp. Từ phân phối quan sát sang intervention là bước đổi semantics quan trọng.
 
 ## Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)
 
@@ -406,7 +406,7 @@ This changes entailment from nhị phân (binary / 이진) proof to posterior be
 
 See [Probabilistic Reasoning](./04_probabilistic_reasoning.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Lập luận nhân quả (causal reasoning / 인과적 추론)** tiếp nhận điểm tựa từ **Lập luận (reasoning / 추론) under bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Counterfactual lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Causal reasoning cung cấp cấu trúc để đánh giá intervention; counterfactual reasoning đi xa hơn bằng cách hỏi một thế giới giả định khác sẽ ra sao dưới cùng lịch sử. Cả hai cần model và assumption rõ.
 
 ## Lập luận nhân quả (causal reasoning / 인과적 추론)
 
@@ -428,7 +428,7 @@ A quy tắc (rule / 규칙) like `Rain→WetRoad` may encode nhân quả (causal
 
 Nhân quả (causal / 인과적) graphs and structural nhân quả (causal / 인과적) các mô hình (models / 모델들) explicitly represent mechanisms/interventions.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Counterfactual lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Lập luận nhân quả (causal reasoning / 인과적 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Case-based lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Counterfactuals dùng model để trả lời “nếu đã làm khác thì sao”; case-based reasoning dùng các tình huống đã gặp để gợi ý quyết định cho case mới. Một bên dựng scenario, bên kia truy hồi precedent.
 
 ## Counterfactual lập luận (reasoning / 추론)
 
@@ -440,7 +440,7 @@ Requires mô hình (model / 모델) of alternate world sharing background factor
 
 Counterfactuals matter for explanation, chính sách (policy / 정책) phân tích (analysis / 분석) and credit assignment.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Counterfactual lập luận (reasoning / 추론)** cho ta quy tắc; **Case-based lập luận (reasoning / 추론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Analogical lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Case-based reasoning dựa vào similarity của tình huống, còn analogical reasoning cần map cấu trúc quan hệ giữa source và target. Vì thế phép tương tự không chỉ là tìm ví dụ có từ khóa giống nhau.
 
 ## Case-based lập luận (reasoning / 추론)
 
@@ -457,7 +457,7 @@ retain new experience
 
 This is ancestor-like idea to retrieval-based các hệ thống (systems / 시스템들), though hiện đại (modern / 현대적) RAG usually retrieves văn bản (text / 텍스트)/ngữ cảnh (context / 맥락) rather than formal trường hợp (case / 사례) adaptation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Case-based lập luận (reasoning / 추론)** cho ta quy tắc; **Analogical lập luận (reasoning / 추론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Commonsense lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Analogical reasoning có thể chuyển cấu trúc hữu ích sang miền mới, nhưng độ đúng phụ thuộc background knowledge và boundary của phép ánh xạ. Commonsense reasoning cung cấp phần ngầm đó và cũng là nơi dễ phát sinh exception.
 
 ## Analogical lập luận (reasoning / 추론)
 
@@ -469,7 +469,7 @@ Useful for học tập (learning / 학습)/explanation but analogy can mislead w
 
 LLMs are good at linguistic analogy generation but need xác minh (verification / 확인) for technical transfer.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Commonsense lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Analogical lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-step lập luận (reasoning / 추론) as tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Analogical reasoning chuyển cấu trúc giữa hai miền, nhưng muốn biết mapping có hợp lệ hay không, agent cần tri thức nền về những điều thường đúng và ngoại lệ. Commonsense reasoning cung cấp context đó nhưng không bao giờ hoàn toàn đầy đủ.
 
 ## Commonsense lập luận (reasoning / 추론)
 
@@ -485,7 +485,7 @@ Challenges:
 
 Pure symbolic encoding difficult; pure statistical mô hình (model / 모델) can be inconsistent. Hybrid approaches remain active research area.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Multi-step lập luận (reasoning / 추론) as tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Commonsense lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proof tìm kiếm (search / 검색) độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Commonsense reasoning thường phải nối nhiều bước nhỏ, từ observation đến một kết luận hành động. Khi chain dài, có thể xem việc suy luận như search trên không gian proof và state.
 
 ## Multi-step lập luận (reasoning / 추론) as tìm kiếm (search / 검색)
 
@@ -502,7 +502,7 @@ Heuristic theorem proving prioritizes promising clauses.
 
 This connects kiến thức (knowledge / 지식) lập luận (reasoning / 추론) back to [Heuristic Search](../02_search_reasoning_and_planning/02_heuristic_search.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Proof tìm kiếm (search / 검색) độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Multi-step lập luận (reasoning / 추론) as tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deductive databases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Multi-step reasoning as search làm lộ branching factor, depth và chi phí của từng bước. Proof search complexity quyết định khi nào cần heuristic, pruning hoặc giới hạn tài nguyên.
 
 ## Proof tìm kiếm (search / 검색) độ phức tạp (complexity / 복잡도)
 
@@ -519,7 +519,7 @@ Lập luận (reasoning / 추론) hệ thống (system / 시스템) needs:
 
 Formal tính đúng đắn (correctness / 정확성) does not imply computational practicality.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Deductive databases** tiếp nhận điểm tựa từ **Proof tìm kiếm (search / 검색) độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy luận (inference / 추론) in kiến thức (knowledge / 지식) Graphs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Proof search có thể lặp lại cùng subproof và tốn chi phí lớn. Deductive databases giảm phần này bằng cách lưu fact/rule có cấu trúc và dùng evaluation strategy thay vì tìm lại từ đầu.
 
 ## Deductive databases
 
@@ -536,7 +536,7 @@ This computes đồ thị (graph / 그래프) reachability through logical rules
 
 Databases and lô-gic (logic / 논리) are deeply connected; truy vấn (query / 쿼리) optimizer is a lập luận (reasoning / 추론)/planning engine over thực thi (execution / 실행) alternatives.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Suy luận (inference / 추론) in kiến thức (knowledge / 지식) Graphs** tiếp nhận điểm tựa từ **Deductive databases** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neural theorem proving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deductive database tối ưu suy luận trên schema và rule; knowledge graph mở rộng bài toán sang thực thể, relation và path giữa nhiều nguồn. Inference trên graph phải giữ cả semantics của edge lẫn provenance.
 
 ## Suy luận (inference / 추론) in kiến thức (knowledge / 지식) Graphs
 
@@ -557,7 +557,7 @@ Alice type Doctor
 
 Embedding-based KG completion instead predicts likely missing edges statistically. One gives logical entailment, other probabilistic score.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Neural theorem proving** tiếp nhận điểm tựa từ **Suy luận (inference / 추론) in kiến thức (knowledge / 지식) Graphs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM lập luận (reasoning / 추론) và xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Knowledge graph cung cấp cấu trúc tường minh để proof search lần theo edge, còn neural theorem proving học representation hoặc heuristic để tìm proof trong không gian lớn. Neural proposal vẫn cần verifier hình thức hoặc constraint rõ.
 
 ## Neural theorem proving
 
@@ -572,7 +572,7 @@ symbolic → correctness guarantee of accepted proof
 
 This is chuẩn gốc (canonical / 정본) neuro-symbolic kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **LLM lập luận (reasoning / 추론) và xác minh (verification / 확인)** tiếp nhận điểm tựa từ **Neural theorem proving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Neural theorem proving gợi ý các bước chứng minh nhưng không tự bảo đảm soundness. LLM reasoning vì vậy phải đi kèm verification để tách câu trả lời có vẻ hợp lý khỏi derivation hợp lệ.
 
 ## LLM lập luận (reasoning / 추론) và xác minh (verification / 확인)
 
@@ -592,7 +592,7 @@ repair
 
 The verifier should check lĩnh vực (domain / 도메인) thuộc tính (property / 속성), not just văn bản (text / 텍스트) style.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Self-consistency** tiếp nhận điểm tựa từ **LLM lập luận (reasoning / 추론) và xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chain-of-thought vs formal derivation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Verification có thể kiểm tra từng claim hoặc kết quả cuối, trong khi self-consistency lấy nhiều trajectory rồi tìm đáp án ổn định. Agreement tăng tín hiệu nhưng không thay thế một proof độc lập.
 
 ## Self-consistency
 
@@ -602,7 +602,7 @@ But agreement is not proof. Many samples can share same systematic lỗi (error 
 
 Self-consistency is an inference-time sampling chiến lược (strategy / 전략), not formal logical consistency guarantee.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Chain-of-thought vs formal derivation** tiếp nhận điểm tựa từ **Self-consistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập luận (reasoning / 추론) dấu vết (trace / 추적) provenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Self-consistency dựa trên sự hội tụ của nhiều đường suy luận; chain-of-thought có thể hữu ích để phân tích nhưng không đồng nghĩa formal derivation. Cần phân biệt trace giải thích với proof có semantics kiểm chứng được.
 
 ## Chain-of-thought vs formal derivation
 
@@ -622,7 +622,7 @@ Formal derivation:
 
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) can use natural ngôn ngữ (language / 언어) for proposal and formal biểu diễn (representation / 표현) for xác minh (verification / 확인).
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Lập luận (reasoning / 추론) dấu vết (trace / 추적) provenance** tiếp nhận điểm tựa từ **Chain-of-thought vs formal derivation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Formal derivation cho biết conclusion được suy ra bằng rule nào; trace provenance cho biết premise, nguồn và phiên bản nào đứng sau claim. Hai lớp này giúp audit mà không biến một chuỗi văn bản tự sự thành bằng chứng.
 
 ## Lập luận (reasoning / 추론) dấu vết (trace / 추적) provenance
 
@@ -640,7 +640,7 @@ This is more auditable than opaque final answer.
 
 Provenance should reflect actual tiến trình (process / 프로세스), not fabricated explanation.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lập luận (reasoning / 추론) dấu vết (trace / 추적) provenance** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Provenance làm rõ boundary của niềm tin: điều gì là source fact, điều gì là inference và điều gì do model đề xuất. Mental model cuối chương gom các lớp đó thành quy trình đánh giá có thể lặp lại.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -657,7 +657,7 @@ Search     = explore possible derivations/plans
 Verification = check candidate against explicit rules
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model giúp nối inference method với guarantee, uncertainty, cost và failure boundary. Nhờ vậy có thể sửa các misconception phổ biến thay vì coi mọi câu trả lời trôi chảy là reasoning đúng.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -677,7 +677,7 @@ Generated rationale can be post-hoc or erroneous. Independent xác minh (verific
 
 More rules can create conflicts, cycles and explosion. kiến thức (knowledge / 지식) kỹ thuật (engineering / 엔지니어링) chất lượng (quality / 품질) matters.
 
-> **Chuyển mạch:** Trong **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Những phân biệt này nối inference với knowledge representation, search, probabilistic/causal reasoning và LLM verification. Chọn cơ chế suy luận đúng nghĩa là chọn cả guarantee, audit trail và cách xử lý khi knowledge không đủ.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

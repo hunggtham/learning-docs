@@ -16,7 +16,7 @@ Mọi connected acyclic đồ thị có `V-1` các cạnh. Do đó không gian t
 
 Nhưng cần nhớ: hệ thống thực tế mạng thường cần redundancy. MST cố tình bỏ redundancy để tối thiểu hóa total chi phí; nó không tối ưu fault tolerance.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **2. MST khác đường đi ngắn nhất cây** tiếp nhận điểm tựa từ **1. Tại sao lời giải tối ưu phải là cây?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cut tính chất — engine chứng minh của MST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định nghiệm tối ưu phải là một cây, cần phân biệt mục tiêu nối toàn bộ đỉnh với mục tiêu tối ưu đường đi từ một nguồn. Tiếp theo, ta dùng cut property để chứng minh vì sao cạnh nhẹ nhất qua một lát cắt là lựa chọn an toàn.
 
 ## 2. MST khác đường đi ngắn nhất cây
 
@@ -40,7 +40,7 @@ cây đường đi ngắn nhất hỏi:
 
 Hai mục tiêu (objective / 목표) khác nhau nên không thể thay thế thuật toán cho nhau.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **3. Cut tính chất — engine chứng minh của MST** tiếp nhận điểm tựa từ **2. MST khác đường đi ngắn nhất cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. chu trình tính chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cut property cung cấp lập luận chọn cạnh theo một lát cắt; chu trình property sẽ bổ sung góc nhìn loại bỏ cạnh nặng nhất trên chu trình. Hai tính chất này là nền tảng để hiểu cả Kruskal lẫn Prim.
 
 ## 3. Cut tính chất — engine chứng minh của MST
 
@@ -54,7 +54,7 @@ trực giác chứng minh dùng exchange argument. Giả sử MST `T` không ch�
 
 Kruskal và Prim chỉ là hai cách khác nhau để liên tục tìm an toàn cạnh bằng cut tính chất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **4. chu trình tính chất** tiếp nhận điểm tựa từ **3. Cut tính chất — engine chứng minh của MST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Kruskal: grow một forest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cycle property cho biết một cạnh nặng nhất trên chu trình không cần xuất hiện trong MST. Kruskal khai thác trực tiếp lập luận này bằng cách tăng dần một forest và chỉ nhận cạnh không tạo chu trình.
 
 ## 4. chu trình tính chất
 
@@ -64,7 +64,7 @@ Nếu một MST chứa `e`, thêm một cạnh nhẹ hơn khác của chu trình
 
 Cut tính chất giúp **thêm** cạnh. chu trình tính chất giúp **loại** cạnh.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **5. Kruskal: grow một forest** tiếp nhận điểm tựa từ **4. chu trình tính chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Minimum Spanning Forest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kruskal bắt đầu từ các thành phần đơn đỉnh và dần hợp nhất chúng, nên trên đồ thị không liên thông kết quả tự nhiên là một minimum spanning forest. Ta cần nêu rõ biến thể này trước khi chuyển sang Prim.
 
 ## 5. Kruskal: grow một forest
 
@@ -109,7 +109,7 @@ O(E\log E)+O(E\alpha(V))=O(E\log E)
 
 Sorting thường chi phối.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **6. Minimum Spanning Forest** tiếp nhận điểm tựa từ **5. Kruskal: grow một forest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Prim: grow một cây qua frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Minimum spanning forest áp dụng cùng tiêu chuẩn tối ưu trên từng thành phần liên thông. Với một thành phần đã chọn hoặc khi muốn mở rộng từ một đỉnh gốc, Prim xây cây bằng frontier của các cạnh đang nối cây với phần còn lại.
 
 ## 6. Minimum Spanning Forest
 
@@ -125,7 +125,7 @@ input required connected graph but was not connected
 
 `used == V-1` là điều kiện sau cho connected đồ thị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **7. Prim: grow một cây qua frontier** tiếp nhận điểm tựa từ **6. Minimum Spanning Forest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Prim và Dijkstra giống mã (code / 코드) nhưng khác bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prim luôn chọn cạnh nhẹ nhất nối cây hiện tại với một đỉnh chưa vào cây, duy trì một frontier rõ ràng. Cấu trúc vòng lặp gần Dijkstra, nhưng bất biến và ý nghĩa của khóa ưu tiên hoàn toàn khác.
 
 ## 7. Prim: grow một cây qua frontier
 
@@ -154,7 +154,7 @@ while heap not empty:
 
 Giữ `key[v]` = cheapest cạnh hiện biết nối `v` vào cây. Khi thấy cạnh nhẹ hơn, cập nhật khóa/nút cha. Indexed vùng nhớ động (heap / 힙)/decrease-key cho cách triển khai gọn về trạng thái (state / 상태), nhưng tiêu chuẩn (standard / 표준) hàng đợi ưu tiên không hỗ trợ decrease-key trực tiếp nên có thể dùng lazy các phần tử trùng.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **8. Prim và Dijkstra giống mã (code / 코드) nhưng khác bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **7. Prim: grow một cây qua frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chọn Kruskal hay Prim theo cách biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Prim và Dijkstra đều dùng priority queue, nhưng Prim tối ưu cạnh nối vào cây còn Dijkstra tối ưu khoảng cách từ nguồn. Khi triển khai, lựa chọn giữa Prim và Kruskal phụ thuộc mạnh vào cách biểu diễn đồ thị.
 
 ## 8. Prim và Dijkstra giống mã (code / 코드) nhưng khác bất biến (invariant / 불변식)
 
@@ -184,7 +184,7 @@ w(u,v)
 
 Nếu bản sao (copy / 복사) mã (code / 코드) mà không hiểu khóa ngữ nghĩa (semantics / 의미론), bug rất dễ xuất hiện.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **9. Chọn Kruskal hay Prim theo cách biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **8. Prim và Dijkstra giống mã (code / 코드) nhưng khác bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Negative các trọng số không gây vấn đề như đường đi ngắn nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Kruskal thuận lợi với edge list và DSU, còn Prim thuận lợi khi mở rộng từ adjacency structure và một frontier. Vì MST không cộng trọng số theo đường đi từ nguồn, cạnh âm không tạo ra vấn đề kiểu Dijkstra.
 
 ## 9. Chọn Kruskal hay Prim theo cách biểu diễn (representation / 표현)
 
@@ -207,7 +207,7 @@ muốn grow từ vertex
 
 thuật toán selection phải xét đồ thị density và cách biểu diễn, không chỉ một dòng Big-O.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **10. Negative các trọng số không gây vấn đề như đường đi ngắn nhất** tiếp nhận điểm tựa từ **9. Chọn Kruskal hay Prim theo cách biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Unique MST và ties** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MST chỉ so sánh tổng trọng số của các cây, nên cộng một hằng số hoặc cho phép trọng số âm không phá vỡ cut/cycle property. Điều cần xem tiếp là khi các cạnh bằng nhau, nghiệm MST có duy nhất hay không.
 
 ## 10. Negative các trọng số không gây vấn đề như đường đi ngắn nhất
 
@@ -215,7 +215,7 @@ MST cây không có chu trình. Negative cạnh chỉ đơn giản là cạnh r�
 
 Không có khái niệm negative chu trình làm mục tiêu (objective / 목표) xuống vô hạn vì spanning cây luôn có đúng `V-1` các cạnh.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **11. Unique MST và ties** tiếp nhận điểm tựa từ **10. Negative các trọng số không gây vấn đề như đường đi ngắn nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. cạnh bắt buộc: unique light cạnh của một cut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các tie có thể tạo ra nhiều MST khác nhau cùng tổng trọng số, dù mọi nghiệm đều tối ưu. Một cut có cạnh nhẹ nhất duy nhất lại tạo ra cạnh bắt buộc, cung cấp tiêu chí mạnh hơn để nhận diện phần chung của mọi MST.
 
 ## 11. Unique MST và ties
 
@@ -227,7 +227,7 @@ Một cạnh là **trọng yếu (critical / 중요)** nếu xuất hiện trong
 
 Cut/chu trình các tính chất là nền cho classification này.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **12. cạnh bắt buộc: unique light cạnh của một cut** tiếp nhận điểm tựa từ **11. Unique MST và ties** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. cạnh bị cấm: unique heaviest trên chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu một cạnh là cạnh nhẹ nhất duy nhất qua một cut, nó phải xuất hiện trong mọi MST. Đối ngẫu với kết luận đó, cạnh nặng nhất duy nhất trên một chu trình sẽ bị loại khỏi mọi MST.
 
 ## 12. cạnh bắt buộc: unique light cạnh của một cut
 
@@ -237,7 +237,7 @@ Lý do: nếu MST không chứa `e`, exchange bằng `e` giảm chi phí nghiêm
 
 Đây là chứng minh mạnh hơn “an toàn”: an toàn nói có một MST chứa cạnh; unique-light nói mọi MST chứa cạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **13. cạnh bị cấm: unique heaviest trên chu trình** tiếp nhận điểm tựa từ **12. cạnh bắt buộc: unique light cạnh của một cut** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Bottleneck view** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cạnh nặng nhất duy nhất trên chu trình là lựa chọn có thể thay thế mà không làm tăng nghiệm, nên không nằm trong MST. Cách nhìn bottleneck đổi câu hỏi từ tổng trọng số sang ngưỡng lớn nhất cần chịu trên một đường nối.
 
 ## 13. cạnh bị cấm: unique heaviest trên chu trình
 
@@ -245,7 +245,7 @@ Nếu `e` là unique heaviest trên một chu trình, không MST nào chứa `e`
 
 Hai criteria này rất hữu ích trong sensitivity phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **14. Bottleneck view** tiếp nhận điểm tựa từ **13. cạnh bị cấm: unique heaviest trên chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Maximum Spanning cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bottleneck view giải thích vì sao MST cũng tối ưu hóa cạnh lớn nhất trên đường đi giữa các cặp đỉnh. Đảo dấu hoặc đảo thứ tự so sánh dẫn thẳng đến maximum spanning tree.
 
 ## 14. Bottleneck view
 
@@ -255,7 +255,7 @@ Kruskal cho intuition rõ. Khi tăng threshold `T` và cho phép tất cả các
 
 Liên kết (connection / 연결) này biến nhiều bài threshold-connectivity thành Kruskal/DSU problems.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **15. Maximum Spanning cây** tiếp nhận điểm tựa từ **14. Bottleneck view** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Single-Linkage Clustering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Maximum spanning tree có thể xây bằng cùng thuật toán sau khi sắp xếp cạnh giảm dần hoặc đổi dấu trọng số. Khi các đỉnh là điểm dữ liệu, thứ tự merge của Kruskal còn tạo ra cách nhìn single-linkage clustering.
 
 ## 15. Maximum Spanning cây
 
@@ -263,7 +263,7 @@ Nếu mục tiêu chuyển thành tối đa hóa tổng trọng số, Kruskal c�
 
 Ứng dụng có thể là maximize affinity/độ tin cậy (reliability / 신뢰성) score trong một formulation phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **16. Single-Linkage Clustering** tiếp nhận điểm tựa từ **15. Maximum Spanning cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Euclidean MST và không materialize đồ thị đầy đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Single-linkage xem mỗi cạnh được thêm vào như một lần nối hai cụm, và MST chứa đúng các ngưỡng merge quan trọng. Với dữ liệu Euclidean lớn, không thể luôn tạo đầy đủ đồ thị khoảng cách trước khi chạy MST.
 
 ## 16. Single-Linkage Clustering
 
@@ -273,7 +273,7 @@ MST giữ các liên kết rẻ nhất cần cho connectivity; các cạnh lớn
 
 Đây là liên kết (connection / 연결) giữa đồ thị lý thuyết (theory / 이론) và hierarchical clustering.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **17. Euclidean MST và không materialize đồ thị đầy đủ** tiếp nhận điểm tựa từ **16. Single-Linkage Clustering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Second-Best MST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Euclidean MST cần khai thác cấu trúc hình học hoặc các ứng viên cạnh để tránh materialize toàn bộ đồ thị đầy đủ. Sau khi có MST, ta có thể hỏi nghiệm tốt thứ hai thay đổi như thế nào khi một cạnh được thay thế.
 
 ## 17. Euclidean MST và không materialize đồ thị đầy đủ
 
@@ -285,7 +285,7 @@ Bài học rộng hơn:
 
 > Đôi khi độ phức tạp (complexity / 복잡도) bottleneck là **xây đồ thị**, không phải thuật toán đồ thị sau đó.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **18. Second-Best MST** tiếp nhận điểm tựa từ **17. Euclidean MST và không materialize đồ thị đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Replacement cạnh và sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Second-best MST thường được tìm bằng cách thêm một cạnh ngoài cây, tạo chu trình rồi bỏ cạnh nặng nhất trên chu trình đó. Công thức replacement edge mở rộng cùng ý tưởng để đo độ nhạy của từng cạnh.
 
 ## 18. Second-Best MST
 
@@ -301,7 +301,7 @@ Nếu preprocess nhảy nhị phân/LCA để truy vấn max cạnh đường đ
 
 Đây là liên kết (connection / 연결) giữa MST và cây đường đi các truy vấn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **19. Replacement cạnh và sensitivity** tiếp nhận điểm tựa từ **18. Second-Best MST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. động MST khó vì cục bộ cập nhật có tác động (effect / 효과) toàn cục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Replacement edge cho biết cạnh nào có thể thay thế cạnh cây khi trọng số hoặc dữ liệu thay đổi. Tuy nhiên, cập nhật động một cạnh có thể làm thay đổi cấu trúc trên phạm vi toàn cầu, không chỉ một vùng cục bộ.
 
 ## 19. Replacement cạnh và sensitivity
 
@@ -311,7 +311,7 @@ Nếu nhiều các cập nhật xảy ra, recompute từ đầu có thể đắt
 
 tĩnh sensitivity phân tích (analysis / 분석) vẫn có thể dùng cut/chu trình + tiền xử lý để trả lời “nếu cạnh này đổi chi phí thì MST thay đổi thế nào?”.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **20. động MST khó vì cục bộ cập nhật có tác động (effect / 효과) toàn cục** tiếp nhận điểm tựa từ **19. Replacement cạnh và sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Reverse-Delete thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khó khăn của dynamic MST nằm ở việc một thay đổi nhỏ có thể mở hoặc đóng cả một cut, kéo theo nhiều cạnh khác. Reverse-Delete cho một cách nhìn đối xứng: xét cạnh từ nặng đến nhẹ và chỉ giữ lại cạnh cần thiết.
 
 ## 20. động MST khó vì cục bộ cập nhật có tác động (effect / 효과) toàn cục
 
@@ -328,7 +328,7 @@ minimum replacement edge crossing cut
 
 là trung tâm của động MST, dẫn tới động các cây như Link-Cut cây trong advanced settings.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **21. Reverse-Delete thuật toán** tiếp nhận điểm tựa từ **20. động MST khó vì cục bộ cập nhật có tác động (effect / 효과) toàn cục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. MST và Matroid intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reverse-Delete xóa cạnh theo thứ tự giảm dần nếu việc xóa không làm mất liên thông, tương ứng với cycle property. Các lập luận trao đổi này có thể được khái quát bằng trực giác matroid.
 
 ## 21. Reverse-Delete thuật toán
 
@@ -341,7 +341,7 @@ Một cách nhìn đối xứng với Kruskal:
 
 chu trình tính chất giải thích tính đúng đắn. Cách đơn giản kiểm tra liên thông làm cách triển khai chậm, nhưng thuật toán rất hữu ích về mặt conceptual: Kruskal “thêm an toàn các cạnh”, reverse-delete “xóa unnecessary heavy các cạnh”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **22. MST và Matroid intuition** tiếp nhận điểm tựa từ **21. Reverse-Delete thuật toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. đồ thị có hướng là bài toán (problem / 문제) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Matroid giải thích vì sao các quy tắc độc lập và trao đổi cho phép greedy tìm một cơ sở có trọng số nhỏ nhất. Trực giác này dựa trên đồ thị vô hướng; với đồ thị có hướng, bài toán spanning tree có cấu trúc khác.
 
 ## 22. MST và Matroid intuition
 
@@ -351,7 +351,7 @@ Không cần học matroid lý thuyết (theory / 이론) để mã (code / 코�
 
 Greedy tính đúng đắn không đến từ sorting; nó đến từ cấu trúc (structure / 구조) của feasible sets.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **23. đồ thị có hướng là bài toán (problem / 문제) khác** tiếp nhận điểm tựa từ **22. MST và Matroid intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Multigraph và các cạnh song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+MST chuẩn giả định cạnh vô hướng và liên thông; directed arborescence cần một gốc và điều kiện hướng riêng. Ngay cả trong đồ thị vô hướng, multigraph với các cạnh song song cũng cần quy ước định danh rõ ràng.
 
 ## 23. đồ thị có hướng là bài toán (problem / 문제) khác
 
@@ -359,7 +359,7 @@ Chuẩn MST áp dụng đồ thị vô hướng (undirected graph). Directed ana
 
 Không thể chỉ chạy Kruskal trên directed các cạnh rồi bỏ orientation.
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **24. Multigraph và các cạnh song song** tiếp nhận điểm tựa từ **23. đồ thị có hướng là bài toán (problem / 문제) khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. tràn số và comparator tính đúng đắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hai cạnh song song là hai lựa chọn độc lập dù cùng endpoints, nên thuật toán phải giữ chúng như các record riêng. Khi sắp xếp và cộng trọng số, comparator và kiểu số phải được thiết kế để không gây tràn số hoặc sai thứ tự.
 
 ## 24. Multigraph và các cạnh song song
 
@@ -367,7 +367,7 @@ Kruskal xử lý các cạnh song song tự nhiên; cạnh rẻ hơn giữa cùn
 
 cách triển khai nên giữ cạnh IDs nếu cần đầu ra chính xác cạnh định danh (identity / 식별자).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **25. tràn số và comparator tính đúng đắn** tiếp nhận điểm tựa từ **24. Multigraph và các cạnh song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. xác minh (verification / 확인) của MST kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Comparator phải dùng phép so sánh an toàn, không dựa vào phép trừ có thể overflow; tổng trọng số cũng cần kiểu đủ rộng. Sau khi chạy thuật toán, nên xác minh kết quả bằng các bất biến độc lập thay vì chỉ tin vào tổng.
 
 ## 25. tràn số và comparator tính đúng đắn
 
@@ -383,7 +383,7 @@ nếu tràn số có thể xảy ra. Dùng `Long.compare`/`Comparator.comparingL
 
 C cũng nên tránh subtraction comparator với signed tràn số.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, **26. xác minh (verification / 확인) của MST kết quả** tiếp nhận điểm tựa từ **25. tràn số và comparator tính đúng đắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Differential kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Một MST hợp lệ phải có đúng số cạnh theo từng thành phần, không tạo chu trình, nối đủ các đỉnh và thỏa điều kiện tối ưu qua các cut/cycle. Differential testing so sánh implementation với một oracle chậm nhưng dễ kiểm tra trên đồ thị nhỏ.
 
 ## 26. xác minh (verification / 확인) của MST kết quả
 
@@ -406,7 +406,7 @@ Nếu có cây cạnh trên đường đi nặng hơn `w`, swap sẽ tạo spann
 
 tính chất này cho phép bộ xác minh độc lập mạnh hơn chỉ so đầu ra cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **cây khung nhỏ nhất**, **27. Differential kiểm thử** tiếp nhận điểm tựa từ **26. xác minh (verification / 확인) của MST kết quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. MST trong cơ sở dữ liệu/mạng/hệ thống thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Differential testing phát hiện lỗi tie, multigraph, disconnected graph và overflow mà vài ví dụ tay có thể bỏ sót. Khi kiểm thử đã củng cố thuật toán, ta có thể nối MST với các bài toán thiết kế mạng và dữ liệu thực tế.
 
 ## 27. Differential kiểm thử
 
@@ -432,7 +432,7 @@ disconnected graph
 very large weights
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **cây khung nhỏ nhất**, **27. Differential kiểm thử** nêu điều cần giải thích; **28. MST trong cơ sở dữ liệu/mạng/hệ thống thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trong mạng, cơ sở dữ liệu và thiết kế hệ thống, MST là mô hình tối ưu chi phí nối các thành phần với giả định cụ thể về cạnh và khả năng thay thế. Mô hình tư duy cuối bài sẽ gom các giả định đó thành checklist khi chọn thuật toán.
 
 ## 28. MST trong cơ sở dữ liệu/mạng/hệ thống thiết kế (design / 설계)
 
@@ -458,7 +458,7 @@ fault domains
 
 Khi đó bài toán (problem / 문제) có thể không còn là pure MST. DSA mô hình phải khớp yêu cầu, không ép nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) vào thuật toán quen thuộc.
 
-> **Chuyển mạch:** Trong **cây khung nhỏ nhất**, các dấu vết trong **28. MST trong cơ sở dữ liệu/mạng/hệ thống thiết kế (design / 설계)** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Mô hình tư duy của MST gồm mục tiêu nối, tính chất cut/cycle, lựa chọn greedy, cấu trúc dữ liệu, bất biến và cách xác minh. Phần liên kết cuối cùng đặt các ý này vào mạch rộng hơn của thuật toán đồ thị.
 
 ## Mô hình tư duy
 

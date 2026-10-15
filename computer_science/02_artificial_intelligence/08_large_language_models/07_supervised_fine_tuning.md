@@ -18,7 +18,7 @@ Về mặt toán học, SFT thường vẫn dùng next-token cross-entropy trên
 
 Nhiều chuỗi xử lý (pipeline / 파이프라인) mask mất mát (loss / 손실) trên người dùng (user / 사용자)/hệ thống (system / 시스템) tokens và chỉ optimize assistant tokens. Như vậy mô hình (model / 모델) không bị train để “predict người dùng (user / 사용자)” mà tập trung tái tạo phản hồi (response / 응답) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, **SFT khác pretraining ở đâu?** tiếp nhận điểm tựa từ **Mục tiêu (objective / 목표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) chất lượng (quality / 품질) quyết định hành vi (behavior / 동작) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mục tiêu loss cho biết tín hiệu nào được tối ưu; sự khác biệt thực tế giữa SFT và pretraining nằm ở phân phối dữ liệu và mức độ giám sát. Vì vậy, trước hết cần đặt hai quy trình cạnh nhau.
 
 ## SFT khác pretraining ở đâu?
 
@@ -38,7 +38,7 @@ instruction/context → imitate curated target response
 
 SFT vì vậy gần hành vi (behavior / 동작) cloning hơn raw ngôn ngữ (language / 언어) modeling.
 
-> **Chuyển mạch:** Ở chặng này của **Supervised Fine-Tuning (SFT)**, **SFT khác pretraining ở đâu?** nêu điều cần giải thích; **Dữ liệu (data / 데이터) chất lượng (quality / 품질) quyết định hành vi (behavior / 동작) chất lượng (quality / 품질)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mất mát (loss / 손실) masking và conversation templates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Nếu pretraining cung cấp nền năng lực rộng, SFT chọn những hành vi sẽ được bắt chước và củng cố. Chất lượng ví dụ vì thế quyết định trực tiếp chất lượng hành vi, còn loss masking và template quyết định tín hiệu đó đi vào mô hình ra sao.
 
 ## Dữ liệu (data / 데이터) chất lượng (quality / 품질) quyết định hành vi (behavior / 동작) chất lượng (quality / 품질)
 
@@ -54,7 +54,7 @@ SFT dữ liệu (data / 데이터) cần represent nhiều dimensions:
 - multilingual coverage;
 - ambiguity handling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Supervised Fine-Tuning (SFT)**, **Dữ liệu (data / 데이터) chất lượng (quality / 품질) quyết định hành vi (behavior / 동작) chất lượng (quality / 품질)** nêu điều cần giải thích; **Mất mát (loss / 손실) masking và conversation templates** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Full fine-tuning vs parameter-efficient fine-tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ví dụ tốt chỉ có tác dụng khi pipeline gán đúng role và vị trí chịu loss. Sau khi kiểm soát hai điều đó, ta mới có thể cân nhắc cập nhật toàn bộ weights hay chỉ một phần parameters.
 
 ## Mất mát (loss / 손실) masking và conversation templates
 
@@ -70,7 +70,7 @@ Ví dụ mô hình (model / 모델) được train với special tokens:
 
 nhưng suy luận (inference / 추론) dùng format khác, mô hình (model / 모델) có thể không recognize role ngữ nghĩa (semantics / 의미론) đúng như huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, **Full fine-tuning vs parameter-efficient fine-tuning** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) masking và conversation templates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lĩnh vực (domain / 도메인) fine-tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Masking và template ảnh hưởng tín hiệu học, còn lựa chọn full fine-tuning hay PEFT quyết định phạm vi tham số được phép thay đổi. Khi nhu cầu chỉ nằm trong một lĩnh vực, câu hỏi tiếp theo là mức thay đổi đó có cần được giới hạn theo domain hay không.
 
 ## Full fine-tuning vs parameter-efficient fine-tuning
 
@@ -86,7 +86,7 @@ với rank nhỏ `r`, nên số trainable parameters giảm mạnh.
 
 LoRA không “compress toàn bộ mô hình (model / 모델)”; nó học một low-rank cập nhật (update / 업데이트) trên một số matrices được chọn.
 
-> **Chuyển mạch:** Ở chặng này của **Supervised Fine-Tuning (SFT)**, **Lĩnh vực (domain / 도메인) fine-tuning** tiếp nhận điểm tựa từ **Full fine-tuning vs parameter-efficient fine-tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Curriculum và mixture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Domain fine-tuning thay đổi vocabulary và format cần thiết, nhưng không nên dùng weights để thay thế dữ liệu luôn biến động. Cách trộn domain examples với general và safety examples sẽ quyết định sự cân bằng đó.
 
 ## Lĩnh vực (domain / 도메인) fine-tuning
 
@@ -94,7 +94,7 @@ Nếu tác vụ (task / 작업) yêu cầu terminology và đầu ra (output / �
 
 Nhưng facts thường xuyên thay đổi vẫn nên đến từ cơ sở dữ liệu (database / 데이터베이스)/RAG, không nên hard-code qua weights nếu provenance quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Supervised Fine-Tuning (SFT)**, **Curriculum và mixture** tiếp nhận điểm tựa từ **Lĩnh vực (domain / 도메인) fine-tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Response-only mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mixture quyết định hành vi nào được ưu tiên khi các mục tiêu cạnh tranh nhau. Trong chat SFT, ưu tiên đó còn được thể hiện bằng việc chỉ tính loss trên response hay trên toàn chuỗi.
 
 ## Curriculum và mixture
 
@@ -102,7 +102,7 @@ SFT dataset thường là mixture của general instruction, lĩnh vực (domain
 
 Nếu an toàn (safety / 안전) examples quá nhiều và simplistic, over-refusal tăng. Nếu lĩnh vực (domain / 도메인) dữ liệu (data / 데이터) quá mạnh, general năng lực (capability / 역량) có thể giảm.
 
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, **Response-only mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Curriculum và mixture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) packing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Response-only loss tập trung tín hiệu vào câu trả lời, nhưng system và user context vẫn điều kiện hóa biểu diễn. Khi nhiều mẫu được đưa vào một batch, sequence packing phải giữ nguyên các ranh giới ngữ nghĩa ấy.
 
 ## Response-only mất mát (loss / 손실)
 
@@ -110,13 +110,13 @@ Trong chat SFT, một practice phổ biến là tính mất mát (loss / 손실)
 
 Tuy nhiên hệ thống (system / 시스템) prompt cấu trúc (structure / 구조) vẫn ảnh hưởng hidden biểu diễn (representation / 표현) vì nó nằm trong ngữ cảnh (context / 맥락) dù không chịu mất mát (loss / 손실) trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Supervised Fine-Tuning (SFT)**, **Response-only mất mát (loss / 손실)** xác định đầu vào; **Chuỗi (sequence / 시퀀스) packing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Overfitting trong SFT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Response-only loss xác định vị trí tạo gradient; packing xác định cách các mẫu chia sẻ hạ tầng mà không nhìn lẫn nhau. Nếu dataset vẫn nhỏ so với model, cần kiểm tra tiếp nguy cơ mô hình ghi nhớ format hoặc câu trả lời.
 
 ## Chuỗi (sequence / 시퀀스) packing
 
 Nhiều short SFT samples có thể pack vào một huấn luyện (training / 학습) chuỗi (sequence / 시퀀스) để tăng utilization. Attention/mất mát (loss / 손실) masks phải đảm bảo samples không leak ngữ cảnh (context / 맥락) lẫn nhau ngoài intended packing ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Supervised Fine-Tuning (SFT)**, **Chuỗi (sequence / 시퀀스) packing** xác định đầu vào; **Overfitting trong SFT** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SFT và lập luận (reasoning / 추론) traces** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Packing đúng giúp sử dụng compute hiệu quả nhưng không làm giảm nguy cơ overfit. Sau khi đánh giá nguy cơ đó, cần xem các traces được đưa vào dataset có làm mô hình học được lập luận đáng tin hay chỉ học một mẫu trình bày.
 
 ## Overfitting trong SFT
 
@@ -133,7 +133,7 @@ out-of-template generalization
 
 SFT mất mát (loss / 손실) thấp không đồng nghĩa assistant tốt.
 
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, **SFT và lập luận (reasoning / 추론) traces** tiếp nhận điểm tựa từ **Overfitting trong SFT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distillation bằng SFT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Overfitting có thể nằm ở câu trả lời, format hoặc cả rationale. Vì thế, traces phải được kiểm tra về tính đúng đắn trước khi dùng SFT để distill hành vi từ một teacher mạnh hơn.
 
 ## SFT và lập luận (reasoning / 추론) traces
 
@@ -143,7 +143,7 @@ Nếu traces chứa plausible nhưng incorrect lập luận (reasoning / 추론)
 
 Không nên assume dài hơn = lập luận (reasoning / 추론) tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Supervised Fine-Tuning (SFT)**, **Distillation bằng SFT** tiếp nhận điểm tựa từ **SFT và lập luận (reasoning / 추론) traces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tool-use SFT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Teacher traces có thể truyền cách giải và style, nhưng student chỉ học những gì xuất hiện trong responses. Khi hành vi cần tương tác với hệ thống bên ngoài, dataset phải mô tả cả tool call và kết quả tool.
 
 ## Distillation bằng SFT
 
@@ -151,7 +151,7 @@ Một teacher mô hình (model / 모델) mạnh có thể generate responses, sa
 
 Student học phân phối (distribution / 분포) đầu ra (output / 출력) của teacher, nhưng không nhất thiết bản sao (copy / 복사) nội bộ (internal / 내부) cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Supervised Fine-Tuning (SFT)**, **Tool-use SFT** tiếp nhận điểm tựa từ **Distillation bằng SFT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SFT và calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tool-use SFT dạy cú pháp và lựa chọn hành động, còn runtime vẫn phải kiểm tra schema, quyền và lỗi. Vì vậy, sau hành vi tool-use cần đánh giá mô hình có diễn đạt mức chắc chắn phù hợp với bằng chứng hay không.
 
 ## Tool-use SFT
 
@@ -166,7 +166,7 @@ user request
 
 SFT giúp mô hình (model / 모델) học cú pháp (syntax / 문법) và quyết định (decision / 결정) patterns. Nhưng môi trường vận hành (production / 운영 환경) vẫn cần lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증), permissions và thời gian chạy (runtime / 런타임) lỗi (error / 오류) handling.
 
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, **SFT và calibration** tiếp nhận điểm tựa từ **Tool-use SFT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tool-use đúng cú pháp chưa đồng nghĩa với câu trả lời đúng hoặc được calibration tốt. Mental model dưới đây gom mục tiêu, dữ liệu, gradient và runtime boundary thành một cách đọc thống nhất.
 
 ## SFT và calibration
 
@@ -174,7 +174,7 @@ SFT có thể làm mô hình (model / 모델) answers trông tự tin hơn mà k
 
 Evaluation phải tách style và tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Ở chặng này của **Supervised Fine-Tuning (SFT)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **SFT và calibration** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hãy nhớ SFT là lớp điều chỉnh hành vi trên nền năng lực pretrained; nó có thể thay đổi cách trả lời mà không đảm bảo thêm sự thật mới. Các ngộ nhận sau đây thường xuất hiện khi quên ranh giới đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -182,7 +182,7 @@ Evaluation phải tách style và tính đúng đắn (correctness / 정확성).
 
 Nó không thay thế pretraining, retrieval hay thời gian chạy (runtime / 런타임) xác minh (verification / 확인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Supervised Fine-Tuning (SFT)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận đều nhầm lẫn giữa việc bắt chước target response và việc huấn luyện lại toàn bộ tri thức hay khả năng của mô hình. Phần liên kết kiến thức đặt SFT vào chuỗi instruction tuning → preference optimization để giữ đúng owner.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -197,8 +197,6 @@ Không. Hiệu quả phụ thuộc rank, mục tiêu (target / 대상) modules, 
 ### “SFT dataset càng lớn càng tốt”
 
 Bad/inconsistent examples có thể degrade hành vi (behavior / 동작). Curated chất lượng (quality / 품질) và coverage quan trọng hơn raw count.
-
-> **Chuyển mạch:** Trong **Supervised Fine-Tuning (SFT)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

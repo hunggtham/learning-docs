@@ -14,7 +14,7 @@ Use-value phụ thuộc vật lý (physical / 물리적)/xã hội (social / 사
 
 Điểm này thường bị hiểu sai thành “càng làm lâu thì hàng càng có giá trị”. Không phải. Nếu một producer chậm gấp đôi average technology, society không tự động công nhận double giá trị (value / 값). Category “socially necessary” đưa productivity và xã hội (social / 사회적) average vào ngay trong lý thuyết (theory / 이론).
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Commodity: Marx bắt đầu từ xã hội (social / 사회적) form, không phải từ factory** cho ta quy tắc; **Concrete labor, abstract labor và vì sao distinction này quan trọng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Giá trị (value / 값) không đồng nghĩa price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Marx bắt đầu từ commodity như một social form, không phải từ nhà máy như một vật thể kỹ thuật. Từ hình thức trao đổi đó, distinction giữa concrete labor và abstract labor giải thích vì sao cùng một sản phẩm có nhiều tầng nghĩa xã hội.
 
 ## Concrete labor, abstract labor và vì sao distinction này quan trọng
 
@@ -24,7 +24,7 @@ Marx phân biệt **concrete labor** và **abstract labor**. Concrete labor tạ
 
 Nếu bỏ distinction này, labor lý thuyết (theory / 이론) of giá trị (value / 값) dễ bị đọc như một claim vật lý rằng mọi labor-hour giống nhau. Marx’s claim tinh vi hơn nhưng cũng vì thế khó kiểm thử (test / 테스트) hơn: xã hội (social / 사회적) kiểm tra hợp lệ (validation / 검증) của private labor chỉ xuất hiện thông qua thị trường (market / 시장) exchange.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Concrete labor, abstract labor và vì sao distinction này quan trọng** cho ta quy tắc; **Giá trị (value / 값) không đồng nghĩa price** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Value-form: từ simple exchange tới money** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Concrete labor tạo ra một loại use-value cụ thể, còn abstract labor là cách xã hội quy các lao động khác nhau về một thước đo trao đổi. Distinction này dẫn tới câu hỏi value được xác định ra sao và vì sao không thể đồng nhất với price.
 
 ## Giá trị (value / 값) không đồng nghĩa price
 
@@ -38,7 +38,7 @@ Marx không nói vậy. Thị trường (market / 시장) prices có thể devia
 
 Vì vậy khi critique labor lý thuyết (theory / 이론) of giá trị (value / 값), phải xác định mục tiêu (target / 대상): lý thuyết (theory / 이론) đang giải thích long-run relative magnitudes, xã hội (social / 사회적) allocation of labor, phân phối (distribution / 분포) hay price formation? Stanford Encyclopedia of Philosophy ghi nhận Marx đưa ra argument cho giá trị (value / 값) dựa trên socially necessary labor, nhưng các bước của argument và vai trò của lý thuyết (theory / 이론) trong exploitation phân tích (analysis / 분석) vẫn là subject of major debate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Value-form: từ simple exchange tới money** tiếp nhận điểm tựa từ **Giá trị (value / 값) không đồng nghĩa price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **C–M–C và M–C–M′: khác biệt giữa circulation và capital** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Value là một quan hệ xã hội được biểu hiện qua trao đổi, còn price là biểu hiện tiền tệ chịu ảnh hưởng của cung cầu, quyền lực và nhiễu thị trường. Để hiểu value đi vào trao đổi, cần theo dõi value-form từ trao đổi đơn giản đến money.
 
 ## Value-form: từ simple exchange tới money
 
@@ -55,7 +55,7 @@ commodity
 
 Money làm ba việc có conceptual importance: measure/giá trị (value / 값) expression, medium of circulation và store/independent form of wealth. Khi money có thể được giữ và tái-deployed, đường dẫn (path / 경로) sang capital mở ra.
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **C–M–C và M–C–M′: khác biệt giữa circulation và capital** tiếp nhận điểm tựa từ **Value-form: từ simple exchange tới money** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Labor power: commodity đặc biệt trong mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Value-form cho thấy money không chỉ là vật trung gian mà là hình thức biểu hiện của value trong trao đổi tổng quát. Khi money quay về circulation với mục tiêu tăng lên, ta chuyển từ C–M–C sang M–C–M′.
 
 ## C–M–C và M–C–M′: khác biệt giữa circulation và capital
 
@@ -79,7 +79,7 @@ Trong đó `M′ = M + ΔM`. Mục tiêu không còn là use-value cuối cùng 
 
 Đây là bước bản lề. Marx cần giải thích `ΔM` xuất hiện ở đâu mà không đơn giản nói “merchant mua rẻ bán đắt”, vì aggregate society không thể giải thích surplus chỉ bằng việc mọi người lừa nhau trong exchange.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **C–M–C và M–C–M′: khác biệt giữa circulation và capital** cho ta quy tắc; **Labor power: commodity đặc biệt trong mô hình (model / 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Necessary labor, surplus labor và surplus giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+C–M–C phục vụ nhu cầu tiêu dùng, còn M–C–M′ mô tả circulation của capital với mục tiêu tạo surplus. Muốn giải thích surplus, mô hình phải chỉ ra commodity đặc biệt mà người mua sử dụng trong production: labor power.
 
 ## Labor power: commodity đặc biệt trong mô hình (model / 모델)
 
@@ -96,7 +96,7 @@ separation from means of production
 
 Marx xem labor power đặc biệt vì **use-value của nó trong môi trường vận hành (production / 운영 환경) có thể tạo new giá trị (value / 값) lớn hơn giá trị (value / 값) cần để reproduce labor power**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Labor power: commodity đặc biệt trong mô hình (model / 모델)** cho ta quy tắc; **Necessary labor, surplus labor và surplus giá trị (value / 값)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Constant capital, variable capital và tỷ lệ (rate / 비율) of surplus giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Labor power là khả năng lao động được bán theo điều kiện lịch sử và pháp lý cụ thể, không phải bản thân labor đã hoàn tất. Phân biệt nó giúp tách necessary labor tạo giá trị tương đương tiền công khỏi surplus labor.
 
 ## Necessary labor, surplus labor và surplus giá trị (value / 값)
 
@@ -111,7 +111,7 @@ Giá trị (value / 값) created trong surplus portion trở thành **surplus gi
 
 Điểm cần giữ chính xác: Marx không đơn giản nói employer “trả worker thấp hơn giá trị thật của labor”. Ông muốn chỉ ra rằng labor-power có thể được exchanged theo quy tắc (rule / 규칙) của commodity exchange nhưng môi trường vận hành (production / 운영 환경) tiến trình (process / 프로세스) vẫn tạo surplus. Exploitation vì vậy nằm trong quan hệ (relation / 관계) giữa quyền sở hữu (ownership / 소유권), labor-power purchase và môi trường vận hành (production / 운영 환경) điều khiển (control / 제어), chứ không chỉ trong fraudulent exchange.
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Necessary labor, surplus labor và surplus giá trị (value / 값)** cho ta quy tắc; **Constant capital, variable capital và tỷ lệ (rate / 비율) of surplus giá trị (value / 값)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Absolute và relative surplus giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Necessary labor và surplus labor là một phân tích về thời gian/giá trị trong mô hình, không tự động là phép đo exploitation trong mọi context. Để theo dõi quy mô và cơ chế, cần tách constant capital, variable capital và rate of surplus value.
 
 ## Constant capital, variable capital và tỷ lệ (rate / 비율) of surplus giá trị (value / 값)
 
@@ -135,7 +135,7 @@ s / v
 
 để represent quan hệ (relation / 관계) giữa surplus labor và necessary labor trong giá trị (value / 값) terms. Đây là technical ratio trong Marxian khung phần mềm (framework / 프레임워크); không phải một ready-made empirical measure có thể lấy trực tiếp từ corporate financial statements hiện đại.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Absolute và relative surplus giá trị (value / 값)** tiếp nhận điểm tựa từ **Constant capital, variable capital và tỷ lệ (rate / 비율) of surplus giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cooperation, manufacture và machinery: productivity cũng là xã hội (social / 사회적) organization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Constant capital chuyển giá trị của input, còn variable capital gắn với labor power tạo ra giá trị mới trong khung phân tích này. Từ tỷ lệ ấy, Marx phân biệt absolute surplus value bằng kéo dài labor với relative surplus value bằng tăng năng suất.
 
 ## Absolute và relative surplus giá trị (value / 값)
 
@@ -147,7 +147,7 @@ Marx phân biệt hai mechanisms.
 
 Điểm quan trọng là Marx không coi capitalism chỉ vận hành bằng kéo dài giờ làm. Competition thúc đẩy technology, tiến trình (process / 프로세스) redesign và productivity vì firms có temporary advantage khi giảm individual chi phí (cost / 비용) below xã hội (social / 사회적) average.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Cooperation, manufacture và machinery: productivity cũng là xã hội (social / 사회적) organization** tiếp nhận điểm tựa từ **Absolute và relative surplus giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accumulation: surplus quay trở lại môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Absolute và relative surplus value đều làm tăng phần surplus nhưng qua cơ chế khác nhau và có giới hạn lịch sử khác nhau. Cooperation, manufacture và machinery cho thấy productivity cũng là cách tổ chức xã hội của labor, không chỉ là công nghệ.
 
 ## Cooperation, manufacture và machinery: productivity cũng là xã hội (social / 사회적) organization
 
@@ -157,7 +157,7 @@ Nhưng xã hội (social / 사회적) productivity tạo một paradox trong Mar
 
 Không được biến observation này thành prediction tự động rằng private thuộc tính (property / 속성) tất yếu collapse. Đó là theoretical tendency claim, cần separate historical bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Accumulation: surplus quay trở lại môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **Cooperation, manufacture và machinery: productivity cũng là xã hội (social / 사회적) organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Simple reproduction và expanded reproduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cooperation và machinery có thể tăng năng suất, nhưng cũng thay đổi control, skill và phân phối quyền quyết định trong production. Khi surplus được tái đầu tư, accumulation nối kết quyết định hiện tại với quy mô capital tương lai.
 
 ## Accumulation: surplus quay trở lại môi trường vận hành (production / 운영 환경)
 
@@ -178,7 +178,7 @@ Capital trong Marx vì thế không chỉ là “machines” hoặc “money sto
 
 Competition làm accumulation mang tính pressure chứ không chỉ personal greed. Một capitalist không reinvest trong môi trường (environment / 환경) nơi rivals adopt productive technology có thể mất thị trường (market / 시장) position. Đây là reason Marx hay phân tích capitalist như bearer of a structural role thay vì chỉ moral personality.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Simple reproduction và expanded reproduction** tiếp nhận điểm tựa từ **Accumulation: surplus quay trở lại môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reserve army of labor và bargaining pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Accumulation biến surplus thành điều kiện cho production tiếp theo, nhưng hướng và tốc độ tái đầu tư phụ thuộc cạnh tranh, tín dụng, technology và institution. Simple reproduction và expanded reproduction tách hai cách hệ thống lặp lại hoặc mở rộng.
 
 ## Simple reproduction và expanded reproduction
 
@@ -197,7 +197,7 @@ capital receives surplus
 
 Marx’s claim là hệ thống (system / 시스템) có sức chứa (capacity / 용량) reproduce separation between workers and means of môi trường vận hành (production / 운영 환경) through ordinary economic circulation, không cần expropriation diễn ra מחדש mỗi ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Simple reproduction và expanded reproduction** cho ta quy tắc; **Reserve army of labor và bargaining pressure** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Concentration và centralization of capital** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Simple reproduction lặp quy mô cũ, còn expanded reproduction dành một phần surplus cho scale mới. Mở rộng production có thể tạo population lao động dự trữ, làm thay đổi bargaining pressure và quan hệ tuyển dụng.
 
 ## Reserve army of labor và bargaining pressure
 
@@ -205,7 +205,7 @@ Marx connects accumulation với creation/reproduction của a **relative surplu
 
 Hiện đại (modern / 현대적) labor economics sẽ không accept vocabulary này automatically, nhưng underlying questions vẫn testable: unemployment, labor-market slack, di chuyển (migration / 마이그레이션), automation và employer concentration ảnh hưởng wage bargaining thế nào? Đây là ví dụ tốt về cách chuyển Marxian concept sang empirical research question mà không giả định conclusion.
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Reserve army of labor và bargaining pressure** cho ta quy tắc; **Concentration và centralization of capital** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Exploitation: technical quan hệ (relation / 관계) và normative evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Reserve army of labor là một hypothesis về supply lao động, wage pressure và điều kiện cạnh tranh, không phải nhãn giải thích mọi unemployment. Khi capital tích lũy, concentration và centralization mô tả hai cách quyền sở hữu/quy mô có thể tăng.
 
 ## Concentration và centralization of capital
 
@@ -213,7 +213,7 @@ Marx phân biệt broadly giữa capital becoming larger through accumulation v�
 
 Claim “capital tends to concentrate” cần được unpack empirically by sector. Some markets become highly concentrated; others see entry and fragmentation. Technology, regulation, mạng (network / 네트워크) effects và capital requirements matter. Vì vậy tendency không được đọc như law rằng toàn economy sẽ become one firm.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Exploitation: technical quan hệ (relation / 관계) và normative evaluation** tiếp nhận điểm tựa từ **Concentration và centralization of capital** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commodity fetishism quay lại ở cấp hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Concentration là tăng quy mô qua accumulation; centralization là gom capital đã tồn tại qua merger, credit hoặc cạnh tranh. Cả hai có thể đổi cấu trúc thị trường, nhưng không tự chứng minh mức exploitation hay welfare effect.
 
 ## Exploitation: technical quan hệ (relation / 관계) và normative evaluation
 
@@ -231,7 +231,7 @@ that appropriation is unjust / dominating / exploitative in moral sense
 
 Technical quan hệ (relation / 관계) không tự động supply moral premise. Nhưng moral critique cũng không nhất thiết collapse hoàn toàn nếu labor lý thuyết (theory / 이론) of giá trị (value / 값) bị reject; nó có thể được reconstructed qua unequal quyền sở hữu (ownership / 소유권), bargaining, vulnerability hoặc domination. [Major critiques](08_major_critiques_and_open_questions.md) xử lý debate này sâu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Commodity fetishism quay lại ở cấp hệ thống** tiếp nhận điểm tựa từ **Exploitation: technical quan hệ (relation / 관계) và normative evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Limits và transformation bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Exploitation trong Marxian analysis vừa là quan hệ kỹ thuật giữa labor power và surplus, vừa có dimension normative về quyền và phân phối. Khi các quan hệ ấy hiện ra như quan hệ giữa vật và giá, ta chuyển sang commodity fetishism.
 
 ## Commodity fetishism quay lại ở cấp hệ thống
 
@@ -239,7 +239,7 @@ Commodity fetishism không chỉ nói producers không hiểu nơi hàng hóa đ
 
 Price changes có effects rất real; workers và firms phải respond. Marx’s điểm (point / 지점) không phải prices “fake”, mà là xã hội (social / 사회적) phụ thuộc (dependency / 의존성) appears in impersonal form. Đây là lý do fetishism nối political economy với ideology without requiring conspiracy.
 
-> **Chuyển mạch:** Trong **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Commodity fetishism quay lại ở cấp hệ thống** đã nêu tiêu chí phân biệt, còn **Limits và transformation bài toán (problem / 문제)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) sau chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Commodity fetishism giải thích một cách biểu hiện của quan hệ xã hội, nhưng không phải cơ chế duy nhất hay dự đoán tự động. Phần limits and transformation đặt câu hỏi giả định nào còn đứng vững và điều kiện nào có thể làm mô hình đổi hướng.
 
 ## Limits và transformation bài toán (problem / 문제)
 
@@ -247,7 +247,7 @@ Marxian giá trị (value / 값) lý thuyết (theory / 이론) đối diện nh
 
 Một serious reading không nên hide các disputes này. Nhưng critique cũng phải tránh overreach: nếu labor-value lý thuyết (theory / 이론) fails as price lý thuyết (theory / 이론), không tự động follow rằng every Marxian claim about lớp (class / 클래스), quyền sở hữu (ownership / 소유권), bargaining, accumulation or institutional power is false. Decompose claims before evaluation.
 
-> **Chuyển mạch:** Ở chặng này của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Limits và transformation bài toán (problem / 문제)** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델) sau chapter** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Limits và transformation giúp giữ chapter trong boundary của một framework phân tích thay vì một prophecy. Mental model cuối chương sẽ gom form, labor, surplus, accumulation và bằng chứng thành chuỗi có thể kiểm tra.
 
 ## Mô hình tư duy (mental model / 사고 모델) sau chapter
 
@@ -270,7 +270,7 @@ Luồng (flow / 흐름) này giải thích vì sao chapter về Lenin sau đó q
 
 Nếu cần đọc sát primary văn bản (text / 텍스트) thay vì reconstruction này, đi tới [Capital close reading](16_capital_close_reading_commodity_value_surplus_accumulation.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marxian political economy — commodity, giá trị (value / 값), money, labor power và accumulation**, **Mô hình tư duy (mental model / 사고 모델) sau chapter** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Source anchors cần được đọc theo loại claim: primary text cho khái niệm, historical evidence cho triển khai, và research hiện đại cho test/counterargument. Không nguồn nào tự động xác nhận toàn bộ model.
 
 ## Sources và reading anchors
 

@@ -9,7 +9,7 @@
 
 Để học **SQL cơ bản: SELECT, hàm, lọc, nhóm và sắp xếp** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 24–42.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 24–42.
 >
 > **Cách học:** Đây là nền cho mọi bài tiếp theo: `JOIN` mở rộng `FROM`, subquery mở rộng biểu thức/điều kiện, còn hàm cửa sổ (window function / 윈도우 함수) mở rộng việc tính trên các hàng đã chọn.
 

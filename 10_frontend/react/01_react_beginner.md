@@ -371,7 +371,7 @@ const enhanced = React.cloneElement(original, {
 `cloneElement` tạo element mới dựa trên element cũ và merge props. API vẫn tồn tại nhưng thường làm luồng dữ liệu (data flow / 데이터 흐름) khó theo dõi hơn composition/ngữ cảnh (context / 맥락)/kết xuất (render / 렌더링) prop, nên mã (code / 코드) mới chỉ dùng khi có lý do rõ.
 
 ### `React.createFactory` — legacy trước khi JSX phổ biến
-Phần này nối mạch bài học với “`React.createFactory` — legacy trước khi JSX phổ biến”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`cloneElement` còn hữu ích nhưng làm data flow opaque; `React.createFactory` tiếp theo cho thấy cách legacy tạo element trước khi JSX trở thành chuẩn.
 
 ```jsx
 const Button = React.createFactory("button");
@@ -544,7 +544,7 @@ setUser(user => ({
 ```
 
 ### `React.PureComponent`
-Phần này nối mạch bài học với “`React.PureComponent`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`PureComponent` mở rộng class component bằng shallow comparison; phần này cần đặt cạnh state/props identity để tránh xem nó như một tối ưu luôn đúng.
 
 ```jsx
 class UserCard extends React.PureComponent {
@@ -799,7 +799,7 @@ const [count, setCount] = useState(0);
 `useState(initialState)` trả `[state, setter]`. Gọi setter không biến đổi biến trạng thái (state / 상태) hiện tại ngay lập tức; nó yêu cầu React kết xuất (render / 렌더링) với trạng thái (state / 상태) mới.
 
 ### State là snapshot
-Phần này nối mạch bài học với “State là snapshot”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`useState` trả state và setter, nhưng mỗi render nhìn thấy một snapshot; phần tiếp theo dùng snapshot semantics để giải thích vì sao log ngay sau setter vẫn là giá trị cũ.
 
 ```jsx
 function handleClick() {
@@ -988,7 +988,7 @@ Thành phần (component / 컴포넌트) có thể return `null` nếu không mu
 > **Nối mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **12. List và key** nối từ **11. Conditional rendering** sang **12A. key là định danh (identity / 식별자), không chỉ để xóa warning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. List và `key`
-Phần này nối mạch bài học với “12. List và `key`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Conditional rendering quyết định subtree nào tồn tại; list và `key` tiếp theo quyết định identity của từng item để React reconcile đúng khi thứ tự thay đổi.
 
 ```jsx
 <ul>
@@ -1091,7 +1091,7 @@ Mỗi mẩu trạng thái (state / 상태) quan trọng nên có một đơn v�
 > **Nối mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)** đặt vấn đề; **15. Composition và children** đối chiếu bằng chứng, rồi **16. Styling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Composition và `children`
-Phần này nối mạch bài học với “15. Composition và `children`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Lifting state đặt owner và source of truth; composition với `children` tiếp theo cho phép truyền cấu trúc UI mà không kéo state qua các tầng không cần thiết.
 
 ```jsx
 function Card({ children }) {
@@ -1162,7 +1162,7 @@ Khi gỡ lỗi (debug / 디버그) trạng thái (state / 상태), log đầu v�
 > **Nối mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **19. Mini project Todo hoàn chỉnh** nối từ **18. gỡ lỗi (debug / 디버그)** sang **20. Các lỗi beginner thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Mini project Todo hoàn chỉnh
-Phần này nối mạch bài học với “19. Mini project Todo hoàn chỉnh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Debugging đã tách runtime, state/render, DOM/CSS và network; mini Todo project ghép các boundary đó thành một flow có thể chạy và kiểm thử.
 
 ```jsx
 import { useState } from "react";
@@ -1279,7 +1279,7 @@ const fullName = `${firstName} ${lastName}`.trim();
 ```
 
 ### Định nghĩa component bên trong component
-Phần này nối mạch bài học với “Định nghĩa component bên trong component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Derived data nên được tính thay vì lưu trùng; component định nghĩa bên trong component tiếp theo cho thấy identity component có thể đổi qua mỗi render và làm mất state.
 
 ```jsx
 function App() {

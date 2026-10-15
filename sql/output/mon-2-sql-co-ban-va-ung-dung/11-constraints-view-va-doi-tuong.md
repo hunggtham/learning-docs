@@ -11,7 +11,7 @@
 
 Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
-> **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 95–100.
+> **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 95–100.
 >
 > **Liên kết bài trước:** DDL tạo cấu trúc; ràng buộc (constraint / 제약조건) bảo đảm dữ liệu đi vào cấu trúc đó vẫn đúng quy tắc nghiệp vụ. Điều này hiện thực hóa consistency (Consistency) (tính nhất quán) trong ACID đã học.
 

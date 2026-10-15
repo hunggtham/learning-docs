@@ -22,7 +22,7 @@ Mô hình (model / 모델) không biến corpus thành một key-value store ho�
 
 Điều này giải thích vì sao mô hình (model / 모델) có thể generalize, paraphrase và combine patterns thay vì chỉ replay chính xác (exact / 정확한) huấn luyện (training / 학습) strings. Đồng thời nó cũng giải thích vì sao retrieval từ parameters không đáng tin như truy vấn cơ sở dữ liệu (database / 데이터베이스): parameterized kiến thức (knowledge / 지식) không có guarantee về freshness, provenance hay chính xác (exact / 정확한) lookup.
 
-> **Chuyển mạch:** Trong **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Pretraining không phải cơ sở dữ liệu (database / 데이터베이스) ingestion** nêu điều cần giải thích; **Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) là một phần của mô hình (model / 모델)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đơn vị từ (token / 토큰) ngân sách (budget / 예산) và exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vì vậy, muốn hiểu pretraining phải bắt đầu từ corpus được lọc, chia đoạn và biến thành đầu vào cho mô hình, thay vì xem weights như một kho tra cứu trực tiếp.
 
 ## Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) là một phần của mô hình (model / 모델)
 
@@ -32,7 +32,7 @@ Nếu một lĩnh vực (domain / 도메인) được oversample, mô hình (mod
 
 Vì vậy có thể coi huấn luyện (training / 학습) phân phối (distribution / 분포) là một implicit curriculum.
 
-> **Chuyển mạch:** Ở chặng này của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) là một phần của mô hình (model / 모델)** nêu điều cần giải thích; **Đơn vị từ (token / 토큰) ngân sách (budget / 예산) và exposure** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhân quả (causal / 인과적) masking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Pipeline quyết định mô hình nhìn thấy phân phối token nào và mỗi mẫu được phơi nhiễm bao nhiêu lần. Mục kế tiếp lượng hóa hai yếu tố đó bằng ngân sách token và exposure.
 
 ## Đơn vị từ (token / 토큰) ngân sách (budget / 예산) và exposure
 
@@ -40,7 +40,7 @@ Dataset thường được đo bằng **đơn vị từ (token / 토큰) count**
 
 Xem thêm: [LLM Tokenization](./01_llm_tokenization.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Nhân quả (causal / 인과적) masking** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰) ngân sách (budget / 예산) và exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Teacher forcing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ngân sách token cho biết lượng tín hiệu mà mô hình nhận được; causal masking quy định tại mỗi vị trí tín hiệu nào được phép nhìn thấy. Từ giới hạn nhìn thấy này, ta có thể giải thích cách teacher forcing tạo mục tiêu huấn luyện.
 
 ## Nhân quả (causal / 인과적) masking
 
@@ -50,7 +50,7 @@ Trong mỗi chuỗi (sequence / 시퀀스), forward pass vẫn có thể xử l�
 
 Sự khác nhau này là lý do huấn luyện (training / 학습) thông lượng (throughput / 처리량) và generation độ trễ (latency / 지연 시간) có characteristics rất khác.
 
-> **Chuyển mạch:** Trong **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Teacher forcing** tiếp nhận điểm tựa từ **Nhân quả (causal / 인과적) masking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Packing và chuỗi (sequence / 시퀀스) construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mask xác định phạm vi ngữ cảnh, còn teacher forcing xác định token trước đó được dùng làm tín hiệu chuẩn. Khi đưa nhiều ví dụ vào cùng một batch, ta còn phải quyết định cách ghép các chuỗi và giữ đúng ranh giới của chúng.
 
 ## Teacher forcing
 
@@ -60,7 +60,7 @@ Nó làm tối ưu hóa (optimization / 최적화) ổn định và parallelizab
 
 Instruction tuning và preference huấn luyện (training / 학습) không loại bỏ hoàn toàn mismatch này.
 
-> **Chuyển mạch:** Ở chặng này của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Teacher forcing** xác định đầu vào; **Packing và chuỗi (sequence / 시퀀스) construction** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dữ liệu (data / 데이터) mixture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Teacher forcing tạo tín hiệu mục tiêu cho từng vị trí; sequence packing quyết định cách các tín hiệu đó được xếp vào batch mà không làm rò rỉ giữa những document khác nhau. Sau khi chuỗi đã được dựng, câu hỏi tiếp theo là những nguồn dữ liệu nào sẽ cùng góp vào quá trình học.
 
 ## Packing và chuỗi (sequence / 시퀀스) construction
 
@@ -74,7 +74,7 @@ O(n^2)
 
 Do đó ngữ cảnh (context / 맥락) length không phải một setting miễn phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Packing và chuỗi (sequence / 시퀀스) construction** nêu điều cần giải thích; **Dữ liệu (data / 데이터) mixture** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Deduplication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Packing tối ưu hạ tầng, nhưng không quyết định nội dung corpus. Nội dung đó được phân bổ qua data mixture; sau đó cần kiểm tra xem các nguồn có lặp lại quá nhiều hay không.
 
 ## Dữ liệu (data / 데이터) mixture
 
@@ -82,7 +82,7 @@ Một LLM tổng quát thường train trên mixture như natural ngôn ngữ (l
 
 Ví dụ tăng mã (code / 코드) dữ liệu (data / 데이터) có thể cải thiện programming và đôi khi lập luận (reasoning / 추론) có cấu trúc, nhưng nếu mixture mất cân bằng có thể làm giảm ngôn ngữ (language / 언어) chất lượng (quality / 품질) ở lĩnh vực (domain / 도메인) khác. Đây là một tối ưu hóa (optimization / 최적화) đa mục tiêu chứ không chỉ “càng nhiều dữ liệu (data / 데이터) càng tốt”.
 
-> **Chuyển mạch:** Trong **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Dữ liệu (data / 데이터) mixture** nêu điều cần giải thích; **Deduplication** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Memorization và generalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mixture quyết định mỗi năng lực được phơi nhiễm với những nguồn nào và ở trọng số nào. Deduplication tiếp tục câu chuyện đó bằng cách loại bớt lặp lại, để exposure phản ánh thông tin mới thay vì chỉ đếm bản sao.
 
 ## Deduplication
 
@@ -90,7 +90,7 @@ Duplicate dữ liệu (data / 데이터) làm mô hình (model / 모델) gặp c
 
 Dedup cũng quan trọng cho benchmark integrity. Nếu evaluation set hoặc near-duplicate của nó xuất hiện trong pretraining corpus, score không còn đo pure generalization.
 
-> **Chuyển mạch:** Ở chặng này của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Memorization và generalization** tiếp nhận điểm tựa từ **Deduplication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델), không tạo assistant hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deduplication giúp giảm việc học đi học lại cùng một chuỗi, nhưng không biến mô hình thành một hệ thống chỉ biết khái quát. Vì thế cần tách memorization khỏi generalization trước khi bàn về vai trò của base model.
 
 ## Memorization và generalization
 
@@ -106,7 +106,7 @@ vs
 model có thể reproduce training sequence cụ thể
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델), không tạo assistant hoàn chỉnh** tiếp nhận điểm tựa từ **Memorization và generalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Domain-adaptive pretraining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phân biệt memorization và generalization cho thấy base model học phân phối văn bản chứ chưa được huấn luyện để thực hiện một vai trò assistant ổn định. Nếu muốn đưa mô hình vào một lĩnh vực hẹp hơn, bước kế tiếp là continued hoặc domain-adaptive pretraining.
 
 ## Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델), không tạo assistant hoàn chỉnh
 
@@ -121,7 +121,7 @@ Cơ sở (base / 기반) mô hình (model / 모델) có thể tiếp tục theo 
 
 Instruction-following hành vi (behavior / 동작) thường được cải thiện qua supervised fine-tuning và preference tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Trong **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Domain-adaptive pretraining** tiếp nhận điểm tựa từ **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델), không tạo assistant hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pretraining và emergent năng lực (capability / 역량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Domain-adaptive pretraining thay đổi phân phối mà mô hình tiếp tục hấp thụ, nhưng cũng có thể làm thay đổi cách năng lực biểu hiện khi quy mô mô hình, dữ liệu và compute tăng. Đó là bối cảnh cần có khi đọc các tuyên bố về emergent capability.
 
 ## Domain-adaptive pretraining
 
@@ -131,7 +131,7 @@ Nó khác SFT. Continued pretraining vẫn tối ưu language-model mục tiêu 
 
 Continued pretraining hữu ích khi muốn mô hình (model / 모델) hấp thụ vocabulary và phân phối (distribution / 분포) chuyên ngành sâu hơn, nhưng có thể gây catastrophic forgetting nếu mixture quá hẹp hoặc học tập (learning / 학습) tỷ lệ (rate / 비율) quá cao.
 
-> **Chuyển mạch:** Ở chặng này của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Pretraining và emergent năng lực (capability / 역량)** tiếp nhận điểm tựa từ **Domain-adaptive pretraining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Năng lực trông như “emergent” thường là kết quả tương tác giữa dữ liệu, tối ưu hóa, kiến trúc và ngưỡng đánh giá. Một mental model ngắn gọn sẽ giúp giữ các yếu tố đó trong cùng một khung giải thích.
 
 ## Pretraining và emergent năng lực (capability / 역량)
 
@@ -139,13 +139,13 @@ Khi quy mô (scale / 규모) mô hình (model / 모델)/dữ liệu (data / 데�
 
 Một benchmark có thể trông như năng lực (capability / 역량) xuất hiện đột ngột chỉ vì score vượt một threshold, trong khi underlying hiệu năng (performance / 성능) tăng dần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Pretraining và emergent năng lực (capability / 역량)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Hãy giữ mô hình tư duy này như một câu hỏi kiểm tra: mô hình đang nén phân phối nào, qua mục tiêu nào, và giới hạn nào còn lại sau khi nén? Các ngộ nhận thường xuất hiện khi bỏ qua một trong ba câu hỏi đó.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Pretraining là quá trình **nén phân phối (distribution / 분포) của một corpus khổng lồ vào parameters** bằng mục tiêu (objective / 목표) dự đoán đơn vị từ (token / 토큰). mô hình (model / 모델) không học một encyclopedia có chỉ mục (index / 인덱스); nó học một hàm (function / 함수) tạo xác suất (probability / 확률) phân phối (distribution / 분포) dựa trên ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các ngộ nhận trên đều quay về một lỗi chung: đồng nhất việc mô hình học được quy luật thống kê với việc mô hình có một kho sự thật hoàn hảo. Phần liên kết kiến thức đặt pretraining cạnh các owner kỹ thuật liên quan để kiểm tra giả định đó.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -160,8 +160,6 @@ Nó đồng thời dạy cú pháp (syntax / 문법), style, mã (code / 코드)
 ### “Thêm dữ liệu (data / 데이터) luôn tốt”
 
 Low-quality, duplicated hoặc mismatched dữ liệu (data / 데이터) có thể làm mô hình (model / 모델) tệ hơn. dữ liệu (data / 데이터) chất lượng (quality / 품질) và mixture quan trọng như quantity.
-
-> **Chuyển mạch:** Ở chặng này của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

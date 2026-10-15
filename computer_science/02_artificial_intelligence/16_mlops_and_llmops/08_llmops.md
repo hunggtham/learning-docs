@@ -10,7 +10,7 @@ Vì vậy đơn vị cần phiên bản (version / 버전) hóa trong LLMOps kh�
 
 Nên đọc trước [RAG](../09_retrieval_and_rag/README.md), [Agent Systems](../10_agents_and_ai_systems/README.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Evaluation](../18_evaluation_reliability_interpretability/00_evaluation_foundations.md) và [Secure AI System Design](../19_ai_safety_security_alignment/08_secure_ai_system_design.md).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Hành vi (behavior / 동작) Bundle** tiếp nhận điểm tựa từ **Kiến thức tiên quyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lineage của một yêu cầu (request / 요청)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các kiến thức tiên quyết cung cấp nền tảng; trước hết cần xác định chính xác gói hành vi của ứng dụng LLM.
 
 ## Hành vi (behavior / 동작) Bundle
 
@@ -34,7 +34,7 @@ evaluation suite
 
 Chỉ cần một thành phần đổi, hành vi đầu-cuối có thể đổi dù mô hình (model / 모델) weights giữ nguyên.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Lineage của một yêu cầu (request / 요청)** tiếp nhận điểm tựa từ **Hành vi (behavior / 동작) Bundle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt Versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi gói hành vi đã được xác định, lineage của từng request cho biết thành phần nào đã tạo ra kết quả.
 
 ## Lineage của một yêu cầu (request / 요청)
 
@@ -54,7 +54,7 @@ evaluator/verifier version
 
 Lineage này giúp trả lời “tại sao hôm nay cùng câu hỏi lại ra kết quả khác tuần trước?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Prompt Versioning** tiếp nhận điểm tựa từ **Lineage của một yêu cầu (request / 요청)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Provider Drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Lineage chỉ hữu ích khi prompt cũng có vòng đời và phiên bản có thể truy nguyên.
 
 ## Prompt Versioning
 
@@ -71,7 +71,7 @@ draft
 
 Không nên sửa môi trường vận hành (production / 운영 환경) prompt trực tiếp trong UI mà không có kiểm tra (audit / 감사) trail. Prompt diff phải đi cùng kết quả evaluation để biết thay đổi nào tạo regression.
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Provider Drift** tiếp nhận điểm tựa từ **Prompt Versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản phát hành (release / 릴리스) dựa trên Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ngay cả prompt đã được version hóa vẫn có thể thay đổi hành vi khi provider cập nhật, nên bản phát hành phải dựa trên evaluation.
 
 ## Provider Drift
 
@@ -87,7 +87,7 @@ Khi có thể, nên pin phiên bản (version / 버전). Nếu không thể pin,
 
 Provider lớp trừu tượng (abstraction / 추상화) không loại bỏ drift; nó chỉ đổi nơi drift xuất hiện.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Bản phát hành (release / 릴리스) dựa trên Evaluation** tiếp nhận điểm tựa từ **Provider Drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Golden Set, Hidden Set và môi trường vận hành (production / 운영 환경) Set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Evaluation chỉ đáng tin khi bao phủ cả các trường hợp ổn định, trường hợp ẩn và tải thực tế.
 
 ## Bản phát hành (release / 릴리스) dựa trên Evaluation
 
@@ -106,7 +106,7 @@ cost
 
 Nên dùng deterministic validator cho thuộc tính (property / 속성) kiểm trực tiếp được, human/tham chiếu (reference / 참조) set cho chất lượng (quality / 품질) cần judgment và model-based evaluator khi đã hiểu độ lệch (bias / 편향) của evaluator.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Golden Set, Hidden Set và môi trường vận hành (production / 운영 환경) Set** tiếp nhận điểm tựa từ **Bản phát hành (release / 릴리스) dựa trên Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eval Tiering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ba loại set bổ trợ cho nhau; eval tiering quyết định khi nào cần chạy mỗi loại để cân bằng chi phí.
 
 ## Golden Set, Hidden Set và môi trường vận hành (production / 운영 환경) Set
 
@@ -118,7 +118,7 @@ Nên dùng deterministic validator cho thuộc tính (property / 속성) kiểm 
 
 Một hệ thống trưởng thành cần cả ba thay vì chỉ giữ một benchmark tĩnh.
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Eval Tiering** tiếp nhận điểm tựa từ **Golden Set, Hidden Set và môi trường vận hành (production / 운영 환경) Set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RAGOps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi evaluation đã được phân tầng, cần kiểm soát riêng vòng đời của dữ liệu và chỉ mục trong RAG.
 
 ## Eval Tiering
 
@@ -133,7 +133,7 @@ Tier 4: shadow/canary online
 
 Không cần chạy bộ đánh giá đắt nhất cho mọi thay đổi nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **RAGOps** tiếp nhận điểm tựa từ **Eval Tiering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục (index / 인덱스) Lineage và Freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+RAG có nhiều stage độc lập; vì vậy lineage và freshness của index phải được theo dõi như một phần của release.
 
 ## RAGOps
 
@@ -153,7 +153,7 @@ source ingestion
 
 Mọi stage có thể tạo regression. Ví dụ mô hình (model / 모델) không đổi nhưng parser mới làm mất heading, khiến chunking và retrieval giảm chất lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Chỉ mục (index / 인덱스) Lineage và Freshness** tiếp nhận điểm tựa từ **RAGOps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Retrieval Regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Biết nguồn gốc và độ mới của index vẫn chưa đủ; cần đo trực tiếp regression ở bước retrieval.
 
 ## Chỉ mục (index / 인덱스) Lineage và Freshness
 
@@ -169,7 +169,7 @@ index build hoàn tất khi nào?
 
 Chỉ mục (index / 인덱스) stale là thất bại (failure / 실패) môi trường vận hành (production / 운영 환경) ngay cả khi mô hình (model / 모델) endpoint hoàn toàn khỏe.
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Retrieval Regression** tiếp nhận điểm tựa từ **Chỉ mục (index / 인덱스) Lineage và Freshness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AgentOps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi retrieval được kiểm soát, phạm vi quan sát mở rộng sang trajectory và các side effect của agent.
 
 ## Retrieval Regression
 
@@ -187,7 +187,7 @@ Nên đo riêng:
 
 Xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **AgentOps** tiếp nhận điểm tựa từ **Retrieval Regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Durable dấu vết (trace / 추적) cho tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+AgentOps cần dấu vết bền vững để tái dựng các quyết định và chuyển trạng thái của tác nhân.
 
 ## AgentOps
 
@@ -205,7 +205,7 @@ verification
 
 Phiên bản (version / 버전) tác nhân (agent / 에이전트) phải bao gồm workflow đồ thị (graph / 그래프), công cụ (tool / 도구) lược đồ (schema / 스키마), trạng thái (state / 상태) chính sách (policy / 정책) và ngân sách (budget / 예산), không chỉ prompt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Durable dấu vết (trace / 추적) cho tác nhân (agent / 에이전트)** tiếp nhận điểm tựa từ **AgentOps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công cụ (tool / 도구) lược đồ (schema / 스키마) Evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trace cho biết điều gì đã xảy ra; tiếp theo cần kiểm soát hợp đồng của các công cụ mà tác nhân gọi.
 
 ## Durable dấu vết (trace / 추적) cho tác nhân (agent / 에이전트)
 
@@ -223,7 +223,7 @@ cost / latency
 
 Raw chain-of-thought không phải yêu cầu (requirement / 요구사항) vận hành; structured sự kiện (event / 이벤트) và quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터) mới là phần cần cho debugging/kiểm tra (audit / 감사).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Công cụ (tool / 도구) lược đồ (schema / 스키마) Evolution** tiếp nhận điểm tựa từ **Durable dấu vết (trace / 추적) cho tác nhân (agent / 에이전트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi schema của tool được quản lý như một API contract, vòng đời của bộ nhớ trở thành phụ thuộc tiếp theo cần version hóa.
 
 ## Công cụ (tool / 도구) lược đồ (schema / 스키마) Evolution
 
@@ -241,7 +241,7 @@ deprecation policy
 
 Công cụ (tool / 도구) đặc tả hợp đồng (contract / 계약) nên được quản lý giống normal Đặc tả API (API contract / API 계약).
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Công cụ (tool / 도구) lược đồ (schema / 스키마) Evolution** xác định đầu vào; **Bộ nhớ (memory / 메모리) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bộ nhớ đệm (cache / 캐시) và phiên bản (version / 버전) Awareness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bộ nhớ có trạng thái lâu dài nên cần chính sách ghi, sửa và xóa; cache lại cần thêm nhận thức về phiên bản.
 
 ## Bộ nhớ (memory / 메모리) vòng đời (lifecycle / 생명주기)
 
@@ -257,7 +257,7 @@ Persistent bộ nhớ (memory / 메모리) là một dữ liệu (data / 데이�
 
 Bộ nhớ (memory / 메모리) ghi (write / 쓰기) từ mô hình (model / 모델) không nên được coi là truth mặc định. Xem [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Bộ nhớ (memory / 메모리) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **Bộ nhớ đệm (cache / 캐시) và phiên bản (version / 버전) Awareness** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình (model / 모델) Routing và bản phát hành (release / 릴리스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cache phải phản ánh các phiên bản tạo nên kết quả; sau đó router mới có thể chọn model và release một cách có kiểm soát.
 
 ## Bộ nhớ đệm (cache / 캐시) và phiên bản (version / 버전) Awareness
 
@@ -275,7 +275,7 @@ tenant/user scope
 
 Nếu không, bản phát hành (release / 릴리스) mới có thể tiếp tục trả đầu ra (output / 출력) được tạo bởi hành vi (behavior / 동작) bundle cũ.
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Mô hình (model / 모델) Routing và bản phát hành (release / 릴리스)** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) và phiên bản (version / 버전) Awareness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰), chi phí (cost / 비용) và ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Routing làm thay đổi phân bổ tải và chi phí, vì vậy cần đo token, cost và budget theo tác vụ.
 
 ## Mô hình (model / 모델) Routing và bản phát hành (release / 릴리스)
 
@@ -283,7 +283,7 @@ Nếu app tuyến (route / 경로) yêu cầu (request / 요청) sang nhiều m�
 
 Một thay đổi nhỏ trong router có thể làm chi phí (cost / 비용) hoặc thất bại (failure / 실패) tỷ lệ (rate / 비율) tăng mạnh dù từng mô hình (model / 모델) không đổi.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Đơn vị từ (token / 토큰), chi phí (cost / 비용) và ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Mô hình (model / 모델) Routing và bản phát hành (release / 릴리스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ (latency / 지연 시간) Decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chi phí theo tác vụ cần được đọc cùng độ trễ từng stage để biết phần nào đang tạo ra bottleneck.
 
 ## Đơn vị từ (token / 토큰), chi phí (cost / 비용) và ngân sách (budget / 예산)
 
@@ -303,7 +303,7 @@ cost / task
 
 Với tác nhân (agent / 에이전트), `cost per successful task` có ý nghĩa hơn chi phí (cost / 비용) mỗi mô hình (model / 모델) lời gọi (call / 호출).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Độ trễ (latency / 지연 시간) Decomposition** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰), chi phí (cost / 비용) và ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) trong LLMOps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các trace về latency cũng giúp xác định nơi cần tối ưu, nhưng mọi tối ưu phải giữ nguyên các bất biến bảo mật.
 
 ## Độ trễ (latency / 지연 시간) Decomposition
 
@@ -321,7 +321,7 @@ queue time
 
 Nếu p99 tăng, decomposition giúp biết cần tối ưu mô hình (model / 모델), chỉ mục (index / 인덱스), công cụ (tool / 도구) hay sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Bảo mật (security / 보안) trong LLMOps** tiếp nhận điểm tựa từ **Độ trễ (latency / 지연 시간) Decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) Regression Suite** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các rủi ro đã xác định cần được chuyển thành regression scenario để trở thành một phần của release gate.
 
 ## Bảo mật (security / 보안) trong LLMOps
 
@@ -337,7 +337,7 @@ LLMOps phải theo dõi và kiểm thử:
 
 Document được retrieve là dữ liệu không đáng tin mặc định. hệ thống (system / 시스템) prompt không phải ranh giới bảo mật (security boundary / 보안 경계). Xem [Prompt Injection](../19_ai_safety_security_alignment/03_prompt_injection_and_jailbreaks.md).
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Bảo mật (security / 보안) Regression Suite** tiếp nhận điểm tựa từ **Bảo mật (security / 보안) trong LLMOps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monitoring và khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Regression suite cho biết hệ thống có giữ được bất biến hay không; monitoring sẽ cho biết chúng có bị phá vỡ trong môi trường vận hành hay không.
 
 ## Bảo mật (security / 보안) Regression Suite
 
@@ -352,7 +352,7 @@ attack case
 
 Ví dụ bất biến (invariant / 불변식): “công cụ (tool / 도구) ghi (write / 쓰기) không chạy nếu không có approval”, bất kể mô hình (model / 모델) đầu ra (output / 출력) nói gì.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Monitoring và khả năng quan sát (observability / 관측 가능성)** tiếp nhận điểm tựa từ **Bảo mật (security / 보안) Regression Suite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online chất lượng (quality / 품질) Signals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Trace vận hành cần được nối với các tín hiệu chất lượng online, nhất là khi ground truth chưa có ngay.
 
 ## Monitoring và khả năng quan sát (observability / 관측 가능성)
 
@@ -373,7 +373,7 @@ Mỗi span nên có độ trễ (latency / 지연 시간), chi phí (cost / 비�
 
 Không nên log raw prompt/công cụ (tool / 도구) kết quả (result / 결과) nhạy cảm mặc định; cần redaction, sampling và retention chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Online chất lượng (quality / 품질) Signals** tiếp nhận điểm tựa từ **Monitoring và khả năng quan sát (observability / 관측 가능성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation Drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các proxy online cần được kiểm định theo thời gian, vì chính eval suite cũng có thể drift.
 
 ## Online chất lượng (quality / 품질) Signals
 
@@ -389,7 +389,7 @@ Ground truth thường đến trễ. Có thể dùng:
 
 Proxy tín hiệu (signal / 신호) phải được hiểu là proxy, không phải ground truth tuyệt đối.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Evaluation Drift** tiếp nhận điểm tựa từ **Online chất lượng (quality / 품질) Signals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự cố (incident / 인시던트) và quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi evaluation phát hiện một cluster thất bại, sự cố cần được phân loại và gắn với kế hoạch quay lui phù hợp.
 
 ## Evaluation Drift
 
@@ -406,7 +406,7 @@ production issue
 → prevent regression
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Sự cố (incident / 인시던트) và quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **Evaluation Drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Canary và Shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Rollback là biện pháp khôi phục; canary và shadow giúp thu thập bằng chứng trước khi mở rộng bản phát hành.
 
 ## Sự cố (incident / 인시던트) và quay lui (rollback / 롤백)
 
@@ -424,7 +424,7 @@ Chỉ quay lui (rollback / 롤백) mô hình (model / 모델) có thể không �
 
 Xem [Incident Response](./09_incident_response_and_lifecycle.md).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Canary và Shadow** tiếp nhận điểm tựa từ **Sự cố (incident / 인시던트) và quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Canary và shadow giảm rủi ro nhưng thêm chi phí và độ phức tạp; đó là sự đánh đổi cần quản lý theo rủi ro.
 
 ## Canary và Shadow
 
@@ -434,7 +434,7 @@ Canary cho một phần traffic thật sử dụng candidate.
 
 Guardrail cần gồm chất lượng (quality / 품질), độ trễ (latency / 지연 시간), chi phí (cost / 비용) và bảo mật (security / 보안) tín hiệu (signal / 신호); không chỉ HTTP lỗi (error / 오류) tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Canary và Shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thất bại (failure / 실패) Modes phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các đánh đổi trên thường bộc lộ qua những failure mode lặp lại trong triển khai.
 
 ## Sự đánh đổi (trade-off / 트레이드오프)
 
@@ -442,7 +442,7 @@ LLMOps sâu làm tăng số sản phẩm tạo ra (artifact / 산출물), phiên
 
 Mục tiêu là tăng mức kiểm soát theo rủi ro (risk / 위험) và độ phức tạp (complexity / 복잡도) của ứng dụng (application / 애플리케이션), không xây nền tảng (platform / 플랫폼) nặng nề hơn nhu cầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Thất bại (failure / 실패) Modes phổ biến** tiếp nhận điểm tựa từ **Sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình triển khai LLMOps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những failure mode này có thể được đặt vào một mô hình triển khai khép kín để theo dõi từ build đến production.
 
 ## Thất bại (failure / 실패) Modes phổ biến
 
@@ -459,7 +459,7 @@ Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học.
 - tác nhân (agent / 에이전트) vòng lặp (loop / 루프) chi phí (cost / 비용) runaway;
 - quay lui (rollback / 롤백) chỉ đổi mô hình (model / 모델) nhưng không đổi prompt/chỉ mục (index / 인덱스).
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Mô hình triển khai LLMOps** tiếp nhận điểm tựa từ **Thất bại (failure / 실패) Modes phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chuỗi triển khai trên là mô hình tư duy để nối artifact, evaluation, quan sát và phản hồi thành một vòng đời.
 
 ## Mô hình triển khai LLMOps
 
@@ -480,7 +480,7 @@ Git / config registry
 
 Đây là một vòng phản hồi (feedback loop / 피드백 루프) vận hành, không phải chuỗi xử lý (pipeline / 파이프라인) một chiều.
 
-> **Chuyển mạch:** Ở chặng này của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Mô hình tư duy** gom các mảnh từ **Mô hình triển khai LLMOps** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Những nhầm lẫn sau đây kiểm tra xem mô hình vòng đời đó có bị giản lược quá mức hay không.
 
 ## Mô hình tư duy
 
@@ -488,7 +488,7 @@ Git / config registry
 
 Nếu không truy vết được mô hình (model / 모델) + prompt + retrieval + công cụ (tool / 도구) + chính sách (policy / 정책) đã tạo một đầu ra (output / 출력), hệ thống chưa thật sự reproducible ở cấp ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Phần liên kết kiến thức đặt LLMOps cạnh các nhánh RAG, agent, evaluation, reliability và security.
 
 ## Những nhầm lẫn thường gặp
 
@@ -508,7 +508,7 @@ Không. dấu vết (trace / 추적) còn cần cho evaluation, bảo mật (sec
 
 Không. Provider chỉ vận hành mô hình (model / 모델) endpoint; ứng dụng (application / 애플리케이션) vòng đời (lifecycle / 생명주기) vẫn thuộc trách nhiệm của bạn.
 
-> **Chuyển mạch:** Trong **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Các liên kết cuối chương giúp chọn nhánh học tiếp theo và giữ ranh giới của LLMOps.
 
 ## Liên kết kiến thức
 

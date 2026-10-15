@@ -227,7 +227,7 @@ Bạn có thể xác định cơ sở (base / 기반) đường dẫn (path / �
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** đặt vấn đề; **8. @source not và việc loại bỏ source không cần thiết** đối chiếu bằng chứng, rồi **9. source(none) và multiple Tailwind bundles** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. `@source not` và việc loại bỏ source không cần thiết
-Phần này nối mạch bài học với “8. `@source not` và việc loại bỏ source không cần thiết”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`@source not` loại trừ source không cần thiết; functional utilities tiếp theo chuyển từ content discovery sang cách utility biểu diễn behavior.
 
 ```css
 @source not "../src/legacy";
@@ -693,7 +693,7 @@ Một custom tiện ích (utility) tên `dashboard-card-primary` chứa bố c�
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **23. Functional tiện ích (utility)** nối từ **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** sang **24. Theme giá trị (value / 값) resolver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Functional tiện ích (utility)
-Phần này nối mạch bài học với “23. Functional tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Functional utility nhận giá trị và tạo rule theo contract; bare value resolver tiếp theo xử lý giá trị không cần token scale.
 
 ```css
 @utility tab-* {
@@ -752,7 +752,7 @@ map khóa–giá trị (map) tới theme đơn vị từ (token / 토큰).
 > **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **25. Bare giá trị (value) resolver** nối từ **24. Theme giá trị (value / 값) resolver** sang **26. giá trị tùy ý (arbitrary value) resolver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Bare giá trị (value) resolver
-Phần này nối mạch bài học với “25. Bare giá trị (value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Bare value resolver giữ giá trị nguyên dạng khi không cần theme token; arbitrary value resolver tiếp theo cho phép biểu diễn value cụ thể có chủ đích.
 
 ```css
 --value(integer)
@@ -775,7 +775,7 @@ Bare các giá trị (values) nên được giới hạn theo CSS/thuộc tính 
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **26. giá trị tùy ý (arbitrary value) resolver** nối từ **25. Bare giá trị (value) resolver** sang **27. Nhiều resolver trong cùng tiện ích (utility)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. giá trị tùy ý (arbitrary value) resolver
-Phần này nối mạch bài học với “26. giá trị tùy ý (arbitrary value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Arbitrary value resolver mở rộng ngoài token; nhiều resolver trong cùng utility tiếp theo kiểm tra cách một utility chọn giữa các kiểu input.
 
 ```css
 --value([integer])
@@ -799,7 +799,7 @@ Typed giá trị tùy ý (arbitrary value) giúp parser biết bạn muốn gì 
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **27. Nhiều resolver trong cùng tiện ích (utility)** nối từ **26. giá trị tùy ý (arbitrary value) resolver** sang **28. Transform giá trị (value / 값) theo nguồn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Nhiều resolver trong cùng tiện ích (utility)
-Phần này nối mạch bài học với “27. Nhiều resolver trong cùng tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Nhiều resolver cần precedence rõ để utility không mơ hồ; variant stacking tiếp theo ghép state, breakpoint và parent condition thành selector.
 
 ```css
 @utility tab-* {
@@ -937,7 +937,7 @@ Một biến thể (variant) vì vậy có thể được hiểu như **hàm (fu
 > **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **34. biến thể (variant) stacking** nối từ **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** sang **35. @custom-variant là reusable điều kiện (condition / 조건) API**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. biến thể (variant) stacking
-Phần này nối mạch bài học với “34. biến thể (variant) stacking”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Variant stacking tạo selector theo chuỗi điều kiện; class order trong HTML không bảo đảm winner vì cascade layer và specificity mới quyết định.
 
 ```text
 dark:md:hover:bg-blue-600
@@ -1039,7 +1039,7 @@ V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind biến thể (varian
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **38. Vì sao class order trong HTML không đảm bảo winner?** nối từ **37. @variant trong custom CSS** sang **39. Conflict-aware merge libraries giải quyết vấn đề gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Vì sao class order trong HTML không đảm bảo winner?
-Phần này nối mạch bài học với “38. Vì sao class order trong HTML không đảm bảo winner?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Cascade layer và specificity giải thích winner thay vì vị trí class; runtime color tiếp theo chuyển theme value từ build-time sang CSS variable.
 
 ```html
 <div class="px-2 px-4">
@@ -1299,7 +1299,7 @@ Lớp (class / 클래스) remains static, giá trị (value / 값) thời gian c
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** đặt vấn đề; **51. thời gian chạy (runtime) color** đối chiếu bằng chứng, rồi **52. Khi nào inline style vẫn hoàn toàn hợp lý?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 51. thời gian chạy (runtime) color
-Phần này nối mạch bài học với “51. thời gian chạy (runtime) color”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Runtime color dựa trên variable và token boundary; utility-pair dark mode tiếp theo mô tả cách hai utility phối hợp theo theme mà không che semantics.
 
 ```jsx
 <div
@@ -1358,7 +1358,7 @@ Tailwind không bypass Content bảo mật (security / 보안) chính sách (pol
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **54. Utility-pair dark mode** nối từ **53. CSP** sang **55. Khi dark pairs bắt đầu lặp quá nhiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Utility-pair dark mode
-Phần này nối mạch bài học với “54. Utility-pair dark mode”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Dark mode utility-pair chỉ giải quyết presentation state; ARIA semantic contract tiếp theo nhắc rằng style không thay thế accessibility semantics.
 
 ```html
 <div
@@ -1436,7 +1436,7 @@ Tailwind generated CSS không thể tự quyết định persisted app preferenc
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **57. ARIA là mang tính ngữ nghĩa (semantic) contract** nối từ **56. FOUC** sang **58. Data attribute là presentation/application trạng thái (state) hook**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. ARIA là mang tính ngữ nghĩa (semantic) contract
-Phần này nối mạch bài học với “57. ARIA là mang tính ngữ nghĩa (semantic) contract”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+ARIA giữ semantic contract cho assistive technology; data attribute tiếp theo làm state hook để nối application state với selector mà không biến CSS thành owner logic.
 
 ```text
 aria-expanded
@@ -1455,7 +1455,7 @@ Nếu trạng thái (state / 상태) chỉ là “loading skeleton visible”, d
 > **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **58. Data attribute là presentation/application trạng thái (state) hook** nối từ **57. ARIA là mang tính ngữ nghĩa (semantic) contract** sang **59. Group quyền sở hữu (ownership / 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Data attribute là presentation/application trạng thái (state) hook
-Phần này nối mạch bài học với “58. Data attribute là presentation/application trạng thái (state) hook”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Data attribute nối state với styling selector; arbitrary variants tiếp theo phù hợp khi integration nhỏ cần bám vào markup hoặc host constraint cụ thể.
 
 ```html
 <div
@@ -1556,7 +1556,7 @@ Không dùng `:has()` để suy nghiệp vụ (business / 비즈니스) trạng 
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** nối từ **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** sang **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ
-Phần này nối mạch bài học với “63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Arbitrary variants hữu ích ở integration boundary nhỏ; `@apply` tiếp theo cần giữ ở layer có ownership rõ thay vì dùng để tái tạo toàn bộ component system.
 
 ```text
 [&_.vendor-item]:p-2
@@ -1597,7 +1597,7 @@ và viết normal CSS hoặc `@apply` targeted.
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **65. @apply ở integration layer** nối từ **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** sang **66. @reference trong isolated style contexts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. `@apply` ở integration layer
-Phần này nối mạch bài học với “65. `@apply` ở integration layer”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`@apply` nên nằm ở integration layer có lý do; `@config` tiếp theo đóng vai trò migration bridge khi chuyển giữa cấu hình cũ và v4.
 
 ```css
 .vendor-dropdown {
@@ -1922,7 +1922,7 @@ Nếu sản phẩm (product / 제품) còn hỗ trợ trình duyệt (browser / 
 > **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **84. @config như chuyển đổi (migration) bridge** nối từ **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** sang **85. Custom plugin chuyển đổi (migration)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. `@config` như chuyển đổi (migration) bridge
-Phần này nối mạch bài học với “84. `@config` như chuyển đổi (migration) bridge”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+`@config` giúp migration có điểm tựa tạm thời; unique arbitrary values tiếp theo kiểm tra cách tránh tạo token giả cho một giá trị chỉ dùng một lần.
 
 ```css
 @config "../../tailwind.config.js";
@@ -2001,7 +2001,7 @@ V4 được tối ưu mạnh cho incremental generation, nhưng monorepo/file-wa
 > **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **89. Unique các giá trị tùy ý (arbitrary values)** nối từ **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** sang **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. Unique các giá trị tùy ý (arbitrary values)
-Phần này nối mạch bài học với “89. Unique các giá trị tùy ý (arbitrary values)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+Unique arbitrary values khép chuỗi resolver và token design: dùng value một lần khi boundary cần nó, nhưng đừng biến ngoại lệ thành hệ thống token không có owner.
 
 ```text
 top-[117px]

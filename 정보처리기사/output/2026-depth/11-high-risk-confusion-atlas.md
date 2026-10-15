@@ -25,7 +25,7 @@ Một hệ thống (system / 시스템) có thể xác minh (verification / 확�
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)** tiếp nhận điểm tựa từ **1.1 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.3 DFD vs Flowchart** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt **1.1 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증)** bằng câu hỏi “đúng đặc tả hay đúng nhu cầu”, chuyển sang **1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)** để xem yêu cầu được mô tả theo hành vi hay theo ràng buộc chất lượng.
 
 ## 1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)
 
@@ -45,7 +45,7 @@ Câu có động từ chưa chắc functional. Nếu năng lực (capability / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)** xác định đầu vào; **1.3 DFD vs Flowchart** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi đã biết một yêu cầu nói về năng lực hay ràng buộc, hãy chuyển sang **1.3 DFD vs Flowchart** để tách luồng dữ liệu khỏi luồng điều khiển; tiêu chí đó chuẩn bị cho việc đọc các sơ đồ tương tác tiếp theo.
 
 ## 1.3 DFD vs Flowchart
 
@@ -59,7 +59,7 @@ Cả hai đều có “mũi tên” và “tiến trình (process / 프로세스
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.3 DFD vs Flowchart** xác định đầu vào; **1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1.5 Aggregation vs Composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.3 DFD vs Flowchart** vừa tách dữ liệu khỏi điều khiển; **1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram** tiếp tục tách thông điệp theo thời gian khỏi workflow và nhánh xử lý.
 
 ## 1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram
 
@@ -74,7 +74,7 @@ Cả hai đều có “mũi tên” và “tiến trình (process / 프로세스
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram** xác định đầu vào; **1.5 Aggregation vs Composition** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1.6 Cohesion vs Coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt sơ đồ mô tả thông điệp với sơ đồ mô tả workflow, chuyển sang **1.5 Aggregation vs Composition** để hỏi quan hệ whole–part có sở hữu vòng đời hay không.
 
 ## 1.5 Aggregation vs Composition
 
@@ -88,7 +88,7 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.6 Cohesion vs Coupling** tiếp nhận điểm tựa từ **1.5 Aggregation vs Composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.5 Aggregation vs Composition** đã xác định mức gắn kết giữa whole và part; **1.6 Cohesion vs Coupling** mở rộng câu hỏi đó vào chất lượng bên trong một module và mức phụ thuộc giữa các module.
 
 ## 1.6 Cohesion vs Coupling
 
@@ -102,7 +102,7 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.6 Cohesion vs Coupling** nêu điều cần giải thích; **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ phân biệt “gắn kết bên trong” và “phụ thuộc bên ngoài” ở **1.6 Cohesion vs Coupling**, chuyển sang **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** để nhận diện mức dữ liệu thực sự được truyền qua lời gọi.
 
 ## 1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling
 
@@ -118,7 +118,7 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** nêu điều cần giải thích; **1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **1.9 SRP vs ISP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** hỏi “truyền đúng dữ liệu hay cả cấu trúc”; **1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling** hỏi thêm liệu tham số có điều khiển nhánh nội bộ hay chỉ mang giá trị.
 
 ## 1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling
 
@@ -133,7 +133,7 @@ process(order, mode='X')   → có thể control coupling nếu mode điều khi
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling** nêu điều cần giải thích; **1.9 SRP vs ISP** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **1.10 OCP vs DIP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt tham số dữ liệu với tham số điều khiển ở **1.8**, chuyển sang **1.9 SRP vs ISP** để tách hai loại áp lực thiết kế: lý do một module thay đổi và interface buộc client phụ thuộc.
 
 ## 1.9 SRP vs ISP
 
@@ -147,7 +147,7 @@ Giao diện (interface / 인터페이스) 25 methods nhưng một máy khách (c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.10 OCP vs DIP** tiếp nhận điểm tựa từ **1.9 SRP vs ISP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.9 SRP vs ISP** đã tách trách nhiệm thay đổi khỏi bề rộng interface; **1.10 OCP vs DIP** chuyển sang câu hỏi về khả năng mở rộng và hướng phụ thuộc giữa chính sách với hiện thực.
 
 ## 1.10 OCP vs DIP
 
@@ -159,7 +159,7 @@ Phụ thuộc (dependency / 의존성) Injection thường giúp DIP nhưng khô
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** tiếp nhận điểm tựa từ **1.10 OCP vs DIP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.12 Adapter vs Facade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mục tiêu mở rộng và đảo chiều phụ thuộc ở **1.10 OCP vs DIP**, chuyển sang **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** để nhận diện hành vi đổi vì thuật toán được chọn hay vì trạng thái nội bộ.
 
 ## 1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)
 
@@ -175,7 +175,7 @@ Cấu trúc lớp (class / 클래스) có thể rất giống nhau.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.12 Adapter vs Facade** tiếp nhận điểm tựa từ **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.13 Decorator vs Proxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** vừa phân biệt nguồn của hành vi; **1.12 Adapter vs Facade** đổi trọng tâm sang mục đích của lớp trung gian: sửa lệch interface hay đơn giản hóa subsystem.
 
 ## 1.12 Adapter vs Facade
 
@@ -189,7 +189,7 @@ Nếu nói “máy khách (client / 클라이언트) phải gọi 7 subsystem v�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.13 Decorator vs Proxy** tiếp nhận điểm tựa từ **1.12 Adapter vs Facade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.14 Factory phương thức (method / 메서드) vs Abstract Factory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt adapter sửa tương thích và facade giảm độ phức tạp, chuyển sang **1.13 Decorator vs Proxy** để hỏi wrapper đang thêm trách nhiệm hay kiểm soát truy cập.
 
 ## 1.13 Decorator vs Proxy
 
@@ -203,7 +203,7 @@ Hỏi: wrapper nhằm **thêm chức năng** hay **kiểm soát truy cập (acce
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.14 Factory phương thức (method / 메서드) vs Abstract Factory** tiếp nhận điểm tựa từ **1.13 Decorator vs Proxy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.15 Wireframe vs Mockup vs Prototype** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1.13 Decorator vs Proxy** kết thúc nhóm wrapper bằng tiêu chí “thêm chức năng hay kiểm soát truy cập”; **1.14 Factory phương thức (method / 메서드) vs Abstract Factory** chuyển sang quy mô của việc tạo sản phẩm.
 
 ## 1.14 Factory phương thức (method / 메서드) vs Abstract Factory
 
@@ -213,7 +213,7 @@ Hỏi: wrapper nhằm **thêm chức năng** hay **kiểm soát truy cập (acce
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **1.15 Wireframe vs Mockup vs Prototype** tiếp nhận điểm tựa từ **1.14 Factory phương thức (method / 메서드) vs Abstract Factory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách factory tạo một sản phẩm khỏi factory tạo cả họ sản phẩm, **1.15 Wireframe vs Mockup vs Prototype** đưa cùng thói quen phân biệt theo mức độ tương tác vào artefact thiết kế; từ đó chuyển sang cấu trúc dữ liệu của Môn 2.
 
 ## 1.15 Wireframe vs Mockup vs Prototype
 
@@ -229,7 +229,7 @@ Câu hỏi “kiểm thử (test / 테스트) tương tác (interaction / 상호
 
 # 2. Môn 2 — 소프트웨어 개발
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **1.15 Wireframe vs Mockup vs Prototype** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.2 BFS vs DFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ mức độ tương tác của prototype, chuyển sang **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** để phân biệt hai quy tắc lấy phần tử: LIFO và FIFO; đó là nền cho cách duyệt đồ thị ở mục sau.
 
 ## 2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)
 
@@ -241,7 +241,7 @@ Không chỉ nhớ acronym: hãy dấu vết (trace / 추적) push/pop hoặc en
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.2 BFS vs DFS** tiếp nhận điểm tựa từ **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.3 BST vs vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** cung cấp cơ chế lưu vết; **2.2 BFS vs DFS** dùng hàng đợi hoặc ngăn xếp để tạo thứ tự duyệt khác nhau, rồi bàn giao sang cấu trúc cây.
 
 ## 2.2 BFS vs DFS
 
@@ -251,7 +251,7 @@ DFS đi sâu trước; mạnh trong traversal, connectivity, cycle/topological l
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.3 BST vs vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **2.2 BFS vs DFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi thấy thứ tự duyệt thay đổi theo cấu trúc lưu vết, **2.3 BST vs vùng nhớ động (heap / 힙)** tách hai mục tiêu thường bị nhầm: tìm kiếm theo thứ tự khóa và giữ phần tử ưu tiên.
 
 ## 2.3 BST vs vùng nhớ động (heap / 힙)
 
@@ -263,7 +263,7 @@ Min-heap lấy minimum hiệu quả nhưng tìm kiếm (search / 검색) arbitra
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup** tiếp nhận điểm tựa từ **2.3 BST vs vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.5 Quick Sort vs Merge Sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.3 BST vs vùng nhớ động (heap / 힙)** đã tách thứ tự khóa khỏi ưu tiên; **2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup** tiếp tục hỏi dữ liệu được tìm nhờ thứ tự hay nhờ hàm băm.
 
 ## 2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup
 
@@ -273,7 +273,7 @@ Băm (hash / 해시) lookup average-case có thể gần O(1), nhưng không t�
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.5 Quick Sort vs Merge Sort** tiếp nhận điểm tựa từ **2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.6 Stub vs Driver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt lookup dựa trên thứ tự với lookup dựa trên hash, **2.5 Quick Sort vs Merge Sort** chuyển sang bài toán sắp xếp và cách mỗi thuật toán đánh đổi pivot, bộ nhớ và tính ổn định.
 
 ## 2.5 Quick Sort vs Merge Sort
 
@@ -285,7 +285,7 @@ Merge Sort worst O(n log n), stable trong hiện thực (implementation / 구현
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.6 Stub vs Driver** tiếp nhận điểm tựa từ **2.5 Quick Sort vs Merge Sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.7 Black-box vs White-box** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.5 Quick Sort vs Merge Sort** kết thúc nhóm thuật toán bằng cách đọc theo điều kiện và chi phí; **2.6 Stub vs Driver** áp dụng cách hỏi đó vào thành phần giả lập: bên cung cấp lời gọi hay bên gọi thành phần.
 
 ## 2.6 Stub vs Driver
 
@@ -297,7 +297,7 @@ Mô hình tư duy (mental model / 사고 모델): stub giả người **bị g�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.7 Black-box vs White-box** tiếp nhận điểm tựa từ **2.6 Stub vs Driver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi biết stub và driver đứng ở hai phía khác nhau của lời gọi kiểm thử, **2.7 Black-box vs White-box** chuyển trọng tâm sang nguồn quan sát: chỉ nhìn đầu vào–đầu ra hay theo dõi cấu trúc bên trong.
 
 ## 2.7 Black-box vs White-box
 
@@ -311,7 +311,7 @@ Statement/Branch/đường dẫn (path / 경로) Coverage → white-box.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.7 Black-box vs White-box** đã nêu tiêu chí phân biệt, còn **2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **2.9 Retest vs Regression kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.7 Black-box vs White-box** xác định cách quan sát; **2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)** dùng quan sát theo đầu vào để chọn lớp tương đương và các điểm biên có nguy cơ sai.
 
 ## 2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)
 
@@ -321,7 +321,7 @@ Ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis /
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)** đã nêu tiêu chí phân biệt, còn **2.9 Retest vs Regression kiểm thử (test / 테스트)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **2.10 Alpha vs Beta kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi chọn lớp giá trị và điểm biên, chuyển sang **2.9 Retest vs Regression kiểm thử (test / 테스트)** để phân biệt chạy lại lỗi đã sửa với kiểm tra ảnh hưởng lan sang chức năng khác.
 
 ## 2.9 Retest vs Regression kiểm thử (test / 테스트)
 
@@ -333,7 +333,7 @@ Một bản phát hành (release / 릴리스) có thể cần cả hai.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.10 Alpha vs Beta kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **2.9 Retest vs Regression kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.9 Retest vs Regression kiểm thử (test / 테스트)** phân biệt mục tiêu của lần chạy; **2.10 Alpha vs Beta kiểm thử (test / 테스트)** chuyển sang bối cảnh người dùng và mức hoàn thiện của sản phẩm trước phát hành.
 
 ## 2.10 Alpha vs Beta kiểm thử (test / 테스트)
 
@@ -343,7 +343,7 @@ Beta thường do bên ngoài (external / 외부)/real users trong môi trườn
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** tiếp nhận điểm tựa từ **2.10 Alpha vs Beta kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt alpha và beta theo mức độ kiểm thử, **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** tách danh tính của artefact khỏi tập thiết lập tạo ra nó.
 
 ## 2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management
 
@@ -355,7 +355,7 @@ Git là công cụ (tool / 도구) quan trọng nhưng không phải toàn bộ 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)** tiếp nhận điểm tựa từ **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.13 Checksum/băm (hash / 해시) vs Digital Signature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** đã tách mã nguồn khỏi thiết lập; **2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)** theo dõi artefact từ lúc tạo đến lúc giao cho người dùng.
 
 ## 2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)
 
@@ -367,7 +367,7 @@ Git là công cụ (tool / 도구) quan trọng nhưng không phải toàn bộ 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **2.13 Checksum/băm (hash / 해시) vs Digital Signature** tiếp nhận điểm tựa từ **2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.1 Super Key vs Candidate Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt build, package và release theo vòng đời artefact, **2.13 Checksum/băm (hash / 해시) vs Digital Signature** hỏi tiếp cách kiểm tra toàn vẹn và xác thực nguồn; rồi chuyển sang khóa trong cơ sở dữ liệu.
 
 ## 2.13 Checksum/băm (hash / 해시) vs Digital Signature
 
@@ -381,7 +381,7 @@ Biết băm (hash / 해시) đúng không tự nói **ai** tạo gói (package /
 
 # 3. Môn 3 — 데이터베이스 구축
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.1 Super Key vs Candidate Key** tiếp nhận điểm tựa từ **2.13 Checksum/băm (hash / 해시) vs Digital Signature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.2 Candidate Key vs Primary Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ kiểm tra toàn vẹn và xác thực artefact ở **2.13**, chuyển sang **3.1 Super Key vs Candidate Key** để phân biệt một tập thuộc tính đủ nhận diện với tập đủ nhận diện tối thiểu.
 
 ## 3.1 Super Key vs Candidate Key
 
@@ -393,7 +393,7 @@ Primary Key chỉ là candidate key được chọn làm key chính.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.2 Candidate Key vs Primary Key** tiếp nhận điểm tựa từ **3.1 Super Key vs Candidate Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.3 Selection vs Projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.1 Super Key vs Candidate Key** đã xác định tính tối thiểu; **3.2 Candidate Key vs Primary Key** hỏi tiếp trong các candidate key, khóa nào được chọn làm định danh chính của bảng.
 
 ## 3.2 Candidate Key vs Primary Key
 
@@ -403,7 +403,7 @@ Các candidate key còn lại thường gọi alternate keys theo terminology tr
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.3 Selection vs Projection** tiếp nhận điểm tựa từ **3.2 Candidate Key vs Primary Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách candidate key khỏi primary key, **3.3 Selection vs Projection** chuyển sang đại số quan hệ: lọc hàng theo điều kiện hay chọn cột theo thuộc tính.
 
 ## 3.3 Selection vs Projection
 
@@ -415,7 +415,7 @@ Projection — π — chọn **column/attribute**.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **3.3 Selection vs Projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.5 3NF vs BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.3 Selection vs Projection** tách thao tác trên hàng và cột; **3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)** tách cách thuộc tính phụ thuộc vào khóa để chuẩn hóa quan hệ.
 
 ## 3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)
 
@@ -427,7 +427,7 @@ Transitive phụ thuộc (dependency / 의존성): key → non-key A → non-key
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.5 3NF vs BCNF** tiếp nhận điểm tựa từ **3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện partial và transitive dependency, **3.5 3NF vs BCNF** cho thấy hai mức chuẩn hóa khác nhau ở điều kiện mọi determinant có phải là super key hay không.
 
 ## 3.5 3NF vs BCNF
 
@@ -439,7 +439,7 @@ Nếu đề chỉ dùng ví dụ cơ bản, cả hai có thể cho cùng decompo
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.5 3NF vs BCNF** nêu điều cần giải thích; **3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.5 3NF vs BCNF** xử lý phụ thuộc ở mức logic; **3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** chuyển câu hỏi sang cách mô hình được triển khai trên hệ thống.
 
 ## 3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
@@ -451,7 +451,7 @@ Truy vấn (query / 쿼리) chậm vì thiếu chỉ mục (index / 인덱스) l
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** nêu điều cần giải thích; **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3.8 Cardinality vs Selectivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách thiết kế logic khỏi bố trí vật lý, **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** so sánh hai cách lập chỉ mục theo kiểu truy vấn và mẫu phân bố khóa.
 
 ## 3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)
 
@@ -463,7 +463,7 @@ Nếu predicate `created_at BETWEEN ...` → B+cây (tree / 트리) thường t�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.8 Cardinality vs Selectivity** tiếp nhận điểm tựa từ **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.9 WHERE vs HAVING** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** cho biết cấu trúc index; **3.8 Cardinality vs Selectivity** bổ sung cách đánh giá có bao nhiêu giá trị và bộ lọc loại được bao nhiêu dòng.
 
 ## 3.8 Cardinality vs Selectivity
 
@@ -475,7 +475,7 @@ Column gender có cardinality thấp; `user_id` thường cardinality cao.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.9 WHERE vs HAVING** tiếp nhận điểm tựa từ **3.8 Cardinality vs Selectivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.10 COUNT() vs COUNT(column)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi hiểu selectivity là sức lọc, **3.9 WHERE vs HAVING** đặt phép lọc vào đúng thời điểm: trước grouping hay sau khi nhóm đã được tạo.
 
 ## 3.9 WHERE vs HAVING
 
@@ -487,7 +487,7 @@ HAVING lọc group sau aggregate.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.10 COUNT() vs COUNT(column)** tiếp nhận điểm tựa từ **3.9 WHERE vs HAVING** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.9 WHERE vs HAVING** đã phân biệt lọc trước và sau grouping; **3.10 COUNT() vs COUNT(column)** tiếp tục kiểm tra dữ liệu nào được tính, đặc biệt khi có `NULL`.
 
 ## 3.10 COUNT(*) vs COUNT(column)
 
@@ -499,7 +499,7 @@ Trong LEFT phép nối (join / 조인) unmatched row, khác biệt này dễ xu�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** tiếp nhận điểm tựa từ **3.10 COUNT() vs COUNT(column)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.12 NULL vs Empty String vs 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt `COUNT(*)` với `COUNT(column)`, chuyển sang **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** để xem việc giữ hay loại dòng không khớp thay đổi kết quả đếm ra sao.
 
 ## 3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)
 
@@ -511,7 +511,7 @@ Nếu yêu cầu (requirement / 요구사항) là “show all customers kể c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.12 NULL vs Empty String vs 0** tiếp nhận điểm tựa từ **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.13 Dirty Read vs Non-repeatable Read vs Phantom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** làm lộ các dòng thiếu phía đối tác; **3.12 NULL vs Empty String vs 0** giúp phân biệt “không có giá trị” với chuỗi rỗng và số không.
 
 ## 3.12 NULL vs Empty String vs 0
 
@@ -523,7 +523,7 @@ Comparison với NULL dùng `IS NULL`, không dùng `= NULL` trong SQL chuẩn.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.13 Dirty Read vs Non-repeatable Read vs Phantom** tiếp nhận điểm tựa từ **3.12 NULL vs Empty String vs 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.14 Deadlock vs Lost cập nhật (update / 업데이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách ba trạng thái giá trị ở **3.12**, **3.13 Dirty Read vs Non-repeatable Read vs Phantom** chuyển sang ba kiểu bất nhất do giao dịch quan sát dữ liệu ở các thời điểm khác nhau.
 
 ## 3.13 Dirty Read vs Non-repeatable Read vs Phantom
 
@@ -537,7 +537,7 @@ Phantom: cùng predicate truy vấn (query / 쿼리) ra set row khác vì insert
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.14 Deadlock vs Lost cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **3.13 Dirty Read vs Non-repeatable Read vs Phantom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.15 Serial vs Serializable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.13 Dirty Read vs Non-repeatable Read vs Phantom** mô tả lỗi đọc; **3.14 Deadlock vs Lost cập nhật (update / 업데이트)** chuyển sang lỗi phối hợp khi giao dịch giữ khóa hoặc ghi đè cùng dữ liệu.
 
 ## 3.14 Deadlock vs Lost cập nhật (update / 업데이트)
 
@@ -549,7 +549,7 @@ Cả hai là tính đồng thời (concurrency / 동시성) bài toán (problem 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.15 Serial vs Serializable** tiếp nhận điểm tựa từ **3.14 Deadlock vs Lost cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.16 Undo vs Redo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách deadlock khỏi lost update, **3.15 Serial vs Serializable** hỏi mức cô lập cần đạt: thực thi tuần tự thật hay chỉ tương đương với một thứ tự tuần tự.
 
 ## 3.15 Serial vs Serializable
 
@@ -561,7 +561,7 @@ Conflict-serializable không đồng nghĩa schedule phải visually serial.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.16 Undo vs Redo** tiếp nhận điểm tựa từ **3.15 Serial vs Serializable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.17 Backup vs Checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.15 Serial vs Serializable** chốt tiêu chí đúng của lịch giao dịch; **3.16 Undo vs Redo** chuyển sang cơ chế khôi phục: hoàn tác tác động chưa commit hay áp lại tác động đã commit.
 
 ## 3.16 Undo vs Redo
 
@@ -573,7 +573,7 @@ WAL/log chuỗi (sequence / 시퀀스) quyết định khôi phục (recovery / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.17 Backup vs Checkpoint** tiếp nhận điểm tựa từ **3.16 Undo vs Redo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt Undo và Redo theo hướng phục hồi log, **3.17 Backup vs Checkpoint** tách bản sao dùng để khôi phục thảm họa khỏi điểm mốc giúp engine rút ngắn việc phục hồi, rồi mở sang Môn 4.
 
 ## 3.17 Backup vs Checkpoint
 
@@ -587,7 +587,7 @@ Checkpoint không thay backup.
 
 # 4. Môn 4 — 프로그래밍 언어 활용
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **3.17 Backup vs Checkpoint** xác định đầu vào; **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4.2 tính đồng thời (concurrency / 동시성) vs Parallelism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3.17 Backup vs Checkpoint** khép nhóm phục hồi dữ liệu; **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** chuyển sang đơn vị thực thi, tách tài nguyên riêng của process khỏi trạng thái dùng chung của thread.
 
 ## 4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)
 
@@ -599,7 +599,7 @@ Luồng thực thi (thread / 스레드) nhẹ hơn về communication/ngữ cả
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** xác định đầu vào; **4.2 tính đồng thời (concurrency / 동시성) vs Parallelism** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4.3 Mutex vs Semaphore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** tách tài nguyên riêng khỏi trạng thái dùng chung; **4.2 tính đồng thời (concurrency / 동시성) vs Parallelism** hỏi các tác vụ chỉ chồng lấn tiến độ hay thực sự chạy cùng lúc.
 
 ## 4.2 tính đồng thời (concurrency / 동시성) vs Parallelism
 
@@ -611,7 +611,7 @@ Single-core vòng lặp sự kiện (event loop / 이벤트 루프) có tính đ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.3 Mutex vs Semaphore** tiếp nhận điểm tựa từ **4.2 tính đồng thời (concurrency / 동시성) vs Parallelism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.4 Race điều kiện (condition / 조건) vs Deadlock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt concurrency với parallelism, **4.3 Mutex vs Semaphore** chuyển sang công cụ điều phối: khóa có ownership để loại trừ hay bộ đếm cho phép nhiều holder.
 
 ## 4.3 Mutex vs Semaphore
 
@@ -623,7 +623,7 @@ Nhị phân (binary / 이진) semaphore có thể giống mutex ở vài use tr�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.4 Race điều kiện (condition / 조건) vs Deadlock** tiếp nhận điểm tựa từ **4.3 Mutex vs Semaphore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.5 Deadlock Prevention vs Avoidance vs Detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.3 Mutex vs Semaphore** cho biết cơ chế cấp quyền; **4.4 Race điều kiện (condition / 조건) vs Deadlock** kiểm tra hệ quả khi đồng bộ thiếu: kết quả sai do tranh chấp hay hệ thống mắc kẹt chờ nhau.
 
 ## 4.4 Race điều kiện (condition / 조건) vs Deadlock
 
@@ -635,7 +635,7 @@ Race có thể cho kết quả (result / 결과) sai nhưng chương trình vẫ
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.5 Deadlock Prevention vs Avoidance vs Detection** tiếp nhận điểm tựa từ **4.4 Race điều kiện (condition / 조건) vs Deadlock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.6 FCFS vs SJF vs Round Robin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách race condition khỏi deadlock, **4.5 Deadlock Prevention vs Avoidance vs Detection** phân biệt ba thời điểm can thiệp: ngăn điều kiện, tránh trạng thái không an toàn, hay phát hiện sau khi xảy ra.
 
 ## 4.5 Deadlock Prevention vs Avoidance vs Detection
 
@@ -647,7 +647,7 @@ Detection: cho phép deadlock xảy ra rồi phát hiện và recover.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.6 FCFS vs SJF vs Round Robin** tiếp nhận điểm tựa từ **4.5 Deadlock Prevention vs Avoidance vs Detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.5 Deadlock Prevention vs Avoidance vs Detection** khép nhóm an toàn đồng thời; **4.6 FCFS vs SJF vs Round Robin** chuyển sang chính sách lập lịch và cách nó ưu tiên công việc.
 
 ## 4.6 FCFS vs SJF vs Round Robin
 
@@ -659,7 +659,7 @@ Round Robin → thời gian (time / 시간) quantum, preemptive/time-sharing, s�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** tiếp nhận điểm tựa từ **4.6 FCFS vs SJF vs Round Robin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.8 Paging vs Segmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi chọn thuật toán lịch, **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** tách các thước đo kết quả: chờ đến lượt, hoàn tất toàn bộ hay phản hồi lần đầu.
 
 ## 4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)
 
@@ -673,7 +673,7 @@ Một tiến trình (process / 프로세스) có phản hồi (response / 응답
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.8 Paging vs Segmentation** tiếp nhận điểm tựa từ **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.9 FIFO vs LRU Page Replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** đo hiệu quả lịch CPU; **4.8 Paging vs Segmentation** chuyển sang cách hệ thống chia và ánh xạ không gian nhớ.
 
 ## 4.8 Paging vs Segmentation
 
@@ -685,7 +685,7 @@ Paging thường gắn nội bộ (internal / 내부) fragmentation; segmentatio
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.9 FIFO vs LRU Page Replacement** tiếp nhận điểm tựa từ **4.8 Paging vs Segmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.10 Page Fault vs Thrashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt page cố định với segment theo logic chương trình, **4.9 FIFO vs LRU Page Replacement** hỏi trang nào bị đẩy ra khi bộ nhớ cần chỗ: trang vào trước hay trang ít được dùng gần đây.
 
 ## 4.9 FIFO vs LRU Page Replacement
 
@@ -697,7 +697,7 @@ Tham chiếu (reference / 참조) gần đây có thể cứu page trong LRU nh�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.10 Page Fault vs Thrashing** tiếp nhận điểm tựa từ **4.9 FIFO vs LRU Page Replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.11 TCP vs UDP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.9 FIFO vs LRU Page Replacement** mô tả chính sách thay trang; **4.10 Page Fault vs Thrashing** phân biệt một lần thiếu trang với tình trạng hệ thống dành hầu hết thời gian để thay trang.
 
 ## 4.10 Page Fault vs Thrashing
 
@@ -709,7 +709,7 @@ Một page fault đơn lẻ không phải thrashing.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.11 TCP vs UDP** tiếp nhận điểm tựa từ **4.10 Page Fault vs Thrashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.12 IP vs MAC Address** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách lỗi nhớ cục bộ khỏi suy giảm toàn hệ thống, **4.11 TCP vs UDP** chuyển sang mạng: truyền tin có kết nối, kiểm soát và thứ tự hay ưu tiên sự gọn nhẹ.
 
 ## 4.11 TCP vs UDP
 
@@ -721,7 +721,7 @@ UDP: connectionless datagram, không tự bảo đảm delivery/thứ tự (orde
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.12 IP vs MAC Address** tiếp nhận điểm tựa từ **4.11 TCP vs UDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.13 DNS vs DHCP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.11 TCP vs UDP** đã tách semantics truyền tải; **4.12 IP vs MAC Address** tách tiếp địa chỉ logic dùng để định tuyến khỏi địa chỉ phần cứng trong một segment.
 
 ## 4.12 IP vs MAC Address
 
@@ -733,7 +733,7 @@ Router forward theo IP; cục bộ (local / 로컬) frame delivery dùng link-la
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.13 DNS vs DHCP** tiếp nhận điểm tựa từ **4.12 IP vs MAC Address** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.14 mạng (network / 네트워크) Address vs Broadcast Address** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt loại địa chỉ và phạm vi của nó, **4.13 DNS vs DHCP** tách hai dịch vụ dễ nhầm: phân giải tên thành địa chỉ và cấp cấu hình mạng cho máy.
 
 ## 4.13 DNS vs DHCP
 
@@ -743,7 +743,7 @@ DHCP cấp mạng (network / 네트워크) cấu hình (configuration / 구성) 
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.14 mạng (network / 네트워크) Address vs Broadcast Address** tiếp nhận điểm tựa từ **4.13 DNS vs DHCP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.15 Overloading vs Overriding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.13 DNS vs DHCP** xác định dịch vụ gắn với tên và cấu hình; **4.14 mạng (network / 네트워크) Address vs Broadcast Address** chuyển sang phạm vi đích của gói: một mạng hay mọi host trong mạng.
 
 ## 4.14 mạng (network / 네트워크) Address vs Broadcast Address
 
@@ -757,7 +757,7 @@ Usable host thường nằm giữa hai ranh giới (boundary / 경계) này, tr�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **4.15 Overloading vs Overriding** tiếp nhận điểm tựa từ **4.14 mạng (network / 네트워크) Address vs Broadcast Address** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách network address khỏi broadcast address, **4.15 Overloading vs Overriding** quay lại ngôn ngữ hướng đối tượng để phân biệt nạp chồng theo chữ ký với ghi đè theo kế thừa.
 
 ## 4.15 Overloading vs Overriding
 
@@ -769,7 +769,7 @@ Chỉ khác return kiểu (type / 타입) không đủ overload trong Java.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, sau nội dung của **4.15 Overloading vs Overriding**, **4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **5.1 Waterfall vs Agile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4.15 Overloading vs Overriding** đã tách lựa chọn compile-time khỏi hành vi runtime; **4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)** hỏi tiếp biến được truyền như bản sao hay cùng trỏ đến một đối tượng, rồi mở sang quản lý dự án.
 
 ## 4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)
 
@@ -785,7 +785,7 @@ Python assignment bind name tới đối tượng (object / 객체); hai names c
 
 # 5. Môn 5 — 정보시스템 구축 관리
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.1 Waterfall vs Agile** tiếp nhận điểm tựa từ **4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.2 rủi ro (risk / 위험) vs Issue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ cách truyền giá trị và alias ở **4.16**, chuyển sang **5.1 Waterfall vs Agile** để phân biệt kế hoạch tuần tự cố định với vòng lặp thích ứng theo phản hồi.
 
 ## 5.1 Waterfall vs Agile
 
@@ -797,7 +797,7 @@ Không kết luận “Agile không cần thiết kế (design / 설계)/documen
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.2 rủi ro (risk / 위험) vs Issue** tiếp nhận điểm tựa từ **5.1 Waterfall vs Agile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.3 PERT vs CPM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách Waterfall khỏi Agile theo cách lập kế hoạch và phản hồi, **5.2 rủi ro (risk / 위험) vs Issue** hỏi một bất định còn có thể xảy ra hay một vấn đề đã hiện hữu.
 
 ## 5.2 rủi ro (risk / 위험) vs Issue
 
@@ -807,7 +807,7 @@ Issue là vấn đề **đã xảy ra/đang tồn tại** cần xử lý.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.3 PERT vs CPM** tiếp nhận điểm tựa từ **5.2 rủi ro (risk / 위험) vs Issue** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.2 rủi ro (risk / 위험) vs Issue** đã phân biệt trạng thái tiềm ẩn và hiện hữu; **5.3 PERT vs CPM** chuyển sang kỹ thuật ước lượng thời lượng bất định và lập lịch với thời lượng xác định.
 
 ## 5.3 PERT vs CPM
 
@@ -819,7 +819,7 @@ Một dự án (project / 프로젝트) có thể dùng cả hai ý tưởng.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.3 PERT vs CPM** xác định đầu vào; **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5.5 RAID vs Backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi chọn PERT hay CPM theo kiểu ước lượng, **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** nhắc rằng đường quyết định thời hạn dự án không nhất thiết là một hoạt động đơn lẻ dài nhất.
 
 ## 5.4 đường găng (critical path / 임계 경로) vs Longest Activity
 
@@ -829,7 +829,7 @@ Một activity rất dài nhưng có float vẫn có thể không nằm đườn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** xác định đầu vào; **5.5 RAID vs Backup** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5.6 Replication vs Backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** chốt cách đọc phụ thuộc thời gian; **5.5 RAID vs Backup** chuyển sang độ sẵn sàng và bảo vệ dữ liệu, tách dư thừa vận hành khỏi bản sao phục hồi.
 
 ## 5.5 RAID vs Backup
 
@@ -841,7 +841,7 @@ RAID không phải backup.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.6 Replication vs Backup** tiếp nhận điểm tựa từ **5.5 RAID vs Backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.7 HA vs DR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt RAID giúp hệ thống tiếp tục chạy với backup dùng để restore, **5.6 Replication vs Backup** hỏi dữ liệu được đồng bộ cho vận hành hay được lưu thành điểm phục hồi.
 
 ## 5.6 Replication vs Backup
 
@@ -853,7 +853,7 @@ Sai dữ liệu/xóa nhầm có thể replicate nhanh sang replica; backup lịc
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.7 HA vs DR** tiếp nhận điểm tựa từ **5.6 Replication vs Backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.8 RTO vs RPO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.6 Replication vs Backup** tách đồng bộ liên tục khỏi bản sao lưu; **5.7 HA vs DR** mở rộng thành mục tiêu giảm gián đoạn đang xảy ra hay khôi phục sau sự cố lớn.
 
 ## 5.7 HA vs DR
 
@@ -865,7 +865,7 @@ Multi-node trong cùng miền lỗi (failure domain / 장애 도메인) có th�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.8 RTO vs RPO** tiếp nhận điểm tựa từ **5.7 HA vs DR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.9 Vertical vs Horizontal Scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi chọn HA hay DR theo mục tiêu phục vụ, **5.8 RTO vs RPO** định lượng hai giới hạn: mất bao lâu để phục hồi và chấp nhận mất bao nhiêu dữ liệu.
 
 ## 5.8 RTO vs RPO
 
@@ -879,7 +879,7 @@ Mất tối đa 5 phút giao dịch (transaction / 트랜잭션) → RPO.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.9 Vertical vs Horizontal Scaling** tiếp nhận điểm tựa từ **5.8 RTO vs RPO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.10 VM vs bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.8 RTO vs RPO** biến yêu cầu phục hồi thành con số; **5.9 Vertical vs Horizontal Scaling** chuyển sang cách tăng năng lực bằng máy lớn hơn hay nhiều instance hơn.
 
 ## 5.9 Vertical vs Horizontal Scaling
 
@@ -891,7 +891,7 @@ Horizontal scaling thường cần giải bài trạng thái (state / 상태) ph
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.10 VM vs bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **5.9 Vertical vs Horizontal Scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.11 IaaS vs PaaS vs SaaS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi phân biệt scale dọc và ngang, **5.10 VM vs bộ chứa (container / 컨테이너)** hỏi mức cô lập và phần hệ điều hành được ảo hóa hay dùng chung.
 
 ## 5.10 VM vs bộ chứa (container / 컨테이너)
 
@@ -903,7 +903,7 @@ Bộ chứa (container / 컨테이너) không tự động “an toàn hơn” h
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.11 IaaS vs PaaS vs SaaS** tiếp nhận điểm tựa từ **5.10 VM vs bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.12 Authentication vs Authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.10 VM vs bộ chứa (container / 컨테이너)** đã tách kiểu đóng gói runtime; **5.11 IaaS vs PaaS vs SaaS** chuyển sang ranh giới trách nhiệm giữa nhà cung cấp và người dùng.
 
 ## 5.11 IaaS vs PaaS vs SaaS
 
@@ -917,7 +917,7 @@ Hãy hỏi **ai quản tầng (layer / 계층) nào**, không học bằng tên 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.12 Authentication vs Authorization** tiếp nhận điểm tựa từ **5.11 IaaS vs PaaS vs SaaS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.13 Hashing vs Encryption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi xác định ai quản lý lớp nào trong IaaS, PaaS và SaaS, **5.12 Authentication vs Authorization** tách việc chứng minh danh tính khỏi việc quyết định quyền được làm gì.
 
 ## 5.12 Authentication vs Authorization
 
@@ -929,7 +929,7 @@ Login đúng không có nghĩa được quyền đọc mọi invoice.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.13 Hashing vs Encryption** tiếp nhận điểm tựa từ **5.12 Authentication vs Authorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.14 Symmetric vs Asymmetric Cryptography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.12 Authentication vs Authorization** xác định ai được phép làm gì; **5.13 Hashing vs Encryption** chuyển sang cách bảo vệ dữ liệu: biến một chiều để kiểm tra hay biến đổi có khóa để giải mã.
 
 ## 5.13 Hashing vs Encryption
 
@@ -941,7 +941,7 @@ Password không nên lưu bằng reversible encryption như substitute cho passw
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.14 Symmetric vs Asymmetric Cryptography** tiếp nhận điểm tựa từ **5.13 Hashing vs Encryption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.15 SQL Injection vs XSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách hashing khỏi encryption, **5.14 Symmetric vs Asymmetric Cryptography** so sánh cơ chế khóa dùng chung với cặp khóa công khai–bí mật và mục tiêu sử dụng của chúng.
 
 ## 5.14 Symmetric vs Asymmetric Cryptography
 
@@ -953,7 +953,7 @@ TLS thường kết hợp nhiều thành phần nguyên thủy (primitive / 기�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.15 SQL Injection vs XSS** tiếp nhận điểm tựa từ **5.14 Symmetric vs Asymmetric Cryptography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.16 Firewall vs WAF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.14 Symmetric vs Asymmetric Cryptography** chốt ranh giới giữa các mô hình khóa; **5.15 SQL Injection vs XSS** chuyển sang nơi đầu vào độc hại tác động: truy vấn phía máy chủ hay script trong trình duyệt.
 
 ## 5.15 SQL Injection vs XSS
 
@@ -969,7 +969,7 @@ Cả hai đều liên quan đầu vào (input / 입력), nhưng nguyên nhân g�
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.16 Firewall vs WAF** tiếp nhận điểm tựa từ **5.15 SQL Injection vs XSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.17 IDS vs IPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi nhận diện SQL injection và XSS theo điểm thực thi, **5.16 Firewall vs WAF** hỏi lớp phòng vệ đang lọc lưu lượng mạng chung hay hiểu ngữ nghĩa HTTP và ứng dụng web.
 
 ## 5.16 Firewall vs WAF
 
@@ -981,7 +981,7 @@ WAF không thay secure coding; firewall L3/L4 không tự giải SQL injection n
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.17 IDS vs IPS** tiếp nhận điểm tựa từ **5.16 Firewall vs WAF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.18 TLS vs VPN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.16 Firewall vs WAF** phân biệt lọc theo lớp và ngữ nghĩa; **5.17 IDS vs IPS** chuyển sang phản ứng của hệ thống: chỉ phát hiện và cảnh báo hay chặn lưu lượng đáng ngờ.
 
 ## 5.17 IDS vs IPS
 
@@ -993,7 +993,7 @@ Triển khai (deployment / 배포) thực tế đa dạng, nhưng đây là ranh
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.18 TLS vs VPN** tiếp nhận điểm tựa từ **5.17 IDS vs IPS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách IDS khỏi IPS theo hành động, **5.18 TLS vs VPN** phân biệt mã hóa một kết nối/luồng ứng dụng với đường hầm bảo vệ cả lưu lượng giữa các mạng hoặc host.
 
 ## 5.18 TLS vs VPN
 
@@ -1005,7 +1005,7 @@ Cả hai có thể dùng cryptography nhưng phạm vi (scope / 범위) khác.
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **5.18 TLS vs VPN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5.18 TLS vs VPN** khép nhóm bảo vệ đường truyền; **5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)** chuyển sang mô hình nguyên nhân, tách tác nhân đe dọa, điểm yếu và khả năng thiệt hại.
 
 ## 5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)
 
@@ -1021,7 +1021,7 @@ Rủi ro (risk / 위험): khả năng + impact của harm trong ngữ cảnh (co
 
 # 6. Meta-confusions — khi hai đáp án đều đúng
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.2 cơ chế (mechanism / 메커니즘) vs Goal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau mô hình threat–vulnerability–risk ở **5.19**, **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** đặt các đáp án đúng cạnh nhau và yêu cầu chọn theo phạm vi tác động trực tiếp hay lớp phòng vệ bổ sung.
 
 ## 6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)
 
@@ -1033,7 +1033,7 @@ Câu hỏi thi thường không chỉ kiểm fact; nó kiểm **phạm vi (scope
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** xác định đầu vào; **6.2 cơ chế (mechanism / 메커니즘) vs Goal** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6.3 Symptom vs Cause** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** vừa cho thấy cách chọn đáp án theo phạm vi; **6.2 cơ chế (mechanism / 메커니즘) vs Goal** áp dụng cùng nguyên tắc để tách thuộc tính mong muốn khỏi cách đạt được nó.
 
 ## 6.2 cơ chế (mechanism / 메커니즘) vs Goal
 
@@ -1050,7 +1050,7 @@ Nếu hỏi “cách đạt thuộc tính đó” → cơ chế (mechanism / 메
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **6.2 cơ chế (mechanism / 메커니즘) vs Goal** xác định đầu vào; **6.3 Symptom vs Cause** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách goal khỏi mechanism ở **6.2**, **6.3 Symptom vs Cause** nhắc người học không chọn giải pháp theo dấu hiệu bề mặt mà phải lần về nguyên nhân được bằng chứng hỗ trợ.
 
 ## 6.3 Symptom vs Cause
 
@@ -1062,7 +1062,7 @@ Nguyên nhân có thể là full scan, poor cardinality estimate, missing chỉ 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — High-Risk Confusion Atlas**, **6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)** tiếp nhận điểm tựa từ **6.3 Symptom vs Cause** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **6.3 Symptom vs Cause** đã tách biểu hiện khỏi nguyên nhân; **6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)** khép atlas bằng câu hỏi phạm vi: cơ chế đúng ở một tầng có đủ để bảo đảm bất biến ở tầng khác hay không.
 
 ## 6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)
 

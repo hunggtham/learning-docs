@@ -32,7 +32,7 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2
 
 Biểu thức trên minh họa việc hai số nguyên toán học khác nhau có thể không còn được phân biệt chính xác bằng `Number`.
 
-> **Chuyển mạch:** Number dùng floating-point với giới hạn integer precision; BigInt giữ integer exact nhưng không trộn trực tiếp với Number, còn Infinity cần được phân biệt khỏi overflow hợp lệ của BigInt.
+Number phù hợp với phần lớn phép tính nhưng không thể giữ mọi integer lớn chính xác. Khi bài toán cần integer exact ngoài safe range, BigInt là lựa chọn khác với semantics riêng.
 
 ## `BigInt`
 
@@ -56,7 +56,7 @@ Khi sắp xếp `BigInt`, nên dùng so sánh quan hệ:
 
 thay vì dựa vào `a - b`.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Infinity và BigInt** tiếp nhận điểm tựa từ **BigInt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mảng JavaScript không phải mảng C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+BigInt giữ integer exact nhưng không trộn trực tiếp với Number, còn Infinity là giá trị đặc biệt của Number chứ không phải overflow BigInt. Vì vậy cần phân biệt biểu diễn số trước khi chọn sentinel hoặc phép so sánh.
 
 ## `Infinity` và `BigInt`
 
@@ -70,7 +70,7 @@ const dist = Array(n).fill(Infinity);
 
 Lựa chọn giá trị canh gác là một phần của **cách biểu diễn (representation / 표현)**, không chỉ là chi tiết cú pháp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Mảng JavaScript không phải mảng C** tiếp nhận điểm tựa từ **Infinity và BigInt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mảng dày đặc, mảng thưa và lỗ trống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Infinity và BigInt có quy tắc coercion khác nhau; một giá trị sentinel hợp lệ trong Number có thể không tương đương với trạng thái “vô hạn” của thuật toán. Sau semantics số, cần nhìn collection: Array của JavaScript không có layout như mảng C.
 
 ## Mảng JavaScript không phải mảng C
 
@@ -84,7 +84,7 @@ a.push(2);
 
 Các engine thường tối ưu tốt mảng dày đặc có kiểu phần tử ổn định, nhưng mảng thưa hoặc trộn nhiều kiểu có thể được biểu diễn khác. Không nên giả định mỗi phần tử luôn nằm trong một ô nhớ liên tiếp giống `double[]` của C.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Mảng dày đặc, mảng thưa và lỗ trống** tiếp nhận điểm tựa từ **Mảng JavaScript không phải mảng C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng mảng làm ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+JavaScript Array có length, property index và representation do engine chọn, nên push/pop hoặc truy cập tuần tự không tự động đồng nghĩa với mảng contiguous kiểu C. Dense, sparse và hole là ba trạng thái có cost model khác nhau.
 
 ## Mảng dày đặc, mảng thưa và lỗ trống
 
@@ -112,7 +112,7 @@ Array(n).fill(0)
 
 hoặc một `TypedArray` phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Dùng mảng làm ngăn xếp** tiếp nhận điểm tựa từ **Mảng dày đặc, mảng thưa và lỗ trống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng đợi và shift()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mảng dense thường thuận lợi cho locality và các đường chạy tối ưu, còn sparse/hole có thể làm đổi representation và hành vi của iterator. Khi cần LIFO, push/pop ở cuối mảng thường tránh được phần dịch phần tử.
 
 ## Dùng mảng làm ngăn xếp
 
@@ -125,7 +125,7 @@ stack.pop();
 
 Các thao tác ở cuối mảng thường phù hợp với mô hình này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Hàng đợi và shift()** tiếp nhận điểm tựa từ **Dùng mảng làm ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deque tự cài đặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dùng mảng làm stack hiệu quả khi chỉ thao tác ở cuối và giữ invariant top rõ ràng. Queue lại cần loại phần tử đầu; dùng shift() có thể tạo chi phí dịch hoặc deopt, nên cần cách biểu diễn khác.
 
 ## Hàng đợi và `shift()`
 
@@ -152,7 +152,7 @@ if (head > 4096 && head * 2 > q.length) {
 
 Không cần nén sau mỗi lần lấy phần tử khỏi hàng đợi.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Deque tự cài đặt** tiếp nhận điểm tựa từ **Hàng đợi và shift()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Object và Map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Queue với head index tránh shift() nhưng phải quản lý phần đã tiêu thụ và compaction. Deque tự cài đặt mở rộng cùng invariant hai đầu để thêm/xóa ở cả trước lẫn sau.
 
 ## Deque tự cài đặt
 
@@ -170,7 +170,7 @@ capacity
 
 Khi đầy, có thể tăng dung lượng tương tự mảng động rồi sao chép theo thứ tự lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Object và Map** tiếp nhận điểm tựa từ **Deque tự cài đặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi khóa của Object** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Deque cần hai biên và quy tắc wrap-around hoặc block storage; nó không chỉ là một Array có thêm tên. Khi cần ánh xạ key→value, câu hỏi representation chuyển sang Object và Map.
 
 ## `Object` và `Map`
 
@@ -189,7 +189,7 @@ map.set(objectKey, value);
 
 Với bài toán DSA cần từ điển hoặc bảng ánh xạ tổng quát, `Map` thường thể hiện ý định rõ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Chuyển đổi khóa của Object** tiếp nhận điểm tựa từ **Object và Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định danh đối tượng trong Map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Object và Map đều lưu cặp key/value nhưng khác semantics key, prototype và thứ tự duyệt. Vì vậy việc chuyển key qua Object có thể làm thay đổi kiểu dữ liệu hoặc tên thực tế.
 
 ## Chuyển đổi khóa của `Object`
 
@@ -211,7 +211,7 @@ const dict = Object.create(null);
 
 nhưng `Map` vẫn thường là lựa chọn dễ hiểu hơn cho cấu trúc ánh xạ thuật toán.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Định danh đối tượng trong Map** tiếp nhận điểm tựa từ **Chuyển đổi khóa của Object** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã hóa trạng thái chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Object thường ép key về string hoặc symbol và chịu ảnh hưởng prototype; Map giữ key theo identity/semantics riêng. Khi key là object, identity của Map trở thành invariant cần kiểm tra.
 
 ## Định danh đối tượng trong `Map`
 
@@ -236,7 +236,7 @@ chuẩn hóa thành một đối tượng dùng chung
 
 Không nên tạo một đối tượng (object / 객체) mới rồi kỳ vọng nó bằng một đối tượng (object / 객체) cũ chỉ vì các trường giống nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Mã hóa trạng thái chuẩn** tiếp nhận điểm tựa từ **Định danh đối tượng trong Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Set và mảng đánh dấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Map dùng cùng object reference làm key chỉ khi identity còn ổn định, không phải khi hai object có nội dung giống nhau. Từ đó, các state của thuật toán cần một encoding canonical để tránh hai representation cho cùng trạng thái.
 
 ## Mã hóa trạng thái chuẩn
 
@@ -254,7 +254,7 @@ const key = `${x},${y},${mask}`;
 
 Khóa chuỗi đơn giản nhưng phát sinh cấp phát và chi phí băm. Nếu các cận kích thước đã biết, mảng nhiều chiều hoặc `TypedArray` có thể hiệu quả hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Set và mảng đánh dấu** tiếp nhận điểm tựa từ **Mã hóa trạng thái chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TypedArray** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Canonical state encoding giúp so sánh và cache state ổn định, nhưng phải cân bằng chi phí serialize với tra cứu. Với membership đơn giản, Set hoặc mảng đánh dấu có thể biểu diễn invariant rõ và rẻ hơn.
 
 ## `Set` và mảng đánh dấu
 
@@ -275,7 +275,7 @@ seen[v] = 1;
 
 Đây là ví dụ điển hình về việc chọn cấu trúc theo **miền khóa**, không chỉ theo tên thao tác “membership”.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **TypedArray** tiếp nhận điểm tựa từ **Set và mảng đánh dấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tràn số và chuyển đổi trong TypedArray** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Set phù hợp membership theo key, còn mảng đánh dấu tận dụng domain số nhỏ và truy cập trực tiếp. Khi domain lớn hoặc cần layout số cố định, TypedArray đặt ra semantics về byte width và conversion.
 
 ## `TypedArray`
 
@@ -291,7 +291,7 @@ BigUint64Array
 
 Ưu điểm chính là độ dài cố định, vùng lưu trữ số gọn, quy tắc chuyển đổi dễ dự đoán hơn và khả năng làm việc với dữ liệu nhị phân. Đổi lại, chúng không hỗ trợ `push/pop` như mảng động và mỗi kiểu có miền giá trị cố định.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Tràn số và chuyển đổi trong TypedArray** tiếp nhận điểm tựa từ **TypedArray** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toán tử bit dùng 32 bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TypedArray cho layout contiguous và kiểu số xác định, hữu ích khi cần truyền dữ liệu hoặc locality. Nhưng ghi giá trị vượt range có thể wrap, truncate hoặc chuyển đổi, nên phải kiểm tra overflow theo kiểu phần tử.
 
 ## Tràn số và chuyển đổi trong `TypedArray`
 
@@ -313,7 +313,7 @@ const state = new Uint8Array(n);
 
 `BigInt64Array` và `BigUint64Array` chứa số nguyên 64 bit; chúng không có miền vô hạn như `BigInt` độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Toán tử bit dùng 32 bit** tiếp nhận điểm tựa từ **Tràn số và chuyển đổi trong TypedArray** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Tràn số và conversion trong TypedArray có thể làm mất thông tin mà không ném exception. Bitwise operator còn có boundary riêng: JavaScript ép toán hạng về signed 32-bit trước khi tính.
 
 ## Toán tử bit dùng 32 bit
 
@@ -339,7 +339,7 @@ x >>> 0
 
 chuyển về `Number` không dấu 32 bit. Nó hữu ích trong một số thao tác băm hoặc bit, nhưng sẽ cắt bỏ các bit cao và không phải cách tổng quát để “biến số thành số dương”.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Sắp xếp số** tiếp nhận điểm tựa từ **Toán tử bit dùng 32 bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng đợi ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Bitwise 32-bit hữu ích cho mask nhưng không phải cách giữ integer lớn tổng quát. Sau khi tách semantics bit, phép sort số cũng cần comparator vì mặc định của Array sắp theo chuỗi.
 
 ## Sắp xếp số
 
@@ -363,7 +363,7 @@ arr.sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 
 ECMAScript hiện đại quy định `Array.prototype.sort()` là ổn định (stable). Nếu phải hỗ trợ môi trường cũ hoặc không chuẩn, cần kiểm tra môi trường đích thay vì giả định.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Hàng đợi ưu tiên** tiếp nhận điểm tựa từ **Sắp xếp số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Numeric sort phụ thuộc comparator đúng và ổn định theo contract; comparator sai có thể phá thứ tự hoặc làm benchmark không đáng tin. Priority queue cần invariant heap riêng thay vì dựa vào sort lại toàn bộ.
 
 ## Hàng đợi ưu tiên
 
@@ -384,7 +384,7 @@ class MinHeap {
 
 Hàm so sánh phải nhất quán và có tính bắc cầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **Hàng đợi ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Priority queue giữ phần tử ưu tiên ở root và thường trả O(log n) cho push/pop. Trong JavaScript, mỗi node hoặc tuple có thể tạo allocation; cost model đó liên quan trực tiếp đến vùng nhớ động.
 
 ## Cấp phát đối tượng trong vùng nhớ động (heap / 힙)
 
@@ -398,7 +398,7 @@ rất dễ đọc nhưng có thể tạo nhiều đối tượng tạm thời. N
 
 Không nên làm mã nguồn phức tạp trước khi có số liệu đo cho thấy điều đó cần thiết.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Heap allocation của object và array ảnh hưởng GC, locality và latency, không chỉ số phép toán. Dijkstra thường tạo nhiều candidate; dùng stale entry thay vì decrease-key phải kiểm tra điều kiện bỏ qua đúng.
 
 ## Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)
 
@@ -416,7 +416,7 @@ if (d !== dist[v]) continue;
 
 Mẫu này đơn giản, dễ kiểm chứng và thường đủ tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Độ sâu đệ quy** tiếp nhận điểm tựa từ **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **async không thay thế thuật toán dạng lặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dijkstra với stale heap entry vẫn đúng khi chỉ xử lý entry khớp distance tốt nhất hiện tại. Khi chuyển sang DFS đệ quy, chi phí không nằm ở heap mà ở giới hạn call stack và độ sâu dữ liệu.
 
 ## Độ sâu đệ quy
 
@@ -434,7 +434,7 @@ while (stack.length) {
 
 Không nên dựa vào tối ưu lời gọi đuôi như một bảo đảm an toàn ngăn xếp cho mã DSA phổ thông.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **async không thay thế thuật toán dạng lặp** tiếp nhận điểm tựa từ **Độ sâu đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đệ quy biểu diễn state qua call stack nhưng depth lớn có thể vượt giới hạn runtime. Async không tự biến một thuật toán đệ quy hoặc lặp thành nhanh hơn; nó chỉ thay đổi thời điểm nhường quyền.
 
 ## `async` không thay thế thuật toán dạng lặp
 
@@ -444,7 +444,7 @@ Tương tự, `await Promise.resolve()` chỉ chuyển việc tiếp tục sang 
 
 **Lập lịch bất đồng bộ không sửa được lựa chọn thuật toán sai.**
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** tiếp nhận điểm tựa từ **async không thay thế thuật toán dạng lặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ thu gom rác và vòng đời dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Async không thay thế thuật toán dạng lặp: một vòng lặp O(n) vẫn cần O(n), dù được chia qua Promise. Nếu công việc CPU dài chạy trên main thread, event loop vẫn bị chặn.
 
 ## Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu
 
@@ -461,7 +461,7 @@ native code / WebAssembly
 
 Thiết kế xử lý đồng thời là một vấn đề riêng; nó không thay đổi độ phức tạp cơ bản của thuật toán.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** nêu điều cần giải thích; **Bộ thu gom rác và vòng đời dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **WeakMap và WeakSet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Event loop phải duy trì responsiveness khi thuật toán chạy lâu; chia task, worker hoặc yield thay đổi scheduling chứ không xóa chi phí tính toán. Các allocation trong quá trình đó còn tạo áp lực lên GC và vòng đời dữ liệu.
 
 ## Bộ thu gom rác và vòng đời dữ liệu
 
@@ -475,13 +475,13 @@ Nếu bộ nhớ đệm trên không có chính sách giới hạn hoặc loại
 
 GC tự động không có nghĩa là vòng đời bộ nhớ không cần được thiết kế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Bộ thu gom rác và vòng đời dữ liệu** nêu điều cần giải thích; **WeakMap và WeakSet** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Closure và giữ tham chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Event loop và thuật toán dài cần tránh giữ tham chiếu không cần thiết trong closure hoặc queue. GC chỉ thu hồi object unreachable, nên hiểu vòng đời dữ liệu trước khi diễn giải pause hay memory growth.
 
 ## `WeakMap` và `WeakSet`
 
 `WeakMap` hữu ích khi cần gắn siêu dữ liệu với vòng đời của một đối tượng mà không muốn ánh xạ mạnh giữ đối tượng đó sống. Tuy nhiên, nó không hỗ trợ duyệt như `Map`, nên không phù hợp với bảng trạng thái thuật toán cần liệt kê toàn bộ phần tử.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, sau nội dung của **WeakMap và WeakSet**, **Closure và giữ tham chiếu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hình dạng đối tượng và JIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+GC lần theo reachability, còn WeakMap/WeakSet không giữ key mạnh và cho phép metadata đi cùng vòng đời object. Đây là lựa chọn representation khi không muốn cache làm object sống mãi.
 
 ## Closure và giữ tham chiếu
 
@@ -489,7 +489,7 @@ Closure có thể giữ tham chiếu tới mảng hoặc cây lớn ngay cả kh
 
 Nhiều rò rỉ bộ nhớ JavaScript là **rò rỉ do khả năng đạt tới (reachability leak)** chứ không phải lỗi quên `free()` như trong C.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Hình dạng đối tượng và JIT** tiếp nhận điểm tựa từ **Closure và giữ tham chiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **class và đối tượng (object / 객체) literal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+WeakMap giải quyết ownership của metadata, nhưng closure có thể vô tình giữ reference mạnh qua scope. Vì vậy cần nhìn cả lexical capture trước khi kết luận object đã được giải phóng.
 
 ## Hình dạng đối tượng và JIT
 
@@ -503,7 +503,7 @@ const node = { key, left: null, right: null, size: 1 };
 
 Chi tiết về hidden lớp (class / 클래스) là đặc thù engine; không nên viết mã phụ thuộc vào các ngưỡng nội bộ không được đặc tả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **class và đối tượng (object / 객체) literal** tiếp nhận điểm tựa từ **Hình dạng đối tượng và JIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị CSR trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Closure giữ biến được capture dù code bên ngoài đã trả về, ảnh hưởng memory và lifetime. Hình dạng object và JIT là lớp khác: engine tối ưu property access dựa trên shape ổn định.
 
 ## `class` và đối tượng (object / 객체) literal
 
@@ -511,7 +511,7 @@ Chi tiết về hidden lớp (class / 클래스) là đặc thù engine; không 
 
 Khi có hàng triệu nút, quyết định dùng mảng, `TypedArray` hay đối tượng thường quan trọng hơn việc chọn cú pháp `class` hay đối tượng (object / 객체) literal.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Đồ thị CSR trong JavaScript** tiếp nhận điểm tựa từ **class và đối tượng (object / 객체) literal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi JavaScript dùng UTF-16** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Object shape ổn định giúp JIT giữ fast path, còn thêm/xóa property hoặc shape polymorphism có thể deopt. class và object literal là hai cách tạo object nhưng không nên suy ra chúng có cùng layout hay cost.
 
 ## Đồ thị CSR trong JavaScript
 
@@ -541,7 +541,7 @@ g[u].push(v);
 
 Khi có hàng triệu cạnh, nên đo chi phí của các mảng lồng nhau thay vì mặc định rằng chúng đủ gọn.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Đồ thị CSR trong JavaScript** xác định đầu vào; **Chuỗi JavaScript dùng UTF-16** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuỗi là bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+class cung cấp prototype/method semantics, còn object literal thuận tiện cho dữ liệu nhưng dễ có shape khác nhau. Với graph lớn, CSR tránh hàng triệu object nhỏ bằng cách tách adjacency vào các mảng contiguous.
 
 ## Chuỗi JavaScript dùng UTF-16
 
@@ -577,7 +577,7 @@ for (const ch of s) {
 
 xử lý cặp thay thế tốt hơn truy cập từng mã (code / 코드) đơn vị (unit / 단위), nhưng một ký tự mà người dùng nhìn thấy vẫn có thể gồm nhiều mã (code / 코드) điểm (point / 지점). Khi cần phân đoạn theo ký tự hiển thị, có thể dùng `Intl.Segmenter`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Chuỗi JavaScript dùng UTF-16** xác định đầu vào; **Chuỗi là bất biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thứ tự duyệt của Map và Object** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+CSR dùng offset và edge arrays để đổi graph object thành representation dày đặc, nhưng cần biết index và số lượng cạnh trước. Chuỗi JavaScript lại có boundary riêng vì đơn vị code point không luôn là một UTF-16 code unit.
 
 ## Chuỗi là bất biến
 
@@ -585,7 +585,7 @@ Chuỗi JavaScript không thay đổi tại chỗ. Engine có thể tối ưu ph
 
 Nếu đây là đường chạy nóng, cần đo trên tải công việc thực tế thay vì dựa vào giả định chung.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Chuỗi là bất biến** xác định đầu vào; **Thứ tự duyệt của Map và Object** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trạng thái dày đặc và trạng thái thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+UTF-16 khiến length, indexing và substring có thể cắt giữa surrogate pair nếu người viết giả định mỗi ký tự là một phần tử. Chuỗi còn immutable, nên phép nối hoặc sửa lặp có thể tạo allocation mới.
 
 ## Thứ tự duyệt của `Map` và `Object`
 
@@ -595,7 +595,7 @@ Quy tắc duyệt thuộc tính của `Object` có các nhóm thứ tự đượ
 
 Về ngữ nghĩa, `Map` thường rõ ràng hơn khi mục tiêu thực sự là một ánh xạ.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Trạng thái dày đặc và trạng thái thưa** tiếp nhận điểm tựa từ **Thứ tự duyệt của Map và Object** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NaN, -0 và số dấu phẩy động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+String immutable buộc các thao tác biến đổi phải tạo string khác hoặc dùng buffer trung gian. Khi duyệt collection để dựng kết quả, thứ tự của Map và Object cũng là semantics cần ghi rõ.
 
 ## Trạng thái dày đặc và trạng thái thưa
 
@@ -617,7 +617,7 @@ Tuy nhiên kích thước có thể tăng rất nhanh. Với không gian trạng
 
 Đây chính là sự đánh đổi **thưa–dày (sparse–dense)** quen thuộc trong quy hoạch động và biểu diễn đồ thị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **NaN, -0 và số dấu phẩy động** tiếp nhận điểm tựa từ **Trạng thái dày đặc và trạng thái thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp đối tượng và hàm so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Map có quy tắc insertion order, còn Object có quy tắc riêng cho integer-like keys và property keys. Khi representation state dày đặc hoặc thưa, không nên suy ra cost từ thứ tự duyệt mà phải nhìn domain và layout.
 
 ## `NaN`, `-0` và số dấu phẩy động
 
@@ -639,7 +639,7 @@ Tổng số dấu phẩy động có thể tích lũy sai số làm tròn:
 
 Với tiền tệ, thường nên lưu số nguyên theo đơn vị nhỏ nhất hoặc dùng thư viện số thập phân phù hợp. Tính đúng đắn của thuật toán phụ thuộc vào cách biểu diễn số, không chỉ vào công thức toán học.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **NaN, -0 và số dấu phẩy động** đã nêu tiêu chí phân biệt, còn **Sắp xếp đối tượng và hàm so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Đo hiệu năng trong môi trường JIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Dense state thường hợp với TypedArray hoặc mảng đánh dấu, còn sparse state hợp với Map/Set khi keyspace lớn và ít phần tử. Các giá trị đặc biệt như NaN, -0 và floating-point lại làm equality và hashing cần thận trọng.
 
 ## Sắp xếp đối tượng và hàm so sánh
 
@@ -653,7 +653,7 @@ items.sort((a, b) =>
 
 Nếu trường có thể vượt miền số nguyên an toàn, nên dùng so sánh quan hệ thay cho phép trừ. Hàm so sánh phải nhất quán và có tính bắc cầu; nếu không, kết quả sắp xếp có thể khó dự đoán.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Sắp xếp đối tượng và hàm so sánh** đã nêu tiêu chí phân biệt, còn **Đo hiệu năng trong môi trường JIT** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Trình duyệt và nút (node / 노드).js** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+NaN không bằng chính nó, -0 có thể khác trong một số phép quan sát và floating-point không giữ mọi số thập phân exact. Những semantics này ảnh hưởng comparator và phép sort object, nơi hàm so sánh phải trả thứ tự nhất quán.
 
 ## Đo hiệu năng trong môi trường JIT
 
@@ -672,13 +672,13 @@ Có thể dùng `performance.now()` hoặc `process.hrtime.bigint()`, nhưng ph�
 
 Một benchmark chỉ dùng mảng toàn số có thể không phản ánh hệ thống thực tế nơi dữ liệu trộn số, đối tượng (object / 객체) và chuỗi. Dữ liệu đo phải gần với tải công việc thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Trình duyệt và nút (node / 노드).js** tiếp nhận điểm tựa từ **Đo hiệu năng trong môi trường JIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Web Worker và workerthreads** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+JIT benchmark chỉ có ý nghĩa khi biết đoạn code đã warm-up đến tier nào và input có giữ shape ổn định không. Browser và Node.js dùng runtime, event loop và host API khác nhau, nên không thể gộp số đo mà không nêu môi trường.
 
 ## Trình duyệt và nút (node / 노드).js
 
 Ngữ nghĩa ECMAScript cơ bản có thể giống nhau, nhưng phiên bản engine, giới hạn bộ nhớ, cấu hình GC và môi trường thực thi có thể khác. Không nên đưa ra một con số hiệu năng phổ quát cho “JavaScript” mà không nêu rõ môi trường chạy.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Web Worker và workerthreads** tiếp nhận điểm tựa từ **Trình duyệt và nút (node / 노드).js** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SharedArrayBuffer và Atomics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Browser và Node.js khác host boundary, timer, GC scheduling và I/O; cùng JavaScript không có nghĩa cùng runtime cost. Worker và worker_threads cho phép tách CPU work, nhưng thêm serialization hoặc message-passing overhead.
 
 ## Web Worker và `worker_threads`
 
@@ -686,7 +686,7 @@ Công việc CPU lớn có thể được chuyển sang worker để tránh ch�
 
 Xử lý song song chỉ hữu ích khi công việc có thể chia được và phần công việc đủ lớn để bù chi phí phối hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **SharedArrayBuffer và Atomics** tiếp nhận điểm tựa từ **Web Worker và workerthreads** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với WebAssembly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Worker cô lập event loop nhưng dữ liệu truyền giữa worker có thể bị clone hoặc serialize. SharedArrayBuffer và Atomics giảm copy trong một số trường hợp, đổi lại phải quản lý memory ordering và race.
 
 ## `SharedArrayBuffer` và `Atomics`
 
@@ -694,7 +694,7 @@ JavaScript có cơ chế đồng thời mức thấp trên bộ nhớ dùng chun
 
 Chỉ thêm `Atomics` vào một cấu trúc dữ liệu tùy ý không tự biến nó thành cấu trúc an toàn khi truy cập đồng thời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Liên hệ với WebAssembly** tiếp nhận điểm tựa từ **SharedArrayBuffer và Atomics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+SharedArrayBuffer/Atomics cho phép chia sẻ bộ nhớ nhưng correctness phụ thuộc happens-before, atomicity và protocol đồng bộ. WebAssembly đưa thêm một representation/ABI boundary, không tự động làm thuật toán tốt hơn.
 
 ## Liên hệ với WebAssembly
 
@@ -702,7 +702,7 @@ Với công việc số học hoặc đồ thị rất nhạy về hiệu năng,
 
 Khi dùng WASM, thường nên gom đủ công việc thành lô trước khi chuyển qua ranh giới môi trường.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Liên hệ với WebAssembly** đã nêu tiêu chí phân biệt, còn **Kiểm thử đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kiểm thử dựa trên tính chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+WebAssembly có kiểu số và memory model gần thấp cấp hơn, hữu ích cho kernel ổn định nhưng giao tiếp JS↔Wasm cũng có chi phí. Để so sánh hai implementation, differential testing phải kiểm tra cùng contract trước.
 
 ## Kiểm thử đối chiếu
 
@@ -730,7 +730,7 @@ so sánh vị trí KMP tìm được với cách kiểm tra ngây thơ
 thêm trường hợp Unicode phù hợp với đơn vị chuỗi đã chọn
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Kiểm thử đối chiếu** đã nêu tiêu chí phân biệt, còn **Kiểm thử dựa trên tính chất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phân tích bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Differential testing chạy JS và oracle/implementation tham chiếu trên cùng input, giúp tách runtime bug khỏi khác biệt output. Property testing bổ sung khi không thể viết oracle đầy đủ cho mọi input.
 
 ## Kiểm thử dựa trên tính chất
 
@@ -745,7 +745,7 @@ Với DSU, phân hoạch liên thông phải tương đương với các thành 
 
 Kiểm thử kiểu này thường bắt được lỗi ở ranh giới biểu diễn tốt hơn một vài ví dụ viết tay.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Phân tích bộ nhớ** tiếp nhận điểm tựa từ **Kiểm thử dựa trên tính chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh sách kiểm tra cách biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Property testing kiểm tra invariant và các quan hệ phải đúng, nhưng vẫn cần giới hạn domain và seed tái hiện được. Khi test hoặc benchmark tạo nhiều object, phân tích memory phải phân biệt live data với garbage chờ thu gom.
 
 ## Phân tích bộ nhớ
 
@@ -753,7 +753,7 @@ Vùng nhớ vùng nhớ động (heap / 힙) snapshot trong Chrome DevTools ho�
 
 CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác băm hoặc mã hóa chuỗi chiếm nhiều thời gian. Tối ưu nên dựa trên bằng chứng đo được.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Danh sách kiểm tra cách biểu diễn** tiếp nhận điểm tựa từ **Phân tích bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Memory analysis cần theo dõi retained references, allocation rate, heap snapshot và thời điểm GC; một peak ngắn không giống leak. Danh sách kiểm tra representation giúp nối số đo đó với lựa chọn Array, Map, Set, TypedArray hay CSR.
 
 ## Danh sách kiểm tra cách biểu diễn
 
@@ -771,7 +771,7 @@ DFS có thể rất sâu?          -> ngăn xếp dạng lặp
 Xử lý Unicode?               -> xác định code unit / code point / grapheme
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Mô hình tư duy** gom các mảnh từ **Danh sách kiểm tra cách biểu diễn** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Checklist representation nên hỏi semantics key, density, mutation, lifetime, locality, complexity và host/runtime boundary. Mô hình tư duy cuối file gom các câu hỏi này thành cách chọn cấu trúc thay vì dựa vào tên API.
 
 ## Mô hình tư duy
 
