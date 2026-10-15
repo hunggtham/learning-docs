@@ -133,5 +133,3 @@ chapter mechanism
 ```
 
 Thư viện (library / 라이브러리) được xem là hoàn thành khi vòng lặp này giúp người đọc tự sửa lập luận (reasoning / 추론), không phải khi mọi tệp (file / 파일) dài bằng nhau.
-
-> **Bàn giao:** Sau **Cách sử dụng khi học PMP**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -450,5 +450,3 @@ Stakeholder need là đầu vào quan trọng của yêu cầu (requirement / �
 > Stakeholder engagement là thiết kế phản hồi (feedback / 피드백) và influence mạng (network / 네트워크) giữa dự án (project / 프로젝트) với những người định nghĩa, cung cấp, sử dụng hoặc chịu hệ quả của giá trị (value / 값). Communication tốt phải bảo toàn meaning, độ trễ (latency / 지연 시간) và accountability; kiến thức (knowledge / 지식) transfer tốt phải biến thông tin (information / 정보) thành năng lực (capability / 역량) có đơn vị sở hữu (owner / 오너) sau chuyển tiếp (transition / 전이).
 
 Tiếp theo: [Integration, scope, requirements và change](./04_integration_scope_requirements_and_change.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

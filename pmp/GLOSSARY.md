@@ -177,5 +177,3 @@ Glossary này là chỉ mục (index / 인덱스) nhận diện thuật ngữ, k
 Khi một term chỉ còn là “mẹo nhớ”, hãy quay lại chapter để phục hồi cơ chế (mechanism / 메커니즘). Ví dụ `CPI < 1` chỉ có ý nghĩa khi hiểu `EV / AC`; `critical path` chỉ có ý nghĩa khi hiểu phụ thuộc (dependency / 의존성) mạng (network / 네트워크); `P80` chỉ có ý nghĩa khi hiểu phân phối (distribution / 분포) và các giả định (assumptions / 가정들); `claim` chỉ có ý nghĩa khi tách entitlement–causation–quantum; `human-in-the-loop` chỉ có giá trị khi human thực sự có sức chứa (capacity / 용량) và authority rà soát (review / 검토).
 
 Nếu gặp term chưa có trong glossary nhưng xuất hiện lặp lại ở nhiều chapter, nên bổ sung vào chính tệp (file / 파일) này thay vì tạo một vocabulary tệp (file / 파일) cạnh tranh khác.
-
-> **Bàn giao:** Sau **Cách dùng glossary**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
