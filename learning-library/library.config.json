@@ -195,6 +195,12 @@
       "category": "Life knowledge",
       "language": "vi-en",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "how-things-work",
+      "category": "How Things Work",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [

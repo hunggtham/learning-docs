@@ -34,6 +34,16 @@ domains:
     scope: Circuits, analog and digital electronics, signals, communications, control, embedded systems, power electronics, and hardware–software interfaces.
     prerequisites: [mathematics, physics]
     related: [computer_science, native, devops_platform_engineering]
+  - id: how-things-work
+    title: How Things Work (Cơ chế hoạt động hệ thống Việt - Hàn)
+    group: Engineering
+    path: how-things-work/
+    entrypoint: how-things-work/README.md
+    status: canonical
+    last_reviewed: 2026-09-30
+    scope: Chuỗi vận hành end-to-end các hệ thống hạ tầng số, tiện ích đô thị, dòng tiền/thị trường, logistics/thương mại và giao thông qua lăng kính so sánh cơ chế Việt Nam – Hàn Quốc.
+    prerequisites: []
+    related: [electrical_engineering, computer_science, economics, investing, korea_business_economy, devops_platform_engineering]
   - id: chemistry
     title: Chemistry
     group: Science
@@ -335,7 +345,8 @@ Science
 └── Biology
 
 Engineering
-└── Electrical Engineering
+├── Electrical Engineering
+└── How Things Work (Cơ chế hoạt động hệ thống Việt - Hàn)
 
 Methods
 └── Research Methods

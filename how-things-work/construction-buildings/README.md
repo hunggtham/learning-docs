@@ -311,7 +311,7 @@ Sau handover, asset chuyển từ project system sang operations system.
 - [Sewage](../sewage/README.md)
 - [Waste/recycling](../waste-recycling/README.md)
 - [Internet](../internet/README.md) và [mobile networks](../mobile-networks/README.md)
-- [`../../personal-finance/`](../../personal-finance/) nếu domain này đã được canonical hóa cho housing finance; chapter hiện tại chỉ sở hữu building mechanism.
+- `personal-finance/` (khi domain này được canonical hóa cho housing finance) hoặc [`../../korea_law_civic_life/`](../../korea_law_civic_life/README.md) cho quy định nhà ở; chapter hiện tại chỉ sở hữu building mechanism.
 
 Mental model:
 
