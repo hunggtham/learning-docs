@@ -404,5 +404,3 @@ Những thất bại (failure / 실패) này đều làm thông tin (information
 > Leadership là thiết kế môi trường (environment / 환경) nơi thông tin (information / 정보) thật có thể đi lên, quyết định (decision / 결정) có thể đi xuống đúng mức (level / 수준) và accountability có thể quay lại bằng phản hồi (feedback / 피드백). nhóm (team / 팀) health là một phần của rủi ro (risk / 위험) management vì incentive, trust, power và quyết định (decision / 결정) kiến trúc (architecture / 아키텍처) quyết định chất lượng hành vi dưới bất định (uncertainty / 불확실성).
 
 Tiếp theo: [Stakeholder, communication và knowledge transfer](./03_stakeholders_communication_and_knowledge.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -283,5 +283,3 @@ Một bước lập luận (reasoning / 추론) sâu hơn là hỏi counterfactu
 > dự án (project / 프로젝트) management không phải quản lý danh sách tác vụ (task / 작업). Nó là thiết kế và vận hành một hệ thống quyết định tạm thời để biến investment thành kết quả (outcome / 결과) có giá trị trong điều kiện bất định, đồng thời giữ đủ option để học, đủ điều khiển (control / 제어) để bảo vệ ràng buộc (constraint / 제약조건) và đủ bằng chứng (evidence / 증거) để dừng khi investment không còn hợp lý.
 
 Chương tiếp theo giải thích vì sao mức bất định quyết định vòng đời và cách giao hàng: [Lifecycle, delivery approach và tailoring](./01_lifecycle_delivery_approaches_and_tailoring.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -354,5 +354,3 @@ Ngược lại, nếu UI preference chưa rõ mà dự án (project / 프로젝�
 > Chọn delivery approach là chọn vị trí đặt phản hồi (feedback / 피드백), commitment và điều khiển (control / 제어). Tailoring tốt đồng bộ bất định (uncertainty / 불확실성), phản hồi (feedback / 피드백) độ trễ (latency / 지연 시간), reversibility, quản trị (governance / 거버넌스) chi phí (cost / 비용) và organizational năng lực (capability / 역량) để mỗi commitment xảy ra khi bằng chứng (evidence / 증거) đủ mạnh.
 
 Tiếp theo: [People, leadership, team và conflict](./02_people_leadership_team_and_conflict.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

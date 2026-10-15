@@ -355,5 +355,3 @@ Tích hợp (integration / 통합) maturity được đo bằng consistency gi�
 > phạm vi (scope / 범위) tạo ranh giới (boundary / 경계) cho commitment; thay đổi (change / 변경) điều khiển (control / 제어) giữ các commitment liên quan vẫn nhất quán khi ranh giới (boundary / 경계) thay đổi. tích hợp (integration / 통합) là khả năng làm một quyết định (decision / 결정) propagate đúng qua yêu cầu (requirement / 요구사항), giả định (assumption / 가정), baseline, phụ thuộc (dependency / 의존성), đặc tả hợp đồng (contract / 계약), bằng chứng (evidence / 증거) và stakeholder trước khi các cục bộ (local / 로컬) trạng thái (state / 상태) tách thành nhiều “sự thật”.
 
 Tiếp theo: [Schedule, estimation, dependency và flow](./05_schedule_estimation_and_flow.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
