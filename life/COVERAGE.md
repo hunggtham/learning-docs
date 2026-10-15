@@ -8,9 +8,9 @@ Bảng này đối chiếu owner, chapter đã có và câu hỏi kế tiếp; h
 
 | Nhánh | Owner | Chapter hiện có | Câu hỏi kế tiếp |
 |---|---|---|---|
-| Food & Drinks | [`food_drink/README.md`](food_drink/README.md) | Beer; whisky; style/process/tasting; regulation/serving; beer–whisky comparison lab | route nền tảng đã đủ; mở rộng category/style là tùy chọn |
-| Cars | [`vehicles/cars/README.md`](vehicles/cars/README.md) | Powertrain; ICE/EV/hybrid; transmission/tires/safety/ownership; vehicle specification case lab | route nền tảng đã đủ; thêm model theo nguồn xác minh khi cần |
-| Consumer Knowledge | [`consumer_knowledge/README.md`](consumer_knowledge/README.md) | Function/material/TCO; claims/evidence; durability; comparison workbook; category case lab | thêm category cụ thể khi có bằng chứng tương ứng |
+| Food & Drinks | [`food_drink/README.md`](food_drink/README.md) | Tầng tổng quan (01–03); Whisky chuyên sâu (00–04); Bia chuyên sâu (00–02) | route nền tảng và chuyên sâu đã đủ; mở rộng wine/coffee khi có nhu cầu |
+| Cars | [`vehicles/cars/README.md`](vehicles/cars/README.md) | Tầng nền tảng (00–03); Tầng chuyên sâu 13 bài (01–13: ICE, EV/HEV, hộp số, dẫn động, lốp, phanh, lái/treo, turbo, nhiệt, ADAS, spec, chẩn đoán, TCO) | route 2 tầng hoàn chỉnh; thêm diagnostic casebook khi cần |
+| Consumer Knowledge & Literacy | [`consumer_knowledge/README.md`](consumer_knowledge/README.md) & [`consumer_literacy/README.md`](consumer_literacy/README.md) | Function/material/TCO (00–04); Specs/materials/reliability/lifecycle (00–03) | backbone dùng lại cho toàn domain; thêm case study khi có bằng chứng |
 | Home | [`home/README.md`](home/README.md) | Systems; thermal/air/moisture; electricity/water; maintenance cases; room system case lab | thêm case nhà ở theo điều kiện địa phương khi cần |
 | Digital Life | [`digital_life/README.md`](digital_life/README.md) | Devices/data; security/privacy; backup/exit; messaging/smart home; service case lab | service-specific modules cần ghi phiên bản và ngày kiểm tra |
 | Everyday Law | [`everyday_law/README.md`](everyday_law/README.md) | Event/rule/evidence; contracts; jurisdiction/deadlines; home/work/digital; jurisdiction case lab | module theo jurisdiction chỉ thêm cùng nguồn hiện hành |
