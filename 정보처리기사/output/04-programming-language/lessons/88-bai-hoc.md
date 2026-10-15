@@ -1,17 +1,59 @@
 # 285 & 295. 워킹 셋 (Working Set / Tập làm việc)
 
-## 285 & 295. 워킹 셋 (Working Set / Tập làm việc)
-### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
-Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa, cơ sở lý thuyết và công thức mô hình hóa Tập làm việc (워킹 셋 - Working Set Model do Peter Denning đề xuất) trong quản trị bộ nhớ ảo.
+- Thấu hiểu mối quan hệ biện chứng giữa nguyên lý tính cục bộ (Locality), kích thước cửa sổ thời gian trượt ($\Delta$ - Working Set Window), và việc cấp phát động khung trang nhớ (Page Frames).
+- Giải thích được vai trò hạt nhân của Working Set trong việc duy trì độ ổn định của hệ thống và ngăn ngừa triệt để hiện tượng suy sụp hiệu năng do nghẽn trang (스레싱 - Thrashing).
 
-- **개념 (Khái niệm)**: 프로세스가 원활한 수행을 위해 일정 시간 동안 집중적으로 참조하는 페이지들의 집합. (Tập hợp các trang mà tiến trình tham chiếu tập trung trong một khoảng thời gian để chạy mượt mà.)
-- **핵심 키워드 (Từ khóa)**: 데닝 (Denning), Locality 활용 (Ứng dụng Locality), 페이지 부재 감소 (Giảm Page Fault), 동적 변경 (Thay đổi động).
-- **시험 포인트 (Điểm thi)**: 자주 참조되는 워킹 셋을 주기억장치에 상주시킴으로써 시스템을 안정화(스래싱 방지)한다는 점. (Giữ Working Set trong bộ nhớ chính giúp hệ thống ổn định và tránh Thrashing.)
+## 핵심 키워드 (Từ khóa)
+- 워킹 셋 (Working Set Model - Peter Denning)
+- 워킹 셋 윈도우 크기 ($\Delta$ - Working Set Window)
+- 국부성 / 구역성 기반 (Locality-based Memory Management)
+- 동적 페이지 할당 (Dynamic Page Allocation)
+- 스레싱 방지 (Thrashing Prevention)
+- 상주 집합 (Resident Set) vs 워킹 셋 (Working Set)
 
-### TẦNG B – NOTE 보충 (HIỂU SÂU)
-Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [87-bai-hoc.md](87-bai-hoc.md): Nguyên lý tính cục bộ (Locality) thời gian và không gian.
+- [89-bai-hoc.md](89-bai-hoc.md): Cấu trúc phân tầng hệ thống UNIX (Kernel, Shell, Utility).
+- [73-bai-hoc.md](73-bai-hoc.md): Thuật toán thay thế trang và hiện tượng Thrashing.
 
-- 데닝(Denning)이 제안한 모델로, 프로그램의 국부성(Locality)을 이용. (Mô hình do Denning đề xuất dựa trên tính cục bộ.)
-- 시간에 따라 참조하는 페이지가 달라지므로 지속적으로 (동적으로) 변경됨. (Thay đổi động theo thời gian.)
-- **예시 (Ví dụ)**: 당신이 시험 공부를 할 때 지금 당장 책상 위에 꺼내놓은 책과 필기구들이 '워킹 셋'입니다. 과목이 바뀌면 책상 위 물건(워킹 셋)도 바뀝니다. (Những cuốn sách và bút bạn đang để trên bàn học ngay lúc này chính là 'Working Set'. Khi chuyển môn, đồ trên bàn cũng thay đổi.)
-- 💡 **Mẹo ghi nhớ**: Working Set = Những món đồ đang "Working" (Đang dùng) phải để sẵn trên bàn (Memory).
+## 읽는 방법 (Cách đọc)
+- Điểm mấu chốt trong đề thi kỹ sư CNTT:
+  - Khái niệm: Working Set là **"Tập hợp các trang nhớ mà tiến trình tham chiếu thường xuyên trong một khoảng thời gian nhất định ($\Delta$)"**.
+  - Tác dụng lớn nhất: Bằng cách **luôn đảm bảo cấp đủ số khung trang nhớ RAM để giữ toàn bộ Working Set của tiến trình thường trú trong bộ nhớ chính**, hệ điều hành sẽ triệt tiêu lỗi trang liên tục, từ đó **ngăn chặn hiện tượng Thrashing**.
+  - Đặc tính: Working Set **không cố định mà thay đổi động (Dynamic)** theo thời gian chạy của chương trình.
+
+---
+
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **1. Mô hình toán học của Working Set (Denning):**
+  - Ký hiệu: $W(t, \Delta)$ là tập hợp các trang nhớ được tiến trình tham chiếu trong khoảng thời gian từ $t - \Delta$ đến thời điểm hiện tại $t$.
+  - Trong đó:
+    - $t$: Thời điểm khảo sát hiện tại.
+    - $\Delta$ (Delta): Kích thước **cửa sổ Working Set (Working Set Window)** – số lượng tham chiếu trang gần nhất được đưa vào xét duyệt.
+  - *Ví dụ minh họa:*
+    - Chuỗi tham chiếu trang: `... 2, 6, 1, 5, 7, 7, 7, 5, 1` tại thời điểm $t$.
+    - Nếu chọn kích thước cửa sổ $\Delta = 5$ tham chiếu gần nhất: Tập các trang tham chiếu gần nhất là $\{7, 7, 5, 1\}$ (lấy 5 vị trí cuối: `7, 7, 7, 5, 1`).
+    - Khi đó Tập làm việc Working Set là: $W(t, 5) = \{1, 5, 7\}$ (gồm 3 trang khác nhau).
+
+- **2. Cơ chế phòng chống Thrashing bằng Working Set:**
+
+| Tình huống tài nguyên bộ nhớ | Trạng thái hệ thống | Hành động xử lý của Hệ điều hành |
+| :--- | :--- | :--- |
+| $\sum \text{Kích thước Working Set} \le \text{Tổng dung lượng RAM}$ | Hệ thống vận hành trơn tru, tỷ lệ lỗi trang (Page Fault) cực thấp. | Tiến trình được cấp phát đủ khung trang theo nhu cầu thực tế; CPU duy trì thông lượng cao. |
+| $\sum \text{Kích thước Working Set} > \text{Tổng dung lượng RAM}$ | Nguy cơ bùng nổ hiện tượng **Thrashing** (Máy bị đơ, giật lag do liên tục Swap trang). | Hệ điều hành chủ động **chọn một số tiến trình để tạm dừng (Suspend / Swap Out)** đưa ra bộ nhớ phụ, nhường toàn bộ khung trang RAM cho các tiến trình còn lại chạy mượt mà. |
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Hình tượng hóa thực tế đời sống:**
+  - Hãy tưởng tượng bạn đang ngồi học thi tại bàn học:
+    - Mặt bàn học của bạn chính là **Bộ nhớ thực (RAM)**.
+    - Kệ sách đằng xa chính là **Ổ cứng (Secondary Storage)**.
+    - Cuốn sách giáo khoa, vở ghi và chiếc bút bạn đang mở ra dùng ngay lúc này chính là **Working Set**.
+    - Nếu mặt bàn đủ chỗ để đặt những thứ đang dùng (Working Set), bạn học rất nhanh. Nếu mặt bàn quá chật không để vừa, bạn phải liên tục đứng lên cất sách này lấy sách kia ra kệ (Page Fault) $\rightarrow$ Hết sạch thời gian học (Thrashing).
+
+### 복습 체크리스트
+- [ ] Ghi nhớ định nghĩa Working Set: Tập hợp các trang nhớ được tham chiếu trong cửa sổ thời gian $\Delta$.
+- [ ] Nắm vững mục đích cốt lõi: Giữ Working Set trong RAM để ngăn ngừa hiện tượng Thrashing.
+- [ ] Khẳng định Working Set mang tính biến đổi động theo thời gian thực tế.
+- [ ] Biết cách tính tập phần tử Working Set từ chuỗi tham chiếu và độ dài cửa sổ $\Delta$.

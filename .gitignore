@@ -19,3 +19,10 @@ ielts/
 
 # English study Markdown is maintained in the separate language-docs repository.
 ielts_docs/
+
+# Temporary worktrees and caches
+.worktrees/
+info-*/
+sql-*/
+__pycache__/
+*.pyc

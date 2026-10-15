@@ -1,96 +1,67 @@
 # 5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)
 
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa và vai trò của Kiến trúc phần mềm (`소프트웨어 아키텍처`) như một bản thiết kế khung xương định hình toàn bộ cấu trúc hệ thống.
+- Thuộc nằm lòng 6 đặc tính chất lượng phần mềm theo tiêu chuẩn quốc tế `ISO/IEC 9126`: Tính chức năng, Độ tin cậy, Tính khả dụng, Tính hiệu quả, Khả năng bảo trì, và Khả năng khả chuyển.
+- Nhận diện các mẫu kiến trúc kinh điển (`아키텍처 패턴`): Mẫu phân tầng (Layered), Mẫu Khách - Chủ (Client-Server), Mẫu Ống dẫn - Bộ lọc (Pipe-Filter), Mẫu MVC, và Mẫu Môi giới (Broker).
+
+## 핵심 키워드 (Từ khóa)
+- 소프트웨어 아키텍처 (Kiến trúc phần mềm / Software Architecture)
+- ISO/IEC 9126 (Tiêu chuẩn chất lượng phần mềm)
+- 기능성·신뢰성·사용성·효율성·유지보수성·이식성 (6 đặc tính ISO 9126)
+- 아키텍처 패턴 (Mẫu kiến trúc / Architectural Patterns)
+- 레이어드 패턴 (Layered Pattern / 계층 구조)
+- 파이프-필터 패턴 (Pipe-Filter Pattern / UNIX Shell)
+- MVC 패턴 (Model-View-Controller)
+
+## 선행·연결 개념 (Kiến thức liên kết)
+- **Từ bài trước ([8. UI 및 UX, HCI](23-bai-hoc.md)):** Sau khi xem xét giao diện và trải nghiệm tương tác bên ngoài, bài này đi sâu vào khung xương kỹ thuật vững chắc bên dưới của hệ thống.
+- **Tiếp nối sang bài sau ([1. 소프트웨어 아키텍처](25-bai-hoc.md)):** So sánh chi tiết giữa Thiết kế mức cao (상위 설계) và Thiết kế mức thấp (하위 설계), cùng mô hình 4+1 View.
+
+## 읽는 방법 (Cách đọc)
+- Đọc TẦNG A để thuộc 6 đặc tính chất lượng của ISO/IEC 9126 bằng thần chú **기-신-사-효-유-이** và đặc trưng nhận diện của từng mẫu kiến trúc.
+- Đọc TẦNG B để hiểu cơ chế truyền dữ liệu liên tục không phụ thuộc trạng thái của mẫu Pipe-Filter trong hệ điều hành và xử lý dữ liệu lớn.
+
+---
+
 ## 5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)
 
-### 024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)
-Phần “024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **개념 (Định nghĩa Kiến trúc phần mềm):** Là khung cấu trúc cơ bản (`기본 구조`) của toàn bộ hệ thống phần mềm, xác định các thành phần phần mềm (Components), mối quan hệ tương tác giữa chúng và các nguyên tắc chỉ đạo việc thiết kế, tiến hóa hệ thống theo thời gian.
+- **ISO/IEC 9126 (6 đặc tính chất lượng phần mềm quốc tế):**
+  1. `기능성 (Functionality - Tính chức năng)`: Phần mềm cung cấp đúng và đủ các chức năng theo yêu cầu (Bao gồm: Tính phù hợp - 적절성, Độ chính xác - 정밀성, Khả năng tương tác - 상호운용성, Bảo mật - 보안성, Tuân thủ tiêu chuẩn - 준수성).
+  2. `신뢰성 (Reliability - Độ tin cậy)`: Khả năng duy trì mức hiệu năng quy định trong các điều kiện xác định (Bao gồm: Độ chín muồi - 성숙성, Khả năng chịu lỗi - 결함 허용성, Khả năng phục hồi sự cố - 회복성).
+  3. `사용성 (Usability - Tính khả dụng)`: Người dùng dễ hiểu, dễ học và thao tác thuận tiện (Bao gồm: Dễ hiểu - 이해성, Dễ học - 학습성, Dễ vận hành - 운용성, Thân thiện - 친근성).
+  4. `효율성 (Efficiency - Tính hiệu quả)`: Mức hiệu năng tối ưu tương ứng với lượng tài nguyên tiêu tốn (Bao gồm: Thời gian đáp ứng nhanh - 시간 반응성, Sử dụng tiết kiệm tài nguyên - 자원 활용성).
+  5. `유지보수성 (Maintainability - Khả năng bảo trì)`: Khả năng dễ dàng sửa đổi khi có lỗi hoặc nâng cấp (Bao gồm: Dễ phân tích lỗi - 분석성, Dễ sửa đổi - 변경성, Độ ổn định - 안정성, Dễ kiểm thử - 시험성).
+  6. `이식성 (Portability - Khả năng khả chuyển)`: Khả năng chuyển đổi phần mềm sang môi trường phần cứng/hệ điều hành khác (Bao gồm: Dễ thích ứng - 적응성, Dễ cài đặt - 설치성, Khả năng cùng tồn tại - 공존성, Dễ thay thế - 대체성).
+  - 💡 **Thần chú nhớ 6 đặc tính:** **기-신-사-효-유-이** (Kỹ Năng Sống Tối Ưu, Hữu Ích).
+- **Các mẫu kiến trúc phần mềm tiêu biểu (아키텍처 패턴):**
+  - **레이어드 패턴 (Layered Pattern - Mẫu phân tầng):**
+    - Hệ thống được chia thành các tầng độc lập xếp chồng lên nhau (ví dụ: UI Layer -> Business Logic Layer -> Data Access Layer).
+    - Tầng trên chỉ sử dụng dịch vụ của tầng ngay dưới nó. Ưu điểm: Độc lập cao, dễ bảo trì và nâng cấp từng tầng.
+  - **클라이언트-서버 패턴 (Client-Server Pattern):**
+    - Một máy chủ (Server) phục vụ nhiều máy khách (Client) gửi yêu cầu dịch vụ qua mạng.
+  - **파이프-필터 패턴 (Pipe-Filter Pattern):**
+    - Luồng dữ liệu chảy qua chuỗi các bộ lọc (`Filter`) được kết nối với nhau bằng các ống dẫn (`Pipe`). Mỗi Filter biến đổi dữ liệu nhận được và đẩy sang Filter kế tiếp (ví dụ tiêu biểu: lệnh đường ống `|` trong UNIX Shell, hệ thống chuyển đổi video/audio).
+  - **MVC 패턴 (Model-View-Controller Pattern):**
+    - Tách biệt hệ thống thành 3 phân hệ: Model (Quản lý dữ liệu và logic nghiệp vụ), View (Hiển thị giao diện cho người dùng), và Controller (Tiếp nhận tương tác của người dùng để cập nhật Model và View).
+  - **브로커 패턴 (Broker Pattern):**
+    - Áp dụng trong hệ thống phân tán không đồng nhất, thành phần Broker đóng vai trò trung gian tiếp nhận yêu cầu từ client và định tuyến đến server phù hợp nhất rồi trả kết quả về (chuẩn CORBA).
+- **주의/함정 (Bẫy đề thi dễ nhầm):**
+  - **Bẫy 1:** *"Đặc tính nào trong ISO 9126 đo lường khả năng phục hồi (회복성) khi hệ thống gặp sự cố?"* -> **신뢰성 (Độ tin cậy)**, KHÔNG PHẢI 유지보수성 (Bảo trì).
+  - **Bẫy 2:** *"Đặc tính nào đo lường khả năng cài đặt (설치성) trên các hệ điều hành khác nhau?"* -> **이식성 (Khả năng khả chuyển)**.
+  - **Bẫy 3:** *"Mẫu kiến trúc nào xử lý luồng dữ liệu tuần tự qua các bộ lọc như lệnh pipeline trong UNIX Shell?"* -> **파이프-필터 패턴 (Pipe-Filter Pattern)**.
+- **한 문장 설명 (Câu chốt ghi nhớ):** "ISO 9126 gồm 6 trụ cột 기신사효유이; Layered phân tầng cách ly, Pipe-Filter lọc luồng dữ liệu, MVC chia tách giao diện nghiệp vụ".
 
-- 기능성 (Functionality): 요구사항을 정확하게 만족하는 기능을 제공하는지 여부를 나타냄. (Cung cấp chức năng thỏa mãn chính xác các yêu cầu không.)
-- 신뢰성 (Reliability): 요구된 기능을 오류 없이 수행할 수 있는 정도를 나타냄. (Mức độ thực hiện chức năng yêu cầu mà không có lỗi.)
-- 사용성 (Usability): 사용자가 쉽게 배우고 사용할 수 있는 정도를 나타냄. (Mức độ người dùng dễ dàng học và sử dụng.)
-- 이식성 (Portability): 다른 환경에서도 얼마나 쉽게 적용할 수 있는지 정도를 나타냄. (Mức độ dễ dàng áp dụng trong các môi trường khác nhau.)
-- **Ví dụ (Example):** App đang chạy trên Android, mang sang iOS chạy vẫn tốt mà không cần sửa nhiều -> Tính 이식성 (Portability) cao.
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Tập con thuộc tính quan trọng của ISO/IEC 9126 thường bị hỏi xoắn:**
+  - `결함 허용성 (Fault Tolerance)`: Khi một phân hệ bị lỗi (ví dụ 1 ổ cứng bị cháy), hệ thống vẫn không bị sập mà duy trì chức năng cơ bản -> Thuộc **신뢰성 (Reliability)**.
+  - `시험성 (Testability)`: Mức độ dễ dàng để lập trình viên viết unit test kiểm tra từng mô-đun -> Thuộc **유지보수성 (Maintainability)**.
+  - `상호운용성 (Interoperability)`: Khả năng hệ thống giao tiếp trơn tru với các phần mềm bên ngoài khác -> Thuộc **기능성 (Functionality)**.
 
-### 025. 소프트웨어 아키텍처의 설계 과정 (Quá trình thiết kế Kiến trúc phần mềm)
-Phần “025. 소프트웨어 아키텍처의 설계 과정 (Quá trình thiết kế Kiến trúc phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 설계 목표 설정 (Thiết lập mục tiêu thiết kế) → 시스템 타입 결정 (Quyết định loại hệ thống) → 아키텍처 패턴 적용 (Áp dụng pattern kiến trúc) → 서브시스템 구체화 (Cụ thể hóa hệ thống con) → 검토 (Xem xét/Đánh giá).
-
-### 026. 모듈화 (Modularization / Mô-đun hóa)
-Phần “026. 모듈화 (Modularization / Mô-đun hóa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 기능의 분리가 가능하여 인터페이스가 단순해진다. (Có thể phân tách các chức năng nên giao diện trở nên đơn giản.)
-- 프로그램의 효율적인 관리가 가능하다. (Có thể quản lý chương trình một cách hiệu quả.)
-- 오류의 파급 효과를 최소화할 수 있다. (Có thể giảm thiểu tác động lan truyền của lỗi.)
-- 모듈의 크기를 너무 작게 나누면 개수가 많아져 모듈간의 통합 비용이 많이 들고, 너무 크게 나누면 개수가 적어 통합 비용은 적게 들지만 모듈 하나의 개발 비용이 많이 든다. (Nếu chia module quá nhỏ, số lượng nhiều, chi phí tích hợp sẽ cao. Nếu chia quá lớn, chi phí tích hợp ít nhưng chi phí phát triển 1 module lại cao.)
-- **Ví dụ (Example):** Thay vì viết toàn bộ chức năng vào 1 file code, ta chia ra `login.py`, `payment.py`. Lỗi ở payment không làm sập login (giảm thiểu 파급 효과).
-
-### 027. 추상화의 유형 (Các loại trừu tượng hóa)
-Phần “027. 추상화의 유형 (Các loại trừu tượng hóa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 과정 추상화 (Trừu tượng hóa quá trình)
-- 데이터(자료) 추상화 (Trừu tượng hóa dữ liệu)
-- 제어 추상화 (Trừu tượng hóa điều khiển)
-
-### 028. 정보 은닉 (Information Hiding / Che giấu thông tin)
-Phần “028. 정보 은닉 (Information Hiding / Che giấu thông tin)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 한 모듈 내부에 포함된 절차와 자료들의 정보가 감추어져 다른 모듈이 접근하거나 변경하지 못하도록 하는 기법이다. (Kỹ thuật che giấu thông tin về thủ tục và dữ liệu bên trong một module để các module khác không thể truy cập hoặc sửa đổi.)
-- 모듈을 독립적으로 수행할 수 있다. (Có thể thực thi module một cách độc lập.)
-- 수정, 시험, 유지보수가 용이하다. (Dễ dàng sửa đổi, kiểm thử, bảo trì.)
-- 정보 은닉을 표기할 때 private의 의미는 은닉이다. (Khi ký hiệu che giấu thông tin, 'private' mang ý nghĩa là che giấu.)
-- **Ví dụ (Example):** Trong OOP, khai báo các biến là `private` và chỉ cho phép truy cập qua `getter/setter`.
-
-### 029. 파이프 - 필터 패턴 (Pipe-Filter Pattern)
-Phần “029. 파이프 - 필터 패턴 (Pipe-Filter Pattern)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 시스템의 처리 결과물을 파이프를 통해 전달받아 처리한 후 그 결과물을 다시 파이프를 통해 다음 시스템으로 넘겨주는 패턴이다. (Pattern nhận kết quả xử lý qua Pipe, xử lý (Filter) rồi lại chuyển kết quả đó qua Pipe cho hệ thống tiếp theo.)
-- 데이터 변환으로 인한 오버헤드가 발생한다. (Phát sinh overhead do chuyển đổi dữ liệu.)
-- **Ví dụ (Example):** Câu lệnh trong Linux: `ls | grep "txt" | sort`. Ký tự `|` chính là Pipe, còn `grep`, `sort` là các Filter.
-
-### 030. MVC (Model-View-Controller) 패턴
-Phần “030. MVC (Model-View-Controller) 패턴” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 모델 (Model): 서브시스템의 핵심 기능과 데이터를 보관함. (Lưu trữ chức năng cốt lõi và dữ liệu - Logic nghiệp vụ.)
-- 뷰 (View): 사용자에게 정보를 표시함. (Hiển thị thông tin cho người dùng - UI.)
-- 컨트롤러 (Controller): 사용자로부터 입력된 변경 요청을 처리하기 위해 모델에게 명령을 보냄. (Xử lý yêu cầu thay đổi từ người dùng và gửi lệnh cho Model.)
-
-### 039. 모듈 (Module)
-Phần “039. 모듈 (Module)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 모듈화를 통해 분리된 시스템의 각 기능들이다. (Là các chức năng của hệ thống được tách ra thông qua quá trình module hóa.)
-- 단독으로 컴파일이 가능하다. (Có thể biên dịch độc lập.)
-- 재사용 할 수 있다. (Có thể tái sử dụng.)
-- 다른 모듈에서의 접근이 가능하다. (Các module khác có thể truy cập được.)
-
-### 040 & 041. 결합도 (Coupling) 의 종류와 정도 (Các loại Độ kết dính / Mức độ từ Yếu → Mạnh)
-Phần “040 & 041. 결합도 (Coupling) 의 종류와 정도 (Các loại Độ kết dính / Mức độ từ Yếu → Mạnh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- *Kết dính càng YẾU (약함) càng TỐT, càng MẠNH (강함) càng XẤU.*
-- **자료 (Data) 결합도 (Yếu nhất - Tốt nhất):** 모듈 간의 인터페이스가 자료 요소로만 구성될 때. (Chỉ truyền dữ liệu đơn giản giữa các module).
-- **스탬프 (Stamp) 결합도:** 배열이나 레코드 등의 자료 구조가 전달될 때. (Truyền cấu trúc dữ liệu như mảng, bản ghi).
-- **제어 (Control) 결합도:** 제어 신호를 이용하여 통신하거나 제어 요소를 전달. (Truyền cờ điều khiển - control flag/signal).
-- **외부 (External) 결합도:** 데이터(변수)를 외부의 다른 모듈에서 참조할 때. (Tham chiếu biến toàn cục bên ngoài).
-- **공통 (Common) 결합도:** 공유되는 공통 데이터 영역을 여러 모듈이 사용할 때. (Nhiều module cùng dùng chung một vùng dữ liệu chung - global data).
-- **내용 (Content) 결합도 (Mạnh nhất - Xấu nhất):** 한 모듈이 다른 모듈의 내부 기능 및 그 내부 자료를 직접 참조하거나 수정. (Module này trực tiếp can thiệp nội bộ module kia).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **TSCNCN** (Tư - Stamp - Chế - Ngoại - Công - Nội): **Tính Sao Cho Nhẹ Cả Người**. (Từ Tốt nhất -> Xấu nhất).
-
-### 043. 주요 응집도 (Cohesion)
-Phần “043. 주요 응집도 (Cohesion)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- *Độ gắn kết nội bộ. Gắn kết càng MẠNH càng TỐT.*
-- **기능적 (Functional) 응집도 (Mạnh nhất - Tốt nhất):** Tất cả các yếu tố bên trong đều hướng tới giải quyết một chức năng duy nhất.
-- **순차적 (Sequential) 응집도:** Kết quả đầu ra của hoạt động này là đầu vào của hoạt động kia.
-- **통신적 (Communication) 응집도:** Các hoạt động cùng sử dụng chung một dữ liệu đầu vào/ra.
-- **절차적 (Procedural) 응집도:** 모듈 안의 구성 요소들이 그 기능을 순차적으로 수행할 경우. (Thực hiện tuần tự theo quy trình nhưng có thể không cùng dữ liệu).
-- **시간적 (Temporal) 응집도:** 특정 시간에 처리되는 몇 개의 기능을 모아 하나의 모듈로 작성. (Nhóm các chức năng cần thực hiện cùng một thời điểm, ví dụ: Module khởi tạo hệ thống).
-- **논리적 (Logical) 응집도:** Các chức năng có cùng logic được nhóm lại.
-- **우연적 (Coincidental) 응집도 (Yếu nhất - Xấu nhất):** 각 구성 요소들이 서로 관련 없는 요소로만 구성된 경우. (Nhóm các thành phần chẳng liên quan gì với nhau).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **KTTTTLN** (Kỳ - Thuận - Thông - Tiết - Thời - Luận - Ngẫu): **Không Thể Tin Thằng Trẻ Làm Ngốc**. (Từ Tốt nhất -> Xấu nhất).
-
-### 044. 팬인(Fan-In) / 팬아웃(Fan-Out)
-Phần “044. 팬인(Fan-In) / 팬아웃(Fan-Out)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 팬인 (Fan-In): 어떤 모듈을 제어(호출)하는 모듈의 수. (Số lượng các module gọi/điều khiển module đó -> Mũi tên TRỎ VÀO nó).
-- 팬아웃 (Fan-Out): 어떤 모듈에 의해 제어(호출)되는 모듈의 수. (Số lượng các module mà module đó gọi/điều khiển -> Mũi tên TRỎ RA từ nó).
-- **Nguyên tắc thiết kế tốt:** Fan-In phải CAO (được dùng lại nhiều), Fan-Out phải THẤP (ít phụ thuộc vào nhiều thằng khác).
+### 복습 체크리스트
+- [ ] Nhớ tên và giải thích 6 đặc tính của ISO/IEC 9126: 기능성, 신뢰성, 사용성, 효율성, 유지보수성, 이식성.
+- [ ] Phân biệt được 회복성 (Độ tin cậy) và 유지보수성 (Khả năng bảo trì).
+- [ ] Nhận diện được đặc trưng của Layered Pattern, Client-Server, Pipe-Filter và MVC.
+- [ ] Nắm được nguyên lý hoạt động của Broker Pattern trong hệ thống phân tán.

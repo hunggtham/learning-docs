@@ -1,48 +1,62 @@
 # 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
-## 스크립트 및 운영체제 (Script Languages & Operating Systems)
-### 193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)
-Phần “193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững khái niệm và đặc tính của ngôn ngữ kịch bản (스크립트 언어 - Script Languages) so với ngôn ngữ biên dịch truyền thống (Compiled Languages).
+- Nắm vững 5 đặc trưng cốt lõi của hệ điều hành UNIX: Viết bằng ngôn ngữ C (C언어로 작성), Tính khả chuyển cao (이식성), Hỗ trợ đa người dùng (다중 사용자), Đa nhiệm (다중 작업), và Cấu trúc tệp tin dạng cây (트리 구조 파일 시스템).
+- Ghi nhớ chức năng của các câu lệnh và lời gọi hệ thống (System Calls) tiêu biểu trong UNIX: `fork()`, `wait()`, `uname`, `chmod`, `chown`, `ls`, và `cat`.
 
-- **자바스크립트 (JavaScript)**: 클라이언트용 웹 동작 제어 (Phía client, điều khiển hành vi web).
-- **PHP**: 서버용 스크립트 언어 (Phía server, dùng trên Linux, Unix, Windows).
-- **파이썬 (Python)**: 대화형 인터프리터 언어 (Ngôn ngữ thông dịch tương tác).
-- **쉘 스크립트 (Shell Script)**: 명령어들의 조합 (Tập hợp các lệnh shell).
-- **Basic**: 절차지향 대화형 인터프리터 (Thông dịch tương tác, hướng thủ tục).
-  - 💡 *Mẹo ghi nhớ*: JS = Client Web, PHP = Server, Python = Thông dịch, Shell = Lệnh HĐH.
+## 핵심 키워드 (Từ khóa)
+- 스크립트 언어 (Script Languages / 인터프리터 방식 / 빠른 개발)
+- UNIX 운영체제 특징 (Features of UNIX)
+- C언어 기반 이식성 (High Portability via C Language)
+- 트리 구조 파일 시스템 (Tree-structured File System)
+- fork() 시스템 호출 (프로세스 복제 생성)
+- wait() 시스템 호출 (자식 프로세스 종료 대기)
+- uname 명령어 (시스템 정보 출력)
 
-### 194. 쉘 스크립트 제어문 (Shell Script Control Statements)
-Phần “194. 쉘 스크립트 제어문 (Shell Script Control Statements)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [31-bai-hoc.md](31-bai-hoc.md): Thư viện liên kết tĩnh và liên kết động.
+- [33-bai-hoc.md](33-bai-hoc.md): Quản lý bộ nhớ và quản lý tiến trình trong hệ điều hành.
+- [06-bai-hoc.md](06-bai-hoc.md): Biến môi trường và các lệnh kịch bản Shell trong Linux.
 
-- **선택형 (Điều kiện)**: `if`, `case`
-- **반복형 (Vòng lặp)**: `for`, `while`, `until`
-
-### 195. 라이브러리 (Libraries / Thư viện)
-Phần “195. 라이브러리 (Libraries / Thư viện)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **표준 (Standard)**: 기본적으로 포함된 모듈 (Tích hợp sẵn trong ngôn ngữ).
-- **외부 (External)**: 다운받아 설치한 후 사용 (Phải tải và cài đặt từ bên ngoài).
-  - 💡 *Mẹo ghi nhớ*: Built-in = Không cần cài, External = Cần pip/npm/v.v.
-
-### 196. C언어의 stdlib.h (Standard Library in C)
-Phần “196. C언어의 stdlib.h (Standard Library in C)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 자료형 변환, 난수 발생, 메모리 할당 기능을 제공한다. (Cung cấp chức năng ép kiểu, tạo số ngẫu nhiên, cấp phát bộ nhớ).
-- 주요 함수 (Các hàm chính): `atoi`, `atof`, `srand`, `rand`, `malloc`, `free`.
-
-### 197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)
-Phần “197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 읽는 방법 (Cách đọc)
+- Phân biệt hai mảng kiến thức:
+  - **Script Languages:** Chạy thông qua trình thông dịch (Interpreter), không cần bước biên dịch ra mã máy trung gian (như JavaScript, Python, PHP, Shell Script). Phát triển nhanh nhưng tốc độ thực thi chậm hơn ngôn ngữ biên dịch như C/C++.
+  - **UNIX:** Là cha đẻ của các hệ điều hành hiện đại (Linux, macOS). Được viết lại 90% bằng **ngôn ngữ C** bởi Ken Thompson và Dennis Ritchie tại Bell Labs $\rightarrow$ Giúp UNIX dễ dàng biên dịch và chạy trên các kiến trúc phần cứng khác nhau mà không cần viết lại từ đầu bằng Assembly (Tính khả chuyển - Portability).
 
 ---
 
-### 206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)
-Phần “206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng 5 đặc trưng kinh điển của hệ điều hành UNIX:**
 
-- `fork`: 새로운 프로세스 생성 (Tạo tiến trình mới).
-- `uname`: 시스템 정보 표시 (Hiển thị thông tin hệ thống).
-- `wait`: 자식 프로세스 종료 대기 (Chờ tiến trình con kết thúc).
-- `chmod`: 파일 보호 모드 설정 (Đổi quyền truy cập file).
-- `ls`: 파일 목록 확인 (Liệt kê file).
-- `cat`: 파일 내용 표시 (Xem nội dung file).
-- `chown`: 소유자 변경 (Đổi chủ sở hữu file).
-  - 💡 *Mẹo ghi nhớ*: fork (nhân bản, nĩa), chmod (change mode), chown (change owner).
+| Đặc trưng cốt lõi | Chi tiết kỹ thuật chuẩn đề thi |
+| :--- | :--- |
+| **C언어로 대부분 작성** | Viết bằng ngôn ngữ bậc cao C; giúp hệ thống có **tính khả chuyển cực cao (높은 이식성)** và dễ dàng mở rộng |
+| **다중 사용자 (Multi-User)** | Nhiều người dùng có thể cùng đăng nhập và làm việc trên hệ thống tại cùng một thời điểm |
+| **다중 작업 (Multi-Tasking)** | Cho phép nhiều tiến trình (Process) cùng chạy đồng thời; áp dụng cơ chế phân chia thời gian (Time-sharing) |
+| **트리 구조 파일 시스템** | Toàn bộ tệp và thư mục được tổ chức theo cấu trúc cây bắt đầu từ thư mục gốc Root (`/`) |
+| **대화식 운영체제 (Interactive)** | Giao tiếp với người dùng qua trình thông dịch dòng lệnh (Shell) theo cơ chế hỏi - đáp trực tiếp |
+
+- **Bảng các lệnh và System Call quản lý tiến trình trong UNIX:**
+
+| Lệnh / Lời gọi hệ thống | Chức năng chi tiết chuẩn thi |
+| :--- | :--- |
+| **`fork()`** | **Tạo ra một tiến trình con mới (자식 프로세스 생성)** bằng cách sao chép y hệt toàn bộ không gian nhớ của tiến trình cha |
+| **`wait()`** | Khiến tiến trình cha **tạm dừng thực thi để chờ cho đến khi tiến trình con kết thúc hoàn tất** |
+| **`exec()`** | Nạp một chương trình nhị phân mới đè lên không gian nhớ của tiến trình hiện tại để thực thi |
+| **`exit()`** | Chấm dứt tiến trình hiện tại và trả về mã trạng thái thoát cho tiến trình cha |
+| **`uname`** | Hiển thị thông tin hệ điều hành (Tên kernel, phiên bản, kiến trúc máy tính) |
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Giá trị trả về của lời gọi hệ thống `fork()`:**
+  - `fork()` là hàm duy nhất được gọi 1 lần nhưng trả về kết quả 2 lần ở hai tiến trình khác nhau:
+    - Ở tiến trình cha: Trả về **PID của tiến trình con** (một số nguyên dương).
+    - Ở tiến trình con: Trả về số **`0`**.
+    - Nếu tạo thất bại: Trả về số **`-1`**.
+  - Lập trình viên dùng giá trị trả về này để phân nhánh logic cho cha và con chạy các công việc độc lập.
+
+### 복습 체크리스트
+- [ ] Nhớ UNIX được viết phần lớn bằng ngôn ngữ C nên có tính khả chuyển (이식성) rất cao.
+- [ ] Nhớ hệ thống tệp tin của UNIX có cấu trúc hình Cây (Tree structure) bắt đầu từ gốc `/`.
+- [ ] Nhớ lời gọi hệ thống `fork()` dùng để tạo tiến trình con mới (nhân bản tiến trình).
+- [ ] Nhớ lời gọi hệ thống `wait()` dùng để chờ tiến trình con kết thúc.

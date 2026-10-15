@@ -1,31 +1,60 @@
 # 배열과 포인터 심화 (Arrays & Pointers - Advanced)
 
-## 배열과 포인터 심화 (Arrays & Pointers - Advanced)
-### 260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)
-Phần “260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững các phép toán số học nâng cao trên con trỏ (포인터 연산) và cơ chế dịch chuyển địa chỉ ô nhớ theo kích thước kiểu dữ liệu cơ sở.
+- Phân biệt sự khác biệt giữa Con trỏ chuỗi ký tự (`char *p = "KOREA";`) và Mảng chuỗi ký tự (`char str[] = "KOREA";`).
+- Phân biệt rõ ràng giữa Mảng con trỏ (포인터 배열 / `int *arr[3]`) và Con trỏ mảng (배열 포인터 / `int (*arr)[3]`).
 
-- 배열 선언 시 초기값을 지정할 수 있다. (Có thể gán giá trị khởi tạo ngay khi khai báo mảng).
-- 배열의 크기를 생략하려면 반드시 초기값을 지정해야 한다. (Nếu bỏ trống kích thước mảng trong ngoặc `[]`, bắt buộc phải có giá trị khởi tạo để máy tự đếm).
-- 적은 수로 초기화하면 나머지 요소는 0이 입력된다. (Nếu khởi tạo ít phần tử hơn kích thước mảng, các phần tử còn lại tự động bằng 0).
-  - *Example / Ví dụ*: `int a[5] = {3};` -> `[3, 0, 0, 0, 0]`.
-  - 💡 *Mẹo ghi nhớ*: C/Java không tự làm sạch bộ nhớ trừ khi bạn khởi tạo ít nhất 1 phần tử.
+## 핵심 키워드 (Từ khóa)
+- 포인터 연산 (Pointer Arithmetic / `ptr + n`)
+- 문자열 포인터 (String Pointer / 문자열 상수)
+- 포인터 배열 (Array of Pointers / `int *arr[]`)
+- 배열 포인터 (Pointer to an Array / `int (*arr)[]`)
+- 간접 참조 (Dereferencing / `*(*(arr + i) + j)`)
+- 불변 문자열 (Read-only String Literal)
 
-### 261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)
-Phần “261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [20-bai-hoc.md](20-bai-hoc.md): Mảng 2 chiều và công thức tính địa chỉ ô nhớ.
+- [22-bai-hoc.md](22-bai-hoc.md): Tổng hợp mảng, câu lệnh điều kiện và vòng lặp.
+- [19-bai-hoc.md](19-bai-hoc.md): Con trỏ, mảng và ký tự kết thúc chuỗi `\0`.
 
-- 배열에 문자열을 저장할 때는 초기값으로 지정해야 하며, 이미 선언된 배열에는 대입 연산자로 문자열을 통째로 저장할 수 없다. (Chỉ được gán chuỗi trực tiếp lúc khởi tạo. Không được gán chuỗi vào mảng đã khai báo bằng dấu `=`).
-- `%s`를 이용해 문자열을 출력할 때는 배열 이름이나 포인터 변수만 적어주면 된다. (Khi in chuỗi bằng `%s`, chỉ cần truyền tên mảng hoặc con trỏ, không cần dấu `&`).
+## 읽는 방법 (Cách đọc)
+- Phân biệt hai khai báo dễ gây nhầm lẫn nhất trong đề thi:
+  - **`int *arr[3]` (Mảng các con trỏ):** Đọc từ dấu ngoặc vuông trước $\rightarrow$ Là một MẢNG gồm 3 phần tử, mỗi phần tử bên trong là một con trỏ kiểu `int*`. Thường dùng để quản lý một danh sách nhiều chuỗi ký tự có độ dài ngắn khác nhau.
+  - **`int (*arr)[3]` (Con trỏ trỏ tới mảng):** Đọc dấu ngoặc tròn trước $\rightarrow$ Là duy nhất MỘT CON TRỎ trỏ tới một mảng gồm 3 số nguyên. Kích thước biến `arr` chỉ bằng kích thước 1 con trỏ (4 hoặc 8 bytes).
 
-### 262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)
-Phần “262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+---
 
-- 포인터 변수는 동적으로 할당되는 메모리 영역인 **힙(Heap) 영역**에 접근하는 동적 변수이다. (Con trỏ là biến động truy cập vào vùng nhớ Heap được cấp phát động).
-- `*` 연산자: 간접 연산자 (Lấy giá trị).
-- `&` 연산자: 번지 연산자 (Lấy địa chỉ).
-  - 💡 *Mẹo ghi nhớ*: Con trỏ giống như tấm bản đồ (chỉ chứa địa chỉ), dùng `*` để đi đến đích và lấy kho báu (giá trị).
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng so sánh: Mảng con trỏ vs Con trỏ mảng:**
 
-### 263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)
-Phần “263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Cú pháp khai báo | Tên gọi chuẩn thi | Bản chất biến | Kích thước bộ nhớ (32-bit) | Ngữ cảnh ứng dụng |
+| :--- | :--- | :--- | :--- | :--- |
+| **`int *arr[3];`** | **포인터 배열 (Pointer Array)** | Là một **Mảng gồm 3 phần tử**, mỗi phần tử chứa 1 địa chỉ ô nhớ | $3 \times 4\text{ Bytes} = 12\text{ Bytes}$ | Quản lý danh sách các chuỗi hoặc mảng rời rạc |
+| **`int (*arr)[3];`** | **배열 포인터 (Array Pointer)** | Là **Duy nhất 1 biến con trỏ**, trỏ tới mảng 1 chiều có 3 số nguyên | Đúng bằng $1$ con trỏ $= 4\text{ Bytes}$ | Truyền mảng 2 chiều làm tham số hàm |
 
-- `p + 1`은 메모리 주소가 1 증가하는 것이 아니라 해당 자료형의 크기(int는 4Byte)만큼 증가한다. (`p + 1` không cộng thêm 1 vào địa chỉ, mà cộng thêm kích thước của kiểu dữ liệu, ví dụ int thì cộng thêm 4 Bytes).
-  - *Example / Ví dụ*: `p` là `1000` -> `p + 1` là `1004` (với int).
+- **So sánh Con trỏ chuỗi vs Mảng chuỗi trong C:**
+
+| Tiêu chuẩn | `char str[] = "KOREA";` (Mảng chuỗi) | `char *p = "KOREA";` (Con trỏ chuỗi) |
+| :--- | :--- | :--- |
+| **Vị trí lưu trữ** | Toàn bộ các ký tự được chép vào vùng nhớ **Stack** | Chuỗi nằm ở vùng nhớ hằng số **Read-Only Data Segment**; con trỏ `p` lưu trên Stack |
+| **Khả năng thay đổi** | **Có thể sửa đổi:** `str[0] = 'C';` hợp lệ | **Tuyệt đối không thể sửa:** `*p = 'C';` gây lỗi hệ thống (Segmentation Fault) |
+| **Bản chất biến** | `str` là một **hằng con trỏ**, không thể gán địa chỉ mới | `p` là một **biến con trỏ**, có thể trỏ sang chuỗi khác `p = "SEOUL";` |
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Bài toán thi mẫu lần vết con trỏ chuỗi:**
+  - *Đoạn mã C:*
+    ```c
+    char *p = "KOREA";
+    printf("%s\n", p + 2);
+    printf("%c\n", *(p + 1));
+    ```
+  - *Quá trình phân tích:*
+    1. Chuỗi `"KOREA"` gồm các ký tự tại các chỉ số $0, 1, 2, 3, 4$: `'K'`, `'O'`, `'R'`, `'E'`, `'A'`.
+    2. Phép toán `p + 2`: Con trỏ nhảy sang địa chỉ của ký tự thứ 3 (chỉ số 2) là `'R'`. Do dùng định dạng chuỗi `%s`, hàm in toàn bộ phần còn lại từ vị trí đó cho đến khi gặp `\0` $\rightarrow$ In ra: `REA`.
+    3. Phép toán `*(p + 1)`: Lấy giá trị của ký tự tại chỉ số 1 (định dạng `%c`) $\rightarrow$ In ra: `O`.
+
+### 복습 체크리스트
+- [ ] Phân biệt được `int *arr[3]` (mảng gồm 3 con trỏ) và `int (*arr)[3]` (con trỏ trỏ tới mảng 3 số nguyên).
+- [ ] Nhớ con trỏ chuỗi `char *p = "..."` trỏ vào vùng nhớ chỉ đọc (Read-only), không được sửa ký tự.
+- [ ] Tính đúng: Với `p = "KOREA"`, lệnh `printf("%s", p + 2)` in ra `REA`.

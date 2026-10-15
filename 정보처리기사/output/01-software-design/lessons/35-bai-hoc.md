@@ -1,49 +1,71 @@
 # 8. 디자인 패턴 (Design Patterns)
 
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa, nguồn gốc và lợi ích của Mẫu thiết kế phần mềm (`디자인 패턴 - Design Patterns`) do nhóm GoF (Gang of Four) hệ thống hóa thành 23 mẫu kinh điển.
+- Phân loại tuyệt đối 23 mẫu thiết kế thành 3 nhóm lớn: Nhóm khởi tạo (`생성 패턴` - 5 mẫu), Nhóm cấu trúc (`구조 패턴` - 7 mẫu), và Nhóm hành vi (`행위 패턴` - 11 mẫu).
+- Thuộc nằm lòng các câu thần chú nhận diện nhanh nhóm của từng mẫu thiết kế trong đề thi trắc nghiệm.
+
+## 핵심 키워드 (Từ khóa)
+- GoF 디자인 패턴 (Gang of Four 23 Design Patterns)
+- 생성 패턴 (Creational Patterns - 5: Abstract Factory, Builder, Factory Method, Prototype, Singleton)
+- 구조 패턴 (Structural Patterns - 7: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)
+- 행위 패턴 (Behavioral Patterns - 11: Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor)
+- 재사용성 / 유지보수성 (Reusability / Maintainability)
+
+## 선행·연결 개념 (Kiến thức liên kết)
+- **Từ bài trước ([9. 소프트웨어 품질 특성 (ISO/IEC 9126)](34-bai-hoc.md)):** Sau khi xem xét các tiêu chuẩn chất lượng (Dễ bảo trì, Dễ mở rộng), bài này trang bị bộ công cụ giải pháp mẫu chuẩn hóa để đạt được các tiêu chuẩn đó.
+- **Tiếp nối sang bài sau ([4. 디자인 패턴 (Design Patterns - GoF)](36-bai-hoc.md)):** Khảo sát chi tiết phân loại và ngữ cảnh áp dụng thực tế của từng nhóm mẫu.
+
+## 읽는 방법 (Cách đọc)
+- Đọc TẦNG A để thuộc 2 bài thơ thần chú phân loại: Tạo dựng gồm 5 (추-빌-팩-프-싱), Cấu trúc gồm 7 (어-브-컴-데-퍼-플-프) - dạng câu hỏi "Mẫu nào sau đây KHÔNG THUỘC nhóm cấu trúc?" xuất hiện liên tục trong đề thi.
+- Đọc TẦNG B để hiểu triết lý "Đừng phát minh lại bánh xe" (Don't reinvent the wheel) khi áp dụng Design Patterns vào dự án thực tế.
+
+---
+
 ## 8. 디자인 패턴 (Design Patterns)
 
-### 디자인 패턴 (Design Pattern) 개요
-Phần “디자인 패턴 (Design Pattern) 개요” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **개념 (Định nghĩa Mẫu thiết kế GoF):**
+  - Là tập hợp các giải pháp thiết kế tiêu chuẩn đã được chứng minh hiệu quả trong thực tế, dùng để giải quyết các vấn đề thường xuyên lặp lại trong quá trình thiết kế phần mềm hướng đối tượng do nhóm 4 tác giả GoF (Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides) tổng hợp thành **23 mẫu kinh điển**.
+- **Phân loại 23 mẫu thiết kế GoF thành 3 nhóm mục đích:**
+  - **1. 생성 패턴 (Creational Patterns - Nhóm khởi tạo - 5 mẫu):**
+    - Trọng tâm: Cơ chế tạo lập đối tượng một cách linh hoạt, che giấu quá trình khởi tạo cụ thể bên trong.
+    - 5 mẫu cốt lõi:
+      1. `Abstract Factory (추상 팩토리)`: Tạo ra các họ đối tượng liên quan mà không chỉ định lớp cụ thể.
+      2. `Builder (빌더)`: Tách rời quá trình xây dựng đối tượng phức tạp khỏi biểu diễn của nó.
+      3. `Factory Method (팩토리 메소드)`: Giao việc khởi tạo đối tượng cụ thể cho các lớp con.
+      4. `Prototype (프로토타입)`: Tạo ra đối tượng mới bằng cách sao chép nhân bản (Clone) từ một đối tượng mẫu có sẵn.
+      5. `Singleton (싱글톤)`: Đảm bảo một lớp chỉ có duy nhất một thể hiện (Instance) trong toàn bộ ứng dụng và cung cấp điểm truy cập toàn cục.
+    - 💡 **Thần chú nhớ 5 mẫu khởi tạo:** **추 - 빌 - 팩 - 프 - 싱** (Chuẩn Bị Phê Pha Sớm).
+  - **2. 구조 패턴 (Structural Patterns - Nhóm cấu trúc - 7 mẫu):**
+    - Trọng tâm: Kết hợp các lớp (Classes) và đối tượng (Objects) thành các cấu trúc lớn hơn, linh hoạt hơn.
+    - 7 mẫu cốt lõi:
+      1. `Adapter (어댑터)`: Chuyển đổi giao diện không tương thích thành giao diện mà client mong đợi.
+      2. `Bridge (브리지)`: Tách rời phần trừu tượng khỏi phần hiện thực để cả hai có thể thay đổi độc lập.
+      3. `Composite (컴포지트)`: Xây dựng cấu trúc cây biểu diễn phân cấp toàn thể - bộ phận, coi đối tượng đơn và nhóm đối tượng như nhau.
+      4. `Decorator (데코레이터)`: Bổ sung trách nhiệm mới cho đối tượng một cách linh hoạt trong thời gian chạy (Runtime) thay vì kế thừa.
+      5. `Facade (퍼사드)`: Cung cấp một giao diện đơn giản duy nhất để giao tiếp với cả một hệ thống con (Subsystem) phức tạp bên trong.
+      6. `Flyweight (플라이웨이트)`: Chia sẻ trạng thái chung giữa nhiều đối tượng nhỏ để tiết kiệm bộ nhớ RAM.
+      7. `Proxy (프록시)`: Tạo đối tượng đại diện thay thế để kiểm soát quyền truy cập hoặc trì hoãn nạp đối tượng thật.
+    - 💡 **Thần chú nhớ 7 mẫu cấu trúc:** **어 - 브 - 컴 - 데 - 퍼 - 플 - 프** (Anh Bảo Chú Đừng Phá Phách Phòng).
+  - **3. 행위 패턴 (Behavioral Patterns - Nhóm hành vi - 11 mẫu):**
+    - Trọng tâm: Phân chia trách nhiệm, thuật toán và luồng giao tiếp tương tác giữa các đối tượng.
+    - 11 mẫu cốt lõi:
+      - `Chain of Responsibility (책임 연쇄)`, `Command (커맨드)`, `Interpreter (인터프리터)`, `Iterator (반복자)`, `Mediator (중재자)`, `Memento (메멘토)`, `Observer (옵서버)`, `State (상태)`, `Strategy (전략)`, `Template Method (템플릿 메소드)`, `Visitor (방문자)`.
+- **주의/함정 (Bẫy đề thi dễ nhầm):**
+  - **Bẫy 1:** *"Mẫu thiết kế nào thuộc nhóm Tạo dựng (생성 패턴)?"* -> Ghi nhớ 5 mẫu: **Abstract Factory, Builder, Factory Method, Prototype, Singleton**. Các mẫu còn lại không thuộc nhóm này.
+  - **Bẫy 2:** *"Decorator và Facade thuộc nhóm mẫu thiết kế nào?"* -> **구조 패턴 (Nhóm cấu trúc - Structural Patterns)**.
+  - **Bẫy 3:** *"Observer và Strategy thuộc nhóm mẫu thiết kế nào?"* -> **행위 패턴 (Nhóm hành vi - Behavioral Patterns)**.
+- **한 문장 설명 (Câu chốt ghi nhớ):** "GoF có 23 mẫu: Tạo dựng có 5 (추빌팩프싱), Cấu trúc có 7 (어브컴데퍼플프), Hành vi có 11 mẫu điều phối tương tác".
 
-- 세부적인 구현 방안을 설계할 때 참조할 수 있는 전형적인 해결 방식 또는 예제를 의미한다. (Là những phương pháp giải quyết hoặc ví dụ điển hình có thể tham khảo khi thiết계 chi tiết phương án triển khai.)
-- 3가지 유형 (3 Loại chính): 생성 패턴 (Creational), 구조 패턴 (Structural), 행위 패턴 (Behavioral).
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Ý nghĩa thực tiễn của việc sử dụng Design Patterns:**
+  - Tiết kiệm thời gian thiết kế vì không phải giải lại các bài toán kiến trúc kinh điển.
+  - Giúp việc giao tiếp giữa các kỹ sư phần mềm trở nên cô đọng và chính xác (chỉ cần nói "chỗ này áp dụng Singleton và Observer", cả nhóm đều hiểu ngay cấu trúc mã nguồn mà không cần giải thích dài dòng).
+  - Tăng độ bền vững của mã nguồn theo đúng các nguyên tắc SOLID.
 
-### 생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại
-Phần “생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 객체 생성과 관련된 패턴. (Liên quan đến việc tạo đối tượng.)
-- **빌더 (Builder):** 작게 분리된 인스턴스를 건축하듯이 조합하여 객체를 생성함. (Tạo đối tượng bằng cách lắp ráp các phần nhỏ như xây nhà.)
-- **팩토리 메소드 (Factory Method):** 객체 생성을 서브 클래스에서 처리하도록 분리하여 캡슐화한 패턴으로, 가상 생성자(Virtual Constructor) 패턴이라고도 함. (Giao việc tạo đối tượng cho lớp con, còn gọi là Virtual Constructor).
-- **프로토타입 (Prototype):** 원본 객체를 복제하는 방법으로 객체를 생성함. (Tạo đối tượng bằng cách copy/clone từ đối tượng gốc).
-- **싱글톤 (Singleton):** 생성된 객체를 여러 프로세스가 동시에 참조할 수는 없음 (하나의 객체만 생성). (Đảm bảo chỉ có 1 instance duy nhất được tạo ra).
-- **추상 팩토리 (Abstract Factory):** 서로 연관·의존하는 객체들의 그룹으로 생성하여 추상적으로 표현함. (Tạo ra một nhóm các đối tượng có liên quan với nhau thông qua interface).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **BFPSA** (Build - Fact - Pro - Sing - Ab): **Bạn Phải Phạt Sợ Ai**.
-
-### 구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại
-Phần “구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 클래스나 객체를 조합해 더 큰 구조를 만드는 패턴. (Kết hợp lớp/đối tượng thành cấu trúc lớn hơn).
-- **어댑터 (Adapter):** 인터페이스를 다른 클래스가 재사용할 수 있도록 변환함. (Biến đổi interface để lớp khác dùng được, giống như cục sạc chuyển đổi điện).
-- **브리지 (Bridge):** 서로가 독립적으로 확장할 수 있도록 구성함. (Tách phần trừu tượng và phần thực thi để cả 2 có thể phát triển độc lập).
-- **컴포지트 (Composite):** 복합 객체와 단일 객체를 구분 없이 다루고자 할 때 사용함. (Xử lý đối tượng đơn lẻ và đối tượng phức hợp (nhóm) theo cùng một cách, cấu trúc cây).
-- **데코레이터 (Decorator):** 부가적인 기능을 추가하기 위해 다른 객체들을 덧붙이는 방식으로 구현함. (Gắn thêm tính năng mới vào đối tượng có sẵn giống như trang trí).
-- **퍼싸드 (Facade):** 복잡한 서브 클래스들을 피해 더 상위에 인터페이스를 구성함. (Tạo một interface cấp cao đơn giản để che giấu hệ thống con phức tạp bên dưới).
-- **플라이웨이트 (Flyweight):** 가능한 한 인스턴스를 공유해서 사용함으로써 메모리를 절약하는 패턴. (Chia sẻ instance để tiết kiệm bộ nhớ, tái sử dụng những gì giống nhau).
-- **프록시 (Proxy):** 접근이 어려운 객체와 여기에 연결하려는 객체 사이에서 인터페이스 역할을 수행하는 패턴. (Người đại diện, đứng giữa kiểm soát truy cập vào đối tượng thực).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **ABCDFFP** (Ad - Bri - Com - Dec - Fac - Fly - Pro): **Anh Bán Cơm Đĩa Phải Phạt Phi**.
-
-### 행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại
-Phần “행위 패턴 (Behavioral Pattern / Mẫu hành vi) - 11 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 객체 간의 상호작용이나 책임 분배에 대한 패턴. (Giao tiếp và phân bổ trách nhiệm giữa các đối tượng).
-- **책임 연쇄 (Chain of Responsibility):** 요청을 한 객체가 처리하지 못하면 다음 객체로 넘어가는 형태. (Xử lý dây chuyền, ai làm được thì làm, không thì chuyển người tiếp theo).
-- **커맨드 (Command):** 재이용하거나 취소할 수 있도록 요청에 필요한 정보를 저장함. (Đóng gói yêu cầu thành đối tượng, dễ dàng undo/redo).
-- **인터프리터 (Interpreter):** 언어에 문법 표현을 정의함. (Định nghĩa ngữ pháp cho ngôn ngữ).
-- **반복자 (Iterator):** 접근이 잦은 객체에 대해 동일한 인터페이스를 사용하도록 함. (Duyệt qua các phần tử của tập hợp mà không cần biết cấu trúc bên trong).
-- **중재자 (Mediator):** 복잡한 상호 작용을 캡슐화하여 객체로 정의함. (Làm trung gian liên lạc giữa các đối tượng để giảm sự phụ thuộc chéo).
-- **메멘토 (Memento):** 객체를 해당 시점의 상태로 돌릴 수 있는 기능을 제공, C + Z와 같은 되돌리기 기능을 개발할 때 주로 이용함. (Lưu trạng thái để khôi phục/Undo).
-- **옵서버 (Observer):** 객체에 상속되어 있는 다른 객체들에게 변화된 상태를 전달함. (Một đối tượng thay đổi trạng thái, các đối tượng đăng ký theo dõi sẽ được thông báo - VD: Đăng ký kênh YouTube).
-- **상태 (State):** 객체의 상태에 따라 동일한 동작을 다르게 처리해야 할 때 사용함. (Thay đổi hành vi khi trạng thái đối tượng thay đổi).
-- **전략 (Strategy):** 동일한 계열의 알고리즘들을 상호 교환할 수 있게 정의함. (Đóng gói thuật toán để có thể thay đổi linh hoạt lúc runtime).
-- **템플릿 메소드 (Template Method):** 하위 클래스에서 세부 처리를 구체화함. (Lớp cha định nghĩa khung thuật toán, lớp con implement chi tiết).
-- **방문자 (Visitor):** 처리 기능을 분리하여 별도의 클래스로 구성함. (Tách logic xử lý khỏi cấu trúc dữ liệu, đối tượng Visitor đi "thăm" các phần tử để xử lý).
+### 복습 체크리스트
+- [ ] Nhớ tên nhóm tác giả GoF và tổng số 23 mẫu thiết kế.
+- [ ] Đọc tên đủ 5 mẫu tạo dựng (생성 패턴): Abstract Factory, Builder, Factory Method, Prototype, Singleton.
+- [ ] Đọc tên đủ 7 mẫu cấu trúc (구조 패턴): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy.
+- [ ] Nhận diện được các mẫu phổ biến thuộc nhóm hành vi (Observer, Strategy, Template Method, Command).

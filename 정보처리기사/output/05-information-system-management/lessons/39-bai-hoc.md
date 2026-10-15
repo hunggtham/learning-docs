@@ -1,100 +1,85 @@
 # 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
 
-## 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
+## 학습 목표 (Mục tiêu)
+- Nắm vững 4 đặc tính kiến trúc cốt lõi của Software Framework (모듈화, 재사용성, 확장성, 제어의 역흐름 - IoC).
+- Phân biệt các hệ khung phần mềm phổ biến trong thực tế và đề thi: Spring Framework, eGovFrame, Microsoft .NET.
+- Phân tích chi tiết ưu nhược điểm của các cấu trúc tô pô mạng (Star, Ring, Bus, Tree, Mesh) và công thức số đường truyền $n(n-1)/2$.
+- Nhớ chuẩn các số hiệu tiêu chuẩn mạng quốc tế IEEE 802 (802.3, 802.11, 802.15).
 
-### 11.1 소프트웨어 프레임워크 및 개발 심화
-Phần “11.1 소프트웨어 프레임워크 및 개발 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 핵심 키워드 (Từ khóa)
+- **프레임워크 4대 특성 (Framework Characteristics)**: 모듈화 (Modularity), 재사용성 (Reusability), 확장성 (Extensibility), 제어의 역흐름 (Inversion of Control - IoC).
+- **주요 프레임워크 (Frameworks)**: Spring (Java IoC/DI, AOP), 전자정부 표준 프레임워크 (eGovFrame), .NET (Microsoft CLR).
+- **네트워크 토폴로지 (Topologies)**: 성형 (Star - Hub trung tâm), 링형 (Ring - vòng tròn khép kín), 버스형 (Bus - dây cáp chung có Terminator), 트리형 (Tree - phân cấp), 망형 (Mesh - $n(n-1)/2$).
+- **IEEE 802 표준**: IEEE 802.3 (Ethernet - CSMA/CD), IEEE 802.11 (Wireless LAN - CSMA/CA), IEEE 802.15 (WPAN - Bluetooth).
 
-- **프레임워크의 특성 (Framework Characteristics):**
-  - **모듈화 (Modularity):** 캡슐화를 통해 변경의 영향을 최소화하고 품질 향상.
-  - **재사용성 (Reusability):** 재사용 가능한 모듈 제공 (생산성 향상).
-  - **확장성 (Extensibility):** 다형성을 통한 인터페이스 확장.
-  - **제어의 역흐름 (Inversion of Control):** 객체 제어 권한을 프레임워크에 넘김.
-- **프레임워크 종류 (Framework Types):**
-  - **스프링 (Spring):** 자바 플랫폼을 위한 경량형 오픈소스 프레임워크.
-  - **전자정부 (e-Government):** 공공부문 정보화 사업을 지원하는 프레임워크.
-  - **닷넷 (.NET):** 마이크로소프트의 Windows 개발 및 실행 환경.
-- **Tiếng Việt:** Đặc điểm của Framework: Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
+## 선행·연결 개념 (Kiến thức liên kết)
+- Liên kết với [02-bai-hoc.md](02-bai-hoc.md) (방법론 테일러링 및 프레임워크 - Đặc tính khung phần mềm).
+- Liên kết với [20-bai-hoc.md](20-bai-hoc.md) (네트워크 토폴로지 및 IEEE 표준 - Cấu trúc mạng cơ bản).
+- Liên kết với [04-programming-language/69-bai-hoc.md](../../04-programming-language/lessons/69-bai-hoc.md) (Kiến trúc Spring và nguyên lý IoC).
 
-### 11.2 네트워크 구조 및 표준 심화
-Phần “11.2 네트워크 구조 및 표준 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 읽는 방법 (Cách đọc)
+- Phân biệt đặc tính Framework:
+  - "Lập trình viên không trực tiếp gọi luồng xử lý mà Framework sẽ điều khiển và gọi lại mã của lập trình viên" $\rightarrow$ **제어의 역흐름 (Inversion of Control - IoC)**.
+  - "Hai đầu dây cáp của cấu trúc mạng bus phải gắn linh kiện gì để tránh phản xạ tín hiệu?" $\rightarrow$ **Terminator (종단 저항)**.
+  - "Mạng kết nối Star có điểm yếu lớn nhất là gì?" $\rightarrow$ **Nút trung tâm (Hub/Switch) bị hỏng sẽ làm tê liệt toàn mạng (Single Point of Failure)**.
 
-- **네트워크 토폴로지 (Network Topology):**
-  - **성형 (Star):** 중앙 컴퓨터를 중심으로 연결 (포인트 투 포인트).
-  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결.
-  - **버스형 (Bus):** 하나의 통신 회선에 여러 단말 연결 (신뢰성 높음).
-  - **망형 (Mesh):** 모든 지점을 서로 연결. 회선 수 = `n(n-1)/2`.
-- **IEEE 802 표준 규격:**
-  - `802.3`: CSMA/CD (유선 LAN)
-  - `802.11`: 무선 LAN (WLAN)
-    - `802.11a/g`: 54Mbps
-    - `802.11i`: 보안 표준 (WPA/WPA2)
-    - `802.11n`: 2.4GHz/5GHz 듀얼 대역, 최고 600Mbps
-- **경로 제어 프로토콜 (Routing Protocols):**
-  - **IGP (내부):** AS 내부 라우팅 (RIP, OSPF)
-  - **EGP (외부):** AS 간의 라우팅
-  - **BGP (Border Gateway Protocol):** EGP 단점 보완. 변화된 정보만 교환.
-- **흐름 제어 (Flow Control):**
-  - **정지-대기 (Stop-and-Wait):** ACK를 받은 후 다음 패킷 전송.
-  - **슬라이딩 윈도우 (Sliding Window):** ACK 없이도 미리 정해진 윈도우 크기(Window Size)만큼 연속 전송.
-- **Tiếng Việt:**
-  - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
-  - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
-  - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
+---
 
-### 11.3 데이터베이스 동시성 및 교착상태 심화
-Phần “11.3 데이터베이스 동시성 및 교착상태 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-- **교착상태 해결 방법 (Deadlock Handling):**
-  - **예방 (Prevention):** 발생 4조건(상호배제, 점유대기, 비선점, 환형대기) 중 하나를 부정 (자원 낭비 심함).
-  - **회피 (Avoidance):** 가능성을 피함 (**은행원 알고리즘**).
-  - **발견 (Detection):** 교착상태가 발생했는지 점검.
-  - **회복 (Recovery):** 프로세스 종료 또는 자원 선점.
-- **회복 기법 (Recovery):**
-  - **연기 갱신 기법 (Deferred Update):** 트랜잭션 부분 완료 전까지 실제 DB 반영을 연기하고 Log에 기록 (Redo만 가능).
-  - **즉각 갱신 기법 (Immediate Update):** 즉시 반영. 장애 시 Undo, Redo 모두 사용 가능.
-  - **그림자 페이지 대체 기법 (Shadow Paging):** 그림자 페이지 보관 (Log, Undo, Redo 불필요).
-  - **검사점 기법 (Check Point):** 검사점부터 회복하여 시간 절약.
-- **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check Point.
+#### 1. Bốn đặc tính kiến trúc của Software Framework
+| Đặc tính (KR / EN) | Khái niệm kỹ thuật | Giá trị mang lại |
+| :--- | :--- | :--- |
+| **모듈화 (Modularity)** | Đóng gói các chức năng thành các module độc lập thông qua kỹ thuật trừu tượng hóa và che giấu thông tin | Giảm thiểu tối đa tác động lan truyền khi có sự thay đổi mã nguồn, tăng chất lượng phần mềm |
+| **재사용성 (Reusability)** | Cung cấp sẵn các thành phần kiến trúc và hàm tiện ích chuẩn hóa dùng chung cho nhiều ứng dụng | Tăng năng suất phát triển, tiết kiệm chi phí và chuẩn hóa cách thức triển khai dự án |
+| **확장성 (Extensibility)** | Cho phép lập trình viên kế thừa (Inheritance) và áp dụng đa hình (Polymorphism) để mở rộng chức năng | Cho phép tùy biến linh hoạt giải pháp nghiệp vụ mà không cần chỉnh sửa mã nguồn gốc của Framework |
+| **제어의 역흐름 / (Inversion of Control - IoC)** | Quyền kiểm soát luồng thực thi của chương trình được chuyển giao cho Framework thay vì người lập trình chủ động gọi | Giảm sự phụ thuộc chặt chẽ giữa các thành phần (Loose Coupling), dễ dàng kiểm thử đơn vị |
 
-### 11.4 암호화 및 해시 알고리즘 심화
-Phần “11.4 암호화 및 해시 알고리즘 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+#### 2. Các Framework tiêu chuẩn trong đề thi
+- **스프링 프레임워크 (Spring Framework)**: Khung phát triển ứng dụng mã nguồn mở trên nền tảng Java, cung cấp các mẫu thiết kế mạnh mẽ gồm: Dependency Injection (DI), Inversion of Control (IoC), Aspect-Oriented Programming (AOP) và Spring MVC.
+- **전자정부 표준 프레임워크 (eGovFrame)**: Khung tiêu chuẩn chính phủ điện tử của Hàn Quốc do Bộ Hành chính An toàn phát triển dựa trên Spring Framework, nhằm chuẩn hóa và nâng cao chất lượng các dự án phần mềm khối công quyền.
+- **닷넷 프레임워크 (.NET Framework)**: Môi trường phát triển và thực thi ứng dụng của Microsoft chạy trên nền tảng Windows, hoạt động dựa trên máy ảo CLR (Common Language Runtime) hỗ trợ nhiều ngôn ngữ (C#, VB.NET, F#).
 
-- **암호화 키 개수 (Key Count):**
-  - **개인키(대칭키):** `n(n-1)/2` 개
-  - **공개키(비대칭키):** `2n` 개
-- **블록 암호화 알고리즘 (Block Ciphers):**
-  - **SEED:** 한국인터넷진흥원(KISA) 개발 (128/256bit).
-  - **ARIA:** 국가정보원 및 산학연 협회 개발 (128/192/256bit).
-  - **DES:** 미국 NBS 발표, 64bit 블록 / 56bit 키 (3DES로 강화됨).
-  - **AES:** DES 한계 극복, NIST 발표 (128/192/256bit).
-- **해시 함수 종류 (Hash Functions):**
-  - **SHA 시리즈:** 미국 NSA 설계, NIST 발표.
-  - **MD5:** R. Rivest 고안 (128bit 키).
-  - **N-NASH, SNEFRU.**
-- **Tiếng Việt:** Thuật toán mã hóa Hàn Quốc: SEED, ARIA. Thuật toán quốc tế: DES, AES, RSA. Số lượng khóa đối xứng = n(n-1)/2. Số lượng khóa bất đối xứng = 2n.
+#### 3. Bảng so sánh 5 cấu trúc Tô pô mạng (Network Topologies)
+| Dạng hình học (KR / EN) | Cấu trúc vật lý | Ưu điểm cốt lõi | Nhược điểm chí mạng |
+| :--- | :--- | :--- | :--- |
+| **성형 (Star Topology)** | Tất cả các nút kết nối trực tiếp (Point-to-Point) tới một Hub/Switch trung tâm | Cài đặt và mở rộng dễ dàng, sự cố 1 máy trạm không ảnh hưởng đến các máy khác | Nếu Hub/Switch trung tâm bị hỏng thì **toàn bộ mạng ngừng hoạt động** (Single Point of Failure) |
+| **링형 (Ring Topology)** | Mỗi nút kết nối nối tiếp với 2 nút lân cận tạo thành một chu trình vòng khép kín | Tiết kiệm dây cáp hơn Star, không xảy ra xung đột gói tin (Token Ring) | Đứt một đoạn cáp có thể làm tê liệt toàn mạng; khó cô lập vị trí gặp sự cố |
+| **버스형 (Bus Topology)** | Tất cả các máy tính cùng chia sẻ chung một trục cáp truyền dẫn chính (Trunk Cable) | Chi phí rẻ nhất, lắp đặt nhanh; hai đầu trục cáp phải gắn **Terminator** để khử sóng dội | Nếu trục cáp chính bị đứt, toàn bộ mạng ngừng hoạt động; lưu lượng lớn dễ gây xung đột (Collision) |
+| **트리형 (Tree Topology)** | Các nút kết nối theo cấu trúc phân cấp hình cây (Hub chính nối tới các Hub phụ nhánh) | Dễ dàng quản trị và phân cụm mạng lớn; mở rộng theo tầng bậc linh hoạt | Máy nhánh phụ thuộc hoàn toàn vào các nút phân nhánh cấp trên |
+| **망형 (Mesh Topology)** | Các nút mạng được kết nối trực tiếp lẫn nhau qua các liên kết riêng biệt | Độ tin cậy và khả năng chịu lỗi cao nhất; có nhiều đường đi dự phòng | Chi phí thi công cáp và số cổng đắt nhất; số đường cáp kết nối toàn phần là $\frac{n(n-1)}{2}$ |
 
-### 11.5 기타 보안 및 공격 기법 심화
-Phần “11.5 기타 보안 및 공격 기법 심화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+#### 4. Các chuẩn kết nối IEEE 802
+- **IEEE 802.3**: Tiêu chuẩn mạng cục bộ có dây **Ethernet**, sử dụng giao thức truy cập đường truyền **CSMA/CD** (Carrier Sense Multiple Access with Collision Detection).
+- **IEEE 802.11**: Tiêu chuẩn mạng cục bộ không dây **Wireless LAN (Wi-Fi)**, sử dụng giao thức **CSMA/CA** (Carrier Sense Multiple Access with Collision Avoidance).
+- **IEEE 802.15**: Tiêu chuẩn mạng cá nhân không dây **WPAN (Wireless Personal Area Network)** bao gồm công nghệ Bluetooth (802.15.1) và ZigBee (802.15.4).
 
-- **Secure SDLC 방법론:**
-  - **CLASP:** 활동 중심, 역할 기반 (초기 단계 보안 강화).
-  - **MS SDL:** 마이크로소프트의 나선형 모델 기반 방법론.
-  - **Seven Touchpoints:** 모범사례를 SDLC에 통합 (위험 분석 및 테스트).
-- **추가 웹 보안 약점 (Additional Web Vulnerabilities):**
-  - **운영체제 명령어 삽입:** 외부 입력으로 시스템 명령어 실행 유도.
-  - **위험한 파일 업로드:** 스크립트 파일 업로드로 시스템 제어.
-  - **신뢰되지 않는 URL 주소로 자동접속 연결 (Open Redirect):** 피싱 사이트로 유도.
-- **분산 서비스 공격용 툴 (DDoS Tools):**
-  - **Trin00:** UDP Flooding 주도.
-  - **TFN / TFN2K:** UDP/TCP SYN, 스머핑 동시 수행.
-  - **Stacheldraht:** 암호화된 통신 수행 및 자동 업데이트.
-- **새로운 공격 기법 (New Attack Vectors):**
-  - **제로 데이 공격 (Zero Day Attack):** 보안 취약점이 공표되기도 전에 이루어지는 신속한 공격.
-  - **스미싱 (Smishing):** SMS를 이용한 개인정보 탈취.
-  - **Evil Twin Attack:** 실제와 동일한 이름의 가짜 Wi-Fi(AP)를 송출해 정보 탈취.
-- **Tiếng Việt:**
-  - Zero Day Attack: Tấn công khai thác lỗ hổng trước khi có bản vá.
-  - Smishing: Phishing qua tin nhắn SMS.
-  - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
-  - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
+---
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+
+#### 1. Sơ đồ cơ chế IoC (Inversion of Control) trong Spring Framework
+```
+[Cách truyền thống (Chủ động)]
+  Lập trình viên viết mã: OrderService tự khởi tạo `new DatabaseRepository()`
+  └── Nhược điểm: Phụ thuộc cứng vào loại Database cụ thể.
+
+[Cách hiện đại với Spring IoC Container (Thụ động)]
+  Lập trình viên khai báo: OrderService cần một `IRepository`
+  Spring Container tự nạp (Inject) `MySQLRepository` vào lúc chạy thông qua cơ chế DI
+  └── Quyền kiểm soát luồng sống của đối tượng thuộc về Framework!
+```
+
+#### 2. Kỹ thuật tính số đường cáp trong Mesh Topology
+- Đối với mạng Full Mesh gồm $n$ trạm: Mỗi trạm cần có $n - 1$ cổng giao tiếp (Ports).
+- Tổng số đường kết nối vật lý trong toàn mạng là:
+  $$\text{Số kết nối} = \frac{n(n - 1)}{2}$$
+- *Ví dụ*: Một mạng có 8 máy trạm kết nối Full Mesh cần: $\frac{8 \times 7}{2} = 28$ đường truyền cáp riêng biệt.
+
+---
+
+### 복습 체크리스트
+- [ ] Bốn đặc tính cốt lõi của Framework gồm những gì và đặc tính nào đảo ngược luồng điều khiển của ứng dụng?
+- [ ] Điểm yếu rủi ro cao nhất của mạng cấu trúc Star (성형) là gì?
+- [ ] Vai trò của linh kiện Terminator (종단 저항) trong cấu trúc mạng hình Bus (버스형) là gì?
+- [ ] Giao thức kiểm soát đường truyền của chuẩn có dây IEEE 802.3 (CSMA/CD) khác gì so với không dây IEEE 802.11 (CSMA/CA)?

@@ -1,69 +1,76 @@
 # 3. 모델링 및 UML (Mô hình hóa và UML)
 
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa, lịch sử và vai trò của Ngôn ngữ mô hình hóa thống nhất (`UML - Unified Modeling Language`) trong kỹ nghệ phần mềm hướng đối tượng.
+- Thuộc nằm lòng 3 thành phần nền tảng của UML: Sự vật (`사물 - Things`), Mối quan hệ (`관계 - Relationships`), và Biểu đồ (`다이어그램 - Diagrams`).
+- Phân biệt tuyệt đối giữa nhóm Biểu đồ cấu trúc tĩnh (`구조적/정적 다이어그램` - 6 loại) và nhóm Biểu đồ hành vi động (`행위적/동적 다이어그램` - 7 loại).
+- Hiểu khái niệm Stereotype và cách biểu diễn bằng dấu ngoặc kép `<< >>` (Guillemet) cùng sự khác biệt giữa Tác nhân chính (`주액터`) và Tác nhân phụ (`부액터`).
+
+## 핵심 키워드 (Từ khóa)
+- UML (Unified Modeling Language / 표준 모델링 언어)
+- 사물·관계·다이어그램 (Things, Relationships, Diagrams)
+- 구조적 / 정적 다이어그램 (Structural / Static Diagrams: Class, Object, Component, Deployment, Composite, Package)
+- 행위적 / 동적 다이어그램 (Behavioral / Dynamic Diagrams: Use Case, Sequence, Communication, State, Activity, Timing)
+- 스테레오 타입 (Stereotype / 길러멧 `<< >>`)
+- 주액터 / 부액터 (Primary Actor / Secondary Actor)
+
+## 선행·연결 개념 (Kiến thức liên kết)
+- **Từ bài trước ([3. 현행 시스템 파악](13-bai-hoc.md)):** Sau khi hoàn thành phân tích hiện trạng hệ thống, bài này chính thức bước vào công cụ thiết kế chuẩn hóa quốc tế mạnh mẽ nhất: UML.
+- **Tiếp nối sang bài sau ([11. 모델링 및 다이어그램 심화](15-bai-hoc.md)):** Đi sâu vào các biểu đồ UML phức tạp, máy chủ ứng dụng web WAS và sự phân biệt ký hiệu DFD giữa các trường phái.
+
+## 읽는 방법 (Cách đọc)
+- Đọc TẦNG A để thuộc 2 bài thơ mnemonic phân loại biểu đồ tĩnh (클-객-컴-배-복-패) và động (유-순-커-상-활-타) - câu hỏi nhận diện này chiếm tần suất cực cao trong đề thi.
+- Đọc TẦNG B để hiểu rõ tại sao việc chia tách góc nhìn tĩnh (cấu trúc code, class) và góc nhìn động (thời gian, thông điệp truyền nhận) là bắt buộc trong thiết kế hướng đối tượng.
+
+---
+
 ## 3. 모델링 및 UML (Mô hình hóa và UML)
 
-### 013. UML (Unified Modeling Language)
-Phần “013. UML (Unified Modeling Language)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **개념 (Định nghĩa UML):** Là ngôn ngữ mô hình hóa trực quan chuẩn hóa quốc tế (chuẩn hóa bởi tổ chức OMG) dùng để đặc tả, trực quan hóa, xây dựng và lập tài liệu cho các hệ thống phần mềm hướng đối tượng (`객체지향 모델링 언어`).
+- **3 thành phần cơ bản của UML (UML 3대 구성 요소):**
+  1. `사물 (Things)`: Các khối xây dựng cơ bản (mô hình hóa cấu trúc như Class, Component; hành vi như State, Interaction; nhóm như Package; chú thích như Note).
+  2. `관계 (Relationships)`: Mối liên kết kết nối các sự vật lại với nhau (Liên kết, Phụ thuộc, Khái quát hóa, Hiện thực hóa).
+  3. `다이어그램 (Diagrams)`: Tập hợp các biểu đồ trực quan biểu diễn sự vật và mối quan hệ theo các góc nhìn khác nhau.
+- **Phân loại biểu đồ UML theo 2 góc nhìn lớn (UML 2.0 chuẩn):**
+  - **1. 구조적 다이어그램 (Structural Diagrams - Biểu đồ cấu trúc / Góc nhìn TĨNH - 6 loại):**
+    - `클래스 다이어그램 (Class Diagram)`: Cấu trúc các lớp, thuộc tính, phương thức và quan hệ giữa chúng (quan trọng nhất).
+    - `객체 다이어그램 (Object Diagram)`: Trạng thái của các đối tượng cụ thể tại một thời điểm nhất định.
+    - `컴포넌트 다이어그램 (Component Diagram)`: Cấu trúc các mô-đun phần mềm có thể tái sử dụng và giao diện của chúng.
+    - `배치 다이어그램 (Deployment Diagram)`: Phân bố vật lý của phần mềm trên các nút phần cứng máy chủ.
+    - `복합체 구조 다이어그램 (Composite Structure Diagram)`: Cấu trúc bên trong của một lớp hoặc một thành phần phức hợp.
+    - `패키지 다이어그램 (Package Diagram)`: Nhóm các phần tử mô hình thành các gói logic phân cấp.
+    - 💡 **Mẹo nhớ biểu đồ tĩnh:** **클-객-컴-배-복-패** (Class, Object, Component, Deployment, Composite Structure, Package).
+  - **2. 행위적 다이어그램 (Behavioral Diagrams - Biểu đồ hành vi / Góc nhìn ĐỘNG - 7 loại):**
+    - `유스케이스 다이어그램 (Use Case Diagram)`: Yêu cầu chức năng nhìn từ góc độ người dùng (Actor và Use Case).
+    - `순차 다이어그램 (Sequence Diagram)`: Tương tác giữa các đối tượng theo thứ tự dòng thời gian (`시간 순서`).
+    - `커뮤니케이션 다이어그램 (Communication Diagram)`: Tương tác giữa các đối tượng nhấn mạnh mối quan hệ cấu trúc gửi nhận thông điệp.
+    - `상태 다이어그램 (State Diagram)`: Sự thay đổi trạng thái của một đối tượng do các sự kiện kích hoạt.
+    - `활동 다이어그램 (Activity Diagram)`: Luồng công việc xử lý logic bên trong của hệ thống (giống lưu đồ thuật toán).
+    - `상호작용 개요 다이어그램 (Interaction Overview Diagram)`: Kết hợp giữa biểu đồ hoạt động và biểu đồ tuần tự.
+    - `타이밍 다이어그램 (Timing Diagram)`: Biểu diễn sự biến đổi trạng thái của đối tượng theo thang đo thời gian thực chính xác.
+    - 💡 **Mẹo nhớ biểu đồ động:** **유-순-커-상-활-상-타** (Use Case, Sequence, Communication, State, Activity, Interaction Overview, Timing).
+- **스테레오 타입 (Stereotype):**
+  - Cơ chế mở rộng của UML để bổ sung ngữ nghĩa cho các phần tử cơ bản.
+  - Được viết trong cặp ngoặc kép gọi là Guillemet: `<<stereotype_name>>` (ví dụ: `<<include>>`, `<<extend>>`, `<<interface>>`).
+- **Phân loại Tác nhân (Actor) trong Use Case:**
+  - `주액터 (Primary Actor)`: Tác nhân trực tiếp sử dụng hệ thống để đạt được mục tiêu chính của mình, thường là con người đứng ở phía bên trái sơ đồ.
+  - `부액터 (Secondary Actor)`: Hệ thống bên ngoài hoặc cơ quan hỗ trợ cung cấp dịch vụ giúp Primary Actor hoàn thành mục tiêu, thường vẽ ở phía bên phải (ví dụ: Cổng thanh toán trực tuyến, Hệ thống xác thực danh tính ngân hàng).
+- **주의/함정 (Bẫy đề thi dễ nhầm):**
+  - **Bẫy 1:** *"Biểu đồ tuần tự (Sequence Diagram) là biểu đồ cấu trúc tĩnh?"* -> **Sai hoàn toàn**. Sequence Diagram là biểu đồ hành vi động (행위적/동적 다이어그램).
+  - **Bẫy 2:** *"Package Diagram thuộc nhóm biểu đồ nào?"* -> **Nhóm cấu trúc tĩnh (구조적 다이어그램)**.
+  - **Bẫy 3:** *"Dấu ngoặc kép biểu diễn Stereotype gọi là gì?"* -> **길러멧 (Guillemet - `<< >>`)**.
+- **한 문장 설명 (Câu chốt ghi nhớ):** "UML gồm Sự vật - Quan hệ - Biểu đồ; tĩnh có 6 (클객컴배복패), động có 7 (유순커상활상타); mở rộng dùng Guillemet `<< >>`".
 
-- 시스템 개발자와 고객 또는 개발자 상호 간의 의사소통이 원활하게 이루어지도록 표준화한 대표적인 객체지향 모델링 언어이다. (Là ngôn ngữ mô hình hóa hướng đối tượng tiêu biểu được chuẩn hóa để việc giao tiếp giữa nhà phát triển hệ thống và khách hàng, hoặc giữa các nhà phát triển với nhau diễn ra suôn sẻ.)
-- 구성 요소 (Components): 사물 (Things - Sự vật), 관계 (Relationships - Mối quan hệ), 다이어그램 (Diagram - Biểu đồ).
-- **Ví dụ (Example):** Khi xây nhà cần bản vẽ thiết kế (Blueprint). Khi làm phần mềm, dùng UML làm bản vẽ thiết kế chung để ai cũng hiểu.
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **SQĐ** (Sự - Quan - Đa): **Sợ Quá Đi** (Sự vật - Quan hệ - Đa biểu đồ).
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Sự khác biệt giữa Sequence Diagram và Communication Diagram:**
+  - Cả hai đều thuộc nhóm Biểu đồ tương tác (`상호작용 다이어그램 - Interaction Diagram`), cùng biểu diễn việc các đối tượng gửi thông điệp (`메시지`) cho nhau.
+  - **Sequence Diagram:** Trục thẳng đứng là đường sinh mệnh (Lifeline) đại diện cho thời gian trôi từ trên xuống dưới. Nhấn mạnh **Trật tự thời gian (시간 순서)**.
+  - **Communication Diagram:** Không có trục thời gian, các đối tượng được nối với nhau bằng các đường liên kết và mũi tên thông điệp kèm số thứ tự (ví dụ: `1: login()`, `1.1: checkUser()`). Nhấn mạnh **Mối quan hệ cấu trúc không gian (구조적 관계)**.
 
-### 014. UML의 주요 관계 (Các mối quan hệ chính trong UML)
-Phần “014. UML의 주요 관계 (Các mối quan hệ chính trong UML)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 일반화 (Generalization) 관계: 하나의 사물이 다른 사물에 비해 더 일반적인지 구체적인지를 표현. (Thể hiện một sự vật là tổng quát hay cụ thể hơn sự vật khác - kế thừa).
-- 의존 (Dependency) 관계: 필요에 의해 서로에게 영향을 주는 짧은 시간 동안만 연관을 유지하는 관계를 표현. (Thể hiện mối quan hệ phụ thuộc ngắn hạn, ảnh hưởng lẫn nhau khi cần thiết).
-- 실체화 (Realization) 관계: 사물이 할 수 있거나 해야 하는 기능으로 서로를 그룹화 할 수 있는 관계를 표현. (Thể hiện mối quan hệ hiện thực hóa chức năng mà sự vật có thể/phải làm - interface).
-- **Ví dụ (Example):** Động vật -> Chó, Mèo là mối quan hệ '일반화' (Generalization).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **NYT** (Nhất - Ý - Thực): **Như Ý Thật** (Nhất quát - Ý tồn - Thực thể).
-
-### 015. 구조적(Structural) 다이어그램의 종류 (Các loại biểu đồ cấu trúc - Tĩnh)
-Phần “015. 구조적(Structural) 다이어그램의 종류 (Các loại biểu đồ cấu trúc - Tĩnh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 클래스 다이어그램 (Class Diagram)
-- 객체 다이어그램 (Object Diagram)
-- 컴포넌트 다이어그램 (Component Diagram)
-- 배치 다이어그램 (Deployment Diagram)
-- 복합체 구조 다이어그램 (Composite Structure Diagram)
-- 패키지 다이어그램 (Package Diagram)
-- **Ví dụ (Example):** Class Diagram thể hiện cấu trúc tĩnh của hệ thống, giống như sơ đồ tổ chức của một công ty.
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **LĐCBPG** (Lớp - Đối - Com - Bố - Phức - Gói): **Làm Được Có Bữa Phải Giỏi**. Các biểu đồ này thể hiện cấu trúc "Tĩnh" (정적).
-
-### 016. 행위(Behavioral) 다이어그램의 종류 (Các loại biểu đồ hành vi - Động)
-Phần “016. 행위(Behavioral) 다이어그램의 종류 (Các loại biểu đồ hành vi - Động)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 유스케이스 다이어그램 (Use Case Diagram)
-- 순차 다이어그램 (Sequence Diagram)
-- 커뮤니케이션 다이어그램 (Communication Diagram)
-- 상태 다이어그램 (State Diagram)
-- 활동 다이어그램 (Activity Diagram)
-- 상호작용 개요 다이어그램 (Interaction Overview Diagram)
-- 타이밍 다이어그램 (Timing Diagram)
-- **Ví dụ (Example):** Sequence Diagram thể hiện trình tự thời gian gửi tin nhắn (메시지) giữa các đối tượng (hành vi động).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **UTCTHTT** (Use - Trình - Com - Trạng - Hoạt - Tương - Time): **Uống Trà Chiều Thấy Hay Thật Tuyệt**. Các biểu đồ này thể hiện đặc tính "Động" (동적).
-
-### 017. 스테레오 타입 (Stereotype)
-Phần “017. 스테레오 타입 (Stereotype)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- UML에서 표현하는 기본 기능 외에 추가적인 기능을 표현하기 위해 사용한다. (Dùng để biểu diễn các chức năng bổ sung ngoài chức năng cơ bản trong UML.)
-- 길러멧(Guilemet)이라고 부르는 겹화살괄호(`<< >>`) 사이에 표현할 형태를 기술한다. (Viết hình thái muốn biểu diễn giữa cặp dấu ngoặc nhọn kép `<< >>` gọi là Guilemet.)
-- **Ví dụ (Example):** `<<include>>` hoặc `<<extend>>` trong Use Case Diagram.
-
-### 018. 유스케이스 다이어그램 - 액터(Actor) (Biểu đồ Use Case - Tác nhân)
-Phần “018. 유스케이스 다이어그램 - 액터(Actor) (Biểu đồ Use Case - Tác nhân)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 시스템과 상호작용을 하는 모든 외부 요소로, 사람이나 외부 시스템을 의미한다. (Là tất cả các yếu tố bên ngoài tương tác với hệ thống, có nghĩa là con người hoặc hệ thống bên ngoài.)
-- 주액터 (Primary Actor): 시스템을 사용함으로써 이득을 얻는 대상으로, 주로 사람이 해당함. (Đối tượng nhận được lợi ích khi dùng hệ thống, chủ yếu là con người - ví dụ: Khách hàng.)
-- 부액터 (Secondary Actor): 주액터의 목적 달성을 위해 시스템에 서비스를 제공하는 외부 시스템으로, 조직이나 기관 등이 될 수 있음. (Hệ thống bên ngoài cung cấp dịch vụ cho hệ thống để đạt mục đích của Primary Actor - ví dụ: Cổng thanh toán ngân hàng.)
-
-### 019. 순차(Sequence) 다이어그램의 구성 요소 (Thành phần của biểu đồ Sequence)
-Phần “019. 순차(Sequence) 다이어그램의 구성 요소 (Thành phần của biểu đồ Sequence)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 액터 (Actor - Tác nhân)
-- 객체 (Object - Đối tượng)
-- 생명선 (Lifeline - Đường đời)
-- 실행 상자 (Active Box - Hộp thực thi)
-- 메시지 (Message - Thông điệp)
-- **Ví dụ (Example):** Khi user (Actor) ấn nút mua hàng, một mũi tên (Message) sẽ được gửi đến Giỏ hàng (Object). Đường nét đứt sổ dọc xuống từ Giỏ hàng là 생명선 (Lifeline).
+### 복습 체크리스트
+- [ ] Nhớ 3 thành phần cấu tạo nên UML: 사물 (Things), 관계 (Relationships), 다이어그램 (Diagrams).
+- [ ] Đọc tên đủ 6 biểu đồ cấu trúc tĩnh (클-객-컴-배-복-패).
+- [ ] Đọc tên đủ 7 biểu đồ hành vi động (유-순-커-상-활-상-타).
+- [ ] Định nghĩa được Stereotype và ký hiệu 길러멧 `<< >>`.
+- [ ] Phân biệt được Primary Actor (người nhận lợi ích) và Secondary Actor (hệ thống dịch vụ bên ngoài).

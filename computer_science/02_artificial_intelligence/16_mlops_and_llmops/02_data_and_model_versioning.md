@@ -18,15 +18,11 @@ manifest của các object ID
 
 Điểm cốt lõi là phải xác định lại chính xác tập dữ liệu huấn luyện hoặc đánh giá đã được dùng.
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Phiên bản dữ liệu là gì?** nêu điều cần giải thích; **Dữ liệu có thể thay đổi nguy hiểm ở đâu?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dòng nguồn gốc của tập dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dữ liệu có thể thay đổi nguy hiểm ở đâu?
 
 Nếu truy vấn `SELECT * FROM transactions` hôm nay và một tháng sau trả về nội dung khác nhau thì cùng mã nguồn/cấu hình vẫn tạo ra hai run không còn so sánh trực tiếp được.
 
 Cần snapshot hoặc manifest theo thời điểm (point-in-time manifest) để đóng băng danh tính dữ liệu.
-
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Dữ liệu có thể thay đổi nguy hiểm ở đâu?** nêu điều cần giải thích; **Dòng nguồn gốc của tập dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phiên bản (version / 버전) hóa lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dòng nguồn gốc của tập dữ liệu
 
@@ -44,15 +40,11 @@ mô hình nào dùng tập dữ liệu đó?
 
 Lineage hai chiều hỗ trợ phân tích ảnh hưởng (impact analysis): nếu một bảng nguồn thay đổi, những mô hình nào sẽ bị ảnh hưởng?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Dòng nguồn gốc của tập dữ liệu** nêu điều cần giải thích; **Phiên bản (version / 버전) hóa lược đồ (schema / 스키마)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phiên bản (version / 버전) hóa đặc trưng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Phiên bản (version / 버전) hóa lược đồ (schema / 스키마)
 
 Sự tiến hóa lược đồ (schema / 스키마) cần hợp đồng rõ. Đổi tên cột, đổi đơn vị hoặc đổi ngữ nghĩa (semantics / 의미론) có thể không gây lỗi cú pháp nhưng vẫn phá mô hình một cách âm thầm.
 
 Nên theo dõi cả siêu dữ liệu (metadata / 메타데이터) ngữ nghĩa như đơn vị, múi giờ, encoding và khoảng giá trị hợp lệ.
-
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Phiên bản (version / 버전) hóa đặc trưng** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) hóa lược đồ (schema / 스키마)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản sản phẩm tạo ra (artifact / 산출물) của mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) hóa đặc trưng
 
@@ -61,8 +53,6 @@ Một định nghĩa đặc trưng (feature definition) thực chất gồm mã 
 Ví dụ `avg_spend_30d` phải xác định rõ cửa sổ thời gian, múi giờ, loại giao dịch bị loại và thời điểm cutoff.
 
 Tính nhất quán giữa huấn luyện và phục vụ yêu cầu lô-gic (logic / 논리) đặc trưng online tương thích với định nghĩa offline.
-
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Phiên bản sản phẩm tạo ra (artifact / 산출물) của mô hình** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) hóa đặc trưng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản ngữ nghĩa và ID bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản sản phẩm tạo ra (artifact / 산출물) của mô hình
 
@@ -81,8 +71,6 @@ báo cáo đánh giá
 
 Với ứng dụng LLM hoặc RAG còn cần phiên bản prompt và cấu hình truy xuất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Phiên bản ngữ nghĩa và ID bất biến** tiếp nhận điểm tựa từ **Phiên bản sản phẩm tạo ra (artifact / 산출물) của mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checksum dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Phiên bản ngữ nghĩa và ID bất biến
 
 Băm (hash / 해시) bất biến hoặc run ID phù hợp cho truy vết. Phiên bản phát hành dễ đọc phù hợp cho giao tiếp giữa con người.
@@ -94,27 +82,19 @@ release: fraud-model-3.2
 artifact sha: abc123...
 ```
 
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Phiên bản ngữ nghĩa và ID bất biến** nêu điều cần giải thích; **Checksum dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tập dữ liệu lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Checksum dữ liệu
 
 Checksum phát hiện thay đổi ở mức byte nhưng không cho biết hai tập dữ liệu có tương đương về ngữ nghĩa hay không. chuỗi xử lý (pipeline / 파이프라인) dữ liệu cần cả băm (hash / 해시) lẫn siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Checksum dữ liệu** nêu điều cần giải thích; **Tập dữ liệu lớn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quyền riêng tư và xóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tập dữ liệu lớn
 
 Không nên sao chép toàn bộ tập dữ liệu cho mỗi thí nghiệm nếu chi phí lưu trữ quá lớn. Snapshot, manifest hoặc lưu trữ theo nội dung (content-addressed storage) có thể tái sử dụng các khối (block / 블록) không đổi.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Tập dữ liệu lớn** nêu điều cần giải thích; **Quyền riêng tư và xóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đồ thị Mô hình–Dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền riêng tư và xóa dữ liệu
 
 Versioning không có nghĩa giữ mọi dữ liệu vĩnh viễn. Yêu cầu xóa vì quyền riêng tư và chính sách lưu giữ phải được truyền qua snapshot, bộ nhớ đệm (cache / 캐시) và lineage huấn luyện.
 
 Trong một số trường hợp cần biết mô hình nào từng huấn luyện từ dữ liệu phải xóa để đánh giá việc huấn luyện lại hoặc biện pháp khắc phục.
-
-> **Chuyển mạch:** Trong **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Quyền riêng tư và xóa dữ liệu** nêu điều cần giải thích; **Đồ thị Mô hình–Dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị Mô hình–Dữ liệu
 
@@ -138,8 +118,6 @@ Triển khai
 
 Mỗi cạnh trong đồ thị (graph / 그래프) cần siêu dữ liệu (metadata / 메타데이터) có thể truy vết.
 
-> **Chuyển mạch:** Ở chặng này của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Đồ thị Mô hình–Dữ liệu** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Những nhầm lẫn thường gặp
 
 ### “Git LFS là đủ cho phiên bản (version / 버전) hóa dữ liệu”
@@ -153,8 +131,6 @@ Không. Tokenizer, lược đồ (schema / 스키마) và cấu hình cũng là 
 ### “Càng nhiều snapshot càng tốt”
 
 Không. Chi phí lưu trữ, thời hạn lưu giữ và ràng buộc quyền riêng tư cần được cân bằng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức
 

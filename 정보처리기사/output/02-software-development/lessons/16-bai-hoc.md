@@ -1,18 +1,60 @@
 # 028: 정렬 (Sorting / Thuật toán sắp xếp)
 
-## 028: 정렬 (Sorting / Thuật toán sắp xếp)
-Phần “028: 정렬 (Sorting / Thuật toán sắp xếp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững bức tranh toàn cảnh và phân loại hai nhóm giải thuật sắp xếp: Sắp xếp nội bộ (내부 정렬 - Internal Sort trong bộ nhớ chính) và Sắp xếp ngoại vi (외부 정렬 - External Sort trên bộ nhớ phụ).
+- Phân biệt rõ tính ổn định (안정성 - Stability): Nhận diện các thuật toán sắp xếp ổn định (Stable Sort) và không ổn định (Unstable Sort).
+- Thuộc nằm lòng bảng ma trận độ phức tạp thời gian (Tốt nhất, Trung bình, Xấu nhất) và không gian bộ nhớ của toàn bộ 8 thuật toán sắp xếp kinh điển.
 
-| 알고리즘 (Thuật toán) | 설명 (Giải thích) | 평균 복잡도 (Average) | 최악 (Worst) |
-|---|---|---|---|
-| 삽입 정렬 (Insertion Sort) | Lấy phần tử thứ i chèn vào đúng vị trí trong mảng con từ 1 tới i-1 đã sắp xếp. | O(n²) | O(n²) |
-| 거품 정렬 (Bubble Sort) | So sánh 2 phần tử kề nhau, sai thì đổi chỗ. Phần tử to nhất sẽ "nổi bọt" về cuối. Cần N-1 Pass (Vòng lặp). | O(n²) | O(n²) |
-| 선택 정렬 (Selection Sort) | Tìm phần tử nhỏ nhất rồi đổi chỗ nó về vị trí đầu tiên chưa sắp xếp. | O(n²) | O(n²) |
-| 퀵 정렬 (Quick Sort) | Chọn Pivot (Chốt), chia làm 2 nửa: Trái nhỏ hơn, Phải to hơn. Lặp lại (Divide & Conquer). | O(n log n) | **O(n²)** |
-| 합병 정렬 (Merge Sort) | Chia đôi mảng cho đến khi còn 1 phần tử, sau đó gộp (Merge) lại theo thứ tự. | O(n log n) | O(n log n) |
-| 힙 정렬 (Heap Sort) | Dùng cây Complete Binary Tree (Heap) để tìm min/max rồi đưa ra ngoài, cấu trúc lại Heap. | O(n log n) | O(n log n) |
+## 핵심 키워드 (Từ khóa)
+- 내부 정렬 (Internal Sort) & 외부 정렬 (External Sort)
+- 안정 정렬 (Stable Sort) & 불안정 정렬 (Unstable Sort)
+- 시간 복잡도 (Time Complexity: $O(n^2)$, $O(n \log n)$, $O(dn)$)
+- 공간 복잡도 (Space Complexity)
+- 정렬 알고리즘 비교 (Sorting Algorithms Matrix)
 
-- **Vietnamese Explanation:** Bubble, Selection, Insertion là 3 thuật toán cơ bản, chạy chậm O(n²). Quick, Merge, Heap là thuật toán xịn, chạy nhanh O(n log n). Nhưng Quick Sort xui xẻo (Worst case) vẫn có thể dính O(n²).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Quick Sort (Nhanh) nhưng Worst là N². Bọt (Bubble), Chọn (Selection), Chèn (Insertion) đều là N².
+## 선행·연결 개념 (Kiến thức liên kết)
+- [14-bai-hoc.md](14-bai-hoc.md): Các thuật toán sắp xếp cơ bản (Insertion, Selection, Bubble).
+- [15-bai-hoc.md](15-bai-hoc.md): Các thuật toán sắp xếp nâng cao (Quick, Merge, Heap).
+- [17-bai-hoc.md](17-bai-hoc.md): Đi sâu chi tiết cơ chế hoạt động của Sắp xếp chèn (Insertion Sort).
+
+## 읽는 방법 (Cách đọc)
+- Học thuộc hai nhóm phân loại ổn định:
+  - **Ổn định (Stable):** **삽-버-병-기** (Chèn - Bọt - Hợp nhất - Cơ số / Insertion, Bubble, Merge, Radix).
+  - **Không ổn định (Unstable):** **선-셸-퀵-힙** (Chọn - Shell - Quick - Heap / Selection, Shell, Quick, Heap).
+- Thuộc làu nhóm hiệu năng cao $O(n \log n)$: **Quick, Merge, Heap**.
 
 ---
+
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng tổng hợp ma trận 8 thuật toán sắp xếp nội bộ kinh điển:**
+
+| Thuật toán (Hàn / Anh) | Tốt nhất (Best) | Trung bình (Avg) | Xấu nhất (Worst) | Bộ nhớ phụ | Tính ổn định |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **삽입 정렬 (Insertion Sort)** | $O(n)$ | $\mathbf{O(n^2)}$ | $O(n^2)$ | $O(1)$ | **Stable (Ổn định)** |
+| **선택 정렬 (Selection Sort)** | $O(n^2)$ | $\mathbf{O(n^2)}$ | $O(n^2)$ | $O(1)$ | Unstable (Không ổn định) |
+| **버블 정렬 (Bubble Sort)** | $O(n)$ *(dùng cờ Flag)* | $\mathbf{O(n^2)}$ | $O(n^2)$ | $O(1)$ | **Stable (Ổn định)** |
+| **셸 정렬 (Shell Sort)** | $O(n)$ | $\mathbf{O(n^{1.25}) \sim O(n^{1.5})}$ | $O(n^2)$ | $O(1)$ | Unstable (Không ổn định) |
+| **퀵 정렬 (Quick Sort)** | $O(n \log n)$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n^2)}$ | $O(\log n)$ | Unstable (Không ổn định) |
+| **2-Way 합병 정렬 (Merge Sort)** | $O(n \log n)$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $O(n)$ | **Stable (Ổn định)** |
+| **힙 정렬 (Heap Sort)** | $O(n \log n)$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $O(1)$ | Unstable (Không ổn định) |
+| **기수 정렬 (Radix Sort)** | $O(dn)$ | $\mathbf{O(dn)}$ | $O(dn)$ | $O(n + k)$ | **Stable (Ổn định)** |
+
+- **Phân loại Nội bộ vs Ngoại vi:**
+  - **내부 정렬 (Internal Sort):** Toàn bộ dữ liệu nằm gọn trong RAM (Bộ nhớ chính). Tốc độ cực nhanh. Bao gồm cả 8 thuật toán trong bảng trên.
+  - **외부 정렬 (External Sort):** Khối lượng dữ liệu quá lớn không thể nạp hết vào RAM, phải lưu trữ trên thiết bị ngoại vi (Ổ đĩa, Băng từ). Áp dụng các thuật toán hòa trộn: **2-Way Merge Sort, Multi-way Merge Sort, Polyphase Merge, Cascade Merge**.
+
+- **Bẫy đề thi trắc nghiệm:**
+  - **Bẫy 1:** *"Thuật toán nào sau đây KHÔNG PHẢI là thuật toán sắp xếp ổn định (Stable)?"* $\rightarrow$ Tra cứu thần chú "선-셸-퀵-힙" $\rightarrow$ Chọn một trong các đáp án Selection, Shell, Quick, Heap.
+  - **Bẫy 2:** *"Sắp xếp nào vượt qua giới hạn $O(n \log n)$ mà không cần so sánh các cặp khóa?"* $\rightarrow$ Đáp án: **기수 정렬 (Radix Sort)**.
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Ý nghĩa thực tế của Tính ổn định (Stability):**
+  - Giả sử có danh sách sinh viên đã được sắp xếp tăng dần theo Tên. Nay ta muốn sắp xếp tiếp theo Điểm số:
+    - Nếu dùng thuật toán **Stable**: Các sinh viên có cùng điểm số vẫn sẽ giữ nguyên thứ tự sắp xếp theo Tên ban đầu.
+    - Nếu dùng thuật toán **Unstable**: Thứ tự theo Tên của các sinh viên cùng điểm số có thể bị đảo lộn ngẫu nhiên.
+
+### 복습 체크리스트
+- [ ] Nhớ tên 4 thuật toán Stable (삽-버-병-기: Insertion, Bubble, Merge, Radix).
+- [ ] Nhớ tên 4 thuật toán Unstable (선-셸-퀵-힙: Selection, Shell, Quick, Heap).
+- [ ] Xác định 3 thuật toán đạt chuẩn $O(n \log n)$: Quick, Merge, Heap.
+- [ ] Phân biệt được Internal Sort (trong RAM) và External Sort (ngoại vi ổ đĩa).

@@ -1,52 +1,66 @@
 # 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
-## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa, mục tiêu chiến lược và 3 yếu tố nền tảng của quản lý dự án phần mềm (**3P: People - Con người, Problem - Vấn đề, Process - Quy trình**).
+- Thuộc lòng và vận dụng thành thạo các công thức tính toán ước lượng dự án theo phương pháp dòng mã nguồn (**LOC - Lines of Code**): Công số nỗ lực nhân tháng (Man-Month / Person-Month), Thời gian phát triển dự án, Chi phí phát triển, và Năng suất lao động.
+- Giải quyết chính xác các bài toán định lượng tính toán chi phí dự án trong đề thi trắc nghiệm và thực hành.
 
-### 3.1 소프트웨어 프로젝트 관리 (Software Project Management)
-Phần “3.1 소프트웨어 프로젝트 관리 (Software Project Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 핵심 키워드 (Từ khóa)
+- 프로젝트 관리 3대 요소 (3P: People, Problem, Process)
+- LOC 기법 (Lines of Code)
+- 노력 / 인월 계산 (Man-Month / Person-Month - MM)
+- 개발 기간 및 투입 인원 산정 (Development Duration & Staffing)
+- 개발 비용 산출 (Total Development Cost)
+- 생산성 (Productivity = LOC / MM)
 
-- 주어진 기간 내에 최소의 비용으로 사용자를 만족시키는 시스템을 개발하기 위한 전반적인 활동.
-- **Tiếng Việt:** Hoạt động tổng thể để phát triển hệ thống làm hài lòng người dùng với chi phí tối thiểu trong thời gian quy định.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [05-bai-hoc.md](05-bai-hoc.md): Đặc tính của Framework và các điểm phân biệt trọng điểm.
+- [07-bai-hoc.md](07-bai-hoc.md): Quản lý tiến độ dự án bằng sơ đồ mạng PERT/CPM và đường găng Critical Path.
+- [08-bai-hoc.md](08-bai-hoc.md): Chi tiết các mô hình toán học ước tính chi phí phần mềm (COCOMO, Putnam, FP).
 
-### 3.2 하향식/상향식 비용 산정 (Cost Estimation)
-#### LOC 기법 (Lines of Code)
-Phần “LOC 기법 (Lines of Code)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 읽는 방법 (Cách đọc)
+- Trong bài thi kỹ sư CNTT, câu hỏi tính toán về LOC luôn tuân theo các công thức cơ sở:
+  $$\mathbf{\text{Nỗ lực (Man-Month)} = \text{Thời gian phát triển (tháng)} \times \text{Số lượng nhân sự}}$$
+  $$\mathbf{\text{Nỗ lực (Man-Month)} = \frac{\text{Tổng số dòng code LOC}}{\text{Năng suất 1 người tạo ra trong 1 tháng}}}$$
+  $$\mathbf{\text{Chi phí dự án} = \text{Nỗ lực (Man-Month)} \times \text{Đơn giá nhân công 1 tháng}}$$
+  $$\mathbf{\text{Thời gian phát triển} = \frac{\text{Nỗ lực (Man-Month)}}{\text{Số lượng nhân sự}}}$$
+- Nhớ thứ tự quan trọng trong 3P: **People (Con người)** luôn là nhân tố quyết định thành bại hàng đầu của dự án.
 
-- 각 기능의 원시 코드 라인 수의 비관치, 낙관치, 기대치를 측정하여 예측.
-- **공식 (Formulas):**
-  - 노력(인월, Person-Month) = 개발 기간 × 투입 인원 = LOC / 1인당 월평균 생산 코드 라인 수
-  - 개발 비용 = 노력(인월) × 단위 비용
-  - 개발 기간 = 노력(인월) / 투입 인원
-  - 생산성 = LOC / 노력(인월)
-- **Tiếng Việt:** Ước tính dựa trên số dòng code. Tính toán Nỗ lực (Person-Month) = Số dòng code / Số dòng code 1 người viết trong 1 tháng.
+---
 
-#### 수학적 산정 기법 (Mathematical Models)
-Phần “수학적 산정 기법 (Mathematical Models)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **1. Tam giác quản trị 3P trong dự án phần mềm:**
+  - **People (인적 자원 - Con người):** Là yếu tố **quan trọng nhất**; bao gồm người quản lý dự án (PM), kỹ sư phân tích, lập trình viên, kiểm thử viên và khách hàng.
+  - **Problem (문제 / 과업 - Vấn đề):** Xác định phạm vi công việc, mục tiêu nghiệp vụ của khách hàng, và các ràng buộc kỹ thuật.
+  - **Process (프로세스 - Quy trình):** Khung quy trình và các giai đoạn thực thi (SDLC), phương pháp luận phát triển được áp dụng.
 
-- **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
-- **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
-- **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
-- **Tiếng Việt:**
-  - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
-  - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
-  - FP (Function Point): Dựa trên tính năng.
+- **2. Bảng hệ thống công thức tính toán LOC và Man-Month:**
 
-### 3.3 일정 관리 (Schedule Management)
-Phần “3.3 일정 관리 (Schedule Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Chỉ số cần tính | Công thức toán học chuẩn | Đơn vị đo |
+| :--- | :--- | :---: |
+| **Nỗ lực (Man-Month)** | $\text{MM} = \text{Thời gian phát triển (tháng)} \times \text{Số nhân lực}$ | Người - Tháng (MM) |
+| **Nỗ lực theo LOC** | $\text{MM} = \frac{\text{Tổng LOC dự kiến}}{\text{Năng suất 1 người trong 1 tháng}}$ | Người - Tháng (MM) |
+| **Chi phí phát triển** | $\text{Chi phí} = \text{Nỗ lực (MM)} \times \text{Đơn giá nhân công 1 người/tháng}$ | Tiền tệ (VND / KRW / USD) |
+| **Thời gian bàn giao** | $\text{Thời gian (tháng)} = \frac{\text{Nỗ lực (MM)}}{\text{Số nhân lực thực tế}}$ | Tháng |
+| **Năng suất bình quân** | $\text{Năng suất} = \frac{\text{Tổng LOC}}{\text{Nỗ lực (MM)}}$ | Dòng code / Người-Tháng |
 
-- **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
-- **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
-- **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
-- **Tiếng Việt:**
-  - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
-  - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
-  - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
+- **3. Bài toán mẫu điển hình trong đề thi:**
+  - *Đề bài:* Một dự án phần mềm có quy mô ước tính là $30.000$ dòng code (LOC). Một lập trình viên trung bình viết được $500$ dòng code trong một tháng. Nếu công ty bố trí $10$ lập trình viên cùng tham gia dự án với mức lương $3.000.000$ KRW/người/tháng, hãy tính:
+    1. Tổng nỗ lực dự án (Man-Month)?
+    2. Thời gian hoàn thành dự án (tháng)?
+    3. Tổng chi phí nhân công của dự án?
+  - *Lời giải:*
+    1. $\text{Nỗ lực (MM)} = \frac{30.000}{500} = 60 \text{ Man-Month}$.
+    2. $\text{Thời gian phát triển} = \frac{\text{Nỗ lực}}{\text{Số người}} = \frac{60}{10} = 6 \text{ tháng}$.
+    3. $\text{Tổng chi phí} = 60 \times 3.000.000 = 180.000.000 \text{ KRW}$.
 
-### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)
-Phần “3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Định luật Brooks (Brooks' Law) trong quản trị nhân sự:**
+  - *"Thêm người vào một dự án phần mềm đang bị trễ hạn chỉ làm cho nó càng trễ hạn hơn"* (Adding manpower to a late software project makes it later).
+  - Lý do: Người mới vào cần thời gian đào tạo từ người cũ, đồng thời số lượng kênh giao tiếp giữa các thành viên tăng theo cấp số nhân $\frac{N(N-1)}{2}$, làm phát sinh chi phí họp hành, giải thích và đồng bộ hóa khổng lồ.
 
-- **위험 관리 (Risk Analysis):** 돌발 상황(위험)을 미리 예상하고 적절한 대책을 수립.
-- **방법론 테일러링 (Tailoring):** 프로젝트 상황에 맞게 방법론 절차나 기법을 수정/보완.
-  - 내부적 기준: 목표 환경, 요구사항, 프로젝트 규모, 보유 기술.
-  - 외부적 기준: 법적 제약사항(Compliance), 표준 품질 기준.
-- **Tiếng Việt:** Quản lý rủi ro (lên phương án phòng ngừa) và Cắt may phương pháp (Tailoring) - điều chỉnh quy trình phát triển cho phù hợp với đặc thù dự án.
+### 복습 체크리스트
+- [ ] Ghi nhớ 3 yếu tố quản lý dự án (3P): People (quan trọng nhất), Problem, Process.
+- [ ] Thuộc lòng công thức tính Man-Month: $\text{MM} = \text{Thời gian} \times \text{Số người} = \frac{\text{LOC}}{\text{Năng suất}}$.
+- [ ] Biết cách tính thời gian phát triển: $\text{Thời gian} = \frac{\text{Man-Month}}{\text{Số người}}$.
+- [ ] Nhớ Định luật Brooks: Bổ sung thêm nhân lực vào dự án đang trễ sẽ làm dự án càng trễ thêm.

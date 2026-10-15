@@ -1,68 +1,74 @@
 # 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
-## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
+## 학습 목표 (Mục tiêu)
+- Nắm vững các nguyên nhân vật lý gây lỗi đường truyền dữ liệu: Suy hao (감쇠), Méo trễ (지연 왜곡), Nhiễu xuyên âm (누화 잡음), và Nhiễu xung đột biến (**충격성 잡음 - Impulse Noise**, nguyên nhân chính gây lỗi trong truyền thông số).
+- Phân biệt chi tiết sự khác nhau mang tính bản chất giữa Sửa lỗi chuyển tiếp (**FEC - Forward Error Correction**) tự sửa lỗi không cần kênh ngược (Mã Hamming) và Yêu cầu phát lại tự động (**ARQ / BEC**).
+- So sánh các phương thức chuyển mạch mạng: Chuyển mạch kênh (**회선 교환 - Circuit Switching**) và Chuyển mạch gói (**패킷 교환 - Packet Switching: Mạch ảo Virtual Circuit vs Datagram**).
 
-### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
-Phần “4.1 오류 발생 원인 및 제어 (Error Causes & Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 핵심 키워드 (Từ khóa)
+- 전송 오류 요인 (충격성 잡음 - Impulse Noise, 감쇠, 누화)
+- FEC (Forward Error Correction - 순방향 오류 수정, 해밍 코드, 역채널 불필요)
+- BEC / ARQ (Automatic Repeat reQuest - 역방향 오류 제어)
+- Stop-and-Wait ARQ vs Go-Back-N ARQ vs Selective Repeat ARQ
+- 회선 교환 (Circuit Switching - 전용선, 점유형, 실시간 전화)
+- 패킷 교환 (Packet Switching - 저장-전송 Store-and-Forward)
+- 가상 회선 (Virtual Circuit - X.25) vs 데이터그램 (Datagram - IP)
 
-- **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
-- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
-- **Tiếng Việt:**
-  - FEC: Tự sửa lỗi (vd: Hamming Code).
-  - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
+## 선행·연결 개념 (Kiến thức liên kết)
+- [14-bai-hoc.md](14-bai-hoc.md): Kỹ thuật đa hợp ghép kênh FDM và TDM.
+- [16-bai-hoc.md](16-bai-hoc.md): Lỗi mã nguồn phần mềm và các nguy cơ lạm dụng API.
+- [19-bai-hoc.md](19-bai-hoc.md): Các thiết bị mạng viễn thông (Repeater, Bridge, Switch, Router).
 
-### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
-Phần “4.2 ARQ (자동 반복 요청) 및 오류 검출 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **ARQ 종류:**
-  - **Stop-and-Wait:** 한 블록 보내고 기다림.
-  - **Go-Back-N:** 오류 발생 지점부터 *모두* 재전송.
-  - **Selective Repeat:** 오류 발생 블록*만* 재전송 (버퍼 필요, 복잡).
-  - **Adaptive:** 채널 상태에 따라 동적 변경.
-- **오류 검출 및 수정:**
-  - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
-  - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
-  - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
-- **Tiếng Việt:**
-  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
-  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
-
-### 4.3 교환 방식 (Switching Methods)
-Phần “4.3 교환 방식 (Switching Methods)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
-- **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
-  - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
-  - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
-- **Tiếng Việt:**
-  - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
-  - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
-
-### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
-Phần “4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
-- **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
-- **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
-- **Tiếng Việt:**
-  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
-  - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
-
-### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
-Phần “4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **경로 설정 방식 (Routing Strategies):**
-  - **고정 경로 (Static):** 미리 정해진 경로 사용.
-  - **적응 경로 (Adaptive):** 트래픽 상황에 따라 동적 변경.
-  - **범람 (Flooding):** 모든 경로로 패킷 복사 전송 (네트워크 정보 불필요).
-  - **임의 경로 (Random):** 인접 교환기 중 임의 선택.
-- **폭주(혼잡) 제어 (Congestion Control):** 오버플로를 방지하기 위해 네트워크 내 패킷 수 조절.
+## 읽는 방법 (Cách đọc)
+- Phân biệt nhanh trong các câu hỏi đề thi:
+  - Khi hỏi: "Kỹ thuật kiểm soát lỗi nào gửi kèm các bit dư thừa để bên nhận **tự phát hiện và tự sửa lỗi trực tiếp mà KHÔNG CẦN KÊNH TRUYỀN NGƯỢC (역채널 불필요)**?" $\rightarrow$ Chọn ngay **FEC (순방향 오류 수정)**, ví dụ kinh điển là **Mã Hamming (해밍 코드)**.
+  - Phân biệt 2 dạng chuyển mạch gói:
+    - **가상 회선 (Virtual Circuit):** Thiết lập đường dẫn logic trước khi truyền, các gói tin **luôn đến đích đúng theo thứ tự ban đầu** (ví dụ giao thức X.25).
+    - **데이터그램 (Datagram):** Mỗi gói tin được định tuyến hoàn toàn độc lập, có thể đi qua các tuyến đường khác nhau và **có thể đến đích sai thứ tự** (ví dụ giao thức IP của Internet).
 
 ---
 
-  - `for(초기식; 조건식; 증감식) { 실행문; }`
-- **while문**: 조건이 참인 동안 무한 반복 가능. 조건이 거짓이면 한 번도 실행되지 않음. (Vòng lặp kiểm tra điều kiện trước).
-  - `while(조건) { 실행문; }`
-- **do~while문**: **무조건 한 번은 실행**한 후, 조건을 판단하여 반복 여부 결정. (Vòng lặp kiểm tra điều kiện sau, ít nhất chạy 1 lần).
-  - `do { 실행문; } while(조건);`
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **1. Các nguyên nhân gây lỗi đường truyền dữ liệu:**
+
+| Tác nhân gây lỗi | Tên tiếng Hàn & Anh | Bản chất vật lý & Đặc điểm thi cử |
+| :--- | :--- | :--- |
+| **Nhiễu xung** | **충격성 잡음** (Impulse Noise) | Phát sinh do sét đánh hoặc tia lửa điện áp đột biến; là **nguyên nhân hàng đầu gây lỗi bit (Burst Error) trong truyền thông số tốc độ cao**. |
+| **Suy hao** | **감쇠** (Attenuation) | Tín hiệu bị yếu dần theo khoảng cách truyền; khắc phục bằng bộ khuếch đại (Amplifier) hoặc bộ tái sinh lặp (Repeater). |
+| **Xuyên âm** | **누화 잡음** (Crosstalk Noise) | Từ trường của dây truyền lân cận cảm ứng sang dây bên cạnh (ví dụ nghe thấy tiếng người khác nói chèn vào đường dây điện thoại). |
+| **Méo trễ** | **지연 왜곡** (Delay Distortion) | Các thành phần tần số khác nhau của cùng một tín hiệu di chuyển với vận tốc khác nhau trên dây dẫn, đến nơi nhận cọc cạch không đồng thời. |
+
+- **2. Bảng đối chiếu cơ chế kiểm soát lỗi: FEC vs ARQ (BEC):**
+
+| Tiêu chuẩn so sánh | 순방향 오류 수정 (FEC - Forward Error Correction) | 역방향 오류 제어 (ARQ - Automatic Repeat reQuest) |
+| :--- | :--- | :--- |
+| **Nguyên lý hoạt động** | Máy phát gán thêm các bit mã hóa sửa lỗi dư thừa (như **Hamming Code**, Reed-Solomon); bên nhận tự tính toán và **tự động sửa đúng bit lỗi tại chỗ**. | Máy thu phát hiện gói tin bị lỗi (qua kiểm tra CRC, Parity) và gửi tín hiệu **NAK (Negative ACK) yêu cầu máy phát gửi lại gói tin đó**. |
+| **Nhu cầu kênh ngược** | **Hoàn toàn không cần kênh ngược (역채널 불필요)**; cực kỳ hữu ích cho truyền thông vệ tinh hoặc phát thanh 1 chiều. | **Bắt buộc phải có kênh truyền ngược 2 chiều** để bên nhận gửi tín hiệu phản hồi xác nhận ACK/NAK. |
+| **Hiệu suất đường truyền** | Chi phí phụ trội (Overhead) bit dư thừa rất cao; làm giảm băng thông hữu ích. | Tận dụng băng thông tốt khi đường truyền sạch ít lỗi; chỉ tốn tài nguyên khi phải gửi lại nhiều. |
+
+- **3. Bảng phân loại các kỹ thuật ARQ (Yêu cầu phát lại tự động):**
+  - **Stop-and-Wait ARQ:** Phát 1 gói $\rightarrow$ Dừng lại chờ ACK $\rightarrow$ Nhận được ACK mới phát gói kế tiếp $\rightarrow$ Cấu trúc đơn giản nhất nhưng hiệu suất đường truyền cực thấp.
+  - **Go-Back-N ARQ:** Sử dụng cửa sổ trượt (Sliding Window) phát liên tục $N$ gói. Nếu gói $k$ bị lỗi hoặc thất lạc $\rightarrow$ Máy phát buộc phải **gửi lại toàn bộ từ gói $k$ đến hết các gói sau đó**.
+  - **Selective Repeat ARQ:** Máy thu có bộ đệm lưu trữ; khi gói $k$ bị lỗi $\rightarrow$ **Chỉ gửi lại duy nhất đúng gói tin $k$ bị hỏng**, các gói đúng khác vẫn được giữ lại $\rightarrow$ Hiệu suất cao nhất nhưng bộ nhớ đệm bên nhận phức tạp.
+
+- **4. Bảng phân biệt: Chuyển mạch kênh vs Chuyển mạch gói:**
+
+| Tiêu chí | 회선 교환 (Circuit Switching) | 패킷 교환 (Packet Switching) |
+| :--- | :--- | :--- |
+| **Thiết lập kết nối** | Bắt buộc phải **thiết lập một đường truyền vật lý chuyên dụng riêng** trước khi bắt đầu đàm thoại. | Không cần chiếm dụng kênh vật lý; dữ liệu được băm nhỏ thành các gói tin (Packets) độc lập. |
+| **Chiếm dụng tài nguyên** | Kênh truyền bị chiếm giữ độc quyền trong suốt phiên làm việc, dù hai bên im lặng không nói gì thì kênh vẫn bị khóa. | Các gói tin từ nhiều người dùng khác nhau **chia sẻ chung đường truyền linh hoạt** (Ghép kênh thống kê). |
+| **Độ trễ truyền dẫn** | Thời gian thiết lập kênh ban đầu lâu, nhưng khi đã kết nối thì **độ trễ truyền gần như bằng 0** (Real-time). | Có độ trễ tích lũy qua từng nút mạng (Store-and-Forward Delay) do router phải lưu tạm vào bộ đệm và tra bảng định tuyến. |
+| **Ví dụ hệ thống** | Mạng điện thoại cố định truyền thống PSTN. | Mạng máy tính Internet (IP), Mạng di động 4G/5G, X.25, Frame Relay. |
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Công thức tính số bit chẵn lẻ kiểm tra lỗi của Mã Hamming (Hamming Code):**
+  - Để mã hóa được $m$ bit dữ liệu và phát hiện/sửa lỗi 1 bit bằng $p$ bit kiểm tra chẵn lẻ (Parity bits), số bit $p$ phải thỏa mãn bất đẳng thức:
+    $$2^p \ge m + p + 1$$
+  - *Ví dụ:* Nếu cần truyền 4 bit dữ liệu ($m = 4$), ta cần tìm số $p$ nhỏ nhất sao cho $2^p \ge 4 + p + 1$. Với $p = 3$, ta có $2^3 = 8 \ge 4 + 3 + 1 = 8$ (Thỏa mãn). Vậy tổng độ dài gói tin mã hóa là $4 + 3 = 7$ bit (Mã Hamming (7, 4)).
+
+### 복습 체크리스트
+- [ ] Ghi nhớ Impulse Noise (충격성 잡음) là nguyên nhân gây lỗi chính trong truyền thông số.
+- [ ] Nhớ FEC tự sửa lỗi không cần kênh ngược (dùng mã Hamming).
+- [ ] Phân biệt được: Go-Back-N gửi lại từ gói lỗi trở đi, Selective Repeat chỉ gửi lại đúng gói lỗi.
+- [ ] Phân biệt được: Mạch ảo (Virtual Circuit) đến đích đúng thứ tự, Datagram đến đích độc lập có thể sai thứ tự.
+- [ ] Nhớ mạng điện thoại PSTN là chuyển mạch kênh (Circuit), Internet là chuyển mạch gói (Packet).

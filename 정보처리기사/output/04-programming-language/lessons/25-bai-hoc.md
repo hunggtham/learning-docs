@@ -1,84 +1,70 @@
 # Python 기초 (Python Basics)
 
-## Python 기초 (Python Basics)
-### 161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)
-Phần “161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững cú pháp cơ bản và các cấu trúc dữ liệu nền tảng trong ngôn ngữ lập trình Python: Danh sách (List), Bộ dữ liệu bất biến (Tuple), Từ điển (Dictionary), Dãy số (`range`), và Kỹ thuật cắt lát (Slicing).
+- Hiểu rõ cơ chế nhập xuất dữ liệu trong Python: hàm `input()` luôn trả về chuỗi, kỹ thuật ép kiểu hàng loạt bằng `map(int, input().split())`, và các tham số `sep`, `end` của hàm `print()`.
+- Nắm vững cú pháp vòng lặp `for` duyệt qua phần tử và cách định nghĩa lớp (Class), phương thức cùng tham số bắt buộc `self`.
 
-- **리스트 (List)**: 요소의 추가, 삭제, 변경 가능 (Có thể thêm, xóa, sửa phần tử).
-- **튜플 (Tuple)**: 요소의 추가, 삭제, 변경 불가능함 (Không thể thay đổi phần tử).
-- **range**: 연속된 숫자를 생성함 (Tạo dãy số liên tiếp).
-  - *Example / Ví dụ*: List `[1, 2]`, Tuple `(1, 2)`.
-  - 💡 *Mẹo ghi nhớ*: List dùng `[]` và linh hoạt. Tuple dùng `()` và cố định (bất biến).
+## 핵심 키워드 (Từ khóa)
+- 파이썬 기초 (Python Basics)
+- 리스트 vs 튜플 (List Mutable vs Tuple Immutable)
+- 딕셔너리 (Dictionary / Key-Value Pair)
+- 슬라이스 (Slicing / `[start:stop:step]`)
+- input() & 형변환 (`map(int, input().split())`)
+- print() 제어 (sep, end 매개변수)
+- 클래스와 self (Classes & self Parameter)
 
-### 185. Python의 리스트 (Python List / Danh sách trong Python)
-Phần “185. Python의 리스트 (Python List / Danh sách trong Python)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [24-bai-hoc.md](24-bai-hoc.md): Con trỏ và quản lý bộ nhớ động trong C.
+- [26-bai-hoc.md](26-bai-hoc.md): Cú pháp thụt lề và đặc trưng ngôn ngữ Python.
+- [27-bai-hoc.md](27-bai-hoc.md): Chi tiết các kiểu dữ liệu chuỗi tuần tự trong Python.
 
-- 크기를 지정하지 않는다. 하나의 리스트에 다양한 자료형을 섞어 저장할 수 저장할 수 있다. (Không cần chỉ định kích thước. Có thể chứa nhiều kiểu dữ liệu khác nhau).
-- 위치는 0부터 시작한다. (Chỉ số bắt đầu từ 0).
-  - *Example / Ví dụ*: `a = [10, 'mike', 23.45]`
-  - 💡 *Mẹo ghi nhớ*: Python List giống như một cái túi thần kỳ, có thể bỏ bất cứ thứ gì vào.
+## 읽는 방법 (Cách đọc)
+- Phân biệt các cấu trúc ngoặc trong Python:
+  - `[ ]` (Ngoặc vuông): **List** - Danh sách động, có thể sửa, thêm, xóa thoải mái.
+  - `( )` (Ngoặc tròn): **Tuple** - Bộ dữ liệu hằng, một khi đã tạo thì **không thể sửa đổi hay xóa** bất kỳ phần tử nào.
+  - `{ }` (Ngoặc nhọn có cặp `k:v`): **Dictionary** - Bảng băm tra cứu theo Khóa (Key) ra Giá trị (Value).
+  - `{ }` (Ngoặc nhọn chỉ có giá trị rời): **Set** - Tập hợp các phần tử duy nhất, không trùng lặp và không có thứ tự.
+- Kỹ thuật cắt lát (Slicing) `a[start : stop : step]`:
+  - Lấy từ chỉ số `start` đến `stop - 1` (không bao gồm `stop`).
+  - Bước nhảy `step = -1` (ví dụ `a[::-1]`) dùng để đảo ngược toàn bộ chuỗi/mảng.
 
-### 186. Python의 딕셔너리 (Dictionary / Từ điển)
-Phần “186. Python의 딕셔너리 (Dictionary / Từ điển)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+---
 
-- 연관된 값을 묶어서 저장하는 용도. (Dùng để lưu trữ dữ liệu theo cặp Khóa - Giá trị).
-- 위치값 대신 사용자가 원하는 키를 직접 지정하여 사용한다. (Dùng Khóa tự định nghĩa thay vì chỉ số số học).
-  - *Example / Ví dụ*: `d = {'name': 'John', 'age': 25}`
-  - 💡 *Mẹo ghi nhớ*: Key-Value (Khóa-Giá trị). Dùng `{}` giống như một từ điển thực sự (tra từ -> ra nghĩa).
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng so sánh 4 cấu trúc tập hợp dữ liệu trong Python:**
 
-### 187. Python의 Range (Python Range / Dãy số)
-Phần “187. Python의 Range (Python Range / Dãy số)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Cấu trúc dữ liệu | Cú pháp khởi tạo | Tính có thể biến đổi (Mutability) | Trùng lặp phần tử | Thao tác truy xuất |
+| :--- | :--- | :--- | :--- | :--- |
+| **List (리스트)** | `a = [10, 20, 30]` | **Có thể thay đổi (Mutable)** | Cho phép trùng lặp | Theo chỉ số số học: `a[0]` |
+| **Tuple (튜플)** | `t = (10, 20, 30)` | **Bất biến (Immutable)** | Cho phép trùng lặp | Theo chỉ số số học: `t[0]` (Chỉ đọc) |
+| **Dictionary (딕셔너리)** | `d = {'name': 'Lee', 'age': 20}` | **Có thể thay đổi (Mutable)** | Key không được trùng, Value tùy ý | Theo Khóa: `d['name']` |
+| **Set (세트)** | `s = {1, 2, 3}` | **Có thể thay đổi (Mutable)** | **Tuyệt đối không trùng lặp** | Không có chỉ số; dùng toán tử `in` |
 
-- 연속된 숫자를 생성하는 것. (Tạo dãy số liên tiếp).
-  - `range(5)` -> 0, 1, 2, 3, 4
-  - `range(4, 9)` -> 4, 5, 6, 7, 8
-  - `range(1, 15, 3)` -> 1, 4, 7, 10, 13
-  - 💡 *Mẹo ghi nhớ*: `range(start, stop, step)`. Bao gồm `start`, nhưng **không** bao gồm `stop`.
+- **Bảng quy tắc Slicing trong Python (`a = [10, 20, 30, 40, 50]`):**
 
-### 188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)
-Phần “188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Cú pháp lát cắt | Ý nghĩa thao tác | Kết quả trả về |
+| :--- | :--- | :--- |
+| **`a[1:3]`** | Lấy từ chỉ số 1 đến chỉ số $3 - 1 = 2$ | `[20, 30]` |
+| **`a[:3]`** | Bỏ trống `start` $\rightarrow$ Lấy từ đầu đến chỉ số 2 | `[10, 20, 30]` |
+| **`a[2:]`** | Bỏ trống `stop` $\rightarrow$ Lấy từ chỉ số 2 đến hết mảng | `[30, 40, 50]` |
+| **`a[0:5:2]`** | Lấy từ 0 đến 4 với bước nhảy 2 (lấy chỉ số 0, 2, 4) | `[10, 30, 50]` |
+| **`a[::-1]`** | Bước nhảy -1 $\rightarrow$ Đảo ngược toàn bộ mảng | `[50, 40, 30, 20, 10]` |
 
-- 객체에서 일부를 잘라 반환하는 기능. (Trích xuất một phần của chuỗi hoặc mảng).
-- `a[1:3]`: Lấy từ index 1 đến 2.
-- `a[0:5:2]`: Lấy từ 0 đến 4, bước nhảy 2.
-- `a[3:]`: Lấy từ index 3 đến cuối.
-- `a[:3]`: Lấy từ đầu đến index 2.
-- `a[::-1]`: Đảo ngược mảng.
-  - 💡 *Mẹo ghi nhớ*: `[start : stop : step]`. Giống range, không bao gồm `stop`.
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Quy tắc tham số `self` trong phương thức lớp (Class Method):**
+  - Trong Python, khi định nghĩa hàm bên trong một lớp (Class), tham số đầu tiên của hàm **bắt buộc phải là `self`** (đại diện cho chính đối tượng thể hiện hiện tại, tương đương con trỏ `this` trong Java/C++).
+  - *Ví dụ:*
+    ```python
+    class Calculator:
+        def add(self, a, b):
+            return a + b
+    calc = Calculator()
+    print(calc.add(3, 5)) # In ra: 8 (calc tự động truyền vào self)
+    ```
 
-### 182. Python의 input() 함수 (Python input() Function / Hàm nhập)
-Phần “182. Python의 input() 함수 (Python input() Function / Hàm nhập)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 키보드로 입력받아 변수에 저장하는 함수이다. (Nhập từ bàn phím và lưu vào biến).
-- 입력되는 값은 기본적으로 문자열로 취급된다. (Giá trị mặc định luôn là chuỗi).
-  - *Example / Ví dụ*: `a = input('Nhập tên:')`
-
-### 183. Python의 print() 함수 (Python print() Function / Hàm in)
-Phần “183. Python의 print() 함수 (Python print() Function / Hàm in)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 인수로 주어진 값을 출력한다. (In giá trị ra màn hình).
-  - *Example / Ví dụ*: `print(82, 24, sep='-', end=',')` -> `82-24,`
-  - 💡 *Mẹo ghi nhớ*: `sep` = phân cách giữa các đối số, `end` = ký tự kết thúc (mặc định là xuống dòng `\n`).
-
-### 184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)
-Phần “184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- `input()` 함수는 무조건 문자열로 저장하므로, 숫자로 사용하려면 형 변환이 필요하다. (Vì `input()` trả về chuỗi, cần ép kiểu nếu muốn dùng số).
-- 변환할 데이터가 1개: `a = int(input())`
-- 변환할 데이터가 2개 이상: `a, b = map(int, input().split())`
-  - 💡 *Mẹo ghi nhớ*: `split()` để cắt khoảng trắng, `map()` để ép tất cả sang kiểu nguyên `int`.
-
-### 189. Python의 for문 (Python for loop)
-Phần “189. Python의 for문 (Python for loop)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **range를 이용하는 방식 (Dùng range)**: `for i in range(1, 11): sum = sum + i`
-- **리스트를 이용하는 방식 (Dùng list)**: `for i in a:` (với `a` là list).
-  - 💡 *Mẹo ghi nhớ*: `for item in tập_hợp`. Lặp qua từng phần tử.
-
-### 191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)
-Phần “191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 클래스 없이 메소드만 단독으로 사용할 수 있다. (Có thể sử dụng phương thức độc lập mà không cần lớp).
-- 클래스를 사용하려면 속성과 메소드를 정의한 후 객체를 선언한다. (Để dùng lớp, định nghĩa thuộc tính và phương thức, sau đó khởi tạo đối tượng).
-  - *Example / Ví dụ*: `def calc(x, y): return x * y` (Hàm độc lập). `class Cls: x = 10` (Lớp).
-  - 💡 *Mẹo ghi nhớ*: Python hỗ trợ cả lập trình thủ tục (như C) và hướng đối tượng (OOP). Tham số đầu tiên của hàm trong lớp luôn là `self`.
+### 복습 체크리스트
+- [ ] Phân biệt được List (ngoặc `[]`, sửa được) và Tuple (ngoặc `()`, không sửa được).
+- [ ] Nhớ kỹ thuật cắt lát `a[start:stop]` không bao gồm phần tử tại chỉ số `stop`.
+- [ ] Nhớ cú pháp đảo ngược mảng trong Python: `a[::-1]`.
+- [ ] Nhớ tham số đầu tiên của phương thức trong class Python bắt buộc là `self`.

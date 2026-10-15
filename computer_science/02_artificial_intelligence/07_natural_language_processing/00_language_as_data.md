@@ -16,7 +16,7 @@ có thể nghĩa ngân hàng hoặc bờ sông. Raw characters không chứa sen
 
 NLP hệ thống (system / 시스템) xử lý observable forms và học statistical/structured relationships để infer useful representations. “Understanding” cần được đánh giá qua capabilities, không assume từ fluency.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Các mức (level / 수준) của linguistic cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Văn bản (text / 텍스트) không phải meaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰), kiểu (type / 타입), Vocabulary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Văn bản có thể mang nhiều tầng cấu trúc; phần tiếp theo chuyển từ các tầng đó sang đơn vị token cụ thể, nơi quyết định biểu diễn ảnh hưởng trực tiếp đến mô hình.
 
 ## Các mức (level / 수준) của linguistic cấu trúc (structure / 구조)
 
@@ -31,7 +31,7 @@ Ngôn ngữ (language / 언어) có nhiều tầng tương tác:
 
 Hiện đại (modern / 현대적) các mô hình (models / 모델들) thường learn nhiều tầng jointly, nhưng terminology giúp diagnose tasks/failures.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Đơn vị từ (token / 토큰), kiểu (type / 타입), Vocabulary** tiếp nhận điểm tựa từ **Các mức (level / 수준) của linguistic cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Corpus và phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Sau khi xác định các tầng cấu trúc, ta xem corpus được chia thành token và type ra sao; cách đếm này là nền cho việc mô tả phân phối.
 
 ## Đơn vị từ (token / 토큰), kiểu (type / 타입), Vocabulary
 
@@ -51,7 +51,7 @@ AI learns. AI changes.
 
 Subword tokenization làm “word” không còn đơn vị cơ bản bắt buộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Corpus và phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰), kiểu (type / 타입), Vocabulary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Zipf's Law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vocabulary chỉ có ý nghĩa khi đặt trong corpus thực tế; phần Zipf tiếp theo giải thích vì sao tần suất không đều tạo ra nhiều token hiếm.
 
 ## Corpus và phân phối (distribution / 분포)
 
@@ -69,7 +69,7 @@ Corpus composition ảnh hưởng:
 
 Dataset curation là modeling choice.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Zipf's Law** tiếp nhận điểm tựa từ **Corpus và phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Morphology và Korean/Vietnamese/English khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Đuôi phân phối dài của Zipf dẫn thẳng tới vấn đề hình thái học: các ngôn ngữ khác nhau tạo ra mức phân mảnh từ vựng khác nhau.
 
 ## Zipf's Law
 
@@ -90,7 +90,7 @@ Consequence:
 - subword tokenization useful;
 - frequency imbalance affects huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Morphology và Korean/Vietnamese/English khác nhau** tiếp nhận điểm tựa từ **Zipf's Law** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ambiguity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khác biệt hình thái làm tăng khả năng mơ hồ; phần tiếp theo tách các kiểu ambiguity để thấy mô hình cần dựa vào ngữ cảnh nào.
 
 ## Morphology và Korean/Vietnamese/English khác nhau
 
@@ -115,7 +115,7 @@ contains multi-syllable lexical units. Tokenization thiết kế (design / 설�
 
 Universal subword các mô hình (models / 모델들) trade linguistic purity for scalable data-driven segmentation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Ambiguity** tiếp nhận điểm tựa từ **Morphology và Korean/Vietnamese/English khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bag-of-Words** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Ambiguity cho thấy đếm từ đơn thuần chưa đủ; Bag-of-Words là baseline hữu ích nhưng cũng phơi bày rõ những gì thứ tự câu bị bỏ qua.
 
 ## Ambiguity
 
@@ -145,7 +145,7 @@ John told Mike that he was late.
 
 Ngôn ngữ (language / 언어) modeling needs ngữ cảnh (context / 맥락)/world priors to resolve probabilistically.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Bag-of-Words** tiếp nhận điểm tựa từ **Ambiguity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **n-grams** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Khi BoW bỏ thứ tự, n-gram bổ sung một cửa sổ ngữ cảnh cục bộ; đổi lại, số mẫu quan sát được tăng nhanh.
 
 ## Bag-of-Words
 
@@ -166,7 +166,7 @@ have same bag-of-words.
 
 Despite limitation, BoW/TF-IDF remain strong interpretable baselines for many classification/tìm kiếm (search / 검색) tasks.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **n-grams** tiếp nhận điểm tựa từ **Bag-of-Words** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TF-IDF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+N-gram khôi phục một phần thứ tự với chi phí sparsity; TF-IDF chuyển trọng tâm sang độ đặc trưng của token trong từng tài liệu.
 
 ## n-grams
 
@@ -186,7 +186,7 @@ Markov approximation reduces độ phức tạp (complexity / 복잡도) but spa
 
 Neural LMs replace tường minh (explicit / 명시적) n-gram bảng (table / 테이블) with phân tán (distributed / 분산) representations and long ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **TF-IDF** tiếp nhận điểm tựa từ **n-grams** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ (language / 언어) as chuỗi (sequence / 시퀀스) vs đồ thị (graph / 그래프) vs cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TF-IDF mô tả độ nổi bật của từ, nhưng chưa mô tả quan hệ cú pháp dài; phần kế tiếp mở rộng biểu diễn sang chuỗi, cây và đồ thị.
 
 ## TF-IDF
 
@@ -202,7 +202,7 @@ A term frequent in one document but rare corpus-wide gets higher weight.
 
 This is cốt lõi (core / 핵심) lexical retrieval biểu diễn (representation / 표현) and remains useful alongside dense embeddings in hybrid tìm kiếm (search / 검색).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **TF-IDF** xác định đầu vào; **Ngôn ngữ (language / 언어) as chuỗi (sequence / 시퀀스) vs đồ thị (graph / 그래프) vs cây (tree / 트리)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Discrete Tokens → Continuous Vectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+TF-IDF cung cấp tín hiệu lexical cho tìm kiếm; khi cần mô hình hóa quan hệ cấu trúc, ta cần một cách nhìn khác trước khi ánh xạ token thành vector.
 
 ## Ngôn ngữ (language / 언어) as chuỗi (sequence / 시퀀스) vs đồ thị (graph / 그래프) vs cây (tree / 트리)
 
@@ -215,7 +215,7 @@ Raw văn bản (text / 텍스트) is chuỗi (sequence / 시퀀스), but linguis
 
 Transformer does not explicitly require parse cây (tree / 트리); attention can learn dependencies from chuỗi (sequence / 시퀀스). But tường minh (explicit / 명시적) structures still useful in constrained/explainable các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Ngôn ngữ (language / 언어) as chuỗi (sequence / 시퀀스) vs đồ thị (graph / 그래프) vs cây (tree / 트리)** xác định đầu vào; **Discrete Tokens → Continuous Vectors** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) as a dữ liệu (data / 데이터) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Các cấu trúc chuỗi, cây và đồ thị nêu những quan hệ cần giữ; embedding tiếp theo biến token rời rạc thành tọa độ liên tục để mô hình học tương đồng.
 
 ## Discrete Tokens → Continuous Vectors
 
@@ -227,7 +227,7 @@ Transformer does not explicitly require parse cây (tree / 트리); attention ca
 
 Now hình học (geometry / 기하학) can encode learned similarities. This chuyển tiếp (transition / 전이) from discrete symbol to continuous véc-tơ (vector / 벡터) is foundational hiện đại (modern / 현대적) NLP.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Discrete Tokens → Continuous Vectors** đã nêu tiêu chí phân biệt, còn **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) as a dữ liệu (data / 데이터) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Vector liên tục chỉ hữu ích khi biết mô hình được phép nhìn bao nhiêu văn bản; giới hạn cửa sổ ngữ cảnh vì vậy trở thành một phần của biểu diễn.
 
 ## Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) as a dữ liệu (data / 데이터) ranh giới (boundary / 경계)
 
@@ -237,7 +237,7 @@ A paragraph split away from its heading loses ngữ cảnh (context / 맥락); R
 
 Ngữ cảnh (context / 맥락) construction is part of biểu diễn (representation / 표현).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) as a dữ liệu (data / 데이터) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Siêu dữ liệu (metadata / 메타데이터)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dữ liệu (data / 데이터) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Cửa sổ ngữ cảnh quyết định phần thông tin có thể quan sát; metadata giúp giữ lại nguồn, vị trí và thời điểm của phần thông tin đó.
 
 ## Siêu dữ liệu (metadata / 메타데이터)
 
@@ -245,7 +245,7 @@ Author, timestamp, ngôn ngữ (language / 언어), document title, section đư
 
 NLP chuỗi xử lý (pipeline / 파이프라인) should distinguish content vs siêu dữ liệu (metadata / 메타데이터) and nhánh học (track / 트랙) provenance.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Siêu dữ liệu (metadata / 메타데이터)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) chất lượng (quality / 품질)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Grounding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Metadata có thể bổ sung ngữ cảnh nhưng cũng gây rò rỉ; tiếp theo, chất lượng dữ liệu quyết định tín hiệu này đáng tin đến mức nào.
 
 ## Dữ liệu (data / 데이터) chất lượng (quality / 품질)
 
@@ -264,7 +264,7 @@ language misclassification
 
 Large language-model huấn luyện (training / 학습) chất lượng (quality / 품질) depends heavily on filtering/deduplication, not only quy mô (scale / 규모).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Dữ liệu (data / 데이터) chất lượng (quality / 품질)** nêu điều cần giải thích; **Grounding** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chất lượng corpus là điều kiện của mọi biểu diễn; grounding nối dữ liệu với nguồn và bằng chứng thay vì để mô hình chỉ dựa vào tương quan.
 
 ## Grounding
 
@@ -272,7 +272,7 @@ Văn bản (text / 텍스트) describes world but is not world itself. A ngôn n
 
 This distinction becomes trọng yếu (critical / 중요) for hallucination.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Grounding** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Grounding biến câu trả lời thành một kết quả có thể truy nguyên; mental model tiếp theo gom các quyết định về dữ liệu, cấu trúc và bằng chứng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -292,7 +292,7 @@ Prediction / generated language
 
 Every arrow can lose thông tin (information / 정보) or introduce độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Mental model này giúp kiểm tra pipeline từ raw text đến tín hiệu học được; phần misconceptions dùng nó để sửa các cách hiểu thường gặp.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -312,7 +312,7 @@ Embedding encodes statistical/task-dependent relations, not complete grounded me
 
 TF-IDF/BM25 remain excellent lexical retrieval/baselines and combine well with dense các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+Sau khi phân biệt các ngộ nhận, phần liên kết kiến thức chỉ rõ nơi sở hữu các chủ đề kế cận và cách tiếp tục học.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

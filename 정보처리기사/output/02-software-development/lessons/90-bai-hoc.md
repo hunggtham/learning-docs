@@ -1,29 +1,53 @@
 # 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
 
-## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
+## 학습 목표 (Mục tiêu)
+- Nắm vững định nghĩa và vai trò của cấu trúc dữ liệu (자료구조 - Data Structure): cách thức tổ chức và lưu trữ dữ liệu hiệu quả trong bộ nhớ máy tính.
+- Phân biệt sâu sắc hai nhóm cấu trúc dữ liệu chính: Cấu trúc tuyến tính (선형 구조 - Linear) và Cấu trúc phi tuyến tính (비선형 구조 - Non-linear).
+- Nhớ đặc điểm vận hành của từng cấu trúc con: Mảng, Danh sách liên kết, Ngăn xếp (LIFO), Hàng đợi (FIFO), Hàng đợi hai đầu Deque, Cây (Tree - không chu trình) và Đồ thị (Graph).
 
-자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
+## 핵심 키워드 (Từ khóa)
+- 자료구조 (Data Structure / 선형 vs 비선형)
+- 선형 구조 (Linear Structure / 배열, 선형 리스트, 스택, 큐, 데크)
+- 비선형 구조 (Non-linear Structure / 트리, 그래프)
+- 스택 (Stack / LIFO / 서브루틴 호출, 인터럽트)
+- 큐 (Queue / FIFO / 작업 스케줄링, 스풀링)
+- 데크 (Deque / Double-ended Queue / Scroll & Shelf)
+- 비순환성 (Acyclic / 트리의 무사이클 특성)
 
-### 선형 구조 (Linear - Nối tiếp nhau)
-Phần “선형 구조 (Linear - Nối tiếp nhau)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [89-bai-hoc.md](89-bai-hoc.md): Phân loại máy tính theo Flynn và các kỹ thuật xử lý song song.
+- [91-bai-hoc.md](91-bai-hoc.md): Kỹ thuật thiết kế thuật toán và độ phức tạp thời gian.
+- [01-bai-hoc.md](01-bai-hoc.md): Chi tiết cấu trúc dữ liệu tuyến tính và phi tuyến tính.
 
-- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
-  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
-  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
-- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
-- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
-- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
-
-### 비선형 구조 (Non-linear - Không nối tiếp)
-Phần “비선형 구조 (Non-linear - Không nối tiếp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
-- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
-
-- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
-  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
-  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
-  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
+## 읽는 방법 (Cách đọc)
+- Phân loại nhanh theo quan hệ giữa các phần tử:
+  - **선형 구조 (Tuyến tính - Quan hệ 1:1):** Các phần tử sắp xếp nối tiếp nhau thành một hàng. Bao gồm: Mảng (배열), Danh sách liên kết (연결 리스트), Stack, Queue, Deque.
+  - **비선형 구조 (Phi tuyến tính - Quan hệ 1:N hoặc N:M):**
+    - Quan hệ 1:N phân cấp thứ bậc: **Cây (Tree)** - đặc biệt là **tuyệt đối không có chu trình (No Cycle)**.
+    - Quan hệ N:M mạng lưới kết nối: **Đồ thị (Graph)** - bao gồm tập đỉnh (Vertices) và tập cạnh (Edges).
 
 ---
+
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng phân loại tổng thể cấu trúc dữ liệu:**
+
+| Nhóm cấu trúc | Quan hệ phần tử | Tên cấu trúc dữ liệu cụ thể | Đặc trưng vận hành và ứng dụng |
+| :--- | :--- | :--- | :--- |
+| **선형 구조 (Linear)** | **1 : 1** (Nối tiếp) | **배열 (Array)** | Các ô nhớ liên tục; truy xuất $O(1)$ qua chỉ số; kích thước cố định |
+|  |  | **연결 리스트 (Linked List)** | Các nút nối bằng con trỏ; chèn/xóa linh hoạt; kích thước động |
+|  |  | **스택 (Stack)** | Cơ chế **LIFO (Last-In-First-Out)**; gọi hàm con (Subroutine), đệ quy, ngắt |
+|  |  | **큐 (Queue)** | Cơ chế **FIFO (First-In-First-Out)**; điều phối tiến trình HĐH, hàng đợi in Spool |
+|  |  | **데크 (Deque)** | Chèn và xóa ở **cả hai đầu**; biến thể Scroll (hạn chế nhập) và Shelf (hạn chế xuất) |
+| **비선형 구조 (Non-linear)** | **1 : N** (Phân cấp) | **트리 (Tree)** | Cấu trúc phân nhánh từ gốc (Root); **không chứa chu trình khép kín (Cycle)** |
+|  | **N : M** (Mạng lưới) | **그래프 (Graph)** | Tập hợp các đỉnh $V$ nối với nhau bằng các cạnh $E$; có hướng hoặc vô hướng |
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Mối liên hệ giữa Cây và Đồ thị:**
+  - Một Cây thực chất là một Đồ thị vô hướng, liên thông và không có chu trình (Connected Acyclic Graph).
+  - Với một cây có $n$ đỉnh, số lượng cạnh luôn chính xác bằng $n - 1$. Nếu thêm bất kỳ một cạnh nào vào cây, chu trình sẽ ngay lập tức xuất hiện.
+
+### 복습 체크리스트
+- [ ] Phân loại đúng: 선형 (Array, Linked List, Stack, Queue, Deque) vs 비선형 (Tree, Graph).
+- [ ] Nhớ Stack là LIFO (Last In First Out), Queue là FIFO (First In First Out).
+- [ ] Nhớ Deque cho phép thao tác ở cả 2 đầu.
+- [ ] Nhớ tính chất cốt lõi của Tree: Cấu trúc phân cấp và hoàn toàn không có chu trình (No Cycle).

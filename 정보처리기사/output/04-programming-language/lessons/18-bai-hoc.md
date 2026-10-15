@@ -1,45 +1,74 @@
 # 제어문 심화 (Control Statements - Advanced)
 
-## 제어문 심화 (Control Statements - Advanced)
-### 252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)
-Phần “252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Nắm vững cú pháp, nguyên lý vận hành và chu trình lặp của 3 cấu trúc vòng lặp cốt lõi: Vòng lặp `for`, Vòng lặp `while` (kiểm tra điều kiện trước), và Vòng lặp `do-while` (kiểm tra điều kiện sau).
+- Phân biệt sự khác nhau căn bản giữa `while` (có thể không chạy lần nào nếu điều kiện sai từ đầu) và `do-while` (bắt buộc thực thi phần thân ít nhất 1 lần).
+- Nắm vững vai trò và hành vi của hai từ khóa điều khiển vòng lặp: `break` (thoát văng ra khỏi vòng lặp ngay lập tức) và `continue` (bỏ qua các lệnh còn lại bên dưới, nhảy sang bước lặp tiếp theo).
 
-- 조건이 여러 개일 때 사용하는 제어문이다. (Sử dụng khi có nhiều điều kiện khác nhau).
-- `if (조건1) ... else if (조건2) ... else ...`
-  - *Example / Ví dụ*: `if(jum >= 90) printf("A"); else if(jum >= 80) printf("B"); else printf("F");`
-  - 💡 *Mẹo ghi nhớ*: Xếp hạng hoặc các điều kiện loại trừ lẫn nhau thì dùng `else if`.
+## 핵심 키워드 (Từ khóa)
+- 반복문 (Loop Statements / for, while, do-while)
+- for문 (초기식, 조건식, 증감식 구조)
+- while문 (선 조건 검사 / 0회 실행 가능)
+- do-while문 (후 조건 검사 / 최소 1회 무조건 실행 / 세미콜론 필수)
+- break문 (반복문 즉각 탈출)
+- continue문 (다음 반복으로 건너뛰기)
+- 무한 루프 (Infinite Loop / `for(;;)` / `while(1)`)
 
-### 253. switch문 (switch statement / Câu lệnh switch - Bổ sung)
-Phần “253. switch문 (switch statement / Câu lệnh switch - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [17-bai-hoc.md](17-bai-hoc.md): Câu lệnh rẽ nhánh `if-else` và `switch-case`.
+- [19-bai-hoc.md](19-bai-hoc.md): Cấu trúc, mảng và con trỏ trong ngôn ngữ C.
+- [20-bai-hoc.md](20-bai-hoc.md): Mảng 2 chiều và vòng lặp lồng nhau (Nested Loops).
 
-- `case`문의 레이블에는 상수만 지정할 수 있으며 변수는 지정할 수 없다. (Nhãn `case` chỉ chấp nhận hằng số, không dùng biến).
-- `int`, `char`, `enum`형의 상수만 가능하다. (Chỉ dùng được số nguyên, ký tự, hoặc kiểu enum).
-  - *Example / Ví dụ*: `switch (jum / 10) { case 10: case 9: printf("A"); break; ... }` (Chia cho 10 để tính điểm thập phân thành số nguyên).
-  - 💡 *Mẹo ghi nhớ*: `switch` thích sự chính xác tuyệt đối (giá trị cụ thể), không thích sự so sánh lớn/nhỏ.
+## 읽는 방법 (Cách đọc)
+- Phân biệt 3 loại vòng lặp:
+  - **`for`:** Dùng khi **biết trước số lần lặp** cụ thể: `for (khởi_tạo; điều_kiện; tăng_giảm)`.
+  - **`while`:** Dùng khi lặp dựa trên **trạng thái điều kiện** chưa biết trước số lần: Kiểm tra điều kiện TRƯỚC, đúng mới chạy thân vòng lặp. Nếu sai ngay từ đầu $\rightarrow$ Không chạy lần nào (0 lần).
+  - **`do-while`:** Chạy thân vòng lặp TRƯỚC một lần rồi mới kiểm tra điều kiện ở cuối $\rightarrow$ **Luôn luôn chạy ít nhất 1 lần**. Chú ý cú pháp kết thúc bằng dấu chấm phẩy: `do { ... } while (điều_kiện);`.
 
-### 254. for문 (for loop / Vòng lặp for - Bổ sung)
-Phần “254. for문 (for loop / Vòng lặp for - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+---
 
-- 처음부터 조건식을 만족하지 못하면 한 번도 수행하지 않는다. (Nếu điều kiện sai ngay từ đầu, vòng lặp không chạy lần nào).
-- `for(초기값; 최종값조건; 증가값) { 실행문; }`
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng so sánh 3 cấu trúc vòng lặp kinh điển:**
 
-### 255. while문 (while loop / Vòng lặp while - Bổ sung)
-Phần “255. while문 (while loop / Vòng lặp while - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Cấu trúc lặp | Vị trí kiểm tra điều kiện | Số lần thực thi tối thiểu | Cú pháp kết thúc | Ngữ cảnh ứng dụng tối ưu |
+| :--- | :--- | :--- | :--- | :--- |
+| **`for`** | Đầu vòng lặp (Trước khi chạy thân) | **0 lần** (Nếu điều kiện ban đầu sai) | Không có dấu chấm phẩy sau dấu ngoặc tròn `)` | Duyệt mảng tuần tự từ $0$ đến $n-1$, lặp với biến đếm |
+| **`while`** | Đầu vòng lặp (**선 조건 검사**) | **0 lần** (Nếu điều kiện ban đầu sai) | Không có dấu chấm phẩy sau `while(조건)` | Đọc dữ liệu từ luồng/tệp cho đến khi gặp kết thúc tệp (EOF) |
+| **`do - while`** | Cuối vòng lặp (**후 조건 검사**) | **Ít nhất 1 lần (최소 1회 실행)** | **BẮT BUỘC có dấu chấm phẩy `;`** sau `while(조건);` | Hiển thị menu cho người dùng chọn ít nhất một lần |
 
-- `while(조건) { 실행문; }`
-- Điều kiện được kiểm tra trước, nếu sai từ đầu sẽ bỏ qua.
-  - *Example / Ví dụ*: `while(a < 5) { a++; hap += a; }`
+- **Bảng phân biệt giữa `break` và `continue` trong vòng lặp:**
 
-### 256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)
-Phần “256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+| Từ khóa | Hành vi điều khiển luồng | Vị trí nhảy đến tiếp theo | Ví dụ với vòng lặp `for (i=1; i<=5; i++)` |
+| :--- | :--- | :--- | :--- |
+| **`break;`** | **Chấm dứt hoàn toàn (Thoát)** vòng lặp chứa nó ngay lập tức | Nhảy ra câu lệnh đầu tiên nằm **bên ngoài** khối vòng lặp | Nếu gặp `if (i == 3) break;` $\rightarrow$ Vòng lặp dừng lại, các lượt $i=3, 4, 5$ không chạy |
+| **`continue;`** | **Bỏ qua phần còn lại** của bước lặp hiện tại | Nhảy đến phần **tăng giảm của `for`** hoặc điều kiện của `while` để chạy lượt tiếp | Nếu gặp `if (i == 3) continue;` $\rightarrow$ Chỉ bỏ qua lượt $i=3$, các lượt $i=4, 5$ vẫn chạy bình thường |
 
-- 실행할 문장을 무조건 한 번 실행한 다음 조건을 판단. (Thực hiện ít nhất 1 lần rồi mới kiểm tra điều kiện ở cuối).
-- `do { 실행문; } while(조건);` (Nhớ có dấu chấm phẩy ở cuối `while`).
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Bài toán thi mẫu lần vết kết hợp `continue` và `break`:**
+  - *Đoạn mã C:*
+    ```c
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) continue; // Bỏ qua số chẵn
+        if (i > 7) break;         // Dừng khi vượt quá 7
+        sum += i;
+    }
+    printf("%d", sum);
+    ```
+  - *Lần vết từng bước:*
+    - $i = 1$: Thỏa mãn cả 2 if $\rightarrow$ `sum += 1` $\rightarrow$ `sum = 1`.
+    - $i = 2$: Chẵn $\rightarrow$ `continue` $\rightarrow$ Bỏ qua.
+    - $i = 3$: Số lẻ $\le 7$ $\rightarrow$ `sum += 3` $\rightarrow$ `sum = 4`.
+    - $i = 4$: Chẵn $\rightarrow$ `continue` $\rightarrow$ Bỏ qua.
+    - $i = 5$: Số lẻ $\le 7$ $\rightarrow$ `sum += 5` $\rightarrow$ `sum = 9`.
+    - $i = 6$: Chẵn $\rightarrow$ `continue` $\rightarrow$ Bỏ qua.
+    - $i = 7$: Số lẻ $\le 7$ $\rightarrow$ `sum += 7` $\rightarrow$ `sum = 16`.
+    - $i = 8$: Chẵn $\rightarrow$ `continue`.
+    - $i = 9$: $i > 7$ là True $\rightarrow$ Gặp `break;` $\rightarrow$ Thoát vòng lặp!
+  - Kết quả in ra: `16`.
 
-### 257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)
-Phần “257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **break**: switch문이나 반복문 안에서 나오면 블록을 벗어난다. (Thoát ngay lập tức khỏi vòng lặp hoặc switch).
-- **continue**: 이후의 문장을 실행하지 않고 반복문의 처음으로 옮긴다. (Bỏ qua các lệnh bên dưới và quay lại đầu vòng lặp để tiếp tục vòng lặp mới).
-  - *Example / Ví dụ*: `if(a % 2 == 0) continue; hap += a;` (Bỏ qua số chẵn, chỉ cộng số lẻ).
-  - 💡 *Mẹo ghi nhớ*: `break` = Phá vỡ (thoát ra). `continue` = Tiếp tục (bước tiếp).
+### 복습 체크리스트
+- [ ] Nhớ `do-while` chạy ít nhất 1 lần và bắt buộc có dấu chấm phẩy ở cuối `while(cond);`.
+- [ ] Phân biệt được `break` (thoát hẳn vòng lặp) và `continue` (bỏ qua lượt này, chạy lượt kế tiếp).
+- [ ] Nhớ cấu trúc vòng lặp vô tận: `for(;;)` và `while(1)`.
+- [ ] Lần vết chính xác các bài toán kết hợp lặp và điều kiện rẽ nhánh.

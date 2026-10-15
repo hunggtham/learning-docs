@@ -1,25 +1,74 @@
 # 025: 트리 (Tree / Cây)
 
-## 025: 트리 (Tree / Cây)
-Phần “025: 트리 (Tree / Cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 학습 목표 (Mục tiêu)
+- Tổng hợp toàn diện các chỉ số cấu trúc định lượng của Cây: Nút gốc, Nút lá, Bậc của nút, Bậc của cây, Cấp độ và Độ sâu.
+- Nắm vững quy trình duyệt cây nhị phân (Preorder, Inorder, Postorder) và giải quyết chính xác các câu hỏi tính toán giải thuật trong kỳ thi Kỹ sư xử lý thông tin.
+- Rèn luyện kỹ năng phân tích cây biểu thức toán học và chuyển đổi qua lại giữa các dạng biểu thức tiền tố, trung tố và hậu tố.
 
-| 용어 (Thuật ngữ) | 설명 (Giải thích) | 예시 (Ví dụ) |
-|---|---|---|
-| 루트 노드 (Root Node) | Nút gốc, không có cha. Chỉ có 1 gốc. | A |
-| 단말 노드 (Leaf/Terminal Node) | Nút lá, ở cuối cùng, không có con. | D, E, H, I, G |
-| 레벨 (Level) | Độ sâu từ gốc tới nút. | E có Level là 3. |
-| 깊이 (Depth) | Độ sâu lớn nhất của cây (Max Level - 1 hoặc tùy cách tính). | Depth = 3. |
-| 차수 (Degree of Node) | Bậc của một nút: Số lượng con của nút đó. | B có 3 con => Degree = 3. |
-| 트리의 차수 (Degree of Tree) | Bậc của cây: Bậc lớn nhất trong tất cả các nút. | Cả cây có nút max là 3 => Degree của cây = 3. |
+## 핵심 키워드 (Từ khóa)
+- 루트 노드 (Root Node)
+- 단말 노드 (Leaf Node)
+- 차수 (Degree of Node & Tree)
+- 레벨 (Level) & 깊이 (Depth)
+- 전위 순회 (Preorder)
+- 중위 순회 (Inorder)
+- 후위 순회 (Postorder)
 
-### 트리 순회 (Tree Traversal - Duyệt cây)
-Phần “트리 순회 (Tree Traversal - Duyệt cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+## 선행·연결 개념 (Kiến thức liên kết)
+- [06-bai-hoc.md](06-bai-hoc.md): Quy tắc duyệt cây nhị phân (Preorder, Inorder, Postorder).
+- [07-bai-hoc.md](07-bai-hoc.md): Thuật ngữ quan hệ trong cây (Parent, Sibling, Forest).
+- [09-bai-hoc.md](09-bai-hoc.md): Luyện tập giải đề thi thực chiến về duyệt cây và tính bậc.
 
-- **전위 순회 (Preorder):** Root -> Left -> Right.
-- **중위 순회 (Inorder):** Left -> Root -> Right.
-- **후위 순회 (Postorder):** Left -> Right -> Root.
-
-- **Vietnamese Explanation:** Cách tính Bậc của cây rất hay thi: Tìm cái nút nào đẻ nhiều con nhất, số con đó chính là Bậc của toàn bộ cây. Khi duyệt cây, chữ "Pre/In/Post" (Trước/Giữa/Sau) dùng để chỉ vị trí của Root. Root đứng trước là Pre, ở giữa là In, ở cuối là Post.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 단말 (Đoạn mạt = Cuối) = Leaf (Lá). Degree = Bậc = Số con. Pre/In/Post = Vị trí của Gốc (Root).
+## 읽는 방법 (Cách đọc)
+- Ôn tập bảng tra cứu nhanh các chỉ số hình học của cây (Level, Depth, Degree).
+- Đọc kỹ phần ví dụ tính toán mẫu ở TẦNG A để nắm chắc phương pháp đếm nút lá (Leaf) và xác định bậc tối đa của cây (Max Degree).
 
 ---
+
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **Bảng tổng hợp chỉ số cấu trúc cây:**
+
+| Chỉ số / Khái niệm | Định nghĩa kỹ thuật | Cách tính nhanh khi làm bài thi |
+| :--- | :--- | :--- |
+| **루트 노드 (Root)** | Đỉnh cao nhất của cây | Nút không có mũi tên đâm vào (Cha = null) |
+| **단말 노드 (Leaf)** | Nút ở đáy, không có con | Đếm các nút có số nhánh con $= 0$ |
+| **차수 (Degree of Node)** | Số lượng con trực tiếp của nút | Đếm số nhánh rẽ ngay dưới nút đó |
+| **트리의 차수 (Degree of Tree)** | Bậc lớn nhất trong tất cả các nút | Tìm $\max(\text{Số con của từng nút})$ |
+| **깊이 (Depth / Height)** | Tầng sâu nhất của cây | Đếm số tầng từ Root (Level 1) xuống nút sâu nhất |
+
+- **Quy tắc duyệt cây nhị phân theo vị trí Root:**
+  - **Preorder (전위):** $\mathbf{Root} \rightarrow \text{Left} \rightarrow \text{Right}$ (Root đứng trước).
+  - **Inorder (중위):** $\text{Left} \rightarrow \mathbf{Root} \rightarrow \text{Right}$ (Root đứng giữa).
+  - **Postorder (후위):** $\text{Left} \rightarrow \text{Right} \rightarrow \mathbf{Root}$ (Root đứng sau cùng).
+
+- **Ví dụ phân tích cây toàn diện:**
+  - Cho cây có cấu trúc:
+    - Root `A` có 2 con: `B` và `C`.
+    - `B` có 2 con: `D` và `E`.
+    - `C` có 1 con: `F`.
+    - `E` có 2 con: `G` và `H`.
+  - **Phân tích chỉ số:**
+    - Nút `A`: Degree = 2.
+    - Nút `B`: Degree = 2.
+    - Nút `C`: Degree = 1.
+    - Nút `E`: Degree = 2.
+    - Các nút `D`, `F`, `G`, `H`: Không có con $\rightarrow$ Degree = 0 $\rightarrow$ Có **4 단말 노드 (Leaf Nodes)**.
+    - **트리의 차수 (Degree của cây):** $\max(2, 2, 1, 2, 0) = \mathbf{2}$ (Đây là cây nhị phân).
+    - **깊이 (Độ sâu / Height):** Root `A` (Level 1) $\rightarrow$ `B`, `C` (Level 2) $\rightarrow$ `D`, `E`, `F` (Level 3) $\rightarrow$ `G`, `H` (Level 4) $\rightarrow$ **Depth = 4**.
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Công thức tính số nút tối đa của cây nhị phân:**
+  - Tại một mức $\text{Level } i$: Số nút tối đa là $2^{i - 1}$ (với Root ở Level 1).
+  - Cây nhị phân có độ sâu $h$:
+    $$\text{Số nút tối đa} = 2^h - 1$$
+    *(Ví dụ cây nhị phân đầy đủ có độ sâu $h = 4$ sẽ có tối đa $2^4 - 1 = 15$ nút).*
+- **Mối quan hệ giữa Nút lá ($n_0$) và Nút có 2 con ($n_2$):**
+  - Trong bất kỳ cây nhị phân nào:
+    $$n_0 = n_2 + 1$$
+    *(Số lượng nút lá luôn nhiều hơn số lượng nút có 2 con đúng 1 nút).*
+
+### 복습 체크리스트
+- [ ] Xác định chính xác Root, Leaf, Degree of Node và Degree of Tree trên một cây bất kỳ.
+- [ ] Tính đúng độ sâu Depth bằng cách đếm số tầng từ Root xuống nút sâu nhất.
+- [ ] Áp dụng công thức $n_0 = n_2 + 1$ để tính nhanh số nút lá trong cây nhị phân.
+- [ ] Thực hiện thuần thục 3 phép duyệt Preorder, Inorder và Postorder.

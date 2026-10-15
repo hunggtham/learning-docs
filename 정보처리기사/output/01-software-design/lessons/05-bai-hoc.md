@@ -1,62 +1,77 @@
 # 9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)
 
+## 학습 목표 (Mục tiêu)
+- Phân biệt rõ ràng 3 phương pháp rà soát và kiểm tra tài liệu yêu cầu: Đánh giá đồng cấp (`동료검토`), Rà soát từng bước (`워크스루`), và Thanh tra chính thức (`인스펙션`).
+- Nắm vững khái niệm, vai trò của Phần mềm trung gian (`미들웨어`) và các chủng loại tiêu biểu (RPC, MOM, TP-Monitor, ORB, WAS).
+- Hiểu sâu vai trò và công cụ của Scrum (PO, SM, Sprint, Burn-down Chart) cùng các kỹ thuật thực hành cốt lõi của XP (Pair Programming, TDD, Refactoring, CI).
+- Ghi nhớ 3 bước phân tích hiện trạng hệ thống (`현행 시스템 파악 3단계`) và tiêu chuẩn lựa chọn OS/DBMS.
+
+## 핵심 키워드 (Từ khóa)
+- 요구사항 검증 (Thẩm định yêu cầu: 동료검토, 워크스루, 인스펙션)
+- 미들웨어 (Phần mềm trung gian / Middleware: RPC, MOM, TP-Monitor, WAS)
+- 스크럼 (Scrum: PO, SM, 스프린트, 소멸 차트 / Burn-down Chart)
+- XP 실천 방법 (Kỹ thuật thực hành XP: 짝 프로그래밍, TDD, 리팩토링, 계속적 통합)
+- 현행 시스템 파악 (Phân tích hệ thống hiện tại / 3단계 절차)
+- 가용성·성능·구축 비용 (Tính sẵn sàng, hiệu năng, chi phí xây dựng)
+
+## 선행·연결 개념 (Kiến thức liên kết)
+- **Từ bài trước ([2. 요구사항 개발](04-bai-hoc.md)):** Sau khi xây dựng tài liệu yêu cầu bằng DFD, DD và SRS, bước tiếp theo là kiểm chứng tính chính xác của tài liệu và đánh giá môi trường kỹ thuật hiện tại mà hệ thống sẽ tích hợp.
+- **Tiếp nối sang bài sau ([10. 요구사항 심화](06-bai-hoc.md)):** Đi sâu vào các kỹ thuật đặc tả hình thức (Formal Specification) và các công cụ CASE tự động hóa phân tích yêu cầu chuyên sâu.
+
+## 읽는 방법 (Cách đọc)
+- Đọc TẦNG A để ghi nhớ mức độ khắt khe của 3 kỹ thuật Review: Inspection là chính thức (`공식적`), có chuyên gia độc lập; Walkthrough và Peer Review là phi chính thức.
+- Đọc TẦNG B để hiểu rõ kiến trúc phân lớp của Middleware trong các hệ thống phân tán và cơ chế họp đánh giá Sprint trong mô hình Agile.
+
+---
+
 ## 9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)
 
-### 요구사항 검증 방법 (Phương pháp xác minh yêu cầu)
-Phần “요구사항 검증 방법 (Phương pháp xác minh yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
+- **3 phương pháp rà soát thẩm định yêu cầu bằng thủ công:**
+  1. **동료검토 (Peer Review - Đánh giá đồng cấp):**
+     - Tác giả trực tiếp giải thích nội dung tài liệu đặc tả cho các đồng nghiệp, cùng nhau thảo luận để phát hiện lỗi khiếm khuyết. Mang tính phi chính thức (`비공식적`).
+  2. **워크스루 (Walkthrough - Rà soát từng bước):**
+     - Tài liệu được gửi trước cho các thành viên xem qua; sau đó tổ chức buổi họp ngắn để tác giả dẫn dắt rà soát từng kịch bản, tìm kiếm lỗi sớm. Mang tính phi chính thức (`비공식적`).
+  3. **인스펙션 (Inspection - Thanh tra chuyên gia):**
+     - **Chính thức và khắt khe nhất (`공식적인 검토 검사`)**. Người viết tài liệu không tham gia dẫn dắt; một nhóm chuyên gia thẩm định độc lập tiến hành soi xét tài liệu theo danh sách tiêu chí kiểm tra (Checklist) để vạch ra các lỗi kỹ thuật và độ lệch chuẩn.
+- **미들웨어 (Middleware - Phần mềm trung gian):**
+  - **Khái niệm:** Là phần mềm nằm giữa Hệ điều hành (`OS`) và Ứng dụng (`응용 프로그램`), cung cấp môi trường kết nối các hệ thống phần cứng/phần mềm không đồng nhất trong môi trường điện toán phân tán, đảm bảo tính trong suốt vị trí (`위치 투명성`).
+  - **Các loại Middleware chủ chốt:**
+    - `RPC (Remote Procedure Call)`: Gọi hàm/thủ tục từ xa qua mạng như trên máy cục bộ.
+    - `MOM (Message-Oriented Middleware)`: Truyền thông điệp bất đồng bộ qua hàng đợi (Message Queue).
+    - `TP-Monitor (Transaction Processing Monitor)`: Giám sát và quản lý giao dịch lớn, phân tải chịu lỗi cao (ngân hàng, hàng không).
+    - `ORB (Object Request Broker)`: Kết nối đối tượng phân tán theo chuẩn CORBA.
+    - `WAS (Web Application Server)`: Môi trường chạy logic nghiệp vụ phía web (Tomcat, WebLogic, Jeus).
+- **스크럼 (Scrum) & XP (eXtreme Programming) trọng tâm:**
+  - **Scrum:**
+    - `제품 책임자 (PO; Product Owner)`: Đại diện tiếng nói khách hàng, xây dựng và quyết định thứ tự ưu tiên trong `제품 백로그 (Product Backlog)`.
+    - `스크럼 마스터 (SM; Scrum Master)`: Người điều phối, loại bỏ các trở ngại cản trở team, không phải sếp chỉ đạo.
+    - `스프린트 (Sprint)`: Vòng lặp phát triển chạy thử thực tế từ 2 đến 4 tuần.
+    - `일일 스크럼 (Daily Scrum)`: Họp đứng 15 phút mỗi sáng, theo dõi tiến độ công việc còn lại bằng **소멸 차트 (Burn-down Chart)**.
+  - **XP Core Practices (Kỹ thuật thực hành XP):**
+    - `짝 프로그래밍 (Pair Programming)`: 2 lập trình viên cùng ngồi 1 máy tính (1 người code, 1 người review).
+    - `테스트 주도 개발 (TDD)`: Viết kiểm thử tự động trước (`테스트 케이스 작성`), viết mã hiện thực sau.
+    - `리팩토링 (Refactoring)`: Tối ưu hóa cấu trúc mã nguồn bên trong mà không làm thay đổi hành vi bên ngoài.
+    - `계속적인 통합 (CI; Continuous Integration)`: Tích hợp mã nguồn của các thành viên liên tục hàng ngày.
+- **현행 시스템 파악 3단계 (3 bước phân tích hiện trạng hệ thống):**
+  - Bước 1: Nắm bắt Cấu trúc hệ thống, Chức năng và Giao diện (`시스템 구성, 기능, 인터페이스 파악`).
+  - Bước 2: Nắm bắt Kiến trúc phần mềm và Các phân hệ (`아키텍처 및 소프트웨어 구성 파악`).
+  - Bước 3: Nắm bắt Phần cứng máy chủ và Hạ tầng mạng (`하드웨어 및 네트워크 구성 파악`).
+- **주의/함정 (Bẫy đề thi dễ nhầm):**
+  - **Bẫy 1:** *"Phương pháp kiểm tra yêu cầu nào là chính thức nhất do nhóm chuyên gia độc lập thực hiện?"* -> **인스펙션 (Inspection)**, không phải Walkthrough hay Peer Review.
+  - **Bẫy 2:** *"Trong Daily Scrum, cuộc họp kéo dài bao lâu và dùng công cụ gì?"* -> **15 phút, đứng họp, sử dụng 소멸 차트 (Burn-down Chart)**.
+  - **Bẫy 3:** *"TDD viết code chức năng trước rồi mới viết test case sau?"* -> **Sai hoàn toàn**. TDD là viết Test trước, viết Code sau.
+- **한 문장 설명 (Câu chốt ghi nhớ):** "Inspection chính thức nhất; Middleware nối OS với App; Daily Scrum 15 phút Burn-down; TDD viết test trước code sau".
 
-- **동료검토 (Peer Review):** 작성자가 명세서 내용을 직접 설명하면서 결함을 발견함. (Tác giả trực tiếp giải thích tài liệu để đồng nghiệp tìm lỗi - Phi chính thức).
-- **워크스루 (Walk Through):** 미리 배포한 명세서를 사전 검토한 후 결함을 발견함. (Phát tài liệu trước, sau đó họp để tìm lỗi - Phi chính thức).
-- **인스펙션 (Inspection):** 작성자를 제외한 다른 검토 전문가들이 결함을 발견함. (Các chuyên gia khác (không phải tác giả) kiểm tra chặt chẽ để tìm lỗi - **Chính thức**).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **PWI** (Peer - Walk - Inspect): **Phát Web In**. Inspection là khắt khe và chính thức nhất (공식적).
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+- **Bản chất của Burn-down Chart trong Scrum:**
+  - Trục hoành là Thời gian trong Sprint (tính theo ngày), trục tung là Tổng số lượng công việc còn lại (tính theo Giờ hoặc Story Point). Đường đồ thị lý tưởng sẽ dốc dần từ góc trên bên trái xuống số 0 ở góc dưới bên phải vào ngày kết thúc Sprint. Nếu đường thực tế nằm trên đường lý tưởng, tiến độ đang bị chậm trễ.
+- **Tại sao cần 3 bước phân tích hiện trạng hệ thống:**
+  - Kỹ sư phải khảo sát từ tầng trừu tượng nghiệp vụ và giao diện (Bước 1), sang cấu trúc phân tầng phần mềm và CSDL (Bước 2), rồi mới đến năng lực vật lý của máy chủ, dung lượng RAM, băng thông mạng (Bước 3). Nếu bỏ qua bước này, hệ thống mới xây dựng có thể không tương thích hoặc làm sập hạ tầng phần cứng hiện có.
 
-### 미들웨어 (Middleware)
-Phần “미들웨어 (Middleware)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 분산 컴퓨팅 환경에서 서로 다른 기종 간을 연결한다. (Kết nối các nền tảng khác nhau trong môi trường điện toán phân tán).
-- 운영체제와 응용 프로그램 사이에서 다양한 서비스를 제공한다. (Cung cấp các dịch vụ nằm giữa HĐH và Ứng dụng).
-- 위치 투명성을 제공한다. (Cung cấp tính trong suốt về vị trí - User không cần biết server nằm đâu).
-- 사용자가 미들웨어의 내부 동작을 확인하려면 별도의 응용 소프트웨어를 사용해야 한다.
-- **종류 (Phân loại):** DB, RPC (Remote Procedure Call), MOM (Message Oriented Middleware), TP-Monitor (Transaction Processing Monitor), ORB (Object Request Broker), WAS (Web Application Server).
-
-### 스크럼(Scrum) 상세 (Chi tiết về Scrum)
-Phần “스크럼(Scrum) 상세 (Chi tiết về Scrum)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **제품 책임자 (PO; Product Owner):** 요구사항을 작성하고 우선순위를 결정하는 주체. (Người đại diện khách hàng, tạo và quản lý thứ tự ưu tiên của Product Backlog).
-- **스크럼 마스터 (SM; Scrum Master):** 스크럼 회의를 주관하고 장애 요소를 해결하는 가이드. (Người hướng dẫn, giải quyết khó khăn cho team, không phải là sếp quản lý).
-- **개발팀 (Development Team):** 디자이너, 테스터 등 개발에 참여하는 모든 인원 (7~8명). (Nhóm đa chức năng trực tiếp làm ra sản phẩm).
-- **제품 백로그 (Product Backlog):** 모든 요구사항(User Story) 목록. (Danh sách tổng tổng hợp mọi yêu cầu của sản phẩm).
-- **스프린트 (Sprint):** 2~4주 주기의 실제 개발 과정. (Vòng lặp phát triển kéo dài 2-4 tuần).
-- **일일 스크럼 (Daily Scrum):** 매일 15분, 서서 진행, 소멸 차트(Burn-down Chart) 사용. (Họp đứng 15 phút mỗi ngày cập nhật tiến độ, dùng Burn-down Chart).
-- **스프린트 검토/회고 (Sprint Review/Retrospective):** 검토는 제품 시연, 회고는 프로세스 cải tiến. (Review = Demo sản phẩm; Retrospective = Rút kinh nghiệm quy trình).
-
-### XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)
-Phần “XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- **짝 프로그래밍 (Pair Programming):** 2 người cùng code trên 1 máy tính.
-- **공동 코드 소유 (Collective Ownership):** Code là của chung, ai cũng có quyền sửa.
-- **테스트 주도 개발 (TDD - Test-Driven Development):** Viết Test case trước, viết Code sau.
-- **전체 팀 (Whole Team):** Khách hàng và team phát triển làm việc cùng nhau như 1 đội.
-- **계속적인 통합 (Continuous Integration):** Tích hợp code liên tục (CI) ngay khi xong 1 task.
-- **리팩토링 (Refactoring):** Cải thiện cấu trúc code mà không đổi chức năng bên ngoài.
-- **소규모 릴리즈 (Small Releases):** Cập nhật/Phát hành các phiên bản nhỏ liên tục.
-
-### 현행 시스템 파악 (Phân tích hệ thống hiện tại)
-Phần “현행 시스템 파악 (Phân tích hệ thống hiện tại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 1단계: 시스템 구성, 기능, 인터페이스 파악. (Bước 1: Nắm bắt Cấu trúc, Chức năng, Interface).
-- 2단계: 아키텍처 및 소프트웨어 구성 파악. (Bước 2: Nắm bắt Kiến trúc và Phần mềm).
-- 3단계: 하드웨어 및 네트워크 구성 파악. (Bước 3: Nắm bắt Phần cứng và Mạng).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** **KGI -> AS -> HN** (Kéo Ghế In -> Áo Sơ -> Hát Nhép) -> Giống như quy trình từ phần mềm đến phần cứng.
-
-### 운영체제 (OS - Operating System)
-Phần “운영체제 (OS - Operating System)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 컴퓨터 시스템의 자원들을 효율적으로 관리하며, 환경을 제공하는 소프트웨어이다. (Là phần mềm quản lý tài nguyên máy tính hiệu quả và cung cấp môi trường chạy ứng dụng).
-- 고려사항 (Các yếu tố cần cân nhắc khi chọn): 가용성 (Tính sẵn sàng), 성능 (Hiệu năng), 기술 지원 (Hỗ trợ kỹ thuật), 주변 기기 (Thiết bị ngoại vi), 구축 비용 (Chi phí).
-
-### 데이터베이스 관리 시스템 (DBMS)
-Phần “데이터베이스 관리 시스템 (DBMS)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
-
-- 사용자와 데이터베이스 사이에서 정보를 생성하고 관리해 주는 소프트웨어이다. (Phần mềm nằm giữa User và Database để quản lý dữ liệu - giải quyết vấn đề trùng lặp và phụ thuộc).
-- 고려사항: 가용성, 성능, 기술 지원, 상호 호환성 (Tính tương thích), 구축 비용.
+### 복습 체크리스트
+- [ ] Phân biệt được sự khác nhau giữa Peer Review, Walkthrough và Inspection (chính thức, checklist).
+- [ ] Kể tên 5 loại Middleware phổ biến: RPC, MOM, TP-Monitor, ORB, WAS.
+- [ ] Nắm vững 3 vai trò và chu trình Sprint trong Scrum cùng công cụ 소멸 차트 (Burn-down Chart).
+- [ ] Liệt kê 4 kỹ thuật thực hành quan trọng của XP: 짝 프로그래밍, TDD, 리팩토링, CI.
+- [ ] Nhớ thứ tự 3 bước của quy trình 현행 시스템 파악 (Cấu trúc/chức năng -> Kiến trúc/SW -> HW/Mạng).
