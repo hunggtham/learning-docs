@@ -46,7 +46,7 @@ Các route này không thay thế chapter toán gốc. Nếu một route sử d�
 
 Phần application cũng giữ boundary rõ:
 
-- Investing: đọc tiếp [macro + behavior + evidence → portfolio decision](../../investing/07_integrated_case_studies/08_MACRO_BEHAVIOR_EVIDENCE_TO_PORTFOLIO_DECISION.md).
+- Investing: đọc tiếp [macro + behavior + evidence → portfolio decision](../../investing/07_integrated_case_studies/06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md).
 - Economics: game theory ở đây giữ mathematical structure; market/institution interpretation thuộc `economics/`.
 - AI/Data: calibration, evaluation và learning mechanics quay về owner của AI/Data tương ứng.
 - Software/Platforms: incentive-aware design ở đây chỉ cung cấp mathematical lens; architecture, security và production behavior thuộc technical libraries.
