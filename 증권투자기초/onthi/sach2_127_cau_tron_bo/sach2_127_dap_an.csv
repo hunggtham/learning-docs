@@ -1,0 +1,128 @@
+﻿chapter,num,key,keyword,note_vi
+1,1,O,체계적·비체계적 위험,Rủi ro riêng doanh nghiệp có thể giảm nhờ đa dạng hóa.
+1,2,X,KOSPI200 기준일,"KOSPI200 lấy ngày gốc 03/01/1990, không phải 04/01/1980."
+1,3,O,금융장세,Lãi suất giảm có thể tạo đợt tăng cổ phiếu do thanh khoản.
+1,4,O,금리와 주가,"Theo mô hình cơ bản, lãi suất và giá cổ phiếu có xu hướng ngược chiều."
+1,5,O,PBR,"Đánh giá PBR cùng ROE, hiệu quả sử dụng tài sản và đòn bẩy."
+1,6,X,PER과 성장률,Tăng trưởng kỳ vọng cao làm PER tăng; lợi suất yêu cầu cao làm PER giảm.
+1,7,X,배당평가모형,"Trong DDM, lợi suất yêu cầu tăng thì giá hiện tại giảm."
+1,8,X,키친파동·주글러파동,Kitchin liên quan tồn kho; Juglar liên quan đầu tư thiết bị.
+1,9,O,환율과 외국자본,Won mất giá có thể khuyến khích vốn ngoại rút ra.
+1,10,X,규모의 경제·진입장벽,Lợi thế quy mô thường làm rào cản gia nhập cao hơn.
+1,11,X,추세선,"Xu hướng tăng nối đáy, xu hướng giảm nối đỉnh."
+1,12,X,엘리어트 4번파동,"Trong Impulse tiêu chuẩn, vùng sóng 4 không chồng lấn sóng 1."
+1,13,O,골든크로스,MA ngắn hạn cắt lên MA dài hạn là Golden Cross.
+1,14,O,까마귀형,Mô hình nến quạ được sách xếp vào tín hiệu đảo chiều giảm.
+1,15,O,유·무상증자 전략,Khai thác sự kiện phát hành tăng vốn thuộc nhóm chiến lược chủ động.
+1,16,④,주가지수 산출방식,"Nikkei225 là chỉ số theo giá, khác KOSPI/KOSDAQ/S&P500 theo vốn hóa."
+1,17,①,시가총액회전율,Giá trị giao dịch chia vốn hóa bình quân.
+1,18,①,유통관련지표,Tỷ lệ quay vòng vốn hóa cao hơn phản ánh cổ phiếu giá cao giao dịch mạnh.
+1,19,③,기본적 분석의 한계,Mô hình giá lặp lại không phải nhược điểm đặc trưng của phân tích cơ bản.
+1,20,②,증권분석의 핵심,Phân tích chứng khoán phục vụ lựa chọn mã và thời điểm giao dịch.
+1,21,③,역금융장세 투자,"Sách đề xuất chú ý cổ phiếu tốt vừa/nhỏ, PER thấp khi thị trường chịu áp lực lãi suất."
+1,22,②,역금융장세의 특징,Giá có thể giảm do lãi suất tăng trước khi lợi nhuận doanh nghiệp xấu đi.
+1,23,②,제품수명주기,Năng lực quản lý quan trọng ở giai đoạn trưởng thành đầu tư.
+1,24,②,질적 분석,Phân tích khả năng sinh lợi bằng tỷ số là định lượng.
+1,25,②,BCG Cash Cow,Thị trường tăng trưởng thấp nhưng tạo dòng tiền tốt.
+1,26,④,BCG Question Mark,Tăng trưởng cao nhưng thị phần tương đối thấp.
+1,27,④,유동자산,Goodwill là tài sản vô hình không thuộc tài sản ngắn hạn.
+1,28,③,경제적 부가가치 EVA,EVA bằng lợi nhuận hoạt động sau thuế trừ chi phí vốn.
+1,29,②,자기자본이익률 ROE,Lợi nhuận ròng chia vốn chủ sở hữu bình quân.
+1,30,④,안정성 비율,"PBR là chỉ tiêu định giá, không phải chỉ tiêu an toàn tài chính."
+1,31,①,활동성 지표,Tỷ lệ vòng quay tổng vốn thuộc chỉ tiêu hiệu quả hoạt động.
+1,32,③,PSR,PSR sử dụng doanh thu để bổ sung hạn chế của PER/PBR.
+1,33,④,수익성분석지표,Hệ số bảo đảm lãi vay thuộc nhóm an toàn tài chính.
+1,34,③,PBR모형,PBR đánh giá doanh nghiệp theo giá trị tài sản ròng.
+1,35,③,기술적 분석의 한계,Phân tích kỹ thuật có chức năng hỗ trợ xác định thời điểm mua/bán.
+1,36,①,주추세,Xu hướng chính kéo dài một năm đến nhiều năm.
+1,37,②,매집국면,Giai đoạn nhà đầu tư chuyên nghiệp gom mua khi thị trường còn yếu.
+1,38,②,엘리어트 파동이론,Mô hình Elliott: năm sóng đẩy và ba sóng điều chỉnh.
+1,39,④,충격파동,"Sóng B thuộc cấu trúc điều chỉnh A–B–C, không phải sóng đẩy theo phân loại sách."
+1,40,②,엘리어트 제3파,Sóng 3 thường có giá và khối lượng tăng mạnh.
+1,41,④,반전형·지속형,"Tam giác được sách xếp vào mô hình tiếp diễn, không phải đảo chiều."
+1,42,①,OBV U·D마크,OBV dùng khối lượng tích lũy; U/D Mark chỉ tín hiệu mua/bán trong sách.
+1,43,②,투자심리도 90%,"Mức tâm lý 90% được xem là vùng quá nóng, tín hiệu bán theo sách."
+1,44,③,역시계곡선,Giá giảm và khối lượng giảm: sách chọn bán.
+1,45,①,캔들 십자형,Doji khi giá mở cửa và đóng cửa bằng hoặc gần nhau.
+1,46,①,상승장악형,Bullish Engulfing là tín hiệu đảo chiều tăng.
+1,47,①,VR 거래량분석,Volume Ratio là chỉ báo phân tích khối lượng giao dịch.
+1,48,①,RSI 매입시점,"Sách đánh dấu ①, nhưng lời giải ghi RSI ≤30 mua, ≥70 bán: đề có lỗi."
+1,49,①,머리-어깨모형,Head and Shoulders là mô hình đảo chiều.
+1,50,②,이동평균선 정배열,Sắp xếp thuận: MA ngắn > trung > dài.
+1,51,③,역시계곡선 1시방향,Giá tăng nhưng khối lượng giảm: tạm hoãn mua.
+1,52,"③, ④",소극적 투자전략,Sách ghi hai đáp án ③ và ④; Buy-and-Hold và DCA là thụ động.
+1,53,③,인덱스펀드법,Quỹ mô phỏng chỉ số thuộc chiến lược thụ động.
+1,54,③,비율계획법,"Theo sách gồm cố định số tiền, cố định tỷ lệ, tỷ lệ biến đổi."
+1,55,③,체계적 위험,"Lạm phát là rủi ro vĩ mô/hệ thống, không phải rủi ro riêng doanh nghiệp."
+2,1,X,이자지급형태별 채권,"Phân loại theo trả lãi: coupon, chiết khấu, đơn/lãi kép; không phải 금융채/회사채."
+2,2,X,할인채와 이표채,Phát hành dưới mệnh giá và hoàn trả mệnh giá là trái phiếu chiết khấu.
+2,3,O,신주인수권부사채 BW,BW gắn với quyền mua cổ phiếu mới theo điều kiện xác định.
+2,4,X,전환사채와 교환사채,"Quyền trao đổi chứng khoán đang nắm giữ là EB, không phải CB."
+2,5,X,교환사채의 대상증권,"Theo sách EB trao đổi chứng khoán đang nắm giữ, không phải cổ phiếu phát hành mới."
+2,6,X,잔존만기와 가격변동성,Trái phiếu dài hạn nhạy với lãi suất hơn; lãi suất giảm thường có lợi cho giá dài hạn.
+2,7,O,만기수익률 YTM,YTM là tỷ lệ chiết khấu dòng tiền cam kết; thực nhận còn phụ thuộc các giả định.
+2,8,O,수익률곡선,Yield Curve biểu diễn quan hệ kỳ hạn và lợi suất khi các điều kiện khác tương đương.
+2,9,O,수익률곡선의 활용,"Dùng dự báo, chọn kỳ hạn, lựa chọn và định giá chứng khoán."
+2,10,X,경기정점과 우하향곡선,Lãi suất ngắn hạn tăng mạnh có thể làm đường cong đảo ngược.
+2,11,X,직접수익률,"Current Yield = coupon năm / giá mua, không gồm lãi/lỗ bán."
+2,12,O,기간구조이론,"Ba lý thuyết: kỳ vọng, phần bù thanh khoản, phân đoạn thị trường."
+2,13,O,듀레이션 정의,Duration là thời điểm bình quân gia quyền của các dòng tiền theo hiện giá.
+2,14,O,롤링효과,Trái phiếu ngắn dần trên đường cong dốc lên có thể tăng giá.
+2,15,O,금리예상스왑,Lãi suất giảm dự báo → tăng Duration bằng dài hạn/coupon thấp.
+2,16,X,소극적·적극적 전략,Barbell là cấu trúc thụ động; hoán đổi khai thác Spread thuộc chủ động.
+2,17,X,듀레이션과 금리·쿠폰,Coupon và YTM thấp thường làm Duration dài hơn.
+2,18,X,만기수익률과 실효수익률,"YTM là nghiệm tỷ lệ chiết khấu, không phải tổng thu thực hiện đã tính theo dự báo."
+2,19,X,BW와 CB 정의,"Quyền mua cổ phiếu mới thuộc BW, không phải CB."
+2,20,X,BW와 CB 전환,"CB chuyển nợ thành cổ phiếu, BW mua cổ phiếu mới qua quyền mua."
+2,21,O,표면이율,Coupon Rate = tiền coupon năm / mệnh giá.
+2,22,X,실효수익률,Lợi suất thực hiệu quả trong sách còn xét tái đầu tư coupon.
+2,23,X,순수할인채·이표채,Zero-coupon cùng kỳ hạn thường nhạy hơn Coupon Bond.
+2,24,X,외평채·통안채,"Sách phân ngoại hối bình ổn là 국채, 통화안정증권 là 금융채."
+2,25,X,듀레이션 결정요인,"Duration ngắn đi khi coupon/YTM tăng, kỳ hạn giảm."
+2,26,④,채권단가 계산요인,"Giá tính trực tiếp từ dòng tiền, kỳ hạn và lãi suất chiết khấu."
+2,27,③,금리예측 포트폴리오,Không rõ xu hướng lãi suất → Ladder; tăng lãi suất → Duration ngắn.
+2,28,②,수정듀레이션 계산,"4,1/(1+0,08)≈3,8; tăng 2 điểm % → giá giảm ≈7,6%=7억6000만원."
+2,29,②,외국채권 명칭,Theo đáp án sách Shogun không cùng nhóm Yankee/Samurai/Bulldog; cách giải thích Euroyen có vấn đề.
+2,30,①,직접·간접발행,"매출발행 thuộc 직접발행, khác 위탁·잔액·총액인수."
+2,31,④,고정금리·변동금리,Sách coi trái phiếu doanh nghiệp thông thường là lãi suất cố định.
+2,32,③,BW 권리행사,BW thực hiện quyền mua có dòng vốn mới vào công ty; CB chuyển nợ thành vốn.
+2,33,④,만기·연평균·인수수익률,Ba phát biểu được sách coi đúng; YTM là tỷ lệ chiết khấu.
+2,34,④,옵션부사채,"Callable cho quyền nhà phát hành, Puttable cho quyền trái chủ."
+2,35,②,대표 채권수익률,"Khi nói chung '채권수익률', sách thường chỉ YTM."
+2,36,①,잔존기간·변동성,Kỳ hạn càng dài độ nhạy giá càng lớn.
+2,37,③,발행주체별 분류,"외국환평형기금채권 thuộc 국채, không phải 특수채."
+2,38,④,채권 수익요소,"Kết quả trái phiếu gồm coupon, lãi/lỗ giá và tái đầu tư."
+2,39,④,채권가격정리,Kỳ hạn dài làm giá nhạy hơn với cùng biến động lợi suất.
+2,40,③,수익률곡선타기전략,Riding the Yield Curve khai thác Roll-down và chênh lệch kỳ hạn.
+2,41,④,스프레드 운용,"Spread mở rộng bất thường, dự đoán thu hẹp có thể chọn trái phiếu lợi suất cao."
+2,42,③,수의상환위험,Call Risk xảy ra khi bên phát hành mua lại trái phiếu trước hạn.
+2,43,①,영구사채,Perpetual Bond không có kỳ hạn hoàn gốc thông thường.
+2,44,②,재투자이율·실효수익률,Tái đầu tư coupon cao hơn YTM → lợi suất thực hiệu quả có thể cao hơn YTM.
+2,45,④,첨가소화 국민주택채권,국민주택채권 được sách xếp vào cơ chế mua bắt buộc gắn thủ tục.
+2,46,③,무위험자산,Quốc trái được sách dùng làm chuẩn tín dụng ít rủi ro.
+2,47,②,공모발행·첨가소화,국민주택채권 khác nhóm phát hành đại chúng thông thường.
+2,48,①,CB·BW 권리행사,CB chuyển đổi không yêu cầu nộp thêm tiền mua mới theo mô hình sách.
+2,49,②,직접수익률,"Đáp án sách ②, nhưng đề scan thiếu đoạn định nghĩa đi kèm."
+2,50,③,만기수익률과 실현수익률,YTM không phải lợi suất thực tế chắc chắn nhận được.
+2,51,①,재할인율과 채권시세,Tăng lãi suất tái chiết khấu gây áp lực giảm giá trái phiếu.
+2,52,④,전환사채 특징,CB có quyền chuyển đổi nên người nắm giữ có thể hưởng lợi khi giá cổ phiếu tăng.
+2,53,①,채권수익률 내적·외적 요인,"Cung cầu trái phiếu thuộc ngoại sinh, kỳ hạn và tín dụng là nội tại."
+2,54,②,이자율 기간구조,"Tất cả điều kiện giống, chỉ khác kỳ hạn → Term Structure."
+2,55,④,재투자수익률과 시장금리,Lãi suất thị trường giảm thì lợi suất tái đầu tư thường giảm.
+2,56,③,볼록성,Convexity dương: giảm lãi suất tạo tăng giá lớn hơn giảm giá khi lãi suất tăng tương ứng.
+2,57,③,장내시장 거래단위,"Sách ghi đơn vị 10만 원, không phải 1만; là quy định lịch sử."
+2,58,①,무이표채 듀레이션,Macaulay Duration của Zero-coupon bằng kỳ hạn.
+2,59,③,바벨형 전략,"Chỉ nắm kỳ hạn ngắn và dài, không nắm trung hạn."
+2,60,③,면역전략,Bù trừ rủi ro giá và lợi suất tái đầu tư bằng cơ cấu Duration phù hợp.
+2,61,①,금리상승 예상시 운용,"Dự báo tăng lãi suất → ngắn hạn, coupon cao, giảm Duration."
+2,62,③,스프레드 투자전략,"Spread thu hẹp, sách đề xuất bán trái phiếu tương đối lợi suất cao nếu dự đoán mở rộng."
+2,63,②,외평채·통안채 비교,외평채 quốc trái; 통안채 trái phiếu tài chính theo sách.
+2,64,④,신종사채 괴리율,CB có giá thấp hơn giá trị chuyển đổi có thể lợi hơn mua cổ phiếu trực tiếp.
+2,65,③,Dutch·Conventional Auction,Dutch một giá; Conventional nhiều giá.
+2,66,③,만기수익률의 정의,YTM còn gọi lợi suất thị trường / IRR của dòng tiền trái phiếu.
+2,67,④,환율과 채권수익률,Sách coi tỷ giá tăng hỗ trợ xuất khẩu gây áp lực tăng lãi suất; thực tế phụ thuộc bối cảnh.
+2,68,②,유동성프리미엄 기간구조,Đường cong có phần bù thanh khoản dương nằm cao hơn đường kỳ vọng thuần.
+2,69,④,말킬 채권가격정리,"Với Convexity dương, lợi suất giảm cho mức tăng giá lớn hơn."
+2,70,③,듀레이션 가장 긴 채권,"Đáp án ③: 5 năm, coupon 2%, YTM 3%."
+2,71,③,수익률곡선타기전략,"Riding thường khai thác đường cong dốc lên, không chỉ dốc xuống."
+2,72,④,우하향곡선 완화 전략,"Theo kịch bản sách nên giảm Duration và tỷ trọng dài hạn, không tăng tỷ trọng YTM thấp."
