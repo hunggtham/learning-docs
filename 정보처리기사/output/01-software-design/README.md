@@ -1,77 +1,42 @@
 # Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)
 
-## Bài học
+## Tài liệu tổng hợp
+- [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
+---
 
-## Các bài học theo chủ đề
+## Danh mục 12 Bài học chuyên sâu theo chuẩn 출제기준 2026
 
-1. [소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)](lessons/01-bai-hoc.md)
-2. [1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)](lessons/02-bai-hoc.md)
-3. [1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)](lessons/03-bai-hoc.md)
-4. [2. 요구사항 개발 (Phát triển Yêu cầu)](lessons/04-bai-hoc.md)
-5. [9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)](lessons/05-bai-hoc.md)
-6. [10. 요구사항 심화 (Yêu cầu chuyên sâu)](lessons/06-bai-hoc.md)
-7. [2. 요구사항 정의 (Requirements Definition)](lessons/07-bai-hoc.md)
-8. [3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)](lessons/08-bai-hoc.md)
-9. [1. 요구사항 개발 기법 (Requirements Elicitation Techniques)](lessons/09-bai-hoc.md)
-10. [12. 요구사항 (Requirements)](lessons/10-bai-hoc.md)
-11. [A+ Deep Dive: 개발 모형 선택과 요구사항 검증](lessons/11-bai-hoc.md)
-12. [1. 현행 시스템 분석 (Current System Analysis)](lessons/12-bai-hoc.md)
-13. [3. 현행 시스템 파악 (Understanding Current System)](lessons/13-bai-hoc.md)
-14. [3. 모델링 및 UML (Mô hình hóa và UML)](lessons/14-bai-hoc.md)
-15. [11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)](lessons/15-bai-hoc.md)
-16. [4. UML (Unified Modeling Language)](lessons/16-bai-hoc.md)
-17. [5. UML 구성요소 상세 (UML Components Detail)](lessons/17-bai-hoc.md)
-18. [7. UML 심화 (Advanced UML)](lessons/18-bai-hoc.md)
-19. [4. 사용자 인터페이스 (Giao diện người dùng - UI)](lessons/19-bai-hoc.md)
-20. [1. 사용자 인터페이스 (User Interface - UI)](lessons/20-bai-hoc.md)
-21. [12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)](lessons/21-bai-hoc.md)
-22. [5. 요구공학 (Requirements Engineering)](lessons/22-bai-hoc.md)
-23. [8. UI 및 UX, HCI (UI, UX, HCI)](lessons/23-bai-hoc.md)
-24. [5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)](lessons/24-bai-hoc.md)
-25. [1. 소프트웨어 아키텍처 (Software Architecture)](lessons/25-bai-hoc.md)
-26. [6. 객체지향 (Hướng Đối Tượng - OOP)](lessons/26-bai-hoc.md)
-27. [2. 객체지향 (OOP - Object Oriented Programming)](lessons/27-bai-hoc.md)
-28. [1. 객체지향 설계 5대 원칙 (SOLID)](lessons/28-bai-hoc.md)
-29. [7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)](lessons/29-bai-hoc.md)
-30. [3. 모듈 (Module)](lessons/30-bai-hoc.md)
-31. [2. 모듈 (Module) & 독립성 (Independence)](lessons/31-bai-hoc.md)
-32. [7. 공통 모듈 (Common Module)](lessons/32-bai-hoc.md)
-33. [9. 효과적인 모듈 설계 방안 (Effective Module Design)](lessons/33-bai-hoc.md)
-34. [9. 소프트웨어 품질 특성 (ISO/IEC 9126)](lessons/34-bai-hoc.md)
-35. [8. 디자인 패턴 (Design Patterns)](lessons/35-bai-hoc.md)
-36. [4. 디자인 패턴 (Design Patterns - GoF)](lessons/36-bai-hoc.md)
-37. [11. 디자인 패턴 (Design Pattern)](lessons/37-bai-hoc.md)
-38. [2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)](lessons/38-bai-hoc.md)
-39. [13. 시스템 연계 및 인터페이스 (System Interface & Integration)](lessons/39-bai-hoc.md)
-40. [14. 미들웨어 (Middleware)](lessons/40-bai-hoc.md)
-41. [4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)](lessons/41-bai-hoc.md)
-42. [5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)](lessons/42-bai-hoc.md)
-43. [6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)](lessons/43-bai-hoc.md)
-44. [1. 회복 (Recovery)](lessons/44-bai-hoc.md)
-45. [2. Commit & Rollback 연산](lessons/45-bai-hoc.md)
-46. [3. 트랜잭션의 상태 (Transaction States)](lessons/46-bai-hoc.md)
-47. [4. 병행 제어 (Concurrency Control)](lessons/47-bai-hoc.md)
-48. [5. 보안 및 암호화 (Security & Encryption)](lessons/48-bai-hoc.md)
-49. [6. 분산 데이터베이스 (Distributed Database)](lessons/49-bai-hoc.md)
-50. [7. 자료 구조 (Data Structures)](lessons/50-bai-hoc.md)
-51. [8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)](lessons/51-bai-hoc.md)
-52. [9. 트리 (Tree) 용어](lessons/52-bai-hoc.md)
-53. [10. 이진 트리의 운행법 (Binary Tree Traversal)](lessons/53-bai-hoc.md)
-54. [11. 수식의 표기법 (Expression Notation)](lessons/54-bai-hoc.md)
-55. [12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)](lessons/55-bai-hoc.md)
-56. [13. 검색 및 해싱 (Search & Hashing)](lessons/56-bai-hoc.md)
-57. [14. 파일 편성 방식 (File Organization)](lessons/57-bai-hoc.md)
-58. [6. 애자일 방법론 (Agile Methodology)](lessons/58-bai-hoc.md)
-59. [7. 스크럼(Scrum) 및 XP(eXtreme Programming)](lessons/59-bai-hoc.md)
-60. [2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)](lessons/60-bai-hoc.md)
-61. [4. 운영 환경 구축 고려사항 (Operation Environment Considerations)](lessons/61-bai-hoc.md)
-62. [6. 구조적 분석 도구 (Structured Analysis Tools)](lessons/62-bai-hoc.md)
-63. [10. 소프트웨어 설계 원리 (Software Design Principles)](lessons/63-bai-hoc.md)
-64. [3. 결합도 (Coupling - Độ phụ thuộc)](lessons/64-bai-hoc.md)
-65. [4. 응집도 (Cohesion - Độ gắn kết)](lessons/65-bai-hoc.md)
-66. [5. Fan-In / Fan-Out (팬인 / 팬아웃)](lessons/66-bai-hoc.md)
-67. [6. N-S 차트 (Nassi-Schneiderman Chart)](lessons/67-bai-hoc.md)
-68. [8. 재사용 (Reuse)](lessons/68-bai-hoc.md)
-69. [10. 코드 (Code) 개요 & 종류](lessons/69-bai-hoc.md)
+### Chương 1. 요구사항 확인 (Xác nhận yêu cầu)
+1. [01. 소프트웨어 생명 주기 및 개발 모형 (Vòng đời phần mềm và Các mô hình phát triển)](lessons/01-sdlc-va-cac-mo-hinh-vong-doi.md)
+   - *Phạm vi:* Khung SDLC, Khủng hoảng phần mềm, 4 mô hình kinh điển (Waterfall, Prototype, Spiral Boehm, V-Model), Ma trận lựa chọn mô hình theo rủi ro.
+2. [02. 애자일 방법론, 스크럼 및 XP (Phương pháp luận Agile, Khung Scrum và Kỹ thuật XP)](lessons/02-phuong-phap-luan-agile-scrum-xp.md)
+   - *Phạm vi:* Tuyên ngôn Agile (4 giá trị, 12 nguyên tắc); Khung Scrum (3 vai trò, 4 sự kiện, 3 tạo phẩm, Burn-down Chart); XP (5 giá trị, 12 thực hành); User Story (INVEST), Planning Poker.
+3. [03. 요구공학 및 요구사항 분석·검증 (Kỹ nghệ và Đặc tả yêu cầu phần mềm)](lessons/03-ky-nghe-va-dac-ta-yeu-cau.md)
+   - *Phạm vi:* Phân tích hiện trạng & hạ tầng (DAS/NAS/SAN); Kỹ nghệ yêu cầu (Phát triển vs Quản lý RTM); Chức năng vs Phi chức năng; DFD, DD, Mini-spec, CASE, Đặc tả hình thức; Thẩm định FTR (Inspection vs Walkthrough).
+4. [04. UML 모델링 및 다이어그램 (Mô hình hóa UML và Hệ thống Biểu đồ)](lessons/04-mo-hinh-hoa-uml-va-bieu-do.md)
+   - *Phạm vi:* Chuẩn UML (3 thành tố); 6 mối quan hệ cốt lõi; Quyền truy cập (+,-,#,~); Biểu đồ cấu trúc tĩnh (Class 3 ngăn, Component, Deployment); Biểu đồ hành vi động (Use Case `<<include>>` vs `<<extend>>`, Sequence, State, Activity).
+
+### Chương 2. 화면 설계 (Thiết kế màn hình)
+5. [05. 화면 설계 및 UI·UX·HCI (Thiết kế Giao diện người dùng và Tương tác UI/UX/HCI)](lessons/05-thiet-ke-giao-dien-ui-ux.md)
+   - *Phạm vi:* 4 dạng UI (CLI, GUI, NUI, OUI); Cử chỉ cảm ứng di động; 4 nguyên tắc vàng UI (직관성, 유효성, 학습성, 유연성); Chuỗi sản phẩm Wireframe $\rightarrow$ Mockup $\rightarrow$ Storyboard $\rightarrow$ Prototype; Mối quan hệ HCI - UX - UI; Chuẩn ISO 9241.
+
+### Chương 3. 애플리케이션 설계 (Thiết kế ứng dụng)
+6. [06. 소프트웨어 아키텍처 및 품질 표준 (Thiết kế Kiến trúc phần mềm và Tiêu chuẩn chất lượng ISO)](lessons/06-thiet-ke-kien-truc-va-chat-luong-phan-mem.md)
+   - *Phạm vi:* Phân cấp thiết kế (상위 설계 vs 하위 설계); Mô hình 4+1 View (Use Case trung tâm); Architectural Patterns (Layered, Pipe-Filter, MVC, Broker, Blackboard); Nguyên lý Parnas; Chuẩn chất lượng ISO/IEC 9126 (기-신-사-효-유-이) và ISO/IEC 25010.
+7. [07. 객체지향 개념 및 SOLID 원칙 (Khái niệm Hướng đối tượng và 5 Nguyên tắc SOLID)](lessons/07-huong-doi-tuong-va-nguyen-ly-solid.md)
+   - *Phạm vi:* Khái niệm OOP (Đối tượng, Lớp, Đóng gói, Kế thừa, Đa hình); Overloading vs Overriding; Phương pháp OOA Rumbaugh (객-동-기); 5 nguyên tắc vàng SOLID (SRP, OCP, LSP, ISP, DIP).
+8. [08. 모듈 설계, 결합도·응집도 및 설계 도구 (Thiết kế Module, Độ phụ thuộc Coupling, Độ gắn kết Cohesion và Công cụ thiết kế)](lessons/08-thiet-ke-module-coupling-cohesion.md)
+   - *Phạm vi:* Độc lập chức năng; 7 cấp độ Cohesion (기-순-교-절-시-논-우); 6 cấp độ Coupling (자-스-제-외-공-내); Fan-In cao / Fan-Out thấp; Đặc tả module dùng chung; N-S Chart (3 quy tắc); Tái sử dụng (합성 vs 생성); Thiết kế hệ thống mã.
+9. [09. GoF 23 디자인 패턴 (23 Mẫu thiết kế GoF chuẩn quốc tế)](lessons/09-design-patterns-gof.md)
+   - *Phạm vi:* 23 mẫu GoF: 5 Mẫu khởi tạo (Factory Method, Abstract Factory, Singleton, Builder, Prototype); 7 Mẫu cấu trúc (Adapter, Decorator, Facade, Proxy...); 11 Mẫu hành vi (Observer, Strategy, Template Method, State...).
+
+### Chương 4. 인터페이스 설계 (Thiết kế giao diện liên kết)
+10. [10. 인터페이스 설계, 미들웨어 및 연계 기술 (Thiết kế Giao diện, Middleware và Kỹ thuật Liên kết Hệ thống)](lessons/10-giao-dien-va-middleware.md)
+    - *Phạm vi:* Thẩm định giao diện FTR; Tích hợp EAI (Point-to-Point, Hub & Spoke SPOF, Message Bus, Hybrid) & ESB; Định dạng JSON, XML, REST API, AJAX; Web Services (SOAP, WSDL, UDDI); 6 loại Middleware (RPC, MOM, TP-Monitor, ORB, WAS, DB Middleware).
+
+### Chuyên đề củng cố nền tảng / Liên môn
+11. [11. 관계형 데이터베이스 및 트랜잭션 관리 (Cơ sở dữ liệu quan hệ và Quản lý Giao dịch)](lessons/11-co-so-du-lieu-va-quan-ly-giao-dich.md)
+    - *Phạm vi:* Bảng quan hệ, Ràng buộc toàn vẹn; 4 phép toán quan hệ thuần túy; Dị thường Anomaly; 6 cấp độ chuẩn hóa (도-부-이-결-다-조); Giao dịch ACID; Trạng thái giao dịch; Phục hồi REDO/UNDO; Kiểm soát đồng thời 2PL; Mật mã đối xứng vs bất đối xứng; 4 tính trong suốt phân tán.
+12. [12. 자료구조 및 알고리즘 (Cấu trúc dữ liệu và Thuật toán nền tảng)](lessons/12-cau-truc-du-lieu-va-thuat-toan.md)
+    - *Phạm vi:* Tuyến tính (Array, List, Stack LIFO, Queue FIFO, Deque) vs Phi tuyến tính (Tree, Graph); Duyệt cây nhị phân (Pre/In/Postorder); Ký pháp biểu thức hậu tố Stack; Độ phức tạp thuật toán sắp xếp (Bubble, Quick, Merge, Heap); Tìm kiếm nhị phân $O(\log N)$; Bảng băm Hashing $O(1)$; Cấu trúc tập tin ISAM.

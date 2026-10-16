@@ -4,19 +4,19 @@
     {
       "path": "10_backend/backend_core/00_backend_request_lifecycle.md",
       "contentId": "doc_cd4fe98efc50a0bfb0fc2960d74ca36cd184780e",
-      "revision": "b04e882e961195addce1739e181d95f33444de11f09b7b4202c4b5a5ca3075b5",
+      "revision": "25bc248df92f1331f638187fe06dab22cba97fdd8b0e1ae7246da628727e7e1b",
       "aliases": []
     },
     {
       "path": "10_backend/backend_core/01_http_api_semantics.md",
       "contentId": "doc_803ecb3d98cbba5fde34153736b5ffc0d8f55fad",
-      "revision": "7549604eb6e24d710ef3cd91e7b52a09f6a18d4f729fda78cfa2d98d730c862f",
+      "revision": "9dd0d25d1856b614ae35319da60b5f572a46220d3d9451348d9ddc570e63852a",
       "aliases": []
     },
     {
       "path": "10_backend/backend_core/02_auth_session_identity.md",
       "contentId": "doc_0d6ec2a44e96977aa6a39bfa1f330cd48a08c746",
-      "revision": "3e389287b322bb096db6aa4fbab642ec439e0f74898d83b7b0a8f703b1f0fa04",
+      "revision": "69256121052bef05e944d85a3e251abafe629c6b8143442cad7e7d1ba7259494",
       "aliases": []
     },
     {
@@ -196,7 +196,7 @@
     {
       "path": "10_frontend/90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md",
       "contentId": "doc_67c7293a91e4ce4fc2df1d9eb2bf7c45500a7de9",
-      "revision": "3d029cab2bb2073da82f216ab537bc1a8d6385673d0fbf1a0fc3b78236f1833d",
+      "revision": "ab5b2548e6bf715cb63ea035e5aee275d9f385389d86c4c18ad448212a3e28a9",
       "aliases": []
     },
     {
@@ -226,55 +226,55 @@
     {
       "path": "10_frontend/html/html_01_beginner_to_senior_detailed.md",
       "contentId": "doc_027cab7bb6ad417fb3b3192eaa11fe8697b45033",
-      "revision": "1ad98a3d2a01c2ca4f0eac1536875477a0cb48c7552bb9786735045b8d6b6f64",
+      "revision": "8b694ee701e2cbd0c718341b8a5d077ba669c2e0d98a368866a2a0775ebc668a",
       "aliases": []
     },
     {
       "path": "10_frontend/html/html_02_master_implementation_detailed.md",
       "contentId": "doc_50a5ad63d8eb9fbbcf2a2b6ccd38d64e7a2b9755",
-      "revision": "dbad0b80ca0b12cbda6cee2bf17bb3047d2980212bf006d0afd0e24a5858c4b1",
+      "revision": "ec497579eaefb45acfb9b031286b31f09f7725893598b0a3834e2554335dda6d",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/javascript_beginner_rebuilt.md",
       "contentId": "doc_571e826d9dde3ae2aeb94132b426d5443959ab62",
-      "revision": "3872b760e9e6ab224c1800fdc85b5b1edae539db5af021def7cf9c24414efed8",
+      "revision": "571f0b4295b46dca9dc0383f6c9a4dc91eb5594e1a4a8e54917abcdd82495ea2",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/javascript_intermediate.md",
       "contentId": "doc_f9d825d43efe278de667fc62ad672fbe61f02a36",
-      "revision": "6f9f2658454ecefd9436a738f18d673812cff135e366e604af6d98dd5ad64521",
+      "revision": "0d085ffd75da205d1bfaea274a75985d86a46de87d7d8d12a29508d2264a95ae",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/javascript_master_supplement_detailed.md",
       "contentId": "doc_0a61bb733f56ab1d33db36f5e6819056d119b6d1",
-      "revision": "ae45bf51355d1d66c99f62b36ef107bb995fa0457e9375dc4b02bd620eb34b48",
+      "revision": "f1abef74b5032d9aef57ca757b90d5fa031d8265b4ce0c541dad088e21219689",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/javascript_senior.md",
       "contentId": "doc_da270ca489b0b14bd11276a7c288ffd6afc5ce73",
-      "revision": "80b7e628c0caf291356f13626524c7368a9d3912159ad157bf65ecbdcc8281c6",
+      "revision": "58d474c20edfe242d4eb3cc795f8eef9ec564fd7d40028202da0ee878d02e967",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/typescript_00_index.md",
       "contentId": "doc_0ddede67487dde36d9b5da5b36f3836167692b75",
-      "revision": "20f6d326a8b09694d4cbf6481597c7081356d4cecacd7665100fc0f49f667992",
+      "revision": "fdce069f687e4606a00e0bfa7d1855836350bba09b0d0502a66ea33a6ac4b0f8",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/typescript_01_foundations.md",
       "contentId": "doc_3d5b41284e26fd8d79b518d9369daa41864cf1c0",
-      "revision": "824e1a6318daa0c010eb64d20a4780d307e2e7e67cca4e6cb3c9ff73fda5580d",
+      "revision": "18f7f5f39ee3690fb18a2fe3c2337be0c17854b876f25859fb1f6eff9f198b6e",
       "aliases": []
     },
     {
       "path": "10_frontend/javascript/typescript_02_type_system.md",
       "contentId": "doc_e7b4b585df5cdf05445fbf7fdb47be9aa3e65b5e",
-      "revision": "c2fe2d3099c7e658d47043de84ce6827aea69261f68ffc1de68fd5281702612a",
+      "revision": "ac5b7903adb96e4c88593252a54acd064f125ae242028e93757c1490a418c16a",
       "aliases": []
     },
     {
@@ -292,43 +292,43 @@
     {
       "path": "10_frontend/javascript/typescript_05_version_evolution_migration.md",
       "contentId": "doc_0ae6857e3fc52175746038ed192a82834abc051a",
-      "revision": "d08b838479f5cb78b5b0eb2a3c03b8ecd1f37b5160944d4b0877556016fadea4",
+      "revision": "75c8bf439a01a3c29b44962f0074f98cacc9306082804fcac8bcf4530d81c53e",
       "aliases": []
     },
     {
       "path": "10_frontend/react/00_index.md",
       "contentId": "doc_e3d8cef48c8d3dd1bfa6524c825284d322659737",
-      "revision": "867279fd45a56a80c23d58dadb11420b2852c63babb20ee0646bc25eec79fa1c",
+      "revision": "c406967cd1acb5ed946ae1c45d20c35cfcd13158dbf2b47f7ba67f4bfa883e54",
       "aliases": []
     },
     {
       "path": "10_frontend/react/01_react_beginner.md",
       "contentId": "doc_887f51e18b3372c95345d8a844658c8b0c2ce5e5",
-      "revision": "7c0c7e22f7d07a3822f8d4c4ea468575f4b82c4f2748e4b1368554c1695bec31",
+      "revision": "9e7d0d4075bc990f380b285fa19d9fa5f1753284561c53f3789fa193ddf5f631",
       "aliases": []
     },
     {
       "path": "10_frontend/react/02_react_intermediate.md",
       "contentId": "doc_56ffa0aa6121f8dd2103f5250241e722516d5fee",
-      "revision": "f798275850d492b70097c26a7c5bd6d8b7d57c9c772c4f85b93061d247ba4542",
+      "revision": "524eed07e7460fc832e04f1d4233aac73ad1370113fdf8200eb665e5ad828b4c",
       "aliases": []
     },
     {
       "path": "10_frontend/react/03_react_advanced_senior.md",
       "contentId": "doc_e7e686e5ed807f5833580e28bfb657fa3dd307c0",
-      "revision": "b0c7e39acf899049e8867cccdce409a7a2acf18aade073f6cef833f04d76eaa7",
+      "revision": "7853ab9fa7b054ebe0c6ab256523692522d21128c452be3af229a4761e8e7941",
       "aliases": []
     },
     {
       "path": "10_frontend/react/04_react_master.md",
       "contentId": "doc_0055aae8a6b92ff35cf8d77bed3f37d21e52a8cb",
-      "revision": "4d340646fced360eef21da96ddcae5ec7a0a948471c5078125dd167fcd662f41",
+      "revision": "454a655e167586572fc859b41329b45d5b31b3be8ae060ab23e7f1f2bdafbe01",
       "aliases": []
     },
     {
       "path": "10_frontend/react/05_react_legacy_api_reference.md",
       "contentId": "doc_55c93a920d295d4c66476c15aec484855eeab315",
-      "revision": "b5bc61ece24f652ee644c4c6af765f49e25e2928f6abc5b220d4f347f5445d34",
+      "revision": "64e01e69e62135e248e4c6085917726d106ae9e67e899dec767fd44fcca2751e",
       "aliases": []
     },
     {
@@ -358,55 +358,55 @@
     {
       "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026.md",
       "contentId": "doc_4934f5d7c4eafa223e1434ee454f78dfcbf8f4a9",
-      "revision": "30cd2a4aa9cb119a8a1c4eae8ba2278d160054da35e623e4fbe6bbbef21e10a0",
+      "revision": "ecfce79bb133ea677d4125febbc61e041981de9a9810603b9367a2f3c69609b3",
       "aliases": []
     },
     {
       "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026.md",
       "contentId": "doc_f4fff6ed93f0b35b2943e1bc3d8592ac2a18c196",
-      "revision": "fc25f0450ccd1d5a743220a6711240347bf3096abbf6a0bd82672cea4dd26f2f",
+      "revision": "9f00ea15c4933641ec3b80d9325a81c671dbb10189a31d12a81ca09bc0e5c8af",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/00_web_platform_model.md",
       "contentId": "doc_5759650d2bd690fc1172fb54f42c119067d5eaa3",
-      "revision": "67b9eaf2e98a51ea104bb825df631b4245d0538a6eed028a9b7b9d95ca1f2584",
+      "revision": "3c0627e79f3c1b5874632aa78e5c0d0bb39cd6784de946292cba1a617c2d5a0c",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/01_browser_runtime_and_lifecycle.md",
       "contentId": "doc_c7492ece4d2a62343dc118eb683f502f10ea3974",
-      "revision": "d7c67f911c242e9007fbb563444bb764420d47d2ba767e9869c6bac317a00115",
+      "revision": "24dfc9fc80d1f167fcace2f81028e2a1fff33ab6f912ee9ad1aa8ea05f476f7c",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/02_rendering_pipeline.md",
       "contentId": "doc_09e59c275de8ddf3e6368be341fe8f04656ff3da",
-      "revision": "164d45d35609797ccab958597477f7b84d0214bb65670638f8138a612f086db2",
+      "revision": "8a148c6cd991c70d93d67126b65ea21bd4ac575d46b6f8cc1866a04e0a3358e0",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/03_events_networking_and_state.md",
       "contentId": "doc_6b9162275c49453183332092882459ccead75c32",
-      "revision": "0f896d0d5211f2e24fee39d1266fc288d9ad9dcc07a06d89fdf4bf3bcb5258dc",
+      "revision": "d4204686ced916c22dc01b698f59c05eb7b400068453196da7f9961fe75878a7",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/04_accessibility_security_performance.md",
       "contentId": "doc_616d7f19588af6b4112c1434c371039a951adec4",
-      "revision": "09cc7d709ceaddc5df39ed0be1750d02f143e9ede7de0895d74a49b22b23bc42",
+      "revision": "1490c246c61c86c57e5a4ee06734fec3c424a8b236087e86d0cb546328e359f1",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/05_framework_boundary_react_websquare.md",
       "contentId": "doc_c07a99fe270e6cab4cd7be81f937017e4a55d10f",
-      "revision": "f336a761285ff78c93fd078880a5fabffdb6b5b8e284ae3082ac8ba6bafa8a8c",
+      "revision": "2aa9e576d58b5474433b46ce461d63cc5a0ff193fe43768f132c5c4616e87d60",
       "aliases": []
     },
     {
       "path": "10_frontend/web_platform_core/README.md",
       "contentId": "doc_3e33dbeccd3277c4d238e5b871219656f9a19971",
-      "revision": "3b2ea930056597d07ff8bf7c2092b455f0041a3d4d711d767d943123c84ed509",
+      "revision": "f6d1f903efe672705ed0401bd838b637a1aa283042966bbe0a198cea0bbaff62",
       "aliases": []
     },
     {
@@ -574,19 +574,19 @@
     {
       "path": "10_frontend/xml/xml_02_intermediate_detailed.md",
       "contentId": "doc_615ab9c54daa2e588d1aea562ffa02be11f5d011",
-      "revision": "d3d2feda7bcb68157dc9fb2297aa4d0e48f5cdd0f965e54b6b28b834a4108226",
+      "revision": "fa0c045c1d707aa57eb5a467e051e9b996117fb63a33866ea0597206f8d83a99",
       "aliases": []
     },
     {
       "path": "10_frontend/xml/xml_03_senior_detailed.md",
       "contentId": "doc_1ac7c2b9f591d1366bc2a1c582df9046fa0ecce2",
-      "revision": "d7f1f39409dfbe42337e74eb05c9ae6e45d69ff7d4ff251fd2051ed42fd52037",
+      "revision": "5f6fec76c11a2e0a05f36be843b7d0a7c4a1220c4dc08316c01f4c6986d76bd6",
       "aliases": []
     },
     {
       "path": "10_frontend/xml/xml_04_master_supplement_detailed.md",
       "contentId": "doc_68fbd97f025baac2800bf1dda8344bea6d26af53",
-      "revision": "388d5958cd6442c5f345e42451c38e0318ec7dbd9a895a74be9525d5010db84a",
+      "revision": "734b0095b3315bbb3874b673ded25bd7792429609fc47882ed841288c90b0faa",
       "aliases": []
     },
     {
@@ -1114,7 +1114,217 @@
     {
       "path": "CATALOG.md",
       "contentId": "doc_635c0cc050ba06e8408f23504745888d34dcef0a",
-      "revision": "7b787ae35b84605a149754903ba6f8b93b405b3ebf94c50127e3bc41c6f9a967",
+      "revision": "863d32eede115c8188266177f0830744d6a99755d7c02703036021a93f7e5062",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/README.md",
+      "contentId": "doc_10f95592ab1972493c8d0c6c8f3e6b22ffddf2de",
+      "revision": "fbe8e67b9147297653357cf761bbed8823c59754c6ace312c520291ce4b3728f",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/01-스프레드시트-기본작업.md",
+      "contentId": "doc_0518fd67d25d9dc47467247abd8518073c4d1a97",
+      "revision": "9422ef7de7a9e706eec0bcb6e1df9a8eee95b82ba192e78706dac41be37375b7",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/02-스프레드시트-계산작업-배열수식.md",
+      "contentId": "doc_6a17e0527afbbd203798c9841da327f8df5a0d84",
+      "revision": "c198b3308d8bfc8b31ff11a3fdb598954e2438dc9e234de6da03cc5f3d117a48",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/03-스프레드시트-계산작업-사용자정의함수-및-고급함수.md",
+      "contentId": "doc_0ded57fa7e25ee9eda73f0dd2c6adec0c3a52e57",
+      "revision": "0b6cefbaca1c011268f0c9302cc595be267b802462b893963543923ff47ab939",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/04-스프레드시트-분석작업.md",
+      "contentId": "doc_dbe2185f5dbe287772db1e8aea31d94a5a6d0b93",
+      "revision": "ab4e79e39e6f7dfb60f53bc76ca9732c736f93c4e18c15e20d43b7cf21785305",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/05-스프레드시트-기타작업-차트-및-프로시저.md",
+      "contentId": "doc_f70c03ae423f10ab623fd5d7858922d9a1aed724",
+      "revision": "ae5f8944c1c3679c918fe2cea2fcb730c696c1fcdc9aee1d948f292745d4164b",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/06-데이터베이스-DB구축.md",
+      "contentId": "doc_2b20b7e496b0103ebef4107974975ad655d1eeb7",
+      "revision": "ec29d92432edda397daa81edf8020111bdc954be71f6153324669d8531a75133",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/07-데이터베이스-화면구현-폼.md",
+      "contentId": "doc_6065e8e9ad05e585bd9d0c71739ef4899014f819",
+      "revision": "b52d3652ad2498f8a6c9c572e8f2ced3ffb6b60c6414948de5605409cccffd2c",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/08-데이터베이스-조회출력-보고서.md",
+      "contentId": "doc_950bed77a8ea1a6cfad5a8f91284358ce174e8de",
+      "revision": "37eee8e997e2ca58753d350bcdf8bef5974e5f099d2c393798bc9a7d3302582e",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/09-데이터베이스-처리구현-쿼리.md",
+      "contentId": "doc_49cda07b2ad06380b5440fe77a1f3b364301fafc",
+      "revision": "9efaa1efda96fdc9f883a527e12c392146f00d7ec9fd5eece732f6bb54c9bd2f",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/10-데이터베이스-프로시저-및-이벤트.md",
+      "contentId": "doc_3b684e344ca2e31a6db71b2a69c5d9581a481793",
+      "revision": "8d9dd8714c8bfb6d67426afa3538c72b8c5e171fe07a6b7a03bf196b5f216b78",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/90-실전-모의고사-및-오류-복구-전략.md",
+      "contentId": "doc_50e7274f66bc6dc148708a7b02b61db16a007042",
+      "revision": "527bf2789451df682fa8d66a2981c20607125c7db4e7d2f586bfd08f86eb1f34",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/실기/README.md",
+      "contentId": "doc_6b9a773f6d896f14430d88290150d9ad3116232f",
+      "revision": "e76c4fe5cda380d8dd9147918c80ef676580eda5a095e80b9bb0c8808f988477",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/필기/01-컴퓨터-일반.md",
+      "contentId": "doc_5102aebb8f1f6c4111ec85a8338656d6a9f4719b",
+      "revision": "5345bee652831654e092f2f80eb07923ba484ad8a13ce1b139aa814a5f7530ba",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/필기/02-스프레드시트-일반.md",
+      "contentId": "doc_3c24f6ea1a9d7db9c82cb50f9e316ffe715586c7",
+      "revision": "2bf7daa91fb4df71e4a233d7d8b12c30efd9400395c85e713d5becae0198126d",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/필기/03-데이터베이스-일반.md",
+      "contentId": "doc_4137e304c8599c8a710fbe20336c234853eb9d17",
+      "revision": "5fb747b35be1f806a823f8e5d5d92ec63811a4dfb874f3a07fb194fd31a59c24",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/필기/90-필기-문제풀이-전략.md",
+      "contentId": "doc_51f9b6bf6dd147f939d4b9153424631eec9635be",
+      "revision": "e3d6f0fb715e7cb8c181962a61f5dd5c475a1b501f32defd643fb091ab6a69cc",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/1급/필기/README.md",
+      "contentId": "doc_04be3369827fc49dc2b58fc96895c3e72cc3e14b",
+      "revision": "d5e5ef5c2d864b621590488818c34cfe3b6ec232b81fe8c2dbae657156e38264",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/README.md",
+      "contentId": "doc_a5e0ada2fdc494c65f283ee8355cc455bb79fda3",
+      "revision": "6ee71132fee0189201d70ae1c553ec83b4b03ae23950f2c04783b9a603a3bf1b",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/01-기본작업.md",
+      "contentId": "doc_1d0644540214e192fd3fd440ef9ad960f69d362f",
+      "revision": "e3b6e40089a98865a021688896874e477d8124e555f3b329f91ca5188307f7bf",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/02-계산작업.md",
+      "contentId": "doc_2dfdeeec2366e7ee0385315d3fb5beadfa43a964",
+      "revision": "f3f8f6e2a60601ca9c78952bd6d5e0f2d8434f2c77df4cc5b73077a640fed22a",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/03-분석작업.md",
+      "contentId": "doc_e5358c38630ebae128d93245082e4ffc577648b1",
+      "revision": "e7f132840065b37fea3352cde76958421c7e03bc877d3d55c4f2948722eeb218",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/04-기타작업.md",
+      "contentId": "doc_98078b4944d27f40fefee5b6eb82ed1a5248cd5c",
+      "revision": "a80999e28b89e818f4b5836ac870ea68f5abb7de0d5b9e888a26f4bb83f6480e",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/05-함수-인벤토리-및-공식-패턴.md",
+      "contentId": "doc_992721f435e265705f73b9543af8a57576f1645e",
+      "revision": "bbaa0908051b1366a4fb2722f7eafa2e964cfb30aab48b2cfbe103e1b77a7300",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/06-분석-기타작업-세부수행-및-감점방지.md",
+      "contentId": "doc_8e9af437765aa00e954890ef0e6be3e15bc95383",
+      "revision": "a3f66dfdba89279db48cbbc541c53c6ab91eddce62dae68b4603bd44eab7a275",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/07-기본작업-심화-서식-필터-외부데이터.md",
+      "contentId": "doc_f6a53fcbe7186c0c6759e789e2fb8ed8916e078b",
+      "revision": "f7898f1fd56f77e90b9465082c3875f3b11991f0133117cc83da98b2110629b7",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/90-실전-모의고사.md",
+      "contentId": "doc_6af9ebcd53c128075dd689ca3746c4e5aece6816",
+      "revision": "59c1823244e5b2dccf6f9a6df75a1751f26f28f827d595abd671db36db4e01a9",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/실기/README.md",
+      "contentId": "doc_6ffb16c546b4b112f3a8bb6149be7d200fcb8689",
+      "revision": "75197e3abfed8688a82e5398f6eb473e7d82a5503992daf11f75d0d656b245ab",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/필기/01-컴퓨터-일반.md",
+      "contentId": "doc_7fe602739ceea48078564486b86dc724e35dbb76",
+      "revision": "8747b9cbffa2f22bb423a8a7c3619b04c0b0215970bb293cff72bee4922f01d7",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/필기/02-스프레드시트-일반.md",
+      "contentId": "doc_080bfca0e0611e518f6e6404a8aa4b4157abf542",
+      "revision": "1a47bfa5bc3bd998973b8017d6af7951ad61659ee2c1cb38e7b2022578a3e1fd",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/필기/90-필기-문제풀이-전략.md",
+      "contentId": "doc_7e482d9932edaf0b5ca229ea42b4187a7b603cf7",
+      "revision": "c422704d664c1cf681d490f78ddebe7a7df17fa7b39ce60b2b59342ca5749139",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/2급/필기/README.md",
+      "contentId": "doc_75646cf14f339c84971e84339a5fa45cc4c6993a",
+      "revision": "c4a0764db486bb5a3cf78840d466e7f7761dc9f9394bc2c02f934ffb2b875d2c",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/COVERAGE_AUDIT.md",
+      "contentId": "doc_a2ab3f67bf6478957d0e54067b0d53388f512d41",
+      "revision": "20b8903b9cfe2136d7d6c3c19ccb0cca58a69c7a7afabee9c1c7635065649874",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/EXAM_VERSION_NOTES.md",
+      "contentId": "doc_94efaf709707e24a2c4e21c7bd11fe54291845ef",
+      "revision": "1123f3ac8ba85d816216bf5f3f8fa6ee3ba910af9f860a1b97d4ae0bcddf395a",
+      "aliases": []
+    },
+    {
+      "path": "cert/컴퓨터활용능력/README.md",
+      "contentId": "doc_9c44b0f43f2a7d26f396a9d7899c98c955735876",
+      "revision": "776d35f3fc3171f2f86528839e7f687e477c04a3dc52744fa53e70ece66b40c5",
       "aliases": []
     },
     {
@@ -2080,37 +2290,37 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/00_tree_foundations.md",
       "contentId": "doc_5027d99f9a93ea4dc9c059273f45754157cd3c5e",
-      "revision": "5b63253923b6ae3309283eddfaca5e7176129f6c74e195c82ea12c98d43457f4",
+      "revision": "b88a70b571d2c697a60e0c4e66844a86b57ffc64fba63665eb54fd771df39995",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/01_binary_search_trees.md",
       "contentId": "doc_9b1164ff68bf25c49f0cdf6163a0e9cf7979bbbb",
-      "revision": "60a6d5b4a198dfb7c199672950390edcf66b167edbff4d518986e1bfe432c24f",
+      "revision": "05407f9738f0718c07f2da3a3804a9d678ad5ac158776f51127e6066cd2ed2b9",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/02_balanced_search_trees.md",
       "contentId": "doc_816f80f145b40a9aa1249c988b16acce5961872d",
-      "revision": "a826837ac0d467692a551269443f5064a22ed40aae52962a73b5aa26db7f1811",
+      "revision": "1d0c034711e4b7508286818f9db10ed717c4da3a84d5c7c915366a4e54cb2115",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/03_heaps.md",
       "contentId": "doc_bc2242509f3fb51403ab67917a325b788ceffb0a",
-      "revision": "12458cb0d7fa92a63399f275adb6b6649dbc5c5b35bf907b543775f6d722d3b1",
+      "revision": "9001b09c7889934e98e53a804e6998a0066e64cf3a943f94c37fd6ce3fb2f6b7",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/04_tries.md",
       "contentId": "doc_4b7c7a894a14bd4a239e04645970c684675803b8",
-      "revision": "25107f2bc548f6a9a7c5765e0b7237503df9ff79fa08abd64316e05661598640",
+      "revision": "c28feef6832a3c25eba43836266aed37b3ec5b148492f64ed591b31269500eab",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/02_trees/05_b_trees_and_external_memory.md",
       "contentId": "doc_e57357be30b2d6bb5a67505e7910c6f8deb0b122",
-      "revision": "d99170082c4da7be544a0a1cb7c8904d8566683815112795c6ff0f1661b345c3",
+      "revision": "05cc53297e06d4eb2ae0a4d72cae80e1c8bf828fd97f091852772b28f2f1163a",
       "aliases": []
     },
     {
@@ -2140,37 +2350,37 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/00_graph_modeling_and_representation.md",
       "contentId": "doc_d77c2512e626158a7319d33ab389990fb2ab9021",
-      "revision": "6391657cf694f90fea98302ce4494860f4ecbfb8e3242b6727c9ddd3f4f21d57",
+      "revision": "6488c9612fb87872a1ab2777ebeb3398c3efd8b85d6c6c14ef027138318ec1c9",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/01_graph_traversal_bfs_dfs.md",
       "contentId": "doc_7fae579b55ef5455408452adbcc937eaa4961753",
-      "revision": "f87ab597c2c8c2f5feb4e5ddfb3081b7447fd1bf43a05ebea01e24b4de95d54e",
+      "revision": "7d416576841d76db3d39b03b046b2c4c1a97650045901507d5c1bcc85e44f559",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/02_shortest_paths.md",
       "contentId": "doc_8cc54a50d128eb9fe86b3cb055fdbf2ca4224856",
-      "revision": "0ae7e314773d4c7555f6245648df82903de6e1916255388faba9321e56d05b15",
+      "revision": "3e435bbad11ba85f778a10c48ace2ea30a64fe97729554e92b590585883b9619",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/03_minimum_spanning_trees.md",
       "contentId": "doc_02b9e01d456d034091da17cc2ad5b585eee6b659",
-      "revision": "35667e147a413e50590937940b160388b15294012616a1a248de0da08de79490",
+      "revision": "1cf1e5a55de73cf2045f61418b77612e2fde0aaa15dd3283ae84143efb3ccd1a",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/04_dag_topological_sort_and_scc.md",
       "contentId": "doc_ad3fac99fa12e9c96e9fff5466c2f64cf9680198",
-      "revision": "026f4ca71b49e3a0e0073f430ed63ac43ae39d4aeb7e9b0493cec6b6cf5096af",
+      "revision": "50fd7641760f2ccdd665840de61a5398dc17c40e77617aed4c8b551df40edf5d",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/03_graphs/05_union_find.md",
       "contentId": "doc_63e9b5e645215610893e77c468aba5738333c38e",
-      "revision": "3a0b7552f196c28dfe8ff0168a9cb180a8eb050a9149eeaaf53c6a7b529bcb5c",
+      "revision": "bb805734c2eeafa51ef33b6028ead6783f8176e3127a7719e4cd5d049daffc42",
       "aliases": []
     },
     {
@@ -2212,7 +2422,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/04_algorithmic_paradigms/01_sorting.md",
       "contentId": "doc_ed84eba1162d17ef55d271f2386eec7be2647881",
-      "revision": "36b7b05a6648c84f037b5e9ef312419e68fdd72a208a1d89ff782941ab381407",
+      "revision": "6e62e6c233e8062733411d3491933098f7a2b956c620ac97760696ea23e86008",
       "aliases": []
     },
     {
@@ -2236,7 +2446,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/04_algorithmic_paradigms/05_dynamic_programming.md",
       "contentId": "doc_92091514b029465e7527bdd3e868c7348d59ecb2",
-      "revision": "bb3a31b694f0b4f3e127643552591d68f294940b74a6cf12f6421e4141a831c1",
+      "revision": "52f339256dbc5102c4311b113135cca6a57d3946297364fa78340d251cd8b520",
       "aliases": []
     },
     {
@@ -2248,7 +2458,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/04_algorithmic_paradigms/07_two_pointers_sliding_window_prefix_difference.md",
       "contentId": "doc_3bc61089884ab8a22632927555e60b114b5a3202",
-      "revision": "f8bb8c4bf67daac0af4fe3b8803bcd40f23b40f8ae67dad0df0126ced9e47616",
+      "revision": "9acc06a8119a29e465e94f5401e294882713ee0f5588224776d237b783f122fb",
       "aliases": []
     },
     {
@@ -2260,7 +2470,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md",
       "contentId": "doc_0f00537d4a4ad936860a3ecce79d521744da0706",
-      "revision": "486355b264839f8947bda7d120fe46a0ef1156c98c5c3df55c0770158739c701",
+      "revision": "7c6e857ea2d8ca37cdb74ddee1716d13d86583b9c5bc4b54930ac008947cf35c",
       "aliases": []
     },
     {
@@ -2296,7 +2506,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/05_specialized/02_bit_manipulation_and_bitsets.md",
       "contentId": "doc_910f9c2e6ededb44e94d4b3c2379e6e099900b6d",
-      "revision": "68461ba34055b765e1502195ffae61bec3588981387cbe78f70b33e658cd3cbc",
+      "revision": "b5f9eafab32df64b68604c3ff44f2780188c6d2cdc519d4b68948e7ff57e1343",
       "aliases": []
     },
     {
@@ -2308,7 +2518,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/05_specialized/04_suffix_arrays_suffix_trees_and_lcp.md",
       "contentId": "doc_50f382f0ed500c63d4f9c6c27f588028b682d645",
-      "revision": "632fc45fe73924367fbcbf13ccd8a9191d978872545b9baa750262f721f6ac29",
+      "revision": "881a5ba07518c86733810b942dcfa4be38d4d24631ba45e89598991f2e658b42",
       "aliases": []
     },
     {
@@ -2320,7 +2530,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/05_specialized/06_probabilistic_data_structures.md",
       "contentId": "doc_7746bf4da28628b6f9edfbad944580ab5fe6f85f",
-      "revision": "a00a3cfcae718eff1ae12ab73119d16ecb1892a7f7885a3faa5c7e9fed8bc250",
+      "revision": "1305e24f67c6780b68c66fd3d8286d0e71a7d45258c8e8f389fb02517c10238a",
       "aliases": []
     },
     {
@@ -2344,13 +2554,13 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/80_language_implementations/02_javascript_dsa_runtime_patterns.md",
       "contentId": "doc_66545fe183da15632a1bb0cc672917bb03067ba3",
-      "revision": "95fffcd63da8cb9f9a2a099a2c67bbd870bf94877a58a19a4a2cf37bb3e1d91c",
+      "revision": "64c387228c3b23bcf000510231985647d7e5eff862290c7963929b59155fa821",
       "aliases": []
     },
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/80_language_implementations/03_cross_language_testing_and_benchmarking.md",
       "contentId": "doc_aaf62f868f3822d6128610f20dc9acccd85e29fc",
-      "revision": "d71425a2957c0cf11eb5185fbfc1372bcac6ffc9250e45d679388ff3b012f2d6",
+      "revision": "500a2e7bca953a17cd02f515b88aec7315c798f063c029674eec034a17c2363e",
       "aliases": []
     },
     {
@@ -2368,7 +2578,7 @@
     {
       "path": "computer_science/01_algorithms_data_structures/advanced/90_connections/01_dsa_in_databases_networks_and_systems.md",
       "contentId": "doc_59f95f015b825db202e5f0f885f97454611250f4",
-      "revision": "935d33214f5dd23b059b7c867aae6c9bcc39d73f41d490db6e3deceffb04a0c3",
+      "revision": "97877826ca013d4746981fb6f8362a6c919fd582c5be5351178f08c755ebeb65",
       "aliases": []
     },
     {
@@ -2548,13 +2758,13 @@
     {
       "path": "computer_science/02_artificial_intelligence/02_search_reasoning_and_planning/05_planning.md",
       "contentId": "doc_7ac43f543a53e744b9f7984befc0079d1cd273bf",
-      "revision": "af7feda33ab3e82a8e50e3480e5e3ae22000a0c60b0d7637b1d9e9cbbeaee6a2",
+      "revision": "917cd523e20e596c8ca52e677b67957ed9701094939b752f151668f147c56312",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md",
       "contentId": "doc_f97d1e30ca0063f9d4dc557831453d36f7a71f51",
-      "revision": "123a6e3c78698f8fe67c5e4355703a5ff2a52c13d04fd65039093abe2dcdc8b9",
+      "revision": "c08c62781203941b42010c2ec43cd91d7243345bd279b6e2ab60103375656335",
       "aliases": []
     },
     {
@@ -2566,7 +2776,7 @@
     {
       "path": "computer_science/02_artificial_intelligence/03_knowledge_and_reasoning/00_knowledge_representation.md",
       "contentId": "doc_0bc8cbbb035a63941804af3b3bf01acce10333d6",
-      "revision": "3afb162565f08b109c47a2c32542e43f8d00deff98c8ca4a447f658cd2246126",
+      "revision": "3c3fe9f14969b5dc104d7ccfc60cb5cc889cb13cc267244cb983246d79f1f9bd",
       "aliases": []
     },
     {
@@ -2584,13 +2794,13 @@
     {
       "path": "computer_science/02_artificial_intelligence/03_knowledge_and_reasoning/03_inference_and_reasoning.md",
       "contentId": "doc_c02759ee12228b46fa8ed83aebb12f99997403ee",
-      "revision": "3cc3bfa9518caddd5d4a7e719e10f4057da3b2f4f9e15531e995792e0cc46fd6",
+      "revision": "7b3d3df4fc00440ba47b7a6ecc71727036ffacb2c4689e4a92e88c3de639f59c",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/03_knowledge_and_reasoning/04_probabilistic_reasoning.md",
       "contentId": "doc_bf84a4e861f13d93bb0ba96e372fbb18df79cc5c",
-      "revision": "8c54ebc84d7812bae8cdfdc54df30d37e731c6e64728b4c524e822e630e64aab",
+      "revision": "76d799768ecc3a38d9cc3dbe3cdafb66149a7dcb248d673ebb5e9d40d459a42a",
       "aliases": []
     },
     {
@@ -2632,7 +2842,7 @@
     {
       "path": "computer_science/02_artificial_intelligence/04_machine_learning/02_data_features_and_labels.md",
       "contentId": "doc_982ec77305f703ac80d00eb5bdbebcff1f709cb9",
-      "revision": "5b5b2855f0193852b41bef2850fcc3035baee1ace2370b0e936de0f56cfdf31f",
+      "revision": "c3aeaf71649bdbb777fc67ff7182fd0db0d0c55adcc0736646580fe62bd0d0e4",
       "aliases": []
     },
     {
@@ -2854,61 +3064,61 @@
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/00_language_as_data.md",
       "contentId": "doc_097bf3e9a943dd3cb7e7fb575c0405eb61ec94bb",
-      "revision": "33394cc7611a162ed73aa1ba8f5c61443c51af2b4dd8ca964d041331a7416bdd",
+      "revision": "8b51d1ee6baba8b0d867a33a0dd7f4ee8c0c32da11b9adac1d9d842bcbfbaf45",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/01_text_normalization_and_tokenization.md",
       "contentId": "doc_9d557d59b8ef2be8ed8e44bee7d438c806519cb0",
-      "revision": "68724ee8eb6cab1e7270b10be0bccf29b631baa4212cb91b382d455f0fa18f61",
+      "revision": "01e907e6267dc35306278671276771a47bc280ccf3a348676c8689a5c12c5a95",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/02_language_models.md",
       "contentId": "doc_6b5a9fa7176c628d77f31af0672002590bf8fe7f",
-      "revision": "b398e7c710d513725cc6a3da3aaaae813987935e15ae086ea8f8d95164779399",
+      "revision": "b42232039e5b0ee382ca92d9d15fa75ed36fdd49e367540b8d94651017156233",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/03_word_embeddings.md",
       "contentId": "doc_80ea647a46116d32c92ee38eadb5a98468acb6c3",
-      "revision": "5813e06febf599d8a51765e06059ed6cc2d61c035535ec2fe99af4f55f0c139b",
+      "revision": "165e88995e4dcf135ccff631c640ed1b3d421bf195c2f251767222904e36941e",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/04_contextual_embeddings.md",
       "contentId": "doc_bff8221ec89ddde144c10fc46c39e55735888371",
-      "revision": "aecc770274a89ce2fad71a08676036f34daa274daab31c0b7f0ab602b19ff896",
+      "revision": "e48773652fdc20b9803de1f913ba822bf9bdb411f795c6a0e7982fe0e0ea09c0",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/05_sequence_to_sequence_nlp.md",
       "contentId": "doc_68ac3ec47e2df54d6e6c3597c181e61b39c8445e",
-      "revision": "49c8e6278c5f7d70c30ffaa98735c62ca67263344f50d19e3e24cf34b217cb6f",
+      "revision": "1ae0a8f0602d58b2885e0a0149b33de88bac2f04c28204aab7eb288359fc1257",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/06_transformer_nlp.md",
       "contentId": "doc_01445babf510c826122c436b794ba4e1ffebe4f3",
-      "revision": "5317abbb5c248a535b652d3732802d9b1c1fcfc4c1d00ff74dcb08ab132e02aa",
+      "revision": "67391d7f1769bfc26cb7c6903465e4554b0988a51f0aa6e0767ede651526d76d",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/07_information_extraction.md",
       "contentId": "doc_2daa6e2a0d78c85bc504962d3a54274eae009679",
-      "revision": "5396772b4feacc68bd65b86da97224e0f893df9ece8d2b4876c46b75c04edb9d",
+      "revision": "eb0268fd6bb31a4acf3ebd64c0470575b8ee4ec96b896de8fbc7b66fea1d3ff8",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/08_search_and_information_retrieval.md",
       "contentId": "doc_f20cb0a8e3d78a3487a9e95b145a4df2398e1382",
-      "revision": "67f39ad2c9ee3504857bb72c03b0d705fffe38e7dc67dc431a8bb9ac6efaca9d",
+      "revision": "a975c7cc612683f9393fe860dca86d9cf081bcc82ab6c5852ebeee816477e98a",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/07_natural_language_processing/09_nlp_evaluation.md",
       "contentId": "doc_c7bd13123c0238d7c00eb7e866c2274b910d9a1b",
-      "revision": "63ad90f2af3e0d796bdfd4de49616dcaba8028ed6db01863d6deceade836463a",
+      "revision": "bbc3a8a0900506fd5751db09c7ba78deca400d1a61b16e0ec0aa9db82c0785fe",
       "aliases": []
     },
     {
@@ -2920,97 +3130,97 @@
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/00_from_language_models_to_llms.md",
       "contentId": "doc_1de1068a9821de7dc01ac34a77905bb4a71a4ff3",
-      "revision": "9ec82073fcd6b83bb7d624653347f887e687e8c23163420ae222869819f7a88e",
+      "revision": "0b5b4ffbf38ebdcdfd4f2cd71a502d69dd2d21c14b2e7e09e8ab5003dc863360",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/01_llm_tokenization.md",
       "contentId": "doc_18f21feaaeb502caf222f4a51e72fde14297bf0b",
-      "revision": "492c6e8daeaff5d97514815d7a6848a3fdd67d868d5c62a8b5de4d87957877cc",
+      "revision": "b313e5b812fa5a441dc43dff2275bbe88b1caecd9645face5108a6f0db483da6",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/02_embeddings_and_semantic_space.md",
       "contentId": "doc_469c644e74b3cfaf2ab4de37715daff562077e09",
-      "revision": "7c84d354aecbe419c808b8a7c64fc45048b1515ffe2a3577e03c96d5a8ed5ea2",
+      "revision": "c69e5f7ec6fb6764fbae3c423f1a360a9ea02eef6f1901826464e7e01201dd2a",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/03_transformer_inside_llms.md",
       "contentId": "doc_6c112566ead3889c9069808a23721475782ff536",
-      "revision": "524121f4c83db7f1e6c118aeb70eac71ce26823845bf0c11882c064dcc406266",
+      "revision": "50828d76a8655d1c3c08360a370e38b32400fd17718710fefaf5a0aca7d8f893",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/04_pretraining.md",
       "contentId": "doc_7f80ecab3105f738db96c17c5dcf5ff727462817",
-      "revision": "9468e33343bdcc00067ff444e77d68177a7995951ca893f368f124cce1c9f2e6",
+      "revision": "7c4aa9c6dd01641983e4ee52bf4fc153bd89140f58d8193e3e02301e2c751a07",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/05_scaling_laws.md",
       "contentId": "doc_7693ca68acf7bd155fd6c418123c83b2c6dbfdb2",
-      "revision": "847d820d178820dce3a4835cf1c21c8d12663c76249679e137eaca969d96c5a4",
+      "revision": "96b6d6524d4a70c262e8c0869b85f1fd2ffa83a1c5690cb46736a245db0d81b2",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/06_instruction_tuning.md",
       "contentId": "doc_a9a30b9dafb35de92c7a11fcc17ed4dc87e43891",
-      "revision": "4f4c9e9de3dc6b4211c071e2e380f852d69c36f0091f02d35e944981fd4c90c4",
+      "revision": "7c243bf32c7482caac18abe9cd4af9bbb9e1f813865a316e205891e46b2f5a3b",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/07_supervised_fine_tuning.md",
       "contentId": "doc_6aa3c55db51b6d3afb1f2ac93f953e8babab01c2",
-      "revision": "40ab34a86f68e7c1ea68b1a9a5504749109fd47cc5ddb1caae8cf6cacb88f7c9",
+      "revision": "3ac9c369aae5b6d642585bc73b33e6e71569afc5f8950f75350c6684d368f425",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/08_rlhf.md",
       "contentId": "doc_4e8707a1a4749ca0726b655c6253831a133840ac",
-      "revision": "28c492f07b3be4e4dbd97cbae257ac1b01c3aa0eedcd425b7da9da7261e65b3c",
+      "revision": "df87fb1b473c6e7611cf194eb4f1db49ceca95045f3dcbae5fa8a34a2ab37465",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/09_preference_optimization_and_dpo.md",
       "contentId": "doc_3239e8c012bfb21b9851c161ee49f1ea88d6170d",
-      "revision": "2a2a9b6be781616450c0ae88444c641b9c457d6df8c082fceb07ad37cf7da873",
+      "revision": "4963020b8372b3bc12ead7da8475933a544c75c8c80092edb9aab25ae33ba701",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/10_in_context_learning.md",
       "contentId": "doc_7cf3f47dd2499b8f5cf2871b0acef9aacf3b3d8f",
-      "revision": "e688d0ad966d09cd2658df3aa2492fb9a7fb99c39ca067829f7f313c2e978afc",
+      "revision": "648f918acfe6b4b96caba109a16b4ce48efe0bd20793c58982018f5920e39dfb",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/11_prompting_and_context_engineering.md",
       "contentId": "doc_754025facbd7ad6c429ef08c32ade63e5acee11c",
-      "revision": "8355723e393fb5e6437b98ffc0c8d45b9c6e4faef354e47eaf3c1f857d37b68c",
+      "revision": "dd373fc2103584717e5d0aa650547fac86077096c8e9029abbff47cc32206d7c",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/12_reasoning_in_llms.md",
       "contentId": "doc_eb0739a889b99a0ca2d36a0212790481be30d833",
-      "revision": "eaabdde0a384fee86df1287367a172207786d12caf7b4fbfdd8b54d993416a5f",
+      "revision": "cc9148bb9791d60552b5777a4029b7989695010ce1b95d8ffba32cef15dd428e",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/13_hallucination_and_grounding.md",
       "contentId": "doc_5dad9121e4a5998bf705b64cb3eaf5eb7d9d728a",
-      "revision": "06f06b029eeb926e13df8cc1799151f637ef961df0bf4f28ae072f2ec565ec2c",
+      "revision": "4598f550cd406163463d9e9dc0c2189741041a3dd57a96d061e0132a15dfb8ce",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/14_llm_evaluation.md",
       "contentId": "doc_3c6ba5ac4f8169d735c60b092fab82ba48f47bf6",
-      "revision": "8659302f750930e33c7c85fd7dcd1b142db9577fd64a925f23a976864518ab79",
+      "revision": "ca3f6fcdac6c62a07ed1dad0b64efb0a4c681048e4077e965adccc7bdde70a21",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/08_large_language_models/15_llm_limitations.md",
       "contentId": "doc_8788116018ac8b8015b761e6b5b96163c666ebba",
-      "revision": "bc52e633d092b4fefe1c3b7c057769139d8077d2c69f2d02c0774b41ed7c5ef4",
+      "revision": "c47d38016611ceca29aa3a94a12a3e54d6f979fbefe8aaa64971f086654b5b00",
       "aliases": []
     },
     {
@@ -3022,19 +3232,19 @@
     {
       "path": "computer_science/02_artificial_intelligence/09_retrieval_and_rag/00_information_retrieval_foundations.md",
       "contentId": "doc_9cf6a9bbc167f3041aa895c9c7f877d8c1368dc3",
-      "revision": "9e43b1feeac0a9d6bd263a0b3df61026acb55def4c6725bff57f338f7258a1ec",
+      "revision": "152c3943081affd0802d351396ca20242dbac310a4d1c2b75dca80e39380d5b5",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/09_retrieval_and_rag/01_sparse_and_dense_retrieval.md",
       "contentId": "doc_d322cf5bd5da170e99881d31b7286d8d4c08ac0f",
-      "revision": "ec23040b324ff74bc08221f7bd0b4944c9d80c8889c618cfa42ad082496906c5",
+      "revision": "7fa73d3352adc2c93fbdff1309377b0df4466063c6a2055837a4f2dc1845969a",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/09_retrieval_and_rag/02_embeddings_for_retrieval.md",
       "contentId": "doc_19f79696c6121c6b1b03806c33868754e17153f8",
-      "revision": "262f088d3a47a47ee51a9341642422960d4002deea5af11d631fd33ef1960ff9",
+      "revision": "5cfd10940f293eb9b7fdb0a654c583f4d81b0dc3cba2f961d6e3f50bfb35809f",
       "aliases": []
     },
     {
@@ -3226,61 +3436,61 @@
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/00_images_as_data.md",
       "contentId": "doc_431e678ce2115606c01814c190cb9d615673b987",
-      "revision": "bb59e14397c15558cc466cb6d0ffdb71125a9068e7a3aacc3f154f77a7941c6c",
+      "revision": "2bf5d6637e88b936d5b8563550ed26f9664f4b257ab0126570eede1c714f6013",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/01_image_processing_foundations.md",
       "contentId": "doc_8f0a5188cb091479e00ac0b42425aae8beafb9c4",
-      "revision": "8bf3d91635e0c0b7e663ba1b0ac1e395f9dc8f392ba2feff165dba31c04624f1",
+      "revision": "6d71c7a232bbe3378329ac549424d45b56493b90923df63c99184e5fbda73f61",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/02_feature_representation.md",
       "contentId": "doc_97ce9a96084a89cdd4eda53b66bcb626b4c293da",
-      "revision": "6f28ecb9c56ae4d31dd09072d18b6e842f0ad91abae50748d52a984ba5af9e81",
+      "revision": "ed793b1e28735bf98cccf89f6899018a6a53bce0703c6150119e98ed7ffb9cab",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/03_cnn_for_vision.md",
       "contentId": "doc_18c8f6e09deb35ba6e37f30f07b92886b07dcbe6",
-      "revision": "a553531fcb3a78221674c70fc5fd00deb2748a9822e393cc45f26bf59a7dff95",
+      "revision": "39fd8118b998a5fd769680c830de18b6a06ba234c6dec29addd7571abeaf5785",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/04_image_classification.md",
       "contentId": "doc_375f3ab015f60fd2aa5e700bae9d8ac364e0fa9b",
-      "revision": "92e58c92ed9aa76dc81655b279699b044e38ec4df31cd795883c5874c6a35ca4",
+      "revision": "f1b4b39b3552feee69b4e3d9e6a22adb45d58cc4bf9c88ae43f85014d76fbfc4",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/05_object_detection.md",
       "contentId": "doc_842d1b7f3346dd70c15f3eb81d83524d3f94632c",
-      "revision": "a3c43e1aaaf2b1dcb8577d91a2a0369cbc6b77758b25d6873a00f2eba80c5232",
+      "revision": "24397cc020e8ae2fe7ced26b8eeaea69a1cbebc5fa590f5b4ff33bc92b0e2b21",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/06_image_segmentation.md",
       "contentId": "doc_c3a7b8f8e5b6dd1138d801c5f6154448afde597d",
-      "revision": "10e29b010048cda0ad3f4ff85454e3da94b7de230320c749e42621285fb48781",
+      "revision": "3a3655104d10d1a978819359390c7005442231a44a42098a5efc58af1109e531",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/07_vision_transformers.md",
       "contentId": "doc_53cb0aa6762f859361de1b3b125ab32ed12fad08",
-      "revision": "047506bea354b8bdc24ecb309b99f3f0cc9f0bcfa99e292660815faf456da82c",
+      "revision": "0429b1141923c607c416672dbd1f76e15f84b7391de965434b5fb0072602804b",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/08_modern_visual_representation.md",
       "contentId": "doc_77321576780cee77e3691e92a5f0d7a3b24c9d0f",
-      "revision": "e91b2198a61acf40a72fa0d5e7960ea66dd69de23c9a552df3b3f2084c9bfd0b",
+      "revision": "20bcaef7b95f5a3a74f4e6020370c4ecb8360898778fd5b096a5869c63ca7c34",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/12_computer_vision/README.md",
       "contentId": "doc_41a138e25586bb5420161da3be26e02af105287e",
-      "revision": "03f214eb1c7ec3cee377506c279bc97397b454e88a08628ff07971875c07ce14",
+      "revision": "39aab2c82a8b977d96e49d4d127b857e2c7a1712d2e9c89c5dbf1320e5026c14",
       "aliases": []
     },
     {
@@ -3466,67 +3676,67 @@
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/00_mlops_and_llmops.md",
       "contentId": "doc_121853355d9a7819d7a0d1a91b559dcc1c916aea",
-      "revision": "d18e267246541da879af364e73b33dcdaea6f9f7ab35d70ab6a2a8bd1dcb0fa1",
+      "revision": "a760a02428d4f6c0dfab3a0d81089b6746d734977012dedf066e610c12e79c6b",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/01_experiment_tracking_and_reproducibility.md",
       "contentId": "doc_745b347dba417112e663901f207442968c174e98",
-      "revision": "08c5c970ad7e06d02fed2a11fca0d4321fed01867566e86060a0e7ae4ec38b32",
+      "revision": "f9f6685c027d22dbac04a8146b8ffc6772a1c810270805a3cff9ebfe965564e0",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/02_data_and_model_versioning.md",
       "contentId": "doc_5e969ecb10c15aa8a6b3180e566702bc6b5e2a21",
-      "revision": "a81f00bd0b8a44719fbfc91b7012272cb077a4c1f1dcc4d1867b816a4702244f",
+      "revision": "c1600ae0e3cb618316eaa715cb6bbffdf12422b7852d6ebce639888a919c26d2",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/03_model_registry.md",
       "contentId": "doc_108e99b5d92cb890923f1d7e1e3220f88ed6ab22",
-      "revision": "00a1222d1d8b0a730797db56b46c2e9ba67194e9c57a59e21be5a66069feaf46",
+      "revision": "7a5f5d6638b83e867e2d0ab05fa63333d7417206a7a2f555fce74fbf7051c799",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/04_ci_cd_ct_for_ai.md",
       "contentId": "doc_4189ac80a10e5de5d43ef1322aaca6713713dd5e",
-      "revision": "9b004f13ee017b1819cde188efdb2980a3dd7466771b34eb8de20c386beee9e3",
+      "revision": "fff24dac02bd61380dfe97ffaaa1e9df318027d77a270d15d2b37272809f56ca",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/05_feature_pipelines_and_training_serving_consistency.md",
       "contentId": "doc_18bb638542f5e6868a76eb071cf7c7fc7a07fe43",
-      "revision": "df9c918a3c6277d3b55c19b380c1806b8b4e2ca2b5e3dc143ff179078289a8be",
+      "revision": "d942550ec0ed59772322321514594b8ef5a20a54b7c79dc131d5c3d42d000a07",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/06_monitoring_and_observability.md",
       "contentId": "doc_521c2dd656bace2fb7831ad772b003fd719d2d93",
-      "revision": "982ad8a5c79bd59c66863875eb466bcb2ee092a8c02cdae4b0ee2a30a486e80e",
+      "revision": "8026f307346ab2c40d3eb76397f173439653e0d1a071ba553939a4cb25954c1c",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/07_drift_and_retraining.md",
       "contentId": "doc_ddf77c46bf924a3c86925fea94692d5906cf3e90",
-      "revision": "7ab3d05accef8e629e8fe3c361a05d03a6c6f9cce9135e7b7253234806c73d71",
+      "revision": "ec0012ad3ae87f94002ffd637acd2de1fe5a7da936a2817d92a26e734b389376",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/08_llmops.md",
       "contentId": "doc_dbd1946a828c7e5b06f3c8d0bdada0431b713452",
-      "revision": "6aca2e8d58fd1a939f6e6278e599d230e60303fdbf9110eead2910c4d3367403",
+      "revision": "2bddac5be1ce2f992f721c0f31a1694051fe3b290701de76ce295864644a53be",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/09_incident_response_and_lifecycle.md",
       "contentId": "doc_1cf40651e9cb884944531e3e2600e21c102d2172",
-      "revision": "25ccf2d1c85b74a7709005af92caab55b9b245d88066af65b90677d0e4495b01",
+      "revision": "cd259f8d510e04b78e0bd079090339c7e9dee734d64813fbfca518bf4030deb6",
       "aliases": []
     },
     {
       "path": "computer_science/02_artificial_intelligence/16_mlops_and_llmops/README.md",
       "contentId": "doc_681cf8bcd5ec00646589e4b65eecff85b30df99d",
-      "revision": "df81fdda6ec911f92d736051234e0f9fe6251444f6da78d715827c26906a8bf2",
+      "revision": "d34a91c2063082f76e7cbd3240e0a77e48c765f2d50d563f852b31e557e982d1",
       "aliases": []
     },
     {
@@ -5500,19 +5710,19 @@
     {
       "path": "data_engineering/01_foundations.md",
       "contentId": "doc_5f78444fa0f93b0d0d6a34b2caa06424870f5896",
-      "revision": "a0d5b0c19497cc7d8eec66df5bfcb6640ffdd59b85a66eff25d04aeeef2806c5",
+      "revision": "29b5098faac8f9829476254dcc76eb1d0bade405429b8fb2ba7d8174d9b911d0",
       "aliases": []
     },
     {
       "path": "data_engineering/02_pipeline_architecture.md",
       "contentId": "doc_0d3dbbe5c8ece8dbcd171ef775cadbe8a88a4a6b",
-      "revision": "74dd5d6080c60b96cdd1d703491ed72aed00be1c38f6eb68c0a53b020ec09a28",
+      "revision": "2e96b119c35439d5323ff35cb3538d2c5d9cf665cc7b01242e49f98526bb803c",
       "aliases": []
     },
     {
       "path": "data_engineering/03_storage_and_formats.md",
       "contentId": "doc_7cc13bda5bc8d289e524e3f2a7caf40f34e267ec",
-      "revision": "b0ad5affe493ac9aa26e87e7e2d01f20df89945e9437203fbdcd3c891d1a8df4",
+      "revision": "ca0118273ebc567e79df543461129a01991f79d256c14ac6a8bc88a249da805b",
       "aliases": []
     },
     {
@@ -5716,7 +5926,7 @@
     {
       "path": "devops_platform_engineering/09_platform_engineering/00_platform_as_product_golden_paths_and_abstractions.md",
       "contentId": "doc_f74681f9be1ace88c4bc58c1c428ace54f3391a0",
-      "revision": "f83d30b789a8639c80031e9b96ff73bf7e05bd9d2caa49866573efdcf01c9a88",
+      "revision": "19eb52fffd88d951cb4daeb58b3aaa79b1614eaf2b1b042a3bb2350883d2034d",
       "aliases": []
     },
     {
@@ -5908,7 +6118,7 @@
     {
       "path": "economics/04_applied_economics/04_industrial_organization.md",
       "contentId": "doc_7e4a0eab226595c25490f96b89b9ac9c0312aef2",
-      "revision": "fbf0b83607cf4bcfa98c9b22e02df434e0c6cc9bb121f4543e44dc89c5d8ea32",
+      "revision": "d5b97cb4c9390bbdd0839cba7aa0f23210e1689e29137a4bfe3f0799bf7f1074",
       "aliases": []
     },
     {
@@ -6052,7 +6262,7 @@
     {
       "path": "electrical_engineering/circuits/00_circuit_analysis_and_measurement.md",
       "contentId": "doc_6440472e49a5512a2551f6bfce26f13a45b1749f",
-      "revision": "2e6d91c11a0b0181a6b88d8714b20766a3a8552247bc79d8b059889ec42ce6b2",
+      "revision": "c89a266e2d9547d2cd1858143c49e04b3e08c886fbc91e4a145b062a0778d360",
       "aliases": []
     },
     {
@@ -6070,7 +6280,7 @@
     {
       "path": "electrical_engineering/communication_systems/00_modulation_channel_coding.md",
       "contentId": "doc_ede4b6067b1fff1ada3f54928cab113485b9ee39",
-      "revision": "08b30c2d516760cbe9462243c6a1021a0c1e60dad54ca1b8c68bdd0d801cd507",
+      "revision": "4065bcf3c22f4222b40c336a5c2d4ea3f00223b78549a469f3090d846cb929eb",
       "aliases": []
     },
     {
@@ -6136,7 +6346,7 @@
     {
       "path": "electrical_engineering/embedded_systems/01_rtos_scheduling_verification.md",
       "contentId": "doc_0e9fe95c3bccd1e7b7426c121f11f3836f42e171",
-      "revision": "1b2d4b48b44830669cfdb4b1a0e284e528adab9e7e7235be7299f5d2eb9c68a6",
+      "revision": "99bc2ecbe226d39ef5eef48b644037fa8cb87d1b7e3ab0bd52774301d43a3a74",
       "aliases": []
     },
     {
@@ -7228,7 +7438,7 @@
     {
       "path": "korea_business_economy_knowledge_library/38_forensic_accounting_red_flags_and_earnings_quality.md",
       "contentId": "doc_3ada8404eb8831a33ce157873ace46c6fe9bde6b",
-      "revision": "d48e9a45bed9d2656705db3eab18278847dc605594b622ecbfcacd8cc8f901bb",
+      "revision": "7f8eaccaa5ccfcf2d9cc499ed164151a8a1114694aae23a8d2e145e7359519c8",
       "aliases": []
     },
     {
@@ -7246,13 +7456,13 @@
     {
       "path": "korea_business_economy_knowledge_library/40_company_case_labs/01_sk_hynix_hbm_memory_case.md",
       "contentId": "doc_ebd10efed459fea850d6a2a804e66ea6c4527626",
-      "revision": "0855f081f7151ee53e90ef8609f0b3eff1e53d55d415378fa03aa716dfc52d05",
+      "revision": "64131ec611e5c21555afbcea5d1dcc637501d98a11e423ffbef40b59f357f528",
       "aliases": []
     },
     {
       "path": "korea_business_economy_knowledge_library/40_company_case_labs/02_hyundai_motor_auto_finance_ev_case.md",
       "contentId": "doc_2e18730fefef79f22050d924c2b0b0d944fb07d0",
-      "revision": "32dfc8259b776190bd8cf2ab5665cc5cc42b8307ac4e1424577aaecd982c658c",
+      "revision": "7d0026b39eea8917d2539e973f97f3f9385fb5ea92422d9d210d7f6ccc5615ac",
       "aliases": []
     },
     {
@@ -7276,7 +7486,7 @@
     {
       "path": "korea_business_economy_knowledge_library/40_company_case_labs/06_shinhan_financial_group_bank_case.md",
       "contentId": "doc_4a58d3c3fe574dde590cbbc2d1360880814548ac",
-      "revision": "32cf804234ac328253a24626ac33dacaf9062177b24a8f9471d1a37d7e9b1f7f",
+      "revision": "28b477dc07b2e8a06a819a1f175adb10921db81b970071d4ed5ac7e0df14e619",
       "aliases": []
     },
     {
@@ -7534,7 +7744,7 @@
     {
       "path": "korean_culture/19_beauty_fashion_body_culture.md",
       "contentId": "doc_5510ff59e0291aab0f5fe8b88597efab30564f3d",
-      "revision": "b52fb3a87c41c8edb91c2c4a0470b864f510398d8386ccd56add11762ef04caa",
+      "revision": "895396a9347f5091837e9885921d6283941bc6c39692a347c1f16b226d2cab6b",
       "aliases": []
     },
     {
@@ -8070,13 +8280,13 @@
     {
       "path": "korean_history/01_how_to_read_korean_history.md",
       "contentId": "doc_710f0cfce32015abc9ce002e5c83b4fc3fe5e05b",
-      "revision": "372e69403883f3151917d382fec93574692dd6b4207bc995ec7303d2b1787b25",
+      "revision": "3a92c2ed7dc0265f70702f31b7ae4fdf6f2dea6fdd8f9dcf24f5267db31e19ad",
       "aliases": []
     },
     {
       "path": "korean_history/02_prehistory_and_early_states.md",
       "contentId": "doc_6ffb527e2bf5df3e65aa107c6647d585353c1b66",
-      "revision": "7005d6ea7043c156a56c5ed3b9d1503ce72f453c03ab33c935712f8551719fbb",
+      "revision": "7a2072b68196b65f1f35f4b5524e5eb9149216a19b15f23f017ec2b192011632",
       "aliases": []
     },
     {
@@ -8154,7 +8364,7 @@
     {
       "path": "korean_history/15_independence_movements_and_provisional_government.md",
       "contentId": "doc_e7a67fac2f903c28a783e0324373b7a861e6b8d7",
-      "revision": "a2cb744ec43c55ef1e562d4e71d6e744d56d08e98f6da4bb86d622413a7d9b00",
+      "revision": "0576b4634522103cc36548926d47a1638a6801e9c1959f8af498a15f9677c220",
       "aliases": []
     },
     {
@@ -8862,7 +9072,7 @@
     {
       "path": "linux/07_networking/linux_network_stack_packet_socket.md",
       "contentId": "doc_a293ebfbad7953f19939e19622bb84f612c568a7",
-      "revision": "b19d36a3385da280cb9cf37a8a683eccb01c397e9046da6157cb774b21f6bbe0",
+      "revision": "5aebf9d469220f0973c15bf9aa93dc51a6087a098d964011d7c19152c4724790",
       "aliases": []
     },
     {
@@ -8928,7 +9138,7 @@
     {
       "path": "linux/08_operations/package_repositories_updates_supply_chain.md",
       "contentId": "doc_4e7ed425f0430bd43fe9dc0aa2e6f31ad861cd18",
-      "revision": "a142678184d12818dd24f71daaebca34763fd511fda32f178795b88bb8b99283",
+      "revision": "e043ba52642d0bd8de7689311363c2420eaef602b8392b67bab63f5f7f114e75",
       "aliases": []
     },
     {
@@ -9606,19 +9816,19 @@
     {
       "path": "philosophy/00_philosophical_reasoning/00_questions_concepts_and_arguments.md",
       "contentId": "doc_5918eb8b0926cf87f8925d4c54fdd8fd7fb2176f",
-      "revision": "a8ceae445f54f62a35c0c817ecc731e13de3c4ce06f115364401af1da1093944",
+      "revision": "8380c041aea1d7f06e9c1971410d2c0e41d4d8f4aaaf29c5faa78d2c4e4cbf41",
       "aliases": []
     },
     {
       "path": "philosophy/00_philosophical_reasoning/01_logic_validity_and_argument_forms.md",
       "contentId": "doc_cc4337847bd397261ae777e71ae5348698bb1696",
-      "revision": "e1de2d012035467c8fa57850e025b7db46fdfffe97946fdf1d0f1a22ab539b45",
+      "revision": "cbc19ca8e63394798abab2ee832753c6ac71f91e53bd8f2fe0a926b2072e6a8a",
       "aliases": []
     },
     {
       "path": "philosophy/00_philosophical_reasoning/02_thought_experiments_and_conceptual_analysis.md",
       "contentId": "doc_db0c4e08da328250a73f78e887b66b767add39ea",
-      "revision": "cdaf71103b927f9e2c8686c8fcd71eb23f09815e65bef318570698fddd8d14bf",
+      "revision": "b2725168a6666bb18058059754f14416bc0697b8b2c618648d225aaf4865667b",
       "aliases": []
     },
     {
@@ -9786,7 +9996,7 @@
     {
       "path": "philosophy/06_social_political_philosophy/04_marxism_leninism/02_marxian_political_economy.md",
       "contentId": "doc_a8365fd041cd5b8355f6ef7e8d11cbcc0104a500",
-      "revision": "184a83ce71dfe8e318336ca581eff811ea8f3d9ffce17241a0d9d433099c5d01",
+      "revision": "b16b8e8661070ae26f817fdc51c8527d17352e7a7d3a450eee7bb44119aead09",
       "aliases": []
     },
     {
@@ -9798,7 +10008,7 @@
     {
       "path": "philosophy/06_social_political_philosophy/04_marxism_leninism/04_lenin_party_state_revolution_and_imperialism.md",
       "contentId": "doc_da06c73ae650b186af492b56cb536264018bf147",
-      "revision": "5737eeba63759c801ef33e35e70955d88c5ddc9a7dc414691d5027f72d312862",
+      "revision": "42e84b6ab6b94ea0fafc7faf15ed8349fbc21bcdd0fc7b9a96e48d720d5263d5",
       "aliases": []
     },
     {
@@ -9822,7 +10032,7 @@
     {
       "path": "philosophy/06_social_political_philosophy/04_marxism_leninism/08_major_critiques_and_open_questions.md",
       "contentId": "doc_008ed4caedff4b92d953d67f1ea276ca36fdeec6",
-      "revision": "32c7aef97bcb6c56d6c29c4d049e0ee888e404f220cf995208bb25447ad799f5",
+      "revision": "fbb70118acc38b50b9b819de4778031bdc6cf4d0470e010bcc2bbab5f93b9537",
       "aliases": []
     },
     {
@@ -9900,61 +10110,61 @@
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/00_comparison_framework.md",
       "contentId": "doc_97977d70a8e982a521d1410792606edc44fb9f85",
-      "revision": "72da22685f98905ffc377c2d60a2d5ad2919b3fd9a089dbeed29164dcef55500",
+      "revision": "7dce1b99d8165aaba04caca9f0234be2c91830b1b4a7511b5839977aab513839",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/01_liberalism.md",
       "contentId": "doc_309fd7654f0727d826c5ddcd03a2a198ba3af56b",
-      "revision": "1920a91669202ef445bfe80ec0f80d8bb1f5a983635e0c8cec4e96fb0fbf2b33",
+      "revision": "9c50f46c5c33cfbc4075c6ce927b09a79342badcc47e8924d6f82beca602db7b",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/02_conservatism.md",
       "contentId": "doc_119487d2bcdc069d4ea4fd117a0d98ed45e06958",
-      "revision": "2e6c840002cd1e59f421939dafb337cf0775df5bc10addbb43d9bd21081391f2",
+      "revision": "c52aca4bfb44746f30ab897ffc5fe804d35aa910877fbc57b56874bb088ee5ab",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/03_socialism_and_social_democracy.md",
       "contentId": "doc_77c6e011ee4eeea116ed6079a47a9e3f7a5ee47e",
-      "revision": "c4826d6270c4cb7f89efc5da033ec7c17322ca89794ad9a211c3bccea6223480",
+      "revision": "11ca043b4fdf4686652e4f610de9148f4d84794b8f9190f26fbcadf2160c7be8",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/04_anarchism.md",
       "contentId": "doc_9f5a6fa60ba05e5abe65cb8b5fd1bea423c2290c",
-      "revision": "84a882a495d193aa2509fb6b7a14d2490384d9c511f788aae7479e61fceb02d2",
+      "revision": "651d9a4f5254a12a9c764a0c0bfd38be46287218cc03229277665bd098970f8c",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/05_libertarianism.md",
       "contentId": "doc_0b4b5ff4eeedb18d0d12649b7b95d59e4214face",
-      "revision": "33d1703ff09c9d6be5371e623f846e309a3005ad2f7dd79da110abc3b47f2f5b",
+      "revision": "ff312b19a9e56271aaa7615f4ab14e2b6dbd1fe9ac7f5de80f26631b072eca76",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/06_republicanism.md",
       "contentId": "doc_383a2d27c4dc3b3648e513c94077a36306118e86",
-      "revision": "e98c1ff0f67dabf5a526128f0f9bd2a3ee76a3980f776c5ea3e6c51a831ec0a8",
+      "revision": "5ec23eacceaf4655c95f80973fc2851273c3b1e4c66298f3076e3606586758ba",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/07_nationalism.md",
       "contentId": "doc_5d7c5e7d3fe7274cb738d39c726eb820034c7b2b",
-      "revision": "a25187583dee2557093dedf82d6fdd6ec8da74c4a3b3488a14e7b5e41fe40e0e",
+      "revision": "72ba6d40c10ccb807a1d5023c36bfea22d941c5ab22d427ff9ccbaea6ab9cc44",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/08_fascism.md",
       "contentId": "doc_100d5af247ab9eeeed74e898495543addf184a31",
-      "revision": "388f695373f9bf40035f95b19aa642ffd69728db1cea59f55f7ca9bbcf717ace",
+      "revision": "4df48ae26e01f3c7c1854736c992c48f2929388de3400cced6deb575731dab3b",
       "aliases": []
     },
     {
       "path": "philosophy/06_social_political_philosophy/05_political_ideologies/09_comparative_synthesis.md",
       "contentId": "doc_79aa350cbf011903ca2f0467bf8a6f6992e33607",
-      "revision": "47e1849c066cd3bf8fff351d4fb482c50929c8ad6ebc306d3bf3ed2a0b82acf0",
+      "revision": "2d63dec920a07a1c11e9200401b568cc07ba3ca7f6e0f72595ba1cabccb052a4",
       "aliases": []
     },
     {
@@ -11388,7 +11598,7 @@
     {
       "path": "sociology/00_sociological_imagination_theory_and_social_structure.md",
       "contentId": "doc_87b475fc5e60d966e49fa6b6580d83061743b8ba",
-      "revision": "a4cc8077639ff6f99ccfcbfe13f6f903c94faba4cfd825d4c9d8162557275871",
+      "revision": "6ee29910d48383eb12aed965798b17071f0bfcccc03f269dc46830ac456cdfb3",
       "aliases": []
     },
     {
@@ -11443,6 +11653,138 @@
       "path": "sociology/SOURCES.md",
       "contentId": "doc_3e30a55f74ff3e428f059dbf96c5a853bf5c1a85",
       "revision": "78fc0246c8560272f03ac319e7d81be3d0460339dcac3e67860103b220925f16",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-1-mo-hinh-du-lieu/01-nen-tang-mo-hinh-du-lieu.md",
+      "contentId": "doc_5e2e7c4356864ff042a563142ee7660ce6d2825a",
+      "revision": "9d032b6f9c476866285d192bd862b9d3998f806631fc87875afc6eb675fa6c0d",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-1-mo-hinh-du-lieu/02-erd-entity-attribute-relationship-identifier.md",
+      "contentId": "doc_929c456deb3e93f8059aa3a2dcc06b297ef6edb3",
+      "revision": "4d6fcfa82549072b6eb2d5a26d291af3479c043d1206a225e960f363343b2c8b",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-1-mo-hinh-du-lieu/03-mo-hinh-du-lieu-huong-hieu-nang-va-chuan-hoa.md",
+      "contentId": "doc_2ea1cb469c1d0412bea1d242e2508a39eddd67ba",
+      "revision": "b25635ba36b0f475e68216dc1a8ff3c4d14e30fea9b7b33409968165bf1e0005",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-1-mo-hinh-du-lieu/04-quan-he-transaction-null-va-identifier.md",
+      "contentId": "doc_2938ed4266ac457cf97b30ac2fd478306077af89",
+      "revision": "897dff6be17592bf413b2d0069cbae2acdc6d525fc94b126278f2c08f7d65b77",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-1-mo-hinh-du-lieu/README.md",
+      "contentId": "doc_3973f033eee09aabf1ce1e80c18b279c13c14543",
+      "revision": "67a48ddf0e1912ab96a9bf184f98074d8d1b81fd911456c15fa6c98e3c4028a3",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/00-sql-select-ham-va-loc.md",
+      "contentId": "doc_5b4e7b574b2971925cdb16cd8caf871cbcb720e0",
+      "revision": "d90ac2bb8cf55a1afccc5f03ff887c3bff1002c0f4fc4504f3b15195dd70f389",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/01-join.md",
+      "contentId": "doc_feb39018045bb14db397c57c41698f8f6f18d36b",
+      "revision": "8318de4f94ab1515ec71d93c8f2fac399c491bb1ba4d7e9604883460f351c7ce",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/02-subquery.md",
+      "contentId": "doc_a6a1c8d8d088a035017e2fd5718e5903d335a554",
+      "revision": "5ae918ff348488dcca0c3e25cebe10650802ec3968dac224dbda6b6d05e8e706",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/03-set-operators.md",
+      "contentId": "doc_98b621cfdc8a47ee01b634465110dc5117de7ea7",
+      "revision": "422950c2278f3db0bda6ea923a6559faadcd0c57b556b5afaf290af101375ce8",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/04-group-functions.md",
+      "contentId": "doc_8a8f901c2aa280ded2efc1f2f7e3cff73f6ed53e",
+      "revision": "fb43785147c497ce485a5b60cd249b6ba25ad296614225a9aadfb4a021c2b6c0",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/05-window-functions.md",
+      "contentId": "doc_4daa7da338afa9cdcabd86e164bbb02bb472d30f",
+      "revision": "fdbac30b970ebfe776db3cbda6282bd87f842870ebe475b9f4c8b26583d6c971",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/06-top-n-va-pagination.md",
+      "contentId": "doc_2d34bac42ab73cee4bb4ab78567b6547431cadc2",
+      "revision": "2855de4b48b688d7a2c29ddf4368c07836ae1e97469631e4a47752ad13e3c2b1",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/07-hierarchical-query.md",
+      "contentId": "doc_bf6fcd7d7225e8a9c660e89ebbd1eabe63f0d62d",
+      "revision": "440ad48f2d161f22df0fb574dd7410d4e9c336cb9800f441113cf5c7d33e881a",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/08-dml-va-toan-tu.md",
+      "contentId": "doc_90b32f2fbd79d4dafe61f6031daae86690cd3b47",
+      "revision": "26ed020649f55c06142b493219625e3b71c744a2c3025e3c868dab136efccffc",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/09-tcl-va-transaction.md",
+      "contentId": "doc_46e0eb2629af5f4081c1c2bc4ead812810e41d46",
+      "revision": "f01e3c8901add051512998061fc73fd1bed22b1c28e2d6c626f647f5f5480ce3",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/10-ddl-va-dinh-nghia-bang.md",
+      "contentId": "doc_3fa13b6030952b32594bceea7b2fffc93e9f82f6",
+      "revision": "2d19c2a50bf1245f01cf24d186b707408f7c970367966bb49759ccaf5c66bd37",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/11-constraints-view-va-doi-tuong.md",
+      "contentId": "doc_765ca6ea82b24a7ae5f291136e63a912d477960e",
+      "revision": "b007afc1d64d58d710d2a01c2f9ef5fe75d9249b02c30742c2a6f1061c3a7e52",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/12-dcl-quyen-va-role.md",
+      "contentId": "doc_32aa629b14abfada2656110cb8f2155620cfe121",
+      "revision": "cfe436b28053e6637d7fc675954f66d09fdc8abdeba9e3f870fd83ae1a3bf672",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/13-pivot-unpivot-va-regexp.md",
+      "contentId": "doc_1b0a092062450c883ffad0125ee8d00e9eed4240",
+      "revision": "687b55a15c6464732d9a90f204c183bef99d578b1ab70c5de77a6d48714c2877",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/14-sql-style-guide.md",
+      "contentId": "doc_18a3ecdb9fb5da23ec5dd7c27ee9696a1bb62818",
+      "revision": "62c99b2fb81e849b9114d1fe5984d69488b3bd68a3be24d077449331807a7671",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/mon-2-sql-co-ban-va-ung-dung/README.md",
+      "contentId": "doc_707d5c631f0390a67934810b06f1b26591b454ca",
+      "revision": "609bd03281c88032e4ca33e66aade80472a4bbbfcc494d6406d1af9b689cdc9c",
+      "aliases": []
+    },
+    {
+      "path": "sql/output/README.md",
+      "contentId": "doc_4bf5e701968128d887676179099f682d1a4101d1",
+      "revision": "96c5da3d0e5494d6170bf35a43ec77ed1886987a1959195528ac70c1136b4b88",
       "aliases": []
     },
     {
@@ -13698,7 +14040,7 @@
     {
       "path": "정보처리기사/output/01-software-design/01-tai-lieu-hoc-day-du.md",
       "contentId": "doc_598d0b796fa68578bace473c8da4640d58860739",
-      "revision": "f4e465b9c182c5d7b02386d2aa4150c2df12e29aa6836bde41359ff67ad0ac6f",
+      "revision": "019fc0485dcae354a6e2766840193997f727f0c4c6ec7d695dadc65226f07e74",
       "aliases": []
     },
     {
@@ -13714,9 +14056,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/01-sdlc-va-cac-mo-hinh-vong-doi.md",
+      "contentId": "doc_f3e010e6bc8dc3e4597a454fb06cbaaa00ff5afb",
+      "revision": "2d7abc1234ca98842599db4846231e0bd9f2d02e213f6c19adaa3d29b9b43d1e",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/02-bai-hoc.md",
       "contentId": "doc_6c96400fb726126c25fd450cb202b6e1d6322da9",
       "revision": "6c379f358b8d3ec6cfadd030b49bd1ab42bb44dfd20da3105bd4e21c8faa919c",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/02-phuong-phap-luan-agile-scrum-xp.md",
+      "contentId": "doc_bc9add991cce658835722e2f04fd42ad355789cf",
+      "revision": "cc211fbc072eebbf5f19188124321497bb61d2fc11917806f2a763f0542fbf68",
       "aliases": []
     },
     {
@@ -13726,9 +14080,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/03-ky-nghe-va-dac-ta-yeu-cau.md",
+      "contentId": "doc_cd49b501ff77e1c897247bb23c8d1625e194db27",
+      "revision": "be5d4571a7d5af203f5d7c7224fa2b7f84b318b2e61695fb7470c1df3ce9cea5",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/04-bai-hoc.md",
       "contentId": "doc_c801e73ef62ab10c4caec630d3592c72a7c97fa3",
       "revision": "17fa94008359d63012869eddb170bc7401de9e7e008fd7d46faa1797cf9a9313",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/04-mo-hinh-hoa-uml-va-bieu-do.md",
+      "contentId": "doc_926cb9b8a4c53bfe270184a39507bd41d9c1c274",
+      "revision": "39178c2909a46952e0792d8be70d71c7adaa3641c696a1695af1fbf61322014e",
       "aliases": []
     },
     {
@@ -13738,9 +14104,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/05-thiet-ke-giao-dien-ui-ux.md",
+      "contentId": "doc_e5e1b3357e3624401491afbc508a5dc908530ba7",
+      "revision": "4f8a4b082468ad9821522e5a4034a50663af51f5b44dcd17a9791acf06e9edf1",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/06-bai-hoc.md",
       "contentId": "doc_4b6847dfbfa7a546824f0b8006129784a53bddb6",
       "revision": "869ec798e5cf2963ffcce40c450bdc80e1704928f6041b3341141baf6ec24b79",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/06-thiet-ke-kien-truc-va-chat-luong-phan-mem.md",
+      "contentId": "doc_1967581887c30916ed5d3f82436d8e2a46d963fc",
+      "revision": "14d77a07e5b49fda6f4c7d40e29fb8bae43169d7dad998243516873eb0b5c65f",
       "aliases": []
     },
     {
@@ -13750,9 +14128,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/07-huong-doi-tuong-va-nguyen-ly-solid.md",
+      "contentId": "doc_395f3d71ced00d6178151729d9b88a6fbb724d19",
+      "revision": "52a674cb70d535eed693ac7e517d5dcba8454ad1d9a061887764abaa43c09c3f",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/08-bai-hoc.md",
       "contentId": "doc_444ec0b52598d8991bce72fc9850aa336ef9857a",
       "revision": "f32032d4098d75eb3d36ba6dbf32bd4aed03231c92bd8ce48605ed9a4e8d4f58",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/08-thiet-ke-module-coupling-cohesion.md",
+      "contentId": "doc_1d079200635e7d8cd097c1cd7e76e50fd7b183be",
+      "revision": "4f2438e62f928e18a3315f6a2bf5d67ac968af1a8ba25869c12fbf275fea4db1",
       "aliases": []
     },
     {
@@ -13762,9 +14152,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/09-design-patterns-gof.md",
+      "contentId": "doc_26d42a860cbd7cd4e780aac34729e8e685dd5083",
+      "revision": "5538fce00a76ceb03eb85fd34ed168fe9cf56dabe41a6014080bec2d3cb58064",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/10-bai-hoc.md",
       "contentId": "doc_3b2a6a7c62f54b65d5f9138520ca6133ce7aa67d",
       "revision": "c347e1f3d49fc5fb0f7f85b3c1583a18bbe4ffc469ad9a3e8c379eb9ac9dc8d8",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/10-giao-dien-va-middleware.md",
+      "contentId": "doc_ea801fa5b36e58488cef96fcd13b004956caaa3a",
+      "revision": "d4aae13bf0bb7d6d0ae6bd42af26e0026a216bb42bef0190877ad946aa8dd3a4",
       "aliases": []
     },
     {
@@ -13774,9 +14176,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/01-software-design/lessons/11-co-so-du-lieu-va-quan-ly-giao-dich.md",
+      "contentId": "doc_6f922169b306896100aecbe3f4066809d4abfbf2",
+      "revision": "a1135bdf42e65a0f3cc8a533080cb6dd5b66a5e922dde11a7e046ac9501bbdc1",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/01-software-design/lessons/12-bai-hoc.md",
       "contentId": "doc_a3a642c5394310ee726c0551d59c060281108af3",
       "revision": "88e6b8183f95d719b8506b4d9646b2ed9fcaa855831cb64f9dd026ea00e6467e",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/01-software-design/lessons/12-cau-truc-du-lieu-va-thuat-toan.md",
+      "contentId": "doc_553b7b2228e9886376dac02e10f4adba1f7fa08d",
+      "revision": "3b94b5fa415dc012e89b0a685768378c847e8cf3a280430ea29651e489dc8683",
       "aliases": []
     },
     {
@@ -14124,13 +14538,13 @@
     {
       "path": "정보처리기사/output/01-software-design/README.md",
       "contentId": "doc_636ec80baace4479b94b78b547e8c62984f4c21f",
-      "revision": "bf6c56832cffb28f6510d4f8367c927ad340a72740dc94c9a1d025ef65e85492",
+      "revision": "dfa75be3d3612a9b4bf956a7498f5df5e393dad3752298b88096070a3754d886",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/02-software-development/01-tai-lieu-hoc-day-du.md",
       "contentId": "doc_372527a4a6b898baf7945210fc9c58d83053ff8b",
-      "revision": "2ceac9a1e87729d18fbb94977cc1b086623c8453d8ddfa9cf76fc8e476df3ba6",
+      "revision": "14762ab4b94edd639cbd4824d279dcf8246f577f90ea4db435a56d7e880aef79",
       "aliases": []
     },
     {
@@ -14140,9 +14554,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/01-cau-truc-du-lieu-tuyen-tinh.md",
+      "contentId": "doc_4ff769ffff2df9aec8d8c9618d62c9d08d6fa572",
+      "revision": "f401c54162c2301ae0a86f8399f72b87052adefcbc2ad492316c9d49e5bf21ac",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/02-bai-hoc.md",
       "contentId": "doc_27bd3aed23ceadebc1ce156ffbca23d4a0f91a27",
       "revision": "089c3c4b1c6d9cc3b4ebbe2ef159724eb78c386dd9311d31eae46fa4d6c4fe36",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/02-ky-phap-bieu-thuc-va-stack.md",
+      "contentId": "doc_167b4a70f1a8d3c78052d6ca9e638e3d07e5cebe",
+      "revision": "fa6d08551fd0ac9067b4c8233b4798ab310a9a0028e9e5cb8d0eb202f6fae0d1",
       "aliases": []
     },
     {
@@ -14152,9 +14578,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/03-cay-va-duyet-cay-nhi-phan.md",
+      "contentId": "doc_4a2e9c80772eca55ba391b4dae215f86c6d32a42",
+      "revision": "6d9aef932a023dece05cc98a9eddb9561b6f706e09b1e7f1d2b82f56cfe36cd6",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/04-bai-hoc.md",
       "contentId": "doc_16b51b9bab69d9a80e7061173d270b1ffcf041bc",
       "revision": "3e503cd32a8600e7d320f4d06ddef9fec833325ca17ea9e413566c224ff6b97b",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/04-do-thi-va-bieu-dien-do-thi.md",
+      "contentId": "doc_29010a00a6586dd45e37eb99b1d34b06a3981953",
+      "revision": "62cadeaee2e84c5a4748d1d4fbcc7ef2e2b13819cc4adb04ddd6bc01a6dc296c",
       "aliases": []
     },
     {
@@ -14164,9 +14602,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/05-thuat-toan-sap-xep-va-do-phuc-tap.md",
+      "contentId": "doc_729f7a4346c1de967a26004d487006a791b791c2",
+      "revision": "c81dc5ba081085fc0ebaf4dcc1800b904b17a2283a314783b5bc67a3b1b7f82e",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/06-bai-hoc.md",
       "contentId": "doc_bf17bd4e198cfde0146b3777c7f9ef5f62b364f9",
       "revision": "93c87b423ebc59d12c959f9921586bfcdb1ca74521324937a00a04671dac0ae8",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/06-thuat-toan-tim-kiem-va-bang-bam.md",
+      "contentId": "doc_3170c9300aebdf93ade601f1fe1f724281319d37",
+      "revision": "4c46961a47f3845bf9c9b538ebc1e5761a11666a53b5a4add4ef6b337bc54112",
       "aliases": []
     },
     {
@@ -14176,9 +14626,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/07-co-so-du-lieu-va-toi-uu-truy-van.md",
+      "contentId": "doc_0927eef53be6436962004621e87c21c105ace3da",
+      "revision": "d8617ac4eb3a8636216957c925c285247889baac6948989c70c4fb103d98e8b2",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/08-bai-hoc.md",
       "contentId": "doc_aa1f6a07d46938ec3c16d3f16917a817a7d023c0",
       "revision": "d222b9908a1917b1e5d6e70164fe236e9a1fbfb31dfa6a341d0145f244a38691",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/08-hien-thuc-module-va-ipc.md",
+      "contentId": "doc_e40a795034783e7d25b651ca8a226edcfcff5cd9",
+      "revision": "9e24ed5c2e4b041d74940bf64ffa5472cf13d392023d39ff909ae3e337bd2e5c",
       "aliases": []
     },
     {
@@ -14188,9 +14650,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/09-tich-hop-he-thong-eai-esb.md",
+      "contentId": "doc_882af51c50bc092d5ab732bde04b4f84c000e2d4",
+      "revision": "3dc7f25c741d60f750b9d479e88b8c8cb55e7dbad255888f0c1e1ed7c90d1b2e",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/10-bai-hoc.md",
       "contentId": "doc_2e244f0ee015699b6da8d20009bfc377c4337d4e",
       "revision": "e2f013d1d7be15565b744075701aec68f9de6d904417d60b9ac4ba6efb2f3c68",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/10-bao-mat-giao-dien-va-kiem-chung.md",
+      "contentId": "doc_5cadc2136c82acbdd7a5375df191289dc02d5739",
+      "revision": "7de26ad31f01c8e55b7860f6d3f4ba56ebe91c7f06a56040e199976e38d695c2",
       "aliases": []
     },
     {
@@ -14212,9 +14686,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/11-dong-goi-phan-mem-va-drm.md",
+      "contentId": "doc_988b217c1beda09d24f3e9b429dcf02db5592ca3",
+      "revision": "4995d3ac3fc220f7aa6dcdd9154e902afeac0287395fc3dc851ac93d0fe488d4",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/12-bai-hoc.md",
       "contentId": "doc_b80426adb51bebd42c64d0776a427cca091faa4b",
       "revision": "f85da2435616b8f3ed9d01c8f069a8c8be2ad1bf3533b83d3602bbea336bd4cd",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/12-quan-ly-cau-hinh-scm-va-git.md",
+      "contentId": "doc_ac38f2209d0eac640246a6d663742dd5b46fc1be",
+      "revision": "f3cebd29426419182e03c495cbfa5bc9eb62e421822bfcca86c4f63bd286eccf",
       "aliases": []
     },
     {
@@ -14224,9 +14710,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/13-ide-va-tu-dong-hoa-build.md",
+      "contentId": "doc_552b121f11a60643c2a0d3d282b952c7008e3a97",
+      "revision": "2f5e999b229305a5ef0cb341fe6786c70d4e464c70f290b2849246f385fc228b",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/14-bai-hoc.md",
       "contentId": "doc_81e08f10a1170821458a4117a5f0f8619d3dc51d",
       "revision": "15b62c940198918518783a56fd0391fa11c34ecab15166ad9b65b167d7292c71",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/14-nguyen-ly-va-phan-loai-kiem-thu.md",
+      "contentId": "doc_39fad653c7885ea65143e3c42e865c27a27145ff",
+      "revision": "1b243506ae2887c2459410779e7750e2acf74d01a044a4f8b8a2b95015fe0860",
       "aliases": []
     },
     {
@@ -14236,9 +14734,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/15-kiem-thu-hop-trang-va-coverage.md",
+      "contentId": "doc_44f2827c61a46212d614da9c45db60fb968124c9",
+      "revision": "d803d323cb3062a2554fa318b34d212aabce003d12461ce5cf218d4190a8dbdc",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/16-bai-hoc.md",
       "contentId": "doc_bc029e778db630c0197d1b7deb68437c6936262e",
       "revision": "fadb8260139cd4d9f0741098b9a52251db489544307950f932b93c75aa032910",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/16-kiem-thu-hop-den-va-test-case.md",
+      "contentId": "doc_fb65e46b8702d0ef0fb7e2da2a9c6552143a5fb9",
+      "revision": "c94837d52a3dad92666bae13f13f48fa2222347ff6310fa18dad456fd67d34fd",
       "aliases": []
     },
     {
@@ -14248,15 +14758,33 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/17-v-model-kiem-thu-tich-hop-va-oracle.md",
+      "contentId": "doc_3d5033e0d1ebadde04c978ddaf1fa7fecc0ccb2b",
+      "revision": "047b5dbd99635bac1afc6fd3a9b3097f661c635d59b50d719e374290fb6c9633",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/18-bai-hoc.md",
       "contentId": "doc_a86f5f003e020a07af19d85784bff33c690a44cf",
       "revision": "72f4caa935636398288958b526bdd207e695b4cbb42cfb7552ce9660af7a5e86",
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/02-software-development/lessons/18-clean-code-refactoring-va-kiem-tra-tinh.md",
+      "contentId": "doc_3479ed3be030699b82fc09f4027c3be53b5d1537",
+      "revision": "e743a24825edf305eca6da43113a01e9cb02a914c7cced58f45f550f6f269473",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/02-software-development/lessons/19-bai-hoc.md",
       "contentId": "doc_63f089b7b340297665b77cd91b6df3432885e8cb",
       "revision": "06c53a017071c82a2046a381171ea1ca6e284e113b6a657d4937cd1e61de7d57",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/02-software-development/lessons/19-phan-cap-bo-nho-va-phan-cung-lien-ket.md",
+      "contentId": "doc_5c75ca5b492b692c2cf459b2a44640fbe7e814f7",
+      "revision": "b0809f3a4476dd0c737f4b873ddfd4c87d9f4c7f50c91f113e6ad68104f74929",
       "aliases": []
     },
     {
@@ -14742,13 +15270,13 @@
     {
       "path": "정보처리기사/output/02-software-development/README.md",
       "contentId": "doc_84fb682d43a8438ca24166cf6ea234698f8bf5d3",
-      "revision": "1059d6e316bf068ab2ad323ba5ce82913a615e89c8df7e578da8c973a32b0f68",
+      "revision": "da331274f01ef5f9461bef30c9e4ca16e9523e7d1bd3b936c848b2299d38bc40",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/03-database-construction/01-tai-lieu-hoc-day-du.md",
       "contentId": "doc_48c7630fd339afdb5bf73220938e4217394a9258",
-      "revision": "5df6d3637421695c69f1208c25dbc7d0e02f91845012e4f787196a385c76efef",
+      "revision": "b42708c1c19fe6b838d32cb03acd8814739fa0f409f3dea7e0724917c917c829",
       "aliases": []
     },
     {
@@ -14758,9 +15286,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/01-quy-trinh-thiet-ke-csdl-khai-niem-logic-vat-ly.md",
+      "contentId": "doc_33d65ecb85c875de1a06dd158c2db40824167826",
+      "revision": "4a187d86a914eeedfafe9a3dd04e5d30dfe244512024702dde14907d8d979e3c",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/02-bai-hoc.md",
       "contentId": "doc_05bf6dee5974d46f83d5b124683f8b8e5e940c24",
       "revision": "cc055e7851b5193dc6ed731140f9a72354164ab4ab278f26668b1aeb49b64af2",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/02-mo-hinh-du-lieu-va-bieu-do-erd.md",
+      "contentId": "doc_63d1faa76bcf933dea704baf3569e5883d872bac",
+      "revision": "cddb6623f9a59e9726955230db5b59631ad78a1f056ac8b55e3e931bd7c18020",
       "aliases": []
     },
     {
@@ -14770,9 +15310,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/03-cau-truc-quan-he-schema-tuple-attribute-domain.md",
+      "contentId": "doc_b62810b34ba88f8724c27202b60a2a7c225b1a48",
+      "revision": "51a2eace949c48589af16ca22522334e45f364a4d5b02bea6f152137b2c90ce6",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/04-bai-hoc.md",
       "contentId": "doc_9438f9e026121105a3b8f2f856d1e4b4b19db756",
       "revision": "b73d1e01f6ceb207bf25e6ad4e839399a2fe4a352edc4df14b05a11b9ea9c310",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/04-cac-loai-khoa-va-rang-buoc-toan-ven-du-lieu.md",
+      "contentId": "doc_fb484e1aeff5506e501b8d52cb3fd52bc1fd3bd4",
+      "revision": "072ca1ed1f911c16149da0478248de16848d099cd9280a153d234fcc9fcd4c34",
       "aliases": []
     },
     {
@@ -14782,9 +15334,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/05-dai-so-quan-he-va-giai-tich-quan-he.md",
+      "contentId": "doc_99a9bab4c5abaa4f77bf8772a7515377081c3583",
+      "revision": "6de4eacf4d2b747540cf5752a68ce71e7ff32f4946450dc9bc7e956bcc5a33df",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/06-bai-hoc.md",
       "contentId": "doc_9d1390f804bf8dcfcd0c90676ef28cdff7a09e90",
       "revision": "74733a690f53f38cc959e9a3c7b5636b745d4a1f7644aa43b9b0a7dd8dd9b138",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/06-bat-thuong-du-lieu-phu-thuoc-ham-va-chuan-hoa-1nf-5nf.md",
+      "contentId": "doc_d615a186727de7fd34c9db5d5bb48a41ce80fcd1",
+      "revision": "77f82022f8d7cc7e6274a267e3aa2cf1bb1c2cdef0afc35a52e113564e4e081e",
       "aliases": []
     },
     {
@@ -14794,9 +15358,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/07-phi-chuan-hoa-va-toi-uu-hieu-nang-truy-van.md",
+      "contentId": "doc_05fd3a8296183188e36b20ca3c013f3f3809a82e",
+      "revision": "a8c4c0e892ee3a5df64c50ae0efce22a0106d79a8c56e6e85899862325372346",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/08-bai-hoc.md",
       "contentId": "doc_c84620c4f23f691c5b9d81fc381e0f7cf7e45638",
       "revision": "fb417b8c737005d6fe0d9c37724b28103e5783d81328bb4ac8d4a4109f6712d6",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/08-giao-dich-trang-thai-acid-va-dieu-khien-dong-thoi.md",
+      "contentId": "doc_1127e5634f5e2a05a374cb12000b7843130e6756",
+      "revision": "4b8f4a12d18e35f971ab9d83d061a305bd3a6687a28e6999307a74b3e61180fc",
       "aliases": []
     },
     {
@@ -14806,9 +15382,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/09-ngon-ngu-sql-ddl-dml-dcl-va-procedural-sql.md",
+      "contentId": "doc_a400360bc0c288cd59daf3fa66562496a72b924a",
+      "revision": "6f5993d0a95dd6f57e49ce208994d63c4b4be0285c1275c563a737169c1d3e12",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/10-bai-hoc.md",
       "contentId": "doc_e3baa135fa4d14a1465cdc5ee5afb2835b149832",
       "revision": "6cf2b6bfa2fc0fab17b0df7e7a546d32f43e781dbbb8951de40da4ae638ce86e",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/10-view-index-system-catalog-va-ma-tran-crud.md",
+      "contentId": "doc_59590f630570a2c5904898accdd0ebb01bc5c10f",
+      "revision": "cb3f50fe6277f7d92136268a4a5863ba3c923b955a75f0c360e3aa1723506d08",
       "aliases": []
     },
     {
@@ -14818,15 +15406,33 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/11-co-so-du-lieu-phan-tan-va-tinh-trong-suot.md",
+      "contentId": "doc_5dbe251d3eb9c71246d0e647b09aedec1907adb3",
+      "revision": "f5efad962de6af7f232af1202aa4978a412cae6b1f7199e86c7e782f6ad0ecf1",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/12-bai-hoc.md",
       "contentId": "doc_8606a62944847beff7351a4a65fe5d1f63479476",
       "revision": "2a644102e59c0a1d1fc708c3dae18117f0e04f4ab74a057116dd8e4b3afd27e6",
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/03-database-construction/lessons/12-phan-vung-du-lieu-va-bao-mat-ma-hoa-csdl.md",
+      "contentId": "doc_1a62a0c66f57dc964453fe245acaab1b788f512a",
+      "revision": "ac89c951e26c6fd8cb1859943ab9dbd6e9a9e4e21b8f2782be5e9b4bd25ec03c",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/03-database-construction/lessons/13-bai-hoc.md",
       "contentId": "doc_cb5ddda0096c997617eacc0cac03b50f7f408eec",
       "revision": "61d850c9e059e07039505081755f6c4070c20d482d3d5e21364b5d3f59c9c907",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/03-database-construction/lessons/13-chuyen-doi-du-lieu-etl-data-warehouse-va-big-data.md",
+      "contentId": "doc_073a2e25ae8a584b01ef219a0517e5116f2c98ce",
+      "revision": "8602871698eb0b8f38aebc4f136024a95932f5a341148646fa35f14a16f390bf",
       "aliases": []
     },
     {
@@ -15078,13 +15684,13 @@
     {
       "path": "정보처리기사/output/03-database-construction/README.md",
       "contentId": "doc_53b8955cf1962f83b82c6a8c335fe4f97d8ac7e6",
-      "revision": "e40adc29f935634ee26ff3930bf2355873e967aed03b2c8b6b23fd6e3c1cbf2c",
+      "revision": "59a890428d90afd780d350fb564d9a0971b25411b928965055e434f688049ea6",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/04-programming-language/01-tai-lieu-hoc-day-du.md",
       "contentId": "doc_4302ddd6109757f34c1137cb29ce739219f7a9d7",
-      "revision": "e02dad0cc9abbd165df7c76255fa6581ac96284ed48c679c30fc541f261c1e4f",
+      "revision": "9b64274527d7422927c8bbead03609df33b68eeea39f339cf115d5d6fa1df6c1",
       "aliases": []
     },
     {
@@ -15094,9 +15700,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/01-bien-dinh-danh-va-kieu-du-lieu-c-java.md",
+      "contentId": "doc_52e2da2e5c521b4c6da6acc2f51828da5f31fde4",
+      "revision": "aa951971d499667b49a3b8a0f55b29616cbb7f2571659c0658500652365dad3f",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/02-bai-hoc.md",
       "contentId": "doc_5ac80431f6977ae4eaa2303bfd98912b556c6a76",
       "revision": "431b02d87af03fe870f3e2f7587eeb37717ed4edb6a68d766d13338f34a00aad",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/02-toan-tu-va-thu-tu-uu-tien-operators.md",
+      "contentId": "doc_e5239fe1ca6177de0d67816399a7d39adc0967b1",
+      "revision": "89c6056ae97632f9faeff60129f15e23c420ba679e722b3b90570b6f849faa83",
       "aliases": []
     },
     {
@@ -15106,9 +15724,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/03-nhap-xuat-chuan-io-c-java.md",
+      "contentId": "doc_258d0695dbe99a86fd372a79f28bd8da113785ed",
+      "revision": "bbad17fc89427acd03ad3ef290e82aeb891e9a7d5d43b776af985ea25da03ca1",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/04-bai-hoc.md",
       "contentId": "doc_e0349ae2e809df9aef158abe8b81507019eecb30",
       "revision": "8b9f2c2422d28c157a9484365f6cf234e2f645a7701b21a587f03077bf1c39bc",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/04-cau-truc-dieu-khien-re-nhanh-va-vong-lap.md",
+      "contentId": "doc_578d44eb9e2fd6dcdcd6437c141781c8234664cc",
+      "revision": "3fb15e3500594a2463eb97a7d29ecdb1db62b2805f4b5d0e325a92ec60f656a6",
       "aliases": []
     },
     {
@@ -15118,9 +15748,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/05-mang-va-chuoi-ky-tu-trong-c.md",
+      "contentId": "doc_1455b11c7b4ee84145d0b27a9aae0b88cddd506c",
+      "revision": "7a35df17725a1847ef4652330414055aa00925bcbf88fc5322802734b47883f6",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/06-bai-hoc.md",
       "contentId": "doc_a5590c63990b86ab55bd48f9790aedb088ad4071",
       "revision": "82e7163bea1d0671495ed09f3e3f83e199e8fb89a469704ea4b0871c1bf7e059",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/06-con-tro-va-cau-truc-struct-trong-c.md",
+      "contentId": "doc_e6f8931bbaa738c71b21e582b96d99a755b58296",
+      "revision": "1859243064ccf4767275475ded534892ed966b0de56b5a07256e36e62abf4f7a",
       "aliases": []
     },
     {
@@ -15130,9 +15772,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/07-lap-trinh-python-va-kieu-sequence.md",
+      "contentId": "doc_1395091c597d17f9565a02c796fd2510c4ba9e53",
+      "revision": "2ea141b8f179e723f8e58fbfc7562205319834d7311741566c57579bea07d9fe",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/08-bai-hoc.md",
       "contentId": "doc_b6f026656e4f3096088d74893f9435dfb66894b2",
       "revision": "2c49ae859193f83489f16dc121de6b05d664e5b94e5ae1055673e0d96efec973",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/08-lap-trinh-huong-doi-tuong-java-oop.md",
+      "contentId": "doc_4fb51b738bdc5c6755912ef93c5e4b1559185dd7",
+      "revision": "b8861b152b20d3494a55b19f7dfbb3be791ff45afe2a3575e48a656145a5c5e2",
       "aliases": []
     },
     {
@@ -15142,9 +15796,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/09-xu-ly-ngoai-le-thu-vien-va-garbage-collection.md",
+      "contentId": "doc_293a4f129e952969f15cbff54680a7c218380721",
+      "revision": "6110bf865fb047328bd6b67bde1bc8c1e97d5dfac946303a53829d2e6bfd4993",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/10-bai-hoc.md",
       "contentId": "doc_3b58c143089a3c24af033b0f64ea679898911c20",
       "revision": "a37719f9cf6858ee1df217b816d128c7d91375d35eba3812c48f4f022c4e0aac",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/10-phan-loai-ngon-ngu-lap-trinh-bien-dich-vs-thong-dich.md",
+      "contentId": "doc_a65a3b8ef8f3a34c91afe5061ed29492b5e2c25c",
+      "revision": "9384b5c49e774baf0a8129961ba0695d732e21ed8dd47cc0ff46952386d90eda",
       "aliases": []
     },
     {
@@ -15154,9 +15820,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/11-tong-quan-he-dieu-hanh-unix-linux-va-shell-script.md",
+      "contentId": "doc_c2993387d221d83ab7142432cc5335a3f412b741",
+      "revision": "5f0913e6d9dd0e9e68b8c5b53ff8d64138abe5a5272665d3d9d97e6be7dd38d9",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/12-bai-hoc.md",
       "contentId": "doc_f63dff4db4a0dc2edf04f72e33455baec48f32e1",
       "revision": "d3a7899368eed534b03231cb1194a156842d6ef353e9441dea5a576c860d3734",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/12-tien-trinh-luong-va-dieu-phoi-cpu.md",
+      "contentId": "doc_0ae96ed92cfd0e3b6aec69ac9e7568ad4b54d7fc",
+      "revision": "6c394edbe3b7509d47329d0bcfa4d912109d7980097ea2579c99735c127ff53a",
       "aliases": []
     },
     {
@@ -15166,9 +15844,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/13-khoa-chet-deadlock-va-dong-bo-hoa-tien-trinh.md",
+      "contentId": "doc_3f09f2356b03dfddcf17a8e10ab8e1b98b22bf9b",
+      "revision": "4af007a5926f0b25182bf55eff2dfbe8c0e6ae60b715bf5198d50a1da9db6d5a",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/14-bai-hoc.md",
       "contentId": "doc_2736fc5ca1d4dc57a9ea5184ad2cbae2f1e03e77",
       "revision": "ecd7504647b492895542f5410d06b862a7d86731794bd79069ad3470f02097ac",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/14-quan-ly-bo-nho-thuc-va-chien-luoc-cap-phat.md",
+      "contentId": "doc_7f450aebd56d1af83e4b2314d503fe04d77c6ef3",
+      "revision": "72e81d44e13cb86876e39f2751c9b198cd82c46f795d24a30f09bdcd3fe6e5ae",
       "aliases": []
     },
     {
@@ -15178,9 +15868,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/15-bo-nho-ao-thuat-toan-thay-the-trang-va-thrashing.md",
+      "contentId": "doc_ba7355d1be0469f6e541eb72c2ee3e793f581579",
+      "revision": "ebc39ab81125d0cce3ed496ce27baa345154c27b62cb3ab83ad4ade866293020",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/16-bai-hoc.md",
       "contentId": "doc_88bb231f221090e752e18e3f32a17ee8ee721771",
       "revision": "8f3ec37b600ed5a4d1f283840ae932757300d5130bd65badc79ff96001cf0023",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/16-mang-may-tinh-osi-7-tang-va-giao-thuc.md",
+      "contentId": "doc_309fe81b6d2c864a363b35c9213d89a47cb380c0",
+      "revision": "0feba96d98904357756cedb69d47760058278e3d467f3b024e8711309188def4",
       "aliases": []
     },
     {
@@ -15190,9 +15892,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/17-tang-giao-van-tcp-udp-va-kiem-soat-luong.md",
+      "contentId": "doc_f7424256a3e87d2d18d34b481e0a9fb1435dc4bd",
+      "revision": "77f7b262e9cdb2479d2890a68c5d1de4ccb66df37439bfb5b6bd62a2ce0a7983",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/18-bai-hoc.md",
       "contentId": "doc_b367d6aa1c7ddb55046d4a569d5bb43e399e3dde",
       "revision": "1e1d998326b45d234109592eb85174b10aed391a5c76f491cd2d2d0176fed579",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/18-dia-chi-ip-ipv4-ipv6-va-chia-mang-con-subnetting.md",
+      "contentId": "doc_3aa93d48aeebf71ff4ad821deb2f67f794cda02a",
+      "revision": "efd9ce671b1169392455772edb3ecb5ec299525d709e5afeb58774018470b967",
       "aliases": []
     },
     {
@@ -15202,9 +15916,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/19-thiet-ke-mo-dun-coupling-va-cohesion.md",
+      "contentId": "doc_766243534a85e515f5c5747f4158573aa264aaa4",
+      "revision": "60ba875cb3d8b68820c9a4514d71532bb183ab3476fc9d9d442b06ab1c5981a4",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/20-bai-hoc.md",
       "contentId": "doc_5fbe83f39615d55badce3d5d0c3f4ceb9c0fd246",
       "revision": "d27dc2b32a073d52b90bf8f35f2704fd9c4d79d767d00c89eee596b272591387",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/20-kiem-thu-phan-mem-va-vong-doi-loi.md",
+      "contentId": "doc_b21b3dec78c490ba5d0d6d47d72cebe88b74d136",
+      "revision": "803302463d64111e504326f3479df2d2c76141a4ef35542fbb8c7b316eebf42d",
       "aliases": []
     },
     {
@@ -15214,9 +15940,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/04-programming-language/lessons/21-bao-tri-phan-mem-tai-ky-nghe-va-cong-cu-case.md",
+      "contentId": "doc_b62fca1cb8f72f58f4d456af9cbe83ca269eabad",
+      "revision": "22dc78f764d60fce1f1ea313b68271e91b65bc3473d1ca07155e2397eafdf895",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/04-programming-language/lessons/22-bai-hoc.md",
       "contentId": "doc_41a261419a8047269a1e56285bb28a8162e87258",
       "revision": "1cd84e107de763ea919310513b3a9dcebdf9eda2a1b9d058602e0773bd15b4a3",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/04-programming-language/lessons/22-trien-khai-server-batch-bao-mat-va-ket-noi-csdl.md",
+      "contentId": "doc_130e8700930d939974d83094c583e6964e7ed8ea",
+      "revision": "9f8274d7fceea31cb2b5d0eddbff45e768cf4e5569b1cf6375c87583974635a2",
       "aliases": []
     },
     {
@@ -15636,13 +16374,13 @@
     {
       "path": "정보처리기사/output/04-programming-language/README.md",
       "contentId": "doc_4a660a5cba25b23b533aefe98b80b873053dfc58",
-      "revision": "332c6962d0ae3d47ee61f1f3df5602bacf0d070d0cb24cac494f434d31bfef4a",
+      "revision": "2c791e38391bcfd5bae876ee00d3e02dcd7a43e82576ef987b27f90edd39af84",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/05-information-system-management/01-tai-lieu-hoc-day-du.md",
       "contentId": "doc_681ae979ca655096724ac73993547f9d32b7241c",
-      "revision": "751685923487c80ba0e4691e0f0638efa329af0910d5580554124732f33c9bf3",
+      "revision": "051a13bf896bf77963c873c2b716d2f2bfe0d13a6e830e5061cebec2e6e905f5",
       "aliases": []
     },
     {
@@ -15652,9 +16390,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/01-phuong-phap-luan-va-framework.md",
+      "contentId": "doc_90bb50b8afa1d33f59580fb0bf949ae71be23dc0",
+      "revision": "0bad81d51d414f62892690d8f0aedf4c5eec8e4c52c5091d253331beb3f6593d",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/02-bai-hoc.md",
       "contentId": "doc_9463aeaf452090abcfed923b3bfdb6f755acd558",
       "revision": "747870f479d7498533178d98cbdef85c05520ba327142fb628073b969f432c0b",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/02-tai-su-dung-va-cong-cu-case.md",
+      "contentId": "doc_1628e3d92bdf37c262c532c6ade918c6f67e1612",
+      "revision": "b17abc1cded41732b829ba87b4a145f2c2a14a9c8f0bc55f26ccc7d8c678567b",
       "aliases": []
     },
     {
@@ -15664,9 +16414,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/03-quan-ly-du-an-chi-phi-va-tien-do.md",
+      "contentId": "doc_f356214187a9602bb0890260d3906ff2bdbfbeb8",
+      "revision": "a83a7ec98e419af2129fe00d7e49f9d52e80e89383087a50d3ee191114c63409",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/04-bai-hoc.md",
       "contentId": "doc_b9e1ecfce47a8cc10b5bb5004c55e888dc81050b",
       "revision": "c8b34e6cab63f0eaa649dde5996448f15603e24ee608b7cf63760e7a7a7e966a",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/04-tieu-chuan-chat-luong-va-cmmi.md",
+      "contentId": "doc_a83c91f0d859d7bb4b9a33bbbc4506bdfeec8b89",
+      "revision": "7df343a78d34639ea221cb90126223486e9c873bb2aa2fe8c9e9d04759020e57",
       "aliases": []
     },
     {
@@ -15676,9 +16438,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/05-khung-bao-mat-phan-mem-va-phap-luat.md",
+      "contentId": "doc_50540c80936e23630b1d9d53fb545d5ce1db4064",
+      "revision": "1a3476a05adeaf2769045abb01a638ca9367e21bb9efe57d8f87355c2dc675be",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/06-bai-hoc.md",
       "contentId": "doc_6e97d5dccdec54d9377186ad50d0832b544934ca",
       "revision": "e087d4b38e6588ae7aaea93eaf0133f4cd8591a1409703b19bd14978c15b4332",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/06-lo-hong-phan-mem-va-secure-coding.md",
+      "contentId": "doc_92df494783aec76ed29fa4d2d437baf65f5d9cdc",
+      "revision": "42a739404527db714fc1a440b476836ee7521308a9c906b6458f8bb5b7868ab7",
       "aliases": []
     },
     {
@@ -15688,9 +16462,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/07-thuat-toan-ma-hoa-va-mat-ma-hoc.md",
+      "contentId": "doc_a791dd94c8ed311c842f68312dc40d924725f333",
+      "revision": "218a5781d4b744c860f4591ead656c9a28f2fc36073fc198bb135da1a5a889af",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/08-bai-hoc.md",
       "contentId": "doc_baf03467c5d058bd31c9c3cccb1c63dca83d2129",
       "revision": "c9f9b740d3f01d8f279dd804540738a035b92a826fba155598d0f2e29dc70793",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/08-xac-thuc-va-kiem-soat-truy-cap.md",
+      "contentId": "doc_9e9f8194cd6c488e5f9df12b8d96750d09ee4911",
+      "revision": "9585cebfff97252156432665e34a351eb57f8f4ee25efd5b29a17f43b250979e",
       "aliases": []
     },
     {
@@ -15700,9 +16486,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/09-tan-cong-mang-va-nguy-co-an-ninh.md",
+      "contentId": "doc_781e178b980a73eb5a5bfb50dca5c85fc95faaa8",
+      "revision": "1646d52970ec76bc5d8ea88a624b1eb962850e343bf80cb0242a5a6c41563034",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/10-bai-hoc.md",
       "contentId": "doc_1565f44366deb2b2d79a3d8634a765687101c8c2",
       "revision": "90a3cfb217a80b36b1976d5c11c1fc7f8594c58fddf5ee905e8e89f2b8239a56",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/10-giai-phap-va-thiet-bi-bao-mat-mang.md",
+      "contentId": "doc_205c41c8ffcf160f4566b70465f2ccdefc4edaf3",
+      "revision": "103772e9ecf2047ebca0647cfef08eaa66f4b2ed61b57253f41f06074863fae1",
       "aliases": []
     },
     {
@@ -15712,9 +16510,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/11-truyen-thong-du-lieu-va-dieu-che.md",
+      "contentId": "doc_48f5f03a35c6d16e9ddcce0361db72097e65fc18",
+      "revision": "348369eee60f5517c04769fe8964faab6037a1cd7f0265571c035e8bee1bee27",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/12-bai-hoc.md",
       "contentId": "doc_e866036264ab99fb50f492ecafa8d61f4616e088",
       "revision": "0b505f77a69692d74d5ff29717a81bb0d092af2265c7dc3193a961d1ca3032ed",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/12-mang-may-tinh-va-giao-thuc-tcp-ip.md",
+      "contentId": "doc_ccf6eeea03aa80bb3f87865ce4f472ab6ff5b0b1",
+      "revision": "284a94e7e9c1c923deb2ecf9dbe53acbb5f02e19e7c9318eff7b6f8ffeef67e1",
       "aliases": []
     },
     {
@@ -15724,9 +16534,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/13-he-dieu-hanh-tien-trinh-va-dieu-phoi.md",
+      "contentId": "doc_85a162ec1eb246fd6c55a9d750c43770e4c7823d",
+      "revision": "0fa59b059f14eeec69ec0878ad59a3cb9e86b1b256fd8e37f5556549a3fdeb90",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/14-bai-hoc.md",
       "contentId": "doc_8a46dec1b8b8b273e46687969119ef43942c4982",
       "revision": "7a5ec540fc3eaa70b6e77aa8cbd617c6a7d0af65e2a63878f0527119066b2769",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/14-quan-ly-bo-nho-va-luu-tru-storage.md",
+      "contentId": "doc_8ef3b1df50d84298826ebc4462abca0d4e43a9f1",
+      "revision": "e4c29de0539d0dc2c0d004811fe950fb6a8855878367be537db87c28bbf7c9e6",
       "aliases": []
     },
     {
@@ -15736,9 +16558,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/15-quan-tri-co-so-du-lieu-va-big-data.md",
+      "contentId": "doc_9beede81ae2304461af914a17c6678a690f2ff43",
+      "revision": "f1ef933f43914e6a35d78ebf5f8d69618bb3980e7fad80595aa55a6c8139b388",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/16-bai-hoc.md",
       "contentId": "doc_614e270f5327da59105c89e1d852294a0277e75b",
       "revision": "fe7b4fc7f8777e7aeac0ee0fa01c8d9c1d98a08fad3f0b3ffc311ee14d490138",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/16-dien-toan-dam-may-va-cong-nghe-moi.md",
+      "contentId": "doc_3878a8b7399ebdcd9092ce888550ed208a9b6316",
+      "revision": "5879f9285d8f59b9e64281e931406153301378d2b02d32e6f0d13225deab908d",
       "aliases": []
     },
     {
@@ -15748,9 +16582,21 @@
       "aliases": []
     },
     {
+      "path": "정보처리기사/output/05-information-system-management/lessons/17-lap-trinh-c-va-cau-truc-bo-nho.md",
+      "contentId": "doc_2ad33251e8e31d74e2832959db74c1db4fe681c8",
+      "revision": "13d3b9ce46f73183a4e69f6f65196e5a43d005211d4de01fa63a1fb52db0dd6c",
+      "aliases": []
+    },
+    {
       "path": "정보처리기사/output/05-information-system-management/lessons/18-bai-hoc.md",
       "contentId": "doc_95db251ef60f9e66fce2623892f709d70b6f8a58",
       "revision": "b0e69226f7eadfb8461847fb9c1f7eed27b4ba025381720c170ba09950854bc1",
+      "aliases": []
+    },
+    {
+      "path": "정보처리기사/output/05-information-system-management/lessons/18-lap-trinh-python-va-tu-dong-hoa.md",
+      "contentId": "doc_2aa62afaf5bbad674be34d9147e4acfc01258a86",
+      "revision": "a30f6a78a9fe30c79339733cd127ec8e96e82bbc6eb687019e32f1c7a9daeb37",
       "aliases": []
     },
     {
@@ -16164,7 +17010,7 @@
     {
       "path": "정보처리기사/output/05-information-system-management/README.md",
       "contentId": "doc_83c0e5792998d43eda65af471bb5841075da7bbe",
-      "revision": "451256dadace5b0f13a56c2d2caa90b04684559aa330faf4a2a70457c63717ce",
+      "revision": "2f60e127b59613eb1d5536ae6aa90956b6cacf5d20a6df2d6394308231c71fac",
       "aliases": []
     },
     {
@@ -16212,7 +17058,7 @@
     {
       "path": "정보처리기사/output/2026-depth/11-high-risk-confusion-atlas.md",
       "contentId": "doc_190489b8129453d83bc09e580bf09a4f0b7e01ed",
-      "revision": "742a0a64afd10ffc35de2998ac6cf6a5c2fa1d32fa517c856d8b92dff8589a1c",
+      "revision": "a5b32b1fc639533c3b952093ffdb37d89d034c0520b7ef1069db6db430d9e2b9",
       "aliases": []
     },
     {
@@ -16248,19 +17094,19 @@
     {
       "path": "정보처리기사/output/COVERAGE_MATRIX.md",
       "contentId": "doc_6be83e154faacedee5729a3a849ed80c22541231",
-      "revision": "78c24a83a871d760082d9116ee223d86a719fd0a8fe676ed12b3a894fe7d2cb4",
+      "revision": "a30e07303f16bf07c697e109ac256559295cd6eac26ae74482dbc61e9daad0fc",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/README.md",
       "contentId": "doc_573cfc95701ee58bd03d3e928ec71401c6c64c71",
-      "revision": "d1b5a5a62731532eeac9356ff4a98adcc3dd75e8b24cef5598d1d7ba77fccc30",
+      "revision": "12f40e707a54f713b1359238e4c62b2b5db858b737aceb6ddf945559483c4c25",
       "aliases": []
     },
     {
       "path": "정보처리기사/output/RESEARCH_REGISTER.md",
       "contentId": "doc_f4d84fbadc85adfbc41a3c77b0071db1d5b5b452",
-      "revision": "a8445c94ce72510c5597b140d89e40873edf90c98a5b5cacfb1024b7fa96341d",
+      "revision": "5ec5fc97d4d8925de42b87d47cde066f71d0cbae044afb3f45e0ae37a4df1db1",
       "aliases": []
     },
     {

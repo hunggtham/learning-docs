@@ -1,94 +1,47 @@
 # Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)
 
-## Bài học
+## Bài học tổng hợp
+- [Tài liệu học đầy đủ (Tổng quan)](01-tai-lieu-hoc-day-du.md)
 
-1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
+---
 
-## Các bài học theo chủ đề
+## Danh mục 18 Chuyên đề Chuẩn mực theo Syllabus HRDK/Q-Net
 
-1. [1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)](lessons/01-bai-hoc.md)
-2. [소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)](lessons/02-bai-hoc.md)
-3. [프레임워크 특징 및 SW 신기술 (Framework & SW Tech)](lessons/03-bai-hoc.md)
-4. [5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크](lessons/04-bai-hoc.md)
-5. [336. 소프트웨어 개발 프레임워크 (Software Development Framework)](lessons/05-bai-hoc.md)
-6. [3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)](lessons/06-bai-hoc.md)
-7. [프로젝트 일정 관리 (Project Schedule Management)](lessons/07-bai-hoc.md)
-8. [소프트웨어 비용 산정 기법 (Software Cost Estimation)](lessons/08-bai-hoc.md)
-9. [323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)](lessons/09-bai-hoc.md)
-10. [4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)](lessons/10-bai-hoc.md)
-11. [소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)](lessons/11-bai-hoc.md)
-12. [1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)](lessons/12-bai-hoc.md)
-13. [2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)](lessons/13-bai-hoc.md)
-14. [3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)](lessons/14-bai-hoc.md)
-15. [4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)](lessons/15-bai-hoc.md)
-16. [⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)](lessons/16-bai-hoc.md)
-17. [2. 자원 처리 오류 (Resource Handling Errors)](lessons/17-bai-hoc.md)
-18. [5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)](lessons/18-bai-hoc.md)
-19. [네트워크 관련 장비 (Network Equipment)](lessons/19-bai-hoc.md)
-20. [네트워크 구조 및 기술 (Network Structures & Technologies)](lessons/20-bai-hoc.md)
-21. [네트워크 및 정보 침해 공격 (Network & Info Security Attacks)](lessons/21-bai-hoc.md)
-22. [네트워크 보안 기술 (Network Security Tech)](lessons/22-bai-hoc.md)
-23. [계층별 주요 프로토콜 (Major Protocols by Layer)](lessons/23-bai-hoc.md)
-24. [7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)](lessons/24-bai-hoc.md)
-25. [데이터베이스 신기술 (DB New Technologies)](lessons/25-bai-hoc.md)
-26. [8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)](lessons/26-bai-hoc.md)
-27. [10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)](lessons/27-bai-hoc.md)
-28. [정보 보안 및 하드웨어 신기술 (Security & HW Tech)](lessons/28-bai-hoc.md)
-29. [소프트웨어 보안 (Software Security)](lessons/29-bai-hoc.md)
-30. [인증 및 보안 체계 (Authentication & Security System)](lessons/30-bai-hoc.md)
-31. [소프트웨어 개발 보안 관련 법규](lessons/31-bai-hoc.md)
-32. [⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)](lessons/32-bai-hoc.md)
-33. [4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)](lessons/33-bai-hoc.md)
-34. [9. 암호화 기술 (Công nghệ Mã hóa)](lessons/34-bai-hoc.md)
-35. [암호화 기법 (Encryption Techniques)](lessons/35-bai-hoc.md)
-36. [1. 암호화 기본 개념 (Concepts)](lessons/36-bai-hoc.md)
-37. [2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)](lessons/37-bai-hoc.md)
-38. [6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)](lessons/38-bai-hoc.md)
-39. [11. 보충 및 심화 내용 (Bổ sung & Nâng cao)](lessons/39-bai-hoc.md)
-40. [핵심 257: 분기/제어 (break, continue)](lessons/40-bai-hoc.md)
-41. [핵심 258, 259, 260: 배열 (Array)](lessons/41-bai-hoc.md)
-42. [핵심 261: C언어의 문자열 배열](lessons/42-bai-hoc.md)
-43. [핵심 262: 포인터와 포인터 변수 (Pointer)](lessons/43-bai-hoc.md)
-44. [포인터와 배열 (Pointer and Array)](lessons/44-bai-hoc.md)
-45. [Python의 기본 문법 (Python Basic Syntax)](lessons/45-bai-hoc.md)
-46. [Python 데이터 입·출력 함수 (Python Input/Output Functions)](lessons/46-bai-hoc.md)
-47. [입력 값의 형변환 (Type Casting)](lessons/47-bai-hoc.md)
-48. [Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)](lessons/48-bai-hoc.md)
-49. [슬라이스 (Slice)](lessons/49-bai-hoc.md)
-50. [Python 제어문 (Control Statements): if문, for문](lessons/50-bai-hoc.md)
-51. [Python 클래스 (Class) - 기초 (Cơ bản)](lessons/51-bai-hoc.md)
-52. [Python 클래스와 함수 (Class and Functions)](lessons/52-bai-hoc.md)
-53. [Python 제어문: while문 (While Loop)](lessons/53-bai-hoc.md)
-54. [프로그래밍 언어의 분류 (Classification of Programming Languages)](lessons/54-bai-hoc.md)
-55. [라이브러리 및 예외 처리 (Libraries and Exception Handling)](lessons/55-bai-hoc.md)
-56. [운영체제 (OS: Operating System) 기초](lessons/56-bai-hoc.md)
-57. [Windows와 UNIX 운영체제 (Windows & UNIX)](lessons/57-bai-hoc.md)
-58. [UNIX 주요 구성요소 (UNIX Components)](lessons/58-bai-hoc.md)
-59. [메모리 관리 (Memory Management)](lessons/59-bai-hoc.md)
-60. [페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)](lessons/60-bai-hoc.md)
-61. [프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)](lessons/61-bai-hoc.md)
-62. [프로세스와 스레드 (Process and Thread)](lessons/62-bai-hoc.md)
-63. [주요 스케줄링 알고리즘 (Major Scheduling Algorithms)](lessons/63-bai-hoc.md)
-64. [UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)](lessons/64-bai-hoc.md)
-65. [IP 주소 및 서브네팅 (IP Address & Subnetting)](lessons/65-bai-hoc.md)
-66. [OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)](lessons/66-bai-hoc.md)
-67. [5과목 정보시스템 구축 관리 (Information System Construction Management)](lessons/67-bai-hoc.md)
-68. [소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)](lessons/68-bai-hoc.md)
-69. [CASE (Computer Aided Software Engineering)](lessons/69-bai-hoc.md)
-70. [DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)](lessons/70-bai-hoc.md)
-71. [교착상태 (Dead Lock)](lessons/71-bai-hoc.md)
-72. [침입 탐지 시스템 (IDS; Intrusion Detection System)](lessons/72-bai-hoc.md)
-73. [리눅스의 커널 로그 (Linux Kernel Logs)](lessons/73-bai-hoc.md)
-74. [소프트웨어 생명주기 모델 (SDLC Models)](lessons/74-bai-hoc.md)
-75. [스토리지 시스템 (Storage Systems)](lessons/75-bai-hoc.md)
-76. [1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)](lessons/76-bai-hoc.md)
-77. [2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)](lessons/77-bai-hoc.md)
-78. [3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)](lessons/78-bai-hoc.md)
-79. [1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)](lessons/79-bai-hoc.md)
-80. [3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)](lessons/80-bai-hoc.md)
-81. [106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)](lessons/81-bai-hoc.md)
-82. [2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)](lessons/82-bai-hoc.md)
-83. [108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)](lessons/83-bai-hoc.md)
-84. [1. 인증 기술 (Authentication Types)](lessons/84-bai-hoc.md)
-85. [2. 접근 제어 정책 (Access Control Policies)](lessons/85-bai-hoc.md)
-86. [318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)](lessons/86-bai-hoc.md)
+Hệ thống bài học Môn 5 được rà soát, tái cấu trúc và hợp nhất toàn diện từ 86 bài học cũ thành **18 chuyên đề chuẩn mực**, đảm bảo chuẩn song ngữ Hàn - Việt kỹ thuật sâu sắc, mô hình 3 vế liên kết kiến thức, cấu trúc 2 tầng (Tầng A: Nén thi - Tầng B: Hiểu sâu hệ thống) và checklist ôn tập thực tế:
+
+1. [Chuyên đề 01: Phương pháp luận & Khung phát triển Phần mềm (소프트웨어 개발 방법론 및 프레임워크)](lessons/01-phuong-phap-luan-va-framework.md)
+   *Vòng đời phát triển SDLC, mô hình Agile/Scrum/XP, Tailoring phương pháp luận và Spring/eGovFrame.*
+2. [Chuyên đề 02: Tái sử dụng & Công cụ Kỹ nghệ Phần mềm CASE (소프트웨어 재사용, 재공학 및 CASE 도구)](lessons/02-tai-su-dung-va-cong-cu-case.md)
+   *Tái sử dụng (Reuse), tái kỹ nghệ (Re-engineering), kỹ nghệ ngược (Reverse Engineering) và công cụ CASE.*
+3. [Chuyên đề 03: Quản lý Dự án, Chi phí & Tiến độ (프로젝트 관리, 비용 산정 및 일정 관리)](lessons/03-quan-ly-du-an-chi-phi-va-tien-do.md)
+   *Mô hình toán học COCOMO, Putnam, Function Point (FP), sơ đồ mạng CPM/PERT và kỹ thuật đường găng Critical Path.*
+4. [Chuyên đề 04: Tiêu chuẩn Chất lượng Phần mềm & Mô hình CMMI (품질 표준 및 프로세스 성숙도 CMMI/SPICE)](lessons/04-tieu-chuan-chat-luong-va-cmmi.md)
+   *ISO/IEC 9126, 25010 (SQuaRE), 12119, 14598, mô hình trưởng thành CMMI 5 cấp độ và tiêu chuẩn SPICE (ISO 15504).*
+5. [Chuyên đề 05: Khung Bảo mật Phần mềm & Hành lang Pháp lý (소프트웨어 보안 프레임워크 및 관련 법규)](lessons/05-khung-bao-mat-phan-mem-va-phap-luat.md)
+   *Nguyên tắc CIA Triad, Secure SDLC (Seven Touchpoints, MS SDL), Luật bảo vệ thông tin cá nhân và quy định an toàn.*
+6. [Chuyên đề 06: Lỗ hổng Phần mềm & Lập trình An toàn Secure Coding (SW 보안 취약점 및 시큐어 코딩)](lessons/06-lo-hong-phan-mem-va-secure-coding.md)
+   *Buffer Overflow, OS Command Injection, SQL Injection, XSS vs CSRF, Null Pointer Dereference, Race Condition và 7 nhóm CWE.*
+7. [Chuyên đề 07: Mật mã học & Thuật toán Mã hóa (암호학 및 암호 알고리즘 체계)](lessons/07-thuat-toan-ma-hoa-va-mat-ma-hoc.md)
+   *Mã hóa đối xứng (DES, AES, SEED, ARIA), mã hóa bất đối xứng (RSA, ECC), hàm băm một chiều (SHA, MD5) và chế độ khối.*
+8. [Chuyên đề 08: Xác thực & Kiểm soát Truy cập (인증 기술 및 접근 통제 체계)](lessons/08-xac-thuc-va-kiem-soat-truy-cap.md)
+   *Mô hình xác thực (SSO, MFA, sinh trắc học, Kerberos, RADIUS), ma trận kiểm soát truy cập (DAC, MAC, RBAC) và mô hình Bell-LaPadula/Biba.*
+9. [Chuyên đề 09: Tấn công Mạng & Mối đe dọa An ninh (네트워크 공격 유형 및 보안 위협)](lessons/09-tan-cong-mang-va-nguy-co-an-ninh.md)
+   *Từ chối dịch vụ (DoS/DDoS, SYN Flooding, Smurf), tấn công giả mạo (ARP/IP/DNS Spoofing), Sniffing, APT, Ransomware và Zero-day.*
+10. [Chuyên đề 10: Thiết bị, Giải pháp Bảo mật Mạng & Giám sát Log (네트워크 보안 장비, 침입 탐지 및 로그 분석)](lessons/10-giai-phap-va-thiet-bi-bao-mat-mang.md)
+    *Firewall các thế hệ, IDS (Misuse/Anomaly) vs IPS, WAF, VPN (IPsec/SSL), SIEM, ESM và phân tích log hệ điều hành Linux/Windows.*
+11. [Chuyên đề 11: Truyền thông Dữ liệu, Điều chế & Đa hợp (데이터 통신, 변조 기술 및 다중화)](lessons/11-truyen-thong-du-lieu-va-dieu-che.md)
+    *Băng thông, điều chế số (ASK, FSK, PSK, QAM), kỹ thuật ghép kênh (FDM, TDM, WDM), kiểm soát luồng và sửa lỗi (Parity, CRC, ARQ).*
+12. [Chuyên đề 12: Mạng Máy tính, Mô hình OSI & Giao thức TCP/IP (네트워크 아키텍처, OSI 7계층 및 TCP/IP)](lessons/12-mang-may-tinh-va-giao-thuc-tcp-ip.md)
+    *Mô hình OSI 7 tầng vs TCP/IP 4 tầng, định dạng IPv4 vs IPv6, Subnetting (CIDR/VLSM), bắt tay 3 bước TCP vs UDP và định tuyến.*
+13. [Chuyên đề 13: Hệ điều hành, Quản lý Tiến trình & Điều phối (운영체제, 프로세스 관리 및 CPU 스케줄링)](lessons/13-he-dieu-hanh-tien-trinh-va-dieu-phoi.md)
+    *Cấu trúc nhân Linux/UNIX, vòng đời Process vs Thread, thuật toán điều phối CPU (FCFS, SJF, RR, HRN), giải quyết Deadlock (Coffman).*
+14. [Chuyên đề 14: Quản lý Bộ nhớ, Bộ nhớ Ảo & Hệ thống Lưu trữ (메모리 관리, 가상 메모리 및 스토리지)](lessons/14-quan-ly-bo-nho-va-luu-tru-storage.md)
+    *Phân mảnh nội/ngoại, Paging vs Segmentation, thuật toán thay thế trang (FIFO, LRU, LFU), Thrashing, Working Set và RAID (0-6).*
+15. [Chuyên đề 15: Quản trị Cơ sở Dữ liệu, Phục hồi, Điều khiển Đồng thời & Dữ liệu Lớn (DB 회복, 병행 제어 및 빅데이터)](lessons/15-quan-tri-co-so-du-lieu-va-big-data.md)
+    *Tính chất ACID, điều khiển đồng thời (Locking 2PL, Timestamp), kỹ thuật phục hồi (Log-based Undo/Redo, Checkpoint) và hệ sinh thái Hadoop NoSQL.*
+16. [Chuyên đề 16: Điện toán Đám mây & Xu hướng Công nghệ Mới (클라우드 컴퓨팅 및 최신 IT 기술)](lessons/16-dien-toan-dam-may-va-cong-nghe-moi.md)
+    *Mô hình đám mây IaaS/PaaS/SaaS, Microservices Architecture (MSA), Docker, Kubernetes, IoT, Blockchain và Trí tuệ nhân tạo (AI).*
+17. [Chuyên đề 17: Lập trình C, Con trỏ và Cấu trúc Bộ nhớ (C 언어, 포인터 및 메모리 구조)](lessons/17-lap-trinh-c-va-cau-truc-bo-nho.md)
+    *Phân loại ngôn ngữ lập trình, lệnh rẽ nhánh break/continue, mảng 1D/2D, chuỗi ký tự kết thúc bằng '\0', toán tử con trỏ (&, \*) và mối liên hệ bảo mật vùng nhớ.*
+18. [Chuyên đề 18: Lập trình Python, Cấu trúc Dữ liệu và Tự động hóa (Python 프로그래밍, 자료구조 및 시스템 자동화)](lessons/18-lap-trinh-python-va-tu-dong-hoa.md)
+    *Cú pháp kịch bản, I/O, ép kiểu, 4 tập hợp (List, Tuple, Set, Dict), cắt lát Slicing, lập trình hướng đối tượng OOP, try-except và tự động hóa hệ thống.*
