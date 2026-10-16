@@ -20,7 +20,7 @@
 
 ## 읽는 방법 (Cách đọc)
 - **Cắt lát `[start:stop:step]`:** Luôn nhớ quy tắc "lấy từ $start$ đến trước $stop$" (tức là $stop - 1$). Nếu bước nhảy âm ($step < 0$), mảng sẽ được duyệt đảo ngược từ phải qua trái.
-- **Cặp ngoặc phân loại:** 
+- **Cặp ngoặc phân loại:**
   - Ngoặc vuông `[]` là **`list`** (thêm, sửa, xóa thoải mái bằng `.append()`, `del`).
   - Ngoặc tròn `()` là **`tuple`** (bất biến, cố tình gán lại phần tử `t[0] = 10` sẽ bị báo lỗi `TypeError`).
   - Ngoặc nhọn `{}` là **`dict`** (nếu có dấu `:` như `{"k": "v"}`) hoặc **`set`** (nếu chỉ có giá trị `{1, 2, 3}`).

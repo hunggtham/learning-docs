@@ -99,7 +99,7 @@ Cú pháp chuẩn: `sequence[start : stop : step]`
 class Parent:
     def __init__(self, name):
         self.name = name  # Thuộc tính cá thể (Instance attribute)
-    
+
     def greet(self):
         return f"Xin chào, tôi là {self.name}"
 
@@ -107,7 +107,7 @@ class Child(Parent):      # Kế thừa lớp Parent
     def __init__(self, name, age):
         super().__init__(name) # Gọi constructor của lớp cha
         self.age = age
-        
+
     def greet(self):      # Ghi đè phương thức (Method Overriding)
         return f"Tôi là {self.name}, {self.age} tuổi"
 ```
@@ -208,7 +208,7 @@ for log in log_entries:
     parts = log.split()
     ip = parts[2]
     status_code = parts[-1]
-    
+
     # Ghi nhận các truy vấn thất bại (mã 4xx)
     if status_code.startswith("4"):
         failed_attempts[ip] = failed_attempts.get(ip, 0) + 1
@@ -245,7 +245,7 @@ Vùng nhớ gốc:   a ───> [ 1 | 2 | con_trỏ ]
                                     └───> [ 3 | 4 ] (Vùng nhớ con)
                                             ▲
 Shallow copy:   c ───> [ 1 | 2 | con_trỏ ───┘  (Vẫn chia sẻ vùng nhớ con!)
-                                               
+
 Deep copy:      d ───> [ 1 | 2 | con_trỏ ]
                                     │
                                     └───> [ 3 | 4 ] (Vùng nhớ con hoàn toàn mới)

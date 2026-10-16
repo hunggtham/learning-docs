@@ -90,7 +90,7 @@ int main() {
     int x, y;
 
     // Tiền tố (++a): a được tăng lên 11 trước, sau đó mới gán cho x
-    x = ++a; 
+    x = ++a;
     printf("x = %d, a = %d\n", x, a); // In ra: x = 11, a = 11
 
     // Hậu tố (b++): giá trị hiện tại của b (10) được gán cho y trước, sau đó b mới tăng lên 11

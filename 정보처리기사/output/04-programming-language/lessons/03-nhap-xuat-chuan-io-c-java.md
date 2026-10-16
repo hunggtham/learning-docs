@@ -126,7 +126,7 @@ int main() {
     // scanf("%c", &grade); // LỖI BẪY: Lệnh này đọc ngay ký tự '\n' còn sót lại và kết thúc luôn!
 
     // GIẢI PHÁP ĐỀ THI: Thêm một dấu cách trước %c để yêu cầu bỏ qua mọi khoảng trắng và ký tự newline
-    scanf(" %c", &grade); 
+    scanf(" %c", &grade);
 
     printf("Tuoi: %d, Xep loai: %c\n", age, grade);
     return 0;

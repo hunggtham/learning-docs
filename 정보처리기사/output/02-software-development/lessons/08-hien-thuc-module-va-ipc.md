@@ -88,7 +88,7 @@ $$\mathbf{우연적(Coincidental) \lt 논리적(Logical) \lt 시간적(Temporal)
    +-----+   +-----+                          +----------------------+
    | Khối | + | Khối |  ===> Phần mềm mới     | Bản đặc tả trừu tượng | ===> Trình sinh mã ===> Code mới
    |  A  |   |  B  |                          +----------------------+
-   +-----+   +-----+                                    
+   +-----+   +-----+
   (Lắp ráp linh kiện Component)                      (Sinh mã tự động theo mẫu Pattern)
 ```
 - **합성 중심 (Synthesis-oriented / Hướng tổng hợp):**

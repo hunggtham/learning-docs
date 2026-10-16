@@ -19,11 +19,11 @@
 - **Dùng đi đâu (Forward Handoff):** Mô hình struct và con trỏ chính là tiền đề tiến hóa trực tiếp lên khái niệm Lớp (Class), Thuộc tính và Đối tượng tham chiếu trong Lập trình hướng đối tượng Java ở bài `08-lap-trinh-huong-doi-tuong-java-oop.md`.
 
 ## 읽는 방법 (Cách đọc)
-- **Toán tử `*` và `&`:** 
+- **Toán tử `*` và `&`:**
   - Khi khai báo: `int *p;` $\rightarrow$ dấu `*` mang ý nghĩa khai báo biến con trỏ.
   - Khi thực thi: `*p` $\rightarrow$ dấu `*` mang ý nghĩa "giải tham chiếu", lấy giá trị bên trong ô nhớ mà `p` đang nắm giữ địa chỉ.
   - `&x` mang ý nghĩa "lấy địa chỉ ô nhớ của `x`".
-- **Cặp ngoặc tròn phân biệt:** 
+- **Cặp ngoặc tròn phân biệt:**
   - `int *p[3]` (không có ngoặc bao `*p`): Do `[]` ưu tiên cao hơn `*`, đây là **Mảng gồm 3 con trỏ**.
   - `int (*p)[3]` (có ngoặc tròn bao `*p`): Dấu `*` đi với `p` trước, đây là **Một con trỏ trỏ tới mảng 3 phần tử**.
 - **Toán tử `->`:** Cứ thấy con trỏ struct thì dùng mũi tên: `ptr->age` tương đương `(*ptr).age`.

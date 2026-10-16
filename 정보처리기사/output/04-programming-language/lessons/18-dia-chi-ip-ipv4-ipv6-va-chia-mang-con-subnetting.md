@@ -61,7 +61,7 @@
 
 - **3. Quy tắc rút gọn địa chỉ IPv6 chuẩn RFC:**
   1. **Lược bỏ các số 0 đứng đầu mỗi nhóm:** Ví dụ nhóm `0042` rút thành `42`, nhóm `0000` rút thành `0`.
-  2. **Rút gọn dãy nhóm toàn số 0 liên tiếp bằng `::`:** 
+  2. **Rút gọn dãy nhóm toàn số 0 liên tiếp bằng `::`:**
      - Địa chỉ gốc: `2001:0DB8:0000:0000:0000:0000:1428:57ab`
      - Rút gọn số 0 đầu: `2001:DB8:0:0:0:0:1428:57ab`
      - Rút gọn dãy số 0 bằng `::`: `2001:DB8::1428:57ab`

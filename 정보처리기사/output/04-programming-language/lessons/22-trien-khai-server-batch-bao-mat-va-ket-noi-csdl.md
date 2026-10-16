@@ -89,7 +89,7 @@
 void vulnerable_function(char *str) {
     char buffer[10];
     // LỖ HỔNG NGUY HIỂM: strcpy không kiểm tra độ dài, nếu str dài hơn 10 ký tự sẽ tràn Stack!
-    // strcpy(buffer, str); 
+    // strcpy(buffer, str);
 
     // GIẢI PHÁP AN TOÀN: Dùng strncpy chỉ copy tối đa kích thước đệm trừ 1 byte cho ký tự \0
     strncpy(buffer, str, sizeof(buffer) - 1);

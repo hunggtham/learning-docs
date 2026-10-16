@@ -100,15 +100,23 @@ Trong đó:
 - `B > 0` là **Điều kiện con 2 ($C_2$)**.
 
 1. **Với 구문 검증 (Statement Coverage):**
-   - Chỉ cần **1 Test Case**: Chọn $A = 1, B = 1 ightarrow$ Điều kiện True $ightarrow$ Lệnh `executeAction()` được thực thi. Đạt 100% Statement Coverage dù nhánh False chưa bao giờ được chạy!
+   - Chỉ cần **1 Test Case**: Chọn $A = 1, B = 1
+ightarrow$ Điều kiện True $
+ightarrow$ Lệnh `executeAction()` được thực thi. Đạt 100% Statement Coverage dù nhánh False chưa bao giờ được chạy!
 2. **Với 결정/분기 검증 (Decision/Branch Coverage):**
    - Cần **2 Test Cases**:
-     - Test Case 1: $A = 1, B = 1 ightarrow$ Decision nhận `True`.
-     - Test Case 2: $A = -1, B = 1 ightarrow$ Decision nhận `False`.
+     - Test Case 1: $A = 1, B = 1
+ightarrow$ Decision nhận `True`.
+     - Test Case 2: $A = -1, B = 1
+ightarrow$ Decision nhận `False`.
 3. **Với 조건 검증 (Condition Coverage) và Điểm mù nguy hiểm:**
    - Cần từng điều kiện con nhận đủ True và False:
-     - Test Case 1: $A = 1, B = -1 ightarrow C_1 = T, C_2 = F ightarrow$ Decision tổng thể là `False`.
-     - Test Case 2: $A = -1, B = 1 ightarrow C_1 = F, C_2 = T ightarrow$ Decision tổng thể là `False`.
+     - Test Case 1: $A = 1, B = -1
+ightarrow C_1 = T, C_2 = F
+ightarrow$ Decision tổng thể là `False`.
+     - Test Case 2: $A = -1, B = 1
+ightarrow C_1 = F, C_2 = T
+ightarrow$ Decision tổng thể là `False`.
    - **Điểm mù:** Cả hai Test Case đều khiến Decision tổng thể mang giá trị `False`! Câu lệnh `executeAction()` bên trong không bao giờ được chạy. Nghĩa là **Condition Coverage đạt 100% nhưng Statement Coverage và Decision Coverage lại không đạt**!
 4. **Với 다중 조건 검증 (Multiple Condition Coverage):**
    - Với $n = 2$ điều kiện con, cần kiểm tra đủ $2^2 = 4$ ca kiểm thử bao phủ toàn bộ bảng chân trị: $(T, T), (T, F), (F, T), (F, F)$.
