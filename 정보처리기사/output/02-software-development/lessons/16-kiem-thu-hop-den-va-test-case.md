@@ -69,39 +69,90 @@
 | **Mối quan hệ** | **Nhiều Test Case kết hợp lại tạo thành một Test Scenario** | Là tài liệu khung định hướng để suy ra tập hợp các Test Case |
 | **Ví dụ minh họa** | Kiểm tra trường Mật khẩu để trống có hiện cảnh báo lỗi hay không | Kịch bản mua hàng: Đăng nhập $\rightarrow$ Tìm kiếm sản phẩm $\rightarrow$ Thêm giỏ hàng $\rightarrow$ Thanh toán |
 
-#### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+#### 5. Bảng phân loại mức độ lỗi phần mềm (Defect Severity & Priority)
+
+| Cấp độ 심각도 (Severity — Mức độ nghiêm trọng) | Ý nghĩa kỹ thuật | Cấp độ 우선순위 (Priority — Độ ưu tiên sửa) | Ý nghĩa kinh doanh |
+|:---|:---|:---|:---|
+| **치명적 (Critical)** | Hệ thống sập hoàn toàn (Crash), mất mát dữ liệu, tê liệt chức năng sống còn, không có giải pháp thay thế | **High (상 - Khẩn cấp)** | Phải sửa ngay lập tức trong vòng vài giờ (Hotfix), chặn đứng việc phát hành |
+| **주요 (Major)** | Tính năng nghiệp vụ chính bị lỗi, ảnh hưởng diện rộng nhưng hệ sinh thái chung vẫn hoạt động | **Medium (중 - Bình thường)** | Bắt buộc sửa trong đợt phát hành hoặc Sprint hiện tại |
+| **보통 (Normal)** | Tính năng phụ hoặc tình huống đặc thù bị lỗi, có giải pháp thay thế tạm thời (Workaround) | **Low (하 - Thấp)** | Có thể lùi lại để sửa trong các đợt cập nhật sau |
+| **경미 (Minor / Trivial)** | Sai chính tả (UI typo), lệch font chữ, màu nút bấm không chuẩn, không ảnh hưởng chức năng | **Low (하 - Thấp)** | Tích lũy sửa khi có thời gian bảo trì định kỳ |
+
+#### 6. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
 - **Bẫy 1: Số lượng mẫu trong Phân vùng tương đương (동치 분할):** Trong mỗi lớp tương đương, **chỉ cần chọn đúng 1 giá trị đại diện**. Nếu đề bài bảo phải chọn tất cả các giá trị là SAI.
 - **Bẫy 2: Điểm biên trong Boundary Value Analysis (경계값 분석):** Phần lớn lỗi xảy ra ở ranh giới điều kiện do lỗi lệch 1 đơn vị (Off-by-one, nhầm `<` và `<=`). Khi điều kiện là $0 \le x \le 100$, bộ giá trị biên chuẩn 3 điểm là $\{-1, 0, 1, 99, 100, 101\}$.
 - **Bẫy 3: Đặc trưng của Error Guessing (오류 예측):** Khi đề hỏi "Kỹ thuật kiểm thử nào dựa vào kinh nghiệm, trực giác và sự nhạy cảm của kiểm thử viên thay vì công thức toán học?" $\rightarrow$ Chọn ngay **오류 예측 (Error Guessing)**.
 - **Bẫy 4: Vai trò của RTM:** Ma trận truy xuất nguồn gốc (Requirements Traceability Matrix) liên kết mỗi Test Case về tài liệu SRS để bảo đảm **100% yêu cầu nghiệp vụ đều được kiểm thử**, không bỏ sót tính năng.
+- **Bẫy 5: Severity vs Priority:** Severity là mức độ tác động kỹ thuật (do Tester xác định); Priority là mức độ khẩn cấp xử lý theo góc độ kinh doanh (do PM/PO xác định). Hai chỉ số này không nhất thiết phải tương đương (ví dụ: Logo công ty bị sai màu $\rightarrow$ Severity là Minor nhưng Priority là High vì ảnh hưởng thương hiệu).
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Chi tiết cơ chế & ví dụ bài tập tính toán
-- **Ví dụ Phân vùng tương đương (동치 분할):**
-  - Quy tắc: "Điểm thi của sinh viên là số nguyên từ 0 đến 100".
-  - Ta chia thành 3 lớp tương đương:
-    1. Lớp không hợp lệ 1: $\text{Điểm} < 0 \rightarrow$ Chọn đại diện: `-5`
-    2. Lớp hợp lệ: $0 \le \text{Điểm} \le 100 \rightarrow$ Chọn đại diện: `75`
-    3. Lớp không hợp lệ 2: $\text{Điểm} > 100 \rightarrow$ Chọn đại diện: `120`
-  - Chỉ cần 3 Test Cases để bao phủ toàn bộ miền dữ liệu của trường này.
-- **Ví dụ Phân tích giá trị biên (경계값 분석):**
-  - Với điều kiện $0 \le \text{Điểm} \le 100$:
-    - Tại biên dưới ($0$): Chọn `-1` (ngoài biên), `0` (ngay biên), `1` (trong biên).
-    - Tại biên trên ($100$): Chọn `99` (trong biên), `100` (ngay biên), `101` (ngoài biên).
-  - Bộ giá trị kiểm thử tối ưu: $\mathbf{\{-1, 0, 1, 99, 100, 101\}}$.
+#### 1. Phân tích giá trị biên: 2-Point Boundary vs 3-Point Boundary
 
-#### 2. Đồ thị nguyên nhân - kết quả (Cause-Effect Graphing) sang Bảng quyết định
+```text
+  [KỸ THUẬT PHÂN TÍCH GIÁ TRỊ BIÊN (BOUNDARY VALUE ANALYSIS)]
+  Miền không hợp lệ           MIỀN HỢP LỆ (VALID RANGE: [a, b])          Miền không hợp lệ
+  (Invalid Low)               a                               b          (Invalid High)
+  ────────────────)┌──────────────────────────────────────────────┐(────────────────
+                   │                                              │
+         a-1       │    a         a+1                    b-1      b   │      b+1
+          ▲        │    ▲          ▲                      ▲       ▲   │       ▲
+   (Ngoài biên dưới) (Biên dưới) (Trong biên dưới) (Trong biên trên) (Biên trên) (Ngoài biên trên)
+```
+
+- **Kỹ thuật biên 2 điểm (2-point boundary - Chuẩn cổ điển):**
+  - Với mỗi ranh giới, chọn 2 giá trị: Giá trị ngay tại biên và giá trị nằm ngay sát ngoài biên.
+  - Cho miền $[a, b]$, chọn 4 giá trị: $\{a-1, a, b, b+1\}$.
+- **Kỹ thuật biên 3 điểm (3-point boundary - Chuẩn ISTQB hiện đại):**
+  - Với mỗi ranh giới, chọn 3 giá trị: Giá trị ngay tại biên, giá trị sát trong biên, và giá trị sát ngoài biên.
+  - Cho miền $[a, b]$, chọn 6 giá trị: $\{a-1, a, a+1, b-1, b, b+1\}$.
+  - Bổ sung thêm 1 giá trị danh định nằm ở giữa miền (Nominal Value) để kiểm tra luồng thông thường $\rightarrow$ Tổng cộng 7 ca kiểm thử.
+
+#### 2. Kiểm thử chuyển trạng thái (State Transition Testing)
+
+```text
+  [MÔ HÌNH MÁY TRẠNG THÁI HỮU HẠN (FSM) - HỆ THỐNG XÁC THỰC]
+         ┌───────────────────┐
+         │ 1. CHƯA ĐĂNG NHẬP │
+         └─────────┬─────────┘
+                   │
+                   │ [Sự kiện]: Nhập đúng Username & Password
+                   ▼
+         ┌───────────────────┐
+         │   2. ĐÃ XÁC THỰC  │ ─────── [Sự kiện]: Bấm Đặt hàng ───────► ┌───────────────────┐
+         └─────────┬─────────┘                                          │ 4. CHỜ THANH TOÁN │
+                   │                                                    └─────────┬─────────┘
+                   │ [Sự kiện]: Hết phiên chờ (Timeout 15 phút)                   │
+                   ▼                                                              │ [Sự kiện]: Hủy đơn
+         ┌───────────────────┐                                                    │
+         │ 3. KHÓA TẠM THỜI  │ ◄──────────────────────────────────────────────────┘
+         └───────────────────┘
+```
+
+- **Bản chất kỹ thuật:** Hệ thống phần mềm được mô hình hóa thành một Máy trạng thái hữu hạn (`FSM - Finite State Machine`).
+- Ca kiểm thử được thiết kế dựa trên:
+  1. Trạng thái hiện tại (`Current State`).
+  2. Sự kiện kích hoạt (`Event / Trigger`).
+  3. Điều kiện bảo vệ (`Guard Condition`).
+  4. Hành động thực thi (`Action`).
+  5. Trạng thái đích kế tiếp (`Next State`).
+- Giúp phát hiện các lỗi chuyển trạng thái bất hợp lệ (ví dụ: Chuyển từ "Chưa đăng nhập" thẳng sang "Đã thanh toán" mà bỏ qua bước xác thực).
+
+#### 3. Đồ thị nguyên nhân - kết quả (Cause-Effect Graphing) sang Bảng quyết định
 - **Cơ chế:** Khi hành vi của hệ thống phụ thuộc vào sự kết hợp phức tạp của nhiều điều kiện đầu vào đồng thời, đồ thị nguyên nhân - kết quả sử dụng các ký hiệu logic:
   - **원인 (Causes — Nguyên nhân):** Đại diện cho các điều kiện dữ liệu đầu vào.
   - **효과 (Effects — Kết quả):** Đại diện cho các hành vi hoặc trạng thái đầu ra của hệ thống.
-  - Các toán tử logic liên kết: `AND`, `OR`, `NOT`.
-  - Các ràng buộc loại trừ giữa các nguyên nhân: `E` (Exclusive - loại trừ lẫn nhau, tối đa 1 cái True), `I` (Inclusive - ít nhất 1 cái True), `O` (One and only one - đúng 1 cái True), `R` (Requires - nếu A True thì B bắt buộc True).
+  - Các toán tử logic liên kết: `AND (^)`, `OR (v)`, `NOT (~)`.
+  - Các ràng buộc loại trừ giữa các nguyên nhân:
+    * `E` (Exclusive): Tối đa chỉ 1 nguyên nhân mang giá trị True (loại trừ lẫn nhau).
+    * `I` (Inclusive): Ít nhất 1 nguyên nhân phải mang giá trị True.
+    * `O` (One and only one): Đúng duy nhất 1 nguyên nhân mang giá trị True.
+    * `R` (Requires): Nếu nguyên nhân A là True thì nguyên nhân B bắt buộc phải là True.
 - Đồ thị sau khi vẽ sẽ được chuyển đổi trực tiếp thành **의사결정 테이블 (Decision Table)** để sinh ra các Test Case hoàn chỉnh.
 
-#### 3. Ma trận truy xuất nguồn gốc kiểm thử (RTM - Requirements Traceability Matrix)
+#### 4. Ma trận truy xuất nguồn gốc kiểm thử (RTM - Requirements Traceability Matrix)
 - Trong các dự án phần mềm chuyên nghiệp, mỗi Test Case bắt buộc phải được liên kết ngược về tài liệu Yêu cầu (Software Requirements Specification - SRS).
 - **Mục đích:** Bảo đảm **100% yêu cầu nghiệp vụ của khách hàng đều có ít nhất một Test Case bao phủ**, không để lọt bất kỳ tính năng nào chưa được kiểm tra trước khi bàn giao sản phẩm.
 

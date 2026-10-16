@@ -63,36 +63,76 @@ $$\mathbf{우연적(Coincidental) \lt 논리적(Logical) \lt 시간적(Temporal)
 | **Coincidental** | **우연적 응집도** | Các câu lệnh nhét chung hoàn toàn ngẫu nhiên, không liên hệ | **Tồi tệ nhất** |
 
 #### 4. Bảng 5 phương thức IPC (Inter-Process Communication)
+
 | Phương thức IPC | Tên tiếng Hàn & Anh | Cơ chế hoạt động chi tiết | Đặc điểm nhận diện cốt lõi |
-| :--- | :--- | :--- | :--- |
-| **Shared Memory** | **공유 메모리** | Nhiều tiến trình cùng ánh xạ và truy cập chung vào một vùng nhớ RAM vật lý | **Tốc độ nhanh nhất**; cần cơ chế đồng bộ tránh xung đột ghi |
-| **Socket** | **소켓** | Giao tiếp thông qua cổng mạng mạng TCP/IP giữa client và server | Giao tiếp được giữa **các máy tính khác nhau qua mạng** |
-| **Semaphore** | **세마포어** | Biến cờ đồng bộ hóa để kiểm soát quyền truy cập tài nguyên găng (Critical Section) | Không dùng truyền dữ liệu lớn; chỉ dùng **đồng bộ hóa và chống Deadlock** |
-| **Pipes** | **파이프** | Kênh truyền dữ liệu một chiều (Half-duplex) từ tiến trình cha sang tiến trình con | Đơn giản, dùng trong dòng lệnh (`ls \| grep`) |
-| **Message Queue** | **메시지 큐** | Hàng đợi lưu trữ thông điệp bất đồng bộ trong nhân hệ điều hành | **Bất đồng bộ (Asynchronous)**, tiến trình gửi không cần chờ tiến trình nhận |
+|:---|:---|:---|:---|
+| **Shared Memory** | **공유 메모리** | Nhiều tiến trình cùng ánh xạ và truy cập chung vào một vùng nhớ RAM vật lý | **Tốc độ nhanh nhất** (không qua kernel sau khi tạo); cần cơ chế đồng bộ tránh xung đột ghi |
+| **Socket** | **소켓** | Giao tiếp hai chiều thông qua cổng mạng mạng TCP/IP giữa client và server | Giao tiếp được giữa **các máy tính khác nhau qua mạng** hoặc nội bộ qua Unix Domain Socket |
+| **Semaphore** | **세마포어** | Biến cờ đồng bộ hóa để kiểm soát quyền truy cập tài nguyên găng (Critical Section) | Không dùng truyền dữ liệu lớn; chỉ dùng **đồng bộ hóa và chống Race Condition / Deadlock** |
+| **Pipes** | **파이프 (익명 vs 네임드)** | Kênh truyền dữ liệu một chiều (Half-duplex). Anonymous Pipe dùng cho cha-con; Named Pipe (FIFO) có tên trên filesystem | Đơn giản, dùng trong dòng lệnh (`ls \| grep`) hoặc giữa các tiến trình độc lập qua file FIFO |
+| **Message Queue** | **메시지 큐** | Hàng đợi lưu trữ thông điệp bất đồng bộ trong nhân hệ điều hành (Kernel) | **Bất đồng bộ (Asynchronous)**, tiến trình gửi không cần chờ tiến trình nhận, hỗ trợ lọc theo Message Type |
 
 #### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
 - **Bẫy 1: Thần chú Coupling & Cohesion:**
-  - Coupling tốt nhất: **자료 결합도 (Data)**; tồi tệ nhất: **내용 결합도 (Content)**.
-  - Cohesion tốt nhất: **기능적 응집도 (Functional)**; tồi tệ nhất: **우연적 응집도 (Coincidental)**.
+  - Quy tắc thiết kế: **고응저결 (Cao Ứng Thấp Kết)** $\rightarrow$ Cohesion High, Coupling Low.
+  - Coupling tốt nhất: **자료 결합도 (Data)**; tồi tệ nhất: **내용 결합도 (Content)** (Khẩu quyết: **자-스-제-외-공-내**).
+  - Cohesion tốt nhất: **기능적 응집도 (Functional)**; tồi tệ nhất: **우연적 응집도 (Coincidental)** (Khẩu quyết: **우-논-시-절-통-순-기**).
 - **Bẫy 2: Biến toàn cục thuộc loại nào:** Nhiều module cùng dùng biến toàn cục $\rightarrow$ **공통 결합도 (Common Coupling)**.
 - **Bẫy 3: Phương thức IPC tốc độ cao nhất:** IPC nào có tốc độ truyền nhanh nhất do không cần sao chép dữ liệu qua kernel? $\rightarrow$ **공유 메모리 (Shared Memory)**.
+- **Bẫy 4: Phân biệt Anonymous Pipe vs Named Pipe:** Anonymous Pipe chỉ dùng cho các tiến trình có quan hệ cha-con (`부모-자식 프로세스`); muốn hai tiến trình hoàn toàn độc lập giao tiếp bằng Pipe thì phải dùng **Named Pipe (FIFO)**.
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Chi tiết 2 phương pháp Tái sử dụng phần mềm (소프트웨어 재사용)
+#### 1. So sánh kiến trúc: Shared Memory vs Message Passing
+
+```text
+  [MÔ HÌNH 1: BỘ NHỚ CHIA SẺ (SHARED MEMORY)]
+  Tiến trình A (Process A)                    Tiến trình B (Process B)
+  ┌───────────────────────┐                   ┌───────────────────────┐
+  │ Không gian địa chỉ A  │                   │ Không gian địa chỉ B  │
+  └───────────┬───────────┘                   └───────────┬───────────┘
+              │ Ánh xạ (Map)                              │ Ánh xạ (Map)
+              ▼                                           ▼
+  ┌───────────────────────────────────────────────────────────────────┐
+  │               Vùng nhớ chia sẻ vật lý (Shared Memory RAM)          │
+  │   - Đọc/Ghi trực tiếp với tốc độ bus phần cứng (Không qua Kernel) │
+  │   - Bắt buộc phối hợp cùng Semaphore/Mutex để chống Race Condition│
+  └───────────────────────────────────────────────────────────────────┘
+
+  [MÔ HÌNH 2: TRUYỀN THÔNG ĐIỆP (MESSAGE PASSING: PIPE / QUEUE / SOCKET)]
+  Tiến trình gửi (Sender)                     Tiến trình nhận (Receiver)
+  ┌───────────────────────┐                   ┌───────────────────────┐
+  │  Buffer người dùng A  │                   │  Buffer người dùng B  │
+  └───────────┬───────────┘                   └───────────▲───────────┘
+              │ 1. write() / send()                       │ 3. read() / recv()
+              ▼    (System Call vào Kernel)               │    (System Call từ Kernel)
+  ┌───────────────────────────────────────────────────────┴───────────┐
+  │                     Nhân Hệ Điều Hành (Kernel)                    │
+  │    [ 2. Buffer dữ liệu trung gian: Pipe Buffer / Message Queue ]   │
+  │    - Tốn chi phí chuyển đổi ngữ cảnh (Context Switching Overhead) │
+  │    - An toàn hơn vì không chia sẻ không gian bộ nhớ trực tiếp      │
+  └───────────────────────────────────────────────────────────────────┘
 ```
-[ 합성 중심 (Composition) ]                 [ 생성 중심 (Generation) ]
-   +-----+   +-----+                          +----------------------+
-   | Khối | + | Khối |  ===> Phần mềm mới     | Bản đặc tả trừu tượng | ===> Trình sinh mã ===> Code mới
-   |  A  |   |  B  |                          +----------------------+
-   +-----+   +-----+
-  (Lắp ráp linh kiện Component)                      (Sinh mã tự động theo mẫu Pattern)
+
+- **Phân tích bản chất:**
+  - **Shared Memory (Bộ nhớ chia sẻ):** Sau khi được hệ điều hành thiết lập vùng nhớ chung ban đầu, các thao tác đọc ghi dữ liệu diễn ra như đọc ghi biến thông thường trên RAM mà **hoàn toàn không cần gọi System Call vào Kernel**. Do đó, nó đạt tốc độ cao nhất và thích hợp cho việc truyền dữ liệu dung lượng lớn (video streaming, hình ảnh đồ họa). Tuy nhiên, lập trình viên phải tự quản lý đồng bộ hóa bằng Semaphore để tránh xung đột dữ liệu.
+  - **Message Passing (Truyền thông điệp):** Mỗi lần gửi nhận dữ liệu, tiến trình phải thực hiện System Call (`send`/`recv` hoặc `write`/`read`). Dữ liệu được sao chép 2 lần: từ bộ nhớ người dùng vào bộ đệm của Kernel, rồi từ Kernel sang bộ nhớ tiến trình đích. Tuy tốc độ chậm hơn và tốn tài nguyên chuyển ngữ cảnh (`Context Switching`), nhưng phương thức này an toàn tuyệt đối và có thể mở rộng chạy phân tán qua mạng (Socket).
+
+#### 2. Chi tiết 2 phương pháp Tái sử dụng phần mềm (소프트웨어 재사용)
+
+```text
+  [ 합성 중심 (Composition-based) ]             [ 생성 중심 (Generation-based) ]
+     ┌─────┐   ┌─────┐                              ┌────────────────────────┐
+     │Khối │ + │Khối │  ===> Phần mềm mới           │ Bản đặc tả trừu tượng  │ ===> Trình sinh mã ===> Code mới
+     │  A  │   │  B  │                              └────────────────────────┘      (Compiler/CASE)
+     └─────┘   └─────┘
+    (Lắp ráp linh kiện Component)                          (Sinh mã tự động theo mẫu Pattern)
 ```
+
 - **합성 중심 (Synthesis-oriented / Hướng tổng hợp):**
-  - Còn gọi là tái sử dụng hướng khối ghép (Block-oriented).
+  - Còn gọi là tái sử dụng hướng khối ghép (Block-oriented / Lego approach).
   - Lắp ráp phần mềm mới bằng cách kết hợp các khối linh kiện phần mềm (Software Components) đã được kiểm thử và lưu trữ sẵn trong thư viện.
 - **생성 중심 (Generation-oriented / Hướng tạo sinh):**
   - Người dùng cung cấp bản đặc tả trừu tượng ở mức cao.
@@ -101,8 +141,10 @@ $$\mathbf{우연적(Coincidental) \lt 논리적(Logical) \lt 시간적(Temporal)
 ---
 
 ### 복습 체크리스트
-- [ ] Thuộc lòng chuỗi 6 cấp độ Coupling: Data < Stamp < Control < External < Common < Content.
-- [ ] Thuộc lòng chuỗi 7 cấp độ Cohesion: Coincidental < Logical < Temporal < Procedural < Communicational < Sequential < Functional.
+- [ ] Thuộc lòng chuỗi 6 cấp độ Coupling: Data < Stamp < Control < External < Common < Content (`자-스-제-외-공-내`).
+- [ ] Thuộc lòng chuỗi 7 cấp độ Cohesion: Coincidental < Logical < Temporal < Procedural < Communicational < Sequential < Functional (`우-논-시-절-통-순-기`).
 - [ ] Nhớ biến toàn cục tương ứng với Common Coupling.
 - [ ] Phân biệt 5 phương thức IPC: Shared Memory (nhanh nhất), Socket (qua mạng), Semaphore (đồng bộ), Pipe (1 chiều), Message Queue (bất đồng bộ).
+- [ ] Phân biệt Anonymous Pipe (quan hệ cha-con) và Named Pipe (giao tiếp tiến trình độc lập qua tên FIFO).
+- [ ] So sánh được cơ chế hoạt động của Shared Memory (không qua kernel) và Message Passing (qua kernel buffer).
 - [ ] Phân biệt Tái sử dụng 합성 중심 (ghép linh kiện) và 생성 중심 (tạo sinh từ đặc tả).

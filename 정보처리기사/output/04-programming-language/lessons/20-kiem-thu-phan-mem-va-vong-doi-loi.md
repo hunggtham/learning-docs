@@ -43,7 +43,7 @@
 | :--- | :--- | :--- |
 | **Góc nhìn mã nguồn** | **Mở mã nguồn:** Nhìn thấy toàn bộ cấu trúc logic, giải thuật và các biến bên trong. | **Đóng mã nguồn:** Hoàn toàn không nhìn vào code; chỉ đối chiếu Đầu vào $\rightarrow$ Đầu ra. |
 | **Căn cứ thiết kế test** | Dựa trên **Biểu đồ luồng điều khiển (Control Flow Graph)** và logic rẽ nhánh. | Dựa trên **Tài liệu đặc tả yêu cầu chức năng (Software Requirements Specification)**. |
-| **Các kỹ thuật then chốt**| • **기초 경로 검사 (Basis Path Testing):** Dựa trên $V(G)$.<br>• **문장 검증 (Statement Coverage):** Phủ mọi dòng lệnh.<br>• **분기 검증 (Branch Coverage):** Phủ mọi nhánh True/False.<br>• **조건 검증 (Condition Coverage):** Phủ điều kiện đơn lẻ. | • **동치 분할 검사 (Equivalence Partitioning):** Chia nhóm hợp lệ và không hợp lệ.<br>• **경계값 분석 (Boundary Value Analysis):** Test tại các điểm biên.<br>• **원인-효과 그래프 (Cause-Effect):** Lập bảng quyết định.<br>• **오류 예측 (Error Guessing):** Dựa trên kinh nghiệm. |
+| **Các kỹ thuật then chốt**| 기초 경로 검사 (Basis Path Testing dựa trên $V(G)$), 문장 검증 (Statement Coverage), 분기 검증 (Branch Coverage), 조건 검증 (Condition Coverage). | 동치 분할 검사 (Equivalence Partitioning), 경계값 분석 (Boundary Value Analysis), 원인-효과 그래프 (Cause-Effect Graphing), 오류 예측 (Error Guessing). |
 
 - **2. Bảng đối chiếu chiến lược tích hợp: Top-Down vs Bottom-Up:**
 

@@ -62,15 +62,39 @@
 | **Phản hồi** | Lập trình viên ghi nhận lỗi tức thì tại chỗ | Người dùng tự trải nghiệm và gửi báo cáo lỗi về |
 
 #### 3. Bảng so sánh đối đầu Top-down vs Bottom-up Integration
+
+```text
+  [1. TÍCH HỢP TỪ TRÊN XUỐNG (TOP-DOWN)]             [2. TÍCH HỢP TỪ DƯỚI LÊN (BOTTOM-UP)]
+              ┌───────────────┐                                 ┌───────────────┐
+              │  MODULE ĐỈNH  │ (Mã nguồn thật)                 │  TEST DRIVER  │ (Giả lập điều khiển)
+              └───────┬───────┘                                 └───────┬───────┘
+                      │ Gọi xuống                                       │ Gọi kích hoạt
+          ┌───────────┴───────────┐                                     ▼
+          ▼                       ▼                             ┌───────────────┐
+   ┌──────────────┐        ┌──────────────┐                     │ CLUSTER/NHÓM  │ (Các module con
+   │ TEST STUB 1  │        │ TEST STUB 2  │                     │  [Module A]   │  thực tế đã code)
+   └──────────────┘        └──────────────┘                     │  [Module B]   │
+   (Giả lập module con cấp dưới nhận tham số)                   └───────────────┘
+```
+
 | Tiêu chí | 하향식 통합 테스트 (Top-down) | 상향식 통합 테스트 (Bottom-up) |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | **Hướng tích hợp** | Từ mô-đun chính ở đỉnh đi dần xuống dưới | Từ các mô-đun lá ở đáy đi dần lên trên |
 | **Công cụ hỗ trợ** | **테스트 스텁 (Test Stub)** - Giả lập mô-đun con bị gọi | **테스트 드라이버 (Test Driver)** - Giả lập chương trình gọi xuống |
+| **Đơn vị tích hợp** | Từng module theo nhánh (Depth-first / Breadth-first) | Gom các module con thành cụm (**클러스터 / Cluster**) |
 | **Ưu điểm lớn nhất** | Sớm có bản mẫu demo (**Prototype**) cho khách hàng xem | Kiểm tra kỹ thuật toán xử lý dữ liệu ở đáy; dễ viết ca test |
 | **Nhược điểm** | Các hàm xử lý dữ liệu chi tiết ở đáy bị test muộn | Mô-đun điều khiển ở đỉnh bị test muộn; không sớm có demo |
 
-- **빅뱅 통합 테스트 (Big-Bang Integration):** Lắp ghép toàn bộ tất cả các module cùng một lúc rồi mới chạy test. Nhược điểm chí tử: **Cực kỳ khó xác định nguyên nhân và vị trí lỗi (원인 식별 곤란)**.
-- **혼합식 통합 (Sandwich Testing):** Tầng trên tích hợp Top-down (dùng Stub), tầng dưới tích hợp Bottom-up (dùng Driver), gặp nhau tại tầng giữa.
+- **Chi tiết hai chiến lược duyệt nhánh trong Top-down:**
+  - `깊이 우선 (Depth-First)`: Tích hợp dọc theo một nhánh điều khiển chính đi thẳng từ đỉnh xuống đáy trước khi chuyển sang nhánh rẽ khác.
+  - `너비 우선 (Breadth-First)`: Tích hợp và kiểm tra tất cả các module ngang hàng trong cùng một cấp trước khi đi xuống cấp sâu hơn.
+- **Quy trình tích hợp trong Bottom-up:**
+  1. Gom các module cấp thấp thực hiện các chức năng liên quan thành các cụm (`클러스터 / Cluster` hoặc `Build`).
+  2. Viết chương trình điều khiển giả lập (`테스트 드라이버 - Test Driver`) để truyền tham số và gọi cluster thực thi.
+  3. Thực hiện kiểm thử trên cluster.
+  4. Gỡ bỏ Test Driver và thay thế bằng các module cấp trên thực tế khi chúng được hoàn thiện.
+- **빅뱅 통합 테스트 (Big-Bang Integration):** Lắp ghép toàn bộ tất cả các module cùng một lúc rồi mới chạy test. Nhược điểm chí tử: **Cực kỳ khó xác định nguyên nhân và vị trí lỗi (원인 식별 곤란)**, chỉ phù hợp dự án quy mô rất nhỏ.
+- **혼합식 통합 (Sandwich / Hybrid Testing):** Tầng trên tích hợp Top-down (dùng Stub), tầng dưới tích hợp Bottom-up (dùng Driver), hai hướng gặp nhau tại tầng điều phối trung gian.
 
 #### 4. Bốn loại Test Oracle (테스트 오라클)
 - **Định nghĩa:**
@@ -78,11 +102,11 @@
   - [Tiếng Việt]: Test Oracle là hoạt động hoặc giá trị chân lý định trước được đưa vào so sánh nhằm phán đoán kết quả thực thi kiểm thử là Đúng hay Sai.
 
 | Loại Test Oracle | Tên tiếng Hàn & Anh | Cơ chế hoạt động chi tiết | Trường hợp áp dụng thực tế |
-| :--- | :--- | :--- | :--- |
-| **Oracle Chân lý** | **참 오라클 (True Oracle)** | Kiểm tra **tất cả mọi ca kiểm thử (전수 검사)** bằng cách so sánh với kết quả kỳ vọng đúng tuyệt đối 100% | Hệ thống an toàn sinh mạng: Hàng không, y tế, ngân hàng |
-| **Oracle Lấy mẫu** | **샘플링 오라클 (Sampling Oracle)** | **Chỉ chọn một số ca kiểm thử mẫu đại diện** để đối chiếu kết quả chính xác, các ca khác kiểm tra sơ bộ | Không gian dữ liệu đầu vào quá lớn, không thể test hết 100% |
-| **Oracle Ước lượng** | **추정 / 휴리스틱 오라클 (Heuristic)** | Sử dụng **kinh nghiệm chuyên gia, xác suất và giải thuật xấp xỉ** khi không thể tính chính xác | Hệ thống Trí tuệ nhân tạo (AI), xử lý hình ảnh, dự báo thời tiết |
-| **Oracle Nhất quán** | **일관성 검사 오라클 (Consistent)** | **So sánh kết quả thực thi trước và sau khi sửa đổi mã nguồn** xem có phát sinh biến đổi ngoài ý muốn | Áp dụng chủ yếu trong **Kiểm thử hồi quy (회귀 테스트 / Regression)** |
+|:---|:---|:---|:---|
+| **Oracle Chân lý** | **참 오라클 (True Oracle)** | Kiểm tra **tất cả mọi ca kiểm thử (전수 검사)** bằng cách so sánh với kết quả kỳ vọng đúng tuyệt đối 100% | Hệ thống an toàn sinh mạng: Hàng không, vũ trụ, thiết bị y tế, ngân hàng |
+| **Oracle Lấy mẫu** | **샘플링 오라클 (Sampling Oracle)** | **Chỉ chọn một số ca kiểm thử mẫu đại diện** để đối chiếu kết quả chính xác, các ca khác kiểm tra sơ bộ | Không gian dữ liệu đầu vào quá lớn, không thể tính toán trước kết quả của 100% trường hợp |
+| **Oracle Ước lượng** | **추정 / 휴리스틱 오라클 (Heuristic Oracle)** | Sử dụng **kinh nghiệm chuyên gia, lý thuyết xác suất và giải thuật xấp xỉ** khi không thể tính chính xác | Hệ thống Trí tuệ nhân tạo (AI/ML), xử lý hình ảnh, thị giác máy tính, mô hình hóa dự báo thời tiết |
+| **Oracle Nhất quán** | **일관성 검사 오라클 (Consistent Oracle)** | **So sánh kết quả thực thi trước và sau khi sửa đổi mã nguồn** xem có phát sinh biến đổi ngoài ý muốn | Áp dụng chủ yếu trong **Kiểm thử hồi quy (회귀 테스트 / Regression Testing)** |
 
 #### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
 - **Bẫy 1: Ghép cặp V-Model:**
@@ -91,9 +115,10 @@
   - Thiết kế chi tiết $\leftrightarrow$ Tích hợp (`통합 테스트`).
   - Cài đặt/Mã nguồn $\leftrightarrow$ Đơn vị (`단위 테스트`).
 - **Bẫy 2: Thần chú Stub vs Driver:**
-  - **Hạ thấu (Top-down)** đi xuống cần đứa hứng bên dưới $\rightarrow$ **Stub** (Mô-đun con giả lập).
-  - **Thượng thăng (Bottom-up)** đi lên cần đứa kích hoạt bên trên $\rightarrow$ **Driver** (Chương trình điều khiển giả lập).
+  - **Hạ thấu (Top-down)** đi xuống cần module con giả lập bên dưới $\rightarrow$ **테스트 스텁 (Test Stub)**.
+  - **Thượng thăng (Bottom-up)** đi lên cần chương trình điều khiển giả lập bên trên $\rightarrow$ **테스트 드라이버 (Test Driver)**.
 - **Bẫy 3: Oracle Nhất quán (Consistent Oracle):** Khi đề hỏi "Loại Oracle nào so sánh kết quả trước và sau khi thay đổi phần mềm, chuyên dùng trong kiểm thử hồi quy?" $\rightarrow$ Chọn ngay **일관성 검사 오라클 (Consistent Oracle)**.
+- **Bẫy 4: Kiểm thử Big-Bang:** Lắp ghép 1 lần toàn bộ module rồi test $\rightarrow$ Nhược điểm lớn nhất là **khó khoanh vùng xác định nguyên nhân lỗi (오류 위치 식별 곤란)**.
 
 ---
 
@@ -105,11 +130,7 @@ Test Harness là khung môi trường phần mềm hỗ trợ thực thi kiểm 
 - **테스트 스텁 (Test Stub):** Module cấp dưới giả lập nhận lệnh và trả về dữ liệu mẫu (dùng trong Top-down).
 - **테스트 슈트 (Test Suite):** Tập hợp nhiều Test Case được gom nhóm lại để thực thi trong một chu kỳ kiểm thử.
 - **테스트 스크립트 (Test Script):** File kịch bản chứa các dòng lệnh tự động hóa thực thi các Test Case.
-- **목 오브젝트 (Mock Object):** Đối tượng giả lập hành vi của các thành phần phụ thuộc bên ngoài (DB, API thứ ba).
-
-#### 2. Kỹ thuật duyệt cây trong Top-down Integration
-- **Duyệt theo chiều sâu (깊이 우선 - Depth-First):** Tích hợp dọc theo một nhánh điều khiển chính đi thẳng từ đỉnh xuống đáy trước khi chuyển sang nhánh rẽ khác.
-- **Duyệt theo chiều rộng (너비 우선 - Breadth-First):** Tích hợp tất cả các module cùng một tầng ngang trước khi tiến xuống tầng sâu hơn.
+- **목 오브젝트 (Mock Object):** Đối tượng giả lập hành vi của các thành phần phụ thuộc bên ngoài (DB, API thứ ba) với các phản hồi được lập trình sẵn.
 
 ---
 

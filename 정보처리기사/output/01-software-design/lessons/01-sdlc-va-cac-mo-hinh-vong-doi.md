@@ -81,14 +81,18 @@
 | **상세 설계** (Thiết kế chi tiết) | **통합 테스트** (Integration Testing) | Kiểm tra sự tương tác và giao tiếp giữa các module |
 | **구현 / 코딩** (Hiện thực mã nguồn) | **단위 테스트** (Unit Testing) | Kiểm tra tính đúng đắn của từng hàm, phương thức, lớp |
 
-#### 3. Ma trận lựa chọn mô hình phát triển (Development Model Selection)
+#### 3. Bảng so sánh chuyên sâu 4 mô hình phát triển phần mềm kinh điển
 
-| Tiêu chí so sánh | 폭포수 (Waterfall) | 프로토타입 (Prototype) | 나선형 (Spiral) | 애자일 (Agile) |
+| Tiêu chí so sánh | 폭포수 모형 (Waterfall) | 프로토타입 모형 (Prototype) | 나선형 모형 (Spiral) | V-모형 (V-Model) |
 |:---|:---|:---|:---|:---|
-| **Độ ổn định của yêu cầu** | Đã xác định rõ, cố định | Rất mơ hồ, chưa rõ ràng | Phức tạp, dễ phát sinh | Biến động liên tục |
-| **Trọng tâm quản lý** | Kế hoạch & Sản phẩm bàn giao | Trải nghiệm người dùng | Quản lý rủi ro (Risk) | Khách hàng & Giá trị chạy được |
-| **Quy mô dự án tối ưu** | Trung bình, hợp đồng cứng | Nhỏ đến trung bình | Lớn đến rất lớn | Nhỏ đến trung bình, linh hoạt |
-| **Chi phí thay đổi muộn** | Cực kỳ cao | Thấp ở đầu, cao ở sau | Trung bình (đã diệt rủi ro) | Thấp (thích ứng ngắn) |
+| **Triết lý cốt lõi** | Tuyến tính tuần tự (선형 순차적), dứt điểm từng pha | Xây dựng bản mẫu thử nghiệm (시제품) thu thập phản hồi | Lặp lại tăng dần (점진적) tích hợp quản lý rủi ro | Mở rộng Waterfall, đối xứng 1:1 giữa Dev và Test |
+| **Tác giả / Nguồn gốc** | W. Royce (1970) | Xu hướng công nghệ tương tác | Barry Boehm (1988) | Paul Rook (1986) / Tiêu chuẩn Đức |
+| **Phân tích rủi ro (위험 분석)** | Không có hoặc rất yếu | Trung bình (giảm rủi ro hiểu lầm giao diện/nghiệp vụ) | **Cốt lõi sống còn** (trung tâm mọi vòng xoắn) | Thấp đến trung bình (tập trung xác minh sớm) |
+| **Thời điểm phát hiện lỗi** | Rất muộn (tại pha Kiểm thử cuối chu trình) | Rất sớm ở khâu yêu cầu/giao diện | Sớm qua từng vòng lặp nhờ phân tích rủi ro | Sớm qua việc lập kế hoạch test song song khi phân tích |
+| **Khả năng đáp ứng thay đổi** | Cực kỳ kém (đóng băng mốc bàn giao) | Rất cao ở giai đoạn đầu | Tốt ở ranh giới giữa các vòng xoắn | Kém (thay đổi yêu cầu làm đảo lộn chuỗi V) |
+| **Sự tham gia của khách hàng** | Chủ yếu ở đầu (yêu cầu) và cuối (nghiệm thu) | Tham gia liên tục tương tác trên bản mẫu | Tham gia cuối mỗi vòng xoắn (고객 평가) | Tham gia mạnh ở đầu và pha Nghiệm thu cuối |
+| **Sản phẩm bàn giao** | Tài liệu đặc tả đồ sộ, code hoàn chỉnh cuối | Bản mẫu (Throwaway hoặc Evolutionary Prototype) | Sản phẩm gia tăng (Release) + Báo cáo rủi ro | Bộ tài liệu đặc tả song hành kịch bản kiểm thử |
+| **Dự án phù hợp nhất** | Yêu cầu cố định, ít rủi ro, dự án công/quốc phòng | Nghiệp vụ mới lạ, giao diện tương tác cao | Dự án quy mô lớn, công nghệ mới, rủi ro cao | Dự án đòi hỏi độ tin cậy và an toàn cực cao (y tế, hàng không) |
 
 #### 4. Bẫy đề thi trắc nghiệm thường gặp (주의/함정)
 - **Bẫy 1 (Chi phí trong vòng đời):** Đề hỏi *"Giai đoạn nào chiếm tỷ trọng chi phí và nhân lực lớn nhất trong SDLC?"* $\rightarrow$ **Đáp án: Bảo trì (`유지보수`)**, thường chiếm từ 60% đến 70% tổng chi phí toàn bộ vòng đời phần mềm.
@@ -96,13 +100,49 @@
 - **Bẫy 3 (Ánh xạ V-Model):** Đề hay hỏi gài *"Kiểm thử tích hợp (통합 테스트) kiểm tra kết quả của giai đoạn nào?"* $\rightarrow$ **Tương ứng với Thiết kế chi tiết / Thiết kế module (`상세 설계`)**, không phải giai đoạn coding.
 - **Bẫy 4 (Đồng nhất SDLC và Methodology):** `소프트웨어 생명 주기 (SDLC)` là khung toàn bộ vòng đời (What & When); còn `개발 방법론 (Methodology)` như Waterfall, Agile là cách tổ chức thực hiện cụ thể (How). Không được đánh đồng hai khái niệm.
 
-- **한 문장 설명 (Câu chốt ghi nhớ):** "Thác nước tuần tự đóng băng mốc, Bản mẫu khai thông yêu cầu mờ, Xoắn ốc Boehm diệt trừ rủi ro, Chữ V đối xứng Dev đi kèm Test".
+- **💡 Khẩu quyết thần chú đề thi:**
+  - Spiral 4 giai đoạn Boehm: **계위개고** (`계`획 수립 $\rightarrow$ `위`험 분석 $\rightarrow$ `개`발 및 검증 $\rightarrow$ `고`객 평가).
+  - V-Model 4 cặp đối xứng: **요-인 / 시-시 / 상-통 / 구-단** (Yêu cầu $\leftrightarrow$ Acceptance; System $\leftrightarrow$ System; Chi tiết $\leftrightarrow$ Integration; Code $\leftrightarrow$ Unit).
+  - Câu chốt tổng quát: "Thác nước tuần tự đóng băng mốc, Bản mẫu khai thông yêu cầu mờ, Xoắn ốc Boehm diệt trừ rủi ro, Chữ V đối xứng Dev đi kèm Test".
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Quy luật chi phí phát hiện lỗi sớm (Cost of Change Curve)
+#### 1. Biểu đồ kiến trúc Spiral Model (Sơ đồ xoắn ốc 4 góc phần tư)
+
+```text
+                                  GÓC PHẦN TƯ I: 계획 수립 (Planning)
+                                  - Xác định mục tiêu (Objectives)
+                                  - Tìm phương án thay thế (Alternatives)
+                                  - Nhận diện ràng buộc (Constraints)
+                                                |
+               ^ Chi phí tích lũy               |             Vòng lặp 1 (Concept)
+               | Bán kính xoắn                  |           . - - - - - .
+               |                                |         /               \
+                                                |        /                 \
+  GÓC PHẦN TƯ IV: 고객 평가 (Evaluation)        |       |   (Tâm xoắn)      |    GÓC PHẦN TƯ II: 위험 분석 (Risk Analysis)
+  - Khách hàng đánh giá kết quả                |       |        *          |    - Nhận diện rủi ro kỹ thuật & quản lý
+  - Nghiệm thu sản phẩm vòng lặp               |        \                 /     - Chế tạo Prototype giải tỏa rủi ro
+  - Quyết định đi tiếp hay hủy bỏ dự án         |         \             /       - Thẩm định giải pháp khả thi
+  ----------------------------------------------+----------`- - - - - '--------------------------------------------
+                                                |                  /
+                                                |                 /  Vòng lặp 2 (Design)
+                                                |                /
+                                                |               /    Vòng lặp 3 (Core Implementation)
+                                                |              /
+                                  GÓC PHẦN TƯ III: 개발 및 검증 (Engineering)
+                                  - Thiết kế chi tiết & Viết code (Coding)
+                                  - Kiểm thử đơn vị, tích hợp (Unit & Integration Test)
+                                  - Bàn giao sản phẩm tăng dần (Deliverable)
+```
+
+**Nguyên lý vận hành vòng xoắn:**
+1. Mỗi vòng xoắn bắt đầu từ trục tung phía trên bên phải theo chiều kim đồng hồ, đi qua đúng 4 góc phần tư: **계획 수립 $\rightarrow$ 위험 분석 $\rightarrow$ 개발 및 검증 $\rightarrow$ 고객 평가**.
+2. **Trục hoành và trục tung:** Chiều bán kính vươn xa từ tâm biểu thị **Chi phí tích lũy (Cumulative Cost)** và **Mức độ hoàn thiện của hệ thống**.
+3. **Chốt chặn sống còn tại Góc phần tư II (위험 분석):** Đây là điểm khác biệt lớn nhất giữa Spiral và các mô hình khác. Nếu tại góc II, rủi ro kỹ thuật (như thuật toán xử lý dữ liệu lớn không khả thi, chi phí phần cứng vượt ngưỡng) không thể giải quyết bằng Prototype, dự án có quyền **Dừng lại ngay lập tức (Go/No-Go Decision)** để cắt giảm tối đa thiệt hại tài chính.
+
+#### 2. Quy luật chi phí phát hiện lỗi sớm (Cost of Change Curve)
 - Theo nghiên cứu kinh điển của Barry Boehm, nếu một lỗi sai lệch về mặt yêu cầu được phát hiện ngay tại giai đoạn Phân tích yêu cầu (`요구사항 분석`), chi phí sửa đổi được quy chuẩn là $1\times$.
 - Nếu lỗi đó trôi qua giai đoạn Thiết kế $\rightarrow$ chi phí tăng lên $3\times - 5\times$.
 - Nếu trôi sang giai đoạn Coding $\rightarrow$ chi phí tăng $10\times$.
@@ -110,18 +150,13 @@
 - Nếu phần mềm đã triển khai thực tế và lỗi chỉ phát hiện ở giai đoạn Bảo trì vận hành $\rightarrow$ chi phí khắc phục có thể lên tới **$100\times$ đến $200\times$** do phải thu hồi sản phẩm, đền bù hợp đồng và viết lại kiến trúc nền tảng.
 - *Ý nghĩa sư phạm:* Đây chính là lý do vì sao SDLC đặt ra các mốc phê duyệt nghiêm ngặt và sản phẩm bàn giao tiêu chuẩn (`산출물`) để phát hiện và ngăn chặn lỗi trôi dạt sang các pha sau.
 
-#### 2. Cơ chế phân tích rủi ro trong mô hình Xoắn ốc (Spiral Model Deep-Dive)
-Mỗi vòng xoắn (Iteration) của mô hình Spiral mở rộng hệ thống theo chiều bán kính tăng dần và luôn tuân thủ đúng 4 góc phần tư:
-1. **Góc phần tư 1 — 계획 수립 (Planning):** Xác định mục tiêu, các phương án thay thế và ràng buộc của vòng lặp hiện tại.
-2. **Góc phần tư 2 — 위험 분석 (Risk Analysis):** Đội ngũ chuyên gia nhận diện các mối nguy kỹ thuật (ví dụ: công nghệ CSDL phân tán có chịu tải nổi 100.000 TPS không?), ước lượng thiệt hại và tiến hành làm thực nghiệm/nguyên mẫu kỹ thuật để triệt tiêu rủi ro.
-3. **Góc phần tư 3 — 개발 및 검증 (Engineering):** Khi rủi ro đã ở mức an toàn, tiến hành thiết kế chi tiết, viết code và kiểm thử mức tương ứng.
-4. **Góc phần tư 4 — 고객 평가 (Evaluation):** Bàn giao kết quả vòng lặp cho khách hàng đánh giá; sự hài lòng và phản hồi của khách hàng quyết định phạm vi công việc cho vòng xoắn tiếp theo. Nếu rủi ro vượt quá ngân sách chịu đựng, dự án có thể hủy bỏ ngay để cắt lỗ.
-
 #### 3. Phân tích tình huống đề thi trắc nghiệm (Case Analysis)
 - **Tình huống 1:** *"Một cơ quan chính phủ mở thầu xây dựng Hệ thống quản lý cơ sở dữ liệu đất đai quốc gia. Luật đất đai và các biểu mẫu hành chính đã được ban hành cố định, nhà thầu phải nộp đầy đủ hồ sơ thiết kế và nghiệm thu từng giai đoạn dứt điểm để giải ngân ngân sách. Nên chọn mô hình nào?"*
   - **Phân tích:** Yêu cầu hoàn toàn cố định, quy định pháp lý minh bạch, cần sản phẩm bàn giao chặt chẽ cho từng mốc thanh toán. $\rightarrow$ **Chọn 폭포수 모형 (Waterfall Model)**.
 - **Tình huống 2:** *"Một công ty công nghệ muốn phát triển hệ thống điều khiển tự động cho tên lửa đẩy vũ trụ. Chi phí phóng thử thất bại là hàng trăm triệu USD và ảnh hưởng nghiêm trọng đến an toàn. Đội ngũ kỹ sư cần nghiên cứu vật liệu mới và phần mềm điều hướng chưa từng có tiền lệ. Mô hình nào tối ưu nhất?"*
   - **Phân tích:** Dự án quy mô siêu lớn, độ bất định công nghệ cực cao, rủi ro tài chính khổng lồ $\rightarrow$ **Chọn 나선형 모형 (Spiral Model)** với chức năng trọng tâm là `위험 분석` qua từng vòng thử nghiệm.
+- **Tình huống 3:** *"Khách hàng là một chuỗi bán lẻ muốn tạo ứng dụng đặt hàng qua thiết bị di động mới, nhưng ban giám đốc chưa hình dung được trải nghiệm vuốt chạm và quy trình thanh toán trên màn hình nhỏ sẽ diễn ra như thế nào."*
+  - **Phân tích:** Yêu cầu giao diện và trải nghiệm người dùng mơ hồ $\rightarrow$ **Chọn 프로토타입 모형 (Prototype Model)** để chế tạo bản mẫu tương tác thử nghiệm trước khi chốt thiết kế.
 
 ---
 
@@ -129,6 +164,6 @@ Mỗi vòng xoắn (Iteration) của mô hình Spiral mở rộng hệ thống t
 - [ ] Nhớ chính xác 6 giai đoạn cơ bản của SDLC và nhận diện `유지보수` là giai đoạn tốn kém chi phí nhất.
 - [ ] Phân biệt được đặc trưng `선형 순차적` và `이전 단계 복귀 불가` của Waterfall Model.
 - [ ] Nhớ từ khóa `시제품 (bản mẫu thử nghiệm)` gắn liền với Prototype Model.
-- [ ] Đọc vanh vách tên nhà khoa học Boehm và chu trình 4 bước của Spiral Model: 계획 수립 $\rightarrow$ 위험 분석 $\rightarrow$ 개발 및 검증 $\rightarrow$ 고객 평가.
-- [ ] Vẽ và ánh xạ chính xác 4 cặp đối xứng trong V-Model: Phân tích yêu cầu $\leftrightarrow$ Kiểm thử chấp nhận; Thiết kế hệ thống $\leftrightarrow$ Kiểm thử hệ thống; Thiết kế chi tiết $\leftrightarrow$ Kiểm thử tích hợp; Hiện thực code $\leftrightarrow$ Kiểm thử đơn vị.
+- [ ] Đọc vanh vách tên nhà khoa học Boehm, câu khẩu quyết `계위개고` và 4 góc phần tư của Spiral Model: 계획 수립 $\rightarrow$ 위험 분석 $\rightarrow$ 개발 및 검증 $\rightarrow$ 고객 평가.
+- [ ] Vẽ và ánh xạ chính xác 4 cặp đối xứng trong V-Model: Phân tích yêu cầu $\leftrightarrow$ Kiểm thử chấp nhận; Thiết kế hệ thống $\leftrightarrow$ Kiểm thử hệ thống; Thiết kế chi tiết $\leftrightarrow$ Kiểm thử tích hợp; Hiện thực code $\leftrightarrow$ Kiểm thử đơn vị (`요-인`, `시-시`, `상-통`, `구-단`).
 - [ ] Nắm vững ma trận lựa chọn mô hình SDLC theo độ ổn định của yêu cầu và mức độ rủi ro kỹ thuật.

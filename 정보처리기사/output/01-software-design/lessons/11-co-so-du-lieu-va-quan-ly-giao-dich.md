@@ -126,12 +126,27 @@ Chuẩn hóa là quy trình phân rã một bảng quan hệ lớn có dị thư
   - `즉시 갱신 기법 (Immediate Update — Cập nhật ngay)`: Dữ liệu được ghi ngay xuống đĩa trong khi giao dịch đang chạy $\rightarrow$ **Cần cả REDO và UNDO**.
   - `체크포인트 기법 (Checkpoint — Điểm kiểm tra)`: Định kỳ ghi toàn bộ bộ đệm xuống đĩa và đánh dấu mốc kiểm tra, giúp rút ngắn thời gian quét log khi phục hồi.
 
-##### B. Kiểm soát đồng thời (Concurrency Control)
+##### B. Kiểm soát đồng thời (Concurrency Control) và Các mức độ Cô lập giao dịch
 - **4 Lỗi phát sinh nếu không kiểm soát đồng thời:**
-  1. `갱신 분실 (Lost Update)`: Hai giao dịch cùng ghi đè lên một bản ghi, làm mất kết quả cập nhật của giao dịch trước.
-  2. `모순성 (Inconsistency)`: Dữ liệu bị đọc trong trạng thái không nhất quán giữa hai lần truy vấn.
-  3. `연쇄 복귀 (Cascading Rollback)`: Một giao dịch bị hủy kéo theo việc phải hủy hàng loạt giao dịch khác đã đọc dữ liệu của nó.
-  4. `비인가 변화 (Dirty Read)`: Đọc phải dữ liệu tạm thời của một giao dịch chưa commit và sau đó giao dịch đó lại bị rollback.
+  1. `갱신 분실 (Lost Update — Mất mát cập nhật)`: Hai giao dịch cùng ghi đè lên một bản ghi, giao dịch sau ghi đè làm mất hoàn toàn kết quả cập nhật của giao dịch trước.
+  2. `모순성 (Inconsistency / Unrepeatable Read — Tính mâu thuẫn)`: Dữ liệu bị đọc trong trạng thái không nhất quán giữa hai lần truy vấn trong cùng một giao dịch do giao dịch khác xen ngang sửa đổi.
+  3. `연쇄 복귀 (Cascading Rollback — Hủy bỏ dây chuyền)`: Một giao dịch bị lỗi rollback kéo theo việc phải hủy hàng loạt giao dịch khác đã lỡ đọc dữ liệu tạm thời của nó.
+  4. `비인가 변화 / 오독 (Dirty Read — Đọc bẩn)`: Đọc phải dữ liệu tạm thời của một giao dịch chưa commit, sau đó giao dịch đó lại bị rollback khiến dữ liệu đã đọc trở thành vô nghĩa.
+
+- **3 Hiện tượng Vi phạm Cô lập Giao dịch cốt lõi trong đề thi:**
+  - `Dirty Read (비인가 판독 / Đọc bẩn)`: Giao dịch $T_1$ sửa một bản ghi nhưng **chưa COMMIT**. Giao dịch $T_2$ đọc bản ghi này. Sau đó $T_1$ gặp lỗi và thực hiện `ROLLBACK`. Dữ liệu mà $T_2$ đang cầm là dữ liệu "rác", chưa từng tồn tại chính thức.
+  - `Non-Repeatable Read (반복 불가능 판독 / Đọc không lặp lại)`: Giao dịch $T_1$ đọc bản ghi $A$ (ví dụ: số dư 100). Giao dịch $T_2$ cập nhật $A$ thành 200 và `COMMIT`. Giao dịch $T_1$ đọc lại bản ghi $A$ lần thứ hai thì thấy giá trị đã đổi thành 200. Trong cùng một giao dịch, cùng một câu lệnh đọc lại cho hai kết quả khác nhau.
+  - `Phantom Read (유령 판독 / Đọc bóng ma)`: Giao dịch $T_1$ truy vấn một tập hợp theo điều kiện phạm vi (`SELECT COUNT(*) WHERE age >= 20` ra 10 dòng). Giao dịch $T_2$ chèn (`INSERT`) thêm một dòng mới thỏa mãn điều kiện và `COMMIT`. Giao dịch $T_1$ thực thi lại câu lệnh thì thấy tập dữ liệu xuất hiện thêm dòng mới "bóng ma" (ra 11 dòng).
+
+- **Bảng ma trận 4 Cấp độ Cô lập Giao dịch chuẩn SQL (Transaction Isolation Levels):**
+
+| Cấp độ cô lập (격리 수준) | Dirty Read (비인가 판독) | Non-Repeatable Read (반복 불가능) | Phantom Read (유령 판독) | Đánh đổi Hiệu năng vs An toàn |
+|:---|:---:|:---:|:---:|:---|
+| **Read Uncommitted** | Bị vi phạm (O) | Bị vi phạm (O) | Bị vi phạm (O) | Hiệu năng cao nhất, an toàn dữ liệu thấp nhất |
+| **Read Committed** | **Được ngăn chặn (X)** | Bị vi phạm (O) | Bị vi phạm (O) | Mặc định trong Oracle, PostgreSQL, SQL Server |
+| **Repeatable Read** | **Được ngăn chặn (X)** | **Được ngăn chặn (X)** | Bị vi phạm (O) | Mặc định trong MySQL InnoDB (dùng MVCC) |
+| **Serializable** | **Được ngăn chặn (X)** | **Được ngăn chặn (X)** | **Được ngăn chặn (X)** | An toàn tuyệt đối, hiệu năng thấp nhất do lock diện rộng |
+
 - **Giao thức khóa 2 pha (2-Phase Locking Protocol — 2PL):**
   - Đảm bảo tính tuần tự hóa (Serializability) cho các giao dịch đồng thời.
   - Gồm 2 giai đoạn:

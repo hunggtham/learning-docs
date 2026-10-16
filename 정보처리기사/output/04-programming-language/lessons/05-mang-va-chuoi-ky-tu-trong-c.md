@@ -2,15 +2,17 @@
 
 ## 학습 목표 (Mục tiêu)
 - Nắm vững nguyên lý cấp phát bộ nhớ liên tục của mảng 1 chiều và mảng 2 chiều trong ngôn ngữ C; áp dụng chính xác công thức tính địa chỉ ô nhớ theo thứ tự ưu tiên hàng (행 우선 순서 - Row-Major Order).
-- Thấu hiểu bản chất chuỗi ký tự trong C là mảng `char` kết thúc bằng ký tự rỗng `\0` (Null Character, mã ASCII 0); phân biệt rõ giữa số ký tự thực tế và kích thước bộ nhớ cần cấp phát.
-- Sử dụng thành thạo và lần vết chính xác kết quả của các hàm xử lý chuỗi kinh điển trong thư viện `<string.h>`: `strlen`, `strcpy`, `strcat`, `strcmp`.
+- Thấu hiểu bản chất chuỗi ký tự trong C là mảng `char` kết thúc bằng ký tự rỗng `\0` (Null Character, mã ASCII 0); phân biệt rõ giữa số ký tự thực tế (`strlen`) và kích thước bộ nhớ cần cấp phát (`sizeof`).
+- Sử dụng thành thạo và lần vết chính xác kết quả của các hàm xử lý chuỗi kinh điển trong thư viện `<string.h>`: `strlen`, `strcpy`, `strcat`, `strcmp` kèm mô phỏng biến động ô nhớ.
 
 ## 핵심 키워드 (Từ khóa)
 - 배열 (Array) — Cấu trúc dữ liệu thuần nhất (Homogeneous) lưu trữ liên tục trên bộ nhớ RAM.
-- 2차원 배열 주소 계산 (2D Array Memory Calculation) — Thứ tự ưu tiên hàng: $\text{Base} + (i \times C + j) \times \text{Size}$.
-- 널 문자 (Null Terminator `\0`) — Ký tự báo hiệu kết thúc chuỗi trong C (ASCII code 0).
+- 1차원 및 2차원 배열 (1D & 2D Arrays) — Mảng tuyến tính và mảng hai chiều hàng/cột.
+- 행 우선 순서 (Row-Major Order) — Thứ tự lưu trữ theo hàng tuần tự trong không gian địa chỉ phẳng.
+- 2차원 배열 주소 계산 (2D Array Memory Calculation) — Công thức: $\text{Base} + (i \times C + j) \times \text{Size}$.
+- 널 문자 (Null Terminator `\0`) — Ký tự byte `0x00` báo hiệu kết thúc chuỗi trong C.
 - 문자열 함수 (String Functions in `<string.h>`) — `strlen`, `strcpy`, `strcat`, `strcmp`.
-- 버퍼 오버플로우 위험 (Buffer Overflow Risk) — Ghi vượt quá độ dài mảng chuỗi làm hỏng bộ nhớ lân cận.
+- 버퍼 오버플로우 (Buffer Overflow) — Lỗi ghi vượt quá ranh giới mảng bộ nhớ.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 - **Từ đâu (Origin):** Kế thừa các kiểu dữ liệu nguyên thủy từ `01-bien-dinh-danh-va-kieu-du-lieu-c-java.md` và các vòng lặp `for` từ `04-cau-truc-dieu-khien-re-nhanh-va-vong-lap.md` để duyệt các phần tử trong mảng.
@@ -29,8 +31,8 @@
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
 - **핵심 원리 (Nguyên tắc cốt lõi):**
-  - [한국어]: `2차원 배열은 행 우선(Row-Major) 방식으로 메모리에 연속 저장되며, C언어의 문자열은 끝에 반드시 널 문자('\0', ASCII 0)가 포함되어야 한다. strlen()은 널 문자를 제외한 순수 길이를 반환하고, strcmp()는 두 문자열이 같을 때 0을 반환한다.`
-  - [Tiếng Việt]: Mảng 2 chiều được lưu liên tục trong RAM theo thứ tự ưu tiên hàng (Row-Major); chuỗi ký tự C bắt buộc phải kết thúc bằng ký tự null `\0` (ASCII 0). Hàm strlen trả về độ dài không tính null; hàm strcmp trả về 0 khi hai chuỗi bằng nhau.
+  - [한국어]: `2차원 배열은 행 우선(Row-Major) 방식으로 메모리에 연속 저장되며 주소 계산식은 Base + (i * C + j) * Size이다. C언어 문자열은 끝에 반드시 널 문자('\0', ASCII 0)가 포함되어야 한다. strlen()은 널 문자를 제외한 길이를 반환하고, strcmp()는 두 문자열이 같을 때 0을 반환한다.`
+  - [Tiếng Việt]: Mảng 2 chiều được lưu liên tục trong RAM theo thứ tự ưu tiên hàng (Row-Major) với công thức địa chỉ Base + (i * C + j) * Size. Chuỗi ký tự C bắt buộc phải kết thúc bằng ký tự null `\0` (ASCII 0). Hàm strlen trả về độ dài không tính null; hàm strcmp trả về 0 khi hai chuỗi bằng nhau.
 
 - **1. Bảng công thức tính địa chỉ ô nhớ mảng 2 chiều (2차원 배열 주소 계산):**
 
@@ -60,18 +62,69 @@
 | `char *ptr = "HELLO";` | Nằm trên vùng **Read-Only Data (ROData)**. | **Cấm sửa đổi:** `ptr[0] = 'h';` sẽ gây lỗi sập chương trình! |
 
 - **주의/함정 (Bẫy đề thi):**
-  - **Quên cộng 1 cho ký tự `\0`:** Khai báo `char str[5] = "HELLO";` sẽ bị lỗi biên dịch hoặc tràn bộ đệm vì từ "HELLO" cần đúng 5 byte chữ cái cộng thêm 1 byte cho `\0` $\rightarrow$ mảng phải có kích thước tối thiểu là `6`.
+  - **Quên cộng 1 cho ký tự `\0`:** Khai báo `char str[5] = "HELLO";` sẽ bị lỗi biên dịch hoặc tràn bộ đệm vì từ "HELLO" cần đúng 5 byte chữ cái cộng thêm 1 byte cho `\0` -> mảng phải có kích thước tối thiểu là `6`.
   - **Nhầm lẫn chỉ số mảng:** Mảng `int arr[5]` chỉ có các phần tử từ `arr[0]` đến `arr[4]`. Truy cập `arr[5]` là lỗi tràn chỉ số (Off-by-one / Out of Bounds).
   - **Gán chuỗi bằng dấu bằng:** Trong C, cấm gán `str1 = str2;` sau khi đã khai báo (vì tên mảng là hằng con trỏ). Bắt buộc phải dùng hàm `strcpy(str1, str2);`.
+  - **Phân biệt `sizeof` vs `strlen`:** `char s[] = "Hi";` thì `sizeof(s) == 3` (gồm 'H', 'i', '\0') nhưng `strlen(s) == 2`.
 
 - **한 문장 설명 (Câu chốt tự nhớ):**
-  - *"Hàng $i$ nhân cột $C$ cộng $j$, chuỗi C luôn chốt bằng ký tự null ('\0'); strlen đếm chữ trừ null, strcmp bằng nhau trả số không (0)."*
+  - *"Hàng i nhân cột C cộng j, chuỗi C luôn chốt bằng ký tự null ('\0'); strlen đếm chữ trừ null, strcmp bằng nhau trả số không (0)."*
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Bài toán trắc nghiệm tính địa chỉ ô nhớ mảng 2 chiều chuẩn đề thi:
+#### 1. Sơ đồ mô phỏng ô nhớ của chuỗi ký tự C và hàm `strcat`:
+
+Khai báo:
+```c
+char dest[12] = "Net";
+char src[] = "work";
+```
+
+Trước khi gọi `strcat(dest, src)`:
+```text
+dest ô nhớ:
++-----+-----+-----+------+-----+-----+-----+-----+-----+-----+-----+-----+
+| 'N' | 'e' | 't' | '\0' |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
++-----+-----+-----+------+-----+-----+-----+-----+-----+-----+-----+-----+
+  [0]   [1]   [2]   [3]    [4]   [5]   [6]   [7]   [8]   [9]  [10]  [11]
+
+src ô nhớ:
++-----+-----+-----+-----+------+
+| 'w' | 'o' | 'r' | 'k' | '\0' |
++-----+-----+-----+-----+------+
+```
+
+Sau khi gọi `strcat(dest, src)`:
+Hàm tìm đến vị trí ký tự `\0` đầu tiên trong `dest` (vị trí `[3]`), ghi đè các ký tự của `src` bắt đầu từ đây, và bổ sung một ký tự `\0` mới ở cuối:
+```text
+dest ô nhớ mới:
++-----+-----+-----+-----+-----+-----+-----+------+-----+-----+-----+-----+
+| 'N' | 'e' | 't' | 'w' | 'o' | 'r' | 'k' | '\0' |  ?  |  ?  |  ?  |  ?  |
++-----+-----+-----+-----+-----+-----+-----+------+-----+-----+-----+-----+
+  [0]   [1]   [2]   [3]   [4]   [5]   [6]   [7]    [8]   [9]  [10]  [11]
+```
+Độ dài mới `strlen(dest) = 7`, kích thước mảng vẫn là `12 Byte`.
+
+#### 2. Sơ đồ trải phẳng bộ nhớ của mảng 2 chiều (Row-Major Order):
+Xét mảng `int A[2][3]` với các phần tử `{{1, 2, 3}, {4, 5, 6}}`:
+
+```text
+Biểu diễn logic (Bảng 2x3):
+         Cột 0   Cột 1   Cột 2
+Hàng 0: [  1  ] [  2  ] [  3  ]
+Hàng 1: [  4  ] [  5  ] [  6  ]
+
+Biểu diễn vật lý trên RAM (Trải phẳng theo Hàng):
++--------+--------+--------+--------+--------+--------+
+| A[0][0]| A[0][1]| A[0][2]| A[1][0]| A[1][1]| A[1][2]|
+|   1    |   2    |   3    |   4    |   5    |   6    |
++--------+--------+--------+--------+--------+--------+
+ 1000     1004     1008     1012     1016     1020
+```
+
+#### 3. Bài toán trắc nghiệm tính địa chỉ ô nhớ mảng 2 chiều chuẩn đề thi:
 - **Đề bài:** Một mảng 2 chiều số nguyên `int A[4][5]` được cấp phát bộ nhớ bắt đầu từ địa chỉ cơ sở `1000`. Giả sử mỗi phần tử `int` chiếm `4 Byte`. Hỏi địa chỉ ô nhớ của phần tử `A[2][3]` là bao nhiêu?
 - **Phân tích thay số:**
   - $\text{Base} = 1000$
@@ -82,7 +135,7 @@
     $$\text{Address}(A[2][3]) = 1000 + (2 \times 5 + 3) \times 4 = 1000 + (10 + 3) \times 4 = 1000 + 13 \times 4 = 1000 + 52 = \mathbf{1052}$$
 - **Đáp án:** Địa chỉ của `A[2][3]` là **`1052`**.
 
-#### 2. Minh họa hoạt động của các hàm chuỗi trong C:
+#### 4. Minh họa hoạt động của các hàm chuỗi trong C:
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -105,36 +158,11 @@ int main() {
     char c[] = "Apple";
 
     printf("strcmp(a, c): %d\n", strcmp(a, c)); // Giong nhau -> In ra: 0
-    printf("strcmp(a, b): %d\n", strcmp(a, b)); // 'A' (65) < 'B' (66) -> In ra so am (vi du -1)
+    printf("strcmp(a, b): %d\n", strcmp(a, b)); // 'A' (65) < 'B' (66) -> In ra so am (-1)
 
     return 0;
 }
 ```
-
-#### 3. Bảng lần vết thuật toán đảo ngược chuỗi (In-place String Reversal):
-Đoạn mã C:
-```c
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    char str[] = "ABCD";
-    int len = strlen(str);
-    for (int i = 0; i < len / 2; i++) {
-        char temp = str[i];
-        str[i] = str[len - 1 - i];
-        str[len - 1 - i] = temp;
-    }
-    printf("str = %s\n", str);
-    return 0;
-}
-```
-
-*Bảng lần vết biến:*
-- `len = 4`, điều kiện lặp `i < 4 / 2` tức `i < 2` ($i$ chạy từ 0 đến 1):
-  - Khi $i = 0$: Hoán đổi `str[0]` ('A') và `str[3]` ('D') $\rightarrow$ Chuỗi trở thành `"DBCD"`.
-  - Khi $i = 1$: Hoán đổi `str[1]` ('B') và `str[2]` ('C') $\rightarrow$ Chuỗi trở thành `"DCBA"`.
-- Kết thúc vòng lặp, kết quả in ra: **`str = DCBA`**.
 
 ---
 
@@ -143,5 +171,6 @@ int main() {
 - [ ] Ghi nhớ ký tự kết thúc chuỗi trong C là `\0` với mã ASCII bằng 0.
 - [ ] Nhớ khai báo mảng chuỗi phải cộng thêm 1 phần tử cho `\0`.
 - [ ] Nắm chắc `strlen()` chỉ đếm số ký tự thực tế, bỏ qua `\0`.
-- [ ] Thuộc quy tắc `strcmp()`: Trả về `0` khi hai chuỗi giống hệt nhau.
-- [ ] Phân biệt được sự an toàn của `strncpy()` so với `strcpy()`.
+- [ ] Phân biệt rõ `strlen()` trả về số ký tự, `sizeof()` trả về tổng số byte cấp phát.
+- [ ] Thuộc quy tắc `strcmp()`: Trả về `0` khi hai chuỗi giống hệt nhau, số âm khi $s1 < s2$.
+- [ ] Nắm vững cách thức `strcat` ghi đè lên `\0` của chuỗi đích và bổ sung `\0` mới ở đuôi.

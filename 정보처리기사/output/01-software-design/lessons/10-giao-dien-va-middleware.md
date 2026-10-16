@@ -49,17 +49,17 @@
 ##### A. 4 Mô hình Topo liên kết của EAI (Enterprise Application Integration)
 EAI là giải pháp phần mềm kết nối và đồng bộ hóa các hệ thống nghiệp vụ không đồng nhất (Kế toán, Bán hàng, Kho bãi, ERP, CRM) trong một doanh nghiệp.
 
-| Topo kết nối EAI | Ký hiệu & Cấu trúc liên kết | Bản chất kỹ thuật & Ưu nhược điểm đề thi |
+| Topo kết nối EAI | Ký hiệu cấu trúc liên kết | Bản chất kỹ thuật & Ưu nhược điểm đề thi |
 |:---|:---:|:---|
-| **Point-to-Point<br>(Điểm - Điểm)** | `A ── B`<br>`│ ╲ ╱ │`<br>`C ── D` | • Các ứng dụng **kết nối trực tiếp 1-1** với nhau.<br>• Đơn giản khi có ít hệ thống.<br>• Khi số hệ thống $N$ tăng, số liên kết tăng vọt theo công thức: $\frac{N(N-1)}{2}$. Cực kỳ khó quản lý, chi phí bảo trì khổng lồ. |
-| **Hub & Spoke<br>(Trục bánh xe)** | `A ── Hub ── B`<br>`      │`<br>`      C` | • Tất cả ứng dụng kết nối tập trung qua một **bộ điều phối trung tâm (Hub)**.<br>• Giảm số lượng đường truyền xuống còn $N$. Dễ mở rộng.<br>• **BẪY TỬ HUYỆT:** **Nguy cơ điểm lỗi đơn (SPOF - Single Point of Failure)**. Nếu Hub bị tê liệt hoặc quá tải, toàn bộ liên lạc của doanh nghiệp ngừng trệ hoàn toàn. |
-| **Message Bus<br>(Trục thông điệp)** | `A    B    C`<br>`│    │    │`<br>`════ Bus ════` | • Các ứng dụng kết nối vào một **trục bus phần mềm trung gian chung** thông qua các Adapter.<br>• Truyền thông điệp bất đồng bộ (Asynchronous). Khả năng mở rộng tuyệt vời, tính độc lập cao, giảm tải tắc nghẽn. |
-| **Hybrid<br>(Mô hình lai)** | `Hub ══ Bus ══ Hub`<br>` │              │`<br>`A, B           C, D` | • **Kết hợp giữa Hub & Spoke và Message Bus**.<br>• Nội bộ từng phòng ban dùng Hub & Spoke; các Hub lớn toàn công ty kết nối với nhau qua Message Bus. Tối ưu hóa hiệu năng và quản trị phân cấp. |
+| **Point-to-Point (Điểm - Điểm)** | `A ── B` / `C ── D` (kết nối lưới chéo) | Các ứng dụng **kết nối trực tiếp 1-1** với nhau. Đơn giản khi có ít hệ thống. Khi số hệ thống $N$ tăng, số liên kết tăng vọt theo công thức: $\frac{N(N-1)}{2}$. Cực kỳ khó quản lý, chi phí bảo trì khổng lồ. |
+| **Hub & Spoke (Trục bánh xe)** | `A, B, C ── Hub trung tâm` | Tất cả ứng dụng kết nối tập trung qua một **bộ điều phối trung tâm (Hub)**. Giảm số lượng đường truyền xuống còn $N$. Dễ mở rộng. **BẪY TỬ HUYỆT: Nguy cơ điểm lỗi đơn (SPOF - Single Point of Failure)**. Nếu Hub bị tê liệt hoặc quá tải, toàn bộ liên lạc của doanh nghiệp ngừng trệ hoàn toàn. |
+| **Message Bus (Trục thông điệp)** | `A, B, C ── Trục Bus dùng chung` | Các ứng dụng kết nối vào một **trục bus phần mềm trung gian chung** thông qua các Adapter. Truyền thông điệp bất đồng bộ (Asynchronous). Khả năng mở rộng tuyệt vời, tính độc lập cao, giảm tải tắc nghẽn. |
+| **Hybrid (Mô hình lai)** | `Hub ══ Bus ══ Hub` | **Kết hợp giữa Hub & Spoke và Message Bus**. Nội bộ từng phòng ban dùng Hub & Spoke; các Hub lớn toàn công ty kết nối với nhau qua Message Bus. Tối ưu hóa hiệu năng và quản trị phân cấp. |
 
 ##### B. Phân biệt EAI vs ESB (Enterprise Service Bus)
 - **EAI (Enterprise Application Integration):**
   - Tiếp cận tập trung, thường phụ thuộc chặt chẽ vào giải pháp của một nhà cung cấp phần mềm duy nhất (Vendor-dependent).
-  - Tích hợp theo hướng ứng dụng với ứng dụng (Application-to-Application).
+  - Tích hợp theo hướng ứng dụng với ứng dụng (Application-to-Application), giao thức độc quyền.
 - **ESB (Enterprise Service Bus):**
   - Dựa trên **Kiến trúc hướng dịch vụ (SOA - Service-Oriented Architecture)**.
   - Các hệ thống giao tiếp với nhau dưới dạng các **Dịch vụ độc lập (Services)** thông qua các chuẩn Web mở (XML, JSON, SOAP, REST).
@@ -88,9 +88,9 @@ EAI là giải pháp phần mềm kết nối và đồng bộ hóa các hệ th
 
 | Tiêu chuẩn | Tên đầy đủ & Ý nghĩa kỹ thuật | Vai trò nhận diện đề thi |
 |:---|:---|:---|
-| **SOAP** | `Simple Object Access Protocol`<br>(Giao thức truy cập đối tượng đơn giản) | **Giao thức truyền thông điệp** dựa trên XML thông qua các giao thức mạng phổ thông như HTTP, HTTPS, SMTP. Đảm bảo an toàn và giao dịch tin cậy. |
-| **WSDL** | `Web Services Description Language`<br>(Ngôn ngữ mô tả dịch vụ web) | **Tài liệu định dạng XML mô tả chi tiết giao diện dịch vụ**: Dịch vụ cung cấp những hàm gì, tham số đầu vào là gì, kiểu dữ liệu trả về và địa chỉ mạng (Endpoint URL) ở đâu. |
-| **UDDI** | `Universal Description, Discovery, and Integration`<br>(Hệ thống đăng ký và khám phá toàn cầu) | **Danh bạ đăng ký dịch vụ (Registry)**, đóng vai trò như cuốn niên giám điện thoại trực tuyến, cho phép các doanh nghiệp đăng ký dịch vụ của mình và tìm kiếm dịch vụ của đối tác. |
+| **SOAP** | `Simple Object Access Protocol` (Giao thức truy cập đối tượng đơn giản) | **Giao thức truyền thông điệp** dựa trên XML thông qua các giao thức mạng phổ thông như HTTP, HTTPS, SMTP. Đảm bảo an toàn và giao dịch tin cậy. |
+| **WSDL** | `Web Services Description Language` (Ngôn ngữ mô tả dịch vụ web) | **Tài liệu định dạng XML mô tả chi tiết giao diện dịch vụ**: Dịch vụ cung cấp những hàm gì, tham số đầu vào là gì, kiểu dữ liệu trả về và địa chỉ mạng (Endpoint URL) ở đâu. |
+| **UDDI** | `Universal Description, Discovery, and Integration` (Hệ thống đăng ký và khám phá toàn cầu) | **Danh bạ đăng ký dịch vụ (Registry)**, đóng vai trò như cuốn niên giám điện thoại trực tuyến, cho phép các doanh nghiệp đăng ký dịch vụ của mình và tìm kiếm dịch vụ của đối tác. |
 
 ---
 
@@ -99,21 +99,21 @@ EAI là giải pháp phần mềm kết nối và đồng bộ hóa các hệ th
   - [Hàn/Anh]: `미들웨어(Middleware)는 운영체제(OS)와 응용 프로그램 사이에서 서로 다른 기종의 하드웨어나 소프트웨어를 연결하여, 분산 컴퓨팅 환경에서 투명한(Transparent) 통신을 지원하는 소프트웨어이다.`
   - [Tiếng Việt]: Middleware là lớp phần mềm trung gian nằm giữa Hệ điều hành và Ứng dụng người dùng, che giấu sự khác biệt về phần cứng, mạng và hệ điều hành, cung cấp tính trong suốt vị trí (`위치 투명성 - Location Transparency`) để các ứng dụng phân tán giao tiếp trơn tru với nhau.
 
-- **Chi tiết 6 loại Middleware kinh điển:**
+- **Chi tiết các loại Middleware kinh điển trong đề thi:**
   1. `RPC (Remote Procedure Call — Gọi thủ tục từ xa)`: Cho phép một chương trình gọi thực thi một hàm/thủ tục nằm trên một máy tính từ xa trong mạng như thể đang gọi một hàm cục bộ trong cùng tiến trình (giao tiếp đồng bộ).
   2. `MOM (Message-Oriented Middleware — Middleware hướng thông điệp)`:
      - Cơ chế truyền thông điệp **bất đồng bộ (Asynchronous)** thông qua hàng đợi thông điệp (`메시지 큐 - Message Queue`).
-     - Người gửi gửi thông điệp vào hàng đợi và tiếp tục công việc; người nhận lấy thông điệp ra xử lý khi sẵn sàng. Hai bên không cần online cùng lúc (ví dụ: RabbitMQ, Apache Kafka).
+     - Người gửi gửi thông điệp vào hàng đợi và tiếp tục công việc; người nhận lấy thông điệp ra xử lý khi sẵn sàng. Hai bên không cần online cùng lúc (ví dụ: RabbitMQ, Apache Kafka, ActiveMQ).
   3. `TP-Monitor (Transaction Processing Monitor — Bộ giám sát xử lý giao dịch)`:
      - Chuyên trách theo dõi, quản trị và phân bổ tài nguyên cho các giao dịch phân tán quy mô lớn (Online Transaction Processing - OLTP).
-     - Đảm bảo trọn vẹn 4 đặc tính **ACID** của giao dịch trong các hệ thống ngân hàng, đặt vé máy bay hàng triệu giao dịch/giây.
+     - Đảm bảo trọn vẹn 4 đặc tính **ACID** của giao dịch trong các hệ thống ngân hàng, viễn thông, hàng không với hàng triệu giao dịch/giây. Ví dụ: Tuxedo.
   4. `ORB (Object Request Broker — Môi giới yêu cầu đối tượng)`:
-     - Thành phần cốt lõi trong kiến trúc CORBA, cho phép các đối tượng phần mềm được viết bằng các ngôn ngữ lập trình khác nhau (C++, Java) chạy trên các hệ điều hành khác nhau có thể tự do gửi nhận thông điệp gọi phương thức của nhau.
+     - Thành phần cốt lõi trong kiến trúc CORBA, cho phép các đối tượng phần mềm được viết bằng các ngôn ngữ khác nhau (C++, Java) chạy trên các hệ điều hành khác nhau có thể tự do gửi nhận thông điệp gọi phương thức của nhau.
   5. `WAS (Web Application Server — Máy chủ ứng dụng web)`:
      - Máy chủ trung gian chuyên quản lý và thực thi **logic nghiệp vụ (Business Logic)** của các ứng dụng web động.
      - Quản lý vòng đời tiến trình, quản lý bộ nhớ đệm (Cache), và tối ưu hóa kết nối cơ sở dữ liệu (`DB 커넥션 풀 - Connection Pooling`). Ví dụ: Apache Tomcat, Oracle WebLogic, Tmax JEUS, IBM WebSphere.
   6. `DB 미들웨어 (ODBC / JDBC)`:
-     - Giao diện chuẩn hóa độc lập giúp ứng dụng kết nối và gửi câu lệnh SQL tới các hệ quản trị cơ sở dữ liệu khác nhau (Oracle, MySQL, SQL Server) mà không cần viết lại mã truy vấn.
+     - Giao diện chuẩn hóa độc lập giúp ứng dụng kết nối và gửi câu lệnh SQL tới các hệ quản trị cơ sở dữ liệu khác nhau (Oracle, MySQL, PostgreSQL) mà không cần viết lại mã truy vấn.
 
 ---
 
@@ -128,20 +128,56 @@ EAI là giải pháp phần mềm kết nối và đồng bộ hóa các hệ th
   - Giao tiếp thông điệp bất đồng bộ qua hàng đợi Message Queue $\rightarrow$ **MOM (Message-Oriented Middleware)**.
 - **Bẫy 4 (AJAX):** AJAX **không phải là một ngôn ngữ lập trình hay một định dạng dữ liệu mới**; nó là một kỹ thuật kết hợp JavaScript và đối tượng `XMLHttpRequest` để trao đổi dữ liệu bất đồng bộ không cần reload trang.
 
-- **한 문장 설명 (Câu chốt ghi nhớ):** "EAI Hub&Spoke sợ nhất SPOF, ESB hướng dịch vụ lỏng liên kết; Web Services có SOAP truyền tin, WSDL đặc tả, UDDI danh bạ; Middleware có RPC gọi hàm, MOM gửi hàng đợi, WAS trị nghiệp vụ web".
+- **💡 Khẩu quyết thần chú đề thi:**
+  - 4 Topo EAI: **P-H-M-H** (Point-to-Point, Hub & Spoke, Message Bus, Hybrid).
+  - Bộ ba Web Services: **S-W-U** (`S`OAP truyền tin, `W`SDL đặc tả, `U`DDI danh bạ).
+  - Middleware cốt lõi: **R-M-T-O-W** (`R`PC gọi từ xa, `M`OM hàng đợi, `T`P-Monitor giao dịch, `O`RB đối tượng, `W`AS nghiệp vụ web).
+  - Câu chốt ghi nhớ: "EAI Hub&Spoke sợ nhất SPOF, ESB hướng dịch vụ lỏng liên kết; Web Services có SOAP truyền tin, WSDL đặc tả, UDDI danh bạ; Middleware có RPC gọi hàm, MOM gửi hàng đợi, WAS trị nghiệp vụ web".
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Cơ chế hoạt động bất đồng bộ của MOM (Message-Oriented Middleware)
+#### 1. Kiến trúc Client-Server: Từ 2-Tier, 3-Tier đến N-Tier
+
+```text
+  [1. KIẾN TRÚC 2 TẦNG (2-TIER ARCHITECTURE)]
+  ┌───────────────────────────────────┐                     ┌───────────────────────────────────┐
+  │       Fat Client (Máy khách)       │ ◄─── ODBC / JDBC ──►│        Database Server (CSDL)      │
+  │ - Tầng Trình diễn (Presentation)  │                     │ - Tầng Dữ liệu (Data Storage)     │
+  │ - Tầng Nghiệp vụ (Business Logic) │                     │ - Hệ quản trị DBMS (Oracle/MySQL) │
+  └───────────────────────────────────┘                     └───────────────────────────────────┘
+
+  [2. KIẾN TRÚC 3 TẦNG (3-TIER ARCHITECTURE)]
+  ┌─────────────────┐                 ┌─────────────────────────────────┐                 ┌─────────────────┐
+  │   Thin Client   │ ◄─── HTTP ────► │    Application Server (WAS)     │ ◄── Connection ─► │ Database Server │
+  │ - Trình diễn    │                 │ - Tầng Nghiệp vụ (Business)     │     Pool (JDBC) │ - Tầng Dữ liệu  │
+  │ - Browser / App │                 │ - Điều phối, bảo mật giao dịch  │                 │ - DBMS          │
+  └─────────────────┘                 └─────────────────────────────────┘                 └─────────────────┘
+
+  [3. KIẾN TRÚC ĐA TẦNG (N-TIER ARCHITECTURE)]
+  [Client] ──► [Web Server (Nginx)] ──► [WAS Cluster] ──► [Integration/Cache] ──► [Distributed DB]
+```
+
+- **Kiến trúc 2 tầng (2-Tier — Client/Server truyền thống):**
+  - **Cơ chế:** Client trực tiếp kết nối tới Database Server qua driver ODBC/JDBC. Toàn bộ giao diện và logic tính toán nghiệp vụ đều được cài đặt trên máy người dùng (**Fat Client / Rich Client**).
+  - **Nhược điểm chí mạng:** Mỗi khi quy tắc nghiệp vụ thay đổi (ví dụ đổi cách tính thuế), quản trị viên phải đi cài lại phần mềm trên hàng nghìn máy trạm của nhân viên; bảo mật kém vì máy khách nắm chuỗi kết nối trực tiếp vào CSDL.
+- **Kiến trúc 3 tầng (3-Tier — Khắc phục nhược điểm 2-Tier):**
+  - **Tầng 1 (Presentation Tier):** Giao diện người dùng trên trình duyệt web hoặc ứng dụng di động (**Thin Client**), chỉ hiển thị dữ liệu và gửi yêu cầu, không chứa logic nghiệp vụ phức tạp.
+  - **Tầng 2 (Application / Business Tier):** Máy chủ ứng dụng web (`WAS`) chứa toàn bộ thuật toán nghiệp vụ, kiểm tra quyền truy cập, tính toán và quản lý phiên.
+  - **Tầng 3 (Data Tier):** Máy chủ cơ sở dữ liệu (`DBMS`) lưu trữ an toàn, chỉ chấp nhận kết nối từ tầng ứng dụng.
+  - **Ưu điểm vượt trội:** Khi thay đổi logic kinh doanh, chỉ cần cập nhật code trên máy chủ WAS; tải hệ thống được phân bổ đều; độ an toàn thông tin tăng vọt.
+- **Kiến trúc N tầng (N-Tier):**
+  - Tách tầng ứng dụng thành nhiều lớp chuyên biệt hơn: Tầng Reverse Proxy (Load Balancing), Tầng Web tĩnh (Web Server), Tầng Logic (WAS Cluster), Tầng Lưu đệm phân tán (Redis Cache), và Tầng Dịch vụ liên kết (ESB/API Gateway). Đảm bảo tính sẵn sàng cao (`High Availability - HA`) cho hàng chục triệu người dùng.
+
+#### 2. Cơ chế hoạt động bất đồng bộ của MOM (Message-Oriented Middleware)
 - Trong các hệ thống thương mại điện tử lớn vào ngày hội mua sắm (Mega Sale), hàng triệu người dùng bấm nút "Đặt mua" trong cùng một giây. Nếu xử lý đồng bộ trực tiếp (RPC), máy chủ CSDL sẽ lập tức bị sập do quá tải kết nối.
 - **Giải pháp MOM:**
   1. Ứng dụng Web nhận yêu cầu, đóng gói thành một thông điệp nhỏ và đẩy vào Hàng đợi thông điệp (`Message Queue`) của MOM trong vòng vài mili-giây, sau đó báo ngay cho người dùng "Đặt hàng thành công!".
   2. Hệ thống xử lý đơn hàng và trừ kho ở phía sau sẽ từ từ rút từng thông điệp trong hàng đợi ra xử lý với tốc độ ổn định mà nó chịu đựng được.
   3. Ngay cả khi hệ thống kho bị mất điện trong 30 phút, thông điệp vẫn nằm an toàn trong hàng đợi của MOM và được xử lý tuần tự khi hệ thống hoạt động trở lại mà không làm mất bất kỳ đơn hàng nào của khách.
 
-#### 2. So sánh chuyên sâu: Web Server vs Web Application Server (WAS)
+#### 3. So sánh chuyên sâu: Web Server vs Web Application Server (WAS)
 - **Web Server (Máy chủ Web thuần túy: Nginx, Apache HTTP Server):**
   - Chỉ chuyên phục vụ các **tài nguyên tĩnh (Static Contents)** như file HTML, CSS, JavaScript, hình ảnh, video.
   - Đóng vai trò làm tường lửa ngoài cùng, định tuyến tải (Reverse Proxy / Load Balancer) cho các máy chủ bên trong.
@@ -159,4 +195,5 @@ EAI là giải pháp phần mềm kết nối và đồng bộ hóa các hệ th
 - [ ] Nhớ ưu thế của JSON (nhẹ, dạng Key-Value) so với XML (nặng, thẻ cây phân cấp).
 - [ ] Định nghĩa được bản chất của AJAX: giao tiếp bất đồng bộ, cập nhật dữ liệu mà không cần tải lại toàn bộ trang web.
 - [ ] Phân biệt bộ ba Web Services: SOAP (giao thức truyền tin), WSDL (ngôn ngữ đặc tả dịch vụ), UDDI (danh bạ đăng ký dịch vụ).
-- [ ] Kể tên và giải thích được chức năng của 6 loại Middleware: RPC, MOM, TP-Monitor, ORB, WAS, DB Middleware.
+- [ ] Kể tên và giải thích được chức năng của các loại Middleware: RPC, MOM, TP-Monitor, ORB, WAS, DB Middleware.
+- [ ] Phân biệt rõ kiến trúc Client-Server 2-Tier (Fat Client) và 3-Tier (Thin Client - WAS - DB).

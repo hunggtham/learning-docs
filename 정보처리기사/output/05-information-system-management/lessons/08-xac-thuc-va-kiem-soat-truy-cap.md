@@ -3,18 +3,18 @@
 ## 학습 목표 (Mục tiêu)
 - Nắm vững kiến trúc khung bảo mật máy chủ theo mô hình **AAA**: Xác thực (**Authentication**), Phân quyền (**Authorization**), và Ghi nhật ký kiểm toán (**Accounting**).
 - Phân biệt toàn diện 4 nhóm nhân tố xác thực người dùng (Tri thức, Sở hữu, Sinh trắc, Hành vi/Vị trí) và nguyên tắc triển khai Xác thực đa nhân tố (**MFA - Multi-Factor Authentication**).
-- Hiểu rõ cơ chế đăng nhập một lần (**SSO - Single Sign-On**) và các giao thức xác thực/ủy quyền tiêu chuẩn: **Kerberos**, **OAuth 2.0**, **SAML**.
-- Phân biệt bản chất và trường hợp áp dụng của 3 mô hình kiểm soát truy cập kinh điển: **DAC** (Tùy ý), **MAC** (Bắt buộc), và **RBAC** (Dựa trên vai trò).
+- Hiểu rõ cơ chế đăng nhập một lần (**SSO - Single Sign-On**) và giao thức xác thực vé **Kerberos** với KDC, AS, TGS.
+- Phân biệt bản chất và trường hợp áp dụng của 3 mô hình kiểm soát truy cập kinh điển: **DAC** (Tùy ý, ma trận ACL), **MAC** (Bắt buộc, nhãn bảo mật), và **RBAC** (Dựa trên vai trò công việc).
 - Làm chủ quy tắc luồng thông tin trong Mô hình bảo vệ tính bí mật **Bell-LaPadula (NRU, NWD)** và Mô hình bảo vệ tính toàn vẹn **Biba (NRD, NWU)**.
 
 ## 핵심 키워드 (Từ khóa song ngữ)
 - AAA 프레임워크 (Authentication 인증, Authorization 인가, Accounting 계정 관리)
-- 인증 4대 요소 (4 Factors — 지식 Something You Know, 소유 Something You Have, 생체 Something You Are, 위치/행위 Somewhere/Something You Do)
+- 인증 4대 요소 (4 Factors — 지식 Something You Know, 소유 Something You Have, 생체 Something You Are, 위치/행위 Somewhere/Do)
 - 다중 요소 인증 (MFA — Multi-Factor Authentication, kết hợp ít nhất 2 nhóm khác loại)
 - 생체 인증 오차율 (Biometric Error Rates — FAR 타인수락률 vs FRR 본인거부률, CER/EER)
 - SSO (Single Sign-On — Đăng nhập một lần dùng cho nhiều hệ thống)
 - 커버로스 (Kerberos — Giao thức xác thực vé Ticket dựa trên KDC, AS, TGS)
-- DAC (임의적 접근 통제 — Discretionary Access Control, 신분 Identity 기반, 소유자 Owner 권한 부여)
+- DAC (임의적 접근 통제 — Discretionary Access Control, 신분 Identity 기반, 소유자 Owner 권한 부여, ACL)
 - MAC (강제적 접근 통제 — Mandatory Access Control, 보안 등급 Label 기반, 관리자 통제, Secure OS)
 - RBAC (역할 기반 접근 통제 — Role-Based Access Control, 역할 Role 기반, 최소 권한 원칙)
 - 벨-라파둘라 모델 (Bell-LaPadula / BLP — 기밀성 보장, No Read Up / No Write Down)
@@ -32,7 +32,7 @@
   - Ghi nhận "Bạn đã làm gì và dùng bao nhiêu tài nguyên?" $\rightarrow$ **Accounting (계정 관리 / 감사)**.
 - **Xác thực đa nhân tố (MFA):** Đề hỏi trường hợp nào là MFA hợp lệ $\rightarrow$ Phải chọn phương án kết hợp **2 nhóm khác loại** (ví dụ: Mật khẩu [Tri thức] + Thẻ OTP [Sở hữu]). Nếu kết hợp 2 yếu tố cùng một nhóm (Mật khẩu + Mã PIN) $\rightarrow$ Không phải là MFA.
 - **3 Mô hình kiểm soát truy cập (Phải nhận diện từ khóa quyết định):**
-  - Nhắc đến **"사용자의 신분(Identity)"**, **"데이터 소유자(Owner)가 권한 부여"**, **"ACL"** $\rightarrow$ Chọn **DAC**.
+  - Nhắc đến **"사용자의 신분(Identity)"**, **"데이터 소유자(Owner)가 권한 부여"**, **"접근 제어 목록 ACL"** $\rightarrow$ Chọn **DAC**.
   - Nhắc đến **"보안 등급(Security Label: Top Secret, Secret)"**, **"중앙 관리자"**, **"군사/정부 시스템"** $\rightarrow$ Chọn **MAC**.
   - Nhắc đến **"조직 내의 직책/직무(Role)"**, **"최소 권한의 원칙"** $\rightarrow$ Chọn **RBAC**.
 - **Mô hình Bell-LaPadula vs Biba (Cực kỳ hay bị bẫy):**
@@ -74,7 +74,7 @@ Mô hình chuẩn mực để quản lý truy cập và bảo vệ tài nguyên 
   - **FRR (False Rejection Rate - 본인 거부률):** Tỷ lệ hệ thống từ chối nhầm chính người dùng hợp lệ (gây phiền toái cho người dùng).
   - **CER / EER (Crossover / Equal Error Rate):** Điểm cân bằng khi $\text{FAR} = \text{FRR}$. Chỉ số CER càng nhỏ thì độ chính xác và chất lượng của hệ thống nhận dạng sinh trắc học càng cao.
 
-#### 3. Đăng nhập một lần (SSO) và các giao thức xác thực máy chủ
+#### 3. Đăng nhập một lần (SSO) và Giao thức Kerberos
 - **SSO (Single Sign-On):**
   - Cơ chế cho phép người dùng chỉ cần thực hiện xác thực đăng nhập thành công một lần duy nhất tại cổng trung tâm, sau đó có thể truy cập tự do vào tất cả các ứng dụng, máy chủ và dịch vụ phân tán khác nhau trong cùng phiên làm việc.
   - Giảm thiểu việc người dùng phải nhớ quá nhiều mật khẩu, tập trung hóa quản trị an ninh; tuy nhiên nếu tài khoản SSO bị lộ thì toàn bộ hệ thống liên kết sẽ bị tổn thương (Single Point of Failure).
@@ -88,7 +88,7 @@ Mô hình chuẩn mực để quản lý truy cập và bảo vệ tài nguyên 
 
 | Mô hình kiểm soát | Tên tiếng Hàn & Anh | Cơ chế cấp quyền cốt lõi | Môi trường áp dụng tiêu biểu |
 | :--- | :--- | :--- | :--- |
-| **Kiểm soát tùy ý** | **DAC (Discretionary Access Control)** | Dựa trên **Danh tính (Identity)** của chủ thể. **Chủ sở hữu dữ liệu (Data Owner)** có toàn quyền tự do quyết định chia sẻ, cấp hoặc thu hồi quyền truy cập cho người khác thông qua **Danh sách kiểm soát truy cập (ACL)**. | Hệ điều hành thương mại thông thường (Windows, Linux tiêu chuẩn), hệ thống tệp chia sẻ nhóm. |
+| **Kiểm soát tùy ý** | **DAC (Discretionary Access Control)** | Dựa trên **Danh tính (Identity)** của chủ thể. **Chủ sở hữu dữ liệu (Data Owner)** có toàn quyền tự do quyết định chia sẻ, cấp hoặc thu hồi quyền truy cập cho người khác thông qua **Danh sách kiểm soát truy cập (ACL)** hoặc Ma trận kiểm soát truy cập. | Hệ điều hành thương mại thông thường (Windows, Linux tiêu chuẩn), hệ thống tệp chia sẻ nhóm. |
 | **Kiểm soát bắt buộc** | **MAC (Mandatory Access Control)** | Dựa trên **Nhãn bảo mật (Security Labels)** được gắn cố định cho Chủ thể (Clearance) và Đối tượng (Classification: Tuyệt mật, Mật, Nội bộ). Quyền truy cập do **Người quản trị trung tâm** ấn định theo luật; chủ sở hữu không có quyền tự thay đổi. | Hệ thống quân sự, cơ quan tình báo, hệ điều hành bảo mật chuyên dụng (**Secure OS**). |
 | **Kiểm soát theo vai trò** | **RBAC (Role-Based Access Control)** | Quyền hạn được gán cho **Vai trò/Chức danh (Role)** trong tổ chức, sau đó người dùng được chỉ định vào các vai trò tương ứng. Tuân thủ triệt để nguyên tắc **Quyền tối thiểu (Least Privilege)** và **Phân tách nhiệm vụ (Separation of Duties)**. | Doanh nghiệp lớn, ngân hàng, bệnh viện, hệ thống ERP có cấu trúc phòng ban rõ ràng. |
 
@@ -114,12 +114,17 @@ Mô hình chuẩn mực để quản lý truy cập và bảo vệ tài nguyên 
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Bảng tóm tắt đối lập trực quan giữa Bell-LaPadula và Biba
+#### Đối chiếu trực quan quy tắc giữa Bell-LaPadula và Biba
 
 | Mô hình | Trọng tâm bảo vệ | Quy tắc Đọc (Read Rule) | Quy tắc Ghi (Write Rule) | Khẩu quyết ghi nhớ |
 | :--- | :--- | :--- | :--- | :--- |
-| **Bell-LaPadula (BLP)** | **Tính Bí mật (기밀성)** | **No Read Up (NRU)**<br>Không đọc trộm cấp trên | **No Write Down (NWD)**<br>Không làm lộ xuống cấp dưới | **BLP:** Bí mật $\rightarrow$ Cấm Đọc Lên, Cấm Ghi Xuống. |
-| **Biba** | **Tính Toàn vẹn (무결성)** | **No Read Down (NRD)**<br>Không đọc rác cấp dưới | **No Write Up (NWU)**<br>Không phá hoại cấp trên | **Biba:** Toàn vẹn $\rightarrow$ Cấm Đọc Xuống, Cấm Ghi Lên. |
+| **Bell-LaPadula (BLP)** | **Tính Bí mật (기밀성)** | **No Read Up (NRU)**: Cấm đọc trộm tài liệu mật cấp trên | **No Write Down (NWD)**: Cấm làm lộ thông tin mật xuống cấp dưới | **BLP:** Bảo vệ Bí mật $\rightarrow$ Cấm Đọc Lên, Cấm Ghi Xuống. |
+| **Biba** | **Tính Toàn vẹn (무결성)** | **No Read Down (NRD)**: Cấm đọc dữ liệu rác không tin cậy cấp dưới | **No Write Up (NWU)**: Cấm sửa đổi phá hoại dữ liệu cấp trên | **Biba:** Bảo vệ Toàn vẹn $\rightarrow$ Cấm Đọc Xuống, Cấm Ghi Lên. |
+
+#### Ma trận kiểm soát truy cập (Access Control Matrix) trong DAC
+Trong mô hình DAC, quyền truy cập giữa tập hợp Chủ thể (Subjects) và tập hợp Đối tượng (Objects) được biểu diễn qua ma trận 2 chiều:
+- **Cột dọc (Theo Đối tượng):** Được gọi là **Danh sách kiểm soát truy cập (ACL - Access Control List)**. Cho biết từng đối tượng tài nguyên (tệp, thư mục) cho phép những ai được làm gì.
+- **Hàng ngang (Theo Chủ thể):** Được gọi là **Danh sách năng lực (Capability List)**. Cho biết một người dùng cụ thể đang nắm giữ những chiếc chìa khóa quyền hạn nào trên toàn bộ hệ thống.
 
 ---
 
@@ -129,6 +134,6 @@ Mô hình chuẩn mực để quản lý truy cập và bảo vệ tài nguyên 
 - [ ] Nhớ nguyên tắc MFA: Bắt buộc kết hợp ít nhất 2 nhóm khác loại.
 - [ ] Nắm vững chỉ số sinh trắc học: FAR (nhận nhầm kẻ gian), FRR (từ chối nhầm người nhà), CER/EER càng nhỏ càng tốt.
 - [ ] Hiểu cơ chế vé Kerberos: Do KDC quản lý, gồm máy chủ xác thực AS (cấp TGT) và máy chủ cấp vé TGS (cấp vé dịch vụ).
-- [ ] Phân biệt 3 mô hình phân quyền: DAC (dựa trên Identity, do Owner quyết), MAC (dựa trên Security Label, do Admin quyết), RBAC (dựa trên Role công việc).
+- [ ] Phân biệt 3 mô hình phân quyền: DAC (dựa trên Identity, do Owner quyết, quản lý bằng ACL/Capability List), MAC (dựa trên Security Label, do Admin quyết), RBAC (dựa trên Role công việc).
 - [ ] Thuộc lòng quy tắc Bell-LaPadula (Bí mật): No Read Up (NRU), No Write Down (NWD).
 - [ ] Thuộc lòng quy tắc Biba (Toàn vẹn): No Read Down (NRD), No Write Up (NWU).

@@ -1,29 +1,35 @@
 # 파이썬 기본 문법 및 시퀀스 자료형 (Lập trình Python & Kiểu Sequence)
 
 ## 학습 목표 (Mục tiêu)
-- Nắm vững đặc trưng cú pháp cốt lõi của ngôn ngữ Python: quy tắc thụt lề bắt buộc (Indentation), dấu hai chấm `:`, định kiểu động (Dynamic Typing) và cách khai báo hàm `def`, biểu thức `lambda`.
-- Phân biệt sự khác nhau mang tính bản chất giữa hai kiểu dữ liệu tuần tự then chốt: Danh sách `list` (có thể thay đổi - Mutable `[]`) và Bộ `tuple` (bất biến - Immutable `()`).
-- Sử dụng thành thạo kỹ thuật cắt lát (Slicing `[start:stop:step]`), chỉ số âm (Negative Indexing), cấu trúc từ điển `dict`, tập hợp `set` và cấu trúc Lớp hướng đối tượng với hàm khởi tạo `__init__` và tham số `self`.
+- Nắm vững đặc trưng cú pháp cốt lõi của ngôn ngữ Python: quy tắc thụt lề bắt buộc (Indentation), cấu trúc dữ liệu tuần tự (`list`, `tuple`, `range`, `str`), tập hợp `set` và ánh xạ `dict`.
+- Phân biệt sự khác nhau mang tính bản chất giữa hai kiểu dữ liệu then chốt: Danh sách `list` (có thể thay đổi - Mutable `[]`) và Bộ `tuple` (bất biến - Immutable `()`).
+- Sử dụng thành thạo kỹ thuật cắt lát (Slicing `[start:stop:step]`), chỉ số âm (Negative Indexing), và bước nhảy âm đảo ngược chuỗi `[::-1]`.
+- Nắm vững cú pháp tạo danh sách tinh gọn (List Comprehension) và các hàm xử lý hàm bậc cao: `lambda`, `map`, `filter`.
 
 ## 핵심 키워드 (Từ khóa)
 - 파이썬 시퀀스 자료형 (Python Sequence Data Types) — `list`, `tuple`, `range`, `str`.
 - 가변 vs 불변 (Mutable vs Immutable) — `list` sửa đổi được vs `tuple` cấm sửa đổi.
-- 슬라이싱 (Slicing `[start:stop:step]`) — Cắt chuỗi/mảng theo chỉ số bắt đầu, kết thúc và bước nhảy.
-- 음수 인덱스 (Negative Indexing) — Chỉ số âm tính ngược từ cuối danh sách (`-1` là phần tử cuối).
+- 슬라이싱 (Slicing `[start:stop:step]`) — Cắt chuỗi/mảng theo chỉ số bắt đầu, kết thúc và bước nhảy âm.
+- 리스트 컴프리헨션 (List Comprehension) — Cú pháp tạo danh sách ngắn gọn `[x for x in ... if ...]`.
+- 람다 함수 (Lambda Function) — Hàm ẩn danh một dòng `lambda x: x * 2`.
+- map & filter — Ánh xạ hàm biến đổi phần tử (`map`) và Lọc phần tử theo điều kiện chân trị (`filter`).
 - 딕셔너리와 세트 (Dictionary & Set) — Ánh xạ cặp `key:value` và Tập hợp khử trùng lặp.
-- 파이썬 클래스 (Python Class & `__init__`) — Phương thức khởi tạo và tham số tự tham chiếu `self`.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 - **Từ đâu (Origin):** Kế thừa tư duy giải thuật điều khiển và vòng lặp từ `04-cau-truc-dieu-khien-re-nhanh-va-vong-lap.md`, chuyển đổi sang văn phong lập trình kịch bản hiện đại của Python.
-- **Đang giải quyết gì (Current Problem):** Giải quyết nhóm câu hỏi viết mã Python ngày càng chiếm tỷ trọng lớn trong kỳ thi Kỹ sư xử lý thông tin: Lần vết cắt lát chuỗi/danh sách, phân biệt lỗi gán giá trị vào tuple và lần vết phương thức trong class.
+- **Đang giải quyết gì (Current Problem):** Giải quyết nhóm câu hỏi viết mã Python ngày càng chiếm tỷ trọng lớn trong kỳ thi Kỹ sư xử lý thông tin: Lần vết cắt lát chuỗi/danh sách, phân biệt lỗi gán giá trị vào tuple, list comprehension và các hàm lambda/map/filter.
 - **Dùng đi đâu (Forward Handoff):** Kiến thức hướng đối tượng và hàm khởi tạo `__init__` của Python sẽ được đối chiếu với mô hình hướng đối tượng tĩnh, chặt chẽ trong Java ở bài `08-lap-trinh-huong-doi-tuong-java-oop.md`.
 
 ## 읽는 방법 (Cách đọc)
-- **Cắt lát `[start:stop:step]`:** Luôn nhớ quy tắc "lấy từ $start$ đến trước $stop$" (tức là $stop - 1$). Nếu bước nhảy âm ($step < 0$), mảng sẽ được duyệt đảo ngược từ phải qua trái.
+- **Cắt lát `[start:stop:step]`:** Luôn nhớ quy tắc "lấy từ $start$ đến trước $stop$" (tức là $stop - 1$). Nếu bước nhảy âm ($step < 0$), mảng sẽ được duyệt đảo ngược từ phải qua trái. Cú pháp `a[::-1]` đảo ngược toàn bộ chuỗi/mảng.
 - **Cặp ngoặc phân loại:**
   - Ngoặc vuông `[]` là **`list`** (thêm, sửa, xóa thoải mái bằng `.append()`, `del`).
   - Ngoặc tròn `()` là **`tuple`** (bất biến, cố tình gán lại phần tử `t[0] = 10` sẽ bị báo lỗi `TypeError`).
   - Ngoặc nhọn `{}` là **`dict`** (nếu có dấu `:` như `{"k": "v"}`) hoặc **`set`** (nếu chỉ có giá trị `{1, 2, 3}`).
+- **List Comprehension:** Đọc từ vế `for` trước: "với mỗi $x$ trong danh sách, nếu thỏa mãn điều kiện `if`, hãy lấy giá trị biểu thức phía trước đưa vào danh sách mới".
+- **`lambda`, `map`, `filter`:**
+  - `map(func, seq)`: Áp dụng `func` lên từng phần tử của `seq`.
+  - `filter(func, seq)`: Giữ lại những phần tử mà `func(x)` trả về `True`.
 
 ---
 
@@ -32,8 +38,8 @@
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
 - **핵심 원리 (Nguyên tắc cốt lõi):**
-  - [한국어]: `파이썬은 들여쓰기로 블록을 구분하며, 리스트([])는 요소 수정이 가능한 가변(Mutable) 객체이고 튜플(())은 생성 후 수정이 불가능한 불변(Immutable) 객체이다. 슬라이싱 a[start:stop:step]은 stop 바로 앞 요소까지만 추출한다.`
-  - [Tiếng Việt]: Python dùng thụt lề để phân tách khối lệnh; list ([]) là đối tượng khả biến (Mutable) cho phép sửa đổi, còn tuple (()) là đối tượng bất biến (Immutable) không thể sửa đổi sau khi tạo. Cắt lát a[start:stop:step] chỉ trích xuất đến phần tử ngay trước chỉ số stop.
+  - [한국어]: `파이썬 시퀀스에서 리스트([])는 가변(Mutable) 객체이고 튜플(())은 생성 후 수정이 불가능한 불변(Immutable) 객체이다. 슬라이싱 a[start:stop:step]은 stop 앞까지만 추출하며, a[::-1]은 역순으로 뒤집는다. 리스트 컴프리헨션은 [표현식 for 변수 in 시퀀스 if 조건문] 형태로 작성된다. lambda는 익명 함수, map은 일괄 변환, filter는 조건 참 추출이다.`
+  - [Tiếng Việt]: Trong kiểu tuần tự Python, list ([]) là đối tượng khả biến (Mutable) còn tuple (()) là đối tượng bất biến (Immutable). Cắt lát a[start:stop:step] chỉ lấy đến trước chỉ số stop, và a[::-1] đảo ngược thứ tự danh sách. List comprehension có dạng [biểu_thức for biến in danh_sách if điều_kiện]. Lambda là hàm ẩn danh, map biến đổi đồng loạt, filter lọc các phần tử có chân trị True.
 
 - **1. Bảng đối chiếu các cấu trúc dữ liệu cốt lõi trong Python:**
 
@@ -43,7 +49,7 @@
 | **`tuple` (Bộ hằng số)** | `(1, 2, 3)` | **Immutable (Bất biến)** | **Cấm sửa đổi**; tuple 1 phần tử bắt buộc có dấu phẩy: `(1,)`. |
 | **`range` (Dãy số)** | `range(1, 5)` | **Immutable** | Sinh dãy số từ 1 đến 4 (dừng trước 5). |
 | **`dict` (Từ điển)** | `{"id": 1, "name": "Kim"}` | **Mutable** | Truy xuất theo khóa `d["id"]`, khóa không được trùng lặp. |
-| **`set` (Tập hợp)** | `{1, 2, 2, 3}` $\rightarrow$ `{1, 2, 3}`| **Mutable** | **Tự động khử trùng lặp**, không lưu thứ tự phần tử. |
+| **`set` (Tập hợp)** | `{1, 2, 2, 3}` -> `{1, 2, 3}` | **Mutable** | **Tự động khử trùng lặp**, không lưu thứ tự phần tử. |
 
 - **2. Bảng quy tắc cắt lát (Slicing Syntax `[start:stop:step]`):**
 Giả sử danh sách: `a = [10, 20, 30, 40, 50]` (chỉ số dương: $0 \rightarrow 4$, chỉ số âm: $-5 \rightarrow -1$).
@@ -58,21 +64,23 @@ Giả sử danh sách: `a = [10, 20, 30, 40, 50]` (chỉ số dương: $0 \right
 | `a[-1]` | `50` | Lấy phần tử cuối cùng bằng chỉ số âm. |
 | `a[-3:-1]` | `[30, 40]` | Lấy từ index -3 (30) đến trước index -1 (trước 50). |
 
-- **3. Hướng đối tượng trong Python (Class & Method):**
+- **3. Bảng hàm nâng cao: List Comprehension, Lambda, Map, Filter:**
 
-| Cú pháp Python | Tương đương trong Java/C++ | Vai trò kỹ thuật |
-| :--- | :--- | :--- |
-| `class Person:` | `class Person { ... }` | Khai báo Lớp đối tượng. |
-| `def __init__(self, name):`| `public Person(String name) { ... }` | **Phương thức khởi tạo (Constructor)** tự động gọi khi tạo mới. |
-| Tham số `self` | Con trỏ / Từ khóa `this` | Tham chiếu đại diện cho chính đối tượng hiện tại đang thực thi. |
+| Cú pháp Python | Tên gọi kỹ thuật | Ý nghĩa & Bản chất xử lý | Ví dụ mẫu |
+| :--- | :--- | :--- | :--- |
+| `[x*2 for x in a if x > 2]`| **List Comprehension** | Tạo danh sách mới từ vòng lặp có điều kiện | `a=[1,2,3,4]` -> `[6, 8]` |
+| `lambda x, y: x + y` | **익명 함수 (Lambda)** | Định nghĩa hàm một dòng không cần từ khóa `def` | `add = lambda x: x + 10` |
+| `map(func, seq)` | **맵 함수 (Map)** | Áp dụng hàm `func` lên từng phần tử của danh sách | `list(map(lambda x: x*2, [1, 2]))` -> `[2, 4]` |
+| `filter(func, seq)` | **필터 함수 (Filter)** | Lọc giữ lại phần tử mà `func` trả về `True` | `list(filter(lambda x: x%2==0, [1,2,3,4]))` -> `[2, 4]` |
 
 - **주의/함정 (Bẫy đề thi):**
-  - **Cố tình sửa Tuple:** `t = (1, 2, 3); t[0] = 10;` $\rightarrow$ Đề thi hỏi kết quả: Chương trình bị **báo lỗi thực thi `TypeError`**, không thể thay đổi giá trị của tuple.
+  - **Cố tình sửa Tuple:** `t = (1, 2, 3); t[0] = 10;` -> Đề thi hỏi kết quả: Chương trình bị **báo lỗi thực thi `TypeError`**, không thể thay đổi giá trị của tuple.
   - **Tuple 1 phần tử:** Viết `x = (5)` thì Python hiểu `x` là số nguyên `int` thông thường. Muốn tạo tuple 1 phần tử bắt buộc phải có dấu phẩy: `x = (5,)`.
   - **Chỉ số kết thúc $stop$:** Lệnh `range(1, 10)` chỉ sinh các số từ $1$ đến $9$, hoàn toàn không có số $10$.
+  - **Kiểu trả về của `map` và `filter`:** Trong Python 3, `map` và `filter` trả về đối tượng iterator (generator); để in ra danh sách dạng `[...]`, cần bọc qua hàm `list()`.
 
 - **한 문장 설명 (Câu chốt tự nhớ):**
-  - *"List vuông sửa được tuple tròn cấm thay; cắt lát dừng trước stop, âm một (-1) đứng cuối hàng."*
+  - *"List vuông sửa được tuple tròn cấm thay; cắt lát dừng trước stop, âm một [::-1] đảo ngược hàng; list comprehension gom lặp một dòng."*
 
 ---
 
@@ -101,47 +109,47 @@ unique_data = list(set(raw_data))
 print(unique_data)    # Kết quả: [1, 2, 3, 4]
 ```
 
-#### 2. Lần vết chương trình Hướng đối tượng Python trong đề thi thực tế:
-```python
-class Calculator:
-    def __init__(self, initial_val=0):
-        self.val = initial_val # Thuộc tính lưu trữ giá trị
-
-    def add(self, n):
-        self.val += n
-        return self.val
-
-    def subtract(self, n):
-        self.val -= n
-        return self.val
-
-# Khởi tạo đối tượng
-calc = Calculator(10)
-calc.add(5)       # val = 10 + 5 = 15
-calc.subtract(3)  # val = 15 - 3 = 12
-
-print("Ket qua cuoi cung:", calc.val) # Kết quả in ra: 12
-```
-
-#### 3. Bảng lần vết thuật toán duyệt Dictionary kết hợp điều kiện:
+#### 2. Lần vết List Comprehension kết hợp điều kiện lọc:
 Đoạn mã Python:
 ```python
-scores = {"Kim": 85, "Lee": 92, "Park": 78}
-total = 0
-for name, score in scores.items():
-    if score >= 80:
-        total += score
-print("Total =", total)
+# Lấy bình phương các số chẵn trong khoảng 1 đến 6
+evens_squared = [x**2 for x in range(1, 7) if x % 2 == 0]
+print("Evens squared:", evens_squared)
+# range(1, 7) sinh ra: 1, 2, 3, 4, 5, 6
+# So chan: 2, 4, 6
+# Binh phuong: 2^2=4, 4^2=16, 6^2=36
+# Ket qua: [4, 16, 36]
 ```
 
-*Bảng lần vết biến:*
+*Bảng lần vết từng bước:*
 
-| Lượt duyệt | Cặp `(name, score)` | Điều kiện `score >= 80` | Hành động thực hiện | Giá trị `total` |
-| :---: | :---: | :---: | :--- | :---: |
-| 1 | `("Kim", 85)` | $85 \ge 80$ (Đúng) | Thực hiện `total += 85` | **85** |
-| 2 | `("Lee", 92)` | $92 \ge 80$ (Đúng) | Thực hiện `total += 92` | **177** |
-| 3 | `("Park", 78)`| $78 \ge 80$ (Sai) | Bỏ qua, không cộng | **177** |
-| **Kết quả in ra** | — | — | **`Total = 177`** | — |
+| $x$ | Điều kiện `x % 2 == 0` | Biểu thức `x**2` | Thêm vào danh sách kết quả |
+| :---: | :---: | :---: | :--- |
+| 1 | Sai ($1 \% 2 = 1$) | — | Bỏ qua |
+| 2 | Đúng ($2 \% 2 = 0$) | $2^2 = 4$ | Thêm 4 |
+| 3 | Sai ($3 \% 2 = 1$) | — | Bỏ qua |
+| 4 | Đúng ($4 \% 2 = 0$) | $4^2 = 16$ | Thêm 16 |
+| 5 | Sai ($5 \% 2 = 1$) | — | Bỏ qua |
+| 6 | Đúng ($6 \% 2 = 0$) | $6^2 = 36$ | Thêm 36 |
+| **Output** | — | — | **`[4, 16, 36]`** |
+
+#### 3. Minh họa hàm `lambda`, `map`, và `filter`:
+```python
+# Danh sách điểm đầu vào
+scores = [45, 82, 67, 90, 55, 78]
+
+# 1. Dùng filter lọc điểm thi đạt (>= 60)
+passed_scores = list(filter(lambda s: s >= 60, scores))
+print("Passed:", passed_scores) # Kết quả: [82, 67, 90, 78]
+
+# 2. Dùng map cộng 5 điểm thưởng cho mỗi điểm đạt
+curved_scores = list(map(lambda s: s + 5, passed_scores))
+print("Curved:", curved_scores) # Kết quả: [87, 72, 95, 83]
+
+# 3. Kết hợp tính tổng
+total_curved = sum(curved_scores)
+print("Total:", total_curved)   # Kết quả: 337
+```
 
 ---
 
@@ -151,4 +159,5 @@ print("Total =", total)
 - [ ] Nhớ cách tạo tuple 1 phần tử: Bắt buộc có dấu phẩy sau số `(5,)`.
 - [ ] Nắm chắc cú pháp cắt lát: `a[start:stop:step]` chỉ lấy đến $stop - 1$.
 - [ ] Nhớ `a[::-1]` đảo ngược danh sách và `a[-1]` lấy phần tử cuối cùng.
-- [ ] Nắm vững cách khai báo hàm `def`, constructor `__init__` và tham số `self` trong Class.
+- [ ] Thành thạo cú pháp List Comprehension: `[biểu_thức for x in danh_sách if điều_kiện]`.
+- [ ] Phân biệt được `map()` (biến đổi đồng loạt) và `filter()` (lọc theo điều kiện boolean) khi kết hợp với `lambda`.

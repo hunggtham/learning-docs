@@ -57,36 +57,86 @@
 | **Sự tham gia của khách hàng** | Chủ yếu ở đầu (yêu cầu) và cuối (nghiệm thu) | Tham gia liên tục, làm việc cùng nhau mỗi ngày |
 | **Thước đo tiến độ** | Số lượng tài liệu sản phẩm bàn giao (`산출물`) | Phần mềm thực tế chạy được (`작동하는 소프트웨어`) |
 
-#### 2. Khung làm việc Scrum (Scrum Framework)
-Scrum là khung quản lý dự án theo chu kỳ lặp lại ngắn gọi là **스프린트 (Sprint)**, thường kéo dài từ 1 đến 4 tuần.
+#### 2. Khung làm việc Scrum chuẩn 3-3-5 (Scrum Framework: 3 Roles - 3 Artifacts - 5 Events)
+Scrum là khung quản lý phát triển linh hoạt vận hành theo chu kỳ nước rút gọi là **스프린트 (Sprint)**, kéo dài từ 1 đến 4 tuần. Kiến trúc của Scrum được chuẩn hóa bởi quy tắc **3-3-5**:
 
 ##### A. 3 Vai trò cốt lõi trong Scrum (Scrum 3 Roles)
 - **제품 책임자 (Product Owner - PO):**
-  - Đại diện cho tiếng nói và lợi ích của khách hàng cùng các bên liên quan.
-  - Chịu trách nhiệm tạo lập, quản lý và **quyết định thứ tự ưu tiên của các hạng mục trong Product Backlog**.
+  - Đại diện cho tiếng nói, yêu cầu và giá trị kinh doanh của khách hàng cùng các bên liên quan.
+  - Chịu trách nhiệm duy nhất trong việc tạo lập, quản lý và **quyết định thứ tự ưu tiên của các hạng mục trong Product Backlog**.
   - Là người duy nhất có quyền nghiệm thu phần mềm hoàn thành sau mỗi Sprint.
 - **스크럼 마스터 (Scrum Master - SM):**
-  - Đóng vai trò là người điều phối, người thầy hướng dẫn (Facilitator / Servant Leader).
-  - Đảm bảo các nguyên tắc và sự kiện của Scrum được tuân thủ nghiêm túc.
-  - Chịu trách nhiệm **loại bỏ các trở ngại và vướng mắc kỹ thuật cản trở tiến độ của nhóm phát triển**.
-  - **Bẫy đề thi:** SM **không phải là Project Manager hay cấp trên chỉ đạo**, không có quyền phân công công việc hay ép buộc nhóm.
+  - Đóng vai trò là người điều phối, người lãnh đạo phục vụ (Facilitator / Servant Leader).
+  - Bảo đảm các nguyên tắc, kỹ thuật và sự kiện của Scrum được toàn đội thấu hiểu và tuân thủ nghiêm ngặt.
+  - Chịu trách nhiệm **loại bỏ các trở ngại, xung đột và rào cản kỹ thuật cản trở tiến độ của nhóm phát triển**.
+  - **Bẫy đề thi:** SM **không phải là Project Manager hay sếp chỉ đạo**, tuyệt đối không có quyền phân chia công việc hay ép deadline cho nhóm.
 - **개발팀 (Development Team - Nhóm phát triển):**
   - Nhóm tự tổ chức (Self-organizing) và đa chức năng (Cross-functional), quy mô tối ưu từ 5 đến 9 thành viên.
-  - Tự chủ phân chia và chịu trách nhiệm tập thể về việc biến các yêu cầu trong Sprint Backlog thành sản phẩm chạy được.
+  - Tự chủ phân chia nhiệm vụ và chịu trách nhiệm tập thể về việc biến các yêu cầu trong Sprint Backlog thành sản phẩm chạy được thực tế.
 
-##### B. 4 Sự kiện chính trong Scrum (Scrum 4 Events)
-1. `스프린트 계획 회의 (Sprint Planning Meeting)`: Diễn ra đầu Sprint để xác định mục tiêu và chọn các mục từ Product Backlog đưa vào Sprint Backlog.
-2. `일일 스크럼 회의 (Daily Scrum Meeting)`: **Họp đứng mỗi sáng tối đa 15 phút**, mỗi thành viên trả lời ngắn gọn 3 câu:
-   - Hôm qua tôi đã làm gì để giúp nhóm đạt mục tiêu?
-   - Hôm nay tôi sẽ làm gì?
-   - Tôi đang gặp trở ngại hay khó khăn gì không?
-3. `스프린트 검토 (Sprint Review)`: Diễn ra cuối Sprint, nhóm **trình diễn trực tiếp sản phẩm (Live Demo)** cho khách hàng và các bên liên quan xem để thu nhận phản hồi.
-4. `스프린트 회고 (Sprint Retrospective)`: Diễn ra sau Sprint Review, **chỉ nội bộ nhóm Scrum họp kín** để đánh giá quy trình làm việc, văn hóa phối hợp và tìm ra các điểm cải tiến cho Sprint kế tiếp.
+##### B. 3 Tạo tác trong Scrum (Scrum 3 Artifacts)
+- `제품 백로그 (Product Backlog)`: Danh sách tổng thể toàn bộ tính năng, yêu cầu, sửa lỗi mong muốn của sản phẩm, do PO liên tục quản lý và sắp xếp độ ưu tiên theo giá trị kinh doanh.
+- `스프린트 백로그 (Sprint Backlog)`: Tập hợp các User Story và đầu việc kỹ thuật cụ thể mà Dev Team lựa chọn và cam kết hoàn thành trong Sprint hiện tại.
+- `완료 증분 (Increment - Sản phẩm tăng dần)`: Phần mềm chạy được, có thể bàn giao ngay (`Shippable Product`), tích lũy qua từng Sprint và bắt buộc phải thỏa mãn tiêu chuẩn **Định nghĩa hoàn thành (`DoD - Definition of Done`)**.
 
-##### C. 3 Tạo phẩm trong Scrum (Scrum 3 Artifacts)
-- `제품 백로그 (Product Backlog)`: Danh sách tổng thể toàn bộ tính năng mong muốn của sản phẩm, do PO quản lý và liên tục cập nhật.
-- `스프린트 백로그 (Sprint Backlog)`: Tập hợp các công việc cụ thể được nhóm phát triển cam kết hoàn thành trong Sprint hiện tại.
-- `완료 증분 (Increment)`: Phần mềm chạy được đã hoàn thành trong Sprint, phải đáp ứng chuẩn Định nghĩa hoàn thành (`DoD - Definition of Done`).
+##### C. 5 Sự kiện chính trong Scrum (Scrum 5 Events)
+1. `스프린트 (Sprint)`: **Sự kiện thùng chứa (Container Event)** bao trùm toàn bộ các hoạt động, có thời lượng cố định (`Time-box`) từ 1 đến 4 tuần. Sprint mới bắt đầu ngay sau khi Sprint trước kết thúc.
+2. `스프린트 계획 회의 (Sprint Planning)`: Diễn ra đầu Sprint. PO trình bày các mục ưu tiên; nhóm Dev ước lượng và chốt mục tiêu (`Sprint Goal`), đồng thời tạo Sprint Backlog.
+3. `일일 스크럼 회의 (Daily Scrum)`: **Họp đứng mỗi sáng tối đa 15 phút**, mỗi thành viên trả lời ngắn gọn 3 câu hỏi:
+   - Hôm qua tôi đã làm gì giúp nhóm đạt Sprint Goal?
+   - Hôm nay tôi sẽ làm gì để giúp nhóm đạt Sprint Goal?
+   - Tôi đang gặp trở ngại hay khó khăn gì cản trở công việc không?
+4. `스프린트 검토 (Sprint Review)`: Diễn ra cuối Sprint, nhóm **trình diễn trực tiếp sản phẩm (Live Demo)** cho PO, khách hàng và các bên liên quan để nghiệm thu và nhận phản hồi thực tế.
+5. `스프린트 회고 (Sprint Retrospective)`: Diễn ra ngay sau Sprint Review, **chỉ nội bộ nhóm Scrum họp kín** để nhìn nhận lại quy trình làm việc, sự phối hợp giữa các thành viên, công cụ hỗ trợ và lập kế hoạch cải tiến cụ thể cho Sprint kế tiếp.
+
+##### D. Sơ đồ quy trình tổng thể vận hành Sprint (Scrum Workflow ASCII)
+
+```text
+    [Product Backlog]
+    - Do PO quản lý
+    - Ưu tiên theo giá trị
+          │
+          ▼
+   ┌───────────────┐
+   │ 1. SPRINT     │ ◄─── Bắt đầu chu kỳ Sprint
+   │    PLANNING   │      (Xác định Sprint Goal & chọn Story)
+   └──────┬────────┘
+          │
+          ▼
+    [Sprint Backlog]
+    - Do Dev Team cam kết
+    - Phân rã thành Task kỹ thuật
+          │
+          ▼
+   ┌─────────────────────────────────────────────────────────────┐
+   │                   SỰ KIỆN CHÍNH: SPRINT (1~4 Tuần)          │
+   │                                                             │
+   │        ┌──────────────────────────────────────┐             │
+   │        │ 2. DAILY SCRUM (Họp đứng 15 phút)     │             │
+   │        │ - Hôm qua làm gì?                    │             │
+   │        │ - Hôm nay làm gì?                    │             │
+   │        │ - Gặp trở ngại gì? (SM hỗ trợ tháo gỡ)│             │
+   │        └──────────────────┬───────────────────┘             │
+   │                           │ Lặp lại mỗi sáng                │
+   │                           ▼                                 │
+   │             [Dev Team phát triển & Tự kiểm thử]              │
+   └───────────────────────────┬─────────────────────────────────┘
+                               │
+                               ▼
+                   [3. HOÀN THÀNH TẠO TÁC: INCREMENT]
+                   (Sản phẩm chạy được, đạt Definition of Done)
+                               │
+                ┌──────────────┴──────────────┐
+                ▼                             ▼
+       ┌──────────────────┐          ┌─────────────────────────┐
+       │ 4. SPRINT REVIEW │          │ 5. SPRINT RETROSPECTIVE │
+       │ - Demo sản phẩm  │          │ - Họp kín nội bộ Team   │
+       │ - Khách hàng & PO│          │ - Đánh giá quy trình    │
+       │   nghiệm thu     │          │ - Đề ra hành động cải   │
+       │ - Cập nhật lại   │          │   tiến cho Sprint sau   │
+       │   Product Backlog│          └─────────────────────────┘
+       └──────────────────┘
+```
 
 #### 3. Phương pháp lập trình eXtreme Programming (XP)
 XP là phương pháp phát triển linh hoạt tập trung sâu vào **kỹ thuật lập trình và năng suất của lập trình viên**.
@@ -138,7 +188,11 @@ XP là phương pháp phát triển linh hoạt tập trung sâu vào **kỹ thu
   - Họp kín nội bộ team để cải tiến quy trình và văn hóa làm việc $\rightarrow$ **스프린트 회고 (Sprint Retrospective)**.
 - **Bẫy 4 (Bộ 5 giá trị XP):** Đề hay chèn các từ gây nhiễu như `정확성 (Chính xác)`, `효율성 (Hiệu quả)`, `복잡성 (Phức tạp)` và hỏi có thuộc 5 giá trị của XP không $\rightarrow$ **KHÔNG**. 5 giá trị chuẩn chỉ gồm: **의사소통, 단순성, 용기, 존중, 피드백**.
 
-- **한 문장 설명 (Câu chốt ghi nhớ):** "PO quyết Backlog, SM diệt rào cản, Daily 15 phút, Review xem Demo, Retrospective cải tiến quy trình; XP gồm 5 giá trị và bộ kỹ thuật thực chiến Pair, TDD, CI, Refactor".
+- **💡 Khẩu quyết thần chú đề thi:**
+  - 4 giá trị cốt lõi Agile: **개실고변** (`개`인과 상호작용, `실`행되는 소프트웨어, `고`객과의 협업, `변`화에 대응).
+  - 5 giá trị XP: **의단용존피** (`의`사소통, `단`순성, `용`기, `존`중, `피`드백).
+  - Khung Scrum 3-3-5: **3 Vai trò** (PO, SM, Dev), **3 Tạo tác** (Product Backlog, Sprint Backlog, Increment), **5 Sự kiện** (Sprint, Planning, Daily, Review, Retrospective).
+  - Câu chốt ghi nhớ: "PO quyết Backlog, SM diệt rào cản, Daily 15 phút, Review xem Demo, Retrospective cải tiến quy trình; XP gồm 5 giá trị và bộ kỹ thuật thực chiến Pair, TDD, CI, Refactor".
 
 ---
 

@@ -42,33 +42,74 @@
 | **6. Phụ thuộc ngữ cảnh** | **정황 의존성 (Context dependent)** | Không có một chiến lược test duy nhất cho mọi dự án; y tế, hàng không đòi hỏi tiêu chuẩn khắt khe hơn mạng xã hội |
 | **7. Ngụy biện vắng bóng lỗi** | **오류-부재의 궤변 (Absence-of-errors)** | Dù sửa sạch 100% lỗi kỹ thuật nhưng sản phẩm **không đáp ứng nhu cầu thực tế của người dùng** thì phần mềm vẫn thất bại |
 
-#### 2. Đối chiếu Verification (검증) vs Validation (확인)
+#### 2. Phân loại kiểm thử theo trạng thái thực thi: Kiểm thử tĩnh vs Kiểm thử động
+
+```text
+                           [PHÂN LOẠI KIỂM THỬ PHẦN MỀM]
+                                        │
+             ┌──────────────────────────┴──────────────────────────┐
+             ▼                                                     ▼
+    [THEO TRẠNG THÁI CHẠY MÃ]                             [THEO MỤC ĐÍCH KIỂM THỬ]
+    ├─ 정적 테스트 (Static - Không chạy mã)                 ├─ 회귀 (Regression - Chống tác dụng phụ)
+    │  ├─ 동료 검토 (Peer Review)                         ├─ 회복 (Recovery - Khôi phục sau sập)
+    │  ├─ 워크스루 (Walkthrough - Tác giả dẫn)             ├─ 안전 (Security - Chống tấn công mạng)
+    │  ├─ 인스펙션 (Inspection - Moderator chủ tọa)        ├─ 강도 (Stress - Tải cực hạn vượt ngưỡng)
+    │  └─ 정적 분석 (Static Code Analysis)                ├─ 부하 (Load - Tăng tải tìm điểm nghẽn)
+    │                                                      ├─ 성능 (Performance - Đo phản hồi/thông lượng)
+    └─ 동적 테스트 (Dynamic - Thực thi mã thật)             └─ 구조 (Structure - Kiểm tra độ phủ mã)
+       ├─ 화이트박스 테스트 (White-box - Cấu trúc nội bộ)
+       └─ 블랙박스 테스트 (Black-box - Chức năng bên ngoài)
+```
+
+| Tiêu chí | 정적 테스트 (Static Testing — Kiểm thử tĩnh) | 동적 테스트 (Dynamic Testing — Kiểm thử động) |
+|:---|:---|:---|
+| **Cơ chế thực thi** | **KHÔNG THỰC THI MÃ NGUỒN (코드 실행 없음)** | **BẮT BUỘC THỰC THI CHƯƠNG TRÌNH (코드 실행 필수)** |
+| **Đối tượng kiểm tra** | Tài liệu đặc tả yêu cầu, thiết kế kiến trúc, mã nguồn thô | Chương trình thực thi, file nhị phân đang chạy |
+| **Thời điểm áp dụng** | Rất sớm, ngay từ giai đoạn khởi đầu dự án | Sau khi đã có mã nguồn chạy được (từ Unit Test trở đi) |
+| **Kỹ thuật tiêu biểu** | **Walkthrough, Inspection, Peer Review, Static Analysis** | **White-box Testing, Black-box Testing** |
+
+##### Phân biệt hai kỹ thuật thẩm tra tĩnh cốt lõi: Walkthrough vs Inspection
+- **워크스루 (Walkthrough):**
+  - Buổi họp do **chính tác giả của tài liệu/mã nguồn chủ trì và dẫn dắt**.
+  - Không chính thức (Informal); mục tiêu chính là giới thiệu sản phẩm, phát hiện lỗi sơ bộ và chia sẻ kiến thức, đào tạo đồng nghiệp.
+- **인스펙션 (Inspection — Fagan Inspection):**
+  - Quy trình kiểm tra chính quy và nghiêm ngặt nhất do **người điều phối độc lập (Moderator / 주임 검토자) chủ trì**, không phải tác giả.
+  - Sử dụng danh sách kiểm tra chuẩn hóa (`Checklist`) và quy tắc định sẵn; lập biên bản ghi nhận lỗi chính thức và có bước theo dõi khắc phục (`Follow-up`).
+
+#### 3. Đối chiếu Verification (검증) vs Validation (확인)
+
 | Tiêu chuẩn so sánh | 검증 (Verification — Xác minh) | 확인 (Validation — Xác nhận) |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | **Câu hỏi triết lý** | *"Are we building the product right?"* | *"Are we building the right product?"* |
 | **Góc nhìn** | **Nhà phát triển (Developer)** | **Người dùng cuối (User / Customer)** |
 | **Bản chất** | Kiểm tra xem sản phẩm có thỏa mãn đúng các đặc tả kỹ thuật và tài liệu thiết kế đã đề ra không | Kiểm tra xem sản phẩm có thỏa mãn đúng nhu cầu nghiệp vụ thực tế và mong đợi của khách hàng không |
 | **Phương pháp tiêu biểu** | Đánh giá tài liệu, Walkthrough, Inspection, Unit Test | Kiểm thử hệ thống, **Kiểm thử chấp nhận (Acceptance Test)**, Beta Test |
 
-#### 3. Bảng phân loại kiểm thử theo mục đích đặc biệt
+#### 4. Bảng phân loại kiểm thử theo mục đích đặc biệt
+
 | Loại hình kiểm thử | Tên tiếng Hàn & Anh | Mục tiêu kiểm tra trọng tâm |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | **Kiểm thử hồi quy** | **회귀 테스트 (Regression Test)** | Chạy lại các ca kiểm thử sau khi sửa lỗi hoặc nâng cấp mã nguồn để bảo đảm **không làm phát sinh lỗi mới (Side Effects)** |
 | **Kiểm thử phục hồi** | **회복 테스트 (Recovery Test)** | Cố tình tạo sự cố hệ thống (ngắt điện, sập mạng) để đo lường khả năng tự khôi phục dữ liệu |
 | **Kiểm thử an ninh** | **안전 테스트 (Security Test)** | Kiểm tra khả năng chống chịu trước các cuộc tấn công mạng, xâm nhập trái phép và bảo vệ dữ liệu nhạy cảm |
 | **Kiểm thử chịu tải quá mức** | **강도 / 스트레스 테스트 (Stress Test)** | Nạp dữ liệu và lưu lượng truy cập **vượt quá ngưỡng thiết kế tối đa** để xem hệ thống sụp đổ ra sao và có cơ chế phòng vệ không |
+| **Kiểm thử tải** | **부하 테스트 (Load Test)** | Tăng dần lưu lượng tải từ từ đến giới hạn định mức của hệ thống để xác định ngưỡng chịu tải và điểm nghẽn hiệu năng |
 | **Kiểm thử hiệu năng** | **성능 테스트 (Performance Test)** | Đo thời gian phản hồi (Response Time), thông lượng xử lý (Throughput) trong điều kiện tải bình thường |
 
-#### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+#### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
 - **Bẫy 1: Nhầm lẫn giữa Defect Clustering và Pesticide Paradox:**
   - Lỗi tập trung 80% ở 20% mô-đun phức tạp $\rightarrow$ **결함 집중 (Defect Clustering / Pareto)**.
   - Chạy mãi bộ test cũ không tìm thấy lỗi mới $\rightarrow$ **살충제 패러독스 (Pesticide Paradox)**.
 - **Bẫy 2: Phân biệt Verification vs Validation:**
   - *"Building product right"* (làm đúng quy chuẩn kỹ thuật) $\rightarrow$ **검증 (Verification)**.
   - *"Building right product"* (làm đúng sản phẩm khách hàng cần) $\rightarrow$ **확인 (Validation)**.
-- **Bẫy 3: Phân biệt Performance Test vs Stress Test:**
-  - Đo thời gian phản hồi ở mức tải thiết kế $\rightarrow$ **성능 테스트 (Performance)**.
-  - Ép hệ thống chạy quá mức cực hạn để thử độ chịu đựng $\rightarrow$ **강도 테스트 (Stress)**.
+- **Bẫy 3: Phân biệt Performance Test vs Stress Test vs Load Test:**
+  - Đo thời gian phản hồi ở mức tải bình thường $\rightarrow$ **성능 테스트 (Performance)**.
+  - Tăng tải từ từ đến giới hạn thiết kế để tìm điểm nghẽn $\rightarrow$ **부하 테스트 (Load)**.
+  - Ép hệ thống chạy vượt quá mức cực hạn tối đa để thử độ chịu đựng và cơ chế phục hồi $\rightarrow$ **강도 테스트 (Stress)**.
+- **Bẫy 4: Walkthrough vs Inspection:**
+  - Tác giả chủ trì, không chính thức, đào tạo $\rightarrow$ **워크스루 (Walkthrough)**.
+  - Người điều phối độc lập (Moderator) chủ trì, dùng Checklist chính quy $\rightarrow$ **인스펙션 (Inspection)**.
 
 ---
 

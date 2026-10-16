@@ -47,13 +47,28 @@ $$\mathbf{V(G) = E - N + 2 = P + 1 = \text{Số vùng khép kín (Regions)}}$$
 - *Ý nghĩa:* Biểu thị **số lượng đường đi độc lập tuyến tính tối thiểu** cần kiểm tra.
 
 #### 3. Bảng 5 cấp độ bao phủ mã nguồn (Code Coverage Criteria)
+
+```text
+  [PHÂN CẤP ĐỘ PHỦ MÃ NGUỒN - TỪ YẾU ĐẾN MẠNH]
+  ▲  [MẠNH NHẤT] 5. 다중 조건 검증 (Multiple Condition Coverage - 2^n tổ hợp bảng chân trị)
+  │              4. MC/DC 검증 (Modified Condition/Decision - Tuyến tính n + 1 ca test)
+  │              3. 조건 / 결정 검증 (Condition / Decision Coverage - Thỏa mãn cả 2)
+  │              2. 결정 / 분기 검증 (Decision / Branch Coverage - Toàn bộ nhánh T/F)
+  ▼  [YẾU NHẤT]  1. 구문 검증 (Statement Coverage - Mọi dòng lệnh chạy ít nhất 1 lần)
+```
+
 | Tiêu chuẩn độ phủ | Tên tiếng Hàn & Anh | Định nghĩa kỹ thuật chuẩn đề thi | Đánh giá độ mạnh |
-| :--- | :--- | :--- | :--- |
-| **Bao phủ câu lệnh** | **구문 검증 (Statement Coverage)** | Mọi câu lệnh trong mã nguồn đều được thực thi ít nhất 1 lần | Yếu nhất, dễ đạt |
+|:---|:---|:---|:---|
+| **Bao phủ câu lệnh** | **구문 검증 (Statement Coverage)** | Mọi câu lệnh trong mã nguồn đều được thực thi ít nhất 1 lần | Yếu nhất, dễ đạt nhất |
 | **Bao phủ quyết định / nhánh** | **결정 / 분기 검증 (Decision / Branch)** | Toàn bộ biểu thức điều kiện đều nhận cả giá trị `True` và `False` ít nhất 1 lần | Mạnh hơn Statement Coverage |
 | **Bao phủ điều kiện** | **조건 검증 (Condition Coverage)** | Từng điều kiện con đơn lẻ bên trong đều phải nhận cả `True` và `False` ít nhất 1 lần | Không bảo đảm Decision Coverage |
 | **Bao phủ điều kiện / nhánh** | **조건 / 분기 검증 (Condition/Branch)** | Thỏa mãn đồng thời cả hai: Toàn bộ nhánh nhận đủ T/F và từng điều kiện con nhận đủ T/F | Khá mạnh |
 | **Bao phủ đa điều kiện** | **다중 조건 검증 (Multiple Condition)** | Kiểm tra **tất cả mọi tổ hợp giá trị chân lý** có thể có giữa các điều kiện con ($2^n$ tổ hợp) | Mạnh nhất, tốn kém nhất |
+
+- **Công thức tính tỷ lệ phần trăm bao phủ (Coverage Percentage Formula):**
+  $$\text{Statement Coverage} = \frac{\text{Số câu lệnh được thực thi}}{\text{Tổng số câu lệnh có trong hàm}} \times 100\%$$
+  $$\text{Branch / Decision Coverage} = \frac{\text{Số nhánh True/False đã được rẽ qua}}{\text{Tổng số nhánh quyết định} \times 2} \times 100\%$$
+  $$\text{Condition Coverage} = \frac{\text{Số trạng thái True/False của điều kiện con đã đạt}}{\text{Tổng số điều kiện con} \times 2} \times 100\%$$
 
 #### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
 - **Bẫy 1: Tính McCabe $V(G)$:**
@@ -87,44 +102,46 @@ $$\mathbf{V(G) = E - N + 2 = P + 1 = \text{Số vùng khép kín (Regions)}}$$
 - `K (Kill)`: Hủy biến hoặc giải phóng vùng nhớ.
 - Mục tiêu: Phát hiện lỗi đọc biến trước khi định nghĩa (Use before Define) hoặc gán 2 lần liên tiếp không dùng.
 
-#### 3. Phân tích ví dụ logic cụ thể và điểm mù của Condition Coverage
-Xét đoạn mã nguồn sau:
+#### 3. Bảng chân trị thực nghiệm và Phân tích điểm mù Condition Coverage
+Xét đoạn mã nguồn thực tế:
 ```java
 if (A > 0 && B > 0) {
-    executeAction();
+    executeAction(); // Dòng lệnh thực thi
 }
 ```
 Trong đó:
-- `(A > 0 && B > 0)` là **Biểu thức quyết định toàn cục (Decision)**.
 - `A > 0` là **Điều kiện con 1 ($C_1$)**.
 - `B > 0` là **Điều kiện con 2 ($C_2$)**.
+- `(A > 0 && B > 0)` là **Biểu thức quyết định tổng thể (Decision $D$)**.
 
-1. **Với 구문 검증 (Statement Coverage):**
-   - Chỉ cần **1 Test Case**: Chọn $A = 1, B = 1
-ightarrow$ Điều kiện True $
-ightarrow$ Lệnh `executeAction()` được thực thi. Đạt 100% Statement Coverage dù nhánh False chưa bao giờ được chạy!
-2. **Với 결정/분기 검증 (Decision/Branch Coverage):**
-   - Cần **2 Test Cases**:
-     - Test Case 1: $A = 1, B = 1
-ightarrow$ Decision nhận `True`.
-     - Test Case 2: $A = -1, B = 1
-ightarrow$ Decision nhận `False`.
-3. **Với 조건 검증 (Condition Coverage) và Điểm mù nguy hiểm:**
-   - Cần từng điều kiện con nhận đủ True và False:
-     - Test Case 1: $A = 1, B = -1
-ightarrow C_1 = T, C_2 = F
-ightarrow$ Decision tổng thể là `False`.
-     - Test Case 2: $A = -1, B = 1
-ightarrow C_1 = F, C_2 = T
-ightarrow$ Decision tổng thể là `False`.
-   - **Điểm mù:** Cả hai Test Case đều khiến Decision tổng thể mang giá trị `False`! Câu lệnh `executeAction()` bên trong không bao giờ được chạy. Nghĩa là **Condition Coverage đạt 100% nhưng Statement Coverage và Decision Coverage lại không đạt**!
-4. **Với 다중 조건 검증 (Multiple Condition Coverage):**
-   - Với $n = 2$ điều kiện con, cần kiểm tra đủ $2^2 = 4$ ca kiểm thử bao phủ toàn bộ bảng chân trị: $(T, T), (T, F), (F, T), (F, F)$.
+##### Bảng chân trị toàn diện (Truth Table):
+
+| Ca kiểm thử (Test Case) | $C_1: A > 0$ | $C_2: B > 0$ | Decision $D: C_1 \land C_2$ | Lệnh executeAction() | Thuộc tập ca test tối thiểu nào? |
+|:---:|:---:|:---:|:---:|:---:|:---|
+| **TC1** ($A=1, B=1$) | **True** | **True** | **True** | **Thực thi** | Statement, Decision, MC/DC |
+| **TC2** ($A=1, B=-1$) | **True** | **False** | **False** | Bỏ qua | Decision, Condition, MC/DC |
+| **TC3** ($A=-1, B=1$) | **False** | **True** | **False** | Bỏ qua | Condition, MC/DC |
+| **TC4** ($A=-1, B=-1$) | **False** | **False** | **False** | Bỏ qua | Chỉ cần trong Multiple Condition |
+
+- **Phân tích từng mức độ bao phủ qua bảng chân trị:**
+  1. **구문 검증 (Statement Coverage):** Chỉ cần **TC1** vì khi $D = \text{True}$, dòng lệnh `executeAction()` được chạy. Tỷ lệ bao phủ đạt $100\%$ dù nhánh False hoàn toàn bị bỏ sót.
+  2. **결정/분기 검증 (Decision/Branch Coverage):** Cần **TC1 ($D = \text{True}$)** và **TC2 ($D = \text{False}$)**. Đạt $100\%$ Branch Coverage vì cả hai nhánh True và False của biểu thức điều kiện đều được chạy.
+  3. **조건 검증 (Condition Coverage) và Điểm mù chí tử:**
+     - Nếu người kiểm thử chọn cặp **{TC2, TC3}**:
+       - Với $C_1$: TC2 mang True, TC3 mang False $\rightarrow C_1$ nhận đủ T/F ($100\%$).
+       - Với $C_2$: TC2 mang False, TC3 mang True $\rightarrow C_2$ nhận đủ T/F ($100\%$).
+     - $\rightarrow$ **Condition Coverage đạt $100\%$ tuyệt đối!**
+     - **Tuy nhiên:** Cả TC2 và TC3 đều làm $D = \text{False}$. Do đó nhánh True không bao giờ chạy và lệnh `executeAction()` không bao giờ được chạm tới $\rightarrow$ **Statement Coverage = 0% và Branch Coverage chỉ đạt 50%**.
+  4. **다중 조건 검증 (Multiple Condition Coverage):** Bắt buộc phải chạy **cả 4 ca {TC1, TC2, TC3, TC4}** để quét trọn vẹn $2^2 = 4$ tổ hợp chân trị.
 
 #### 4. Tiêu chuẩn MC/DC (Modified Condition/Decision Coverage)
 - Khi một biểu thức phức hợp có $n = 10$ điều kiện con, Multiple Condition đòi hỏi $2^{10} = 1024$ Test Cases, chi phí kiểm thử quá khổng lồ.
 - Chuẩn an toàn hàng không (DO-178C Cấp độ A) sử dụng tiêu chuẩn **MC/DC**: Chỉ yêu cầu tuyến tính **$n + 1$ ca kiểm thử** (với $n=10$ chỉ cần 11 ca test).
 - **Nguyên lý MC/DC:** Mỗi điều kiện con khi độc lập đổi từ True sang False (trong khi giữ nguyên giá trị của tất cả các điều kiện con khác) phải trực tiếp làm thay đổi kết quả đầu ra của toàn bộ biểu thức quyết định.
+- **Minh họa trên bảng chân trị:**
+  - Cặp kiểm chứng cho $C_1$: {TC1, TC3} (khi $C_2=\text{True}$ cố định, $C_1$ đổi từ $T \rightarrow F$ làm $D$ đổi từ $T \rightarrow F$).
+  - Cặp kiểm chứng cho $C_2$: {TC1, TC2} (khi $C_1=\text{True}$ cố định, $C_2$ đổi từ $T \rightarrow F$ làm $D$ đổi từ $T \rightarrow F$).
+  - $\rightarrow$ Bộ ca kiểm thử MC/DC chỉ cần **3 ca: {TC1, TC2, TC3}** (đúng bằng $n + 1 = 2 + 1 = 3$).
 
 ---
 
@@ -134,5 +151,5 @@ ightarrow$ Decision tổng thể là `False`.
 - [ ] Nêu 3 kỹ thuật kiểm tra cấu trúc điều khiển: Điều kiện, Vòng lặp, Luồng dữ liệu (DUK).
 - [ ] Nhớ 7 trường hợp biên khi kiểm tra vòng lặp đơn giản: $0, 1, 2, m, n-1, n, n+1$.
 - [ ] Phân biệt định nghĩa cốt lõi của 5 cấp độ Code Coverage: Statement, Branch/Decision, Condition, Condition/Branch, Multiple Condition.
-- [ ] Giải thích điểm mù của Condition Coverage (có thể đạt 100% Condition nhưng nhánh True không bao giờ chạy).
-- [ ] Nhớ tiêu chuẩn MC/DC chỉ cần $n + 1$ ca kiểm thử thay vì $2^n$ trong công nghệ an toàn cao.
+- [ ] Giải thích điểm mù của Condition Coverage (chọn {TC2, TC3} đạt 100% Condition nhưng nhánh True không bao giờ chạy).
+- [ ] Nhớ tiêu chuẩn MC/DC chỉ cần tuyến tính $n + 1$ ca kiểm thử thay vì $2^n$ trong công nghệ an toàn cao.

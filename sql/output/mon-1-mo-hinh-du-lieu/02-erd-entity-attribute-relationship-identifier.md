@@ -1291,7 +1291,6 @@ DELIVERY_HISTORY
 ---
 
 ## 19. Sơ đồ quan hệ giữa các loại Entity
-Phần này nối mạch SQL với “19. Sơ đồ quan hệ giữa các loại Entity”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 기본/키 엔터티
@@ -1324,7 +1323,6 @@ Basic Entity tồn tại trước, tạo ra Central Entity, còn Action Entity �
 ---
 
 ## 20. Tổng hợp keyword của hai hình
-Phần này nối mạch SQL với “20. Tổng hợp keyword của hai hình”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Keyword | Nghĩa tiếng Việt | Cách hiểu ngắn |
 | --- | --- | --- |
@@ -1611,7 +1609,6 @@ Mỗi ô chỉ có một giá trị:
 ```
 
 #### Ví dụ sai trong tài liệu
-Phần này nối mạch SQL với “Ví dụ sai trong tài liệu”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 나이 = 25, 370
@@ -2244,7 +2241,6 @@ Một sản phẩm ngoài đời có thể không tự nhiên có `상품코드`
 - Liên kết với bảng khác.
 
 #### Ví dụ
-Phần này nối mạch SQL với “Ví dụ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 PRODUCT
@@ -2731,7 +2727,6 @@ Theo số lượng giá trị, Attribute được chia thành Single Value và M
 Theo khả năng phân tách, Attribute được chia thành Simple và Composite Attribute.
 
 ### Sơ đồ ghi nhớ
-Phần này nối mạch SQL với “Sơ đồ ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 속성
@@ -3336,7 +3331,6 @@ Cardinality cho biết một Instance có thể liên kết với bao nhiêu Ins
 Ví dụ:
 
 #### 1:1
-Phần này nối mạch SQL với “1:1”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 PERSON 1 ─── 1 PASSPORT
@@ -3345,7 +3339,6 @@ PERSON 1 ─── 1 PASSPORT
 Một người có một hộ chiếu và một hộ chiếu thuộc về một người.
 
 #### 1:N
-Phần này nối mạch SQL với “1:N”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 DEPARTMENT 1 ─── N EMPLOYEE
@@ -3354,7 +3347,6 @@ DEPARTMENT 1 ─── N EMPLOYEE
 Một phòng ban có nhiều nhân viên.
 
 #### M:N
-Phần này nối mạch SQL với “M:N”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 STUDENT M ─── N COURSE
@@ -3537,7 +3529,6 @@ Trong Identifying Relationship, Primary Key của Entity cha được bao gồm 
 Entity cha bắt buộc phải được tạo trước thì Entity con mới có thể được tạo.
 
 #### Ví dụ trong hình
-Phần này nối mạch SQL với “Ví dụ trong hình”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 학생
@@ -3583,7 +3574,6 @@ STUDENT + COURSE → ENROLLMENT
 Nếu `ENROLLMENT` dùng `STUDENT_ID` trong Primary Key, thì không thể tạo đăng ký môn học nếu không có sinh viên.
 
 #### Ví dụ khóa
-Phần này nối mạch SQL với “Ví dụ khóa”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 ENROLLMENT
@@ -3674,7 +3664,6 @@ Trong Non-identifying Relationship, Primary Key của cha được kế thừa t
 Trong Non-identifying Relationship, Entity con có thể được tạo mà không cần Entity cha.
 
 #### Ví dụ
-Phần này nối mạch SQL với “Ví dụ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 DEPARTMENT
@@ -3698,7 +3687,6 @@ DEPARTMENT_ID FK
 ---
 
 ### 9.2. So sánh hai loại Relationship
-Phần này nối mạch SQL với “9.2. So sánh hai loại Relationship”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Nội dung | 식별자 관계 | 비식별자 관계 |
 | --- | --- | --- |
@@ -3966,7 +3954,6 @@ Primary Key trong Oracle có các đặc tính:
 Tài liệu phân loại theo nhiều tiêu chí.
 
 ### 12.1. Theo tính đại diện
-Phần này nối mạch SQL với “12.1. Theo tính đại diện”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 주식별자 - Primary Key
@@ -3974,7 +3961,6 @@ Phần này nối mạch SQL với “12.1. Theo tính đại diện”, giải 
 ```
 
 ### 12.2. Theo cách tạo ra
-Phần này nối mạch SQL với “12.2. Theo cách tạo ra”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 내부식별자 - Internal Identifier
@@ -3982,7 +3968,6 @@ Phần này nối mạch SQL với “12.2. Theo cách tạo ra”, giải thíc
 ```
 
 ### 12.3. Theo số lượng Attribute
-Phần này nối mạch SQL với “12.3. Theo số lượng Attribute”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 단일식별자 - Single Identifier
@@ -3990,7 +3975,6 @@ Phần này nối mạch SQL với “12.3. Theo số lượng Attribute”, gi�
 ```
 
 ### 12.4. Theo nguồn gốc
-Phần này nối mạch SQL với “12.4. Theo nguồn gốc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 본질식별자 - Natural Identifier
@@ -4105,7 +4089,6 @@ Ví dụ:
 Nếu `STUDENT_ID` đã đủ xác định duy nhất, thì các tổ hợp có thêm Attribute vẫn là Super Key nhưng không phải Candidate Key vì không tối thiểu.
 
 #### Quan hệ giữa các Key
-Phần này nối mạch SQL với “Quan hệ giữa các Key”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Super Key
@@ -4243,7 +4226,6 @@ Một khóa ghép quá dài sẽ:
 ---
 
 ## 16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm
-Phần này nối mạch SQL với “16. 식별자 관계 và 비식별자 관계: So sánh trọng tâm”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Tiêu chí | 식별자 관계 | 비식별자 관계 |
 | --- | --- | --- |
@@ -4256,7 +4238,6 @@ Phần này nối mạch SQL với “16. 식별자 관계 và 비식별자 관�
 | Ví dụ | `STUDENT - ENROLLMENT` | `DEPARTMENT - EMPLOYEE` |
 
 #### Cách ghi nhớ
-Phần này nối mạch SQL với “Cách ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 식별자 관계:
@@ -4364,7 +4345,6 @@ Relationship = Tập hợp Pairing
 ---
 
 ### 2. Hai loại Relationship chính
-Phần này nối mạch SQL với “2. Hai loại Relationship chính”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | Tiếng Việt | Đặc điểm |
 | --- | --- | --- |
@@ -4379,7 +4359,6 @@ Phần này nối mạch SQL với “2. Hai loại Relationship chính”, gi�
 ---
 
 ### 3. Quan hệ trong UML
-Phần này nối mạch SQL với “3. Quan hệ trong UML”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Quan hệ | Ký pháp UML | Ý nghĩa |
 | --- | --- | --- |
@@ -4395,7 +4374,6 @@ Trong ERD, khác với UML, Relationship tồn tại và Relationship hành đ�
 ---
 
 ### 4. Các thành phần cần ghi trên Relationship
-Phần này nối mạch SQL với “4. Các thành phần cần ghi trên Relationship”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 관계명        = Tên quan hệ
@@ -4417,3 +4395,22 @@ Một Employee thuộc một Department.
 ```
 
 ---
+
+### 5. Bảng tổng hợp đối chiếu 4 trụ cột mô hình hóa dữ liệu (Ôn thi SQLD)
+
+| Trụ cột mô hình | Tiêu chí phân loại | Nhóm phân loại (Hàn / Việt) | Định nghĩa & Ví dụ thực tế |
+| :--- | :--- | :--- | :--- |
+| **엔터티 (Entity)** | **Tính hữu hình (유무형)** | 유형 (Hữu hình) / 개념 (Khái niệm) / 사건 (Sự kiện) | - Hữu hình: Vật lý sờ chạm được (`사원`, `상품`, `부서`). - Khái niệm: Quản lý vô hình (`조직`, `보험상품`, `계좌`). - Sự kiện: Phát sinh do hành vi (`주문`, `결제`, `배송`). |
+| | **Tính phát sinh (발생시점)** | 기본 (Cơ bản/Nguồn) / 중심 (Trung tâm) / 행위 (Hành động) | - Cơ bản: Độc lập từ nghiệp vụ gốc (`고객`, `상품`). - Trung tâm: Cốt lõi sinh từ cơ bản (`주문`, `매출`). - Hành động: Kết quả giao dịch liên tục đổi (`주문상세`, `결제이력`). |
+| **속성 (Attribute)** | **Đặc tính dữ liệu (특성)** | 기본 (Cơ bản) / 설계 (Thiết kế) / 파생 (Phái sinh) | - Cơ bản: Thuộc tính tự nhiên vốn có (`사원명`, `단가`). - Thiết kế: Định nghĩa phục vụ hệ thống (`사원코드`, `주문상태`). - Phái sinh: Tính toán từ cột khác (`총결제금액`, `평균점수`). |
+| **관계 (Relationship)** | **Kế thừa khóa (식별성)** | 식별자 관계 (Xác định) / 비식별자 관계 (Không xác định) | - Xác định: Khóa cha vào PK con, nét liền, quan hệ cha con bắt buộc. - Không xác định: Khóa cha vào FK thường của con, nét đứt, quan hệ lỏng lẻo. |
+| **식별자 (Identifier)** | **Tính đại diện & Nguồn gốc** | 주식별자 (PK) / 보조식별자 (AK) / 본질식별자 / 인조식별자 | - Primary: Đại diện chính, duy nhất, tối thiểu, Not NULL. - Alternate: Duy nhất nhưng không chọn làm PK. - Natural: Thuộc tính nghiệp vụ tự nhiên (`주민번호`). - Surrogate: Cột nhân tạo tự sinh để thay PK phức hợp (`주문번호`). |
+
+---
+
+## NỐI MẠCH SANG BÀI 03
+
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 02 đã trang bị toàn bộ 4 khối kiến trúc cơ bản cấu thành ERD: Entity, Attribute, Relationship (Identifying vs Non-identifying) và Identifier (Natural vs Surrogate).
+> - **Đang giải quyết gì:** Khi đã có một mô hình dữ liệu logic hoàn chỉnh với nhiều bảng và quan hệ, làm thế nào để đảm bảo hệ thống không bị dị thường khi thêm/sửa/xóa dữ liệu và duy trì hiệu năng truy vấn tối ưu khi khối lượng giao dịch tăng vọt?
+> - **Dùng đi đâu:** Chuyển tiếp trực tiếp sang [Bài 03 — Mô hình dữ liệu hướng hiệu năng và chuẩn hóa](./03-mo-hinh-du-lieu-huong-hieu-nang-va-chuan-hoa.md) để làm chủ quy trình Chuẩn hóa dữ liệu (1NF $\sim$ 5NF), các mẫu kỹ thuật Phi chuẩn hóa (Denormalization: Gộp/Tách bảng, Thêm cột tính sẵn) và Phân vùng bảng (Partitioning).

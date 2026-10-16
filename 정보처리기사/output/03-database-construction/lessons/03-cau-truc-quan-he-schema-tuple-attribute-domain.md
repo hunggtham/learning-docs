@@ -1,125 +1,138 @@
-# 릴레이션 구조와 스키마 3계층 (Cấu trúc quan hệ: Schema, Tuple, Attribute và Domain)
+# 릴레이션 구조와 스키마 (Cấu trúc quan hệ: Schema, Tuple, Attribute và Domain)
 
 ## 학습 목표 (Mục tiêu)
-- Nắm vững kiến trúc 3 tầng lược đồ ANSI/SPARC: Lược đồ ngoài (`외부 스키마`), Lược đồ khái niệm (`개념 스키마`), Lược đồ trong (`내부 스키마`).
-- Phân biệt sâu sắc 2 cấp độ độc lập dữ liệu: Độc lập logic (`논리적 데이터 독립성`) và Độc lập vật lý (`물리적 데이터 독립성`).
-- Làm chủ cấu trúc quan hệ: Bảng quan hệ (`릴레이션`), Hàng (`튜플`), Cột (`속성`), Miền giá trị nguyên tử (`도메인`).
-- Thuộc nằm lòng các công thức tính toán Degree (`디그리 / 차수` = số cột) và Cardinality (`카디널리티 / 기수` = số hàng) trong phép tích Descartes ($R \times S$).
-- Nắm vững 4 đặc trưng cốt lõi của Relation: Tính duy nhất, vô thứ tự của hàng, vô thứ tự của cột, và tính nguyên tử của giá trị thuộc tính.
+- Nắm vững cấu trúc hình thức của bảng quan hệ trong CSDL: Lược đồ quan hệ (`릴레이션 스키마` / Intension / 내연) và Thể hiện quan hệ (`릴레이션 인스턴스` / Extension / 외연).
+- Hiểu rõ 4 thành phần cấu trúc cốt lõi: Quan hệ (`릴레이션` / Relation), Bộ dữ liệu (`튜플` / Tuple), Thuộc tính (`속성` / Attribute), và Miền giá trị nguyên tử (`도메인` / Domain).
+- Phân biệt tuyệt đối giữa Bậc (`디그리 / 차수` / Degree - số lượng cột/thuộc tính) và Lực lượng (`카디널리티 / 기수` / Cardinality - số lượng hàng/bộ).
+- Thành thạo công thức tính toán Degree và Cardinality trong các phép toán quan hệ, đặc biệt là phép tích Descartes ($R \times S$).
+- Nắm vững 4 đặc trưng toán học nền tảng của quan hệ: Tính duy nhất của Tuple, Tính vô thứ tự của Tuple, Tính vô thứ tự của Attribute, và Tính nguyên tử của giá trị thuộc tính.
 
 ## 핵심 키워드 (Từ khóa)
-- 스키마 3계층 (Kiến trúc 3 tầng lược đồ: 외부, 개념, 내부 스키마)
-- 데이터 독립성 (Tính độc lập dữ liệu logic và vật lý)
+- 릴레이션 스키마 (Lược đồ quan hệ / Relation Schema / 내연 Intension)
+- 릴레이션 인스턴스 (Thể hiện quan hệ / Relation Instance / 외연 Extension)
 - 릴레이션 (Bảng quan hệ / Relation / Table)
-- 튜플, 카디널리티 (Tuple, Cardinality / Số hàng)
-- 속성, 디그리, 차수 (Attribute, Degree / Số cột)
-- 도메인, 원자값 (Domain, Giá trị nguyên tử / Atomic Value)
-- 카티션 프로덕트 (Phép tích Descartes / Degree cộng, Cardinality nhân)
+- 튜플, 카디널리티 (Tuple, Cardinality / Bộ dữ liệu / Lực lượng / Số hàng)
+- 속성, 디그리, 차수 (Attribute, Degree / Thuộc tính / Bậc / Số cột)
+- 도메인 (Miền giá trị / Domain / 원자값 집합)
+- 카티션 프로덕트 (Phép tích Descartes / Cartesian Product)
+- 릴레이션의 특성 (Đặc trưng của quan hệ: 유일성, 무순서성, 원자성)
 
 ## 선행·연결 개념 (Kiến thức liên kết)
-- **Từ đâu (Origin / Prerequisite):** Sau khi biểu đồ E-R ở Bài 02 được chuyển đổi thành các bảng logic, các bảng này tồn tại dưới dạng các quan hệ toán học (Relation).
-- **Đang giải quyết gì (Current Problem):** Định hình ranh giới kỹ thuật giữa người dùng (External), thiết kế logic toàn cục (Conceptual), và lưu trữ vật lý (Internal); đồng thời giải quyết các câu hỏi tính toán cốt lõi trong đề thi về số hàng (Cardinality) và số cột (Degree).
-- **Dùng đi đâu (Forward Handoff):** Trên nền cấu trúc bảng và thuộc tính này, [04-cac-loai-khoa-va-rang-buoc-toan-ven-du-lieu.md](04-cac-loai-khoa-va-rang-buoc-toan-ven-du-lieu.md) sẽ thiết lập hệ thống các loại Khóa (Khóa chính, Khóa ngoại, Khóa ứng viên) và các ràng buộc toàn vẹn dữ liệu.
+- **Từ đâu (Origin / Prerequisite):** Ở [02-mo-hinh-du-lieu-va-bieu-do-erd.md](02-mo-hinh-du-lieu-va-bieu-do-erd.md), mô hình thực thể quan hệ E-R đã được ánh xạ thành các bảng quan hệ logic.
+- **Đang giải quyết gì (Current Problem):** Mổ xẻ cấu trúc toán học của bảng quan hệ theo lý thuyết của E.F. Codd: phân tách cấu trúc định nghĩa tĩnh (Schema/Intension) với dữ liệu thực tế biến động (Instance/Extension); định nghĩa các đơn vị hàng, cột, miền giá trị và cung cấp các quy tắc tính bậc, lực lượng trong đề thi.
+- **Dùng đi đâu (Forward Handoff):** Trên cấu trúc các tuple và attribute này, [04-cac-loai-khoa-va-rang-buoc-toan-ven-du-lieu.md](04-cac-loai-khoa-va-rang-buoc-toan-ven-du-lieu.md) sẽ thiết lập các loại Khóa (Super, Candidate, Primary, Alternate, Foreign key) và các quy tắc toàn vẹn thực thể, tham chiếu, miền giá trị.
 
 ## 읽는 방법 (Cách đọc)
-- Đọc TẦNG A để ghi nhớ nhanh bảng thuật ngữ tương đương (Toán học - CSDL - File), công thức tích Descartes và các bẫy trắc nghiệm dễ nhầm giữa Degree và Cardinality.
-- Đọc TẦNG B để hiểu sâu bản chất 3 tầng lược đồ, tính độc lập dữ liệu 2 cấp độ và 4 đặc tính toán học của quan hệ.
+- Đọc TẦNG A để nắm vững bảng đối chiếu thuật ngữ toán học - CSDL - hệ thống tệp, công thức tính Degree/Cardinality và câu thần chú `카-튜, 디-속`.
+- Đọc TẦNG B để phân biệt sâu sắc khái niệm 내연 (Intension) vs 외연 (Extension) và hiểu cặn kẽ 4 đặc trưng của bảng quan hệ.
 
 ---
 
-## 릴레이션 구조와 스키마 3계층
+## 릴레이션 구조와 스키마
 
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-#### 1. Bảng thuật ngữ tương đương giữa Toán học, CSDL và File
+#### 1. Cấu trúc bảng quan hệ (릴레이션 구조)
 
-Mô hình dữ liệu quan hệ tổ chức dữ liệu thành bảng 2 chiều gọi là **릴레이션 (Relation)**.
+Bảng quan hệ hai chiều (**릴레이션** / Relation) được cấu thành từ hai phần: phần định nghĩa cấu trúc (Lược đồ - Schema) và phần tập hợp dữ liệu thực tế (Thể hiện - Instance):
 
-```
-       속성 (Attribute, 열/Column) ──> Degree (차수) = số cột
+```text
+       속성 (Attribute / 열 Column) ──> Degree (차수 / Bậc) = Số cột (ở đây = 3)
        ┌───────────┬──────────────┬──────────────┐
-       │ 학번(MSSV)│ 이름(Họ tên) │ 학과(Ngành)  │ ◄── 릴레이션 스키마 (Relation Schema)
+       │ 학번(MSSV)│ 이름(Họ tên) │ 학과(Ngành)  │ ◄── 릴레이션 스키마 (Relation Schema / 내연 Intension)
        ├───────────┼──────────────┼──────────────┤
 튜플   │ 20260001  │ 홍길동       │ 컴퓨터공학   │
-(Tuple)│ 20260002  │ 김영희       │ 소프트웨어   │ ◄── 릴레이션 인스턴스 (Relation Instance)
-Row/행 │ 20260003  │ 이철수       │ 정보보안     │
+(Tuple)│ 20260002  │ 김영희       │ 소프트웨어   │ ◄── 릴레이션 인스턴스 (Relation Instance / 외연 Extension)
+Hàng/행│ 20260003  │ 이철수       │ 정보보안     │
        └───────────┴──────────────┴──────────────┘
        ▲
-       └── Cardinality (카디널리티, 기수) = số hàng (ở đây = 3)
+       └── Cardinality (카디널리티 / 기수 / Lực lượng) = Số hàng (ở đây = 3)
 ```
 
-| Thuật ngữ Quan hệ (관계형 용어) | Thuật ngữ SQL / Bảng (테이블 용어) | Thuật ngữ Hệ thống Tệp (파일 시스템) | Định nghĩa & Đo lường |
+#### 2. Bảng đối chiếu thuật ngữ tương đương (Toán học, CSDL và Tệp tin)
+
+| Thuật ngữ Toán học (관계형 모델) | Thuật ngữ SQL / CSDL (RDBMS) | Thuật ngữ Hệ thống Tệp (File System) | Bản chất kỹ thuật & Đơn vị đo |
 | :--- | :--- | :--- | :--- |
-| **릴레이션 (Relation)** | `테이블 (Table)` | `파일 (File)` | Toàn bộ cấu trúc bảng 2 chiều. |
-| **튜플 (Tuple)** | `행 (Row)` | `레코드 (Record)` | Một dòng dữ liệu đại diện cho một đối tượng. Số lượng tuple gọi là **카디널리티 (Cardinality / Lực lượng)**. |
-| **속성 (Attribute)** | `열 (Column)` | `필드 (Field)` | Đặc tính mô tả thực thể. Số lượng attribute gọi là **디그리 (Degree / Bậc / 차수)**. |
-| **도메인 (Domain)** | `데이터 타입/제약` (Type/Check) | `값의 범위` (Range) | Tập hợp tất cả các giá trị nguyên tử hợp lệ mà một thuộc tính có thể nhận. |
+| **릴레이션 (Relation)** | `테이블 (Table)` | `파일 (File)` | Toàn bộ bảng 2 chiều chứa cấu trúc và dữ liệu. |
+| **튜플 (Tuple / Bộ)** | `행 (Row)` | `레코드 (Record)` | Một bản ghi đại diện cho một đối tượng. Số hàng = **카디널리티 (Cardinality / Lực lượng / 기수)**. |
+| **속성 (Attribute / Thuộc tính)** | `열 (Column)` | `필드 (Field)` | Đơn vị logic nhỏ nhất mô tả một đặc tính. Số cột = **디그리 (Degree / Bậc / 차수)**. |
+| **도메인 (Domain / Miền giá trị)** | `데이터 타입 / 제약` (Type/CHECK) | `값의 범위` (Range) | Tập hợp tất cả các giá trị nguyên tử (원자값) hợp lệ mà một thuộc tính có thể nhận. |
 
-#### 2. Công thức tính Degree và Cardinality trong đề thi
+#### 3. Bậc (Degree) vs Lực lượng (Cardinality) & Công thức tính tích Descartes
 
+| Chỉ số đo lường | Tên tiếng Hàn | Đối tượng đếm | Khả năng thay đổi | Giá trị tối thiểu |
+| :--- | :--- | :--- | :--- | :--- |
+| **디그리 (Degree / Bậc)** | `차수 (Degree)` | Số lượng **속성 (Attribute / Cột)** | Thường cố định theo thời gian (tĩnh) | Tối thiểu $\ge 1$ (bảng phải có ít nhất 1 cột) |
+| **카디널리티 (Cardinality / Lực lượng)** | `기수 (Cardinality)` | Số lượng **튜플 (Tuple / Hàng)** | Thay đổi liên tục theo thao tác INSERT/DELETE (động) | Có thể bằng 0 (khi bảng rỗng mới tạo) |
+
+##### Công thức đề thi: Phép tích Descartes ($R \times S$)
 Giả sử Relation $R$ có Degree $D_1$, Cardinality $C_1$; Relation $S$ có Degree $D_2$, Cardinality $C_2$:
-- **Degree của kết quả:** $\text{Degree}(R \times S) = D_1 + D_2$ (Cộng các cột lại).
-- **Cardinality của kết quả:** $\text{Cardinality}(R \times S) = C_1 \times C_2$ (Nhân các dòng với nhau).
+- **Degree của kết quả:** $\text{Degree}(R \times S) = D_1 + D_2$ (Cộng số lượng cột lại).
+- **Cardinality của kết quả:** $\text{Cardinality}(R \times S) = C_1 \times C_2$ (Nhân số lượng dòng với nhau).
 
-> **Ví dụ thi:** Bảng $R$ có 4 cột, 5 dòng; Bảng $S$ có 3 cột, 10 dòng. Kết quả phép tích $R \times S$ có:
+> **Ví dụ thi kinh điển:** Bảng $R$ có 4 cột, 6 dòng; Bảng $S$ có 3 cột, 10 dòng. Kết quả $R \times S$ có:
 > - Degree = $4 + 3 = 7$ cột.
-> - Cardinality = $5 \times 10 = 50$ dòng.
+> - Cardinality = $6 \times 10 = 60$ dòng.
 
-#### 3. Bẫy đề thi trắc nghiệm kinh điển (기출 함정)
+#### 4. Bẫy đề thi và khẩu quyết ghi nhớ (시험 대비 함정 & 암기 팁)
 
+##### Các bẫy trắc nghiệm kinh điển
 - **Bẫy 1: Nhầm lẫn giữa Degree và Cardinality:**
   - *Câu hỏi:* "Số lượng hàng (Tuple) trong bảng quan hệ được gọi là gì?"
   - *Đáp án đúng:* **카디널리티 (Cardinality / 기수)**.
-  - *Mẹo nhớ:* **"Cột = Cấp độ (Degree), Hàng = Hàng hóa chất đầy (Cardinality)"**.
-- **Bẫy 2: Số lượng của các tầng Schema:**
-  - *Câu hỏi:* "Trong một hệ quản trị CSDL, có bao nhiêu 개념 스키마 (Conceptual Schema) và bao nhiêu 외부 스키마 (External Schema)?"
-  - *Đáp án đúng:* **Chỉ có DUY NHẤT 1 개념 스키마 và 1 내부 스키마**, nhưng có thể có **NHIỀU 외부 스키마**.
-- **Bẫy 3: Phân biệt độc lập logic vs độc lập vật lý:**
-  - *Câu hỏi:* "Khi DBA tạo thêm chỉ mục (Index) hoặc đổi ổ cứng mà không làm ảnh hưởng đến cấu trúc logic của bảng thì hệ thống thỏa mãn tính chất nào?"
-  - *Đáp án đúng:* **Tính độc lập dữ liệu vật lý (물리적 데이터 독립성)**.
+  - *Bẫy sai:* Thí sinh chọn nhầm *디그리 (Degree / 차수)*.
+- **Bẫy 2: Phân biệt Schema (내연 Intension) vs Instance (외연 Extension):**
+  - *Câu hỏi:* "Thành phần nào của bảng quan hệ là tĩnh, biểu diễn tên bảng và danh sách các cột?"
+  - *Đáp án đúng:* **릴레이션 스키마 (Relation Schema / 내연 Intension)**.
+  - Ngược lại, tập hợp dữ liệu thực tế tại một thời điểm là **릴레이션 인스턴스 (Relation Instance / 외연 Extension)** mang tính chất động.
+- **Bẫy 3: Miền giá trị (도메인) chứa giá trị gì:**
+  - *Câu hỏi:* "Một Domain trong mô hình quan hệ chứa các giá trị thuộc dạng nào?"
+  - *Đáp án đúng:* **Tập hợp các giá trị nguyên tử (원자값 - Atomic value)**. Không được chứa mảng hay tập hợp phức tạp.
+
+##### Khẩu quyết ghi nhớ thần chú (Mnemonic)
+- **Thần chú cặp đôi:** `"카-튜, 디-속"` (hoặc `"Tu-Car, At-De"`)
+  - `카 - 튜`: **카**디널리티 = **튜**플 (Cardinality = Tuple = Số Hàng).
+  - `디 - 속`: **디**그리 = **속**성 (Degree = 속성/Attribute = Số Cột).
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Kiến trúc 3 tầng lược đồ và Tính độc lập dữ liệu (스키마 3계층과 데이터 독립성)
+#### 1. Chi tiết Schema vs Instance: Intension (내연) và Extension (외연)
 
-ANSI/SPARC đề xuất kiến trúc 3 tầng lược đồ (Schema) nhằm tách biệt góc nhìn của người dùng với cách thức dữ liệu thực sự được lưu trên ổ đĩa:
+Trong lý thuyết cơ sở dữ liệu quan hệ của E.F. Codd:
+- **릴레이션 스키마 (Relation Schema / 내연 Intension):**
+  - Biểu diễn cấu trúc logic của quan hệ: $R(A_1, A_2, \dots, A_n)$ trong đó $R$ là tên quan hệ, $A_i$ là các thuộc tính.
+  - Mang tính chất **tĩnh (정적 특성)**: Sau khi đã thiết kế và tạo bảng, schema hiếm khi thay đổi trừ khi có lệnh DDL `ALTER TABLE`.
+- **릴레이션 인스턴스 (Relation Instance / 외연 Extension):**
+  - Là tập hợp các bộ dữ liệu thực tế ($t_1, t_2, \dots, t_m$) tồn tại trong quan hệ tại một thời điểm cụ thể.
+  - Mang tính chất **động (동적 특성)**: Mỗi khi người dùng thực hiện câu lệnh `INSERT`, `DELETE`, `UPDATE`, instance của quan hệ sẽ lập tức thay đổi.
 
-```
-[외부 스키마 (External Schema)]  ──> Góc nhìn người dùng / Ứng dụng (User Views)
-           │
-           │  ◄── 논리적 데이터 독립성 (Tính độc lập dữ liệu logic)
-           ▼
-[개념 스키마 (Conceptual Schema)] ──> Toàn bộ cấu trúc logic toàn cục (Enterprise View)
-           │
-           │  ◄── 물리적 데이터 독립성 (Tính độc lập dữ liệu vật lý)
-           ▼
-[내부 스키마 (Internal Schema)]  ──> Cấu trúc lưu trữ vật lý trên đĩa (Physical Storage)
-```
+#### 2. Miền giá trị (도메인 / Domain) và tính nguyên tử
 
-| Tầng lược đồ (스키마) | Tên gọi khác (별칭) | Góc nhìn và phạm vi (관점 및 범위) | Nội dung cốt lõi |
-| :--- | :--- | :--- | :--- |
-| **1. 외부 스키마** (External Schema) | `서브스키마` (Subschema / User View) | Góc nhìn cá nhân của từng người dùng hoặc nhóm ứng dụng cụ thể. | Mỗi người dùng chỉ thấy phần dữ liệu liên quan đến nghiệp vụ của mình (thông qua View). Một CSDL có **nhiều 외부 스키마**. |
-| **2. 개념 스키마** (Conceptual Schema) | `전체적인 논리적 구조` (Logical Schema / Enterprise View) | Góc nhìn toàn cục của toàn bộ doanh nghiệp/tổ chức. | Định nghĩa toàn bộ thực thể, thuộc tính, mối quan hệ và các ràng buộc toàn vẹn. Một CSDL chỉ có **duy nhất 1 개념 스키마**. |
-| **3. 내부 스키마** (Internal Schema) | `물리적 스키마` (Physical Schema / Storage View) | Góc nhìn của phần cứng và hệ thống lưu trữ vật lý. | Định nghĩa cấu trúc bản ghi lưu trữ, đường dẫn truy cập, chỉ mục (index), kiểu mã hóa và khối nhớ trên đĩa. Chỉ có **duy nhất 1 내부 스키마**. |
+- **Khái niệm:** Domain là tập hợp tất cả các giá trị nguyên tử (Atomic values) có cùng kiểu dữ liệu mà một thuộc tính có thể nhận hợp lệ.
+- **Ví dụ minh họa:**
+  - Thuộc tính `Giới tính (성별)` có Domain = `{'Nam', 'Nữ'}`.
+  - Thuộc tính `Điểm trung bình (학점)` có Domain = Số thực từ $0.0$ đến $4.5$.
+  - Thuộc tính `Mã sinh viên (학번)` có Domain = Chuỗi ký tự số gồm đúng 8 chữ số.
+- **Ý nghĩa kỹ thuật:** Domain đóng vai trò là cơ chế kiểm tra kiểu và kiểm tra phạm vi giá trị tự động (Domain Constraint) nhằm bảo đảm dữ liệu nhập vào luôn đúng đắn và có ý nghĩa nghiệp vụ.
 
-##### Tính độc lập dữ liệu 2 cấp độ
-1. **논리적 데이터 독립성 (Tính độc lập dữ liệu logic):** Khả năng thay đổi Lược đồ khái niệm (`개념 스키마`) mà không làm ảnh hưởng đến Lược đồ ngoài (`외부 스키마`) và các chương trình ứng dụng (ví dụ thêm cột mới không làm hỏng giao diện cũ).
-2. **물리적 데이터 독립성 (Tính độc lập dữ liệu vật lý):** Khả năng thay đổi Lược đồ trong (`내부 스키마`) như thay đổi cấu trúc lưu trữ, định dạng file hoặc tạo thêm Index mà không làm thay đổi Lược đồ khái niệm (`개념 스키마`) và Lược đồ ngoài.
+#### 3. Bốn đặc trưng cốt lõi của Relation (릴레이션의 4대 특성)
 
-#### 2. Bốn đặc trưng cốt lõi của Relation (릴레이션의 4대 특성)
-
-1. **튜플의 유일성 (Tính duy nhất của Tuple):** Trong một relation không bao giờ tồn tại hai tuple giống hệt nhau ở mọi thuộc tính (bắt buộc phải có khóa chính để phân biệt).
-2. **튜플의 무순서성 (Tính vô thứ tự của Tuple):** Thứ tự trên-dưới của các dòng trong bảng hoàn toàn không ảnh hưởng đến ngữ nghĩa hay tính đúng đắn của dữ liệu.
-3. **속성의 무순서성 (Tính vô thứ tự của Attribute):** Thứ tự trái-phải của các cột trong bảng không có ý nghĩa toán học (cột `Họ tên` đứng trước hay đứng sau `Ngày sinh` đều như nhau).
-4. **속성의 원자성 (Tính nguyên tử của thuộc tính):** Mỗi ô dữ liệu tại giao điểm giữa một dòng và một cột chỉ được phép chứa **duy nhất một giá trị nguyên tử (Atomic value)**, không được chứa mảng hoặc danh sách giá trị lặp (chuẩn 1NF).
+1. **튜플의 유일성 (Tính duy nhất của Tuple):**
+   - Trong một bảng quan hệ không bao giờ được phép tồn tại hai tuple giống hệt nhau ở mọi thuộc tính. Luôn phải tồn tại một tập hợp thuộc tính (Khóa chính) có giá trị phân biệt hoàn toàn giữa các tuple.
+2. **튜플의 무순서성 (Tính vô thứ tự của Tuple):**
+   - Thứ tự trên - dưới của các dòng trong bảng không có ý nghĩa toán học. Dữ liệu dòng thứ nhất được lưu trước hay dòng thứ mười được lưu trước thì ý nghĩa nghiệp vụ của bảng vẫn giữ nguyên không đổi.
+3. **속성의 무순서성 (Tính vô thứ tự của Attribute):**
+   - Thứ tự trái - phải của các cột trong bảng không ảnh hưởng đến ngữ nghĩa của relation. Cột `Tên` đứng trước cột `Tuổi` hay cột `Tuổi` đứng trước cột `Tên` thì relation vẫn biểu diễn cùng một bản thể dữ liệu.
+4. **속성의 원자성 (Tính nguyên tử của thuộc tính):**
+   - Tại giao điểm giữa một hàng và một cột (mỗi ô dữ liệu), chỉ được phép lưu trữ duy nhất một giá trị nguyên tử không thể phân chia tiếp theo nghiệp vụ dữ liệu (`원자값만 가짐`). Đây là điều kiện tiên quyết để đạt chuẩn hóa dạng 1NF.
 
 ---
 
 ### 복습 체크리스트
-- [ ] Phân biệt 3 tầng Schema: External (người dùng/view), Conceptual (toàn cục logic), Internal (lưu trữ đĩa).
-- [ ] Nhớ rõ số lượng: CSDL chỉ có 1 Conceptual Schema và 1 Internal Schema, nhưng có nhiều External Schema.
-- [ ] Phân biệt Degree (số cột / 차수) và Cardinality (số hàng / 카디널리티).
-- [ ] Thuộc công thức phép tích Descartes: Degree cộng dồn ($D_1 + D_2$), Cardinality nhân chéo ($C_1 \times C_2$).
-- [ ] Thuộc 4 đặc trưng của Relation: Tuple duy nhất, Tuple vô thứ tự, Attribute vô thứ tự, Giá trị nguyên tử.
+- [ ] Phân biệt rõ: Relation Schema (`릴레이션 스키마` / 내연 Intension - tĩnh) và Relation Instance (`릴레이션 인스턴스` / 외연 Extension - động).
+- [ ] Nhớ khẩu quyết thần chú: `"카-튜, 디-속"` (Cardinality = Tuple = Số hàng; Degree = Attribute = Số cột).
+- [ ] Hiểu rõ miền giá trị (Domain): Là tập hợp các giá trị nguyên tử hợp lệ của một thuộc tính.
+- [ ] Làm chủ công thức tích Descartes $R \times S$: Degree cộng ($D_1 + D_2$), Cardinality nhân ($C_1 \times C_2$).
+- [ ] Nắm vững 4 đặc trưng của Relation: Tính duy nhất của Tuple, Tính vô thứ tự của Tuple, Tính vô thứ tự của Attribute, Tính nguyên tử của giá trị thuộc tính.

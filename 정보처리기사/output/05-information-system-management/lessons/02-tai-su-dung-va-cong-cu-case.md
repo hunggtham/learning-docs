@@ -2,20 +2,23 @@
 
 ## 학습 목표 (Mục tiêu)
 - Nắm vững định nghĩa, ý nghĩa kinh tế và các lợi ích cốt lõi của Tái sử dụng phần mềm (소프트웨어 재사용 - Software Reuse).
-- Phân biệt bản chất kỹ thuật của hai phương pháp tiếp cận tái sử dụng: Tiếp cận dựa trên tổng hợp (합성 중심 - Composition-based) và Tiếp cận dựa trên sinh mã (생성 중심 - Generation-based).
-- Thấu hiểu mục tiêu của Tái kỹ nghệ phần mềm (소프트웨어 재공학 - Software Reengineering) và trình tự 4 hoạt động chuẩn: 분석 (Phân tích) $\rightarrow$ 재구성 (Tái cấu trúc) $\rightarrow$ 역공학 (Kỹ nghệ ngược) $\rightarrow$ 이식 (Di chuyển nền tảng).
-- Phân loại toàn diện các công cụ hỗ trợ công nghệ phần mềm bằng máy tính (CASE: 상위 CASE, 하위 CASE, 통합 CASE) và vai trò trung tâm của Kho lưu trữ (Central Repository).
+- Phân biệt bản chất kỹ thuật của hai phương pháp tiếp cận tái sử dụng: Tiếp cận dựa trên tổng hợp (합성 중심 - Synthesis / Composition-based) và Tiếp cận dựa trên phân tích/sinh mã (생성 중심 - Analysis / Generation-based).
+- Thấu hiểu mục tiêu của Tái kỹ nghệ phần mềm (소프트웨어 재공학 - Software Reengineering) và các hoạt động cốt lõi: Phân tích (분석), Tái cấu trúc (재구성), Kỹ nghệ ngược (역공학), Kỹ nghệ xuôi (순공학), và Di chuyển nền tảng (이식).
+- Phân loại toàn diện các công cụ hỗ trợ công nghệ phần mềm bằng máy tính (CASE: 상위 CASE, 하위 CASE, 통합 CASE) và vai trò hạt nhân của Kho lưu trữ trung tâm (중앙 저장소 - Central Repository).
 
 ## 핵심 키워드 (Từ khóa song ngữ)
 - 소프트웨어 재사용 (Software Reuse — Tái sử dụng tài sản phần mềm đã kiểm chứng)
-- 합성 중심 (Composition-Based / Block Building — Lắp ghép module, component có sẵn như Lego)
-- 생성 중심 (Generation-Based — Sinh mã tự động từ mô tả trừu tượng/mẫu đặc tả)
-- 소프트웨어 재공학 (Software Reengineering — Cải thiện tính bảo trì của hệ thống cũ)
+- 합성 중심 (Synthesis / Composition-Based — Lắp ghép module, component có sẵn như khối Lego)
+- 생성 중심 (Analysis / Generation-Based — Phân tích mẫu đặc tả và sinh mã nguồn tự động)
+- 소프트웨어 재공학 (Software Reengineering — Nâng cao tính bảo trì của hệ thống cũ)
 - 역공학 (Reverse Engineering — Khôi phục tài liệu thiết kế/đặc tả từ mã nguồn có sẵn)
-- 재구성 (Restructuring — Tái cấu trúc mã/dữ liệu mà không làm đổi hành vi chức năng bên ngoài)
+- 재구성 (Restructuring — Tối ưu hóa cấu trúc bên trong mà không thay đổi chức năng ngoài)
+- 순공학 (Forward Engineering — Phát triển tính năng mới từ mô hình đã tái cấu trúc)
+- 이식 (Migration — Chuyển đổi hệ thống sang nền tảng phần cứng/HĐH mới)
 - CASE 도구 (Computer Aided Software Engineering — Tự động hóa các pha trong vòng đời SDLC)
 - 상위 CASE (Upper CASE — Hỗ trợ pha kế hoạch, phân tích yêu cầu, thiết kế kiến trúc)
 - 하위 CASE (Lower CASE — Hỗ trợ pha viết mã, kiểm thử, bảo trì)
+- 통합 CASE (Integrated CASE / I-CASE — Bao phủ toàn bộ vòng đời SDLC)
 - 중앙 저장소 (Central Repository — Kho lưu trữ tập trung bảo đảm tính nhất quán của CASE)
 
 ## 선행·연결 개념 (Kiến thức liên kết)
@@ -25,16 +28,17 @@
 
 ## 읽는 방법 (Cách đọc & Dấu hiệu nhận diện đề thi)
 - **Tái sử dụng (Software Reuse):**
-  - Nhắc đến **"블록(부품)을 조립" (Lắp ghép khối/linh kiện có sẵn)** $\rightarrow$ Chọn **합성 중심 (Composition-based)**.
-  - Nhắc đến **"명세서를 바탕으로 소스 코드를 생성" (Sinh mã nguồn tự động từ tài liệu đặc tả)** $\rightarrow$ Chọn **생성 중심 (Generation-based)**.
+  - Nhắc đến **"블록(부품)을 조립" (Lắp ghép khối/linh kiện có sẵn)** $\rightarrow$ Chọn **합성 중심 (Synthesis / Composition-based)**.
+  - Nhắc đến **"추상화된 명세/패턴을 바탕으로 소스 코드를 생성" (Phân tích đặc tả và sinh mã tự động)** $\rightarrow$ Chọn **생성 중심 (Analysis / Generation-based)**.
 - **Tái kỹ nghệ (Reengineering) vs Kỹ nghệ ngược (Reverse Engineering):**
   - Đề hỏi: *"Mục đích chính của 재공학 là gì?"* $\rightarrow$ Đáp án đúng luôn xoay quanh: **유지보수성 향상 (Nâng cao tính bảo trì)** và **유지보수 비용 절감 (Giảm chi phí bảo trì)**.
   - Đề hỏi: *"Phục hồi tài liệu thiết kế, sơ đồ hoặc đặc tả từ mã nguồn phần mềm cũ là hoạt động gì?"* $\rightarrow$ Đáp án đúng là **역공학 (Reverse Engineering / Kỹ nghệ ngược)**.
-  - Nhớ thứ tự 4 bước của 재공학: **분석 (Phân tích) $\rightarrow$ 재구성 (Tái cấu trúc) $\rightarrow$ 역공학 (Kỹ nghệ ngược) $\rightarrow$ 이식 (Di chuyển nền tảng)**.
+  - Nhớ các hoạt động của 재공학: **분석 (Phân tích) $\rightarrow$ 재구성 (Tái cấu trúc) $\rightarrow$ 역공학 (Kỹ nghệ ngược) $\rightarrow$ 순공학 (Kỹ nghệ xuôi) / 이식 (Di chuyển nền tảng)**.
 - **Công cụ CASE:**
   - Pha đầu (Kế hoạch, Phân tích, Thiết kế kiến trúc) $\rightarrow$ **상위 CASE (Upper CASE)**.
-  - Pha sau (Viết code, Kiểm thử, Tài liệu hóa) $\rightarrow$ **하위 CASE (Lower CASE)**.
-  - Trái tim/Trung tâm của môi trường CASE $\rightarrow$ **중앙 저장소 (Central Repository)**.
+  - Pha sau (Viết code, Kiểm thử, Tài liệu hóa, Bảo trì) $\rightarrow$ **하위 CASE (Lower CASE)**.
+  - Xuyên suốt toàn bộ chu trình sống SDLC $\rightarrow$ **통합 CASE (Integrated CASE)**.
+  - Trái tim duy trì tính toàn vẹn và nhất quán của CASE $\rightarrow$ **중앙 저장소 (Central Repository)**.
 
 ---
 
@@ -50,20 +54,21 @@
   - `프로젝트 위험 감소 및 표준화 촉진` — Giảm thiểu rủi ro thất bại dự án, thúc đẩy chuẩn hóa quy trình công nghệ trong doanh nghiệp.
 - **Đối chiếu 2 phương pháp tiếp cận tái sử dụng:**
 
-| Tiêu chí | Tiếp cận dựa trên tổng hợp (합성 중심) | Tiếp cận dựa trên sinh mã (생성 중심) |
+| Tiêu chí | Tiếp cận dựa trên tổng hợp (합성 중심) | Tiếp cận dựa trên phân tích/sinh mã (생성 중심) |
 | :--- | :--- | :--- |
-| **Tên tiếng Hàn & Anh** | **합성 중심 (Composition-Based)** | **생성 중심 (Generation-Based)** |
-| **Cơ chế kỹ thuật** | Lắp ghép và tích hợp các khối thành phần (Software Blocks / Components) có sẵn trong kho lưu trữ thành hệ thống hoàn chỉnh. | Tự động hóa quá trình sinh mã nguồn mới dựa trên các mô hình đặc tả trừu tượng, mẫu thiết kế hoặc tham số đầu vào. |
+| **Tên tiếng Hàn & Anh** | **합성 중심 (Synthesis / Composition-Based)** | **생성 중심 (Analysis / Generation-Based)** |
+| **Cơ chế kỹ thuật** | Lắp ghép và tích hợp các khối thành phần (Software Blocks / Components) có sẵn trong kho lưu trữ thành hệ thống hoàn chỉnh. | Phân tích miền ứng dụng (Domain Analysis), từ đó tự động sinh mã nguồn mới dựa trên các mô hình đặc tả trừu tượng hoặc mẫu thiết kế. |
 | **Ẩn dụ trực quan** | **Trò chơi xếp hình Lego** (Block building). | **Khuôn đúc sản phẩm** (Pattern/Spec generator). |
-| **Công nghệ tiêu biểu** | Kiến trúc CBD (Component-Based Development), thư viện COTS. | Trình tạo giao diện GUI Builder, Bộ sinh cú pháp Lex/Yacc, Trình tạo mã ORM. |
+| **Công nghệ tiêu biểu** | Kiến trúc CBD (Component-Based Development), thư viện COTS. | Trình tạo giao diện GUI Builder, Bộ sinh cú pháp Lex/Yacc, Trình tạo mã ORM, Trình sinh khung mẫu mã nguồn. |
 
-#### 2. Tái kỹ nghệ phần mềm (소프트웨어 재공학 - Software Reengineering)
+#### 2. Kỹ nghệ tái sinh phần mềm (소프트웨어 재공학 - Software Reengineering)
 - **개념 (Khái niệm):** Quá trình phân tích, tái cấu trúc và hiện đại hóa hệ thống phần mềm cũ (Legacy System) để cải thiện chất lượng, nâng cao tính bảo trì (유지보수성) và kéo dài tuổi thọ hệ thống mà không làm thay đổi các chức năng nghiệp vụ ban đầu.
-- **4 hoạt động tuần tự trong quy trình tái kỹ nghệ (핵심 시험 포인트):**
-  1. **분석 (Analysis / Phân tích):** Khảo sát cấu trúc hiện tại của hệ thống cũ, đánh giá tính khả thi và lựa chọn các module cần tái kỹ nghệ.
-  2. **재구성 (Restructuring / Tái cấu trúc):** Thay đổi, tối ưu hóa cấu trúc bên trong của mã nguồn hoặc cấu trúc dữ liệu để làm mã sạch hơn, dễ đọc hơn mà không làm thay đổi hành vi nghiệp vụ bên ngoài.
+- **Các hoạt động cốt lõi trong quy trình tái kỹ nghệ (핵심 시험 포인트):**
+  1. **분석 (Analysis / Phân tích):** Khảo sát cấu trúc hiện tại của hệ thống cũ, đánh giá tính khả thi kinh tế kỹ thuật và xác định các module cần tái kỹ nghệ.
+  2. **재구성 (Restructuring / Tái cấu trúc):** Thay đổi, tối ưu hóa cấu trúc bên trong của mã nguồn hoặc cấu trúc dữ liệu để làm mã sạch hơn, dễ đọc và dễ bảo trì hơn mà không làm thay đổi hành vi nghiệp vụ bên ngoài.
   3. **역공학 (Reverse Engineering / Kỹ nghệ ngược):** Phân tích mã nguồn hoặc tệp nhị phân hiện có để trích xuất ngược lại các tài liệu thiết kế, sơ đồ luồng dữ liệu hoặc đặc tả yêu cầu đã bị thất lạc trong quá trình vận hành lâu năm.
-  4. **이식 (Migration / Di chuyển nền tảng):** Chuyển đổi toàn bộ hệ thống phần mềm đã được tái cấu trúc sang hoạt động trên nền tảng phần cứng, hệ điều hành hoặc cơ sở dữ liệu mới.
+  4. **순공학 (Forward Engineering / Kỹ nghệ xuôi):** Quá trình phát triển phần mềm thông thường đi từ tài liệu thiết kế và đặc tả (đã được khôi phục hoặc nâng cấp) để sinh mã hoặc bổ sung thêm các tính năng nghiệp vụ mới.
+  5. **이식 (Migration / Di chuyển nền tảng):** Chuyển đổi toàn bộ hệ thống phần mềm đã được tái cấu trúc sang hoạt động trên nền tảng phần cứng, hệ điều hành hoặc cơ sở dữ liệu mới.
 
 #### 3. Công cụ CASE (Computer Aided Software Engineering)
 - **개념 (Khái niệm):** Bộ các công cụ phần mềm chuyên dụng hỗ trợ tự động hóa toàn bộ hoặc từng phần các hoạt động trong chu trình sống phát triển phần mềm (SDLC), từ phân tích yêu cầu, thiết kế kiến trúc, sinh mã cho đến kiểm thử và bảo trì.
@@ -84,8 +89,8 @@
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
 #### Mối quan hệ giữa Tái kỹ nghệ (Reengineering) và Tái cấu trúc (Refactoring)
-- **Tái cấu trúc (Refactoring):** Là một kỹ thuật nằm trong giai đoạn phát triển hoặc bảo trì nhỏ, thay đổi cấu trúc mã nguồn bên trong để dễ đọc, loại bỏ "mùi hôi của mã" (Code Smells) mà không thay đổi chức năng.
-- **Tái kỹ nghệ (Reengineering):** Là một chiến lược quy mô lớn cấp hệ thống, bao gồm cả việc khảo sát kinh tế kỹ thuật, khôi phục kiến trúc bằng Kỹ nghệ ngược, tái cấu trúc dữ liệu và di chuyển sang nền tảng công nghệ mới (ví dụ: chuyển đổi hệ thống ngân hàng từ COBOL trên Mainframe sang Java Spring Boot trên Cloud).
+- **Tái cấu trúc (Refactoring):** Là một kỹ thuật vi mô nằm trong giai đoạn phát triển hoặc bảo trì nhỏ, sửa đổi cấu trúc bên trong của mã nguồn nhằm loại bỏ mã xấu ("Code Smells"), nâng cao tính dễ đọc mà không làm thay đổi hành vi bên ngoài.
+- **Tái kỹ nghệ (Reengineering):** Là một chiến lược quy mô lớn cấp hệ thống (Macro-level), bao gồm cả việc khảo sát kinh tế kỹ thuật, khôi phục kiến trúc bằng Kỹ nghệ ngược (Reverse Engineering), tái cấu trúc dữ liệu và di chuyển sang nền tảng công nghệ mới (ví dụ: chuyển đổi hệ thống ngân hàng từ COBOL trên Mainframe sang Java Spring Boot trên Cloud).
 
 #### Rào cản kỹ thuật của việc Tái sử dụng phần mềm
 - Để một module có thể tái sử dụng thành công, nó phải thỏa mãn các nguyên lý thiết kế:
@@ -96,8 +101,8 @@
 ---
 
 ### 복습 체크리스트
-- [ ] Phân biệt rõ: 합성 중심 (Composition-based) là lắp ghép linh kiện/khối có sẵn (Lego); 생성 중심 (Generation-based) là sinh mã tự động từ mẫu đặc tả.
-- [ ] Nhớ 4 bước của quy trình tái kỹ nghệ: 분석 (Phân tích) $\rightarrow$ 재구성 (Tái cấu trúc) $\rightarrow$ 역공학 (Kỹ nghệ ngược) $\rightarrow$ 이식 (Di chuyển nền tảng).
+- [ ] Phân biệt rõ: 합성 중심 (Synthesis/Composition) là lắp ghép linh kiện/khối có sẵn (Lego); 생성 중심 (Analysis/Generation) là phân tích mẫu và sinh mã tự động.
+- [ ] Nhớ các hoạt động của quy trình tái kỹ nghệ: 분석 (Phân tích), 재구성 (Tái cấu trúc), 역공학 (Kỹ nghệ ngược), 순공학 (Kỹ nghệ xuôi), 이식 (Di chuyển nền tảng).
 - [ ] Nắm được bản chất của 역공학 (Reverse Engineering): Đi ngược từ mã nguồn để khôi phục tài liệu thiết kế bị mất.
-- [ ] Phân loại chính xác: 상위 CASE hỗ trợ pha đầu (Phân tích, Thiết kế); 하위 CASE hỗ trợ pha sau (Viết mã, Kiểm thử).
+- [ ] Phân loại chính xác: 상위 CASE hỗ trợ pha đầu (Phân tích, Thiết kế); 하위 CASE hỗ trợ pha sau (Viết mã, Kiểm thử); 통합 CASE bao phủ toàn bộ SDLC.
 - [ ] Nhớ vai trò của 중앙 저장소 (Central Repository): Trái tim duy trì tính nhất quán và lưu trữ toàn bộ tài sản trong môi trường CASE.

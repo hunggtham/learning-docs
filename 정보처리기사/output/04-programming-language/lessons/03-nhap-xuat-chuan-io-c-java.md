@@ -3,12 +3,14 @@
 ## 학습 목표 (Mục tiêu)
 - Nắm vững các hàm nhập xuất chuẩn trong ngôn ngữ C (`printf`, `scanf`, `getchar`, `gets`, `putchar`, `puts`) và Java (`System.out.print`, `println`, `printf`).
 - Hiểu và tính toán chính xác kết quả của chuỗi định dạng (Format String Specifiers) phức hợp trong C: căn lề, độ rộng trường, số chữ số thập phân (`%8.2f`, `%-5d`, `%04d`), các hệ cơ số bát phân `%o`, thập lục phân `%x`.
-- Nhận biết các lỗi biên dịch và lỗi thực thi kinh điển: quên toán tử địa chỉ `&` trong `scanf`, hiện tượng trôi lệnh do bộ đệm nhập (Input Buffer Overflow / Trailing Newline).
+- Nắm vững bảng ký tự thoát (이스케이프 시퀀스 - Escape Sequences: `\n`, `\t`, `\0`, `\\`, `\'`, `\"`, `\r`, `\b`) và vai trò của byte kết thúc null `\0` trong chuỗi C.
+- Nhận biết các lỗi biên dịch và lỗi thực thi kinh điển: quên toán tử địa chỉ `&` trong `scanf`, hiện tượng trôi lệnh do bộ đệm nhập (Input Buffer Newline).
 
 ## 핵심 키워드 (Từ khóa)
 - 표준 입출력 (Standard Input/Output) — Luồng dữ liệu vào ra tiêu chuẩn qua `stdin` và `stdout`.
 - 서식 지정자 (Format Specifiers) — Ký tự đặc tả kiểu: `%d`, `%u`, `%f`, `%c`, `%s`, `%o`, `%x`, `%p`.
 - 출력 포맷 제어 (Output Formatting Flags) — Căn phải, căn trái (`-`), đệm số 0 (`0`), độ chính xác (`.n`).
+- 이스케이프 시퀀스 (Escape Sequences) — Ký tự điều khiển: `\n` (xuống dòng), `\t` (tab), `\0` (null byte), `\\` (dấu gạch chéo ngược).
 - 주소 연산자 (Address Operator `&`) — Truyền địa chỉ ô nhớ biến số cho hàm `scanf()`.
 - 입력 버퍼 개행 문자 (Input Buffer Newline) — Ký tự `\n` còn sót lại làm trôi các hàm nhập ký tự tiếp theo.
 - Java 표준 출력 (Java Standard Output) — `System.out.print`, `System.out.println`, `System.out.printf`.
@@ -23,6 +25,11 @@
   - `w` (Width - độ rộng tối thiểu của toàn bộ số in ra, tính cả dấu chấm và chữ số thập phân).
   - `p` (Precision - số chữ số sau dấu phẩy).
   - Mặc định căn lề bên phải (chèn khoảng trắng phía trước); nếu có dấu trừ `%-w.pf` thì căn lề bên trái.
+- **Bảng ký tự thoát Escape:**
+  - `\n`: Chuyển con trỏ xuống đầu dòng tiếp theo.
+  - `\t`: Nhảy một khoảng tab (thường là 4 hoặc 8 khoảng trắng).
+  - `\0`: Ký tự Null (ASCII 0), dấu hiệu báo kết thúc một chuỗi ký tự trong C.
+  - `\\`: In ra ký tự gạch chéo ngược `\`.
 - **`scanf` và dấu `&`:** Biến đơn (`int`, `float`, `char`) bắt buộc phải có `&` trước tên biến. Riêng chuỗi ký tự (mảng `char[]`) không cần `&` vì tên mảng bản thân nó đã là con trỏ địa chỉ.
 
 ---
@@ -32,8 +39,8 @@
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
 - **핵심 원리 (Nguyên tắc cốt lõi):**
-  - [한국어]: `printf 서식 지정자에서 %w.p는 전체 자릿수 w와 소수점 이하 p자리를 의미하며 기본 우측 정렬된다. 음수 부호(-)가 붙으면 좌측 정렬되고, scanf 함수에서 변수에 값을 입력받을 때는 반드시 주소 연산자(&)를 사용해야 한다.`
-  - [Tiếng Việt]: Trong chuỗi định dạng printf, `%w.p` thể hiện tổng độ rộng $w$ và $p$ chữ số thập phân, mặc định căn phải. Dấu trừ (`-`) căn trái; khi dùng hàm scanf phải bắt buộc đặt toán tử địa chỉ `&` trước biến số đơn.
+  - [한국어]: `printf 서식 지정자에서 %w.p는 전체 자릿수 w와 소수점 이하 p자리를 의미하며 기본 우측 정렬된다. 음수 부호(-)는 좌측 정렬, 0 플래그는 빈 공간을 0으로 채운다. 이스케이프 시퀀스 \n은 줄바꿈, \t는 탭, \0은 문자열 끝을 알리는 널 문자이다. scanf에서 단일 변수는 반드시 주소(&)를 전달해야 한다.`
+  - [Tiếng Việt]: Trong chuỗi định dạng printf, `%w.p` thể hiện tổng độ rộng $w$ và $p$ chữ số thập phân, mặc định căn phải. Dấu trừ (`-`) căn trái, cờ `0` điền số không vào chỗ trống. Ký tự thoát `\n` xuống dòng, `\t` lùi tab, `\0` là ký tự null kết thúc chuỗi. Khi dùng hàm scanf với biến đơn phải bắt buộc truyền địa chỉ `&`.
 
 - **1. Bảng ký tự định dạng chuẩn (서식 문자열 일람):**
 
@@ -60,7 +67,20 @@
 | `%-8.2f` | `12.3456` | `12.35   ` (3 khoảng trắng sau)| Căn trái, tổng độ rộng 8, lấy 2 số thập phân. |
 | `%.3s` | `"KOREA"` | `KOR` | Lấy tối đa **3 ký tự đầu tiên** của chuỗi. |
 
-- **3. Đối chiếu các hàm xuất trong Java (Java 표준 출력 함수):**
+- **3. Bảng ký tự thoát chuẩn (이스케이프 시퀀스 - Escape Sequences):**
+
+| Ký tự thoát | Tên gọi chuẩn Hàn / Anh | Ý nghĩa hành động | Ứng dụng thi cử |
+| :---: | :--- | :--- | :--- |
+| `\n` | 줄 바꿈 (Newline / Linefeed) | Đưa con trỏ xuống đầu dòng mới tiếp theo | Xuất hiện cuối câu lệnh `printf` |
+| `\t` | 탭 (Horizontal Tab) | Nhảy con trỏ sang điểm dừng Tab kế tiếp (4-8 cột) | Định dạng bảng dữ liệu trên terminal |
+| `\0` | 널 문자 (Null Character) | Byte có giá trị nhị phân `0x00`, kết thúc chuỗi C | Xác định độ dài chuỗi trong `strlen` |
+| `\\` | 역슬래시 (Backslash) | In ra đúng một ký tự gạch chéo ngược `\` | Biểu diễn đường dẫn file trên Windows |
+| `\'` | 작은따옴표 (Single Quote) | In ra ký tự dấu nháy đơn `'` | Khai báo hằng ký tự |
+| `\"` | 큰따옴표 (Double Quote) | In ra ký tự dấu nháy kép `"` bên trong chuỗi | Trích dẫn văn bản trong chuỗi |
+| `\r` | 캐리지 리턴 (Carriage Return) | Di chuyển con trỏ về đầu dòng hiện tại | Ghi đè dòng trong console |
+| `\b` | 백스페이스 (Backspace) | Di chuyển con trỏ lùi lại 1 vị trí | Xóa ký tự trước đó |
+
+- **4. Đối chiếu các hàm xuất trong Java (Java 표준 출력 함수):**
 
 | Hàm Java | Hành vi xuống dòng | Hỗ trợ định dạng | Ngữ cảnh ứng dụng |
 | :--- | :---: | :---: | :--- |
@@ -70,17 +90,40 @@
 
 - **주의/함정 (Bẫy đề thi):**
   - **Quên dấu `&` trong `scanf`:** Lệnh `scanf("%d", a);` thay vì `scanf("%d", &a);` sẽ gây lỗi sập chương trình (Segmentation Fault / Access Violation) vì `scanf` coi giá trị của `a` là một địa chỉ ô nhớ để ghi đè.
+  - **Mảng chuỗi không dùng `&`:** `char name[20]; scanf("%s", name);` -> Đúng cú pháp vì `name` tự thân là địa chỉ phần tử đầu tiên của mảng. Viết `&name` là dư thừa.
   - **Khoảng trắng trong chuỗi `scanf("%s", str)`:** Hàm `scanf` với `%s` sẽ **ngừng đọc ngay khi gặp khoảng trắng** hoặc dấu tab/xuống dòng. Muốn đọc cả dòng có khoảng trắng trong C, phải dùng `gets()` (hoặc `fgets()`).
   - **Làm tròn số thập phân:** `%8.2f` với giá trị `3.146` sẽ làm tròn thành `3.15`.
+  - **Ký tự Null `\0`:** Mảng `char str[5] = "Java";` thực tế chiếm 5 Byte ô nhớ (`'J'`, `'a'`, `'v'`, `'a'`, `'\0'`). Nếu khai báo `char str[4] = "Java";` sẽ bị lỗi tràn bộ đệm vì không có chỗ chứa `\0`.
 
 - **한 문장 설명 (Câu chốt tự nhớ):**
-  - *"Độ rộng $w$, thập phân $p$, âm căn trái dương căn phải; scanf nhớ dấu và (&), chuỗi đọc gặp cách là dừng."*
+  - *"Độ rộng w thập phân p, âm căn trái dương căn phải; scanf biến đơn nhớ và (&), chuỗi C luôn kết bằng null byte (\0)."*
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Minh họa định dạng in trong C và bẫy làm tròn số:
+#### 1. Sơ đồ ASCII minh họa cơ chế căn lề và đệm khoảng trắng trong `printf`:
+
+Xét giá trị nguyên `num = 123;`:
+
+```text
+Chuỗi định dạng: "%5d"  (Mặc định căn phải, rộng 5)
++---+---+---+---+---+
+|   |   | 1 | 2 | 3 |  -> [  123]  (2 dấu cách đầu)
++---+---+---+---+---+
+
+Chuỗi định dạng: "%-5d" (Căn trái, rộng 5)
++---+---+---+---+---+
+| 1 | 2 | 3 |   |   |  -> [123  ]  (2 dấu cách cuối)
++---+---+---+---+---+
+
+Chuỗi định dạng: "%05d" (Đệm số 0, rộng 5)
++---+---+---+---+---+
+| 0 | 0 | 1 | 2 | 3 |  -> [00123]  (2 số 0 ở đầu)
++---+---+---+---+---+
+```
+
+#### 2. Minh họa định dạng in trong C và bẫy làm tròn số:
 ```c
 #include <stdio.h>
 
@@ -106,11 +149,14 @@ int main() {
     // 45 = 5*8 + 5 -> %o ra 55
     // 45 = 2*16 + 13 (D) -> %x ra 2d, %X ra 2D
 
+    // In ký tự thoát escape
+    printf("Line 1\tTab\nLine 2\\Path\n");
+
     return 0;
 }
 ```
 
-#### 2. Lần vết hiện tượng trôi lệnh trong `scanf` do bộ đệm bàn phím:
+#### 3. Lần vết hiện tượng trôi lệnh trong `scanf` do bộ đệm bàn phím:
 ```c
 #include <stdio.h>
 
@@ -133,7 +179,7 @@ int main() {
 }
 ```
 
-#### 3. Minh họa xuất chuẩn trong Java:
+#### 4. Minh họa xuất chuẩn trong Java:
 ```java
 public class JavaIODemo {
     public static void main(String[] args) {
@@ -156,9 +202,10 @@ public class JavaIODemo {
 ---
 
 ### 복습 체크리스트
-- [ ] Ghi nhớ ý nghĩa định dạng: `%d` (thập phân), `%o` (bát phân), `%x` (thập lục phân), `%f` (số thực).
+- [ ] Ghi nhớ ý nghĩa định dạng: `%d` (thập phân), `%o` (bát phân), `%x` (thập lục phân), `%f` (số thực), `%c` (ký tự), `%s` (chuỗi).
 - [ ] Hiểu rõ công thức `%w.pf`: $w$ là tổng độ rộng, $p$ là số chữ số thập phân.
 - [ ] Nhớ dấu `-` là căn trái (`%-5d`), số `0` là điền số không vào khoảng trống (`%05d`).
-- [ ] Nắm chắc quy tắc: `scanf` với biến đơn bắt buộc phải có toán tử địa chỉ `&`.
+- [ ] Nắm chắc quy tắc: `scanf` với biến đơn bắt buộc phải có toán tử địa chỉ `&`, mảng ký tự không cần `&`.
+- [ ] Thuộc lòng các ký tự thoát: `\n` (xuống dòng), `\t` (tab), `\0` (kết thúc chuỗi null), `\\` (in dấu gạch chéo ngược).
 - [ ] Nhớ `%s` trong `scanf` tự động dừng khi gặp khoảng trắng đầu tiên.
 - [ ] Phân biệt được trong Java: `print` không xuống dòng, `println` có xuống dòng, `printf` hỗ trợ định dạng `%`.

@@ -4,9 +4,8 @@
 - Nắm vững 4 chỉ số hiệu năng đánh giá hệ điều hành: Thông lượng (**Throughput**), Thời gian phản hồi (**Turnaround Time**), Tính sẵn sàng (**Availability**), và Độ tin cậy (**Reliability**).
 - Phân biệt kiến trúc hạt nhân UNIX: Hạt nhân thường trú RAM (**Kernel - 커널**) và Trình thông dịch lệnh giao tiếp người dùng (**Shell - 쉘**).
 - Làm chủ sơ đồ chuyển đổi trạng thái tiến trình (생성 Create $\rightarrow$ 준비 Ready $\leftrightarrow$ 실행 Running $\rightarrow$ 대기 Waiting $\rightarrow$ 종료 Terminated) và các thao tác: **Dispatch**, **Timeout**, **Block**, **Wakeup**.
-- Phân biệt rõ hai trường phái lập lịch CPU: **Không chiếm đoạt (비선점형)** (FCFS, SJF, HRN) và **Chiếm đoạt (선점형)** (Round Robin, SRT, Multilevel Queue).
-- Tính toán thành thạo công thức độ ưu tiên trong thuật toán **HRN** ($\frac{\text{Đợi} + \text{Chạy}}{\text{Chạy}}$) để khắc phục tình trạng đói tài nguyên (Starvation).
-- Làm chủ hệ thống quyền tệp octal Linux (**`chmod` rwx 4-2-1**) và các lệnh quản trị cơ bản (`chown`, `ps`, `kill`).
+- Phân biệt sâu sắc các thuật toán điều phối CPU không chiếm dụng (**비선점형**: FCFS, SJF, HRN) và chiếm dụng (**선점형**: Round Robin, SRTF, Multi-level Queue, Multi-level Feedback Queue).
+- Tính toán thành thạo công thức độ ưu tiên HRN ($P = \frac{W+S}{S}$) và phân tích tác động của độ dài Time Quantum ($q$) trong Round Robin.
 - Thuộc lòng 4 điều kiện phát sinh bế tắc **Deadlock** theo khẩu quyết **상점비환** (상호 배제, 점유와 대기, 비선점, 환형 대기) và 4 chiến lược giải quyết (Phòng ngừa, Né tránh với Thuật toán Banker, Phát hiện, Khôi phục).
 
 ## 핵심 키워드 (Từ khóa song ngữ)
@@ -15,9 +14,9 @@
 - UNIX 쉘 (Shell — 명령어 해석기, 비상주, 파이프라인 Pipeline `|`, 입출력 리다이렉션)
 - 프로세스 제어 블록 (PCB — Process Control Block, PID, 상태, PC, 레지스터 포인터)
 - 상태 전이 (State Transitions — 디스패치 Dispatch, 타임아웃 Timeout, 블록 Block, 웨이크업 Wakeup)
-- 스케줄링 알고리즘 (Scheduling — FCFS Convoy Effect vs SJF Starvation vs HRN 우선순위)
-- HRN 우선순위 공식 (Highest Response-ratio Next — $\frac{\text{대기 시간} + \text{서비스 시간}}{\text{서비스 시간}}$)
-- 라운드 로빈 (Round Robin — 선점형, Time Slice/Quantum 기반 시분할 스케줄링)
+- 비선점형 스케줄링 (Non-Preemptive — FCFS Convoy Effect, SJF Starvation, HRN 우선순위)
+- HRN 우선순위 공식 (Highest Response-ratio Next — $P = \frac{\text{대기 시간 } W + \text{서비스 시간 } S}{\text{서비스 시간 } S}$)
+- 선점형 스케줄링 (Preemptive — Round Robin Time Quantum $q$, SRTF, Multi-level Queue, Multi-level Feedback Queue)
 - chmod 권한 설정 (Change Mode — 8진수 Read 4, Write 2, Execute 1)
 - 교착상태 4대 조건 (Deadlock — 상점비환: 상호 배제, 점유와 대기, 비선점, 환형 대기)
 - 은행원 알고리즘 (Banker's Algorithm — Dijkstra, 교착상태 회피 Avoidance, 안전 상태 Safe State)
@@ -40,7 +39,10 @@
   - Đang chạy mà cần đợi đọc đĩa/nhập bàn phím $\rightarrow$ **Block (블록 / 대기)** $\rightarrow$ sang Waiting.
   - Đọc đĩa xong $\rightarrow$ **Wakeup (웨이크업)** $\rightarrow$ về lại Ready.
 - **Công thức HRN (Bài toán tính toán cực kỳ hay gặp):**
-  - $\text{Độ ưu tiên} = \frac{\text{Thời gian chờ} + \text{Thời gian chạy}}{\text{Thời gian chạy}}$. Giá trị này **càng lớn thì độ ưu tiên càng cao**.
+  - $\text{Độ ưu tiên } P = \frac{\text{Thời gian chờ } W + \text{Thời gian chạy } S}{\text{Thời gian chạy } S}$. Giá trị này **càng lớn thì độ ưu tiên càng cao**.
+- **Time Quantum ($q$) trong Round Robin:**
+  - $q \to \infty \implies$ Biến thành FCFS.
+  - $q \to 0 \implies$ Quá tải chuyển ngữ cảnh (Context Switching Overhead) làm sập hiệu năng.
 - **Khẩu quyết Deadlock 4 điều kiện cần (Bắt buộc phải thuộc):**
   - **상 (상호 배제 - Mutual Exclusion):** Dùng độc quyền.
   - **점 (점유와 대기 - Hold and Wait):** Giữ cái này đòi thêm cái kia.
@@ -75,37 +77,23 @@
 - **Khối điều khiển tiến trình (PCB - Process Control Block):**
   - Cấu trúc dữ liệu do hệ điều hành tạo ra ngay khi tiến trình khởi sinh để quản lý vòng đời tiến trình.
   - Chứa các thông tin quan trọng: Mã định danh tiến trình (**PID**), Trạng thái tiến trình (**Process State**), Bộ đếm chương trình (**PC - Program Counter**), Giá trị các thanh ghi CPU, Danh sách tài nguyên và tệp đang mở, Thông tin lập lịch độ ưu tiên.
-- **Năm trạng thái tiến trình và các hành vi chuyển trạng thái:**
-
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> New: 생성
-    New --> Ready: Đưa vào RAM
-    Ready --> Running: Dispatch (디스패치)
-    Running --> Ready: Timeout (타임아웃)
-    Running --> Waiting: Block (입출력 요청)
-    Waiting --> Ready: Wakeup (입출력 완료)
-    Running --> Terminated: Exit (종료)
-    Terminated --> [*]
-```
-
-- **Ý nghĩa các hành vi chuyển trạng thái:**
+- **Ý nghĩa các hành vi chuyển trạng thái tiến trình:**
   - **디스패치 (Dispatch):** Bộ điều phối (Scheduler) chọn một tiến trình đang ở hàng đợi **Ready** để trao quyền sử dụng CPU $\rightarrow$ chuyển sang **Running**.
   - **타임아웃 (Timeout):** Tiến trình đang ở **Running** bị hết lượt thời gian (Time Slice) $\rightarrow$ bị cưỡng chế thu hồi CPU và đưa về hàng đợi **Ready**.
   - **블록 / 대기 (Block):** Tiến trình đang ở **Running** phát sinh yêu cầu I/O (như đọc đĩa) $\rightarrow$ tự nhả CPU để sang trạng thái **Waiting / Blocked**.
   - **웨이크업 (Wakeup):** Thao tác I/O hoàn tất $\rightarrow$ tiến trình được đánh thức từ **Waiting** chuyển về hàng đợi **Ready** để chờ CPU.
 
-#### 3. Các thuật toán lập lịch CPU (CPU Scheduling)
+#### 3. Các thuật toán điều phối CPU (CPU Scheduling Algorithms)
 
-| Thuật toán | Loại lập lịch | Nguyên lý vận hành & Công thức tính toán | Ưu nhược điểm trong đề thi |
+| Thuật toán | Loại điều phối | Nguyên lý vận hành & Công thức tính toán | Ưu nhược điểm trong đề thi |
 | :--- | :---: | :--- | :--- |
-| **FCFS**<br>(First-Come First-Served) | **비선점형**<br>(Không chiếm đoạt) | Tiến trình nào đến hàng đợi Ready trước thì được cấp phát CPU phục vụ trước cho đến khi kết thúc. | Đơn giản, công bằng; nhược điểm gây ra **Hiệu ứng đoàn tàu (Convoy Effect)**: tiến trình ngắn phải đợi tiến trình dài chạy xong. |
-| **SJF**<br>(Shortest Job First) | **비선점형**<br>(Không chiếm đoạt) | Ưu tiên chọn tiến trình có **thời gian thực thi (Service Time) ngắn nhất** để chạy trước. | Cho **thời gian chờ đợi trung bình ngắn nhất**; nhược điểm gây **Đói tài nguyên (Starvation / 기아 현상)** cho các tiến trình dài. |
-| **HRN**<br>(Highest Response-ratio Next) | **비선점형**<br>(Không chiếm đoạt) | Khắc phục nhược điểm của SJF bằng cách tính điểm ưu tiên kết hợp cả Thời gian chờ đợi và Thời gian chạy:<br>$$\text{우선순위} = \frac{\text{대기 시간} + \text{서비스 시간}}{\text{서비스 시간}}$$ | Tiến trình càng chờ lâu thì độ ưu tiên càng tăng vọt; **ngăn chặn triệt để tình trạng đói tài nguyên (Starvation)**. |
-| **Round Robin (RR)** | **선점형**<br>(Chiếm đoạt) | Mỗi tiến trình được cấp một khoảng thời gian lát cắt cố định (**Time Slice / Quantum**). Hết giờ mà chưa xong sẽ bị đưa về đuôi hàng đợi Ready. | Phù hợp hệ thống phân chia thời gian (TSS). Nếu Time Slice quá lớn $\rightarrow$ biến thành FCFS; nếu quá nhỏ $\rightarrow$ quá tải chuyển ngữ cảnh (Context Switching). |
-| **SRT**<br>(Shortest Remaining Time) | **선점형**<br>(Chiếm đoạt) | Biến thể chiếm đoạt của SJF; nếu có tiến trình mới đến mà có thời gian còn lại ngắn hơn tiến trình đang chạy, CPU sẽ bị tước đoạt ngay. | Thời gian chờ tối ưu; chi phí theo dõi thời gian còn lại lớn. |
-| **Multilevel Feedback Queue** | **선점형**<br>(Chiếm đoạt) | Có nhiều hàng đợi với Time Slice khác nhau; tiến trình dùng hết Time Slice sẽ bị giáng xuống hàng đợi thấp hơn. | Thuật toán hiện đại và phổ biến nhất trong các HĐH đa nhiệm hiện nay. |
+| **FCFS (First-Come First-Served)** | **비선점형** (Không chiếm đoạt) | Tiến trình nào đến hàng đợi Ready trước thì được cấp phát CPU phục vụ trước cho đến khi kết thúc. | Đơn giản, công bằng; nhược điểm gây ra **Hiệu ứng đoàn tàu (Convoy Effect)**: tiến trình ngắn phải đợi tiến trình dài chạy xong. |
+| **SJF (Shortest Job First)** | **비선점형** (Không chiếm đoạt) | Ưu tiên chọn tiến trình có **thời gian thực thi (Service Time) ngắn nhất** để chạy trước. | Cho **thời gian chờ đợi trung bình ngắn nhất**; nhược điểm gây **Đói tài nguyên (Starvation / 기아 현상)** cho các tiến trình dài. |
+| **HRN (Highest Response Ratio Next)** | **비선점형** (Không chiếm đoạt) | Khắc phục nhược điểm của SJF bằng cách tính điểm ưu tiên kết hợp cả Thời gian chờ đợi ($W$) và Thời gian chạy ($S$): $P = \frac{W + S}{S}$. | Tiến trình càng chờ lâu thì độ ưu tiên càng tăng vọt; **ngăn chặn triệt để tình trạng đói tài nguyên (Starvation)**. |
+| **Round Robin (RR)** | **선점형** (Chiếm đoạt) | Mỗi tiến trình được cấp một khoảng thời gian cố định (**Time Quantum $q$**). Hết lượt thời gian sẽ bị thu hồi CPU đưa về đuôi hàng đợi Ready. | Phù hợp hệ thống phân chia thời gian (TSS). Nếu $q$ quá lớn $\rightarrow$ biến thành FCFS; nếu $q$ quá nhỏ $\rightarrow$ quá tải chuyển ngữ cảnh (Context Switching). |
+| **SRTF (Shortest Remaining Time First)** | **선점형** (Chiếm đoạt) | Biến thể chiếm đoạt của SJF; nếu có tiến trình mới đến mà có thời gian còn lại ngắn hơn tiến trình đang chạy, CPU sẽ bị tước đoạt ngay. | Thời gian chờ tối ưu; chi phí theo dõi thời gian còn lại lớn. |
+| **Multi-level Queue (다단계 큐)** | **선점형** (Chiếm đoạt) | Chia hàng đợi Ready thành nhiều hàng đợi độc lập với mức ưu tiên khác nhau; tiến trình được gán cố định vào một hàng đợi, không chuyển hàng đợi được. | Phân nhóm rõ ràng tác vụ tương tác và tác vụ xử lý theo lô; cứng nhắc, dễ gây đói tài nguyên cho hàng đợi thấp. |
+| **Multi-level Feedback Queue (다단계 피드백 큐)** | **선점형** (Chiếm đoạt) | Có nhiều hàng đợi với Time Quantum khác nhau; cho phép tiến trình di chuyển linh hoạt giữa các hàng đợi (dùng hết lượt bị hạ cấp, chờ lâu được thăng cấp). | Thuật toán hiện đại và phổ biến nhất trong các HĐH đa nhiệm hiện nay (Linux CFS, Windows). |
 
 #### 4. Quản trị tệp tin và Phân quyền Linux (`chmod`)
 - **Cấu trúc phân quyền tệp tin:** Gồm 10 ký tự: `-[rwx][rwx][rwx]` (Ký tự đầu là loại tệp, 9 ký tự tiếp theo chia thành 3 nhóm: **Chủ sở hữu User (u)**, **Nhóm Group (g)**, **Người khác Other (o)**).
@@ -128,7 +116,7 @@ stateDiagram-v2
 | Chiến lược | Tên tiếng Hàn & Anh | Cơ chế vận hành & Đại diện tiêu biểu |
 | :--- | :--- | :--- |
 | **Phòng ngừa** | **예방 (Prevention)** | Can thiệp thiết kế hệ thống để **triệt tiêu ít nhất 1 trong 4 điều kiện trên** (ví dụ: bắt buộc cấp phát toàn bộ tài nguyên cùng lúc để triệt tiêu Hold and Wait). Nhược điểm: làm giảm hiệu suất sử dụng thiết bị nghiêm trọng. |
-| **Né tránh** | **회피 (Avoidance)** | Cho phép 4 điều kiện tồn tại nhưng kiểm tra động mọi yêu cầu cấp phát để đảm bảo hệ thống luôn nằm trong **Trạng thái an toàn (안전 상태 - Safe State)**.<br>$\implies$ Thuật toán tiêu biểu: **은행원 알고리즘 (Banker's Algorithm của Dijkstra)**. |
+| **Né tránh** | **회피 (Avoidance)** | Cho phép 4 điều kiện tồn tại nhưng kiểm tra động mọi yêu cầu cấp phát để đảm bảo hệ thống luôn nằm trong **Trạng thái an toàn (안전 상태 - Safe State)**; thuật toán tiêu biểu là **은행원 알고리즘 (Banker's Algorithm của Dijkstra)**. |
 | **Phát hiện** | **발견 (Detection)** | Cho phép bế tắc xảy ra, định kỳ kiểm tra đồ thị cấp phát tài nguyên (**자원 할당 그래프 - Resource Allocation Graph**) để tìm chu trình bế tắc. |
 | **Khôi phục** | **회복 (Recovery)** | Khi đã phát hiện bế tắc, tiến hành hủy bỏ một số tiến trình (**프로세스 강제 종료**) hoặc cưỡng chế thu hồi tài nguyên (**자원 선점**) để giải phóng hệ thống. |
 
@@ -138,9 +126,9 @@ stateDiagram-v2
 
 #### Bài toán ví dụ tính toán thứ tự chạy theo HRN
 - **Đề bài mẫu:** Có 3 tiến trình A, B, C trong hàng đợi Ready với thông số:
-  - Tiến trình A: Thời gian chờ $= 20\text{s}$, Thời gian chạy $= 5\text{s}$.
-  - Tiến trình B: Thời gian chờ $= 10\text{s}$, Thời gian chạy $= 10\text{s}$.
-  - Tiến trình C: Thời gian chờ $= 30\text{s}$, Thời gian chạy $= 15\text{s}$.
+  - Tiến trình A: Thời gian chờ $W = 20\text{s}$, Thời gian chạy $S = 5\text{s}$.
+  - Tiến trình B: Thời gian chờ $W = 10\text{s}$, Thời gian chạy $S = 10\text{s}$.
+  - Tiến trình C: Thời gian chờ $W = 30\text{s}$, Thời gian chạy $S = 15\text{s}$.
   Hãy tính độ ưu tiên HRN của từng tiến trình và xác định tiến trình nào được chạy trước.
 - **Lời giải:**
   - $\text{Ưu tiên A} = \frac{20 + 5}{5} = \frac{25}{5} = 5.0$.
@@ -151,10 +139,10 @@ stateDiagram-v2
 ---
 
 ### 복습 체크리스트
-- [ ] Nhớ 4 chỉ số hiệu năng HĐH: Tăng Throughput, Giảm Turnaround Time, Tăng Availability, Tăng Reliability.
-- [ ] Phân biệt Kernel (thường trú RAM, quản lý phần cứng) vs Shell (không thường trú, thông dịch lệnh).
-- [ ] Đọc đúng các sự kiện chuyển trạng thái tiến trình: Dispatch (Ready $\rightarrow$ Run), Timeout (Run $\rightarrow$ Ready), Block (Run $\rightarrow$ Wait), Wakeup (Wait $\rightarrow$ Ready).
-- [ ] Thuộc công thức HRN: $\text{Ưu tiên} = \frac{\text{Đợi} + \text{Chạy}}{\text{Chạy}}$ (ngăn ngừa đói tài nguyên Starvation).
-- [ ] Tính thành thạo phân quyền `chmod`: $r=4, w=2, x=1$.
-- [ ] Thuộc lòng 4 điều kiện Deadlock (상점비환): 상호 배제 (Mutual Exclusion), 점유와 대기 (Hold & Wait), 비선점 (Non-Preemption), 환형 대기 (Circular Wait).
-- [ ] Nhớ Banker's Algorithm của Dijkstra là thuật toán Né tránh Deadlock (회피 - Avoidance).
+- [ ] Phân biệt 4 chỉ số hiệu năng: Thông lượng tăng, Thời gian phản hồi giảm, Khả dụng tăng, Tin cậy tăng.
+- [ ] Phân biệt Kernel (thường trú trong RAM) vs Shell (không thường trú trong RAM, thông dịch lệnh).
+- [ ] Nắm vững các hành vi chuyển trạng thái tiến trình: Dispatch, Timeout, Block, Wakeup.
+- [ ] Nắm vững thuật toán không chiếm đoạt: FCFS (Convoy Effect), SJF (Starvation), HRN ($P = \frac{W+S}{S}$, chống Starvation).
+- [ ] Nắm vững thuật toán chiếm đoạt: Round Robin (Time Quantum $q$), SRTF, Multi-level Queue (hàng đợi cố định), Multi-level Feedback Queue (di chuyển linh hoạt giữa các hàng đợi).
+- [ ] Thuộc 4 điều kiện phát sinh Deadlock (상점비환): Mutual Exclusion, Hold and Wait, Non-Preemption, Circular Wait.
+- [ ] Nhớ 4 chiến lược Deadlock: Prevention (triệt tiêu 1 điều kiện), Avoidance (Banker's Algorithm, Safe State), Detection (Resource Allocation Graph), Recovery (hủy tiến trình/thu hồi tài nguyên).

@@ -95,7 +95,6 @@ Phải kiểm tra SQL thực tế, dữ liệu thực tế và Execution Plan tr
 Trong hình có hai bảng đã được chuẩn hóa:
 
 #### 사원 테이블 — Bảng nhân viên
-Phần này nối mạch SQL với “사원 테이블 — Bảng nhân viên”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 사번(PK) | 이름 | 부서번호 |
 | --- | --- | --- |
@@ -104,7 +103,6 @@ Phần này nối mạch SQL với “사원 테이블 — Bảng nhân viên”
 | 2403 | 유현지 | 201 |
 
 #### 부서 테이블 — Bảng phòng ban
-Phần này nối mạch SQL với “부서 테이블 — Bảng phòng ban”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 부서번호(PK) | 부서명 | 소재지 |
 | --- | --- | --- |
@@ -368,7 +366,6 @@ Cùng một bảng `직원`, nhưng một dòng có thể là cấp trên của 
 ---
 
 ### 6.2 Ví dụ bảng nhân viên
-Phần này nối mạch SQL với “6.2 Ví dụ bảng nhân viên”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 직원ID(PK) | 이름 | 상사ID |
 | --- | --- | --- |
@@ -536,7 +533,6 @@ Nhưng phải nhớ:
 ---
 
 ### 2. 관계
-Phần này nối mạch SQL với “2. 관계”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | English | Nghĩa |
 | --- | --- | --- |
@@ -578,7 +574,6 @@ Ví dụ thường gặp:
 ---
 
 ### 5. Câu ghi nhớ cuối bài
-Phần này nối mạch SQL với “5. Câu ghi nhớ cuối bài”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 정규화하면 JOIN 증가
@@ -940,7 +935,6 @@ hoặc
 ```
 
 #### Keyword nhớ nhanh
-Phần này nối mạch SQL với “Keyword nhớ nhanh”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Atomicity
@@ -1013,7 +1007,6 @@ balance = -1,000,000
 trong khi hệ thống cấm số dư âm, thì trạng thái DB không còn thỏa quy tắc.
 
 #### Nhớ:
-Phần này nối mạch SQL với “Nhớ:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Consistency
@@ -1115,7 +1108,6 @@ B = 3M
 ---
 
 ## ⭐ Tổng hợp ACID cực dễ nhớ
-Phần này nối mạch SQL với “⭐ Tổng hợp ACID cực dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Korean | English | Ý chính |
 | --- | --- | --- |
@@ -1383,7 +1375,6 @@ UNKNOWN
 Hãy tính.
 
 #### COUNT(column)
-Phần này nối mạch SQL với “COUNT(column)”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 COUNT(column1)
@@ -1406,7 +1397,6 @@ COUNT(column) bỏ qua NULL.
 ---
 
 #### SUM
-Phần này nối mạch SQL với “SUM”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SUM(column1)
@@ -1454,7 +1444,6 @@ Trong aggregate function, NULL không được xem là 0 mà bị loại khỏi 
 ---
 
 ## 15. COUNT(*) khác COUNT(column)
-Phần này nối mạch SQL với “15. COUNT(*) khác COUNT(column)”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 COUNT(*)
@@ -1497,7 +1486,6 @@ COUNT(column)  → đếm NON-NULL
 ```
 
 #### ⭐ Đây là một công thức SQLD rất đáng nhớ
-Phần này nối mạch SQL với “⭐ Đây là một công thức SQLD rất đáng nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 COUNT(*) = 모든 행
@@ -1561,7 +1549,6 @@ NULL
 ```
 
 #### AVG(column)
-Phần này nối mạch SQL với “AVG(column)”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 20 / 1
@@ -1569,7 +1556,6 @@ Phần này nối mạch SQL với “AVG(column)”, giải thích dữ liệu 
 ```
 
 #### SUM(column)/COUNT(*)
-Phần này nối mạch SQL với “SUM(column)/COUNT(*)”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 20 / 2
@@ -2147,7 +2133,6 @@ Bây giờ hãy nối chúng thành một logic duy nhất.
 ```
 
 #### Transaction trả lời:
-Phần này nối mạch SQL với “Transaction trả lời:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Một nghiệp vụ phải được xử lý như thế nào?
@@ -2156,7 +2141,6 @@ Một nghiệp vụ phải được xử lý như thế nào?
 → All or Nothing.
 
 #### ACID trả lời:
-Phần này nối mạch SQL với “ACID trả lời:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Transaction phải đảm bảo những tính chất gì?
@@ -2165,7 +2149,6 @@ Transaction phải đảm bảo những tính chất gì?
 → Atomicity / Consistency / Isolation / Durability.
 
 #### NULL trả lời:
-Phần này nối mạch SQL với “NULL trả lời:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 DB biểu diễn giá trị chưa biết/chưa có thế nào?
@@ -2174,7 +2157,6 @@ DB biểu diễn giá trị chưa biết/chưa có thế nào?
 → NULL.
 
 #### Identifier trả lời:
-Phần này nối mạch SQL với “Identifier trả lời:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Làm thế nào phân biệt từng instance/row?
@@ -2183,7 +2165,6 @@ Làm thế nào phân biệt từng instance/row?
 → Identifier.
 
 #### Natural vs Surrogate trả lời:
-Phần này nối mạch SQL với “Natural vs Surrogate trả lời:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 Identifier đó đến từ nghiệp vụ
@@ -2195,7 +2176,6 @@ hay do hệ thống tạo?
 ---
 
 ## ⭐ NOTE ÔN SQLD — Phần cần thuộc
-Phần này nối mạch SQL với “⭐ NOTE ÔN SQLD — Phần cần thuộc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 [TRANSACTION]

@@ -1,31 +1,36 @@
 # 프로그래밍 언어 분류 및 컴파일러 vs 인터프리터 (Phân loại ngôn ngữ & Biên dịch vs Thông dịch)
 
 ## 학습 목표 (Mục tiêu)
-- Nắm vững sự khác nhau mang tính bản chất giữa hai phương thức thực thi chương trình: Trình biên dịch (컴파일러 - Compiler) và Trình thông dịch (인터프리터 - Interpreter), cũng như mô hình mã trung gian Bytecode (Java JVM).
+- Nắm vững sự khác nhau mang tính bản chất giữa hai phương thức thực thi chương trình: Trình biên dịch (컴파일러 - Compiler) và Trình thông dịch (인터프리터 - Interpreter).
+- Thuộc lòng 6 giai đoạn biên dịch mã nguồn của Compiler: Phân tích từ vựng (Lexical), Phân tích cú pháp (Syntax - Parse Tree), Phân tích ngữ nghĩa (Semantic), Sinh mã trung gian, Tối ưu hóa mã, và Sinh mã đích (Target Code).
+- Thấu hiểu cơ chế hoạt động của trình biên dịch động Just-In-Time (JIT Compiler) và mô hình mã trung gian Bytecode trong máy ảo JVM.
 - Phân biệt 4 mô hình lập trình (Programming Paradigms) kinh điển: Ngôn ngữ mệnh lệnh/thủ tục (명령형/절차적 언어), Ngôn ngữ hướng đối tượng (객체지향 언어), Ngôn ngữ khai báo (선언형 언어: Hàm và Logic), và Ngôn ngữ kịch bản (스크립트 언어).
-- Nhận diện chính xác mục đích thiết kế của các ngôn ngữ lập trình lịch sử thường xuyên xuất hiện trong câu hỏi trắc nghiệm của HRDK: FORTRAN (khoa học kỹ thuật), COBOL (kinh doanh/kế toán), LISP (hàm), PROLOG (logic).
 
 ## 핵심 키워드 (Từ khóa)
 - 컴파일러 vs 인터프리터 (Compiler vs Interpreter) — Sinh mã đối tượng chạy nhanh vs Thông dịch từng dòng chạy tương tác.
+- 컴파일 6단계 (6 Compilation Phases) — 어휘 분석(토큰), 구문 분석(파스 트리), 의미 분석(타입 검사), 중간 코드 생성, 코드 최적화, 목적 코드 생성.
+- 파스 트리 (Parse Tree / AST) — Cây phân tích cú pháp biểu diễn cấu trúc ngữ pháp chương trình.
 - 목적 코드 (Object Code) — Tệp mã máy trung gian (`.obj`) chỉ được tạo ra bởi Compiler.
-- 명령형/절차적 언어 (Imperative / Procedural) — Hướng dẫn máy tính cách thức thực hiện ("How"), ví dụ: C, FORTRAN, COBOL.
-- 선언형 언어 (Declarative) — Chỉ định kết quả mong muốn ("What"): Hàm (LISP, Haskell) & Logic (PROLOG).
-- 하이브리드 바이트코드 (Hybrid Bytecode) — Trình biên dịch sinh Bytecode trung gian cho máy ảo JVM thực thi.
-- 스크립트 언어 (Scripting Languages) — Ngôn ngữ thông dịch phục vụ tự động hóa và phát triển nhanh.
+- JIT 컴파일러 (Just-In-Time Compiler) — Biên dịch mã Bytecode thành mã máy bản địa tại runtime cho các đoạn mã lặp nóng (Hotspots).
+- 명령형 vs 선언형 (Imperative vs Declarative) — Tập trung vào cách làm ("How") vs Tập trung vào kết quả ("What").
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 - **Từ đâu (Origin):** Kế thừa các trải nghiệm cú pháp và biên dịch giữa C (ngôn ngữ biên dịch), Java (ngôn ngữ bytecode) và Python (ngôn ngữ thông dịch) đã học từ bài 01 đến bài 09.
-- **Đang giải quyết gì (Current Problem):** Trả lời các câu hỏi lý thuyết phân loại của kỳ thi: Tại sao ngôn ngữ này chạy nhanh hơn ngôn ngữ kia, ngôn ngữ nào tạo tệp mã đối tượng độc lập, và ngôn ngữ nào phù hợp cho bài toán suy diễn trí tuệ nhân tạo hoặc tính toán khoa học.
+- **Đang giải quyết gì (Current Problem):** Trả lời các câu hỏi lý thuyết phân loại của kỳ thi: Tại sao ngôn ngữ này chạy nhanh hơn ngôn ngữ kia, ngôn ngữ nào tạo tệp mã đối tượng độc lập, quá trình dịch mã diễn ra qua các bước nào và giải quyết các lỗi cú pháp/ngữ nghĩa ở đâu.
 - **Dùng đi đâu (Forward Handoff):** Khái niệm tệp thực thi mã máy và quá trình nạp chương trình vào RAM sẽ chuyển giao trực tiếp sang việc tìm hiểu cơ chế quản lý tiến trình và quản lý bộ nhớ của Hệ điều hành trong bài `11-tong-quan-he-dieu-hanh-unix-linux-va-shell-script.md` và `12-tien-trinh-luong-va-dieu-phoi-cpu.md`.
 
 ## 읽는 방법 (Cách đọc)
 - **Compiler vs Interpreter:**
-  - Cứ thấy **"tạo tệp mã đối tượng (목적 코드 생성)"** $\rightarrow$ Chọn ngay **Compiler** (C, C++, Go).
-  - Cứ thấy **"không tạo mã đối tượng, dịch từng dòng (줄 단위 / 대화형 실행)"** $\rightarrow$ Chọn ngay **Interpreter** (Python, JS, BASIC).
-- **Mô hình lập trình:**
-  - "Làm như thế nào (How)" $\rightarrow$ **Mệnh lệnh / Thủ tục** (C, Pascal).
-  - "Cái gì cần đạt được (What)" $\rightarrow$ **Khai báo** (SQL, LISP, PROLOG).
-  - FORTRAN = Tính toán khoa học; COBOL = Thương mại/Kinh doanh; PROLOG = Logic/AI; LISP = Xử lý danh sách/Hàm.
+  - Cứ thấy **"tạo tệp mã đối tượng (목적 코드 생성)"** -> Chọn ngay **Compiler** (C, C++, Go).
+  - Cứ thấy **"không tạo mã đối tượng, dịch từng dòng (줄 단위 / 대화형 실행)"** -> Chọn ngay **Interpreter** (Python, JS, BASIC).
+- **6 Giai đoạn biên dịch:**
+  - Từ vựng (Lexical) -> Tạo **Token**.
+  - Cú pháp (Syntax) -> Tạo **Parse Tree** (Cây cú pháp).
+  - Ngữ nghĩa (Semantic) -> **Kiểm tra kiểu dữ liệu (Type Checking)**.
+  - Mã trung gian -> Độc lập phần cứng (3-address code).
+  - Tối ưu hóa -> Bỏ code thừa, tối ưu vòng lặp.
+  - Mã đích -> Sinh mã máy CPU cụ thể.
+- **JIT Compiler:** Không dịch trước toàn bộ, mà dịch tức thời các đoạn mã chạy lặp đi lặp lại nhiều lần (Hotspot) thành mã máy thật để tăng tốc.
 
 ---
 
@@ -34,8 +39,8 @@
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
 - **핵심 원리 (Nguyên tắc cốt lõi):**
-  - [한국어]: `컴파일러는 전체 원시 코드를 한 번에 번역하여 목적 코드(실행 파일)를 생성하므로 실행 속도가 빠르지만, 인터프리터는 한 줄씩 번역하여 바로 실행하므로 목적 코드를 생성하지 않고 실행 속도가 느리다. 절차적 언어는 'How', 선언형 언어는 'What'에 집중한다.`
-  - [Tiếng Việt]: Trình biên dịch dịch toàn bộ mã nguồn cùng lúc và tạo ra tệp mã đối tượng (tệp thực thi) nên tốc độ chạy nhanh; trình thông dịch dịch từng dòng một và thực thi ngay nên không tạo tệp mã đối tượng và tốc độ chạy chậm hơn. Ngôn ngữ thủ tục tập trung vào 'How', ngôn ngữ khai báo tập trung vào 'What'.
+  - [한국어]: `컴파일러는 전체 원시 코드를 한 번에 번역하여 목적 코드(.obj)를 생성하고 6단계(어휘-토큰, 구문-파스트리, 의미-타입검사, 중간코드, 최적화, 목적코드)를 거친다. 인터프리터는 한 줄씩 번역하여 실행하므로 목적 코드가 없다. JIT 컴파일러는 바이트코드를 런타임에 기계어로 직접 변환한다.`
+  - [Tiếng Việt]: Trình biên dịch dịch toàn bộ mã nguồn cùng lúc để sinh mã đối tượng (.obj) qua 6 giai đoạn (từ vựng-token, cú pháp-parse tree, ngữ nghĩa-kiểm tra kiểu, mã trung gian, tối ưu hóa, mã đích). Trình thông dịch dịch từng dòng thực thi ngay nên không có mã đối tượng. Trình biên dịch JIT chuyển bytecode thành mã máy bản địa tại runtime.
 
 - **1. Bảng đối chiếu toàn diện: Trình biên dịch vs Trình thông dịch:**
 
@@ -48,52 +53,103 @@
 | **Phát hiện lỗi (Debug)** | Báo toàn bộ danh sách lỗi sau khi dịch xong. | Báo lỗi ngay tại chính dòng lệnh bị sai. |
 | **Ngôn ngữ tiêu biểu** | **C, C++, Go, FORTRAN, COBOL**. | **Python, JavaScript, Ruby, PHP, BASIC**. |
 
-- **2. Bảng phân loại 4 mô hình lập trình (프로그래밍 패러다임 분류):**
+- **2. Bảng 6 giai đoạn dịch mã của Trình biên dịch (컴파일러 번역 6단계):**
+
+| Giai đoạn | Tên tiếng Hàn & Anh | Nhiệm vụ kỹ thuật cốt lõi | Đầu ra sinh ra (Artifact) |
+| :---: | :--- | :--- | :--- |
+| **1** | **어휘 분석** (Lexical Analysis) | Đọc chuỗi ký tự thô, gom nhóm thành các từ tố có nghĩa (**Token**), lọc bỏ khoảng trắng và chú thích. | Danh sách Token & Bảng ký hiệu (Symbol Table) |
+| **2** | **구문 분석** (Syntax Analysis) | Kiểm tra ngữ pháp theo văn phạm phi ngữ cảnh, phát hiện lỗi cú pháp dấu câu. | **Cây phân tích cú pháp (Parse Tree / AST)** |
+| **3** | **의미 분석** (Semantic Analysis) | Kiểm tra tính tương thích kiểu dữ liệu (**Type Checking**), phạm vi biến, số lượng đối số hàm. | Cây cú pháp có gán nhãn kiểu (Annotated AST) |
+| **4** | **중간 코드 생성** (Intermediate Code) | Sinh biểu diễn trung gian độc lập với phần cứng máy tính (dạng mã 3 địa chỉ, Quadruple, Bytecode). | Intermediate Representation (IR) |
+| **5** | **코드 최적화** (Code Optimization) | Loại bỏ mã chết (Dead code), rút gọn hằng số (Constant folding), tối ưu vòng lặp để tăng tốc độ. | Mã trung gian tối ưu |
+| **6** | **목적 코드 생성** (Target Code) | Chuyển đổi mã trung gian thành mã máy bản địa hoặc mã hợp ngữ (Assembly) của kiến trúc CPU cụ thể. | **Mã đối tượng (Object Code `.obj`)** |
+
+- **3. Bảng phân loại 4 mô hình lập trình (프로그래밍 패러다임 분류):**
 
 | Mô hình lập trình | Định hướng cốt lõi | Ngôn ngữ tiêu biểu chuẩn đề thi | Mục đích / Đặc trưng khảo thí |
 | :--- | :--- | :--- | :--- |
-| **1. Mệnh lệnh / Thủ tục**<br>(명령형 / 절차적) | Tập trung vào **"Làm thế nào (How)"**; tuần tự thay đổi biến trạng thái. | **C, FORTRAN, COBOL, ALGOL, Pascal** | • **FORTRAN:** Tính toán khoa học kỹ thuật.<br>• **COBOL:** Xử lý kinh doanh, ngân hàng.<br>• **C:** Hệ thống và hiệu năng cao. |
-| **2. Hướng đối tượng**<br>(객체지향) | Đóng gói thực thể tự chủ gồm dữ liệu và phương thức. | **Java, C++, C#, Smalltalk, Python** | Tái sử dụng cao qua Kế thừa và Đa hình; mô phỏng thế giới thực. |
-| **3. Khai báo: Hàm**<br>(선언형 - 함수형) | Tập trung vào **"Cái gì (What)"**; tính toán dựa trên hàm toán học, không side-effect. | **LISP, Haskell, Erlang, Clojure** | **LISP:** Xử lý danh sách (List Processing), ứng dụng nghiên cứu AI đời đầu. |
-| **4. Khai báo: Logic**<br>(선언형 - 논리형) | Giải quyết vấn đề bằng suy diễn logic mệnh đề và quy tắc. | **PROLOG** | Hệ chuyên gia (Expert System), chứng minh định lý tự động. |
-
-- **3. Mô hình lai Bytecode trong Java (하이브리드 바이트코드):**
-  - Trình biên dịch Java (`javac`) không dịch thẳng ra mã máy vật lý mà dịch mã nguồn `.java` thành **Bytecode trung gian** lưu trong tệp `.class`.
-  - Khi chạy, Máy ảo Java (**JVM - Java Virtual Machine**) sẽ nạp Bytecode và dùng kết hợp **Interpreter** cùng **JIT Compiler (Just-In-Time Compiler)** để biên dịch các đoạn mã nóng (Hotspot) thành mã máy bản địa.
-  - Nhờ cơ chế này, Java đạt triết lý nổi tiếng: **"Write Once, Run Anywhere (WORA)"** (Viết một lần, chạy mọi nơi).
+| **Mệnh lệnh / Thủ tục (명령형 / 절차적)** | Tập trung vào "Làm thế nào (How)"; tuần tự thay đổi biến trạng thái. | C, FORTRAN, COBOL, ALGOL, Pascal | FORTRAN cho khoa học kỹ thuật; COBOL cho kinh doanh ngân hàng; C cho hệ thống. |
+| **Hướng đối tượng (객체지향)** | Đóng gói thực thể tự chủ gồm dữ liệu và phương thức. | Java, C++, C#, Smalltalk, Python | Tái sử dụng cao qua Kế thừa và Đa hình; mô phỏng thế giới thực. |
+| **Khai báo: Hàm (선언형 - 함수형)** | Tập trung vào "Cái gì (What)"; tính toán dựa trên hàm toán học, không side-effect. | LISP, Haskell, Erlang, Clojure | LISP xử lý danh sách (List Processing), nghiên cứu AI đời đầu. |
+| **Khai báo: Logic (선언형 - 논리형)** | Giải quyết vấn đề bằng suy diễn logic mệnh đề và quy tắc. | PROLOG | Hệ chuyên gia (Expert System), chứng minh định lý tự động. |
 
 - **주의/함정 (Bẫy đề thi):**
-  - **Khẳng định sai về Interpreter:** Đề thi khẳng định: *"Trình thông dịch tạo ra tệp mã đối tượng trước khi thực thi"* $\rightarrow$ Đây là khẳng định **SAI HOÀN TOÀN**; chỉ Compiler mới tạo ra mã đối tượng (목적 코드).
-  - **Nhầm lẫn giữa FORTRAN và COBOL:** FORTRAN dành cho khoa học kỹ thuật (Formula Translation); COBOL dành cho kế toán, thương mại kinh doanh (Common Business-Oriented Language).
+  - **Khẳng định sai về Interpreter:** Đề thi khẳng định: *"Trình thông dịch tạo ra tệp mã đối tượng trước khi thực thi"* -> Đây là khẳng định **SAI HOÀN TOÀN**; chỉ Compiler mới tạo ra mã đối tượng (목적 코드).
+  - **Nhiệm vụ của Syntax vs Semantic:** Kiểm tra dấu ngoặc, thiếu dấu chấm phẩy thuộc về **Syntax Analysis**; kiểm tra lỗi cộng số nguyên với chuỗi (sai kiểu) hoặc dùng biến chưa khai báo thuộc về **Semantic Analysis**.
+  - **JIT Compiler:** JIT là thành phần của máy ảo (như JVM, V8), biên dịch Bytecode thành mã máy ngay tại runtime cho các đoạn mã chạy nhiều lần (Hotspot), kết hợp ưu điểm khởi động nhanh của Interpreter và tốc độ cao của Compiler.
 
 - **한 문장 설명 (Câu chốt tự nhớ):**
-  - *"Compiler sinh file chạy nhanh, Interpreter dịch từng dòng tương tác; FORTRAN khoa học, COBOL kế toán, PROLOG suy diễn logic."*
+  - *"Compiler sinh file chạy nhanh qua 6 bước (từ vựng token, cú pháp parse tree, ngữ nghĩa type check, mã trung gian, tối ưu, mã máy); Interpreter dịch từng dòng; JIT nung mã nóng thành mã máy."*
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Sơ đồ quy trình biên dịch của C (Compiler Pipeline):
-$$\text{Mã nguồn (.c)} \xrightarrow{\text{Tiền xử lý (Preprocessor)}} \text{Mã mở rộng} \xrightarrow{\text{Trình biên dịch (Compiler)}} \text{Mã hợp ngữ (.s)} \xrightarrow{\text{Trình hợp dịch (Assembler)}} \mathbf{\text{Mã đối tượng (.obj)}} \xrightarrow{\text{Trình liên kết (Linker)}} \mathbf{\text{Tệp thực thi (.exe)}}$$
+#### 1. Sơ đồ luồng 6 giai đoạn biên dịch chi tiết (Compiler Pipeline):
+```text
+[ Mã nguồn C: "int a = b + 10;" ]
+               |
+               v
+1. Phân tích từ vựng (Lexer)     --> [ Token: <INT>, <ID, "a">, <ASSIGN>, <ID, "b">, <PLUS>, <NUM, 10>, <SEMI> ]
+               |
+               v
+2. Phân tích cú pháp (Parser)    --> [ Parse Tree / AST: Nút gốc '=' có con trái 'a', con phải '+'(b, 10) ]
+               |
+               v
+3. Phân tích ngữ nghĩa (Semantic) --> [ Kiểm tra: Biến b đã khai báo chưa? Kiểu của b có cộng được với 10 không? ]
+               |
+               v
+4. Sinh mã trung gian (IR Gen)   --> [ Mã 3 địa chỉ: t1 = b + 10; a = t1 ]
+               |
+               v
+5. Tối ưu hóa mã (Optimizer)     --> [ Loại bỏ biến phụ t1, tối ưu thanh ghi ]
+               |
+               v
+6. Sinh mã đích (Code Gen)       --> [ Mã máy / Hợp ngữ: MOV EAX, [b]; ADD EAX, 10; MOV [a], EAX ]
+```
 
-- Tệp `.obj` chứa mã máy nhưng chưa liên kết các hàm thư viện như `printf`.
-- Trình liên kết (Linker) chịu trách nhiệm ghép nối `.obj` với các thư viện chuẩn để sinh ra tệp thực thi cuối cùng `.exe`.
+#### 2. Sơ đồ cơ chế hoạt động của JIT Compiler trong Java Virtual Machine (JVM):
+```text
++---------------------+
+| Mã nguồn Java (.java)|
++---------------------+
+           | javac (Biên dịch tĩnh ban đầu)
+           v
++---------------------+
+| Bytecode (.class)   | (Độc lập nền tảng, mã giả lập cho JVM)
++---------------------+
+           |
+           v Nạp vào JVM Runtime
++-------------------------------------------------------------+
+| JVM Execution Engine                                        |
+|  - Interpreter: Dịch và chạy từng dòng Bytecode ngay lập tức|
+|  - Profiler: Theo dõi các đoạn mã chạy lặp lại nhiều lần    |
+|              (Hotspot Code)                                 |
+|  - JIT Compiler: Biên dịch trực tiếp Hotspot Bytecode thành  |
+|                  Mã máy CPU bản địa (Native Machine Code)   |
+|                  -> Lưu vào Code Cache để chạy siêu tốc     |
++-------------------------------------------------------------+
+```
 
-#### 2. Sơ đồ quy trình thực thi mã Bytecode của Java (JVM):
-$$\text{Mã nguồn Java (.java)} \xrightarrow{\text{Lệnh javac}} \mathbf{\text{Bytecode (.class)}} \xrightarrow{\text{Nạp vào JVM}} \begin{cases} \text{Interpreter: Dịch nhanh từng dòng} \\ \text{JIT Compiler: Dịch mã máy cho đoạn lặp nhiều} \end{cases}$$
-
-#### 3. Đối chiếu tư duy "How" (Mệnh lệnh) vs "What" (Khai báo):
-- **Ví dụ bài toán:** Lấy các số chẵn trong danh sách `[1, 2, 3, 4, 5, 6]`.
-  - *Mô hình Mệnh lệnh (C - "How"):*
-    Lập trình viên phải chỉ rõ từng bước: Khởi tạo mảng kết quả, tạo vòng lặp từ 0 đến 5, kiểm tra `arr[i] % 2 == 0`, nếu đúng thì gán vào mảng mới và tăng biến đếm.
-  - *Mô hình Khai báo (SQL / Functional - "What"):*
-    Chỉ cần tuyên bố điều kiện mong muốn: `SELECT num FROM numbers WHERE num % 2 = 0;` mà không cần quan tâm máy tính duyệt vòng lặp như thế nào.
+#### 3. So sánh các mô hình lập trình qua bài toán tính tổng mảng:
+- *Mô hình Mệnh lệnh (C - Imperative "How"):*
+```c
+int sum = 0;
+for (int i = 0; i < n; i++) {
+    sum += arr[i]; // Lập trình viên tự quản lý biến chỉ số và trạng thái cộng dồn
+}
+```
+- *Mô hình Hàm (Python/LISP - Declarative "What"):*
+```python
+total = sum(arr) # Chỉ định kết quả mong muốn, không bận tâm đến cơ chế lặp bên dưới
+```
 
 ---
 
 ### 복습 체크리스트
-- [ ] Ghi nhớ tiêu chí quyết định: Compiler tạo ra mục đích mã đối tượng (`.obj`), Interpreter không tạo mã đối tượng.
-- [ ] Nắm được ưu điểm của Compiler: Tốc độ thực thi nhanh; ưu điểm của Interpreter: Debug nhanh từng dòng.
-- [ ] Nhớ triết lý: Mệnh lệnh tập trung vào "How", Khai báo tập trung vào "What".
-- [ ] Thuộc tên ngôn ngữ đặc thù: FORTRAN (khoa học), COBOL (kinh doanh), PROLOG (logic), LISP (hàm/AI).
-- [ ] Hiểu cơ chế Java Bytecode: `javac` dịch sang `.class`, máy ảo JVM thực thi độc lập nền tảng.
+- [ ] Ghi nhớ tiêu chí quyết định: Compiler tạo ra tệp mã đối tượng (`.obj`), Interpreter không tạo mã đối tượng.
+- [ ] Thuộc lòng thứ tự 6 giai đoạn của Compiler: Từ vựng -> Cú pháp -> Ngữ nghĩa -> Mã trung gian -> Tối ưu -> Mã đích.
+- [ ] Phân biệt được: Syntax Analysis sinh Parse Tree, Semantic Analysis thực hiện kiểm tra kiểu (Type Checking).
+- [ ] Hiểu rõ cơ chế JIT Compiler: Dịch Bytecode thành Native Code tại runtime cho các đoạn mã Hotspot.
+- [ ] Nhớ triết lý: Mệnh lệnh (C) tập trung vào "How", Khai báo (SQL, Hàm) tập trung vào "What".
+- [ ] Thuộc tên các ngôn ngữ lịch sử: FORTRAN (khoa học), COBOL (kinh doanh), PROLOG (logic), LISP (hàm/AI).

@@ -99,7 +99,6 @@ Phương tiện nhân viên dùng để đi làm
 Những thông tin này tồn tại trong thực tế nhưng không cần thiết cho mục tiêu quản lý nhân sự.
 
 #### Cách hiểu dễ nhớ
-Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 추상화 = Bỏ chi tiết phụ, giữ bản chất chính
@@ -142,7 +141,6 @@ PRODUCT
 ```
 
 #### Cách hiểu dễ nhớ
-Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 단순화 = Biến câu chuyện nghiệp vụ phức tạp thành cấu trúc dễ nhìn
@@ -187,7 +185,6 @@ DEPARTMENT 1 ─── N EMPLOYEE
 - `EMPLOYEE.DEPARTMENT_ID` có thể là Foreign Key.
 
 #### Cách hiểu dễ nhớ
-Phần này nối mạch SQL với “Cách hiểu dễ nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 명확화 = Không để người đọc phải đoán
@@ -380,7 +377,6 @@ Ví dụ:
 | Hủy đơn | UPDATE trạng thái, hoàn kho |
 
 #### Cách ghi nhớ
-Phần này nối mạch SQL với “Cách ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 데이터 관점 = What?
@@ -618,7 +614,6 @@ CUSTOMER_NAME VARCHAR2(100)
 ```
 
 #### Đặc điểm ghi nhớ
-Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 개념적 = 업무와 핵심 Entity
@@ -657,7 +652,6 @@ Key:
 ```
 
 #### Đặc điểm ghi nhớ
-Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 논리적 = 테이블, 키, 속성, 관계, 정규화
@@ -694,7 +688,6 @@ ON CUSTOMER(CUSTOMER_NAME);
 ```
 
 #### Đặc điểm ghi nhớ
-Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```
 물리적 = DBMS, 데이터 타입, 인덱스, 저장
@@ -703,7 +696,6 @@ Phần này nối mạch SQL với “Đặc điểm ghi nhớ”, giải thích
 ---
 
 ## 8. So sánh ba cấp độ
-Phần này nối mạch SQL với “8. So sánh ba cấp độ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | Tiếng Việt | Keyword chính |
 | --- | --- | --- |
@@ -727,156 +719,121 @@ Mô hình hóa vật lý tập trung vào Index và phương thức lưu trữ.
 
 ---
 
-## 9. Tính độc lập của dữ liệu
+## 9. Kiến trúc 3 tầng lược đồ ANSI/SPARC (ANSI/SPARC 3단계 스키마 구조)
 
-**데이터 독립성이란 데이터 구조가 변경되어도 응용 프로그램이 반드시 변경될 필요가 없는 성질이다.**
+Để đảm bảo tính độc lập dữ liệu và che giấu sự phức tạp của việc lưu trữ vật lý đối với người dùng, tổ chức ANSI/X3/SPARC đã chuẩn hóa kiến trúc cơ sở dữ liệu thành **3 tầng lược đồ (3단계 스키마 구조)**:
 
-Tính độc lập dữ liệu là đặc tính trong đó chương trình ứng dụng không nhất thiết phải thay đổi khi cấu trúc dữ liệu thay đổi.
+### 9.1. 외부 스키마 (External Schema) — Góc nhìn người dùng (사용자 관점)
+- **Khái niệm:** Là tầng mô tả khung nhìn dữ liệu của từng cá nhân, nhóm người dùng hoặc một chương trình ứng dụng cụ thể (**View / 사용자 뷰**).
+- **Đặc trưng:**
+  - Mỗi nhóm người dùng (ví dụ: nhân viên bán hàng, kế toán, quản trị viên) chỉ nhìn thấy và thao tác trên phần dữ liệu liên quan trực tiếp đến nghiệp vụ của mình.
+  - Một cơ sở dữ liệu có thể có **nhiều 외부 스키마** khác nhau cùng tồn tại.
+  - Được định nghĩa thông qua các View (Khung nhìn) hoặc giao diện truy vấn trong ứng dụng.
 
-#### Keyword: 데이터 독립성
+### 9.2. 개념 스키마 (Conceptual Schema) — Góc nhìn tổng thể toàn cục (통합 관점)
+- **Khái niệm:** Là tầng mô tả cấu trúc logic toàn diện của toàn bộ cơ sở dữ liệu của một tổ chức (**Toàn bộ Entity, Attribute, Relationship, Ràng buộc nghiệp vụ và Phân quyền**).
+- **Đặc trưng:**
+  - Đóng vai trò là bức tranh tổng hợp hợp nhất tất cả các góc nhìn bên ngoài thành một thể thống nhất độc lập với DBMS vật lý cụ thể.
+  - Mỗi hệ thống cơ sở dữ liệu chỉ có **duy nhất 1 개념 스키마** đại diện cho toàn bộ tổ chức.
+  - Chính là sản phẩm đầu ra hoàn chỉnh của giai đoạn **Mô hình hóa dữ liệu logic (논리적 데이터 모델링)**.
 
-**데이터 독립성은 데이터베이스의 한 계층이 변경되어도 다른 계층에 미치는 영향을 최소화하는 개념이다.**
-
-Tính độc lập dữ liệu là khái niệm giảm thiểu ảnh hưởng giữa các tầng khi một tầng của database thay đổi.
-
----
-
-### 9.1. 물리적 독립성 - Độc lập dữ liệu vật lý
-
-**물리적 독립성은 저장 구조나 접근 방법이 변경되어도 논리적 스키마와 응용 프로그램이 영향을 받지 않는 것이다.**
-
-Độc lập dữ liệu vật lý là khi cấu trúc lưu trữ hoặc phương thức truy cập thay đổi nhưng schema logic và chương trình ứng dụng không bị ảnh hưởng.
-
-Ví dụ:
-
-- Thêm Index.
-- Thay đổi Index.
-- Di chuyển Tablespace.
-- Partition bảng.
-- Thay đổi vị trí lưu trữ.
-
-Ứng dụng vẫn dùng:
-
-```sql
-SELECT *
-FROM CUSTOMER;
-```
-
-#### Keyword: 물리적 독립성
-Phần này nối mạch SQL với “Keyword: 물리적 독립성”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```
-Thay đổi cách lưu trên đĩa
-→ Không cần thay đổi ứng dụng
-```
+### 9.3. 내부 스키마 (Internal Schema) — Góc nhìn lưu trữ vật lý (물리적 저장 관점)
+- **Khái niệm:** Là tầng mô tả cách thức dữ liệu thực sự được tổ chức và lưu trữ vật lý trên các thiết bị đĩa cứng (**Storage Structures, Data Types, Block Sizes, Indices, Hashing**).
+- **Đặc trưng:**
+  - Phản ánh chi tiết việc cấp phát bộ nhớ, cấu trúc tệp tin, đường dẫn truy cập (Access Paths) và chỉ mục Index nhằm tối ưu hóa hiệu năng I/O.
+  - Mỗi cơ sở dữ liệu chỉ có **duy nhất 1 내부 스키마**.
+  - Chính là sản phẩm đầu ra của giai đoạn **Mô hình hóa dữ liệu vật lý (물리적 데이터 모델링)**.
 
 ---
 
-### 9.2. 논리적 독립성 - Độc lập dữ liệu logic
+### 9.4. Cơ chế ánh xạ 2 tầng (2단계 사상 - Mapping)
 
-**논리적 독립성은 논리적 스키마가 변경되어도 외부 스키마와 응용 프로그램에 미치는 영향을 최소화하는 것이다.**
+Mối liên kết giữa 3 tầng lược đồ được duy trì thông qua 2 cơ chế ánh xạ độc lập nhằm bảo đảm tính độc lập dữ liệu:
 
-Độc lập dữ liệu logic là giảm thiểu ảnh hưởng đến schema bên ngoài và chương trình ứng dụng khi schema logic thay đổi.
+1. **외부/개념 사상 (External / Conceptual Mapping — 논리적 사상 / Ánh xạ logic):**
+   - Ánh xạ giữa từng góc nhìn người dùng (외부 스키마) và lược đồ logic toàn cục (개념 스키마).
+   - Xác định xem dữ liệu hiển thị trên ứng dụng tương ứng với bảng và cột nào trong cấu trúc toàn hệ thống.
+   - **Mang lại Tính độc lập dữ liệu logic (논리적 데이터 독립성).**
 
-Ví dụ thêm một cột:
-
-```
-CUSTOMER
-- CUSTOMER_ID
-- CUSTOMER_NAME
-- EMAIL
-```
-
-Câu SQL cũ vẫn có thể chạy:
-
-```sql
-SELECT CUSTOMER_ID, CUSTOMER_NAME
-FROM CUSTOMER;
-```
-
-Nhưng nếu đổi tên cột:
-
-```
-CUSTOMER_NAME → NAME
-```
-
-thì ứng dụng có thể lỗi nếu đang dùng `CUSTOMER_NAME`.
-
-Có thể dùng View để duy trì giao diện cũ:
-
-```sql
-CREATE VIEW CUSTOMER_VIEW AS
-SELECT CUSTOMER_ID,
-       NAME AS CUSTOMER_NAME
-FROM CUSTOMER;
-```
-
-#### Keyword: 논리적 독립성
-Phần này nối mạch SQL với “Keyword: 논리적 독립성”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```
-Thay đổi cấu trúc logic
-→ Hạn chế ảnh hưởng đến ứng dụng
-```
+2. **개념/내부 사상 (Conceptual / Internal Mapping — 물리적 사상 / Ánh xạ vật lý):**
+   - Ánh xạ giữa lược đồ logic toàn cục (개념 스키마) và cấu trúc lưu trữ trên đĩa cứng (내부 스키마).
+   - Xác định bảng logic được lưu trữ trong tệp nào, trên tablespace nào, và sử dụng những Index vật lý nào.
+   - **Mang lại Tính độc lập dữ liệu vật lý (물리적 데이터 독립성).**
 
 ---
 
-## 10. Nếu không duy trì tính độc lập dữ liệu
+## 10. Tính độc lập của dữ liệu (데이터 독립성 - Data Independence)
+
+**데이터 독립성이란 하위 단계의 데이터 구조가 변경되어도 상위 단계의 구조나 응용 프로그램이 영향을 받지 않는 성질이다.**
+
+Tính độc lập dữ liệu là đặc tính trong đó cấu trúc dữ liệu ở tầng dưới thay đổi nhưng cấu trúc tầng trên hoặc chương trình ứng dụng không bị ảnh hưởng.
+
+### 10.1. 논리적 독립성 (Logical Data Independence)
+- **Bản chất:** Khi **개념 스키마 (Lược đồ logic toàn cục)** bị thay đổi (ví dụ: thêm bảng mới, bổ sung thêm cột vào bảng, điều chỉnh quan hệ), **외부 스키마 và chương trình ứng dụng vẫn không phải sửa đổi**.
+- **Cơ chế:** Nhờ có **외부/개념 사상 (Logical Mapping)**, ta chỉ cần điều chỉnh lại định nghĩa ánh xạ (ví dụ: cập nhật lại câu lệnh View) để duy trì giao diện cũ cho người dùng mà không cần viết lại toàn bộ mã nguồn chương trình.
+- **Ví dụ thực tế:**
+  Bảng `CUSTOMER` được bổ sung thêm cột `EMAIL` và `PHONE_NUMBER`. Chương trình kế toán cũ chỉ truy vấn `CUSTOMER_ID` và `CUSTOMER_NAME` vẫn chạy bình thường mà không phát sinh bất kỳ lỗi nào.
+
+### 10.2. 물리적 독립성 (Physical Data Independence)
+- **Bản chất:** Khi **내부 스키마 (Cấu trúc lưu trữ vật lý)** bị thay đổi (ví dụ: tạo thêm Index mới, di chuyển sang ổ đĩa SSD mới, chia phân vùng Partitioning, tổ chức lại khối dữ liệu), **개념 스키마 và chương trình ứng dụng hoàn toàn không bị ảnh hưởng**.
+- **Cơ chế:** Nhờ có **개념/내부 사상 (Physical Mapping)**, hệ quản trị CSDL tự động ánh xạ cấu trúc bảng logic sang vị trí vật lý mới mà câu lệnh SQL của ứng dụng không cần thay đổi một ký tự nào.
+- **Ví dụ thực tế:**
+  DBA tạo thêm chỉ mục `CREATE INDEX IDX_CUST_NAME ON CUSTOMER(CUSTOMER_NAME)` hoặc phân vùng bảng theo năm. Câu lệnh `SELECT * FROM CUSTOMER WHERE CUSTOMER_NAME = 'Lee'` trong mã nguồn ứng dụng vẫn giữ nguyên, tốc độ truy vấn tăng lên mà mã nguồn không cần sửa đổi.
+
+---
+
+### 10.3. Bảng đối chiếu tổng hợp Kiến trúc ANSI/SPARC và Tính độc lập dữ liệu
+
+| Tầng lược đồ (Schema) | Góc nhìn kiến trúc | Số lượng lược đồ | Cơ chế ánh xạ (Mapping) | Tính độc lập dữ liệu bảo đảm |
+| :--- | :--- | :---: | :--- | :--- |
+| **외부 스키마 (External)** | Người dùng cá nhân / Ứng dụng (**사용자 관점**) | Nhiều (N) | **논리적 사상 (External/Conceptual)** | **논리적 독립성 (Logical Independence)**: Khái niệm đổi, ứng dụng không đổi. |
+| **개념 스키마 (Conceptual)** | Toàn bộ tổ chức / Doanh nghiệp (**통합 관점**) | 1 | | |
+| **내부 스키마 (Internal)** | Lưu trữ vật lý trên đĩa cứng (**물리적 저장 관점**) | 1 | **물리적 사상 (Conceptual/Internal)** | **물리적 독립성 (Physical Independence)**: Vật lý đổi, khái niệm và ứng dụng không đổi. |
+
+---
+
+## 11. Hậu quả khi không duy trì tính độc lập dữ liệu
 
 **데이터 독립성이 유지되지 않으면 데이터의 중복성과 복잡성이 증가한다.**
 
 Nếu không duy trì tính độc lập dữ liệu thì sự trùng lặp và phức tạp của dữ liệu sẽ tăng lên.
 
-**또한 요구사항에 대응하기 어려워지고 데이터 유지보수 비용이 증가한다.**
+**또한 요구사항에 대응하기 어려워지고 데이터 유지보수 비용이 급격히 증가한다.**
 
-Ngoài ra, việc đáp ứng yêu cầu trở nên khó khăn và chi phí bảo trì dữ liệu tăng lên.
+Ngoài ra, việc đáp ứng yêu cầu mới trở nên chậm chạp và chi phí bảo trì dữ liệu tăng vọt.
 
-#### Keyword: 유지보수 비용
-
-**유지보수 비용은 데이터 구조나 프로그램을 변경하고 테스트하며 관리하는 데 필요한 비용이다.**
-
-Chi phí bảo trì là chi phí cần thiết để thay đổi, kiểm thử và quản lý cấu trúc dữ liệu hoặc chương trình.
-
-Chuỗi ảnh hưởng:
+Chuỗi ảnh hưởng tiêu cực khi thiếu tính độc lập:
 
 ```
-Cấu trúc dữ liệu thay đổi
-→ SQL thay đổi
-→ Code thay đổi
-→ Kiểm thử lại
-→ Triển khai lại
-→ Có thể phát sinh lỗi
+Cấu trúc lưu trữ đĩa thay đổi
+→ Câu lệnh SQL buộc phải thay đổi
+→ Mã nguồn chương trình ứng dụng phải viết lại
+→ Tốn kém chi phí kiểm thử hồi quy toàn diện
+→ Nguy cơ phát sinh lỗi tiềm ẩn cao
 ```
 
 ---
 
-## 11. Tóm tắt toàn bộ hai trang
+## 12. Tóm tắt toàn bộ bài học
 
-**데이터 모델링은 현실 세계의 업무를 데이터베이스 구조로 변환하는 과정이다.**
-
-Mô hình hóa dữ liệu là quá trình chuyển nghiệp vụ trong thế giới thực thành cấu trúc database.
-
-**이를 위해 현실 세계를 추상화하고 단순화하며 명확하게 표현한다.**
-
-Để làm điều đó, ta trừu tượng hóa, đơn giản hóa và làm rõ thế giới thực.
-
-**데이터 모델링은 데이터, 프로세스, 상호작용의 세 가지 관점에서 분석할 수 있다.**
-
-Mô hình hóa dữ liệu có thể được phân tích theo ba góc nhìn: dữ liệu, quy trình và tương tác.
-
-**데이터 모델링은 개념적, 논리적, 물리적 모델링의 3단계로 진행된다.**
-
-Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: khái niệm, logic và vật lý.
-
-**좋은 데이터 모델은 중복, 비유연성, 비일관성을 줄이고 데이터 품질과 데이터 독립성을 유지한다.**
-
-Một mô hình dữ liệu tốt làm giảm trùng lặp, không linh hoạt và không nhất quán, đồng thời duy trì chất lượng và tính độc lập dữ liệu.
+1. **Định nghĩa:** Mô hình hóa dữ liệu là quá trình trừu tượng hóa, đơn giản hóa và làm rõ thế giới thực phức tạp thành cấu trúc cơ sở dữ liệu.
+2. **3 Góc nhìn mô hình hóa:**
+   - Góc nhìn dữ liệu (**데이터 관점 - What**): Dữ liệu cần quản lý là gì? (ERD).
+   - Góc nhìn quy trình (**프로세스 관점 - How**): Dữ liệu được xử lý như thế nào? (DFD).
+   - Góc nhìn tương tác (**상호작용 관점**): Quy trình tác động làm thay đổi dữ liệu ra sao? (CRUD Matrix).
+3. **3 Cấp độ mô hình hóa:**
+   - **개념적 모델링 (Khái niệm):** Xác định các Entity cốt lõi và mối quan hệ nghiệp vụ, lập ERD cấp cao.
+   - **논리적 모델링 (Logic):** Xác định Bảng, Cột, Khóa chính/Khóa ngoại và thực hiện chuẩn hóa (Normalization).
+   - **물리적 모델링 (Vật lý):** Thiết lập kiểu dữ liệu thực tế, Index, Partition và phương thức lưu trữ tối ưu hiệu năng.
+4. **Kiến trúc 3 lược đồ ANSI/SPARC:**
+   - 외부 스키마 (External - Người dùng) $\leftrightarrow$ [논리적 사상] $\leftrightarrow$ 개념 스키마 (Conceptual - Tổng thể) $\leftrightarrow$ [물리적 사상] $\leftrightarrow$ 내부 스키마 (Internal - Vật lý).
+   - Bảo đảm 2 cấp độ độc lập: **논리적 독립성** (Độc lập logic) và **물리적 독립성** (Độc lập vật lý).
 
 ---
 
-## 12. Nối mạch sang Bài 02: ERD, Entity, Thuộc tính, Quan hệ và Định danh
+## 13. Nối mạch sang Bài 02: ERD, Entity, Thuộc tính, Quan hệ và Định danh
 
 > **Mạch nối (Bridge):**
-> - **Từ đâu (Kiến thức nền):** Bài 01 đã xác lập khung nền tảng của mô hình hóa dữ liệu: 3 cấp độ (khái niệm, logic, vật lý) và các nguyên lý loại bỏ dư thừa, bất nhất để duy trì tính độc lập dữ liệu.
+> - **Từ đâu (Kiến thức nền):** Bài 01 đã xác lập khung nền tảng của mô hình hóa dữ liệu: 3 góc nhìn (What, How, CRUD), 3 cấp độ (khái niệm, logic, vật lý) và kiến trúc 3 tầng lược đồ ANSI/SPARC bảo đảm tính độc lập dữ liệu.
 > - **Đang giải quyết gì:** Làm thế nào để cụ thể hóa các yêu cầu nghiệp vụ trừu tượng thành các khối kiến trúc dữ liệu trực quan mà con người và hệ thống đều hiểu chung một nghĩa?
 > - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 02 — ERD, Entity, Attribute, Relationship và Identifier](./02-erd-entity-attribute-relationship-identifier.md) để hiện thực hóa mô hình dữ liệu qua 4 thành phần trụ cột cấu thành nên một sơ đồ thực thể liên kết (ERD) hoàn chỉnh và chuẩn hóa.

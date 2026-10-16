@@ -68,9 +68,11 @@
 
 | Thứ tự mô hình | Tên tiếng Hàn & Tiếng Anh | Biểu đồ sử dụng | Mục tiêu phân tích cốt lõi |
 |:---:|:---|:---|:---|
-| **Bước 1** | **객체 모델링**<br>(Object Modeling — Mô hình đối tượng) | **ER 다이어그램 (ERD), 클래스 다이어그램** | **Quan trọng nhất, thực hiện đầu tiên**. Mô tả cấu trúc tĩnh của các đối tượng và mối quan hệ giữa chúng. |
-| **Bước 2** | **동적 모델링**<br>(Dynamic Modeling — Mô hình động) | **상태 다이어그램 (State Diagram)** | Mô tả sự biến đổi trạng thái, tương tác và chuỗi hành vi của đối tượng theo thời gian khi có sự kiện tác động. |
-| **Bước 3** | **기능 모델링**<br>(Functional Modeling — Mô hình chức năng) | **자료 흐름도 (DFD - Data Flow Diagram)** | Mô tả quá trình biến đổi dữ liệu đầu vào thành dữ liệu đầu ra qua các tiến trình tính toán. |
+| Thứ tự mô hình | Tên tiếng Hàn & Tiếng Anh | Biểu đồ sử dụng | Mục tiêu phân tích cốt lõi |
+|:---:|:---|:---|:---|
+| **Bước 1** | **객체 모델링** (Object Modeling — Mô hình đối tượng) | **ER 다이어그램 (ERD), 클래스 다이어그램** | **Quan trọng nhất, thực hiện đầu tiên**. Mô tả cấu trúc tĩnh của các đối tượng và mối quan hệ giữa chúng. |
+| **Bước 2** | **동적 모델링** (Dynamic Modeling — Mô hình động) | **상태 다이어그램 (State Diagram)** | Mô tả sự biến đổi trạng thái, tương tác và chuỗi hành vi của đối tượng theo thời gian khi có sự kiện tác động. |
+| **Bước 3** | **기능 모델링** (Functional Modeling — Mô hình chức năng) | **자료 흐름도 (DFD - Data Flow Diagram)** | Mô tả quá trình biến đổi dữ liệu đầu vào thành dữ liệu đầu ra qua các tiến trình tính toán. |
 
 ##### B. Các phương pháp OOA tiêu biểu khác
 - `Coad와 Yourdon 방법`: Sử dụng biểu đồ E-R để mô hình hóa cấu trúc thực thể và quan hệ đối tượng.
@@ -127,14 +129,118 @@ Do Robert C. Martin ("Uncle Bob") hệ thống hóa, là tiêu chuẩn vàng c�
   - Gắn với từ khóa "Chia nhỏ giao diện lớn, không phụ thuộc hàm không dùng" $\rightarrow$ **ISP**.
   - Gắn với từ khóa "Phụ thuộc vào Interface trừu tượng, không phụ thuộc class cụ thể" $\rightarrow$ **DIP**.
 
-- **한 문장 설명 (Câu chốt ghi nhớ):** "OOP gồm Đóng gói, Kế thừa, Đa hình; Rumbaugh ba bước Khách - Động - Cơ; SOLID giữ vững Đơn trách, Đóng mở, Liskov thay thế, Tách giao diện, Đảo ngược phụ thuộc".
+- **💡 Khẩu quyết thần chú đề thi:**
+  - 4 Trụ cột OOP: **캡-상-다-추** (캡슐화, 상속, 다형성, 추상화).
+  - Rumbaugh OMT 3 bước: **객-동-기** (`객`체 모델링 $\rightarrow$ `동`적 모델링 $\rightarrow$ `기`능 모델링).
+  - SOLID 5 nguyên tắc: **단-개-리-인-의** (`단`일 책임, `개`방-폐쇄, `리`스코프 치환, `인`터페이스 분리, `의`존성 역전).
+  - Câu chốt ghi nhớ: "OOP gồm Đóng gói, Kế thừa, Đa hình, Trừu tượng; Rumbaugh ba bước Khách - Động - Cơ; SOLID giữ vững Đơn trách, Đóng mở, Liskov thay thế, Tách giao diện, Đảo ngược phụ thuộc".
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Bài toán kinh điển vi phạm nguyên tắc LSP: Hình chữ nhật vs Hình vuông
-- Trong hình học thực tế, Hình vuông là một trường hợp đặc biệt của Hình chữ nhật. Một lập trình viên tạo lớp `Square` kế thừa từ lớp `Rectangle`:
+#### 1. Phân tích 4 Trụ cột Lập trình Hướng đối tượng (4 Pillars of OOP)
+
+```text
+               ┌─────────────────────────────────────────────────────────┐
+               │           4 TRỤ CỘT HƯỚNG ĐỐI TƯỢNG (4 PILLARS)          │
+               ├────────────────────────────┬────────────────────────────┤
+               │ 1. 캡슐화 (Encapsulation)  │ 2. 상속성 (Inheritance)    │
+               │ - Gom dữ liệu & hành vi    │ - Kế thừa lớp cha $\rightarrow$ con│
+               │ - Che giấu thông tin nội bộ│ - Tái sử dụng mã nguồn     │
+               ├────────────────────────────┼────────────────────────────┤
+               │ 3. 다형성 (Polymorphism)   │ 4. 추상화 (Abstraction)    │
+               │ - 1 thông điệp, đa hành vi │ - Trích xuất đặc trưng lõi │
+               │ - Overloading / Overriding │ - Ẩn chi tiết triển khai   │
+               └────────────────────────────┴────────────────────────────┘
+```
+
+1. **캡슐화 (Encapsulation - Đóng gói):**
+   - Đóng gói thuộc tính (State) và phương thức (Behavior) vào chung trong một đơn vị đối tượng độc lập.
+   - Kết hợp với `정보 은닉 (Information Hiding)` thông qua các phạm vi truy cập (`private`, `protected`, `public`) để bảo vệ dữ liệu nội tại, ngăn chặn truy cập trái phép từ bên ngoài, giúp hệ thống đạt chuẩn "Gắn kết cao, Phụ thuộc thấp" (`응집도↑, 결합도↓`).
+2. **상속성 (Inheritance - Kế thừa):**
+   - Cho phép lớp con (`자식 클래스 / 서브 클래스`) tái sử dụng toàn bộ cấu trúc thuộc tính và phương thức của lớp cha (`부모 클래스 / 슈퍼 클래스`).
+   - Thúc đẩy việc tái sử dụng phần mềm (`소프트웨어 재사용성`), tránh trùng lặp mã nguồn và tạo nền tảng thiết lập quan hệ gia đình (IS-A relationship).
+3. **다형성 (Polymorphism - Đa hình):**
+   - Cùng một tên thông điệp gửi đến các đối tượng thuộc các kiểu dữ liệu khác nhau sẽ kích hoạt phương thức xử lý chuyên biệt tương ứng.
+   - Hiện thực hóa qua hai cơ chế: Nạp chồng (`오버로딩` - tĩnh, tại thời điểm biên dịch) và Ghi đè (`오버라이딩` - động, tại thời điểm thực thi nhờ Dynamic Method Dispatch).
+4. **추상화 (Abstraction - Trừu tượng hóa):**
+   - Quá trình tập trung vào các đặc tính bản chất cốt lõi của một thực thể trong thế giới thực và bỏ qua các chi tiết kỹ thuật phức tạp không cần thiết ở cấp độ hiện tại.
+   - Ba cấp độ trừu tượng hóa kinh điển: Trừu tượng hóa quá trình (`과정 추상화`), Trừu tượng hóa dữ liệu (`데이터 추상화`), và Trừu tượng hóa điều khiển (`제어 추상화`).
+
+#### 2. So sánh đối chiếu toàn diện 5 Nguyên tắc SOLID qua Ví dụ Code thực chiến
+
+##### A. SRP (Single Responsibility Principle)
+- **Vi phạm SRP:**
+  ```java
+  class UserService {
+      public void registerUser(String email, String password) {
+          // 1. Logic nghiệp vụ tạo User
+          User user = new User(email, password);
+          // 2. Vi phạm: Chứa trực tiếp mã truy vấn CSDL
+          String sql = "INSERT INTO users VALUES ('" + email + "')";
+          database.execute(sql);
+          // 3. Vi phạm: Chứa trực tiếp logic gửi email
+          EmailClient.send(email, "Chào mừng bạn!");
+      }
+  }
+  ```
+- **Tuân thủ SRP:**
+  ```java
+  class UserService {
+      private final UserRepository userRepository;
+      private final NotificationService notificationService;
+      public UserService(UserRepository repo, NotificationService noti) {
+          this.userRepository = repo;
+          this.notificationService = noti;
+      }
+      public void registerUser(String email, String password) {
+          User user = new User(email, password);
+          userRepository.save(user); // Chỉ điều phối nghiệp vụ
+          notificationService.sendWelcome(user);
+      }
+  }
+  ```
+
+##### B. OCP (Open-Closed Principle)
+- **Vi phạm OCP (Dùng if-else/switch dựa trên loại hình cụ thể):**
+  ```java
+  class AreaCalculator {
+      public double calculateArea(Object shape) {
+          if (shape instanceof Circle) {
+              Circle c = (Circle) shape;
+              return Math.PI * c.radius * c.radius;
+          } else if (shape instanceof Rectangle) {
+              Rectangle r = (Rectangle) shape;
+              return r.width * r.height;
+          }
+          // Mỗi khi thêm hình mới (Tam giác, Hình thang) -> Bắt buộc phải SỬA hàm calculateArea!
+          return 0;
+      }
+  }
+  ```
+- **Tuân thủ OCP (Sử dụng Interface trừu tượng):**
+  ```java
+  interface Shape {
+      double getArea();
+  }
+  class Circle implements Shape {
+      private double radius;
+      public double getArea() { return Math.PI * radius * radius; }
+  }
+  class Rectangle implements Shape {
+      private double width, height;
+      public double getArea() { return width * height; }
+  }
+  // Khi cần thêm Triangle, chỉ cần tạo: class Triangle implements Shape
+  // Lớp AreaCalculator hoàn toàn KHÔNG CẦN CHỈNH SỬA MÃ NGUỒN CŨ!
+  class AreaCalculator {
+      public double calculateArea(Shape shape) { return shape.getArea(); }
+  }
+  ```
+
+##### C. LSP (Liskov Substitution Principle)
+- **Bài toán kinh điển vi phạm LSP: Hình chữ nhật vs Hình vuông:**
   ```java
   class Rectangle {
       protected int width, height;
@@ -149,33 +255,81 @@ Do Robert C. Martin ("Uncle Bob") hệ thống hóa, là tiêu chuẩn vàng c�
       public void setHeight(int h) { this.width = h; this.height = h; }
   }
   ```
-- **Hậu quả vi phạm LSP:** Khi một hàm máy khách kiểm thử tính đúng đắn:
+- **Hậu quả vi phạm LSP:**
   ```java
-  void testArea(Rectangle r) {
+  void verifyRectangle(Rectangle r) {
       r.setWidth(5);
       r.setHeight(4);
-      assert r.getArea() == 20; // Đúng với Rectangle, nhưng SẼ BỊ FAIL nếu r là một Square (kết quả là 16)!
+      // Kết quả kỳ vọng: 5 * 4 = 20.
+      // Nếu r là Rectangle: getArea() == 20 (Đúng).
+      // Nhưng nếu r là Square: getArea() == 16 (Sai logic hoàn toàn!).
+      assert r.getArea() == 20;
   }
   ```
-- Đoạn mã trên cho thấy `Square` không thể thay thế cho `Rectangle` mà giữ nguyên hành vi mong đợi. Do đó, kế thừa toán học không đồng nghĩa với kế thừa hành vi trong hướng đối tượng; đây là ví dụ kinh điển vi phạm **LSP (리스코프 치환 원칙)**.
+- **Cách giải quyết tuân thủ LSP:** Tách cả hai thành hai lớp độc lập cùng hiện thực hóa giao diện chung `Shape`, không gượng ép `Square extends Rectangle`.
 
-#### 2. Kỹ thuật Dependency Injection (DI) hiện thực hóa DIP
-- **Không áp dụng DIP (Phụ thuộc chặt chẽ):**
+##### D. ISP (Interface Segregation Principle)
+- **Vi phạm ISP (Giao diện béo phì Fat Interface):**
   ```java
-  class OrderService {
-      private MySQLDatabase db = new MySQLDatabase(); // Module cấp cao phụ thuộc chặt vào module cấp thấp!
+  interface MultiFunctionDevice {
+      void print();
+      void scan();
+      void fax();
+  }
+  class BasicPrinter implements MultiFunctionDevice {
+      public void print() { System.out.println("Đang in văn bản..."); }
+      // Vi phạm: Bị ép cài đặt các phương thức không hỗ trợ!
+      public void scan() { throw new UnsupportedOperationException(); }
+      public void fax() { throw new UnsupportedOperationException(); }
   }
   ```
-  Nếu công ty chuyển sang dùng PostgreSQL hay MongoDB, toàn bộ lớp `OrderService` phải viết lại.
-- **Áp dụng DIP (Đảo ngược phụ thuộc qua Interface):**
+- **Tuân thủ ISP (Phân tách thành các giao diện vai trò hẹp):**
   ```java
-  interface Database { void save(Order o); }
-  class OrderService {
-      private Database db; // Phụ thuộc vào trừu tượng
-      public OrderService(Database db) { this.db = db; } // Tiêm phụ thuộc qua Constructor
+  interface Printer { void print(); }
+  interface Scanner { void scan(); }
+  interface Fax { void fax(); }
+
+  // Máy in cơ bản chỉ cần cài đặt đúng Printer
+  class BasicPrinter implements Printer {
+      public void print() { System.out.println("Đang in văn bản..."); }
+  }
+  // Máy đa chức năng cao cấp cài đặt cả 3 giao diện
+  class AdvancedAllInOne implements Printer, Scanner, Fax {
+      public void print() { /* in */ }
+      public void scan() { /* quét */ }
+      public void fax() { /* fax */ }
   }
   ```
-  Lúc này, `OrderService` hoàn toàn độc lập với chi tiết cơ sở dữ liệu. Bất kỳ lớp nào cài đặt `Database` đều có thể truyền vào mà không làm thay đổi một dòng code nghiệp vụ nào.
+
+##### E. DIP (Dependency Inversion Principle)
+- **Vi phạm DIP (Module cấp cao phụ thuộc trực tiếp vào Module cấp thấp):**
+  ```java
+  class OrderService {
+      // Vi phạm: Gắn chặt vào lớp cụ thể MySQLDatabase
+      private MySQLDatabase db = new MySQLDatabase();
+      public void processOrder(Order o) { db.save(o); }
+  }
+  ```
+- **Tuân thủ DIP (Cả hai phụ thuộc vào Interface trừu tượng qua Dependency Injection):**
+  ```java
+  interface Database {
+      void save(Order o);
+  }
+  // Module cấp thấp hiện thực hóa Interface
+  class MySQLDatabase implements Database { public void save(Order o) { /* SQL */ } }
+  class MongoDatabase implements Database { public void save(Order o) { /* NoSQL */ } }
+
+  // Module cấp cao chỉ phụ thuộc vào Interface trừu tượng
+  class OrderService {
+      private final Database database;
+      public OrderService(Database database) { // Tiêm phụ thuộc qua Constructor
+          this.database = database;
+      }
+      public void processOrder(Order o) {
+          database.save(o); // Độc lập hoàn toàn với loại CSDL cụ thể
+      }
+  }
+  ```
 
 ---
 

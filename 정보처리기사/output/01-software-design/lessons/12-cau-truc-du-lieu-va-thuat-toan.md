@@ -44,8 +44,8 @@
 
 | Nhánh cấu trúc | Đặc trưng quan hệ | Các cấu trúc dữ liệu cụ thể |
 |:---|:---:|:---|
-| **선형 구조<br>(Linear Data Structures)** | **Quan hệ 1:1**<br>(Tuần tự liên tiếp) | • **배열 (Array)**: Các phần tử cùng kiểu, nằm liền kề trong bộ nhớ, truy cập chỉ mục $O(1)$.<br>• **연결 리스트 (Linked List)**: Các nút nối nhau bằng con trỏ, chèn/xóa $O(1)$, truy cập $O(N)$.<br>• **스택 (Stack)**: Vào sau ra trước (LIFO).<br>• **큐 (Queue)**: Vào trước ra trước (FIFO).<br>• **데크 (Deque)**: Vào/ra ở cả hai đầu. |
-| **비선형 구조<br>(Non-linear Data Structures)** | **Quan hệ 1:N hoặc N:M**<br>(Phân nhánh, mạng lưới) | • **트리 (Tree)**: Cấu trúc phân cấp hình cây (Quan hệ 1:N cha - con).<br>• **그래프 (Graph)**: Cấu trúc mạng lưới đỉnh và cạnh (Quan hệ N:M). |
+| **선형 구조 (Linear Data Structures)** | **Quan hệ 1:1** (Tuần tự liên tiếp) | • **배열 (Array)**: Các phần tử cùng kiểu, nằm liền kề trong bộ nhớ, truy cập chỉ mục $O(1)$. • **연결 리스트 (Linked List)**: Các nút nối nhau bằng con trỏ, chèn/xóa $O(1)$, truy cập $O(N)$. • **스택 (Stack)**: Vào sau ra trước (LIFO). • **큐 (Queue)**: Vào trước ra trước (FIFO). • **데크 (Deque)**: Vào/ra ở cả hai đầu. |
+| **비선형 구조 (Non-linear Data Structures)** | **Quan hệ 1:N hoặc N:M** (Phân nhánh, mạng lưới) | • **트리 (Tree)**: Cấu trúc phân cấp hình cây (Quan hệ 1:N cha - con). • **그래프 (Graph)**: Cấu trúc mạng lưới đỉnh và cạnh (Quan hệ N:M). |
 
 ---
 
@@ -53,9 +53,9 @@
 
 | Cấu trúc | Nguyên lý hoạt động | Thao tác cốt lõi | Hiện tượng & Ứng dụng thực tế |
 |:---|:---:|:---|:---|
-| **스택<br>(Stack)** | **LIFO**<br>(Last In First Out / Vào sau ra trước) | • `Push`: Thêm phần tử vào đỉnh `Top`.<br>• `Pop`: Lấy phần tử ra từ đỉnh `Top`. | • `오버플로 (Overflow)`: Thêm vào khi Stack đã đầy.<br>• `언더플로 (Underflow)`: Lấy ra khi Stack rỗng.<br>• *Ứng dụng:* Ngăn xếp lời gọi hàm đệ quy (Call Stack), Đảo ngược chuỗi, Hoàn tác Undo/Redo, Tính biểu thức hậu tố. |
-| **큐<br>(Queue)** | **FIFO**<br>(First In First Out / Vào trước ra trước) | • `Enqueue`: Thêm phần tử vào đuôi `Rear`.<br>• `Dequeue`: Lấy phần tử ra từ đầu `Front`. | • Thêm và xóa diễn ra ở **hai đầu đối diện nhau**.<br>• *Ứng dụng:* Lập lịch điều phối CPU (FIFO/Round Robin), Hàng đợi in tài liệu, Hàng đợi thông điệp Message Queue (MOM). |
-| **데크<br>(Deque)** | **LIFO + FIFO**<br>(Hai đầu linh hoạt) | Cho phép cả hai thao tác Thêm (`Insert`) và Xóa (`Delete`) ở cả hai đầu `Front` và `Rear`. | • `Scroll`: Hạn chế đầu nhập.<br>• `Shelf`: Hạn chế đầu xuất. |
+| **스택 (Stack)** | **LIFO** (Last In First Out / Vào sau ra trước) | • `Push`: Thêm phần tử vào đỉnh `Top`. • `Pop`: Lấy phần tử ra từ đỉnh `Top`. | • `오버플로 (Overflow)`: Thêm vào khi Stack đã đầy. • `언더플로 (Underflow)`: Lấy ra khi Stack rỗng. • *Ứng dụng:* Ngăn xếp lời gọi hàm đệ quy (Call Stack), Đảo ngược chuỗi, Hoàn tác Undo/Redo, Tính biểu thức hậu tố. |
+| **큐 (Queue)** | **FIFO** (First In First Out / Vào trước ra trước) | • `Enqueue`: Thêm phần tử vào đuôi `Rear`. • `Dequeue`: Lấy phần tử ra từ đầu `Front`. | • Thêm và xóa diễn ra ở **hai đầu đối diện nhau**. • *Ứng dụng:* Lập lịch điều phối CPU (FIFO/Round Robin), Hàng đợi in tài liệu, Hàng đợi thông điệp Message Queue (MOM). |
+| **데크 (Deque)** | **LIFO + FIFO** (Hai đầu linh hoạt) | Cho phép cả hai thao tác Thêm (`Insert`) và Xóa (`Delete`) ở cả hai đầu `Front` và `Rear`. | • `Scroll`: Hạn chế đầu nhập. • `Shelf`: Hạn chế đầu xuất. |
 
 ---
 
@@ -66,6 +66,10 @@
   - `차수 (Degree - Bậc của nút)`: **Số lượng nút con trực tiếp** của một nút.
   - `트리의 차수 (Degree of Tree - Bậc của cây)`: **Giá trị bậc lớn nhất** trong tất cả các nút của cây.
 - **Cây nhị phân (이진 트리 - Binary Tree):** Cây mà mỗi nút có **tối đa 2 nút con (Degree $\le 2$)**.
+- **Các công thức toán học cây nhị phân kinh điển trong đề thi:**
+  1. Số nút tối đa ở tầng $i$ (Level $i$, gốc là tầng 1): **$\text{Max Nodes at Level } i = 2^{i-1}$**.
+  2. Số nút tối đa của cây nhị phân có độ cao $h$: **$\text{Max Nodes} = 2^h - 1$**.
+  3. Mối quan hệ giữa nút lá $n_0$ (bậc 0) và nút có 2 con $n_2$ (bậc 2): **$n_0 = n_2 + 1$** (Số nút lá luôn bằng số nút 2 con cộng 1).
 - **3 Phép duyệt cây nhị phân kinh điển (BẮT BUỘC THUỘC ĐỂ GIẢI ĐỀ THI):**
   1. `전위 순회 (Preorder Traversal)`: **Root $\rightarrow$ Left $\rightarrow$ Right** (Thăm nút Gốc trước).
   2. `중위 순회 (Inorder Traversal)`: **Left $\rightarrow$ Root $\rightarrow$ Right** (Thăm nút Gốc ở giữa).
@@ -128,24 +132,42 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Bài toán mẫu duyệt Cây nhị phân trong Đề thi thực tế
-Cho cây nhị phân có cấu trúc như sau:
+#### 1. Bài toán mẫu duyệt Cây nhị phân và Trace chi tiết từng bước
+Cho cây nhị phân mẫu sau:
+```text
+            [A] (Root)
+           /   \
+        [B]     [C]
+       /   \       \
+     [D]   [E]     [F]
 ```
-        A (Root)
-       / \
-      B   C
-     / \   \
-    D   E   F
-```
-- **1. Duyệt Tiền thứ tự (Preorder: Root $\rightarrow$ Left $\rightarrow$ Right):**
-  - Bắt đầu từ $A \rightarrow$ sang nhánh trái $B \rightarrow D \rightarrow E \rightarrow$ sang nhánh phải $C \rightarrow F$.
-  - **Kết quả: A - B - D - E - C - F**
-- **2. Duyệt Trung thứ tự (Inorder: Left $\rightarrow$ Root $\rightarrow$ Right):**
-  - Đi hết về bên trái nhất: $D \rightarrow B \rightarrow E \rightarrow$ về gốc $A \rightarrow$ sang nhánh phải: $C \rightarrow F$.
-  - **Kết quả: D - B - E - A - C - F**
-- **3. Duyệt Hậu thứ tự (Postorder: Left $\rightarrow$ Right $\rightarrow$ Root):**
-  - Nhánh trái trước: $D \rightarrow E \rightarrow B \rightarrow$ Nhánh phải: $F \rightarrow C \rightarrow$ Gốc sau cùng: $A$.
-  - **Kết quả: D - E - B - F - C - A**
+
+- **A. Duyệt Tiền thứ tự (Preorder Traversal: Root $\rightarrow$ Left $\rightarrow$ Right):**
+  - Bước 1: Thăm gốc `A`.
+  - Bước 2: Đi sang cây con trái của `A` (gốc là `B`) $\rightarrow$ Thăm `B`.
+  - Bước 3: Đi sang cây con trái của `B` (gốc là `D`, lá) $\rightarrow$ Thăm `D`.
+  - Bước 4: Đi sang cây con phải của `B` (gốc là `E`, lá) $\rightarrow$ Thăm `E`.
+  - Bước 5: Quay lại gốc `A`, đi sang cây con phải của `A` (gốc là `C`) $\rightarrow$ Thăm `C`.
+  - Bước 6: Đi sang cây con phải của `C` (gốc là `F`, lá) $\rightarrow$ Thăm `F`.
+  - **Chuỗi kết quả Preorder:** $\mathbf{A \rightarrow B \rightarrow D \rightarrow E \rightarrow C \rightarrow F}$.
+
+- **B. Duyệt Trung thứ tự (Inorder Traversal: Left $\rightarrow$ Root $\rightarrow$ Right):**
+  - Bước 1: Đi hết về phía trái nhất $\rightarrow$ Thăm `D`.
+  - Bước 2: Lùi về nút cha của `D` $\rightarrow$ Thăm `B`.
+  - Bước 3: Đi sang con phải của `B` $\rightarrow$ Thăm `E`.
+  - Bước 4: Lùi về nút gốc toàn cây $\rightarrow$ Thăm `A`.
+  - Bước 5: Đi sang cây con phải của `A`, thăm nút `C` (vì `C` không có con trái).
+  - Bước 6: Đi sang con phải của `C` $\rightarrow$ Thăm `F`.
+  - **Chuỗi kết quả Inorder:** $\mathbf{D \rightarrow B \rightarrow E \rightarrow A \rightarrow C \rightarrow F}$.
+
+- **C. Duyệt Hậu thứ tự (Postorder Traversal: Left $\rightarrow$ Right $\rightarrow$ Root):**
+  - Bước 1: Đi hết về con trái nhất $\rightarrow$ Thăm `D`.
+  - Bước 2: Đi sang con phải của `B` $\rightarrow$ Thăm `E`.
+  - Bước 3: Sau khi duyệt xong 2 con, thăm cha `B`.
+  - Bước 4: Chuyển sang cây con phải của `A`, đi đến lá `F`.
+  - Bước 5: Thăm cha `C` (sau khi con phải `F` xong).
+  - Bước 6: Thăm gốc toàn cây `A` sau cùng.
+  - **Chuỗi kết quả Postorder:** $\mathbf{D \rightarrow E \rightarrow B \rightarrow F \rightarrow C \rightarrow A}$.
 
 #### 2. Bài toán mẫu tính toán Biểu thức hậu tố bằng Stack
 - Cho biểu thức hậu tố: `3 4 2 * + 5 -`

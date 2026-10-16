@@ -42,18 +42,32 @@
 #### 2. 7 Cấp độ 응집도 (Cohesion — Độ gắn kết nội tại)
 - **Định nghĩa:** Là thước đo mức độ liên kết chặt chẽ và tập trung vào một mục đích chung duy nhất của các phần tử bên trong cùng một mô-đun. **응집도는 높을수록 (강할수록) 품질이 좋다**.
 - **Thứ tự 7 cấp độ từ Mạnh nhất (Tốt nhất) $\rightarrow$ Yếu nhất (Kém nhất):**
-  $$\text{기능적 (Functional)} > \text{순차적 (Sequential)} > \text{교환적 (Communication)} > \text{절차적 (Procedural)} > \text{시간적 (Temporal)} > \text{논리적 (Logical)} > \text{우연적 (Coincidental)}$$
-- **Mẹo ghi nhớ thần chú:** **기 - 순 - 교 - 절 - 시 - 논 - 우** (*Kì - Sun - Kiều - Chul - Shi - Non - U*).
+  $$\text{기능적 (Functional)} > \text{순차적 (Sequential)} > \text{통신적/교환적 (Communicational)} > \text{절차적 (Procedural)} > \text{시간적 (Temporal)} > \text{논리적 (Logical)} > \text{우연적 (Coincidental)}$$
+- **Biểu đồ phân cấp Cohesion (Độ gắn kết nội tại):**
+
+```text
+  ▲  [CAO / TỐT]  1. 기능적 (Functional)        - Duy nhất 1 chức năng chuyên biệt (TỐT NHẤT)
+  │               2. 순차적 (Sequential)        - Output của bước này là Input của bước sau
+  │               3. 통신/교환적 (Communicational) - Thao tác trên cùng cấu trúc dữ liệu I/O
+  │               4. 절차적 (Procedural)        - Thực thi theo thứ tự các bước điều khiển
+  │               5. 시간적 (Temporal)          - Gom việc thực hiện cùng một thời điểm (init/exit)
+  │               6. 논리적 (Logical)           - Gom các việc tương tự, rẽ nhánh qua cờ (Flag)
+  ▼  [THẤP / XẤU] 7. 우연적 (Coincidental)      - Gom ngẫu nhiên, không liên quan (TỆ NHẤT)
+```
+
+- **Mẹo ghi nhớ thần chú:**
+  - Từ cao xuống thấp: **기 - 순 - 통 - 절 - 시 - 논 - 우** (*Kỳ - Thuận - Thông - Tiết - Thời - Luận - Ngẫu*).
+  - Từ thấp lên cao: **우 - 논 - 시 - 절 - 통 - 순 - 기** (*Ngẫu - Luận - Thời - Tiết - Thông - Thuận - Kỳ*).
 
 | Cấp độ 응집도 | Tên tiếng Hàn & Anh | Bản chất kỹ thuật & Nhận diện đề thi |
 |:---|:---|:---|
-| **1. 기능적 (Mạnh nhất)** | `기능적 응집도`<br>(Functional Cohesion) | [Hàn/Anh]: `모듈 내부의 모든 기능 요소들이 단 하나의 단일 기능을 수행하는 경우.`<br>[Tiếng Việt]: Tất cả các phần tử bên trong module cùng phối hợp để thực hiện **DUY NHẤT MỘT CHỨC NĂNG NGHIỆP VỤ** (ví dụ: hàm tính căn bậc hai `sqrt(x)`). |
-| **2. 순차적** | `순차적 응집도`<br>(Sequential Cohesion) | [Hàn/Anh]: `모듈 내 하나의 활동으로부터 나온 출력 데이터를 그 다음 활동의 입력 데이터로 사용하는 경우.`<br>[Tiếng Việt]: **Đầu ra của thao tác này trở thành đầu vào trực tiếp của thao tác kế tiếp** bên trong module (ví dụ: Đọc file $\rightarrow$ Phân tích cú pháp). |
-| **3. 교환적 / 통신적** | `교환적(통신적) 응집도`<br>(Communication Cohesion) | [Hàn/Anh]: `동일한 입력 자료나 출력 자료를 사용하여 서로 다른 기능을 수행하는 경우.`<br>[Tiếng Việt]: Các phần tử **thao tác trên CÙNG MỘT DỮ LIỆU ĐẦU VÀO hoặc ĐẦU RA** nhưng thực hiện các mục đích khác nhau. |
-| **4. 절차적** | `절차적 응집도`<br>(Procedural Cohesion) | [Hàn/Anh]: `모듈 내의 기능들이 순차적으로 수행되지만, 데이터가 아닌 제어 흐름에 따라 순서대로 실행되는 경우.`<br>[Tiếng Việt]: Các thao tác được thực hiện **theo một trình tự các bước định trước** theo luồng điều khiển của thuật toán. |
-| **5. 시간적** | `시간적 응집도`<br>(Temporal Cohesion) | [Hàn/Anh]: `특정 시간에 처리되어야 하는 활동들을 한 모듈에 모아 놓은 경우.`<br>[Tiếng Việt]: Các thao tác được gom chung chỉ vì chúng **cùng được thực thi tại CÙNG MỘT THỜI ĐIỂM** (ví dụ: hàm khởi tạo hệ thống `initialize()`, hàm đóng file khi tắt máy). |
-| **6. 논리적** | `논리적 응집도`<br>(Logical Cohesion) | [Hàn/Anh]: `논리적으로 유사한 기능을 수행하지만 서로 다른 작업을 하는 요소들이 모여 있는 경우.`<br>[Tiếng Việt]: Các thao tác có tính chất tương tự nhau được gom chung và **chọn thực thi thông qua một cờ tham số (Flag)** (ví dụ: hàm `output(type)` vừa in ra giấy vừa ghi ra file tùy vào cờ type). |
-| **7. 우연적 (Yếu nhất)** | `우연적 응집도`<br>(Coincidental Cohesion) | [Hàn/Anh]: `모듈 내부의 요소들이 서로 아무런 관련성 없이 우연히 모여 있는 경우.`<br>[Tiếng Việt]: Các phần tử được gom chung vào module **hoàn toàn ngẫu nhiên**, không có bất kỳ mối liên hệ logic, dữ liệu hay thời gian nào. Chất lượng tệ nhất. |
+| **1. 기능적 (Mạnh nhất)** | `기능적 응집도` (Functional Cohesion) | [Hàn/Anh]: `모듈 내부의 모든 기능 요소들이 단 하나의 단일 기능을 수행하는 경우.` / [Tiếng Việt]: Tất cả các phần tử bên trong module cùng phối hợp để thực hiện **DUY NHẤT MỘT CHỨC NĂNG NGHIỆP VỤ** (ví dụ: hàm tính căn bậc hai `sqrt(x)`). |
+| **2. 순차적** | `순차적 응집도` (Sequential Cohesion) | [Hàn/Anh]: `모듈 내 하나의 활동으로부터 나온 출력 데이터를 그 다음 활동의 입력 데이터로 사용하는 경우.` / [Tiếng Việt]: **Đầu ra của thao tác này trở thành đầu vào trực tiếp của thao tác kế tiếp** bên trong module (ví dụ: Đọc file $\rightarrow$ Phân tích cú pháp). |
+| **3. 교환적 / 통신적** | `통신적(교환적) 응집도` (Communicational Cohesion) | [Hàn/Anh]: `동일한 입력 자료나 출력 자료를 사용하여 서로 다른 기능을 수행하는 경우.` / [Tiếng Việt]: Các phần tử **thao tác trên CÙNG MỘT DỮ LIỆU ĐẦU VÀO hoặc ĐẦU RA** nhưng thực hiện các mục đích khác nhau. |
+| **4. 절차적** | `절차적 응집도` (Procedural Cohesion) | [Hàn/Anh]: `모듈 내의 기능들이 순차적으로 수행되지만, 데이터가 아닌 제어 흐름에 따라 순서대로 실행되는 경우.` / [Tiếng Việt]: Các thao tác được thực hiện **theo một trình tự các bước định trước** theo luồng điều khiển của thuật toán. |
+| **5. 시간적** | `시간적 응집도` (Temporal Cohesion) | [Hàn/Anh]: `특정 시간에 처리되어야 하는 활동들을 한 모듈에 모아 놓은 경우.` / [Tiếng Việt]: Các thao tác được gom chung chỉ vì chúng **cùng được thực thi tại CÙNG MỘT THỜI ĐIỂM** (ví dụ: hàm khởi tạo hệ thống `initialize()`, hàm đóng file khi tắt máy). |
+| **6. 논리적** | `논리적 응집도` (Logical Cohesion) | [Hàn/Anh]: `논리적으로 유사한 기능을 수행하지만 서로 다른 작업을 하는 요소들이 모여 있는 경우.` / [Tiếng Việt]: Các thao tác có tính chất tương tự nhau được gom chung và **chọn thực thi thông qua một cờ tham số (Flag)** (ví dụ: hàm `output(type)` vừa in ra giấy vừa ghi ra file tùy vào cờ type). |
+| **7. 우연적 (Yếu nhất)** | `우연적 응집도` (Coincidental Cohesion) | [Hàn/Anh]: `모듈 내부의 요소들이 서로 아무런 관련성 없이 우연히 모여 있는 경우.` / [Tiếng Việt]: Các phần tử được gom chung vào module **hoàn toàn ngẫu nhiên**, không có bất kỳ mối liên hệ logic, dữ liệu hay thời gian nào. Chất lượng tệ nhất. |
 
 ---
 
@@ -61,16 +75,29 @@
 - **Định nghĩa:** Là thước đo mức độ phụ thuộc lẫn nhau giữa các mô-đun phần mềm. **결합도는 낮을수록 (약할수록) 품질이 좋다**.
 - **Thứ tự 6 cấp độ từ Yếu nhất (Tốt nhất) $\rightarrow$ Mạnh nhất (Xấu nhất):**
   $$\text{자료 (Data)} < \text{스탬프 (Stamp)} < \text{제어 (Control)} < \text{외부 (External)} < \text{공통 (Common)} < \text{내용 (Content)}$$
-- **Mẹo ghi nhớ thần chú:** **자 - 스 - 제 - 외 - 공 - 내** (*Tử - Stamp - Chế - Ngoại - Công - Nội*).
+- **Biểu đồ phân cấp Coupling (Độ phụ thuộc kết nối):**
+
+```text
+  ▲  [CAO / XẤU]  6. 내용 결합도 (Content)  - Can thiệp trực tiếp nội bộ/mã lệnh của module khác (TỆ NHẤT)
+  │               5. 공통 결합도 (Common)   - Dùng chung biến toàn cục (Global Variables)
+  │               4. 외부 결합도 (External) - Phụ thuộc định dạng/giao thức thiết bị bên ngoài
+  │               3. 제어 결합도 (Control)  - Truyền cờ điều khiển (Flag) can thiệp luồng rẽ nhánh
+  │               2. 스탬프 결합도 (Stamp)   - Truyền cả cấu trúc dữ liệu (Object/Record) dù chỉ dùng 1 phần
+  ▼  [THẤP / TỐT] 1. 자료 결합도 (Data)    - Chỉ truyền tham số giá trị đơn nguyên (Primitive) (TỐT NHẤT)
+```
+
+- **Mẹo ghi nhớ thần chú:**
+  - Từ thấp (tốt) lên cao (xấu): **자 - 스 - 제 - 외 - 공 - 내** (*Tư - Stamp - Chế - Ngoại - Công - Nội*).
+  - Từ cao (xấu) xuống thấp (tốt): **내 - 공 - 외 - 제 - 스 - 자** (*Nội - Công - Ngoại - Chế - Stamp - Tư*).
 
 | Cấp độ 결합도 | Tên tiếng Hàn & Anh | Bản chất kỹ thuật & Nhận diện đề thi |
 |:---|:---|:---|
-| **1. 자료 결합도<br>(Tốt nhất / Yếu nhất)** | `자료 결합도`<br>(Data Coupling) | [Hàn/Anh]: `모듈 간의 인터페이스가 오직 파라미터(단순 자료값)를 통해서만 이루어지는 경우.`<br>[Tiếng Việt]: Các module chỉ trao đổi với nhau bằng **các tham số giá trị đơn giản (Primitive parameters: int, float, string)**. Không chia sẻ cấu trúc dữ liệu phức tạp. Tốt nhất. |
-| **2. 스탬프 결합도** | `스탬프 결합도`<br>(Stamp Coupling) | [Hàn/Anh]: `모듈 간의 인터페이스로 배열이나 레코드 등의 동일한 자료구조가 전달되는 경우.`<br>[Tiếng Việt]: Các module truyền cho nhau **CẢ MỘT CẤU TRÚC DỮ LIỆU TỔNG THỂ** (Object, Record, Struct), trong khi module nhận chỉ thực sự dùng một vài trường nhỏ bên trong cấu trúc đó. |
-| **3. 제어 결합도** | `제어 결합도`<br>(Control Coupling) | [Hàn/Anh]: `한 모듈이 다른 모듈의 내부 논리 흐름을 제어하기 위해 제어 신호(플래그)를 전달하는 경우.`<br>[Tiếng Việt]: Module này truyền **cờ điều khiển (Control Flag)** sang module kia để trực tiếp chi phối luồng logic rẽ nhánh bên trong module đó. |
-| **4. 외부 결합도** | `외부 결합도`<br>(External Coupling) | [Hàn/Anh]: `모듈들이 외부에서 도입된 데이터 포맷, 통신 프로토콜, 디바이스 인터페이스를 공유하는 경우.`<br>[Tiếng Việt]: Các module cùng chia sẻ và phụ thuộc vào một **định dạng dữ liệu hoặc giao thức bên ngoài** hệ thống. |
-| **5. 공통 결합도** | `공통 결합도`<br>(Common Coupling) | [Hàn/Anh]: `여러 모듈이 하나의 공통 데이터 영역(전역 변수)을 공유하여 사용하는 경우.`<br>[Tiếng Việt]: Các module cùng truy cập và chia sẻ **MỘT VÙNG DỮ LIỆU TOÀN CỤC (Global Variables)**. Một module sửa biến toàn cục có thể làm sập các module khác. |
-| **6. 내용 결합도<br>(Tệ nhất / Mạnh nhất)** | `내용 결합도`<br>(Content Coupling) | [Hàn/Anh]: `한 모듈이 다른 모듈의 내부 자료나 명령어를 직접 참조하거나 수정하는 경우.`<br>[Tiếng Việt]: Module này **can thiệp trực tiếp vào mã nguồn nội bộ hoặc địa chỉ nhớ của module khác**. Phá vỡ hoàn toàn tính đóng gói. Tệ nhất. |
+| **1. 자료 결합도 (Tốt nhất / Yếu nhất)** | `자료 결합도` (Data Coupling) | [Hàn/Anh]: `모듈 간의 인터페이스가 오직 파라미터(단순 자료값)를 통해서만 이루어지는 경우.` / [Tiếng Việt]: Các module chỉ trao đổi với nhau bằng **các tham số giá trị đơn giản (Primitive parameters: int, float, string)**. Không chia sẻ cấu trúc dữ liệu phức tạp. Tốt nhất. |
+| **2. 스탬프 결합도** | `스탬프 결합도` (Stamp Coupling) | [Hàn/Anh]: `모듈 간의 인터페이스로 배열이나 레코드 등의 동일한 자료구조가 전달되는 경우.` / [Tiếng Việt]: Các module truyền cho nhau **CẢ MỘT CẤU TRÚC DỮ LIỆU TỔNG THỂ** (Object, Record, Struct), trong khi module nhận chỉ thực sự dùng một vài trường nhỏ bên trong cấu trúc đó. |
+| **3. 제어 결합도** | `제어 결합도` (Control Coupling) | [Hàn/Anh]: `한 모듈이 다른 모듈의 내부 논리 흐름을 제어하기 위해 제어 신호(플래그)를 전달하는 경우.` / [Tiếng Việt]: Module này truyền **cờ điều khiển (Control Flag)** sang module kia để trực tiếp chi phối luồng logic rẽ nhánh bên trong module đó. |
+| **4. 외부 결합도** | `외부 결합도` (External Coupling) | [Hàn/Anh]: `모듈들이 외부에서 도입된 데이터 포맷, 통신 프로토콜, 디바이스 인터페이스를 공유하는 경우.` / [Tiếng Việt]: Các module cùng chia sẻ và phụ thuộc vào một **định dạng dữ liệu hoặc giao thức bên ngoài** hệ thống. |
+| **5. 공통 결합도** | `공통 결합도` (Common Coupling) | [Hàn/Anh]: `여러 모듈이 하나의 공통 데이터 영역(전역 변수)을 공유하여 사용하는 경우.` / [Tiếng Việt]: Các module cùng truy cập và chia sẻ **MỘT VÙNG DỮ LIỆU TOÀN CỤC (Global Variables)**. Một module sửa biến toàn cục có thể làm sập các module khác. |
+| **6. 내용 결합도 (Tệ nhất / Mạnh nhất)** | `내용 결합도` (Content Coupling) | [Hàn/Anh]: `한 모듈이 다른 모듈의 내부 자료나 명령어를 직접 참조하거나 수정하는 경우.` / [Tiếng Việt]: Module này **can thiệp trực tiếp vào mã nguồn nội bộ hoặc địa chỉ nhớ của module khác**. Phá vỡ hoàn toàn tính đóng gói. Tệ nhất. |
 
 ---
 
@@ -112,14 +139,20 @@
   - `연상 코드 (Mnemonic Code - Mã liên tưởng)`: Dùng chữ cái viết tắt gợi nhớ trực tiếp đến tên sản phẩm (ví dụ: TV-42, TV-55).
 
 #### 7. Bẫy đề thi trắc nghiệm thường gặp (주의/함정)
-- **Bẫy 1 (Thứ tự 응집도):** Đề thi trắc nghiệm hay đảo vị trí giữa `순차적 (Sequential)` và `교환적 (Communication)`. Nhớ chắc chắn: **기 $\rightarrow$ 순 $\rightarrow$ 교 $\rightarrow$ 절 $\rightarrow$ 시 $\rightarrow$ 논 $\rightarrow$ 우**.
+- **Bẫy 1 (Thứ tự 응집도):** Đề thi trắc nghiệm hay đảo vị trí giữa `순차적 (Sequential)` và `교환/통신적 (Communicational)`. Nhớ chắc chắn: **기 $\rightarrow$ 순 $\rightarrow$ 통 $\rightarrow$ 절 $\rightarrow$ 시 $\rightarrow$ 논 $\rightarrow$ 우**.
 - **Bẫy 2 (Thứ tự 결합도):** Đề hỏi *"Loại kết hợp nào có chất lượng tốt nhất / độ phụ thuộc yếu nhất?"* $\rightarrow$ Đáp án là **자료 결합도 (Data Coupling)**. Hỏi *"Loại nào xấu nhất / phụ thuộc mạnh nhất?"* $\rightarrow$ Đáp án là **내용 결합도 (Content Coupling)**.
 - **Bẫy 3 (N-S Chart):** Đề hỏi *"Đặc điểm nào sau đây SAI về biểu đồ N-S?"* $\rightarrow$ Đáp án sai thường là: *"Sử dụng các mũi tên có điều kiện để biểu diễn luồng dữ liệu"* (N-S Chart **tuyệt đối không dùng mũi tên**).
 - **Bẫy 4 (Kỳ vọng Fan-In / Fan-Out):**
   - Fan-In (luồng gọi vào) $\rightarrow$ **Nên CAO (높게 설계)**.
   - Fan-Out (luồng gọi ra) $\rightarrow$ **Nên THẤP (낮게 설계)**.
 
-- **한 문장 설명 (Câu chốt ghi nhớ):** "Cohesion càng cao càng tốt theo Kì-Sun-Kiều-Chul-Shi-Non-U; Coupling càng thấp càng tốt theo Tử-Stamp-Chế-Ngoại-Công-Nội; Fan-In cao tái sử dụng, Fan-Out thấp giảm rối ren; N-S ba không: không tên, không GOTO, một vào một ra".
+- **💡 Khẩu quyết thần chú đề thi:**
+  - Quy tắc vàng thiết kế module: **고응저결 (Cao Ứng Thấp Kết)** $\rightarrow$ 응집도 높게(Cohesion High), 결합도 낮게(Coupling Low).
+  - Cohesion từ thấp đến cao: **우-논-시-절-통-순-기** (`우`연 $\rightarrow$ `논`리 $\rightarrow$ `시`간 $\rightarrow$ `절`차 $\rightarrow$ `통`신 $\rightarrow$ `순`차 $\rightarrow$ `기`능).
+  - Cohesion từ cao xuống thấp: **기-순-통-절-시-논-우**.
+  - Coupling từ thấp (tốt) đến cao (xấu): **자-스-제-외-공-내** (`자`료 $\rightarrow$ `스`탬프 $\rightarrow$ `제`어 $\rightarrow$ `외`부 $\rightarrow$ `공`통 $\rightarrow$ `내`용).
+  - Coupling từ cao (xấu) xuống thấp (tốt): **내-공-외-제-스-자**.
+  - Câu chốt ghi nhớ: "Cohesion càng cao càng tốt theo Kì-Sun-Thông-Chul-Shi-Non-U; Coupling càng thấp càng tốt theo Tử-Stamp-Chế-Ngoại-Công-Nội; Fan-In cao tái sử dụng, Fan-Out thấp giảm rối ren; N-S ba không: không tên, không GOTO, một vào một ra".
 
 ---
 

@@ -524,71 +524,98 @@ Khôi phục lại A
 
 ---
 
-## 13. 반정규화
+## 13. 반정규화 — Phi chuẩn hóa (Denormalization)
 
-## 13. Phi chuẩn hóa
+### 13.1. Bản chất và Nguyên tắc áp dụng
+**반정규화는 정규화된 데이터 모델에서 시스템의 성능 향상, 개발 및 운영의 단순화를 위해 의도적으로 중복, 통합, 분리를 수행하는 모델링 기법이다.**
 
-**반정규화는 성능 향상을 위해 데이터 중복을 허용하고 JOIN을 줄이는 방법이다.**
+Phi chuẩn hóa là kỹ thuật mô hình hóa có chủ đích chấp nhận trùng lặp dữ liệu, gộp hoặc tách bảng trên mô hình đã chuẩn hóa nhằm cải thiện hiệu năng truy vấn và đơn giản hóa việc phát triển, vận hành hệ thống.
 
-**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm JOIN để cải thiện hiệu năng.**
+- **Khác biệt quan trọng trong đề thi:**
+  - `정규화 (Normalization)`: Giảm thiểu trùng lặp, triệt tiêu bất thường (Anomaly) khi INSERT/UPDATE/DELETE.
+  - `반정규화 (Denormalization)`: Chấp nhận đánh đổi hiệu năng ghi để tăng tốc độ đọc (SELECT), giảm chi phí JOIN nhiều bảng.
+  - `비정규화 (Unnormalized)`: Mô hình thô ban đầu chưa từng được chuẩn hóa (khác hoàn toàn với 반정규화).
 
-**반정규화는 비정규화와 같지 않고 정규화된 모델을 성능 목적에 맞게 조정하는 것이다.**
+- **Quy trình 3 bước trước khi quyết định Phi chuẩn hóa:**
+  1. **정규화 수행 (Chuẩn hóa chuẩn mực):** Luôn hoàn thành chuẩn hóa mô hình dữ liệu trước tiên.
+  2. **대체 방안 검토 (Khảo sát các giải pháp thay thế):** Khi phát sinh vấn đề hiệu năng, trước hết phải xem xét: tạo thêm chỉ mục (Index), tạo khung nhìn (View), gom cụm dữ liệu (Clustering), hoặc tối ưu lại câu lệnh SQL.
+  3. **반정규화 적용 (Chỉ áp dụng khi cần thiết):** Nếu các giải pháp kỹ thuật trên không giải quyết được bài toán hiệu năng thì mới tiến hành phi chuẩn hóa.
 
-**Phi chuẩn hóa không giống với không chuẩn hóa; đó là việc điều chỉnh mô hình đã chuẩn hóa vì mục tiêu hiệu năng.**
+---
 
-### Khi thực hiện
+### 13.2. Ba nhóm kỹ thuật Phi chuẩn hóa chính
 
-**정규화로 엔터티와 관계가 많아져 JOIN 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
+#### 1) Phi chuẩn hóa Bảng (테이블 반정규화)
+- **테이블 병합 (Gộp bảng):**
+  - **Gộp bảng 1:1 (1:1 관계 병합):** Hai bảng có quan hệ 1:1 thường xuyên được truy vấn cùng nhau thì gộp làm một bảng duy nhất để triệt tiêu chi phí JOIN.
+  - **Gộp bảng 1:N (1:N 관계 병합):** Gộp bảng con vào bảng cha; nhược điểm lớn là làm lặp lại nhiều lần dữ liệu của bảng cha, tốn dung lượng lưu trữ.
+  - **Gộp mô hình Super/Sub-type (슈퍼·서브타입 병합):**
+    - *Single Table (One Table / Roll-up):* Gộp toàn bộ Super-type và Sub-types vào 1 bảng duy nhất; truy vấn nhanh nhất nhưng nhiều ô nhận giá trị NULL.
+    - *All Table per Sub-type:* Chỉ tạo các bảng Sub-type riêng biệt, chứa luôn thuộc tính của Super-type.
+    - *One Table per Type:* Giữ nguyên mỗi Sub-type một bảng và 1 bảng Super-type độc lập (kết nối qua PK/FK).
+- **테이블 분할 (Tách bảng):**
+  - **수직 분할 (Tách dọc / Vertical Split):** Tách một bảng có quá nhiều cột thành 2 bảng có cùng khóa chính PK. Đưa các cột có dung lượng lớn (TEXT, BLOB) hoặc các cột ít khi truy xuất sang bảng phụ để giảm kích thước bản ghi, tăng số bản ghi nạp được vào một khối I/O bộ nhớ đệm (Buffer Cache).
+  - **수평 분할 (Tách ngang / Horizontal Split):** Tách bảng thành nhiều bảng con có cấu trúc cột giống hệt nhau dựa trên điều kiện giá trị (ví dụ: tách theo năm `ORDER_2025`, `ORDER_2026`).
+- **테이블 추가 (Thêm bảng bổ trợ):**
+  - **집계 테이블 추가 (Thêm bảng tổng hợp):** Tạo bảng lưu sẵn các kết quả tổng hợp tính toán (`총매출`, `월별통계`) để tránh phải tính lại `SUM/AVG` trên hàng chục triệu dòng.
+  - **진행/이력 테이블 추가 (Thêm bảng tiến trình / lịch sử):** Lưu riêng trạng thái hiện tại hoặc vết lịch sử giao dịch để phục vụ tra cứu nhanh.
 
-**Có thể phi chuẩn hóa khi việc chuẩn hóa làm tăng Entity và quan hệ, dẫn đến dự đoán hiệu năng JOIN giảm.**
+#### 2) Phi chuẩn hóa Cột (컬럼 반정규화)
+- **중복 컬럼 추가 (Thêm cột trùng lặp):** Sao chép trực tiếp một cột thường xuyên dùng từ bảng này sang bảng khác (ví dụ: sao chép `부서명` sang bảng `사원`) để câu lệnh `SELECT` không cần phải thực hiện phép `JOIN`.
+- **파생 컬럼 추가 (Thêm cột phái sinh):** Lưu trực tiếp giá trị đã tính toán sẵn vào cột mới (ví dụ: cột `결제총액` trong bảng Đơn hàng = Đơn giá $\times$ Số lượng) thay vì tính toán động khi truy vấn.
+- **PK에 의한 컬럼 추가 (Thêm cột theo PK):** Khi PK là khóa phức hợp gồm nhiều cột, thêm cột đại diện để tạo điều kiện tìm kiếm đơn giản hơn.
 
-**대량의 범위를 자주 처리하거나 특정 범위의 데이터만 자주 처리할 때 반정규화를 고려할 수 있다.**
+#### 3) Phi chuẩn hóa Quan hệ (관계 반정규화)
+- **중복 관계 추가 (Thêm quan hệ trùng lặp):** Khi để truy vấn từ bảng A sang bảng C phải đi qua bảng B ($A \rightarrow B \rightarrow C$), ta tạo thêm một quan hệ trực tiếp từ $A \rightarrow C$ (thêm khóa ngoại FK trực tiếp từ C vào A) để giảm độ sâu của phép JOIN từ 2 lần xuống còn 1 lần.
 
-**Có thể cân nhắc phi chuẩn hóa khi thường xuyên xử lý lượng dữ liệu lớn hoặc một phạm vi dữ liệu cụ thể.**
+---
 
-**요약이나 집계 정보가 자주 필요할 때 반정규화를 고려할 수 있다.**
+## 14. 테이블 파티셔닝 — Phân vùng bảng (Table Partitioning)
 
-**Có thể cân nhắc phi chuẩn hóa khi thường xuyên cần dữ liệu tổng hợp hoặc thống kê.**
+### 14.1. Bản chất và Kỹ thuật Partition Pruning
+- **Khái niệm:** Phân vùng bảng là kỹ thuật chia một bảng logic lớn có dung lượng hàng chục đến hàng trăm Gigabyte thành nhiều phân vùng vật lý độc lập (Physical Partitions) được lưu trữ trên các tablespace khác nhau.
+- **Tính trong suốt phân vùng (Partition Transparency):** Người dùng và lập trình viên vẫn nhìn bảng như một bảng logic duy nhất; câu lệnh SQL không cần thay đổi tên bảng.
+- **Partition Pruning (Tối ưu hóa loại trừ phân vùng):** Khi câu lệnh SQL có mệnh đề `WHERE` chứa điều kiện khớp với khóa phân vùng (Partition Key), bộ tối ưu hóa của DBMS sẽ **chỉ quét riêng phân vùng chứa dữ liệu cần tìm và bỏ qua hoàn toàn các phân vùng còn lại**, giúp giảm thiểu tối đa số khối đĩa I/O phải đọc.
 
-### Nhược điểm
+### 14.2. Bốn phương pháp phân vùng bảng trong SQLD
 
-**반정규화는 조회 속도를 높일 수 있지만 입력·수정·삭제 성능을 저하시킬 수 있다.**
-
-**Phi chuẩn hóa có thể tăng tốc truy vấn nhưng có thể làm giảm hiệu năng thêm, sửa và xóa dữ liệu.**
-
-**반정규화는 조회 성능 향상을 항상 보장하지 않는다.**
-
-**Phi chuẩn hóa không phải lúc nào cũng bảo đảm cải thiện hiệu năng truy vấn.**
+| Phương pháp phân vùng | Tên tiếng Hàn & Anh | Cơ chế phân chia dữ liệu | Trường hợp áp dụng điển hình |
+| :--- | :--- | :--- | :--- |
+| **Phân vùng theo dải** | **Range Partitioning (범위 분할)** | Phân chia dữ liệu dựa trên **khoảng giá trị liên tục** của khóa phân vùng (ví dụ: `< 2025-01-01`, `< 2026-01-01`). | Phổ biến nhất trong thực tế; dữ liệu có tính chất chuỗi thời gian như ngày đặt hàng, ngày phát sinh giao dịch. |
+| **Phân vùng theo danh sách** | **List Partitioning (목록 분할)** | Phân chia dữ liệu dựa trên **danh sách các giá trị rời rạc xác định** (ví dụ: `AREA_CODE IN ('02', '031')`). | Khi cột phân vùng có số lượng giá trị phân loại hữu hạn, không liên tục như mã khu vực, quốc gia, loại tiền tệ. |
+| **Phân vùng theo băm** | **Hash Partitioning (해시 분할)** | DBMS áp dụng một hàm băm nội bộ lên khóa phân vùng để **phân tán ngẫu nhiên và đồng đều** dữ liệu vào các phân vùng. | Khi dữ liệu không có dải ngày tháng rõ ràng; giúp triệt tiêu hiện tượng thắt cổ chai điểm nóng I/O (Hotspot). |
+| **Phân vùng kết hợp** | **Composite Partitioning (복합 분할)** | Kết hợp hai tầng phân vùng: Tầng 1 chia theo **Range Partitioning**, mỗi phân vùng con ở Tầng 2 lại chia tiếp theo **List hoặc Hash**. | Bảng giao dịch khổng lồ: Tầng 1 chia theo Năm/Tháng, Tầng 2 chia theo Mã vùng hoặc băm mã khách hàng. |
 
 ---
 
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
 
-### Chuỗi ghi nhớ
-Phần này nối mạch SQL với “Chuỗi ghi nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
+### 1. Chuỗi khẩu quyết Chuẩn hóa kinh điển
 ```
-원 → 부 → 이 → 결 → 다 → 조
+도 → 부 → 이 → 결 → 다 → 조
+(Do → Bu → I → Gyeol → Da → Jo)
 ```
+- **도 (Domain / 1NF):** Tất cả các thuộc tính phải mang giá trị nguyên tử (원자값).
+- **부 (Partial / 2NF):** Loại bỏ phụ thuộc hàm bộ phận (부분 함수 종속 제거); toàn bộ thuộc tính không khóa phải phụ thuộc vào toàn bộ PK.
+- **이 (Transitive / 3NF):** Loại bỏ phụ thuộc hàm bắc cầu (이행 함수 종속 제거); $X \rightarrow Y$ và $Y \rightarrow Z$ thì tách $Z$ thành bảng riêng.
+- **결 (Determinant / BCNF):** Mọi thuộc tính quyết định (Determinant) đều phải là Khóa ứng viên (후보키).
+- **다 (Multivalued / 4NF):** Loại bỏ phụ thuộc đa trị (다치 종속 제거).
+- **조 (Join / 5NF):** Loại bỏ phụ thuộc kết nối JOIN (조인 종속 제거).
 
-**원자값 → 부분 함수 종속 제거 → 이행 함수 종속 제거 → 결정자는 후보키 → 다치 종속 제거 → 조인 종속 제거**
+### 2. Bảng so sánh Chuẩn hóa vs Phi chuẩn hóa
 
-**Giá trị nguyên tử → loại bỏ phụ thuộc bộ phận → loại bỏ phụ thuộc bắc cầu → Determinant là Candidate Key → loại bỏ phụ thuộc đa trị → loại bỏ phụ thuộc JOIN.**
+| Tiêu chí | Chuẩn hóa (정규화) | Phi chuẩn hóa (반정규화) |
+| :--- | :--- | :--- |
+| **Mục tiêu chính** | Loại bỏ trùng lặp, bảo đảm tính toàn vẹn dữ liệu. | Tăng tốc độ truy vấn đọc (SELECT), giảm số lần JOIN. |
+| **Hiệu năng SELECT** | Có thể giảm khi phải JOIN qua quá nhiều bảng. | Tăng tốc rõ rệt do dữ liệu đã được gộp hoặc tính sẵn. |
+| **Hiệu năng INSERT/UPDATE/DELETE** | Nhanh và nhất quán do mỗi dữ liệu chỉ lưu một nơi. | Chậm hơn do phải cập nhật đồng thời nhiều cột/bảng trùng lặp. |
+| **Thời điểm thực hiện** | Bắt buộc thực hiện ở giai đoạn thiết kế logic. | Chỉ thực hiện có chọn lọc khi kiểm thử hiệu năng gặp nghẽn. |
 
-### Các dạng chuẩn
-Phần này nối mạch SQL với “Các dạng chuẩn”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+---
 
-```
-1NF = 원자값
-2NF = 부분 함수 종속 제거
-3NF = 이행 함수 종속 제거
-BCNF = 결정자는 후보키
-4NF = 다치 종속 제거
-5NF = 조인 종속 제거
-```
+## NỐI MẠCH SANG BÀI 04
 
-### Câu tổng kết tiếng Hàn
-
-**정규화는 데이터 중복과 입력·수정·삭제 이상을 줄이기 위해 함수적 종속성을 기준으로 테이블을 분리하는 과정이며, 반정규화는 정규화 이후 JOIN 증가로 성능 문제가 발생할 때 제한적으로 수행한다.**
-
-**Chuẩn hóa là quá trình tách bảng dựa trên phụ thuộc hàm để giảm trùng lặp và các lỗi chèn, cập nhật, xóa; phi chuẩn hóa chỉ được thực hiện có giới hạn khi JOIN tăng sau chuẩn hóa gây ra vấn đề hiệu năng.**
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 03 đã hoàn thiện bức tranh tối ưu hóa mô hình dữ liệu: từ các bước chuẩn hóa triệt tiêu bất thường (1NF $\sim$ 5NF), kỹ thuật phi chuẩn hóa có kiểm soát đến phân vùng bảng Partitioning.
+> - **Đang giải quyết gì:** Trong quá trình vận hành cơ sở dữ liệu thực tế, các thao tác nghiệp vụ được nhóm thành các đơn vị giao dịch (Transaction) như thế nào? Giá trị NULL được đối xử ra sao trong các phép toán SQL và cách khóa ngoại lan truyền qua các mối quan hệ xác định vs không xác định?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 04 — Quan hệ, Transaction, NULL và Identifier](./04-quan-he-transaction-null-va-identifier.md) để nắm vững các thuộc tính ACID của Transaction, bản chất 3 giá trị logic của NULL và sự lan truyền khóa nhận diện.
