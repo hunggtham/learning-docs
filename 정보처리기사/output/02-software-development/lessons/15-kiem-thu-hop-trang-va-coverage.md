@@ -87,6 +87,37 @@ $$\mathbf{V(G) = E - N + 2 = P + 1 = \text{Số vùng khép kín (Regions)}}$$
 - `K (Kill)`: Hủy biến hoặc giải phóng vùng nhớ.
 - Mục tiêu: Phát hiện lỗi đọc biến trước khi định nghĩa (Use before Define) hoặc gán 2 lần liên tiếp không dùng.
 
+#### 3. Phân tích ví dụ logic cụ thể và điểm mù của Condition Coverage
+Xét đoạn mã nguồn sau:
+```java
+if (A > 0 && B > 0) {
+    executeAction();
+}
+```
+Trong đó:
+- `(A > 0 && B > 0)` là **Biểu thức quyết định toàn cục (Decision)**.
+- `A > 0` là **Điều kiện con 1 ($C_1$)**.
+- `B > 0` là **Điều kiện con 2 ($C_2$)**.
+
+1. **Với 구문 검증 (Statement Coverage):**
+   - Chỉ cần **1 Test Case**: Chọn $A = 1, B = 1 ightarrow$ Điều kiện True $ightarrow$ Lệnh `executeAction()` được thực thi. Đạt 100% Statement Coverage dù nhánh False chưa bao giờ được chạy!
+2. **Với 결정/분기 검증 (Decision/Branch Coverage):**
+   - Cần **2 Test Cases**:
+     - Test Case 1: $A = 1, B = 1 ightarrow$ Decision nhận `True`.
+     - Test Case 2: $A = -1, B = 1 ightarrow$ Decision nhận `False`.
+3. **Với 조건 검증 (Condition Coverage) và Điểm mù nguy hiểm:**
+   - Cần từng điều kiện con nhận đủ True và False:
+     - Test Case 1: $A = 1, B = -1 ightarrow C_1 = T, C_2 = F ightarrow$ Decision tổng thể là `False`.
+     - Test Case 2: $A = -1, B = 1 ightarrow C_1 = F, C_2 = T ightarrow$ Decision tổng thể là `False`.
+   - **Điểm mù:** Cả hai Test Case đều khiến Decision tổng thể mang giá trị `False`! Câu lệnh `executeAction()` bên trong không bao giờ được chạy. Nghĩa là **Condition Coverage đạt 100% nhưng Statement Coverage và Decision Coverage lại không đạt**!
+4. **Với 다중 조건 검증 (Multiple Condition Coverage):**
+   - Với $n = 2$ điều kiện con, cần kiểm tra đủ $2^2 = 4$ ca kiểm thử bao phủ toàn bộ bảng chân trị: $(T, T), (T, F), (F, T), (F, F)$.
+
+#### 4. Tiêu chuẩn MC/DC (Modified Condition/Decision Coverage)
+- Khi một biểu thức phức hợp có $n = 10$ điều kiện con, Multiple Condition đòi hỏi $2^{10} = 1024$ Test Cases, chi phí kiểm thử quá khổng lồ.
+- Chuẩn an toàn hàng không (DO-178C Cấp độ A) sử dụng tiêu chuẩn **MC/DC**: Chỉ yêu cầu tuyến tính **$n + 1$ ca kiểm thử** (với $n=10$ chỉ cần 11 ca test).
+- **Nguyên lý MC/DC:** Mỗi điều kiện con khi độc lập đổi từ True sang False (trong khi giữ nguyên giá trị của tất cả các điều kiện con khác) phải trực tiếp làm thay đổi kết quả đầu ra của toàn bộ biểu thức quyết định.
+
 ---
 
 ### 복습 체크리스트

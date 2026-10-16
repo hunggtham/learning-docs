@@ -46,7 +46,14 @@
 | **MAC** | **강제 접근통제 (Mandatory)** | **Cấp bậc an ninh của hệ thống** | So sánh nhãn bảo mật (Security Clearance vs Classification); người dùng không tự ý đổi quyền |
 | **RBAC** | **역할기반 접근통제 (Role-Based)** | **Vai trò / Chức danh công việc** | Gán quyền vào Vai trò (Role), sau đó xếp người dùng vào Vai trò tương ứng |
 
-#### 3. Bảng so sánh mô hình an ninh: Bell-LaPadula vs Biba
+#### 3. Sơ đồ và Bảng so sánh mô hình an ninh: Bell-LaPadula vs Biba
+```
+[ Bell-LaPadula (BLP) 모델 ]                     [ Biba (비바) 모델 ]
+  • 핵심 목표: 기밀성 (Confidentiality)             • 핵심 목표: 무결성 (Integrity)
+  • No Read Up   (NRU: 상위 등급 읽기 금지)        • No Read Down (NRD: 하위 등급 읽기 금지)
+  • No Write Down (NWD: 하위 등급 쓰기 금지)       • No Write Up   (NWU: 상위 등급 쓰기 금지)
+```
+
 | Tiêu chí | Bell-LaPadula (BLP) | Biba Model |
 | :--- | :--- | :--- |
 | **Mục tiêu tối thượng** | **Tính bí mật (`기밀성` / Confidentiality)** | **Tính toàn vẹn (`무결성` / Integrity)** |

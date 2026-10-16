@@ -104,6 +104,26 @@ Nếu với mỗi giá trị của thuộc tính $X$, luôn chỉ xác định �
 - **$Y$ gọi là:** `종속자 (Dependent / Phụ thuộc tử)` — Vế bị phụ thuộc.
 
 ##### Ba loại phụ thuộc hàm cốt lõi
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        3 LOẠI PHỤ THUỘC HÀM CỐT LÕI                    │
+├────────────────────────────────────────────────────────────────────────┤
+│ 1. 완전 함수 종속 (Full Functional Dependency - FFD):                  │
+│    - Y phụ thuộc vào TOÀN BỘ khóa chính phức hợp.                      │
+│    - (MSSV, Mã môn) ──> Điểm số (Điểm phải có cả 2 mới xác định).      │
+├────────────────────────────────────────────────────────────────────────┤
+│ 2. 부분 함수 종속 (Partial Functional Dependency - PFD):                │
+│    - Y chỉ phụ thuộc vào MỘT PHẦN của khóa chính phức hợp.             │
+│    - (MSSV, Mã môn) ──> Tên sinh viên (Chỉ cần MSSV là biết tên).      │
+│    ──> Đây là nguyên nhân gây ra bảng chưa đạt chuẩn 2NF!              │
+├────────────────────────────────────────────────────────────────────────┤
+│ 3. 이행적 함수 종속 (Transitive Functional Dependency - TFD):           │
+│    - X -> Y và Y -> Z kéo theo X -> Z                                  │
+│    - MSSV ──> Mã khoa ──> Tên trưởng khoa (Bắc cầu qua Mã khoa).        │
+│    ──> Đây là nguyên nhân gây ra bảng chưa đạt chuẩn 3NF!              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
 1. **완전 함수 종속 (Full Functional Dependency - FFD):** $Y$ phụ thuộc vào TOÀN BỘ khóa chính phức hợp. *(Ví dụ: (MSSV, Mã môn) $\rightarrow$ Điểm số)*.
 2. **부분 함수 종속 (Partial Functional Dependency - PFD):** $Y$ chỉ phụ thuộc vào MỘT PHẦN của khóa chính phức hợp. *(Ví dụ: (MSSV, Mã môn) $\rightarrow$ Tên sinh viên, chỉ cần MSSV là biết tên)*. $\rightarrow$ Đây là nguyên nhân khiến bảng chưa đạt chuẩn 2NF.
 3. **이행적 함수 종속 (Transitive Functional Dependency - TFD):** $X \rightarrow Y$ và $Y \rightarrow Z$ kéo theo $X \rightarrow Z$. *(Ví dụ: MSSV $\rightarrow$ Mã khoa $\rightarrow$ Tên trưởng khoa)*. $\rightarrow$ Đây là nguyên nhân khiến bảng chưa đạt chuẩn 3NF.

@@ -1,95 +1,104 @@
-# 그래프와 탐색 알고리즘 (Đồ thị và biểu diễn đồ thị)
+# 그래프와 그래프 탐색 (Đồ thị và biểu diễn đồ thị)
 
 ## 학습 목표
-- Nắm vững định nghĩa đồ thị $G = (V, E)$, phân biệt đồ thị vô hướng (`무방향 그래프`) và có hướng (`방향 그래프`), tính đúng số cạnh tối đa: vô hướng là $\frac{n(n-1)}{2}$, có hướng là $n(n-1)$.
-- So sánh hai phương pháp biểu diễn đồ thị trong bộ nhớ: Ma trận kề (`인접 행렬` - $O(n^2)$, tối ưu cho đồ thị dày) và Danh sách kề (`인접 리스트` - $O(n+e)$, tối ưu cho đồ thị thưa).
-- Tính chuẩn xác Bậc vào (`진입 차수 / In-degree` - tổng cột) và Bậc ra (`진출 차수 / Out-degree` - tổng hàng) trong ma trận kề của đồ thị có hướng.
-- So sánh đối đầu giữa hai giải thuật duyệt đồ thị: DFS (`깊이 우선 탐색` - dùng Stack hoặc đệ quy) và BFS (`너비 우선 탐색` - dùng Queue, tìm đường đi ngắn nhất trên đồ thị không trọng số).
-- Phân biệt định nghĩa Cây khung (`신장 트리 / Spanning Tree` - gồm $n$ đỉnh và đúng $n-1$ cạnh) và hai thuật toán tìm cây khung nhỏ nhất MST: Kruskal (theo cạnh) và Prim (theo đỉnh).
+- Nắm vững định nghĩa Đồ thị (`그래프 / Graph` - cấu trúc phi tuyến $N - M$), ký hiệu toán học $G = (V, E)$, phân biệt Đồ thị vô hướng (`무방향 그래프`) và Đồ thị có hướng (`방향 그래프 / Di-Graph`).
+- Áp dụng thành thạo 2 công thức tính số cạnh tối đa: Đồ thị vô hướng $\frac{n(n-1)}{2}$ và Đồ thị có hướng $n(n-1)$, cùng khái niệm Đồ thị đầy đủ (`완전 그래프 / Complete Graph`).
+- Hiểu rõ khái niệm Bậc của đỉnh: Đồ thị vô hướng (tổng số cạnh nối) vs Đồ thị có hướng (Bậc vào `진입 차수 / In-degree` và Bậc ra `진출 차수 / Out-degree`).
+- So sánh đối đầu 2 phương pháp biểu diễn đồ thị trong máy tính: Ma trận kề (`인접 행렬 / Adjacency Matrix` - ma trận $n \times n$, đối xứng qua đường chéo chính) và Danh sách kề (`인접 리스트 / Adjacency List` - mảng con trỏ danh sách liên kết).
+- Phân biệt 2 giải thuật duyệt đồ thị kinh điển: Tìm kiếm theo chiều sâu (`깊이 우선 탐색 / DFS` - dùng Ngăn xếp Stack) và Tìm kiếm theo chiều rộng (`너비 우선 탐색 / BFS` - dùng Hàng đợi Queue).
+- Nắm vững khái niệm Cây khung nhỏ nhất (`최소 비용 신장 트리 / MST`) và hai giải thuật tham lam: Kruskal (chọn cạnh trọng số nhỏ nhất, tránh chu trình) và Prim (phát triển từ đỉnh).
 
 ## 핵심 키워드
-- 그래프 (Đồ thị / Graph / 정점 Vertex, 간선 Edge)
+- 비선형 구조 (Cấu trúc phi tuyến / Graph / 정점 Vertex, 간선 Edge)
+- 무방향 그래프 vs 방향 그래프 (Đồ thị vô hướng vs Đồ thị có hướng)
 - 완전 그래프 (Đồ thị đầy đủ / Complete Graph / n(n-1)/2 vs n(n-1))
-- 인접 행렬 (Ma trận kề / Adjacency Matrix / O(n²) / 대칭행렬 vs 비대칭행렬)
-- 진입 차수 vs 진출 차수 (In-degree vs Out-degree / 열의 합 vs 행의 합)
-- 인접 리스트 (Danh sách kề / Adjacency List / O(n+e))
-- DFS vs BFS (깊이 우선 탐색 Stack vs 너비 우선 탐색 Queue)
-- 최소 비용 신장 트리 (MST / Minimum Spanning Tree / 크루스칼 Kruskal, 프림 Prim)
+- 진입 차수 & 진출 차수 (In-degree & Out-degree)
+- 인접 행렬 vs 인접 리스트 (Adjacency Matrix $O(n^2)$ vs Adjacency List $O(n+e)$)
+- 깊이 우선 탐색 (DFS / Depth-First Search / 스택 Stack / 재귀)
+- 너비 우선 탐색 (BFS / Breadth-First Search / 큐 Queue)
+- 신장 트리 & MST (Spanning Tree & Minimum Spanning Tree / Kruskal, Prim)
 
 ## 선행·연결 개념
-- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [03-cay-va-duyet-cay-nhi-phan.md](03-cay-va-duyet-cay-nhi-phan.md), chúng ta đã nghiên cứu cấu trúc Cây — một dạng đồ thị phân cấp đặc biệt không chứa chu trình.
-- **Đang giải quyết gì (Current Problem):** Bài học này mở rộng phạm vi ra cấu trúc mạng lưới tổng quát nhất với quan hệ $N - M$ và cho phép chu trình (đồ thị mạng máy tính, bản đồ giao thông), giải quyết bài toán biểu diễn bộ nhớ tối ưu và tìm kiếm đường đi qua DFS/BFS.
-- **Dùng đi đâu (Forward Handoff):** Sau khi hoàn tất 4 bài học cấu trúc dữ liệu nền tảng, chúng ta chuyển sang khảo sát thao tác tốn tài nguyên nhất trong xử lý dữ liệu với [05-thuat-toan-sap-xep-va-do-phuc-tap.md](05-thuat-toan-sap-xep-va-do-phuc-tap.md) để làm chủ 8 thuật toán sắp xếp kinh điển.
+- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [03-cay-va-duyet-cay-nhi-phan.md](03-cay-va-duyet-cay-nhi-phan.md), chúng ta đã khảo sát Cây - một đồ thị phân cấp đặc biệt không có chu trình.
+- **Đang giải quyết gì (Current Problem):** Đồ thị giải quyết bài toán mô hình hóa các mạng lưới đa chiều phức tạp trong thực tế (mạng máy tính, giao thông, mạng xã hội). Bài học này thiết lập công thức tính số cạnh, phương pháp biểu diễn tối ưu bộ nhớ và giải thuật duyệt mạng lưới.
+- **Dùng đi đâu (Forward Handoff):** Các kỹ thuật duyệt DFS/BFS và tính toán độ phức tạp chuyển tiếp trực tiếp sang [05-thuat-toan-sap-xep-va-do-phuc-tap.md](05-thuat-toan-sap-xep-va-do-phuc-tap.md) để đánh giá hiệu năng thuật toán qua ký pháp Big-O.
 
 ## 읽는 방법
-- Đọc TẦNG A để nắm chắc hai công thức tính số cạnh tối đa, quy tắc tính bậc vào/ra trên ma trận kề và cặp đôi DFS (Stack) vs BFS (Queue).
-- Đọc TẦNG B để hiểu sâu sự đánh đổi giữa Ma trận kề (Dense Graph) và Danh sách kề (Sparse Graph) cùng hai thuật toán tham lam Kruskal và Prim.
+- Đọc TẦNG A để thuộc lòng 2 công thức tính số cạnh tối đa, bảng so sánh Ma trận kề vs Danh sách kề, bảng đối chiếu DFS vs BFS và các bẫy trắc nghiệm.
+- Đọc TẦNG B để hiểu sâu bậc vào/bậc ra của đồ thị có hướng, cấu trúc ma trận kề đối xứng và cơ chế hoạt động của thuật toán Kruskal / Prim.
 
 ---
 
-## 그래프와 탐색 알고리즘
+## 그래프와 그래프 탐색
 
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-#### 1. Bảng phân loại đồ thị và công thức số cạnh tối đa
-| Tiêu chuẩn so sánh | 무방향 그래프 (Đồ thị vô hướng) | 방향 그래프 (Đồ thị có hướng) |
+#### 1. Bảng phân loại đồ thị và công thức tính số cạnh tối đa
+| Tiêu chí | 무방향 그래프 (Đồ thị vô hướng) | 방향 그래프 (Đồ thị có hướng / Di-Graph) |
 | :--- | :--- | :--- |
-| **Đặc điểm cạnh nối** | Cạnh không có mũi tên; $(u, v)$ và $(v, u)$ là một cạnh | Cạnh có mũi tên; cung $\langle u, v \rangle$ khác cung $\langle v, u \rangle$ |
-| **Công thức số cạnh tối đa** | $$\mathbf{\frac{n(n - 1)}{2}}$$ | $$\mathbf{n(n - 1)}$$ |
-| **Bậc của đỉnh** | Tổng số cạnh nối trực tiếp vào đỉnh đó | Tách thành **진입 차수 (In-degree)** và **진출 차수 (Out-degree)** |
-| **Ma trận kề** | **Luôn đối xứng qua đường chéo chính** | Nói chung là ma trận bất đối xứng |
+| **Đặc điểm cạnh nối** | Cạnh không có mũi tên; $(u, v)$ và $(v, u)$ là một cạnh duy nhất | Cạnh có mũi tên; cung $\langle u, v \rangle$ ($u \rightarrow v$) khác hoàn toàn với cung $\langle v, u \rangle$ |
+| **Công thức số cạnh tối đa** | $\mathbf{\frac{n(n - 1)}{2}}$ | $\mathbf{n(n - 1)}$ |
+| **Đồ thị đầy đủ (Complete)** | Đạt đúng $\frac{n(n-1)}{2}$ cạnh | Đạt đúng $n(n-1)$ cạnh |
+| **Ví dụ: $n = 5$ đỉnh** | Tối đa: $\frac{5 \times 4}{2} = \mathbf{10}$ cạnh | Tối đa: $5 \times 4 = \mathbf{20}$ cạnh |
+| **Ví dụ: $n = 6$ đỉnh** | Tối đa: $\frac{6 \times 5}{2} = \mathbf{15}$ cạnh | Tối đa: $6 \times 5 = \mathbf{30}$ cạnh |
 
-#### 2. Đối chiếu Ma trận kề vs Danh sách kề
+#### 2. Bảng so sánh Ma trận kề vs Danh sách kề
 | Tiêu chí | 인접 행렬 (Adjacency Matrix) | 인접 리스트 (Adjacency List) |
 | :--- | :--- | :--- |
-| **Cấu trúc lưu trữ** | Mảng 2 chiều kích thước $n \times n$ | Mảng gồm $n$ con trỏ trỏ tới các Linked List |
-| **Không gian bộ nhớ** | **Cố định $O(n^2)$** | **Tiết kiệm $O(n + e)$** |
-| **Kiểm tra cạnh $(u, v)$**| Cực nhanh: $O(1)$ (`A[u][v] == 1`) | Chậm hơn: $O(\text{Degree}(u))$ |
-| **Môi trường tối ưu** | **밀집 그래프 (Dense Graph - nhiều cạnh)** | **희소 그래프 (Sparse Graph - ít cạnh)** |
+| **Bản chất lưu trữ** | Mảng 2 chiều kích thước $n \times n$ ($A[i][j] \in \{0, 1\}$) | Mảng các danh sách liên kết trỏ đến các đỉnh kề |
+| **Dung lượng bộ nhớ** | Luôn tốn cố định **$O(n^2)$** | Tiết kiệm: **$O(n + e)$** ($e$ là số cạnh) |
+| **Đặc tính ma trận vô hướng** | **Đối xứng qua đường chéo chính** ($A[i][j] = A[j][i]$) | Không có tính chất này |
+| **Độ phức tạp kiểm tra kề** | Rất nhanh: **$O(1)$** kiểm tra ô $A[i][j]$ | Chậm hơn: Phải duyệt danh sách kề |
+| **Trường hợp áp dụng** | **Đồ thị dày / nhiều cạnh (밀집 그래프 - Dense Graph)** | **Đồ thị thưa / ít cạnh (희소 그래프 - Sparse Graph)** |
 
-#### 3. Bảng so sánh đối đầu DFS vs BFS
+#### 3. Bảng đối chiếu DFS vs BFS
 | Tiêu chí | 깊이 우선 탐색 (DFS) | 너비 우선 탐색 (BFS) |
 | :--- | :--- | :--- |
-| **Cơ chế duyệt** | Đi sâu nhất có thể theo một nhánh rồi quay lui (**Backtracking**) | Loang dần, thăm toàn bộ các đỉnh cùng tầng trước khi xuống sâu |
-| **Cấu trúc hỗ trợ** | **스택 (Stack)** hoặc Đệ quy (Recursion) | **큐 (Queue)** |
-| **Đường đi tìm kiếm**| Không đảm bảo ngắn nhất | **Luôn tìm được đường đi ngắn nhất (đồ thị không trọng số)** |
-| **Độ phức tạp** | $O(V^2)$ với ma trận kề; $O(V + E)$ với danh sách kề | $O(V^2)$ với ma trận kề; $O(V + E)$ với danh sách kề |
+| **Chiến lược duyệt** | Đi sâu theo từng nhánh đến kịch sàn, gặp ngõ cụt thì quay lui | Thăm toàn bộ các đỉnh láng giềng kề cận trước khi sang tầng sâu hơn |
+| **Cấu trúc dữ liệu bổ trợ** | **스택 (Stack)** hoặc hàm gọi đệ quy | **큐 (Queue)** |
+| **Độ phức tạp ma trận kề** | $O(n^2)$ | $O(n^2)$ |
+| **Độ phức tạp danh sách kề** | $O(n + e)$ | $O(n + e)$ |
+| **Ứng dụng tiêu biểu** | Tìm chu trình, bài toán mê cung, sắp xếp tô-pô | **Tìm đường đi ngắn nhất** trên đồ thị không trọng số |
 
-#### 4. Cây khung nhỏ nhất (MST - Kruskal vs Prim)
-- **Spanning Tree (신장 트리):** Đồ thị con liên thông chứa toàn bộ $n$ đỉnh và **đúng $n - 1$ cạnh**.
-- **Kruskal's Algorithm:** Sắp xếp các cạnh tăng dần; lần lượt chọn cạnh nhỏ nhất không tạo chu trình (theo cạnh, phù hợp đồ thị thưa).
-- **Prim's Algorithm:** Bắt đầu từ 1 đỉnh; mỗi bước kết nối đỉnh mới vào cây bằng cạnh có trọng số nhỏ nhất (theo đỉnh, phù hợp đồ thị dày).
-
-#### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
-- **Bẫy 1: Bậc vào và Bậc ra trong Ma trận kề có hướng:**
-  - **진출 차수 (Out-degree):** Bằng **tổng các số 1 trên Hàng $i$** (các cung đi ra).
-  - **진입 차수 (In-degree):** Bằng **tổng các số 1 trên Cột $j$** (các cung đi vào).
-- **Bẫy 2: Cấu trúc dữ liệu của DFS và BFS:**
-  - Cứ nhắc đến **DFS** $\rightarrow$ Chọn **Stack** (hoặc đệ quy).
-  - Cứ nhắc đến **BFS** $\rightarrow$ Chọn **Queue**.
-- **Bẫy 3: Đường đi ngắn nhất:** Thuật toán luôn tìm được đường đi ngắn nhất trên đồ thị không có trọng số là **BFS**, không phải DFS.
+#### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+- **Bẫy 1: Quên chia đôi số cạnh đồ thị vô hướng:** Đồ thị vô hướng có $n = 5$ đỉnh $\rightarrow \frac{5 \times 4}{2} = 10$ cạnh (thí sinh hay chọn nhầm $5 \times 4 = 20$).
+- **Bẫy 2: Thần chú cấu trúc dữ liệu DFS vs BFS:**
+  - **DFS (깊이 우선)** $\leftrightarrow$ **Stack (스택)**
+  - **BFS (너비 우선)** $\leftrightarrow$ **Queue (큐)**
+- **Bẫy 3: Tính đối xứng của Ma trận kề:** Ma trận kề của đồ thị **vô hướng** luôn là ma trận đối xứng qua đường chéo chính ($A[i][j] = A[j][i]$). Ma trận kề của đồ thị có hướng không có tính đối xứng này.
+- **Bẫy 4: Số cạnh của Cây khung (Spanning Tree):** Đồ thị liên thông có $n$ đỉnh thì mọi cây khung của nó luôn chứa đúng **$n - 1$ cạnh**.
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Tính toán ma trận kề thực tế
-- Giả sử ma trận kề của đồ thị có hướng 4 đỉnh:
-  $$A = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 1 & 0 \end{pmatrix}$$
-- Muốn tìm Bậc ra của đỉnh 1: Cộng các số trên Hàng 1: $0 + 1 + 1 + 0 = 2$.
-- Muốn tìm Bậc vào của đỉnh 3: Cộng các số trên Cột 3: $1 + 1 + 0 + 1 = 3$.
+#### 1. Bậc của đỉnh trong Đồ thị có hướng (Di-Graph)
+- **Bậc vào (진입 차수 / In-degree):** Số lượng cung có mũi tên trỏ thẳng VÀO đỉnh đó (đếm số số 1 trên cột tương ứng trong ma trận kề).
+- **Bậc ra (진출 차수 / Out-degree):** Số lượng cung có mũi tên xuất phát TỪ đỉnh đó trỏ đi (đếm số số 1 trên hàng tương ứng trong ma trận kề).
+- Tổng số bậc vào của toàn bộ các đỉnh luôn bằng tổng số bậc ra và bằng đúng tổng số cạnh của đồ thị:
+  $$\sum \text{In-degree} = \sum \text{Out-degree} = |E|$$
 
-#### 2. Kiểm tra chu trình trong thuật toán Kruskal
-- Thuật toán Kruskal sử dụng cấu trúc dữ liệu **Tập hợp rời rạc (Disjoint Set / Union-Find)** với hai phép toán `Find` và `Union`. Nếu hai đỉnh đầu mút của một cạnh cùng thuộc về một tập hợp đại diện (chung Root), việc thêm cạnh đó sẽ tạo ra chu trình khép kín và bị từ chối ngay lập tức.
+#### 2. Cây khung nhỏ nhất (MST - Minimum Spanning Tree)
+Cây khung là đồ thị con chứa toàn bộ $n$ đỉnh của đồ thị gốc nhưng chỉ có đúng $n-1$ cạnh và không chứa chu trình. Cây khung nhỏ nhất là cây khung có tổng trọng số các cạnh là nhỏ nhất:
+- **Thuật toán Kruskal (크루스칼 알고리즘):**
+  - Sắp xếp tất cả các cạnh theo thứ tự trọng số tăng dần.
+  - Lần lượt chọn các cạnh có trọng số nhỏ nhất đưa vào cây khung, miễn là cạnh đó **không tạo thành chu trình** (kiểm tra chu trình bằng thuật toán Union-Find).
+  - Lặp lại cho đến khi chọn đủ đúng $n - 1$ cạnh.
+  - Phù hợp nhất với đồ thị thưa (Sparse Graph).
+- **Thuật toán Prim (프림 알고리즘):**
+  - Bắt đầu từ một đỉnh gốc bất kỳ.
+  - Tại mỗi bước, chọn cạnh có trọng số nhỏ nhất nối một đỉnh đã nằm trong cây với một đỉnh chưa nằm trong cây.
+  - Lặp lại cho đến khi toàn bộ $n$ đỉnh được kết nối.
+  - Phù hợp nhất với đồ thị dày (Dense Graph).
 
 ---
 
 ### 복습 체크리스트
-- [ ] Tính đúng công thức số cạnh cực đại: Vô hướng là $\frac{n(n-1)}{2}$, Có hướng là $n(n-1)$.
-- [ ] Khẳng định ma trận kề của đồ thị vô hướng luôn là ma trận đối xứng qua đường chéo chính.
-- [ ] Tính chuẩn xác: Bậc ra (Out-degree) bằng tổng hàng; Bậc vào (In-degree) bằng tổng cột trong ma trận kề có hướng.
-- [ ] Phân biệt khi nào dùng Ma trận kề ($O(n^2)$ - Dense Graph) và Danh sách kề ($O(n+e)$ - Sparse Graph).
-- [ ] Ghi nhớ chắc chắn: DFS dùng Stack (hoặc đệ quy), BFS dùng Queue.
-- [ ] Nhớ BFS luôn tìm được đường đi ngắn nhất trên đồ thị không trọng số.
-- [ ] Định nghĩa Spanning Tree có $n$ đỉnh và đúng $n - 1$ cạnh.
-- [ ] Phân biệt thuật toán Kruskal (chọn cạnh nhỏ nhất không tạo chu trình) và Prim (phát triển từ đỉnh).
+- [ ] Tính thành thạo số cạnh tối đa của đồ thị vô hướng: $\frac{n(n-1)}{2}$.
+- [ ] Tính thành thạo số cạnh tối đa của đồ thị có hướng: $n(n-1)$.
+- [ ] Phân biệt 진입 차수 (In-degree) và 진출 차수 (Out-degree) trong đồ thị có hướng.
+- [ ] Nhớ ma trận kề của đồ thị vô hướng luôn đối xứng qua đường chéo chính.
+- [ ] Chọn Adjacency Matrix cho đồ thị dày và Adjacency List cho đồ thị thưa.
+- [ ] Nhớ thần chú: DFS dùng Stack, BFS dùng Queue.
+- [ ] Nhớ Cây khung của đồ thị có $n$ đỉnh luôn có đúng $n - 1$ cạnh.
+- [ ] Phân biệt giải thuật Kruskal (chọn cạnh, tránh chu trình) và Prim (phát triển từ đỉnh).

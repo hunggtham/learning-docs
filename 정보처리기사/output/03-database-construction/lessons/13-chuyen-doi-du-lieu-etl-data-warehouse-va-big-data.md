@@ -38,7 +38,12 @@
 | **Tệp tuần tự có chỉ mục** | `색인 순차 파일` (ISAM) | Lưu tuần tự kèm bảng chỉ mục hỗ trợ cả tuần tự và ngẫu nhiên | **Gồm 3 vùng: Prime, Index, Overflow** |
 | **Tệp trực tiếp** | `직접 파일` (DAM) | Dùng hàm băm (Hash) tính toán địa chỉ vật lý từ Khóa | Tốc độ truy xuất nhanh nhất, cần cơ chế giải quyết xung đột |
 
-#### 2. Quy trình 3 bước ETL (데이터 전환)
+#### 2. Sơ đồ luồng và Bảng quy trình 3 bước ETL (데이터 전환)
+```
+[ 소스 레거시 시스템 ] ──(추출: Extraction)──> [ 스테이징 영역 ] ──(변환: Transformation)──> [ 적재: Loading ] ──> [ 데이터 웨어하우스 ]
+(RDBMS, CSV, Log)                            (Data Cleansing, 표준화)                      (신규 대상 DB)
+```
+
 | Bước | Tên tiếng Hàn & Anh | Hoạt động kỹ thuật chính |
 | :---: | :--- | :--- |
 | **E** | **추출 (Extraction)** | Trích xuất dữ liệu từ các hệ thống nguồn không đồng nhất (RDBMS, Log, File) |

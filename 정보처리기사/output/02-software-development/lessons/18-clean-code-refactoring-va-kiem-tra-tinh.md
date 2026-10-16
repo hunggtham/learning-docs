@@ -67,7 +67,24 @@
   - *Rename Variable/Method (Đổi tên có ý nghĩa):* Đổi tên biến và hàm cho đúng với trách nhiệm thực tế.
   - *Replace Temp with Query:* Thay thế các biến tạm tính toán trung gian bằng một hàm truy vấn.
 
-#### 4. Bảng so sánh Phân tích tĩnh vs Phân tích động
+#### 4. Sơ đồ phân nhánh và Bảng so sánh Phân tích tĩnh vs Phân tích động
+```
+                              ┌──────────────────────────────────────────────┐
+                              │     ĐÁNH GIÁ CHẤT LƯỢNG MÃ NGUỒN             │
+                              └──────────────────────┬───────────────────────┘
+                                                     │
+                         ┌───────────────────────────┴───────────────────────────┐
+                         ▼                                                       ▼
+            ┌───────────────────────────┐                           ┌───────────────────────────┐
+            │  정적 분석 (Static)        │                           │  동적 분석 (Dynamic)       │
+            │  - KHÔNG CHẠY mã nguồn    │                           │  - BẮT BUỘC CHẠY mã nguồn │
+            │  - Tìm vi phạm quy chuẩn, │                           │  - Đo rò rỉ bộ nhớ,       │
+            │    biến thừa, AST syntax  │                           │    profiling CPU, coverage│
+            └────────────┬──────────────┘                           └────────────┬──────────────┘
+                         │                                                       │
+                 PMD, Checkstyle, SonarQube                              Valgrind, Profiler
+```
+
 | Tiêu chí | 정적 분석 도구 (Static Analysis) | 동적 분석 도구 (Dynamic Analysis) |
 | :--- | :--- | :--- |
 | **Trạng thái thực thi** | **Không chạy chương trình (코드를 실행하지 않음)** | **Bắt buộc phải chạy chương trình (프로그램 실행 중)** |

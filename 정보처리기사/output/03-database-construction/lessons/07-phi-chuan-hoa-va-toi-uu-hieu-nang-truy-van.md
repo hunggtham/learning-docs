@@ -71,6 +71,10 @@
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
 #### 1. Bản chất Phi chuẩn hóa và Đánh đổi (Trade-off)
+```
+[ Mô hình Chuẩn hóa cao ]  --- (Join nhiều, I/O chậm) --->  [ Áp dụng 반정규화 ]
+(Ưu tiên: Toàn vẹn, không dị thường)                   (Ưu tiên: Tốc độ đọc, giảm Join)
+```
 
 - [한국어]: **반정규화(Denormalization)**는 시스템의 성능 향상 및 운영 편의성을 위해 정규화된 데이터 모델을 통합, 중복, 분할하는 과정이다. 무조건적인 정규화가 아닌, **데이터 무결성과 시스템 성능 간의 균형(Trade-off)**을 맞추는 엔지니어링 의사결정이다.
 - [Tiếng Việt]: **Phi chuẩn hóa (Denormalization)** là quá trình tích hợp, tạo trùng lặp hoặc phân chia các mô hình dữ liệu đã được chuẩn hóa nhằm nâng cao hiệu năng hệ thống và độ tiện lợi trong vận hành. Đây là quyết định kỹ thuật nhằm cân bằng giữa **tính toàn vẹn dữ liệu** và **tốc độ đáp ứng hệ thống**.

@@ -1,27 +1,28 @@
 # 탐색 알고리즘과 해싱 (Thuật toán tìm kiếm và cấu trúc bảng băm)
 
 ## 학습 목표
-- Nắm vững nguyên lý và điều kiện tiên quyết của Tìm kiếm nhị phân (`이분 검색 / Binary Search` - mảng bắt buộc phải được sắp xếp trước) và công thức số lần so sánh tối đa: $\lfloor \log_2 n \rfloor + 1$.
-- Định nghĩa chuẩn xác cấu trúc Bảng băm (`해시 테이블 / Hash Table`) và mối quan hệ nhân quả giữa bộ ba thuật ngữ: Từ đồng nghĩa (`동의어 / Synonym`), Đụng độ (`충돌 / Collision`), và Tràn thùng (`오버플로 / Overflow`).
-- Phân tích cơ chế và nhận diện qua đề thi 5 hàm băm kinh điển: Phép chia lấy dư (`제산법 / Division`), Bình phương lấy giữa (`제곱법 / Mid-Square`), Gấp nếp (`폴딩법 / Folding`), Phân tích chữ số (`숫자 분석법`), và Chuyển đổi cơ số (`기수 변환법`).
-- So sánh hai chiến lược giải quyết xung đột và tràn thùng: Địa chỉ mở (`개방 주소법 / Open Addressing`: Thử tuyến tính, Thử bậc hai, Băm kép) và Đóng địa chỉ (`체이닝 / Chaining` - dùng danh sách liên kết).
-- Nhận diện hiện tượng kết cụm (`군집화 / Clustering`) trong Thử tuyến tính và cách khắc phục bằng Băm kép hoặc Chaining.
+- So sánh đối đầu giữa Tìm kiếm tuần tự (`순차 검색 / Linear Search` - $O(n)$, không cần sắp xếp) và Tìm kiếm nhị phân (`이분 검색 / Binary Search` - $O(\log n)$, bắt buộc mảng phải sắp xếp).
+- Áp dụng thành thạo công thức tính số lần so sánh tối đa của Tìm kiếm nhị phân trong trường hợp xấu nhất: $\lfloor \log_2 n \rfloor + 1$.
+- Nắm vững cấu trúc giải phẫu của Bảng băm (`해시 테이블 / Hash Table`): Xô (`버킷 / Bucket`), Khe cắm (`슬롯 / Slot`), Địa chỉ gốc (`홈 주소 / Home Address`), và mối quan hệ giữa Đồng nghĩa (`동의어 / Synonym`) $\rightarrow$ Xung đột (`충돌 / Collision`) $\rightarrow$ Tràn xô (`오버플로 / Overflow`).
+- Nắm vững nguyên lý toán học của 5 hàm băm kinh điển: Phép chia lấy dư (`제산법 / Division`), Bình phương giữa (`제곱법 / Mid-square`), Gấp nếp (`폴딩법 / Folding`), Chuyển cơ số (`기수 변환법 / Radix`), và Phân tích chữ số (`숫자 분석법 / Digit Analysis`).
+- Phân biệt 2 chiến lược giải quyết xung đột: Định địa chỉ mở (`개방 주소법 / Open Addressing` - Dò tuyến tính, Dò bậc hai, Băm kép) và Nối kết danh sách (`체이닝 / Chaining` - dùng con trỏ danh sách liên kết).
 
 ## 핵심 키워드
-- 이분 검색 (Tìm kiếm nhị phân / Binary Search / O(log n) / 정렬 필수 / ⌊log₂ n⌋ + 1)
-- 해싱 (Bảng băm / Hashing / O(1) / 홈 주소 Home Address)
-- 해시 테이블 용어 (버킷 Bucket, 슬롯 Slot, 동의어 Synonym, 충돌 Collision, 오버플로 Overflow)
-- 해시 함수 (제산법 Division M prime, 제곱법 Mid-square, 폴딩법 Folding, 숫자 분석법)
-- 충돌 해결 (개방 주소법 Open Addressing - 선형 조사법 군집화, 체이닝 Chaining)
+- 이분 검색 (Tìm kiếm nhị phân / Binary Search / $O(\log n)$ / $\lfloor \log_2 n \rfloor + 1$)
+- 해싱 & 해시 함수 (Hashing & Hash Function / $O(1)$)
+- 버킷 & 슬롯 (Bucket & Slot / Hash Table Cấu trúc)
+- 동의어 & 충돌 & 오버플로 (Synonym, Collision, Overflow)
+- 5대 해시 함수 (제산법 Division, 제곱법 Mid-square, 폴딩법 Folding, 기수 변환법 Radix, 숫자 분석법)
+- 충돌 해결 기법 (개방 주소법 Open Addressing - 선형 조사, 이차 조사 vs 체이닝 Chaining)
 
 ## 선행·연결 개념
-- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [05-thuat-toan-sap-xep-va-do-phuc-tap.md](05-thuat-toan-sap-xep-va-do-phuc-tap.md), chúng ta đã sắp xếp dữ liệu có thứ tự tăng dần/giảm dần bằng các thuật toán tối ưu $O(n \log n)$.
-- **Đang giải quyết gì (Current Problem):** Bài học này giải quyết việc tăng tốc tra cứu dữ liệu từ quét tuần tự chậm chạp $O(n)$ lên $O(\log n)$ bằng Tìm kiếm nhị phân, và đạt tới tốc độ truy xuất tức thì $O(1)$ bằng Cấu trúc Bảng băm (Hashing) cùng các giải thuật xử lý đụng độ.
-- **Dùng đi đâu (Forward Handoff):** Từ các thuật toán tìm kiếm và bảng băm trên RAM, khi mở rộng quy mô lên các tệp dữ liệu đĩa cứng bền vững của doanh nghiệp, kiến thức này kết nối trực tiếp với [07-co-so-du-lieu-va-toi-uu-truy-van.md](07-co-so-du-lieu-va-toi-uu-truy-van.md) để khảo sát hệ thống cơ sở dữ liệu và tối ưu hóa truy vấn.
+- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [05-thuat-toan-sap-xep-va-do-phuc-tap.md](05-thuat-toan-sap-xep-va-do-phuc-tap.md), dữ liệu đã được sắp xếp trật tự, tạo tiền đề để áp dụng các thuật toán tìm kiếm tốc độ cao.
+- **Đang giải quyết gì (Current Problem):** Tìm kiếm tuần tự quá chậm trên tập dữ liệu lớn ($O(n)$). Bài học này giải quyết việc tăng tốc độ tra cứu lên $O(\log n)$ bằng Tìm kiếm nhị phân và tiệm cận $O(1)$ tức thời bằng Cấu trúc Bảng băm.
+- **Dùng đi đâu (Forward Handoff):** Sau khi hoàn thành toàn bộ các cấu trúc dữ liệu và giải thuật trong RAM, bài học tiếp theo [07-co-so-du-lieu-va-toi-uu-truy-van.md](07-co-so-du-lieu-va-toi-uu-truy-van.md) sẽ đưa người học sang không gian lưu trữ CSDL bền vững.
 
 ## 읽는 방법
-- Đọc TẦNG A để nắm chắc công thức tính số bước so sánh của Binary Search ($\lfloor \log_2 n \rfloor + 1$), bảng đối chiếu 5 hàm băm và quan hệ nhân quả: nếu 1 Bucket có 1 Slot thì Collision lập tức gây ra Overflow.
-- Đọc TẦNG B để hiểu sâu hiện tượng Clustering trong Linear Probing và phân biệt hai biến thể Shift Folding vs Boundary Folding.
+- Đọc TẦNG A để thuộc lòng công thức tính số bước so sánh nhị phân, bảng 5 hàm băm, bảng đối chiếu Open Addressing vs Chaining và các bẫy trắc nghiệm.
+- Đọc TẦNG B để xem sơ đồ ASCII giải phẫu Bucket/Slot, cơ chế nhân quả Synonym $\rightarrow$ Collision $\rightarrow$ Overflow và chi tiết từng phương pháp dò địa chỉ mở.
 
 ---
 
@@ -29,71 +30,62 @@
 
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-#### 1. Bảng đối chiếu các thuật toán tìm kiếm
-| Thuật toán tìm kiếm | Tên tiếng Hàn & Anh | Điều kiện tiên quyết | Độ phức tạp thời gian | Số lần so sánh tối đa |
-| :--- | :--- | :--- | :---: | :---: |
-| **Tìm kiếm tuần tự** | **순차 검색 (Linear)** | Dữ liệu ngẫu nhiên, không cần sắp xếp | $O(n)$ | $n$ lần |
-| **Tìm kiếm nhị phân**| **이분 검색 (Binary)** | **Dữ liệu bắt buộc phải được sắp xếp trước** | $\mathbf{O(\log n)}$ | $\mathbf{\lfloor \log_2 n \rfloor + 1}$ |
-| **Bảng băm** | **해싱 (Hashing)** | Sử dụng hàm băm $h(K)$ tính địa chỉ ô nhớ | $\mathbf{O(1)}$ (lý tưởng) | 1 lần (nếu không đụng độ) |
-
-#### 2. Hệ thống thuật ngữ Bảng băm (해시 테이블)
-| Thuật ngữ | Tên Hàn & Anh | Định nghĩa kỹ thuật chuẩn thi cử |
+#### 1. Đối chiếu Linear Search vs Binary Search
+| Tiêu chí | 순차 검색 (Linear Search) | 이분 검색 (Binary Search) |
 | :--- | :--- | :--- |
-| **Hàm băm** | **해시 함수 (Hash Function)** | Hàm toán học biến đổi khóa $K$ thành địa chỉ ô nhớ $h(K)$ |
-| **Địa chỉ gốc** | **홈 주소 (Home Address)** | Giá trị địa chỉ trả về trực tiếp từ hàm băm |
-| **Thùng chứa** | **버킷 (Bucket)** | Khối lưu trữ tương ứng 1 địa chỉ băm, gồm một hoặc nhiều Slot |
-| **Khe cắm** | **슬롯 (Slot)** | Ô nhớ lưu trữ đúng 1 bản ghi dữ liệu bên trong Bucket |
-| **Từ đồng nghĩa** | **동의어 (Synonym)** | **Tập hợp các khóa khác nhau nhưng có cùng địa chỉ băm**: $h(K_1) = h(K_2)$ |
-| **Đụng độ** | **충돌 (Collision)** | **Hiện tượng hai khóa khác nhau được ánh xạ vào cùng một Bucket** |
-| **Tràn thùng** | **오버플로 (Overflow)** | Hiện tượng xảy ra khi một Bucket **không còn Slot trống nào** để chứa thêm |
+| **Yêu cầu dữ liệu** | **Không cần sắp xếp trước** | **Bắt buộc phải được sắp xếp trước** |
+| **Độ phức tạp thời gian** | $O(n)$ (Số lần so sánh trung bình: $\frac{n+1}{2}$) | $\mathbf{O(\log n)}$ |
+| **Công thức so sánh tối đa** | $n$ lần | $\mathbf{\lfloor \log_2 n \rfloor + 1}$ |
+| **Ví dụ: $n = 15$ phần tử** | Tối đa 15 lần | Tối đa: $\lfloor \log_2 15 \rfloor + 1 = 3 + 1 = \mathbf{4}$ lần |
+| **Ví dụ: $n = 1.000.000$ bản ghi** | Tối đa 1.000.000 lần | Tối đa: $\lfloor \log_2 1.000.000 \rfloor + 1 = \mathbf{20}$ lần |
 
-#### 3. Bảng 5 hàm băm kinh điển (해싱 함수)
-| Hàm băm | Tên Hàn & Anh | Cơ chế tạo địa chỉ | Điểm lưu ý thi cử |
+#### 2. Bảng 5 hàm băm (Hash Functions) kinh điển trong đề thi
+| Tên hàm băm | Tên tiếng Hàn | Nguyên lý hoạt động toán học | Trường hợp áp dụng |
 | :--- | :--- | :--- | :--- |
-| **Phép chia lấy dư** | **제산법 (Division)** | $\mathbf{h(K) = K \pmod M}$ | **$M$ bắt buộc phải là số nguyên tố (Prime Number)** |
-| **Bình phương giữa** | **제곱법 (Mid-Square)** | Tính $K^2$ rồi trích chữ số ở giữa | Phá vỡ sự trùng lặp ở hai đầu của khóa |
-| **Phương pháp gấp nếp**| **폴딩법 (Folding)** | Chia khóa thành từng đoạn rồi cộng lại | Gồm **Shift Folding** và **Boundary Folding** (lật đối xứng) |
-| **Phân tích chữ số** | **숫자 분석법 (Digit Analysis)**| Chọn các vị trí chữ số có tần suất phân bố đều | Áp dụng cho tập khóa biết trước (như số CMND/CCCD) |
-| **Chuyển đổi cơ số** | **기수 변환법 (Radix)** | Đổi khóa sang hệ cơ số khác rồi lấy địa chỉ | Phá vỡ quy luật phân bố ban đầu |
+| **Phép chia lấy dư** | **제산법 (Division)** | Lấy khóa chia cho số nguyên tố $p$ (sát kích thước bảng), lấy phần dư làm địa chỉ: $h(K) = K \bmod p$ | Phổ biến nhất, dễ cài đặt |
+| **Bình phương giữa** | **제곱법 (Mid-Square)** | Bình phương giá trị khóa ($K^2$), sau đó trích xuất các chữ số ở chính giữa làm địa chỉ | Khóa có nhiều chữ số |
+| **Gấp nếp** | **폴딩법 (Folding)** | Chia khóa thành nhiều đoạn có độ dài bằng địa chỉ, rồi cộng (hoặc XOR) các đoạn lại (Shift fold / Boundary fold) | Khóa có độ dài rất lớn |
+| **Chuyển đổi cơ số** | **기수 변환법 (Radix)** | Coi khóa như một số ở hệ cơ số khác rồi đổi sang hệ cơ số của bảng băm | Khóa chứa ký tự đặc biệt |
+| **Phân tích chữ số** | **숫자 분석법 (Digit Analysis)** | Phân tích phân bố các chữ số của khóa, loại bỏ các vị trí hay trùng lặp, chọn các vị trí có độ ngẫu nhiên cao | Biết trước phân bố tập khóa |
 
-#### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
-- **Bẫy 1: Điều kiện của Binary Search:** Dữ liệu **bắt buộc phải được sắp xếp trước**; nếu mảng lộn xộn thì không thể áp dụng tìm kiếm nhị phân.
-- **Bẫy 2: Collision vs Overflow:**
-  - Nếu Bucket có đúng 1 Slot: **Collision luôn luôn đồng thời gây ra Overflow**.
-  - Nếu Bucket có nhiều Slot: Xảy ra Collision nhưng chưa chắc đã Overflow (nếu vẫn còn Slot trống).
-- **Bẫy 3: Nhược điểm của Linear Probing:** Gây ra hiện tượng **군집화 (Clustering / Kết cụm)**, các bản ghi dồn cục vào các Bucket liền kề làm chậm tốc độ tìm kiếm.
-- **Bẫy 4: Công thức số lần so sánh của Binary Search:** $n = 15 \rightarrow \lfloor \log_2 15 \rfloor + 1 = 3 + 1 = \mathbf{4}$ lần; $n = 1.000.000 \rightarrow$ chỉ cần tối đa **20 lần**.
+#### 3. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+- **Bẫy 1: Điều kiện tiên quyết của Binary Search:** Bắt buộc dữ liệu phải được **sắp xếp có thứ tự từ trước (정렬)**. Nếu dữ liệu xáo trộn, Binary Search không thể hoạt động.
+- **Bẫy 2: Quan hệ nhân quả Synonym - Collision - Overflow:**
+  - Hai khóa khác nhau cho ra cùng Home Address $\rightarrow$ Gọi là **동의어 (Synonym)**.
+  - Hiện tượng hai khóa tranh chấp cùng 1 Bucket $\rightarrow$ Gọi là **충돌 (Collision)**.
+  - Khi Collision xảy ra mà Bucket đã **hết sạch Slot trống** $\rightarrow$ Dẫn đến **오버플로 (Overflow)**.
+- **Bẫy 3: Đánh giá Chaining vs Open Addressing:** Chaining dùng con trỏ liên kết nên **không bị giới hạn dung lượng bảng và không gây tràn bảng ảo**, nhưng tốn thêm vùng nhớ lưu con trỏ.
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Cơ chế tìm kiếm nhị phân (Binary Search)
-- Duy trì 2 con trỏ Đầu ($F$) và Cuối ($L$).
-- Tính chỉ số giữa: $M = \lfloor (F + L) / 2 \rfloor$.
-- So sánh $K$ với $A[M]$:
-  - Nếu $K == A[M]$: Tìm thấy.
-  - Nếu $K < A[M]$: Thu hẹp sang nửa trái $L = M - 1$.
-  - Nếu $K > A[M]$: Thu hẹp sang nửa phải $F = M + 1$.
-  - Khi $F > L$: Dừng, không tìm thấy khóa.
+#### 1. Sơ đồ giải phẫu cấu trúc Bảng băm (Hash Table Structure)
+```
++--------------------------------------------------------+
+| HASH TABLE                                             |
+|                                                        |
+| Bucket 0: [ Slot 1: Data A ] [ Slot 2: Empty  ]        |
+| Bucket 1: [ Slot 1: Data B ] [ Slot 2: Data C ] (FULL) | <-- Tràn nếu có khóa mới băm vào đây!
+| Bucket 2: [ Slot 1: Empty  ] [ Slot 2: Empty  ]        |
++--------------------------------------------------------+
+```
+- **버킷 (Bucket):** Một khối ô nhớ có cùng một địa chỉ băm (Home Address). Một bảng băm gồm nhiều Bucket.
+- **슬롯 (Slot):** Vị trí chứa từng bản ghi dữ liệu bên trong một Bucket. Nếu 1 Bucket có $k$ Slot thì nó chứa tối đa được $k$ bản ghi đồng nghĩa mà chưa bị Overflow.
 
-#### 2. Kỹ thuật giải quyết đụng độ và tràn thùng
-- **개방 주소법 (Open Addressing):** Đi tìm Bucket trống khác trong bảng:
-  - `선형 조사법 (Linear Probing)`: Thử tuần tự các ô kế tiếp: $h(K) + 1, h(K) + 2 \dots$ (dễ bị 군집화).
-  - `이차 조사법 (Quadratic Probing)`: Thử theo bước nhảy bậc hai: $h(K) + 1^2, h(K) + 2^2 \dots$
-  - `이중 해싱법 (Double Hashing)`: Dùng 2 hàm băm độc lập, hàm 1 xác định địa chỉ, hàm 2 xác định bước nhảy.
-- **체이닝 (Chaining):** Mỗi Bucket gắn với một Danh sách liên kết (Linked List). Khi tràn, nút mới được móc nối tiếp vào đuôi danh sách của chính Bucket đó; không làm ảnh hưởng các Bucket khác.
+#### 2. Hai phương pháp giải quyết xung đột (충돌 해결 기법)
+Khi xảy ra hiện tượng Overflow (xô đã đầy), có 2 chiến lược hóa giải:
+- **개방 주소법 (Open Addressing):** Tìm một ô nhớ trống khác còn lại ngay bên trong bảng băm:
+  - *선형 조사법 (Linear Probing):* Khi ô bị chiếm, tuần tự kiểm tra ô tiếp theo ($+1, +2, +3 \dots$). Dễ gây hiện tượng dồn cục cụm (Clustering).
+  - *이차 조사법 (Quadratic Probing):* Nhảy theo bình phương khoảng cách ($+1^2, +2^2, +3^2 \dots$) để giảm bớt dồn cục.
+  - *이중 해싱 (Double Hashing):* Dùng một hàm băm thứ hai để tính khoảng cách nhảy mỗi bước.
+- **체이닝 (Chaining):** Mỗi Bucket được liên kết với một Danh sách liên kết (Linked List). Khi có phần tử mới cùng băm vào Bucket đã đầy, chỉ cần tạo Node mới và móc vào cuối danh sách liên kết mà không làm ảnh hưởng đến các Bucket khác.
 
 ---
 
 ### 복습 체크리스트
-- [ ] Nhớ điều kiện tiên quyết của 이분 검색: Dữ liệu bắt buộc phải được sắp xếp trước.
-- [ ] Tính đúng chỉ số giữa: $M = \lfloor (F + L) / 2 \rfloor$.
-- [ ] Áp dụng đúng công thức số lần so sánh tối đa của Binary Search: $\lfloor \log_2 n \rfloor + 1$.
-- [ ] Định nghĩa và phân biệt rõ bộ ba: 동의어 (Synonym), 충돌 (Collision), 오버플로 (Overflow).
-- [ ] Khẳng định: Nếu Bucket chỉ có 1 Slot thì Collision luôn kéo theo Overflow.
-- [ ] Nhớ công thức 제산법 (Division Method): $h(K) = K \pmod M$ với $M$ là số nguyên tố.
-- [ ] Nhận diện 제곱법 (Mid-Square) qua thao tác tính $K^2$ rồi trích chữ số ở giữa.
-- [ ] Phân biệt 이동 폴딩 (Shift) và 경계 폴딩 (Boundary) trong phương pháp 폴딩법.
-- [ ] Phân biệt 개방 주소법 (Linear, Quadratic, Double Hashing) và 체이닝 (Chaining dùng Linked List).
-- [ ] Nhớ nhược điểm lớn nhất của Linear Probing là hiện tượng 군집화 (Clustering).
+- [ ] Tính thành thạo số lần so sánh tối đa của Binary Search: $\lfloor \log_2 n \rfloor + 1$.
+- [ ] Nắm rõ điều kiện tiên quyết bắt buộc của Binary Search là mảng đã sắp xếp.
+- [ ] Phân biệt rõ chuỗi khái niệm: 동의어 (Synonym) $\rightarrow$ 충돌 (Collision) $\rightarrow$ 오버플로 (Overflow).
+- [ ] Kể tên và nêu nguyên lý 5 hàm băm: 제산법 (chia dư), 제곱법 (bình phương giữa), 폴딩법 (gấp nếp), 기수 변환법, 숫자 분석법.
+- [ ] Phân biệt hai chiến lược giải quyết xung đột: 개방 주소법 (Open Addressing) và 체이닝 (Chaining).

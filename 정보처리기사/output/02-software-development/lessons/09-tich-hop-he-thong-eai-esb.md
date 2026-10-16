@@ -1,90 +1,98 @@
-# 연계 통합 기술과 데이터 교환 (Tích hợp hệ thống EAI/ESB và giao thức truyền thông)
+# 연계 통합 구현과 EAI/ESB (Tích hợp hệ thống EAI/ESB)
 
 ## 학습 목표
-- Nắm vững định nghĩa và so sánh 4 mô hình kiến trúc EAI: Point-to-Point, Hub & Spoke, Message Bus (ESB), và Hybrid; tính đúng số đường kết nối của Point-to-Point: $\frac{N(N-1)}{2}$.
-- Phân tích điểm lỗi đơn (`단일 장애점 / SPOF`) của mô hình Hub & Spoke và so sánh sự chuyển dịch từ EAI sang Trục dịch vụ doanh nghiệp ESB theo kiến trúc hướng dịch vụ (SOA).
-- So sánh đối đầu giữa hai định dạng trao đổi dữ liệu: JSON (gọn nhẹ, cặp Key-Value, parse nhanh) vs XML (thẻ lồng nhau, kiểm tra tính hợp lệ qua DTD/XSD).
-- Nắm vững cơ chế truyền thông bất đồng bộ của AJAX: sử dụng đối tượng `XMLHttpRequest` để trao đổi dữ liệu ngầm và cập nhật giao diện cục bộ (`부분 화면 갱신`) mà không tải lại toàn trang.
-- Định nghĩa kiến trúc RESTful API, 4 phương thức HTTP tiêu chuẩn (GET, POST, PUT, DELETE) và đặc tính phi trạng thái (`Stateless`).
+- Nắm vững định nghĩa và vai trò của Tích hợp ứng dụng doanh nghiệp (`EAI / Enterprise Application Integration`), phân tích chi tiết 4 mô hình kiến trúc EAI kinh điển: Point-to-Point, Hub & Spoke, Message Bus, Hybrid.
+- Áp dụng thành thạo công thức tính số lượng đường kết nối trong mô hình Point-to-Point: $\frac{N(N-1)}{2}$.
+- So sánh đối đầu giữa kiến trúc EAI truyền thống và Trục dịch vụ doanh nghiệp (`ESB / Enterprise Service Bus`) theo định hướng kiến trúc hướng dịch vụ (SOA).
+- Phân tích ưu nhược điểm của hai định dạng trao đổi dữ liệu tiêu chuẩn: `JSON` (nhẹ, nhanh, cặp key-value) và `XML` (cấu trúc cây thẻ, hỗ trợ DTD/XSD).
+- Nắm vững công nghệ truyền thông Web Services (SOAP, WSDL, UDDI) và cơ chế truyền thông bất đồng bộ qua mạng `AJAX` và `REST`.
 
 ## 핵심 키워드
 - EAI (Enterprise Application Integration / 기업 애플리케이션 통합)
-- EAI 구축 유형 (Point-to-Point N(N-1)/2, Hub & Spoke 단일 장애점 SPOF, Message Bus, Hybrid)
+- EAI 4대 구축 유형 (Point-to-Point, Hub & Spoke 중앙 집중, Message Bus, Hybrid)
+- SPOF (Single Point of Failure / 단일 장애점 / Hub & Spoke 단점)
 - ESB (Enterprise Service Bus / SOA 서비스 지향 아키텍처 / 느슨한 결합 Loose Coupling)
-- 데이터 교환 포맷 (JSON 경량 Key-Value vs XML DTD/XSD 태그 기반)
-- AJAX (Asynchronous JavaScript and XML / 비동기 통신 / 부분 화면 갱신 / XMLHttpRequest)
-- RESTful API (자원 중심 Resource-oriented / URI / GET, POST, PUT, DELETE / Stateless)
+- 데이터 교환 포맷 (JSON vs XML / WSDL, SOAP, REST)
+- AJAX (Asynchronous JavaScript and XML / 비동기 통신)
 
 ## 선행·연결 개념
-- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [08-hien-thuc-module-va-ipc.md](08-hien-thuc-module-va-ipc.md), chúng ta đã khảo sát các cơ chế giao tiếp liên tiến trình IPC (Shared Memory, Socket, Pipe) trong phạm vi một máy chủ độc lập.
-- **Đang giải quyết gì (Current Problem):** Bài học này nâng tầm bài toán tích hợp lên quy mô mạng doanh nghiệp kết nối các hệ thống phần mềm dị thể (ERP, CRM, Ngân hàng), giải quyết bài toán chống nghẽn đường truyền và chuẩn hóa định dạng dữ liệu web mở qua EAI/ESB, JSON và AJAX.
-- **Dùng đi đâu (Forward Handoff):** Khi các hệ thống liên kết qua mạng, vấn đề an ninh thông tin và xác minh giao diện trở thành yếu tố sống còn, bàn giao trực tiếp sang [10-bao-mat-giao-dien-va-kiem-chung.md](10-bao-mat-giao-dien-va-kiem-chung.md).
+- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [08-hien-thuc-module-va-ipc.md](08-hien-thuc-module-va-ipc.md), chúng ta đã khảo sát các cơ chế giao tiếp liên tiến trình IPC trên một máy chủ đơn lẻ.
+- **Đang giải quyết gì (Current Problem):** Bài học này nâng tầm bài toán tích hợp lên quy mô doanh nghiệp và hệ thống phân tán đa nền tảng, giải quyết việc kết nối các hệ thống phần mềm dị thể qua EAI/ESB và chuẩn hóa định dạng dữ liệu truyền thông bằng JSON/XML.
+- **Dùng đi đâu (Forward Handoff):** Khi các giao diện hệ thống được mở ra để tích hợp liên thông, nguy cơ bảo mật xuất hiện. Bài học tiếp theo [10-bao-mat-giao-dien-va-kiem-chung.md](10-bao-mat-giao-dien-va-kiem-chung.md) sẽ khảo sát các giao thức bảo mật IPSec, SSL/TLS và công cụ kiểm chứng.
 
 ## 읽는 방법
-- Đọc TẦNG A để nắm chắc công thức tính số kết nối Point-to-Point $\frac{N(N-1)}{2}$, bẫy SPOF của Hub & Spoke, và từ khóa nhận diện AJAX (비동기 통신, 부분 갱신).
-- Đọc TẦNG B để hiểu sâu sự khác nhau giữa adapter độc quyền của EAI với chuẩn mở Web Services của ESB.
+- Đọc TẦNG A để thuộc lòng bảng 4 mô hình EAI, bảng đối đầu EAI vs ESB, bảng so sánh JSON vs XML và các bẫy trắc nghiệm.
+- Đọc TẦNG B để hiểu sâu công thức tính số kết nối Point-to-Point, các thành phần của Web Services (SOAP, WSDL, UDDI) và công nghệ AJAX/REST.
 
 ---
 
-## 연계 통합 기술과 데이터 교환
+## 연계 통합 구현과 EAI/ESB
 
 ### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-#### 1. Bảng so sánh 4 mô hình kiến trúc EAI kinh điển
+#### 1. Bảng 4 mô hình kiến trúc EAI kinh điển
 | Mô hình EAI | Cơ chế kết nối | Ưu điểm cốt lõi | Nhược điểm (Bẫy đề thi cốt lõi) |
 | :--- | :--- | :--- | :--- |
-| **Point-to-Point** | Kết nối trực tiếp 1:1 giữa từng cặp ứng dụng | Đơn giản khi chỉ có 2-3 hệ thống | Số kết nối bùng nổ theo công thức $\mathbf{\frac{N(N-1)}{2}}$; cực khó bảo trì khi $N$ lớn |
-| **Hub & Spoke** | Nối tập trung về một máy chủ **Hub trung tâm (중앙 집중형)** | Dễ quản lý dữ liệu, kiểm soát bảo mật | **Điểm lỗi đơn (SPOF - Single Point of Failure)**; Hub sập thì tê liệt toàn bộ |
-| **Message Bus (ESB)**| Kết nối qua **đường trục thông điệp chung (미들웨어 버스)** | Khả năng mở rộng cao, truyền thông bất đồng bộ | Thiết kế ban đầu phức tạp, chi phí middleware |
-| **Hybrid** | Nội bộ dùng **Hub & Spoke**, giữa các cụm dùng **Message Bus** | Kết hợp ưu điểm kiểm soát nội bộ và mở rộng liên vùng | Quản trị song song hai mô hình phức tạp |
+| **Point-to-Point** | Kết nối trực tiếp 1:1 giữa từng cặp ứng dụng | Rất đơn giản khi hệ thống chỉ có 2-3 ứng dụng | Khi $N$ tăng, số kết nối bùng nổ: $\mathbf{\frac{N(N-1)}{2}}$; cực kỳ khó bảo trì |
+| **Hub & Spoke** | Mọi hệ thống đều nối tập trung về một **Hub trung tâm (중앙 집중형)** | Dễ quản lý dữ liệu, kiểm soát bảo mật tập trung | **Điểm lỗi đơn (SPOF — Single Point of Failure)**; sập Hub là sập toàn bộ |
+| **Message Bus (ESB)** | Các ứng dụng liên lạc qua một **trục bus trung gian chung (미들웨어 버스)** | Khả năng mở rộng vượt trội, truyền thông bất đồng bộ tin cậy | Chi phí mua middleware và thiết kế ban đầu phức tạp |
+| **Hybrid** | Nội bộ cụm dùng **Hub & Spoke**, giữa các cụm lớn liên kết qua **Message Bus** | Tận dụng sự linh hoạt của Hub và khả năng mở rộng của Bus | Đòi hỏi trình độ quản trị hai kiến trúc song song |
 
-#### 2. Đối chiếu EAI vs ESB
-| Tiêu chí | EAI (Enterprise Application Integration) | ESB (Enterprise Service Bus) |
+#### 2. Bảng so sánh đối đầu EAI vs ESB
+| Tiêu chuẩn so sánh | EAI (Enterprise Application Integration) | ESB (Enterprise Service Bus) |
 | :--- | :--- | :--- |
-| **Triết lý kiến trúc** | Tập trung (Hub & Spoke) hoặc adapter độc quyền | **Phân tán, hướng dịch vụ (SOA - Service-Oriented Architecture)** |
+| **Triết lý kiến trúc** | Tập trung (Hub & Spoke) hoặc độc quyền | **Phân tán, hướng dịch vụ (SOA — Service-Oriented Architecture)** |
 | **Mức độ liên kết** | Ghép nối tương đối chặt (Tight Coupling) | **Ghép nối lỏng lẻo (Loose Coupling)** |
-| **Giao thức chuẩn** | Thường dùng Adapter riêng của nhà sản xuất | Sử dụng **chuẩn mở Web Services (SOAP, RESTful)** |
+| **Giao thức chuẩn** | Dùng Adapter riêng của từng nhà cung cấp | Sử dụng **chuẩn mở Web Services (SOAP, RESTful)** |
 | **Định dạng dữ liệu** | Phụ thuộc vào công cụ chuyển đổi nội bộ | Chuẩn hóa thông qua **XML và JSON** |
+| **Khả năng mở rộng** | Khó mở rộng xuyên qua ranh giới Internet | Dễ dàng mở rộng qua Internet và môi trường Cloud |
 
-#### 3. Bảng so sánh JSON vs XML
-| Tiêu chuẩn so sánh | JSON (JavaScript Object Notation) | XML (eXtensible Markup Language) |
+#### 3. Bảng so sánh chi tiết JSON vs XML
+| Tiêu chuẩn | JSON (JavaScript Object Notation) | XML (eXtensible Markup Language) |
 | :--- | :--- | :--- |
 | **Cấu trúc dữ liệu** | Cặp **속성-값 (Key-Value)** `{}` và Mảng `[]` | Cấu trúc cây thẻ lồng nhau mở-đóng (`<tag>...</tag>`) |
 | **Dung lượng tệp** | **Rất nhẹ**, ít ký tự thừa, tiết kiệm băng thông | Cồng kềnh, nặng hơn do lặp lại các thẻ đóng mở |
-| **Tốc độ xử lý** | **Cực nhanh**; hỗ trợ tự nhiên trong JavaScript | Chậm hơn; cần bộ phân tích DOM/SAX Parser phức tạp |
-| **Kiểm tra cấu trúc**| Hỗ trợ JSON Schema | Hỗ trợ kiểm tra ràng buộc chặt chẽ qua **DTD** và **XSD** |
+| **Tốc độ Parse** | **Cực nhanh**; hỗ trợ tự nhiên trong JS (`JSON.parse`) | Chậm hơn; cần bộ phân tích DOM / SAX Parser phức tạp |
+| **Kiểm tra schema** | Hỗ trợ JSON Schema (ít phổ biến) | Hỗ trợ kiểm tra ràng buộc kiểu dữ liệu cực mạnh qua **DTD** và **XSD** |
 
 #### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
-- **Bẫy 1: Số kết nối Point-to-Point:** Doanh nghiệp có $N = 10$ hệ thống độc lập thì cần $\frac{10 \times 9}{2} = \mathbf{45}$ đường kết nối.
-- **Bẫy 2: Nhược điểm của Hub & Spoke:** Luôn luôn gắn liền với khái niệm **단일 장애점 (Single Point of Failure / SPOF)**.
-- **Bẫy 3: Đặc trưng nhận diện AJAX:** Cứ thấy câu hỏi *"công nghệ web trao đổi dữ liệu bất đồng bộ (`비동기`) và cập nhật cục bộ (`부분 화면 갱신`) mà không cần tải lại toàn trang"* $\rightarrow$ Chọn ngay **AJAX**.
-- **Bẫy 4: 4 phương thức HTTP trong RESTful API:**
-  - `GET`: Đọc / Truy vấn.
-  - `POST`: Tạo mới tài nguyên.
-  - `PUT`: Sửa / Cập nhật tài nguyên.
-  - `DELETE`: Xóa tài nguyên.
+- **Bẫy 1: Công thức kết nối Point-to-Point:** Khi hệ thống có $N = 10$ ứng dụng $\rightarrow \frac{10 \times 9}{2} = \mathbf{45}$ đường kết nối.
+- **Bẫy 2: Nhược điểm chí tử của Hub & Spoke:** Điểm yếu lớn nhất là xuất hiện **단일 장애점 (SPOF - Single Point of Failure)** tại máy chủ Hub trung tâm.
+- **Bẫy 3: Triết lý của ESB:** ESB luôn gắn liền với **SOA (Service-Oriented Architecture)** và nguyên tắc **느슨한 결합 (Loose Coupling - Ghép nối lỏng lẻo)**.
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Cơ chế vận hành của AJAX
-- Trình duyệt khởi tạo đối tượng `XMLHttpRequest` hoặc hàm `fetch()` trong JavaScript để gửi yêu cầu HTTP ngầm đến máy chủ.
-- **Giao tiếp bất đồng bộ (비동기 통신):** Người dùng vẫn có thể thao tác cuộn trang hoặc bấm chuột bình thường mà không bị treo màn hình trong khi máy chủ đang xử lý.
-- Khi máy chủ trả về kết quả (thường là dữ liệu JSON), JavaScript chỉ vẽ lại đúng phần tử HTML tương ứng trên cây DOM (ví dụ: cập nhật số lượt Like, hiển thị gợi ý tìm kiếm tức thời) mà **không làm tải lại toàn bộ trang**.
+#### 1. Bộ 3 công nghệ Web Services chuẩn đề thi
+- **SOAP (Simple Object Access Protocol):** Giao thức truyền thông điệp dựa trên XML qua giao thức HTTP/HTTPS.
+- **WSDL (Web Services Description Language):** Ngôn ngữ dựa trên XML dùng để mô tả chi tiết các dịch vụ web: các hàm cung cấp, tham số đầu vào và kiểu dữ liệu trả về.
+- **UDDI (Universal Description, Discovery, and Integration):** Sổ danh bạ trực tuyến toàn cầu dựa trên XML cho phép các doanh nghiệp đăng ký và tìm kiếm các dịch vụ web.
 
-#### 2. Tính chất phi trạng thái (Stateless) của RESTful API
-- Mỗi yêu cầu gửi từ Client lên Server phải chứa đầy đủ mọi thông tin cần thiết (Authentication Token, Headers, Payload) để Server xử lý.
-- Server không lưu trữ bất kỳ trạng thái phiên làm việc nào của Client giữa các lần gọi; điều này giúp hệ thống máy chủ dễ dàng mở rộng theo chiều ngang (Scale-out) phía sau bộ cân bằng tải Load Balancer.
+#### 2. Công nghệ AJAX và REST
+- **AJAX (Asynchronous JavaScript and XML):** Kỹ thuật cho phép trang web trao đổi một lượng nhỏ dữ liệu với máy chủ ở chế độ bất đồng bộ (Background), giúp cập nhật một phần nội dung giao diện mà **không cần tải lại toàn bộ trang web (페이지 새로고침 없음)**.
+- **REST (Representational State Transfer):** Kiến trúc dịch vụ web sử dụng trực tiếp các phương thức HTTP chuẩn (`GET`, `POST`, `PUT`, `DELETE`) để thao tác trên các tài nguyên được định danh bằng URL (URI).
+
+#### 3. Minh họa định dạng dữ liệu JSON vs XML
+- **JSON (gọn nhẹ, cặp Key-Value):**
+  ```json
+  { "id": 101, "name": "Antigravity", "role": "Engineer" }
+  ```
+- **XML (cấu trúc thẻ cây phân cấp, kèm DTD/XSD):**
+  ```xml
+  <user>
+      <id>101</id>
+      <name>Antigravity</name>
+      <role>Engineer</role>
+  </user>
+  ```
 
 ---
 
 ### 복습 체크리스트
-- [ ] Kể tên đầy đủ 4 mô hình EAI: Point-to-Point, Hub & Spoke, Message Bus, Hybrid.
-- [ ] Tính đúng số kết nối của Point-to-Point theo công thức $\frac{N(N-1)}{2}$.
-- [ ] Nhớ nhược điểm Single Point of Failure (SPOF) của mô hình Hub & Spoke.
-- [ ] Phân biệt được sự chuyển dịch từ EAI (tập trung) sang ESB (phân tán, hướng dịch vụ SOA).
-- [ ] So sánh được ưu điểm của JSON so với XML (nhẹ hơn, ít ký tự thừa, parse nhanh hơn).
-- [ ] Định nghĩa AJAX là công nghệ truyền thông bất đồng bộ cho phép cập nhật cục bộ không tải lại toàn trang.
-- [ ] Kể tên đối tượng nền tảng của AJAX: `XMLHttpRequest` (hoặc `fetch`).
-- [ ] Nắm vững 4 phương thức HTTP trong RESTful API: GET (đọc), POST (tạo), PUT (sửa), DELETE (xóa).
+- [ ] Tính thành thạo số kết nối Point-to-Point: $\frac{N(N-1)}{2}$.
+- [ ] Nêu nhược điểm SPOF (Single Point of Failure) của mô hình Hub & Spoke.
+- [ ] Phân biệt EAI (ghép nối chặt) và ESB (ghép nối lỏng lẻo, SOA).
+- [ ] So sánh ưu nhược điểm giữa JSON (nhẹ, nhanh) và XML (chuẩn hóa DTD/XSD).
+- [ ] Kể tên bộ ba Web Services: SOAP (giao thức), WSDL (mô tả dịch vụ), UDDI (sổ danh bạ tìm kiếm).
+- [ ] Nêu định nghĩa AJAX là truyền thông bất đồng bộ không cần tải lại toàn trang.

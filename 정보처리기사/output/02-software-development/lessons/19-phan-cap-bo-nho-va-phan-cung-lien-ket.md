@@ -27,7 +27,7 @@
 
 ## 읽는 방법
 - Đọc TẦNG A để thuộc lòng bảng so sánh DRAM vs SRAM, công thức tính Access Time đĩa từ, bảng 3 kỹ thuật ánh xạ Cache, bảng Paging vs Segmentation, và phân loại kiến trúc theo Flynn.
-- Đọc TẦNG B để hiểu sâu công thức tính dung lượng bus MAR/MBR, cấu trúc lõi từ DRO, cơ chế CAM và Memory Interleaving, cùng hiện tượng Thrashing.
+- Đọc TẦNG B để theo dõi sơ đồ ASCII Disk Access Time, chi tiết công thức tính dung lượng bus MAR/MBR, cấu trúc lõi từ DRO, cơ chế CAM và Memory Interleaving, cùng hiện tượng Thrashing.
 
 ---
 
@@ -115,18 +115,36 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Tính toán dung lượng bộ nhớ bán dẫn
+#### 1. Sơ đồ các thành phần thời gian truy cập đĩa từ
+```
+                  ┌────────────────────────────────────────────────────────┐
+                  │                 TỔNG THỜI GIAN TRUY CẬP ĐĨA             │
+                  │                     (Disk Access Time)                 │
+                  └───────────────────────────┬────────────────────────────┘
+                                              │
+         ┌────────────────────────────────────┼────────────────────────────────────┐
+         ▼                                    ▼                                    ▼
+┌─────────────────────────┐          ┌─────────────────────────┐          ┌─────────────────────────┐
+│ 탐색 시간 (Seek Time)    │          │ 회전 지연 시간 (Latency) │          │ 전송 시간 (Transmission)│
+│ Đầu đọc di chuyển vào   │    +     │ Đĩa quay đưa Sector cần │    +     │ Đọc các byte dữ liệu và │
+│ đúng rãnh Track         │          │ đọc nằm dưới đầu từ     │          │ truyền qua bus về RAM   │
+│ (Mất nhiều thời gian    │          │ (Thời gian trung bình   │          │                         │
+│  nhất trong 3 thành phần│          │  bằng quay nửa vòng đĩa)│          │                         │
+└─────────────────────────┘          └─────────────────────────┘          └─────────────────────────┘
+```
+
+#### 2. Tính toán dung lượng bộ nhớ bán dẫn
 $$\text{Tổng dung lượng (Capacity)} = (\text{Số lượng từ nhớ - Words}) \times (\text{Độ dài từ nhớ - Word Length})$$
 - Hệ thống có $n$ đường Address Bus $\rightarrow 2^n$ địa chỉ (tương ứng kích thước thanh ghi địa chỉ MAR).
 - Hệ thống có $m$ đường Data Bus $\rightarrow$ Mỗi Word có độ dài $m$ bits (tương ứng kích thước thanh ghi đệm MBR).
 - *Ví dụ đề thi:* Bộ nhớ có 10 đường Address Bus và 8 đường Data Bus $\rightarrow$ Dung lượng $= 2^{10} \times 8\text{ bits} = 1024 \times 1\text{ Byte} = 1\text{ KB}$.
 
-#### 2. Lõi từ (자기 코어 - Magnetic Core) và Đặc tính DRO
+#### 3. Lõi từ (자기 코어 - Magnetic Core) và Đặc tính DRO
 - Là công nghệ bộ nhớ từ tính sơ khai.
 - **Đặc tính DRO (Destructive Read Out - Đọc phá hủy):** Đọc dữ liệu làm phá hủy trạng thái từ tính của lõi, hệ thống bắt buộc phải có chu kỳ phục hồi (**재생산 주기 - Restoration Time**) để ghi lại nội dung vừa đọc.
 - Gồm 4 dây dẫn: 2 dây toạ độ (X, Y), 1 dây cảm ứng đọc tín hiệu (센스선 - Sense Line) và 1 dây cấm đảo từ (금지선 - Inhibit Line).
 
-#### 3. Bộ nhớ liên kết CAM và Xen kẽ bộ nhớ Interleaving
+#### 4. Bộ nhớ liên kết CAM và Xen kẽ bộ nhớ Interleaving
 - **CAM (Content Addressable Memory):** Tích hợp mạch so sánh song song (**일치 회로**), so sánh toàn bộ mảng dữ liệu trong 1 chu kỳ máy. Ứng dụng trong Cache tag directory và bảng chuyển đổi trang nhanh TLB.
 - **메모리 인터리빙 (Memory Interleaving):** Chia RAM thành nhiều module độc lập, đánh địa chỉ luân phiên để CPU có thể truy cập song song đồng thời nhiều module trong 1 chu kỳ bus, hỗ trợ đắc lực cho DMA và kiến trúc Pipeline.
 
