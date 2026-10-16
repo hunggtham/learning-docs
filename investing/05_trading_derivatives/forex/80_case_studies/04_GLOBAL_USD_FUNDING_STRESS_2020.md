@@ -22,8 +22,6 @@ Hedging demand
 
 Do đó một institution ở Europe, Japan hoặc Korea có thể thiếu USD dù domestic currency của họ vẫn đầy đủ.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **2. Offshore dollar hệ thống (system / 시스템)** nối từ **1. Vì sao non-US institutions cần USD?** sang **3. COVID shock as liquidity shock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Offshore dollar hệ thống (system / 시스템)
 
 Nhiều USD liabilities được tạo ngoài US banking hệ thống (system / 시스템).
@@ -41,8 +39,6 @@ Khi normal funding markets hoạt động, rollover có vẻ routine.
 
 Crisis bắt đầu khi everyone tries to secure USD at same thời gian (time / 시간).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **3. COVID shock as liquidity shock** nối từ **2. Offshore dollar hệ thống (system / 시스템)** sang **4. Dollar appreciation can be funding-driven**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. COVID shock as liquidity shock
 
 Đầu 2020, pandemic bất định (uncertainty / 불확실성) làm markets reprice mạnh.
@@ -57,8 +53,6 @@ Kết quả (result / 결과):
 Demand for dollars rises sharply
 while market-making capacity and risk appetite fall
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **4. Dollar appreciation can be funding-driven** nối từ **3. COVID shock as liquidity shock** sang **5. Cross-currency basis as funding stress tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Dollar appreciation can be funding-driven
 
@@ -80,8 +74,6 @@ Global participants urgently need USD liquidity
 
 FX move therefore can come from balance-sheet demand, not growth optimism.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **5. Cross-currency basis as funding stress tín hiệu (signal / 신호)** nối từ **4. Dollar appreciation can be funding-driven** sang **6. FX swap is funding instrument, not only trading sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Cross-currency basis as funding stress tín hiệu (signal / 신호)
 
 Covered interest parity links spot, forward and interest-rate differentials.
@@ -99,8 +91,6 @@ Need USD
 
 If many institutions compete for USD, basis can move sharply.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **6. FX swap is funding instrument, not only trading sản phẩm (product / 제품)** nối từ **5. Cross-currency basis as funding stress tín hiệu (signal / 신호)** sang **7. Why balance-sheet sức chứa (capacity / 용량) matters**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. FX swap is funding instrument, not only trading sản phẩm (product / 제품)
 
 A large share of toàn cục (global / 전역) FX turnover comes from swaps.
@@ -113,8 +103,6 @@ Therefore:
 FX swap market dysfunction
 can transmit into spot FX, bond markets and credit conditions
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **7. Why balance-sheet sức chứa (capacity / 용량) matters** nối từ **6. FX swap is funding instrument, not only trading sản phẩm (product / 제품)** sang **8. Dash for cash**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Why balance-sheet sức chứa (capacity / 용량) matters
 
@@ -131,8 +119,6 @@ Dealer intermediation capacity falls
 
 Even when there are buyers and sellers economically, market-making balance sheet can become bottleneck.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **8. Dash for cash** nối từ **7. Why balance-sheet sức chứa (capacity / 용량) matters** sang **9. Margin calls amplify dollar demand**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Dash for cash
 
 Investors may sell even high-quality assets not because fundamentals deteriorated, but because they need cash.
@@ -147,8 +133,6 @@ Sell liquid assets
 ```
 
 Price movement is then driven partly by financing các ràng buộc (constraints / 제약조건들).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **9. Margin calls amplify dollar demand** nối từ **8. Dash for cash** sang **10. Central-bank swap lines**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Margin calls amplify dollar demand
 
@@ -166,8 +150,6 @@ Asset value down
 
 This is leverage vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **10. Central-bank swap lines** nối từ **9. Margin calls amplify dollar demand** sang **11. Why swap lines reduce FX funding pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Central-bank swap lines
 
 Federal Reserve has standing dollar liquidity swap lines with several major central banks.
@@ -182,8 +164,6 @@ At maturity, currencies are swapped back at same exchange rate
 ```
 
 This allows foreign central bank to act as cục bộ (local / 로컬) distributor of dollar liquidity.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **11. Why swap lines reduce FX funding pressure** nối từ **10. Central-bank swap lines** sang **12. March 15, 2020 enhancement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Why swap lines reduce FX funding pressure
 
@@ -204,8 +184,6 @@ Central bank can supply USD against local collateral framework
 
 Swap lines therefore mục tiêu (target / 대상) funding thị trường (market / 시장), not exchange-rate mức (level / 수준) directly.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **12. March 15, 2020 enhancement** nối từ **11. Why swap lines reduce FX funding pressure** sang **13. March 19 expansion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. March 15, 2020 enhancement
 
 Fed and standing swap-line central banks announced coordinated changes:
@@ -219,8 +197,6 @@ Goal: improve truy cập (access / 접근) to term USD liquidity.
 
 This matters because crisis participants may fear not only today's funding but funding several weeks/months ahead.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **13. March 19 expansion** nối từ **12. March 15, 2020 enhancement** sang **14. Daily operations**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. March 19 expansion
 
 Fed established temporary USD swap arrangements with nine additional central banks, including Bank of Korea.
@@ -228,8 +204,6 @@ Fed established temporary USD swap arrangements with nine additional central ban
 For several central banks, line kích thước (size / 크기) reached up to USD 60 billion.
 
 This is a direct example of toàn cục (global / 전역) dollar kiến trúc (architecture / 아키텍처) reaching Korea during stress.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **14. Daily operations** nối từ **13. March 19 expansion** sang **15. Take-up and signaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Daily operations
 
@@ -243,8 +217,6 @@ weekly auction may leave institutions waiting.
 ```
 
 More frequent operations reduce timing mismatch.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **15. Take-up and signaling** nối từ **14. Daily operations** sang **16. Korea liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Take-up and signaling
 
@@ -261,8 +233,6 @@ Actual dollars supplied
 
 Backstop credibility can reduce precautionary hoarding.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, sau nội dung của **15. Take-up and signaling**, **16. Korea liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **17. FIMA Repo Facility** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16. Korea liên kết (connection / 연결)
 
 Bank of Korea received temporary swap line truy cập (access / 접근) during March 2020.
@@ -276,8 +246,6 @@ banks/corporates interacting with USD markets
 ```
 
 During toàn cục (global / 전역) dollar stress, USD/KRW can move not only from Korea-specific fundamentals but also from system-wide USD funding demand.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **17. FIMA Repo Facility** nối từ **16. Korea liên kết (connection / 연결)** sang **18. Safe asset can become funding collateral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. FIMA Repo Facility
 
@@ -303,8 +271,6 @@ Pledge Treasuries temporarily
 
 This connects FX reserve management with Treasury thị trường (market / 시장) functioning.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **18. Safe asset can become funding collateral** nối từ **17. FIMA Repo Facility** sang **19. Why spot FX alone is incomplete**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Safe asset can become funding collateral
 
 US Treasuries are safe credit assets, but during cash scramble even Treasury thị trường (market / 시장) can face liquidity stress.
@@ -317,8 +283,6 @@ Credit safety
 ```
 
 Same distinction applies to FX pairs.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **19. Why spot FX alone is incomplete** nối từ **18. Safe asset can become funding collateral** sang **20. Cross-currency basis and covered interest parity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Why spot FX alone is incomplete
 
@@ -342,8 +306,6 @@ Treasury market liquidity
 ```
 
 FX is connected to funding mạng (network / 네트워크).
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **20. Cross-currency basis and covered interest parity** nối từ **19. Why spot FX alone is incomplete** sang **21. Corporate dollar debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Cross-currency basis and covered interest parity
 
@@ -369,8 +331,6 @@ Collateral constraints
 
 Therefore basis is not just pricing anomaly; it can measure hệ thống (system / 시스템) ràng buộc (constraint / 제약조건).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **21. Corporate dollar debt** nối từ **20. Cross-currency basis and covered interest parity** sang **22. Hedging demand can worsen funding pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Corporate dollar debt
 
 A non-US corporation with USD debt but local-currency revenue faces two stress channels:
@@ -384,8 +344,6 @@ USD funding spread widens
 ```
 
 Currency and credit stress can happen together.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **22. Hedging demand can worsen funding pressure** nối từ **21. Corporate dollar debt** sang **23. Dollar smile nuance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Hedging demand can worsen funding pressure
 
@@ -402,8 +360,6 @@ Portfolio revaluation
 
 Thus hedging itself can become procyclical.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **23. Dollar smile nuance** nối từ **22. Hedging demand can worsen funding pressure** sang **24. Liquidity transformation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Dollar smile nuance
 
 USD sometimes strengthens in both:
@@ -417,8 +373,6 @@ Global crisis / funding stress
 But cơ chế (mechanism / 메커니즘) differs.
 
 This is why same price direction must not be treated as same regime.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **24. Liquidity transformation** nối từ **23. Dollar smile nuance** sang **25. Why swap line is not FX intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Liquidity transformation
 
@@ -434,8 +388,6 @@ Need to shrink balance sheet
 ```
 
 Again, maturity mismatch is central.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **25. Why swap line is not FX intervention** nối từ **24. Liquidity transformation** sang **26. Moral hazard vs crisis stabilization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Why swap line is not FX intervention
 
@@ -453,8 +405,6 @@ with
 central-bank liquidity swap
 ```
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **26. Moral hazard vs crisis stabilization** nối từ **25. Why swap line is not FX intervention** sang **27. What dữ liệu (data / 데이터) should be monitored?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Moral hazard vs crisis stabilization
 
 Backstops can create debate about incentives.
@@ -468,8 +418,6 @@ Ex-ante incentive question
 from
 Ex-post crisis stabilization question
 ```
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **26. Moral hazard vs crisis stabilization** đặt vấn đề; **27. What dữ liệu (data / 데이터) should be monitored?** đối chiếu bằng chứng, rồi **28. USD/KRW-specific stress dashboard** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. What dữ liệu (data / 데이터) should be monitored?
 
@@ -488,8 +436,6 @@ Margin and collateral conditions
 
 Not all dữ liệu (data / 데이터) are available in real thời gian (time / 시간) to retail researcher.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **27. What dữ liệu (data / 데이터) should be monitored?** đặt vấn đề; **28. USD/KRW-specific stress dashboard** đối chiếu bằng chứng, rồi **29. Why ordinary volatility các mô hình (models / 모델들) thất bại (fail / 실패)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 28. USD/KRW-specific stress dashboard
 
 ```text
@@ -504,8 +450,6 @@ Semiconductor/export fundamentals
 ```
 
 Purpose: separate Korea-specific weakness from toàn cục (global / 전역) dollar squeeze.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **29. Why ordinary volatility các mô hình (models / 모델들) thất bại (fail / 실패)** nối từ **28. USD/KRW-specific stress dashboard** sang **30. Chiến lược (strategy / 전략) implication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Why ordinary volatility các mô hình (models / 모델들) thất bại (fail / 실패)
 
@@ -523,8 +467,6 @@ Policy backstops activate
 
 Regime-aware rủi ro (risk / 위험) mô hình (model / 모델) must include liquidity/funding trạng thái (state / 상태).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **30. Chiến lược (strategy / 전략) implication** nối từ **29. Why ordinary volatility các mô hình (models / 모델들) thất bại (fail / 실패)** sang **31. Portfolio implication**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Chiến lược (strategy / 전략) implication
 
 A macro chiến lược (strategy / 전략) long USD may profit during funding squeeze, but if thesis says “US growth outperforming”, attribution is wrong.
@@ -538,8 +480,6 @@ Funding-stress beta
 ```
 
 Otherwise researcher may think mô hình (model / 모델) works for wrong reason.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **31. Portfolio implication** nối từ **30. Chiến lược (strategy / 전략) implication** sang **32. Counterparty implication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Portfolio implication
 
@@ -558,8 +498,6 @@ may all suffer when USD funding tightens.
 
 True diversification requires factor phân tích (analysis / 분석).
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **32. Counterparty implication** nối từ **31. Portfolio implication** sang **33. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Counterparty implication
 
 Funding stress raises counterparty and settlement rủi ro (risk / 위험).
@@ -574,8 +512,6 @@ Settlement capacity
 
 may thay đổi (change / 변경) rapidly.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **33. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **32. Counterparty implication** sang **34. Cơ chế (mechanism / 메커니즘) map**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Instead of asking:
@@ -587,8 +523,6 @@ Ask:
 > What combination of USD appreciation, funding spread widening and margin calls forces portfolio liquidation?
 
 This is more useful for leveraged portfolio.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **33. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** đặt đầu vào cho **34. Cơ chế (mechanism / 메커니즘) map**, rồi **35. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. Cơ chế (mechanism / 메커니즘) map
 
@@ -607,8 +541,6 @@ COVID shock
 → funding stress eases
 ```
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, sau khi thấy quy trình trong **34. Cơ chế (mechanism / 메커니즘) map**, **35. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **36. Practice exercise** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 35. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)
 
 For any toàn cục (global / 전역) portfolio, ask:
@@ -623,8 +555,6 @@ Which central-bank backstops exist?
 Which counterparties can access them?
 What assets would be sold to raise dollars?
 ```
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **35. Rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)** nêu quy tắc; **36. Practice exercise** thử quy tắc trong tình huống, rồi **37. What not to learn** mở rộng hệ quả.
 
 ## 36. Practice exercise
 
@@ -652,8 +582,6 @@ Then assume BOK provides USD auction truy cập (access / 접근) through Fed sw
 
 Goal: see difference between **solvency, currency exposure and funding liquidity**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **37. What not to learn** nối từ **36. Practice exercise** sang **Nguồn nền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. What not to learn
 
 Wrong lesson:
@@ -678,8 +606,6 @@ Wrong lesson:
 ```
 
 Funding stress can strengthen USD during weak toàn cục (global / 전역)/US conditions.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 04 — Toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ**, **37. What not to learn** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

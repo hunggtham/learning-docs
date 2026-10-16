@@ -42,8 +42,6 @@ Account loss ≈ 10%
 
 Leverage không làm xác suất dự đoán đúng tăng. Nó chỉ làm cùng price move tạo biến động account lớn hơn.
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **1. Leverage không tạo ra edge** đặt tiêu chí; **2. Broker leverage limit và effective leverage khác nhau** dùng tiêu chí đó để đối chiếu ranh giới, rồi **3. Margin yêu cầu (requirement / 요구사항)** mở rộng hệ quả.
-
 ## 2. Broker leverage limit và effective leverage khác nhau
 
 Broker có thể quảng cáo maximum leverage, ví dụ `1:30`, `1:50`, `1:100` hoặc mức khác tùy jurisdiction/sản phẩm (product / 제품)/máy khách (client / 클라이언트) classification.
@@ -63,8 +61,6 @@ Do đó câu hỏi đúng không phải:
 mà là:
 
 > Tổng notional exposure hiện tại bằng bao nhiêu lần equity và account sẽ mất bao nhiêu nếu thị trường (market / 시장) di chuyển bất lợi theo các stress scenario?
-
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **2. Broker leverage limit và effective leverage khác nhau** đặt tiêu chí; **3. Margin yêu cầu (requirement / 요구사항)** dùng tiêu chí đó để đối chiếu ranh giới, rồi **4. Margin không phải maximum mất mát (loss / 손실)** mở rộng hệ quả.
 
 ## 3. Margin yêu cầu (requirement / 요구사항)
 
@@ -93,8 +89,6 @@ Margin Rate = 1 / Leverage
 
 Nhưng broker thực tế có thể tính margin theo đặc tả hợp đồng (contract / 계약) specification, pair, account currency, tiered notional, volatility regime hoặc regulatory quy tắc (rule / 규칙). Công thức trên là mô hình tư duy (mental model / 사고 모델), không thay thế quy tắc (rule / 규칙) của broker.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **4. Margin không phải maximum mất mát (loss / 손실)** nối từ **3. Margin yêu cầu (requirement / 요구사항)** sang **5. Balance, equity, used margin và free margin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Margin không phải maximum mất mát (loss / 손실)
 
 Đây là distinction quan trọng nhất.
@@ -114,8 +108,6 @@ Loss can consume margin
 Treatment của negative balance phụ thuộc jurisdiction, máy khách (client / 클라이언트) kiểu (type / 타입) và contractual terms. Không được giả định protection tồn tại nếu chưa kiểm tra.
 
 CFTC cũng nhấn mạnh leverage trong retail OTC forex có thể khuếch đại mất mát (loss / 손실) mạnh và customer cần hiểu margin obligation trước khi giao dịch.
-
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **5. Balance, equity, used margin và free margin** nối từ **4. Margin không phải maximum mất mát (loss / 손실)** sang **6. Margin mức (level / 수준)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Balance, equity, used margin và free margin
 
@@ -155,8 +147,6 @@ Free margin giảm khi:
 - floating losses tăng;
 - margin yêu cầu (requirement / 요구사항) tăng.
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **6. Margin mức (level / 수준)** nối từ **5. Balance, equity, used margin và free margin** sang **7. Margin lời gọi (call / 호출) và stop-out không giống stop-loss**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Margin mức (level / 수준)
 
 Nhiều retail platforms dùng:
@@ -181,8 +171,6 @@ Margin Level = 200%
 
 Broker có thể đặt threshold riêng cho margin lời gọi (call / 호출) hoặc automatic stop-out. Không có một universal stop-out percentage cho mọi broker.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **7. Margin lời gọi (call / 호출) và stop-out không giống stop-loss** nối từ **6. Margin mức (level / 수준)** sang **8. Effective leverage tăng khi equity giảm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Margin lời gọi (call / 호출) và stop-out không giống stop-loss
 
 ### Stop-loss
@@ -202,8 +190,6 @@ Một rủi ro (risk / 위험) tiến trình (process / 프로세스) tốt thư
 ```
 
 Liquidation có thể xảy ra trong điều kiện spread rộng và liquidity xấu, chính là lúc thực thi (execution / 실행) chất lượng (quality / 품질) giảm.
-
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **8. Effective leverage tăng khi equity giảm** nối từ **7. Margin lời gọi (call / 호출) và stop-out không giống stop-loss** sang **9. Gross leverage và net exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Effective leverage tăng khi equity giảm
 
@@ -235,8 +221,6 @@ Loss
 → higher liquidation risk
 ```
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **9. Gross leverage và net exposure** nối từ **8. Effective leverage tăng khi equity giảm** sang **10. Position sizing phải bắt đầu từ vô hiệu hóa (invalidation / 무효화)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Gross leverage và net exposure
 
 Nếu có nhiều positions, cần nhìn cả gross lẫn net.
@@ -258,8 +242,6 @@ Gross Leverage
 ```
 
 Netting chỉ theo USD có thể che giấu cross-currency rủi ro (risk / 위험).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **10. Position sizing phải bắt đầu từ vô hiệu hóa (invalidation / 무효화)** nối từ **9. Gross leverage và net exposure** sang **11. Basic sizing formula**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Position sizing phải bắt đầu từ vô hiệu hóa (invalidation / 무효화)
 
@@ -288,8 +270,6 @@ Choose huge lot
 → then invent a stop to fit it
 ```
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **11. Basic sizing formula** nối từ **10. Position sizing phải bắt đầu từ vô hiệu hóa (invalidation / 무효화)** sang **12. Ví dụ sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Basic sizing formula
 
 Nếu account currency trùng P/L currency:
@@ -314,8 +294,6 @@ Base Units
 ```
 
 đối với cấu trúc (structure / 구조) đơn giản như EUR/USD account USD.
-
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **11. Basic sizing formula** nêu quy tắc; **12. Ví dụ sizing** thử quy tắc trong tình huống, rồi **13. Fixed percentage rủi ro (risk / 위험) có lợi ích gì?** mở rộng hệ quả.
 
 ## 12. Ví dụ sizing
 
@@ -358,8 +336,6 @@ Approximate standard-lot notation:
 
 Đây chỉ là planned mất mát (loss / 손실) **trước** slippage, gap và some costs.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **12. Ví dụ sizing** nêu quy tắc; **13. Fixed percentage rủi ro (risk / 위험) có lợi ích gì?** thử quy tắc trong tình huống, rồi **14. Vì sao “rủi ro (risk / 위험) 2% mỗi trade” không phải quy tắc universal?** mở rộng hệ quả.
-
 ## 13. Fixed percentage rủi ro (risk / 위험) có lợi ích gì?
 
 Nếu mỗi trade rủi ro (risk / 위험) một fraction của hiện tại (current / 현재) equity, kích thước (size / 크기) tự co lại sau drawdown và tăng dần khi equity tăng.
@@ -374,8 +350,6 @@ Equity 8,000  → planned risk 80
 Cơ chế này giảm tốc độ mất vốn tương đối so với fixed-dollar rủi ro (risk / 위험) khi account giảm mạnh.
 
 Nhưng fixed percentage không tự tạo edge. Một chiến lược (strategy / 전략) có negative expectancy vẫn mất tiền, chỉ có thể mất chậm hơn.
-
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **14. Vì sao “rủi ro (risk / 위험) 2% mỗi trade” không phải quy tắc universal?** nối từ **13. Fixed percentage rủi ro (risk / 위험) có lợi ích gì?** sang **15. Portfolio heat**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Vì sao “rủi ro (risk / 위험) 2% mỗi trade” không phải quy tắc universal?
 
@@ -395,8 +369,6 @@ Rủi ro (risk / 위험) fraction cần phụ thuộc:
 
 Một chiến lược (strategy / 전략) có nhiều correlated trades không thể đánh giá rủi ro (risk / 위험) từng trade riêng lẻ.
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **15. Portfolio heat** nối từ **14. Vì sao “rủi ro (risk / 위험) 2% mỗi trade” không phải quy tắc universal?** sang **16. Currency-factor decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Portfolio heat
 
 **Portfolio heat** là tổng planned mất mát (loss / 손실)/exposure nếu nhiều positions cùng đi tới stop hoặc stress threshold.
@@ -413,8 +385,6 @@ USD shock
 ```
 
 Cần stress cả **dùng chung (common / 공통) factor**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **16. Currency-factor decomposition** nối từ **15. Portfolio heat** sang **17. Stop distance nên liên hệ volatility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Currency-factor decomposition
 
@@ -449,8 +419,6 @@ JPY exposure
 
 thay vì chỉ đếm tickets.
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **17. Stop distance nên liên hệ volatility** nối từ **16. Currency-factor decomposition** sang **18. Gap rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Stop distance nên liên hệ volatility
 
 Một fixed 20-pip stop có ý nghĩa rất khác khi pair daily phạm vi (range / 범위) là 40 pips so với 200 pips.
@@ -469,8 +437,6 @@ Market structure / thesis invalidation
 ```
 
 Không nên giữ kích thước (size / 크기) cố định rồi nới stop trong high volatility; làm vậy rủi ro (risk / 위험) tăng hai lần.
-
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **18. Gap rủi ro (risk / 위험)** nối từ **17. Stop distance nên liên hệ volatility** sang **19. Spread widening cũng làm liquidation pressure tăng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Gap rủi ro (risk / 위험)
 
@@ -500,8 +466,6 @@ nếu price jumps qua stop.
 
 Rủi ro (risk / 위험) mô hình (model / 모델) phải có tail scenario thay vì giả định continuous price đường dẫn (path / 경로).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **19. Spread widening cũng làm liquidation pressure tăng** nối từ **18. Gap rủi ro (risk / 위험)** sang **20. Rollover và financing ảnh hưởng equity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Spread widening cũng làm liquidation pressure tăng
 
 Floating P/L thường được marked theo executable bid/ask side. Khi spread widen mạnh:
@@ -517,8 +481,6 @@ Ngay cả khi mid-price không di chuyển nhiều, account có thể chịu str
 
 Đây là lý do margin headroom cần lớn hơn minimum yêu cầu (requirement / 요구사항).
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **20. Rollover và financing ảnh hưởng equity** nối từ **19. Spread widening cũng làm liquidation pressure tăng** sang **21. Drawdown math**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Rollover và financing ảnh hưởng equity
 
 Position giữ lâu có financing debit/credit. Với leveraged position lớn, chi phí (cost / 비용) nhỏ theo notional có thể trở thành đáng kể so với equity.
@@ -531,8 +493,6 @@ small % of large notional
 ```
 
 Do đó backtest swing/carry chiến lược (strategy / 전략) phải include financing.
-
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **21. Drawdown math** nối từ **20. Rollover và financing ảnh hưởng equity** sang **22. Rủi ro (risk / 위험) of ruin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Drawdown math
 
@@ -550,8 +510,6 @@ Leverage cao làm account dễ rơi vào vùng mà mathematical khôi phục (re
 
 Mục tiêu rủi ro (risk / 위험) management vì vậy không chỉ là tránh bankruptcy, mà là **preserve compounding sức chứa (capacity / 용량)**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **22. Rủi ro (risk / 위험) of ruin** nối từ **21. Drawdown math** sang **23. Chuỗi (sequence / 시퀀스) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Rủi ro (risk / 위험) of ruin
 
 **Rủi ro (risk / 위험) of ruin** là xác suất capital rơi xuống mức không thể tiếp tục chiến lược (strategy / 전략) theo cách dự kiến.
@@ -568,8 +526,6 @@ Nó tăng khi:
 
 Một chiến lược (strategy / 전략) có positive expectancy vẫn có thể ruin nếu sizing quá lớn.
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **22. Rủi ro (risk / 위험) of ruin** đặt đầu vào cho **23. Chuỗi (sequence / 시퀀스) rủi ro (risk / 위험)**, rồi **24. Kelly criterion: tối ưu growth không đồng nghĩa dễ chịu hay robust** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 23. Chuỗi (sequence / 시퀀스) rủi ro (risk / 위험)
 
 Hai traders có cùng 60 wins và 40 losses nhưng thứ tự trade khác nhau có thể trải qua drawdown rất khác nếu sizing phụ thuộc hiện tại (current / 현재) equity hoặc leverage.
@@ -584,8 +540,6 @@ same trade distribution
 
 Backtest equity curve duy nhất không cho thấy đầy đủ đường dẫn (path / 경로) rủi ro (risk / 위험).
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **23. Chuỗi (sequence / 시퀀스) rủi ro (risk / 위험)** đặt đầu vào cho **24. Kelly criterion: tối ưu growth không đồng nghĩa dễ chịu hay robust**, rồi **25. Margin kiểm thử sức chịu tải (stress test / 스트레스 테스트)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 24. Kelly criterion: tối ưu growth không đồng nghĩa dễ chịu hay robust
 
 Kelly khung phần mềm (framework / 프레임워크) liên hệ optimal betting fraction với edge/payoff dưới các giả định (assumptions / 가정들) cụ thể.
@@ -599,8 +553,6 @@ Vấn đề trong trading thực tế:
 - psychological tolerance thấp hơn mathematical tolerance.
 
 Vì vậy nếu dùng Kelly trong research, thường cần hiểu fractional Kelly và estimation lỗi (error / 오류). Không nên lấy một Kelly fraction từ backtest nhỏ rồi coi là “kích thước (size / 크기) tối ưu”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **25. Margin kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **24. Kelly criterion: tối ưu growth không đồng nghĩa dễ chịu hay robust** sang **26. Leverage và thời gian (time / 시간) horizon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Margin kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
@@ -629,8 +581,6 @@ Remaining Gross Leverage
 
 Rủi ro (risk / 위험) plan chỉ nhìn stop-loss mà không nhìn margin dynamics là chưa đủ cho leveraged sản phẩm (product / 제품).
 
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **26. Leverage và thời gian (time / 시간) horizon** nối từ **25. Margin kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **27. Broker margin có thể thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Leverage và thời gian (time / 시간) horizon
 
 Shorter timeframe không tự động cho phép leverage cao hơn an toàn.
@@ -647,8 +597,6 @@ Longer horizon có fewer trades nhưng chịu overnight/weekend rủi ro (risk /
 
 Leverage phải phù hợp **phân phối (distribution / 분포) of adverse moves**, không chỉ holding period label.
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **27. Broker margin có thể thay đổi** nối từ **26. Leverage và thời gian (time / 시간) horizon** sang **28. Một trade plan đầy đủ nên ghi gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Broker margin có thể thay đổi
 
 Margin yêu cầu (requirement / 요구사항) không nhất thiết cố định mãi.
@@ -664,8 +612,6 @@ margin increase
 ```
 
 Đó là structural fragility.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **28. Một trade plan đầy đủ nên ghi gì?** nối từ **27. Broker margin có thể thay đổi** sang **29. Sai lầm cần loại bỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Một trade plan đầy đủ nên ghi gì?
 
@@ -690,8 +636,6 @@ Portfolio heat after entry: ...
 ```
 
 Notice rằng `0.25 lot` chỉ là một dòng trong rủi ro (risk / 위험) specification, không phải trung tâm của plan.
-
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **29. Sai lầm cần loại bỏ** nối từ **28. Một trade plan đầy đủ nên ghi gì?** sang **30. Checklist trước khi học macro drivers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Sai lầm cần loại bỏ
 
@@ -719,8 +663,6 @@ Chưa đủ. Cần stop distance, pip giá trị (value / 값), volatility và a
 
 Sai. Account có thể chịu drawdown rất lớn trước liquidation threshold.
 
-> **Nối mạch:** Ở chặng này của **03 — Leverage, margin và position sizing**, **30. Checklist trước khi học macro drivers** nối từ **29. Sai lầm cần loại bỏ** sang **Nối sang chương tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Checklist trước khi học macro drivers
 
 Bạn cần tự giải thích được:
@@ -735,15 +677,11 @@ Bạn cần tự giải thích được:
 8. Vì sao gap/slippage khiến planned mất mát (loss / 손실) chỉ là estimate.
 9. Vì sao margin headroom quan trọng ngay cả khi mỗi trade có stop.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Leverage, margin và position sizing**, **Nối sang chương tiếp theo** nối từ **30. Checklist trước khi học macro drivers** sang **Nguồn và liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nối sang chương tiếp theo
 
 Sau khi biết position tạo rủi ro (risk / 위험) ra sao, câu hỏi tiếp theo là: **điều gì làm relative giá trị (value / 값) của hai currency thay đổi?**
 
 → [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
-
-> **Nối mạch:** Trong **03 — Leverage, margin và position sizing**, **Nối sang chương tiếp theo** đặt vấn đề; **Nguồn và liên kết** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn và liên kết
 

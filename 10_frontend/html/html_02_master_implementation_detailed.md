@@ -12,8 +12,6 @@ Mục tiêu không phải thuộc mọi môi trường vận hành (production /
 
 # PHẦN 1 — NHỮNG ELEMENT ÍT GẶP NHƯNG CẦN BIẾT
 
-> **Nối mạch:** Browser parsing, form, accessibility và security là các constraint chung; `<search>` minh họa một element hiện đại trong các constraint đó, còn `<hgroup>` tiếp theo kiểm tra semantics heading.
-
 ## 1. `<search>`
 
 `search` biểu diễn một vùng của document dành cho chức năng tìm kiếm hoặc lọc. Nó không thực hiện tìm kiếm (search / 검색) và cũng không thay thế `form`; ngữ nghĩa (semantic / 의미적) của nó chỉ giúp trình duyệt (browser / 브라우저) và khả năng tiếp cận (accessibility / 접근성) tầng (layer / 계층) biết subtree này có purpose là tìm kiếm (search / 검색).
@@ -32,8 +30,6 @@ Khi dùng, hãy nghĩ theo meaning thay vì visual bố cục (layout / 레이�
 
 ---
 
-> **Nối mạch:** `<search>` diễn đạt vùng tìm kiếm; `<hgroup>` tiếp theo nhóm heading có quan hệ, còn `<menu>` mở rộng semantic cho nhóm thao tác.
-
 ## 2. `<hgroup>`
 
 `hgroup` group một heading với supporting văn bản (text / 텍스트) như subtitle hoặc tagline.
@@ -48,8 +44,6 @@ Khi dùng, hãy nghĩ theo meaning thay vì visual bố cục (layout / 레이�
 Nó không phải shortcut để gộp `h1`, `h2`, `h3` thành một hierarchy. Heading hierarchy vẫn đến từ headings và document cấu trúc (structure / 구조). khả năng tiếp cận (accessibility / 접근성) implication ở đây là supporting văn bản (text / 텍스트) không trở thành một heading chỉ vì đứng gần heading về mặt visual.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **3. <menu>** nối từ **2. <hgroup>** sang **4. <wbr>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. `<menu>`
 
@@ -66,8 +60,6 @@ Trong ứng dụng (application / 애플리케이션) thông thường `ul` vẫ
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **4. <wbr>** nối từ **3. <menu>** sang **5. <dfn> và <u>**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. `<wbr>`
 
 `wbr` tạo **word break opportunity**. trình duyệt (browser / 브라우저) chỉ xuống dòng tại đó khi bố cục (layout / 레이아웃) cần, khác với `br` là line break bắt buộc.
@@ -81,8 +73,6 @@ Trong ứng dụng (application / 애플리케이션) thông thường `ul` vẫ
 Nó hữu ích với URL, băm (hash / 해시), identifier hoặc technical đơn vị từ (token / 토큰) dài. Về khả năng tiếp cận (accessibility / 접근성), `wbr` không nên được dùng để thay đổi meaning của văn bản (text / 텍스트); nó chỉ giúp bố cục (layout / 레이아웃) break line ở vị trí hợp lý.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **5. <dfn> và <u>** nối từ **4. <wbr>** sang **6. <map> và <area>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. `<dfn>` và `<u>`
 
@@ -107,8 +97,6 @@ Nếu mục tiêu chỉ là presentation, CSS phù hợp hơn. Underline còn c�
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **6. <map> và <area>** nối từ **5. <dfn> và <u>** sang **7. <canvas>**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. `<map>` và `<area>`
 
 Ảnh (image / 이미지) map cho phép một ảnh (image / 이미지) có nhiều vùng clickable:
@@ -132,8 +120,6 @@ Trình duyệt (browser / 브라우저) dùng `shape` và `coords` để hit-tes
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **7. <canvas>** nối từ **6. <map> và <area>** sang **8. SVG và MathML là foreign content**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. `<canvas>`
 
 `canvas` cung cấp bitmap drawing surface cho JavaScript:
@@ -149,8 +135,6 @@ Trình duyệt (browser / 브라우저) dùng `shape` và `coords` để hit-tes
 Canvas pixels không tự tạo ngữ nghĩa (semantic / 의미적) cây (tree / 트리). Một chart quan trọng nên có alternative biểu diễn (representation / 표현) như bảng (table / 테이블), văn bản (text / 텍스트) summary hoặc DOM controls. cấp cao (senior / 시니어) cần nhớ rằng canvas rendering và cây khả năng tiếp cận (accessibility tree / 접근성 트리) là hai hệ thống khác nhau.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **8. SVG và MathML là foreign content** nối từ **7. <canvas>** sang **9. HTML không phải XML**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. SVG và MathML là foreign content
 
@@ -180,8 +164,6 @@ Khi parser đi vào SVG hoặc MathML, không gian tên (namespace / 네임스�
 
 # PHẦN 2 — HTML PARSER VÀ cây (tree / 트리) CONSTRUCTION
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **9. HTML không phải XML** nối từ **8. SVG và MathML là foreign content** sang **10. Optional end tags và parser repair**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. HTML không phải XML
 
 Trong `text/html`, `img` là void element:
@@ -200,8 +182,6 @@ không biến document thành XML. Parsing chế độ (mode / 모드) đến t�
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **10. Optional end tags và parser repair** nối từ **9. HTML không phải XML** sang **11. <p> auto-closing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Optional end tags và parser repair
 
 HTML cho phép omit một số end tags trong những conditions cụ thể:
@@ -218,8 +198,6 @@ Trình duyệt (browser / 브라우저) vẫn có thể tạo hai `li`. Tuy nhi�
 HTML parser còn có lỗi (error / 오류) khôi phục (recovery / 복구) mạnh. Việc trình duyệt (browser / 브라우저) kết xuất (render / 렌더링) được markup không chứng minh markup author-conforming hoặc ngữ nghĩa (semantic / 의미적) đúng.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **11. <p> auto-closing** nối từ **10. Optional end tags và parser repair** sang **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. `<p>` auto-closing
 
@@ -238,8 +216,6 @@ không tạo cây (tree / 트리) “div nằm trong p” như indentation gợi
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** nối từ **11. <p> auto-closing** sang **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)
 
 HTML parser là context-sensitive. Nó có các insertion modes như `in head`, `in body`, `in table`, `in row`, `in cell`. Một đơn vị từ (token / 토큰) xuất hiện trong bảng (table / 테이블) ngữ cảnh (context / 맥락) có thể được xử lý khác khi nó xuất hiện trong ordinary body luồng (flow / 흐름).
@@ -250,8 +226,6 @@ Bạn không cần thuộc từng bước thuật toán. Điều cần hiểu l�
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)** đặt vấn đề; **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** đối chiếu bằng chứng, rồi **14. Raw văn bản (text / 텍스트), RCDATA và character references** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)
 
 Ba tầng (layer / 계층) phải được phân biệt. View nguồn (source / 소스) gần với original phản hồi (response / 응답). DOM là kết quả sau tokenizer/cây (tree / 트리) construction và sau các thời gian chạy (runtime / 런타임) mutations. React/Vue/Svelte lại có nội bộ (internal / 내부) thành phần (component / 컴포넌트)/cây (tree / 트리) mô hình (model / 모델) riêng.
@@ -259,8 +233,6 @@ Ba tầng (layer / 계층) phải được phân biệt. View nguồn (source / 
 Khi gỡ lỗi (debug / 디버그) hydration, bảng (table / 테이블) cấu trúc (structure / 구조) hoặc invalid nesting, hãy so sánh original HTML với Elements panel thay vì chỉ nhìn JSX/template.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)** đặt vấn đề; **14. Raw văn bản (text / 텍스트), RCDATA và character references** đối chiếu bằng chứng, rồi **15. Form đơn vị sở hữu (owner / 오너)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Raw văn bản (text / 텍스트), RCDATA và character references
 
@@ -271,8 +243,6 @@ Character references như `&amp;`, `&lt;`, `&gt;` và `&quot;` dùng khi cần b
 ---
 
 # PHẦN 3 — FORM INTERNALS VÀ LIVE trạng thái (state / 상태)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **15. Form đơn vị sở hữu (owner / 오너)** nối từ **14. Raw văn bản (text / 텍스트), RCDATA và character references** sang **16. Submitter và implicit submission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Form đơn vị sở hữu (owner / 오너)
 
@@ -302,8 +272,6 @@ Nested `form` không phải cách tạo form con. Hãy dùng sibling forms hoặ
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **16. Submitter và implicit submission** nối từ **15. Form đơn vị sở hữu (owner / 오너)** sang **17. Successful controls**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Submitter và implicit submission
 
 Button trigger form submission được gọi là submitter:
@@ -323,8 +291,6 @@ Pressing Enter trong văn bản (text / 텍스트) điều khiển (control / �
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **17. Successful controls** nối từ **16. Submitter và implicit submission** sang **18. Disabled, readonly và disabled fieldset**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Successful controls
 
 Khi form submit, trình duyệt (browser / 브라우저) không đơn giản serialize mọi đầu vào (input / 입력) nằm trong DOM. điều khiển (control / 제어) phải đáp ứng submission rules. `name` thường cần thiết; disabled controls thường không đóng góp entry; unchecked checkbox/radio thường không tạo entry; readonly giá trị (value / 값) vẫn có thể submit; submit button chỉ đóng góp khi nó là submitter.
@@ -332,8 +298,6 @@ Khi form submit, trình duyệt (browser / 브라우저) không đơn giản ser
 Đây là reason backend đôi khi “không nhận được trường dữ liệu (field / 필드)” dù trường dữ liệu (field / 필드) hiển thị trên UI. gỡ lỗi (debug / 디버그) bằng form-data ngữ nghĩa (semantics / 의미론) trước khi đổ lỗi mạng (network / 네트워크) thư viện (library / 라이브러리).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **18. Disabled, readonly và disabled fieldset** nối từ **17. Successful controls** sang **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Disabled, readonly và disabled fieldset
 
@@ -349,8 +313,6 @@ Không được coi readonly giá trị (value / 값) là trusted; máy khách (
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** nối từ **18. Disabled, readonly và disabled fieldset** sang **20. dirname và capture**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)
 
 `type="reset"` không “xóa trắng form”; nó restore default trạng thái (state / 상태).
@@ -364,8 +326,6 @@ sau khi người dùng (user / 사용자) sửa thành `Bob`, `input.value` là 
 Đây là một ví dụ quan trọng cho relationship giữa markup attribute và DOM thuộc tính (property / 속성).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **20. dirname và capture** nối từ **19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)** sang **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. `dirname` và `capture`
 
@@ -386,8 +346,6 @@ Nó không phải bảo mật (security / 보안)/permission guarantee và UX c�
 
 # PHẦN 4 — DOM quan hệ (relation / 관계) VÀ DOM CLOBBERING
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** nối từ **20. dirname và capture** sang **22. DOM clobbering**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Attribute không đồng nghĩa live thuộc tính (property / 속성)
 
 Markup là initial declarative trạng thái (state / 상태); DOM đối tượng (object / 객체) có live properties. Ví dụ người dùng (user / 사용자) có thể thay đổi `input.value` mà `getAttribute("value")` vẫn phản ánh initial/default markup.
@@ -397,8 +355,6 @@ Tương tự, `a.getAttribute("href")` có thể là relative URL `/users`, còn
 Cấp cao (senior / 시니어) cần biết attribute reflection rules khác nhau theo từng API thay vì assume attribute/thuộc tính (property / 속성) luôn sync hai chiều.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **22. DOM clobbering** nối từ **21. Attribute không đồng nghĩa live thuộc tính (property / 속성)** sang **23. Microdata**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. DOM clobbering
 
@@ -417,8 +373,6 @@ DOM không nên được dùng như trusted cấu hình (configuration / 구성)
 ---
 
 # PHẦN 5 — MICRODATA
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **23. Microdata** nối từ **22. DOM clobbering** sang **24. <template>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Microdata
 
@@ -440,8 +394,6 @@ JSON-LD thường dễ quản lý hơn trong SEO kiến trúc (architecture / �
 
 # PHẦN 6 — TEMPLATE, CUSTOM ELEMENTS VÀ SHADOW DOM
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **24. <template>** nối từ **23. Microdata** sang **25. Declarative Shadow DOM**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. `<template>`
 
 `template` chứa inert fragment:
@@ -455,8 +407,6 @@ JSON-LD thường dễ quản lý hơn trong SEO kiến trúc (architecture / �
 Content không participate như ordinary rendered content cho tới khi được clone/insert, và template còn là foundation của Declarative Shadow DOM.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **25. Declarative Shadow DOM** nối từ **24. <template>** sang **26. Slots và composed cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Declarative Shadow DOM
 
@@ -480,8 +430,6 @@ Trình duyệt (browser / 브라우저) có thể attach shadow gốc (root / �
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **26. Slots và composed cây (tree / 트리)** nối từ **25. Declarative Shadow DOM** sang **27. Custom elements và form-associated custom elements**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Slots và composed cây (tree / 트리)
 
 Shadow DOM dùng `slot` để phân phối light-DOM content:
@@ -500,8 +448,6 @@ Shadow DOM dùng `slot` để phân phối light-DOM content:
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **27. Custom elements và form-associated custom elements** nối từ **26. Slots và composed cây (tree / 트리)** sang **28. hidden="until-found"**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Custom elements và form-associated custom elements
 
 Autonomous custom element phải có dấu `-`:
@@ -518,8 +464,6 @@ Advanced components có thể tham gia form mô hình (model / 모델) thông qu
 
 # PHẦN 7 — HIDDEN, POPOVER VÀ TOP tầng (layer / 계층)
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **28. hidden="until-found"** nối từ **27. Custom elements và form-associated custom elements** sang **29. Popover modes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. `hidden="until-found"`
 
 Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="until-found"` cho phép content vẫn có thể được trình duyệt (browser / 브라우저) reveal khi find-in-page hoặc fragment điều hướng (navigation / 내비게이션) tìm thấy mục tiêu (target / 대상) trong supporting hành vi (behavior / 동작).
@@ -533,8 +477,6 @@ Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="
 `beforematch` có thể được dispatch trước reveal để ứng dụng (application / 애플리케이션) prepare surrounding UI. Đây là ví dụ browser-native Find/điều hướng (navigation / 내비게이션) tích hợp với ứng dụng (application / 애플리케이션) trạng thái (state / 상태).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **29. Popover modes** nối từ **28. hidden="until-found"** sang **30. Top tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Popover modes
 
@@ -551,8 +493,6 @@ Popover không tự quyết định nghiệp vụ (business / 비즈니스) ng�
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **30. Top tầng (layer / 계층)** nối từ **29. Popover modes** sang **31. Modal và non-modal dialog**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Top tầng (layer / 계층)
 
 Top tầng (layer / 계층) không phải `z-index` cực lớn. Nó là browser-managed tầng (layer / 계층) dành cho một số UI như modal dialog và popover. Vì vậy nó tránh nhiều vấn đề ancestor ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) hoặc overflow clipping mà custom overlay gặp.
@@ -563,8 +503,6 @@ Khi bản địa (native / 네이티브) top-layer thành phần nguyên thủy 
 
 # PHẦN 8 — DIALOG VÀ DECLARATIVE COMMANDS
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **31. Modal và non-modal dialog** nối từ **30. Top tầng (layer / 계층)** sang **32. command và commandfor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Modal và non-modal dialog
 
 `dialog.show()` mở non-modal; `dialog.showModal()` mở modal. Modal dialog tham gia top tầng (layer / 계층) và trình duyệt (browser / 브라우저) quản lý surrounding tương tác (interaction / 상호작용) theo modal mô hình (model / 모델).
@@ -574,8 +512,6 @@ Khi bản địa (native / 네이티브) top-layer thành phần nguyên thủy 
 Hiện đại (modern / 현대적) `closedby` cho phép mô tả close hành vi (behavior / 동작) như `any`, `closerequest` hoặc `none` trong supporting browsers. Vì đây là tính năng (feature / 기능) mới hơn, môi trường vận hành (production / 운영 환경) cần check target-browser tính tương thích (compatibility / 호환성).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **32. command và commandfor** nối từ **31. Modal và non-modal dialog** sang **33. <selectedcontent> và rich options**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. `command` và `commandfor`
 
@@ -604,8 +540,6 @@ Các commands như `show-modal`, `close`, `request-close` có thể giảm JavaS
 
 # PHẦN 9 — CUSTOMIZABLE SELECT
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **33. <selectedcontent> và rich options** nối từ **32. command và commandfor** sang **34. referrerpolicy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. `<selectedcontent>` và rich options
 
 Classic select rất mạnh về keyboard/mobile/khả năng tiếp cận (accessibility / 접근성) nhưng khó style. Customizable select mô hình (model / 모델) cho trình duyệt (browser / 브라우저) hỗ trợ richer markup trong select trong những môi trường phù hợp.
@@ -631,8 +565,6 @@ Concept:
 
 # PHẦN 10 — ADVANCED tài nguyên (resource / 자원), LINK VÀ yêu cầu (request / 요청) ATTRIBUTES
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **34. referrerpolicy** nối từ **33. <selectedcontent> và rich options** sang **35. crossorigin và CORS chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. `referrerpolicy`
 
 `referrerpolicy` có thể xuất hiện trên link, anchor, ảnh (image / 이미지), script, iframe và một số tài nguyên (resource / 자원) elements. Nó kiểm soát lượng referrer thông tin (information / 정보) trình duyệt (browser / 브라우저) gửi cùng yêu cầu (request / 요청).
@@ -648,8 +580,6 @@ Concept:
 Policies như `no-referrer`, `origin`, `same-origin`, `strict-origin`, `strict-origin-when-cross-origin` thuộc privacy/bảo mật (security / 보안) yêu cầu (request / 요청) hành vi (behavior / 동작). Chúng không thay authorization.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **35. crossorigin và CORS chế độ (mode / 모드)** nối từ **34. referrerpolicy** sang **36. ping và hyperlink auditing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `crossorigin` và CORS chế độ (mode / 모드)
 
@@ -670,8 +600,6 @@ Trên script/link/font/SRI scenarios, CORS chế độ (mode / 모드) cũng có
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** nối từ **35. crossorigin và CORS chế độ (mode / 모드)** sang **37. hreflang, alternate resources và SEO**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. `ping` và hyperlink auditing
 
 Anchor có thể có `ping`:
@@ -685,8 +613,6 @@ Anchor có thể có `ping`:
 Trình duyệt (browser / 브라우저) có thể gửi auditing requests khi điều hướng (navigation / 내비게이션) xảy ra. Vì có privacy implication và analytics ecosystem còn nhiều cách khác, cấp cao (senior / 시니어) chủ yếu cần biết để kiểm tra (audit / 감사) mạng (network / 네트워크) hành vi (behavior / 동작) thay vì coi đây là default tracking solution.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **36. ping và hyperlink auditing** đặt vấn đề; **37. hreflang, alternate resources và SEO** đối chiếu bằng chứng, rồi **38. Responsive preload và priority hints** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. `hreflang`, alternate resources và SEO
 Ping và hyperlink auditing tạo một network behavior cần cân nhắc privacy; `hreflang` tiếp theo chuyển trọng tâm sang alternate resources và SEO semantics.
@@ -702,8 +628,6 @@ Ping và hyperlink auditing tạo một network behavior cần cân nhắc priva
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **37. hreflang, alternate resources và SEO** đặt vấn đề; **38. Responsive preload và priority hints** đối chiếu bằng chứng, rồi **39. Parser-blocking, render-blocking và preload scanner** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. Responsive preload và priority hints
 
 Nếu LCP ảnh (image / 이미지) có `srcset`, preload một hard-coded candidate có thể khiến trình duyệt (browser / 브라우저) fetch tài nguyên (resource / 자원) không phù hợp. Responsive ảnh (image / 이미지) preload có thể cần `imagesrcset`/`imagesizes` tương ứng.
@@ -714,8 +638,6 @@ Hiệu năng (performance / 성능) decisions nên đo bằng mạng (network / 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **39. Parser-blocking, render-blocking và preload scanner** nối từ **38. Responsive preload và priority hints** sang **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Parser-blocking, render-blocking và preload scanner
 
 Parser-blocking nghĩa main HTML parser phải dừng/coordinate với script/tài nguyên (resource / 자원). Render-blocking nghĩa trình duyệt (browser / 브라우저) trì hoãn paint vì tài nguyên (resource / 자원) cần thiết. Hai concepts không phải synonym.
@@ -725,8 +647,6 @@ Trình duyệt (browser / 브라우저) còn có speculative/preload scanner đ�
 ---
 
 # PHẦN 11 — siêu dữ liệu (metadata / 메타데이터) ADVANCED
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** nối từ **39. Parser-blocking, render-blocking và preload scanner** sang **41. meta name="color-scheme"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `meta http-equiv` không phải replacement hoàn chỉnh cho HTTP headers
 
@@ -750,8 +670,6 @@ Trình duyệt (browser / 브라우저) chỉ hỗ trợ những directives cụ
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **41. meta name="color-scheme"** nối từ **40. meta http-equiv không phải replacement hoàn chỉnh cho HTTP headers** sang **42. Document-level referrer chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. `meta name="color-scheme"`
 `meta http-equiv` chỉ mô phỏng một số directive; `color-scheme` tiếp theo đặt riêng contract về theme preference trước khi quay lại document-level policy.
 
@@ -767,8 +685,6 @@ Khả năng tiếp cận (accessibility / 접근성) implication là UA controls
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **42. Document-level referrer chính sách (policy / 정책)** nối từ **41. meta name="color-scheme"** sang **43. bản địa (native / 네이티브) HTML trước ARIA**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. Document-level referrer chính sách (policy / 정책)
 
 Ngoài element-level `referrerpolicy`, document có thể dùng siêu dữ liệu (metadata / 메타데이터) phù hợp để đặt referrer chính sách (policy / 정책) chung. cấp cao (senior / 시니어) nên hiểu chính sách (policy / 정책) có thể đến từ HTTP header, document siêu dữ liệu (metadata / 메타데이터) hoặc element-level override tùy cơ chế (mechanism / 메커니즘).
@@ -778,8 +694,6 @@ Nguyên tắc thiết kế là chính sách (policy / 정책) toàn site/documen
 ---
 
 # PHẦN 12 — khả năng tiếp cận (accessibility / 접근성) VÀ ARIA NHƯ MỘT API tầng (layer / 계층)
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **43. bản địa (native / 네이티브) HTML trước ARIA** nối từ **42. Document-level referrer chính sách (policy / 정책)** sang **44. Accessible name và description**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. bản địa (native / 네이티브) HTML trước ARIA
 
@@ -798,8 +712,6 @@ thường tốt hơn:
 `role="button"` có thể làm khả năng tiếp cận (accessibility / 접근성) API expose nút (node / 노드) như button, nhưng nó không tự thêm không gian (space / 공간)/Enter activation, disabled ngữ nghĩa (semantics / 의미론), form hành vi (behavior / 동작) hoặc keyboard handling. ARIA thay đổi ngữ nghĩa (semantic / 의미적) exposure; nó không tự tạo trình duyệt (browser / 브라우저) hành vi (behavior / 동작) tương ứng.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **44. Accessible name và description** nối từ **43. bản địa (native / 네이티브) HTML trước ARIA** sang **45. aria-expanded và aria-controls**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Accessible name và description
 
@@ -827,8 +739,6 @@ Name trả lời “điều khiển (control / 제어) là gì”; description c
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **45. aria-expanded và aria-controls** nối từ **44. Accessible name và description** sang **46. aria-invalid và aria-errormessage**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 45. `aria-expanded` và `aria-controls`
 Accessible name và description trả lời control là gì; `aria-expanded` và `aria-controls` tiếp theo mô tả trạng thái mở/đóng và quan hệ điều khiển mà assistive technology cần biết.
 
@@ -845,8 +755,6 @@ Accessible name và description trả lời control là gì; `aria-expanded` và
 Nếu bản địa (native / 네이티브) `details/summary` hoặc Popover đáp ứng use trường hợp (case / 사례), chúng thường giảm nguy cơ trạng thái (state / 상태) visual và ARIA trạng thái (state / 상태) bị lệch nhau.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **46. aria-invalid và aria-errormessage** nối từ **45. aria-expanded và aria-controls** sang **47. aria-busy, live regions và động (dynamic / 동적) updates**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. `aria-invalid` và `aria-errormessage`
 
@@ -871,8 +779,6 @@ Nếu đầu vào (input / 입력) đang valid, đừng để stale `aria-invali
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **47. aria-busy, live regions và động (dynamic / 동적) updates** nối từ **46. aria-invalid và aria-errormessage** sang **48. aria-hidden, hidden, inert và disabled khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 47. `aria-busy`, live regions và động (dynamic / 동적) updates
 
 `aria-busy="true"` có thể báo rằng một region đang được cập nhật và assistive technology có thể trì hoãn xử lý announcements phù hợp. `aria-live` dùng cho động (dynamic / 동적) messages cần announce mà focus không chuyển tới đó.
@@ -880,8 +786,6 @@ Nếu đầu vào (input / 입력) đang valid, đừng để stale `aria-invali
 Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `assertive` quá nhiều sẽ gây noise/interruptions. khả năng tiếp cận (accessibility / 접근성) tốt là chọn đúng sự kiện (event / 이벤트) cần announce, không phải thêm nhiều ARIA nhất có thể.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **48. aria-hidden, hidden, inert và disabled khác nhau** nối từ **47. aria-busy, live regions và động (dynamic / 동적) updates** sang **49. Sanitization không phải remove <script>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. `aria-hidden`, `hidden`, `inert` và `disabled` khác nhau
 
@@ -893,8 +797,6 @@ Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `asse
 
 # PHẦN 13 — bảo mật (security / 보안) DEEPER
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **49. Sanitization không phải remove <script>** nối từ **48. aria-hidden, hidden, inert và disabled khác nhau** sang **50. URL-valued attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 49. Sanitization không phải remove `<script>`
 
 Untrusted HTML attack surface gồm event-handler attributes, dangerous URL schemes, SVG/foreign content, `srcdoc`, DOM clobbering và nhiều parser contexts khác. Regex remove `<script>` không phải sanitizer.
@@ -903,8 +805,6 @@ Nếu ứng dụng (application / 애플리케이션) thực sự cho phép rich
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **50. URL-valued attributes** nối từ **49. Sanitization không phải remove <script>** sang **51. iframe srcdoc, sandbox và permissions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 50. URL-valued attributes
 
 Escaping HTML characters không tự làm URL safe. Nếu user-controlled giá trị (value / 값) đi vào `href`, `src`, `action` hoặc tương tự, ứng dụng (application / 애플리케이션) còn phải validate allowed schemes/origins theo use trường hợp (case / 사례).
@@ -912,8 +812,6 @@ Escaping HTML characters không tự làm URL safe. Nếu user-controlled giá t
 Ví dụ nếu tính năng (feature / 기능) chỉ cho bên ngoài (external / 외부) web links, allowlist `https:`/`http:` phù hợp hơn việc chấp nhận bất kỳ scheme nào. `javascript:` URL là lý do URL kiểm tra hợp lệ (validation / 검증) và HTML escaping là hai defense khác nhau.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **51. iframe srcdoc, sandbox và permissions** nối từ **50. URL-valued attributes** sang **52. Valid HTML quan trọng đặc biệt với SSR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. `iframe srcdoc`, sandbox và permissions
 
@@ -925,8 +823,6 @@ Ví dụ nếu tính năng (feature / 기능) chỉ cho bên ngoài (external / 
 
 # PHẦN 14 — SSR, FRAMEWORKS VÀ PARSER-STABLE MARKUP
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **52. Valid HTML quan trọng đặc biệt với SSR** nối từ **51. iframe srcdoc, sandbox và permissions** sang **53. Declarative Shadow DOM và SSR**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 52. Valid HTML quan trọng đặc biệt với SSR
 
 JSX có thể viết cấu trúc (structure / 구조) mà trình duyệt (browser / 브라우저) HTML parser sẽ repair. Nếu máy chủ (server / 서버) đầu ra (output / 출력) và trình duyệt (browser / 브라우저) DOM khác nhau trước khi React/Vue hydrate, khung phần mềm (framework / 프레임워크) có thể báo hydration mismatch hoặc replace nodes.
@@ -934,8 +830,6 @@ JSX có thể viết cấu trúc (structure / 구조) mà trình duyệt (browse
 Trình duyệt (browser / 브라우저) không parse JSX; trình duyệt (browser / 브라우저) parse generated HTML. Vì vậy khung phần mềm (framework / 프레임워크) nhà phát triển (developer / 개발자) vẫn phải hiểu HTML content các mô hình (models / 모델들), optional tags, bảng (table / 테이블) parsing và interactive-content restrictions.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **53. Declarative Shadow DOM và SSR** nối từ **52. Valid HTML quan trọng đặc biệt với SSR** sang **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Declarative Shadow DOM và SSR
 
@@ -947,8 +841,6 @@ Khi dùng, kiểm thử (test / 테스트) parser hành vi (behavior / 동작), 
 
 # PHẦN 15 — LEGACY, DEPRECATED VÀ OBSOLETE HTML
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** nối từ **53. Declarative Shadow DOM và SSR** sang **55. Presentational elements: <font>, <center>, <big> và <tt>**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author
 
 Web phải giữ backward tính tương thích (compatibility / 호환성) với hàng chục năm nội dung cũ. Vì vậy trình duyệt (browser / 브라우저) engines vẫn có thể parse/kết xuất (render / 렌더링) nhiều obsolete elements. Điều này không biến chúng thành lựa chọn đúng cho mã (code / 코드) mới.
@@ -956,8 +848,6 @@ Web phải giữ backward tính tương thích (compatibility / 호환성) với
 Khi maintain legacy hệ thống (system / 시스템), hãy phân biệt hai câu hỏi: trình duyệt (browser / 브라우저) có tính tương thích (compatibility / 호환성) hành vi (behavior / 동작) cho markup này không, và nhà phát triển (developer / 개발자) hiện đại có nên author markup này không. Câu trả lời có thể là “có kết xuất (render / 렌더링) nhưng không nên viết mới”.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **55. Presentational elements: <font>, <center>, <big> và <tt>** nối từ **54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author** sang **56. <strike> và <acronym>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Presentational elements: `<font>`, `<center>`, `<big>` và `<tt>`
 
@@ -985,8 +875,6 @@ và CSS chịu font, color, alignment, kích thước (size / 크기).
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **56. <strike> và <acronym>** nối từ **55. Presentational elements: <font>, <center>, <big> và <tt>** sang **57. <marquee>, <blink>, <bgsound> và motion/audio legacy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 56. `<strike>` và `<acronym>`
 
 `strike` là presentational legacy. Nếu content chỉ “không còn đúng/relevant”, `s` thường phù hợp:
@@ -1012,8 +900,6 @@ Di chuyển (migration / 마이그레이션) tốt không chỉ đổi tên tag;
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** nối từ **56. <strike> và <acronym>** sang **58. <frameset>, <frame> và <noframes>**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 57. `<marquee>`, `<blink>`, `<bgsound>` và motion/audio legacy
 
 Các elements kiểu `marquee`, `blink`, `bgsound` xuất phát từ era browser-specific/presentational HTML. Không dùng chúng trong ứng dụng (application / 애플리케이션) mới.
@@ -1021,8 +907,6 @@ Các elements kiểu `marquee`, `blink`, `bgsound` xuất phát từ era browser
 Nếu animation thực sự cần thiết, CSS/Web Animations/JavaScript cung cấp điều khiển (control / 제어) tốt hơn và có thể tôn trọng người dùng (user / 사용자) preference như reduced motion. Auto-playing background audio thường là UX/khả năng tiếp cận (accessibility / 접근성) anti-pattern và trình duyệt (browser / 브라우저) autoplay policies cũng hạn chế hành vi (behavior / 동작) này.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **58. <frameset>, <frame> và <noframes>** nối từ **57. <marquee>, <blink>, <bgsound> và motion/audio legacy** sang **59. <applet>, <param>, <object> và plugin-era content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. `<frameset>`, `<frame>` và `<noframes>`
 
@@ -1032,8 +916,6 @@ Hiện đại (modern / 현대적) page bố cục (layout / 레이아웃) dùng
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **59. <applet>, <param>, <object> và plugin-era content** nối từ **58. <frameset>, <frame> và <noframes>** sang **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 59. `<applet>`, `<param>`, `<object>` và plugin-era content
 
 `applet` thuộc era Java trình duyệt (browser / 브라우저) plugins và không còn là nền tảng web hiện đại. di chuyển (migration / 마이그레이션) thường là rewrite functionality bằng HTML/CSS/JavaScript/Web APIs hoặc chuyển sang ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처) khác.
@@ -1041,8 +923,6 @@ Hiện đại (modern / 현대적) page bố cục (layout / 레이아웃) dùng
 `param` gắn với old plugin/đối tượng (object / 객체) parameter mechanisms và không phải lựa chọn authoring hiện đại. `object` vẫn có những embedding ngữ nghĩa (semantics / 의미론) riêng nhưng không nên được dùng để hồi sinh plugin kiến trúc (architecture / 아키텍처) cũ.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** nối từ **59. <applet>, <param>, <object> và plugin-era content** sang **61. <dir> element khác dir toàn cục (global / 전역) attribute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. `<isindex>`, `<keygen>`, `<listing>`, `<xmp>`, `<plaintext>` và các parser-era relics
 
@@ -1052,8 +932,6 @@ Khi gặp chúng trong mã (code / 코드) legacy, mục tiêu không phải h�
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **61. <dir> element khác dir toàn cục (global / 전역) attribute** nối từ **60. <isindex>, <keygen>, <listing>, <xmp>, <plaintext> và các parser-era relics** sang **62. Presentational/legacy attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 61. `<dir>` element khác `dir` toàn cục (global / 전역) attribute
 
 Legacy `<dir>` element từng đại diện directory danh sách (list / 목록) và không nên dùng mới. Nhưng toàn cục (global / 전역) attribute `dir="rtl"`, `dir="ltr"`, `dir="auto"` vẫn là hiện đại (modern / 현대적), quan trọng cho bidirectional văn bản (text / 텍스트).
@@ -1061,8 +939,6 @@ Legacy `<dir>` element từng đại diện directory danh sách (list / 목록)
 Đây là ví dụ điển hình cho việc cùng spelling có thể xuất hiện ở hai khái niệm lịch sử khác nhau. Đừng xóa `dir` attribute chỉ vì thấy `<dir>` element obsolete.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **62. Presentational/legacy attributes** nối từ **61. <dir> element khác dir toàn cục (global / 전역) attribute** sang **63. Legacy JavaScript attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Presentational/legacy attributes
 
@@ -1082,8 +958,6 @@ Hiện đại (modern / 현대적) markup giữ bảng (table / 테이블) ngữ
 Một số legacy attributes vẫn có parser tính tương thích (compatibility / 호환성) hoặc special obsolete-but-conforming exceptions vì web tính tương thích (compatibility / 호환성). Đừng dựa vào việc validator/trình duyệt (browser / 브라우저) “vẫn nhận” để quyết định authoring style.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **63. Legacy JavaScript attributes** nối từ **62. Presentational/legacy attributes** sang **64. Anchor name và fragment IDs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Legacy JavaScript attributes
 
@@ -1111,8 +985,6 @@ Khi migrate, phân biệt “legacy cú pháp (syntax / 문법) bỏ được”
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **64. Anchor name và fragment IDs** nối từ **63. Legacy JavaScript attributes** sang **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 64. Anchor `name` và fragment IDs
 
 Legacy markup có thể dùng:
@@ -1133,8 +1005,6 @@ Hiện đại (modern / 현대적) fragment mục tiêu (target / 대상) nên d
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** nối từ **64. Anchor name và fragment IDs** sang **66. Disclosure, dialog, popover và forms**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 
 Đừng chạy search-replace theo tag name mà không hiểu meaning. Quy trình tốt là xác định intent cũ, tìm bản địa (native / 네이티브) hiện đại (modern / 현대적) ngữ nghĩa (semantic / 의미적), chuyển presentation sang CSS, thay plugin/frames kiến trúc (architecture / 아키텍처) nếu cần, sau đó kiểm thử (test / 테스트) DOM, keyboard, screen reader và trình duyệt (browser / 브라우저) tính tương thích (compatibility / 호환성).
@@ -1145,8 +1015,6 @@ Legacy markup thường có hidden coupling với JavaScript selectors hoặc m�
 
 # PHẦN 16 — bản địa (native / 네이티브) HTML TRƯỚC CUSTOM JAVASCRIPT
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **66. Disclosure, dialog, popover và forms** nối từ **65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)** sang **67. Parser repair**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 66. Disclosure, dialog, popover và forms
 
 Nếu yêu cầu (requirement / 요구사항) chỉ là disclosure, `details/summary` có thể đủ. Nếu là modal, `dialog` thường tốt hơn generic div. Nếu là floating transient UI, Popover có thể cung cấp top-layer/light-dismiss thành phần nguyên thủy (primitive / 기본 요소). Nếu là kiểm tra hợp lệ (validation / 검증), hãy bắt đầu với `required`, kiểu (type / 타입) các ràng buộc (constraints / 제약조건들), min/max/mẫu (pattern / 패턴) trước khi replace toàn bộ bằng JavaScript.
@@ -1156,8 +1024,6 @@ Native-first không có nghĩa “không được custom”. Nó nghĩa bạn t�
 ---
 
 # PHẦN 17 — gỡ lỗi (debug / 디버그) EXERCISES
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **67. Parser repair** nối từ **66. Disclosure, dialog, popover và forms** sang **68. Attribute/property state**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Parser repair
 
@@ -1174,8 +1040,6 @@ Mục tiêu là thấy nguồn (source / 소스) indentation không quyết đ�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **68. Attribute/property state** nối từ **67. Parser repair** sang **69. Checkbox trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 68. Attribute/property state
 Parser repair cho thấy source indentation không quyết định DOM; attribute/property state tiếp theo đối chiếu default value với current value và reset behavior.
 
@@ -1189,8 +1053,6 @@ Trong console, sửa `el.value = "Bob"`, rồi so sánh `el.value`, `el.defaultV
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **69. Checkbox trạng thái (state / 상태)** nối từ **68. Attribute/property state** sang **70. Form đơn vị sở hữu (owner / 오너)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 69. Checkbox trạng thái (state / 상태)
 
 Với:
@@ -1203,23 +1065,17 @@ Người dùng (user / 사용자) uncheck rồi so sánh `checked`, `defaultChec
 
 ---
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, sau nội dung của **69. Checkbox trạng thái (state / 상태)**, **70. Form đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **71. DOM clobbering** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 70. Form đơn vị sở hữu (owner / 오너)
 
 Đặt submit button ngoài form nhưng dùng `form="profile"`, rồi quan sát trình duyệt (browser / 브라우저) vẫn submit đúng đơn vị sở hữu (owner / 오너). Sau đó thử disabled/readonly/unchecked controls và inspect `FormData` để thấy successful-controls rules.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **71. DOM clobbering** nối từ **70. Form đơn vị sở hữu (owner / 오너)** sang **72. Popover và until-found**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 71. DOM clobbering
 
 Tạo form có `<input name="method">` và inspect `form.method`. Mục tiêu không phải exploit, mà là thấy tại sao named truy cập (access / 접근) không nên được dùng như trusted đối tượng (object / 객체) thuộc tính (property / 속성) mô hình (model / 모델).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **72. Popover và until-found** nối từ **71. DOM clobbering** sang **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. Popover và until-found
 
@@ -1275,8 +1131,6 @@ Một tag quan trọng vì nó tham gia một hoặc nhiều layers trong luồn
 
 Phần này khép những khoảng nhỏ còn lại sau khi kiểm tra (audit / 감사) toàn bộ chuẩn gốc (canonical / 정본) HTML notes theo document cấu trúc (structure / 구조), ngữ nghĩa (semantics / 의미론), siêu dữ liệu (metadata / 메타데이터), tables, forms, kiểm tra hợp lệ (validation / 검증), DOM, khả năng tiếp cận (accessibility / 접근성), hiệu năng (performance / 성능), bảo mật (security / 보안), hiện đại (modern / 현대적) HTML và legacy HTML. Các mục dưới đây không phải danh sách thuộc lòng; mục tiêu vẫn là hiểu **meaning → trình duyệt (browser / 브라우저) processing → lúc dùng → ngữ nghĩa (semantic / 의미적)/khả năng tiếp cận (accessibility / 접근성) implication**.
 
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** nối từ **72. Popover và until-found** sang **74. Những input type dễ bị bỏ sót: submit, reset, button, image**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 73. `<colgroup>` và `<col>`: mô tả nhóm cột, không phải header thay thế
 
 Trong bảng (table / 테이블), `colgroup` và `col` cho phép author mô tả hoặc style một nhóm cột mà không cần lặp lớp (class / 클래스) trên từng cell:
@@ -1310,8 +1164,6 @@ Trình duyệt (browser / 브라우저) dùng column mô hình (model / 모델) 
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **74. Những input type dễ bị bỏ sót: submit, reset, button, image** nối từ **73. <colgroup> và <col>: mô tả nhóm cột, không phải header thay thế** sang **75. form, novalidate, formnovalidate và accept-charset**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 74. Những `input type` dễ bị bỏ sót: `submit`, `reset`, `button`, `image`
 
 `<input type="submit">` tạo submit điều khiển (control / 제어) tương tự submit button nhưng label đến từ `value`. `<input type="button">` tạo generic push button nhưng không có rich child content như `<button>`. `<input type="reset">` restore default form trạng thái (state / 상태), không phải “xóa tất cả về rỗng”. Với ứng dụng (application / 애플리케이션) UI hiện đại, `<button>` thường expressive hơn vì chứa được markup và văn bản (text / 텍스트) linh hoạt.
@@ -1328,8 +1180,6 @@ Trình duyệt (browser / 브라우저) dùng column mô hình (model / 모델) 
 Trình duyệt (browser / 브라우저) còn có thể submit click coordinates theo form ngữ nghĩa (semantics / 의미론). Vì hành vi (behavior / 동작) khá đặc thù, đừng dùng `type="image"` chỉ để có một button đẹp; ordinary `<button>` + CSS thường rõ ràng hơn.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **75. form, novalidate, formnovalidate và accept-charset** nối từ **74. Những input type dễ bị bỏ sót: submit, reset, button, image** sang **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 75. `form`, `novalidate`, `formnovalidate` và `accept-charset`
 
@@ -1353,8 +1203,6 @@ Hai attributes này không có nghĩa máy chủ (server / 서버) được bỏ
 `accept-charset` mô tả encoding dùng cho form submission. Trong hiện đại (modern / 현대적) HTML, UTF-8 là encoding cần nghĩ tới; đừng xây kiến trúc (architecture / 아키텍처) phụ thuộc legacy encodings nếu không có đặc tả hợp đồng (contract / 계약) bắt buộc.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** nối từ **75. form, novalidate, formnovalidate và accept-charset** sang **77. accept, list, size, placeholder: hint, association và presentation khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?
 
@@ -1383,8 +1231,6 @@ Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không đi�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **77. accept, list, size, placeholder: hint, association và presentation khác nhau** nối từ **76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?** sang **78. accesskey, autocapitalize và autocorrect**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 77. `accept`, `list`, `size`, `placeholder`: hint, association và presentation khác nhau
 
 `accept` trên tệp (file / 파일) đầu vào (input / 입력) là hint cho tệp (file / 파일) picker về MIME kiểu (type / 타입)/extension mong muốn:
@@ -1403,8 +1249,6 @@ Trình duyệt (browser / 브라우저) có thể lọc picker UI, nhưng attack
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **78. accesskey, autocapitalize và autocorrect** nối từ **77. accept, list, size, placeholder: hint, association và presentation khác nhau** sang **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 78. `accesskey`, `autocapitalize` và `autocorrect`
 
 `accesskey` có thể gán shortcut activation/focus, nhưng actual key combination phụ thuộc trình duyệt (browser / 브라우저) và operating hệ thống (system / 시스템). Shortcut tự chọn còn có thể xung đột (conflict / 충돌) với trình duyệt (browser / 브라우저), assistive technology hoặc người dùng (user / 사용자) conventions. Vì vậy đây không phải attribute nên rải khắp ứng dụng (application / 애플리케이션) chỉ để “hỗ trợ keyboard”. Natural tab thứ tự (order / 순서) và bản địa (native / 네이티브) controls quan trọng hơn.
@@ -1412,8 +1256,6 @@ Trình duyệt (browser / 브라우저) có thể lọc picker UI, nhưng attack
 `autocapitalize` và `autocorrect` là hints cho supported đầu vào (input / 입력) methods, đặc biệt mobile keyboards. Ví dụ username hoặc mã (code / 코드) trường dữ liệu (field / 필드) có thể không muốn automatic capitalization/correction, trong khi prose trường dữ liệu (field / 필드) có thể hưởng lợi. Chúng không validate content và không thay nghiệp vụ (business / 비즈니스) normalization.
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** nối từ **78. accesskey, autocapitalize và autocorrect** sang **80. meta name="theme-color" và link rel="manifest"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `loading="lazy"` trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên
 
@@ -1432,8 +1274,6 @@ Trình duyệt (browser / 브라우저) quyết định scheduling dựa trên h
 Lazy loading không thay ngữ nghĩa (semantic / 의미적) yêu cầu (requirement / 요구사항). Iframe vẫn cần `title` hữu ích; nếu third-party content trọng yếu (critical / 중요) cho tác vụ (task / 작업), phải kiểm thử (test / 테스트) keyboard/focus/loading states và fallback UX. Đừng lazy-load content ngay đầu viewport nếu điều đó làm người dùng (user / 사용자) chờ phần chính của page.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **80. meta name="theme-color" và link rel="manifest"** nối từ **79. loading="lazy" trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên** sang **81. blocking="render": khi author chủ động đánh dấu render-blocking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. `meta name="theme-color"` và `link rel="manifest"`
 
@@ -1457,8 +1297,6 @@ Trình duyệt (browser / 브라우저) fetch manifest như một bên ngoài (e
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Master hiện thực (implementation / 구현)**, **81. blocking="render": khi author chủ động đánh dấu render-blocking** nối từ **80. meta name="theme-color" và link rel="manifest"** sang **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 81. `blocking="render"`: khi author chủ động đánh dấu render-blocking
 
 HTML hiện đại có `blocking` trên các element tài nguyên (resource / 자원) phù hợp như `link`, `script`, `style`; đơn vị từ (token / 토큰) hiện tại đáng quan tâm là `render`.
@@ -1477,8 +1315,6 @@ Attribute này tham gia trình duyệt (browser / 브라우저) rendering chuỗ
 Không thêm `blocking="render"` bừa. Render-blocking tài nguyên (resource / 자원) kéo dài đường găng (critical path / 임계 경로) nếu tài nguyên (resource / 자원) chậm. Chỉ dùng khi bạn hiểu chính xác vì sao page phải đợi tài nguyên (resource / 자원) đó trước rendering và đã đo hiệu năng (performance / 성능).
 
 ---
-
-> **Nối mạch:** Trong **HTML — Master hiện thực (implementation / 구현)**, **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** nối từ **81. blocking="render": khi author chủ động đánh dấu render-blocking** sang **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. Declarative Shadow DOM 2026: không chỉ có `shadowrootmode`
 
@@ -1499,8 +1335,6 @@ Ví dụ concept:
 Đây là infrastructure-level HTML. Beginner không cần dùng, nhưng cấp cao (senior / 시니어) làm Web Components/SSR phải biết chúng tác động **browser-created ShadowRoot**, không phải chỉ là arbitrary dữ liệu (data / 데이터) attributes. trình duyệt (browser / 브라우저)/tooling hỗ trợ (support / 지원) vẫn phải được kiểm tra theo mục tiêu (target / 대상) môi trường (environment / 환경), đặc biệt với options mới hơn.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **HTML — Master hiện thực (implementation / 구현)**, **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)** nối từ **82. Declarative Shadow DOM 2026: không chỉ có shadowrootmode** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 83. `interestfor`: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)
 

@@ -45,8 +45,6 @@ Economy B / Currency B
 
 Đây là lý do phân tích FX cần so sánh chênh lệch lãi suất, kỳ vọng chính sách, tăng trưởng, lạm phát, dòng vốn và rủi ro (risk / 위험) premium giữa hai phía thay vì chỉ phân tích một quốc gia.
 
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **2. Quy mô thị trường lớn không có nghĩa mọi phần của thị trường đều giống nhau** nối từ **1. Forex không phải là “mua một đồng tiền vì chart đẹp”** sang **3. OTC: Forex phần lớn không có một centralized exchange duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Quy mô thị trường lớn không có nghĩa mọi phần của thị trường đều giống nhau
 
 Theo 2025 Triennial Central Bank Survey của Bank for International Settlements (BIS), turnover FX toàn cầu trong tháng 4/2025 vào khoảng **9,6 nghìn tỷ USD mỗi ngày**. USD nằm ở một phía của phần lớn giao dịch, và FX swap tiếp tục chiếm phần rất lớn của turnover.
@@ -65,8 +63,6 @@ currency pair
 ```
 
 Không nên suy luận kiểu “Forex lớn nên lúc nào cũng thanh khoản tốt”.
-
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **3. OTC: Forex phần lớn không có một centralized exchange duy nhất** nối từ **2. Quy mô thị trường lớn không có nghĩa mọi phần của thị trường đều giống nhau** sang **4. Interdealer thị trường (market / 시장) và dealer-client thị trường (market / 시장)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. OTC: Forex phần lớn không có một centralized exchange duy nhất
 
@@ -91,8 +87,6 @@ Sơ đồ chỉ là simplification. Một tổ chức có thể kết nối nhi�
 Hệ quả quan trọng là **không tồn tại một universal thứ tự (order / 순서) book chứa toàn bộ lệnh Forex trên thế giới**. Hai nguồn dữ liệu có thể hiển thị bid/ask hơi khác nhau vì chúng lấy liquidity từ các pool khác nhau, có độ trễ (latency / 지연 시간) khác nhau hoặc áp dụng markup khác nhau.
 
 Do đó khi nhìn chart retail, cần hiểu chart đó là một **biểu diễn (representation / 표현) của feed cụ thể**, không phải bản ghi tuyệt đối của mọi giao dịch (transaction / 트랜잭션) toàn cầu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **4. Interdealer thị trường (market / 시장) và dealer-client thị trường (market / 시장)** nối từ **3. OTC: Forex phần lớn không có một centralized exchange duy nhất** sang **5. Spot FX là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Interdealer thị trường (market / 시장) và dealer-client thị trường (market / 시장)
 
@@ -123,8 +117,6 @@ Một corporation có thể mua USD forward để khóa tỷ giá cho khoản ph
 
 Luồng (flow / 흐름) vì vậy không đồng nghĩa với “view”. Một lệnh mua USD lớn có thể là hedging bắt buộc chứ không phải trader tin USD sẽ tăng.
 
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **5. Spot FX là gì?** nối từ **4. Interdealer thị trường (market / 시장) và dealer-client thị trường (market / 시장)** sang **6. Forward: khóa tỷ giá cho tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Spot FX là gì?
 
 **Spot foreign exchange** là giao dịch trao đổi hai đồng tiền theo tỷ giá hiện tại với settlement theo convention của cặp tiền.
@@ -151,8 +143,6 @@ retail leveraged rolling FX product
 
 Tên hiển thị trên nền tảng (platform / 플랫폼) có thể giống nhau nhưng legal/economic mechanics không hoàn toàn giống nhau.
 
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **6. Forward: khóa tỷ giá cho tương lai** nối từ **5. Spot FX là gì?** sang **7. FX swap: trao đổi spot và đảo ngược ở tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Forward: khóa tỷ giá cho tương lai
 
 **FX forward — hợp đồng kỳ hạn ngoại hối** là thỏa thuận hôm nay về việc trao đổi tiền tại một ngày tương lai với tỷ giá forward đã xác định.
@@ -171,8 +161,6 @@ Nếu giữ USD và EUR tạo ra mức return khác nhau, mức chênh lệch đ
 
 Thực tế còn có giao dịch (transaction / 트랜잭션) chi phí (cost / 비용), balance-sheet ràng buộc (constraint / 제약조건), cross-currency basis và credit/collateral terms, nên textbook covered interest parity không phải lúc nào cũng khớp hoàn hảo.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **7. FX swap: trao đổi spot và đảo ngược ở tương lai** nối từ **6. Forward: khóa tỷ giá cho tương lai** sang **8. Currency swap**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. FX swap: trao đổi spot và đảo ngược ở tương lai
 
 **FX swap** thường kết hợp hai legs:
@@ -187,8 +175,6 @@ Ví dụ một ngân hàng cần USD trong ba tháng nhưng đang có EUR. Thay 
 Điều này giải thích vì sao turnover FX swap rất lớn: FX thị trường (market / 시장) không chỉ tồn tại để đầu cơ tỷ giá, mà còn là hạ tầng funding và hedging của hệ thống tài chính toàn cầu.
 
 Đừng nhầm FX swap với **currency swap** dài hạn.
-
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **8. Currency swap** nối từ **7. FX swap: trao đổi spot và đảo ngược ở tương lai** sang **9. FX futures**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Currency swap
 
@@ -210,8 +196,6 @@ basis
 ```
 
 Đây là instrument tài trợ/phòng vệ phức tạp hơn retail spot trading rất nhiều.
-
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **9. FX futures** nối từ **8. Currency swap** sang **10. FX options**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. FX futures
 
@@ -241,8 +225,6 @@ Ví dụ futures có:
 
 Futures mang lại centralized thứ tự (order / 순서) book và transparency cao hơn về traded volume/thứ tự (order / 순서) book trong venue đó, nhưng không có nghĩa futures thứ tự (order / 순서) book đại diện toàn bộ toàn cục (global / 전역) FX thị trường (market / 시장).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **10. FX options** nối từ **9. FX futures** sang **11. CFD và các retail derivative tương tự**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. FX options
 
 **FX option** cho holder quyền, nhưng không phải nghĩa vụ, mua hoặc bán currency theo strike và điều khoản xác định.
@@ -264,8 +246,6 @@ P/L phụ thuộc price
 Vì vậy một trader đúng hướng về EUR/USD nhưng vẫn có thể mất tiền với option nếu trả implied volatility quá cao hoặc timing sai.
 
 Phần option chuyên sâu nằm ở `../05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md`; Forex lộ trình học (learning path / 학습 경로) chỉ dùng option khi cần nối FX với volatility/hedging.
-
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **11. CFD và các retail derivative tương tự** nối từ **10. FX options** sang **12. Liquidity provider là ai?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. CFD và các retail derivative tương tự
 
@@ -292,8 +272,6 @@ corporate / market-event handling
 withdrawal and dispute process
 ```
 
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **12. Liquidity provider là ai?** nối từ **11. CFD và các retail derivative tương tự** sang **13. Bid, ask và spread tồn tại vì sao?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Liquidity provider là ai?
 
 **Liquidity provider (LP)** cung cấp executable prices cho máy khách (client / 클라이언트)/venue/broker tùy mô hình.
@@ -311,8 +289,6 @@ raw market spread
 ```
 
 “Zero commission” không đồng nghĩa “zero chi phí (cost / 비용)”. Chi phí (cost / 비용) có thể nằm trong spread hoặc financing.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **13. Bid, ask và spread tồn tại vì sao?** nối từ **12. Liquidity provider là ai?** sang **14. Price discovery không nằm ở một điểm duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Bid, ask và spread tồn tại vì sao?
 
@@ -342,8 +318,6 @@ Khi bất định (uncertainty / 불확실성) tăng mạnh, thị trường (ma
 
 Đây là lý do spread thường xấu đi quanh news sự kiện (event / 이벤트), thị trường (market / 시장) stress hoặc thời điểm liquidity thấp.
 
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **14. Price discovery không nằm ở một điểm duy nhất** nối từ **13. Bid, ask và spread tồn tại vì sao?** sang **15. Trading session: thị trường gần như 24 giờ nhưng liquidity không đồng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Price discovery không nằm ở một điểm duy nhất
 
 Price discovery trong FX diễn ra qua tương tác giữa:
@@ -359,8 +333,6 @@ Price discovery trong FX diễn ra qua tương tác giữa:
 Arbitrage và competition giữ các price pool tương đối gần nhau, nhưng không loại bỏ hoàn toàn micro-difference.
 
 Nếu broker A hiển thị EUR/USD `1.12001/1.12005` và broker B hiển thị `1.12002/1.12007`, điều đó không tự động có nghĩa một bên “sai giá”. Cần xét timestamp, liquidity nguồn (source / 소스), markup và executable kích thước (size / 크기).
-
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **15. Trading session: thị trường gần như 24 giờ nhưng liquidity không đồng nhất** nối từ **14. Price discovery không nằm ở một điểm duy nhất** sang **16. Settlement rủi ro (risk / 위험): trade đúng chưa có nghĩa tiền đã settle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Trading session: thị trường gần như 24 giờ nhưng liquidity không đồng nhất
 
@@ -385,8 +357,6 @@ major financial centres open
 
 Một chiến lược (strategy / 전략) backtest theo giờ phải xử lý timezone và daylight-saving đúng, nếu không statistical kết quả (result / 결과) có thể lệch.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **16. Settlement rủi ro (risk / 위험): trade đúng chưa có nghĩa tiền đã settle** nối từ **15. Trading session: thị trường gần như 24 giờ nhưng liquidity không đồng nhất** sang **17. Counterparty rủi ro (risk / 위험) thay đổi theo instrument**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Settlement rủi ro (risk / 위험): trade đúng chưa có nghĩa tiền đã settle
 
 Trong deliverable FX, hai currencies phải được trao đổi. Nếu một bên gửi currency của mình nhưng counterparty phá sản trước khi gửi currency còn lại, phát sinh **principal rủi ro (risk / 위험) / settlement rủi ro (risk / 위험)**.
@@ -396,8 +366,6 @@ Trong deliverable FX, hai currencies phải được trao đổi. Nếu một b�
 Hệ thống payment-versus-payment như CLS được thiết kế để giảm principal settlement rủi ro (risk / 위험) cho các currency đủ điều kiện bằng cách liên kết hai payment legs thay vì để một bên thanh toán trước mà không chắc nhận leg còn lại.
 
 Retail nền tảng (platform / 플랫폼) người dùng (user / 사용자) thường không trực tiếp vận hành settlement hạ tầng (infrastructure / 인프라) này, nhưng hiểu settlement giúp thấy FX là financial plumbing thật sự, không chỉ là chart.
-
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **17. Counterparty rủi ro (risk / 위험) thay đổi theo instrument** nối từ **16. Settlement rủi ro (risk / 위험): trade đúng chưa có nghĩa tiền đã settle** sang **18. Tại sao giá giữa spot, forward và futures liên hệ với nhau?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Counterparty rủi ro (risk / 위험) thay đổi theo instrument
 
@@ -425,8 +393,6 @@ cyber / operational risk
 
 CFTC đặc biệt cảnh báo rằng retail OTC customer cần hiểu mình có thể đang giao dịch trực tiếp với dealer thay vì trên open centralized exchange.
 
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **18. Tại sao giá giữa spot, forward và futures liên hệ với nhau?** nối từ **17. Counterparty rủi ro (risk / 위험) thay đổi theo instrument** sang **19. Một ví dụ nối toàn bộ thị trường (market / 시장) cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Tại sao giá giữa spot, forward và futures liên hệ với nhau?
 
 Nếu các instrument cùng biểu diễn exposure đến một currency pair nhưng pricing lệch quá xa sau khi tính:
@@ -449,8 +415,6 @@ Arbitrage không làm mọi giá giống hệt nhau. Nó tạo **no-arbitrage re
 - cross-currency basis;
 - futures basis;
 - carry trade.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **18. Tại sao giá giữa spot, forward và futures liên hệ với nhau?** nêu quy tắc; **19. Một ví dụ nối toàn bộ thị trường (market / 시장) cấu trúc (structure / 구조)** thử quy tắc trong tình huống, rồi **20. Sai lầm mô hình tư duy (mental model / 사고 모델) phổ biến** mở rộng hệ quả.
 
 ## 19. Một ví dụ nối toàn bộ thị trường (market / 시장) cấu trúc (structure / 구조)
 
@@ -488,8 +452,6 @@ Thuật ngữ Hàn Quốc hữu ích:
 - hợp đồng kỳ hạn: **선도계약**;
 - hợp đồng tương lai: **선물계약**.
 
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **19. Một ví dụ nối toàn bộ thị trường (market / 시장) cấu trúc (structure / 구조)** nêu quy tắc; **20. Sai lầm mô hình tư duy (mental model / 사고 모델) phổ biến** thử quy tắc trong tình huống, rồi **21. Checklist trước khi học sang pip/lot** mở rộng hệ quả.
-
 ## 20. Sai lầm mô hình tư duy (mental model / 사고 모델) phổ biến
 
 ### “Forex có một giá chính xác duy nhất”
@@ -516,8 +478,6 @@ Sai. OTC mô tả thị trường (market / 시장) cấu trúc (structure / 구
 
 Sai. Clearing tái cấu trúc và quản lý counterparty rủi ro (risk / 위험) bằng collateral/margin/default waterfall, không xóa mọi rủi ro (risk / 위험).
 
-> **Nối mạch:** Ở chặng này của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **21. Checklist trước khi học sang pip/lot** tổng hợp từ **20. Sai lầm mô hình tư duy (mental model / 사고 모델) phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nối sang chương tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Checklist trước khi học sang pip/lot
 
 Bạn nên tự giải thích được:
@@ -533,15 +493,11 @@ Bạn nên tự giải thích được:
 
 Nếu các câu này chưa rõ, quay lại thị trường (market / 시장) cấu trúc (structure / 구조) trước khi học chiến lược (strategy / 전략).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **Nối sang chương tiếp theo** nối từ **21. Checklist trước khi học sang pip/lot** sang **Nguồn nền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nối sang chương tiếp theo
 
 Thị trường (market / 시장) cấu trúc (structure / 구조) trả lời **“mình đang giao dịch cái gì và với ai?”**. Chương tiếp theo trả lời **“giá đó được đọc và biến thành P/L như thế nào?”**:
 
 → [02 — Quotes, pips, lots and P/L](./02_QUOTES_PIPS_LOTS_AND_PNL.md)
-
-> **Nối mạch:** Trong **01 — Cấu trúc thị trường Forex và các công cụ giao dịch**, **Nối sang chương tiếp theo** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

@@ -8,15 +8,11 @@ Cảm giác nóng/lạnh phụ thuộc nhiệt độ không khí, bức xạ t�
 
 Một phòng có cùng nhiệt độ trung bình vẫn có thể có vùng nóng/lạnh do phân tầng, hướng nắng, khe gió hoặc bố trí nguồn nhiệt. Đo ở một điểm không đại diện cho toàn bộ không gian.
 
-> **Chuyển mạch:** Comfort là kết quả của nhiều đường truyền nhiệt; luồng không khí và trao đổi ẩm quyết định liệu nhiệt được phân phối và thải ra ngoài hay không.
-
 ## 2. Thông gió, lọc và chất lượng không khí
 
 Thông gió đưa khí mới vào và đưa chất ô nhiễm ra; lọc giữ một phần hạt; điều hòa có thể tuần hoàn và điều chỉnh nhiệt nhưng không mặc nhiên thay thế thông gió. Nấu ăn, tắm, đốt nhiên liệu và số người làm thay đổi tải chất lượng không khí.
 
 Đọc hệ thống theo nguồn ô nhiễm, đường di chuyển và điểm xả. Tăng quạt mà không có đường cấp/xả phù hợp có thể tạo áp suất bất lợi hoặc kéo khí từ nơi không mong muốn.
-
-> **Chuyển mạch:** Không khí sạch cần cả trao đổi và kiểm soát nguồn; với ẩm, cần thêm cân bằng giữa tạo hơi, ngưng tụ và khả năng làm khô.
 
 ## 3. Ẩm và ngưng tụ
 

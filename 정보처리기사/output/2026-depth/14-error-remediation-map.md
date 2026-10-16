@@ -30,8 +30,6 @@ Không sửa COV bằng cách học riêng đáp án của câu vừa sai.
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **CON — Confusion lỗi (error / 오류)** nối từ **COV — Coverage Hole** sang **PRO — Procedural lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CON — Confusion lỗi (error / 오류)
 
 Bạn biết cả hai concept nhưng nhầm ranh giới.
@@ -60,8 +58,6 @@ Sau đó tự tạo một scenario mà A đúng và một scenario mà B đúng.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **PRO — Procedural lỗi (error / 오류)** nối từ **CON — Confusion lỗi (error / 오류)** sang **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## PRO — Procedural lỗi (error / 오류)
 
 Biết lý thuyết nhưng không thực hiện được các bước tính/tracing.
@@ -84,8 +80,6 @@ Quay lại `08-procedural-workbook.md`.
 Làm lại procedure với **hai bộ số liệu tự đổi**, không học đáp số cũ.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)** nối từ **PRO — Procedural lỗi (error / 오류)** sang **TERM — Korean Term Recognition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)
 
@@ -113,8 +107,6 @@ Invariant thật nằm ở layer nào?
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **TERM — Korean Term Recognition** nối từ **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)** sang **READ — Reading / Polarity lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## TERM — Korean Term Recognition
 
 Bạn biết concept bằng English/Vietnamese nhưng không nhận ra wording tiếng Hàn.
@@ -134,8 +126,6 @@ Korean → mechanism
 Không chỉ dịch nghĩa.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **READ — Reading / Polarity lỗi (error / 오류)** nối từ **TERM — Korean Term Recognition** sang **CAL — Arithmetic lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## READ — Reading / Polarity lỗi (error / 오류)
 
@@ -165,8 +155,6 @@ Tạo checklist trước khi chọn đáp án:
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **CAL — Arithmetic lỗi (error / 오류)** nối từ **READ — Reading / Polarity lỗi (error / 오류)** sang **MEM — Fragile Memorization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CAL — Arithmetic lỗi (error / 오류)
 
 Procedure đúng nhưng tính nhầm số.
@@ -178,8 +166,6 @@ Tách calculation khỏi conceptual lập luận (reasoning / 추론).
 Viết intermediate trạng thái (state / 상태); không tính mental quá nhiều trong scheduling/subnet/page replacement.
 
 ---
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **MEM — Fragile Memorization** nối từ **CAL — Arithmetic lỗi (error / 오류)** sang **Nếu một môn còn nhiều lỗi nền tảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MEM — Fragile Memorization
 
@@ -336,8 +322,6 @@ Với mã (code / 코드)/OS/mạng (network / 네트워크), phải viết tr�
 
 # 7. Score-driven remediation
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu một môn còn nhiều lỗi nền tảng** nối từ **MEM — Fragile Memorization** sang **Nếu môn 8–11/20**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nếu một môn còn nhiều lỗi nền tảng
 
 Đây là **과락 rủi ro (risk / 위험)**, không chỉ “điểm hơi thấp”.
@@ -356,8 +340,6 @@ Luồng (flow / 흐름):
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 8–11/20** nối từ **Nếu một môn còn nhiều lỗi nền tảng** sang **Nếu môn 12–15/20**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nếu môn 8–11/20
 
 Đã qua ngưỡng mô phỏng nhưng margin quá thấp.
@@ -372,8 +354,6 @@ Vì đây thường là lỗi có thể cải thiện nhanh hơn việc học th
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 12–15/20** nối từ **Nếu môn 8–11/20** sang **Nếu môn 16+/20**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nếu môn 12–15/20
 
 Coverage khá ổn. Tập trung:
@@ -387,8 +367,6 @@ cross-subject connections
 Dùng Advanced Scenario Labs và Confusion Atlas.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 16+/20** nối từ **Nếu môn 12–15/20** sang **Cluster A — “đều là bảo mật (security / 보안)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nếu môn 16+/20
 
@@ -428,8 +406,6 @@ Không ghi “careless” nếu thực ra bạn không hiểu concept. `READ` ch
 
 # 9. lỗi (error / 오류) clusters cần cảnh giác
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster A — “đều là bảo mật (security / 보안)”** nối từ **Nếu môn 16+/20** sang **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cluster A — “đều là bảo mật (security / 보안)”
 
 ```text
@@ -447,8 +423,6 @@ VPN
 Nếu cứ chọn bằng cảm giác “security-related”, lỗi gốc là LAY/CON.
 
 ---
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster A — “đều là bảo mật (security / 보안)”** đặt vấn đề; **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”** đối chiếu bằng chứng, rồi **Cluster C — “đều là thiết kế (design / 설계)”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”
 
@@ -471,8 +445,6 @@ Cần phân: thuộc tính (property / 속성), tính đồng thời (concurrenc
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”** đặt vấn đề; **Cluster C — “đều là thiết kế (design / 설계)”** đối chiếu bằng chứng, rồi **Cluster D — “đều là hiệu năng (performance / 성능)”** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Cluster C — “đều là thiết kế (design / 설계)”
 
 ```text
@@ -488,8 +460,6 @@ UML
 Hãy xác định lớp trừu tượng (abstraction / 추상화) mức (level / 수준) trước khi chọn.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster D — “đều là hiệu năng (performance / 성능)”** nối từ **Cluster C — “đều là thiết kế (design / 설계)”** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## Cluster D — “đều là hiệu năng (performance / 성능)”
 

@@ -23,8 +23,6 @@ request lifecycle
   → production case studies
 ```
 
-> **Chuyển mạch:** Mạch học cung cấp thứ tự prerequisite; danh sách Chapters chuyển thứ tự đó thành các owner có thể đọc và kiểm chứng. Đường đọc nâng cao sau đó gom lại các trục correctness, latency, durability và scale.
-
 ## Chapters
 
 1. [Backend request lifecycle](./00_backend_request_lifecycle.md)
@@ -48,8 +46,6 @@ thuộc lòng.
 `COVERAGE_AUDIT.md` là nơi ghi ranh giới (boundary / 경계), đơn vị sở hữu (owner / 오너) và các chủ đề cố ý không lặp lại
 từ Khoa học máy tính (computer science / 컴퓨터 과학). Khi thêm chapter mới, cập nhật kiểm tra (audit / 감사) trước để tránh biến
 Backend cốt lõi (core / 핵심) thành một bản sao của cơ sở dữ liệu (database / 데이터베이스), mạng (network / 네트워크) hoặc khung phần mềm (framework / 프레임워크) thư viện (library / 라이브러리).
-
-> **Chuyển mạch:** Các chapter cung cấp cơ chế riêng; Đường đọc nâng cao đặt chúng trên cùng các câu hỏi xuyên lớp để người học kiểm tra trade-off và bằng chứng vận hành.
 
 ## Đường đọc nâng cao
 

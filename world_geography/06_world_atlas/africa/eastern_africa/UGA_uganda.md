@@ -8,15 +8,11 @@ Uganda nằm trên cao nguyên Đông Phi, gần xích đạo nhưng nhiều khu
 
 Uganda không giáp biển, vì vậy khoảng cách kinh tế tới thị trường toàn cầu phụ thuộc hành lang qua Kenya và Tanzania nhiều hơn khoảng cách thẳng trên bản đồ.
 
-> **Nối mạch:** Great Lakes highland vừa làm Uganda landlocked vừa điều hòa ẩm và dân cư; **Rift/đầu nguồn Nile** cụ thể hóa cách hồ, escarpment và dòng White Nile nối quốc gia với các basin khu vực. **Khí hậu và nông nghiệp** tiếp theo phân bố lợi ích và ràng buộc theo độ cao.
-
 ## Địa hình, Rift và đầu nguồn Nile
 
 Phía tây Uganda chịu ảnh hưởng mạnh của nhánh phía tây East African Rift, với các hồ dài, escarpment và núi cao. White Nile rời Lake Victoria tại khu vực Jinja và tiếp tục chảy về phía bắc.
 
 Điều này đặt Uganda trong cả hai hệ lớn: **Great Lakes hệ thống (system / 시스템)** và **Nile basin**. Một thay đổi sử dụng đất hoặc thủy văn vì vậy có thể có ý nghĩa vượt khỏi biên giới quốc gia.
-
-> **Nối mạch:** Rift, hồ và Nile tạo nhiều ecological zones; **khí hậu và nông nghiệp** biến gradient mưa/độ cao thành coffee, food và water systems. **Kampala và mạng đô thị** bám theo nơi có access, thị trường và corridor.
 
 ## Khí hậu và nông nghiệp
 
@@ -24,13 +20,9 @@ Mưa phân bố không đều; vùng gần hồ và một số cao nguyên ẩm 
 
 Độ cao tạo các vùng sinh thái theo tầng, do đó “Uganda nằm gần xích đạo” không đủ để suy ra một kiểu khí hậu đồng nhất.
 
-> **Nối mạch:** Climate/agriculture tạo supply và demand cho Kampala, Jinja và các đô thị vùng; **hành lang ra biển** quyết định chi phí đưa hàng qua Kenya/Tanzania tới cảng. **Rủi ro và môi trường** tiếp theo kiểm tra cả corridor lẫn lake livelihoods.
-
 ## Kampala và mạng đô thị
 
 Kampala nằm gần bờ bắc Lake Victoria và là lõi đô thị–dịch vụ chính. Cùng với Entebbe và các đô thị lân cận, nó tạo metropolitan region ngày càng liên kết chặt. Jinja có vai trò lịch sử về công nghiệp và vị trí trên Nile, còn các đô thị khác kết nối vùng nông nghiệp và biên giới.
-
-> **Nối mạch:** Northern/Central Corridors tạo redundancy nhưng phụ thuộc border procedures, port capacity và hạ tầng; **rủi ro/môi trường** gồm flood, drought, landslide và lake-water degradation quanh các node.
 
 ## Hành lang ra biển
 
@@ -38,13 +30,9 @@ Northern Corridor qua Kenya nối Uganda với Mombasa; Central Corridor qua Tan
 
 Đối với một quốc gia không giáp biển, chi phí logistics có thể ảnh hưởng giá hàng nhập và khả năng cạnh tranh của hàng xuất mạnh hơn nhiều so với quốc gia ven biển tương đương.
 
-> **Nối mạch:** Rủi ro làm lộ sự phụ thuộc của landlocked corridor và Great Lakes livelihood vào mùa, địa hình và chất lượng nước. **Mô hình tư duy** sẽ gom accessibility, highland climate, Nile headwater và network redundancy.
-
 ## Rủi ro và môi trường
 
 Lũ, sạt lở ở vùng núi, hạn ở vùng khô và suy giảm chất lượng nước là các rủi ro không gian khác nhau. Lake Victoria tạo nguồn nước và sinh kế nhưng cũng tập trung dân cư, giao thông và hoạt động kinh tế quanh bờ.
-
-> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Great Lakes highland–Nile headwater → climate/agriculture–urban nodes → Kenya/Tanzania corridors và environmental risk. Đây là điểm bàn giao cho các profile East Africa trong owner World Atlas.
 
 ## Mô hình tư duy
 

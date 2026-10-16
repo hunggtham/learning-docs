@@ -8,15 +8,11 @@ Tin nhắn hiệu quả không phải là tin nhắn dài nhất. Hãy đặt b�
 
 Một tin nhắn có thể được kiểm tra sau này phải tách dữ kiện khỏi diễn giải. “Đơn chưa đến lúc 15:00” khác với “bạn luôn chậm”; câu đầu mở đường cho giải quyết, câu sau đẩy cuộc trao đổi sang phòng thủ.
 
-> **Chuyển mạch:** Tin nhắn tốt tạo đầu ra nhỏ và rõ; cuộc họp cần xử lý vấn đề có nhiều bên, nhiều bất định hoặc cần thương lượng.
-
 ## 2. Cuộc họp là hệ thống quyết định
 
 Trước cuộc họp, ghi mục tiêu, người có quyền quyết định, dữ liệu cần đọc và điều gì không cần bàn. Trong cuộc họp, phân biệt `thông tin`, `giả định`, `lựa chọn`, `rủi ro` và `quyết định`. Cuối buổi ghi owner, deadline và điều kiện thay đổi quyết định.
 
 Nếu một cuộc họp lặp lại cùng câu hỏi, failure có thể nằm ở thiếu dữ liệu, thiếu quyền quyết định hoặc không ai chịu trách nhiệm sau đó. Đừng chữa failure về ownership bằng cách kéo thêm người vào phòng.
-
-> **Chuyển mạch:** Cấu trúc cuộc họp biến lời nói thành trạng thái công việc; khi có bất đồng, phản hồi và sửa hiểu nhầm giữ cho xung đột không biến thành gán động cơ.
 
 ## 3. Quyết định và phản hồi sau giao tiếp
 

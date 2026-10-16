@@ -36,8 +36,6 @@ Compile-time điều kiện (condition / 조건) như `#if DEBUG`, `#if os(iOS)`
 
 # 1. Làm quen Xcode trước khi viết app
 
-> **Nối mạch:** Version, language mode, Xcode, SDK và deployment target tạo toolchain contract; project/target/scheme tiếp theo biến contract đó thành build configuration cụ thể.
-
 ## 1.1 Cài và kiểm tra toolchain
 
 Xcode có thể được cài từ Mac App Store hoặc Apple nhà phát triển (developer / 개발자) Downloads. Nếu máy có nhiều Xcode:
@@ -49,8 +47,6 @@ swift --version
 ```
 
 Simulator giúp phản hồi (feedback / 피드백) nhanh nhưng không phải thiết bị thật. Camera, push notification, thermal hành vi (behavior / 동작), bộ nhớ (memory / 메모리) pressure, background thực thi (execution / 실행), Keychain, Bluetooth và hiệu năng (performance / 성능) cần được kiểm thử (test / 테스트) trên thiết bị (device / 장치) phù hợp.
-
-> **Nối mạch:** Toolchain validation xác nhận compiler/SDK; project, target và scheme tiếp theo đóng gói lựa chọn build, rồi `let`/`var` đưa mutability vào code.
 
 ## 1.2 dự án (project / 프로젝트), mục tiêu (target / 대상), scheme và bản dựng (build / 빌드) cấu hình (configuration / 구성)
 
@@ -78,8 +74,6 @@ struct ReaderApp: App {
 ---
 
 # 2. Values, variables và hệ kiểu (type system / 타입 시스템) nền tảng
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **2.1 let, var và kiểu (type / 타입) suy luận (inference / 추론)** nối từ **1.2 dự án (project / 프로젝트), mục tiêu (target / 대상), scheme và bản dựng (build / 빌드) cấu hình (configuration / 구성)** sang **2.2 Numeric types và conversion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.1 `let`, `var` và kiểu (type / 타입) suy luận (inference / 추론)
 
@@ -109,8 +103,6 @@ let retryCount: Int = 3
 let timeout: Double = 30
 ```
 
-> **Nối mạch:** `let`/`var` và type inference quyết định binding; numeric conversion tiếp theo làm rõ precision, rồi Boolean/comparison đặt rule cho control flow.
-
 ## 2.2 Numeric types và conversion
 
 Các kiểu (type / 타입) thường gặp là `Int`, `UInt`, `Double`, `Float`. Trong app thông thường, dùng `Int` cho integer và `Double` cho floating-point trừ khi lĩnh vực (domain / 도메인)/interop yêu cầu kiểu (type / 타입) khác.
@@ -127,8 +119,6 @@ Floating-point không biểu diễn chính xác mọi số thập phân. Không 
 
 Overflow integer thường trap trong bản dựng (build / 빌드) bình thường. Swift có overflow operator `&+`, `&-`, `&*`, nhưng chỉ dùng khi wraparound là ngữ nghĩa (semantics / 의미론) có chủ đích.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **2.3 Boolean và comparison** nối từ **2.2 Numeric types và conversion** sang **2.4 Tuple và typealias**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2.3 Boolean và comparison
 
 Điều kiện Swift phải là `Bool`; không có kiểu “0 là false, khác 0 là true” như C.
@@ -140,8 +130,6 @@ if items.isEmpty {
 ```
 
 Các operator so sánh gồm `==`, `!=`, `<`, `<=`, `>`, `>=`; logical operator gồm `!`, `&&`, `||` và short-circuit theo thứ tự expression.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **2.4 Tuple và typealias** nối từ **2.3 Boolean và comparison** sang **3.1 String là Unicode, không phải mảng byte**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.4 Tuple và `typealias`
 
@@ -166,8 +154,6 @@ Nếu cần trình biên dịch (compiler / 컴파일러) phân biệt `UserID` 
 
 # 3. String, Character, collection và indexing
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **3.1 String là Unicode, không phải mảng byte** nối từ **2.4 Tuple và typealias** sang **3.2 Array, Set, Dictionary**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3.1 String là Unicode, không phải mảng byte
 
 Một ký tự người dùng nhìn thấy có thể chứa nhiều Unicode scalar. Vì vậy `String.Index` không phải `Int`.
@@ -188,8 +174,6 @@ let character = text[index]
 
 Random truy cập (access / 접근) theo integer lặp đi lặp lại trên `String` có thể là dấu hiệu cấu trúc dữ liệu (data structure / 자료구조) sai. Với nhị phân (binary / 이진) giao thức (protocol / 프로토콜), dùng `Data`/byte-oriented API thay vì ép `String` thành byte array.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **3.2 Array, Set, Dictionary** nối từ **3.1 String là Unicode, không phải mảng byte** sang **3.3 Collection algorithms**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3.2 Array, Set, Dictionary
 
 Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
@@ -209,8 +193,6 @@ let bob = scores["Bob"] // Int?
 
 Truy cập array chỉ mục (index / 인덱스) ngoài phạm vi (range / 범위) sẽ trap. Khi định danh (identity / 식별자) của UI item là thực thể (entity / 엔터티) định danh (identity / 식별자), không dùng chỉ mục (index / 인덱스) thay cho ID chỉ vì thuận tiện.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **3.3 Collection algorithms** nối từ **3.2 Array, Set, Dictionary** sang **4.1 if, ternary, guard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3.3 Collection algorithms
 
 Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
@@ -229,8 +211,6 @@ let numbers = ["1", "x", "3"].compactMap(Int.init)
 ---
 
 # 4. điều khiển (control / 제어) luồng (flow / 흐름) và mẫu (pattern / 패턴) matching
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **4.1 if, ternary, guard** nối từ **3.3 Collection algorithms** sang **4.2 switch exhaustive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.1 `if`, ternary, `guard`
 
@@ -255,8 +235,6 @@ func load(userID: String?) {
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **4.2 switch exhaustive** nối từ **4.1 if, ternary, guard** sang **4.3 if case, guard case, for case**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4.2 `switch` exhaustive
 
 Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
@@ -275,8 +253,6 @@ default:
 ```
 
 Swift không fall through mặc định. Exhaustiveness làm enum/máy trạng thái (state machine / 상태 머신) an toàn hơn khi thêm trường hợp (case / 사례) mới.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **4.2 switch exhaustive** nêu quy tắc; **4.3 if case, guard case, for case** thử quy tắc trong tình huống, rồi **4.4 vòng lặp (loop / 루프) và phạm vi (range / 범위)** mở rộng hệ quả.
 
 ## 4.3 `if case`, `guard case`, `for case`
 
@@ -298,8 +274,6 @@ for case let .success(value) in results {
 
 Các form này hữu ích khi chỉ quan tâm một mẫu (pattern / 패턴) mà không cần `switch` đầy đủ.
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **4.3 if case, guard case, for case** nêu quy tắc; **4.4 vòng lặp (loop / 루프) và phạm vi (range / 범위)** thử quy tắc trong tình huống, rồi **5.1 hàm (function / 함수) và argument label** mở rộng hệ quả.
-
 ## 4.4 vòng lặp (loop / 루프) và phạm vi (range / 범위)
 
 Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
@@ -319,8 +293,6 @@ while retry > 0 {
 ---
 
 # 5. hàm (function / 함수), parameter và call-site thiết kế (design / 설계)
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **4.4 vòng lặp (loop / 루프) và phạm vi (range / 범위)** nêu quy tắc; **5.1 hàm (function / 함수) và argument label** thử quy tắc trong tình huống, rồi **5.2 hàm (function / 함수) là giá trị (value / 값)** mở rộng hệ quả.
 
 ## 5.1 hàm (function / 함수) và argument label
 
@@ -350,8 +322,6 @@ func sum(_ numbers: Int...) -> Int {
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **5.1 hàm (function / 함수) và argument label** nêu quy tắc; **5.2 hàm (function / 함수) là giá trị (value / 값)** thử quy tắc trong tình huống, rồi **5.3 inout** mở rộng hệ quả.
-
 ## 5.2 hàm (function / 함수) là giá trị (value / 값)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -362,8 +332,6 @@ let operation: (Int, Int) -> Int = add
 ```
 
 Hàm (function / 함수) có thể được truyền vào hàm (function / 함수) khác, lưu trong thuộc tính (property / 속성) hoặc trả về như giá trị (value / 값). Đây là nền tảng của closure, callback, higher-order hàm (function / 함수) và phụ thuộc (dependency / 의존성) injection bằng hàm (function / 함수) giá trị (value / 값).
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **5.3 inout** nối từ **5.2 hàm (function / 함수) là giá trị (value / 값)** sang **5.4 Overload và ambiguity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.3 `inout`
 
@@ -380,8 +348,6 @@ increment(&count)
 
 `inout` không có nghĩa “pointer C thông thường”. Swift thực thi exclusivity quy tắc (rule / 규칙) để tránh hai truy cập (access / 접근) ghi/đọc xung đột cùng lưu trữ (storage / 저장소).
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **5.4 Overload và ambiguity** nối từ **5.3 inout** sang **6.1 Unwrap**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5.4 Overload và ambiguity
 
 Swift cho phép nhiều hàm (function / 함수) cùng tên nếu signature khác nhau. Overload giúp API tự nhiên nhưng quá nhiều overload generic có thể khiến lời gọi (call / 호출) site/diagnostic khó hiểu. Khi ngữ nghĩa (semantic / 의미적) khác nhau rõ rệt, tên khác thường tốt hơn ép trình biên dịch (compiler / 컴파일러) đoán.
@@ -396,8 +362,6 @@ Swift cho phép nhiều hàm (function / 함수) cùng tên nếu signature khá
 var nickname: String? = nil
 nickname = "Tom"
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **6.1 Unwrap** nối từ **5.4 Overload và ambiguity** sang **6.2 Force unwrap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.1 Unwrap
 
@@ -414,8 +378,6 @@ let length = user.profile?.name.count
 
 `guard let` phù hợp với early-exit; nil coalescing `??` phù hợp default giá trị (value / 값); optional chaining phù hợp chuỗi thuộc tính (property / 속성)/phương thức (method / 메서드) có thể nil.
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **6.2 Force unwrap** nối từ **6.1 Unwrap** sang **7.1 Struct và giá trị (value / 값) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6.2 Force unwrap
 
 Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
@@ -431,8 +393,6 @@ Implicitly unwrapped Optional (`String!`) vẫn xuất hiện trong IBOutlet/API
 ---
 
 # 7. Struct, lớp (class / 클래스), enum và giao thức (protocol / 프로토콜)
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **7.1 Struct và giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** nối từ **6.2 Force unwrap** sang **7.2 lớp (class / 클래스), định danh (identity / 식별자) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.1 Struct và giá trị (value / 값) ngữ nghĩa (semantics / 의미론)
 
@@ -451,8 +411,6 @@ b.name = "B"
 
 Về ngữ nghĩa (semantics / 의미론), `a` và `b` là hai giá trị (value / 값) độc lập. tiêu chuẩn (standard / 표준) collection như Array/String có thể dùng sao chép khi ghi (copy-on-write / 쓰기 시 복사) nội bộ để tránh bản sao (copy / 복사) vật lý không cần thiết, nhưng mã (code / 코드) của bạn vẫn phải lập luận (reasoning / 추론) như giá trị (value / 값) ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, sau nội dung của **7.1 Struct và giá trị (value / 값) ngữ nghĩa (semantics / 의미론)**, **7.2 lớp (class / 클래스), định danh (identity / 식별자) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **7.3 Enum: raw giá trị (value / 값), associated giá trị (value / 값) và recursive trạng thái (state / 상태)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 7.2 lớp (class / 클래스), định danh (identity / 식별자) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -470,8 +428,6 @@ print(first === second) // true
 Nhiều tham chiếu (reference / 참조) có thể trỏ cùng instance. Vì vậy mutation qua một tham chiếu (reference / 참조) có thể được quan sát từ tham chiếu (reference / 참조) khác. `===` kiểm định danh (identity / 식별자), khác `==` là equality ngữ nghĩa (semantic / 의미적).
 
 Nếu không chủ đích thiết kế inheritance, `final class` thường thể hiện intent tốt hơn.
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **7.3 Enum: raw giá trị (value / 값), associated giá trị (value / 값) và recursive trạng thái (state / 상태)** nối từ **7.2 lớp (class / 클래스), định danh (identity / 식별자) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** sang **7.4 giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.3 Enum: raw giá trị (value / 값), associated giá trị (value / 값) và recursive trạng thái (state / 상태)
 
@@ -501,8 +457,6 @@ indirect enum Expression {
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **7.4 giao thức (protocol / 프로토콜)** nối từ **7.3 Enum: raw giá trị (value / 값), associated giá trị (value / 값) và recursive trạng thái (state / 상태)** sang **8.1 Initialization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7.4 giao thức (protocol / 프로토콜)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -519,8 +473,6 @@ Giao thức (protocol / 프로토콜) mô tả năng lực (capability / 역량)
 ---
 
 # 8. Initialization, extension, nested kiểu (type / 타입) và subscript
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **8.1 Initialization** nối từ **7.4 giao thức (protocol / 프로토콜)** sang **8.2 Extension**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8.1 Initialization
 
@@ -539,8 +491,6 @@ struct EmailAddress {
 
 Initializer phải đưa đối tượng (object / 객체) vào trạng thái hợp lệ trước khi sử dụng `self` tự do. Đừng đẩy đối tượng (object / 객체) “nửa khởi tạo” ra bên ngoài rồi mong caller nhớ gọi `setup()` nếu bất biến (invariant / 불변식) có thể đảm bảo ngay trong init.
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **8.2 Extension** nối từ **8.1 Initialization** sang **8.3 Nested kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8.2 Extension
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -555,8 +505,6 @@ extension String {
 
 Extension nhóm hành vi (behavior / 동작)/conformance tốt, nhưng đừng rải một kiểu (type / 타입) thành hàng chục extension không có ranh giới (boundary / 경계) rõ ràng.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **8.3 Nested kiểu (type / 타입)** nối từ **8.2 Extension** sang **8.4 Subscript**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8.3 Nested kiểu (type / 타입)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -570,8 +518,6 @@ struct APIRequest {
 ```
 
 Nested kiểu (type / 타입) hữu ích khi kiểu (type / 타입) con chỉ có ý nghĩa trong không gian tên (namespace / 네임스페이스) của kiểu (type / 타입) cha.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **8.4 Subscript** nối từ **8.3 Nested kiểu (type / 타입)** sang **11.1 Escaping và non-escaping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8.4 Subscript
 
@@ -667,8 +613,6 @@ Trailing closure và shorthand:
 let doubled = [1, 2, 3].map { $0 * 2 }
 ```
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **11.1 Escaping và non-escaping** nối từ **8.4 Subscript** sang **11.2 Capture danh sách (list / 목록)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11.1 Escaping và non-escaping
 
 Closure parameter mặc định là non-escaping: closure phải được gọi trước khi hàm (function / 함수) return. Nếu closure được giữ lại để gọi sau, parameter cần `@escaping`:
@@ -684,8 +628,6 @@ final class Loader {
 ```
 
 Escaping closure quan trọng vì thời gian tồn tại (lifetime / 수명) dài hơn ngăn xếp lời gọi (call stack / 호출 스택) và có thể tham gia quyền sở hữu (ownership / 소유권) cycle.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **11.2 Capture danh sách (list / 목록)** nối từ **11.1 Escaping và non-escaping** sang **11.3 @autoclosure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11.2 Capture danh sách (list / 목록)
 
@@ -709,8 +651,6 @@ closure() // A
 
 Không thêm `[weak self]` máy móc. Hãy hỏi closure được ai giữ, sống bao lâu và thao tác (operation / 연산) có nên tiếp tục khi đơn vị sở hữu (owner / 오너) biến mất hay không.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **11.3 @autoclosure** nối từ **11.2 Capture danh sách (list / 목록)** sang **12.1 Strong tham chiếu (reference / 참조) và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11.3 `@autoclosure`
 
 `@autoclosure` cho phép caller truyền expression thay vì viết `{ ... }`. Nó phù hợp API như assertion/lazy expression nhưng dễ che điều khiển (control / 제어) luồng (flow / 흐름); app mã (code / 코드) hiếm khi cần tự thiết kế API kiểu này.
@@ -720,8 +660,6 @@ Không thêm `[weak self]` máy móc. Hãy hỏi closure được ai giữ, số
 # 12. ARC và bộ nhớ (memory / 메모리) quyền sở hữu (ownership / 소유권) — mô hình tư duy (mental model / 사고 모델) bắt buộc
 
 Swift dùng Automatic tham chiếu (reference / 참조) Counting cho lớp (class / 클래스)/reference-counted đối tượng (object / 객체). ARC tự chèn retain/bản phát hành (release / 릴리스) theo thời gian tồn tại (lifetime / 수명), nhưng ARC không phải garbage collector dò cycle.
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, sau nội dung của **11.3 @autoclosure**, **12.1 Strong tham chiếu (reference / 참조) và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **12.2 Retain cycle giữa đối tượng (object / 객체)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12.1 Strong tham chiếu (reference / 참조) và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명)
 
@@ -740,8 +678,6 @@ owner = nil
 
 Khi strong tham chiếu (reference / 참조) cuối cùng mất đi, instance có thể deinitialize. `deinit` phù hợp cleanup synchronous/tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) rõ, nhưng không phải nơi đáng tin để gửi mạng (network / 네트워크) yêu cầu (request / 요청) hoặc lưu nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **12.2 Retain cycle giữa đối tượng (object / 객체)** nối từ **12.1 Strong tham chiếu (reference / 참조) và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명)** sang **12.3 Retain cycle với closure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12.2 Retain cycle giữa đối tượng (object / 객체)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -759,8 +695,6 @@ final class Child {
 Nếu cả `Parent.child` và `Child.parent` đều strong, hai đối tượng (object / 객체) giữ nhau và ARC không thể giảm count về zero. `weak` không giữ đối tượng (object / 객체) sống và luôn đọc được như Optional vì mục tiêu (target / 대상) có thể biến mất.
 
 `unowned` cũng không retain nhưng biểu diễn bất biến (invariant / 불변식) mạnh hơn: tham chiếu (reference / 참조) phải còn sống mỗi khi truy cập. Nếu bất biến (invariant / 불변식) sai, chương trình trap. Chỉ dùng `unowned` khi thời gian tồn tại (lifetime / 수명) quan hệ (relation / 관계) thực sự được chứng minh, không phải để tránh viết `?`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **12.3 Retain cycle với closure** nối từ **12.2 Retain cycle giữa đối tượng (object / 객체)** sang **12.4 giá trị (value / 값) kiểu (type / 타입) vẫn có thể giữ tham chiếu (reference / 참조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12.3 Retain cycle với closure
 
@@ -782,8 +716,6 @@ final class ScreenModel {
 
 Nếu closure chỉ tồn tại trong một lời gọi (call / 호출) synchronous và không được giữ, strong capture có thể hoàn toàn đúng. quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프) quan trọng hơn quy tắc “closure luôn weak self”.
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, sau nội dung của **12.3 Retain cycle với closure**, **12.4 giá trị (value / 값) kiểu (type / 타입) vẫn có thể giữ tham chiếu (reference / 참조)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **12.5 ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thứ thật sự cần nhớ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12.4 giá trị (value / 값) kiểu (type / 타입) vẫn có thể giữ tham chiếu (reference / 참조)
 
 Struct không có định danh (identity / 식별자) ARC riêng, nhưng trường dữ liệu (field / 필드) của struct có thể là lớp (class / 클래스) tham chiếu (reference / 참조):
@@ -796,13 +728,9 @@ struct Container {
 
 Bản sao (copy / 복사) `Container` không nhất thiết tạo `Session` mới. Hai bộ chứa (container / 컨테이너) giá trị (value / 값) có thể vẫn giữ cùng instance. Vì vậy “struct = mọi thứ deep copied” là mô hình tư duy (mental model / 사고 모델) sai.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **12.5 ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thứ thật sự cần nhớ** nối từ **12.4 giá trị (value / 값) kiểu (type / 타입) vẫn có thể giữ tham chiếu (reference / 참조)** sang **12.6 gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12.5 ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thứ thật sự cần nhớ
 
 Không nên học Swift theo quy tắc đơn giản “struct ở ngăn xếp (stack / 스택), lớp (class / 클래스) ở vùng nhớ động (heap / 힙)”. trình biên dịch (compiler / 컴파일러) có quyền optimize/box/escape giá trị (value / 값). Điều có ý nghĩa ở nguồn (source / 소스) mức (level / 수준) là giá trị (value / 값) ngữ nghĩa (semantics / 의미론), tham chiếu (reference / 참조) định danh (identity / 식별자), quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명). ngăn xếp (stack / 스택)/vùng nhớ động (heap / 힙) hữu ích khi profiling low-level, nhưng không thay ngữ nghĩa (semantics / 의미론) ngôn ngữ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **12.6 gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리)** nối từ **12.5 ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thứ thật sự cần nhớ** sang **16.1 Date, Calendar, timezone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12.6 gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리)
 
@@ -903,8 +831,6 @@ Regex phù hợp mẫu (pattern / 패턴) matching/extraction, không phải par
 
 # 16. Foundation cần học sớm
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **16.1 Date, Calendar, timezone** nối từ **12.6 gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리)** sang **16.2 URL và URLComponents**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16.1 `Date`, `Calendar`, timezone
 
 `Date` biểu diễn một instant. “Ngày/tháng/năm” là cách diễn giải theo calendar/timezone.
@@ -917,8 +843,6 @@ let tomorrow = calendar.date(byAdding: .day, value: 1, to: now)
 ```
 
 Nếu lô-gic (logic / 논리) là “ngày mai theo lịch”, không tự cộng 86.400 giây vì DST/calendar có thể làm giả định (assumption / 가정) sai.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **16.2 URL và URLComponents** nối từ **16.1 Date, Calendar, timezone** sang **16.3 Codable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16.2 URL và URLComponents
 
@@ -933,8 +857,6 @@ let url = components.url!
 ```
 
 Không tự nối truy vấn (query / 쿼리) string vì escaping/encoding dễ sai.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **16.3 Codable** nối từ **16.2 URL và URLComponents** sang **17.1 Modifier và thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16.3 `Codable`
 
@@ -989,8 +911,6 @@ struct CounterView: View {
 
 `View` là giá trị (value / 값) description. Đừng mang mô hình tư duy (mental model / 사고 모델) “View đối tượng (object / 객체) sống cố định và tôi mutate label.văn bản (text / 텍스트)” từ UIKit sang SwiftUI.
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **17.1 Modifier và thứ tự (order / 순서)** nối từ **16.3 Codable** sang **17.2 bố cục (layout / 레이아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17.1 Modifier và thứ tự (order / 순서)
 
 Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
@@ -1004,13 +924,9 @@ Text("Hello")
 
 Modifier trả về view description mới; thứ tự có thể thay đổi bố cục (layout / 레이아웃)/visual tác động (effect / 효과).
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **17.2 bố cục (layout / 레이아웃)** nối từ **17.1 Modifier và thứ tự (order / 순서)** sang **17.3 danh sách (list / 목록) và định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17.2 bố cục (layout / 레이아웃)
 
 `VStack`, `HStack`, `ZStack`, `Spacer`, `frame`, `padding`, alignment và bố cục (layout / 레이아웃) priority là thành phần nguyên thủy (primitive / 기본 요소) chính. SwiftUI bố cục (layout / 레이아웃) là negotiation: parent propose kích thước (size / 크기), child chọn kích thước (size / 크기) phù hợp, parent đặt child. `frame` không đơn giản là UIKit frame assignment.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **17.3 danh sách (list / 목록) và định danh (identity / 식별자)** nối từ **17.2 bố cục (layout / 레이아웃)** sang **18.1 @State**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17.3 danh sách (list / 목록) và định danh (identity / 식별자)
 
@@ -1035,8 +951,6 @@ List(items) { item in
 
 Trước khi chọn wrapper, hỏi: **ai sở hữu giá trị (value / 값), ai được mutate, thời gian tồn tại (lifetime / 수명) thuộc đâu?**
 
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **18.1 @State** nối từ **17.3 danh sách (list / 목록) và định danh (identity / 식별자)** sang **18.2 @Binding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18.1 `@State`
 
 Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
@@ -1046,8 +960,6 @@ Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và số
 ```
 
 Dùng cho cục bộ (local / 로컬) mutable trạng thái (state / 상태) mà view định danh (identity / 식별자) sở hữu. `@State` không phải cách biến mọi thuộc tính (property / 속성) thành mutable; derived giá trị (value / 값) nên được tính từ nguồn (source / 소스) trạng thái (state / 상태) thay vì lưu trùng.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **18.2 @Binding** nối từ **18.1 @State** sang **18.3 Observation hiện đại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18.2 `@Binding`
 
@@ -1065,8 +977,6 @@ struct ToggleRow: View {
 
 Binding không sở hữu giá trị (value / 값); nó là read/ghi (write / 쓰기) projection tới trạng thái (state / 상태) do nơi khác sở hữu.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **18.3 Observation hiện đại** nối từ **18.2 @Binding** sang **18.4 môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18.3 Observation hiện đại
 
 Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
@@ -1082,8 +992,6 @@ final class ProfileModel {
 ```
 
 SwiftUI theo dõi thuộc tính (property / 속성) observable mà view đọc. `ObservableObject`, `@Published`, `@StateObject`, `@ObservedObject` vẫn cần biết để maintain mục tiêu (target / 대상) cũ/mã (code / 코드) legacy.
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **18.4 môi trường (environment / 환경)** nối từ **18.3 Observation hiện đại** sang **22.1 UserDefaults**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18.4 môi trường (environment / 환경)
 
@@ -1198,8 +1106,6 @@ Quan trọng: **ARC giải quyết thời gian tồn tại (lifetime / 수명) c
 
 # 22. Persistence căn bản
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **22.1 UserDefaults** nối từ **18.4 môi trường (environment / 환경)** sang **22.2 Keychain**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22.1 UserDefaults
 
 Dùng cho preference nhỏ:
@@ -1211,13 +1117,9 @@ let value = UserDefaults.standard.bool(forKey: "hasSeenOnboarding")
 
 Không dùng UserDefaults làm cơ sở dữ liệu (database / 데이터베이스) lớn hoặc nơi lưu secret.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **22.2 Keychain** nối từ **22.1 UserDefaults** sang **22.3 SwiftData**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22.2 Keychain
 
 Credential/đơn vị từ (token / 토큰) nhạy cảm nên nằm trong Keychain thay vì UserDefaults/plain tệp (file / 파일). Cần hiểu truy cập (access / 접근) group và khả năng tiếp cận (accessibility / 접근성) option khi lên Intermediate/cấp cao (senior / 시니어).
-
-> **Nối mạch:** Trong **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **22.3 SwiftData** nối từ **22.2 Keychain** sang **22.4 tệp (file / 파일) hệ thống (system / 시스템) sandbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22.3 SwiftData
 
@@ -1245,8 +1147,6 @@ private var modelContext
 ```
 
 SwiftData làm persistence ergonomic nhưng không loại bỏ lược đồ (schema / 스키마)/di chuyển (migration / 마이그레이션)/truy vấn (query / 쿼리)/tính đồng thời (concurrency / 동시성) problems. cốt lõi (core / 핵심) dữ liệu (data / 데이터) vẫn quan trọng trong môi trường vận hành (production / 운영 환경) legacy và sẽ được học ở mức (level / 수준) sau.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **22.4 tệp (file / 파일) hệ thống (system / 시스템) sandbox** nối từ **22.3 SwiftData** sang **Checklist trước khi sang Intermediate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22.4 tệp (file / 파일) hệ thống (system / 시스템) sandbox
 
@@ -1434,8 +1334,6 @@ Xcode 27 đi với Swift 6.4/iOS 27 SDK. SwiftUI `State` hiện thực (implemen
 Hãy xây app “Reading danh sách (list / 목록)” có danh sách, chi tiết và form thêm/sửa. mô hình (model / 모델) thực thể (entity / 엔터티) bằng `struct`/`enum`; `NavigationStack` cho điều hướng (navigation / 내비게이션); cục bộ (local / 로컬) UI trạng thái (state / 상태) dùng `@State`; dùng chung (shared / 공유) observable mô hình (model / 모델) dùng Observation; REST bằng `URLSession`; decode Codable; bookmark bằng SwiftData; preference bằng UserDefaults; credential giả lập qua Keychain dịch vụ (service / 서비스).
 
 Bắt buộc xác minh các thất bại (failure / 실패) đường dẫn (path / 경로): máy chủ (server / 서버) trả non-2xx, decode thất bại (fail / 실패), tác vụ (task / 작업) bị cancel, bản ghi (record / 레코드) không tồn tại, form invalid. Dùng bộ nhớ (memory / 메모리) đồ thị (graph / 그래프) để xác nhận một screen/mô hình (model / 모델) được giải phóng khi điều hướng (navigation / 내비게이션) pop nếu nó không còn đơn vị sở hữu (owner / 오너).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS Master ghi chú (note / 노트) — Beginner**, **Checklist trước khi sang Intermediate** nối từ **22.4 tệp (file / 파일) hệ thống (system / 시스템) sandbox** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Checklist trước khi sang Intermediate
 

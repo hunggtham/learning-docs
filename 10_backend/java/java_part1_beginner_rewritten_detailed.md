@@ -8,8 +8,6 @@
 >
 > Các “cấp cao (senior / 시니어) ghi chú (note / 노트)”, “lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)”, “mẫu lập trình (programming pattern / 프로그래밍 패턴)” và “mẫu thiết kế (design pattern / 디자인 패턴)” không được tách thành checklist riêng sau mỗi mục. Khi một mẫu (pattern / 패턴) thực sự quan trọng, nó sẽ được giải thích ngay trong nội dung để bạn hiểu nó như một phần tự nhiên của Java chứ không phải một danh sách thuật ngữ cần học thuộc.
 
-> **Chuyển mạch:** Sau khi dựng mental model Java từ execution và object, **Cách đọc bộ Java chuẩn gốc (canonical / 정본)** chỉ ra API/spec nào là owner cho từng câu hỏi. Handoff này giữ Part 1 ở nền tảng ngôn ngữ thay vì lấn sang framework.
-
 ## Cách đọc bộ Java chuẩn gốc (canonical / 정본)
 
 Đây là tệp (file / 파일) đầu tiên trong bốn ghi chú (note / 노트) chuẩn gốc (canonical / 정본) của Java thư viện kiến thức (knowledge library / 지식 라이브러리). Hãy đọc theo thứ tự **Beginner → Intermediate → cấp cao (senior / 시니어) → Master Supplement** thay vì nhảy thẳng vào JVM hoặc tính đồng thời (concurrency / 동시성). Beginner xây hệ kiểu (type system / 타입 시스템), mô hình đối tượng (object model / 객체 모델), collections, exception và I/O; Intermediate mở generics, tính đồng thời (concurrency / 동시성), JDBC, reflection và JVM; cấp cao (senior / 시니어) chuyển sang môi trường vận hành (production / 운영 환경) tính đúng đắn (correctness / 정확성), profiling và hiệu năng (performance / 성능); Master chỉ bổ sung low-level/thời gian chạy (runtime / 런타임)/library-author topics chưa phù hợp với ba phần trước.

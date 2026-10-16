@@ -80,8 +80,6 @@ Tuyến tính (linear / 선형) Probing dễ primary clustering. Double Hashing 
 
 Tải (load / 로드) factor `α = number of entries / table size` ảnh hưởng hiệu năng (performance / 성능). Khi α quá cao trong open addressing, probe chuỗi (chain / 사슬) tăng mạnh.
 
-> **Nối mạch:** Trong **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **1. 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** đặt vấn đề; **2. 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** đối chiếu bằng chứng, rồi **3. 제품 소프트웨어 패키징 — sản phẩm (product / 제품) Software Packaging** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)
 
 ### 2.1 đơn vị (unit / 단위) mô-đun (module / 모듈)
@@ -99,8 +97,6 @@ Dùng chung (shared / 공유) bộ nhớ (memory / 메모리) thường nhanh v�
 ### 2.3 tích hợp (integration / 통합)
 
 Khi tích hợp mô-đun (module / 모듈)/dịch vụ (service / 서비스), cần kiểm soát giao diện (interface / 인터페이스) đặc tả hợp đồng (contract / 계약), dữ liệu (data / 데이터) ánh xạ (mapping / 매핑), lỗi (error / 오류) mã (code / 코드), giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계), thử lại (retry / 재시도) và idempotency. Một thử lại (retry / 재시도) không an toàn có thể tạo duplicate thao tác (operation / 연산); vì vậy “thử lại (retry / 재시도)” không tự động là giải pháp cho mọi giao diện (interface / 인터페이스) lỗi (error / 오류).
-
-> **Nối mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **3. 제품 소프트웨어 패키징 — sản phẩm (product / 제품) Software Packaging** nối từ **2. 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** sang **4. 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) Management**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 제품 소프트웨어 패키징 — sản phẩm (product / 제품) Software Packaging
 
@@ -129,8 +125,6 @@ Centralized VCS như SVN dựa nhiều vào central repository. phân tán (dist
 ### 3.5 bản dựng (build / 빌드) Automation
 
 Bản dựng (build / 빌드) automation tự động compile, kiểm thử (test / 테스트), gói (package / 패키지) và đôi khi deploy. Jenkins là automation máy chủ (server / 서버)/orchestrator; Gradle/Maven là bản dựng (build / 빌드) tools. Đề dễ trộn category: Jenkins không phải trình biên dịch (compiler / 컴파일러) và Git không phải bản dựng (build / 빌드) công cụ (tool / 도구).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **4. 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) Management** nối từ **3. 제품 소프트웨어 패키징 — sản phẩm (product / 제품) Software Packaging** sang **5. 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) Management
 
@@ -207,8 +201,6 @@ Các chỉ số (metric / 지표) cần phân biệt:
 
 Độ trễ (latency / 지연 시간) thấp không đồng nghĩa thông lượng (throughput / 처리량) cao và ngược lại.
 
-> **Nối mạch:** Trong **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **5. 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** nối từ **4. 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) Management** sang **6. Các cặp dễ mất điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)
 
 ### 5.1 hiện thực (implementation / 구현)
@@ -229,8 +221,6 @@ Integrity check có thể dùng băm (hash / 해시)/checksum. băm (hash / 해�
 
 Công cụ (tool / 도구) category thường gặp gồm xUnit-style đơn vị (unit / 단위) kiểm thử (test / 테스트) khung phần mềm (framework / 프레임워크), API testing tools, static/động (dynamic / 동적) phân tích (analysis / 분석), monitoring/APM. Hãy phân loại công cụ (tool / 도구) theo **mục đích**, không học tên công cụ (tool / 도구) đơn độc vì công cụ (tool / 도구) ecosystem thay đổi.
 
-> **Nối mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **6. Các cặp dễ mất điểm** nối từ **5. 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** sang **7. Procedural drills**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Các cặp dễ mất điểm
 
 | Cặp | Phân biệt |
@@ -246,8 +236,6 @@ Công cụ (tool / 도구) category thường gặp gồm xUnit-style đơn vị
 | Stub vs Driver | mô-đun (module / 모듈) con giả vs mô-đun (module / 모듈) cha giả |
 | phản hồi (response / 응답) thời gian (time / 시간) vs thông lượng (throughput / 처리량) | độ trễ (latency / 지연 시간) từng yêu cầu (request / 요청) vs lượng công việc (work / 작업)/thời gian (time / 시간) |
 | băm (hash / 해시) vs Encryption | one-way digest/integrity vs reversible confidentiality với key phù hợp |
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **7. Procedural drills** nối từ **6. Các cặp dễ mất điểm** sang **8. 과락 방지 checklist — Môn 2**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Procedural drills
 
@@ -278,8 +266,6 @@ Trong top-down tích hợp (integration / 통합), mô-đun (module / 모듈) `O
 ### Drill 7 — hiệu năng (performance / 성능)
 
 Một API phản hồi (response / 응답) thời gian (time / 시간) giảm từ 500ms xuống 200ms nhưng số yêu cầu (request / 요청)/second không tăng vì DB liên kết (connection / 연결) pool vẫn giới hạn. chỉ số (metric / 지표) nào cải thiện, chỉ số (metric / 지표) nào gần như không đổi?
-
-> **Nối mạch:** Trong **Môn 2 — 소프트웨어 개발: Deep Dive 2026**, **8. 과락 방지 checklist — Môn 2** nối từ **7. Procedural drills** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 8. 과락 방지 checklist — Môn 2
 

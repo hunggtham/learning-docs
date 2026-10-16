@@ -35,8 +35,6 @@ Bốn part là bốn chuẩn gốc (canonical / 정본) chapter lớn. Cấu tr�
 
 Part 1 là prerequisite trực tiếp của Part 2. Part 3 có thể được đọc sớm nếu mục tiêu là dự án (project / 프로젝트)/triển khai (deployment / 배포), nhưng các phần testing, import, tính đồng thời (concurrency / 동시성) và bộ nhớ (memory / 메모리) đều giả định mô hình tư duy (mental model / 사고 모델) đối tượng (object / 객체)/tham chiếu (reference / 참조) từ Part 1–2. Part 4 là lớp đào sâu; nó không thay thế ba phần trước mà giải thích vì sao các hành vi (behavior / 동작) đã học xuất hiện ở thời gian chạy (runtime / 런타임) và môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Mạch học xác định prerequisite giữa bốn part; ranh giới domain nói rõ phần nào thuộc Python và phần nào phải quay về Computer Science. Sau đó Quy ước thuật ngữ giữ cách dùng tiếng Việt nhất quán.
-
 ## Ranh giới (boundary / 경계) với các lĩnh vực (domain / 도메인) khác
 
 Python cốt lõi (core / 핵심) ở đây giải thích ngôn ngữ, CPython khi cần thiết, thư viện chuẩn (standard library / 표준 라이브러리) và môi trường vận hành (production / 운영 환경) practice gắn trực tiếp với Python. FastAPI, AI khung phần mềm (framework / 프레임워크) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) khung phần mềm (framework / 프레임워크) không được kéo sâu vào thư viện (library / 라이브러리) chỉ vì chúng dùng tệp (file / 파일) `.py`.
@@ -47,15 +45,11 @@ Các concept nền rộng hơn như tiến trình (process / 프로세스)/luồ
 
 Multiple interpreters, free-threaded CPython và tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) thực thi (execution / 실행) được giải thích ở Python ranh giới (boundary / 경계) vì chúng thay đổi hành vi (behavior / 동작) của Python thời gian chạy (runtime / 런타임). Những nguyên lý rộng hơn về isolation, scheduling, trạng thái dùng chung (shared state / 공유 상태) và IPC vẫn thuộc Khoa học máy tính (computer science / 컴퓨터 과학); tài liệu Python chỉ giữ phần cần để hiểu quyết định kỹ thuật (engineering / 엔지니어링) trong Python.
 
-> **Chuyển mạch:** Quy ước thuật ngữ giữ tên API và thuật ngữ tra cứu ổn định; phần Hiện đại Python và legacy dùng quy ước đó để phân biệt hành vi theo phiên bản.
-
 ## Quy ước thuật ngữ
 
 Giải thích chính dùng tiếng Việt tự nhiên. Mỗi lần thuật ngữ quan trọng xuất hiện, dùng dạng `tiếng Việt (English term / 한국어 용어)` theo ánh xạ trong [Glossary](GLOSSARY.md). Tên API, mô-đun (module / 모듈), lớp (class / 클래스), phương thức (method / 메서드), command, identifier, tiêu chuẩn (standard / 표준), sản phẩm (product / 제품) và mã (code / 코드) như `asyncio`, `Path`, `__iter__`, `pyproject.toml` giữ nguyên bản gốc.
 
 Khi đọc chapter, ưu tiên hiểu quan hệ giữa khái niệm và cơ chế (mechanism / 메커니즘). Glossary dùng để nhận diện thuật ngữ, không thay thế phần giải thích trong chapter.
-
-> **Chuyển mạch:** Phân biệt modern và legacy giúp người học biết khi nào một claim phụ thuộc phiên bản; **Cách dùng thư viện** chuyển claim đó thành quyết định đọc và kiểm chứng trong dự án.
 
 ## Hiện đại (modern / 현대적) Python và legacy
 
@@ -67,8 +61,6 @@ Python 3.14 cũng đưa `concurrent.interpreters` và `InterpreterPoolExecutor` 
 
 Trên POSIX hỗ trợ phù hợp, Python 3.14 dùng `forkserver` làm multiprocessing start phương thức (method / 메서드) mặc định thay cho `fork`. mã (code / 코드) phụ thuộc `fork` phải chọn tường minh (explicit / 명시적) ngữ cảnh (context / 맥락) thay vì coi historical default là ngôn ngữ (language / 언어) guarantee. Packaging cũng cần tách dự án (project / 프로젝트) siêu dữ liệu (metadata / 메타데이터), phụ thuộc (dependency / 의존성) groups, resolved triển khai (deployment / 배포) môi trường (environment / 환경) và nhị phân (binary / 이진) wheel/ABI tính tương thích (compatibility / 호환성) thành các lớp khác nhau.
 
-> **Chuyển mạch:** Cách dùng thư viện nêu lúc nào cần đọc Part 1–4 và case study; Nguồn chuẩn gốc cung cấp tài liệu chính thức để kiểm tra claim theo phiên bản.
-
 ## Cách dùng thư viện (library / 라이브러리)
 
 Nếu mới học Python, đọc Part 1 → 2 và tự chạy các ví dụ nhỏ. Khi bắt đầu dự án (project / 프로젝트) thật, chuyển sang Part 3 để hiểu môi trường (environment / 환경), phụ thuộc (dependency / 의존성), testing, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) ranh giới (boundary / 경계). Part 4 phù hợp khi cần điều tra hiệu năng (performance / 성능), bộ nhớ (memory / 메모리), import hành vi (behavior / 동작), descriptor/attribute lookup, `__new__`/lớp (class / 클래스) creation, free-threading, multiple interpreters, async internals hoặc rà soát (review / 검토) kiến trúc (architecture / 아키텍처).
@@ -76,8 +68,6 @@ Nếu mới học Python, đọc Part 1 → 2 và tự chạy các ví dụ nh�
 Sau mỗi cụm lớn, đọc trường hợp (case / 사례) tương ứng trong `ENGINEERING_CASE_STUDIES.md`. Ví dụ sau đối tượng (object / 객체)/bản sao (copy / 복사) hãy đọc trường hợp (case / 사례) 1; sau import đọc trường hợp (case / 사례) 2; sau packaging đọc trường hợp (case / 사례) 3; sau tính đồng thời (concurrency / 동시성)/async đọc trường hợp (case / 사례) 4–7; sau testing/bảo mật (security / 보안)/khả năng quan sát (observability / 관측 가능성) đọc trường hợp (case / 사례) 8–10. Mục tiêu là kiểm tra xem bạn có thể suy luận từ symptom tới cơ chế (mechanism / 메커니즘) hay chỉ đang nhớ tên API.
 
 Nếu đã viết Python nhưng mô hình tư duy (mental model / 사고 모델) chưa chắc, không cần đọc lại mọi cú pháp (syntax / 문법). Hãy bắt đầu từ Part 1 §2–4 về name/đối tượng (object / 객체)/định danh (identity / 식별자)/mutability, Part 2 về mô hình dữ liệu (data model / 데이터 모델)/iterator/ngữ cảnh (context / 맥락) manager, rồi Part 3 về tính đồng thời (concurrency / 동시성). Khi gặp phép màu của khung phần mềm (framework magic / 프레임워크 마법) như ORM trường dữ liệu (field / 필드)/thuộc tính (property / 속성)/proxy, đọc Part 4 §4; khi gặp vòng đời (lifecycle / 생명주기)/lớp (class / 클래스) factory/metaclass, đọc Part 4 §7; khi chọn CPU mô hình thực thi (execution model / 실행 모델), đọc Part 3 §17 và Part 4 §13/17.
-
-> **Chuyển mạch:** Danh sách nguồn chuẩn gốc là điểm kiểm chứng cuối cho phiên bản và semantics; không thay thế phần giải thích bằng một danh sách URL.
 
 ## Nguồn chuẩn gốc (canonical / 정본)
 

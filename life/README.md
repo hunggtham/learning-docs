@@ -6,8 +6,6 @@ Thư viện này giải thích những đối tượng rất thường gặp tro
 
 Nội dung kế thừa [`prompt/COMMON_PROMPT.md`](../prompt/COMMON_PROMPT.md): ưu tiên mô hình tư duy, cơ chế, nguyên lý nền tảng và mạch giải thích liên tục; thuật ngữ chuyên môn được giải thích bằng tiếng Việt kèm từ khóa tiếng Anh/Hàn khi phù hợp.
 
-> **Chuyển mạch:** Contract chung yêu cầu đi từ câu hỏi đến cơ chế và giới hạn; các README nhánh dưới đây áp dụng cùng contract đó cho một nhóm đối tượng cụ thể.
-
 ## Mục lục canonical
 
 Đây là bản đồ owner của domain; hãy chọn nhánh theo câu hỏi đời sống rồi đi theo route cơ chế của nhánh đó trước khi so sánh thương hiệu, giá hoặc lời khuyên cộng đồng.
@@ -36,8 +34,6 @@ Các nhánh được ánh xạ vào filesystem như sau:
 - [Safety & First Aid](safety_first_aid/README.md): phòng ngừa → nhận diện nguy hiểm → bảo vệ hiện trường → gọi trợ giúp → sơ cứu trong giới hạn an toàn.
 - [Communication](communication/README.md): ý định → bối cảnh chung → kênh → phản hồi → sửa hiểu nhầm và xử lý xung đột.
 - [How Things Work](how_things_work/README.md): hiện tượng → ranh giới hệ thống → đầu vào/trạng thái → cơ chế → phản hồi/thất bại → cách kiểm tra.
-
-> **Chuyển mạch:** Mỗi nhánh dưới đây đã có owner, chapter nền tảng và case/decision layer; các module theo model, jurisdiction hoặc sản phẩm cụ thể được mở rộng mà không thay đổi canonical map.
 
 ## Canonical map và nguồn
 

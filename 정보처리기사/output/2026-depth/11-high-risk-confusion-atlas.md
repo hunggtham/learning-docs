@@ -25,8 +25,6 @@ Một hệ thống (system / 시스템) có thể xác minh (verification / 확�
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt **1.1 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증)** bằng câu hỏi “đúng đặc tả hay đúng nhu cầu”, chuyển sang **1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)** để xem yêu cầu được mô tả theo hành vi hay theo ràng buộc chất lượng.
-
 ## 1.2 Functional vs Non-functional yêu cầu (requirement / 요구사항)
 
 **Functional yêu cầu (requirement / 요구사항) — 기능 요구사항** mô tả năng lực (capability / 역량)/nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작).
@@ -45,8 +43,6 @@ Câu có động từ chưa chắc functional. Nếu năng lực (capability / �
 
 ---
 
-> **Nối mạch:** Khi đã biết một yêu cầu nói về năng lực hay ràng buộc, hãy chuyển sang **1.3 DFD vs Flowchart** để tách luồng dữ liệu khỏi luồng điều khiển; tiêu chí đó chuẩn bị cho việc đọc các sơ đồ tương tác tiếp theo.
-
 ## 1.3 DFD vs Flowchart
 
 **DFD** tập trung dữ liệu (data / 데이터) movement và transformation giữa tiến trình (process / 프로세스), dữ liệu (data / 데이터) store và bên ngoài (external / 외부) thực thể (entity / 엔터티).
@@ -58,8 +54,6 @@ Câu có động từ chưa chắc functional. Nếu năng lực (capability / �
 Cả hai đều có “mũi tên” và “tiến trình (process / 프로세스)”. Hãy hỏi arrow biểu diễn **dữ liệu (data / 데이터)** hay **điều khiển (control / 제어)**.
 
 ---
-
-> **Nối mạch:** **1.3 DFD vs Flowchart** vừa tách dữ liệu khỏi điều khiển; **1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram** tiếp tục tách thông điệp theo thời gian khỏi workflow và nhánh xử lý.
 
 ## 1.4 chuỗi (sequence / 시퀀스) Diagram vs Activity Diagram
 
@@ -74,8 +68,6 @@ Cả hai đều có “mũi tên” và “tiến trình (process / 프로세스
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt sơ đồ mô tả thông điệp với sơ đồ mô tả workflow, chuyển sang **1.5 Aggregation vs Composition** để hỏi quan hệ whole–part có sở hữu vòng đời hay không.
-
 ## 1.5 Aggregation vs Composition
 
 **Aggregation**: whole–part yếu; part có thể tồn tại độc lập.
@@ -88,8 +80,6 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Nối mạch:** **1.5 Aggregation vs Composition** đã xác định mức gắn kết giữa whole và part; **1.6 Cohesion vs Coupling** mở rộng câu hỏi đó vào chất lượng bên trong một module và mức phụ thuộc giữa các module.
-
 ## 1.6 Cohesion vs Coupling
 
 **Cohesion — 응집도** nhìn **bên trong một mô-đun (module / 모듈)**: các phần tử có phục vụ cùng purpose không?
@@ -101,8 +91,6 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 “High cohesion” và “low coupling” thường cùng là mục tiêu nhưng không đồng nghĩa.
 
 ---
-
-> **Nối mạch:** Từ phân biệt “gắn kết bên trong” và “phụ thuộc bên ngoài” ở **1.6 Cohesion vs Coupling**, chuyển sang **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** để nhận diện mức dữ liệu thực sự được truyền qua lời gọi.
 
 ## 1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling
 
@@ -118,8 +106,6 @@ Nếu xóa whole và part cũng mất về ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Nối mạch:** **1.7 dữ liệu (data / 데이터) Coupling vs Stamp Coupling** hỏi “truyền đúng dữ liệu hay cả cấu trúc”; **1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling** hỏi thêm liệu tham số có điều khiển nhánh nội bộ hay chỉ mang giá trị.
-
 ## 1.8 điều khiển (control / 제어) Coupling vs dữ liệu (data / 데이터) Coupling
 
 Nếu parameter chỉ là dữ liệu nghiệp vụ → dữ liệu (data / 데이터) Coupling.
@@ -133,8 +119,6 @@ process(order, mode='X')   → có thể control coupling nếu mode điều khi
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt tham số dữ liệu với tham số điều khiển ở **1.8**, chuyển sang **1.9 SRP vs ISP** để tách hai loại áp lực thiết kế: lý do một module thay đổi và interface buộc client phụ thuộc.
-
 ## 1.9 SRP vs ISP
 
 **SRP** hỏi một lớp (class / 클래스)/mô-đun (module / 모듈) có quá nhiều **reason to thay đổi (change / 변경)** không.
@@ -147,8 +131,6 @@ Giao diện (interface / 인터페이스) 25 methods nhưng một máy khách (c
 
 ---
 
-> **Nối mạch:** **1.9 SRP vs ISP** đã tách trách nhiệm thay đổi khỏi bề rộng interface; **1.10 OCP vs DIP** chuyển sang câu hỏi về khả năng mở rộng và hướng phụ thuộc giữa chính sách với hiện thực.
-
 ## 1.10 OCP vs DIP
 
 **OCP**: mở rộng hành vi (behavior / 동작) mà giảm sửa mã (code / 코드) ổn định.
@@ -158,8 +140,6 @@ Giao diện (interface / 인터페이스) 25 methods nhưng một máy khách (c
 Phụ thuộc (dependency / 의존성) Injection thường giúp DIP nhưng không tự động chứng minh OCP.
 
 ---
-
-> **Nối mạch:** Từ mục tiêu mở rộng và đảo chiều phụ thuộc ở **1.10 OCP vs DIP**, chuyển sang **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** để nhận diện hành vi đổi vì thuật toán được chọn hay vì trạng thái nội bộ.
 
 ## 1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)
 
@@ -175,8 +155,6 @@ Cấu trúc lớp (class / 클래스) có thể rất giống nhau.
 
 ---
 
-> **Nối mạch:** **1.11 chiến lược (strategy / 전략) vs trạng thái (state / 상태)** vừa phân biệt nguồn của hành vi; **1.12 Adapter vs Facade** đổi trọng tâm sang mục đích của lớp trung gian: sửa lệch interface hay đơn giản hóa subsystem.
-
 ## 1.12 Adapter vs Facade
 
 **Adapter** giải quyết **giao diện (interface / 인터페이스) mismatch**.
@@ -188,8 +166,6 @@ Nếu đề nói “legacy API không tương thích” → Adapter.
 Nếu nói “máy khách (client / 클라이언트) phải gọi 7 subsystem và cần API đơn giản” → Facade.
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt adapter sửa tương thích và facade giảm độ phức tạp, chuyển sang **1.13 Decorator vs Proxy** để hỏi wrapper đang thêm trách nhiệm hay kiểm soát truy cập.
 
 ## 1.13 Decorator vs Proxy
 
@@ -203,8 +179,6 @@ Hỏi: wrapper nhằm **thêm chức năng** hay **kiểm soát truy cập (acce
 
 ---
 
-> **Nối mạch:** **1.13 Decorator vs Proxy** kết thúc nhóm wrapper bằng tiêu chí “thêm chức năng hay kiểm soát truy cập”; **1.14 Factory phương thức (method / 메서드) vs Abstract Factory** chuyển sang quy mô của việc tạo sản phẩm.
-
 ## 1.14 Factory phương thức (method / 메서드) vs Abstract Factory
 
 **Factory phương thức (method / 메서드)** tập trung phương thức (method / 메서드) tạo một loại sản phẩm (product / 제품), thường cho subclass/hiện thực (implementation / 구현) quyết định concrete kiểu (type / 타입).
@@ -212,8 +186,6 @@ Hỏi: wrapper nhằm **thêm chức năng** hay **kiểm soát truy cập (acce
 **Abstract Factory** tạo **một họ các đối tượng (object / 객체) liên quan** mà máy khách (client / 클라이언트) không cần biết concrete classes.
 
 ---
-
-> **Nối mạch:** Sau khi tách factory tạo một sản phẩm khỏi factory tạo cả họ sản phẩm, **1.15 Wireframe vs Mockup vs Prototype** đưa cùng thói quen phân biệt theo mức độ tương tác vào artefact thiết kế; từ đó chuyển sang cấu trúc dữ liệu của Môn 2.
 
 ## 1.15 Wireframe vs Mockup vs Prototype
 
@@ -229,8 +201,6 @@ Câu hỏi “kiểm thử (test / 테스트) tương tác (interaction / 상호
 
 # 2. Môn 2 — 소프트웨어 개발
 
-> **Nối mạch:** Từ mức độ tương tác của prototype, chuyển sang **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** để phân biệt hai quy tắc lấy phần tử: LIFO và FIFO; đó là nền cho cách duyệt đồ thị ở mục sau.
-
 ## 2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)
 
 Ngăn xếp (stack / 스택) → LIFO.
@@ -241,8 +211,6 @@ Không chỉ nhớ acronym: hãy dấu vết (trace / 추적) push/pop hoặc en
 
 ---
 
-> **Nối mạch:** **2.1 ngăn xếp (stack / 스택) vs hàng đợi (queue / 큐)** cung cấp cơ chế lưu vết; **2.2 BFS vs DFS** dùng hàng đợi hoặc ngăn xếp để tạo thứ tự duyệt khác nhau, rồi bàn giao sang cấu trúc cây.
-
 ## 2.2 BFS vs DFS
 
 BFS dùng frontier FIFO và khám phá theo tầng (layer / 계층); đồ thị (graph / 그래프) unweighted cho shortest đường dẫn (path / 경로) theo số cạnh.
@@ -250,8 +218,6 @@ BFS dùng frontier FIFO và khám phá theo tầng (layer / 계층); đồ thị
 DFS đi sâu trước; mạnh trong traversal, connectivity, cycle/topological lập luận (reasoning / 추론) nhưng không tự bảo đảm shortest đường dẫn (path / 경로) unweighted.
 
 ---
-
-> **Nối mạch:** Sau khi thấy thứ tự duyệt thay đổi theo cấu trúc lưu vết, **2.3 BST vs vùng nhớ động (heap / 힙)** tách hai mục tiêu thường bị nhầm: tìm kiếm theo thứ tự khóa và giữ phần tử ưu tiên.
 
 ## 2.3 BST vs vùng nhớ động (heap / 힙)
 
@@ -263,8 +229,6 @@ Min-heap lấy minimum hiệu quả nhưng tìm kiếm (search / 검색) arbitra
 
 ---
 
-> **Nối mạch:** **2.3 BST vs vùng nhớ động (heap / 힙)** đã tách thứ tự khóa khỏi ưu tiên; **2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup** tiếp tục hỏi dữ liệu được tìm nhờ thứ tự hay nhờ hàm băm.
-
 ## 2.4 tìm kiếm nhị phân (binary search / 이진 탐색) vs băm (hash / 해시) Lookup
 
 Tìm kiếm nhị phân (binary search / 이진 탐색) cần ordered cấu trúc (structure / 구조) và O(log n) comparison tìm kiếm (search / 검색).
@@ -272,8 +236,6 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) cần ordered cấu trú
 Băm (hash / 해시) lookup average-case có thể gần O(1), nhưng không tự hỗ trợ ordered/phạm vi (range / 범위) ngữ nghĩa (semantics / 의미론).
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt lookup dựa trên thứ tự với lookup dựa trên hash, **2.5 Quick Sort vs Merge Sort** chuyển sang bài toán sắp xếp và cách mỗi thuật toán đánh đổi pivot, bộ nhớ và tính ổn định.
 
 ## 2.5 Quick Sort vs Merge Sort
 
@@ -285,8 +247,6 @@ Merge Sort worst O(n log n), stable trong hiện thực (implementation / 구현
 
 ---
 
-> **Nối mạch:** **2.5 Quick Sort vs Merge Sort** kết thúc nhóm thuật toán bằng cách đọc theo điều kiện và chi phí; **2.6 Stub vs Driver** áp dụng cách hỏi đó vào thành phần giả lập: bên cung cấp lời gọi hay bên gọi thành phần.
-
 ## 2.6 Stub vs Driver
 
 Top-down tích hợp (integration / 통합) → thiếu lower mô-đun (module / 모듈) → **Stub**.
@@ -296,8 +256,6 @@ Bottom-up tích hợp (integration / 통합) → thiếu upper caller → **Driv
 Mô hình tư duy (mental model / 사고 모델): stub giả người **bị gọi**; driver giả người **đi gọi**.
 
 ---
-
-> **Nối mạch:** Sau khi biết stub và driver đứng ở hai phía khác nhau của lời gọi kiểm thử, **2.7 Black-box vs White-box** chuyển trọng tâm sang nguồn quan sát: chỉ nhìn đầu vào–đầu ra hay theo dõi cấu trúc bên trong.
 
 ## 2.7 Black-box vs White-box
 
@@ -311,8 +269,6 @@ Statement/Branch/đường dẫn (path / 경로) Coverage → white-box.
 
 ---
 
-> **Nối mạch:** **2.7 Black-box vs White-box** xác định cách quan sát; **2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)** dùng quan sát theo đầu vào để chọn lớp tương đương và các điểm biên có nguy cơ sai.
-
 ## 2.8 Equivalence Partitioning vs ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)
 
 Equivalence Partitioning chia lĩnh vực (domain / 도메인) thành các lớp (class / 클래스) kỳ vọng hành vi (behavior / 동작) tương đương.
@@ -320,8 +276,6 @@ Equivalence Partitioning chia lĩnh vực (domain / 도메인) thành các lớp
 Ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석) tập trung ngay biên và gần biên, nơi bug off-by-one dễ xuất hiện.
 
 ---
-
-> **Nối mạch:** Sau khi chọn lớp giá trị và điểm biên, chuyển sang **2.9 Retest vs Regression kiểm thử (test / 테스트)** để phân biệt chạy lại lỗi đã sửa với kiểm tra ảnh hưởng lan sang chức năng khác.
 
 ## 2.9 Retest vs Regression kiểm thử (test / 테스트)
 
@@ -333,8 +287,6 @@ Một bản phát hành (release / 릴리스) có thể cần cả hai.
 
 ---
 
-> **Nối mạch:** **2.9 Retest vs Regression kiểm thử (test / 테스트)** phân biệt mục tiêu của lần chạy; **2.10 Alpha vs Beta kiểm thử (test / 테스트)** chuyển sang bối cảnh người dùng và mức hoàn thiện của sản phẩm trước phát hành.
-
 ## 2.10 Alpha vs Beta kiểm thử (test / 테스트)
 
 Alpha thường nội bộ hoặc môi trường kiểm soát của tổ chức phát triển.
@@ -342,8 +294,6 @@ Alpha thường nội bộ hoặc môi trường kiểm soát của tổ chức 
 Beta thường do bên ngoài (external / 외부)/real users trong môi trường gần thực tế hơn trước bản phát hành (release / 릴리스) rộng.
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt alpha và beta theo mức độ kiểm thử, **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** tách danh tính của artefact khỏi tập thiết lập tạo ra nó.
 
 ## 2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management
 
@@ -355,8 +305,6 @@ Git là công cụ (tool / 도구) quan trọng nhưng không phải toàn bộ 
 
 ---
 
-> **Nối mạch:** **2.11 phiên bản (version / 버전) điều khiển (control / 제어) vs cấu hình (configuration / 구성) Management** đã tách mã nguồn khỏi thiết lập; **2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)** theo dõi artefact từ lúc tạo đến lúc giao cho người dùng.
-
 ## 2.12 bản dựng (build / 빌드) vs gói (package / 패키지) vs bản phát hành (release / 릴리스)
 
 **bản dựng (build / 빌드)** biến nguồn (source / 소스) thành executable/sản phẩm tạo ra (artifact / 산출물).
@@ -366,8 +314,6 @@ Git là công cụ (tool / 도구) quan trọng nhưng không phải toàn bộ 
 **bản phát hành (release / 릴리스)** là một phiên bản (version / 버전) được chuẩn bị/approve để phân phối/deploy theo tiến trình (process / 프로세스).
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt build, package và release theo vòng đời artefact, **2.13 Checksum/băm (hash / 해시) vs Digital Signature** hỏi tiếp cách kiểm tra toàn vẹn và xác thực nguồn; rồi chuyển sang khóa trong cơ sở dữ liệu.
 
 ## 2.13 Checksum/băm (hash / 해시) vs Digital Signature
 
@@ -381,8 +327,6 @@ Biết băm (hash / 해시) đúng không tự nói **ai** tạo gói (package /
 
 # 3. Môn 3 — 데이터베이스 구축
 
-> **Nối mạch:** Từ kiểm tra toàn vẹn và xác thực artefact ở **2.13**, chuyển sang **3.1 Super Key vs Candidate Key** để phân biệt một tập thuộc tính đủ nhận diện với tập đủ nhận diện tối thiểu.
-
 ## 3.1 Super Key vs Candidate Key
 
 Super Key xác định duy nhất row nhưng có thể dư attribute.
@@ -393,8 +337,6 @@ Primary Key chỉ là candidate key được chọn làm key chính.
 
 ---
 
-> **Nối mạch:** **3.1 Super Key vs Candidate Key** đã xác định tính tối thiểu; **3.2 Candidate Key vs Primary Key** hỏi tiếp trong các candidate key, khóa nào được chọn làm định danh chính của bảng.
-
 ## 3.2 Candidate Key vs Primary Key
 
 Một quan hệ (relation / 관계) có thể có nhiều candidate keys nhưng chỉ chọn một primary key.
@@ -402,8 +344,6 @@ Một quan hệ (relation / 관계) có thể có nhiều candidate keys nhưng 
 Các candidate key còn lại thường gọi alternate keys theo terminology truyền thống.
 
 ---
-
-> **Nối mạch:** Sau khi tách candidate key khỏi primary key, **3.3 Selection vs Projection** chuyển sang đại số quan hệ: lọc hàng theo điều kiện hay chọn cột theo thuộc tính.
 
 ## 3.3 Selection vs Projection
 
@@ -415,8 +355,6 @@ Projection — π — chọn **column/attribute**.
 
 ---
 
-> **Nối mạch:** **3.3 Selection vs Projection** tách thao tác trên hàng và cột; **3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)** tách cách thuộc tính phụ thuộc vào khóa để chuẩn hóa quan hệ.
-
 ## 3.4 Partial vs Transitive phụ thuộc (dependency / 의존성)
 
 Partial phụ thuộc (dependency / 의존성): non-key attribute phụ thuộc vào **một phần** composite key.
@@ -426,8 +364,6 @@ Transitive phụ thuộc (dependency / 의존성): key → non-key A → non-key
 2NF chủ yếu xử lý partial phụ thuộc (dependency / 의존성); 3NF xử lý transitive phụ thuộc (dependency / 의존성) theo intuition thi cơ bản.
 
 ---
-
-> **Nối mạch:** Sau khi nhận diện partial và transitive dependency, **3.5 3NF vs BCNF** cho thấy hai mức chuẩn hóa khác nhau ở điều kiện mọi determinant có phải là super key hay không.
 
 ## 3.5 3NF vs BCNF
 
@@ -439,8 +375,6 @@ Nếu đề chỉ dùng ví dụ cơ bản, cả hai có thể cho cùng decompo
 
 ---
 
-> **Nối mạch:** **3.5 3NF vs BCNF** xử lý phụ thuộc ở mức logic; **3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** chuyển câu hỏi sang cách mô hình được triển khai trên hệ thống.
-
 ## 3.6 Logical vs vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
 Logical thiết kế (design / 설계) nói quan hệ (relation / 관계)/thực thể (entity / 엔터티), key, phụ thuộc (dependency / 의존성), normalization.
@@ -450,8 +384,6 @@ Vật lý (physical / 물리적) thiết kế (design / 설계) nói lưu trữ 
 Truy vấn (query / 쿼리) chậm vì thiếu chỉ mục (index / 인덱스) là vật lý (physical / 물리적) bài toán (problem / 문제), không tự động là normalization bài toán (problem / 문제).
 
 ---
-
-> **Nối mạch:** Sau khi tách thiết kế logic khỏi bố trí vật lý, **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** so sánh hai cách lập chỉ mục theo kiểu truy vấn và mẫu phân bố khóa.
 
 ## 3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)
 
@@ -463,8 +395,6 @@ Nếu predicate `created_at BETWEEN ...` → B+cây (tree / 트리) thường t�
 
 ---
 
-> **Nối mạch:** **3.7 B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스)** cho biết cấu trúc index; **3.8 Cardinality vs Selectivity** bổ sung cách đánh giá có bao nhiêu giá trị và bộ lọc loại được bao nhiêu dòng.
-
 ## 3.8 Cardinality vs Selectivity
 
 **Cardinality** thường nói số lượng distinct values hoặc số row tùy ngữ cảnh (context / 맥락) thống kê.
@@ -474,8 +404,6 @@ Nếu predicate `created_at BETWEEN ...` → B+cây (tree / 트리) thường t�
 Column gender có cardinality thấp; `user_id` thường cardinality cao.
 
 ---
-
-> **Nối mạch:** Sau khi hiểu selectivity là sức lọc, **3.9 WHERE vs HAVING** đặt phép lọc vào đúng thời điểm: trước grouping hay sau khi nhóm đã được tạo.
 
 ## 3.9 WHERE vs HAVING
 
@@ -487,8 +415,6 @@ HAVING lọc group sau aggregate.
 
 ---
 
-> **Nối mạch:** **3.9 WHERE vs HAVING** đã phân biệt lọc trước và sau grouping; **3.10 COUNT() vs COUNT(column)** tiếp tục kiểm tra dữ liệu nào được tính, đặc biệt khi có `NULL`.
-
 ## 3.10 COUNT(*) vs COUNT(column)
 
 `COUNT(*)` đếm rows.
@@ -498,8 +424,6 @@ HAVING lọc group sau aggregate.
 Trong LEFT phép nối (join / 조인) unmatched row, khác biệt này dễ xuất hiện.
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt `COUNT(*)` với `COUNT(column)`, chuyển sang **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** để xem việc giữ hay loại dòng không khớp thay đổi kết quả đếm ra sao.
 
 ## 3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)
 
@@ -511,8 +435,6 @@ Nếu yêu cầu (requirement / 요구사항) là “show all customers kể c�
 
 ---
 
-> **Nối mạch:** **3.11 INNER phép nối (join / 조인) vs LEFT phép nối (join / 조인)** làm lộ các dòng thiếu phía đối tác; **3.12 NULL vs Empty String vs 0** giúp phân biệt “không có giá trị” với chuỗi rỗng và số không.
-
 ## 3.12 NULL vs Empty String vs 0
 
 NULL biểu diễn missing/unknown/not-applicable theo mô hình (model / 모델)/ngữ cảnh (context / 맥락).
@@ -522,8 +444,6 @@ NULL biểu diễn missing/unknown/not-applicable theo mô hình (model / 모델
 Comparison với NULL dùng `IS NULL`, không dùng `= NULL` trong SQL chuẩn.
 
 ---
-
-> **Nối mạch:** Sau khi tách ba trạng thái giá trị ở **3.12**, **3.13 Dirty Read vs Non-repeatable Read vs Phantom** chuyển sang ba kiểu bất nhất do giao dịch quan sát dữ liệu ở các thời điểm khác nhau.
 
 ## 3.13 Dirty Read vs Non-repeatable Read vs Phantom
 
@@ -537,8 +457,6 @@ Phantom: cùng predicate truy vấn (query / 쿼리) ra set row khác vì insert
 
 ---
 
-> **Nối mạch:** **3.13 Dirty Read vs Non-repeatable Read vs Phantom** mô tả lỗi đọc; **3.14 Deadlock vs Lost cập nhật (update / 업데이트)** chuyển sang lỗi phối hợp khi giao dịch giữ khóa hoặc ghi đè cùng dữ liệu.
-
 ## 3.14 Deadlock vs Lost cập nhật (update / 업데이트)
 
 Deadlock: transactions chờ tài nguyên (resource / 자원) vòng tròn, không tiến được.
@@ -548,8 +466,6 @@ Lost cập nhật (update / 업데이트): một cập nhật (update / 업데�
 Cả hai là tính đồng thời (concurrency / 동시성) bài toán (problem / 문제) nhưng symptom hoàn toàn khác.
 
 ---
-
-> **Nối mạch:** Sau khi tách deadlock khỏi lost update, **3.15 Serial vs Serializable** hỏi mức cô lập cần đạt: thực thi tuần tự thật hay chỉ tương đương với một thứ tự tuần tự.
 
 ## 3.15 Serial vs Serializable
 
@@ -561,8 +477,6 @@ Conflict-serializable không đồng nghĩa schedule phải visually serial.
 
 ---
 
-> **Nối mạch:** **3.15 Serial vs Serializable** chốt tiêu chí đúng của lịch giao dịch; **3.16 Undo vs Redo** chuyển sang cơ chế khôi phục: hoàn tác tác động chưa commit hay áp lại tác động đã commit.
-
 ## 3.16 Undo vs Redo
 
 Undo quay lại tác động (effect / 효과) của giao dịch (transaction / 트랜잭션) chưa lần ghi nhận (commit / 커밋)/aborted theo chiến lược khôi phục (recovery strategy / 복구 전략).
@@ -572,8 +486,6 @@ Redo tái áp tác động (effect / 효과) của committed giao dịch (transa
 WAL/log chuỗi (sequence / 시퀀스) quyết định khôi phục (recovery / 복구) hành động (action / 동작) cụ thể.
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt Undo và Redo theo hướng phục hồi log, **3.17 Backup vs Checkpoint** tách bản sao dùng để khôi phục thảm họa khỏi điểm mốc giúp engine rút ngắn việc phục hồi, rồi mở sang Môn 4.
 
 ## 3.17 Backup vs Checkpoint
 
@@ -587,8 +499,6 @@ Checkpoint không thay backup.
 
 # 4. Môn 4 — 프로그래밍 언어 활용
 
-> **Nối mạch:** **3.17 Backup vs Checkpoint** khép nhóm phục hồi dữ liệu; **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** chuyển sang đơn vị thực thi, tách tài nguyên riêng của process khỏi trạng thái dùng chung của thread.
-
 ## 4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)
 
 Tiến trình (process / 프로세스) có address không gian (space / 공간)/tài nguyên (resource / 자원) ngữ cảnh (context / 맥락) riêng hơn.
@@ -598,8 +508,6 @@ Threads trong cùng tiến trình (process / 프로세스) thường share addre
 Luồng thực thi (thread / 스레드) nhẹ hơn về communication/ngữ cảnh (context / 맥락) nhưng trạng thái dùng chung (shared state / 공유 상태) tạo synchronization rủi ro (risk / 위험).
 
 ---
-
-> **Nối mạch:** **4.1 tiến trình (process / 프로세스) vs luồng thực thi (thread / 스레드)** tách tài nguyên riêng khỏi trạng thái dùng chung; **4.2 tính đồng thời (concurrency / 동시성) vs Parallelism** hỏi các tác vụ chỉ chồng lấn tiến độ hay thực sự chạy cùng lúc.
 
 ## 4.2 tính đồng thời (concurrency / 동시성) vs Parallelism
 
@@ -611,8 +519,6 @@ Single-core vòng lặp sự kiện (event loop / 이벤트 루프) có tính đ
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt concurrency với parallelism, **4.3 Mutex vs Semaphore** chuyển sang công cụ điều phối: khóa có ownership để loại trừ hay bộ đếm cho phép nhiều holder.
-
 ## 4.3 Mutex vs Semaphore
 
 Mutex thường mutual exclusion với quyền sở hữu (ownership / 소유권) ngữ nghĩa (semantics / 의미론).
@@ -622,8 +528,6 @@ Semaphore là counter permits; có thể cho N concurrent holders.
 Nhị phân (binary / 이진) semaphore có thể giống mutex ở vài use trường hợp (case / 사례) nhưng không đồng nhất lớp trừu tượng (abstraction / 추상화).
 
 ---
-
-> **Nối mạch:** **4.3 Mutex vs Semaphore** cho biết cơ chế cấp quyền; **4.4 Race điều kiện (condition / 조건) vs Deadlock** kiểm tra hệ quả khi đồng bộ thiếu: kết quả sai do tranh chấp hay hệ thống mắc kẹt chờ nhau.
 
 ## 4.4 Race điều kiện (condition / 조건) vs Deadlock
 
@@ -635,8 +539,6 @@ Race có thể cho kết quả (result / 결과) sai nhưng chương trình vẫ
 
 ---
 
-> **Nối mạch:** Sau khi tách race condition khỏi deadlock, **4.5 Deadlock Prevention vs Avoidance vs Detection** phân biệt ba thời điểm can thiệp: ngăn điều kiện, tránh trạng thái không an toàn, hay phát hiện sau khi xảy ra.
-
 ## 4.5 Deadlock Prevention vs Avoidance vs Detection
 
 Prevention: phá ít nhất một Coffman điều kiện (condition / 조건).
@@ -647,8 +549,6 @@ Detection: cho phép deadlock xảy ra rồi phát hiện và recover.
 
 ---
 
-> **Nối mạch:** **4.5 Deadlock Prevention vs Avoidance vs Detection** khép nhóm an toàn đồng thời; **4.6 FCFS vs SJF vs Round Robin** chuyển sang chính sách lập lịch và cách nó ưu tiên công việc.
-
 ## 4.6 FCFS vs SJF vs Round Robin
 
 FCFS → đơn giản, convoy tác động (effect / 효과).
@@ -658,8 +558,6 @@ SJF → ưu tiên burst ngắn, tốt cho average waiting trong mô hình (model
 Round Robin → thời gian (time / 시간) quantum, preemptive/time-sharing, sự đánh đổi (trade-off / 트레이드오프) responsiveness vs context-switch overhead.
 
 ---
-
-> **Nối mạch:** Sau khi chọn thuật toán lịch, **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** tách các thước đo kết quả: chờ đến lượt, hoàn tất toàn bộ hay phản hồi lần đầu.
 
 ## 4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)
 
@@ -673,8 +571,6 @@ Một tiến trình (process / 프로세스) có phản hồi (response / 응답
 
 ---
 
-> **Nối mạch:** **4.7 Waiting vs Turnaround vs phản hồi (response / 응답) thời gian (time / 시간)** đo hiệu quả lịch CPU; **4.8 Paging vs Segmentation** chuyển sang cách hệ thống chia và ánh xạ không gian nhớ.
-
 ## 4.8 Paging vs Segmentation
 
 Paging chia fixed-size page/frame.
@@ -684,8 +580,6 @@ Segmentation chia logical variable-size segment.
 Paging thường gắn nội bộ (internal / 내부) fragmentation; segmentation contiguous truyền thống dễ bên ngoài (external / 외부) fragmentation.
 
 ---
-
-> **Nối mạch:** Sau khi phân biệt page cố định với segment theo logic chương trình, **4.9 FIFO vs LRU Page Replacement** hỏi trang nào bị đẩy ra khi bộ nhớ cần chỗ: trang vào trước hay trang ít được dùng gần đây.
 
 ## 4.9 FIFO vs LRU Page Replacement
 
@@ -697,8 +591,6 @@ Tham chiếu (reference / 참조) gần đây có thể cứu page trong LRU nh�
 
 ---
 
-> **Nối mạch:** **4.9 FIFO vs LRU Page Replacement** mô tả chính sách thay trang; **4.10 Page Fault vs Thrashing** phân biệt một lần thiếu trang với tình trạng hệ thống dành hầu hết thời gian để thay trang.
-
 ## 4.10 Page Fault vs Thrashing
 
 Page fault là một sự kiện (event / 이벤트): referenced page chưa resident.
@@ -708,8 +600,6 @@ Thrashing là system-level điều kiện (condition / 조건): quá nhiều pag
 Một page fault đơn lẻ không phải thrashing.
 
 ---
-
-> **Nối mạch:** Sau khi tách lỗi nhớ cục bộ khỏi suy giảm toàn hệ thống, **4.11 TCP vs UDP** chuyển sang mạng: truyền tin có kết nối, kiểm soát và thứ tự hay ưu tiên sự gọn nhẹ.
 
 ## 4.11 TCP vs UDP
 
@@ -721,8 +611,6 @@ UDP: connectionless datagram, không tự bảo đảm delivery/thứ tự (orde
 
 ---
 
-> **Nối mạch:** **4.11 TCP vs UDP** đã tách semantics truyền tải; **4.12 IP vs MAC Address** tách tiếp địa chỉ logic dùng để định tuyến khỏi địa chỉ phần cứng trong một segment.
-
 ## 4.12 IP vs MAC Address
 
 IP dùng logical network-layer addressing/routing.
@@ -733,8 +621,6 @@ Router forward theo IP; cục bộ (local / 로컬) frame delivery dùng link-la
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt loại địa chỉ và phạm vi của nó, **4.13 DNS vs DHCP** tách hai dịch vụ dễ nhầm: phân giải tên thành địa chỉ và cấp cấu hình mạng cho máy.
-
 ## 4.13 DNS vs DHCP
 
 DNS giải tên/bản ghi (record / 레코드).
@@ -742,8 +628,6 @@ DNS giải tên/bản ghi (record / 레코드).
 DHCP cấp mạng (network / 네트워크) cấu hình (configuration / 구성) động như IP, mask, gateway, DNS máy chủ (server / 서버).
 
 ---
-
-> **Nối mạch:** **4.13 DNS vs DHCP** xác định dịch vụ gắn với tên và cấu hình; **4.14 mạng (network / 네트워크) Address vs Broadcast Address** chuyển sang phạm vi đích của gói: một mạng hay mọi host trong mạng.
 
 ## 4.14 mạng (network / 네트워크) Address vs Broadcast Address
 
@@ -757,8 +641,6 @@ Usable host thường nằm giữa hai ranh giới (boundary / 경계) này, tr�
 
 ---
 
-> **Nối mạch:** Sau khi tách network address khỏi broadcast address, **4.15 Overloading vs Overriding** quay lại ngôn ngữ hướng đối tượng để phân biệt nạp chồng theo chữ ký với ghi đè theo kế thừa.
-
 ## 4.15 Overloading vs Overriding
 
 Overloading: cùng tên, parameter signature khác; resolution chủ yếu compile-time.
@@ -768,8 +650,6 @@ Overriding: subclass cung cấp hiện thực (implementation / 구현) mới c�
 Chỉ khác return kiểu (type / 타입) không đủ overload trong Java.
 
 ---
-
-> **Nối mạch:** **4.15 Overloading vs Overriding** đã tách lựa chọn compile-time khỏi hành vi runtime; **4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)** hỏi tiếp biến được truyền như bản sao hay cùng trỏ đến một đối tượng, rồi mở sang quản lý dự án.
 
 ## 4.16 giá trị (value / 값) vs tham chiếu (reference / 참조)/Alias lập luận (reasoning / 추론)
 
@@ -785,8 +665,6 @@ Python assignment bind name tới đối tượng (object / 객체); hai names c
 
 # 5. Môn 5 — 정보시스템 구축 관리
 
-> **Nối mạch:** Từ cách truyền giá trị và alias ở **4.16**, chuyển sang **5.1 Waterfall vs Agile** để phân biệt kế hoạch tuần tự cố định với vòng lặp thích ứng theo phản hồi.
-
 ## 5.1 Waterfall vs Agile
 
 Waterfall tổ chức phase theo chuỗi (sequence / 시퀀스) rõ và phản hồi (feedback / 피드백)/thay đổi (change / 변경) thường đắt hơn khi muộn.
@@ -797,8 +675,6 @@ Không kết luận “Agile không cần thiết kế (design / 설계)/documen
 
 ---
 
-> **Nối mạch:** Sau khi tách Waterfall khỏi Agile theo cách lập kế hoạch và phản hồi, **5.2 rủi ro (risk / 위험) vs Issue** hỏi một bất định còn có thể xảy ra hay một vấn đề đã hiện hữu.
-
 ## 5.2 rủi ro (risk / 위험) vs Issue
 
 Rủi ro (risk / 위험) là sự kiện **có thể xảy ra** trong tương lai với xác suất (probability / 확률)/impact.
@@ -806,8 +682,6 @@ Rủi ro (risk / 위험) là sự kiện **có thể xảy ra** trong tương la
 Issue là vấn đề **đã xảy ra/đang tồn tại** cần xử lý.
 
 ---
-
-> **Nối mạch:** **5.2 rủi ro (risk / 위험) vs Issue** đã phân biệt trạng thái tiềm ẩn và hiện hữu; **5.3 PERT vs CPM** chuyển sang kỹ thuật ước lượng thời lượng bất định và lập lịch với thời lượng xác định.
 
 ## 5.3 PERT vs CPM
 
@@ -819,8 +693,6 @@ Một dự án (project / 프로젝트) có thể dùng cả hai ý tưởng.
 
 ---
 
-> **Nối mạch:** Sau khi chọn PERT hay CPM theo kiểu ước lượng, **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** nhắc rằng đường quyết định thời hạn dự án không nhất thiết là một hoạt động đơn lẻ dài nhất.
-
 ## 5.4 đường găng (critical path / 임계 경로) vs Longest Activity
 
 Đường găng (critical path / 임계 경로) là **chuỗi đường dẫn (path / 경로)** quyết định dự án (project / 프로젝트) duration, không phải activity đơn lẻ dài nhất.
@@ -828,8 +700,6 @@ Một dự án (project / 프로젝트) có thể dùng cả hai ý tưởng.
 Một activity rất dài nhưng có float vẫn có thể không nằm đường găng (critical path / 임계 경로).
 
 ---
-
-> **Nối mạch:** **5.4 đường găng (critical path / 임계 경로) vs Longest Activity** chốt cách đọc phụ thuộc thời gian; **5.5 RAID vs Backup** chuyển sang độ sẵn sàng và bảo vệ dữ liệu, tách dư thừa vận hành khỏi bản sao phục hồi.
 
 ## 5.5 RAID vs Backup
 
@@ -841,8 +711,6 @@ RAID không phải backup.
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt RAID giúp hệ thống tiếp tục chạy với backup dùng để restore, **5.6 Replication vs Backup** hỏi dữ liệu được đồng bộ cho vận hành hay được lưu thành điểm phục hồi.
-
 ## 5.6 Replication vs Backup
 
 Replication giữ bản sao (copy / 복사) gần hiện tại (current / 현재) để availability/read quy mô (scale / 규모)/failover.
@@ -853,8 +721,6 @@ Sai dữ liệu/xóa nhầm có thể replicate nhanh sang replica; backup lịc
 
 ---
 
-> **Nối mạch:** **5.6 Replication vs Backup** tách đồng bộ liên tục khỏi bản sao lưu; **5.7 HA vs DR** mở rộng thành mục tiêu giảm gián đoạn đang xảy ra hay khôi phục sau sự cố lớn.
-
 ## 5.7 HA vs DR
 
 High Availability — 고가용성 — giảm downtime trong thất bại (failure / 실패) thường gặp, thường failover nhanh.
@@ -864,8 +730,6 @@ Disaster khôi phục (recovery / 복구) — 재해복구 — phục hồi sau 
 Multi-node trong cùng miền lỗi (failure domain / 장애 도메인) có thể HA nhưng vẫn DR yếu.
 
 ---
-
-> **Nối mạch:** Sau khi chọn HA hay DR theo mục tiêu phục vụ, **5.8 RTO vs RPO** định lượng hai giới hạn: mất bao lâu để phục hồi và chấp nhận mất bao nhiêu dữ liệu.
 
 ## 5.8 RTO vs RPO
 
@@ -879,8 +743,6 @@ Mất tối đa 5 phút giao dịch (transaction / 트랜잭션) → RPO.
 
 ---
 
-> **Nối mạch:** **5.8 RTO vs RPO** biến yêu cầu phục hồi thành con số; **5.9 Vertical vs Horizontal Scaling** chuyển sang cách tăng năng lực bằng máy lớn hơn hay nhiều instance hơn.
-
 ## 5.9 Vertical vs Horizontal Scaling
 
 Vertical: tăng tài nguyên (resource / 자원) cho một nút (node / 노드).
@@ -891,8 +753,6 @@ Horizontal scaling thường cần giải bài trạng thái (state / 상태) ph
 
 ---
 
-> **Nối mạch:** Sau khi phân biệt scale dọc và ngang, **5.10 VM vs bộ chứa (container / 컨테이너)** hỏi mức cô lập và phần hệ điều hành được ảo hóa hay dùng chung.
-
 ## 5.10 VM vs bộ chứa (container / 컨테이너)
 
 VM truyền thống có guest OS/kernel riêng trên hypervisor.
@@ -902,8 +762,6 @@ Bộ chứa (container / 컨테이너) thường share host kernel nhưng isolat
 Bộ chứa (container / 컨테이너) không tự động “an toàn hơn” hoặc “nhanh hơn” trong mọi ngữ cảnh (context / 맥락).
 
 ---
-
-> **Nối mạch:** **5.10 VM vs bộ chứa (container / 컨테이너)** đã tách kiểu đóng gói runtime; **5.11 IaaS vs PaaS vs SaaS** chuyển sang ranh giới trách nhiệm giữa nhà cung cấp và người dùng.
 
 ## 5.11 IaaS vs PaaS vs SaaS
 
@@ -917,8 +775,6 @@ Hãy hỏi **ai quản tầng (layer / 계층) nào**, không học bằng tên 
 
 ---
 
-> **Nối mạch:** Sau khi xác định ai quản lý lớp nào trong IaaS, PaaS và SaaS, **5.12 Authentication vs Authorization** tách việc chứng minh danh tính khỏi việc quyết định quyền được làm gì.
-
 ## 5.12 Authentication vs Authorization
 
 Authentication — 인증 — xác minh định danh (identity / 식별자).
@@ -928,8 +784,6 @@ Authorization — 인가/권한부여 — quyết định định danh (identity
 Login đúng không có nghĩa được quyền đọc mọi invoice.
 
 ---
-
-> **Nối mạch:** **5.12 Authentication vs Authorization** xác định ai được phép làm gì; **5.13 Hashing vs Encryption** chuyển sang cách bảo vệ dữ liệu: biến một chiều để kiểm tra hay biến đổi có khóa để giải mã.
 
 ## 5.13 Hashing vs Encryption
 
@@ -941,8 +795,6 @@ Password không nên lưu bằng reversible encryption như substitute cho passw
 
 ---
 
-> **Nối mạch:** Sau khi tách hashing khỏi encryption, **5.14 Symmetric vs Asymmetric Cryptography** so sánh cơ chế khóa dùng chung với cặp khóa công khai–bí mật và mục tiêu sử dụng của chúng.
-
 ## 5.14 Symmetric vs Asymmetric Cryptography
 
 Symmetric dùng cùng secret key family cho encrypt/decrypt, hiệu quả với bulk dữ liệu (data / 데이터).
@@ -952,8 +804,6 @@ Asymmetric dùng công khai (public / 공개)/private key pair, phù hợp key e
 TLS thường kết hợp nhiều thành phần nguyên thủy (primitive / 기본 요소), không phải chỉ “asymmetric encryption”.
 
 ---
-
-> **Nối mạch:** **5.14 Symmetric vs Asymmetric Cryptography** chốt ranh giới giữa các mô hình khóa; **5.15 SQL Injection vs XSS** chuyển sang nơi đầu vào độc hại tác động: truy vấn phía máy chủ hay script trong trình duyệt.
 
 ## 5.15 SQL Injection vs XSS
 
@@ -969,8 +819,6 @@ Cả hai đều liên quan đầu vào (input / 입력), nhưng nguyên nhân g�
 
 ---
 
-> **Nối mạch:** Sau khi nhận diện SQL injection và XSS theo điểm thực thi, **5.16 Firewall vs WAF** hỏi lớp phòng vệ đang lọc lưu lượng mạng chung hay hiểu ngữ nghĩa HTTP và ứng dụng web.
-
 ## 5.16 Firewall vs WAF
 
 Mạng (network / 네트워크) firewall kiểm traffic theo mạng (network / 네트워크)/vận chuyển (transport / 전송) quy tắc (rule / 규칙) và ngữ cảnh (context / 맥락) thiết bị.
@@ -980,8 +828,6 @@ WAF hiểu HTTP/web ứng dụng (application / 애플리케이션) ngữ nghĩa
 WAF không thay secure coding; firewall L3/L4 không tự giải SQL injection nguyên nhân gốc (root cause / 근본 원인).
 
 ---
-
-> **Nối mạch:** **5.16 Firewall vs WAF** phân biệt lọc theo lớp và ngữ nghĩa; **5.17 IDS vs IPS** chuyển sang phản ứng của hệ thống: chỉ phát hiện và cảnh báo hay chặn lưu lượng đáng ngờ.
 
 ## 5.17 IDS vs IPS
 
@@ -993,8 +839,6 @@ Triển khai (deployment / 배포) thực tế đa dạng, nhưng đây là ranh
 
 ---
 
-> **Nối mạch:** Sau khi tách IDS khỏi IPS theo hành động, **5.18 TLS vs VPN** phân biệt mã hóa một kết nối/luồng ứng dụng với đường hầm bảo vệ cả lưu lượng giữa các mạng hoặc host.
-
 ## 5.18 TLS vs VPN
 
 TLS bảo vệ một ứng dụng (application / 애플리케이션)/session/channel cụ thể theo giao thức (protocol / 프로토콜) setup.
@@ -1004,8 +848,6 @@ VPN tạo protected tunnel/mạng (network / 네트워크) overlay giữa endpoi
 Cả hai có thể dùng cryptography nhưng phạm vi (scope / 범위) khác.
 
 ---
-
-> **Nối mạch:** **5.18 TLS vs VPN** khép nhóm bảo vệ đường truyền; **5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)** chuyển sang mô hình nguyên nhân, tách tác nhân đe dọa, điểm yếu và khả năng thiệt hại.
 
 ## 5.19 Threat vs Vulnerability vs rủi ro (risk / 위험)
 
@@ -1021,8 +863,6 @@ Rủi ro (risk / 위험): khả năng + impact của harm trong ngữ cảnh (co
 
 # 6. Meta-confusions — khi hai đáp án đều đúng
 
-> **Nối mạch:** Sau mô hình threat–vulnerability–risk ở **5.19**, **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** đặt các đáp án đúng cạnh nhau và yêu cầu chọn theo phạm vi tác động trực tiếp hay lớp phòng vệ bổ sung.
-
 ## 6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)
 
 Nếu SQL injection xảy ra, cả WAF và prepared statement đều có thể giúp. Nhưng nếu đề hỏi **biện pháp trực tiếp xử lý nguyên nhân trong mã (code / 코드)**, prepared statement là đáp án mạnh hơn.
@@ -1032,8 +872,6 @@ Nếu hỏi “additional perimeter điều khiển (control / 제어)”, WAF c
 Câu hỏi thi thường không chỉ kiểm fact; nó kiểm **phạm vi (scope / 범위) của fact**.
 
 ---
-
-> **Nối mạch:** **6.1 nguyên nhân gốc (root cause / 근본 원인) vs Defense in độ sâu (depth / 깊이)** vừa cho thấy cách chọn đáp án theo phạm vi; **6.2 cơ chế (mechanism / 메커니즘) vs Goal** áp dụng cùng nguyên tắc để tách thuộc tính mong muốn khỏi cách đạt được nó.
 
 ## 6.2 cơ chế (mechanism / 메커니즘) vs Goal
 
@@ -1050,8 +888,6 @@ Nếu hỏi “cách đạt thuộc tính đó” → cơ chế (mechanism / 메
 
 ---
 
-> **Nối mạch:** Sau khi tách goal khỏi mechanism ở **6.2**, **6.3 Symptom vs Cause** nhắc người học không chọn giải pháp theo dấu hiệu bề mặt mà phải lần về nguyên nhân được bằng chứng hỗ trợ.
-
 ## 6.3 Symptom vs Cause
 
 Slow truy vấn (query / 쿼리) là symptom.
@@ -1061,8 +897,6 @@ Nguyên nhân có thể là full scan, poor cardinality estimate, missing chỉ 
 Đừng chọn giải pháp chỉ vì nó “liên quan hiệu năng (performance / 성능)”. Chọn đáp án khớp bằng chứng (evidence / 증거) trong đề.
 
 ---
-
-> **Nối mạch:** **6.3 Symptom vs Cause** đã tách biểu hiện khỏi nguyên nhân; **6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)** khép atlas bằng câu hỏi phạm vi: cơ chế đúng ở một tầng có đủ để bảo đảm bất biến ở tầng khác hay không.
 
 ## 6.4 Logical tầng (layer / 계층) vs vật lý (physical / 물리적) tầng (layer / 계층)
 

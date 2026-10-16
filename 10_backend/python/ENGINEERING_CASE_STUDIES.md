@@ -56,8 +56,6 @@ Mô hình tư duy (mental model / 사고 모델) cần mang sang môi trường 
 
 ---
 
-> **Chuyển mạch:** Trong **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 1 — “Tôi chỉ gán sang biến khác, tại sao dữ liệu cũ cũng đổi?”** cho ta quy tắc; **Trường hợp (case / 사례) 2 — Import làm dịch vụ (service / 서비스) khởi động chậm hoặc thất bại trước khi nhận yêu cầu (request / 요청)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 3 — “Máy tôi chạy được” nhưng CI hoặc môi trường vận hành (production / 운영 환경) cài phụ thuộc (dependency / 의존성) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 2 — Import làm dịch vụ (service / 서비스) khởi động chậm hoặc thất bại trước khi nhận yêu cầu (request / 요청)
 
 Một mô-đun (module / 모듈) thường được viết kiểu:
@@ -102,8 +100,6 @@ Khi startup chậm, đo import đồ thị (graph / 그래프) thay vì đoán. 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 2 — Import làm dịch vụ (service / 서비스) khởi động chậm hoặc thất bại trước khi nhận yêu cầu (request / 요청)** cho ta quy tắc; **Trường hợp (case / 사례) 3 — “Máy tôi chạy được” nhưng CI hoặc môi trường vận hành (production / 운영 환경) cài phụ thuộc (dependency / 의존성) khác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 4 — Async endpoint nhưng dịch vụ (service / 서비스) vẫn “đơ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 3 — “Máy tôi chạy được” nhưng CI hoặc môi trường vận hành (production / 운영 환경) cài phụ thuộc (dependency / 의존성) khác
 
 Một dự án (project / 프로젝트) Python không chỉ là mã nguồn (source code / 소스 코드). hành vi (behavior / 동작) còn phụ thuộc trình thông dịch (interpreter / 인터프리터), phân phối (distribution / 분포) packages, bản địa (native / 네이티브) libraries, nền tảng (platform / 플랫폼) tag và cách môi trường (environment / 환경) được resolve. `pyproject.toml` giải quyết siêu dữ liệu (metadata / 메타데이터)/bản dựng (build / 빌드)/công cụ (tool / 도구) cấu hình (configuration / 구성), nhưng không tự động đảm bảo mọi triển khai (deployment / 배포) resolve đúng cùng phụ thuộc (dependency / 의존성) set.
@@ -137,8 +133,6 @@ Khi sự cố (incident / 인시던트) xảy ra chỉ trên một môi trườn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 3 — “Máy tôi chạy được” nhưng CI hoặc môi trường vận hành (production / 운영 환경) cài phụ thuộc (dependency / 의존성) khác** cho ta quy tắc; **Trường hợp (case / 사례) 4 — Async endpoint nhưng dịch vụ (service / 서비스) vẫn “đơ”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 5 — thông lượng (throughput / 처리량) tăng rồi bộ nhớ (memory / 메모리) tăng không giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 4 — Async endpoint nhưng dịch vụ (service / 서비스) vẫn “đơ”
 
 Một endpoint FastAPI `async def` có thể phải gọi một chuỗi xử lý đồng bộ qua `asyncio.to_thread`. Đây là case study tốt vì nó thể hiện ranh giới phổ biến: ứng dụng async không tự biến mã sync thành non-blocking.
@@ -166,8 +160,6 @@ Nhưng đây chưa phải lời giải cho mọi thứ. Nếu chuỗi xử lý (
 Đây là ví dụ điển hình cho cách lập luận (reasoning / 추론) theo phạm vi (scope / 범위): tác vụ (task / 작업) phạm vi (scope / 범위) → vòng lặp sự kiện (event loop / 이벤트 루프) → luồng thực thi (thread / 스레드) → tiến trình (process / 프로세스) → replica → hệ thống phân tán (distributed system / 분산 시스템). Một thành phần nguyên thủy (primitive / 기본 요소) đúng ở tầng thấp không tự mở rộng ngữ nghĩa (semantics / 의미론) lên tầng cao hơn.
 
 ---
-
-> **Chuyển mạch:** Trong **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 4 — Async endpoint nhưng dịch vụ (service / 서비스) vẫn “đơ”** cho ta quy tắc; **Trường hợp (case / 사례) 5 — thông lượng (throughput / 처리량) tăng rồi bộ nhớ (memory / 메모리) tăng không giới hạn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 6 — Chọn luồng thực thi (thread / 스레드), tiến trình (process / 프로세스), async hay free-threaded bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 5 — thông lượng (throughput / 처리량) tăng rồi bộ nhớ (memory / 메모리) tăng không giới hạn
 
@@ -198,8 +190,6 @@ Backpressure vì vậy không phải API của `asyncio`; nó là bất biến (
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 5 — thông lượng (throughput / 처리량) tăng rồi bộ nhớ (memory / 메모리) tăng không giới hạn** cho ta quy tắc; **Trường hợp (case / 사례) 6 — Chọn luồng thực thi (thread / 스레드), tiến trình (process / 프로세스), async hay free-threaded bản dựng (build / 빌드)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 7 — di chuyển (migration / 마이그레이션) sang free-threaded Python không phải chỉ đổi trình thông dịch (interpreter / 인터프리터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 6 — Chọn luồng thực thi (thread / 스레드), tiến trình (process / 프로세스), async hay free-threaded bản dựng (build / 빌드)
 
 Một lỗi thiết kế phổ biến là chọn tính đồng thời (concurrency / 동시성) mô hình (model / 모델) dựa trên slogan: “Python có GIL nên dùng tiến trình (process / 프로세스)”, hoặc “async nhanh hơn luồng thực thi (thread / 스레드)”. Cách đúng là bắt đầu từ dominant công việc (work / 작업).
@@ -226,8 +216,6 @@ Nếu phải truyền hàng GB giữa processes mỗi job, tiến trình (proces
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, sau khi thấy quy trình trong **Trường hợp (case / 사례) 6 — Chọn luồng thực thi (thread / 스레드), tiến trình (process / 프로세스), async hay free-threaded bản dựng (build / 빌드)**, **Trường hợp (case / 사례) 7 — di chuyển (migration / 마이그레이션) sang free-threaded Python không phải chỉ đổi trình thông dịch (interpreter / 인터프리터)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Trường hợp (case / 사례) 8 — kiểm thử (test / 테스트) pass nhưng hệ thống vẫn sai vì kiểm thử (test / 테스트) không kiểm bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 7 — di chuyển (migration / 마이그레이션) sang free-threaded Python không phải chỉ đổi trình thông dịch (interpreter / 인터프리터)
 
 Giả sử dịch vụ (service / 서비스) hiện chạy ổn với CPython có GIL và muốn thử free-threaded 3.14. Sai lầm nguy hiểm là suy luận rằng mã (code / 코드) đã chạy nhiều luồng thực thi (thread / 스레드) lâu nay nên mặc nhiên thread-safe.
@@ -248,8 +236,6 @@ Di chuyển (migration / 마이그레이션) kiểm tra (audit / 감사) cần n
 
 ---
 
-> **Chuyển mạch:** Trong **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 7 — di chuyển (migration / 마이그레이션) sang free-threaded Python không phải chỉ đổi trình thông dịch (interpreter / 인터프리터)** cho ta quy tắc; **Trường hợp (case / 사례) 8 — kiểm thử (test / 테스트) pass nhưng hệ thống vẫn sai vì kiểm thử (test / 테스트) không kiểm bất biến (invariant / 불변식)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 9 — động (dynamic / 동적) tính năng (feature / 기능) biến thành ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 8 — kiểm thử (test / 테스트) pass nhưng hệ thống vẫn sai vì kiểm thử (test / 테스트) không kiểm bất biến (invariant / 불변식)
 
 Giả sử hàm (function / 함수) thử lại (retry / 재시도) payment API. đơn vị (unit / 단위) kiểm thử (test / 테스트) chỉ mock máy khách (client / 클라이언트) và assert `client.post` được gọi ba lần khi hết thời gian chờ (timeout / 타임아웃). kiểm thử (test / 테스트) đó kiểm hiện thực (implementation / 구현) detail, nhưng chưa kiểm bất biến (invariant / 불변식) quan trọng hơn: thao tác (operation / 연산) có bị duplicate side tác động (effect / 효과) không?
@@ -269,8 +255,6 @@ def make_record(now: Callable[[], datetime]) -> dict:
 Kiểm thử (test / 테스트) tốt làm rõ bất biến (invariant / 불변식) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론). Mock chỉ là một kỹ thuật để cô lập ranh giới (boundary / 경계); số lượng mock không phải thước đo chất lượng kiểm thử (test / 테스트).
 
 ---
-
-> **Chuyển mạch:** Ở chặng này của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) 8 — kiểm thử (test / 테스트) pass nhưng hệ thống vẫn sai vì kiểm thử (test / 테스트) không kiểm bất biến (invariant / 불변식)** cho ta quy tắc; **Trường hợp (case / 사례) 9 — động (dynamic / 동적) tính năng (feature / 기능) biến thành ranh giới bảo mật (security boundary / 보안 경계)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 10 — sự cố (incident / 인시던트) môi trường vận hành (production / 운영 환경): CPU bình thường nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 9 — động (dynamic / 동적) tính năng (feature / 기능) biến thành ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -296,8 +280,6 @@ Một tích hợp subprocess được viết thủ công dùng argument dạng d
 
 ---
 
-> **Chuyển mạch:** Hai case trước lần lượt chỉ ra ranh giới bảo mật và ranh giới độ trễ. Capstone gộp chúng thành một câu hỏi hệ thống: khi endpoint, subprocess, trạng thái và test cùng thay đổi, bằng chứng nào cho thấy thiết kế vẫn an toàn?
-
 ## Trường hợp (case / 사례) 10 — sự cố (incident / 인시던트) môi trường vận hành (production / 운영 환경): CPU bình thường nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng mạnh
 
 Khi độ trễ (latency / 지연 시간) tăng, chỉ log exception thường không đủ vì yêu cầu (request / 요청) có thể chậm nhưng không thất bại (fail / 실패). khả năng quan sát (observability / 관측 가능성) cần phân biệt log, chỉ số (metric / 지표) và dấu vết (trace / 추적).
@@ -311,8 +293,6 @@ Trong async dịch vụ (service / 서비스), correlation ngữ cảnh (context
 Khi điều tra bộ nhớ (memory / 메모리) growth, kết hợp RSS/tiến trình (process / 프로세스) chỉ số (metric / 지표) với `tracemalloc` hoặc object-level bằng chứng (evidence / 증거). Khi điều tra CPU, profile lời gọi (call / 호출) stacks/hotspots. Khi điều tra event-loop stall, tìm blocking synchronous công việc (work / 작업) và tác vụ (task / 작업) độ trễ (latency / 지연 시간). bằng chứng (evidence / 증거) phải khớp lớp cơ chế (mechanism / 메커니즘) đang nghi ngờ.
 
 ---
-
-> **Chuyển mạch:** Sau khi nối symptom với invariant và evidence ở mục 10, capstone yêu cầu đọc toàn hệ thống thay vì một hàm riêng lẻ. Những câu hỏi cuối tài liệu dùng kết quả đó để khép lại mạch và chỉ ra phần cần kiểm chứng thêm.
 
 ## Capstone — rà soát một dịch vụ Python như một hệ thống, không chỉ như mã Python
 
@@ -346,15 +326,11 @@ Capstone này cho thấy cấp cao (senior / 시니어) Python không phải thu
 
 ---
 
-> **Chuyển mạch:** **Những câu hỏi nên tự trả lời sau tài liệu này** gom lại các invariant, trade-off và bằng chứng đã gặp trong capstone. Đọc liền hai mục để chuyển từ phân tích một hệ thống sang kế hoạch kiểm chứng bằng nguồn chính và thử nghiệm cụ thể.
-
 ## Những câu hỏi nên tự trả lời sau tài liệu này
 
 Bạn nên giải thích được vì sao shallow bản sao (copy / 복사) có thể làm default trạng thái (state / 상태) đổi; vì sao import có thể gây I/O trước startup; vì sao `pyproject.toml` không đồng nghĩa deploy reproducible; vì sao `async def` vẫn có thể khối (block / 블록); vì sao cục bộ (local / 로컬) `asyncio.Lock` không phải phân tán (distributed / 분산) khóa (lock / 잠금); vì sao hàng đợi (queue / 큐) unbounded là memory-retention cơ chế (mechanism / 메커니즘); vì sao GIL không phải thread-safety đặc tả hợp đồng (contract / 계약); vì sao free-threaded di chuyển (migration / 마이그레이션) cần race kiểm tra (audit / 감사); vì sao thử lại (retry / 재시도) liên hệ trực tiếp với idempotency; và vì sao log, chỉ số (metric / 지표), dấu vết (trace / 추적) trả lời các câu hỏi khác nhau.
 
 Nếu một câu chỉ trả lời được bằng tên API mà chưa mô tả bất biến (invariant / 불변식) và cơ chế (mechanism / 메커니즘), nên quay lại chuẩn gốc (canonical / 정본) part tương ứng.
-
-> **Chuyển mạch:** Các câu hỏi cuối file gom những failure mode từ từng case thành một checklist tự kiểm tra. **Nguồn chính** cho phép đối chiếu lại behavior Python thay vì dựa vào trí nhớ sau khi đọc.
 
 ## Nguồn chính
 

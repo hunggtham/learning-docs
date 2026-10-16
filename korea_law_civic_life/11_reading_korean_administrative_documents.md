@@ -22,8 +22,6 @@ Thứ tự nên dùng:
 → 담당자 연락처
 ```
 
-> **Chuyển mạch:** Administrative documents are structured records, not essays; header keywords identify issuer/date/subject, then legal verbs reveal duty, permission, refusal or deadline.
-
 ## 2. Từ khóa ở phần đầu văn bản
 
 ### 제목 — tiêu đề
@@ -48,8 +46,6 @@ Tiêu đề thường cho biết văn bản là:
 
 Số văn bản là khóa để liên hệ cơ quan. Khi gọi điện, đọc `문서번호` thường nhanh hơn giải thích toàn bộ câu chuyện.
 
-> **Chuyển mạch:** Ở chặng này của **11. Cách đọc văn bản hành chính tiếng Hàn**, **3. Các động từ pháp lý quan trọng** tiếp nhận điểm tựa từ **2. Từ khóa ở phần đầu văn bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Từ khóa deadline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Các động từ pháp lý quan trọng
 
 Sau khi nhận diện loại văn bản, hãy tập trung vào các động từ vì chúng cho biết hành động nào đã xảy ra, ai phải làm gì và quyết định đang ở trạng thái nào. Đọc động từ cùng chủ thể và thời hạn, không dịch từng từ rời.
@@ -72,8 +68,6 @@ Sau khi nhận diện loại văn bản, hãy tập trung vào các động từ
 
 `기각` và `각하` rất dễ nhầm. `기각` thường có nghĩa yêu cầu được xem xét nhưng không được chấp nhận về nội dung; `각하` thường liên quan việc không đi vào xét nội dung vì điều kiện thủ tục hoặc lý do pháp lý khác. Phải xem luật cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11. Cách đọc văn bản hành chính tiếng Hàn**, **4. Từ khóa deadline** tiếp nhận điểm tựa từ **3. Các động từ pháp lý quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cụm từ chỉ nghĩa vụ và ngoại lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Từ khóa deadline
 
 Các từ khóa thời hạn là cầu nối giữa việc hiểu văn bản và hành động đúng ngày. Hãy ghi lại ngày bắt đầu tính, ngày làm việc và ngoại lệ trước khi tự cộng ngày trên lịch.
@@ -89,8 +83,6 @@ Các từ khóa thời hạn là cầu nối giữa việc hiểu văn bản và
 - `공휴일`: ngày nghỉ lễ.
 
 Không tự tính deadline bằng cách cộng số ngày trên lịch nếu văn bản dùng quy tắc khác. Kiểm tra luật và hướng dẫn.
-
-> **Chuyển mạch:** Trong **11. Cách đọc văn bản hành chính tiếng Hàn**, **5. Cụm từ chỉ nghĩa vụ và ngoại lệ** tiếp nhận điểm tựa từ **4. Từ khóa deadline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cách đọc phần căn cứ pháp lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Cụm từ chỉ nghĩa vụ và ngoại lệ
 
@@ -131,8 +123,6 @@ Ngoại lệ là nơi nhiều bản dịch và cách hiểu máy móc bị sai. 
 
 Khi thấy `다만`, đừng dừng ở câu trước. Rất nhiều sai sót đến từ việc nhớ nguyên tắc mà quên ngoại lệ.
 
-> **Chuyển mạch:** Ở chặng này của **11. Cách đọc văn bản hành chính tiếng Hàn**, **6. Cách đọc phần căn cứ pháp lý** tiếp nhận điểm tựa từ **5. Cụm từ chỉ nghĩa vụ và ngoại lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 별지, 별표, 첨부 khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Cách đọc phần căn cứ pháp lý
 
 Thường có dạng:
@@ -147,8 +137,6 @@ Thường có dạng:
 
 Khi thấy căn cứ, bản sao (copy / 복사) chính xác tên luật + số điều vào `law.go.kr`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11. Cách đọc văn bản hành chính tiếng Hàn**, **7. 별지, 별표, 첨부 khác nhau** tiếp nhận điểm tựa từ **6. Cách đọc phần căn cứ pháp lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Từ khóa trạng thái hồ sơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. `별지`, `별표`, `첨부` khác nhau
 
 Sau khi hiểu câu chữ chính, hãy kiểm tra các phụ lục vì điều kiện hồ sơ thường nằm ở đó. Phân biệt đúng tên phụ lục giúp biết đâu là mẫu phải điền, đâu là bảng pháp lý và đâu là tài liệu đính kèm.
@@ -160,8 +148,6 @@ Sau khi hiểu câu chữ chính, hãy kiểm tra các phụ lục vì điều k
 - `증빙서류`: giấy tờ chứng minh.
 
 Một hướng dẫn có thể ngắn nhưng toàn bộ điều kiện thực tế nằm trong `별표`.
-
-> **Chuyển mạch:** Trong **11. Cách đọc văn bản hành chính tiếng Hàn**, **8. Từ khóa trạng thái hồ sơ** tiếp nhận điểm tựa từ **7. 별지, 별표, 첨부 khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Template dịch một văn bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Từ khóa trạng thái hồ sơ
 
@@ -178,8 +164,6 @@ Trạng thái hồ sơ mô tả hồ sơ đang ở đâu trong quy trình, khôn
 - `보류`: tạm giữ/chưa quyết định.
 
 Không suy rằng `접수완료` nghĩa là đã được chấp thuận. Nó thường chỉ nghĩa hệ thống đã nhận hồ sơ.
-
-> **Chuyển mạch:** Ở chặng này của **11. Cách đọc văn bản hành chính tiếng Hàn**, **9. Template dịch một văn bản** tiếp nhận điểm tựa từ **8. Từ khóa trạng thái hồ sơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ví dụ cấu trúc 보완요청** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Template dịch một văn bản
 
@@ -198,8 +182,6 @@ Không cần dịch từng từ trước. Hãy tạo bảng:
 | Liên hệ | |
 
 Sau khi hoàn thành bảng này mới dịch các đoạn khó.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11. Cách đọc văn bản hành chính tiếng Hàn**, **9. Template dịch một văn bản** cho ta quy tắc; **10. Ví dụ cấu trúc 보완요청** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Cách gọi điện cho 담당자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Ví dụ cấu trúc `보완요청`
 
@@ -226,8 +208,6 @@ lý do thiếu gì?
 → cần gọi 담당자 xác nhận không?
 ```
 
-> **Chuyển mạch:** Trong **11. Cách đọc văn bản hành chính tiếng Hàn**, **10. Ví dụ cấu trúc 보완요청** cho ta quy tắc; **11. Cách gọi điện cho 담당자** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Cảnh báo dịch máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 11. Cách gọi điện cho 담당자
 
 Một script ngắn:
@@ -248,8 +228,6 @@ Sau cuộc gọi nên ghi:
 ```
 
 Cuộc gọi hữu ích để hiểu nghiệp vụ, nhưng với vấn đề quan trọng nên cố gắng có nguồn văn bản hoặc xác nhận chính thức.
-
-> **Chuyển mạch:** Ở chặng này của **11. Cách đọc văn bản hành chính tiếng Hàn**, **12. Cảnh báo dịch máy** tiếp nhận điểm tựa từ **11. Cách gọi điện cho 담당자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 12. Cảnh báo dịch máy
 

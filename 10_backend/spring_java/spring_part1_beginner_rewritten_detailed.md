@@ -11,8 +11,6 @@
 
 <!-- VERSION_UPDATE_2026-09-12_START -->
 
-> **Chuyển mạch:** Sau mental model về Spring container và Boot, **Bản đồ phiên bản (version / 버전)** đặt các thay đổi vào đúng mốc API. Câu hỏi metadata → bean instance tiếp theo giải thích cơ chế injection thay vì học annotation rời rạc.
-
 ## Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
 Tài liệu dùng **Spring Boot 4.1.1 + Spring khung phần mềm (framework / 프레임워크) 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring khung phần mềm (framework / 프레임워크) 7.0.9 trở lên. Với Servlet ngăn xếp (stack / 스택), generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM bản địa (native / 네이티브) ảnh (image / 이미지) hỗ trợ (support / 지원) của Boot 4.1 yêu cầu GraalVM 25 trở lên.
@@ -145,8 +143,6 @@ Một cách rất hiệu quả để gỡ lỗi (debug / 디버그) Spring là l
 
 <!-- SPRING_BATCH1_IOC_BEGINNER -->
 
-> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 1: Beginner**, **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** nêu điều cần giải thích; **Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?
 
 Khi mới học, câu “Spring scan `@Service` rồi inject bean” đủ để bắt đầu, nhưng mô hình tư duy (mental model / 사고 모델) đó quá ngắn để gỡ lỗi (debug / 디버그) hệ thống thật. bộ chứa (container / 컨테이너) thực tế phải đi qua ba lớp khác nhau: **siêu dữ liệu (metadata / 메타데이터) cấu hình**, **BeanDefinition**, rồi mới tới **đối tượng (object / 객체) instance**. `@Component`, `@Service`, `@Repository`, `@Configuration` và `@Bean` cung cấp siêu dữ liệu (metadata / 메타데이터). Spring đọc siêu dữ liệu (metadata / 메타데이터) đó để đăng ký BeanDefinition, tức bản mô tả cách tạo đối tượng (object / 객체): lớp (class / 클래스) nào, phạm vi (scope / 범위) nào, factory phương thức (method / 메서드) nào, phụ thuộc (dependency / 의존성) nào, có lazy hay không, có qualifier gì và callback vòng đời (lifecycle / 생명주기) nào. Chỉ sau khi ngữ cảnh (context / 맥락) bước vào giai đoạn tạo bean, BeanDefinition mới được dùng để instantiate đối tượng (object / 객체).
@@ -226,8 +222,6 @@ Khi đọc ngăn xếp (stack / 스택) Overflow hoặc blog, trước tiên hã
 ---
 
 <!-- SPRING_BATCH5_VERSION_BEGINNER -->
-
-> **Chuyển mạch:** Khi đã theo dõi metadata đến bean instance, việc đọc phiên bản theo thay đổi cách viết ứng dụng giúp kiểm tra tác động thực tế của API. Đây là nền để chuyển sang các phần Spring nâng cao mà không biến tài liệu thành release-note list.
 
 ## Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)
 

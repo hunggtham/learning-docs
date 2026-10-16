@@ -8,15 +8,11 @@ Sau khi kiểm tra hiện trường an toàn, dùng gạc hoặc vật sạch t�
 
 Không tháo lớp gạc đã thấm để kiểm tra liên tục; làm theo hướng dẫn của điều phối viên. Dị vật cắm sâu, vết thương lớn hoặc chấn thương phối hợp cần chuyên môn, không cố lấy dị vật ra.
 
-> **Chuyển mạch:** Chảy máu đe dọa tính mạng ưu tiên áp lực và gọi trợ giúp; bỏng lại cần dừng nguồn nhiệt và đánh giá diện tích, vị trí, độ sâu trong giới hạn người cứu.
-
 ## 2. Bỏng và nguy cơ tiếp diễn
 
 Đưa người bị nạn ra khỏi nguồn nhiệt hoặc điện chỉ khi an toàn. Làm mát vùng bỏng bằng nước mát sạch trong thời gian phù hợp theo hướng dẫn địa phương; không bôi chất không rõ, không chọc vỡ bóng nước và không bóc vật liệu dính vào da.
 
 Bỏng rộng, ở mặt/cổ/bàn tay/bộ phận sinh dục, bỏng hóa chất/điện, bỏng hít khói hoặc người bệnh khó thở cần đánh giá y tế khẩn cấp. Mức độ có thể khó nhìn thấy ngay.
-
-> **Chuyển mạch:** Bỏng cần dừng nguồn và tránh làm tổn thương thêm; nghẹn cần nhận diện khả năng nói/thở và gọi trợ giúp nhanh vì tình trạng có thể chuyển xấu trong thời gian ngắn.
 
 ## 3. Nghẹn và đường thở
 

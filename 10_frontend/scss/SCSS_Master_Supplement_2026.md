@@ -89,8 +89,6 @@ LibSass / node-sass
 
 không hỗ trợ đầy đủ hệ mô-đun (module system) hiện đại.
 
-> **Nối mạch:** Thuật ngữ thống nhất giúp đọc Sass rule chính xác; mental model tiếp theo nối source syntax, compiler evaluation và CSS output.
-
 ## Master quy tắc (rule / 규칙)
 
 Nếu một gói (package / 패키지) vẫn yêu cầu node-sass/LibSass tính tương thích (compatibility / 호환성):
@@ -112,8 +110,6 @@ Khi CSS thêm cú pháp (syntax / 문법) mới:
 Sass đôi khi phải deprecate old ngôn ngữ (language / 언어) hành vi (behavior / 동작).
 
 Đây là nguồn của nhiều breaking changes.
-
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Master quy tắc (rule / 규칙)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thư viện (library / 라이브러리)/tooling concern** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -157,8 +153,6 @@ Nếu cùng vật lý (physical / 물리적) mô-đun (module / 모듈) được
 - duplicate mô-đun (module / 모듈) tải (load / 로드) có thể xảy ra,
 - CSS/cấu hình (config / 설정)/trạng thái (state / 상태) có thể khác expectation.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Thư viện (library / 라이브러리)/tooling concern** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mẫu thiết kế (design pattern / 디자인 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Thư viện (library / 라이브러리)/tooling concern
 
 Custom importers phải implement canonicalization đúng.
@@ -198,8 +192,6 @@ Nếu mô-đun (module / 모듈) đã tải (load / 로드) earlier:
 ```
 
 Cấu hình (configuration / 구성) xung đột (conflict / 충돌)/lỗi (error / 오류).
-
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Mẫu thiết kế (design pattern / 디자인 패턴)** nối từ **Thư viện (library / 라이브러리)/tooling concern** sang **Quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu thiết kế (design pattern / 디자인 패턴)
 
@@ -247,8 +239,6 @@ Hiện đại (modern / 현대적) Dart Sass deprecates configuring private các
 
 Private members are hiện thực (implementation / 구현) details.
 
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Quy tắc (rule / 규칙)** nối từ **Mẫu thiết kế (design pattern / 디자인 패턴)** sang **Công cụ (tool / 도구) mô-đun (module / 모듈)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc (rule / 규칙)
 
 If consumers need to configure giá trị (value / 값):
@@ -278,8 +268,6 @@ Treat emitted CSS itself as part of công khai (public / 공개) hành vi (behav
 
 # 11. CSS Side-effect Modules vs công cụ (tool / 도구) Modules [ARCH]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Công cụ (tool / 도구) mô-đun (module / 모듈)** nối từ **Quy tắc (rule / 규칙)** sang **CSS side-effect mô-đun (module / 모듈)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Công cụ (tool / 도구) mô-đun (module / 모듈)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -290,8 +278,6 @@ mixins
 variables
 no CSS emitted on load
 ```
-
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **CSS side-effect mô-đun (module / 모듈)** nối từ **Công cụ (tool / 도구) mô-đun (module / 모듈)** sang **Warning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSS side-effect mô-đun (module / 모듈)
 
@@ -400,8 +386,6 @@ Use cases:
 Get các hàm (functions) exposed by mô-đun (module / 모듈).
 
 Can bản dựng (build / 빌드) generic plugin/dispatch các hệ thống (systems / 시스템들).
-
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Warning** nối từ **CSS side-effect mô-đun (module / 모듈)** sang **Quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Warning
 
@@ -649,8 +633,6 @@ Hiện đại (modern / 현대적) `sass:map` supports nested operations:
 - deep remove.
 
 Good for hierarchical đơn vị từ (token / 토큰) các hệ thống (systems / 시스템들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Quy tắc (rule / 규칙)** nối từ **Warning** sang **Adjust**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc (rule / 규칙)
 
@@ -1113,13 +1095,9 @@ Conversion may alter gamut biểu diễn (representation / 표현).
 
 # 61. `color.adjust()` vs `color.scale()` [ADV]
 
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Adjust** nối từ **Quy tắc (rule / 규칙)** sang **Quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Adjust
 
 Adds/subtracts channel amount.
-
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Quy mô (scale / 규모)** nối từ **Adjust** sang **Use Sass biến (variable) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy mô (scale / 규모)
 
@@ -2357,16 +2335,12 @@ Different responsibilities.
 
 # 136. Master quyết định (decision / 결정) ma trận (matrix / 행렬)
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Use Sass biến (variable) when:** nối từ **Quy mô (scale / 규모)** sang **CSS biến (variable) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Use Sass biến (variable) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời điểm biên dịch (compile-time) only,
 - generation,
 - gói (package / 패키지) cấu hình (config / 설정).
-
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **CSS biến (variable) when:** nối từ **Use Sass biến (variable) when:** sang **Sass hàm (function) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSS biến (variable) when:
 
@@ -2375,42 +2349,30 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - cơ chế phân tầng (cascade),
 - thành phần (component / 컴포넌트) override.
 
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Sass hàm (function) when:** nối từ **CSS biến (variable) when:** sang **CSS hàm (function) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sass hàm (function) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời điểm biên dịch (compile-time) giá trị (value) transformation.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **CSS hàm (function) when:** nối từ **Sass hàm (function) when:** sang **khối trộn tái sử dụng (mixin) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSS hàm (function) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - layout/thời gian chạy (runtime) giá trị (value).
 
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **khối trộn tái sử dụng (mixin) when:** nối từ **CSS hàm (function) when:** sang **tiện ích (utility) when:**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## khối trộn tái sử dụng (mixin) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - reusable style generation.
-
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **tiện ích (utility) when:** nối từ **khối trộn tái sử dụng (mixin) when:** sang **@forward when:**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## tiện ích (utility) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời gian chạy (runtime) composition.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **@forward when:** nối từ **tiện ích (utility) when:** sang **@extend when:**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `@forward` when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - package facade.
-
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **@extend when:** nối từ **@forward when:** sang **Senior SCSS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `@extend` when:
 
@@ -2708,8 +2670,6 @@ Reduce đầu ra (output / 출력) 30% without losing required API.
 
 # 155. Mastery Rubric
 
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Senior SCSS** nối từ **@extend when:** sang **Sass Library Engineer**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Senior SCSS
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2718,8 +2678,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - các map khóa–giá trị (maps),
 - kiến trúc (architecture / 아키텍처),
 - clean deprecations.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Sass Library Engineer** nối từ **Senior SCSS** sang **Sass Tooling Specialist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sass Library Engineer
 
@@ -2731,8 +2689,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - tests,
 - versioning.
 
-> **Nối mạch:** Trong **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Sass Tooling Specialist** nối từ **Sass Library Engineer** sang **Master**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sass Tooling Specialist
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2741,8 +2697,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - custom các hàm (functions),
 - chuẩn gốc (canonical / 정본) URLs,
 - compile diagnostics/hiệu năng (performance / 성능).
-
-> **Nối mạch:** Ở chặng này của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**, **Master** nối từ **Sass Tooling Specialist** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Master
 Có thể:

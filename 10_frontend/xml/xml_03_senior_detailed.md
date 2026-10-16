@@ -10,8 +10,6 @@ Tư duy xuyên suốt của phần này là chuyển từ “XML như dữ liệ
 
 ---
 
-> **Nối mạch:** XSLT nằm trong pipeline XML cùng schema evolution, streaming và security; phần “XSLT là gì?” xác định transformation model, rồi template dispatch biến model đó thành rule áp dụng được.
-
 ## 1. XSLT là gì?
 
 XSLT là viết tắt của **XSL Transformations**. Nó là ngôn ngữ dùng để transform XML/XDM đầu vào (input / 입력) thành một đầu ra (output / 출력) cây (tree / 트리) hoặc serialization khác.
@@ -49,8 +47,6 @@ XSLT không nên được học như một thứ “XML có if và for”. mô h
 
 ---
 
-> **Nối mạch:** XSLT biến XML tree thành output tree; `xsl:template` khai báo rule, còn `xsl:apply-templates` điều phối dispatch theo node hiện tại.
-
 ## 2. `xsl:template` và template dispatch
 
 Một template:
@@ -79,8 +75,6 @@ Template này không cần biết title đến từ book nào. Nó chỉ biết 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **3. xsl:apply-templates** nối từ **2. xsl:template và template dispatch** sang **4. xsl:value-of**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. `xsl:apply-templates`
 
 `xsl:apply-templates` là idiom cốt lõi:
@@ -104,8 +98,6 @@ Nếu bạn dùng `xsl:for-each` cho mọi thứ, XSLT dễ biến thành impera
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **4. xsl:value-of** nối từ **3. xsl:apply-templates** sang **5. xsl:for-each**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. `xsl:value-of`
 `xsl:value-of` là điểm rẽ từ template dispatch sang việc lấy một giá trị XPath cụ thể; phần này làm rõ khi nào việc làm phẳng thành chuỗi phù hợp và khi nào cần giữ cấu trúc bằng `xsl:apply-templates`.
 
@@ -125,8 +117,6 @@ và bạn muốn preserve markup ngữ nghĩa (semantics / 의미론), `apply-te
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **5. xsl:for-each** nối từ **4. xsl:value-of** sang **6. Conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. `xsl:for-each`
 `xsl:for-each` biến một sequence thành các lần xử lý tuần tự, nhưng không tự thay thế template dispatch; phần này đặt giới hạn procedural của nó trước khi chuyển sang điều kiện và mode.
 
@@ -143,8 +133,6 @@ và bạn muốn preserve markup ngữ nghĩa (semantics / 의미론), `apply-te
 Nếu same nút (node / 노드) cần nhiều rendering modes hoặc override hành vi (behavior / 동작) theo kiểu (type / 타입), template dispatch thường flexible hơn.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **6. Conditions** nối từ **5. xsl:for-each** sang **7. Variables trong XSLT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Conditions
 
@@ -174,8 +162,6 @@ XSLT conditions dùng XPath expressions. Vì vậy hiểu XPath kiểu (type / �
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **7. Variables trong XSLT** nối từ **6. Conditions** sang **8. Modes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Variables trong XSLT
 Variable binding giữ một giá trị hoặc sequence trong phạm vi transformation; hiểu nó là binding bất biến giúp nối điều kiện với các mode mà không nhầm XSLT với bộ nhớ mutable.
 
@@ -190,8 +176,6 @@ Variable binding giữ một giá trị hoặc sequence trong phạm vi transfor
 Tư duy immutable binding giúp transformation dễ reason hơn và phù hợp streaming/parallel tối ưu hóa (optimization / 최적화) hơn.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **8. Modes** nối từ **7. Variables trong XSLT** sang **9. XSLT hiện đại không dừng ở phiên bản (version / 버전) 1.0**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Modes
 
@@ -228,8 +212,6 @@ Modes là một trong những công cụ quan trọng để chia một biểu đ
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **9. XSLT hiện đại không dừng ở phiên bản (version / 버전) 1.0** nối từ **8. Modes** sang **10. XSLT streaming**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. XSLT hiện đại không dừng ở phiên bản (version / 버전) 1.0
 
 Nhiều nhà phát triển (developer / 개발자) chỉ từng gặp XSLT 1.0 trong hệ thống legacy nên nghĩ XSLT là một ngôn ngữ cũ, yếu và khó dùng. XSLT 2.0/3.0 cùng XPath hiện đại có hệ kiểu (type system / 타입 시스템), functions, grouping, packages, maps, arrays và streaming features mạnh hơn rất nhiều.
@@ -237,8 +219,6 @@ Nhiều nhà phát triển (developer / 개발자) chỉ từng gặp XSLT 1.0 t
 Điểm quan trọng không phải bạn phải dùng XSLT 3.0 ở mọi nơi, mà là khi rà soát (review / 검토) một hệ thống (system / 시스템), bạn phải biết processor đang hỗ trợ (support / 지원) phiên bản (version / 버전) nào. cú pháp (syntax / 문법) và năng lực (capability / 역량) có thể khác rất xa.
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **10. XSLT streaming** nối từ **9. XSLT hiện đại không dừng ở phiên bản (version / 버전) 1.0** sang **11. XQuery là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. XSLT streaming
 
@@ -251,8 +231,6 @@ Cấp cao (senior / 시니어) phải hiểu rằng streaming không chỉ là b
 ---
 
 # XQuery
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **11. XQuery là gì?** nối từ **10. XSLT streaming** sang **12. FLWOR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. XQuery là gì?
 
@@ -273,8 +251,6 @@ return
 XQuery rất phù hợp với XML-native databases hoặc hệ thống cần truy vấn (query / 쿼리) collections of XML documents.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **12. FLWOR** nối từ **11. XQuery là gì?** sang **13. XPath và XQuery khác nhau ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. FLWOR
 
@@ -302,8 +278,6 @@ return $b/title
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **12. FLWOR** đặt đầu vào cho **13. XPath và XQuery khác nhau ở đâu?**, rồi **14. XDM là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 13. XPath và XQuery khác nhau ở đâu?
 
 XPath thường được embed vào XSLT, Java API, lược đồ (schema / 스키마) assertions hoặc tools để select/calculate.
@@ -315,8 +289,6 @@ Nếu chỉ cần lấy `/order/item/price`, XPath là đủ. Nếu cần phép 
 ---
 
 # XDM và XPath nâng cao
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **13. XPath và XQuery khác nhau ở đâu?** đặt đầu vào cho **14. XDM là gì?**, rồi **15. chuỗi (sequence / 시퀀스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. XDM là gì?
 
@@ -336,8 +308,6 @@ trả về một chuỗi (sequence / 시퀀스) ba atomic values.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **14. XDM là gì?** đặt đầu vào cho **15. chuỗi (sequence / 시퀀스)**, rồi **16. XPath axes** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 15. chuỗi (sequence / 시퀀스)
 
 Chuỗi (sequence / 시퀀스) là ordered chuỗi (sequence / 시퀀스) of items.
@@ -355,8 +325,6 @@ Item có thể là nút (node / 노드) hoặc atomic giá trị (value / 값).
 Không phải chuỗi (sequence / 시퀀스) nào cũng là danh sách (list / 목록) đối tượng (object / 객체) như Java, nhưng mô hình tư duy (mental model / 사고 모델) “ordered kết quả (result / 결과) of items” là đúng.
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **15. chuỗi (sequence / 시퀀스)** đặt đầu vào cho **16. XPath axes**, rồi **17. Namespace-safe XPath** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. XPath axes
 
@@ -395,8 +363,6 @@ Axes giúp truy vấn (query / 쿼리) rõ ràng và precise hơn việc dùng `
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **16. XPath axes** đặt đầu vào cho **17. Namespace-safe XPath**, rồi **18. không gian tên (namespace / 네임스페이스) phải stable** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 17. Namespace-safe XPath
 
 Đây là quy tắc (rule / 규칙) cấp cao (senior / 시니어) phải coi như phản xạ.
@@ -433,8 +399,6 @@ Không bao giờ coi prefix nguồn (source / 소스) là định danh (identity
 
 # Lược đồ (schema / 스키마) thiết kế (design / 설계) và đặc tả hợp đồng (contract / 계약) Evolution
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **17. Namespace-safe XPath** đặt đầu vào cho **18. không gian tên (namespace / 네임스페이스) phải stable**, rồi **19. phiên bản (version / 버전) trong không gian tên (namespace / 네임스페이스)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. không gian tên (namespace / 네임스페이스) phải stable
 
 Không gian tên (namespace / 네임스페이스) URI là định danh (identity / 식별자) của vocabulary. Đừng đổi không gian tên (namespace / 네임스페이스) chỉ vì:
@@ -452,8 +416,6 @@ Không gian tên (namespace / 네임스페이스) nên được phiên bản (ve
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **19. phiên bản (version / 버전) trong không gian tên (namespace / 네임스페이스)** nối từ **18. không gian tên (namespace / 네임스페이스) phải stable** sang **20. Stable không gian tên (namespace / 네임스페이스) + phiên bản (version / 버전) attribute**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. phiên bản (version / 버전) trong không gian tên (namespace / 네임스페이스)
 
 Một chiến lược (strategy / 전략) là:
@@ -470,8 +432,6 @@ Nhược điểm là mọi XPath, XSD import, binding, serializer và message đ
 Chiến lược (strategy / 전략) này hợp khi major versions thực sự độc lập.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **20. Stable không gian tên (namespace / 네임스페이스) + phiên bản (version / 버전) attribute** nối từ **19. phiên bản (version / 버전) trong không gian tên (namespace / 네임스페이스)** sang **21. Backward-compatible thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Stable không gian tên (namespace / 네임스페이스) + phiên bản (version / 버전) attribute
 
@@ -493,8 +453,6 @@ Không có một chiến lược (strategy / 전략) luôn đúng.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **21. Backward-compatible thay đổi (change / 변경)** nối từ **20. Stable không gian tên (namespace / 네임스페이스) + phiên bản (version / 버전) attribute** sang **22. Extension points**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Backward-compatible thay đổi (change / 변경)
 
 Thêm optional element thường dễ compatible hơn:
@@ -512,8 +470,6 @@ Những thay đổi dễ breaking gồm rename required trường dữ liệu (f
 Lược đồ (schema / 스키마) evolution phải được treat như API evolution.
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **22. Extension points** nối từ **21. Backward-compatible thay đổi (change / 변경)** sang **23. processContents**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Extension points
 
@@ -535,8 +491,6 @@ Nhưng `xs:any` ở khắp nơi sẽ làm lược đồ (schema / 스키마) g�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **22. Extension points** đặt đầu vào cho **23. processContents**, rồi **24. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 23. `processContents`
 
 `strict`, `lax`, `skip` điều khiển wildcard processing.
@@ -551,8 +505,6 @@ Nếu bạn dùng `skip` cho security-sensitive extension, ứng dụng (applica
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **23. processContents** đặt đầu vào cho **24. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들)**, rồi **25. xs:unique** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 24. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들)
 
 XSD có `xs:unique`, `xs:key`, `xs:keyref`.
@@ -565,8 +517,6 @@ Ví dụ một danh sách (list / 목록) customer có ID unique, rồi thứ t�
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **25. xs:unique** nối từ **24. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들)** sang **26. xs:key**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. `xs:unique`
 
 `xs:unique` bảo đảm values được chọn bởi selector/trường dữ liệu (field / 필드) không trùng lặp theo lược đồ (schema / 스키마) ngữ nghĩa (semantics / 의미론).
@@ -575,8 +525,6 @@ Nó thích hợp với nghiệp vụ (business / 비즈니스) điều kiện (c
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **26. xs:key** nối từ **25. xs:unique** sang **27. xs:keyref**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. `xs:key`
 
 `xs:key` giống key ràng buộc (constraint / 제약조건) với ngữ nghĩa (semantics / 의미론) chặt hơn về presence/giá trị (value / 값) theo XSD rules.
@@ -584,8 +532,6 @@ Nó thích hợp với nghiệp vụ (business / 비즈니스) điều kiện (c
 Nó có thể được tham chiếu (reference / 참조) bởi `xs:keyref`.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **27. xs:keyref** nối từ **26. xs:key** sang **28. Complex kiểu (type / 타입) derivation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. `xs:keyref`
 
@@ -602,8 +548,6 @@ phải match một customer ID tồn tại trong document.
 Đây là integrity ràng buộc (constraint / 제약조건) ở lược đồ (schema / 스키마) tầng (layer / 계층).
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **28. Complex kiểu (type / 타입) derivation** nối từ **27. xs:keyref** sang **29. xsi:type**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Complex kiểu (type / 타입) derivation
 
@@ -625,8 +569,6 @@ Một lược đồ (schema / 스키마) inheritance cây (tree / 트리) sâu l
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **29. xsi:type** nối từ **28. Complex kiểu (type / 타입) derivation** sang **30. Substitution groups**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. `xsi:type`
 
 Instance có thể chọn derived kiểu (type / 타입):
@@ -643,8 +585,6 @@ nếu lược đồ (schema / 스키마) cho phép.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **30. Substitution groups** nối từ **29. xsi:type** sang **31. Nil, empty và missing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Substitution groups
 
 Substitution group cho phép element declarations thay thế một head element theo lược đồ (schema / 스키마) rules.
@@ -654,8 +594,6 @@ Nó hỗ trợ polymorphic XML vocabulary.
 Nhưng khi kết hợp với derived types và `xsi:type`, lược đồ (schema / 스키마) có thể rất khó đọc. cấp cao (senior / 시니어) phải cân bằng flexibility với maintainability.
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **31. Nil, empty và missing** nối từ **30. Substitution groups** sang **32. XML đối tượng (object / 객체) binding là convenience tầng (layer / 계층), không phải XML replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Nil, empty và missing
 
@@ -687,8 +625,6 @@ Nếu Java binding map cả ba thành `null` hoặc `""`, nghiệp vụ (busines
 
 # XML Binding và Java
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **32. XML đối tượng (object / 객체) binding là convenience tầng (layer / 계층), không phải XML replacement** nối từ **31. Nil, empty và missing** sang **33. Contract-first vs object-first ở mức cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. XML đối tượng (object / 객체) binding là convenience tầng (layer / 계층), không phải XML replacement
 
 Khung phần mềm (framework / 프레임워크) như JAXB/Jakarta XML Binding có thể map:
@@ -715,8 +651,6 @@ Nếu tích hợp (integration / 통합) phức tạp, đừng để generated c
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **33. Contract-first vs object-first ở mức cấp cao (senior / 시니어)** nối từ **32. XML đối tượng (object / 객체) binding là convenience tầng (layer / 계층), không phải XML replacement** sang **34. Vì sao DOM có thể rất tốn bộ nhớ (memory / 메모리)?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Contract-first vs object-first ở mức cấp cao (senior / 시니어)
 
 Trong enterprise tích hợp (integration / 통합), một lược đồ (schema / 스키마) được nhiều Java/.NET/vendor các hệ thống (systems / 시스템들) dùng thường nên được thiết kế như một language-neutral đặc tả hợp đồng (contract / 계약).
@@ -729,8 +663,6 @@ Vì vậy contract-first thường phù hợp với long-lived cross-system XML 
 
 # Large XML và Streaming
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **34. Vì sao DOM có thể rất tốn bộ nhớ (memory / 메모리)?** nối từ **33. Contract-first vs object-first ở mức cấp cao (senior / 시니어)** sang **35. Streaming Parser mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Vì sao DOM có thể rất tốn bộ nhớ (memory / 메모리)?
 
 Raw XML 500 MB không có nghĩa DOM chỉ dùng 500 MB RAM.
@@ -740,8 +672,6 @@ Một DOM cây (tree / 트리) cần đối tượng (object / 객체) cho mỗi
 Vì vậy large XML phải được benchmark bằng actual parser, không estimate từ tệp (file / 파일) kích thước (size / 크기).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **35. Streaming Parser mẫu (pattern / 패턴)** nối từ **34. Vì sao DOM có thể rất tốn bộ nhớ (memory / 메모리)?** sang **36. Partial Materialization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Streaming Parser mẫu (pattern / 패턴)
 
@@ -769,8 +699,6 @@ Bộ nhớ (memory / 메모리) gần như phụ thuộc kích thước (size / 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **36. Partial Materialization** nối từ **35. Streaming Parser mẫu (pattern / 패턴)** sang **37. Streaming không giải quyết mọi bộ nhớ (memory / 메모리) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Partial Materialization
 
 Bạn không bắt buộc phải stream từng thành phần nguyên thủy (primitive / 기본 요소) trường dữ liệu (field / 필드) bằng tay.
@@ -791,8 +719,6 @@ StAX outer loop
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **37. Streaming không giải quyết mọi bộ nhớ (memory / 메모리) bài toán (problem / 문제)** nối từ **36. Partial Materialization** sang **38. Vì sao XML có bảo mật (security / 보안) surface lớn?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Streaming không giải quyết mọi bộ nhớ (memory / 메모리) bài toán (problem / 문제)
 
 Nếu yêu cầu (requirement / 요구사항) nói “mọi customer ID phải unique toàn tệp (file / 파일)”, bạn vẫn cần trạng thái (state / 상태) như HashSet hoặc bên ngoài (external / 외부) cơ sở dữ liệu (database / 데이터베이스).
@@ -804,8 +730,6 @@ Streaming chỉ giúp không giữ toàn cây (tree / 트리). Nó không loại
 ---
 
 # Bảo mật (security / 보안)
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **38. Vì sao XML có bảo mật (security / 보안) surface lớn?** nối từ **37. Streaming không giải quyết mọi bộ nhớ (memory / 메모리) bài toán (problem / 문제)** sang **39. XXE là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Vì sao XML có bảo mật (security / 보안) surface lớn?
 
@@ -827,8 +751,6 @@ Các năng lực (capability / 역량) này rất hữu ích với trusted docum
 Cấp cao (senior / 시니어) phải coi parser như một thành phần (component / 컴포넌트) có filesystem/mạng (network / 네트워크) capabilities cần được sandbox/harden.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **39. XXE là gì?** nối từ **38. Vì sao XML có bảo mật (security / 보안) surface lớn?** sang **40. bên ngoài (external / 외부) DTD và SSRF**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. XXE là gì?
 
@@ -860,8 +782,6 @@ Không phải mọi parser mặc định vulnerable, nhưng bạn không đượ
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **40. bên ngoài (external / 외부) DTD và SSRF** nối từ **39. XXE là gì?** sang **41. Parameter entities**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. bên ngoài (external / 외부) DTD và SSRF
 
 Ngay cả không dùng thực thể (entity / 엔터티) trực tiếp, DOCTYPE:
@@ -877,8 +797,6 @@ có thể khiến parser gửi mạng (network / 네트워크) yêu cầu (reque
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **41. Parameter entities** nối từ **40. bên ngoài (external / 외부) DTD và SSRF** sang **42. Billion Laughs**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. Parameter entities
 
 DTD còn có parameter entities, thường dùng bên trong DTD grammar.
@@ -888,8 +806,6 @@ Bên ngoài (external / 외부) parameter thực thể (entity / 엔터티) cũn
 Vì vậy hardening chỉ “disable bên ngoài (external / 외부) general entities” nhưng bỏ parameter entities vẫn có thể chưa đủ.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **42. Billion Laughs** nối từ **41. Parameter entities** sang **43. XInclude**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Billion Laughs
 
@@ -910,8 +826,6 @@ Hiện đại (modern / 현대적) parsers thường có limits, nhưng ứng d�
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **43. XInclude** nối từ **42. Billion Laughs** sang **44. lược đồ (schema / 스키마) resolution cũng là bên ngoài (external / 외부) truy cập (access / 접근)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. XInclude
 
 XInclude cho phép include bên ngoài (external / 외부) XML/tài nguyên (resource / 자원):
@@ -928,8 +842,6 @@ Nếu ứng dụng (application / 애플리케이션) không cần XInclude, dis
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **44. lược đồ (schema / 스키마) resolution cũng là bên ngoài (external / 외부) truy cập (access / 접근)** nối từ **43. XInclude** sang **45. XML danh mục (catalog / 카탈로그)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. lược đồ (schema / 스키마) resolution cũng là bên ngoài (external / 외부) truy cập (access / 접근)
 
 XSD có imports/includes. Instance có `schemaLocation`. Nếu validator tự fetch remote schemas, attacker hoặc mạng (network / 네트워크) phụ thuộc (dependency / 의존성) có thể ảnh hưởng hành vi (behavior / 동작).
@@ -937,8 +849,6 @@ XSD có imports/includes. Instance có `schemaLocation`. Nếu validator tự fe
 Một môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) tốt nên dùng trusted cục bộ (local / 로컬) lược đồ (schema / 스키마) registry hoặc resolver.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **45. XML danh mục (catalog / 카탈로그)** nối từ **44. lược đồ (schema / 스키마) resolution cũng là bên ngoài (external / 외부) truy cập (access / 접근)** sang **46. Secure parser chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. XML danh mục (catalog / 카탈로그)
 
@@ -957,8 +867,6 @@ Trong enterprise XML hạ tầng (infrastructure / 인프라), danh mục (catal
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **46. Secure parser chiến lược (strategy / 전략)** nối từ **45. XML danh mục (catalog / 카탈로그)** sang **47. Hardening một parser không harden toàn chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Secure parser chiến lược (strategy / 전략)
 
 Với untrusted XML, default mental checklist là: tắt DTD nếu không cần; tắt bên ngoài (external / 외부) general entities; tắt bên ngoài (external / 외부) parameter entities; khối (block / 블록) bên ngoài (external / 외부) DTD/lược đồ (schema / 스키마) resolution; tắt XInclude nếu không cần; giới hạn document kích thước (size / 크기)/độ sâu (depth / 깊이)/thực thể (entity / 엔터티) expansions; dùng secure processing options; và kiểm soát mọi URI resolver.
@@ -968,8 +876,6 @@ Chính xác (exact / 정확한) flag khác nhau giữa `DocumentBuilderFactory`,
 Điều này có nghĩa không tồn tại một cấu hình (config / 설정) snippet universal cho mọi Java XML API.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **46. Secure parser chiến lược (strategy / 전략)** đặt đầu vào cho **47. Hardening một parser không harden toàn chuỗi xử lý (pipeline / 파이프라인)**, rồi **48. XSLT bảo mật (security / 보안)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 47. Hardening một parser không harden toàn chuỗi xử lý (pipeline / 파이프라인)
 
@@ -992,8 +898,6 @@ signature verifier
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **47. Hardening một parser không harden toàn chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **48. XSLT bảo mật (security / 보안)**, rồi **49. XPath Injection** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 48. XSLT bảo mật (security / 보안)
 
 XSLT có thể include/import stylesheets và trong một số processor có khả năng truy cập (access / 접근) bên ngoài (external / 외부) documents hoặc extension functions.
@@ -1003,8 +907,6 @@ Do đó “untrusted XML” và “untrusted XSLT” là hai threat các mô hì
 Không execute biểu định kiểu (stylesheet / 스타일시트) do người dùng (user / 사용자) upload với unrestricted server-side processor nếu không có sandbox/chính sách (policy / 정책).
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **48. XSLT bảo mật (security / 보안)** đặt đầu vào cho **49. XPath Injection**, rồi **50. Vì sao không thể băm (hash / 해시) raw XML văn bản (text / 텍스트) một cách ngây thơ?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 49. XPath Injection
 
@@ -1024,8 +926,6 @@ Defense là dùng variable binding nếu engine hỗ trợ, không cho người 
 ---
 
 # Canonicalization và XML Signature
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **49. XPath Injection** đặt đầu vào cho **50. Vì sao không thể băm (hash / 해시) raw XML văn bản (text / 텍스트) một cách ngây thơ?**, rồi **51. Canonicalization không phải pretty-print** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 50. Vì sao không thể băm (hash / 해시) raw XML văn bản (text / 텍스트) một cách ngây thơ?
 
@@ -1049,8 +949,6 @@ Chuẩn gốc (canonical / 정본) XML giải quyết bằng cách tạo biểu 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, sau nội dung của **50. Vì sao không thể băm (hash / 해시) raw XML văn bản (text / 텍스트) một cách ngây thơ?**, **51. Canonicalization không phải pretty-print** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **52. XML Digital Signature** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 51. Canonicalization không phải pretty-print
 
 Pretty-print làm XML dễ đọc bằng indentation.
@@ -1069,8 +967,6 @@ tự viết.
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **52. XML Digital Signature** nối từ **51. Canonicalization không phải pretty-print** sang **53. Signature Wrapping Attack**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 52. XML Digital Signature
 
 XML Signature có thể sign whole document hoặc một phần document.
@@ -1082,8 +978,6 @@ Signature thường chứa references, transforms, digest và signature giá tr�
 Ứng dụng (application / 애플리케이션) phải hiểu signed phạm vi (scope / 범위).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **53. Signature Wrapping Attack** nối từ **52. XML Digital Signature** sang **54. ID ngữ nghĩa (semantics / 의미론) và signature**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Signature Wrapping Attack
 
@@ -1110,8 +1004,6 @@ Defense là ứng dụng (application / 애플리케이션) phải tiến trình
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **54. ID ngữ nghĩa (semantics / 의미론) và signature** nối từ **53. Signature Wrapping Attack** sang **55. ranh giới (boundary / 경계) kiểm tra hợp lệ (validation / 검증) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. ID ngữ nghĩa (semantics / 의미론) và signature
 
 Tham chiếu (reference / 참조) kiểu:
@@ -1131,8 +1023,6 @@ Một attribute tên `id` không tự động có ID ngữ nghĩa (semantics / �
 ---
 
 # Tích hợp (integration / 통합) kiến trúc (architecture / 아키텍처)
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **54. ID ngữ nghĩa (semantics / 의미론) và signature** đặt tiêu chí; **55. ranh giới (boundary / 경계) kiểm tra hợp lệ (validation / 검증) mẫu (pattern / 패턴)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **56. lược đồ (schema / 스키마) compilation bộ nhớ đệm (cache / 캐시)** mở rộng hệ quả.
 
 ## 55. ranh giới (boundary / 경계) kiểm tra hợp lệ (validation / 검증) mẫu (pattern / 패턴)
 
@@ -1155,8 +1045,6 @@ XSD không thay authorization. Parser bảo mật (security / 보안) không tha
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **55. ranh giới (boundary / 경계) kiểm tra hợp lệ (validation / 검증) mẫu (pattern / 패턴)** đặt tiêu chí; **56. lược đồ (schema / 스키마) compilation bộ nhớ đệm (cache / 캐시)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **57. Strict Reader vs Tolerant Reader** mở rộng hệ quả.
-
 ## 56. lược đồ (schema / 스키마) compilation bộ nhớ đệm (cache / 캐시)
 
 XSD compilation có chi phí (cost / 비용). Nếu mỗi yêu cầu (request / 요청) đều đọc XSD từ disk, resolve imports và compile lại, độ trễ (latency / 지연 시간) và CPU sẽ tăng.
@@ -1173,8 +1061,6 @@ load trusted schemas at startup
 Tương tự, XSLT biểu định kiểu (stylesheet / 스타일시트) có thể được compile/bộ nhớ đệm (cache / 캐시) nếu processor API cho phép.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **57. Strict Reader vs Tolerant Reader** nối từ **56. lược đồ (schema / 스키마) compilation bộ nhớ đệm (cache / 캐시)** sang **58. “Be liberal in what you accept” không phải lúc nào tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Strict Reader vs Tolerant Reader
 
@@ -1194,8 +1080,6 @@ Một cấp cao (senior / 시니어) đặc tả hợp đồng (contract / 계�
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **58. “Be liberal in what you accept” không phải lúc nào tốt** nối từ **57. Strict Reader vs Tolerant Reader** sang **59. Envelope mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 58. “Be liberal in what you accept” không phải lúc nào tốt
 
 Postel's Law từng rất phổ biến trong giao thức (protocol / 프로토콜) thiết kế (design / 설계), nhưng với security-critical contracts, quá tolerant có thể che lỗi hoặc bypass kiểm tra hợp lệ (validation / 검증).
@@ -1210,8 +1094,6 @@ known tolerance policy
 ```
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **59. Envelope mẫu (pattern / 패턴)** nối từ **58. “Be liberal in what you accept” không phải lúc nào tốt** sang **60. không gian tên (namespace / 네임스페이스) Extension mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Envelope mẫu (pattern / 패턴)
 
@@ -1235,8 +1117,6 @@ SOAP là ví dụ nổi tiếng của mẫu (pattern / 패턴) này.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **60. không gian tên (namespace / 네임스페이스) Extension mẫu (pattern / 패턴)** nối từ **59. Envelope mẫu (pattern / 패턴)** sang **61. lược đồ (schema / 스키마) Registry mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 60. không gian tên (namespace / 네임스페이스) Extension mẫu (pattern / 패턴)
 
 Cốt lõi (core / 핵심) vocabulary:
@@ -1256,8 +1136,6 @@ XML không gian tên (namespace / 네임스페이스) giúp hai bên mở rộng
 Nếu lược đồ (schema / 스키마) có controlled wildcard extension điểm (point / 지점), partner có thể thêm siêu dữ liệu (metadata / 메타데이터) mà không đổi cốt lõi (core / 핵심) không gian tên (namespace / 네임스페이스).
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **61. lược đồ (schema / 스키마) Registry mẫu (pattern / 패턴)** nối từ **60. không gian tên (namespace / 네임스페이스) Extension mẫu (pattern / 패턴)** sang **62. chuẩn gốc (canonical / 정본) mô hình dữ liệu (data model / 데이터 모델) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. lược đồ (schema / 스키마) Registry mẫu (pattern / 패턴)
 
@@ -1279,8 +1157,6 @@ release date
 Không nên để mỗi nhóm (team / 팀) bản sao (copy / 복사) `common.xsd` khác nhau rồi tự sửa.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **61. lược đồ (schema / 스키마) Registry mẫu (pattern / 패턴)** đặt vấn đề; **62. chuẩn gốc (canonical / 정본) mô hình dữ liệu (data model / 데이터 모델) mẫu (pattern / 패턴)** đối chiếu bằng chứng, rồi **63. Anti-Corruption tầng (layer / 계층)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 62. chuẩn gốc (canonical / 정본) mô hình dữ liệu (data model / 데이터 모델) mẫu (pattern / 패턴)
 
@@ -1311,8 +1187,6 @@ Nhưng một chuẩn gốc (canonical / 정본) mô hình (model / 모델) quá 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **62. chuẩn gốc (canonical / 정본) mô hình dữ liệu (data model / 데이터 모델) mẫu (pattern / 패턴)** đặt vấn đề; **63. Anti-Corruption tầng (layer / 계층)** đối chiếu bằng chứng, rồi **64. tường minh (explicit / 명시적) units** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 63. Anti-Corruption tầng (layer / 계층)
 
 DDD gọi tầng (layer / 계층) bảo vệ lĩnh vực (domain / 도메인) khỏi bên ngoài (external / 외부) mô hình (model / 모델) là Anti-Corruption tầng (layer / 계층).
@@ -1333,8 +1207,6 @@ Legacy naming, không gian tên (namespace / 네임스페이스), null ngữ ngh
 
 # XML thiết kế (design / 설계) Idioms
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **64. tường minh (explicit / 명시적) units** nối từ **63. Anti-Corruption tầng (layer / 계층)** sang **65. Stable identifiers**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 64. tường minh (explicit / 명시적) units
 
 Nếu number không có globally fixed đơn vị (unit / 단위), nên biểu diễn rõ:
@@ -1353,8 +1225,6 @@ và để bên tiêu thụ (consumer / 소비자) đoán.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **65. Stable identifiers** nối từ **64. tường minh (explicit / 명시적) units** sang **66. Wrapper collection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 65. Stable identifiers
 
 Nếu có:
@@ -1368,8 +1238,6 @@ Nếu có:
 Không nên chỉ nói “id là string”.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **66. Wrapper collection** nối từ **65. Stable identifiers** sang **67. Discriminator attribute vs distinct elements**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Wrapper collection
 
@@ -1399,8 +1267,6 @@ Chọn dựa trên khả năng evolution.
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **67. Discriminator attribute vs distinct elements** nối từ **66. Wrapper collection** sang **68. Đổi không gian tên (namespace / 네임스페이스) cho mọi minor bản phát hành (release / 릴리스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 67. Discriminator attribute vs distinct elements
 
 Option A:
@@ -1427,8 +1293,6 @@ Nếu mỗi contact kiểu (type / 타입) có cấu trúc (structure / 구조) 
 
 # Cấp cao (senior / 시니어) Anti-patterns
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **68. Đổi không gian tên (namespace / 네임스페이스) cho mọi minor bản phát hành (release / 릴리스)** nối từ **67. Discriminator attribute vs distinct elements** sang **69. xs:any ở mọi nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 68. Đổi không gian tên (namespace / 네임스페이스) cho mọi minor bản phát hành (release / 릴리스)
 
 Nếu `v1.1`, `v1.2`, `v1.3` đều có không gian tên (namespace / 네임스페이스) mới, bên tiêu thụ (consumer / 소비자) phải cập nhật (update / 업데이트) XPath/binding liên tục.
@@ -1436,8 +1300,6 @@ Nếu `v1.1`, `v1.2`, `v1.3` đều có không gian tên (namespace / 네임스�
 Chỉ phiên bản (version / 버전) không gian tên (namespace / 네임스페이스) khi chiến lược (strategy / 전략) thực sự yêu cầu breaking định danh (identity / 식별자).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **69. xs:any ở mọi nơi** nối từ **68. Đổi không gian tên (namespace / 네임스페이스) cho mọi minor bản phát hành (release / 릴리스)** sang **70. Deep inheritance cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. `xs:any` ở mọi nơi
 
@@ -1447,8 +1309,6 @@ Extension phải có ranh giới (boundary / 경계) rõ.
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **70. Deep inheritance cây (tree / 트리)** nối từ **69. xs:any ở mọi nơi** sang **71. Monolithic XSD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 70. Deep inheritance cây (tree / 트리)
 
 Lược đồ (schema / 스키마) kiểu (type / 타입) inheritance 7 tầng có thể làm generated mã (code / 코드) cực khó hiểu.
@@ -1456,8 +1316,6 @@ Lược đồ (schema / 스키마) kiểu (type / 타입) inheritance 7 tầng c
 Nếu composition đủ, composition thường dễ maintain hơn.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **71. Monolithic XSD** nối từ **70. Deep inheritance cây (tree / 트리)** sang **72. Everything required**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. Monolithic XSD
 
@@ -1467,15 +1325,11 @@ Chia mô-đun (module / 모듈) theo vocabulary/lĩnh vực (domain / 도메인)
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **72. Everything required** nối từ **71. Monolithic XSD** sang **73. Everything optional**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 72. Everything required
 
 Nếu mọi trường dữ liệu (field / 필드) bắt buộc, thêm tính năng (feature / 기능) mới gần như luôn breaking.
 
 ---
-
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **73. Everything optional** nối từ **72. Everything required** sang **74. hiệu năng (performance / 성능) limits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 73. Everything optional
 
@@ -1487,8 +1341,6 @@ Cấp cao (senior / 시니어) phải cân bằng evolvability và tính đúng 
 
 # Hiệu năng (performance / 성능) và khả năng quan sát (observability / 관측 가능성)
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **73. Everything optional** đặt tiêu chí; **74. hiệu năng (performance / 성능) limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **75. Logging** mở rộng hệ quả.
-
 ## 74. hiệu năng (performance / 성능) limits
 
 Môi trường vận hành (production / 운영 환경) XML processing nên nghĩ tới max bytes, độ sâu (depth / 깊이), number of elements, number of attributes, max văn bản (text / 텍스트) nút (node / 노드) kích thước (size / 크기), thực thể (entity / 엔터티) expansion limits và processing hết thời gian chờ (timeout / 타임아웃).
@@ -1496,8 +1348,6 @@ Môi trường vận hành (production / 운영 환경) XML processing nên ngh�
 Bảo mật (security / 보안) và hiệu năng (performance / 성능) ở đây liên quan chặt nhau vì attacker có thể dùng XML độ phức tạp (complexity / 복잡도) để tiêu tốn CPU/RAM.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **74. hiệu năng (performance / 성능) limits** đặt tiêu chí; **75. Logging** dùng tiêu chí đó để kiểm tra ranh giới, rồi **76. Golden document tests** mở rộng hệ quả.
 
 ## 75. Logging
 
@@ -1519,8 +1369,6 @@ Một log “đủ để gỡ lỗi (debug / 디버그)” không đồng nghĩa
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **76. Golden document tests** nối từ **75. Logging** sang **77. mô hình tư duy (mental model / 사고 모델) sau cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 76. Golden document tests
 
 Một XML đặc tả hợp đồng (contract / 계약) tốt nên có mẫu (sample / 표본) tests cho minimum valid, full valid, old phiên bản (version / 버전), future extension, missing trường dữ liệu (field / 필드), nil trường dữ liệu (field / 필드), empty trường dữ liệu (field / 필드), wrong thứ tự (order / 순서), invalid kiểu (type / 타입), very large payload và malicious XXE đầu vào (input / 입력).
@@ -1528,8 +1376,6 @@ Một XML đặc tả hợp đồng (contract / 계약) tốt nên có mẫu (sa
 Các fixtures này giúp regression kiểm thử (test / 테스트) lược đồ (schema / 스키마), parser cấu hình (config / 설정) và ánh xạ (mapping / 매핑) mã (code / 코드).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **77. mô hình tư duy (mental model / 사고 모델) sau cấp cao (senior / 시니어)** tổng hợp từ **76. Golden document tests** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **78. SOAP là gì và vì sao nó gắn chặt với XML?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 77. mô hình tư duy (mental model / 사고 모델) sau cấp cao (senior / 시니어)
 
@@ -1557,8 +1403,6 @@ Nếu bạn hiểu được luồng (flow / 흐름) này và biết mỗi stage 
 ---
 
 # PHẦN BỔ SUNG — SOAP, WSDL VÀ XML TRONG ENTERPRISE tích hợp (integration / 통합)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **78. SOAP là gì và vì sao nó gắn chặt với XML?** tổng hợp từ **77. mô hình tư duy (mental model / 사고 모델) sau cấp cao (senior / 시니어)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **79. SOAP Header không chỉ là chỗ đặt siêu dữ liệu (metadata / 메타데이터) tùy ý** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 78. SOAP là gì và vì sao nó gắn chặt với XML?
 
@@ -1594,8 +1438,6 @@ SOAP 1.1 và SOAP 1.2 có không gian tên (namespace / 네임스페이스)/giao
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **78. SOAP là gì và vì sao nó gắn chặt với XML?** đặt vấn đề; **79. SOAP Header không chỉ là chỗ đặt siêu dữ liệu (metadata / 메타데이터) tùy ý** đối chiếu bằng chứng, rồi **80. SOAP Body và nghiệp vụ (business / 비즈니스) payload** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 79. SOAP Header không chỉ là chỗ đặt siêu dữ liệu (metadata / 메타데이터) tùy ý
 
 SOAP Header được thiết kế để mang các blocks có ngữ nghĩa (semantics / 의미론) xử lý riêng, ví dụ bảo mật (security / 보안), giao dịch (transaction / 트랜잭션), routing, correlation hoặc addressing. Header khối (block / 블록) có thể mục tiêu (target / 대상) một nút (node / 노드)/intermediary cụ thể trên message đường dẫn (path / 경로).
@@ -1605,8 +1447,6 @@ SOAP còn có concept `mustUnderstand`. Nếu một header khối (block / 블�
 Điểm này cho thấy SOAP khác một JSON đối tượng (object / 객체) có trường dữ liệu (field / 필드) `headers`. Header trong SOAP là một phần của processing mô hình (model / 모델), không chỉ là convention do ứng dụng (application / 애플리케이션) tự nghĩ ra.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **79. SOAP Header không chỉ là chỗ đặt siêu dữ liệu (metadata / 메타데이터) tùy ý** đặt vấn đề; **80. SOAP Body và nghiệp vụ (business / 비즈니스) payload** đối chiếu bằng chứng, rồi **81. SOAP Fault** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 80. SOAP Body và nghiệp vụ (business / 비즈니스) payload
 
@@ -1641,8 +1481,6 @@ Khi lỗi xảy ra, phải xác định lỗi nằm ở tầng (layer / 계층) 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **81. SOAP Fault** nối từ **80. SOAP Body và nghiệp vụ (business / 비즈니스) payload** sang **82. WSDL là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 81. SOAP Fault
 
 SOAP dùng `Fault` để biểu diễn lỗi theo message format chuẩn. Với SOAP 1.2, Fault có các phần như mã (code / 코드), Reason và optional Detail.
@@ -1674,8 +1512,6 @@ Ví dụ rút gọn:
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **82. WSDL là gì?** nối từ **81. SOAP Fault** sang **83. Contract-first SOAP luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 82. WSDL là gì?
 
 WSDL là **Web Services Description ngôn ngữ (language / 언어)**. Trong các SOAP các hệ thống (systems / 시스템들) truyền thống, WSDL đóng vai trò đặc tả hợp đồng (contract / 계약) mô tả dịch vụ (service / 서비스) để máy khách (client / 클라이언트)/máy chủ (server / 서버) tooling biết dịch vụ (service / 서비스) cung cấp operations nào, message shape ra sao, binding/giao thức (protocol / 프로토콜) nào được dùng và endpoint ở đâu.
@@ -1695,8 +1531,6 @@ Trong thực tế WSDL thường import hoặc embed XSD. XSD định nghĩa ngh
 Đây là lý do khi một SOAP máy khách (client / 클라이언트) generate Java classes từ WSDL, bạn có thể thấy rất nhiều generated DTOs, dịch vụ (service / 서비스) interfaces và QName constants. Tooling đang biến XML đặc tả hợp đồng (contract / 계약) thành programming-language artifacts.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **82. WSDL là gì?** đặt đầu vào cho **83. Contract-first SOAP luồng (flow / 흐름)**, rồi **84. WSDL/XSD mã (code / 코드) generation giúp nhanh nhưng có coupling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 83. Contract-first SOAP luồng (flow / 흐름)
 
@@ -1724,8 +1558,6 @@ Một exception Java kiểu “unexpected element” thường thực chất là
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **83. Contract-first SOAP luồng (flow / 흐름)** đặt đầu vào cho **84. WSDL/XSD mã (code / 코드) generation giúp nhanh nhưng có coupling**, rồi **85. SOAP, WS- và vì sao enterprise các hệ thống (systems / 시스템들) vẫn dùng** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 84. WSDL/XSD mã (code / 코드) generation giúp nhanh nhưng có coupling
 
 Generated classes giúp nhà phát triển (developer / 개발자) không phải tự viết parser cho mỗi SOAP message. Tuy nhiên mã (code / 코드) generation cũng làm ứng dụng (application / 애플리케이션) coupling mạnh với đặc tả hợp đồng (contract / 계약). Khi WSDL thay không gian tên (namespace / 네임스페이스), kiểu (type / 타입) hierarchy hoặc required trường dữ liệu (field / 필드), generated mã (code / 코드) có thể thay đổi hàng loạt.
@@ -1736,8 +1568,6 @@ Nếu generated classes quá phức tạp, nên map chúng sang nội bộ (inte
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **85. SOAP, WS- và vì sao enterprise các hệ thống (systems / 시스템들) vẫn dùng** nối từ **84. WSDL/XSD mã (code / 코드) generation giúp nhanh nhưng có coupling** sang **86. SOAP so với REST/JSON phải so ở đúng tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 85. SOAP, WS-* và vì sao enterprise các hệ thống (systems / 시스템들) vẫn dùng
 
 SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B tích hợp (integration / 통합) và các hệ thống được xây trong thời kỳ enterprise dịch vụ (service / 서비스) bus. Một lý do là ecosystem xung quanh SOAP có nhiều specifications cho concerns như bảo mật (security / 보안), addressing, độ tin cậy (reliability / 신뢰성) và transactions. Những hệ thống đã đầu tư vào WSDL/XSD quản trị (governance / 거버넌스), mã (code / 코드) generation và tích hợp (integration / 통합) middleware không có lý do kỹ thuật để rewrite chỉ vì JSON phổ biến hơn.
@@ -1745,8 +1575,6 @@ SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B 
 Điều này không có nghĩa SOAP nên là default cho mọi API mới. Với một công khai (public / 공개)/nội bộ (internal / 내부) CRUD API đơn giản, HTTP + JSON thường nhẹ và dễ vận hành hơn. Nhưng nếu bạn maintain cốt lõi (core / 핵심) banking hoặc B2B gateway, việc hiểu SOAP/WSDL/XSD là kỹ năng thực tế chứ không phải kiến thức lịch sử.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **86. SOAP so với REST/JSON phải so ở đúng tầng** nối từ **85. SOAP, WS- và vì sao enterprise các hệ thống (systems / 시스템들) vẫn dùng** sang **87. Enterprise tích hợp (integration / 통합) luồng (flow / 흐름) nên cô lập XML ở ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. SOAP so với REST/JSON phải so ở đúng tầng
 
@@ -1757,8 +1585,6 @@ Một SOAP dịch vụ (service / 서비스) thường dùng XML payload và WSD
 Cấp cao (senior / 시니어) không chọn công nghệ chỉ vì verbosity. Bạn phải đánh giá đặc tả hợp đồng (contract / 계약) vòng đời (lifecycle / 생명주기) và ecosystem của hệ thống.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **86. SOAP so với REST/JSON phải so ở đúng tầng** đặt tiêu chí; **87. Enterprise tích hợp (integration / 통합) luồng (flow / 흐름) nên cô lập XML ở ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **88. gỡ lỗi (debug / 디버그) SOAP theo tầng (layer / 계층) thay vì nhìn một XML khổng lồ** mở rộng hệ quả.
 
 ## 87. Enterprise tích hợp (integration / 통합) luồng (flow / 흐름) nên cô lập XML ở ranh giới (boundary / 경계)
 
@@ -1780,8 +1606,6 @@ Phản hồi (response / 응답) đi ngược lại qua mapper và SOAP tầng (
 
 ---
 
-> **Nối mạch:** Trong **XML — cấp cao (senior / 시니어)**, **87. Enterprise tích hợp (integration / 통합) luồng (flow / 흐름) nên cô lập XML ở ranh giới (boundary / 경계)** đặt tiêu chí; **88. gỡ lỗi (debug / 디버그) SOAP theo tầng (layer / 계층) thay vì nhìn một XML khổng lồ** dùng tiêu chí đó để kiểm tra ranh giới, rồi **89. SOAP bảo mật (security / 보안) vẫn bắt đầu từ XML bảo mật (security / 보안)** mở rộng hệ quả.
-
 ## 88. gỡ lỗi (debug / 디버그) SOAP theo tầng (layer / 계층) thay vì nhìn một XML khổng lồ
 
 Khi SOAP yêu cầu (request / 요청) thất bại (fail / 실패), hãy bắt đầu từ vận chuyển (transport / 전송): endpoint, HTTP headers/content kiểu (type / 타입), TLS và authentication có đúng không. Sau đó kiểm tra SOAP phiên bản (version / 버전) bằng envelope không gian tên (namespace / 네임스페이스). Tiếp theo kiểm tra `Envelope`, `Header`, `Body` và Fault cấu trúc (structure / 구조). Sau đó mới đi vào nghiệp vụ (business / 비즈니스) payload không gian tên (namespace / 네임스페이스) và XSD thứ tự (order / 순서)/kiểu (type / 타입). Cuối cùng kiểm tra binding mã (code / 코드) hoặc generated classes.
@@ -1790,8 +1614,6 @@ Luồng (flow / 흐름) gỡ lỗi (debug / 디버그) này giúp tránh việc 
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — cấp cao (senior / 시니어)**, **89. SOAP bảo mật (security / 보안) vẫn bắt đầu từ XML bảo mật (security / 보안)** nối từ **88. gỡ lỗi (debug / 디버그) SOAP theo tầng (layer / 계층) thay vì nhìn một XML khổng lồ** sang **90. mô hình tư duy (mental model / 사고 모델) enterprise cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 89. SOAP bảo mật (security / 보안) vẫn bắt đầu từ XML bảo mật (security / 보안)
 
 Dù SOAP khung phần mềm (framework / 프레임워크) xử lý envelope, XML parser và bên ngoài (external / 외부) resolution vẫn là phần threat surface. Ngoài ra SOAP các hệ thống (systems / 시스템들) còn có thể dùng message-level bảo mật (security / 보안) standards như WS-Security/XML Signature. Khi đó namespace-aware signature xác minh (verification / 확인), canonicalization và verified-node binding từ các phần trước trở nên đặc biệt quan trọng.
@@ -1799,8 +1621,6 @@ Dù SOAP khung phần mềm (framework / 프레임워크) xử lý envelope, XML
 Không nên tự parse SOAP bằng string hoặc tự implement XML Signature. Hãy dùng khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) đã được rà soát (review / 검토), cấu hình parser/tài nguyên (resource / 자원) resolution chặt, rồi giữ lô-gic nghiệp vụ (business logic / 비즈니스 로직) tách khỏi raw XML.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — cấp cao (senior / 시니어)**, **90. mô hình tư duy (mental model / 사고 모델) enterprise cuối cùng** tổng hợp từ **89. SOAP bảo mật (security / 보안) vẫn bắt đầu từ XML bảo mật (security / 보안)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 90. mô hình tư duy (mental model / 사고 모델) enterprise cuối cùng
 

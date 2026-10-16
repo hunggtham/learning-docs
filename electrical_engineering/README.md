@@ -37,8 +37,6 @@ electrical_engineering/
 └── 90_connections/
 ```
 
-> **Chuyển mạch:** **Phạm vi chuẩn gốc** xác định owner và ranh giới; **dependency graph** nối các prerequisite, rồi **Lộ trình đọc mặc định** biến đồ thị thành thứ tự học có thể kiểm tra.
-
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
 ```mermaid
@@ -62,8 +60,6 @@ flowchart TD
 
 Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) tuyến (route / 경로), không phải taxonomy cứng. Ví dụ một người làm firmware có thể vào `embedded_systems` trước rồi quay lại `digital_electronics` và `hardware_software_interfaces` khi gặp ranh giới (boundary / 경계) cụ thể.
 
-> **Chuyển mạch:** **Lộ trình đọc mặc định** sắp xếp tín hiệu, mạch, điều khiển và embedded theo tiền đề; **Ranh giới giữa các thư viện** chỉ lúc nào cần chuyển owner sang domain khác.
-
 ## Lộ trình đọc mặc định
 
 1. **Circuits** — charge, voltage, hiện tại (current / 현재), impedance, Kirchhoff, transient, frequency phản hồi (response / 응답), grounding và đo lường (measurement / 측정).
@@ -76,8 +72,6 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 8. **Power electronics** — switches, converters, magnetics, PWM, vòng điều khiển (control loop / 제어 루프), EMI/EMC, batteries, thermal thiết kế (design / 설계) và protection.
 9. **Hardware–software interfaces** — registers, memory-mapped I/O, buses, drivers, boot, firmware contracts, timing, faults, cập nhật (update / 업데이트) và khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Sau khi biết biên owner, **Chuẩn của một chapter** nêu bằng chứng, ví dụ và verification tối thiểu để một bài không chỉ có công thức.
-
 ## Ranh giới giữa các thư viện (library / 라이브러리)
 
 | Câu hỏi | Nơi đặt chính |
@@ -87,8 +81,6 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 | CPU, ISA, bộ nhớ (memory / 메모리) hierarchy và OS lớp trừu tượng (abstraction / 추상화) | [Computer Science](../computer_science/README.md) |
 | Firmware, board bring-up và peripheral đặc tả hợp đồng (contract / 계약) | `embedded_systems/` và `hardware_software_interfaces/` |
 | Driver/API, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) software | [Computer Science](../computer_science/README.md) và các thư viện (library / 라이브러리) software tương ứng |
-
-> **Chuyển mạch:** **Chuẩn của một chapter** đưa ranh giới thành tiêu chí pass; **Trạng thái** ghi lại mức hoàn thiện và gap cần tiếp tục.
 
 ## Chuẩn của một chapter
 
@@ -108,13 +100,9 @@ physical law / requirement
 
 Không coi một datasheet, waveform hoặc schematic là bằng chứng tự đủ. Cần phân biệt mô hình (model / 모델) lý tưởng với parasitic, tolerance, temperature, noise, timing, loading và an toàn (safety / 안전) margin trong hệ thật.
 
-> **Chuyển mạch:** Khi trạng thái đã được ghi, **Điều hướng** chỉ file kế tiếp, prerequisite và bằng chứng cần mở để đóng gap.
-
 ## Trạng thái
 
 Đây là **chuẩn gốc (canonical / 정본) P3 thư viện (library / 라이브러리)** trên `main`: taxonomy, phụ thuộc (dependency / 의존성) map và các cốt lõi (core / 핵심) chapters cho mỗi nhánh đã có; nội dung chuyên sâu sẽ được mở rộng theo từng nhánh mà không tạo bản sao của Physics hoặc Khoa học máy tính (computer science / 컴퓨터 과학). Tiêu chí hoàn thiện và các khoảng trống hiện tại nằm ở [Coverage Audit](COVERAGE_AUDIT.md).
-
-> **Chuyển mạch:** **Điều hướng** khép README bằng vòng lặp owner → route → kiểm chứng → cập nhật trạng thái, để người học không bị bỏ lại ở một danh sách chapter.
 
 ## Điều hướng (navigation / 내비게이션)
 

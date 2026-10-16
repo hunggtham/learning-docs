@@ -20,8 +20,6 @@ tài khoản thanh toán
 
 Visa và thời gian cư trú có thể ảnh hưởng khả năng mở hoặc sử dụng một số sản phẩm, nhưng điều kiện cụ thể còn phụ thuộc ngân hàng và quy định hiện hành.
 
-> **Chuyển mạch:** Financial system context explains where an account sits; 계좌 records access and transactions, while 신용 changes borrowing terms and consumer risk.
-
 ## 2. Tài khoản ngân hàng (계좌)
 
 Các từ thường gặp:
@@ -38,8 +36,6 @@ Các từ thường gặp:
 
 Ngân hàng có nghĩa vụ AML/KYC, vì vậy việc yêu cầu giấy tờ về danh tính, địa chỉ, việc làm hoặc mục đích giao dịch không nên được hiểu đơn giản là “ngân hàng gây khó cho người nước ngoài”.
 
-> **Chuyển mạch:** Ở chặng này của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **3. Tín dụng (신용)** tiếp nhận điểm tựa từ **2. Tài khoản ngân hàng (계좌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 신용점수 không phải quyền được vay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Tín dụng (신용)
 
 Tín dụng không chỉ là “điểm số”. Hệ thống có thể phản ánh:
@@ -52,8 +48,6 @@ Tín dụng không chỉ là “điểm số”. Hệ thống có thể phản �
 - thông tin do tổ chức tín dụng báo cáo theo luật.
 
 `Credit4U (본인신용정보 열람서비스)` cho phép người dùng tra nhiều nhóm thông tin tín dụng của chính mình, như tình trạng đăng ký thông tin tín dụng, thay đổi chủ nợ, một số thông tin nợ và dữ liệu liên quan.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **4. 신용점수 không phải quyền được vay** tiếp nhận điểm tựa từ **3. Tín dụng (신용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Luật bảo vệ người tiêu dùng tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. `신용점수` không phải quyền được vay
 
@@ -72,15 +66,11 @@ thu nhập
 
 Vì vậy không nên hiểu một app chấm điểm là cam kết ngân hàng phải cho vay.
 
-> **Chuyển mạch:** Trong **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **5. Luật bảo vệ người tiêu dùng tài chính** tiếp nhận điểm tựa từ **4. 신용점수 không phải quyền được vay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Khi ký khoản vay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. Luật bảo vệ người tiêu dùng tài chính
 
 `금융소비자보호법` đặt ra nhiều nghĩa vụ đối với bên bán sản phẩm tài chính, bao gồm nguyên tắc phù hợp (`적합성원칙`), thích hợp (`적정성원칙`), nghĩa vụ giải thích, cấm hành vi kinh doanh không công bằng và một số quyền rút lại giao dịch trong trường hợp luật định.
 
 Quan trọng: **thời hạn rút lại không giống nhau cho mọi sản phẩm**. Ví dụ luật hiện hành phân biệt bảo hiểm, đầu tư và khoản vay. Hãy kiểm tra điều khoản hiện hành thay vì nhớ một con số chung.
-
-> **Chuyển mạch:** Ở chặng này của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **6. Khi ký khoản vay** tiếp nhận điểm tựa từ **5. Luật bảo vệ người tiêu dùng tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thẻ tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Khi ký khoản vay
 
@@ -102,8 +92,6 @@ Checklist:
 
 `변동금리` có nghĩa chi phí có thể thay đổi. `중도상환수수료` có điều kiện luật định và hợp đồng. `연체` có thể ảnh hưởng chi phí và tín dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **7. Thẻ tín dụng** tiếp nhận điểm tựa từ **6. Khi ký khoản vay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Bảo vệ khi có giao dịch bất thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. Thẻ tín dụng
 
 Phân biệt:
@@ -117,8 +105,6 @@ Phân biệt:
 - `카드론`: khoản vay qua công ty thẻ.
 
 Các sản phẩm “tiện” có thể là tín dụng với chi phí cao hơn giao dịch thẻ thông thường. Đọc lãi suất và phí trước khi dùng.
-
-> **Chuyển mạch:** Trong **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **8. Bảo vệ khi có giao dịch bất thường** tiếp nhận điểm tựa từ **7. Thẻ tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Khi có tranh chấp với tổ chức tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Bảo vệ khi có giao dịch bất thường
 
@@ -134,8 +120,6 @@ Nếu nghi ngờ lộ tài khoản hoặc gian lận:
 ```
 
 Với phishing/voice phishing (`보이스피싱`), tốc độ phản ứng quan trọng hơn việc tự điều tra quá lâu.
-
-> **Chuyển mạch:** Ở chặng này của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **9. Khi có tranh chấp với tổ chức tài chính** tiếp nhận điểm tựa từ **8. Bảo vệ khi có giao dịch bất thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Khi có tranh chấp với tổ chức tài chính
 
@@ -153,8 +137,6 @@ Tách rõ:
 
 Chúng không thay thế nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **9. Khi có tranh chấp với tổ chức tài chính** nêu điều cần giải thích; **10. Nguồn chính thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Nguyên tắc tự bảo vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. Nguồn chính thức
 
 Tài chính cá nhân cần nguồn cập nhật vì sản phẩm, cảnh báo lừa đảo và quy tắc bảo vệ người tiêu dùng thay đổi theo thời gian. Các nguồn này giúp nối giao dịch cụ thể với cơ quan giám sát và kênh xử lý phù hợp.
@@ -165,8 +147,6 @@ Tài chính cá nhân cần nguồn cập nhật vì sản phẩm, cảnh báo l
 - 금융소비자보호법: https://www.law.go.kr/
 - 한국소비자원: https://www.kca.go.kr/
 - 금융위원회: https://www.fsc.go.kr/
-
-> **Chuyển mạch:** Trong **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **10. Nguồn chính thức** nêu điều cần giải thích; **11. Nguyên tắc tự bảo vệ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11. Nguyên tắc tự bảo vệ
 

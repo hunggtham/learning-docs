@@ -16,8 +16,6 @@ Khi đọc bảng thông số, hãy đánh dấu ba lớp:
 
 Ví dụ, công suất tối đa có thể khác công suất liên tục; dung lượng danh nghĩa có thể khác dung lượng dùng được; độ phân giải cao không tự tạo ra hình ảnh đẹp nếu cảm biến, ống kính hoặc xử lý giới hạn.
 
-> **Chuyển mạch:** Một con số chỉ có ý nghĩa trong phép đo của nó; claim marketing thường mở rộng con số thành lời hứa rộng hơn, nên cần tách claim khỏi bằng chứng.
-
 ## 2. Claim, review và test không cùng mức bằng chứng
 
 Claim của nhà sản xuất cho biết sản phẩm được định vị thế nào; review cho biết trải nghiệm ở một cấu hình và môi trường; test có phương pháp cho phép so sánh trong điều kiện được mô tả. Không nên trộn ba loại thành một kết luận chắc chắn.
@@ -31,8 +29,6 @@ Lập bảng nhỏ:
 | tiết kiệm hơn | mức tiêu thụ, giá năng lượng, thời gian dùng | hành vi và môi trường quyết định phần lớn TCO |
 
 Bảng này không xếp hạng sản phẩm; nó buộc người đọc hỏi claim đang được chứng minh bằng loại dữ liệu nào.
-
-> **Chuyển mạch:** Sau khi biết bằng chứng và giới hạn, ta có thể so sánh theo nhu cầu cụ thể thay vì theo ấn tượng hoặc một review nổi bật.
 
 ## 3. So sánh theo scenario và sensitivity
 

@@ -14,8 +14,6 @@ Vì vậy mọi lựa chọn đều có **chi phí cơ hội (opportunity cost)*
 
 Ví dụ, nếu doanh nghiệp dùng 1 tỷ USD để xây nhà máy, chi phí kinh tế không chỉ là 1 tỷ USD đã chi mà còn là lợi ích có thể nhận được nếu dùng số vốn đó cho R&D, trả nợ hoặc mua lại cổ phiếu.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **2. Tư duy cận biên** nối từ **1. Khan hiếm và chi phí cơ hội** sang **3. Incentive**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Tư duy cận biên
 
 Sau khi đặt câu hỏi kinh tế, ta cần xem điều gì thay đổi khi thêm một đơn vị sản lượng, chi phí hoặc hành động. Phân tích cận biên giúp người mới tránh suy luận từ mức trung bình sang quyết định tăng/giảm mà không kiểm tra phần thay đổi.
@@ -32,8 +30,6 @@ Marginal Cost
 
 Một công ty không cần hỏi “quảng cáo có tốt không?”, mà nên hỏi “1 USD quảng cáo thêm tạo bao nhiêu gross profit tăng thêm?”.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **3. Incentive** nối từ **2. Tư duy cận biên** sang **4. Cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Incentive
 
 Con người và doanh nghiệp phản ứng với **động lực khuyến khích (incentive)**.
@@ -43,8 +39,6 @@ Thuế, trợ cấp, lãi suất, tiền thưởng quản lý hay quy định đ
 Phân tích chính sách tốt phải hỏi cả tác động trực tiếp và hành vi thích nghi.
 
 # Phần II — Cung, cầu và giá
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **4. Cầu** nối từ **3. Incentive** sang **5. Cung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cầu
 
@@ -61,8 +55,6 @@ Cầu có thể dịch chuyển do:
 
 Cần phân biệt **di chuyển dọc đường cầu do giá** và **dịch chuyển toàn đường cầu do yếu tố khác**.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **5. Cung** nối từ **4. Cầu** sang **6. Cân bằng thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Cung
 
 Cung phụ thuộc:
@@ -77,15 +69,11 @@ Cung phụ thuộc:
 
 Trong ngành cần capex lớn, nguồn cung thường phản ứng chậm. Đây là lý do bán dẫn, vận tải biển hoặc khai khoáng có chu kỳ mạnh.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **6. Cân bằng thị trường** nối từ **5. Cung** sang **7. Độ co giãn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Cân bằng thị trường
 
 Giá cân bằng là nơi lượng cung và cầu gặp nhau trong một mô hình đơn giản.
 
 Trong thực tế, giá liên tục điều chỉnh vì thông tin, tồn kho, hạn chế công suất và kỳ vọng tương lai thay đổi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **7. Độ co giãn** nối từ **6. Cân bằng thị trường** sang **8. Co giãn và pricing power**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Độ co giãn
 
@@ -102,8 +90,6 @@ Cầu ít co giãn thường xuất hiện khi:
 
 Doanh nghiệp có nhu cầu ít co giãn thường có khả năng tăng giá tốt hơn.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **8. Co giãn và pricing power** nối từ **7. Độ co giãn** sang **9. Lựa chọn tiêu dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Co giãn và pricing power
 
 Quyền định giá (pricing power) không chỉ là “thương hiệu mạnh”. Nó phụ thuộc vào mức độ khách hàng sẵn sàng giảm lượng mua khi giá tăng.
@@ -112,15 +98,11 @@ Nếu tăng giá 10% nhưng volume chỉ giảm 1%, doanh nghiệp có vị th�
 
 # Phần III — Hành vi người tiêu dùng
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **9. Lựa chọn tiêu dùng** nối từ **8. Co giãn và pricing power** sang **10. Hiệu ứng thu nhập và thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Lựa chọn tiêu dùng
 
 Người tiêu dùng phân bổ ngân sách để tối đa hóa mức thỏa dụng (utility) trong giới hạn thu nhập.
 
 Khái niệm quan trọng là sự đánh đổi (trade-off / 트레이드오프): chi nhiều cho một nhóm hàng nghĩa là còn ít tiền cho nhóm khác.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **10. Hiệu ứng thu nhập và thay thế** nối từ **9. Lựa chọn tiêu dùng** sang **11. Hàm sản xuất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Hiệu ứng thu nhập và thay thế
 
@@ -133,15 +115,11 @@ Hai hiệu ứng này giúp giải thích vì sao cùng một đợt lạm phát
 
 # Phần IV — Doanh nghiệp và chi phí
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **11. Hàm sản xuất** nối từ **10. Hiệu ứng thu nhập và thay thế** sang **12. Chi phí cố định và biến đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Hàm sản xuất
 
 Doanh nghiệp biến lao động, vốn và công nghệ thành sản lượng.
 
 Năng suất tăng khi có thể tạo nhiều đầu ra (output / 출력) hơn từ cùng lượng đầu vào (input / 입력).
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **12. Chi phí cố định và biến đổi** nối từ **11. Hàm sản xuất** sang **13. Chi phí cận biên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Chi phí cố định và biến đổi
 
@@ -158,15 +136,11 @@ Doanh thu ↑ nhẹ
 
 Nhưng chiều ngược lại cũng đúng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **13. Chi phí cận biên** nối từ **12. Chi phí cố định và biến đổi** sang **14. Kinh tế theo quy mô**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Chi phí cận biên
 
 Chi phí cận biên (marginal cost) là chi phí tạo thêm một đơn vị sản lượng.
 
 Trong cạnh tranh mạnh, giá dài hạn thường có xu hướng bị kéo gần chi phí kinh tế của nhà sản xuất biên.
-
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **14. Kinh tế theo quy mô** nối từ **13. Chi phí cận biên** sang **15. Cạnh tranh hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Kinh tế theo quy mô
 
@@ -187,29 +161,21 @@ Nhưng quy mô quá lớn cũng có thể tạo **diseconomies of quy mô (scale
 
 # Phần V — Cấu trúc thị trường
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **15. Cạnh tranh hoàn hảo** nối từ **14. Kinh tế theo quy mô** sang **16. Độc quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Cạnh tranh hoàn hảo
 
 Mô hình cạnh tranh hoàn hảo giả định nhiều người mua bán, sản phẩm gần giống nhau và không ai có quyền định giá lớn.
 
 Đây là benchmark lý thuyết hơn là mô tả phần lớn ngành thực tế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **16. Độc quyền** nối từ **15. Cạnh tranh hoàn hảo** sang **17. Oligopoly**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Độc quyền
 
 Doanh nghiệp độc quyền có khả năng hạn chế đầu ra (output / 출력) và đặt giá cao hơn thị trường cạnh tranh, nhưng vẫn bị giới hạn bởi cầu, công nghệ, regulation và sản phẩm thay thế.
-
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **17. Oligopoly** nối từ **16. Độc quyền** sang **18. Nash equilibrium**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Oligopoly
 
 Trong thị trường ít đối thủ, quyết định của một công ty phụ thuộc phản ứng của công ty khác.
 
 Đây là nơi **lý thuyết trò chơi (game theory)** trở nên quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **18. Nash equilibrium** nối từ **17. Oligopoly** sang **19. Price discrimination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Nash equilibrium
 
@@ -218,8 +184,6 @@ Khi nhiều bên cùng ra quyết định, kết quả không thể phân tích 
 **Cân bằng Nash (Nash equilibrium)** là trạng thái mỗi bên không muốn đơn phương thay chiến lược khi chiến lược của bên khác giữ nguyên.
 
 Khái niệm này giúp hiểu cạnh tranh giá, capex, sức chứa (capacity / 용량) và bidding.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **19. Price discrimination** nối từ **18. Nash equilibrium** sang **20. Externality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Price discrimination
 
@@ -233,23 +197,17 @@ Ví dụ quen thuộc là airline pricing hoặc subscription tier.
 
 # Phần VI — Thất bại thị trường
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **20. Externality** nối từ **19. Price discrimination** sang **21. công khai (public / 공개) goods**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Externality
 
 Ngoại tác (externality) xuất hiện khi hành động của một bên tạo chi phí hoặc lợi ích cho bên khác nhưng không phản ánh đầy đủ trong giá.
 
 Ô nhiễm là ví dụ ngoại tác âm. R&D có thể tạo ngoại tác dương vì kiến thức lan sang doanh nghiệp khác.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **21. công khai (public / 공개) goods** nối từ **20. Externality** sang **22. Thuế và tổn thất vô ích**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. công khai (public / 공개) goods
 
 Hàng hóa công (public goods) có tính không loại trừ và không cạnh tranh trong tiêu dùng ở mức cao.
 
 Quốc phòng hoặc một số loại kiến thức cơ bản là ví dụ gần với mô hình này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **22. Thuế và tổn thất vô ích** nối từ **21. công khai (public / 공개) goods** sang **23. Thông tin bất cân xứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Thuế và tổn thất vô ích
 
@@ -261,8 +219,6 @@ Mức tổn thất phụ thuộc độ co giãn của cung và cầu.
 
 # Phần VII — Thông tin và incentive
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **23. Thông tin bất cân xứng** nối từ **22. Thuế và tổn thất vô ích** sang **24. Adverse selection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Thông tin bất cân xứng
 
 Thị trường có thể thất bại khi một bên biết nhiều hơn bên kia. Phần này là nền để hiểu vì sao hợp đồng, disclosure, bảo hiểm và cơ chế giám sát tồn tại.
@@ -271,23 +227,17 @@ Thị trường có thể thất bại khi một bên biết nhiều hơn bên k
 
 Ví dụ ngân hàng không biết chính xác chất lượng người vay bằng chính người vay.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **24. Adverse selection** nối từ **23. Thông tin bất cân xứng** sang **25. Moral hazard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Adverse selection
 
 Adverse selection xảy ra trước giao dịch: cấu trúc giá hoặc thông tin khiến nhóm rủi ro cao tham gia nhiều hơn. Hãy đọc nó như vấn đề thiết kế thị trường, không chỉ như một nhãn bảo hiểm.
 
 **Lựa chọn bất lợi (adverse selection)** xảy ra trước giao dịch khi bên rủi ro cao có xu hướng tham gia nhiều hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **25. Moral hazard** nối từ **24. Adverse selection** sang **26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Moral hazard
 
 Moral hazard xảy ra sau giao dịch, khi người được bảo vệ hoặc người nhận vốn thay đổi hành vi vì không chịu toàn bộ hậu quả. Cơ chế giám sát, collateral và incentive được dùng để hạn chế kênh này.
 
 **Rủi ro đạo đức (moral hazard)** xảy ra sau giao dịch khi một bên thay đổi hành vi vì không chịu toàn bộ hậu quả.
-
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)** nối từ **25. Moral hazard** sang **27. Con người không hoàn toàn lý trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)
 
@@ -298,8 +248,6 @@ Principal–agent nối thông tin bất cân xứng với quản trị doanh ng
 Đây là nền tảng kinh tế của corporate quản trị (governance / 거버넌스).
 
 # Phần VIII — Kinh tế hành vi
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **27. Con người không hoàn toàn lý trí** nối từ **26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)** sang **28. Tổng hợp hành vi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Con người không hoàn toàn lý trí
 
@@ -315,8 +263,6 @@ Các độ lệch (bias / 편향) này ảnh hưởng tiêu dùng, tiết kiệm
 
 # Phần IX — Từ vi mô tới vĩ mô
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **28. Tổng hợp hành vi** tổng hợp từ **27. Con người không hoàn toàn lý trí** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **29. GDP** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 28. Tổng hợp hành vi
 
 Kinh tế vĩ mô là kết quả tổng hợp của:
@@ -330,8 +276,6 @@ Household Consumption
 
 Nhưng tổng thể không phải lúc nào cũng bằng việc cộng cơ học từng cá nhân vì có phản hồi (feedback / 피드백) giữa các chủ thể.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **29. GDP** tổng hợp từ **28. Tổng hợp hành vi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **30. GDP danh nghĩa và thực** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 29. GDP
 
 Theo phương pháp chi tiêu:
@@ -342,15 +286,11 @@ GDP = C + I + G + NX
 
 GDP đo giá trị sản xuất cuối cùng trong một nền kinh tế, không đo trực tiếp chất lượng cuộc sống hay giá trị tài sản.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **30. GDP danh nghĩa và thực** nối từ **29. GDP** sang **31. Tổng cầu và tổng cung**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. GDP danh nghĩa và thực
 
 GDP danh nghĩa chịu cả giá và lượng. GDP thực điều chỉnh thay đổi mức giá để gần hơn với tăng trưởng sản lượng.
 
 Trong môi trường lạm phát cao, nominal growth có thể mạnh trong khi real growth yếu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **31. Tổng cầu và tổng cung** nối từ **30. GDP danh nghĩa và thực** sang **32. đầu ra (output / 출력) gap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Tổng cầu và tổng cung
 
@@ -369,8 +309,6 @@ Growth ↓ + Inflation ↑
 
 Đây là một trong những bản đồ hữu ích nhất khi đọc vĩ mô.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **32. đầu ra (output / 출력) gap** nối từ **31. Tổng cầu và tổng cung** sang **33. Chu kỳ kinh doanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. đầu ra (output / 출력) gap
 
 Sau khi đọc chu kỳ và tổng cầu, output gap đặt nền kinh tế thực cạnh mức tiềm năng ước tính. Nó giúp giải thích áp lực lạm phát và phản ứng chính sách, nhưng bản thân mức tiềm năng cũng chứa bất định.
@@ -380,8 +318,6 @@ Sau khi đọc chu kỳ và tổng cầu, output gap đặt nền kinh tế th�
 Đầu ra (output / 출력) trên tiềm năng có thể tạo áp lực giá và lương. đầu ra (output / 출력) dưới tiềm năng thường đi cùng tài nguyên nhàn rỗi hơn.
 
 Mức tiềm năng không quan sát trực tiếp nên luôn là ước tính.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **33. Chu kỳ kinh doanh** nối từ **32. đầu ra (output / 출력) gap** sang **34. Thất nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Chu kỳ kinh doanh
 
@@ -399,8 +335,6 @@ Nhưng độ dài và thứ tự không cố định.
 
 # Phần X — Thị trường lao động
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **34. Thất nghiệp** nối từ **33. Chu kỳ kinh doanh** sang **35. Okun's law**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Thất nghiệp
 
 Tỷ lệ thất nghiệp không phản ánh toàn bộ thị trường lao động. Cần xem thêm:
@@ -411,8 +345,6 @@ Tỷ lệ thất nghiệp không phản ánh toàn bộ thị trường lao đ�
 - job openings;
 - wage growth.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **35. Okun's law** nối từ **34. Thất nghiệp** sang **36. Phillips curve**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Okun's law
 
 Okun’s law nối tăng trưởng với thất nghiệp bằng một quan hệ thực nghiệm, không phải luật cơ học. Hãy dùng nó như khung kiểm tra độ lớn, rồi đối chiếu với năng suất, participation và cấu trúc thị trường lao động.
@@ -420,8 +352,6 @@ Okun’s law nối tăng trưởng với thất nghiệp bằng một quan hệ 
 **Định luật Okun (Okun's law)** mô tả quan hệ thực nghiệm giữa tăng trưởng và thất nghiệp.
 
 Nó là quy tắc gần đúng, không phải hằng số bất biến.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **36. Phillips curve** nối từ **35. Okun's law** sang **37. Các nguồn lạm phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Phillips curve
 
@@ -438,8 +368,6 @@ Do đó không nên dùng như công thức cơ học.
 
 # Phần XI — Lạm phát
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **36. Phillips curve** đặt vấn đề; **37. Các nguồn lạm phát** đối chiếu bằng chứng, rồi **38. Kỳ vọng lạm phát** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 37. Các nguồn lạm phát
 
 Lạm phát có thể đến từ:
@@ -454,8 +382,6 @@ Lạm phát có thể đến từ:
 
 Cùng CPI 4% nhưng cấu trúc khác nhau sẽ tạo reaction hàm (function / 함수) khác.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **37. Các nguồn lạm phát** đặt vấn đề; **38. Kỳ vọng lạm phát** đối chiếu bằng chứng, rồi **39. Cơ chế truyền dẫn** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. Kỳ vọng lạm phát
 
 Nếu doanh nghiệp và người lao động tin lạm phát cao sẽ kéo dài, họ có thể điều chỉnh giá và lương trước, khiến lạm phát bền hơn.
@@ -463,8 +389,6 @@ Nếu doanh nghiệp và người lao động tin lạm phát cao sẽ kéo dài
 Đây là lý do ngân hàng trung ương quan tâm việc kỳ vọng có được **neo (anchored)** hay không.
 
 # Phần XII — Chính sách tiền tệ
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **38. Kỳ vọng lạm phát** đặt đầu vào cho **39. Cơ chế truyền dẫn**, rồi **40. Reaction hàm (function / 함수)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. Cơ chế truyền dẫn
 
@@ -482,8 +406,6 @@ Policy Rate
 
 Mỗi mắt xích có độ trễ và cường độ khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **39. Cơ chế truyền dẫn** đặt đầu vào cho **40. Reaction hàm (function / 함수)**, rồi **41. Taylor quy tắc (rule / 규칙)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 40. Reaction hàm (function / 함수)
 
 Hàm phản ứng của ngân hàng trung ương cân nhắc:
@@ -496,15 +418,11 @@ Hàm phản ứng của ngân hàng trung ương cân nhắc:
 
 Thị trường thường phản ứng với thay đổi dự kiến trong reaction hàm (function / 함수) chứ không chỉ mức lãi suất hiện tại.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **41. Taylor quy tắc (rule / 규칙)** nối từ **40. Reaction hàm (function / 함수)** sang **42. Neutral tỷ lệ (rate / 비율) và r-star**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. Taylor quy tắc (rule / 규칙)
 
 Taylor quy tắc (rule / 규칙) là một khung đơn giản liên hệ chính sách (policy / 정책) tỷ lệ (rate / 비율) với lạm phát và đầu ra (output / 출력) gap.
 
 Nó hữu ích như benchmark, không phải công thức buộc ngân hàng trung ương phải làm theo.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **42. Neutral tỷ lệ (rate / 비율) và r-star** nối từ **41. Taylor quy tắc (rule / 규칙)** sang **43. Fiscal stimulus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Neutral tỷ lệ (rate / 비율) và r-star
 
@@ -522,8 +440,6 @@ R-star không quan sát trực tiếp và có thể thay đổi theo:
 
 # Phần XIII — Chính sách tài khóa
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **43. Fiscal stimulus** nối từ **42. Neutral tỷ lệ (rate / 비율) và r-star** sang **44. Fiscal multiplier**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. Fiscal stimulus
 
 Chính phủ có thể tác động tổng cầu qua chi tiêu, thuế và chuyển giao.
@@ -534,8 +450,6 @@ Hiệu quả phụ thuộc:
 - hộ gia đình có chi tiêu hay tiết kiệm khoản nhận được;
 - chính sách tiền tệ phản ứng thế nào.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **44. Fiscal multiplier** nối từ **43. Fiscal stimulus** sang **45. Crowding out**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Fiscal multiplier
 
 Fiscal multiplier hỏi một thay đổi chi tiêu hoặc thuế làm output thay đổi bao nhiêu trong một bối cảnh cụ thể. Độ lớn phụ thuộc slack, chính sách tiền tệ, tỷ giá, nhập khẩu và cách tài trợ.
@@ -544,8 +458,6 @@ Fiscal multiplier hỏi một thay đổi chi tiêu hoặc thuế làm output th
 
 Multiplier không cố định. Nó có thể cao hơn trong suy thoái sâu và thấp hơn khi nền kinh tế đã quá nóng.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **45. Crowding out** nối từ **44. Fiscal multiplier** sang **46. Năng suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 45. Crowding out
 
 Nếu chính phủ vay nhiều khi nền kinh tế gần toàn dụng, lợi suất có thể tăng và làm đầu tư tư nhân bị chèn lấn.
@@ -553,8 +465,6 @@ Nếu chính phủ vay nhiều khi nền kinh tế gần toàn dụng, lợi su�
 Nhưng trong suy thoái với nguồn lực nhàn rỗi, hiệu ứng này có thể yếu hơn.
 
 # Phần XIV — Năng suất và tăng trưởng dài hạn
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **46. Năng suất** nối từ **45. Crowding out** sang **47. Solow khung phần mềm (framework / 프레임워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Năng suất
 
@@ -568,15 +478,11 @@ Nguồn bền vững gồm:
 - công nghệ;
 - năng suất nhân tố tổng hợp (TFP).
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **47. Solow khung phần mềm (framework / 프레임워크)** nối từ **46. Năng suất** sang **48. TFP**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 47. Solow khung phần mềm (framework / 프레임워크)
 
 Mô hình Solow giúp tách tăng trưởng từ tích lũy vốn, lao động và tiến bộ công nghệ.
 
 Khi vốn trên mỗi lao động đã cao, thêm vốn thường có lợi suất giảm dần nếu công nghệ không tiến bộ.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **48. TFP** nối từ **47. Solow khung phần mềm (framework / 프레임워크)** sang **49. Financial accelerator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. TFP
 
@@ -591,8 +497,6 @@ Nó liên quan tới:
 - cạnh tranh.
 
 # Phần XV — Hệ thống tài chính và chu kỳ tín dụng
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **49. Financial accelerator** nối từ **48. TFP** sang **50. Leverage cycle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Financial accelerator
 
@@ -610,8 +514,6 @@ Asset Price ↓
 
 Đây là **bộ khuếch đại tài chính (financial accelerator)**.
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **50. Leverage cycle** nối từ **49. Financial accelerator** sang **51. hiện tại (current / 현재) account**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 50. Leverage cycle
 
 Đòn bẩy thường tăng khi volatility thấp và tài sản tăng giá, rồi giảm cưỡng bức khi collateral giảm.
@@ -620,15 +522,11 @@ Asset Price ↓
 
 # Phần XVI — Kinh tế mở
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **51. hiện tại (current / 현재) account** nối từ **50. Leverage cycle** sang **52. Tỷ giá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 51. hiện tại (current / 현재) account
 
 Tài khoản vãng lai phản ánh thương mại hàng hóa, dịch vụ, thu nhập và chuyển giao.
 
 Thặng dư không tự động “tốt”, thâm hụt không tự động “xấu”. Cần hỏi nền kinh tế đang đầu tư vào đâu và tài trợ bằng nguồn vốn gì.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **52. Tỷ giá** nối từ **51. hiện tại (current / 현재) account** sang **53. Impossible trinity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Tỷ giá
 
@@ -642,8 +540,6 @@ Nó chịu ảnh hưởng của:
 - capital luồng (flow / 흐름);
 - rủi ro (risk / 위험) sentiment;
 - chính sách (policy / 정책) intervention.
-
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **53. Impossible trinity** nối từ **52. Tỷ giá** sang **54. Chế độ tỷ giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Impossible trinity
 
@@ -659,8 +555,6 @@ Tỷ giá cố định
 
 Phải hy sinh ít nhất một mức độ tự do.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **54. Chế độ tỷ giá** nối từ **53. Impossible trinity** sang **55. Không dùng một quan hệ đơn biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. Chế độ tỷ giá
 
 Có thể từ:
@@ -672,8 +566,6 @@ Có thể từ:
 Mỗi chế độ tạo sự đánh đổi (trade-off / 트레이드오프) khác nhau về dự trữ ngoại hối, chính sách (policy / 정책) autonomy và capital-flow rủi ro (risk / 위험).
 
 # Phần XVII — Cách dùng kinh tế học trong đầu tư
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **55. Không dùng một quan hệ đơn biến** nối từ **54. Chế độ tỷ giá** sang **56. Phân biệt mức (level / 수준), thay đổi (change / 변경) và surprise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Không dùng một quan hệ đơn biến
 
@@ -696,8 +588,6 @@ Reaction function thay đổi không?
 Điều gì đã được price?
 ```
 
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **56. Phân biệt mức (level / 수준), thay đổi (change / 변경) và surprise** nối từ **55. Không dùng một quan hệ đơn biến** sang **57. Phân biệt stock và luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 56. Phân biệt mức (level / 수준), thay đổi (change / 변경) và surprise
 
 Một biến có thể ở mức cao nhưng đang giảm nhanh.
@@ -709,8 +599,6 @@ Mức hiện tại
 + Tốc độ thay đổi
 + Bất ngờ so với kỳ vọng
 ```
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **56. Phân biệt mức (level / 수준), thay đổi (change / 변경) và surprise** đặt đầu vào cho **57. Phân biệt stock và luồng (flow / 흐름)**, rồi **58. Khung nhân quả** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 57. Phân biệt stock và luồng (flow / 흐름)
 
@@ -724,8 +612,6 @@ Ví dụ:
 - inventory bản dựng (build / 빌드) là luồng (flow / 흐름).
 
 Nhầm hai loại này dễ dẫn tới phân tích sai.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế vi mô và vĩ mô nâng cao**, **57. Phân biệt stock và luồng (flow / 흐름)** đặt đầu vào cho **58. Khung nhân quả**, rồi **59. Checklist vĩ mô** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 58. Khung nhân quả
 
@@ -741,8 +627,6 @@ Nguyên nhân
 → Chính sách
 → Kết quả phân phối
 ```
-
-> **Nối mạch:** Trong **Kinh tế vi mô và vĩ mô nâng cao**, **59. Checklist vĩ mô** nối từ **58. Khung nhân quả** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Checklist vĩ mô
 
@@ -762,8 +646,6 @@ Liquidity
 Fiscal Impulse
 Earnings Revisions
 ```
-
-> **Nối mạch:** Ở chặng này của **Kinh tế vi mô và vĩ mô nâng cao**, **Kết luận** tổng hợp từ **59. Checklist vĩ mô** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

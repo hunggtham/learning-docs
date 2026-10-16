@@ -8,15 +8,11 @@ Sudan trải qua một độ dốc (gradient / 기울기) khô–ẩm rất mạ
 
 Không nên coi đường ranh khí hậu như một vạch cố định. Sahel là **vùng chuyển tiếp (transition zone)** có biến động lượng mưa lớn giữa các năm; vì vậy quản lý bất định quan trọng hơn việc dựa vào một “lượng mưa trung bình” duy nhất.
 
-> **Nối mạch:** Sahara–xavan tạo một chuyển tiếp khô rộng, còn **Nile là trục tổ chức không gian** gom nước, cư trú và agriculture vào dải hẹp. **Khartoum và cổng (port / 포트) Sudan** tiếp theo cho thấy trục sông gặp mạng biển thế nào.
-
 ## Nile là trục tổ chức không gian
 
 White Nile và Blue Nile gặp nhau tại Khartoum trước khi chảy về phía bắc. Hệ sông này tạo hành lang định cư, tưới tiêu và đô thị giữa vùng khô hạn rộng lớn. Các dự án thủy lợi lớn làm một số khu vực nông nghiệp phụ thuộc mạnh vào quản lý nước và hạ tầng kênh.
 
 Do phần lớn dòng chảy được hình thành ngoài Sudan, Nile cũng là hệ thống xuyên biên giới; thay đổi thượng nguồn có thể ảnh hưởng tới dòng chảy, thời điểm nước và quản trị hạ lưu.
-
-> **Nối mạch:** Khartoum là nút hợp lưu và hành chính, Port Sudan là cửa ra Red Sea; **Khartoum và cổng (port / 포트) Sudan** nối interior với thương mại biển nhưng qua khoảng cách dài. **Sinh kế và kinh tế không gian** tiếp theo phân hóa theo nước và corridor.
 
 ## Khartoum và cổng (port / 포트) Sudan
 
@@ -24,23 +20,17 @@ Khartoum hình thành ở hợp lưu hai nhánh Nile — một ví dụ rõ về
 
 Cổng (port / 포트) Sudan ở Biển Đỏ là cửa ngõ hàng hải chính. Vì khoảng cách giữa vùng sản xuất nội địa và cảng lớn, hành lang giao thông tới Biển Đỏ có vai trò chiến lược đối với thương mại.
 
-> **Nối mạch:** Irrigation dọc Nile, pastoral mobility ở xavan và trade qua Port Sudan tạo **Sinh kế và kinh tế không gian** không đồng đều; water timing quan trọng hơn diện tích. **Rủi ro** tiếp theo đặt các vùng trước drought, flood và conflict-related disruption.
-
 ## Sinh kế và kinh tế không gian
 
 Sudan có nông nghiệp tưới quanh Nile, canh tác dựa vào mưa, chăn nuôi du mục/bán du mục và các vùng khai khoáng. Các hệ sinh kế này sử dụng không gian khác nhau và có mức nhạy cảm khác nhau với hạn, biến động mưa và truy cập (access / 접근) to markets.
 
 Một hệ thống chăn thả cần mobility; nếu chỉ nhìn ranh giới hành chính có thể bỏ qua lô-gic (logic / 논리) mùa của tuyến di chuyển và nguồn nước.
 
-> **Nối mạch:** Drought, Nile flood, heat, desertification và đứt gãy hạ tầng làm **Rủi ro** phân hóa theo sông, xavan, sa mạc và coastal gateway. **Mô hình tư duy** sẽ giữ cả trục nước lẫn khoảng cách biển.
-
 ## Rủi ro
 
 Lũ dọc Nile và wadis có thể xảy ra trong một quốc gia nhìn chung khô hạn. Đây là nghịch lý quan trọng: **arid climate không loại trừ flood rủi ro (risk / 위험)**. Hạn hán, suy thoái đất và biến động nguồn nước cũng có thể làm sinh kế dễ tổn thương.
 
 Khí hậu có thể khuếch đại khó khăn nhưng không nên dùng nó như lời giải thích duy nhất cho xung đột hoặc biến động xã hội; các yếu tố thể chế, kinh tế và lịch sử luôn cần phân tích riêng.
-
-> **Nối mạch:** **Mô hình tư duy** khép chuỗi Sahara–xavan → Nile → Khartoum/Port Sudan → livelihoods/corridors → water and conflict risk, rồi bàn giao cho owner **Northern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

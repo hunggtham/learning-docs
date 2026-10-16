@@ -8,15 +8,11 @@ Quan sát ghi lại điều cùng xảy ra; nó chưa chỉ ra biến nào gây 
 
 Một mô hình tốt dự đoán được ít nhất một điều mới và có thể bị phản bác. Nếu mọi kết quả đều được giải thích sau khi xảy ra, đó là story linh hoạt chứ chưa phải test.
 
-> **Chuyển mạch:** Câu hỏi nhân quả cần prediction; thiết kế thử nghiệm phải cân bằng thông tin thu được với rủi ro, chi phí và khả năng đo.
-
 ## 2. Thử nghiệm nhỏ và an toàn
 
 Thay đổi một biến khi có thể, giữ các biến khác ổn định, ghi baseline và thời gian. Với Home, Digital Life hoặc Cars, không thử nếu có nguy cơ điện, cháy, chấn thương, mất dữ liệu hoặc vi phạm điều khoản; dùng mô phỏng, tài liệu owner hoặc chuyên gia thay thế.
 
 Ghi cả kết quả âm tính và lý do test không kết luận được. Không mở rộng một kết quả từ một thiết bị, người dùng hoặc thời điểm thành quy luật phổ quát.
-
-> **Chuyển mạch:** Test tạo dữ liệu trong một vùng điều kiện; bất định còn lại phải được đưa vào quyết định thay vì bị che bằng một con số chắc chắn.
 
 ## 3. Quyết định dưới bất định
 

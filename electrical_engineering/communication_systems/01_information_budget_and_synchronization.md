@@ -12,25 +12,17 @@ Kênh bandwidth B không nhiễu có giới hạn symbol tỷ lệ (rate / 비�
 
 Sức chứa (capacity / 용량) là upper bound dưới các giả định (assumptions / 가정들), không phải tốc độ ứng dụng luôn đạt. Roll-off, pilot, guard interval, giao thức (protocol / 프로토콜) header và retransmission làm net thông lượng (throughput / 처리량) thấp hơn.
 
-> **Chuyển mạch:** **1. Nyquist và Shannon** đặt giới hạn tốc độ; **2. Constellation và EVM** chuyển giới hạn đó thành khoảng cách điểm và sai số, trước khi **3. Synchronization loop** xử lý lệch thời gian/tần số.
-
 ## 2. Constellation và EVM
 
 QPSK, QAM và các constellation khác đổi symbol năng lượng (energy / 에너지) thành bits/symbol. Khoảng cách điểm quyết định noise tolerance. lỗi (error / 오류) véc-tơ (vector / 벡터) magnitude (EVM) đo khoảng cách véc-tơ (vector / 벡터) giữa điểm nhận và điểm lý tưởng; EVM giúp thấy phase noise, IQ imbalance, compression và multipath.
-
-> **Chuyển mạch:** Từ EVM và constellation, **3. Synchronization loop** khôi phục tham chiếu cần thiết; **4. Worked reasoning** tính throughput thực sau khi trừ overhead và lỗi.
 
 ## 3. Synchronization vòng lặp (loop / 루프)
 
 Timing khôi phục (recovery / 복구) và carrier khôi phục (recovery / 복구) thường là điều khiển (control / 제어) loops. vòng lặp (loop / 루프) bandwidth rộng bắt nhanh nhưng thu thêm noise; hẹp thì lọc tốt nhưng nhánh học (track / 트랙) oscillator drift chậm. Preamble/pilot tiêu tốn thông lượng (throughput / 처리량) để đổi lấy khóa (lock / 잠금) độ tin cậy (reliability / 신뢰성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) ngân sách (budget / 예산) and Synchronization — Dung lượng và đồng bộ**, **3. Synchronization vòng lặp (loop / 루프)** cho ta quy tắc; **4. Worked lập luận (reasoning / 추론): thông lượng (throughput / 처리량) thực** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Worked lập luận (reasoning / 추론): thông lượng (throughput / 처리량) thực
 
 Một link 10 Msymbol/s, 16-QAM có 4 bit/symbol, nên raw tỷ lệ (rate / 비율) 40 Mbit/s. Nếu coding tỷ lệ (rate / 비율) 3/4, giao thức (protocol / 프로토콜) overhead 10% và retransmission trung bình 5%, goodput xấp xỉ 40 × 0.75 × 0.9 × 0.95 = 25.65 Mbit/s, chưa trừ inter-frame gap và power-save wake-up.
-
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) ngân sách (budget / 예산) and Synchronization — Dung lượng và đồng bộ**, **4. Worked lập luận (reasoning / 추론): thông lượng (throughput / 처리량) thực** cho ta quy tắc; **Thất bại (failure / 실패) modes** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thất bại (failure / 실패) modes
 
@@ -38,8 +30,6 @@ Một link 10 Msymbol/s, 16-QAM có 4 bit/symbol, nên raw tỷ lệ (rate / 비
 - tăng modulation thứ tự (order / 순서) khi EVM không đủ;
 - pilot quá ít làm carrier drift thành burst lỗi (error / 오류);
 - FEC sửa được bit nhưng độ trễ (latency / 지연 시간)/thử lại (retry / 재시도) vẫn vượt deadline.
-
-> **Chuyển mạch:** **Failure modes** chỉ ra khi budget và đồng bộ hỏng; **Cầu nối** biến các dấu hiệu đó thành checklist thiết kế và đo kiểm cho hệ thống tiếp theo.
 
 ## Cầu nối (bridge / 브리지)
 

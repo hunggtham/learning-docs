@@ -26,8 +26,6 @@ yêu cầu (request / 요청) và Nền tảng Web (web platform / 웹 플랫폼
 - **Intentional ranh giới (boundary / 경계)** — không duplicate ở Frontend vì lĩnh vực (domain / 도메인) khác là đơn vị sở hữu (owner / 오너);
   Frontend chỉ giữ đặc tả hợp đồng (contract / 계약) cần để tích hợp.
 
-> **Chuyển mạch:** Trong **Frontend Coverage Kiểm tra (audit / 감사)**, **1. Kiểm tra (audit / 감사) theo mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cách đọc trạng thái** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **2. Kiểm tra (audit / 감사) theo nhánh học (track / 트랙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1. Kiểm tra (audit / 감사) theo mô hình tư duy (mental model / 사고 모델)
 
 | Stage | Đơn vị sở hữu (owner / 오너) chính | Coverage | Bằng chứng / tiêu chí kiểm chứng |
@@ -64,8 +62,6 @@ khả năng tiếp cận (accessibility / 접근성), bảo mật (security / �
 duy nhất. Vì vậy hai P1 gap này không còn cần thêm lý thuyết (theory / 이론) tệp (file / 파일); vòng sau chỉ nên
 mở rộng khi có năng lực (capability / 역량)/bằng chứng (evidence / 증거) mới.
 
-> **Chuyển mạch:** Ở chặng này của **Frontend Coverage Kiểm tra (audit / 감사)**, **2. Kiểm tra (audit / 감사) theo nhánh học (track / 트랙)** gom các mảnh từ **1. Kiểm tra (audit / 감사) theo mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Cross-cutting bất biến (invariant / 불변식) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. Kiểm tra (audit / 감사) theo nhánh học (track / 트랙)
 
 | Nhánh học (track / 트랙) | Trục học (learning spine / 학습 축) | Đã cover tốt | Ranh giới (boundary / 경계) cần giữ |
@@ -80,8 +76,6 @@ mở rộng khi có năng lực (capability / 역량)/bằng chứng (evidence /
 | WebSquare | 01 → 24 + glossary/coverage | Thời gian chạy (runtime / 런타임)/page/phạm vi (scope / 범위), DataCollection/Submission, Grid, reusable kiến trúc (architecture / 아키텍처), vòng đời (lifecycle / 생명주기), kiểm thử (test / 테스트), bản dựng (build / 빌드), auth, tích hợp (integration / 통합), khả năng quan sát (observability / 관측 가능성), workflow và profiling | Khung phần mềm (framework / 프레임워크) đặc tả hợp đồng (contract / 계약) có thể bản dựng (build / 빌드)/version-dependent; XML nguồn (source / 소스), thời gian chạy (runtime / 런타임) engine và W-Pack sản phẩm tạo ra (artifact / 산출물) phải tách. |
 | XML | Beginner → Intermediate → Cấp cao (senior / 시니어) → Master Supplement | Cú pháp (syntax / 문법)/cây (tree / 트리), không gian tên (namespace / 네임스페이스), kiểm tra hợp lệ (validation / 검증), transformation, bảo mật (security / 보안) và tích hợp (integration / 통합) | XML là dữ liệu (data / 데이터)/cấu hình (config / 설정)/document ranh giới (boundary / 경계); không dùng XML parser các giả định (assumptions / 가정들) để giải thích HTML parser. |
 | Trường hợp (case / 사례)/Lab | Yêu cầu (request / 요청)→Điểm ảnh (pixel / 픽셀) dấu vết (trace / 추적) → Rendering Đo lường (measurement / 측정) Lab | Cross-owner nhân quả (causal / 인과적) dấu vết (trace / 추적), bằng chứng vận hành (production evidence / 운영 증거), bố cục (layout / 레이아웃)/paint/composite profiling, sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자) | Không biến trường hợp (case / 사례) thành đơn vị sở hữu (owner / 오너) lý thuyết (theory / 이론) mới; framework-specific profiler chỉ bổ sung trình duyệt (browser / 브라우저)/nền tảng (platform / 플랫폼) bằng chứng (evidence / 증거). |
-
-> **Chuyển mạch:** Track audit xác định từng nhánh đã có owner và evidence nào; cross-cutting invariants nối các nhánh qua accessibility, security, performance và state. Framework placement tiếp theo kiểm tra boundary khi chọn implementation.
 
 ## 3. Cross-cutting bất biến (invariant / 불변식) kiểm tra (audit / 감사)
 
@@ -142,8 +136,6 @@ Người học đạt coverage thực dụng khi có thể trả lời các câu
 - Quay lui (rollback / 롤백) có trả đúng sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정)/lược đồ (schema / 스키마) đặc tả hợp đồng (contract / 계약) hay chỉ quay lại Git
   branch?
 
-> **Chuyển mạch:** Cross-cutting invariants cung cấp tiêu chí; framework placement audit áp dụng tiêu chí đó cho React, WebSquare và các framework khác mà không thay web-platform owner. Gaps tiếp theo được ưu tiên theo evidence còn thiếu.
-
 ## 4. Khung phần mềm (framework / 프레임워크) placement kiểm tra (audit / 감사)
 
 Nhánh học khung phần mềm (framework track / 프레임워크 트랙) được xem là đạt khi mỗi chương trả lời được ba câu hỏi:
@@ -159,8 +151,6 @@ React và WebSquare đều đã có chuẩn gốc (canonical / 정본) chỉ m�
 JavaScript/XML/nền tảng (platform / 플랫폼). Không coi khung phần mềm (framework / 프레임워크) README là lĩnh vực (domain / 도메인) điểm vào (entrypoint / 진입점) là
 điều kiện bắt buộc để tránh “framework-first drift”.
 
-> **Chuyển mạch:** Placement audit làm lộ gap về ownership, test hoặc runtime evidence; backlog tiếp theo xếp chúng theo risk và dependency. Exit criteria chốt điều kiện để coverage chuyển thành bằng chứng hoàn chỉnh.
-
 ## 5. Gaps và ưu tiên vòng kiểm tra (audit / 감사) tiếp theo
 
 Backlog hiện chuyển từ thiếu foundation sang **tích hợp (integration / 통합)/tính tương thích (compatibility / 호환성) và
@@ -175,8 +165,6 @@ regression bằng chứng (evidence / 증거)**. Không nên mở thêm khung ph
 | P2 | Tạo năng lực (capability / 역량) ma trận (matrix / 행렬) cho trình duyệt (browser / 브라우저), WebView, React và WebSquare | Chỉ thêm khi có di chuyển (migration / 마이그레이션)/tính tương thích (compatibility / 호환성) use trường hợp (case / 사례) thực; ma trận (matrix / 행렬) phải có phiên bản (version / 버전)/bằng chứng (evidence / 증거), không phải tính năng (feature / 기능) checklist chung. |
 | P2 | Bổ sung end-to-end khả năng tiếp cận (accessibility / 접근성) regression example xuyên bản địa (native / 네이티브) HTML và khung phần mềm (framework / 프레임워크) | Đây là candidate độ sâu (depth / 깊이) tiếp theo nếu cần; đặt trường hợp (case / 사례) ở tầng (layer / 계층) tích hợp (integration / 통합) và cross-link đơn vị sở hữu (owner / 오너), không duplicate a11y lý thuyết (theory / 이론). |
 | P2 | Tạo one-screen môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) drill | Candidate cao: sản phẩm tạo ra (artifact / 산출물) mismatch + stale yêu cầu (request / 요청) + hiệu năng (performance / 성능) + khả năng tiếp cận (accessibility / 접근성)/bảo mật (security / 보안) checks trong một sự cố (incident / 인시던트), nếu muốn luyện vận hành thay vì thêm lý thuyết (theory / 이론). |
-
-> **Chuyển mạch:** Exit criteria gom owner, invariant, source, test và link checks thành điều kiện review. Coverage chỉ được coi là hoàn tất khi từng điều kiện có evidence truy nguyên.
 
 ## 6. Exit criteria cho Frontend lĩnh vực (domain / 도메인)
 

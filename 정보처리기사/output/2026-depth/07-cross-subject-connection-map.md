@@ -22,8 +22,6 @@ Nếu chỉ học theo từng môn, ta có thể biết tất cả các từ nh�
 
 # 1. Từ 요구사항 đến 테스트 — Requirements ↔ Testing
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **1.1 yêu cầu (requirement / 요구사항) không kết thúc ở tài liệu đặc tả** tiếp nhận điểm tựa từ **0. Một hệ thống thật không chia thành 5 môn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.2 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증) nối Môn 1 và Môn 2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1.1 yêu cầu (requirement / 요구사항) không kết thúc ở tài liệu đặc tả
 
 Functional yêu cầu (requirement / 요구사항) — 기능 요구사항 — nói hệ thống phải làm gì. Non-functional yêu cầu (requirement / 요구사항) — 비기능 요구사항 — nói hệ thống phải đạt chất lượng hoặc ràng buộc (constraint / 제약조건) nào.
@@ -63,8 +61,6 @@ Operational metric
 
 Nếu đề hỏi “thay đổi yêu cầu (requirement / 요구사항) nhưng trường hợp kiểm thử (test case / 테스트 케이스) không được cập nhật”, vấn đề không chỉ là kiểm thử (test / 테스트). Đó là đứt **추적성 — traceability** giữa yêu cầu (requirement / 요구사항) và xác minh (verification / 확인) sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **1.2 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증) nối Môn 1 và Môn 2** tiếp nhận điểm tựa từ **1.1 yêu cầu (requirement / 요구사항) không kết thúc ở tài liệu đặc tả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.1 lớp (class / 클래스) Diagram là mô hình, OOP là cơ chế thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1.2 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증) nối Môn 1 và Môn 2
 
 Xác minh (verification / 확인) hỏi: sản phẩm có được xây đúng theo specification không?
@@ -77,15 +73,11 @@ Một đơn vị (unit / 단위) kiểm thử (test / 테스트) có thể verif
 
 # 2. UML, OOP và mẫu thiết kế (design pattern / 디자인 패턴) không phải ba thế giới khác nhau
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **1.2 xác minh (verification / 확인) vs kiểm tra hợp lệ (validation / 검증) nối Môn 1 và Môn 2** xác định đầu vào; **2.1 lớp (class / 클래스) Diagram là mô hình, OOP là cơ chế thời gian chạy (runtime / 런타임)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **2.2 mẫu (pattern / 패턴) là lời giải cho force lặp lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2.1 lớp (class / 클래스) Diagram là mô hình, OOP là cơ chế thời gian chạy (runtime / 런타임)
 
 Lớp (class / 클래스) Diagram — 클래스 다이어그램 — mô tả lớp (class / 클래스), attribute, thao tác (operation / 연산) và relationship. Encapsulation, inheritance, polymorphism là các cơ chế mà hiện thực (implementation / 구현) có thể dùng để hiện thực mô hình đó.
 
 Một mũi tên generalization trong UML không tự động nói mã (code / 코드) sẽ “tốt”. Nếu hierarchy vi phạm Liskov Substitution Principle — LSP — 리스코프 치환 원칙, mô hình vẫn vẽ được nhưng thiết kế yếu.
-
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **2.1 lớp (class / 클래스) Diagram là mô hình, OOP là cơ chế thời gian chạy (runtime / 런타임)** xác định đầu vào; **2.2 mẫu (pattern / 패턴) là lời giải cho force lặp lại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3.1 Đặc tả API (API contract / API 계약) không dừng ở JSON** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2.2 mẫu (pattern / 패턴) là lời giải cho force lặp lại
 
@@ -106,8 +98,6 @@ Nếu hai lớp (class / 클래스) “nhìn giống nhau” trong UML nhưng m�
 
 # 3. giao diện (interface / 인터페이스) thiết kế (design / 설계) ↔ tích hợp (integration / 통합) ↔ mạng (network / 네트워크)
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **3.1 Đặc tả API (API contract / API 계약) không dừng ở JSON** tiếp nhận điểm tựa từ **2.2 mẫu (pattern / 패턴) là lời giải cho force lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.2 hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và duplicate side tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3.1 Đặc tả API (API contract / API 계약) không dừng ở JSON
 
 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계) — xác định dữ liệu, giao thức (protocol / 프로토콜), lỗi (error / 오류) handling, chuỗi (sequence / 시퀀스) và đặc tả hợp đồng (contract / 계약) giữa hai thành phần. Khi triển khai, đặc tả hợp đồng (contract / 계약) đó đi qua mạng (network / 네트워크) thật.
@@ -123,8 +113,6 @@ Content-Type: application/json
 JSON lược đồ (schema / 스키마) thuộc đặc tả hợp đồng (contract / 계약). HTTP phương thức (method / 메서드)/status thuộc ứng dụng (application / 애플리케이션) giao thức (protocol / 프로토콜). TCP chịu trách nhiệm reliable byte stream. IP chịu trách nhiệm packet forwarding. Ethernet/Wi-Fi xử lý cục bộ (local / 로컬) link.
 
 Đây là lý do OSI/TCP-IP ở Môn 4 liên quan trực tiếp giao diện (interface / 인터페이스) hiện thực (implementation / 구현) ở Môn 1–2.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **3.2 hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và duplicate side tác động (effect / 효과)** tiếp nhận điểm tựa từ **3.1 Đặc tả API (API contract / API 계약) không dừng ở JSON** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.3 EAI/ESB và coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3.2 hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và duplicate side tác động (effect / 효과)
 
@@ -146,8 +134,6 @@ DB uniqueness / transaction
 
 Một câu hỏi về “중복 처리 방지 — duplicate processing prevention” có thể đòi suy nghĩ đồng thời về giao diện (interface / 인터페이스), máy chủ (server / 서버) lô-gic (logic / 논리) và cơ sở dữ liệu (database / 데이터베이스) ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **3.3 EAI/ESB và coupling** tiếp nhận điểm tựa từ **3.2 hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và duplicate side tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.1 Normalization giải quyết anomaly, không giải quyết mọi hiệu năng (performance / 성능) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3.3 EAI/ESB và coupling
 
 Point-to-point tích hợp (integration / 통합) tăng nhanh số liên kết (connection / 연결) khi số hệ thống (system / 시스템) tăng. EAI/ESB cố gắng tập trung hoặc chuẩn hóa mediation, routing và transformation.
@@ -157,8 +143,6 @@ Nhưng thêm middleware không tự động tạo low coupling. Nếu mọi bên
 ---
 
 # 4. Logical mô hình dữ liệu (data model / 데이터 모델) ↔ vật lý (physical / 물리적) DB ↔ SQL ↔ giao dịch (transaction / 트랜잭션)
-
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **4.1 Normalization giải quyết anomaly, không giải quyết mọi hiệu năng (performance / 성능) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **3.3 EAI/ESB và coupling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.2 chỉ mục (index / 인덱스) nối SQL với cấu trúc dữ liệu (data structure / 자료구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.1 Normalization giải quyết anomaly, không giải quyết mọi hiệu năng (performance / 성능) bài toán (problem / 문제)
 
@@ -172,8 +156,6 @@ Logical correctness ≠ Physical performance
 
 Một lược đồ (schema / 스키마) có thể ở 3NF/BCNF nhưng truy vấn (query / 쿼리) chậm vì thiếu chỉ mục (index / 인덱스) hoặc truy cập (access / 접근) mẫu (pattern / 패턴) không phù hợp. Một lược đồ (schema / 스키마) denormalized có thể nhanh hơn cho read nhưng tăng consistency burden.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **4.1 Normalization giải quyết anomaly, không giải quyết mọi hiệu năng (performance / 성능) bài toán (problem / 문제)** nêu điều cần giải thích; **4.2 chỉ mục (index / 인덱스) nối SQL với cấu trúc dữ liệu (data structure / 자료구조)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4.3 giao dịch (transaction / 트랜잭션) nối nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) với tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4.2 chỉ mục (index / 인덱스) nối SQL với cấu trúc dữ liệu (data structure / 자료구조)
 
 B+cây (tree / 트리) chỉ mục (index / 인덱스) hoạt động tốt với equality và phạm vi (range / 범위) vì key có thứ tự. băm (hash / 해시) chỉ mục (index / 인덱스) tự nhiên cho equality lookup nhưng không hỗ trợ phạm vi (range / 범위) theo thứ tự (ordering / 순서) như B+cây (tree / 트리).
@@ -183,8 +165,6 @@ B+cây (tree / 트리) chỉ mục (index / 인덱스) hoạt động tốt vớ
 - 자료구조 — cấu trúc dữ liệu (data structure / 자료구조) ở Môn 2;
 - 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB ở Môn 3;
 - truy vấn (query / 쿼리) hiệu năng (performance / 성능) trong hệ thống (system / 시스템) management.
-
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **4.2 chỉ mục (index / 인덱스) nối SQL với cấu trúc dữ liệu (data structure / 자료구조)** nêu điều cần giải thích; **4.3 giao dịch (transaction / 트랜잭션) nối nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) với tính đồng thời (concurrency / 동시성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5.1 Big-O không bằng thời gian chạy thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.3 giao dịch (transaction / 트랜잭션) nối nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) với tính đồng thời (concurrency / 동시성)
 
@@ -204,8 +184,6 @@ Locking, MVCC, log, checkpoint và khôi phục (recovery / 복구) là hiện t
 ---
 
 # 5. thuật toán (algorithm / 알고리즘)/cấu trúc dữ liệu (data structure / 자료구조) ↔ hiệu năng (performance / 성능)
-
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **5.1 Big-O không bằng thời gian chạy thực tế** tiếp nhận điểm tựa từ **4.3 giao dịch (transaction / 트랜잭션) nối nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) với tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.2 hàng đợi (queue / 큐) xuất hiện ở nhiều môn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5.1 Big-O không bằng thời gian chạy thực tế
 
@@ -227,8 +205,6 @@ Algorithmic complexity
 
 Nếu đề cho một vấn đề lookup nhiều lần, chọn cấu trúc dữ liệu (data structure / 자료구조) đúng thường quan trọng hơn micro-optimization cú pháp (syntax / 문법).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **5.2 hàng đợi (queue / 큐) xuất hiện ở nhiều môn** tiếp nhận điểm tựa từ **5.1 Big-O không bằng thời gian chạy thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.1 yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성) cuối cùng trở thành shared-state bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5.2 hàng đợi (queue / 큐) xuất hiện ở nhiều môn
 
 Hàng đợi (queue / 큐) — 큐 — FIFO cấu trúc (structure / 구조) ở Môn 2. Nhưng cùng lớp trừu tượng (abstraction / 추상화) xuất hiện trong:
@@ -244,8 +220,6 @@ Cần phân biệt lớp trừu tượng (abstraction / 추상화) “hàng đ�
 ---
 
 # 6. máy chủ (server / 서버) Program ↔ tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) ↔ Synchronization
-
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **6.1 yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성) cuối cùng trở thành shared-state bài toán (problem / 문제)** tiếp nhận điểm tựa từ **5.2 hàng đợi (queue / 큐) xuất hiện ở nhiều môn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.2 Mutex, Semaphore và DB khóa (lock / 잠금) có họ hàng nhưng không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.1 yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성) cuối cùng trở thành shared-state bài toán (problem / 문제)
 
@@ -266,8 +240,6 @@ T2 writes stock = 0
 Hai thứ tự (order / 순서) đều nghĩ đã mua thành công dù chỉ có một item.
 
 Ở ứng dụng (application / 애플리케이션) tầng (layer / 계층), có thể dùng khóa (lock / 잠금). Ở cơ sở dữ liệu (database / 데이터베이스) tầng (layer / 계층), có thể dùng giao dịch (transaction / 트랜잭션)/row khóa (lock / 잠금)/optimistic tính đồng thời (concurrency / 동시성). Chọn tầng (layer / 계층) phụ thuộc bất biến (invariant / 불변식) và hệ thống (system / 시스템) ranh giới (boundary / 경계).
-
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **6.2 Mutex, Semaphore và DB khóa (lock / 잠금) có họ hàng nhưng không đồng nhất** tiếp nhận điểm tựa từ **6.1 yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성) cuối cùng trở thành shared-state bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.1 bảo mật (security / 보안) điều khiển (control / 제어) nằm trên nhiều tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.2 Mutex, Semaphore và DB khóa (lock / 잠금) có họ hàng nhưng không đồng nhất
 
@@ -304,8 +276,6 @@ Deadlock có thể tồn tại ở cả hai: mỗi bên giữ tài nguyên (reso
 
 # 9. mạng (network / 네트워크) ↔ bảo mật (security / 보안)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **9.1 bảo mật (security / 보안) điều khiển (control / 제어) nằm trên nhiều tầng (layer / 계층)** tiếp nhận điểm tựa từ **6.2 Mutex, Semaphore và DB khóa (lock / 잠금) có họ hàng nhưng không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.2 Authentication, Authorization, Encryption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9.1 bảo mật (security / 보안) điều khiển (control / 제어) nằm trên nhiều tầng (layer / 계층)
 
 Firewall — 방화벽 — kiểm soát traffic theo quy tắc (rule / 규칙). IDS phát hiện suspicious activity. IPS có thể khối (block / 블록) inline. TLS cung cấp cryptographic protection cho vận chuyển (transport / 전송)/ứng dụng (application / 애플리케이션) communication. VPN tạo protected tunnel. WAF tập trung HTTP/web ứng dụng (application / 애플리케이션) traffic.
@@ -313,8 +283,6 @@ Firewall — 방화벽 — kiểm soát traffic theo quy tắc (rule / 규칙). 
 Không hỏi “công cụ nào mạnh nhất”; hỏi **threat ở tầng (layer / 계층) nào và điều khiển (control / 제어) quan sát được gì**.
 
 Ví dụ SQL Injection không được giải quyết tận gốc bằng firewall L3/L4. Secure coding với parameterized truy vấn (query / 쿼리) xử lý nguyên nhân tại ứng dụng (application / 애플리케이션)/DB ranh giới (boundary / 경계); WAF có thể là additional defense.
-
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **9.2 Authentication, Authorization, Encryption** tiếp nhận điểm tựa từ **9.1 bảo mật (security / 보안) điều khiển (control / 제어) nằm trên nhiều tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 1 — Duplicate Payment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9.2 Authentication, Authorization, Encryption
 
@@ -388,8 +356,6 @@ Nếu một câu hỏi hỏi “mã (code / 코드) đúng nhưng môi trường
 
 # 13. Tám scenario liên môn
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 1 — Duplicate Payment** tiếp nhận điểm tựa từ **9.2 Authentication, Authorization, Encryption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 2 — Overselling Stock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scenario 1 — Duplicate Payment
 
 ### Tình huống
@@ -412,8 +378,6 @@ Mạng (network / 네트워크) không thể bảo đảm máy khách (client / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 2 — Overselling Stock** tiếp nhận điểm tựa từ **Scenario 1 — Duplicate Payment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 3 — Slow tìm kiếm (search / 검색) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scenario 2 — Overselling Stock
 
 Hai yêu cầu (request / 요청) cùng mua item cuối cùng.
@@ -429,8 +393,6 @@ Các phương án có thể gồm pessimistic khóa (lock / 잠금), atomic cond
 - Mutex trong một máy chủ (server / 서버) instance có đủ khi chạy 10 instances không?
 
 ---
-
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 3 — Slow tìm kiếm (search / 검색) API** tiếp nhận điểm tựa từ **Scenario 2 — Overselling Stock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 4 — Login dịch vụ (service / 서비스) bị tấn công brute force** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Scenario 3 — Slow tìm kiếm (search / 검색) API
 
@@ -457,8 +419,6 @@ Composite chỉ mục (index / 인덱스) `(customer_id, created_at)` có thể 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 4 — Login dịch vụ (service / 서비스) bị tấn công brute force** tiếp nhận điểm tựa từ **Scenario 3 — Slow tìm kiếm (search / 검색) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 5 — Batch Job ăn hết bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scenario 4 — Login dịch vụ (service / 서비스) bị tấn công brute force
 
 Yêu cầu (requirement / 요구사항) cần tỷ lệ (rate / 비율) limit/lockout. thiết kế (design / 설계) phải tránh cho attacker khóa account người khác quá dễ. hiện thực (implementation / 구현) cần secure password hashing, constant-time comparison ở chỗ phù hợp, session/đơn vị từ (token / 토큰) handling. mạng (network / 네트워크) cần TLS. Monitoring cần phát hiện mẫu (pattern / 패턴) bất thường.
@@ -470,8 +430,6 @@ Yêu cầu (requirement / 요구사항) cần tỷ lệ (rate / 비율) limit/lo
 - Account lockout có thể tạo denial-of-service véc-tơ (vector / 벡터) như thế nào?
 
 ---
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 5 — Batch Job ăn hết bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Scenario 4 — Login dịch vụ (service / 서비스) bị tấn công brute force** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 6 — Đặc tả API (API contract / API 계약) thay đổi làm nhiều hệ thống lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Scenario 5 — Batch Job ăn hết bộ nhớ (memory / 메모리)
 
@@ -487,8 +445,6 @@ Giải pháp kiến trúc có thể là streaming/chunking. Đây là liên kế
 
 ---
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 6 — Đặc tả API (API contract / API 계약) thay đổi làm nhiều hệ thống lỗi** tiếp nhận điểm tựa từ **Scenario 5 — Batch Job ăn hết bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario 7 — cơ sở dữ liệu (database / 데이터베이스) primary chết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scenario 6 — Đặc tả API (API contract / API 계약) thay đổi làm nhiều hệ thống lỗi
 
 Provider rename trường dữ liệu (field / 필드) `customerId` thành `userId`. Nhiều bên tiêu thụ (consumer / 소비자) thất bại (fail / 실패).
@@ -503,8 +459,6 @@ Provider rename trường dữ liệu (field / 필드) `customerId` thành `user
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 6 — Đặc tả API (API contract / API 계약) thay đổi làm nhiều hệ thống lỗi** nêu điều cần giải thích; **Scenario 7 — cơ sở dữ liệu (database / 데이터베이스) primary chết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Scenario 8 — Deadlock trong thứ tự (order / 순서) processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scenario 7 — cơ sở dữ liệu (database / 데이터베이스) primary chết
 
 Nếu hệ thống có replica nhưng failover mất 20 phút, availability có thể vẫn không đạt SLO. Nếu replica async lag 30 giây, failover có thể mất recent dữ liệu (data / 데이터).
@@ -518,8 +472,6 @@ RTO liên quan thời gian phục hồi. RPO liên quan mức dữ liệu (data 
 - RAID bảo vệ loại thất bại (failure / 실패) nào và không bảo vệ loại nào?
 
 ---
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Cross-Subject liên kết (connection / 연결) Map**, **Scenario 7 — cơ sở dữ liệu (database / 데이터베이스) primary chết** nêu điều cần giải thích; **Scenario 8 — Deadlock trong thứ tự (order / 순서) processing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Scenario 8 — Deadlock trong thứ tự (order / 순서) processing
 

@@ -51,8 +51,6 @@ Spring có machinery cho singleton creation trạng thái (state / 상태) và m
 
 <!-- SPRING_BATCH1_IOC_MASTER -->
 
-> **Chuyển mạch:** Trong **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Nguồn (source / 소스) dấu vết (trace / 추적): từ `getBean()` tới `doCreateBean()` và final exposed tham chiếu (reference / 참조)
 
 Khi muốn đọc Spring nguồn (source / 소스) thay vì chỉ dùng API, một dấu vết (trace / 추적) có giá trị là bắt đầu từ `AbstractBeanFactory#doGetBean`. Lookup trước hết kiểm tra singleton bộ nhớ đệm (cache / 캐시); nếu chưa có instance, khung phần mềm (framework / 프레임워크) lấy merged BeanDefinition, bảo đảm dependencies cần tạo trước, rồi đi vào creation đường dẫn (path / 경로) phù hợp phạm vi (scope / 범위). Với singleton, singleton registry kiểm soát “create once” ngữ nghĩa (semantics / 의미론) và trạng thái currently-in-creation để phát hiện cycle.
@@ -133,8 +131,6 @@ Giao dịch (transaction / 트랜잭션) interceptor không trực tiếp biết
 
 <!-- SPRING_BATCH3_TX_MASTER -->
 
-> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Nguồn (source / 소스) dấu vết (trace / 추적): `TransactionInterceptor` → `TransactionAspectSupport` → giao dịch (transaction / 트랜잭션) manager
 
 `TransactionInterceptor` là MethodInterceptor mỏng; phần orchestration chính nằm trong `TransactionAspectSupport#invokeWithinTransaction`. khung phần mềm (framework / 프레임워크) lấy `TransactionAttributeSource`, xác định manager, tạo/phép nối (join / 조인) giao dịch (transaction / 트랜잭션) rồi invoke callback tới mục tiêu (target / 대상). Sau mục tiêu (target / 대상), lô-gic (logic / 논리) complete-after-throwing hoặc commit-after-returning chuyển điều khiển (control / 제어) cho giao dịch (transaction / 트랜잭션) manager. Đọc nguồn (source / 소스) theo luồng (flow / 흐름) này giúp bạn phân biệt AOP interception với actual tài nguyên (resource / 자원) hiện thực (implementation / 구현).
@@ -153,8 +149,6 @@ Imperative giao dịch (transaction / 트랜잭션) hạ tầng (infrastructure 
 Bên ngoài (external / 외부) lời gọi (call / 호출) đi `caller → proxy → interceptor → target`. nội bộ (internal / 내부) `this.otherMethod()` chỉ là Java lời gọi (call / 호출) trên mục tiêu (target / 대상) và không quay lại proxy. Vì vậy giao dịch (transaction / 트랜잭션)/bộ nhớ đệm (cache / 캐시)/bảo mật (security / 보안)/async advice có thể bị bypass. Đây là consequence của proxy-based AOP, không phải bug riêng `@Transactional`.
 
 <!-- SPRING_BATCH3_PERSISTENCE_MASTER -->
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** nêu điều cần giải thích; **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)
 
@@ -186,8 +180,6 @@ request
 
 <!-- SPRING_BATCH2_REQUEST_MASTER -->
 
-> **Chuyển mạch:** Trong **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Nguồn (source / 소스) dấu vết (trace / 추적): `DispatcherServlet#doDispatch` thực sự phối hợp những chiến lược (strategy / 전략) nào?
 
 Trong `doDispatch`, DispatcherServlet không trực tiếp gọi controller bằng reflection tùy ý. Nó lấy handler qua `getHandler`, chọn adapter qua `getHandlerAdapter`, rồi delegate việc invoke. Với annotated controller, `RequestMappingHandlerAdapter` tạo `ServletInvocableHandlerMethod`; argument resolution đi qua các composite resolver đã được đăng ký theo thứ tự (order / 순서). Một resolver chỉ tham gia khi `supportsParameter` trả true, sau đó mới resolve giá trị (value / 값). Return values đi qua một composite tương tự để chọn handler phù hợp.
@@ -216,8 +208,6 @@ Khung phần mềm (framework / 프레임워크) 7 có `ApiVersionStrategy`, res
 Boot 4 ưu tiên Jackson 3. mã (code / 코드) chỉ dùng DTO + Boot auto-config thường migrate dễ. mã (code / 코드) custom mapper/modules/polymorphic serialization phải rà soát (review / 검토) gói (package / 패키지) changes và behavioral tính tương thích (compatibility / 호환성). `spring-boot-jackson2` tồn tại như deprecated stop-gap, không phải long-term mục tiêu (target / 대상).
 
 <!-- SPRING_BATCH4_SECURITY_TEST_MASTER -->
-
-> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext
 
@@ -344,8 +334,6 @@ Official docs hiện liệt kê khung phần mềm (framework / 프레임워크)
 Default: để Boot quản lý versions. Override khi có bảo mật (security / 보안) fix, vendor tính tương thích (compatibility / 호환성), required tính năng (feature / 기능) hoặc known bug fix, và phải kiểm thử (test / 테스트) ma trận (matrix / 행렬). nền tảng (platform / 플랫폼) coherence quan trọng hơn newest sản phẩm tạo ra (artifact / 산출물) number.
 
 <!-- SPRING_BATCH5_VERSION_MASTER -->
-
-> **Chuyển mạch:** Source trace của Spring Security và TestContext chỉ ra behavior cần giữ; migration graph 2.7/5.3 → 3.5/6.2 → 4.1/7.0 dùng các mốc đó để đối chiếu compatibility và failure khi nâng phiên bản.
 
 ## Di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0
 

@@ -29,8 +29,6 @@ Property / Syntax
 → Design / Architecture Pattern
 ```
 
-> **Nối mạch:** Thuật ngữ và syntax xác định cách đọc một declaration; CSS idiom tiếp theo cho thấy declaration được nhóm, cascade và tổ chức thành pattern bảo trì được thế nào.
-
 ## 1. thuộc tính (property / 속성) / cú pháp (syntax / 문법)
 
 Đây là tầng thấp nhất: thuộc tính (property / 속성) làm gì, nhận giá trị (value / 값) nào, computed hành vi (behavior / 동작) ra sao.
@@ -41,8 +39,6 @@ Ví dụ:
 display: flex;
 gap: 1rem;
 ```
-
-> **Nối mạch:** Property và syntax là primitives; CSS idiom tiếp theo tổ chức chúng thành pattern dễ đọc, dễ cascade và dễ bảo trì.
 
 ## 2. CSS lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)
 
@@ -58,8 +54,6 @@ Ví dụ:
 ```
 
 Đây là idiom **fluid centered bộ chứa (container / 컨테이너)**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)** nối từ **2. CSS lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)** sang **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)
 
@@ -79,8 +73,6 @@ Dùng cho:
 - avatar + content,
 - icon + văn bản (text / 텍스트),
 - thumbnail + description.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)** nối từ **3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)** sang **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)
 
@@ -142,45 +134,31 @@ selector matching
 
 Khi CSS “không chạy”, hãy truy theo đúng trục này thay vì đổi thuộc tính (property / 속성) ngẫu nhiên. Ví dụ `.card { width: 100% }` có thể không cho kết quả mong muốn vì bộ chọn (selector) không match, quy tắc (rule / 규칙) ở tầng (layer / 계층) khác thắng, percentage resolve theo khối chứa tham chiếu (containing block / 컨테이닝 블록) khác, phần tử Flex (flex item) bị kích thước tối thiểu tự động (automatic minimum size) chặn co, hoặc parent tạo overflow/ngữ cảnh định dạng (formatting context / 서식 컨텍스트) khác với giả định (assumption / 가정). Thêm `!important` chỉ giải quyết một nhánh rất nhỏ của cây nguyên nhân.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)** đặt đầu vào cho **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau**, rồi **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau
 
 độ đặc hiệu (specificity) không phải luật đầu tiên của CSS. cơ chế phân tầng (cascade) trước tiên xét relevance, nguồn và mức quan trọng (origin/importance) và lớp phân tầng (cascade layer). độ đặc hiệu (specificity) chỉ được so giữa những khai báo (declaration) vẫn còn cạnh tranh trong cùng ngữ cảnh (context / 맥락) precedence. Nếu độ đặc hiệu (specificity) bằng nhau, `@scope` có thể đưa scoping proximity vào quyết định; thứ tự nguồn (source order) là tie-breaker cuối. Vì thế kiến trúc (architecture / 아키텍처) với `@layer`, bộ chọn (selector) nhẹ và thành phần (component / 컴포넌트) ranh giới (boundary / 경계) thường bền hơn cuộc chiến độ đặc hiệu (specificity war).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau** đặt đầu vào cho **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”**, rồi **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”
 
 Một `color` trên parent thường truyền xuống child vì `color` là inherited thuộc tính (property / 속성); `padding` thì không. Nếu child có quy tắc (rule / 규칙) trực tiếp mục tiêu (target / 대상) nó, direct giá trị (value / 값) thắng inherited giá trị (value / 값) bất kể bộ chọn (selector) của parent mạnh đến đâu. Khi gỡ lỗi (debug / 디버그) typography, custom thuộc tính (property / 속성) hoặc theme, hãy luôn phân biệt khai báo (declaration) thắng trên chính element với giá trị (value / 값) inherited từ ancestor.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** nối từ **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”** sang **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)
 
 `content`, `padding`, `border`, `margin` chỉ mô tả box. Cách box được đặt phụ thuộc ngữ cảnh định dạng (formatting context / 서식 컨텍스트). ngữ cảnh định dạng khối (block formatting context) có rules về khối (block / 블록) luồng (flow / 흐름), floats và margin tương tác (interaction / 상호작용); ngữ cảnh định dạng nội dòng (inline formatting context) tạo các hộp dòng (line boxes) và đường cơ sở (baseline); Flexbox/Grid chạy sizing/placement thuật toán (algorithm / 알고리즘) riêng. Đây là lý do cùng `width`, `margin:auto` hay alignment thuộc tính (property / 속성) có thể hành xử khác ở các ngữ cảnh (context / 맥락) khác nhau.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** đặt đầu vào cho **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning**, rồi **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning
 
 Trước `absolute`, `fixed`, `sticky`, cần hiểu luồng bố cục thông thường (normal flow / 일반 흐름). `position: relative` vẫn giữ slot trong luồng (flow / 흐름) rồi offset visual box. `absolute` rời luồng bố cục thông thường (normal flow / 일반 흐름) và tìm khối chứa tham chiếu (containing block / 컨테이닝 블록). `fixed` thường liên hệ vùng nhìn (viewport)/top-level containing ngữ cảnh (context / 맥락). `sticky` vẫn tham gia luồng (flow / 흐름) nhưng bị ràng buộc bởi vùng chứa cuộn (scroll container), inset và scroll phạm vi (range / 범위). Khi positioning sai, câu hỏi đúng là “khối chứa tham chiếu (containing block / 컨테이닝 블록)/vùng chứa cuộn (scroll container) là ai?” trước khi hỏi “top bao nhiêu px?”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning** đặt đầu vào cho **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)**, rồi **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)
 
 truy vấn môi trường (media query) bật/tắt các khai báo (declarations) theo vùng nhìn (viewport), đầu vào (input / 입력) năng lực (capability / 역량), motion preference hoặc color scheme. truy vấn vùng chứa (container query) làm điều tương tự nhưng truy vấn (query / 쿼리) bộ chứa (container / 컨테이너) thay vì vùng nhìn (viewport). Bên trong điều kiện đó, bố cục (layout / 레이아웃) vẫn do luồng bố cục thông thường (normal flow / 일반 흐름), Flexbox, Grid và sizing algorithms thực thi. Responsive tốt thường bắt đầu bằng fluid/intrinsic các ràng buộc (constraints / 제약조건들), rồi điểm ngắt (breakpoint) chỉ xuất hiện ở nơi hành vi (behavior / 동작) thực sự cần đổi.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thứ tự ưu tiên** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)
 
 Sau bố cục (layout / 레이아웃), trình duyệt (browser / 브라우저) paint văn bản (text / 텍스트), background, border, shadow/effects rồi composite. Thay đổi hình học (geometry / 기하학) như `width` hoặc font metrics có thể kéo theo style/bố cục (layout / 레이아웃)/paint; `transform` và `opacity` thường thuận lợi hơn cho compositor animation nhưng không miễn phí. Blur/backdrop-filter lớn, quá nhiều các lớp tổng hợp (compositing layers) hoặc `will-change` bừa bãi có thể tăng bộ nhớ (memory / 메모리)/kết xuất (render / 렌더링) chi phí (cost / 비용). hiệu năng (performance / 성능) phải được đo theo chuỗi xử lý kết xuất (rendering pipeline), không tối ưu bằng mẹo truyền miệng.
 
 Khi gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경), dấu vết (trace / 추적) chuẩn là: bộ chọn (selector) match → khai báo (declaration) valid → cơ chế phân tầng (cascade)/tầng (layer / 계층)/độ đặc hiệu (specificity) → computed giá trị (value / 값) → kế thừa (inheritance)/defaulting → ngữ cảnh định dạng (formatting context / 서식 컨텍스트)/khối chứa tham chiếu (containing block / 컨테이닝 블록) → intrinsic/min/max/overflow → stacking/paint/composite. Đây là xương sống nối mọi chapter còn lại.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Thứ tự ưu tiên** tổng hợp từ **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thứ tự ưu tiên
 
@@ -195,8 +173,6 @@ Khi gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운�
 9. **Custom các thuộc tính (properties) → đơn vị từ (token / 토큰) thiết kế (design tokens)**
 10. **kiến trúc (architecture / 아키텍처) → khả năng tiếp cận (accessibility / 접근성) → hiệu năng (performance / 성능) → gỡ lỗi (debugging)**
 11. **CSS hiện đại:** lồng cú pháp (nesting), các lớp phân tầng (cascade layers), `@scope`, `:has()`, Subgrid, định vị theo điểm neo (anchor positioning), hoạt ảnh điều khiển bằng cuộn (scroll-driven animations), chuyển cảnh giao diện (view transitions), `@property`, hiện đại (modern / 현대적) color.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** tổng hợp từ **Thứ tự ưu tiên** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1.1 quy tắc (rule / 규칙) cơ bản** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델) quan trọng nhất
 
@@ -219,8 +195,6 @@ Selector có match không?
 ---
 
 # 1. CSS cú pháp (syntax / 문법) & cách trình duyệt (browser / 브라우저) áp dụng CSS [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.1 quy tắc (rule / 규칙) cơ bản** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1.2 Cách đưa CSS vào HTML** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 1.1 quy tắc (rule / 규칙) cơ bản
 
@@ -247,8 +221,6 @@ Nếu một khai báo (declaration) sai, trình duyệt (browser / 브라우저)
   padding: abc; /* invalid → ignored */
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.2 Cách đưa CSS vào HTML** nối từ **1.1 quy tắc (rule / 규칙) cơ bản** sang **1.3 Comment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.2 Cách đưa CSS vào HTML
 
@@ -283,8 +255,6 @@ Inline style có độ đặc hiệu (specificity) cao và khó maintain. Chỉ 
 - email HTML,
 - khung phần mềm (framework / 프레임워크)/thời gian chạy (runtime / 런타임) buộc phải dùng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.3 Comment** nối từ **1.2 Cách đưa CSS vào HTML** sang **1.4 Shorthand và longhand**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1.3 Comment
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -294,8 +264,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```
 
 CSS không hỗ trợ `//` như JavaScript/SCSS.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.4 Shorthand và longhand** nối từ **1.3 Comment** sang **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.4 Shorthand và longhand
 
@@ -339,8 +307,6 @@ margin: 10px 20px 30px 40px; /* top | right | bottom | left */
 ---
 
 # 2. các bộ chọn (selectors) [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)** nối từ **1.4 Shorthand và longhand** sang **Descendant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)
 
@@ -514,8 +480,6 @@ a[href$=".PDF" i] {}
 
 # 3. Combinators [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Descendant** nối từ **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)** sang **Child >**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Descendant
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -525,8 +489,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```
 
 Match `p` ở bất kỳ độ sâu (depth / 깊이) nào trong `.card`.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Child >** nối từ **Descendant** sang **Adjacent sibling +**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Child `>`
 
@@ -538,8 +500,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 Chỉ match con trực tiếp.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Adjacent sibling +** nối từ **Child >** sang **General sibling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Adjacent sibling `+`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -549,8 +509,6 @@ label + input {}
 ```
 
 Match `input` ngay sau `label`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **General sibling** nối từ **Adjacent sibling +** sang **4.1 tương tác (interaction / 상호작용) các trạng thái (states)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## General sibling `~`
 
@@ -579,8 +537,6 @@ Nên:
 ---
 
 # 4. các lớp giả (pseudo-classes) [cốt lõi (core / 핵심) → ADV]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.1 tương tác (interaction / 상호작용) các trạng thái (states)** nối từ **General sibling** sang **4.2 Form các trạng thái (states)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.1 tương tác (interaction / 상호작용) các trạng thái (states)
 
@@ -619,8 +575,6 @@ Không nên:
 
 vì phá keyboard khả năng tiếp cận (accessibility / 접근성).
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.2 Form các trạng thái (states)** nối từ **4.1 tương tác (interaction / 상호작용) các trạng thái (states)** sang **4.3 Structural các bộ chọn (selectors)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4.2 Form các trạng thái (states)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -644,8 +598,6 @@ input:invalid:not(:placeholder-shown) {
   border-color: crimson;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.3 Structural các bộ chọn (selectors)** nối từ **4.2 Form các trạng thái (states)** sang **4.4 :not()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.3 Structural các bộ chọn (selectors)
 
@@ -681,8 +633,6 @@ Công thức `an+b`:
 n+4     → từ phần tử 4 trở đi
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.4 :not()** nối từ **4.3 Structural các bộ chọn (selectors)** sang **4.5 :is() [ADV]**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4.4 `:not()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -696,8 +646,6 @@ Có thể nhận bộ chọn (selector) danh sách (list / 목록):
 ```css
 input:not([type="checkbox"], [type="radio"]) {}
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.5 :is() [ADV]** nối từ **4.4 :not()** sang **4.6 :where() [ADV]**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.5 `:is()` [ADV]
 
@@ -723,8 +671,6 @@ Hữu ích với bộ chọn (selector) dài:
 
 độ đặc hiệu (specificity) của `:is()` lấy độ đặc hiệu (specificity) cao nhất trong arguments.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.6 :where() [ADV]** nối từ **4.5 :is() [ADV]** sang **4.7 :has() [ADV/hiện đại (modern / 현대적)]**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4.6 `:where()` [ADV]
 
 Cú pháp (syntax / 문법) tương tự `:is()` nhưng **độ đặc hiệu (specificity) = 0**.
@@ -736,8 +682,6 @@ Cú pháp (syntax / 문법) tương tự `:is()` nhưng **độ đặc hiệu (s
 ```
 
 Rất hữu ích khi xây cơ sở (base / 기반)/theme dễ override.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.7 :has() [ADV/hiện đại (modern / 현대적)]** nối từ **4.6 :where() [ADV]** sang **::before / ::after**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.7 `:has()` [ADV/hiện đại (modern / 현대적)]
 
@@ -784,8 +728,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ::file-selector-button
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::before / ::after** nối từ **4.7 :has() [ADV/hiện đại (modern / 현대적)]** sang **::marker**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `::before` / `::after`
 
 Cần `content`:
@@ -809,8 +751,6 @@ Decoration:
 
 Không dùng phần tử giả (pseudo-element) cho content quan trọng về ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::marker** nối từ **::before / ::after** sang **::selection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `::marker`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -821,8 +761,6 @@ li::marker {
   font-weight: 700;
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::selection** nối từ **::marker** sang **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `::selection`
 
@@ -838,8 +776,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 6. cơ chế phân tầng (cascade) — nền tảng sống còn của CSS [cốt lõi (core / 핵심)/ADV]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::selection** đặt đầu vào cho **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)**, rồi **6.1 độ đặc hiệu (specificity)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)
 
@@ -921,8 +857,6 @@ Các yếu tố chính:
 4. độ gần phạm vi (scope proximity) trong scoped CSS.
 5. thứ tự nguồn (source order).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)** đặt đầu vào cho **6.1 độ đặc hiệu (specificity)**, rồi **6.2 thứ tự nguồn (source order)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6.1 độ đặc hiệu (specificity)
 
 Có thể tư duy gần đúng:
@@ -951,8 +885,6 @@ cao hơn:
 .card p {}
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.1 độ đặc hiệu (specificity)** đặt vấn đề; **6.2 thứ tự nguồn (source order)** đối chiếu bằng chứng, rồi **6.3 !important** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6.2 thứ tự nguồn (source order)
 
 Nếu độ đặc hiệu (specificity) bằng nhau, quy tắc (rule / 규칙) viết sau thắng:
@@ -961,8 +893,6 @@ Nếu độ đặc hiệu (specificity) bằng nhau, quy tắc (rule / 규칙) v
 .btn { color: blue; }
 .btn { color: red; } /* thắng */
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.2 thứ tự nguồn (source order)** đặt vấn đề; **6.3 !important** đối chiếu bằng chứng, rồi **6.4 toàn cục (global / 전역) keywords** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6.3 `!important`
 
@@ -978,8 +908,6 @@ Chỉ hợp lý khi:
 - tiện ích (utility) API có chủ đích,
 - override bên ngoài (external / 외부) styles khó kiểm soát,
 - khả năng tiếp cận (accessibility / 접근성)/người dùng (user / 사용자) override đặc biệt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.4 toàn cục (global / 전역) keywords** nối từ **6.3 !important** sang **Absolute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.4 toàn cục (global / 전역) keywords
 
@@ -1114,8 +1042,6 @@ Con thường tự kế thừa.
 
 # 9.1 Length units
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Absolute** nối từ **6.4 toàn cục (global / 전역) keywords** sang **Font-relative**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Absolute
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1130,8 +1056,6 @@ pc
 ```
 
 Web UI gần như chủ yếu dùng `px`.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Font-relative** nối từ **Absolute** sang **vùng nhìn (viewport) units**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Font-relative
 
@@ -1171,8 +1095,6 @@ Hữu ích khi thành phần (component / 컴포넌트) cần quy mô (scale / �
 
 ⚠ nested `em` cho `font-size` có thể compound.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **vùng nhìn (viewport) units** nối từ **Font-relative** sang **truy vấn vùng chứa (container query) units**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## vùng nhìn (viewport) units
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1198,8 +1120,6 @@ Mobile full-screen:
 ```
 
 Thường tốt hơn `100vh` trên mobile trình duyệt (browser / 브라우저) có thanh address thay đổi kích thước.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **truy vấn vùng chứa (container query) units** nối từ **vùng nhìn (viewport) units** sang **calc()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## truy vấn vùng chứa (container query) units
 
@@ -1243,8 +1163,6 @@ Percentage padding truyền thống resolve theo inline kích thước (size / �
 
 # 11. CSS Math các hàm (functions) [cốt lõi (core / 핵심)/ADV]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **calc()** nối từ **truy vấn vùng chứa (container query) units** sang **min()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `calc()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1252,8 +1170,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 width: calc(100% - 2rem);
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **min()** nối từ **calc()** sang **max()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `min()`
 
@@ -1263,8 +1179,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 width: min(100%, 70rem);
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **max()** nối từ **min()** sang **clamp(min, preferred, max)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `max()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1272,8 +1186,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 padding-inline: max(1rem, 5vw);
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clamp(min, preferred, max)** nối từ **max()** sang **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `clamp(min, preferred, max)`
 
@@ -1292,8 +1204,6 @@ Rất hữu ích cho:
 ---
 
 # 12. Custom các thuộc tính (properties) / CSS các biến (variables) [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)** nối từ **clamp(min, preferred, max)** sang **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)
 
@@ -1378,8 +1288,6 @@ phương án dự phòng (fallback):
 color: var(--text-color, #222);
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)** đặt đầu vào cho **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit**, rồi **giao diện thành phần (component API)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -1390,8 +1298,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   --text: #fff;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit** đặt đầu vào cho **giao diện thành phần (component API)**, rồi **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## giao diện thành phần (component API)
 
@@ -1450,8 +1356,6 @@ Descriptors:
 
 # 14. mô hình hộp (box model / 박스 모델) [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** nối từ **giao diện thành phần (component API)** sang **box-sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)
 
 ### CSS Idiom — Universal border-box
@@ -1506,8 +1410,6 @@ border
 margin
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **box-sizing** nối từ **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** sang **Mẫu (pattern / 패턴) notes — Sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `box-sizing`
 
 ### `content-box`
@@ -1545,8 +1447,6 @@ Toàn cục (global / 전역) best practice:
 ---
 
 # 15. Width / Height / Sizing [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Sizing** nối từ **box-sizing** sang **Dùng chung (common / 공통) các giá trị (values)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Sizing
 
@@ -1607,8 +1507,6 @@ max-width
 max-height
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Dùng chung (common / 공통) các giá trị (values)** nối từ **Mẫu (pattern / 패턴) notes — Sizing** sang **aspect-ratio**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dùng chung (common / 공통) các giá trị (values)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1642,8 +1540,6 @@ Thực tế:
   width: fit-content;
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **aspect-ratio** nối từ **Dùng chung (common / 공통) các giá trị (values)** sang **gộp lề (margin collapsing) [ADV]**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `aspect-ratio`
 
@@ -1686,8 +1582,6 @@ Center khối (block / 블록) có width:
   margin-inline: auto;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **gộp lề (margin collapsing) [ADV]** nối từ **aspect-ratio** sang **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## gộp lề (margin collapsing) [ADV]
 
@@ -1792,8 +1686,6 @@ Khác border:
 
 # 20. Display & ngữ cảnh định dạng (formatting context / 서식 컨텍스트) [cốt lõi (core / 핵심)/ADV]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** nối từ **gộp lề (margin collapsing) [ADV]** sang **display: block**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)
 
 ### CSS Idiom — `flow-root` để isolate khối (block / 블록) luồng (flow / 흐름)
@@ -1859,16 +1751,12 @@ table
 list-item
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: block** nối từ **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** sang **display: inline**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `display: block`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - thường chiếm available inline width.
 - bắt đầu dòng mới.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: inline** nối từ **display: block** sang **inline-block**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `display: inline`
 
@@ -1878,19 +1766,13 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - width/height không hoạt động như block.
 - vertical margin/padding có behavior khác block.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **inline-block** nối từ **display: inline** sang **display: none**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `inline-block`
 
 Inline bên ngoài, block-like sizing bên trong.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: none** nối từ **inline-block** sang **display: flow-root [ADV]**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `display: none`
 
 Loại khỏi bố cục (layout / 레이아웃) và cây khả năng tiếp cận (accessibility tree / 접근성 트리) trong hầu hết trường hợp.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: none** đặt đầu vào cho **display: flow-root [ADV]**, rồi **display: contents** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `display: flow-root` [ADV]
 
@@ -1904,8 +1786,6 @@ Useful clear float / isolate luồng (flow / 흐름):
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: flow-root [ADV]** đặt đầu vào cho **display: contents**, rồi **visibility** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `display: contents`
 
 Box của element biến mất nhưng children vẫn participate bố cục (layout / 레이아웃).
@@ -1915,8 +1795,6 @@ Box của element biến mất nhưng children vẫn participate bố cục (lay
 ---
 
 # 21. Visibility & Opacity
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **visibility** nối từ **display: contents** sang **opacity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `visibility`
 
@@ -1928,8 +1806,6 @@ visibility: hidden;
 ```
 
 `hidden`: giữ bố cục (layout / 레이아웃) không gian (space / 공간) nhưng không paint.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **opacity** nối từ **visibility** sang **Mẫu (pattern / 패턴) notes — Positioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `opacity`
 
@@ -1963,8 +1839,6 @@ Cấp cao (senior / 시니어) phải hiểu "default hành vi (behavior / 동�
 ---
 
 # 23. Positioning [cốt lõi (core / 핵심)/ADV]
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Positioning** nối từ **opacity** sang **static**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Positioning
 
@@ -2045,13 +1919,9 @@ left
 inset
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **static** nối từ **Mẫu (pattern / 패턴) notes — Positioning** sang **relative**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `static`
 
 Default. Offset không áp dụng.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **relative** nối từ **static** sang **absolute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `relative`
 
@@ -2070,8 +1940,6 @@ Quan trọng hơn: thường tạo khối chứa tham chiếu (containing block 
   right: 8px;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **absolute** nối từ **relative** sang **fixed**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `absolute`
 
@@ -2094,8 +1962,6 @@ bottom: 0;
 left: 0;
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **fixed** nối từ **absolute** sang **sticky**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `fixed`
 
 Thường cố định theo vùng nhìn (viewport).
@@ -2109,8 +1975,6 @@ Thường cố định theo vùng nhìn (viewport).
 ```
 
 ⚠ ancestor có `transform`, `filter`, `perspective`... có thể thay khối chứa tham chiếu (containing block / 컨테이닝 블록) hành vi (behavior / 동작).
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **sticky** nối từ **fixed** sang **Mẫu (pattern / 패턴) notes — Stacking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `sticky`
 
@@ -2146,8 +2010,6 @@ Gỡ lỗi (debug / 디버그) absolute/fixed lỗi phải hỏi:
 ---
 
 # 25. z-index & ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) [cốt lõi (core / 핵심)/ADV]
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Stacking** nối từ **sticky** sang **hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Stacking
 
@@ -2254,19 +2116,13 @@ scroll
 auto
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hidden** nối từ **Mẫu (pattern / 패턴) notes — Stacking** sang **clip**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `hidden`
 
 Clip overflow và thường tạo vùng chứa cuộn (scroll container) ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clip** nối từ **hidden** sang **auto**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `clip`
 
 Clip mà không cung cấp scrolling như `hidden`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **auto** nối từ **clip** sang **contain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `auto`
 
@@ -2297,8 +2153,6 @@ Multiline line clamp:
 
 # 27. `contain` & `content-visibility` [ADV]
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **contain** nối từ **auto** sang **content-visibility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `contain`
 
 Giới hạn ảnh hưởng của subtree tới bên ngoài.
@@ -2318,8 +2172,6 @@ các giá trị (values) conceptually:
 - combinations / `strict` / `content`
 
 Dùng cẩn thận vì có thể thay sizing/positioning hành vi (behavior / 동작).
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **content-visibility** nối từ **contain** sang **Mẫu (pattern / 패턴) notes — Flexbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `content-visibility`
 
@@ -2344,8 +2196,6 @@ contain-intrinsic-size: auto 500px;
 ---
 
 # 28. Flexbox [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Flexbox** nối từ **content-visibility** sang **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Flexbox
 
@@ -2424,8 +2274,6 @@ Flexbox là bố cục (layout / 레이아웃) **1 chiều**: row hoặc column.
   display: flex;
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)** nối từ **Mẫu (pattern / 패턴) notes — Flexbox** sang **flex-grow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)
 
@@ -2538,8 +2386,6 @@ column-gap: 2rem;
 
 # 29. phần tử Flex (flex item) các thuộc tính (properties) [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-grow** nối từ **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)** sang **flex-shrink**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `flex-grow`
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -2551,8 +2397,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```
 
 Phân chia **positive không gian dư (free space)** theo tỉ lệ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-shrink** nối từ **flex-grow** sang **flex-basis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `flex-shrink`
 
@@ -2566,8 +2410,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 
 Quyết định item co khi thiếu không gian (space / 공간).
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-basis** nối từ **flex-shrink** sang **flex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `flex-basis`
 
 Initial main-size trước grow/shrink.
@@ -2577,8 +2419,6 @@ Initial main-size trước grow/shrink.
   flex-basis: 20rem;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex** nối từ **flex-basis** sang **align-self**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `flex`
 
@@ -2603,13 +2443,9 @@ flex: 1;          /* grow */
 flex: 0 0 200px;  /* fixed basis */
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **align-self** nối từ **flex** sang **order**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `align-self`
 
 Override `align-items` cho một item.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **order** nối từ **align-self** sang **Center**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `order`
 
@@ -2654,8 +2490,6 @@ Tương tự vertical flex:
 
 # 31. Flex Patterns
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Center** nối từ **order** sang **Navbar**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Center
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2667,8 +2501,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   justify-content: center;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Navbar** nối từ **Center** sang **Equal cards**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Navbar
 
@@ -2685,8 +2517,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   margin-inline-start: auto;
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Equal cards** nối từ **Navbar** sang **Mẫu (pattern / 패턴) notes — Grid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Equal cards
 
@@ -2707,8 +2537,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 32. CSS Grid [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Grid** nối từ **Equal cards** sang **32.1 các dải lưới (grid tracks)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — Grid
 
@@ -2770,8 +2598,6 @@ Grid là bố cục (layout / 레이아웃) **2 chiều**.
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **32.1 các dải lưới (grid tracks)** nối từ **Mẫu (pattern / 패턴) notes — Grid** sang **fr**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32.1 các dải lưới (grid tracks)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -2779,8 +2605,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```css
 grid-template-columns: 1fr 1fr 1fr;
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **fr** nối từ **32.1 các dải lưới (grid tracks)** sang **repeat()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `fr`
 
@@ -2792,8 +2616,6 @@ grid-template-columns: 240px 1fr;
 
 Sidebar + content.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **repeat()** nối từ **fr** sang **minmax()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `repeat()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2801,8 +2623,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 grid-template-columns: repeat(3, 1fr);
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **minmax()** nối từ **repeat()** sang **Responsive grid không truy vấn môi trường (media query)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `minmax()`
 
@@ -2813,8 +2633,6 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 ```
 
 `minmax(0, 1fr)` thường chống intrinsic overflow tốt hơn plain `1fr`.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive grid không truy vấn môi trường (media query)** nối từ **minmax()** sang **Mẫu (pattern / 패턴) notes — Subgrid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Responsive grid không truy vấn môi trường (media query)
 
@@ -2959,8 +2777,6 @@ column dense
 
 # 37. Subgrid [ADV/hiện đại (modern / 현대적)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Subgrid** nối từ **Responsive grid không truy vấn môi trường (media query)** sang **Mẫu (pattern / 패턴) notes — Typography**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — Subgrid
 
 ### CSS Idiom — Aligned card internals
@@ -3083,8 +2899,6 @@ Useful cho newspaper/text-heavy layouts.
 
 # 41. Typography [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Typography** nối từ **Mẫu (pattern / 패턴) notes — Subgrid** sang **font-family**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — Typography
 
 ### CSS Idiom — Unitless line-height
@@ -3131,8 +2945,6 @@ Xây một hệ kiểu (type system / 타입 시스템):
 
 Không chọn từng font-size ngẫu nhiên.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-family** nối từ **Mẫu (pattern / 패턴) notes — Typography** sang **font-size**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `font-family`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3158,8 +2970,6 @@ Generic families:
 - `fantasy`
 - `system-ui`
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-size** nối từ **font-family** sang **font-weight**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `font-size`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3174,8 +2984,6 @@ Fluid:
 font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-weight** nối từ **font-size** sang **font-style**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `font-weight`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3188,8 +2996,6 @@ bold ≈ 700
 
 biến (variable) font có thể hỗ trợ phạm vi (range / 범위).
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-style** nối từ **font-weight** sang **line-height**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `font-style`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3199,8 +3005,6 @@ normal
 italic
 oblique
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **line-height** nối từ **font-style** sang **font shorthand**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `line-height`
 
@@ -3222,8 +3026,6 @@ h1 {
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font shorthand** nối từ **line-height** sang **text-align**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `font` shorthand
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3237,8 +3039,6 @@ font: italic 600 1rem/1.5 Inter, sans-serif;
 ---
 
 # 42. văn bản (text / 텍스트) các thuộc tính (properties) [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-align** nối từ **font shorthand** sang **text-decoration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `text-align`
 
@@ -3254,8 +3054,6 @@ justify
 ```
 
 Ưu tiên `start/end` cho internationalization.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-decoration** nối từ **text-align** sang **text-transform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `text-decoration`
 
@@ -3275,8 +3073,6 @@ Sub-properties:
 - `text-decoration-style`
 - `text-decoration-thickness`
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-transform** nối từ **text-decoration** sang **letter-spacing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `text-transform`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3290,8 +3086,6 @@ capitalize
 
 Không dùng CSS uppercase thay cho dữ liệu nếu ngữ nghĩa (semantics / 의미론)/bản sao (copy / 복사) thực sự cần uppercase.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **letter-spacing** nối từ **text-transform** sang **word-spacing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `letter-spacing`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3302,13 +3096,9 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **word-spacing** nối từ **letter-spacing** sang **text-indent**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `word-spacing`
 
 Điều chỉnh không gian (space / 공간) giữa từ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-indent** nối từ **word-spacing** sang **white-space**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `text-indent`
 
@@ -3317,8 +3107,6 @@ Indent dòng đầu.
 ---
 
 # 43. Wrapping / Breaking [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **white-space** nối từ **text-indent** sang **overflow-wrap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `white-space`
 
@@ -3345,8 +3133,6 @@ Giữ whitespace + newline, không wrap tự nhiên.
 
 Giữ whitespace/newline nhưng cho wrap.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **white-space** đặt đầu vào cho **overflow-wrap**, rồi **word-break** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `overflow-wrap`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3356,8 +3142,6 @@ overflow-wrap: anywhere;
 ```
 
 Cho phép break long URL/đơn vị từ (token / 토큰).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **overflow-wrap** đặt đầu vào cho **word-break**, rồi **hyphens** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `word-break`
 
@@ -3371,8 +3155,6 @@ keep-all
 
 Cẩn thận `break-all` vì có thể break rất xấu.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hyphens** nối từ **word-break** sang **text-overflow**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `hyphens`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3385,8 +3167,6 @@ p {
 
 Cần `lang` đúng trong HTML để trình duyệt (browser / 브라우저) hyphenate tốt.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hyphens** đặt đầu vào cho **text-overflow**, rồi **text-wrap [hiện đại (modern / 현대적)]** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `text-overflow`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3396,8 +3176,6 @@ text-overflow: ellipsis;
 ```
 
 Thường đi cùng `overflow:hidden` + `white-space:nowrap`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-overflow** đặt đầu vào cho **text-wrap [hiện đại (modern / 현대적)]**, rồi **Mẫu (pattern / 패턴) notes — Color** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `text-wrap` [hiện đại (modern / 현대적)]
 
@@ -3463,8 +3241,6 @@ Hiệu năng (performance / 성능): ưu tiên WOFF2, subset khi cần, không t
 
 # 45. Color [cốt lõi (core / 핵심) → hiện đại (modern / 현대적)]
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Color** nối từ **text-wrap [hiện đại (modern / 현대적)]** sang **Keywords**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — Color
 
 ### CSS Idiom — `currentColor`
@@ -3501,8 +3277,6 @@ blue-600
 
 Oklch phù hợp khi cần tạo palette có lightness dễ kiểm soát hơn HSL.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Keywords** nối từ **Mẫu (pattern / 패턴) notes — Color** sang **Hex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Keywords
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3521,8 +3295,6 @@ color: currentColor;
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hex** nối từ **Keywords** sang **rgb()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hex
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3535,8 +3307,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **rgb()** nối từ **Hex** sang **hsl()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `rgb()`
 
 Hiện đại (modern / 현대적) cú pháp (syntax / 문법):
@@ -3545,8 +3315,6 @@ Hiện đại (modern / 현대적) cú pháp (syntax / 문법):
 color: rgb(255 0 0 / 80%);
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hsl()** nối từ **rgb()** sang **oklch() [hiện đại (modern / 현대적)]**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `hsl()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3554,8 +3322,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 color: hsl(220 90% 56%);
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **oklch() [hiện đại (modern / 현대적)]** nối từ **hsl()** sang **Relative colors [hiện đại (modern / 현대적)]**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `oklch()` [hiện đại (modern / 현대적)]
 
@@ -3573,8 +3339,6 @@ Oklch hữu ích cho hệ thống thiết kế (design system) vì lightness g�
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Relative colors [hiện đại (modern / 현대적)]** nối từ **oklch() [hiện đại (modern / 현대적)]** sang **color-mix()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Relative colors [hiện đại (modern / 현대적)]
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3584,8 +3348,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   oklch(from var(--brand) calc(l - 0.08) c h);
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **color-mix()** nối từ **Relative colors [hiện đại (modern / 현대적)]** sang **light-dark()**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `color-mix()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3594,8 +3356,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 background:
   color-mix(in oklab, var(--brand) 20%, white);
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **light-dark()** nối từ **color-mix()** sang **background-size**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `light-dark()`
 
@@ -3638,8 +3398,6 @@ Example:
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **background-size** nối từ **light-dark()** sang **Tuyến tính (linear / 선형)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `background-size`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3659,8 +3417,6 @@ contain
 
 # 47. Gradients [cốt lõi (core / 핵심)/ADV]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tuyến tính (linear / 선형)** nối từ **background-size** sang **Radial**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tuyến tính (linear / 선형)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3670,8 +3426,6 @@ background:
   linear-gradient(135deg, #2563eb, #7c3aed);
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Radial** nối từ **Tuyến tính (linear / 선형)** sang **Conic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Radial
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3680,8 +3434,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 background:
   radial-gradient(circle at top, white, #ddd);
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Conic** nối từ **Radial** sang **box-shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conic
 
@@ -3700,8 +3452,6 @@ Useful:
 ---
 
 # 48. Shadows [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **box-shadow** nối từ **Conic** sang **text-shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `box-shadow`
 
@@ -3725,8 +3475,6 @@ box-shadow:
   0 8px 24px rgb(0 0 0 / .10);
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-shadow** nối từ **box-shadow** sang **object-fit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `text-shadow`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3738,8 +3486,6 @@ text-shadow: 0 1px 2px rgb(0 0 0 / .3);
 ---
 
 # 49. đối tượng (object / 객체) sizing: images/video [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **object-fit** nối từ **text-shadow** sang **object-position**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `object-fit`
 
@@ -3760,8 +3506,6 @@ scale-down
   object-fit: cover;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **object-position** nối từ **object-fit** sang **backdrop-filter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `object-position`
 
@@ -3810,8 +3554,6 @@ các hàm (functions):
 - `saturate()`
 - `sepia()`
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **backdrop-filter** nối từ **object-position** sang **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `backdrop-filter`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3848,8 +3590,6 @@ Dùng chung (common / 공통) blend modes:
 ---
 
 # 53. thuộc tính lô-gic (logic / 논리) (logical properties) [cốt lõi (core / 핵심)/ADV]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)** nối từ **backdrop-filter** sang **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)
 
@@ -3951,8 +3691,6 @@ Không nên dùng `direction` chỉ để reorder UI tùy tiện.
 
 # 55. thiết kế đáp ứng (responsive design) [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)** nối từ **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)** sang **Media features quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)
 
 ### CSS Idiom — Content-driven điểm ngắt (breakpoint)
@@ -4023,8 +3761,6 @@ Có thể:
 @media (48rem <= width < 80rem) {}
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Media features quan trọng** nối từ **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)** sang **Dark chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Media features quan trọng
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -4071,8 +3807,6 @@ Không bắt buộc mọi dự án (project / 프로젝트) phải mobile-first,
 
 # 58. người dùng (user / 사용자) Preference các truy vấn môi trường (media queries) [cốt lõi (core / 핵심)/ADV]
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Dark chế độ (mode / 모드)** nối từ **Media features quan trọng** sang **giảm chuyển động (reduced motion)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dark chế độ (mode / 모드)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4085,8 +3819,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   }
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **giảm chuyển động (reduced motion)** nối từ **Dark chế độ (mode / 모드)** sang **Pointer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## giảm chuyển động (reduced motion)
 
@@ -4107,8 +3839,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 Trong môi trường vận hành (production / 운영 환경) có thể viết targeted hơn thay vì kill toàn bộ motion.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Pointer** nối từ **giảm chuyển động (reduced motion)** sang **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pointer
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4126,8 +3856,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 59. các truy vấn vùng chứa (container queries) [ADV/hiện đại (modern / 현대적)]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)** nối từ **Pointer** sang **Individual transform các thuộc tính (properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)
 
@@ -4281,8 +4009,6 @@ transform: translateY(-2px) scale(1.02);
 
 ⚠ transform thứ tự (order / 순서) matters.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Individual transform các thuộc tính (properties)** nối từ **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)** sang **transform-origin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Individual transform các thuộc tính (properties)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4293,8 +4019,6 @@ rotate: 5deg;
 scale: 1.05;
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **transform-origin** nối từ **Individual transform các thuộc tính (properties)** sang **3D**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `transform-origin`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4303,8 +4027,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 transform-origin: center;
 transform-origin: top left;
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3D** nối từ **transform-origin** sang **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3D
 
@@ -4320,8 +4042,6 @@ backface-visibility: hidden;
 ---
 
 # 63. Transitions [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)** nối từ **3D** sang **Mẫu (pattern / 패턴) notes — Animation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)
 
@@ -4411,8 +4131,6 @@ transition: opacity 150ms ease, transform 150ms ease;
 
 # 64. Animations [cốt lõi (core / 핵심)/ADV]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Animation** nối từ **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)** sang **animation-iteration-count**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — Animation
 
 ### CSS Idiom — Reduced-motion override
@@ -4474,8 +4192,6 @@ animation-play-state
 animation
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-iteration-count** nối từ **Mẫu (pattern / 패턴) notes — Animation** sang **animation-direction**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `animation-iteration-count`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4485,8 +4201,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 2
 infinite
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-direction** nối từ **animation-iteration-count** sang **animation-fill-mode**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `animation-direction`
 
@@ -4499,8 +4213,6 @@ alternate
 alternate-reverse
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-fill-mode** nối từ **animation-direction** sang **animation-play-state**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `animation-fill-mode`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4511,8 +4223,6 @@ forwards
 backwards
 both
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-play-state** nối từ **animation-fill-mode** sang **will-change**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `animation-play-state`
 
@@ -4539,8 +4249,6 @@ Cẩn thận animation liên tục của:
 vì có thể trigger bố cục (layout / 레이아웃) nhiều hơn.
 
 Nhưng đừng biến "transform always fast" thành luật tuyệt đối; profiling với DevTools khi animation phức tạp.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **will-change** nối từ **animation-play-state** sang **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `will-change`
 
@@ -4705,8 +4413,6 @@ Cấp cao (senior / 시니어) quy tắc (rule / 규칙): kiểm tra trình duy�
 
 # 71. CSS lồng cú pháp (nesting) [hiện đại (modern / 현대적)]
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)** nối từ **will-change** sang **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)
 
 ### CSS Idiom — Nest các trạng thái (states), not DOM độ sâu (depth / 깊이)
@@ -4779,8 +4485,6 @@ Quy tắc (rule / 규칙) thực tế: 1–3 levels là đủ trong đa số th�
 ---
 
 # 72. `@scope` [hiện đại (modern / 현대적)/ADV]
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)** nối từ **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)** sang **appearance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)
 
@@ -4969,8 +4673,6 @@ Responsive bảng (table / 테이블) thường cần wrapper:
 
 # 77. Forms & Controls [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **appearance** nối từ **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)** sang **accent-color**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `appearance`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4994,8 +4696,6 @@ select {
 - độ tương phản cao (high contrast),
 - khả năng tiếp cận (accessibility / 접근성) visuals.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **accent-color** nối từ **appearance** sang **caret-color**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `accent-color`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5012,8 +4712,6 @@ Style bản địa (native / 네이티브):
 - phạm vi (range / 범위),
 - progress (tùy browser).
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **caret-color** nối từ **accent-color** sang **resize**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `caret-color`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5023,8 +4721,6 @@ input {
   caret-color: var(--brand);
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **resize** nối từ **caret-color** sang **field-sizing [hiện đại (modern / 현대적)]**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `resize`
 
@@ -5042,8 +4738,6 @@ các giá trị (values):
 - `horizontal`
 - `vertical`
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **field-sizing [hiện đại (modern / 현대적)]** nối từ **resize** sang **cursor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `field-sizing` [hiện đại (modern / 현대적)]
 
 Trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) phù hợp, giúp form controls kích thước (size / 크기) theo content.
@@ -5051,8 +4745,6 @@ Trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) ph
 ---
 
 # 78. Cursor & Pointer hành vi (behavior / 동작)
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **cursor** nối từ **field-sizing [hiện đại (modern / 현대적)]** sang **pointer-events**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `cursor`
 
@@ -5074,8 +4766,6 @@ crosshair
 
 Đừng dùng `cursor:pointer` cho non-interactive element nếu ngữ nghĩa (semantics / 의미론) không click được.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **pointer-events** nối từ **cursor** sang **user-select**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `pointer-events`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5091,8 +4781,6 @@ các giá trị (values) web UI thường:
 - `none`
 
 ⚠ `pointer-events:none` không đồng nghĩa disabled mang tính ngữ nghĩa (semantic / 의미적).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **user-select** nối từ **pointer-events** sang **clip-path**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `user-select`
 
@@ -5134,8 +4822,6 @@ Không nhét thông tin (information / 정보) quan trọng chỉ trong CSS-gene
 
 # 80. Shapes, Clip & Mask [ADV/hiện đại (modern / 현대적)]
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **user-select** đặt đầu vào cho **clip-path**, rồi **shape-outside** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `clip-path`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5153,13 +4839,9 @@ clip-path:
   polygon(50% 0, 100% 100%, 0 100%);
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clip-path** đặt đầu vào cho **shape-outside**, rồi **Masks** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `shape-outside`
 
 Văn bản (text / 텍스트) wrap quanh shape, thường với float.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Masks** nối từ **shape-outside** sang **[cốt lõi (core / 핵심)]**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Masks
 
@@ -5226,8 +4908,6 @@ text-align: start;
 
 # 84. At-rules cần biết
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **[cốt lõi (core / 핵심)]** nối từ **Masks** sang **[ADV/hiện đại (modern / 현대적)]**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## [cốt lõi (core / 핵심)]
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5238,8 +4918,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 @font-face
 @keyframes
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **[ADV/hiện đại (modern / 현대적)]** nối từ **[cốt lõi (core / 핵심)]** sang **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## [ADV/hiện đại (modern / 현대적)]
 
@@ -5313,8 +4991,6 @@ trong các mức hỗ trợ trình duyệt (browser support / 브라우저 지�
 ---
 
 # 88. kiến trúc (architecture / 아키텍처): tổ chức CSS như cấp cao (senior / 시니어) [ADV]
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)** nối từ **[ADV/hiện đại (modern / 현대적)]** sang **BEM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)
 
@@ -5395,8 +5071,6 @@ build output
 
 # 89. Naming Strategies
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **BEM** nối từ **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)** sang **ưu tiên tiện ích (utility-first)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## BEM
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5416,8 +5090,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 Nhược:
 - verbose.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **ưu tiên tiện ích (utility-first)** nối từ **BEM** sang **CSS Modules**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ưu tiên tiện ích (utility-first)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5435,8 +5107,6 @@ Nhược:
 - markup nhiều lớp (class / 클래스),
 - cần convention/tooling.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **CSS Modules** nối từ **ưu tiên tiện ích (utility-first)** sang **CSS-in-JS**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CSS Modules
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -5450,8 +5120,6 @@ Hệ thống dựng (build system / 빌드 시스템) tạo scoped lớp (class 
 Ưu:
 - cục bộ (local / 로컬) phạm vi (scope / 범위),
 - giảm collision.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **CSS-in-JS** nối từ **CSS Modules** sang **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSS-in-JS
 
@@ -5482,8 +5150,6 @@ overrides   → rare integration overrides
 ---
 
 # 91. đơn vị từ (token / 토큰) thiết kế (design tokens)
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)** nối từ **CSS-in-JS** sang **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)
 
@@ -5568,8 +5234,6 @@ body {
 ---
 
 # 93. thành phần (component / 컴포넌트) trạng thái (state / 상태)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)** nối từ **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)** sang **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)
 
@@ -5704,8 +5368,6 @@ Không blindly bản sao (copy / 복사) reset từ internet; hiểu từng line
 
 # 96. khả năng tiếp cận (accessibility / 접근성) [cốt lõi (core / 핵심)/cấp cao (senior / 시니어)]
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)** nối từ **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)** sang **Focus**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)
 
 ### CSS Idiom — Focus-visible ring
@@ -5744,8 +5406,6 @@ Style đẹp nhưng làm mất focus, cắt văn bản (text / 텍스트) khi zo
 
 CSS có thể phá khả năng tiếp cận (accessibility / 접근성) dù HTML đúng.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Focus** nối từ **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)** sang **Contrast**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Focus
 
 Phải có visible focus:
@@ -5756,8 +5416,6 @@ Phải có visible focus:
   outline-offset: 3px;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Focus** đặt tiêu chí; **Contrast** dùng tiêu chí đó để kiểm tra ranh giới, rồi **giảm chuyển động (reduced motion)** mở rộng hệ quả.
 
 ## Contrast
 
@@ -5774,8 +5432,6 @@ green = success
 
 Nên có icon/văn bản (text / 텍스트)/trạng thái (state / 상태) thêm.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Contrast** đặt tiêu chí; **giảm chuyển động (reduced motion)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Zoom** mở rộng hệ quả.
-
 ## giảm chuyển động (reduced motion)
 
 Hỗ trợ (support / 지원):
@@ -5787,8 +5443,6 @@ Hỗ trợ (support / 지원):
   }
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Zoom** nối từ **giảm chuyển động (reduced motion)** sang **Visual thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Zoom
 
@@ -5811,13 +5465,9 @@ Tốt hơn:
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Visual thứ tự (order / 순서)** nối từ **Zoom** sang **Hidden content**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Visual thứ tự (order / 순서)
 
 Đừng dùng Flex/Grid `order` để tạo visual thứ tự (order / 순서) khác hoàn toàn DOM thứ tự (order / 순서).
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hidden content** nối từ **Visual thứ tự (order / 순서)** sang **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hidden content
 
@@ -5873,8 +5523,6 @@ Không assume colors/shadows luôn được kết xuất (render / 렌더링) nh
 
 # 99. hiệu năng (performance / 성능) [ADV/cấp cao (senior / 시니어)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)** nối từ **Hidden content** sang **Không micro-optimize bộ chọn (selector) vô nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)
 
 ### CSS Idiom — Skip off-screen rendering khi phù hợp
@@ -5913,13 +5561,9 @@ CSS hiệu năng (performance / 성능) thường liên quan:
 - animation,
 - tính lại style (style recalculation).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Không micro-optimize bộ chọn (selector) vô nghĩa** nối từ **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)** sang **Tập trung vào**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Không micro-optimize bộ chọn (selector) vô nghĩa
 
 Hiện đại (modern / 현대적) trình duyệt (browser / 브라우저) bộ chọn (selector) engine rất tối ưu. Vấn đề maintainability thường lớn hơn việc `.a > .b` nhanh hơn hay chậm hơn vài microsecond.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tập trung vào** nối từ **Không micro-optimize bộ chọn (selector) vô nghĩa** sang **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tập trung vào
 
@@ -5988,8 +5632,6 @@ Checklist:
 
 # 103. CSS gỡ lỗi (debugging) Workflow [cấp cao (senior / 시니어)]
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)** nối từ **Tập trung vào** sang **Step 1 — Inspect element**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)
 
 ### Mẫu lập trình (coding pattern / 코딩 패턴) — ràng buộc (constraint / 제약조건) tracing
@@ -6029,8 +5671,6 @@ Tìm hệ thống (system / 시스템) quyết định hành vi (behavior / 동�
 
 Khi bố cục (layout / 레이아웃) sai:
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 1 — Inspect element** nối từ **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)** sang **Step 2 — mô hình hộp (box model / 박스 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Step 1 — Inspect element
 
 DevTools:
@@ -6039,8 +5679,6 @@ DevTools:
 - computed giá trị (value / 값)?
 - inherited từ đâu?
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 2 — mô hình hộp (box model / 박스 모델)** nối từ **Step 1 — Inspect element** sang **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Step 2 — mô hình hộp (box model / 박스 모델)
 
 Check:
@@ -6048,8 +5686,6 @@ Check:
 - padding,
 - border,
 - margin.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)** nối từ **Step 2 — mô hình hộp (box model / 박스 모델)** sang **Step 4 — các ràng buộc (constraints / 제약조건들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)
 
@@ -6060,8 +5696,6 @@ Element là:
 - positioned?
 - vùng chứa cuộn (scroll container)?
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 4 — các ràng buộc (constraints / 제약조건들)** nối từ **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)** sang **Step 5 — Position ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Step 4 — các ràng buộc (constraints / 제약조건들)
 
 Check:
@@ -6071,16 +5705,12 @@ Check:
 - overflow,
 - aspect ratio.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 5 — Position ngữ cảnh (context / 맥락)** nối từ **Step 4 — các ràng buộc (constraints / 제약조건들)** sang **Step 6 — trình duyệt (browser / 브라우저) responsive modes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Step 5 — Position ngữ cảnh (context / 맥락)
 
 Check:
 - khối chứa tham chiếu (containing block / 컨테이닝 블록),
 - ngữ cảnh xếp chồng (stacking context / 쌓임 맥락),
 - clipping ancestor.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 6 — trình duyệt (browser / 브라우저) responsive modes** nối từ **Step 5 — Position ngữ cảnh (context / 맥락)** sang **Bug 1 — z-index không chạy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Step 6 — trình duyệt (browser / 브라우저) responsive modes
 
@@ -6119,16 +5749,12 @@ Grid/Flex overlays trong Chrome/Firefox DevTools cực hữu ích.
 
 # 105. dùng chung (common / 공통) CSS Bugs cấp cao (senior / 시니어) phải nhận ra ngay
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 1 — z-index không chạy** nối từ **Step 6 — trình duyệt (browser / 브라우저) responsive modes** sang **Bug 2 — Flex child overflow**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bug 1 — `z-index` không chạy
 
 Cause thường:
 - ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) parent,
 - `z-index` chưa applicable theo ngữ cảnh (context / 맥락),
 - clipping.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 1 — z-index không chạy** đặt đầu vào cho **Bug 2 — Flex child overflow**, rồi **Bug 3 — Vertical flex scroll không chạy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bug 2 — Flex child overflow
 
@@ -6139,8 +5765,6 @@ Fix thường:
   min-width: 0;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 2 — Flex child overflow** đặt đầu vào cho **Bug 3 — Vertical flex scroll không chạy**, rồi **Bug 4 — position: sticky không stick** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bug 3 — Vertical flex scroll không chạy
 
@@ -6159,8 +5783,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 4 — position: sticky không stick** nối từ **Bug 3 — Vertical flex scroll không chạy** sang **Bug 5 — height:100% không có tác dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bug 4 — `position: sticky` không stick
 
 Check:
@@ -6168,8 +5790,6 @@ Check:
 - ancestor overflow?
 - vùng chứa cuộn (scroll container) nào?
 - parent height?
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 5 — height:100% không có tác dụng** nối từ **Bug 4 — position: sticky không stick** sang **Bug 6 — Ellipsis không chạy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bug 5 — `height:100%` không có tác dụng
 
@@ -6180,8 +5800,6 @@ Dùng đúng ngữ cảnh (context / 맥락) hoặc:
 ```css
 min-height: 100dvh;
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 6 — Ellipsis không chạy** nối từ **Bug 5 — height:100% không có tác dụng** sang **Bug 7 — margin:auto tưởng luôn center**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bug 6 — Ellipsis không chạy
 
@@ -6196,13 +5814,9 @@ Cần các ràng buộc (constraints / 제약조건들):
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 7 — margin:auto tưởng luôn center** nối từ **Bug 6 — Ellipsis không chạy** sang **Bug 8 — absolute element "bay" sai nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bug 7 — `margin:auto` tưởng luôn center
 
 Auto margins hoạt động khác nhau tùy ngữ cảnh định dạng (formatting context / 서식 컨텍스트)/axis/available không gian dư (free space).
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 8 — absolute element "bay" sai nơi** nối từ **Bug 7 — margin:auto tưởng luôn center** sang **Fluid bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bug 8 — absolute element "bay" sai nơi
 
@@ -6211,8 +5825,6 @@ Khối chứa tham chiếu (containing block / 컨테이닝 블록) không phả
 ---
 
 # 106. Responsive bố cục (layout / 레이아웃) Recipes
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Fluid bộ chứa (container / 컨테이너)** nối từ **Bug 8 — absolute element "bay" sai nơi** sang **Auto-responsive cards**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fluid bộ chứa (container / 컨테이너)
 
@@ -6224,8 +5836,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   margin-inline: auto;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Auto-responsive cards** nối từ **Fluid bộ chứa (container / 컨테이너)** sang **Sidebar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Auto-responsive cards
 
@@ -6240,8 +5850,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sidebar** nối từ **Auto-responsive cards** sang **Sticky sidebar**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sidebar
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6255,8 +5863,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   gap: 2rem;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sticky sidebar** nối từ **Sidebar** sang **Bố cục (layout / 레이아웃)/math**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sticky sidebar
 
@@ -6388,8 +5994,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 
 # 112. CSS các hàm (functions) nên biết
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bố cục (layout / 레이아웃)/math** nối từ **Sticky sidebar** sang **các biến (variables)/môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bố cục (layout / 레이아웃)/math
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -6404,8 +6008,6 @@ repeat()
 fit-content()
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **các biến (variables)/môi trường (environment / 환경)** nối từ **Bố cục (layout / 레이아웃)/math** sang **Color**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## các biến (variables)/môi trường (environment / 환경)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -6415,8 +6017,6 @@ var()
 env()
 attr()
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Color** nối từ **các biến (variables)/môi trường (environment / 환경)** sang **Images**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Color
 
@@ -6435,8 +6035,6 @@ color-mix()
 light-dark()
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Images** nối từ **Color** sang **Transform**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Images
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6447,8 +6045,6 @@ radial-gradient()
 conic-gradient()
 image-set()
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Transform** nối từ **Images** sang **Filters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transform
 
@@ -6461,8 +6057,6 @@ rotate()
 matrix()
 perspective()
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Filters** nối từ **Transform** sang **Shapes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Filters
 
@@ -6479,8 +6073,6 @@ invert()
 saturate()
 sepia()
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Shapes** nối từ **Filters** sang **Bố cục (layout / 레이아웃) / Box**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Shapes
 
@@ -6516,8 +6108,6 @@ Ngoài ra CSS-wide từ khóa (keyword / 키워드) thường có `initial`, `in
 
 Đây chỉ là appendix để tra cứu sau khi đã hiểu mô hình tư duy (mental model / 사고 모델) ở các phần trước. Không dùng section này như lộ trình học (learning path / 학습 경로) và không học thuộc thuộc tính (property / 속성) theo kiểu danh sách.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bố cục (layout / 레이아웃) / Box** nối từ **Shapes** sang **Position / stacking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bố cục (layout / 레이아웃) / Box
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -6547,8 +6137,6 @@ content-visibility
 contain-intrinsic-size
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Position / stacking** nối từ **Bố cục (layout / 레이아웃) / Box** sang **Flexbox**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Position / stacking
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6563,8 +6151,6 @@ inset
 z-index
 isolation
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Flexbox** nối từ **Position / stacking** sang **Grid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Flexbox
 
@@ -6587,8 +6173,6 @@ gap
 row-gap
 column-gap
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Grid** nối từ **Flexbox** sang **Typography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grid
 
@@ -6621,8 +6205,6 @@ align-content
 place-content
 gap
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Typography** nối từ **Grid** sang **Color / background**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Typography
 
@@ -6660,8 +6242,6 @@ hyphens
 vertical-align
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Color / background** nối từ **Typography** sang **Border / visual**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Color / background
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6680,8 +6260,6 @@ background-clip
 color-scheme
 accent-color
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Border / visual** nối từ **Color / background** sang **Images / replaced content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Border / visual
 
@@ -6706,8 +6284,6 @@ mix-blend-mode
 background-blend-mode
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Images / replaced content** nối từ **Border / visual** sang **Transform / animation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Images / replaced content
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6718,8 +6294,6 @@ object-position
 image-rendering
 aspect-ratio
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Transform / animation** nối từ **Images / replaced content** sang **Scroll**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transform / animation
 
@@ -6755,8 +6329,6 @@ animation-range
 will-change
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Scroll** nối từ **Transform / animation** sang **UI**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scroll
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6773,8 +6345,6 @@ scrollbar-color
 scrollbar-width
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **UI** nối từ **Scroll** sang **Danh sách (list / 목록) / counters**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## UI
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6788,8 +6358,6 @@ resize
 caret-color
 touch-action
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Danh sách (list / 목록) / counters** nối từ **UI** sang **Bảng (table / 테이블)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Danh sách (list / 목록) / counters
 
@@ -6807,8 +6375,6 @@ content
 quotes
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bảng (table / 테이블)** nối từ **Danh sách (list / 목록) / counters** sang **Columns / fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bảng (table / 테이블)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6820,8 +6386,6 @@ table-layout
 caption-side
 empty-cells
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Columns / fragmentation** nối từ **Bảng (table / 테이블)** sang **thuộc tính lô-gic (logic / 논리) (logical properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Columns / fragmentation
 
@@ -6838,8 +6402,6 @@ break-before
 break-after
 break-inside
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **thuộc tính lô-gic (logic / 논리) (logical properties)** nối từ **Columns / fragmentation** sang **Writing / direction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## thuộc tính lô-gic (logic / 논리) (logical properties)
 
@@ -6862,8 +6424,6 @@ border-inline
 border-block
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Writing / direction** nối từ **thuộc tính lô-gic (logic / 논리) (logical properties)** sang **Shape / clipping / mask**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Writing / direction
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6874,8 +6434,6 @@ direction
 unicode-bidi
 text-orientation
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Shape / clipping / mask** nối từ **Writing / direction** sang **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Shape / clipping / mask
 
@@ -6891,8 +6449,6 @@ mask-size
 mask-position
 mask-repeat
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive** nối từ **Shape / clipping / mask** sang **Tính đúng đắn (correctness / 정확성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive
 
@@ -6988,8 +6544,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 # 117. CSS cấp cao (senior / 시니어) Checklist trước khi merge PR
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tính đúng đắn (correctness / 정확성)** nối từ **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive** sang **Responsive**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính đúng đắn (correctness / 정확성)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7001,8 +6555,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - Có toàn cục (global / 전역) tác dụng phụ (side effect) không?
 - Long văn bản (text / 텍스트) có break bố cục (layout / 레이아웃) không?
 - Loading trạng thái (state / 상태)/empty trạng thái (state / 상태)/lỗi (error / 오류) trạng thái (state / 상태) ổn không?
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive** nối từ **Tính đúng đắn (correctness / 정확성)** sang **Khả năng tiếp cận (accessibility / 접근성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Responsive
 
@@ -7016,8 +6568,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 - orientation thay đổi (change / 변경)?
 - thành phần (component / 컴포넌트) trong bộ chứa (container / 컨테이너) khác?
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Khả năng tiếp cận (accessibility / 접근성)** nối từ **Responsive** sang **Hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng tiếp cận (accessibility / 접근성)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7029,8 +6579,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - trạng thái (state / 상태) không chỉ dựa vào color?
 - visual thứ tự (order / 순서) = logical thứ tự (order / 순서)?
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hiệu năng (performance / 성능)** nối từ **Khả năng tiếp cận (accessibility / 접근성)** sang **Kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu năng (performance / 성능)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7040,8 +6588,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - unused CSS?
 - font weights thừa?
 - ảnh (image / 이미지) dimensions reserved?
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Kiến trúc (architecture / 아키텍처)** nối từ **Hiệu năng (performance / 성능)** sang **1. !important everywhere**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiến trúc (architecture / 아키텍처)
 
@@ -7057,8 +6603,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 # 118. Những phản mẫu (anti-pattern) cần bỏ
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1. !important everywhere** nối từ **Kiến trúc (architecture / 아키텍처)** sang **2. Magic z-index**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1. `!important` everywhere
 
 Sai:
@@ -7071,8 +6615,6 @@ Sai:
 
 Hãy sửa cơ chế phân tầng (cascade) kiến trúc (architecture / 아키텍처).
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **2. Magic z-index** nối từ **1. !important everywhere** sang **3. Fixed điểm ảnh (pixel / 픽셀) everything**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Magic z-index
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7082,8 +6624,6 @@ z-index: 999999999;
 ```
 
 Không sửa được ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) cha.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3. Fixed điểm ảnh (pixel / 픽셀) everything** nối từ **2. Magic z-index** sang **4. DOM-coupled bộ chọn (selector)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Fixed điểm ảnh (pixel / 픽셀) everything
 
@@ -7096,8 +6636,6 @@ height: 600px;
 
 Dễ phá responsive/zoom/content.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. DOM-coupled bộ chọn (selector)** nối từ **3. Fixed điểm ảnh (pixel / 픽셀) everything** sang **5. transition: all**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. DOM-coupled bộ chọn (selector)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7108,13 +6646,9 @@ main > div > div:nth-child(2) span {}
 
 Rất fragile.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **5. transition: all** nối từ **4. DOM-coupled bộ chọn (selector)** sang **6. Remove focus outline**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. `transition: all`
 
 Animate unintended changes.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6. Remove focus outline** nối từ **5. transition: all** sang **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Remove focus outline
 
@@ -7126,13 +6660,9 @@ outline: none;
 
 mà không replacement.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)** nối từ **6. Remove focus outline** sang **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)
 
 Dùng Grid/Flex trước.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names** nối từ **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)** sang **9. JavaScript cho vấn đề CSS giải được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names
 
@@ -7143,8 +6673,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```
 
 Hãy chọn điểm ngắt (breakpoint) theo content/bố cục (layout / 레이아웃), không theo tên thiết bị.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **9. JavaScript cho vấn đề CSS giải được** nối từ **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names** sang **Ngày 1–3 — cốt lõi (core / 핵심) mechanics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. JavaScript cho vấn đề CSS giải được
 
@@ -7185,8 +6713,6 @@ Ví dụ nhiều bố cục (layout / 레이아웃) responsive/trạng thái (st
 
 # 120. Roadmap 30 ngày
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 1–3 — cốt lõi (core / 핵심) mechanics** nối từ **9. JavaScript cho vấn đề CSS giải được** sang **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 1–3 — cốt lõi (core / 핵심) mechanics
 
 Học:
@@ -7200,8 +6726,6 @@ Học:
 Đầu ra (output / 출력):
 - 20 bộ chọn (selector) examples,
 - độ đặc hiệu (specificity) playground.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals** nối từ **Ngày 1–3 — cốt lõi (core / 핵심) mechanics** sang **Ngày 7–9 — Positioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals
 
@@ -7217,8 +6741,6 @@ Học:
 - cards,
 - truncation cases.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 7–9 — Positioning** nối từ **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals** sang **Ngày 10–13 — Flexbox**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 7–9 — Positioning
 
 Học:
@@ -7232,8 +6754,6 @@ Học:
 - modal,
 - dropdown.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 10–13 — Flexbox** nối từ **Ngày 7–9 — Positioning** sang **Ngày 14–17 — Grid**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 10–13 — Flexbox
 
 Đầu ra (output / 출력):
@@ -7241,8 +6761,6 @@ Học:
 - toolbar,
 - media đối tượng (object / 객체),
 - responsive card row.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 14–17 — Grid** nối từ **Ngày 10–13 — Flexbox** sang **Ngày 18–19 — Typography & visual**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 14–17 — Grid
 
@@ -7252,8 +6770,6 @@ Học:
 - auto-fit cards,
 - named areas,
 - subgrid.
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 18–19 — Typography & visual** nối từ **Ngày 14–17 — Grid** sang **Ngày 20–21 — Responsive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 18–19 — Typography & visual
 
@@ -7266,8 +6782,6 @@ Học:
 - shadows,
 - gradients.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 20–21 — Responsive** nối từ **Ngày 18–19 — Typography & visual** sang **Ngày 22–23 — Motion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 20–21 — Responsive
 
 Học:
@@ -7275,8 +6789,6 @@ Học:
 - các truy vấn môi trường (media queries),
 - người dùng (user / 사용자) preferences,
 - các truy vấn vùng chứa (container queries).
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 22–23 — Motion** nối từ **Ngày 20–21 — Responsive** sang **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 22–23 — Motion
 
@@ -7287,8 +6799,6 @@ Học:
 - scroll snap,
 - giảm chuyển động (reduced motion).
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)** nối từ **Ngày 22–23 — Motion** sang **Ngày 26–27 — hiện đại (modern / 현대적) CSS**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)
 
 Học:
@@ -7297,8 +6807,6 @@ Học:
 - naming,
 - layers,
 - thành phần (component / 컴포넌트) trạng thái (state / 상태).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 26–27 — hiện đại (modern / 현대적) CSS** nối từ **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)** sang **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 26–27 — hiện đại (modern / 현대적) CSS
 
@@ -7311,8 +6819,6 @@ Học:
 - hoạt ảnh điều khiển bằng cuộn (scroll-driven animations),
 - hiện đại (modern / 현대적) colors.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)** nối từ **Ngày 26–27 — hiện đại (modern / 현대적) CSS** sang **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 28 — khả năng tiếp cận (accessibility / 접근성)
 
 Kiểm thử (test / 테스트):
@@ -7323,8 +6829,6 @@ Kiểm thử (test / 테스트):
 - contrast,
 - RTL/logical props.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)** nối từ **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)** sang **Ngày 30 — Final dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)
 
 DevTools:
@@ -7333,8 +6837,6 @@ DevTools:
 - Layers,
 - hiệu năng (performance / 성능),
 - Rendering.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 30 — Final dự án (project / 프로젝트)** nối từ **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)** sang **125.1 Fluid centered bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngày 30 — Final dự án (project / 프로젝트)
 
@@ -7560,8 +7062,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 # 125. danh mục (catalog / 카탈로그) — CSS ngôn ngữ (language / 언어) Idioms quan trọng phải nhớ
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.1 Fluid centered bộ chứa (container / 컨테이너)** nối từ **Ngày 30 — Final dự án (project / 프로젝트)** sang **125.2 ngăn xếp (stack / 스택)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.1 Fluid centered bộ chứa (container / 컨테이너)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7572,8 +7072,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   margin-inline: auto;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.2 ngăn xếp (stack / 스택)** nối từ **125.1 Fluid centered bộ chứa (container / 컨테이너)** sang **125.3 Cluster**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.2 ngăn xếp (stack / 스택)
 
@@ -7586,8 +7084,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   gap: var(--stack-gap, 1rem);
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.3 Cluster** nối từ **125.2 ngăn xếp (stack / 스택)** sang **125.4 Center**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.3 Cluster
 
@@ -7602,8 +7098,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.4 Center** nối từ **125.3 Cluster** sang **125.5 Cover vùng nhìn (viewport)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.4 Center
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7614,8 +7108,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   place-items: center;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.5 Cover vùng nhìn (viewport)** nối từ **125.4 Center** sang **125.6 Sidebar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.5 Cover vùng nhìn (viewport)
 
@@ -7628,8 +7120,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   place-items: center;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.6 Sidebar** nối từ **125.5 Cover vùng nhìn (viewport)** sang **125.7 Auto grid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.6 Sidebar
 
@@ -7645,8 +7135,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.7 Auto grid** nối từ **125.6 Sidebar** sang **125.8 Media đối tượng (object / 객체)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.7 Auto grid
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7660,8 +7148,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.8 Media đối tượng (object / 객체)** nối từ **125.7 Auto grid** sang **125.9 Push hành động (action / 동작) right**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.8 Media đối tượng (object / 객체)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7674,8 +7160,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.9 Push hành động (action / 동작) right** nối từ **125.8 Media đối tượng (object / 객체)** sang **125.10 Safe flex văn bản (text / 텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.9 Push hành động (action / 동작) right
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7686,8 +7170,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.10 Safe flex văn bản (text / 텍스트)** nối từ **125.9 Push hành động (action / 동작) right** sang **125.11 Safe vertical flex scroll**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.10 Safe flex văn bản (text / 텍스트)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7697,8 +7179,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   min-width: 0;
 }
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.11 Safe vertical flex scroll** nối từ **125.10 Safe flex văn bản (text / 텍스트)** sang **125.12 Single-line truncate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.11 Safe vertical flex scroll
 
@@ -7717,8 +7197,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.12 Single-line truncate** nối từ **125.11 Safe vertical flex scroll** sang **125.13 Ratio media**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.12 Single-line truncate
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7731,8 +7209,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   white-space: nowrap;
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.13 Ratio media** nối từ **125.12 Single-line truncate** sang **125.14 Sticky region**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.13 Ratio media
 
@@ -7751,8 +7227,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.14 Sticky region** nối từ **125.13 Ratio media** sang **125.15 cục bộ (local / 로컬) overlay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.14 Sticky region
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7764,8 +7238,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   z-index: var(--z-sticky);
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.15 cục bộ (local / 로컬) overlay** nối từ **125.14 Sticky region** sang **125.16 Modal shell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.15 cục bộ (local / 로컬) overlay
 
@@ -7782,8 +7254,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.16 Modal shell** nối từ **125.15 cục bộ (local / 로컬) overlay** sang **125.17 Intrinsic button**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.16 Modal shell
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7798,8 +7268,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.17 Intrinsic button** nối từ **125.16 Modal shell** sang **125.18 Fluid font**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.17 Intrinsic button
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7812,8 +7280,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.18 Fluid font** nối từ **125.17 Intrinsic button** sang **125.19 Readable prose**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.18 Fluid font
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7823,8 +7289,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.19 Readable prose** nối từ **125.18 Fluid font** sang **125.20 Theme đơn vị từ (token / 토큰) consumption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.19 Readable prose
 
@@ -7837,8 +7301,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.20 Theme đơn vị từ (token / 토큰) consumption** nối từ **125.19 Readable prose** sang **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 125.20 Theme đơn vị từ (token / 토큰) consumption
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7850,8 +7312,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.20 Theme đơn vị từ (token / 토큰) consumption** đặt vấn đề; **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute** đối chiếu bằng chứng, rồi **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7860,8 +7320,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 .panel[data-state="open"] {}
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute** đặt vấn đề; **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** đối chiếu bằng chứng, rồi **125.23 Focus ring** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7869,8 +7327,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 .tab[aria-selected="true"] {}
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.23 Focus ring** nối từ **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** sang **125.24 giảm chuyển động (reduced motion)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.23 Focus ring
 
@@ -7882,8 +7338,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   outline-offset: 3px;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.24 giảm chuyển động (reduced motion)** nối từ **125.23 Focus ring** sang **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125.24 giảm chuyển động (reduced motion)
 
@@ -7901,8 +7355,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 126. danh mục (catalog / 카탈로그) — Coding / Programming Patterns
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition** nối từ **125.24 giảm chuyển động (reduced motion)** sang **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition
 
@@ -7923,8 +7375,6 @@ Thành phần (component / 컴포넌트):
   ...
 </article>
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)** nối từ **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition** sang **126.3 Slot mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)
 
@@ -7947,8 +7397,6 @@ JS → state
 CSS → presentation
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.3 Slot mẫu (pattern / 패턴)** nối từ **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)** sang **126.4 biến thể (variant) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.3 Slot mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7966,8 +7414,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Useful khi muốn expose mang tính ngữ nghĩa (semantic / 의미적) thành phần (component / 컴포넌트) slots.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.4 biến thể (variant) mẫu (pattern / 패턴)** nối từ **126.3 Slot mẫu (pattern / 패턴)** sang **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.4 biến thể (variant) mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7978,8 +7424,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 .button[data-variant="danger"] {}
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)** nối từ **126.4 biến thể (variant) mẫu (pattern / 패턴)** sang **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7989,8 +7433,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 .button[data-size="md"] {}
 .button[data-size="lg"] {}
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)** nối từ **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)** sang **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)
 
@@ -8009,8 +7451,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Override đơn vị từ (token / 토큰) thường ổn hơn override nhiều internals.
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)** nối từ **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)** sang **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -8026,8 +7466,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 Responsibility:
 - `section`: background + vertical rhythm,
 - `container`: horizontal ràng buộc (constraint / 제약조건).
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)** nối từ **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)** sang **126.9 Container-responsive mẫu thành phần (component pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)
 
@@ -8045,8 +7483,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.9 Container-responsive mẫu thành phần (component pattern)** nối từ **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)** sang **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.9 Container-responsive mẫu thành phần (component pattern)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -8062,8 +7498,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   }
 }
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)** nối từ **126.9 Container-responsive mẫu thành phần (component pattern)** sang **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)
 
@@ -8081,8 +7515,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)** nối từ **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)** sang **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)
 
 Expose:
@@ -8096,8 +7528,6 @@ Không expose nội bộ (internal / 내부) DOM độ sâu (depth / 깊이) nh�
 ---
 
 # 127. danh mục (catalog / 카탈로그) — CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) Patterns
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)** đặt đầu vào cho **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)**, rồi **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)
 
@@ -8114,8 +7544,6 @@ overrides
 ```
 
 Implement tốt bằng `@layer`.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)** đặt đầu vào cho **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)**, rồi **127.3 Composition mẫu (pattern / 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)
 
@@ -8137,8 +7565,6 @@ blue-600
 → button-bg-hover
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.3 Composition mẫu (pattern / 패턴)** nối từ **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)** sang **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 127.3 Composition mẫu (pattern / 패턴)
 
 Thành phần (component / 컴포넌트) compose các primitives:
@@ -8154,8 +7580,6 @@ Container
 
 thay vì mỗi thành phần (component / 컴포넌트) viết lại bố cục (layout / 레이아웃).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)** nối từ **127.3 Composition mẫu (pattern / 패턴)** sang **127.5 Exception mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)
 
 Mức cô lập (isolation) tăng dần:
@@ -8168,8 +7592,6 @@ naming convention
 ```
 
 Chọn đúng mức thay vì luôn dùng mức mạnh nhất.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.5 Exception mẫu (pattern / 패턴)** nối từ **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)** sang **127.6 Theme-by-contract mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 127.5 Exception mẫu (pattern / 패턴)
 
@@ -8187,8 +7609,6 @@ Exception:
 
 Không duplicate thành `.special-card-special`.
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.6 Theme-by-contract mẫu (pattern / 패턴)** nối từ **127.5 Exception mẫu (pattern / 패턴)** sang **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 127.6 Theme-by-contract mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -8202,8 +7622,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Components consume mang tính ngữ nghĩa (semantic / 의미적) tokens.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, sau nội dung của **127.6 Theme-by-contract mẫu (pattern / 패턴)**, **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -8214,8 +7632,6 @@ Component-level layout   → @container
 User preference          → media features
 Feature availability     → @supports
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** nối từ **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)** sang **127.9 Accessibility-first Styling mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)
 
@@ -8229,8 +7645,6 @@ top-layer UI     → dialog/popover
 anchor UI        → Anchor Positioning
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.9 Accessibility-first Styling mẫu (pattern / 패턴)** nối từ **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** sang **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 127.9 Accessibility-first Styling mẫu (pattern / 패턴)
 
 Cơ sở (base / 기반) thành phần (component / 컴포넌트) phải:
@@ -8240,8 +7654,6 @@ Cơ sở (base / 기반) thành phần (component / 컴포넌트) phải:
 - reduced-motion compatible.
 
 Visual enhancement đến sau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)** nối từ **127.9 Accessibility-first Styling mẫu (pattern / 패턴)** sang **Ellipsis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)
 
@@ -8269,8 +7681,6 @@ CSS hiện đại (`min`, `max`, `clamp`, Grid, truy vấn vùng chứa (contain
 
 # 128. cấp cao (senior / 시니어) mẫu (pattern / 패턴) map khóa–giá trị (map) — thuộc tính (property / 속성) nào thường đi cùng thuộc tính (property / 속성) nào
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ellipsis** nối từ **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)** sang **Responsive ảnh (image / 이미지)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ellipsis
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8281,8 +7691,6 @@ min-width: 0
 + white-space: nowrap
 + text-overflow: ellipsis
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive ảnh (image / 이미지)** nối từ **Ellipsis** sang **Sticky**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Responsive ảnh (image / 이미지)
 
@@ -8295,8 +7703,6 @@ width/max-width
 + aspect-ratio
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sticky** nối từ **Responsive ảnh (image / 이미지)** sang **Absolute overlay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sticky
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8308,8 +7714,6 @@ position: sticky
 + enough scrollable space
 ```
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Absolute overlay** nối từ **Sticky** sang **Modal**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Absolute overlay
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8320,8 +7724,6 @@ parent position:relative
 + inset
 + z-index nếu cần
 ```
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Modal** nối từ **Absolute overlay** sang **Flexible văn bản (text / 텍스트) row**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Modal
 
@@ -8335,8 +7737,6 @@ fixed/top-layer
 + overflow:auto
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Flexible văn bản (text / 텍스트) row** nối từ **Modal** sang **Accessible interactive điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Flexible văn bản (text / 텍스트) row
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8346,8 +7746,6 @@ display:flex/grid
 + minmax(0,1fr) hoặc min-width:0
 + gap
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Accessible interactive điều khiển (control / 제어)** nối từ **Flexible văn bản (text / 텍스트) row** sang **Theme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Accessible interactive điều khiển (control / 제어)
 
@@ -8362,8 +7760,6 @@ minimum target size
 + hover as enhancement
 ```
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Theme** nối từ **Accessible interactive điều khiển (control / 제어)** sang **Animation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Theme
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8375,8 +7771,6 @@ custom properties
 + prefers-color-scheme optional
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Animation** nối từ **Theme** sang **Thành phần (component / 컴포넌트) responsive**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Animation
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -8387,8 +7781,6 @@ state attribute
 + transition/animation
 + prefers-reduced-motion
 ```
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Thành phần (component / 컴포넌트) responsive** nối từ **Animation** sang **BEM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thành phần (component / 컴포넌트) responsive
 
@@ -8404,8 +7796,6 @@ container-type
 
 # 129. Khi nào mẫu (pattern / 패턴) trở thành phản mẫu (anti-pattern)?
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **BEM** nối từ **Thành phần (component / 컴포넌트) responsive** sang **tiện ích (utility) classes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## BEM
 
 Tốt khi:
@@ -8414,8 +7804,6 @@ Tốt khi:
 
 Có thể dư khi:
 - CSS Modules/Shadow DOM (cây DOM đóng gói) đã phạm vi (scope / 범위).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **tiện ích (utility) classes** nối từ **BEM** sang **lồng cú pháp (nesting)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## tiện ích (utility) classes
 
@@ -8428,8 +7816,6 @@ Có thể xấu khi:
 - không có đơn vị từ (token / 토큰) hệ thống (system / 시스템),
 - dùng tiện ích (utility) để encode nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **lồng cú pháp (nesting)** nối từ **tiện ích (utility) classes** sang **Custom các thuộc tính (properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## lồng cú pháp (nesting)
 
 Tốt:
@@ -8439,8 +7825,6 @@ Tốt:
 
 Xấu:
 - phản chiếu toàn bộ DOM cây (tree / 트리).
-
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Custom các thuộc tính (properties)** nối từ **lồng cú pháp (nesting)** sang **@layer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Custom các thuộc tính (properties)
 
@@ -8453,8 +7837,6 @@ Xấu:
 - hàng trăm các biến (variables) không có ngữ nghĩa (semantics / 의미론),
 - lớp trừu tượng (abstraction / 추상화) cho giá trị (value / 값) chỉ dùng một lần.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **@layer** nối từ **Custom các thuộc tính (properties)** sang **truy vấn vùng chứa (container query)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `@layer`
 
 Tốt:
@@ -8464,8 +7846,6 @@ Tốt:
 
 Có thể overkill:
 - một thành phần (component / 컴포넌트)/tệp (file / 파일) cực nhỏ.
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **truy vấn vùng chứa (container query)** nối từ **@layer** sang **Beginner**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## truy vấn vùng chứa (container query)
 
@@ -8530,8 +7910,6 @@ Một tệp (file / 파일) CSS dễ maintain khi dev khác đọc được lu�
 
 # 131. học tập (learning / 학습) Checkpoints theo cấp độ
 
-> **Nối mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Beginner** nối từ **truy vấn vùng chứa (container query)** sang **Intermediate**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Beginner
 
 Phải làm được:
@@ -8552,8 +7930,6 @@ Patterns cần nhớ:
 - truncate,
 - responsive ảnh (image / 이미지).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Intermediate** nối từ **Beginner** sang **Cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Intermediate
 
 Phải hiểu:
@@ -8573,8 +7949,6 @@ Patterns cần biết:
 - đơn vị từ (token / 토큰) override,
 - trạng thái (state / 상태) attribute,
 - responsive thành phần (component / 컴포넌트).
-
-> **Nối mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Cấp cao (senior / 시니어)** nối từ **Intermediate** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Cấp cao (senior / 시니어)
 

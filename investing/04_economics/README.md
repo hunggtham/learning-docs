@@ -22,15 +22,11 @@ Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tà
 
 [07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md) là lớp học sâu: xây nowcast theo diffusion, tách bất ngờ dữ liệu khỏi mức tuyệt đối, đọc phản ứng đầu ngắn/đầu dài của đường cong, kênh tín dụng và FX, nhu cầu tài trợ chính phủ, chuyển chế độ kinh tế và tác động bậc một/bậc hai tới doanh nghiệp và tài sản.
 
-> **Nối mạch:** **Thứ tự đọc** đi từ growth, inflation và policy đến market impact; **Sau lĩnh vực này bạn cần làm được gì?** chuyển route đó thành năng lực đọc dữ liệu và lập luận vĩ mô.
-
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú sốc → thu nhập/giá cả → chính sách → lợi suất/FX/tín dụng → lợi nhuận ngành/doanh nghiệp → định giá`; phân biệt cú sốc cầu, cung, tín dụng, thanh khoản và tài khóa; đọc hàm phản ứng của ngân hàng trung ương; tách biến động đầu ngắn của đường cong khỏi phần bù kỳ hạn; phân tích tính bền vững của nợ bằng cán cân sơ cấp, chênh lệch r-g và cấu trúc kỳ hạn/tiền tệ; nối nhân khẩu học và năng suất với tăng trưởng tiềm năng, cơ sở thuế, lãi suất trung tính và định giá dài hạn.
 
 Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu kỳ và khi nào bảng cân đối, cấu trúc nợ hoặc xu hướng năng suất đang làm thay đổi chế độ cấu trúc.
-
-> **Nối mạch:** **Bài tập tích hợp** đặt policy shock, asset price và macro evidence trong cùng một case, rồi bàn giao sang market owner.
 
 ## Bài tập tích hợp
 

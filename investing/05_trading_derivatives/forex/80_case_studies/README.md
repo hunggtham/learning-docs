@@ -30,8 +30,6 @@ Mỗi trường hợp (case / 사례) phải trả lời bốn câu hỏi:
 3. [03_SNB_CHF_FLOOR_REMOVAL_2015.md](./03_SNB_CHF_FLOOR_REMOVAL_2015.md) — central-bank floor, balance-sheet commitment, gap rủi ro (risk / 위험) và broker/counterparty thất bại (failure / 실패).
 4. [04_GLOBAL_USD_FUNDING_STRESS_2020.md](./04_GLOBAL_USD_FUNDING_STRESS_2020.md) — offshore dollar demand, cross-currency funding stress, swap lines và toàn cục (global / 전역) dollar plumbing.
 
-> **Nối mạch:** **Thứ tự đọc** đi từ regime, event và market mechanism; **Cách đọc** biến từng case thành evidence path, rồi **Liên kết** trả cơ chế về owner của macro, FX và risk.
-
 ## Cách đọc
 
 Không biến trường hợp (case / 사례) thành câu chuyện kiểu “ai đúng/ai sai”. Hãy tách:
@@ -51,8 +49,6 @@ Exit from the regime
 ```
 
 Sau mỗi trường hợp (case / 사례), viết một `mechanism map` và một `risk checklist` có thể áp dụng vào research hiện tại mà không giả định lịch sử sẽ lặp lại nguyên dạng.
-
-> **Nối mạch:** **Liên kết** khép case-study README bằng source owner và boundary; chi tiết valuation, hedging hoặc macro quay về canonical chapter tương ứng.
 
 ## Liên kết
 

@@ -10,14 +10,10 @@ Nhánh này cung cấp ngôn ngữ chung cho sensor, audio, điều khiển (con
 LTI systems → convolution → Fourier/Laplace/Z → sampling → filters → estimation
 ```
 
-> **Chuyển mạch:** **Cốt lõi tuyến** đi từ biểu diễn tín hiệu đến hệ LTI, Fourier và sampling; **Cốt lõi chapter** giải thích phép biến đổi, còn **Cần nắm** gom điều kiện áp dụng.
-
 ## Cốt lõi (core / 핵심) chapter
 
 - [LTI, sampling and filtering](00_lti_sampling_filtering.md) — poles/zeros, aliasing, ADC quantization, FIR/IIR và đo PSD.
 - [Transforms and estimation](01_transforms_and_estimation.md) — Laplace/Z, matched filter, trạng thái (state / 상태) estimation, covariance và sensor fusion.
-
-> **Chuyển mạch:** Sau khi nắm công cụ toán và điều kiện, **Cầu nối** đặt chúng vào bài toán lọc, ước lượng và kiểm tra hệ thống thực.
 
 ## Cần nắm
 
@@ -26,8 +22,6 @@ LTI systems → convolution → Fourier/Laplace/Z → sampling → filters → e
 - spectrum, bandwidth, phase/group delay và aliasing;
 - FIR/IIR, quantization, ADC/DAC và noise shaping;
 - SNR, PSD, correlation, detection và bất định (uncertainty / 불확실성).
-
-> **Chuyển mạch:** **Cầu nối** khép README bằng cách nối mô hình tín hiệu với phép đo, nhiễu và giới hạn sampling khi mở các chapter ứng dụng.
 
 ## Cầu nối (bridge / 브리지)
 

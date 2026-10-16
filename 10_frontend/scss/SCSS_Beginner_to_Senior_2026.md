@@ -89,8 +89,6 @@ Compile thành:
 }
 ```
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Mô hình tư duy (mental model / 사고 모델) quan trọng** tổng hợp từ **Quy ước thuật ngữ Việt–Anh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델) quan trọng
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -111,8 +109,6 @@ Trình duyệt (browser / 브라우저) **không biết**:
 
 Trình duyệt (browser / 브라우저) chỉ nhận CSS cuối.
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델) quan trọng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Sass biến (variable)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 Nếu hành vi (behavior / 동작) phụ thuộc thời gian chạy (runtime / 런타임):
@@ -127,8 +123,6 @@ thường CSS custom thuộc tính (property / 속성) phù hợp hơn Sass bi�
 ---
 
 # 1. SCSS vs CSS Custom các thuộc tính (properties) [cốt lõi (core / 핵심)]
-
-> **Nối mạch:** Sass variables được resolve lúc compile; CSS custom properties tồn tại ở runtime, nên senior rules phải chọn đúng boundary giữa hai loại.
 
 ## Sass biến (variable)
 
@@ -145,8 +139,6 @@ Sau compile:
 ```css
 /* $space-4 biến mất */
 ```
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **CSS custom thuộc tính (property / 속성)** nối từ **Sass biến (variable)** sang **Mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime / 런타임) tokens**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSS custom thuộc tính (property / 속성)
 
@@ -165,8 +157,6 @@ Có:
 - kế thừa (inheritance),
 - thời gian chạy (runtime / 런타임) override,
 - DevTools visibility.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime / 런타임) tokens** nối từ **CSS custom thuộc tính (property / 속성)** sang **Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime / 런타임) tokens
 
@@ -218,8 +208,6 @@ npx sass src/styles.scss dist/styles.css --style=compressed
 
 Bản đồ mã nguồn (source map / 소스 맵) hành vi (behavior / 동작) tùy CLI/bản dựng (build / 빌드) tích hợp (integration / 통합).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙)** nối từ **Mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime / 런타임) tokens** sang **Idiom**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙)
 
 Trong app hiện đại thường Sass chạy thông qua:
@@ -251,8 +239,6 @@ Tải (load / 로드):
 Không cần viết:
 - `_variables.scss`,
 - extension `.scss`.
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Idiom** nối từ **Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙)** sang **Naming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Idiom
 
@@ -318,8 +304,6 @@ Use:
 }
 ```
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Naming** nối từ **Idiom** sang **Cấp cao (senior / 시니어) ghi chú (note / 노트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Naming
 
 Hyphen và underscore lịch sử được Sass coi tương đương trong identifiers:
@@ -381,8 +365,6 @@ $color: blue;
 - card red,
 - link blue.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) ghi chú (note / 노트)** nối từ **Naming** sang **⚠ PITFALL**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 che khuất biến (shadowing) quá nhiều khiến SCSS khó reason.
@@ -423,8 +405,6 @@ $flag: false;
 ```
 
 Có thể modify toàn cục (global / 전역) biến (variable).
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ PITFALL** nối từ **Cấp cao (senior / 시니어) ghi chú (note / 노트)** sang **Quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ⚠ PITFALL
 
@@ -585,8 +565,6 @@ nội suy (interpolation):
 ```scss
 .#{$name} {}
 ```
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Quy tắc (rule / 규칙)** nối từ **⚠ PITFALL** sang **⚠ PITFALL**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc (rule / 규칙)
 
@@ -1377,8 +1355,6 @@ background-image:
   url("/images/#{$url}.jpg");
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ PITFALL** nối từ **Quy tắc (rule / 규칙)** sang **Mẫu (pattern / 패턴) — Optional khai báo (declaration)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ⚠ PITFALL
 
 nội suy (interpolation) là powerful nhưng dễ biến Sass thành template spaghetti.
@@ -1426,8 +1402,6 @@ $border: null;
 
 Có thể compile mà khai báo (declaration) không xuất.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Mẫu (pattern / 패턴) — Optional khai báo (declaration)** nối từ **⚠ PITFALL** sang **Important**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) — Optional khai báo (declaration)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -1463,8 +1437,6 @@ $list: [a, b, c];
 ```
 
 Slash-separated các giá trị (values) cũng tồn tại.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Important** nối từ **Mẫu (pattern / 패턴) — Optional khai báo (declaration)** sang **⚠ PITFALL**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Important
 
@@ -1512,8 +1484,6 @@ list.nth($items, 1)
 → first item.
 
 Negative chỉ mục (index / 인덱스) có thể refer từ cuối tùy hàm (function / 함수) ngữ nghĩa (semantics / 의미론).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ PITFALL** nối từ **Important** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ⚠ PITFALL
 
@@ -1622,8 +1592,6 @@ Generate styles:
 }
 ```
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **⚠ PITFALL** sang **⚠ Legacy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 map khóa–giá trị (map) tốt khi:
@@ -1686,8 +1654,6 @@ $hover:
   );
 ```
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ Legacy** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **Pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ⚠ Legacy
 
 Các toàn cục (global / 전역)/legacy các hàm (functions) như:
@@ -1713,8 +1679,6 @@ background:
 ```
 
 Sass không thể thời điểm biên dịch (compile-time) resolve thời gian chạy (runtime / 런타임) custom thuộc tính (property / 속성).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Pattern** nối từ **⚠ Legacy** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pattern
 Phần này nối kiến thức vừa học với “Pattern”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -1753,8 +1717,6 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   font-weight: 700;
 }
 ```
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **Pattern** sang **⚠ PITFALL**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
@@ -1820,8 +1782,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 .theme-dark .button {}
 ```
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ PITFALL** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **Recommendation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ⚠ PITFALL
 
 Ngữ cảnh (context / 맥락) inversion dễ tạo hidden coupling.
@@ -1851,8 +1811,6 @@ Có thể compile thành:
 - `font-family`,
 - `font-size`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Recommendation** nối từ **⚠ PITFALL** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Recommendation
 
 Không ưu tiên cú pháp (syntax / 문법) này cho mã (code / 코드) mới.
@@ -1879,8 +1837,6 @@ các khai báo (declarations) giữ thứ tự xuất hiện ngay cả khi inter
 ```
 
 Đừng assume Sass tự hoist các khai báo (declarations) như historical versions.
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **Recommendation** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
@@ -1963,8 +1919,6 @@ Có thể:
 - nối các bộ chọn (selectors) xa nhau,
 - coupling khó thấy,
 - khó predict trong legacy toàn cục (global / 전역) imports.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **Thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
@@ -2070,8 +2024,6 @@ Useful khi:
 - nhiều optional params,
 - boolean params,
 - API clarity.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성)** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **Thiết kế (design / 설계) lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성)
 
@@ -2184,8 +2136,6 @@ Advanced thư viện (library / 라이브러리) technique.
 - sees các biến (variables) at include site,
 - không automatically see khối trộn tái sử dụng (mixin) cục bộ (local / 로컬) các biến (variables) như động (dynamic / 동적) phạm vi (scope / 범위).
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Thiết kế (design / 설계) lesson** nối từ **Thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성)** sang **Hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thiết kế (design / 설계) lesson
 
 khối trộn tái sử dụng (mixin) content khối (block / 블록) giống thời điểm biên dịch (compile-time) higher-order style khối (block / 블록).
@@ -2220,8 +2170,6 @@ Need:
 
 # 49. hàm (function / 함수) vs khối trộn tái sử dụng (mixin) [cốt lõi (core / 핵심)]
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Hàm (function / 함수)** nối từ **Thiết kế (design / 설계) lesson** sang **khối trộn tái sử dụng (mixin)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm (function / 함수)
 
 Return **giá trị (value / 값)**:
@@ -2231,8 +2179,6 @@ Return **giá trị (value / 값)**:
   @return $step * .25rem;
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **khối trộn tái sử dụng (mixin)** nối từ **Hàm (function / 함수)** sang **Rule**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## khối trộn tái sử dụng (mixin)
 
@@ -2245,8 +2191,6 @@ Emit **styles/rules**:
   gap: $gap;
 }
 ```
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Rule** nối từ **khối trộn tái sử dụng (mixin)** sang **Pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rule
 Phần này nối kiến thức vừa học với “Rule”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -2287,8 +2231,6 @@ $_internal-scale: ...;
 ```
 
 Bên tiêu thụ (consumer / 소비자) mô-đun (module / 모듈) không nên truy cập (access / 접근).
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Pattern** nối từ **Rule** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pattern
 Mẫu này phân biệt public và private member, giúp người mới hiểu phần nào có thể dùng từ bên ngoài module và phần nào chỉ phục vụ nội bộ.
@@ -2412,8 +2354,6 @@ $i: 1;
 }
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **Pattern** sang **Mẫu thiết kế (design pattern / 디자인 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 `@while` hiếm khi cần.
@@ -2438,8 +2378,6 @@ Concern:
 - CSS kích thước (size / 크기),
 - dead các tiện ích (utilities),
 - API explosion.
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Mẫu thiết kế (design pattern / 디자인 패턴)** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **⚠ PITFALL**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu thiết kế (design pattern / 디자인 패턴)
 
@@ -2562,8 +2500,6 @@ Phần này nối kiến thức vừa học với “64. `as *` [ADV]”, giúp 
 
 Members vào cục bộ (local / 로컬) không gian tên (namespace / 네임스페이스).
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ PITFALL** nối từ **Mẫu thiết kế (design pattern / 디자인 패턴)** sang **Important**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ⚠ PITFALL
 
 Làm mất provenance:
@@ -2598,8 +2534,6 @@ Bên tiêu thụ (consumer / 소비자):
   $radius: 1rem
 );
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Important** nối từ **⚠ PITFALL** sang **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Important
 
@@ -2773,8 +2707,6 @@ Cấu hình (configuration / 구성) tùy:
 - bundler,
 - JS API.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **Important** sang **mô hình tư duy (mental model)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 Avoid ambiguous mô-đun (module / 모듈) resolution.
@@ -2850,8 +2782,6 @@ math.min(10px, 20px)
 ```
 
 thời điểm biên dịch (compile-time) numeric hàm (function / 함수).
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **mô hình tư duy (mental model)** tổng hợp từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Pattern** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## mô hình tư duy (mental model)
 Phần này nối kiến thức vừa học với “mô hình tư duy (mental model)”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -3172,8 +3102,6 @@ $colors: (
 
 Đầu ra (output / 출력) thời gian chạy (runtime / 런타임) tokens.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Pattern** tổng hợp từ **mô hình tư duy (mental model)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Decision** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Pattern
 Phần này nối kiến thức vừa học với “Pattern”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
@@ -3333,8 +3261,6 @@ Bad:
 
 không hẳn luôn bad, nhưng tiện ích (utility)/bố cục (layout / 레이아웃) lớp (class / 클래스) có thể reusable thời gian chạy (runtime / 런타임) tốt hơn nếu dùng nhiều.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Decision** nối từ **Pattern** sang **⚠ Caveat**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Decision
 Phần này nối kiến thức vừa học với “Decision”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
@@ -3422,8 +3348,6 @@ Phần này nối kiến thức vừa học với “100. BEM + SCSS [CORE/ADV]�
 ```
 
 Works.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ Caveat** nối từ **Decision** sang **Use cases**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ⚠ Caveat
 
@@ -3618,15 +3542,11 @@ Moves nested quy tắc (rule / 규칙) out of hiện tại (current / 현재) l�
 
 Advanced truy vấn (query / 쿼리) forms can điều khiển (control / 제어) which at-rules/các bộ chọn (selectors) stay.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **⚠ Caveat** nêu quy tắc; **Use cases** thử quy tắc trong tình huống, rồi **⚠** mở rộng hệ quả.
-
 ## Use cases
 Phần này nối kiến thức vừa học với “Use cases”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - thư viện (library / 라이브러리) bộ chọn (selector) generation,
 - escape contextual lồng cú pháp (nesting).
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Use cases** nêu quy tắc; **⚠** thử quy tắc trong tình huống, rồi **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** mở rộng hệ quả.
 
 ## ⚠
 
@@ -3664,8 +3584,6 @@ Sass generally passes through CSS at-rules it doesn't specially interpret:
 ```
 
 SCSS should remain CSS-compatible.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nối từ **⚠** sang **Quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
@@ -3857,8 +3775,6 @@ sass-migrator module ...
 
 Chính xác (exact / 정확한) installation/flags should be checked against hiện tại (current / 현재) docs.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Quy tắc (rule / 규칙)** nối từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **Token layers**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc (rule / 규칙)
 
 chuyển đổi (migration) công cụ (tool / 도구):
@@ -4049,8 +3965,6 @@ generate:
 --color-action-primary: ...
 ```
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Token layers** nối từ **Quy tắc (rule / 규칙)** sang **@extend**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Token layers
 Phần này nối kiến thức vừa học với “Token layers”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
@@ -4236,19 +4150,13 @@ Tradeoff:
 
 # 137. Extend vs khối trộn tái sử dụng (mixin) vs tiện ích (utility) [MUST]
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **@extend** nối từ **Token layers** sang **@mixin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `@extend`
 
 bộ chọn (selector) relationship.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **@mixin** nối từ **@extend** sang **tiện ích (utility) lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `@mixin`
 
 khai báo (declaration)/quy tắc (rule / 규칙) duplication at compile thời gian (time / 시간).
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **tiện ích (utility) lớp (class / 클래스)** nối từ **@mixin** sang **Days 1–3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## tiện ích (utility) lớp (class / 클래스)
 
@@ -4496,8 +4404,6 @@ Bản dựng (build / 빌드):
 
 # 151. 30-Day SCSS Roadmap
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 1–3** nối từ **tiện ích (utility) lớp (class / 클래스)** sang **Days 4–6**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 1–3
 Phần này nối kiến thức vừa học với “Days 1–3”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
@@ -4506,16 +4412,12 @@ Phần này nối kiến thức vừa học với “Days 1–3”, giúp ngư�
 - dữ liệu (data / 데이터) types,
 - lồng cú pháp (nesting).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 4–6** nối từ **Days 1–3** sang **Days 7–9**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 4–6
 Phần này nối kiến thức vừa học với “Days 4–6”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - các danh sách (lists),
 - các map khóa–giá trị (maps),
 - built-in modules.
-
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 7–9** nối từ **Days 4–6** sang **Days 10–12**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Days 7–9
 Phần này nối kiến thức vừa học với “Days 7–9”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -4524,16 +4426,12 @@ Phần này nối kiến thức vừa học với “Days 7–9”, giúp ngư�
 - arguments,
 - `@content`.
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 10–12** nối từ **Days 7–9** sang **Days 13–15**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 10–12
 Phần này nối kiến thức vừa học với “Days 10–12”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - các hàm (functions),
 - luồng điều khiển (control flow),
 - kiểm tra hợp lệ (validation / 검증).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 13–15** nối từ **Days 10–12** sang **Days 16–18**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Days 13–15
 Phần này nối kiến thức vừa học với “Days 13–15”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -4542,8 +4440,6 @@ Phần này nối kiến thức vừa học với “Days 13–15”, giúp ngư
 - không gian tên (namespace / 네임스페이스),
 - cấu hình (configuration / 구성).
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 16–18** nối từ **Days 13–15** sang **Days 19–21**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 16–18
 Phần này nối kiến thức vừa học với “Days 16–18”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
@@ -4551,15 +4447,11 @@ Phần này nối kiến thức vừa học với “Days 16–18”, giúp ngư
 - facade,
 - công khai (public / 공개)/private API.
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 19–21** nối từ **Days 16–18** sang **Days 22–23**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 19–21
 Phần này nối kiến thức vừa học với “Days 19–21”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - token system,
 - generators.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 22–23** nối từ **Days 19–21** sang **Days 24–25**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Days 22–23
 Phần này nối kiến thức vừa học với “Days 22–23”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -4567,15 +4459,11 @@ Phần này nối kiến thức vừa học với “Days 22–23”, giúp ngư
 - CSS các biến (variables) integration,
 - thời gian chạy (runtime)/thời điểm biên dịch (compile-time) boundary.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 24–25** nối từ **Days 22–23** sang **Days 26–27**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Days 24–25
 Phần này nối kiến thức vừa học với “Days 24–25”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - kiến trúc (architecture),
 - component ownership.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Days 26–27** nối từ **Days 24–25** sang **Day 28**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Days 26–27
 Phần này nối kiến thức vừa học với “Days 26–27”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -4583,21 +4471,15 @@ Phần này nối kiến thức vừa học với “Days 26–27”, giúp ngư
 - legacy chuyển đổi (migration),
 - deprecations.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Day 28** nối từ **Days 26–27** sang **Day 29**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Day 28
 Phần này nối kiến thức vừa học với “Day 28”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - output/hiệu năng (performance) inspection.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Day 29** nối từ **Day 28** sang **Day 30**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Day 29
 Phần này nối kiến thức vừa học với “Day 29”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
 
 - library API review.
-
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Day 30** nối từ **Day 29** sang **giao diện công khai (public API) và cấu hình (configuration / 구성) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Day 30
 Phần này nối kiến thức vừa học với “Day 30”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
@@ -4790,27 +4672,19 @@ app.scss          → entry point, @use style/facade modules
 
 Điểm quan trọng là “tệp (file / 파일) thành phần (partial)” không tự làm mã (code / 코드) modular. `_tokens.scss` vẫn có thể là toàn cục (global / 전역) soup nếu được kéo bằng legacy `@import`. ranh giới mô-đun (module boundary / 모듈 경계) đến từ không gian tên (namespace / 네임스페이스), private members, single evaluation và giao diện công khai (public API) discipline của `@use`/`@forward`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Day 30** đặt tiêu chí; **giao diện công khai (public API) và cấu hình (configuration / 구성) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Side-effect CSS phải có quyền sở hữu (ownership / 소유권)** mở rộng hệ quả.
-
 ## giao diện công khai (public API) và cấu hình (configuration / 구성) ranh giới (boundary / 경계)
 
 Thư viện (library / 라이브러리) Sass nên expose ít thứ hơn nội bộ (internal / 내부) hiện thực (implementation / 구현). Nếu bên tiêu thụ (consumer / 소비자) cần configure brand color, spacing quy mô (scale / 규모) hoặc cờ tính năng (feature flag / 기능 플래그) thời điểm biên dịch (compile-time), expose `$variable: default !default` có chủ đích và configure qua `@use ... with (...)`. Đừng expose mọi nội bộ (internal / 내부) map khóa–giá trị (map) chỉ vì “sau này có thể cần”; khi bên tiêu thụ (consumer / 소비자) phụ thuộc vào shape của nested map khóa–giá trị (map), refactor nội bộ biến thành breaking thay đổi (change / 변경).
 
 `@forward ... show/hide` hoặc prefixing giúp facade chỉ xuất phần ổn định. Private members nên thực sự private. công khai (public / 공개) khối trộn tái sử dụng (mixin)/hàm (function / 함수) name, parameter ngữ nghĩa (semantics / 의미론) và generated CSS đặc tả hợp đồng (contract / 계약) đều là API cần versioning.
 
-> **Nối mạch:** Trong **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **giao diện công khai (public API) và cấu hình (configuration / 구성) ranh giới (boundary / 경계)** đặt tiêu chí; **Side-effect CSS phải có quyền sở hữu (ownership / 소유권)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **@extend không phải kế thừa (inheritance) kiến trúc (architecture / 아키텍처)** mở rộng hệ quả.
-
 ## Side-effect CSS phải có quyền sở hữu (ownership / 소유권)
 
 Một dùng chung (common / 공통) bug là `@use` một helper mô-đun (module / 모듈) chỉ để gọi hàm (function / 함수) nhưng mô-đun (module / 모듈) đó cũng emit reset/components. Vì mô-đun (module / 모듈) tải (load / 로드) một lần, duplication được giảm so với `@import`, nhưng tác dụng phụ (side effect) vẫn tồn tại. Tách công cụ (tool / 도구) modules khỏi style modules làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) predictable hơn và giúp thư viện (library / 라이브러리) bên tiêu thụ (consumer / 소비자) dùng lô-gic (logic / 논리) mà không kéo CSS ngoài ý muốn.
 
-> **Nối mạch:** Ở chặng này của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **@extend không phải kế thừa (inheritance) kiến trúc (architecture / 아키텍처)** nối từ **Side-effect CSS phải có quyền sở hữu (ownership / 소유권)** sang **Sass vs bản địa (native / 네이티브) CSS responsibility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `@extend` không phải kế thừa (inheritance) kiến trúc (architecture / 아키텍처)
 
 `@extend` hợp nhất các bộ chọn (selectors) trong trình biên dịch (compiler / 컴파일러). Nó không bản sao (copy / 복사) các khai báo (declarations) như khối trộn tái sử dụng (mixin) và không tạo kiểu (type / 타입) hierarchy như Java. Vì hợp nhất bộ chọn (selector unification) có thể tạo đầu ra (output / 출력) ở nơi xa lời gọi (call / 호출) site và coupling giữa modules, hãy giới hạn `@extend` cho placeholder contracts rất controlled. Nếu bạn cần parameterization, khối trộn tái sử dụng (mixin) thường rõ hơn; nếu chỉ cần dùng chung (shared / 공유) visual primitives, composition/tiện ích (utility) lớp (class / 클래스) hoặc bản địa (native / 네이티브) CSS tầng (layer / 계층)/đơn vị từ (token / 토큰) thường dễ dự đoán hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**, **Sass vs bản địa (native / 네이티브) CSS responsibility** nối từ **@extend không phải kế thừa (inheritance) kiến trúc (architecture / 아키텍처)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Sass vs bản địa (native / 네이티브) CSS responsibility
 

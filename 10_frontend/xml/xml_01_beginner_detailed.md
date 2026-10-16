@@ -8,8 +8,6 @@ Tài liệu này được viết cho người chưa có nền tảng XML. Mục 
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML** đặt vấn đề; **1. XML là gì và vì sao nó tồn tại?** đối chiếu bằng chứng, rồi **2. XML document thực chất là một cây dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 1. XML là gì và vì sao nó tồn tại?
 
 XML là viết tắt của **Extensible Markup ngôn ngữ (language / 언어)**, tức là ngôn ngữ đánh dấu có khả năng mở rộng. Từ “markup” nghĩa là dữ liệu được bao quanh bởi các dấu hiệu cấu trúc như `<user>`, `<name>`, `<price>`. Từ “extensible” nghĩa là XML không ép bạn phải dùng một tập tag cố định. Bạn có thể tự định nghĩa vocabulary của riêng mình, miễn là toàn bộ tài liệu tuân theo quy tắc cú pháp XML.
@@ -28,8 +26,6 @@ XML chỉ biết đây là một cây có element `user`, bên trong có `name` 
 Điểm này rất quan trọng. Khi học HTML, bạn có thể học rằng `<a>` là hyperlink, `<button>` là button, `<table>` là bảng. Với XML thì không có một ý nghĩa chuẩn như vậy cho `<user>` hay `<order>`. XML chỉ cung cấp **cú pháp chung để biểu diễn dữ liệu có cấu trúc**. Chính Maven định nghĩa ý nghĩa của `<groupId>`, SOAP định nghĩa ý nghĩa của `<Envelope>`, Spring định nghĩa ý nghĩa của các tag cấu hình cũ, và Android định nghĩa ý nghĩa của các tag XML trong bố cục (layout / 레이아웃).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **1. XML là gì và vì sao nó tồn tại?** đặt vấn đề; **2. XML document thực chất là một cây dữ liệu** đối chiếu bằng chứng, rồi **3. gốc (root / 루트) element là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. XML document thực chất là một cây dữ liệu
 
@@ -63,8 +59,6 @@ Một XML parser không chỉ “tìm văn bản (text / 텍스트) giữa hai t
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **2. XML document thực chất là một cây dữ liệu** đặt vấn đề; **3. gốc (root / 루트) element là gì?** đối chiếu bằng chứng, rồi **4. Element là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 3. gốc (root / 루트) element là gì?
 
 Một XML document đúng cú pháp phải có đúng **một document element**, thường được gọi đơn giản là gốc (root / 루트) element. Ví dụ này hợp lệ:
@@ -90,8 +84,6 @@ Lý do là tài liệu có hai top-level elements. XML parser không thể coi c
 Điều này không có nghĩa bên ngoài gốc (root / 루트) hoàn toàn không được có gì. Một tài liệu vẫn có thể có XML declaration, comment, processing instruction hoặc DOCTYPE ở vị trí phù hợp. Nhưng về element cây (tree / 트리) thì chỉ có một element gốc.
 
 ---
-
-> **Nối mạch:** Root element đặt giới hạn cho document tree; element tiếp theo mô tả node có content và attributes ra sao. Empty/self-closing syntax kiểm tra trường hợp node không có content.
 
 ## 4. Element là gì?
 
@@ -132,8 +124,6 @@ là hai tên khác nhau.
 
 ---
 
-> **Nối mạch:** Element có thể chứa content hoặc rỗng; empty-element syntax quy định serialization, còn case sensitivity tiếp theo ảnh hưởng name matching.
-
 ## 5. Empty element và self-closing cú pháp (syntax / 문법)
 
 Nếu một element không có content, bạn có thể viết dạng đầy đủ:
@@ -154,8 +144,6 @@ Trong XML, đây là empty-element cú pháp (syntax / 문법) thực sự. Nó 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **6. XML phân biệt chữ hoa chữ thường** nối từ **5. Empty element và self-closing cú pháp (syntax / 문법)** sang **7. Proper nesting: element phải đóng đúng thứ tự**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. XML phân biệt chữ hoa chữ thường
 
 XML là case-sensitive. Ví dụ sau sai:
@@ -171,8 +159,6 @@ Start tag là `User`, còn end tag là `user`. XML parser phải báo lỗi.
 Bạn cũng cần hiểu rằng tên attribute cũng phân biệt hoa thường theo XML rules. Một thiết kế XML tốt nên dùng naming convention nhất quán, ví dụ toàn bộ dùng `camelCase`, hoặc toàn bộ dùng `kebab-case`, tránh trộn lẫn thiếu quy tắc.
 
 ---
-
-> **Nối mạch:** Trong **XML — Beginner**, **7. Proper nesting: element phải đóng đúng thứ tự** nối từ **6. XML phân biệt chữ hoa chữ thường** sang **8. Attribute là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Proper nesting: element phải đóng đúng thứ tự
 
@@ -197,8 +183,6 @@ HTML trình duyệt (browser / 브라우저) có lỗi (error / 오류) khôi ph
 Điều này khiến XML thích hợp với các giao thức (protocol / 프로토콜) hoặc tệp (file / 파일) cấu hình nơi tính chính xác quan trọng hơn khả năng “kết xuất (render / 렌더링) được dù sai”.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **8. Attribute là gì?** nối từ **7. Proper nesting: element phải đóng đúng thứ tự** sang **9. Khi nào nên dùng element, khi nào nên dùng attribute?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Attribute là gì?
 
@@ -237,8 +221,6 @@ Ngoài ra, cùng một element không được có duplicate attribute với cù
 là lỗi.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** nối từ **8. Attribute là gì?** sang **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Khi nào nên dùng element, khi nào nên dùng attribute?
 
@@ -286,8 +268,6 @@ Cấp cao (senior / 시니어) XML thiết kế (design / 설계) không dựa t
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** đặt vấn đề; **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)
 
 Xét:
@@ -309,8 +289,6 @@ không tự động trở thành boolean.
 Kiểu dữ liệu có thể được gán ở tầng XML lược đồ (schema / 스키마) hoặc ứng dụng (application / 애플리케이션). Điều này rất quan trọng khi bạn làm Java binding hoặc validate XML. Nếu không có lược đồ (schema / 스키마) hoặc ánh xạ (mapping / 매핑) quy tắc (rule / 규칙), parser chỉ trả về character dữ liệu (data / 데이터).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** đặt vấn đề; **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** đối chiếu bằng chứng, rồi **12. Numeric character references** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Escaping: vì sao một số ký tự không được viết trực tiếp?
 
@@ -354,8 +332,6 @@ Bạn không cần encode mọi Unicode character thành thực thể (entity / 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, sau nội dung của **11. Escaping: vì sao một số ký tự không được viết trực tiếp?**, **12. Numeric character references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **13. XML declaration** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12. Numeric character references
 
 Ngoài named thực thể (entity / 엔터티), XML còn cho phép numeric character tham chiếu (reference / 참조).
@@ -378,8 +354,6 @@ Numeric tham chiếu (reference / 참조) hữu ích khi cần biểu diễn ký
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **13. XML declaration** nối từ **12. Numeric character references** sang **14. XML declaration có bắt buộc không?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. XML declaration
 
 Bạn thường thấy đầu tệp (file / 파일):
@@ -397,8 +371,6 @@ Một điểm rất quan trọng là declaration không “chuyển đổi encod
 Trong hệ thống mới, UTF‑8 gần như luôn là lựa chọn tốt nhất trừ khi giao thức (protocol / 프로토콜) hoặc hệ thống legacy yêu cầu khác.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **14. XML declaration có bắt buộc không?** nối từ **13. XML declaration** sang **15. BOM là gì và có cần không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. XML declaration có bắt buộc không?
 
@@ -420,8 +392,6 @@ giúp giảm ambiguity và làm intent rõ hơn.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **15. BOM là gì và có cần không?** nối từ **14. XML declaration có bắt buộc không?** sang **16. Comment**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. BOM là gì và có cần không?
 
 BOM là Byte thứ tự (order / 순서) Mark. Với UTF‑16, BOM từng rất quan trọng để xác định byte thứ tự (order / 순서). Với UTF‑8, BOM không cần thiết.
@@ -429,8 +399,6 @@ BOM là Byte thứ tự (order / 순서) Mark. Với UTF‑16, BOM từng rất 
 XML processor chuẩn có rules xử lý BOM, nhưng một số toolchain hoặc hệ thống dựng (build system / 빌드 시스템) có thể có hành vi (behavior / 동작) riêng. Trong nhiều dự án hiện đại, `UTF‑8 without BOM` là lựa chọn đơn giản và ít rắc rối nhất, trừ khi hệ thống cụ thể yêu cầu BOM.
 
 ---
-
-> **Nối mạch:** Trong **XML — Beginner**, **16. Comment** nối từ **15. BOM là gì và có cần không?** sang **17. CDATA section**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Comment
 
@@ -447,8 +415,6 @@ Một lỗi tư duy thường gặp là để secret trong comment vì “không
 Ngoài ra XML comment có restrictions riêng về chuỗi `--`, vì vậy không nên dùng comment như nơi lưu arbitrary văn bản (text / 텍스트).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **17. CDATA section** nối từ **16. Comment** sang **18. Vì sao ]]> đặc biệt trong CDATA?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. CDATA section
 
@@ -484,8 +450,6 @@ CDATA cũng không phải bảo mật (security / 보안) tính năng (feature /
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** nối từ **17. CDATA section** sang **19. Processing Instruction**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Vì sao `]]>` đặc biệt trong CDATA?
 
 Chuỗi:
@@ -499,8 +463,6 @@ là delimiter kết thúc CDATA section. Vì vậy bạn không thể chứa ngu
 Nếu bạn dùng XML serializer đúng chuẩn, serializer sẽ xử lý chuyện này tốt hơn việc tự nối string.
 
 ---
-
-> **Nối mạch:** Trong **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** đặt đầu vào cho **19. Processing Instruction**, rồi **20. Whitespace trong XML có thực sự tồn tại không?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Processing Instruction
 
@@ -522,8 +484,6 @@ XML declaration nhìn giống PI nhưng có grammar và vị trí đặc biệt.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **19. Processing Instruction** đặt đầu vào cho **20. Whitespace trong XML có thực sự tồn tại không?**, rồi **21. xml:space** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 20. Whitespace trong XML có thực sự tồn tại không?
 
 Có. Ví dụ:
@@ -542,8 +502,6 @@ Giữa các child element có newline và spaces dùng để indent. Tùy parser
 Vì vậy khi bạn muốn “lấy child elements”, hãy dùng API chọn element thay vì giả định mọi child nút (node / 노드) đều là element.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **21. xml:space** nối từ **20. Whitespace trong XML có thực sự tồn tại không?** sang **22. xml:lang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `xml:space`
 
@@ -569,8 +527,6 @@ preserve
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **22. xml:lang** nối từ **21. xml:space** sang **23. xml:base**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. `xml:lang`
 
 `xml:lang` khai báo ngôn ngữ của nội dung.
@@ -584,8 +540,6 @@ preserve
 Nó hữu ích với document processing, khả năng tiếp cận (accessibility / 접근성), transformation hoặc hệ thống đa ngôn ngữ.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **23. xml:base** nối từ **22. xml:lang** sang **24. xml:id**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `xml:base`
 
@@ -602,8 +556,6 @@ Nó hữu ích với document processing, khả năng tiếp cận (accessibilit
 Ở mức cấp cao (senior / 시니어), cơ sở (base / 기반) URI còn ảnh hưởng XSLT, URI resolution và bảo mật (security / 보안), vì một relative đường dẫn (path / 경로) cuối cùng có thể trỏ tới bên ngoài (external / 외부) tài nguyên (resource / 자원).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **24. xml:id** nối từ **23. xml:base** sang **25. Well-formed XML là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `xml:id`
 
@@ -625,8 +577,6 @@ Vì một attribute có tên `id` không tự động có ID kiểu (type / 타�
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **25. Well-formed XML là gì?** nối từ **24. xml:id** sang **26. Valid XML khác well-formed như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Well-formed XML là gì?
 
 “Well-formed” nghĩa là tài liệu tuân toàn bộ cú pháp cơ bản của XML.
@@ -644,8 +594,6 @@ Ví dụ sau không well-formed:
 XML parser phải báo fatal lỗi (error / 오류).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **26. Valid XML khác well-formed như thế nào?** nối từ **25. Well-formed XML là gì?** sang **27. XML Names có quy tắc riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Valid XML khác well-formed như thế nào?
 
@@ -672,8 +620,6 @@ Mọi valid XML phải well-formed, nhưng well-formed XML chưa chắc valid.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **27. XML Names có quy tắc riêng** nối từ **26. Valid XML khác well-formed như thế nào?** sang **28. Mixed content**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. XML Names có quy tắc riêng
 
 Tên element hoặc attribute không phải một chuỗi tùy ý. XML có grammar dành cho Name và QName.
@@ -691,8 +637,6 @@ Nhưng không nên tự viết một regex ASCII đơn giản rồi nghĩ đã v
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **28. Mixed content** nối từ **27. XML Names có quy tắc riêng** sang **29. Data-centric XML**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Mixed content
 
 Mixed content là khi văn bản (text / 텍스트) và child elements xen kẽ nhau.
@@ -709,8 +653,6 @@ Trong mixed content, whitespace và văn bản (text / 텍스트) nút (node / �
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **29. Data-centric XML** nối từ **28. Mixed content** sang **30. Document-centric XML**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Data-centric XML
 
 Data-centric XML giống đối tượng (object / 객체)/bản ghi (record / 레코드):
@@ -725,8 +667,6 @@ Data-centric XML giống đối tượng (object / 객체)/bản ghi (record / �
 Mỗi child element gần giống một trường dữ liệu (field / 필드). Loại XML này thường dễ map sang Java đối tượng (object / 객체) hoặc cơ sở dữ liệu (database / 데이터베이스) row.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **30. Document-centric XML** nối từ **29. Data-centric XML** sang **31. XML khác HTML như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Document-centric XML
 
@@ -747,8 +687,6 @@ Document-centric XML thiên về nội dung văn bản:
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **31. XML khác HTML như thế nào?** nối từ **30. Document-centric XML** sang **32. XHTML là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. XML khác HTML như thế nào?
 
 XML và HTML có cú pháp (syntax / 문법) bề ngoài giống nhau, nhưng mục tiêu và parsing mô hình (model / 모델) khác.
@@ -760,8 +698,6 @@ HTML có vocabulary và ngữ nghĩa (semantics / 의미론) do HTML tiêu chu�
 Đây là lý do không nên lấy kinh nghiệm HTML rồi suy thẳng sang XML.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **32. XHTML là gì?** nối từ **31. XML khác HTML như thế nào?** sang **33. XML khác JSON như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. XHTML là gì?
 
@@ -781,8 +717,6 @@ Một tệp (file / 파일) HTML thông thường có `<br />` vẫn có thể �
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **33. XML khác JSON như thế nào?** nối từ **32. XHTML là gì?** sang **34. Ví dụ thực tế: Maven pom.xml**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. XML khác JSON như thế nào?
 
 JSON có mô hình đối tượng (object / 객체), array, number, boolean, null và string rất phù hợp với API hiện đại. XML có element, attribute, không gian tên (namespace / 네임스페이스), mixed content và một hệ sinh thái lược đồ (schema / 스키마)/truy vấn (query / 쿼리)/transform rất mạnh.
@@ -794,8 +728,6 @@ JSON thường nhẹ và dễ dùng hơn cho API object-oriented thông thườn
 Vì vậy không nên kết luận “XML cũ nên luôn thay bằng JSON”. Câu hỏi đúng là: lĩnh vực (domain / 도메인) nào đang cần mixed content, namespaces, XSD/XSLT, existing enterprise contracts hoặc document-centric processing?
 
 ---
-
-> **Nối mạch:** Trong **XML — Beginner**, **33. XML khác JSON như thế nào?** nêu quy tắc; **34. Ví dụ thực tế: Maven pom.xml** thử quy tắc trong tình huống, rồi **35. Tại sao không parse XML bằng regex?** mở rộng hệ quả.
 
 ## 34. Ví dụ thực tế: Maven `pom.xml`
 
@@ -816,8 +748,6 @@ Tư duy này giúp bạn đọc mọi XML khung phần mềm (framework / 프레
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **34. Ví dụ thực tế: Maven pom.xml** nêu quy tắc; **35. Tại sao không parse XML bằng regex?** thử quy tắc trong tình huống, rồi **36. DOM mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## 35. Tại sao không parse XML bằng regex?
 
 Giả sử bạn muốn lấy `<name>`. Một cách ngây thơ là tìm substring giữa `<name>` và `</name>`. Nhưng ngay lập tức sẽ gặp vấn đề với không gian tên (namespace / 네임스페이스):
@@ -831,8 +761,6 @@ hoặc CDATA, comments, thực thể (entity / 엔터티) references, nested con
 XML là grammar có cấu trúc. Regex/string split không hiểu cây (tree / 트리), không gian tên (namespace / 네임스페이스) và parser rules. Hãy dùng XML parser.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **36. DOM mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **35. Tại sao không parse XML bằng regex?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **37. Bài tập tổng hợp Beginner** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 36. DOM mô hình tư duy (mental model / 사고 모델)
 
@@ -852,8 +780,6 @@ DOM phù hợp khi document nhỏ hoặc vừa, bạn cần truy cập nhiều v
 Ở phần Intermediate, bạn sẽ học vì sao SAX/StAX tốt hơn khi XML rất lớn.
 
 ---
-
-> **Nối mạch:** Trong **XML — Beginner**, **37. Bài tập tổng hợp Beginner** tổng hợp từ **36. DOM mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. Bài tập tổng hợp Beginner
 
@@ -883,8 +809,6 @@ Nếu bạn đổi end tag `</book>` thành `</Book>`, tài liệu sẽ không c
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** tổng hợp từ **37. Bài tập tổng hợp Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **39. Những lỗi beginner phải tránh** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner
 
 Sau khi học xong phần này, bạn không nên nhìn XML như một tệp (file / 파일) văn bản (text / 텍스트) có tag nữa. Bạn phải nhìn nó như một biểu diễn (representation / 표현) của cây dữ liệu được sinh ra từ bytes thông qua decoding và parsing.
@@ -904,8 +828,6 @@ bytes
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **39. Những lỗi beginner phải tránh** tổng hợp từ **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 39. Những lỗi beginner phải tránh
 
 Không nối XML bằng string nếu có serializer phù hợp. Không parse XML bằng regex. Không coi văn bản (text / 텍스트) `"27"` là integer nếu chưa có kiểu (type / 타입) tầng (layer / 계층). Không nghĩ CDATA là encryption. Không để secret trong comment. Không bỏ qua encoding. Không coi XML và HTML là cùng parser. Không quên rằng whitespace có thể là dữ liệu thật.
@@ -916,8 +838,6 @@ Nếu các nguyên tắc này trở thành phản xạ, bạn đã có nền t�
 
 # PHẦN BỔ SUNG — XML TRONG CÁC HỆ THỐNG THỰC TẾ
 
-> **Nối mạch:** Trong **XML — Beginner**, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** nối từ **39. Những lỗi beginner phải tránh** sang **41. Android dùng XML như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)
 
 Khi bạn mở một tệp (file / 파일) như `pom.xml`, `AndroidManifest.xml` hoặc một tệp (file / 파일) Spring XML cũ, điều quan trọng đầu tiên là tách hai lớp kiến thức. Lớp thứ nhất là **XML cú pháp (syntax / 문법)**: element phải đóng đúng, attribute phải quote, không gian tên (namespace / 네임스페이스) phải được bind đúng, document phải well-formed. Lớp thứ hai là **vocabulary của công cụ**: Maven mới định nghĩa `dependency`, Android mới định nghĩa `activity`, Spring mới định nghĩa `bean`. XML parser chỉ hiểu cấu trúc; khung phần mềm (framework / 프레임워크) hiểu ý nghĩa nghiệp vụ của từng tag.
@@ -925,8 +845,6 @@ Khi bạn mở một tệp (file / 파일) như `pom.xml`, `AndroidManifest.xml`
 Đây là mô hình tư duy (mental model / 사고 모델) giúp bạn đọc một XML cấu hình (configuration / 구성) lạ mà không bị choáng. Bạn không cần học lại XML cho từng khung phần mềm (framework / 프레임워크). Bạn giữ nguyên kiến thức XML cốt lõi (core / 핵심), sau đó học vocabulary và lược đồ (schema / 스키마)/tham chiếu (reference / 참조) của khung phần mềm (framework / 프레임워크) đó.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **41. Android dùng XML như thế nào?** nối từ **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** sang **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Android dùng XML như thế nào?
 
@@ -1001,8 +919,6 @@ Jetpack Compose làm giảm nhu cầu dùng XML bố cục (layout / 레이아�
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** nối từ **41. Android dùng XML như thế nào?** sang **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise
 
 Maven POM là ví dụ data-centric XML được dùng làm bản dựng (build / 빌드) cấu hình (configuration / 구성). `pom.xml` mô tả dự án (project / 프로젝트) mô hình (model / 모델), dependencies, plugins và bản dựng (build / 빌드) cấu hình (configuration / 구성). Maven thường dùng default không gian tên (namespace / 네임스페이스) và XSD-related siêu dữ liệu (metadata / 메타데이터), vì vậy đây là một tệp (file / 파일) rất tốt để luyện cách đọc không gian tên (namespace / 네임스페이스) thay vì chỉ nhìn cục bộ (local / 로컬) tag names.
@@ -1027,8 +943,6 @@ Khi maintain legacy Java ứng dụng (application / 애플리케이션), bạn 
 
 ---
 
-> **Nối mạch:** Trong **XML — Beginner**, **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** nối từ **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** sang **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy
 
 Khi gặp một tệp (file / 파일) XML lạ, trước tiên hãy tìm gốc (root / 루트) element và không gian tên (namespace / 네임스페이스) declarations. gốc (root / 루트) cho bạn biết loại document tổng quát, còn không gian tên (namespace / 네임스페이스) cho biết vocabulary nào đang được dùng. Sau đó hãy phân biệt element nào là cấu trúc (structure / 구조) chính, attribute nào là siêu dữ liệu (metadata / 메타데이터)/cấu hình (configuration / 구성), và giá trị (value / 값) nào chỉ là string theo XML cốt lõi (core / 핵심) nhưng được khung phần mềm (framework / 프레임워크) diễn giải thành enum, lớp (class / 클래스) name, URI hoặc tài nguyên (resource / 자원) tham chiếu (reference / 참조).
@@ -1052,8 +966,6 @@ bạn đã có thể suy ra rất nhiều trước khi biết khung phần mềm
 Sau đó mới tìm lược đồ (schema / 스키마) hoặc documentation của vocabulary. Đây là cách đọc XML từ **cấu trúc chung → không gian tên (namespace / 네임스페이스) → đặc tả hợp đồng (contract / 계약) → khung phần mềm (framework / 프레임워크) meaning**, thay vì học thuộc từng tệp (file / 파일) cấu hình.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Beginner**, **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?** nối từ **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?
 

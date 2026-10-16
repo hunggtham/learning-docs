@@ -20,8 +20,6 @@ TTL là an toàn (safety / 안전) net, không phải vô hiệu hóa (invalidat
 invalidate các key liên quan hoặc dùng versioned key. vô hiệu hóa (invalidation / 무효화) phải bao phủ
 mọi biểu diễn (representation / 표현): detail, danh sách (list / 목록), aggregate và permission-sensitive view.
 
-> **Chuyển mạch:** Sau khi chọn được pattern ghi/đọc, hãy kiểm tra nó dưới tải đồng thời: **Stampede và consistency** trả lời khi nhiều request cùng chạm một key và khi dữ liệu vừa mutation. Kết quả này là điều kiện để chọn metric phù hợp ở phần kế tiếp.
-
 ## Stampede và consistency
 
 Dùng single-flight/lease, jitter TTL, stale-while-revalidate hoặc giới hạn
@@ -29,15 +27,11 @@ tính đồng thời (concurrency / 동시성) để tránh hàng nghìn yêu c�
 phụ thuộc định danh (identity / 식별자) bằng key thiếu tenant/người dùng (user / 사용자). Nếu consistency quan trọng hơn
 độ trễ (latency / 지연 시간), đọc nguồn (source / 소스) sau ghi (write / 쓰기) hoặc đính kèm phiên bản (version / 버전) để máy khách (client / 클라이언트) phát hiện stale.
 
-> **Chuyển mạch:** Các biện pháp single-flight, versioned key và stale-read chỉ đáng tin khi đo được tác động của chúng. Vì vậy **Chỉ số cần theo dõi** chuyển từ cơ chế bảo vệ key sang hit/stale/origin và cho phép ta định lượng ngân sách nhất quán ở phần sau.
-
 ## Chỉ số cần theo dõi
 
 Hit ratio một mình không đủ: theo dõi stale-read tỷ lệ (rate / 비율), eviction, kích thước (size / 크기), độ trễ (latency / 지연 시간),
 origin tải (load / 로드), lỗi (error / 오류)/fallback và hot-key skew. bộ nhớ đệm (cache / 캐시) outage phải degrade có chủ ý
 (slower origin, partial response hoặc fail fast), không tạo thử lại (retry / 재시도) storm.
-
-> **Chuyển mạch:** Khi metric cho thấy stale-read và origin load, **Đào sâu: consistency ngân sách (budget / 예산)** biến chúng thành ngưỡng thiết kế theo từng loại dữ liệu. Đây là điểm chốt để cân TTL, invalidation và read-after-write mà không đánh đồng mọi cache.
 
 ## Đào sâu: consistency ngân sách (budget / 예산)
 

@@ -35,8 +35,6 @@ increment(&count)
 
 `inout` không nên được dùng để giả lập dùng chung (shared / 공유) tham chiếu (reference / 참조) trạng thái (state / 상태). Khi trạng thái (state / 상태) có thời gian tồn tại (lifetime / 수명) dài hoặc đi qua tính đồng thời (concurrency / 동시성) ranh giới (boundary / 경계), hãy mô hình (model / 모델) quyền sở hữu (ownership / 소유권) bằng kiểu (type / 타입)/actor/dịch vụ (service / 서비스) phù hợp.
 
-> **Nối mạch:** Trong **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **1. Closure thời gian tồn tại (lifetime / 수명): @escaping, capture, @Sendable và inout** đặt đầu vào cho **2. Numeric tính đúng đắn (correctness / 정확성): overflow, floating điểm (point / 지점) và tiền tệ**, rồi **3. HTTP ngữ nghĩa (semantics / 의미론) trước mạng (network / 네트워크) lớp trừu tượng (abstraction / 추상화)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Numeric tính đúng đắn (correctness / 정확성): overflow, floating điểm (point / 지점) và tiền tệ
 
 Swift ưu tiên arithmetic an toàn (safety / 안전). Integer overflow thông thường sẽ trap thay vì silently wrap. Các operator `&+`, `&-`, `&*` cho phép wraparound có chủ đích, phù hợp low-level thuật toán (algorithm / 알고리즘), hashing hoặc nhị phân (binary / 이진) giao thức (protocol / 프로토콜) chứ không nên dùng để “né crash”.
@@ -44,8 +42,6 @@ Swift ưu tiên arithmetic an toàn (safety / 안전). Integer overflow thông t
 `Double` dùng nhị phân (binary / 이진) floating-point IEEE 754 nên nhiều số thập phân không thể biểu diễn chính xác. Vì vậy equality trực tiếp cho kết quả tính toán floating-point cần được xem xét theo tolerance, còn dữ liệu tiền tệ nên chọn biểu diễn (representation / 표현) theo bất biến (invariant / 불변식) lĩnh vực (domain / 도메인). Có thể dùng `Decimal` khi cần decimal arithmetic hoặc integer minor đơn vị (unit / 단위) như cents/won nhỏ nhất khi lĩnh vực (domain / 도메인) cho phép.
 
 Cấp cao (senior / 시니어) ghi chú (note / 노트): numeric kiểu (type / 타입) là một phần lĩnh vực (domain / 도메인) mô hình (model / 모델). Chọn `Double` cho exchange-rate calculation, `Decimal` cho accounting và integer cho count không phải style preference; nó quyết định precision, rounding và lỗi (error / 오류) hành vi (behavior / 동작).
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **2. Numeric tính đúng đắn (correctness / 정확성): overflow, floating điểm (point / 지점) và tiền tệ** đặt đầu vào cho **3. HTTP ngữ nghĩa (semantics / 의미론) trước mạng (network / 네트워크) lớp trừu tượng (abstraction / 추상화)**, rồi **4. thử lại (retry / 재시도), exponential backoff, jitter và idempotency** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. HTTP ngữ nghĩa (semantics / 의미론) trước mạng (network / 네트워크) lớp trừu tượng (abstraction / 추상화)
 
@@ -67,8 +63,6 @@ guard 200..<300 ~= http.statusCode else {
 
 `401` thường gắn với authentication, `403` thường gắn authorization, nhưng app không nên hard-code UX chỉ dựa trên số status nếu backend định nghĩa lỗi (error / 오류) mã (code / 코드) chi tiết hơn.
 
-> **Nối mạch:** HTTP semantics phải rõ trước khi retry; exponential backoff/jitter giảm thundering herd, còn idempotency bảo vệ side effect trước khi API evolution.
-
 ## 4. thử lại (retry / 재시도), exponential backoff, jitter và idempotency
 
 Thử lại (retry / 재시도) chỉ đúng khi thất bại (failure / 실패) có khả năng transient và thao tác (operation / 연산) an toàn để lặp. liên kết (connection / 연결) reset, hết thời gian chờ (timeout / 타임아웃) hoặc một số `5xx` có thể đáng thử lại (retry / 재시도). kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류), revoked credential hoặc lĩnh vực (domain / 도메인) xung đột (conflict / 충돌) thường không.
@@ -76,8 +70,6 @@ Thử lại (retry / 재시도) chỉ đúng khi thất bại (failure / 실패)
 Exponential backoff tăng thời gian chờ theo lần thử; jitter thêm độ ngẫu nhiên để hàng nghìn máy khách (client / 클라이언트) không thử lại (retry / 재시도) đồng thời. Cancellation phải được kiểm trước/sau sleep để người dùng (user / 사용자) rời màn hình không còn gây yêu cầu (request / 요청) tiếp tục.
 
 Với mutation như payment/thứ tự (order / 순서)/create-resource, client-side thử lại (retry / 재시도) chỉ an toàn khi backend có idempotency ngữ nghĩa (semantics / 의미론) hoặc thao tác (operation / 연산) vốn idempotent. Một yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) có thể đã thành công ở máy chủ (server / 서버) dù máy khách (client / 클라이언트) không nhận phản hồi (response / 응답); gửi lại mù quáng có thể tạo dữ liệu trùng.
-
-> **Nối mạch:** Retry/idempotency bảo vệ request side effects; Codable tolerant tiếp theo bảo vệ schema evolution, rồi legacy maintenance cần một core data mental model ổn định.
 
 ## 5. Codable tolerant và API evolution
 
@@ -87,15 +79,11 @@ Với payload có discriminator, custom `init(from:)` giúp decode polymorphic m
 
 Tách DTO khỏi lĩnh vực (domain / 도메인) mô hình (model / 모델) có lợi khi vận chuyển (transport / 전송) lược đồ (schema / 스키마) không ổn định. DTO có thể tolerant với máy chủ (server / 서버), còn lĩnh vực (domain / 도메인) mô hình (model / 모델) giữ bất biến (invariant / 불변식) mạnh hơn.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **5. Codable tolerant và API evolution** đặt vấn đề; **6. cốt lõi (core / 핵심) dữ liệu (data / 데이터) mô hình tư duy (mental model / 사고 모델) để maintain codebase legacy** đối chiếu bằng chứng, rồi **7. Background URLSession và thao tác (operation / 연산) sống lâu hơn UI** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. cốt lõi (core / 핵심) dữ liệu (data / 데이터) mô hình tư duy (mental model / 사고 모델) để maintain codebase legacy
 
 Cốt lõi (core / 핵심) dữ liệu (data / 데이터) không chỉ là wrapper SQLite. `NSManagedObjectContext` là đối tượng (object / 객체) đồ thị (graph / 그래프)/unit-of-work ngữ cảnh (context / 맥락) với tính đồng thời (concurrency / 동시성) quy tắc (rule / 규칙) riêng. Managed đối tượng (object / 객체) thuộc ngữ cảnh (context / 맥락); save ghi thay đổi (change / 변경) theo topology của ngữ cảnh (context / 맥락)/bộ chứa (container / 컨테이너); merge chính sách (policy / 정책) giải quyết xung đột (conflict / 충돌); `NSManagedObjectID` là cách an toàn hơn để tham chiếu đối tượng (object / 객체) qua ngữ cảnh (context / 맥락) ranh giới (boundary / 경계).
 
 Background ngữ cảnh (context / 맥락) cho phép fetch/import ngoài main hàng đợi (queue / 큐), nhưng không nên đưa một `NSManagedObject` trực tiếp sang ngữ cảnh (context / 맥락) khác. Hãy truyền đối tượng (object / 객체) ID hoặc map thành immutable snapshot. Hiểu mô hình (model / 모델) này cũng giúp học SwiftData sâu hơn vì nhiều bài toán persistence—định danh (identity / 식별자), di chuyển (migration / 마이그레이션), relationship, lịch sử (history / 이력), giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계)—không biến mất chỉ vì API mới ergonomic hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **6. cốt lõi (core / 핵심) dữ liệu (data / 데이터) mô hình tư duy (mental model / 사고 모델) để maintain codebase legacy** đặt vấn đề; **7. Background URLSession và thao tác (operation / 연산) sống lâu hơn UI** đối chiếu bằng chứng, rồi **8. UIKit vòng đời (lifecycle / 생명주기) và Auto bố cục (layout / 레이아웃) diagnostic** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Background URLSession và thao tác (operation / 연산) sống lâu hơn UI
 
@@ -103,15 +91,11 @@ Background ngữ cảnh (context / 맥락) cho phép fetch/import ngoài main h�
 
 Điều này dẫn đến một nguyên tắc kiến trúc: tác vụ (task / 작업) thời gian tồn tại (lifetime / 수명) phải thuộc nghiệp vụ (business / 비즈니스) đơn vị sở hữu (owner / 오너) đúng. Nếu upload phải sống qua điều hướng (navigation / 내비게이션) hoặc restart, siêu dữ liệu (metadata / 메타데이터) trạng thái cần được persist; không thể chỉ giữ trong `@State` hoặc ViewModel tạm thời.
 
-> **Nối mạch:** Trong **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **7. Background URLSession và thao tác (operation / 연산) sống lâu hơn UI** đặt đầu vào cho **8. UIKit vòng đời (lifecycle / 생명주기) và Auto bố cục (layout / 레이아웃) diagnostic**, rồi **9. quyền sở hữu (ownership / 소유권) mới: borrowing, consuming, noncopyable** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 8. UIKit vòng đời (lifecycle / 생명주기) và Auto bố cục (layout / 레이아웃) diagnostic
 
 `UIViewController` có các phase như `loadView`, `viewDidLoad`, `viewWillAppear`, `viewDidAppear`, `viewWillDisappear`, `viewDidDisappear`. `viewDidLoad` phù hợp setup view một lần cho view instance, nhưng không có nghĩa controller chỉ xuất hiện một lần trong app.
 
 Auto bố cục (layout / 레이아웃) warning cần được đọc như ràng buộc (constraint / 제약조건) hệ thống (system / 시스템). *Ambiguous* nghĩa có nhiều nghiệm; *unsatisfiable* nghĩa ràng buộc (constraint / 제약조건) xung đột. Content hugging nói view không muốn lớn hơn intrinsic content kích thước (size / 크기), còn compression resistance nói view không muốn nhỏ hơn intrinsic kích thước (size / 크기). Priority không nên được chỉnh ngẫu nhiên chỉ để console hết warning; phải phản ánh bố cục (layout / 레이아웃) quy tắc (rule / 규칙) mong muốn.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **8. UIKit vòng đời (lifecycle / 생명주기) và Auto bố cục (layout / 레이아웃) diagnostic** đặt đầu vào cho **9. quyền sở hữu (ownership / 소유권) mới: borrowing, consuming, noncopyable**, rồi **10. SwiftPM plugin, generated mã (code / 코드) và bản dựng (build / 빌드) determinism** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. quyền sở hữu (ownership / 소유권) mới: borrowing, consuming, noncopyable
 
@@ -119,15 +103,11 @@ Swift hiện đại ngày càng cho phép diễn đạt quyền sở hữu (owne
 
 Các tính năng (feature / 기능) này quan trọng với các hệ thống (systems / 시스템들)/thư viện (library / 라이브러리) mã (code / 코드), buffer, handle hoặc tài nguyên (resource / 자원) độc quyền. App nghiệp vụ (business / 비즈니스) mô hình (model / 모델) bình thường vẫn nên ưu tiên kiểu (type / 타입) đơn giản. Mastery không phải dùng tính năng (feature / 기능) mới khắp nơi mà là nhận ra khi copying/quyền sở hữu (ownership / 소유권) thực sự là ràng buộc (constraint / 제약조건).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **10. SwiftPM plugin, generated mã (code / 코드) và bản dựng (build / 빌드) determinism** nối từ **9. quyền sở hữu (ownership / 소유권) mới: borrowing, consuming, noncopyable** sang **11. khả năng quan sát (observability / 관측 가능성): Logger, signpost, Instruments và MetricKit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. SwiftPM plugin, generated mã (code / 코드) và bản dựng (build / 빌드) determinism
 
 SwiftPM bản dựng (build / 빌드) công cụ (tool / 도구)/plugin có thể generate nguồn (source / 소스) từ lược đồ (schema / 스키마), localization, API description hoặc asset chuỗi xử lý (pipeline / 파이프라인). Generation phải deterministic: cùng đầu vào (input / 입력)/công cụ (tool / 도구) phiên bản (version / 버전) phải cho cùng đầu ra (output / 출력). CI cần pin generator/toolchain và thất bại (fail / 실패) nếu generated sản phẩm tạo ra (artifact / 산출물) drift khỏi source-of-truth chính sách (policy / 정책).
 
 Generated mã (code / 코드) phù hợp boilerplate máy tạo; lô-gic nghiệp vụ (business logic / 비즈니스 로직) quan trọng nên vẫn reviewable. Một generator quá “thông minh” có thể khiến debugging và compile-time khó hơn mã (code / 코드) viết tay.
-
-> **Nối mạch:** Deterministic build giúp telemetry có version trace; observability tiếp theo nối Logger/signpost/Instruments/MetricKit với memory graph để tìm retain cycle và cache growth.
 
 ## 11. khả năng quan sát (observability / 관측 가능성): Logger, signpost, Instruments và MetricKit
 
@@ -137,15 +117,11 @@ Logging trả lời “điều gì đã xảy ra”, chỉ số (metric / 지표
 
 Hiệu năng (performance / 성능) investigation nên có baseline và hypothesis. Không optimize theo trực giác hoặc chỉ nhìn một screenshot profiler.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **12. bộ nhớ (memory / 메모리) đồ thị (graph / 그래프): retain cycle và bộ nhớ đệm (cache / 캐시) growth** nối từ **11. khả năng quan sát (observability / 관측 가능성): Logger, signpost, Instruments và MetricKit** sang **13. App extension là tiến trình (process / 프로세스) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. bộ nhớ (memory / 메모리) đồ thị (graph / 그래프): retain cycle và bộ nhớ đệm (cache / 캐시) growth
 
 Khi đối tượng (object / 객체) không deallocate, bộ nhớ (memory / 메모리) đồ thị (graph / 그래프) giúp truy gốc (root / 루트) strong tham chiếu (reference / 참조). dùng chung (common / 공통) nguồn (source / 소스) gồm timer/display link, observer legacy, delegate không weak, dịch vụ (service / 서비스) giữ callback, tác vụ (task / 작업) giữ đơn vị sở hữu (owner / 오너) hoặc bộ nhớ đệm (cache / 캐시) không có eviction.
 
 `[weak self]` không chữa mọi bộ nhớ (memory / 메모리) growth. bộ nhớ đệm (cache / 캐시) giữ dữ liệu chủ đích cũng làm bộ nhớ (memory / 메모리) tăng nhưng không nhất thiết là leak. Cần phân biệt unbounded retention, bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) và temporary peak.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **12. bộ nhớ (memory / 메모리) đồ thị (graph / 그래프): retain cycle và bộ nhớ đệm (cache / 캐시) growth** đặt tiêu chí; **13. App extension là tiến trình (process / 프로세스) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. Supply-chain bảo mật (security / 보안) của gói (package / 패키지) và SDK** mở rộng hệ quả.
 
 ## 13. App extension là tiến trình (process / 프로세스) ranh giới (boundary / 경계)
 
@@ -153,15 +129,11 @@ Widget, Share Extension, Notification dịch vụ (service / 서비스) Extensio
 
 Do ngân sách (budget / 예산) chặt, extension nên tránh kéo phụ thuộc (dependency / 의존성) nặng nếu không cần. cốt lõi (core / 핵심) mô-đun (module / 모듈) dùng chung nên giữ nhẹ, còn SDK hoặc dịch vụ (service / 서비스) chỉ main app cần đặt ở composition tầng (layer / 계층) của app.
 
-> **Nối mạch:** Trong **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **13. App extension là tiến trình (process / 프로세스) ranh giới (boundary / 경계)** đặt tiêu chí; **14. Supply-chain bảo mật (security / 보안) của gói (package / 패키지) và SDK** dùng tiêu chí đó để kiểm tra ranh giới, rồi **15. Make invalid states unrepresentable** mở rộng hệ quả.
-
 ## 14. Supply-chain bảo mật (security / 보안) của gói (package / 패키지) và SDK
 
 Mỗi third-party gói (package / 패키지) mở rộng trust ranh giới (boundary / 경계). rà soát (review / 검토) không chỉ số star mà còn maintainer, provenance/quy trình phát hành (release process / 릴리스 프로세스), license, vulnerability lịch sử (history / 이력), privacy manifest, transitive phụ thuộc (dependency / 의존성) và khả năng exit.
 
 Pin/resolved phiên bản (version / 버전) góp phần reproducible bản dựng (build / 빌드). Major cập nhật (update / 업데이트) không nên tự động ship mà không rà soát (review / 검토). Với SDK analytics/ads/auth/payment, privacy/bảo mật (security / 보안) rà soát (review / 검토) phải tương xứng lượng dữ liệu và quyền truy cập SDK có.
-
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **15. Make invalid states unrepresentable** nối từ **14. Supply-chain bảo mật (security / 보안) của gói (package / 패키지) và SDK** sang **16. ADR và tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Make invalid states unrepresentable
 
@@ -180,15 +152,11 @@ struct RetryPolicy {
 
 Nhưng đừng wrapper mọi thành phần nguyên thủy (primitive / 기본 요소) vô điều kiện. Hãy tạo kiểu (type / 타입) khi nó mang bất biến (invariant / 불변식)/ngữ nghĩa (semantic / 의미적) đáng bảo vệ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **16. ADR và tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nối từ **15. Make invalid states unrepresentable** sang **17. Disaster khôi phục (recovery / 복구) và mobile quay lui (rollback / 롤백)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. ADR và tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
 Kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) (ADR) ghi ngữ cảnh (context / 맥락), quyết định, alternative và consequence cho quyết định đáng kể như minimum iOS phiên bản (version / 버전), SwiftData vs cốt lõi (core / 핵심) dữ liệu (data / 데이터), mô-đun (module / 모듈) chiến lược (strategy / 전략) hoặc thử lại (retry / 재시도) chính sách (policy / 정책). Mục tiêu là lưu *lý do*, không phải tạo tài liệu dài.
 
 Nhóm (team / 팀) môi trường vận hành (production / 운영 환경) cũng nên có tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬): Xcode/toolchain được phép, Swift ngôn ngữ (language / 언어) chế độ (mode / 모드), minimum triển khai (deployment / 배포) mục tiêu (target / 대상), OS/thiết bị (device / 장치) kiểm thử (test / 테스트) set, backend tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) và gói (package / 패키지) chính sách (policy / 정책). Encode phần quan trọng vào CI để tránh cục bộ (local / 로컬)/CI drift.
-
-> **Nối mạch:** Trong **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **17. Disaster khôi phục (recovery / 복구) và mobile quay lui (rollback / 롤백)** nối từ **16. ADR và tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sang **18. hiệu năng (performance / 성능) mô hình (model / 모델) từ thuật toán (algorithm / 알고리즘) đến frame ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Disaster khôi phục (recovery / 복구) và mobile quay lui (rollback / 롤백)
 
@@ -196,15 +164,11 @@ Mobile nhị phân (binary / 이진) không quay lui (rollback / 롤백) tức t
 
 Không phải mọi tính năng (feature / 기능) cần remote flag. Flag cũng tạo combinatorial độ phức tạp (complexity / 복잡도) và phải có đơn vị sở hữu (owner / 오너)/expiry. Rigor phải tỷ lệ với hậu quả khi tính năng (feature / 기능) sai.
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **18. hiệu năng (performance / 성능) mô hình (model / 모델) từ thuật toán (algorithm / 알고리즘) đến frame ngân sách (budget / 예산)** nối từ **17. Disaster khôi phục (recovery / 복구) và mobile quay lui (rollback / 롤백)** sang **19. bảo mật (security / 보안) rà soát (review / 검토) theo luồng dữ liệu (data flow / 데이터 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. hiệu năng (performance / 성능) mô hình (model / 모델) từ thuật toán (algorithm / 알고리즘) đến frame ngân sách (budget / 예산)
 
 Hiệu năng (performance / 성능) không có một bottleneck duy nhất. thuật toán (algorithm / 알고리즘) O(n²) có thể vô hại với 20 item nhưng nguy hiểm với 100.000. ảnh (image / 이미지) decode trên main luồng thực thi (thread / 스레드) có thể gây hitch dù thuật toán (algorithm / 알고리즘) O(n). cơ sở dữ liệu (database / 데이터베이스) thiếu chỉ mục (index / 인덱스) có thể chậm hơn mọi micro-optimization Swift.
 
 Trước khi tối ưu, xác định tài nguyên (resource / 자원) giới hạn: CPU, GPU, bộ nhớ (memory / 메모리), I/O, mạng (network / 네트워크), tranh chấp khóa (lock contention / 잠금 경합), actor serialization hay main-thread công việc (work / 작업). Sau đó chọn công cụ đo tương ứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **18. hiệu năng (performance / 성능) mô hình (model / 모델) từ thuật toán (algorithm / 알고리즘) đến frame ngân sách (budget / 예산)** đặt vấn đề; **19. bảo mật (security / 보안) rà soát (review / 검토) theo luồng dữ liệu (data flow / 데이터 흐름)** đối chiếu bằng chứng, rồi **20. kiểm thử (test / 테스트) bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물), không chỉ gỡ lỗi (debug / 디버그) nguồn (source / 소스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. bảo mật (security / 보안) rà soát (review / 검토) theo luồng dữ liệu (data flow / 데이터 흐름)
 
@@ -212,23 +176,17 @@ Keychain chỉ bảo vệ một phần dữ liệu. bảo mật (security / 보�
 
 Threat mô hình (model / 모델) phải gắn asset và attacker: đơn vị từ (token / 토큰) theft, reverse kỹ thuật (engineering / 엔지니어링), MITM, compromised thiết bị (device / 장치) và unauthorized backend hành động (action / 동작) là threat khác nhau. máy khách (client / 클라이언트) hardening không thay backend authorization.
 
-> **Nối mạch:** Trong **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, cơ chế trong **19. bảo mật (security / 보안) rà soát (review / 검토) theo luồng dữ liệu (data flow / 데이터 흐름)** cần được kiểm chứng bằng dấu vết cụ thể; **20. kiểm thử (test / 테스트) bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물), không chỉ gỡ lỗi (debug / 디버그) nguồn (source / 소스)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **21. Definition of Done theo rủi ro (risk / 위험)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 20. kiểm thử (test / 테스트) bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물), không chỉ gỡ lỗi (debug / 디버그) nguồn (source / 소스)
 
 Đơn vị (unit / 단위) kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) Simulator xanh chưa đảm bảo archive bản phát hành (release / 릴리스) đúng. chuỗi xử lý (pipeline / 파이프라인) môi trường vận hành (production / 운영 환경) nên bản dựng (build / 빌드)/archive cấu hình (configuration / 구성) thật và kiểm entitlement/signing/tài nguyên (resource / 자원)/cấu hình (configuration / 구성). Khi khả thi, smoke kiểm thử (test / 테스트) sản phẩm tạo ra (artifact / 산출물) hoặc bản dựng (build / 빌드) gần bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) trên thiết bị (device / 장치)/arm64.
 
 Optimization-sensitive race, missing tài nguyên (resource / 자원), wrong môi trường (environment / 환경) endpoint, entitlement khác gỡ lỗi (debug / 디버그) hoặc gói (package / 패키지)/thiết bị (device / 장치) kiến trúc (architecture / 아키텍처) issue thường chỉ lộ gần bản phát hành (release / 릴리스).
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **20. kiểm thử (test / 테스트) bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물), không chỉ gỡ lỗi (debug / 디버그) nguồn (source / 소스)** đặt vấn đề; **21. Definition of Done theo rủi ro (risk / 위험)** đối chiếu bằng chứng, rồi **22. Capstone kiểm tra (audit / 감사)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Definition of Done theo rủi ro (risk / 위험)
 
 Một tính năng (feature / 기능) môi trường vận hành (production / 운영 환경) hoàn thành khi hành vi (behavior / 동작) happy/lỗi (error / 오류)/cancel được định nghĩa, khả năng tiếp cận (accessibility / 접근성)/localization hợp lý, kiểm thử (test / 테스트) trọng yếu (critical / 중요) lô-gic (logic / 논리), availability/triển khai (deployment / 배포) mục tiêu (target / 대상) đúng, persistence/di chuyển (migration / 마이그레이션) impact được xem xét, telemetry đủ cho rủi ro (risk / 위험) và rollout chiến lược (strategy / 전략) phù hợp.
 
 Definition of Done không nên nặng như nhau cho mọi tính năng (feature / 기능). Một cục bộ (local / 로컬) toggle và payment luồng (flow / 흐름) có hậu quả khác nhau. cấp cao (senior / 시니어)/master skill nằm ở việc quy mô (scale / 규모) rigor theo rủi ro (risk / 위험).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS — môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) & Completion Guide**, **22. Capstone kiểm tra (audit / 감사)** nối từ **21. Definition of Done theo rủi ro (risk / 위험)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 22. Capstone kiểm tra (audit / 감사)
 

@@ -108,8 +108,6 @@ Hiện tại (current / 현재) kết quả (outcome / 결과) depends on hiện
 
 ARMA/ARIMA combine autoregressive, moving-average and differencing structures.
 
-> **Chuyển mạch:** Sau **9. Moving-average tiến trình (process / 프로세스)**, ta đã có ngôn ngữ cho dependence và lags; **10. Forecast vs nhân quả (causal / 인과적) mô hình (model / 모델)** đặt ranh giới mục tiêu trước khi chọn metric hoặc estimator. Một biến giúp dự báo không vì thế trở thành nguyên nhân cấu trúc.
-
 ## 10. Forecast vs nhân quả (causal / 인과적) mô hình (model / 모델)
 
 A lagged variable may improve forecast without causing kết quả (outcome / 결과). Granger predictability means X's past helps predict Y conditional on thông tin (information / 정보) set; it is not sufficient proof of structural causality.
@@ -186,8 +184,6 @@ Restrictions may be contemporaneous thứ tự (ordering / 순서), long-run res
 
 Every restriction is an economic giả định (assumption / 가정) and should be defended.
 
-> **Chuyển mạch:** **19. Structural VAR identification** cho biết shock chỉ có tên kinh tế sau khi áp đặt restriction; **20. Cholesky thứ tự (ordering / 순서)** làm rõ một lựa chọn cụ thể và độ nhạy của nó. Từ đây, local projections và các chiến lược external/narrative sẽ được đọc như những cách thay thế để bảo vệ impulse response, không phải như causal shortcut.
-
 ## 20. Cholesky thứ tự (ordering / 순서)
 
 Recursive identification assumes variables earlier in thứ tự (ordering / 순서) do not respond contemporaneously to later shocks.
@@ -259,8 +255,6 @@ Mixed-frequency các mô hình (models / 모델들) can use high-frequency indic
 Macro releases are revised. A forecasting mô hình (model / 모델) evaluated on revised final dữ liệu (data / 데이터) may look better than what was possible in real thời gian (time / 시간).
 
 Use vintages when evaluating policymaker/investor forecasts.
-
-> **Chuyển mạch:** Sau **30. Real-time dữ liệu (data / 데이터) and revisions**, forecast/nowcast chỉ đáng tin nếu tập thông tin được khóa tại thời điểm dự báo. **31. Nowcasting** tiếp tục cùng nguyên tắc với dữ liệu chưa hoàn tất; các mục sau kiểm tra look-ahead, survivorship và khác biệt giữa các horizon.
 
 ## 31. Nowcasting
 

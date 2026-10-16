@@ -24,8 +24,6 @@ Cú sốc kinh tế
 
 Không nên dừng ở câu như “CPI tăng nên cổ phiếu giảm”.
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **2. Hai kênh lớn: earnings và valuation** nối từ **1. Điểm xuất phát vẫn là doanh nghiệp** sang **3. Doanh thu và chu kỳ kinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Hai kênh lớn: earnings và valuation
 
 Vĩ mô ảnh hưởng cổ phiếu qua hai đường chính.
@@ -51,8 +49,6 @@ Inflation / Policy
 
 Một cổ phiếu có thể có EPS tăng nhưng P/E giảm. Tổng lợi nhuận phụ thuộc kênh nào mạnh hơn.
 
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **3. Doanh thu và chu kỳ kinh tế** nối từ **2. Hai kênh lớn: earnings và valuation** sang **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Doanh thu và chu kỳ kinh tế
 
 Không phải mọi doanh thu phản ứng giống GDP.
@@ -64,8 +60,6 @@ Không phải mọi doanh thu phản ứng giống GDP.
 - bán dẫn nhạy tồn kho, capex và nhu cầu công nghệ toàn cầu.
 
 Cần lập bản đồ **độ nhạy chu kỳ (cyclical sensitivity)** riêng cho từng doanh nghiệp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** nối từ **3. Doanh thu và chu kỳ kinh tế** sang **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Lạm phát ảnh hưởng doanh nghiệp thế nào?
 
@@ -82,8 +76,6 @@ FX
 
 Doanh nghiệp có quyền định giá (pricing power) có thể chuyển một phần chi phí sang khách hàng. Doanh nghiệp cạnh tranh cao có thể bị co biên lợi nhuận.
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** nối từ **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** sang **6. Đường cong lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp
 
 Lãi suất cao hơn có thể:
@@ -96,8 +88,6 @@ Lãi suất cao hơn có thể:
 
 Do đó “lãi suất tăng tốt cho bank” hoặc “lãi suất tăng xấu cho growth” chỉ là khẩu quyết sơ cấp.
 
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **6. Đường cong lợi suất** nối từ **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** sang **7. Credit spread**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Đường cong lợi suất
 
 Cần tách:
@@ -109,8 +99,6 @@ Cần tách:
 - phần bù kỳ hạn (term premium).
 
 Hai lần lợi suất 10 năm cùng tăng 50bp có thể có ý nghĩa khác nếu một lần do kỳ vọng tăng trưởng, lần khác do lạm phát hoặc cung trái phiếu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **7. Credit spread** nối từ **6. Đường cong lợi suất** sang **8. FX và doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Credit spread
 
@@ -125,8 +113,6 @@ Rủi ro vỡ nợ
 
 Spread tăng làm tái cấp vốn đắt hơn và có thể là tín hiệu điều kiện tài chính đang thắt chặt ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) chưa đổi.
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **8. FX và doanh nghiệp** nối từ **7. Credit spread** sang **9. Dầu và hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. FX và doanh nghiệp
 
 Tỷ giá cần được tách theo:
@@ -140,8 +126,6 @@ Hedge Policy
 ```
 
 KRW yếu không tự động tốt cho mọi exporter Hàn Quốc nếu chi phí đầu vào, nợ hoặc nhu cầu toàn cầu cùng xấu đi.
-
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **9. Dầu và hàng hóa** nối từ **8. FX và doanh nghiệp** sang **10. Chính sách tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Dầu và hàng hóa
 
@@ -159,8 +143,6 @@ Nhưng nó lại có thể hỗ trợ lợi nhuận producer năng lượng.
 
 Một cú sốc phải được đọc theo **ai là người mua và ai là người bán**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **10. Chính sách tiền tệ** nối từ **9. Dầu và hàng hóa** sang **11. Fed và FOMC**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Chính sách tiền tệ
 
 Ngân hàng trung ương không phản ứng với một chỉ số đơn lẻ.
@@ -174,8 +156,6 @@ Hàm phản ứng (reaction function) thường cân bằng:
 - ổn định tài chính.
 
 Thị trường thường giao dịch thay đổi trong **đường đi kỳ vọng của lãi suất**, không chỉ quyết định hôm nay.
-
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **11. Fed và FOMC** nối từ **10. Chính sách tiền tệ** sang **12. QE và QT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Fed và FOMC
 
@@ -191,8 +171,6 @@ Financial Conditions
 
 Một cuộc họp giữ nguyên lãi suất vẫn có thể rất “hawkish” hoặc “dovish” nếu kỳ vọng tương lai thay đổi.
 
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **12. QE và QT** nối từ **11. Fed và FOMC** sang **13. Thanh khoản hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. QE và QT
 
 Nới lỏng định lượng (QE) và thắt chặt định lượng (QT) tác động qua bảng cân đối ngân hàng trung ương, duration supply, dự trữ, term premium và điều kiện thị trường.
@@ -204,8 +182,6 @@ QE = in tiền = stocks up
 ```
 
 Cần xem cơ chế cụ thể và bối cảnh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **13. Thanh khoản hệ thống** nối từ **12. QE và QT** sang **14. Repo và collateral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Thanh khoản hệ thống
 
@@ -219,8 +195,6 @@ Thanh khoản (liquidity) có nhiều lớp:
 - dealer balance sheet.
 
 Một hệ thống có nhiều tiền danh nghĩa vẫn có thể gặp stress nếu collateral hoặc niềm tin suy giảm.
-
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **14. Repo và collateral** nối từ **13. Thanh khoản hệ thống** sang **15. Ngân hàng và tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Repo và collateral
 
@@ -238,8 +212,6 @@ Haircut ↑
 
 Đây là một kênh khủng hoảng quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **15. Ngân hàng và tín dụng** nối từ **14. Repo và collateral** sang **16. Fiscal chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Ngân hàng và tín dụng
 
 Tín dụng truyền vĩ mô tới doanh nghiệp qua:
@@ -254,8 +226,6 @@ Credit Availability
 
 Ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) giảm, tín dụng vẫn có thể co nếu ngân hàng đang bảo vệ vốn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **16. Fiscal chính sách (policy / 정책)** nối từ **15. Ngân hàng và tín dụng** sang **17. Thuế quan và thương mại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Fiscal chính sách (policy / 정책)
 
 Chính sách tài khóa ảnh hưởng:
@@ -269,8 +239,6 @@ Chính sách tài khóa ảnh hưởng:
 
 Tác động phụ thuộc quy mô, thời điểm và nền kinh tế đang dư hay thiếu công suất.
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **17. Thuế quan và thương mại** nối từ **16. Fiscal chính sách (policy / 정책)** sang **18. Geopolitics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Thuế quan và thương mại
 
 Thuế quan (tariff) có thể làm:
@@ -283,8 +251,6 @@ Giá nhập khẩu ↑
 ```
 
 Nhưng tác động còn phụ thuộc tỷ giá, chuyển nguồn cung, mức pass-through và khả năng nội địa hóa.
-
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **18. Geopolitics** nối từ **17. Thuế quan và thương mại** sang **19. Trung Quốc và chu kỳ châu Á**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Geopolitics
 
@@ -300,8 +266,6 @@ Rủi ro địa chính trị có thể ảnh hưởng qua:
 
 Ảnh hưởng thường khác nhau giữa doanh nghiệp có cùng ngành nhưng khác địa lý.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **19. Trung Quốc và chu kỳ châu Á** nối từ **18. Geopolitics** sang **20. Mỹ và nhu cầu toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Trung Quốc và chu kỳ châu Á
 
 Trung Quốc ảnh hưởng Hàn Quốc và Việt Nam qua:
@@ -315,8 +279,6 @@ Trung Quốc ảnh hưởng Hàn Quốc và Việt Nam qua:
 
 “China stimulus” không phải một biến duy nhất. Kích thích bất động sản, hạ tầng hay tiêu dùng sẽ giúp các ngành khác nhau.
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **20. Mỹ và nhu cầu toàn cầu** nối từ **19. Trung Quốc và chu kỳ châu Á** sang **21. Bán dẫn và AI capex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Mỹ và nhu cầu toàn cầu
 
 Mỹ ảnh hưởng thế giới qua:
@@ -329,8 +291,6 @@ Mỹ ảnh hưởng thế giới qua:
 - công nghệ.
 
 Một doanh nghiệp xuất khẩu sang Mỹ có thể chịu đồng thời demand tác động (effect / 효과) và FX tác động (effect / 효과) theo hai hướng khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **21. Bán dẫn và AI capex** nối từ **20. Mỹ và nhu cầu toàn cầu** sang **22. Kỳ vọng quan trọng hơn headline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Bán dẫn và AI capex
 
@@ -347,8 +307,6 @@ Hyperscaler Capex
 
 Nhưng cần tách demand thật, inventory bản dựng (build / 빌드) và supply phản hồi (response / 응답).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** nối từ **21. Bán dẫn và AI capex** sang **23. Positioning và flows**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Kỳ vọng quan trọng hơn headline
 
 Thị trường (market / 시장) reaction thường phụ thuộc:
@@ -360,8 +318,6 @@ Actual
 ```
 
 Một số liệu tốt vẫn có thể làm giá giảm nếu thị trường đã kỳ vọng tốt hơn.
-
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** đặt đầu vào cho **23. Positioning và flows**, rồi **24. Earnings revision** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Positioning và flows
 
@@ -377,8 +333,6 @@ và
 Positioning / Flow Change
 ```
 
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **23. Positioning và flows** đặt đầu vào cho **24. Earnings revision**, rồi **25. Chu kỳ và xu hướng cấu trúc** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 24. Earnings revision
 
 Sau cú sốc vĩ mô, câu hỏi thực tế là analyst có sửa:
@@ -393,8 +347,6 @@ hay không.
 
 Giá cổ phiếu thường đi trước reported earnings vì thị trường phản ánh kỳ vọng mới.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **25. Chu kỳ và xu hướng cấu trúc** nối từ **24. Earnings revision** sang **26. Regime**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Chu kỳ và xu hướng cấu trúc
 
 Cần phân biệt:
@@ -404,8 +356,6 @@ Cần phân biệt:
 **Cấu trúc (structural):** nhân khẩu học, năng suất, công nghệ, mô hình thương mại, lợi thế ngành.
 
 Không nên định giá thay đổi chu kỳ như thể nó tồn tại vĩnh viễn.
-
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **26. Regime** nối từ **25. Chu kỳ và xu hướng cấu trúc** sang **27. Từ macro tới mô hình doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Regime
 
@@ -419,8 +369,6 @@ Inflation: tăng / giảm
 Từ đó hình thành các trạng thái như Goldilocks, overheating, stagflation hoặc deflationary bust.
 
 Nhưng đây chỉ là bản đồ, không phải công thức dự báo giá tài sản.
-
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **27. Từ macro tới mô hình doanh nghiệp** nối từ **26. Regime** sang **28. Khung phân tích một cú sốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Từ macro tới mô hình doanh nghiệp
 
@@ -437,8 +385,6 @@ USD/KRW ↑
 ```
 
 Nếu không thể chỉ ra dòng nào thay đổi trong mô hình (model / 모델), “macro thesis” còn quá mơ hồ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **28. Khung phân tích một cú sốc** nối từ **27. Từ macro tới mô hình doanh nghiệp** sang **29. Các tệp (file / 파일) chuyên sâu tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Khung phân tích một cú sốc
 
@@ -457,8 +403,6 @@ Khi có một headline mới, dùng chuỗi:
 10. Điều gì đã được price trước?
 ```
 
-> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **29. Các tệp (file / 파일) chuyên sâu tiếp theo** nối từ **28. Khung phân tích một cú sốc** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Các tệp (file / 파일) chuyên sâu tiếp theo
 
 Để học chi tiết hơn:
@@ -469,8 +413,6 @@ Khi có một headline mới, dùng chuỗi:
 - [04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md](./04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md): hệ thống tiền tệ và thanh khoản;
 - [05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md): chế độ vĩ mô và lịch sử khủng hoảng;
 - [06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md): tài khóa, nợ, dân số và năng suất.
-
-> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **Kết luận** tổng hợp từ **29. Các tệp (file / 파일) chuyên sâu tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

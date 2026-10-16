@@ -14,8 +14,6 @@ Hai file dưới đây là hai điểm vào bổ sung cho cùng câu hỏi: nguy
 4. [`02_regulation_comparison_and_serving.md`](02_regulation_comparison_and_serving.md) — đọc nhãn, jurisdiction, phục vụ và trách nhiệm.
 5. [`03_beer_whisky_comparison_lab.md`](03_beer_whisky_comparison_lab.md) — case lab so sánh beer và whisky từ một nhu cầu phục vụ cụ thể.
 
-> **Chuyển mạch:** Whisky và beer cùng dùng nguyên liệu–đường–men nhưng tách nhau ở chưng cất, hoa bia và trưởng thành; đọc hai file theo sự khác nhau của cơ chế, không theo thứ tự thương hiệu.
-
 Sau khi nắm hai nhánh này, thư viện có thể mở rộng sang wine, coffee, tea và fermentation để thấy các cơ chế chung như lên men, chiết xuất, oxy hóa, nhiệt độ và thời gian xuất hiện lặp lại dưới những hình thức khác nhau.
 
 > **Bàn giao:** Đọc whisky để hiểu chuỗi ngũ cốc → lên men → chưng cất → trưởng thành; đọc beer để thấy ngũ cốc → malt → hoa bia → lên men tạo ra các họ bia. Khi mở nhánh mới, giữ cùng cách tách nguyên liệu, cơ chế và thuộc tính cảm nhận.

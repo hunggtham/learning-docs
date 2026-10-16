@@ -86,15 +86,11 @@ User-facing string nên ở tài nguyên (resource / 자원) để localize, ki�
 
 Nhưng plural phải dùng plural tài nguyên (resource / 자원) thay vì nối số + noun thủ công.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **5. String tài nguyên (resource / 자원), không hardcode UI văn bản (text / 텍스트)** đặt vấn đề; **6. Plural** đối chiếu bằng chứng, rồi **7. Format number/currency/date theo locale** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. Plural
 
 Ngôn ngữ không có cùng plural quy tắc (rule / 규칙). Dùng `<plurals>`/quantity string để khung phần mềm (framework / 프레임워크) chọn form.
 
 Đừng giả định chỉ singular/plural kiểu English.
-
-> **Nối mạch:** Plural và number/currency/date đều phụ thuộc locale; sau format, timezone phải được xử lý riêng để tránh biến instant thành local time sai.
 
 ## 7. Format number/currency/date theo locale
 
@@ -107,8 +103,6 @@ Không tự format:
 nếu UI cần locale-aware display. Dùng formatter thích hợp cho currency/number/date.
 
 Lĩnh vực (domain / 도메인) giá trị (value / 값) giữ ngữ nghĩa (semantic / 의미적) chuẩn; formatting là presentation concern.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **8. thời gian (time / 시간) zone** nối từ **7. Format number/currency/date theo locale** sang **9. Locale thay đổi (change / 변경) thời gian chạy (runtime / 런타임)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. thời gian (time / 시간) zone
 
@@ -127,8 +121,6 @@ ZonedDateTime → local time + zone
 
 Mobile travel qua timezone dễ làm bug calendar/reminder nếu mô hình (model / 모델) sai từ đầu.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **9. Locale thay đổi (change / 변경) thời gian chạy (runtime / 런타임)** nối từ **8. thời gian (time / 시간) zone** sang **10. Start/end thay left/right**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Locale thay đổi (change / 변경) thời gian chạy (runtime / 런타임)
 
 Locale có thể đổi khi tiến trình (process / 프로세스)/app đang tồn tại. Đừng bộ nhớ đệm (cache / 캐시) formatted string toàn cục (global / 전역) vô hạn.
@@ -137,15 +129,11 @@ UI nên derive display văn bản (text / 텍스트) từ tài nguyên (resource
 
 # RTL
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **10. Start/end thay left/right** nối từ **9. Locale thay đổi (change / 변경) thời gian chạy (runtime / 런타임)** sang **11. BiDi văn bản (text / 텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Start/end thay left/right
 
 Bố cục (layout / 레이아웃) direction phải hỗ trợ (support / 지원) RTL khi app localize Arabic/Hebrew. Dùng start/end cho alignment/margin khi ngữ nghĩa (semantic / 의미적) directional.
 
 Icon có direction như arrow/back có thể cần auto-mirror.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **11. BiDi văn bản (text / 텍스트)** nối từ **10. Start/end thay left/right** sang **12. Large văn bản (text / 텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. BiDi văn bản (text / 텍스트)
 
@@ -153,21 +141,15 @@ Mixed Latin/Arabic/number/URL có thể kết xuất (render / 렌더링) direct
 
 # Font scaling và khả năng tiếp cận (accessibility / 접근성)
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **12. Large văn bản (text / 텍스트)** nối từ **11. BiDi văn bản (text / 텍스트)** sang **13. Screen reader**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Large văn bản (text / 텍스트)
 
 Người dùng (user / 사용자) có thể tăng font quy mô (scale / 규모). Fixed-height bộ chứa (container / 컨테이너) dễ cắt văn bản (text / 텍스트).
 
 Đừng thiết kế (design / 설계) button/card theo một screenshot kích thước (size / 크기) duy nhất. Cho văn bản (text / 텍스트) wrap hoặc bố cục (layout / 레이아웃) adapt.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **13. Screen reader** nối từ **12. Large văn bản (text / 텍스트)** sang **14. Color/contrast**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Screen reader
 
 Trọng yếu (critical / 중요) luồng (flow / 흐름) phải kiểm thử (test / 테스트) manual với TalkBack ít nhất theo bản phát hành (release / 릴리스) cadence phù hợp. ngữ nghĩa (semantics / 의미론) automated kiểm thử (test / 테스트) giúp nhưng không thay trải nghiệm nghe thật.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **13. Screen reader** đặt tiêu chí; **14. Color/contrast** dùng tiêu chí đó để kiểm tra ranh giới, rồi **15. Wakeup chi phí (cost / 비용)** mở rộng hệ quả.
 
 ## 14. Color/contrast
 
@@ -176,8 +158,6 @@ Không truyền trạng thái chỉ bằng màu. lỗi (error / 오류)/success/
 Dark chế độ (mode / 모드) và động (dynamic / 동적) color có thể thay contrast; custom color cần kiểm thử (test / 테스트) cả theme.
 
 # Battery và background chất lượng (quality / 품질)
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **14. Color/contrast** đặt tiêu chí; **15. Wakeup chi phí (cost / 비용)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. Batch thay polling khi có thể** mở rộng hệ quả.
 
 ## 15. Wakeup chi phí (cost / 비용)
 
@@ -195,13 +175,9 @@ battery reason
 user-visible benefit
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **16. Batch thay polling khi có thể** nối từ **15. Wakeup chi phí (cost / 비용)** sang **17. Doze/App Standby**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Batch thay polling khi có thể
 
 Nếu backend hỗ trợ push/stream/sự kiện (event / 이벤트), không nhất thiết poll 5 phút. Nếu công việc (work / 작업) không cần chính xác (exact / 정확한) thời gian (time / 시간), để WorkManager/hệ thống (system / 시스템) batch giúp battery.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **17. Doze/App Standby** nối từ **16. Batch thay polling khi có thể** sang **18. kiểm thử (test / 테스트) slow mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Doze/App Standby
 
@@ -211,23 +187,17 @@ Nếu sản phẩm (product / 제품) yêu cầu hard realtime, cần kiến tr�
 
 # Mạng (network / 네트워크) chất lượng (quality / 품질)
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **18. kiểm thử (test / 테스트) slow mạng (network / 네트워크)** nối từ **17. Doze/App Standby** sang **19. thử lại (retry / 재시도) storm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. kiểm thử (test / 테스트) slow mạng (network / 네트워크)
 
 Wi-Fi văn phòng che giấu race/loading bug. kiểm thử (test / 테스트) độ trễ (latency / 지연 시간) cao, packet mất mát (loss / 손실), offline giữa yêu cầu (request / 요청), reconnect và máy chủ (server / 서버) hết thời gian chờ (timeout / 타임아웃).
 
 UI cần distinguish loading initial và refreshing existing content.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **19. thử lại (retry / 재시도) storm** nối từ **18. kiểm thử (test / 테스트) slow mạng (network / 네트워크)** sang **20. Payload kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. thử lại (retry / 재시도) storm
 
 Nếu 1 triệu thiết bị (device / 장치) cùng thử lại (retry / 재시도) ngay sau backend outage, exponential backoff + jitter giúp tránh thundering herd.
 
 Thử lại (retry / 재시도) chính sách (policy / 정책) là distributed-system concern.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **20. Payload kích thước (size / 크기)** nối từ **19. thử lại (retry / 재시도) storm** sang **21. Low-memory thiết bị (device / 장치)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Payload kích thước (size / 크기)
 
@@ -237,23 +207,17 @@ Mobile mạng (network / 네트워크) đắt và không ổn định. Đặc t�
 
 # Bộ nhớ (memory / 메모리)/CPU chất lượng (quality / 품질)
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **21. Low-memory thiết bị (device / 장치)** nối từ **20. Payload kích thước (size / 크기)** sang **22. Thermal throttling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Low-memory thiết bị (device / 장치)
 
 Kiểm thử (test / 테스트) thiết bị (device / 장치) RAM thấp giúp phát hiện bitmap bộ nhớ đệm (cache / 캐시), giant danh sách (list / 목록), WebView/media bộ nhớ (memory / 메모리) và startup overhead.
 
 Background tiến trình (process / 프로세스) có thể bị kill thường xuyên hơn, làm trạng thái (state / 상태) restoration bug lộ ra.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **22. Thermal throttling** nối từ **21. Low-memory thiết bị (device / 장치)** sang **23. Không giả định mọi OEM giống điểm ảnh (pixel / 픽셀)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Thermal throttling
 
 CPU benchmark kéo dài có thể khác khi thiết bị (device / 장치) nóng. Heavy camera/ML/video tính năng (feature / 기능) nên kiểm thử (test / 테스트) thermal/battery thực tế chứ không chỉ một run ngắn.
 
 # OEM fragmentation
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **23. Không giả định mọi OEM giống điểm ảnh (pixel / 픽셀)** nối từ **22. Thermal throttling** sang **24. gỡ lỗi (debug / 디버그) tính năng (feature / 기능) không lọt môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Không giả định mọi OEM giống điểm ảnh (pixel / 픽셀)
 
@@ -262,8 +226,6 @@ Một số OEM có aggressive battery/background management, camera/Bluetooth ng
 Không viết mã (code / 코드) “detect Samsung rồi hack” ngay từ đầu. Trước tiên dựa API công khai (public API / 공개 API); chỉ có workaround khi có bằng chứng (evidence / 증거), isolate workaround và document phạm vi (scope / 범위)/phiên bản (version / 버전).
 
 # Bảo mật (security / 보안) chất lượng (quality / 품질)
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **24. gỡ lỗi (debug / 디버그) tính năng (feature / 기능) không lọt môi trường vận hành (production / 운영 환경)** nối từ **23. Không giả định mọi OEM giống điểm ảnh (pixel / 픽셀)** sang **25. Log redaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. gỡ lỗi (debug / 디버그) tính năng (feature / 기능) không lọt môi trường vận hành (production / 운영 환경)
 
@@ -280,21 +242,15 @@ no backup exposure ngoài policy
 
 Bản dựng (build / 빌드) variant/cấu hình (configuration / 구성) nên khiến insecure gỡ lỗi (debug / 디버그) hành vi (behavior / 동작) khó lọt bản phát hành (release / 릴리스).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **25. Log redaction** nối từ **24. gỡ lỗi (debug / 디버그) tính năng (feature / 기능) không lọt môi trường vận hành (production / 운영 환경)** sang **26. Screenshot/screen recording sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Log redaction
 
 Đơn vị từ (token / 토큰), password, full card/account identifier, sensitive PII không nên log. Structured logging nên redaction từ nguồn (source / 소스) thay vì hy vọng dashboard filter sau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **26. Screenshot/screen recording sensitivity** nối từ **25. Log redaction** sang **27. dữ liệu (data / 데이터) inventory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Screenshot/screen recording sensitivity
 
 Một số screen như credential/payment/health có thể cần `FLAG_SECURE` hoặc chính sách (policy / 정책) tương đương tùy yêu cầu (requirement / 요구사항). Nhưng đừng bật toàn app nếu làm hỏng legitimate người dùng (user / 사용자) workflow không cần thiết.
 
 # Privacy chất lượng (quality / 품질)
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **26. Screenshot/screen recording sensitivity** đặt vấn đề; **27. dữ liệu (data / 데이터) inventory** đối chiếu bằng chứng, rồi **28. dữ liệu (data / 데이터) minimization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. dữ liệu (data / 데이터) inventory
 
@@ -311,8 +267,6 @@ user control
 
 Nếu nhóm (team / 팀) không biết sự kiện (event / 이벤트) analytics chứa gì, rất khó đảm bảo privacy hoặc dữ liệu (data / 데이터) an toàn (safety / 안전) declaration đúng.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **27. dữ liệu (data / 데이터) inventory** đặt vấn đề; **28. dữ liệu (data / 데이터) minimization** đối chiếu bằng chứng, rồi **29. Analytics khác telemetry độ tin cậy (reliability / 신뢰성)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 28. dữ liệu (data / 데이터) minimization
 
 Không gửi raw GPS/contacts/thiết bị (device / 장치) identifier nếu nghiệp vụ (business / 비즈니스) chỉ cần derived region/count.
@@ -321,15 +275,11 @@ Privacy tốt thường bắt đầu bằng **không thu dữ liệu không cầ
 
 # Analytics và khả năng quan sát (observability / 관측 가능성)
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **28. dữ liệu (data / 데이터) minimization** đặt vấn đề; **29. Analytics khác telemetry độ tin cậy (reliability / 신뢰성)** đối chiếu bằng chứng, rồi **30. sự kiện (event / 이벤트) lược đồ (schema / 스키마) versioning** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 29. Analytics khác telemetry độ tin cậy (reliability / 신뢰성)
 
 Sản phẩm (product / 제품) analytics trả lời người dùng (user / 사용자) làm gì. Operational telemetry trả lời app có khỏe không.
 
 Đừng dùng sự kiện (event / 이벤트) analytics như crash/dấu vết (trace / 추적) hệ thống (system / 시스템) thay thế.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **30. sự kiện (event / 이벤트) lược đồ (schema / 스키마) versioning** nối từ **29. Analytics khác telemetry độ tin cậy (reliability / 신뢰성)** sang **31. Crash-free không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. sự kiện (event / 이벤트) lược đồ (schema / 스키마) versioning
 
@@ -342,15 +292,11 @@ checkout_completed.v1
 
 không nhất thiết phải phiên bản (version / 버전) trong tên, nhưng cần quản trị (governance / 거버넌스)/lược đồ (schema / 스키마) đặc tả hợp đồng (contract / 계약) rõ.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **31. Crash-free không đủ** nối từ **30. sự kiện (event / 이벤트) lược đồ (schema / 스키마) versioning** sang **32. Flag là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không phải rác vĩnh viễn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Crash-free không đủ
 
 App không crash vẫn có thể slow, ANR, login vòng lặp (loop / 루프) hoặc sync thất bại (fail / 실패) silent. Monitor thêm ANR, startup, jank, mạng (network / 네트워크) lỗi (error / 오류), sync backlog và nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) quan trọng.
 
 # Cờ tính năng (feature flag / 기능 플래그)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **32. Flag là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không phải rác vĩnh viễn** nối từ **31. Crash-free không đủ** sang **33. Server-driven flag và offline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Flag là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không phải rác vĩnh viễn
 
@@ -358,15 +304,11 @@ Cờ tính năng (feature flag / 기능 플래그) giúp rollout/kill-switch. Nh
 
 Mỗi flag cần đơn vị sở hữu (owner / 오너), default, expiry/removal plan.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **33. Server-driven flag và offline** nối từ **32. Flag là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không phải rác vĩnh viễn** sang **34. cổng chất lượng (quality gate / 품질 게이트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Server-driven flag và offline
 
 App offline cần default/cached flag hành vi (behavior / 동작). Không để app startup khối (block / 블록) vô hạn chờ cấu hình (config / 설정) remote.
 
 # Bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인)
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **34. cổng chất lượng (quality gate / 품질 게이트)** nối từ **33. Server-driven flag và offline** sang **35. Signed sản phẩm tạo ra (artifact / 산출물) là immutable đầu ra (output / 출력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. cổng chất lượng (quality gate / 품질 게이트)
 
@@ -388,13 +330,9 @@ compile
 
 Không phải nhóm (team / 팀) nào cần mọi gate trên mỗi PR; phân lớp theo chi phí (cost / 비용) và rủi ro (risk / 위험).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **35. Signed sản phẩm tạo ra (artifact / 산출물) là immutable đầu ra (output / 출력)** nối từ **34. cổng chất lượng (quality gate / 품질 게이트)** sang **36. phiên bản (version / 버전) mã (code / 코드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Signed sản phẩm tạo ra (artifact / 산출물) là immutable đầu ra (output / 출력)
 
 Sản phẩm tạo ra (artifact / 산출물) đã QA/rà soát (review / 검토) nên chính là sản phẩm tạo ra (artifact / 산출물) được promote. Tránh rebuild khác cấu hình (config / 설정) giữa staging và môi trường vận hành (production / 운영 환경) nếu không cần, vì bạn mất traceability.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **36. phiên bản (version / 버전) mã (code / 코드)** nối từ **35. Signed sản phẩm tạo ra (artifact / 산출물) là immutable đầu ra (output / 출력)** sang **37. AAB và động (dynamic / 동적) delivery**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. phiên bản (version / 버전) mã (code / 코드)
 
@@ -402,13 +340,9 @@ Sản phẩm tạo ra (artifact / 산출물) đã QA/rà soát (review / 검토)
 
 # Play/App phân phối (distribution / 분포) awareness
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **37. AAB và động (dynamic / 동적) delivery** nối từ **36. phiên bản (version / 버전) mã (code / 코드)** sang **38. mục tiêu (target / 대상) API deadline**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. AAB và động (dynamic / 동적) delivery
 
 Android App Bundle cho Play generate APK tối ưu theo thiết bị (device / 장치). Nếu app dùng động (dynamic / 동적) tính năng (feature / 기능)/mô-đun (module / 모듈)/tài nguyên (resource / 자원) delivery, kiểm thử (test / 테스트) install/cập nhật (update / 업데이트) đường dẫn (path / 경로) thực tế trên phân phối (distribution / 분포) nhánh học (track / 트랙) chứ không chỉ cục bộ (local / 로컬) APK.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **38. mục tiêu (target / 대상) API deadline** nối từ **37. AAB và động (dynamic / 동적) delivery** sang **39. Auto Backup không phải luôn desirable cho mọi dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. mục tiêu (target / 대상) API deadline
 
@@ -416,23 +350,17 @@ Google Play thay đổi mục tiêu (target / 대상) API yêu cầu (requiremen
 
 # Backup và restore
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **38. mục tiêu (target / 대상) API deadline** đặt vấn đề; **39. Auto Backup không phải luôn desirable cho mọi dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **40. Restore phiên bản (version / 버전) mismatch** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 39. Auto Backup không phải luôn desirable cho mọi dữ liệu (data / 데이터)
 
 Đơn vị từ (token / 토큰)/secret/device-bound credential có thể không nên restore sang thiết bị (device / 장치) mới. cơ sở dữ liệu (database / 데이터베이스)/người dùng (user / 사용자) preference khác có thể benefit từ backup.
 
 Rà soát (review / 검토) backup quy tắc (rule / 규칙) theo dữ liệu (data / 데이터) sensitivity và máy chủ (server / 서버) rehydration năng lực (capability / 역량).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **39. Auto Backup không phải luôn desirable cho mọi dữ liệu (data / 데이터)** đặt vấn đề; **40. Restore phiên bản (version / 버전) mismatch** đối chiếu bằng chứng, rồi **41. Production-like trạng thái (state / 상태)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 40. Restore phiên bản (version / 버전) mismatch
 
 Backup từ app phiên bản (version / 버전) cũ có thể được restore vào phiên bản (version / 버전) mới. Persistence tầng (layer / 계층) phải xử lý lược đồ (schema / 스키마)/dữ liệu (data / 데이터) phiên bản (version / 버전) đúng.
 
 # Kiểm thử (test / 테스트) account và seed dữ liệu (data / 데이터)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **41. Production-like trạng thái (state / 상태)** nối từ **40. Restore phiên bản (version / 버전) mismatch** sang **42. Mobile sự cố (incident / 인시던트) khác máy chủ (server / 서버) sự cố (incident / 인시던트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Production-like trạng thái (state / 상태)
 
@@ -452,8 +380,6 @@ Happy-path empty account không phát hiện nhiều bug môi trường vận h�
 
 # Sự cố (incident / 인시던트) readiness
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **42. Mobile sự cố (incident / 인시던트) khác máy chủ (server / 서버) sự cố (incident / 인시던트)** nối từ **41. Production-like trạng thái (state / 상태)** sang **43. Diagnose theo phiên bản (version / 버전)/thiết bị (device / 장치) cohort**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. Mobile sự cố (incident / 인시던트) khác máy chủ (server / 서버) sự cố (incident / 인시던트)
 
 Máy chủ (server / 서버) fix có thể deploy phút. Mobile nhị phân (binary / 이진) đã nằm trên hàng triệu thiết bị (device / 장치) không cập nhật (update / 업데이트) ngay.
@@ -468,15 +394,11 @@ staged rollout
 old-client support window
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **43. Diagnose theo phiên bản (version / 버전)/thiết bị (device / 장치) cohort** nối từ **42. Mobile sự cố (incident / 인시던트) khác máy chủ (server / 서버) sự cố (incident / 인시던트)** sang **44. tính năng (feature / 기능) complete không chỉ UI xong**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. Diagnose theo phiên bản (version / 버전)/thiết bị (device / 장치) cohort
 
 Khi crash tăng, breakdown theo app phiên bản (version / 버전), OS, OEM/thiết bị (device / 장치) mô hình (model / 모델), locale, cờ tính năng (feature flag / 기능 플래그) cohort và rollout percentage giúp tìm regression nhanh.
 
 # Definition of Done môi trường vận hành (production / 운영 환경)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **44. tính năng (feature / 기능) complete không chỉ UI xong** nối từ **43. Diagnose theo phiên bản (version / 버전)/thiết bị (device / 장치) cohort** sang **45. chất lượng (quality / 품질) là kiến trúc (architecture / 아키텍처) thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. tính năng (feature / 기능) complete không chỉ UI xong
 
@@ -500,25 +422,17 @@ Không phải mọi tính năng (feature / 기능) cần cùng mức rigor; paym
 
 # Cấp cao (senior / 시니어) Notes
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **45. chất lượng (quality / 품질) là kiến trúc (architecture / 아키텍처) thuộc tính (property / 속성)** nối từ **44. tính năng (feature / 기능) complete không chỉ UI xong** sang **46. ma trận (matrix / 행렬) phải dựa telemetry**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 45. chất lượng (quality / 품질) là kiến trúc (architecture / 아키텍처) thuộc tính (property / 속성)
 
 Nếu mã (code / 코드) không có clear nguồn chuẩn (source of truth / 정본), không thể kiểm thử (test / 테스트) offline đúng. Nếu điều hướng (navigation / 내비게이션) truyền giant đối tượng (object / 객체), tiến trình (process / 프로세스) restore khó. Nếu networking không typed lỗi (error / 오류), UI khôi phục (recovery / 복구) mơ hồ. QA không thể “kiểm thử (test / 테스트) ra” một kiến trúc (architecture / 아키텍처) thiếu khôi phục (recovery / 복구) đường dẫn (path / 경로).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **46. ma trận (matrix / 행렬) phải dựa telemetry** nối từ **45. chất lượng (quality / 품질) là kiến trúc (architecture / 아키텍처) thuộc tính (property / 속성)** sang **47. Backward tính tương thích (compatibility / 호환성) là mobile superpower**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. ma trận (matrix / 행렬) phải dựa telemetry
 
 Sau môi trường vận hành (production / 운영 환경), dùng crash/thiết bị (device / 장치)/OS/người dùng (user / 사용자) phân phối (distribution / 분포) để cập nhật kiểm thử (test / 테스트) ma trận (matrix / 행렬). Nếu 40% người dùng (user / 사용자) dùng một OEM cụ thể, thiết bị (device / 장치) đó quan trọng hơn một flagship hiếm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **47. Backward tính tương thích (compatibility / 호환성) là mobile superpower** nối từ **46. ma trận (matrix / 행렬) phải dựa telemetry** sang **48. Không tối ưu chỉ số (metric / 지표) đơn lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 47. Backward tính tương thích (compatibility / 호환성) là mobile superpower
 
 Máy chủ (server / 서버)/API có khả năng phục vụ nhiều app phiên bản (version / 버전) giúp rollout an toàn, sự cố (incident / 인시던트) khôi phục (recovery / 복구) nhanh và người dùng (user / 사용자) không bị bắt cập nhật (update / 업데이트) ngay.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness**, **48. Không tối ưu chỉ số (metric / 지표) đơn lẻ** nối từ **47. Backward tính tương thích (compatibility / 호환성) là mobile superpower** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 48. Không tối ưu chỉ số (metric / 지표) đơn lẻ
 

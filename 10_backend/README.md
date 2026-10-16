@@ -31,8 +31,6 @@ thích ngữ nghĩa (semantics / 의미론) của thời gian chạy (runtime / 
 các backend concept vào ứng dụng (application / 애플리케이션). Không đọc các nhánh học (track / 트랙) như ba bản sao của
 một giáo trình backend.
 
-> **Chuyển mạch:** Sau khi hiểu cách đọc, Bản đồ nội dung cho biết đường đi từ backend core tới các nhánh ngôn ngữ/framework. Phần kế tiếp đặt ranh giới với Computer Science để tránh trùng owner của database, network và distributed systems.
-
 ## Bản đồ nội dung
 
 | Phần | Mục tiêu |
@@ -41,8 +39,6 @@ một giáo trình backend.
 | [`java/`](./java/) | Java ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) và kỹ thuật (engineering / 엔지니어링) practice |
 | [`spring_java/`](./spring_java/) | Spring ecosystem và cách triển khai backend bằng Java |
 | [`python/`](./python/README.md) | Python ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임), packaging, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) |
-
-> **Chuyển mạch:** Ranh giới owner xác định phần backend chỉ cần giải thích ở mức application contract. **Nguyên tắc học** dùng ranh giới đó để nối quyết định thiết kế với test và telemetry.
 
 ## Ranh giới với các lĩnh vực (domain / 도메인) khác
 
@@ -59,8 +55,6 @@ Backend cốt lõi (core / 핵심) chỉ giữ mô hình tư duy (mental model /
 ghi rõ bất biến (invariant / 불변식) cần bảo vệ và dẫn sang đơn vị sở hữu (owner / 오너) khi cần đào sâu. Các ví dụ có thể
 dùng HTTP, SQL, hàng đợi (queue / 큐) hoặc tracing nhưng không biến sản phẩm (product / 제품)/công cụ (tool / 도구) cụ thể thành
 kiến thức chuẩn gốc (canonical / 정본).
-
-> **Chuyển mạch:** Nguyên tắc học gom các trục correctness, latency, durability, safe change và scale thành cách đọc có thể kiểm chứng; đây là điểm bàn giao để chọn chapter cụ thể.
 
 ## Nguyên tắc học
 

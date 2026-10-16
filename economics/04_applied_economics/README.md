@@ -12,8 +12,6 @@ Applied Economics dùng lý thuyết (theory / 이론) từ Microeconomics, Th�
 4. [Development Economics](./03_development_economics.md) — poverty, credit/rủi ro (risk / 위험) các ràng buộc (constraints / 제약조건들), health/education, structural transformation, hạ tầng (infrastructure / 인프라), institutions/trạng thái (state / 상태) sức chứa (capacity / 용량), industrial chính sách (policy / 정책) và scale-up.
 5. [Industrial Organization](./04_industrial_organization.md) — demand estimation, substitution, markups, entry, vertical/nền tảng (platform / 플랫폼) markets, mergers, procurement, innovation và structural/reduced-form IO.
 
-> **Chuyển mạch:** Canonical order supplies theory; applied spine adds domain institutions, measurement and policy constraints, making each dependency explicit.
-
 ## Applied spine
 
 ```text
@@ -30,8 +28,6 @@ Economic mechanism
 
 Nếu một chapter chỉ có lý thuyết (theory / 이론) mà không nói dữ liệu (data / 데이터)/thiết kế (design / 설계), nó chưa đủ applied. Nếu chỉ có empirical correlation mà không có cơ chế (mechanism / 메커니즘)/counterfactual, nó cũng chưa đủ applied.
 
-> **Chuyển mạch:** Applied spine links theory to domain constraints; each dependency must be stated as evidence/contract so policy claims remain testable.
-
 ## Phụ thuộc (dependency / 의존성)
 
 Applied Economics nên được đọc sau hoặc song song với:
@@ -42,8 +38,6 @@ Applied Economics nên được đọc sau hoặc song song với:
 - [Econometrics](../05_econometrics/README.md) cho estimands, counterfactuals, OLS/IV/RDD/DiD/thời gian (time / 시간) series và robustness.
 
 Folder numbering giữ `04 Applied`, `05 Econometrics`, nhưng hiện thực (implementation / 구현) thứ tự (order / 순서) cố ý xây Econometrics trước để mô-đun (module / 모듈) này có bằng chứng (evidence / 증거) discipline ngay từ đầu.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **04 — Applied Economics**, **Phụ thuộc (dependency / 의존성)** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân phối (distribution / 분포) và general equilibrium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)
 
@@ -59,21 +53,15 @@ Không trộn ba tầng này.
 
 Một exporter productivity premium là descriptive cho đến khi xử lý selection. Một DiD estimate là nhân quả (causal / 인과적) chỉ nếu parallel trends/counterfactual credible. Một merger simulation là structural counterfactual conditional on estimated demand/conduct các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **04 — Applied Economics**, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **Phân phối (distribution / 분포) và general equilibrium** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chính sách (policy / 정책) interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Phân phối (distribution / 분포) và general equilibrium
 
 Applied chính sách (policy / 정책) gần như luôn tạo winners/losers. Vì vậy average tác động (effect / 효과) không đủ nếu incidence khác mạnh theo income, skill, geography, firm kích thước (size / 크기) hoặc thị trường (market / 시장) position.
 
 Ngoài ra, tác động (effect / 효과) cục bộ (local / 로컬)/pilot có thể đổi khi quy mô (scale / 규모): wages, prices, rents, firm entry, di chuyển (migration / 마이그레이션), taxes và political phản hồi (response / 응답) đều có thể điều chỉnh. Mô-đun (module / 모듈) này phải luôn nêu partial-equilibrium vs general-equilibrium ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** **Distribution và general equilibrium** mô tả cơ chế phân bổ; **Policy interpretation** thêm institutional constraint, rồi **Connections** chỉ đường quay lại owner.
-
 ## Chính sách (policy / 정책) interpretation
 
 Economics có thể estimate consequences, trade-offs và welfare under tường minh (explicit / 명시적) xã hội (social / 사회적) các giả định (assumptions / 가정들). Một estimate không tự chuyển thành chính sách (policy / 정책) recommendation. Chính sách (policy / 정책) còn phụ thuộc distributional weights, legal các ràng buộc (constraints / 제약조건들), hiện thực (implementation / 구현) sức chứa (capacity / 용량), rights, political institutions và bất định (uncertainty / 불확실성).
-
-> **Chuyển mạch:** **Connections** nối policy mechanism với empirical design; **Checklist khi đọc một applied claim** kiểm tra estimand, evidence và giới hạn suy luận.
 
 ## Connections
 
@@ -82,8 +70,6 @@ Economics có thể estimate consequences, trade-offs và welfare under tường
 - [World Geography](../../world_geography/README.md) cung cấp spatial, vận chuyển (transport / 전송), tài nguyên (resource / 자원) và market-access các ràng buộc (constraints / 제약조건들).
 - [World History](../../world_history/README.md) cung cấp institutional/historical chuỗi (sequence / 시퀀스) nhưng không tự đóng vai nhân quả (causal / 인과적) thiết kế (design / 설계).
 - [Psychology](../../psychology/README.md) liên quan labor supply, salience, take-up, expectations và behavioral công khai (public / 공개) economics.
-
-> **Chuyển mạch:** **Checklist** khép applied route bằng cách phân biệt correlation, identification và policy relevance; chi tiết formal quay về econometrics owner.
 
 ## Checklist khi đọc một applied claim
 

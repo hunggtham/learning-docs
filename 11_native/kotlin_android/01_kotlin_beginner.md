@@ -43,8 +43,6 @@ Một ứng dụng Android Kotlin hiện đại thường có ba lớp công ngh
 
 Kotlin tương thích rất tốt với Java. Một dự án (project / 프로젝트) Android có thể có tệp (file / 파일) `.kt` và `.java` cùng lúc. Kotlin gọi Java API trực tiếp, và Java cũng có thể gọi Kotlin nếu signature phù hợp. Điều này đặc biệt quan trọng vì phần lớn Android khung phần mềm (framework / 프레임워크) ban đầu được viết bằng Java và nhiều codebase enterprise vẫn còn Java.
 
-> **Nối mạch:** Mục lục đặt Kotlin/JVM, KMP và native boundary cạnh nhau; tiếp theo `val`/`var` biến khác biệt về mutability thành quy tắc code cụ thể.
-
 ## 1.1 Kotlin/JVM, Kotlin Multiplatform và Kotlin/bản địa (native / 네이티브)
 
 Trong Android truyền thống, mã Kotlin chủ yếu biên dịch cho JVM bytecode rồi được Android bản dựng (build / 빌드) công cụ (tool / 도구) chuyển thành DEX để ART chạy. Ngoài Kotlin/JVM, Kotlin còn có Kotlin/JS, Kotlin/bản địa (native / 네이티브), Kotlin/Wasm và Kotlin Multiplatform. Tuy nhiên khi mới học Android, không nên trộn KMP vào quá sớm. Hãy nắm chắc Kotlin/JVM + Android trước; KMP phù hợp hơn khi đã hiểu mô-đun (module / 모듈), phụ thuộc (dependency / 의존성), coroutine, serialization và nền tảng (platform / 플랫폼) ranh giới (boundary / 경계).
@@ -120,8 +118,6 @@ fun main() {
 
 Dấu chấm phẩy thường không cần. Kotlin coi nhiều cấu trúc là expression, nghĩa là chúng có thể trả về giá trị.
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **4.1 val và var** nối từ **1.1 Kotlin/JVM, Kotlin Multiplatform và Kotlin/bản địa (native / 네이티브)** sang **4.2 kiểu (type / 타입) suy luận (inference / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4.1 `val` và `var`
 
 `val` là tham chiếu (reference / 참조) chỉ được gán một lần; `var` là tham chiếu (reference / 참조) có thể gán lại.
@@ -135,8 +131,6 @@ age = 21
 `val` không có nghĩa đối tượng (object / 객체) bên trong bất biến tuyệt đối. Nếu `val list = mutableListOf(1, 2)`, bạn không thể gán `list = ...` nhưng vẫn có thể `list.add(3)`. Đây là khác biệt giữa tham chiếu (reference / 참조) immutability và đối tượng (object / 객체) immutability.
 
 Quy ước môi trường vận hành (production / 운영 환경) là ưu tiên `val`, chỉ dùng `var` khi thực sự cần mutation.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **4.2 kiểu (type / 타입) suy luận (inference / 추론)** nối từ **4.1 val và var** sang **5.1 String template**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.2 kiểu (type / 타입) suy luận (inference / 추론)
 
@@ -168,8 +162,6 @@ val c: Char = 'A'
 val s: String = "Hello"
 ```
 
-> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **5.1 String template** nối từ **4.2 kiểu (type / 타입) suy luận (inference / 추론)** sang **5.2 Nullable kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5.1 String template
 
 Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
@@ -179,8 +171,6 @@ val name = "Lan"
 val age = 25
 println("Name: $name, next year: ${age + 1}")
 ```
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **5.1 String template** nêu quy tắc; **5.2 Nullable kiểu (type / 타입)** thử quy tắc trong tình huống, rồi **5.3 Smart cast** mở rộng hệ quả.
 
 ## 5.2 Nullable kiểu (type / 타입)
 
@@ -230,8 +220,6 @@ val text = value as? String
 
 Nếu cast không hợp lệ, kết quả là null thay vì `ClassCastException`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **5.2 Nullable kiểu (type / 타입)** nêu quy tắc; **5.3 Smart cast** thử quy tắc trong tình huống, rồi **7.1 if là expression** mở rộng hệ quả.
-
 ## 5.3 Smart cast
 
 Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
@@ -268,8 +256,6 @@ val y: Long = x.toLong()
 
 # 7. Điều khiển luồng
 
-> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **7.1 if là expression** nối từ **5.3 Smart cast** sang **7.2 when**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7.1 `if` là expression
 
 Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
@@ -279,8 +265,6 @@ val max = if (a > b) a else b
 ```
 
 Kotlin không có ternary operator `condition ? a : b` vì `if` đã là expression.
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **7.2 when** nối từ **7.1 if là expression** sang **7.3 vòng lặp (loop / 루프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 `when`
 
@@ -303,8 +287,6 @@ fun describe(x: Any) = when (x) {
     else -> "Unknown"
 }
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **7.3 vòng lặp (loop / 루프)** nối từ **7.2 when** sang **8.1 Default argument và named argument**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.3 vòng lặp (loop / 루프)
 
@@ -336,8 +318,6 @@ Expression body:
 fun add(a: Int, b: Int) = a + b
 ```
 
-> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **8.1 Default argument và named argument** nối từ **7.3 vòng lặp (loop / 루프)** sang **8.2 Unit, Nothing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8.1 Default argument và named argument
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -351,8 +331,6 @@ greet(name = "Minh", prefix = "Hi")
 
 Cách này giảm nhu cầu overload nhiều phương thức (method / 메서드) như Java.
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **8.2 Unit, Nothing** nối từ **8.1 Default argument và named argument** sang **8.3 Vararg**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8.2 `Unit`, `Nothing`
 
 `Unit` tương đương ý nghĩa “không trả dữ liệu có ích”, gần với `void` nhưng là một kiểu (type / 타입) thực tế.
@@ -362,8 +340,6 @@ Cách này giảm nhu cầu overload nhiều phương thức (method / 메서드
 ```kotlin
 fun fail(message: String): Nothing = throw IllegalStateException(message)
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **8.3 Vararg** nối từ **8.2 Unit, Nothing** sang **9.1 Secondary constructor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8.3 Vararg
 
@@ -401,8 +377,6 @@ class User(val name: String) {
     }
 }
 ```
-
-> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **9.1 Secondary constructor** nối từ **8.3 Vararg** sang **12.1 dữ liệu (data / 데이터) lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9.1 Secondary constructor
 
@@ -469,8 +443,6 @@ Abstract lớp (class / 클래스) phù hợp khi muốn chia sẻ trạng thái
 
 # 12. dữ liệu (data / 데이터) lớp (class / 클래스), enum lớp (class / 클래스) và sealed lớp (class / 클래스)
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **9.1 Secondary constructor** đặt vấn đề; **12.1 dữ liệu (data / 데이터) lớp (class / 클래스)** đối chiếu bằng chứng, rồi **12.2 Enum** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12.1 dữ liệu (data / 데이터) lớp (class / 클래스)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -490,8 +462,6 @@ val u2 = u1.copy(name = "Lan")
 
 Dữ liệu (data / 데이터) lớp (class / 클래스) rất phù hợp cho DTO, UI mô hình (model / 모델), trạng thái (state / 상태) đối tượng (object / 객체) nhỏ. Không nên mặc định dùng dữ liệu (data / 데이터) lớp (class / 클래스) cho thực thể (entity / 엔터티) giàu hành vi (behavior / 동작) nếu định danh (identity / 식별자)/vòng đời (lifecycle / 생명주기) quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **12.1 dữ liệu (data / 데이터) lớp (class / 클래스)** đặt vấn đề; **12.2 Enum** đối chiếu bằng chứng, rồi **12.3 Sealed lớp (class / 클래스)/giao diện (interface / 인터페이스)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12.2 Enum
 
 Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
@@ -501,8 +471,6 @@ enum class Role { ADMIN, USER, GUEST }
 ```
 
 Enum phù hợp tập giá trị cố định cùng kiểu (type / 타입).
-
-> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **12.3 Sealed lớp (class / 클래스)/giao diện (interface / 인터페이스)** nối từ **12.2 Enum** sang **17.1 bố cục (layout / 레이아웃) cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12.3 Sealed lớp (class / 클래스)/giao diện (interface / 인터페이스)
 
@@ -612,8 +580,6 @@ fun Greeting(name: String) {
 ```
 
 `@Composable` không đơn thuần là annotation trang trí. trình biên dịch (compiler / 컴파일러) Compose plugin biến đổi hàm (function / 함수) để thời gian chạy (runtime / 런타임) có thể theo dõi composition, trạng thái (state / 상태) read và recomposition.
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **17.1 bố cục (layout / 레이아웃) cơ bản** nối từ **12.3 Sealed lớp (class / 클래스)/giao diện (interface / 인터페이스)** sang **Phiên bản (version / 버전) & Legacy Notes — cách đọc API cũ và mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17.1 bố cục (layout / 레이아웃) cơ bản
 
@@ -834,8 +800,6 @@ Một API có thể “cũ” nhưng vẫn được hỗ trợ (support / 지원
 Nếu còn thấy `?.`, `?:`, `let`, lambda, `@Composable`, `remember`, `Modifier`, `Context`, `Intent`, `ViewModel` là những từ “ma thuật” chưa giải thích được bằng lời của mình, chưa nên chuyển nhanh sang các kiến trúc (architecture / 아키텍처) phức tạp.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**, **Phiên bản (version / 버전) & Legacy Notes — cách đọc API cũ và mới** nối từ **17.1 bố cục (layout / 레이아웃) cơ bản** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Phiên bản (version / 버전) & Legacy Notes — cách đọc API cũ và mới
 

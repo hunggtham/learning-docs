@@ -22,15 +22,11 @@ object SessionCache {
 
 chỉ singleton **trong một tiến trình (process / 프로세스) cụ thể**. Nó không phải persistence. Nếu tiến trình (process / 프로세스) chết, đối tượng (object / 객체) chết. Nếu app dùng nhiều tiến trình (process / 프로세스), mỗi tiến trình (process / 프로세스) thậm chí có singleton riêng.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **1. Một Android app không phải là một tiến trình (process / 프로세스) sống vĩnh viễn** đặt đầu vào cho **2. Linux tiến trình (process / 프로세스) và Android sandbox**, rồi **3. Application không phải nơi đảm bảo dữ liệu sống lâu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Linux tiến trình (process / 프로세스) và Android sandbox
 
 Mỗi Android app thông thường chạy dưới một Linux UID riêng. UID này là nền tảng của ứng dụng (application / 애플리케이션) sandbox: tệp (file / 파일) private của app, tiến trình (process / 프로세스) permission và nhiều ranh giới bảo mật (security boundary / 보안 경계) được kernel thực thi dựa trên định danh (identity / 식별자) này. Android khung phần mềm (framework / 프레임워크) bổ sung thêm permission mô hình (model / 모델), SELinux chính sách (policy / 정책), Binder định danh (identity / 식별자) và package-level chính sách (policy / 정책) bên trên.
 
 Một tiến trình (process / 프로세스) app thường chứa Android thời gian chạy (runtime / 런타임) (ART), vùng nhớ động (heap / 힙) managed cho Kotlin/Java đối tượng (object / 객체), bản địa (native / 네이티브) vùng nhớ động (heap / 힙) cho C/C++ hoặc bản địa (native / 네이티브) allocation, luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), mapped libraries, graphics tài nguyên (resource / 자원) và các vùng bộ nhớ (memory / 메모리) khác. Khi nói “app dùng 300 MB RAM”, đừng tự động nghĩ toàn bộ là Kotlin đối tượng (object / 객체) trong vùng nhớ động (heap / 힙). Bitmap, graphics buffer, bản địa (native / 네이티브) codec, cơ sở dữ liệu (database / 데이터베이스) page bộ nhớ đệm (cache / 캐시) và memory-mapped tệp (file / 파일) có thể chiếm phần đáng kể.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, cơ chế trong **2. Linux tiến trình (process / 프로세스) và Android sandbox** cần được kiểm chứng bằng dấu vết cụ thể; **3. Application không phải nơi đảm bảo dữ liệu sống lâu** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **4. Main luồng thực thi (thread / 스레드) là vòng lặp sự kiện (event loop / 이벤트 루프), không phải “luồng thực thi (thread / 스레드) dành riêng cho UI mã (code / 코드)” theo nghĩa đơn giản** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. `Application` không phải nơi đảm bảo dữ liệu sống lâu
 
@@ -45,8 +41,6 @@ class MyApp : Application() {
 ```
 
 Nếu tiến trình (process / 프로세스) chết rồi screen được restore, `selectedOrder` trở lại `null`. Nếu dữ liệu cần khôi phục, hãy lưu identifier nhỏ trong saved trạng thái (state / 상태) và reconstruct từ Room/backend, hoặc persist dữ liệu thực sự vào lưu trữ (storage / 저장소) phù hợp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **3. Application không phải nơi đảm bảo dữ liệu sống lâu** đặt vấn đề; **4. Main luồng thực thi (thread / 스레드) là vòng lặp sự kiện (event loop / 이벤트 루프), không phải “luồng thực thi (thread / 스레드) dành riêng cho UI mã (code / 코드)” theo nghĩa đơn giản** đối chiếu bằng chứng, rồi **5. Looper, MessageQueue, Handler** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Main luồng thực thi (thread / 스레드) là vòng lặp sự kiện (event loop / 이벤트 루프), không phải “luồng thực thi (thread / 스레드) dành riêng cho UI mã (code / 코드)” theo nghĩa đơn giản
 
@@ -68,8 +62,6 @@ Message / Runnable / framework event
 
 Main luồng thực thi (thread / 스레드) không “chạy UI liên tục”. Nó nhận công việc từ hàng đợi (queue / 큐) rồi xử lý tuần tự. Nếu một callback chiếm luồng thực thi (thread / 스레드) quá lâu, các đầu vào (input / 입력)/kết xuất (render / 렌더링)/vòng đời (lifecycle / 생명주기) message phía sau không được xử lý đúng thời điểm. Đây là nền tảng của jank và ANR.
 
-> **Nối mạch:** Main thread vận hành event loop; `Looper`/`MessageQueue`/`Handler` tổ chức dispatch, còn coroutine chạy trên scheduler chứ không thay thế event loop.
-
 ## 5. `Looper`, `MessageQueue`, `Handler`
 
 `Looper` là lớp trừu tượng (abstraction / 추상화) chạy vòng lặp lấy message từ `MessageQueue` và dispatch chúng. Main luồng thực thi (thread / 스레드) có main `Looper`. `Handler` là API truyền thống để post `Runnable` hoặc message vào hàng đợi (queue / 큐) gắn với một Looper.
@@ -87,8 +79,6 @@ mainHandler.post {
 Mã (code / 코드) hiện đại thường không dùng `Handler` trực tiếp cho ứng dụng (application / 애플리케이션) tính đồng thời (concurrency / 동시성) vì coroutine cung cấp lớp trừu tượng (abstraction / 추상화) tốt hơn, nhưng hiểu Handler/Looper vẫn quan trọng vì nhiều Android API, View hệ thống (system / 시스템) và thư viện (library / 라이브러리) cũ dựa trên cơ chế này.
 
 Android 17 thay đổi hiện thực (implementation / 구현) của `MessageQueue` cho app mục tiêu (target / 대상) API 37+, theo hướng lock-free. ứng dụng (application / 애플리케이션) bình thường không nên phụ thuộc private trường dữ liệu (field / 필드) của `MessageQueue`; thay đổi này là ví dụ điển hình cho lý do không reflection vào hiện thực (implementation / 구현) detail của khung phần mềm (framework / 프레임워크).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **6. Coroutine không thay thế vòng lặp sự kiện (event loop / 이벤트 루프); nó chạy bên trên scheduler/luồng thực thi (thread / 스레드)** nối từ **5. Looper, MessageQueue, Handler** sang **7. Main-safety**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Coroutine không thay thế vòng lặp sự kiện (event loop / 이벤트 루프); nó chạy bên trên scheduler/luồng thực thi (thread / 스레드)
 
@@ -114,8 +104,6 @@ coroutine được chuyển sang dispatcher khác cho khối (block / 블록) đ
 
 Cấp cao (senior / 시니어) quy tắc (rule / 규칙) là hỏi: **thao tác (operation / 연산) này blocking hay non-blocking, CPU-bound hay IO-bound, và Đặc tả API (API contract / API 계약) nói gì về thực thi (execution / 실행) ngữ cảnh (context / 맥락)?** chứ không phải “mọi suspend đều background”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **7. Main-safety** nối từ **6. Coroutine không thay thế vòng lặp sự kiện (event loop / 이벤트 루프); nó chạy bên trên scheduler/luồng thực thi (thread / 스레드)** sang **8. Frame ngân sách (budget / 예산) và jank**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Main-safety
 
 Một hàm (function / 함수) được gọi từ main luồng thực thi (thread / 스레드) nên “main-safe”: nó không làm blocking IO hoặc CPU công việc (work / 작업) đủ lớn để gây lag. Một thiết kế (design / 설계) tốt thường để tầng (layer / 계층) sở hữu thao tác (operation / 연산) tự đảm bảo main-safety.
@@ -135,8 +123,6 @@ class ImageHasher(
 
 Caller không cần biết hiện thực (implementation / 구현) dùng CPU nhiều. Điều này giảm việc dispatcher lô-gic (logic / 논리) bị rải khắp UI/ViewModel.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **8. Frame ngân sách (budget / 예산) và jank** nối từ **7. Main-safety** sang **9. ANR khác crash**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Frame ngân sách (budget / 예산) và jank
 
 UI 60 Hz có khoảng 16.67 ms cho mỗi frame; màn hình refresh cao hơn có ngân sách (budget / 예산) nhỏ hơn. Không phải toàn bộ ngân sách (budget / 예산) thuộc ứng dụng (application / 애플리케이션) mã (code / 코드), vì rendering chuỗi xử lý (pipeline / 파이프라인) còn có measure/bố cục (layout / 레이아웃)/draw, GPU công việc (work / 작업) và hệ thống (system / 시스템) overhead.
@@ -145,8 +131,6 @@ Nếu main luồng thực thi (thread / 스레드) bị khối (block / 블록) 
 
 Hiệu năng (performance / 성능) công việc (work / 작업) vì vậy bắt đầu bằng đo dấu vết (trace / 추적)/frame/jank, không bằng nhìn mã (code / 코드) rồi đoán rằng một hàm (function / 함수) “có vẻ chậm”.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **9. ANR khác crash** nối từ **8. Frame ngân sách (budget / 예산) và jank** sang **10. StrictMode như development guardrail**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. ANR khác crash
 
 Crash xảy ra khi tiến trình (process / 프로세스) gặp exception/fatal tín hiệu (signal / 신호) không được xử lý và kết thúc. ANR xảy ra khi app vẫn tồn tại nhưng không đáp ứng đúng thời hạn mà khung phần mềm (framework / 프레임워크) yêu cầu cho một thao tác (operation / 연산) quan trọng, phổ biến nhất là main luồng thực thi (thread / 스레드) không xử lý sự kiện (event / 이벤트) đủ nhanh.
@@ -154,8 +138,6 @@ Crash xảy ra khi tiến trình (process / 프로세스) gặp exception/fatal 
 Nguồn ANR thường gồm blocking IO trên main, tranh chấp khóa (lock contention / 잠금 경합)/deadlock, synchronous Binder lời gọi (call / 호출) quá lâu, BroadcastReceiver làm việc quá nhiều, startup quá nặng hoặc luồng thực thi (thread / 스레드) pool starvation gián tiếp làm main chờ.
 
 Một bug có thể không xuất hiện trong cục bộ (local / 로컬) testing vì mạng (network / 네트워크)/dev machine nhanh, nhưng xuất hiện môi trường vận hành (production / 운영 환경) trên thiết bị (device / 장치) chậm. Vì vậy StrictMode, tracing và representative hardware quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **10. StrictMode như development guardrail** nối từ **9. ANR khác crash** sang **11. Tại sao Android cần IPC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. `StrictMode` như development guardrail
 
@@ -178,8 +160,6 @@ Không nên bật penalty phá app một cách mù quáng trong môi trường v
 
 # Binder — xương sống IPC của Android
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **11. Tại sao Android cần IPC** nối từ **10. StrictMode như development guardrail** sang **12. IPC không miễn phí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Tại sao Android cần IPC
 
 Nhiều thứ ứng dụng (application / 애플리케이션) gọi thực tế sống ở tiến trình (process / 프로세스) khác: ActivityManager, PackageManager dịch vụ (service / 서비스), hệ thống (system / 시스템) dịch vụ (service / 서비스), media dịch vụ (service / 서비스) và các thành phần (component / 컴포넌트) hệ thống khác. Android dùng **Binder** làm cơ chế IPC chủ đạo để tiến trình (process / 프로세스) gọi qua ranh giới (boundary / 경계) an toàn hơn so với chia sẻ bộ nhớ (memory / 메모리) tùy ý.
@@ -200,15 +180,11 @@ System/server process
   Binder stub
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **12. IPC không miễn phí** nối từ **11. Tại sao Android cần IPC** sang **13. Bundle, Intent và giao dịch (transaction / 트랜잭션) kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. IPC không miễn phí
 
 Binder lời gọi (call / 호출) có serialization/marshalling, ngữ cảnh (context / 맥락) switching, scheduling và giới hạn giao dịch (transaction / 트랜잭션). Vì vậy tránh thiết kế chatty IPC ở đường xử lý nóng (hot path / 핫 패스).
 
 Ví dụ, gọi hệ thống (system / 시스템) dịch vụ (service / 서비스) hàng nghìn lần trong vòng lặp (loop / 루프) có thể tốn hơn việc batch/caching hợp lý. Nhưng cũng không nên bộ nhớ đệm (cache / 캐시) dữ liệu hệ thống vô hạn nếu đặc tả hợp đồng (contract / 계약) yêu cầu freshness.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **13. Bundle, Intent và giao dịch (transaction / 트랜잭션) kích thước (size / 크기)** nối từ **12. IPC không miễn phí** sang **14. Parcelable không phải persistence format**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. `Bundle`, `Intent` và giao dịch (transaction / 트랜잭션) kích thước (size / 크기)
 
@@ -230,23 +206,17 @@ rồi reconstruct dữ liệu (data / 데이터) từ repository/nguồn chuẩn
 
 Điều này không chỉ tránh `TransactionTooLargeException`, mà còn làm trạng thái (state / 상태) restoration ổn định hơn.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **13. Bundle, Intent và giao dịch (transaction / 트랜잭션) kích thước (size / 크기)** nêu quy tắc; **14. Parcelable không phải persistence format** thử quy tắc trong tình huống, rồi **15. Binder luồng thực thi (thread / 스레드) pool và callback threading** mở rộng hệ quả.
-
 ## 14. Parcelable không phải persistence format
 
 `Parcelable` tối ưu cho IPC/in-process Android ranh giới (boundary / 경계), không phải lược đồ (schema / 스키마) lưu trữ dài hạn. Không lưu raw Parcel vào cơ sở dữ liệu (database / 데이터베이스)/tệp (file / 파일) rồi kỳ vọng phiên bản (version / 버전) sau đọc ổn định.
 
 Cho persistence, dùng lược đồ (schema / 스키마) rõ ràng: Room, Proto/DataStore, JSON/CBOR/protobuf tùy use trường hợp (case / 사례).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **14. Parcelable không phải persistence format** nêu quy tắc; **15. Binder luồng thực thi (thread / 스레드) pool và callback threading** thử quy tắc trong tình huống, rồi **16. Binder định danh (identity / 식별자) và ranh giới bảo mật (security boundary / 보안 경계)** mở rộng hệ quả.
-
 ## 15. Binder luồng thực thi (thread / 스레드) pool và callback threading
 
 Không phải Binder callback nào cũng chạy main luồng thực thi (thread / 스레드). Một Binder dịch vụ (service / 서비스) có luồng thực thi (thread / 스레드) pool xử lý incoming giao dịch (transaction / 트랜잭션). Nếu bạn tự viết dịch vụ (service / 서비스)/AIDL hoặc tương tác low-level IPC, phải đọc đặc tả hợp đồng (contract / 계약) threading rõ ràng.
 
 Nếu callback từ background/Binder luồng thực thi (thread / 스레드) cần mutate UI trạng thái (state / 상태), chuyển sang lifecycle-aware/main-safe đường dẫn (path / 경로) phù hợp. Ngược lại, đừng ép mọi callback sang main nếu processing nặng không cần UI.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **15. Binder luồng thực thi (thread / 스레드) pool và callback threading** đặt tiêu chí; **16. Binder định danh (identity / 식별자) và ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Kotlin không chạy trực tiếp như mã nguồn (source code / 소스 코드)** mở rộng hệ quả.
 
 ## 16. Binder định danh (identity / 식별자) và ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -255,8 +225,6 @@ Khi hệ thống (system / 시스템)/dịch vụ (service / 서비스) xử lý
 Mọi bên ngoài (external / 외부) đầu vào (input / 입력) nên được xem là untrusted ranh giới (boundary / 경계).
 
 # ART, bytecode và thời gian chạy (runtime / 런타임)
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **16. Binder định danh (identity / 식별자) và ranh giới bảo mật (security boundary / 보안 경계)** đặt tiêu chí; **17. Kotlin không chạy trực tiếp như mã nguồn (source code / 소스 코드)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **18. AOT, JIT và profile-guided tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
 
 ## 17. Kotlin không chạy trực tiếp như mã nguồn (source code / 소스 코드)
 
@@ -275,15 +243,11 @@ Kotlin source
 
 Điều này giải thích vì sao Java interoperability, generic erasure, synthetic phương thức (method / 메서드), cầu nối (bridge / 브리지) phương thức (method / 메서드), boxing và reflection đều có thể ảnh hưởng Android app dù mã (code / 코드) viết bằng Kotlin.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **17. Kotlin không chạy trực tiếp như mã nguồn (source code / 소스 코드)** đặt vấn đề; **18. AOT, JIT và profile-guided tối ưu hóa (optimization / 최적화)** đối chiếu bằng chứng, rồi **19. nạp lớp (class loading / 클래스 로딩) và startup** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. AOT, JIT và profile-guided tối ưu hóa (optimization / 최적화)
 
 ART có thể dùng nhiều cơ chế compile/thời gian chạy (runtime / 런타임) tối ưu hóa (optimization / 최적화) tùy Android phiên bản (version / 버전) và trạng thái app. nhà phát triển (developer / 개발자) không nên cố “điều khiển JIT” như JVM máy chủ (server / 서버) app. Thứ có thể kiểm soát tốt hơn ở app tầng (layer / 계층) là startup đường dẫn (path / 경로), mã (code / 코드) kích thước (size / 크기), nạp lớp (class loading / 클래스 로딩), Baseline Profile và đường xử lý nóng (hot path / 핫 패스) thiết kế (design / 설계).
 
 Baseline Profile giúp thời gian chạy (runtime / 런타임) biết những đường đi mã (code path / 코드 경로) quan trọng nên được tối ưu sớm, giảm cold-start/jank cho đường dẫn (path / 경로) điển hình.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **19. nạp lớp (class loading / 클래스 로딩) và startup** nối từ **18. AOT, JIT và profile-guided tối ưu hóa (optimization / 최적화)** sang **20. Managed vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. nạp lớp (class loading / 클래스 로딩) và startup
 
@@ -302,15 +266,11 @@ Không tối ưu startup bằng cách chuyển tất cả sang luồng thực th
 
 # Bộ nhớ (memory / 메모리)
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **20. Managed vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ (memory / 메모리)** nối từ **19. nạp lớp (class loading / 클래스 로딩) và startup** sang **21. Garbage Collection không phải leak detector**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Managed vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ (memory / 메모리)
 
 Kotlin/Java đối tượng (object / 객체) sống trong managed vùng nhớ động (heap / 힙) do GC quản lý, nhưng app còn dùng bản địa (native / 네이티브) bộ nhớ (memory / 메모리), graphics buffer, bitmap, SQLite/bản địa (native / 네이티브) thư viện (library / 라이브러리) bộ nhớ (memory / 메모리) và mapped tệp (file / 파일).
 
 Một profiler chỉ nhìn Java vùng nhớ động (heap / 힙) có thể không thấy toàn bộ vấn đề.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **21. Garbage Collection không phải leak detector** nối từ **20. Managed vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ (memory / 메모리)** sang **22. Context leak**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Garbage Collection không phải leak detector
 
@@ -328,8 +288,6 @@ process singleton
 
 Nếu singleton giữ listener của Activity sau destroy, toàn đồ thị (graph / 그래프) còn reachable.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **22. Context leak** nối từ **21. Garbage Collection không phải leak detector** sang **23. Listener và coroutine leak**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. `Context` leak
 
 `Activity` ngữ cảnh (context / 맥락) giữ nhiều trạng thái (state / 상태) gắn với cửa sổ (window / 윈도우)/UI. Không giữ Activity trong singleton/static đối tượng (object / 객체) lâu hơn vòng đời (lifecycle / 생명주기).
@@ -337,8 +295,6 @@ Nếu singleton giữ listener của Activity sau destroy, toàn đồ thị (gr
 Nếu phụ thuộc (dependency / 의존성) chỉ cần process-level ngữ cảnh (context / 맥락), inject `ApplicationContext`. Nhưng cũng không biến `ApplicationContext` thành giải pháp mặc định cho mọi thứ; một số API cần themed/activity ngữ cảnh (context / 맥락).
 
 Câu hỏi đúng là **phụ thuộc (dependency / 의존성) cần thời gian tồn tại (lifetime / 수명)/ngữ cảnh (context / 맥락) năng lực (capability / 역량) nào?**
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **23. Listener và coroutine leak** nối từ **22. Context leak** sang **24. Bitmap và ảnh (image / 이미지) bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Listener và coroutine leak
 
@@ -356,13 +312,9 @@ durable background work → WorkManager
 process-level work → application-owned scope nếu thật sự cần
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **24. Bitmap và ảnh (image / 이미지) bộ nhớ (memory / 메모리)** nối từ **23. Listener và coroutine leak** sang **25. Low-memory và tiến trình (process / 프로세스) reclaim**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Bitmap và ảnh (image / 이미지) bộ nhớ (memory / 메모리)
 
 Ảnh (image / 이미지) decoding có thể dùng bộ nhớ (memory / 메모리) lớn. Không tải (load / 로드) ảnh full-resolution chỉ để hiển thị thumbnail. Dùng ảnh (image / 이미지) loading thư viện (library / 라이브러리) có decode/downsample/bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) đúng. Với app widget/RemoteViews, Android 17 mục tiêu (target / 대상) 37+ còn áp giới hạn bộ nhớ (memory limit / 메모리 제한) rõ hơn cho combined Bitmap/Icon trong parcel, cho thấy nền tảng (platform / 플랫폼) ngày càng siết tài nguyên (resource / 자원) misuse.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **24. Bitmap và ảnh (image / 이미지) bộ nhớ (memory / 메모리)** đặt đầu vào cho **25. Low-memory và tiến trình (process / 프로세스) reclaim**, rồi **26. cấu hình (configuration / 구성) thay đổi (change / 변경) khác tiến trình (process / 프로세스) death** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Low-memory và tiến trình (process / 프로세스) reclaim
 
@@ -372,8 +324,6 @@ Nếu dữ liệu quan trọng chỉ tồn tại trong RAM, đó là data-loss b
 
 # Tiến trình (process / 프로세스) death và trạng thái (state / 상태) restoration
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **25. Low-memory và tiến trình (process / 프로세스) reclaim** đặt đầu vào cho **26. cấu hình (configuration / 구성) thay đổi (change / 변경) khác tiến trình (process / 프로세스) death**, rồi **27. trạng thái (state / 상태) classification** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 26. cấu hình (configuration / 구성) thay đổi (change / 변경) khác tiến trình (process / 프로세스) death
 
 Rotation/cửa sổ (window / 윈도우) resize có thể recreate Activity nhưng tiến trình (process / 프로세스) vẫn sống. ViewModel thường survive cấu hình (configuration / 구성) thay đổi (change / 변경).
@@ -381,8 +331,6 @@ Rotation/cửa sổ (window / 윈도우) resize có thể recreate Activity như
 Tiến trình (process / 프로세스) death thì ViewModel, singleton và vùng nhớ động (heap / 힙) biến mất. Android có thể restore điều hướng (navigation / 내비게이션)/tác vụ (task / 작업)/activity trạng thái (state / 상태) đủ để đưa người dùng (user / 사용자) về màn hình gần trước đó, nhưng ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리) không được phục hồi tự động.
 
 Bởi vậy kiểm thử (test / 테스트) rotation thôi chưa đủ; cần kiểm thử (test / 테스트) **Don't keep activities** chỉ giúp một phần và không hoàn toàn tương đương tiến trình (process / 프로세스) kill thật. Với luồng (flow / 흐름) quan trọng, cần kiểm thử (test / 테스트) restore từ saved trạng thái (state / 상태) + persistent nguồn chuẩn (source of truth / 정본).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **26. cấu hình (configuration / 구성) thay đổi (change / 변경) khác tiến trình (process / 프로세스) death** đặt đầu vào cho **27. trạng thái (state / 상태) classification**, rồi **28. “Chỉ dùng coroutine” không tự động thread-safe** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. trạng thái (state / 상태) classification
 
@@ -400,8 +348,6 @@ Một cách phân loại thực dụng:
 Không cố lưu mọi thứ vào `SavedStateHandle`; saved trạng thái (state / 상태) phải nhỏ và reconstructive.
 
 # Luồng thực thi (thread / 스레드) an toàn (safety / 안전)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **28. “Chỉ dùng coroutine” không tự động thread-safe** nối từ **27. trạng thái (state / 상태) classification** sang **29. Confinement thường đơn giản hơn khóa (lock / 잠금)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. “Chỉ dùng coroutine” không tự động thread-safe
 
@@ -423,8 +369,6 @@ coroutineScope {
 
 `counter++` không atomic. Giải pháp có thể là confinement, immutable trạng thái (state / 상태) reducer, `Mutex`, atomic thành phần nguyên thủy (primitive / 기본 요소) hoặc cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) tùy loại trạng thái (state / 상태).
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **29. Confinement thường đơn giản hơn khóa (lock / 잠금)** nối từ **28. “Chỉ dùng coroutine” không tự động thread-safe** sang **30. Deadlock và khóa (lock / 잠금) inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Confinement thường đơn giản hơn khóa (lock / 잠금)
 
 UI trạng thái (state / 상태) thường tốt khi mutation được serialize trong một đơn vị sở hữu (owner / 오너). Thay vì nhiều tầng (layer / 계층) cùng mutate `MutableStateFlow`, expose immutable trạng thái (state / 상태) và funnel sự kiện (event / 이벤트) qua một mutation đường dẫn (path / 경로).
@@ -436,8 +380,6 @@ val uiState: StateFlow<UiState> = _uiState
 
 Không đưa `_uiState` ra ngoài.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **30. Deadlock và khóa (lock / 잠금) inversion** nối từ **29. Confinement thường đơn giản hơn khóa (lock / 잠금)** sang **31. Khi nào dùng công cụ (tool / 도구) nào**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Deadlock và khóa (lock / 잠금) inversion
 
 Nếu nhiều khóa (lock / 잠금) được acquire theo thứ tự khác nhau, deadlock có thể xảy ra. Trong Android, synchronous Binder lời gọi (call / 호출) trong khi giữ app khóa (lock / 잠금) còn có thể tạo phụ thuộc (dependency / 의존성) khó thấy giữa tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드).
@@ -446,15 +388,11 @@ Cấp cao (senior / 시니어) guideline: giữ trọng yếu (critical / 중요
 
 # Debugging thời gian chạy (runtime / 런타임)
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **31. Khi nào dùng công cụ (tool / 도구) nào** nối từ **30. Deadlock và khóa (lock / 잠금) inversion** sang **32. Ví dụ suy luận một ANR**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Khi nào dùng công cụ (tool / 도구) nào
 
 Logcat tốt cho chuỗi (sequence / 시퀀스)/sự kiện (event / 이벤트). Android Studio Profiler tốt cho CPU/bộ nhớ (memory / 메모리)/mạng (network / 네트워크) overview. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적) tốt cho luồng thực thi (thread / 스레드) scheduling, frame, Binder, khóa (lock / 잠금) và end-to-end timing. vùng nhớ động (heap / 힙) dump tốt cho retained đối tượng (object / 객체). Macrobenchmark đo startup/frame tương tác (interaction / 상호작용) ở gần môi trường vận hành (production / 운영 환경). StrictMode bắt một số chính sách (policy / 정책) violation dev-time.
 
 Không chọn công cụ (tool / 도구) theo thói quen; chọn theo hypothesis.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **31. Khi nào dùng công cụ (tool / 도구) nào** nêu quy tắc; **32. Ví dụ suy luận một ANR** thử quy tắc trong tình huống, rồi **33. Ví dụ suy luận bộ nhớ (memory / 메모리) leak** mở rộng hệ quả.
 
 ## 32. Ví dụ suy luận một ANR
 
@@ -471,39 +409,27 @@ Không cần tối ưu Compose trước. nguyên nhân gốc (root cause / 근�
 
 Nếu dấu vết (trace / 추적) lại cho thấy main luồng thực thi (thread / 스레드) đang chờ `CountDownLatch`, trong khi worker cần callback trên main để count down, đây có thể là deadlock/liveness bug chứ không phải mạng (network / 네트워크) chậm.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **32. Ví dụ suy luận một ANR** nêu quy tắc; **33. Ví dụ suy luận bộ nhớ (memory / 메모리) leak** thử quy tắc trong tình huống, rồi **34. thời gian chạy (runtime / 런타임) kiến thức (knowledge / 지식) dùng để phá vỡ ảo tưởng lớp trừu tượng (abstraction / 추상화)** mở rộng hệ quả.
-
 ## 33. Ví dụ suy luận bộ nhớ (memory / 메모리) leak
 
 Nếu vùng nhớ động (heap / 힙) dump cho thấy destroyed Activity retained bởi `SomeManager.listener`, sửa manager/listener thời gian tồn tại (lifetime / 수명). Không “gọi hệ thống (system / 시스템).gc()” để chữa leak. GC không thể thu đối tượng (object / 객체) vẫn reachable.
 
 # Cấp cao (senior / 시니어) Notes
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **33. Ví dụ suy luận bộ nhớ (memory / 메모리) leak** nêu quy tắc; **34. thời gian chạy (runtime / 런타임) kiến thức (knowledge / 지식) dùng để phá vỡ ảo tưởng lớp trừu tượng (abstraction / 추상화)** thử quy tắc trong tình huống, rồi **35. tiến trình (process / 프로세스) death là thiết kế (design / 설계) đầu vào (input / 입력), không phải trường hợp biên (edge case / 경계 사례) kỳ lạ** mở rộng hệ quả.
-
 ## 34. thời gian chạy (runtime / 런타임) kiến thức (knowledge / 지식) dùng để phá vỡ ảo tưởng lớp trừu tượng (abstraction / 추상화)
 
 Ở mã (code / 코드) bình thường, hãy làm việc ở lớp trừu tượng (abstraction / 추상화) cao: coroutine, luồng (flow / 흐름), Compose, Room, điều hướng (navigation / 내비게이션). Chỉ hạ xuống Handler/Binder/ART khi bằng chứng (evidence / 증거) chỉ tới đó. cấp cao (senior / 시니어) không phải người luôn viết low-level mã (code / 코드); cấp cao (senior / 시니어) là người biết lớp trừu tượng (abstraction / 추상화) nào đang giữ và khi nào nó đã rò rỉ.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **34. thời gian chạy (runtime / 런타임) kiến thức (knowledge / 지식) dùng để phá vỡ ảo tưởng lớp trừu tượng (abstraction / 추상화)** nêu quy tắc; **35. tiến trình (process / 프로세스) death là thiết kế (design / 설계) đầu vào (input / 입력), không phải trường hợp biên (edge case / 경계 사례) kỳ lạ** thử quy tắc trong tình huống, rồi **36. luồng thực thi (thread / 스레드) là tài nguyên (resource / 자원), không phải đơn vị (unit / 단위) lô-gic nghiệp vụ (business logic / 비즈니스 로직)** mở rộng hệ quả.
 
 ## 35. tiến trình (process / 프로세스) death là thiết kế (design / 설계) đầu vào (input / 입력), không phải trường hợp biên (edge case / 경계 사례) kỳ lạ
 
 Nếu app mobile chạy đủ lâu ngoài môi trường vận hành (production / 운영 환경), tiến trình (process / 프로세스) death sẽ xảy ra. Vì vậy persistence/trạng thái (state / 상태) restoration nên là một phần kiến trúc (architecture / 아키텍처), không phải patch sau bug report.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, cơ chế trong **35. tiến trình (process / 프로세스) death là thiết kế (design / 설계) đầu vào (input / 입력), không phải trường hợp biên (edge case / 경계 사례) kỳ lạ** cần được kiểm chứng bằng dấu vết cụ thể; **36. luồng thực thi (thread / 스레드) là tài nguyên (resource / 자원), không phải đơn vị (unit / 단위) lô-gic nghiệp vụ (business logic / 비즈니스 로직)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **37. IPC ranh giới (boundary / 경계) là serialization + trust ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 36. luồng thực thi (thread / 스레드) là tài nguyên (resource / 자원), không phải đơn vị (unit / 단위) lô-gic nghiệp vụ (business logic / 비즈니스 로직)
 
 Nghiệp vụ (business / 비즈니스) mã (code / 코드) nên nói “tải (load / 로드) profile”, “sync pending mutation”, “kết xuất (render / 렌더링) trạng thái (state / 상태)”, không nói “spawn luồng thực thi (thread / 스레드) 4”. luồng thực thi (thread / 스레드)/dispatcher là thực thi (execution / 실행) cơ chế (mechanism / 메커니즘). Tách hai thứ giúp mã (code / 코드) testable và portable hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **36. luồng thực thi (thread / 스레드) là tài nguyên (resource / 자원), không phải đơn vị (unit / 단위) lô-gic nghiệp vụ (business logic / 비즈니스 로직)** đặt tiêu chí; **37. IPC ranh giới (boundary / 경계) là serialization + trust ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **38. bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) phải dựa trên retained đồ thị (graph / 그래프) và allocation mẫu (pattern / 패턴)** mở rộng hệ quả.
-
 ## 37. IPC ranh giới (boundary / 경계) là serialization + trust ranh giới (boundary / 경계)
 
 Qua Binder/Intent/URI, hãy nghĩ cùng lúc ba vấn đề: payload có nhỏ không, phiên bản (version / 버전)/serialization có đúng không, đầu vào (input / 입력) có đáng tin không.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)**, **37. IPC ranh giới (boundary / 경계) là serialization + trust ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **38. bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) phải dựa trên retained đồ thị (graph / 그래프) và allocation mẫu (pattern / 패턴)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 38. bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) phải dựa trên retained đồ thị (graph / 그래프) và allocation mẫu (pattern / 패턴)
 

@@ -8,8 +8,6 @@ Một style thường gom lịch sử, nguyên liệu, quy trình và profile c�
 
 Hãy đọc style theo câu hỏi: quy trình nào tạo ra thuộc tính chính, thuộc tính đó được đo hay cảm nhận ra sao, và đâu là giới hạn của tên style?
 
-> **Chuyển mạch:** Style là bản đồ kỳ vọng; tasting cần quay từ kỳ vọng về bằng chứng cảm giác và bối cảnh phục vụ, thay vì chấm điểm theo trí nhớ thương hiệu.
-
 ## 2. Tasting là quan sát có cấu trúc
 
 Ghi lần lượt `appearance → aroma → palate → finish`, rồi mô tả cường độ, cân bằng, kết cấu và thay đổi theo nhiệt độ/ly/phục vụ. Tách quan sát (“mùi khói rõ”) khỏi diễn giải (“do peat”) nếu chưa có nguồn quy trình.

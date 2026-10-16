@@ -39,8 +39,6 @@ How much liquidity is needed before netting and settlement?
 
 Một position có giá trị thị trường (market value / 시장 가치) gần zero vẫn có gross principal amounts rất lớn cần settle.
 
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **2. rủi ro (risk / 위험) taxonomy** nối từ **1. Trade P/L và settlement exposure là hai lớp khác nhau** sang **3. Principal settlement rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. rủi ro (risk / 위험) taxonomy
 
 Tách ít nhất năm risks:
@@ -64,8 +62,6 @@ Legal risk
 
 PvP chủ yếu giải quyết principal rủi ro (risk / 위험). Nó không tự động xóa replacement-cost, liquidity, operational hoặc legal rủi ro (risk / 위험).
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **3. Principal settlement rủi ro (risk / 위험)** nối từ **2. rủi ro (risk / 위험) taxonomy** sang **4. Settlement exposure cửa sổ (window / 윈도우)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Principal settlement rủi ro (risk / 위험)
 
 Principal rủi ro (risk / 위험) xuất hiện khi một institution irrevocably pays currency A nhưng chưa nhận currency B. Exposure có thể bằng full principal, không chỉ mark-to-market.
@@ -77,8 +73,6 @@ Pay USD 100m
 ```
 
 Đây là lý do settlement phương thức (method / 메서드) phải nằm trong counterparty limit và pre-trade quyết định (decision / 결정), không chỉ là back-office detail.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **4. Settlement exposure cửa sổ (window / 윈도우)** nối từ **3. Principal settlement rủi ro (risk / 위험)** sang **5. Payment versus payment — PvP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Settlement exposure cửa sổ (window / 윈도우)
 
@@ -92,8 +86,6 @@ Unilateral-cancellation deadline
 ```
 
 Time-zone difference có thể kéo dài cửa sổ (window / 윈도우). Một trade T+2 không có nghĩa rủi ro (risk / 위험) chỉ tồn tại đúng hai ngày; cần biết chính xác (exact / 정확한) payment cut-offs và finality points.
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **5. Payment versus payment — PvP** nối từ **4. Settlement exposure cửa sổ (window / 윈도우)** sang **6. PvP khác central clearing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Payment versus payment — PvP
 
@@ -117,8 +109,6 @@ counterparty exposure outside eligible trades
 
 Không được viết `PvP = no risk`.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **6. PvP khác central clearing** nối từ **5. Payment versus payment — PvP** sang **7. CLS as an important example, not a universal answer**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. PvP khác central clearing
 
 PvP là settlement điều kiện (condition / 조건). Central counterparty — CCP — interposes itself between participants and changes counterparty cấu trúc (structure / 구조) through novation or equivalent legal cơ chế (mechanism / 메커니즘).
@@ -132,8 +122,6 @@ CCP
 ```
 
 Một hệ thống (system / 시스템) có thể cung cấp PvP mà không là CCP. Vì vậy không suy từ PvP rằng credit exposure đã được mutualized hoặc guaranteed.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **6. PvP khác central clearing** nêu quy tắc; **7. CLS as an important example, not a universal answer** thử quy tắc trong tình huống, rồi **8. Gross bilateral settlement** mở rộng hệ quả.
 
 ## 7. CLS as an important example, not a universal answer
 
@@ -152,8 +140,6 @@ funding schedule
 
 Một organization giao dịch currency không được hỗ trợ, trade same-day, hoặc miss cut-off có thể vẫn settle ngoài PvP.
 
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **7. CLS as an important example, not a universal answer** nêu quy tắc; **8. Gross bilateral settlement** thử quy tắc trong tình huống, rồi **9. Pre-settlement netting** mở rộng hệ quả.
-
 ## 8. Gross bilateral settlement
 
 Trong gross bilateral settlement, mỗi trade leg có thể được thanh toán riêng qua correspondent accounts.
@@ -171,8 +157,6 @@ larger principal exposure
 more payment messages
 more operational touchpoints
 ```
-
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **9. Pre-settlement netting** nối từ **8. Gross bilateral settlement** sang **10. Payment netting vs close-out netting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Pre-settlement netting
 
@@ -203,8 +187,6 @@ cut-off and value date must align
 disputes can prevent compression
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **10. Payment netting vs close-out netting** nối từ **9. Pre-settlement netting** sang **11. On-us settlement**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Payment netting vs close-out netting
 
 Do not mix:
@@ -218,8 +200,6 @@ Close-out netting
 ```
 
 Both depend on đặc tả hợp đồng (contract / 계약) and legal enforceability, but solve different states. A bilateral agreement supporting payment netting does not let a researcher assume every default exposure is legally netted exactly as modeled.
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **11. On-us settlement** nối từ **10. Payment netting vs close-out netting** sang **12. Deliverable vs non-deliverable instruments**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. On-us settlement
 
@@ -237,8 +217,6 @@ account and entity structure
 
 `Same bank` is not equivalent to `risk-free`.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **12. Deliverable vs non-deliverable instruments** nối từ **11. On-us settlement** sang **13. FX swaps have two giá trị (value / 값) dates**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Deliverable vs non-deliverable instruments
 
 Deliverable spot/forward/swap exchanges principal currencies. NDF generally settles a net cash difference in a settlement currency against an agreed fixing.
@@ -254,8 +232,6 @@ legal and documentation risk
 ```
 
 Therefore `non-deliverable` does not mean `no settlement risk`; it changes what must settle.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **13. FX swaps have two giá trị (value / 값) dates** nối từ **12. Deliverable vs non-deliverable instruments** sang **14. Same-day and shortened settlement cycles**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. FX swaps have two giá trị (value / 값) dates
 
@@ -279,8 +255,6 @@ counterparty netting set
 collateral agreement
 ```
 
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **14. Same-day and shortened settlement cycles** nối từ **13. FX swaps have two giá trị (value / 값) dates** sang **15. Standing settlement instructions — SSI**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Same-day and shortened settlement cycles
 
 Shorter settlement reduces market-exposure thời gian (time / 시간) but compresses operations:
@@ -294,8 +268,6 @@ greater automation need
 ```
 
 Same-day FX may not be eligible for the same PvP tiến trình (process / 프로세스) as ordinary T+1/T+2 trades. Operational feasibility must be checked before promising settlement.
-
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **15. Standing settlement instructions — SSI** nối từ **14. Same-day and shortened settlement cycles** sang **16. Confirmation and matching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Standing settlement instructions — SSI
 
@@ -313,8 +285,6 @@ fraud screening
 
 An incorrect or fraudulently changed SSI can redirect full principal even when trade economics are correct.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **16. Confirmation and matching** nối từ **15. Standing settlement instructions — SSI** sang **17. Calendar and cut-off rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Confirmation and matching
 
 Trade fields must match:
@@ -331,8 +301,6 @@ product type
 ```
 
 Mismatch found after cut-off can force gross bilateral settlement, delay receipt or create a thất bại (fail / 실패).
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **17. Calendar and cut-off rủi ro (risk / 위험)** nối từ **16. Confirmation and matching** sang **18. Funding and intraday liquidity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Calendar and cut-off rủi ro (risk / 위험)
 
@@ -356,8 +324,6 @@ daylight-saving treatment
 
 Hard-coding `T+2 = two calendar days` is an operational defect.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **18. Funding and intraday liquidity** nối từ **17. Calendar and cut-off rủi ro (risk / 위험)** sang **19. Liquidity rủi ro (risk / 위험) survives PvP**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Funding and intraday liquidity
 
 Settlement requires available currency at the right location and thời gian (time / 시간).
@@ -376,8 +342,6 @@ timing uncertainty
 
 An institution can be solvent but thất bại (fail / 실패) settlement because liquidity is in the wrong currency, account, legal thực thể (entity / 엔터티) or thời gian (time / 시간) zone.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **19. Liquidity rủi ro (risk / 위험) survives PvP** nối từ **18. Funding and intraday liquidity** sang **20. Collateral is not a substitute for PvP**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Liquidity rủi ro (risk / 위험) survives PvP
 
 PvP can withhold outgoing payment if incoming payment is not available, preventing principal mất mát (loss / 손실). But the institution may still not receive currency when expected and may need emergency funding or replacement trade.
@@ -388,8 +352,6 @@ No principal loss
 ```
 
 This distinction matters for import payments, collateral calls, securities settlement and debt dịch vụ (service / 서비스).
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **20. Collateral is not a substitute for PvP** nối từ **19. Liquidity rủi ro (risk / 위험) survives PvP** sang **21. Settlement thất bại (fail / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Collateral is not a substitute for PvP
 
@@ -413,8 +375,6 @@ wrong-way risk
 
 Use collateral and PvP as different controls.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **21. Settlement thất bại (fail / 실패)** nối từ **20. Collateral is not a substitute for PvP** sang **22. Failed receipt can create downstream thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Settlement thất bại (fail / 실패)
 
 A thất bại (fail / 실패) means a due giao dịch (transaction / 트랜잭션) remains unsettled under the applicable definition and thời gian (time / 시간) ranh giới (boundary / 경계).
@@ -434,8 +394,6 @@ calendar error
 
 Do not close a thất bại (fail / 실패) ticket merely because payment arrived later. bản ghi (record / 레코드) duration, liquidity chi phí (cost / 비용), replacement chi phí (cost / 비용), operational cause and recurrence rủi ro (risk / 위험).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **22. Failed receipt can create downstream thất bại (failure / 실패)** nối từ **21. Settlement thất bại (fail / 실패)** sang **23. Counterparty limits must include settlement phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Failed receipt can create downstream thất bại (failure / 실패)
 
 ```text
@@ -446,8 +404,6 @@ Expected USD receipt fails
 ```
 
 Thus FX settlement rủi ro (risk / 위험) can propagate into securities, derivatives collateral, trade finance and corporate payments.
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **22. Failed receipt can create downstream thất bại (failure / 실패)** đặt tiêu chí; **23. Counterparty limits must include settlement phương thức (method / 메서드)** dùng tiêu chí đó để đối chiếu ranh giới, rồi **24. Settlement-method hierarchy** mở rộng hệ quả.
 
 ## 23. Counterparty limits must include settlement phương thức (method / 메서드)
 
@@ -463,8 +419,6 @@ liquidity dependency
 
 A lower limit or additional điều khiển (control / 제어) may be appropriate when counterparty cannot use PvP or robust netting. chính xác (exact / 정확한) chính sách (policy / 정책) depends on institution and regulation.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **23. Counterparty limits must include settlement phương thức (method / 메서드)** đặt tiêu chí; **24. Settlement-method hierarchy** dùng tiêu chí đó để đối chiếu ranh giới, rồi **25. KRW and VND ngữ cảnh (context / 맥락)** mở rộng hệ quả.
-
 ## 24. Settlement-method hierarchy
 
 A học tập (learning / 학습) hierarchy:
@@ -477,8 +431,6 @@ A học tập (learning / 학습) hierarchy:
 ```
 
 This is not a universal legal ranking. Each step requires eligibility, enforceability and operational phân tích (analysis / 분석).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **25. KRW and VND ngữ cảnh (context / 맥락)** nối từ **24. Settlement-method hierarchy** sang **26. Settlement mô hình dữ liệu (data model / 데이터 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. KRW and VND ngữ cảnh (context / 맥락)
 
@@ -497,8 +449,6 @@ convertibility and remittance rule
 ```
 
 Do not bản sao (copy / 복사) EUR/USD settlement các giả định (assumptions / 가정들) into USD/KRW or USD/VND workflows.
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **25. KRW and VND ngữ cảnh (context / 맥락)** đặt vấn đề; **26. Settlement mô hình dữ liệu (data model / 데이터 모델)** đối chiếu bằng chứng, rồi **27. Exposure calculation layers** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Settlement mô hình dữ liệu (data model / 데이터 모델)
 
@@ -525,8 +475,6 @@ resolution_time
 
 Keep sự kiện (event / 이벤트) lịch sử (history / 이력) append-only. Overwriting `status=settled` destroys bằng chứng (evidence / 증거) of prior delay or manual intervention.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **26. Settlement mô hình dữ liệu (data model / 데이터 모델)** đặt vấn đề; **27. Exposure calculation layers** đối chiếu bằng chứng, rồi **28. Intraday liquidity ladder** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 27. Exposure calculation layers
 
 Nhánh học (track / 트랙) at least:
@@ -542,8 +490,6 @@ failed / delayed amount
 ```
 
 Do not report only final net cash and claim full rủi ro (risk / 위험) mitigation.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **28. Intraday liquidity ladder** nối từ **27. Exposure calculation layers** sang **29. Stress scenarios**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Intraday liquidity ladder
 
@@ -570,8 +516,6 @@ shortfall
 ```
 
 Stress expected receipts separately from committed outgoing payments.
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **29. Stress scenarios** nối từ **28. Intraday liquidity ladder** sang **30. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Stress scenarios
 
@@ -608,8 +552,6 @@ onshore leg unavailable
 → basis and liquidity mismatch
 ```
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **30. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **29. Stress scenarios** sang **31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Start from thất bại (failure / 실패):
@@ -634,8 +576,6 @@ counterparty default timing
 
 At least one reverse stress must occur without a large spot move.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)** nối từ **30. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **32. Dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)
 
 ```text
@@ -657,8 +597,6 @@ Post-settlement
 
 Controls need đơn vị sở hữu (owner / 오너), timestamp, bằng chứng (evidence / 증거) and escalation đường dẫn (path / 경로).
 
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **32. Dashboard** nối từ **31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)** sang **33. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Dashboard
 
 ```text
@@ -676,8 +614,6 @@ recurring root cause
 
 Dashboard should preserve denominator and amount. A low thất bại (fail / 실패) percentage can still hide a material principal amount.
 
-> **Nối mạch:** Ở chặng này của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **33. What not to learn** nối từ **32. Dashboard** sang **34. rà soát (review / 검토) questions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. What not to learn
 
 ```text
@@ -689,8 +625,6 @@ NDF has no settlement risk
 T+1 is operationally safer in every dimension
 settlement is only a back-office concern
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **34. rà soát (review / 검토) questions** nối từ **33. What not to learn** sang **35. Sources and cập nhật (update / 업데이트) watch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. rà soát (review / 검토) questions
 
@@ -704,8 +638,6 @@ settlement is only a back-office concern
 8. What happens if expected receipt is delayed but outgoing obligations remain due?
 9. Which downstream settlements depend on the FX receipt?
 10. Which operational chỉ số (metric / 지표) would reveal a deteriorating tiến trình (process / 프로세스) before a mất mát (loss / 손실)?
-
-> **Nối mạch:** Trong **FX Settlement, PvP, Netting & Liquidity — từ executed trade đến final payment**, **34. rà soát (review / 검토) questions** đặt vấn đề; **35. Sources and cập nhật (update / 업데이트) watch** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 35. Sources and cập nhật (update / 업데이트) watch
 

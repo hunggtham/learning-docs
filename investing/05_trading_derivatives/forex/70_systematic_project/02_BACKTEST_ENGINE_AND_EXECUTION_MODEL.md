@@ -23,8 +23,6 @@ Market / event data becomes available
 
 Không được cập nhật (update / 업데이트) position trước khi thực thi (execution / 실행) sự kiện (event / 이벤트) xảy ra.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **2. Bốn timestamp nên tách riêng** nối từ **1. Causality trước hiệu năng (performance / 성능)** sang **3. Quyết định (decision / 결정) price không phải fill price**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Bốn timestamp nên tách riêng
 
 Một trade có thể có:
@@ -39,8 +37,6 @@ fill_timestamp
 Với daily chiến lược (strategy / 전략), các timestamp có thể gần nhau. Với event-driven chiến lược (strategy / 전략), chênh lệch milliseconds/seconds có thể material.
 
 Backtest phải define độ trễ (latency / 지연 시간) giả định (assumption / 가정) thay vì implicitly cho `signal_timestamp = fill_timestamp`.
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **3. Quyết định (decision / 결정) price không phải fill price** nối từ **2. Bốn timestamp nên tách riêng** sang **4. Executable side**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Quyết định (decision / 결정) price không phải fill price
 
@@ -62,8 +58,6 @@ Arrival → Fill
 
 Nếu chỉ lưu final P/L, bạn không biết edge mất ở tín hiệu (signal / 신호) hay thực thi (execution / 실행).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **4. Executable side** nối từ **3. Quyết định (decision / 결정) price không phải fill price** sang **5. Thứ tự (order / 순서) mô hình (model / 모델) phải tường minh (explicit / 명시적)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Executable side
 
 Long entry bằng thị trường (market / 시장) thứ tự (order / 순서) thường cross ask.
@@ -80,8 +74,6 @@ Sell ≠ mid
 ```
 
 Một backtest dùng mid cho cả hai phía đang xóa spread khỏi thị trường (market / 시장).
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **5. Thứ tự (order / 순서) mô hình (model / 모델) phải tường minh (explicit / 명시적)** nối từ **4. Executable side** sang **6. Thị trường (market / 시장) thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Thứ tự (order / 순서) mô hình (model / 모델) phải tường minh (explicit / 명시적)
 
@@ -101,8 +93,6 @@ UNKNOWN
 
 Không phải mọi chiến lược (strategy / 전략) cần simulate mọi broker giao thức (protocol / 프로토콜), nhưng trạng thái (state / 상태) ngữ nghĩa (semantics / 의미론) phải rõ để sau này nối live hệ thống (system / 시스템) không phải viết lại mô hình tư duy (mental model / 사고 모델).
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **6. Thị trường (market / 시장) thứ tự (order / 순서)** nối từ **5. Thứ tự (order / 순서) mô hình (model / 모델) phải tường minh (explicit / 명시적)** sang **7. Limit thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Thị trường (market / 시장) thứ tự (order / 순서)
 
 Thực thi (execution / 실행) giả định (assumption / 가정) tối thiểu:
@@ -116,8 +106,6 @@ Sell market
 ```
 
 Slippage có thể stochastic hoặc deterministic theo mô hình (model / 모델), nhưng phải versioned.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **6. Thị trường (market / 시장) thứ tự (order / 순서)** đặt tiêu chí; **7. Limit thứ tự (order / 순서)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Stop thứ tự (order / 순서)** mở rộng hệ quả.
 
 ## 7. Limit thứ tự (order / 순서)
 
@@ -146,8 +134,6 @@ price must trade through limit by buffer
 
 hoặc assign fill xác suất (probability / 확률), nhưng limitation phải ghi rõ.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **7. Limit thứ tự (order / 순서)** đặt tiêu chí; **8. Stop thứ tự (order / 순서)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **9. Stop-limit** mở rộng hệ quả.
-
 ## 8. Stop thứ tự (order / 순서)
 
 Stop trigger không đồng nghĩa fill tại stop price.
@@ -162,8 +148,6 @@ trigger condition met
 
 Gap qua stop phải fill tại first modeled executable price, không force fill ở trigger.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **8. Stop thứ tự (order / 순서)** đặt tiêu chí; **9. Stop-limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **10. OHLC intrabar ambiguity** mở rộng hệ quả.
-
 ## 9. Stop-limit
 
 Stop-limit có hai rủi ro (risk / 위험):
@@ -176,8 +160,6 @@ Non-execution risk
 Nếu price gap beyond limit, position có thể vẫn mở.
 
 Engine phải preserve this rather than silently converting stop-limit into guaranteed stop.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **9. Stop-limit** đặt tiêu chí; **10. OHLC intrabar ambiguity** dùng tiêu chí đó để kiểm tra ranh giới, rồi **11. Same-bar entry and exit** mở rộng hệ quả.
 
 ## 10. OHLC intrabar ambiguity
 
@@ -203,8 +185,6 @@ Reject ambiguous trades from evaluation
 
 Không chọn thứ tự (ordering / 순서) làm equity curve đẹp nhất.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **11. Same-bar entry and exit** nối từ **10. OHLC intrabar ambiguity** sang **12. Partial fills**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Same-bar entry and exit
 
 Nếu tín hiệu (signal / 신호) xuất hiện từ close của bar, chiến lược (strategy / 전략) không thể entry ở chính close rồi cũng dùng high/low cùng bar để stop/mục tiêu (target / 대상) như thể đã ở trong thị trường (market / 시장) cả bar.
@@ -217,8 +197,6 @@ Signal computed at close T
 ```
 
 trừ khi dữ liệu (data / 데이터)/sự kiện (event / 이벤트) timing thực sự cho phép khác.
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **12. Partial fills** nối từ **11. Same-bar entry and exit** sang **13. Rejection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Partial fills
 
@@ -240,8 +218,6 @@ expire
 
 according to thứ tự (order / 순서) chính sách (policy / 정책).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **13. Rejection** nối từ **12. Partial fills** sang **14. Slippage mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Rejection
 
 Thứ tự (order / 순서) có thể rejected vì:
@@ -256,8 +232,6 @@ instrument unavailable
 ```
 
 Engine nên bản ghi (record / 레코드) rejection as sự kiện (event / 이벤트), không biến thành silent no-trade.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **14. Slippage mô hình (model / 모델)** nối từ **13. Rejection** sang **15. Chi phí (cost / 비용) scenario ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Slippage mô hình (model / 모델)
 
@@ -283,8 +257,6 @@ slippage = f(spread, volatility, event flag, size, depth proxy)
 
 Không cần mô hình (model / 모델) phức tạp hơn dữ liệu (data / 데이터) chất lượng (quality / 품질).
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **15. Chi phí (cost / 비용) scenario ma trận (matrix / 행렬)** nối từ **14. Slippage mô hình (model / 모델)** sang **16. Spread mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Chi phí (cost / 비용) scenario ma trận (matrix / 행렬)
 
 Mọi chiến lược (strategy / 전략) nên chạy ít nhất:
@@ -297,8 +269,6 @@ Stress-event cost
 ```
 
 Nếu edge biến mất ngay ở 1.2x normal chi phí (cost / 비용), chiến lược (strategy / 전략) có little hiện thực (implementation / 구현) margin.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **16. Spread mô hình (model / 모델)** nối từ **15. Chi phí (cost / 비용) scenario ma trận (matrix / 행렬)** sang **17. Commission mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Spread mô hình (model / 모델)
 
@@ -320,8 +290,6 @@ spread_model_version
 
 trong experiment siêu dữ liệu (metadata / 메타데이터).
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **17. Commission mô hình (model / 모델)** nối từ **16. Spread mô hình (model / 모델)** sang **18. Financing / rollover**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Commission mô hình (model / 모델)
 
 Commission có thể theo:
@@ -334,8 +302,6 @@ minimum fee
 ```
 
 Không hard-code giả định (assumption / 가정) từ một broker nếu chiến lược (strategy / 전략) mục tiêu (target / 대상) instrument khác.
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **18. Financing / rollover** nối từ **17. Commission mô hình (model / 모델)** sang **19. Carry attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Financing / rollover
 
@@ -353,8 +319,6 @@ broker/provider markup if modeling retail product
 
 Weekends/holidays làm charge nhiều ngày cùng lúc tùy convention.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **19. Carry attribution** nối từ **18. Financing / rollover** sang **20. Account currency conversion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Carry attribution
 
 Không trộn financing vào price P/L.
@@ -371,8 +335,6 @@ conversion_pnl
 ```
 
 Chiến lược (strategy / 전략) carry chỉ có thể được hiểu nếu attribution riêng.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **20. Account currency conversion** nối từ **19. Carry attribution** sang **21. Position đối tượng (object / 객체)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Account currency conversion
 
@@ -395,8 +357,6 @@ hoặc direct tỷ lệ (rate / 비율) nếu available.
 
 Conversion phải dùng tỷ lệ (rate / 비율) tại relevant accounting timestamp.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **21. Position đối tượng (object / 객체)** nối từ **20. Account currency conversion** sang **22. Balance và equity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Position đối tượng (object / 객체)
 
 Một position trạng thái (state / 상태) có thể gồm:
@@ -416,8 +376,6 @@ strategy_id
 
 Không chỉ lưu lot kích thước (size / 크기).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **22. Balance và equity** nối từ **21. Position đối tượng (object / 객체)** sang **23. Margin accounting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Balance và equity
 
 Dùng chung (common / 공통) ngữ nghĩa (semantics / 의미론):
@@ -428,8 +386,6 @@ Equity = Balance + Unrealized P/L
 ```
 
 Define chính xác (exact / 정확한) ngữ nghĩa (semantics / 의미론) của engine và giữ nhất quán.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **23. Margin accounting** nối từ **22. Balance và equity** sang **24. Margin quy tắc (rule / 규칙) is product-specific**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Margin accounting
 
@@ -446,8 +402,6 @@ Actual broker quy tắc (rule / 규칙) có thể phức tạp hơn.
 
 Engine phải phiên bản (version / 버전) margin chính sách (policy / 정책).
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **24. Margin quy tắc (rule / 규칙) is product-specific** nối từ **23. Margin accounting** sang **25. Liquidation / stop-out**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Margin quy tắc (rule / 규칙) is product-specific
 
 Retail FX, CFD và exchange futures có margin mechanics khác nhau.
@@ -463,8 +417,6 @@ MarginModel
     liquidation_condition()
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **25. Liquidation / stop-out** nối từ **24. Margin quy tắc (rule / 규칙) is product-specific** sang **26. Portfolio thứ tự (ordering / 순서) during liquidation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Liquidation / stop-out
 
 If modeled retail account reaches stop-out threshold:
@@ -478,8 +430,6 @@ risk event triggers
 Không close positions at perfect threshold price.
 
 Liquidation itself may incur adverse slippage.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **26. Portfolio thứ tự (ordering / 순서) during liquidation** nối từ **25. Liquidation / stop-out** sang **27. Effective leverage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Portfolio thứ tự (ordering / 순서) during liquidation
 
@@ -495,8 +445,6 @@ Quy tắc (rule / 규칙) depends on provider.
 
 If unknown, choose conservative tường minh (explicit / 명시적) giả định (assumption / 가정) and sensitivity-test alternatives.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **27. Effective leverage** nối từ **26. Portfolio thứ tự (ordering / 순서) during liquidation** sang **28. Currency-factor exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Effective leverage
 
 At each timestamp:
@@ -509,8 +457,6 @@ Bản ghi (record / 레코드) thời gian (time / 시간) series.
 
 Drawdown can increase effective leverage even without new trade.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **28. Currency-factor exposure** nối từ **27. Effective leverage** sang **29. Rủi ro (risk / 위험) check before thứ tự (order / 순서) acceptance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Currency-factor exposure
 
 Engine should expose position legs to rủi ro (risk / 위험) tầng (layer / 계층):
@@ -521,8 +467,6 @@ Long EUR/USD
 ```
 
 Do not wait until reporting stage to discover all positions are short USD.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **29. Rủi ro (risk / 위험) check before thứ tự (order / 순서) acceptance** nối từ **28. Currency-factor exposure** sang **30. Sự kiện (event / 이벤트) sourcing / ledger**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Rủi ro (risk / 위험) check before thứ tự (order / 순서) acceptance
 
@@ -547,8 +491,6 @@ margin buffer
 max event risk
 ```
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **30. Sự kiện (event / 이벤트) sourcing / ledger** nối từ **29. Rủi ro (risk / 위험) check before thứ tự (order / 순서) acceptance** sang **31. Trade ledger vs account ledger**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Sự kiện (event / 이벤트) sourcing / ledger
 
 Prefer append-only events conceptually:
@@ -567,8 +509,6 @@ POSITION_CLOSED
 Then reconstruct account trạng thái (state / 상태) from events.
 
 This improves auditability.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **31. Trade ledger vs account ledger** nối từ **30. Sự kiện (event / 이벤트) sourcing / ledger** sang **32. Deterministic sự kiện (event / 이벤트) thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Trade ledger vs account ledger
 
@@ -591,8 +531,6 @@ margin
 
 Một trade có thể map nhiều fills và ledger entries.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **32. Deterministic sự kiện (event / 이벤트) thứ tự (order / 순서)** nối từ **31. Trade ledger vs account ledger** sang **33. Random slippage reproducibility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Deterministic sự kiện (event / 이벤트) thứ tự (order / 순서)
 
 When two events share timestamp, define priority.
@@ -611,8 +549,6 @@ Different thứ tự (ordering / 순서) can thay đổi (change / 변경) kết
 
 Document it.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **33. Random slippage reproducibility** nối từ **32. Deterministic sự kiện (event / 이벤트) thứ tự (order / 순서)** sang **34. Chiến lược (strategy / 전략) giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Random slippage reproducibility
 
 If stochastic simulation used:
@@ -624,8 +560,6 @@ random_seed
 must be stored.
 
 Run multiple seeds and report phân phối (distribution / 분포), not one lucky simulation.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **34. Chiến lược (strategy / 전략) giao diện (interface / 인터페이스)** nối từ **33. Random slippage reproducibility** sang **35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Chiến lược (strategy / 전략) giao diện (interface / 인터페이스)
 
@@ -641,8 +575,6 @@ Chiến lược (strategy / 전략) should not directly mutate broker/account le
 
 Separation reduces accidental cheating.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)** nối từ **34. Chiến lược (strategy / 전략) giao diện (interface / 인터페이스)** sang **36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)
 
 ```text
@@ -651,8 +583,6 @@ execute(order, market_state) -> fills/rejection
 
 Mô hình thực thi (execution model / 실행 모델) must not truy cập (access / 접근) future thị trường (market / 시장) trạng thái (state / 상태).
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)** nối từ **35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)** sang **37. Đơn vị (unit / 단위) tests — P/L**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)
 
 ```text
@@ -660,8 +590,6 @@ accrue(position, timestamp, calendar) -> cashflow
 ```
 
 Keeps carry lô-gic (logic / 논리) separate from chiến lược (strategy / 전략) tín hiệu (signal / 신호).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **37. Đơn vị (unit / 단위) tests — P/L** nối từ **36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)** sang **38. Đơn vị (unit / 단위) tests — spread**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Đơn vị (unit / 단위) tests — P/L
 
@@ -676,8 +604,6 @@ Gross price P/L = 100 USD
 
 Kiểm thử (test / 테스트) long and short, JPY pairs, cross pairs and non-USD account currency.
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **38. Đơn vị (unit / 단위) tests — spread** nối từ **37. Đơn vị (unit / 단위) tests — P/L** sang **39. Đơn vị (unit / 단위) tests — margin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 38. Đơn vị (unit / 단위) tests — spread
 
 If no thị trường (market / 시장) move and trader:
@@ -690,8 +616,6 @@ immediately sell at bid
 P/L should be negative by spread plus fees.
 
 If engine returns zero, chi phí (cost / 비용) ngữ nghĩa (semantics / 의미론) are wrong.
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **39. Đơn vị (unit / 단위) tests — margin** nối từ **38. Đơn vị (unit / 단위) tests — spread** sang **40. Property-based invariants**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Đơn vị (unit / 단위) tests — margin
 
@@ -707,8 +631,6 @@ are known.
 
 Check used/free margin and liquidation threshold.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **40. Property-based invariants** nối từ **39. Đơn vị (unit / 단위) tests — margin** sang **41. Stress replay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Property-based invariants
 
 Useful invariants:
@@ -720,8 +642,6 @@ position after full close = 0
 cash reconciliation balances
 same seed + inputs = same outputs
 ```
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **41. Stress replay** nối từ **40. Property-based invariants** sang **42. Survivorship of broker terms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Stress replay
 
@@ -742,15 +662,11 @@ margin stress
 
 without impossible fills.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **42. Survivorship of broker terms** nối từ **41. Stress replay** sang **43. Multi-strategy portfolio**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. Survivorship of broker terms
 
 If backtest retail sản phẩm (product / 제품) across years, hiện tại (current / 현재) margin/financing terms may not equal historical terms.
 
 If historical rules unavailable, disclose giả định (assumption / 가정) and sensitivity-test.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **43. Multi-strategy portfolio** nối từ **42. Survivorship of broker terms** sang **44. Same tín hiệu (signal / 신호) from multiple strategies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Multi-strategy portfolio
 
@@ -764,8 +680,6 @@ margin
 currency exposure
 risk limits
 ```
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **44. Same tín hiệu (signal / 신호) from multiple strategies** nối từ **43. Multi-strategy portfolio** sang **45. Netting vs hedging account chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Same tín hiệu (signal / 신호) from multiple strategies
 
@@ -781,8 +695,6 @@ while broker/account net position is combined.
 
 Attribution requires virtual lots even if thực thi (execution / 실행) is netted.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **45. Netting vs hedging account chế độ (mode / 모드)** nối từ **44. Same tín hiệu (signal / 신호) from multiple strategies** sang **46. Position sizing timing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 45. Netting vs hedging account chế độ (mode / 모드)
 
 Some retail accounts net opposing positions; others represent separate tickets.
@@ -791,15 +703,11 @@ Hệ thống (system / 시스템) ngữ nghĩa (semantics / 의미론) must matc
 
 Do not assume both long and short EUR/USD can coexist economically without understanding account chế độ (mode / 모드).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **46. Position sizing timing** nối từ **45. Netting vs hedging account chế độ (mode / 모드)** sang **47. Volatility targeting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Position sizing timing
 
 Kích thước (size / 크기) should use equity/rủi ro (risk / 위험) trạng thái (state / 상태) **at quyết định (decision / 결정) thời gian (time / 시간)**.
 
 Do not kích thước (size / 크기) all historical trades using final/hiện tại (current / 현재) capital.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **47. Volatility targeting** nối từ **46. Position sizing timing** sang **48. Backtest outputs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Volatility targeting
 
@@ -812,8 +720,6 @@ vol_estimate_t
 must only use dữ liệu (data / 데이터) available through `t`.
 
 No future full-sample tiêu chuẩn (standard / 표준) deviation.
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **48. Backtest outputs** nối từ **47. Volatility targeting** sang **49. Chi phí (cost / 비용) attribution ratio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Backtest outputs
 
@@ -837,8 +743,6 @@ Partial fills
 Stress-period performance
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **49. Chi phí (cost / 비용) attribution ratio** nối từ **48. Backtest outputs** sang **50. Paper chiến lược (strategy / 전략) vs executable chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 49. Chi phí (cost / 비용) attribution ratio
 
 Useful chỉ số (metric / 지표):
@@ -848,8 +752,6 @@ Implementation Cost / Gross Strategy Edge
 ```
 
 If chi phí (cost / 비용) consumes 80–90% of gross edge, live fragility is high.
-
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **50. Paper chiến lược (strategy / 전략) vs executable chiến lược (strategy / 전략)** nối từ **49. Chi phí (cost / 비용) attribution ratio** sang **51. Lỗi (error / 오류) handling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Paper chiến lược (strategy / 전략) vs executable chiến lược (strategy / 전략)
 
@@ -873,8 +775,6 @@ what margin?
 
 Only latter is deployable research.
 
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **51. Lỗi (error / 오류) handling** nối từ **50. Paper chiến lược (strategy / 전략) vs executable chiến lược (strategy / 전략)** sang **52. Experiment siêu dữ liệu (metadata / 메타데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 51. Lỗi (error / 오류) handling
 
 Engine should thất bại (fail / 실패) loudly on:
@@ -888,8 +788,6 @@ impossible order state
 ```
 
 Do not silently fill with zero/previous price.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **51. Lỗi (error / 오류) handling** đặt vấn đề; **52. Experiment siêu dữ liệu (metadata / 메타데이터)** đối chiếu bằng chứng, rồi **53. Completion criteria** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 52. Experiment siêu dữ liệu (metadata / 메타데이터)
 
@@ -907,8 +805,6 @@ code_commit
 config_hash
 ```
 
-> **Nối mạch:** Trong **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **52. Experiment siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **53. Completion criteria** đối chiếu bằng chứng, rồi **Deliverables** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 53. Completion criteria
 
 Mô-đun (module / 모듈) complete when reviewer can dấu vết (trace / 추적) any trade:
@@ -922,8 +818,6 @@ Why signal existed
 → how margin changed
 → how P/L reached account currency
 ```
-
-> **Nối mạch:** Ở chặng này của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **Deliverables** nối từ **53. Completion criteria** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deliverables
 
@@ -939,8 +833,6 @@ ledger_schema.md
 backtest_report.md
 engine_test_cases.md
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Backtest Engine và Mô hình thực thi (execution model / 실행 모델) cho Systematic FX**, **Đọc tiếp** nối từ **Deliverables** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

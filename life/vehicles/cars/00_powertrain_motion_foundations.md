@@ -17,15 +17,11 @@ năng lượng
 → xe tăng tốc hoặc giữ tốc độ
 ```
 
-> **Chuyển mạch:** Chuỗi truyền năng lượng cho biết lực đến bánh từ đâu; [01. ICE, EV, hybrid and thermal](01_ice_ev_hybrid_and_thermal.md) tách các nguồn năng lượng, còn [02. Transmission, tires, safety and ownership](02_transmission_tires_safety_and_ownership.md) kiểm tra vì sao cùng horsepower vẫn cho cảm giác khác.
-
 ## 2. Mô-men và công suất trả lời hai câu hỏi khác nhau
 
 Mô-men mô tả xu hướng làm quay; công suất mô tả tốc độ thực hiện công. Trong hệ quay, công suất tăng khi mô-men được tạo ra ở tốc độ quay cao hơn, vì vậy cần nhìn cả đường cong theo vòng tua.
 
 Hộp số cho phép power unit hoạt động trong vùng phù hợp bằng cách đổi quan hệ giữa tốc độ quay và mô-men tại bánh. So sánh horsepower cực đại mà bỏ qua tỷ số truyền, khối lượng và traction sẽ dự đoán sai cảm giác tăng tốc.
-
-> **Chuyển mạch:** Công suất/mô-men của nguồn chưa phải lực thực tế; transmission và drivetrain quyết định lực đó được đưa tới cầu nào và với tổn hao bao nhiêu.
 
 ## 3. Lốp là điểm tiếp xúc giới hạn toàn hệ thống
 

@@ -16,23 +16,17 @@ Malt — thường là malt lúa mạch — cung cấp nguồn tinh bột có th
 
 Đây là một chìa khóa để hiểu stout: màu tối không phải một “loại cồn” khác mà liên quan mạnh đến lựa chọn nguyên liệu malt/ngũ cốc rang và toàn bộ công thức.
 
-> **Chuyển mạch:** Malt quyết định nền đường, màu và nhiều hợp chất hương; tiếp theo hoa bia bổ sung vị đắng và mùi thơm, nên không thể đọc phong cách chỉ từ màu bia.
-
 ## 2. Hoa bia không chỉ làm bia đắng
 
 Hoa bia (hops / 홉) có thể đóng góp vị đắng, mùi thơm và một phần cấu trúc cảm nhận của bia. Thời điểm thêm hoa bia và giống hoa bia làm thay đổi kết quả. Việc đun lâu thường nhấn mạnh khả năng tạo vị đắng hơn, trong khi những kỹ thuật thêm hoa bia muộn hoặc ủ hoa bia lạnh (dry hopping / 드라이 호핑) có thể giữ và nhấn mạnh nhiều hợp chất thơm hơn.
 
 Vì vậy IPA không nên được hiểu đơn giản là “bia rất đắng”. Nhiều IPA hiện đại tập trung mạnh vào mùi citrus, tropical fruit, pine hoặc những profile thơm khác; mức đắng chỉ là một phần của thiết kế.
 
-> **Chuyển mạch:** Hoa bia thay đổi cân bằng đắng–thơm, còn men tạo ethanol và hợp chất phụ; phần kế tiếp giải thích vì sao sinh học của men tạo ra hai họ ale và lager.
-
 ## 3. Men là một nhà máy hóa sinh
 
 Men (yeast / 효모) tiêu thụ đường có thể lên men và tạo ethanol cùng carbon dioxide, nhưng đồng thời cũng tạo nhiều hợp chất ảnh hưởng đến hương. Chủng men và điều kiện lên men vì thế có thể thay đổi đáng kể tính cách của bia.
 
 Sự khác biệt lịch sử và kỹ thuật giữa các họ men/quy trình là nền tảng cho cách phân biệt lớn giữa bia ale (ale / 에일) và bia lager (lager / 라거). Không nên chỉ ghi nhớ rằng “ale lên men ấm, lager lên men lạnh”; nhiệt độ là dấu hiệu hữu ích nhưng phía sau nó là sinh học của chủng men, động học lên men và cách nhà sản xuất kiểm soát quá trình.
-
-> **Chuyển mạch:** Men và điều kiện lên men giải thích một trục lớn của bia, nhưng IPA, stout và pilsner nằm trên các trục phong cách khác; cần dựng bản đồ phân loại thay vì xếp tên ngang hàng.
 
 ## 4. Ale và Lager là hai nhánh lớn; IPA không đối lập với chúng theo cùng cách
 
@@ -56,15 +50,11 @@ Beer
 
 Cây trên chỉ là bản đồ nhập môn, không phải toàn bộ hệ thống phân loại bia. Thế giới bia còn có các truyền thống lên men hỗn hợp, bia chua, wheat beer và nhiều phong cách có lịch sử/phương pháp không thể giải thích đầy đủ bằng một cây đơn giản.
 
-> **Chuyển mạch:** Cây phân loại giúp định vị họ bia nhưng chưa dự đoán chính xác trải nghiệm của từng chai; [01. Style, process and tasting](../01_style_process_and_tasting.md) dùng cùng một phong cách để cho thấy công thức tạo ra biến thiên lớn thế nào.
-
 ## 5. Vì sao hai chai đều ghi IPA nhưng uống rất khác?
 
 Tên phong cách tạo ra một vùng kỳ vọng chứ không phải một công thức duy nhất. Nhà nấu bia có thể thay đổi loại malt, giống và lượng hoa bia, thời điểm thêm hoa bia, men, nồng độ dịch đường, profile nước, nhiệt độ lên men và nhiều thông số khác.
 
 Do đó hai IPA có thể cùng thuộc một họ nhưng một chai khô và đắng rõ, chai khác mềm hơn và có hương trái cây nhiệt đới mạnh. Đây là lý do hiểu nguyên liệu và quy trình hữu ích hơn việc cố gắn một câu mô tả cố định vào mỗi tên phong cách.
-
-> **Chuyển mạch:** Khi công thức có nhiều biến số, các thông số trên nhãn chỉ nên được đọc như phép đo một thuộc tính; ABV và IBU là ví dụ rõ nhất cho ranh giới đó.
 
 ## 6. ABV và IBU nói được gì — và không nói được gì?
 

@@ -14,16 +14,12 @@ trực tiếp bảng của mô-đun (module / 모듈) khác, và phụ thuộc (
 utility chỉ chứa thành phần nguyên thủy (primitive / 기본 요소) ổn định; đừng biến nó thành dùng chung (shared / 공유) lĩnh vực (domain / 도메인) mô hình (model / 모델) làm
 mọi mô-đun (module / 모듈) coupling.
 
-> **Chuyển mạch:** Ranh giới module phải được chứng minh bằng ownership, invariant và dependency direction trước khi bàn topology. **Khi nào tách dịch vụ (service / 서비스)** dùng các tiêu chí đó để quyết định việc tách có giải quyết một nhu cầu vận hành thật hay chỉ thêm network hop.
-
 ## Khi nào tách dịch vụ (service / 서비스)
 
 Tách khi có ranh giới (boundary / 경계) nghiệp vụ (business / 비즈니스)/quyền sở hữu (ownership / 소유권) thật, scaling hoặc availability profile
 khác, cadence/triển khai (deployment / 배포) độc lập, hoặc bảo mật (security / 보안)/isolation bắt buộc. Không tách
 chỉ vì gói (package / 패키지) dài hay vì muốn “microservice-ready”. Trước khi tách, đo coupling,
 giao dịch (transaction / 트랜잭션) crossing, dữ liệu (data / 데이터) truy cập (access / 접근) và operational readiness.
-
-> **Chuyển mạch:** Một quyết định tách chỉ có giá trị khi có đường di chuyển kiểm soát được dữ liệu, contract và rollback. **Di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)** biến quyết định đó thành các bước đo được; **Đào sâu: phụ thuộc (dependency / 의존성) fitness** sẽ kiểm tra boundary sau mỗi bước.
 
 ## Di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)
 
@@ -39,8 +35,6 @@ thay bằng cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션)
 
 Kiến trúc (architecture / 아키텍처) fundamentals và phân tán (distributed / 분산) sự đánh đổi (trade-off / 트레이드오프) thuộc [Computer Science](../../computer_science/README.md); chapter này giữ quyết định topology ở ứng dụng (application / 애플리케이션) mức (level / 수준).
 
-> **Chuyển mạch:** Migration làm lộ coupling thật qua cross-transaction, direct table read và đồng bộ release. **Đào sâu: phụ thuộc (dependency / 의존성) fitness** đo các dấu hiệu đó; **Bài tập suy luận** áp dụng chúng vào việc tách Billing và yêu cầu điều kiện dừng.
-
 ## Đào sâu: phụ thuộc (dependency / 의존성) fitness
 
 Ranh giới (boundary / 경계) cần được kiểm tra liên tục bằng các chỉ số: phụ thuộc (dependency / 의존성) đi ngược hướng,
@@ -53,8 +47,6 @@ Khi dịch vụ (service / 서비스) B cần dữ liệu của A, chọn rõ: s
 replicated read mô hình (model / 모델) (eventual consistency), hoặc API composition (coupling
 contract). Không cho B đọc thẳng cơ sở dữ liệu (database / 데이터베이스) A “tạm thời” mà không có expiry plan;
 đường tắt này thường trở thành giao dịch (transaction / 트랜잭션) xuyên dịch vụ (service / 서비스) không thể tách.
-
-> **Chuyển mạch:** Bài tập Billing buộc nêu invariant cục bộ, outbox, dual-read/dual-write và rollback signal; đây là phép kiểm tra cuối cho việc boundary có đủ thật để tách hay chưa.
 
 ## Bài tập suy luận
 

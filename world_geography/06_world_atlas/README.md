@@ -8,8 +8,6 @@ World Atlas dùng country/territory như **trường hợp (case / 사례) study
 
 Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일).
 
-> **Nối mạch:** **Atlas không phải coverage game** tách inventory khỏi prose học tập và ngăn việc tạo file để đếm; **Bốn trạng thái nội dung** tiếp theo cho biết mỗi entry đang ở mức nào. **Definition of Done** sau đó đặt ngưỡng evidence cho profile thật.
-
 ## Bốn trạng thái nội dung
 
 **Inventory** — chỉ tồn tại trong toàn cục (global / 전역) danh sách (list / 목록).
@@ -21,8 +19,6 @@ Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일)
 **học tập (learning / 학습) profile** — chapter độc lập đạt chuỗi nhân quả (causal chain / 인과 사슬) và cross-link chuẩn.
 
 Xem [Coverage Status](./03_coverage_status.md).
-
-> **Nối mạch:** **Definition of Done** biến trạng thái thành thesis, cơ chế, cross-link và giới hạn có thể kiểm chứng; **Học tập (learning / 학습) profiles ưu tiên cao** tiếp theo dùng ngưỡng đó để chọn nơi có leverage lớn.
 
 ## Definition of Done
 
@@ -46,8 +42,6 @@ Chuỗi nhân quả (causal chain / 인과 사슬) mặc định:
 **vật lý (physical / 물리적) geography → resources/water → settlement → economy → vận chuyển (transport / 전송) → urban hệ thống (system / 시스템) → trade → society/institution → regional role**.
 
 Một tệp (file / 파일) có đủ heading nhưng chỉ vài câu vẫn không đạt Definition of Done.
-
-> **Nối mạch:** **Học tập (learning / 학습) profiles ưu tiên cao** áp dụng DoD vào Korea–Vietnam, châu Á và các case lục địa; **Atlas promotions gần nhất** tiếp theo ghi những profile đã vượt cổng và owner chịu trách nhiệm.
 
 ## Học tập (learning / 학습) profiles ưu tiên cao
 
@@ -80,8 +74,6 @@ Bốn profile này dùng để so monsoon megaregion, continental thị trườn
 
 Germany, France, United Kingdom, Italy và Netherlands đã được promote thành comparative học tập (learning / 학습) profiles về manufacturing, dịch vụ (service / 서비스), ports, urban networks và European connectivity.
 
-> **Nối mạch:** **Atlas promotions gần nhất** cho thấy những case đã có chuỗi vật lý–kinh tế–trade; **Planned, chưa completed** tiếp theo giữ minh bạch các gap thay vì biến file ngắn thành coverage giả.
-
 ## Atlas promotions gần nhất
 
 Batch gần nhất **không tạo tệp (file / 파일) mới**. Ba compact references được nâng thành full học tập (learning / 학습) profiles:
@@ -92,21 +84,15 @@ Batch gần nhất **không tạo tệp (file / 파일) mới**. Ba compact refe
 
 Mỗi profile đều dùng chuỗi nhân quả (causal chain / 인과 사슬) vật lý (physical / 물리적) → resources → settlement → economy → vận chuyển (transport / 전송) → cities → trade → development/regional role.
 
-> **Nối mạch:** **Planned, chưa completed** xác định nơi cần thêm cơ chế độc lập; **Africa profiles** tiếp theo là case kiểm tra boundary, độ sâu và prose owner trước khi promote.
-
 ## Planned, chưa completed
 
 Thailand và Philippines có học tập (learning / 학습) giá trị (value / 값) cao cho Southeast Asia nhưng vẫn giữ Planned/tham chiếu (reference / 참조) cho tới khi có thể viết full profile. Không tạo bản tóm tắt 10 dòng để đổi trạng thái.
 
 Các năng lượng (energy / 에너지)/chokepoint cases như Saudi Arabia, Iran, Türkiye, UAE, Egypt hay Panama chỉ được ưu tiên khi bổ sung một cơ chế (mechanism / 메커니즘) chưa được Atlas hiện tại minh họa tốt.
 
-> **Nối mạch:** **Africa profiles** cho thấy country file chỉ đáng giữ khi có cơ chế địa lý riêng và evidence đủ sâu; **Khi nào nên merge** tiếp theo đưa quyết định vào boundary, source và khả năng bảo trì.
-
 ## Africa profiles
 
 Một số Africa files đã qua độ sâu (depth / 깊이) pass và có giá trị về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors và tài nguyên (resource / 자원) belts. Tuy nhiên chúng vẫn cần QA theo cùng Definition of Done; không có khái niệm “Africa completed” chỉ vì đủ tệp (file / 파일).
-
-> **Nối mạch:** **Khi nào nên merge thay vì giữ country tệp (file / 파일)?** khép README bằng tiêu chí cơ chế, owner và evidence; từ đây detail quay về region canonical nếu file riêng chỉ lặp nội dung.
 
 ## Khi nào nên merge thay vì giữ country tệp (file / 파일)?
 

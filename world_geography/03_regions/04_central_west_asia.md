@@ -15,8 +15,6 @@ Trung Á được tổ chức mạnh bởi **landlocked continentality, mountain
 
 Cả hai cùng có dryland rộng và long-distance trade lịch sử (history / 이력), nhưng nếu gộp thành một chapter, người học dễ biến “dry climate” thành lời giải cho mọi thứ và bỏ qua sự khác nhau giữa inland corridor với maritime-energy hệ thống (system / 시스템).
 
-> **Nối mạch:** Hai vùng cùng khô nhưng khác cơ chế; **Cầu nối (bridge / 브리지) giữa hai vùng** đặt Caspian, Caucasus, Iranian Plateau và các corridor vào vùng chuyển tiếp thay vì ép một boundary tự nhiên. Kết luận này bàn giao về owner **Central and West Asia** trong [README](../README.md).
-
 ## Cầu nối (bridge / 브리지) giữa hai vùng
 
 Caspian basin, Caucasus, Iranian plateau và các corridor nối east–west tạo vùng chuyển tiếp. Đây là lý do regional ranh giới (boundary / 경계) không phải đường tự nhiên tuyệt đối.

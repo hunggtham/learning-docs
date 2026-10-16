@@ -8,8 +8,6 @@
 
 Điểm này rất quan trọng cho năng lực đọc bản đồ. Một bản đồ có thể chính xác về kỹ thuật nhưng vẫn gây hiểu sai nếu người đọc không biết dữ liệu gì bị bỏ qua, biến nào được chuẩn hóa, ranh giới nào được sử dụng hoặc phép chiếu đang bảo toàn tính chất nào.
 
-> **Nối mạch:** Bản đồ là mô hình có lựa chọn, không phải bản sao; **Ba nghĩa khác nhau của “quy mô (scale / 규모)”** tách map scale, process scale và analysis scale. **Extent, resolution và grain** tiếp theo đặt giới hạn dữ liệu lên ba nghĩa đó.
-
 ## Ba nghĩa khác nhau của “quy mô (scale / 규모)”
 
 Trong Địa lý, **quy mô (scale / 규모)** có ít nhất ba lớp dễ bị trộn lẫn.
@@ -18,15 +16,11 @@ Trong Địa lý, **quy mô (scale / 규모)** có ít nhất ba lớp dễ bị
 
 Một kết luận có thể thay đổi khi đổi quy mô phân tích. Trung bình của tỉnh có thể che cụm nghèo trong vài quận; xu hướng toàn cầu có thể khác xu hướng địa phương. Do đó quy mô (scale / 규모) không chỉ là chuyện phóng to–thu nhỏ hình ảnh mà là một phần của lô-gic (logic / 논리) suy luận.
 
-> **Nối mạch:** Scale phân tích có thể đổi kết luận, còn **Extent, resolution và grain** cho biết dữ liệu phủ bao xa và chi tiết tới đâu; quá thô trộn đối tượng, quá mịn tạo ảo giác chính xác. **Vì sao phép chiếu là bắt buộc?** tiếp theo xử lý bề mặt cong khi biểu diễn phẳng.
-
 ## Extent, resolution và grain
 
 Ngoài quy mô (scale / 규모), cần phân biệt **phạm vi (extent)** và **độ phân giải (resolution/grain)**. Một raster 30 m phủ cả quốc gia có extent rất lớn nhưng grain tương đối mịn; một raster 1 km phủ một thành phố có extent nhỏ hơn nhưng grain thô hơn.
 
 Khi độ phân giải quá thô, các đối tượng nhỏ bị trộn trong cùng điểm ảnh (pixel / 픽셀) hoặc vùng thống kê. Khi quá mịn so với chất lượng dữ liệu, bản đồ có thể tạo ảo giác chính xác. Độ chi tiết hiển thị nên phù hợp với độ chính xác của phép đo và câu hỏi nghiên cứu.
-
-> **Nối mạch:** Extent và grain quyết định chi tiết, nhưng **Vì sao phép chiếu là bắt buộc?** giải thích vì sao ellipsoid phải đổi thành mặt phẳng và thuộc tính nào sẽ bị đánh đổi. **Mercator: đúng cho một mục tiêu, sai khi dùng nhầm mục tiêu** tiếp theo là ví dụ projection đúng cho hàng hải nhưng lệch diện tích.
 
 ## Vì sao phép chiếu là bắt buộc?
 
@@ -38,8 +32,6 @@ Mọi phép chiếu đều đánh đổi giữa diện tích, hình dạng, kho�
 
 Không có phép chiếu nào giữ đồng thời mọi thuộc tính trên toàn cầu.
 
-> **Nối mạch:** Projection luôn là trade-off giữa góc, diện tích, khoảng cách và hướng; **Mercator: đúng cho một mục tiêu, sai khi dùng nhầm mục tiêu** cho thấy “sai” phụ thuộc câu hỏi, không phải tên projection. **Distortion có thể đọc bằng Tissot indicatrix** tiếp theo trực quan hóa trade-off tại từng vị trí.
-
 ## Mercator: đúng cho một mục tiêu, sai khi dùng nhầm mục tiêu
 
 Mercator là phép chiếu bảo giác. Nó bảo toàn góc cục bộ và từng rất hữu ích cho hàng hải vì đường rhumb line có hướng la bàn cố định được biểu diễn thành đường thẳng. Tuy nhiên diện tích bị phóng đại mạnh ở vĩ độ cao.
@@ -48,23 +40,17 @@ Vì vậy Greenland trông lớn bất thường trên bản đồ Mercator toà
 
 Web Mercator phổ biến trong bản đồ web chủ yếu vì tính tiện lợi cho tile pyramid và tương thích kỹ thuật. Nó là lựa chọn hiển thị, không phải CRS phân tích tối ưu cho mọi phép đo.
 
-> **Nối mạch:** Mercator minh họa distortion theo vĩ độ, còn **Distortion có thể đọc bằng Tissot indicatrix** cho biết ellipse bị kéo theo góc, diện tích và hướng thế nào. **UTM và bài toán địa phương** tiếp theo thu nhỏ extent để giới hạn biến dạng.
-
 ## Distortion có thể đọc bằng Tissot indicatrix
 
 Một cách trực quan để hiểu biến dạng phép chiếu là **Tissot indicatrix**. Ta tưởng tượng các vòng tròn nhỏ giống nhau trên địa cầu; sau phép chiếu chúng có thể trở thành ellipse khác kích thước và hướng. Hình dạng ellipse cho biết biến dạng góc, diện tích và phương hướng cục bộ.
 
 Mô hình tư duy (mental model / 사고 모델) này hữu ích hơn việc học thuộc danh sách tên projection vì nó giúp hỏi: “bản đồ này đang bóp méo thứ gì và ở đâu?”.
 
-> **Nối mạch:** Tissot cho thấy biến dạng, còn **UTM và bài toán địa phương** minh họa nguyên tắc tối ưu CRS trên extent nhỏ thay vì ép một projection toàn cầu. **Khái quát hóa khi thay đổi mức zoom** tiếp theo điều chỉnh nội dung khi extent hiển thị đổi.
-
 ## UTM và bài toán địa phương
 
 **Universal Transverse Mercator (UTM)** chia thế giới thành các múi để giới hạn biến dạng trong từng vùng. Đây là ví dụ của nguyên lý: nếu không thể tối ưu toàn cầu, hãy tối ưu trên extent nhỏ hơn.
 
 Trong khảo sát, kỹ thuật hoặc tính diện tích, chọn CRS địa phương phù hợp thường quan trọng hơn dùng một projection toàn cầu tiện lợi. Tuy nhiên khi dữ liệu trải qua nhiều múi UTM, cần thiết kế hệ phân tích khác thay vì nối các tọa độ phẳng một cách tùy tiện.
-
-> **Nối mạch:** CRS địa phương giảm distortion, còn **Khái quát hóa khi thay đổi mức zoom** chọn lọc, gộp và đơn giản hóa để giữ cấu trúc; topology vẫn phải được bảo toàn. **Bản đồ chuyên đề và vấn đề mẫu số** tiếp theo hỏi biến nào nên được chuẩn hóa trước khi tô vùng.
 
 ## Khái quát hóa khi thay đổi mức zoom
 
@@ -74,15 +60,11 @@ Một thành phố có thể là polygon ở zoom lớn, điểm (point / 지점
 
 Nhưng generalization cần nhất quán. Nếu đơn giản hóa quá mạnh, topology có thể bị phá hoặc biên giới có thể trông thay đổi.
 
-> **Nối mạch:** Generalization đổi biểu diễn theo zoom, còn **Bản đồ chuyên đề và vấn đề mẫu số** quyết định absolute hay rate mới trả lời đúng câu hỏi; mẫu số nhỏ vẫn cần bất định. **Phân lớp dữ liệu thay đổi câu chuyện** tiếp theo cho thấy legend và breakpoint cũng là mô hình.
-
 ## Bản đồ chuyên đề và vấn đề mẫu số
 
 **Bản đồ tô vùng (choropleth map)** phù hợp với biến đã chuẩn hóa theo diện tích, dân số hoặc mẫu số liên quan, chẳng hạn tỷ lệ thất nghiệp hoặc mật độ dân số. Dùng số lượng tuyệt đối dễ khiến vùng lớn hoặc đông dân chi phối thị giác.
 
 Ví dụ bản đồ số ca bệnh tuyệt đối thường phản ánh một phần bản đồ dân số. Nếu câu hỏi là “rủi ro đối với mỗi người”, cần tỷ lệ phù hợp hơn. Tuy nhiên tỷ lệ ở vùng dân số rất nhỏ có thể dao động mạnh, nên cần nhìn cả mẫu số và bất định (uncertainty / 불확실성).
-
-> **Nối mạch:** Absolute count có thể bị dân số chi phối, còn **Phân lớp dữ liệu thay đổi câu chuyện** làm equal interval, quantile và natural breaks nhấn mạnh các pattern khác nhau. **MAUP: ranh giới thống kê có thể thay đổi kết luận** tiếp theo mở rộng vấn đề từ legend sang chính boundary aggregation.
 
 ## Phân lớp dữ liệu thay đổi câu chuyện
 
@@ -92,8 +74,6 @@ Quantile phân số vùng gần bằng nhau cho mỗi lớp nhưng có thể tá
 
 Vì vậy legend là một phần của mô hình, không chỉ trang trí.
 
-> **Nối mạch:** Breakpoint là lựa chọn mô hình, còn **MAUP: ranh giới thống kê có thể thay đổi kết luận** cho thấy cùng dữ liệu đổi tương quan khi gộp phường, quận hay tỉnh. **Bản đồ điểm (point / 지점), proportional symbol, dasymetric và density** tiếp theo chọn biểu diễn phù hợp với loại hiện tượng.
-
 ## MAUP: ranh giới thống kê có thể thay đổi kết luận
 
 **Vấn đề đơn vị không gian có thể thay đổi (Modifiable Areal Unit Problem, MAUP)** xuất hiện khi kết quả thống kê thay đổi do cách ta chia vùng hoặc mức aggregation.
@@ -102,15 +82,11 @@ Cùng dữ liệu hộ gia đình, tương quan có thể khác khi gộp theo p
 
 Liên quan là **ngụy biện sinh thái (ecological fallacy)**: suy đặc điểm cá nhân từ trung bình vùng. “Quận thu nhập cao” không có nghĩa mọi cư dân đều giàu.
 
-> **Nối mạch:** MAUP cảnh báo boundary làm đổi kết luận, còn **Bản đồ điểm (point / 지점), proportional symbol, dasymetric và density** nhắc point, total, density và continuous field không thể dùng lẫn. **Bất định (uncertainty / 불확실성) cũng cần được cartography hóa** tiếp theo làm phần không chắc chắn hiện ra thay vì giấu đi.
-
 ## Bản đồ điểm (point / 지점), proportional symbol, dasymetric và density
 
 Không phải mọi biến nên tô polygon. Điểm phù hợp với sự kiện hoặc cơ sở; **proportional symbol** phù hợp với tổng lượng tại địa điểm; **dot density** giúp trực quan phân bố tương đối; **dasymetric ánh xạ (mapping / 매핑)** dùng thông tin bổ sung để phân bố giá trị trong vùng hợp lý hơn.
 
 Chọn kiểu bản đồ là chọn mô hình dữ liệu. Nếu hiện tượng liên tục như nhiệt độ, ép nó vào biên giới hành chính có thể làm mất cấu trúc. Nếu hiện tượng thuộc từng đơn vị pháp lý như mức thuế địa phương, polygon lại có ý nghĩa trực tiếp.
-
-> **Nối mạch:** Symbolization chọn cách phân bố giá trị, còn **Bất định (uncertainty / 불확실성) cũng cần được cartography hóa** thêm transparency, interval, hatching hay ensemble spread. **Bản đồ và quyền lực lựa chọn** tiếp theo đặt các quyết định đó vào provenance và bối cảnh chính trị.
 
 ## Bất định (uncertainty / 불확실성) cũng cần được cartography hóa
 
@@ -118,23 +94,17 @@ Bản đồ thường hiển thị estimate nhưng giấu bất định (uncerta
 
 Có thể thể hiện bất định (uncertainty / 불확실성) bằng transparency, hatching, confidence interval, ensemble spread hoặc tách một bản đồ phụ. Trong disaster map, vùng dự báo xác suất khác bản đồ quan sát đã xác nhận; người đọc cần biết hai lớp này không cùng mức chắc chắn.
 
-> **Nối mạch:** Bản đồ có thể giấu bất định hoặc chọn center, boundary, label theo một claim; **Bản đồ và quyền lực lựa chọn** yêu cầu provenance và wording trung tính. **Web maps, tiles và véc-tơ (vector / 벡터) tiles** tiếp theo biến các lựa chọn đó thành pipeline phân phối.
-
 ## Bản đồ và quyền lực lựa chọn
 
 Tên địa danh, đường biên, projection, center điểm (point / 지점) và biến được chọn đều có thể mang ý nghĩa xã hội–chính trị. Điều này không có nghĩa mọi bản đồ đều là tuyên truyền. Nó có nghĩa người đọc cần biết **provenance**: ai tạo, từ dữ liệu nào, thời điểm nào, với quy ước gì.
 
 Trong các vùng có tranh chấp, một đường ranh giới có thể đại diện cho claim, line of điều khiển (control / 제어), administrative ranh giới (boundary / 경계) hoặc dataset convention. Cartography tốt phải phân biệt các lớp đó thay vì trộn chúng.
 
-> **Nối mạch:** Provenance quyết định dữ liệu và quy ước, còn **Web maps, tiles và véc-tơ (vector / 벡터) tiles** thêm generalization theo zoom, cache và tile-edge behavior. **Cartography như một chuỗi xử lý (pipeline / 파이프라인)** tiếp theo truy nguyên lỗi từ measurement tới rendering.
-
 ## Web maps, tiles và véc-tơ (vector / 벡터) tiles
 
 Bản đồ web thường dùng **tile pyramid**: thế giới được chia thành các ô theo nhiều mức zoom. Raster tile là ảnh; **véc-tơ (vector / 벡터) tile** chứa hình học (geometry / 기하학) và attribute đã được cắt/đơn giản hóa để máy khách (client / 클라이언트) kết xuất (render / 렌더링).
 
 Hệ tile làm bản đồ tải nhanh nhưng cũng tạo giới hạn. Dữ liệu phải được generalize theo zoom; label cần collision handling; bộ nhớ đệm (cache / 캐시) có thể khiến dữ liệu cũ tồn tại; tính năng (feature / 기능) tại biên tile cần xử lý để không bị đứt.
-
-> **Nối mạch:** Tile pipeline là một dạng cartographic processing; **Cartography như một chuỗi xử lý (pipeline / 파이프라인)** nối measurement → cleaning → CRS → aggregation → classification → symbolization → rendering. **Mô hình tư duy** tiếp theo nén các điểm kiểm tra đó thành năm câu hỏi đọc bản đồ.
 
 ## Cartography như một chuỗi xử lý (pipeline / 파이프라인)
 
@@ -143,8 +113,6 @@ Một bản đồ có thể được hiểu như chuỗi:
 **đo lường (measurement / 측정) → cleaning → CRS transformation → aggregation/mô hình (model / 모델) → classification → symbolization → rendering → interpretation**.
 
 Lỗi ở đầu chuỗi xử lý (pipeline / 파이프라인) không được sửa bằng thiết kế đẹp ở cuối. Ngược lại, dữ liệu chính xác vẫn có thể truyền tải sai nếu classification hoặc visual hierarchy không phù hợp.
-
-> **Nối mạch:** **Mô hình tư duy** khép chuỗi purpose–data–scale/extent–projection/aggregation–uncertainty/provenance, rồi bàn giao sang GIS và tọa độ của owner **World Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 

@@ -22,8 +22,6 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 
 [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), liquidity, thị trường (market / 시장) transmission, crisis cases, chính sách (policy / 정책) regimes và nowcasting; Economics cross-link thay vì duplicate.
 
-> **Chuyển mạch:** Current state identifies the next learning route; depth work must preserve canonical ownership and add reasoning/evidence rather than duplicate a chapter.
-
 ## Học tập (learning / 학습) tuyến (route / 경로)
 
 ```text
@@ -37,8 +35,6 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 ```
 
 Folder numbering phản ánh taxonomy, không ép thứ tự học tuyệt đối. Econometrics được đặt trước Applied Economics trong học tập (learning / 학습) phụ thuộc (dependency / 의존성) để empirical trường hợp (case / 사례) không biến thành correlation narrative.
-
-> **Chuyển mạch:** **Học tập route** xác định thứ tự prerequisite; **Depth contract** nêu mức giải thích cần đạt, rồi **Connections làm spine** nối các domain bằng causal mechanism thật.
 
 ## Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)
 
@@ -58,8 +54,6 @@ Problem / question
 
 Applied chapter thêm incidence và scale-up. Historical chapter thêm enforcement, phân phối (distribution / 분포) of power, persistence cơ chế (mechanism / 메커니즘) và historical-identification limits.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, sau nội dung của **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)**, **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Quy ước biên soạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)
 
 - [Mathematics](../mathematics/README.md): calculus, tối ưu hóa (optimization / 최적화), xác suất (probability / 확률)/statistics, tuyến tính (linear / 선형) algebra và dynamical các hệ thống (systems / 시스템들).
@@ -69,8 +63,6 @@ Applied chapter thêm incidence và scale-up. Historical chapter thêm enforceme
 - [Investing](../investing/README.md): asset/company/capital-flow ứng dụng (application / 애플리케이션) tầng (layer / 계층).
 - [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md): trường hợp (case / 사례) tầng (layer / 계층) cho labor, chaebol, trade, industrial chính sách (policy / 정책) và Korean institutions.
 - [Computer Science](../computer_science/README.md): auctions, cơ chế (mechanism / 메커니즘) thiết kế (design / 설계), platforms, matching, tối ưu hóa (optimization / 최적화) và computational methods.
-
-> **Chuyển mạch:** **Connections làm spine** chỉ ra nơi các lập luận kinh tế gặp nhau; **Quy ước biên soạn** giữ thuật ngữ, evidence và owner nhất quán trước khi sang **Sau cốt lõi**.
 
 ## Quy ước biên soạn
 
@@ -84,8 +76,6 @@ Causal Estimate ≠ Policy Recommendation
 ```
 
 Positive economics phải tách khỏi normative judgment. Historical persistence cũng không tự đồng nghĩa đường dẫn (path / 경로) dependence; formal rules cũng không tự đồng nghĩa effective enforcement.
-
-> **Chuyển mạch:** **Sau cốt lõi** chốt năng lực giải thích và chỉ ra điểm quay lại từng domain owner; đây là boundary của README, không phải một chapter mới.
 
 ## Sau cốt lõi (core / 핵심)
 

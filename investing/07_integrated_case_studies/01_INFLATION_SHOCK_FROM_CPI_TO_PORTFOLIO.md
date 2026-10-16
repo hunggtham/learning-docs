@@ -20,8 +20,6 @@ Lạm phát hàng hóa: gần như đi ngang
 
 Điểm đầu tiên không phải hỏi “3,2% có cao không?”, mà hỏi **mức chênh so với điều thị trường đã phản ánh vào giá là bao nhiêu**. Cùng mức 3,2%, phản ứng sẽ khác nếu thị trường đã kỳ vọng 3,1% thay vì 2,8%.
 
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **2. Tách cấu phần lạm phát** nối từ **1. Bối cảnh giả định** sang **3. Cập nhật hàm phản ứng của ngân hàng trung ương**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Tách cấu phần lạm phát
 
 Lạm phát không phải một con số duy nhất. Nên tách ít nhất:
@@ -40,8 +38,6 @@ Lạm phát hàng hóa có thể thay đổi do chuỗi cung ứng. Giá nhà �
 Nếu bất ngờ chủ yếu đến từ cú tăng năng lượng tạm thời, hàm phản ứng của ngân hàng trung ương có thể khác với trường hợp dịch vụ lõi vẫn dai dẳng. Vì vậy cấu phần quan trọng hơn chỉ số tiêu đề.
 
 Đọc thêm: [Macro Data Playbook](../04_economics/03_MACRO_DATA_PLAYBOOK.md).
-
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **3. Cập nhật hàm phản ứng của ngân hàng trung ương** nối từ **2. Tách cấu phần lạm phát** sang **4. Lợi suất đầu ngắn của đường cong**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Cập nhật hàm phản ứng của ngân hàng trung ương
 
@@ -66,15 +62,11 @@ CPI gây bất ngờ
 → Đường đi kỳ vọng của lãi suất chính sách
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **4. Lợi suất đầu ngắn của đường cong** nối từ **3. Cập nhật hàm phản ứng của ngân hàng trung ương** sang **5. Lợi suất đầu dài và phần bù kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Lợi suất đầu ngắn của đường cong
 
 Lợi suất 2 năm thường nhạy với kỳ vọng về lãi suất chính sách. Nếu thị trường trì hoãn kỳ vọng hạ lãi suất, lợi suất 2 năm có thể tăng nhanh.
 
 Nếu CPI cao hơn dự kiến nhưng lợi suất 2 năm gần như không phản ứng, có thể cú sốc đã được phản ánh trước hoặc cấu phần được xem là tạm thời.
-
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **5. Lợi suất đầu dài và phần bù kỳ hạn** nối từ **4. Lợi suất đầu ngắn của đường cong** sang **6. Lợi suất thực và duration của cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Lợi suất đầu dài và phần bù kỳ hạn
 
@@ -90,8 +82,6 @@ Nếu thị trường cho rằng chính sách chặt hơn sẽ làm tăng trư�
 
 Đọc thêm: [Trái phiếu, lãi suất và tín dụng](../02_asset_classes/02_BONDS_RATES_AND_CREDIT.md).
 
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **6. Lợi suất thực và duration của cổ phiếu** nối từ **5. Lợi suất đầu dài và phần bù kỳ hạn** sang **7. Kênh USD và tỷ giá địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Lợi suất thực và duration của cổ phiếu
 
 Giá trị cổ phiếu có thể được hiểu như giá trị hiện tại của dòng tiền tương lai. Những doanh nghiệp có phần lớn dòng tiền nằm xa trong tương lai thường có duration cổ phiếu dài hơn.
@@ -104,8 +94,6 @@ Lợi suất thực tăng
 ```
 
 Điều này không có nghĩa cổ phiếu công nghệ luôn giảm khi lợi suất tăng. Nếu kỳ vọng lợi nhuận tăng nhanh hơn tác động của tỷ lệ chiết khấu, giá cổ phiếu vẫn có thể tăng. Luôn tách **tác động lợi nhuận** và **tác động hệ số định giá**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **7. Kênh USD và tỷ giá địa phương** nối từ **6. Lợi suất thực và duration của cổ phiếu** sang **8. Điều kiện tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Kênh USD và tỷ giá địa phương
 
@@ -126,8 +114,6 @@ Với Việt Nam, USD mạnh có thể làm thu hẹp dư địa nới lỏng n�
 
 Đọc thêm: [Cú sốc liên thị trường](../06_markets_korea_vietnam/03_CROSS_MARKET_GLOBAL_SHOCKS.md).
 
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **8. Điều kiện tín dụng** nối từ **7. Kênh USD và tỷ giá địa phương** sang **9. Lập bản đồ theo ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Điều kiện tín dụng
 
 Nếu CPI cao hơn dự kiến khiến kỳ vọng lãi suất duy trì cao lâu hơn, chi phí tái cấp vốn tăng. Tác động lớn hơn với:
@@ -141,8 +127,6 @@ Doanh nghiệp nhỏ phụ thuộc vốn vay
 ```
 
 Nếu lợi suất trái phiếu chính phủ tăng nhưng chênh lệch tín dụng chưa mở rộng, cú sốc có thể chủ yếu là rủi ro lãi suất. Nếu cả hai cùng tăng, điều kiện tài chính đang siết rộng hơn.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **9. Lập bản đồ theo ngành** nối từ **8. Điều kiện tín dụng** sang **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Lập bản đồ theo ngành
 
@@ -166,8 +150,6 @@ Dòng tiền ổn định nhưng thường có tính duration cao. Lợi suất 
 
 Nếu CPI cao do nhu cầu mạnh, doanh nghiệp hàng hóa có thể hưởng lợi. Nếu do cú sốc nguồn cung, các ngành sử dụng đầu vào lại chịu thiệt nhiều hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** nối từ **9. Lập bản đồ theo ngành** sang **11. Phân rã biến động định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp
 
 Một cú sốc vĩ mô chỉ có ý nghĩa đầu tư khi có thể chuyển thành biến trong mô hình doanh nghiệp.
@@ -185,8 +167,6 @@ NHƯNG
 
 Cần lập bản đồ tiền tệ của doanh thu, chi phí, nợ và chính sách phòng vệ thay vì dùng khẩu quyết `KRW yếu = doanh nghiệp xuất khẩu tốt`.
 
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **11. Phân rã biến động định giá** nối từ **10. Chuyển cú sốc vĩ mô vào mô hình doanh nghiệp** sang **12. Mức phơi nhiễm ở cấp danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Phân rã biến động định giá
 
 Nếu cổ phiếu giảm 8% sau CPI, hãy hỏi:
@@ -200,8 +180,6 @@ Bao nhiêu do tỷ giá, dòng vốn và thanh khoản?
 Nếu EPS gần như không đổi nhưng P/E giảm từ 30x xuống 27x, biến động chủ yếu đến từ tỷ lệ chiết khấu. Nếu dự báo EPS cũng giảm, cú sốc đã bắt đầu đi vào kênh lợi nhuận.
 
 Đọc thêm: [Định giá doanh nghiệp](../03_company_analysis/03_VALUATION_DCF_AND_MULTIPLES.md).
-
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **12. Mức phơi nhiễm ở cấp danh mục** nối từ **11. Phân rã biến động định giá** sang **13. Thiết kế phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Mức phơi nhiễm ở cấp danh mục
 
@@ -221,8 +199,6 @@ Thanh khoản
 
 Đọc thêm: [Phân bổ đa tài sản](../02_asset_classes/05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **13. Thiết kế phòng vệ** nối từ **12. Mức phơi nhiễm ở cấp danh mục** sang **14. Quy mô vị thế theo kịch bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Thiết kế phòng vệ
 
 Công cụ phòng vệ phải khớp đúng loại rủi ro cần giảm:
@@ -235,8 +211,6 @@ Rủi ro FX → Forward FX / Tỷ lệ phòng vệ
 ```
 
 Dùng sai công cụ sẽ tạo rủi ro cơ sở (basis risk).
-
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **14. Quy mô vị thế theo kịch bản** nối từ **13. Thiết kế phòng vệ** sang **15. Thực thi quanh sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Quy mô vị thế theo kịch bản
 
@@ -252,8 +226,6 @@ Tiêu cực: 2Y +40bp, 10Y +35bp, USD +3%, credit spread +30bp
 
 Kiểm thử toàn danh mục theo các trạng thái này rồi mới quyết định quy mô.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **15. Thực thi quanh sự kiện** nối từ **14. Quy mô vị thế theo kịch bản** sang **16. Mua quyền chọn không chỉ cần đoán đúng hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Thực thi quanh sự kiện
 
 Sự kiện vĩ mô thường làm chênh lệch mua bán và trượt giá tăng. Nếu giao dịch quanh CPI, lệnh thị trường có thể khớp xa giá mong muốn, stop có thể bị trượt, limit có thể không khớp hoặc bị lựa chọn bất lợi. Biến động ngụ ý của quyền chọn cũng thường cao trước sự kiện.
@@ -261,8 +233,6 @@ Sự kiện vĩ mô thường làm chênh lệch mua bán và trượt giá tăn
 Kế hoạch thực thi phải được xác định **trước** thời điểm công bố.
 
 Đọc thêm: [Thực thi và vi cấu trúc](../05_trading_derivatives/03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **16. Mua quyền chọn không chỉ cần đoán đúng hướng** nối từ **15. Thực thi quanh sự kiện** sang **17. Truyền dẫn riêng tới Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Mua quyền chọn không chỉ cần đoán đúng hướng
 
@@ -277,8 +247,6 @@ Chi phí thực thi
 ```
 
 Thị trường có thể giảm đúng hướng nhưng ít hơn mức biến động đã được định giá, khiến lợi nhuận quyền chọn thấp hơn kỳ vọng. Sau sự kiện, IV thường giảm nhanh.
-
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **17. Truyền dẫn riêng tới Hàn Quốc** nối từ **16. Mua quyền chọn không chỉ cần đoán đúng hướng** sang **18. Truyền dẫn riêng tới Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Truyền dẫn riêng tới Hàn Quốc
 
@@ -295,8 +263,6 @@ CPI Mỹ cao hơn dự kiến
 
 Nhưng nhóm bán dẫn vẫn có thể chống chịu nếu điều chỉnh dự báo lợi nhuận toàn cầu tiếp tục tăng.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **18. Truyền dẫn riêng tới Việt Nam** nối từ **17. Truyền dẫn riêng tới Hàn Quốc** sang **19. Thị trường đã phản ánh điều gì vào giá?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Truyền dẫn riêng tới Việt Nam
 
 Một chuỗi có thể là:
@@ -310,8 +276,6 @@ Lợi suất Mỹ / USD tăng
 ```
 
 Tuy nhiên chính sách tín dụng, lãi suất huy động, đầu tư công và lợi nhuận nội địa có thể chi phối về trung hạn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **19. Thị trường đã phản ánh điều gì vào giá?** nối từ **18. Truyền dẫn riêng tới Việt Nam** sang **20. Xác nhận liên thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Thị trường đã phản ánh điều gì vào giá?
 
@@ -330,15 +294,11 @@ Mức biến động hàm ý của quyền chọn
 Vị thế USD
 ```
 
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **20. Xác nhận liên thị trường** nối từ **19. Thị trường đã phản ánh điều gì vào giá?** sang **21. Phân rã sau sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Xác nhận liên thị trường
 
 Sau khi công bố, kiểm tra đồng thời lợi suất 2Y/10Y, lợi suất thực, kỳ vọng lạm phát hòa vốn, USD, chênh lệch tín dụng, vàng, dầu, độ rộng cổ phiếu và tương quan tăng trưởng–giá trị.
 
 Nếu các tín hiệu không khớp với câu chuyện ban đầu, cần hạ mức tin cậy thay vì ép dữ liệu vào một câu chuyện duy nhất.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **21. Phân rã sau sự kiện** nối từ **20. Xác nhận liên thị trường** sang **22. Điều kiện vô hiệu hóa luận điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Phân rã sau sự kiện
 
@@ -354,8 +314,6 @@ Chi phí thực thi có chấp nhận được không?
 Phòng vệ có hoạt động đúng mục tiêu không?
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **22. Điều kiện vô hiệu hóa luận điểm** nối từ **21. Phân rã sau sự kiện** sang **23. Mẫu dùng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Điều kiện vô hiệu hóa luận điểm
 
 Ví dụ luận điểm ban đầu: lạm phát dai dẳng sẽ trì hoãn nới lỏng và gây áp lực lên tài sản duration dài.
@@ -363,8 +321,6 @@ Ví dụ luận điểm ban đầu: lạm phát dai dẳng sẽ trì hoãn nới
 Luận điểm có thể bị vô hiệu nếu thị trường lao động suy yếu nhanh, cấu phần lạm phát lõi giảm rõ, ngân hàng trung ương chấp nhận lạm phát tạm thời hoặc căng thẳng tài chính buộc chính sách phải đảo chiều.
 
 Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ chế cốt lõi thay đổi mới là điều quan trọng.
-
-> **Nối mạch:** Trong **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **23. Mẫu dùng lại** nối từ **22. Điều kiện vô hiệu hóa luận điểm** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Mẫu dùng lại
 
@@ -388,8 +344,6 @@ Mẫu này gom toàn bộ chuỗi truyền dẫn thành một thứ tự thao t�
 15. Thực thi
 16. Phân rã kết quả
 ```
-
-> **Nối mạch:** Ở chặng này của **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục**, **Kết luận** tổng hợp từ **23. Mẫu dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

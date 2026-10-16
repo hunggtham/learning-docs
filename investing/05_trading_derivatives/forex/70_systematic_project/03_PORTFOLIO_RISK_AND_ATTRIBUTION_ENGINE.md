@@ -35,8 +35,6 @@ USD short factor xuất hiện ba lần.
 
 Rủi ro (risk / 위험) engine phải aggregate legs thay vì chỉ đếm positions.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, sau nội dung của **1. Ticket không phải true exposure**, **2. Chuẩn gốc (canonical / 정본) currency-leg biểu diễn (representation / 표현)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **3. Reporting currency** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Chuẩn gốc (canonical / 정본) currency-leg biểu diễn (representation / 표현)
 
 Mỗi FX position `A/B` có thể biểu diễn:
@@ -47,8 +45,6 @@ Short A/B → -A, +B
 ```
 
 Quy mô (scale / 규모) legs theo notional và hiện tại (current / 현재) price để có comparable reporting currency exposure.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **3. Reporting currency** nối từ **2. Chuẩn gốc (canonical / 정본) currency-leg biểu diễn (representation / 표현)** sang **4. Gross và net exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Reporting currency
 
@@ -64,8 +60,6 @@ conversion rate source
 ```
 
 Không overwrite bản địa (native / 네이티브) amount sau conversion; giữ cả hai để kiểm tra (audit / 감사).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **4. Gross và net exposure** nối từ **3. Reporting currency** sang **5. Gross leverage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Gross và net exposure
 
@@ -85,8 +79,6 @@ basis risk
 execution cost
 ```
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **5. Gross leverage** nối từ **4. Gross và net exposure** sang **6. Net leverage không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Gross leverage
 
 ```text
@@ -103,8 +95,6 @@ maximum
 
 Một end-of-day snapshot có thể bỏ lỡ intraday leverage spikes.
 
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **6. Net leverage không đủ** nối từ **5. Gross leverage** sang **7. Factor buckets**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Net leverage không đủ
 
 Hai opposing positions có thể giảm net directional exposure nhưng vẫn có:
@@ -117,8 +107,6 @@ spread/slippage
 ```
 
 Rủi ro (risk / 위험) dashboard nên show cả gross và net.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **7. Factor buckets** nối từ **6. Net leverage không đủ** sang **8. Factor loading is conditional**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Factor buckets
 
@@ -137,8 +125,6 @@ Volatility
 
 Factor ánh xạ (mapping / 매핑) có thể model-based hoặc heuristic, nhưng phải versioned.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **8. Factor loading is conditional** nối từ **7. Factor buckets** sang **9. Currency exposure bảng (table / 테이블)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Factor loading is conditional
 
 EUR/USD sensitivity to yields không cố định.
@@ -152,8 +138,6 @@ confidence / error
 ```
 
 Không trình bày estimated beta như vật lý (physical / 물리적) constant.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **9. Currency exposure bảng (table / 테이블)** nối từ **8. Factor loading is conditional** sang **10. Pair correlation vs currency-factor overlap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Currency exposure bảng (table / 테이블)
 
@@ -171,8 +155,6 @@ KRW
 
 Rows phải derive từ positions, không manual spreadsheet nếu hệ thống (system / 시스템) có thể calculate.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **10. Pair correlation vs currency-factor overlap** nối từ **9. Currency exposure bảng (table / 테이블)** sang **11. Covariance ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Pair correlation vs currency-factor overlap
 
 Correlation giữa EUR/USD và GBP/USD có thể thay đổi.
@@ -180,8 +162,6 @@ Correlation giữa EUR/USD và GBP/USD có thể thay đổi.
 Nhưng cả hai structurally contain USD leg.
 
 Factor decomposition cung cấp thông tin (information / 정보) mà mẫu (sample / 표본) correlation có thể bỏ lỡ.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **11. Covariance ma trận (matrix / 행렬)** nối từ **10. Pair correlation vs currency-factor overlap** sang **12. Stress correlation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Covariance ma trận (matrix / 행렬)
 
@@ -194,8 +174,6 @@ Portfolio Variance = w' Σ w
 Useful nhưng phụ thuộc mẫu (sample / 표본).
 
 Store covariance mô hình (model / 모델) phiên bản (version / 버전) và estimation period.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **12. Stress correlation** nối từ **11. Covariance ma trận (matrix / 행렬)** sang **13. Volatility targeting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Stress correlation
 
@@ -212,8 +190,6 @@ funding-stress correlation
 
 Do not assume one covariance ma trận (matrix / 행렬) describes all states.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **13. Volatility targeting** nối từ **12. Stress correlation** sang **14. Rủi ro (risk / 위험) contribution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Volatility targeting
 
 Mục tiêu (target / 대상) rủi ro (risk / 위험) example:
@@ -227,8 +203,6 @@ Nhưng cap kích thước (size / 크기) bằng liquidity/margin các ràng bu�
 
 Vol targeting without leverage cap can increase exposure dramatically in calm regime just before volatility jumps.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **14. Rủi ro (risk / 위험) contribution** nối từ **13. Volatility targeting** sang **15. Planned mất mát (loss / 손실) vs statistical rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Rủi ro (risk / 위험) contribution
 
 Approximate marginal/thành phần (component / 컴포넌트) rủi ro (risk / 위험) giúp biết position nào đóng góp portfolio volatility.
@@ -241,8 +215,6 @@ Portfolio weight
 ```
 
 A small position can dominate rủi ro (risk / 위험) if volatility/correlation high.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **15. Planned mất mát (loss / 손실) vs statistical rủi ro (risk / 위험)** nối từ **14. Rủi ro (risk / 위험) contribution** sang **16. Portfolio heat**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Planned mất mát (loss / 손실) vs statistical rủi ro (risk / 위험)
 
@@ -266,8 +238,6 @@ loss under specified extreme scenario
 
 Store all three; none replaces the others.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **16. Portfolio heat** nối từ **15. Planned mất mát (loss / 손실) vs statistical rủi ro (risk / 위험)** sang **17. Scenario engine**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Portfolio heat
 
 Define one practical chỉ số (metric / 지표):
@@ -283,8 +253,6 @@ Correlated Heat = stressed loss if common factor moves and slippage widens
 ```
 
 Naive heat ignores dùng chung (shared / 공유) USD/carry factor.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **17. Scenario engine** nối từ **16. Portfolio heat** sang **18. Deterministic shock examples**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Scenario engine
 
@@ -303,8 +271,6 @@ notes
 
 Apply same scenarios across historical experiments for comparability.
 
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **17. Scenario engine** nêu quy tắc; **18. Deterministic shock examples** thử quy tắc trong tình huống, rồi **19. Combined scenario** mở rộng hệ quả.
-
 ## 18. Deterministic shock examples
 
 ```text
@@ -317,8 +283,6 @@ KRW -10% vs USD
 ```
 
 Scenarios are not forecasts. They kiểm thử (test / 테스트) survivability.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **18. Deterministic shock examples** nêu quy tắc; **19. Combined scenario** thử quy tắc trong tình huống, rồi **20. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** mở rộng hệ quả.
 
 ## 19. Combined scenario
 
@@ -336,8 +300,6 @@ Margin requirement +50%
 
 Combined scenario often reveals hidden fragility.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **20. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **19. Combined scenario** sang **21. VaR**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Instead of choosing shock first, solve:
@@ -350,8 +312,6 @@ or forced liquidation?
 ```
 
 Reverse stress identifies thất bại (failure / 실패) ranh giới (boundary / 경계).
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **21. VaR** nối từ **20. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **22. Expected Shortfall**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. VaR
 
@@ -372,8 +332,6 @@ parametric
 Monte Carlo
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **22. Expected Shortfall** nối từ **21. VaR** sang **23. Tail events outside mẫu (sample / 표본)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Expected Shortfall
 
 Expected Shortfall estimates average mất mát (loss / 손실) beyond VaR threshold.
@@ -381,8 +339,6 @@ Expected Shortfall estimates average mất mát (loss / 손실) beyond VaR thres
 Still depends on dữ liệu (data / 데이터)/mô hình (model / 모델) and may underestimate regime breaks absent from mẫu (sample / 표본).
 
 Use alongside scenario tests.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **23. Tail events outside mẫu (sample / 표본)** nối từ **22. Expected Shortfall** sang **24. Margin stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Tail events outside mẫu (sample / 표본)
 
@@ -394,8 +350,6 @@ may exclude relevant future regime break
 ```
 
 Rủi ro (risk / 위험) engine needs tường minh (explicit / 명시적) jump scenarios not just empirical quantiles.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **24. Margin stress** nối từ **23. Tail events outside mẫu (sample / 표본)** sang **25. Động (dynamic / 동적) margin chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Margin stress
 
@@ -412,8 +366,6 @@ Positions liquidated under policy
 
 Price rủi ro (risk / 위험) and margin rủi ro (risk / 위험) must be simulated together.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **25. Động (dynamic / 동적) margin chính sách (policy / 정책)** nối từ **24. Margin stress** sang **26. Liquidity stress**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Động (dynamic / 동적) margin chính sách (policy / 정책)
 
 Provider may raise margin during stress.
@@ -427,8 +379,6 @@ without price move
 
 can still force deleveraging.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **26. Liquidity stress** nối từ **25. Động (dynamic / 동적) margin chính sách (policy / 정책)** sang **27. Concentration limits**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Liquidity stress
 
 Add:
@@ -440,8 +390,6 @@ max executable size reduction
 ```
 
 A position may be small in notional but hard to exit in stressed thị trường (market / 시장).
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **26. Liquidity stress** đặt tiêu chí; **27. Concentration limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **28. Pre-trade rủi ro (risk / 위험) check** mở rộng hệ quả.
 
 ## 27. Concentration limits
 
@@ -459,8 +407,6 @@ max margin utilization
 
 Limits should be chiến lược (strategy / 전략)/account specific, not universal percentages.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **27. Concentration limits** đặt tiêu chí; **28. Pre-trade rủi ro (risk / 위험) check** dùng tiêu chí đó để kiểm tra ranh giới, rồi **29. Post-fill check** mở rộng hệ quả.
-
 ## 28. Pre-trade rủi ro (risk / 위험) check
 
 Before thứ tự (order / 순서):
@@ -477,8 +423,6 @@ Reject if limits breached.
 
 Do not check only position after fill.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **29. Post-fill check** nối từ **28. Pre-trade rủi ro (risk / 위험) check** sang **30. Hedge biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Post-fill check
 
 Actual fill may differ from requested kích thước (size / 크기)/price.
@@ -486,8 +430,6 @@ Actual fill may differ from requested kích thước (size / 크기)/price.
 Recompute rủi ro (risk / 위험) using filled quantity immediately.
 
 Partial fill changes hedge ratio.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **30. Hedge biểu diễn (representation / 표현)** nối từ **29. Post-fill check** sang **31. Hedge effectiveness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Hedge biểu diễn (representation / 표현)
 
@@ -504,8 +446,6 @@ liquidity
 
 Do not label position “hedged” as boolean only.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **31. Hedge effectiveness** nối từ **30. Hedge biểu diễn (representation / 표현)** sang **32. P/L attribution kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Hedge effectiveness
 
 Measure:
@@ -518,8 +458,6 @@ Residual basis risk
 ```
 
 A hedge can reduce variance while increasing negative carry.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **32. P/L attribution kiến trúc (architecture / 아키텍처)** nối từ **31. Hedge effectiveness** sang **33. Gross vs net alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. P/L attribution kiến trúc (architecture / 아키텍처)
 
@@ -547,8 +485,6 @@ session
 event/regime
 ```
 
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **33. Gross vs net alpha** nối từ **32. P/L attribution kiến trúc (architecture / 아키텍처)** sang **34. Factor attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Gross vs net alpha
 
 Define:
@@ -562,8 +498,6 @@ Gross Signal P/L
 
 Research should not lời gọi (call / 호출) gross paper return “alpha”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **34. Factor attribution** nối từ **33. Gross vs net alpha** sang **35. Benchmark attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Factor attribution
 
 If portfolio gains because broad USD moves, but chiến lược (strategy / 전략) thesis was pair-specific giá trị (value / 값):
@@ -573,8 +507,6 @@ factor attribution reveals mismatch
 ```
 
 This is crucial for học tập (learning / 학습) whether edge came from intended cơ chế (mechanism / 메커니즘).
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **35. Benchmark attribution** nối từ **34. Factor attribution** sang **36. R-multiple attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Benchmark attribution
 
@@ -590,8 +522,6 @@ risk-parity FX basket
 Benchmark depends on chiến lược (strategy / 전략) mục tiêu (objective / 목표).
 
 Do not choose benchmark after seeing hiệu năng (performance / 성능).
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **36. R-multiple attribution** nối từ **35. Benchmark attribution** sang **37. MAE/MFE**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. R-multiple attribution
 
@@ -611,8 +541,6 @@ Slippage R
 
 This normalizes trades of different sizes.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **37. MAE/MFE** nối từ **36. R-multiple attribution** sang **38. Drawdown attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. MAE/MFE
 
 Store:
@@ -625,8 +553,6 @@ Maximum Favorable Excursion
 relative to entry and planned R.
 
 Useful for exit research but vulnerable to hindsight overfitting if repeatedly optimized.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **38. Drawdown attribution** nối từ **37. MAE/MFE** sang **39. Correlated losing clusters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Drawdown attribution
 
@@ -643,8 +569,6 @@ contributed.
 
 Do not treat drawdown as one number only.
 
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **39. Correlated losing clusters** nối từ **38. Drawdown attribution** sang **40. Risk-adjusted metrics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Correlated losing clusters
 
 Detect periods where multiple strategies lose simultaneously.
@@ -658,8 +582,6 @@ liquidity shock
 ```
 
 Portfolio of strategies is not diversified merely because chiến lược (strategy / 전략) names differ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **40. Risk-adjusted metrics** nối từ **39. Correlated losing clusters** sang **41. Turnover and sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Risk-adjusted metrics
 
@@ -675,8 +597,6 @@ Expected Shortfall
 
 but always alongside leverage, liquidity and tail scenarios.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **41. Turnover and sức chứa (capacity / 용량)** nối từ **40. Risk-adjusted metrics** sang **42. Exposure by session**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. Turnover and sức chứa (capacity / 용량)
 
 Nhánh học (track / 트랙):
@@ -688,8 +608,6 @@ size relative to liquidity proxy
 ```
 
 A scalable chiến lược (strategy / 전략) should not assume unlimited thực thi (execution / 실행) at top-of-book.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **42. Exposure by session** nối từ **41. Turnover and sức chứa (capacity / 용량)** sang **43. Sự kiện (event / 이벤트) rủi ro (risk / 위험) inventory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Exposure by session
 
@@ -705,8 +623,6 @@ macro-event windows
 
 Report exposure before major scheduled events.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **43. Sự kiện (event / 이벤트) rủi ro (risk / 위험) inventory** nối từ **42. Exposure by session** sang **44. Chiến lược (strategy / 전략) virtual books**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. Sự kiện (event / 이벤트) rủi ro (risk / 위험) inventory
 
 At any thời gian (time / 시간) hệ thống (system / 시스템) can danh sách (list / 목록):
@@ -720,8 +636,6 @@ weekend holding
 
 This supports event-specific limits.
 
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **44. Chiến lược (strategy / 전략) virtual books** nối từ **43. Sự kiện (event / 이벤트) rủi ro (risk / 위험) inventory** sang **45. Allocation of thực thi (execution / 실행) chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Chiến lược (strategy / 전략) virtual books
 
 If broker nets positions but multiple strategies share pair, maintain nội bộ (internal / 내부) virtual books:
@@ -733,8 +647,6 @@ broker net +30k
 ```
 
 Attribution remains possible.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **45. Allocation of thực thi (execution / 실행) chi phí (cost / 비용)** nối từ **44. Chiến lược (strategy / 전략) virtual books** sang **46. Allocation of financing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Allocation of thực thi (execution / 실행) chi phí (cost / 비용)
 
@@ -748,15 +660,11 @@ pro rata by requested quantity
 
 Document consistently.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **46. Allocation of financing** nối từ **45. Allocation of thực thi (execution / 실행) chi phí (cost / 비용)** sang **47. Reconciliation bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Allocation of financing
 
 Financing charged to net broker position may differ from sum of virtual chiến lược (strategy / 전략) positions.
 
 Define attribution chính sách (policy / 정책); otherwise strategy-level P/L won't reconcile to account P/L.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **47. Reconciliation bất biến (invariant / 불변식)** nối từ **46. Allocation of financing** sang **48. Rủi ro (risk / 위험) snapshot lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Reconciliation bất biến (invariant / 불변식)
 
@@ -769,8 +677,6 @@ At end of period:
 ```
 
 Difference must be zero within rounding tolerance.
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **48. Rủi ro (risk / 위험) snapshot lược đồ (schema / 스키마)** nối từ **47. Reconciliation bất biến (invariant / 불변식)** sang **49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Rủi ro (risk / 위험) snapshot lược đồ (schema / 스키마)
 
@@ -791,8 +697,6 @@ stress_loss_severe
 
 Store snapshots for later rà soát (review / 검토).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)** nối từ **48. Rủi ro (risk / 위험) snapshot lược đồ (schema / 스키마)** sang **50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)
 
 ```text
@@ -804,8 +708,6 @@ projected_margin_level
 largest_loss_factor
 liquidation_flag
 ```
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)** nối từ **49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)** sang **51. Đơn vị (unit / 단위) tests — decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)
 
@@ -822,8 +724,6 @@ conversion_effect
 net_pnl
 factor_tags
 ```
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **51. Đơn vị (unit / 단위) tests — decomposition** nối từ **50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)** sang **52. Đơn vị (unit / 단위) tests — aggregation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Đơn vị (unit / 단위) tests — decomposition
 
@@ -842,13 +742,9 @@ negative USD leg equal to quote value
 
 within defined valuation convention.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **52. Đơn vị (unit / 단위) tests — aggregation** nối từ **51. Đơn vị (unit / 단위) tests — decomposition** sang **53. Đơn vị (unit / 단위) tests — P/L reconciliation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 52. Đơn vị (unit / 단위) tests — aggregation
 
 Long EUR/USD + long GBP/USD should show larger negative USD aggregate than either trade alone.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **53. Đơn vị (unit / 단위) tests — P/L reconciliation** nối từ **52. Đơn vị (unit / 단위) tests — aggregation** sang **54. Stress regression tests**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Đơn vị (unit / 단위) tests — P/L reconciliation
 
@@ -860,15 +756,11 @@ Gross P/L - costs = Net P/L
 
 and sum of chiến lược (strategy / 전략) attribution equals account ledger.
 
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **54. Stress regression tests** nối từ **53. Đơn vị (unit / 단위) tests — P/L reconciliation** sang **55. Mô hình (model / 모델) thay đổi (change / 변경) quản trị (governance / 거버넌스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. Stress regression tests
 
 Keep fixed scenarios so mã (code / 코드) changes don't silently alter rủi ro (risk / 위험) calculation.
 
 Example expected outputs can use tolerance ranges.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **55. Mô hình (model / 모델) thay đổi (change / 변경) quản trị (governance / 거버넌스)** nối từ **54. Stress regression tests** sang **56. Completion criteria**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Mô hình (model / 모델) thay đổi (change / 변경) quản trị (governance / 거버넌스)
 
@@ -879,8 +771,6 @@ risk_model_version++
 ```
 
 Do not overwrite historical rủi ro (risk / 위험) snapshots with new methodology without label.
-
-> **Nối mạch:** Trong **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **56. Completion criteria** nối từ **55. Mô hình (model / 모델) thay đổi (change / 변경) quản trị (governance / 거버넌스)** sang **Deliverables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Completion criteria
 
@@ -894,8 +784,6 @@ Will margin force liquidation first?
 Where did yesterday's P/L actually come from?
 Did intended edge or unintended beta generate return?
 ```
-
-> **Nối mạch:** Ở chặng này của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **Deliverables** nối từ **56. Completion criteria** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deliverables
 
@@ -911,8 +799,6 @@ pnl_attribution_spec.md
 attribution_report.md
 reconciliation_tests.md
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — Portfolio Rủi ro (risk / 위험) và Attribution Engine cho Systematic FX**, **Đọc tiếp** nối từ **Deliverables** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

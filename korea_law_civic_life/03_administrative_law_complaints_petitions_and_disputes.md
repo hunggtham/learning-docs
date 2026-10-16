@@ -23,8 +23,6 @@ Một số từ cần nhận diện:
 - `행정심판`: khiếu nại hành chính;
 - `행정소송`: kiện hành chính tại tòa.
 
-> **Chuyển mạch:** Administrative law governs public authority; 민원 is an administrative request, not automatically litigation, so an adverse decision must be mapped to the correct objection/appeal route.
-
 ## 2. `민원` không đồng nghĩa với “khiếu kiện”
 
 `민원` là khái niệm rộng: có thể là xin giấy tờ, hỏi thủ tục, gửi kiến nghị, phản ánh hoặc yêu cầu cơ quan xử lý một vấn đề.
@@ -32,8 +30,6 @@ Một số từ cần nhận diện:
 `정부24` là cổng quan trọng để tìm, nộp, tra cứu và phát hành nhiều dịch vụ công. `국민신문고` là nền tảng tiếp nhận nhiều loại 민원, phản ánh và kiến nghị đối với cơ quan nhà nước.
 
 Theo 국민권익위원회, `고충민원` liên quan đến trường hợp người dân cho rằng một 처분 bất hợp pháp/không hợp lý, sự chậm trễ hoặc cơ chế hành chính bất hợp lý gây xâm phạm quyền hoặc tạo gánh nặng. Nhưng một câu hỏi thủ tục thông thường không tự động là `고충민원`.
-
-> **Chuyển mạch:** Ở chặng này của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **3. Khi nhận một quyết định hành chính bất lợi** tiếp nhận điểm tựa từ **2. 민원 không đồng nghĩa với “khiếu kiện”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 행정심판 và 행정소송 khác nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Khi nhận một quyết định hành chính bất lợi
 
@@ -52,8 +48,6 @@ Theo 국민권익위원회, `고충민원` liên quan đến trường hợp ng�
 
 Thời hạn phản đối có thể phụ thuộc loại quyết định và luật chuyên ngành. Không nên dùng một con số chung cho mọi trường hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **4. 행정심판 và 행정소송 khác nhau thế nào?** tiếp nhận điểm tựa từ **3. Khi nhận một quyết định hành chính bất lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Một mô hình tư duy (mental model / 사고 모델) về “đường đi của vấn đề”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. `행정심판` và `행정소송` khác nhau thế nào?
 
 ### 행정심판
@@ -65,8 +59,6 @@ Là cơ chế xem xét tranh chấp hành chính ngoài tòa theo luật. Có nh
 Là tố tụng trước tòa án hành chính hoặc tòa có thẩm quyền. Đây là thủ tục tư pháp, khác với gửi 민원 hay 국민신문고.
 
 Không phải mọi quyết định đều yêu cầu phải qua hành정심판 trước khi kiện, và một số lĩnh vực có quy trình đặc biệt. Vì vậy cần kiểm tra luật chuyên ngành.
-
-> **Chuyển mạch:** Trong **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **5. Một mô hình tư duy (mental model / 사고 모델) về “đường đi của vấn đề”** gom các mảnh từ **4. 행정심판 và 행정소송 khác nhau thế nào?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **6. Petition và kiến nghị công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Một mô hình tư duy (mental model / 사고 모델) về “đường đi của vấn đề”
 
@@ -89,15 +81,11 @@ không đồng ý với 처분
 
 Việc gửi 국민신문고 không tự động làm dừng thời hạn pháp lý của một thủ tục phản đối khác. Nếu đang có `불복기간`, cần kiểm tra riêng.
 
-> **Chuyển mạch:** Ở chặng này của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **6. Petition và kiến nghị công** gom các mảnh từ **5. Một mô hình tư duy (mental model / 사고 모델) về “đường đi của vấn đề”** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **7. Cách viết một 민원 dễ xử lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Petition và kiến nghị công
 
 Các từ như `청원`, `진정`, `건의`, `제안` có sắc thái khác nhau. Khi mục tiêu là sửa quy định hoặc đề xuất chính sách, đó là vấn đề khác với việc yêu cầu giải quyết quyền lợi cá nhân trong một hồ sơ.
 
 Không nên dùng một kênh “kiến nghị” để thay thế thủ tục luật định nếu bạn cần bảo vệ một quyền cụ thể có thời hạn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **7. Cách viết một 민원 dễ xử lý** tiếp nhận điểm tựa từ **6. Petition và kiến nghị công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Ví dụ: nhận giấy phạt hành chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Cách viết một 민원 dễ xử lý
 
@@ -116,8 +104,6 @@ Một 민원 tốt nên tách sự kiện khỏi cảm xúc:
 
 Nếu viết tiếng Hàn chưa tự tin, câu ngắn và thuật ngữ chính xác thường tốt hơn câu dài.
 
-> **Chuyển mạch:** Trong **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **7. Cách viết một 민원 dễ xử lý** cho ta quy tắc; **8. Ví dụ: nhận giấy phạt hành chính** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Ví dụ: nhận giấy phạt hành chính
 
 Không kết luận ngay rằng “phạt sai” hay “phải nộp”. Hãy kiểm tra:
@@ -135,8 +121,6 @@ Không kết luận ngay rằng “phạt sai” hay “phải nộp”. Hãy ki
 
 Sau đó mở luật trên `law.go.kr` và trang chính thức của cơ quan ban hành.
 
-> **Chuyển mạch:** Ở chặng này của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **8. Ví dụ: nhận giấy phạt hành chính** cho ta quy tắc; **9. Nguồn chính thức** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Ranh giới của tài liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Nguồn chính thức
 
 Các nguồn dưới đây dùng để kiểm tra thủ tục, thời hạn và căn cứ hiện hành. Hãy mở nguồn tương ứng với loại vấn đề trước khi viết 민원 hoặc đánh giá một 처분 cụ thể.
@@ -147,8 +131,6 @@ Các nguồn dưới đây dùng để kiểm tra thủ tục, thời hạn và 
 - 온라인 행정심판 안내: https://www.acrc.go.kr/menu.es?mid=a10103050000
 - 국가법령정보센터: https://www.law.go.kr/
 - 법원 전자민원센터: https://www.scourt.go.kr/nm/main/
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**, **9. Nguồn chính thức** nêu điều cần giải thích; **10. Ranh giới của tài liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. Ranh giới của tài liệu
 

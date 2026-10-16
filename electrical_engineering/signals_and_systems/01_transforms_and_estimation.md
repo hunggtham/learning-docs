@@ -10,13 +10,9 @@ Laplace biến differential equation thành algebraic quan hệ (relation / 관�
 
 Transfer hàm (function / 함수) chỉ mô tả zero-state phản hồi (response / 응답). Khi startup, reset hoặc disturbance lớn, trạng thái (state / 상태)/initial điều kiện (condition / 조건) phải được mô hình hóa riêng.
 
-> **Chuyển mạch:** **1. Laplace và Z transform** cung cấp miền biểu diễn; **2. Matched filtering** dùng đáp ứng đó để tối ưu phát hiện, rồi **3. State estimation** khôi phục biến ẩn.
-
 ## 2. Matched filtering
 
 Nếu biết waveform mẫu trong white Gaussian noise, matched filter tối đa SNR tại thời điểm sampling. Đây là nguyên tắc phía sau pulse detection và nhiều receiver; nó không có nghĩa filter càng hẹp luôn tốt hơn vì timing bất định (uncertainty / 불확실성) và channel distortion vẫn tồn tại.
-
-> **Chuyển mạch:** Sau khi lọc và ước lượng trạng thái, **4. Worked reasoning** kiểm tra sensor fusion khi các phép đo có noise và độ trễ khác nhau.
 
 ## 3. trạng thái (state / 상태) estimation
 
@@ -27,13 +23,9 @@ Một state-space mô hình (model / 모델) có thể viết:
 
 Kalman filter kết hợp mô hình (model / 모델) prediction với đo lường (measurement / 측정) cập nhật (update / 업데이트) theo covariance bất định (uncertainty / 불확실성). Nếu noise covariance đặt sai, estimator có thể quá tin mô hình (model / 모델) hoặc quá tin sensor.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transforms and Estimation — Biến đổi và ước lượng**, **3. trạng thái (state / 상태) estimation** cho ta quy tắc; **4. Worked lập luận (reasoning / 추론): sensor fusion** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Worked lập luận (reasoning / 추론): sensor fusion
 
 Accelerometer cho phản hồi (response / 응답) nhanh nhưng drift khi tích phân; encoder chính xác vị trí nhưng có quantization/dropout. Estimator cần biểu diễn độ lệch (bias / 편향) và timestamp, không chỉ average hai số. Innovation residual là tín hiệu (signal / 신호) để detect sensor fault hoặc mô hình (model / 모델) mismatch.
-
-> **Chuyển mạch:** Trong **Transforms and Estimation — Biến đổi và ước lượng**, **4. Worked lập luận (reasoning / 추론): sensor fusion** cho ta quy tắc; **Thất bại (failure / 실패) modes** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thất bại (failure / 실패) modes
 
@@ -41,8 +33,6 @@ Accelerometer cho phản hồi (response / 응답) nhanh nhưng drift khi tích 
 - timestamp không đồng bộ làm correlation sai;
 - covariance bằng zero giả tạo certainty;
 - interpolation che giấu packet mất mát (loss / 손실) thay vì báo bất định (uncertainty / 불확실성).
-
-> **Chuyển mạch:** **Failure modes** cho biết khi biến đổi, lọc hoặc fusion sai; **Cầu nối** ghi điều kiện đo và giới hạn mô hình cho lần thiết kế sau.
 
 ## Cầu nối (bridge / 브리지)
 

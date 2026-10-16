@@ -8,8 +8,6 @@
 >
 > Các ghi chú kiểu cấp cao (senior / 시니어), idiom và mẫu (pattern / 패턴) không được tách thành mục riêng sau mỗi chương. Khi một tư duy nâng cao cần thiết, nó được giải thích ngay trong nội dung cùng ví dụ để bạn học như một phần tự nhiên của Java.
 
-> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed**, **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** đã nêu tiêu chí phân biệt, còn **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thread: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)
 
 Part 2 nối trực tiếp từ [Java Part 1 — Beginner](./java_part1_beginner_rewritten_detailed.md). Ở đây bạn không học lại cú pháp (syntax / 문법); bạn bắt đầu giải thích được đặc tả hợp đồng (contract / 계약) của collections/generics, vòng đời (lifecycle / 생명주기) của luồng thực thi (thread / 스레드)/tài nguyên (resource / 자원), bộ nhớ (memory / 메모리) visibility, JDBC giao dịch (transaction / 트랜잭션), reflection, nạp lớp (class loading / 클래스 로딩) và JVM. Sau khi hoàn thành Part 2, tiếp tục [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md).
@@ -1050,8 +1048,6 @@ Hai threads có thể cùng read 10 và cùng ghi (write / 쓰기) 11, mất m�
 Thread-safe thiết kế (design / 설계) bắt đầu bằng việc giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태). Immutable dữ liệu (data / 데이터) và luồng thực thi (thread / 스레드) confinement thường đơn giản hơn locks.
 
 ---
-
-> **Chuyển mạch:** Part 2 bắt đầu từ nền tảng object và chuyển sang concurrency/runtime. Câu hỏi về **Thread: đối tượng Java và execution context khác nhau thế nào?** là cầu nối để đọc các phần sau về memory visibility, coordination và failure.
 
 ## `Thread`: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?
 

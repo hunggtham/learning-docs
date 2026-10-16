@@ -36,8 +36,6 @@ Phase xác định loại bằng chứng (evidence / 증거) cần thu thập.
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **1. bản dựng (build / 빌드) thất bại (failure / 실패) và thời gian chạy (runtime / 런타임) thất bại (failure / 실패) có thể cùng nguồn gốc nhưng khác phase** đặt vấn đề; **2. Gradle cấu hình (configuration / 구성) đồ thị (graph / 그래프) khác tác vụ (task / 작업) thực thi (execution / 실행) đồ thị (graph / 그래프)** đối chiếu bằng chứng, rồi **3. Convention plugin giúp tập trung chính sách (policy / 정책), không chỉ giảm copy-paste** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Gradle cấu hình (configuration / 구성) đồ thị (graph / 그래프) khác tác vụ (task / 작업) thực thi (execution / 실행) đồ thị (graph / 그래프)
 
 Gradle phải đọc bản dựng (build / 빌드) lô-gic (logic / 논리) và tạo mô hình (model / 모델) tác vụ (task / 작업) trước khi execute tác vụ (task / 작업) cần thiết.
@@ -55,8 +53,6 @@ poor incremental inputs
 Không phải mọi build-slow issue đều do trình biên dịch (compiler / 컴파일러).
 
 ---
-
-> **Nối mạch:** Configuration graph và execution graph trả lời hai câu hỏi khác nhau; convention plugin gom policy, còn version catalog chỉ quản lý coordinates chứ không thay dependency policy.
 
 ## 3. Convention plugin giúp tập trung chính sách (policy / 정책), không chỉ giảm copy-paste
 
@@ -85,8 +81,6 @@ Lợi ích lớn nhất là **quản trị (governance / 거버넌스)**: upgrad
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **4. phiên bản (version / 버전) danh mục (catalog / 카탈로그) quản lý coordinates, không thay phụ thuộc (dependency / 의존성) chính sách (policy / 정책)** nối từ **3. Convention plugin giúp tập trung chính sách (policy / 정책), không chỉ giảm copy-paste** sang **5. api vs implementation ảnh hưởng compile đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. phiên bản (version / 버전) danh mục (catalog / 카탈로그) quản lý coordinates, không thay phụ thuộc (dependency / 의존성) chính sách (policy / 정책)
 
 `libs.versions.toml` giúp centralize phiên bản (version / 버전)/alias.
@@ -103,8 +97,6 @@ Danh mục (catalog / 카탈로그) là cú pháp (syntax / 문법)/management c
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **5. api vs implementation ảnh hưởng compile đồ thị (graph / 그래프)** nối từ **4. phiên bản (version / 버전) danh mục (catalog / 카탈로그) quản lý coordinates, không thay phụ thuộc (dependency / 의존성) chính sách (policy / 정책)** sang **6. bản dựng (build / 빌드) variant là sản phẩm (product / 제품) trạng thái (state / 상태) không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. `api` vs `implementation` ảnh hưởng compile đồ thị (graph / 그래프)
 
 Nếu thư viện (library / 라이브러리) mô-đun (module / 모듈) expose phụ thuộc (dependency / 의존성) kiểu (type / 타입) trong API công khai (public API / 공개 API), bên tiêu thụ (consumer / 소비자) cần phụ thuộc (dependency / 의존성) đó trên compile classpath.
@@ -118,8 +110,6 @@ Quy tắc (rule / 규칙):
 > phụ thuộc (dependency / 의존성) visibility nên phản ánh công khai (public / 공개) ABI, không chỉ “dùng cái nào bản dựng (build / 빌드) được”.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **6. bản dựng (build / 빌드) variant là sản phẩm (product / 제품) trạng thái (state / 상태) không gian (space / 공간)** nối từ **5. api vs implementation ảnh hưởng compile đồ thị (graph / 그래프)** sang **7. nguồn (source / 소스) set precedence cần được hiểu như override đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. bản dựng (build / 빌드) variant là sản phẩm (product / 제품) trạng thái (state / 상태) không gian (space / 공간)
 
@@ -151,8 +141,6 @@ release complexity
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **6. bản dựng (build / 빌드) variant là sản phẩm (product / 제품) trạng thái (state / 상태) không gian (space / 공간)** đặt vấn đề; **7. nguồn (source / 소스) set precedence cần được hiểu như override đồ thị (graph / 그래프)** đối chiếu bằng chứng, rồi **8. Manifest merger là hidden kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 7. nguồn (source / 소스) set precedence cần được hiểu như override đồ thị (graph / 그래프)
 
 Ví dụ:
@@ -171,8 +159,6 @@ Bug “gỡ lỗi (debug / 디버그) đúng, bản phát hành (release / 릴�
 Khi gỡ lỗi (debug / 디버그) variant-specific issue, inspect merged nguồn (source / 소스)/tài nguyên (resource / 자원)/manifest đầu ra (output / 출력) thay vì chỉ đọc `main`.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **7. nguồn (source / 소스) set precedence cần được hiểu như override đồ thị (graph / 그래프)** đặt tiêu chí; **8. Manifest merger là hidden kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **9. tài nguyên (resource / 자원) merge cũng có collision và override ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả.
 
 ## 8. Manifest merger là hidden kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)
 
@@ -194,8 +180,6 @@ Do đó final merged manifest là sản phẩm tạo ra (artifact / 산출물) c
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **8. Manifest merger là hidden kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)** đặt tiêu chí; **9. tài nguyên (resource / 자원) merge cũng có collision và override ngữ nghĩa (semantics / 의미론)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **10. Generated mã (code / 코드) là part của bản dựng (build / 빌드) đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả.
-
 ## 9. tài nguyên (resource / 자원) merge cũng có collision và override ngữ nghĩa (semantics / 의미론)
 
 Tên tài nguyên (resource / 자원) toàn cục (global / 전역) trong ứng dụng (application / 애플리케이션) gói (package / 패키지) có thể collision giữa app/thư viện (library / 라이브러리).
@@ -205,8 +189,6 @@ Thư viện (library / 라이브러리) author nên prefix tài nguyên (resourc
 Bên tiêu thụ (consumer / 소비자) cần hiểu tài nguyên (resource / 자원) override có thể thay thư viện (library / 라이브러리) hành vi (behavior / 동작) nếu thư viện (library / 라이브러리) dùng công khai (public / 공개) tài nguyên (resource / 자원) hook.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **9. tài nguyên (resource / 자원) merge cũng có collision và override ngữ nghĩa (semantics / 의미론)** đặt vấn đề; **10. Generated mã (code / 코드) là part của bản dựng (build / 빌드) đặc tả hợp đồng (contract / 계약)** đối chiếu bằng chứng, rồi **11. KSP di chuyển (migration / 마이그레이션) không chỉ là đổi plugin name** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Generated mã (code / 코드) là part của bản dựng (build / 빌드) đặc tả hợp đồng (contract / 계약)
 
@@ -225,8 +207,6 @@ Gỡ lỗi (debug / 디버그) generated mã (code / 코드) bằng cách inspec
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **11. KSP di chuyển (migration / 마이그레이션) không chỉ là đổi plugin name** nối từ **10. Generated mã (code / 코드) là part của bản dựng (build / 빌드) đặc tả hợp đồng (contract / 계약)** sang **12. D8 và R8 giải quyết hai vấn đề khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. KSP di chuyển (migration / 마이그레이션) không chỉ là đổi plugin name
 
 Processor phải hỗ trợ (support / 지원) KSP.
@@ -238,8 +218,6 @@ Bản dựng (build / 빌드) hiệu năng (performance / 성능) có thể tố
 Di chuyển (migration / 마이그레이션) toolchain luôn cần bản phát hành (release / 릴리스) ghi chú (note / 노트) + mẫu (sample / 표본) bản dựng (build / 빌드) + full CI.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **12. D8 và R8 giải quyết hai vấn đề khác nhau** nối từ **11. KSP di chuyển (migration / 마이그레이션) không chỉ là đổi plugin name** sang **13. Reflection phá static reachability giả định (assumption / 가정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. D8 và R8 giải quyết hai vấn đề khác nhau
 
@@ -263,8 +241,6 @@ Vì vậy release-only crash phải nghĩ tới shrinker/reflection/generated si
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **13. Reflection phá static reachability giả định (assumption / 가정)** nối từ **12. D8 và R8 giải quyết hai vấn đề khác nhau** sang **14. Serialization và reflection cần bên tiêu thụ (consumer / 소비자) rules đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Reflection phá static reachability giả định (assumption / 가정)
 
 Mã (code / 코드):
@@ -287,8 +263,6 @@ sẽ phá shrink benefit.
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **14. Serialization và reflection cần bên tiêu thụ (consumer / 소비자) rules đúng** nối từ **13. Reflection phá static reachability giả định (assumption / 가정)** sang **15. ánh xạ (mapping / 매핑) tệp (file / 파일) là môi trường vận hành (production / 운영 환경) debugging sản phẩm tạo ra (artifact / 산출물)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Serialization và reflection cần bên tiêu thụ (consumer / 소비자) rules đúng
 
 SDK/thư viện (library / 라이브러리) có thể cần ship bên tiêu thụ (consumer / 소비자) ProGuard quy tắc (rule / 규칙) để bên tiêu thụ (consumer / 소비자) app không phải tự biết internals.
@@ -303,8 +277,6 @@ Không chỉ kiểm thử (test / 테스트) thư viện (library / 라이브러
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **15. ánh xạ (mapping / 매핑) tệp (file / 파일) là môi trường vận hành (production / 운영 환경) debugging sản phẩm tạo ra (artifact / 산출물)** nối từ **14. Serialization và reflection cần bên tiêu thụ (consumer / 소비자) rules đúng** sang **16. Signing key là long-term định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. ánh xạ (mapping / 매핑) tệp (file / 파일) là môi trường vận hành (production / 운영 환경) debugging sản phẩm tạo ra (artifact / 산출물)
 
 Sau obfuscation, dấu vết ngăn xếp (stack trace / 스택 트레이스) cần ánh xạ (mapping / 매핑) để deobfuscate.
@@ -314,8 +286,6 @@ Bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프�
 Nếu sản phẩm tạo ra (artifact / 산출물) đã rollout nhưng ánh xạ (mapping / 매핑) thất lạc, crash forensic khó hơn nhiều.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **16. Signing key là long-term định danh (identity / 식별자)** nối từ **15. ánh xạ (mapping / 매핑) tệp (file / 파일) là môi trường vận hành (production / 운영 환경) debugging sản phẩm tạo ra (artifact / 산출물)** sang **17. bản dựng (build / 빌드) reproducibility giúp forensic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Signing key là long-term định danh (identity / 식별자)
 
@@ -328,8 +298,6 @@ Môi trường vận hành (production / 운영 환경) key không nên nằm pl
 Quyền truy cập signing material cần least privilege/kiểm tra (audit / 감사).
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **17. bản dựng (build / 빌드) reproducibility giúp forensic** nối từ **16. Signing key là long-term định danh (identity / 식별자)** sang **18. phụ thuộc (dependency / 의존성) khóa (lock / 잠금) giúp giảm “same nguồn (source / 소스), different nhị phân (binary / 이진)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. bản dựng (build / 빌드) reproducibility giúp forensic
 
@@ -347,8 +315,6 @@ Sản phẩm tạo ra (artifact / 산출물) siêu dữ liệu (metadata / 메�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **17. bản dựng (build / 빌드) reproducibility giúp forensic** đặt vấn đề; **18. phụ thuộc (dependency / 의존성) khóa (lock / 잠금) giúp giảm “same nguồn (source / 소스), different nhị phân (binary / 이진)”** đối chiếu bằng chứng, rồi **19. minSdk, compileSdk, targetSdk là ba contract khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. phụ thuộc (dependency / 의존성) khóa (lock / 잠금) giúp giảm “same nguồn (source / 소스), different nhị phân (binary / 이진)”
 
 Nếu động (dynamic / 동적)/transitive resolution thay đổi theo thời gian, rebuild lần ghi nhận (commit / 커밋) cũ có thể ra phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) khác.
@@ -356,8 +322,6 @@ Nếu động (dynamic / 동적)/transitive resolution thay đổi theo thời g
 Phụ thuộc (dependency / 의존성) locking/phiên bản (version / 버전) pinning giúp forensic và supply-chain điều khiển (control / 제어).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **18. phụ thuộc (dependency / 의존성) khóa (lock / 잠금) giúp giảm “same nguồn (source / 소스), different nhị phân (binary / 이진)”** đặt vấn đề; **19. minSdk, compileSdk, targetSdk là ba contract khác nhau** đối chiếu bằng chứng, rồi **20. nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) nên tách compile di chuyển (migration / 마이그레이션) và hành vi (behavior / 동작) di chuyển (migration / 마이그레이션)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau
 Phần này nối mạch Android vừa học với “19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -373,8 +337,6 @@ Tăng compileSdk có thể không đổi hành vi thời gian chạy (runtime be
 Tăng targetSdk có thể activate hành vi (behavior / 동작) changes dù mã nguồn (source code / 소스 코드) gần như không đổi.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **20. nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) nên tách compile di chuyển (migration / 마이그레이션) và hành vi (behavior / 동작) di chuyển (migration / 마이그레이션)** nối từ **19. minSdk, compileSdk, targetSdk là ba contract khác nhau** sang **21. hành vi (behavior / 동작) thay đổi (change / 변경) có thể apply cho mọi app hoặc target-gated**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) nên tách compile di chuyển (migration / 마이그레이션) và hành vi (behavior / 동작) di chuyển (migration / 마이그레이션)
 
@@ -393,8 +355,6 @@ Tách dimension giúp giảm số biến thay đổi cùng lúc.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **21. hành vi (behavior / 동작) thay đổi (change / 변경) có thể apply cho mọi app hoặc target-gated** nối từ **20. nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) nên tách compile di chuyển (migration / 마이그레이션) và hành vi (behavior / 동작) di chuyển (migration / 마이그레이션)** sang **22. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) là di chuyển (migration / 마이그레이션) công cụ (tool / 도구)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. hành vi (behavior / 동작) thay đổi (change / 변경) có thể apply cho mọi app hoặc target-gated
 
 Khi đọc Android bản phát hành (release / 릴리스) notes, phân biệt:
@@ -407,8 +367,6 @@ changes only if targetSdk >= X
 Nếu không phân biệt, nhóm (team / 팀) có thể bỏ lỡ regression trên thiết bị (device / 장치) mới dù chưa bump mục tiêu (target / 대상).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **22. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) là di chuyển (migration / 마이그레이션) công cụ (tool / 도구)** nối từ **21. hành vi (behavior / 동작) thay đổi (change / 변경) có thể apply cho mọi app hoặc target-gated** sang **23. API guard bảo vệ class loading/runtime access**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) là di chuyển (migration / 마이그레이션) công cụ (tool / 도구)
 
@@ -425,8 +383,6 @@ Dùng toggle như diagnostic/di chuyển (migration / 마이그레이션) aid, k
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **23. API guard bảo vệ class loading/runtime access** nối từ **22. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) là di chuyển (migration / 마이그레이션) công cụ (tool / 도구)** sang **24. Desugaring mang một số ngôn ngữ (language / 언어)/thư viện (library / 라이브러리) tính năng (feature / 기능) xuống API cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. API guard bảo vệ class loading/runtime access
 Phần này nối mạch Android vừa học với “23. API guard bảo vệ class loading/runtime access”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
@@ -441,8 +397,6 @@ Nhưng cần cẩn thận với static initialization/lớp (class / 클래스) 
 Tách API-specific mã (code / 코드) vào phương thức (method / 메서드)/lớp (class / 클래스) rõ có thể giúp tính tương thích (compatibility / 호환성) và readability.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **24. Desugaring mang một số ngôn ngữ (language / 언어)/thư viện (library / 라이브러리) tính năng (feature / 기능) xuống API cũ** nối từ **23. API guard bảo vệ class loading/runtime access** sang **25. SDK Extensions làm API availability không còn chỉ là API mức (level / 수준)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Desugaring mang một số ngôn ngữ (language / 언어)/thư viện (library / 라이브러리) tính năng (feature / 기능) xuống API cũ
 
@@ -460,8 +414,6 @@ Android framework API availability
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **24. Desugaring mang một số ngôn ngữ (language / 언어)/thư viện (library / 라이브러리) tính năng (feature / 기능) xuống API cũ** nêu quy tắc; **25. SDK Extensions làm API availability không còn chỉ là API mức (level / 수준)** thử quy tắc trong tình huống, rồi **26. Non-SDK giao diện (interface / 인터페이스) là tính tương thích (compatibility / 호환성) rủi ro (risk / 위험)** mở rộng hệ quả.
-
 ## 25. SDK Extensions làm API availability không còn chỉ là API mức (level / 수준)
 
 Một API có thể available theo extension phiên bản (version / 버전) trên cùng Android API mức (level / 수준).
@@ -472,8 +424,6 @@ Mô hình tư duy (mental model / 사고 모델) tính tương thích (compatibi
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **25. SDK Extensions làm API availability không còn chỉ là API mức (level / 수준)** nêu quy tắc; **26. Non-SDK giao diện (interface / 인터페이스) là tính tương thích (compatibility / 호환성) rủi ro (risk / 위험)** thử quy tắc trong tình huống, rồi **27. OEM hành vi (behavior / 동작) là dimension ngoài API mức (level / 수준)** mở rộng hệ quả.
-
 ## 26. Non-SDK giao diện (interface / 인터페이스) là tính tương thích (compatibility / 호환성) rủi ro (risk / 위험)
 
 Reflection/nội bộ (internal / 내부) nền tảng (platform / 플랫폼) API có thể bị restrict theo Android phiên bản (version / 버전).
@@ -483,8 +433,6 @@ Nếu thư viện (library / 라이브러리) phụ thuộc hidden API, app có 
 Môi trường vận hành (production / 운영 환경) mã (code / 코드) nên ưu tiên công khai (public / 공개) SDK đặc tả hợp đồng (contract / 계약).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **27. OEM hành vi (behavior / 동작) là dimension ngoài API mức (level / 수준)** nối từ **26. Non-SDK giao diện (interface / 인터페이스) là tính tương thích (compatibility / 호환성) rủi ro (risk / 위험)** sang **28. WebView là independently updated thời gian chạy (runtime / 런타임)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. OEM hành vi (behavior / 동작) là dimension ngoài API mức (level / 수준)
 
@@ -502,8 +450,6 @@ Tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트)
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **28. WebView là independently updated thời gian chạy (runtime / 런타임)** nối từ **27. OEM hành vi (behavior / 동작) là dimension ngoài API mức (level / 수준)** sang **29. Startup phải được xem như phụ thuộc (dependency / 의존성) đường găng (critical path / 임계 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. WebView là independently updated thời gian chạy (runtime / 런타임)
 
 WebView hành vi (behavior / 동작) có thể đổi qua cập nhật (update / 업데이트) thành phần (component / 컴포넌트) mà không đổi Android OS phiên bản (version / 버전).
@@ -511,8 +457,6 @@ WebView hành vi (behavior / 동작) có thể đổi qua cập nhật (update /
 Hybrid app cần log WebView phiên bản (version / 버전) khi gỡ lỗi (debug / 디버그) issue rendering/JS cầu nối (bridge / 브리지)/mạng (network / 네트워크).
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **28. WebView là independently updated thời gian chạy (runtime / 런타임)** đặt đầu vào cho **29. Startup phải được xem như phụ thuộc (dependency / 의존성) đường găng (critical path / 임계 경로)**, rồi **30. TTID và TTFD trả lời hai câu khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Startup phải được xem như phụ thuộc (dependency / 의존성) đường găng (critical path / 임계 경로)
 
@@ -532,8 +476,6 @@ process fork
 Mọi eager initializer nằm trên đường găng (critical path / 임계 경로) đều cộng độ trễ (latency / 지연 시간).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **29. Startup phải được xem như phụ thuộc (dependency / 의존성) đường găng (critical path / 임계 경로)** đặt đầu vào cho **30. TTID và TTFD trả lời hai câu khác nhau**, rồi **31. Eager initialization phải có lý do** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. TTID và TTFD trả lời hai câu khác nhau
 
@@ -555,8 +497,6 @@ Nhánh học (track / 트랙) cả hai khi phù hợp.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **31. Eager initialization phải có lý do** nối từ **30. TTID và TTFD trả lời hai câu khác nhau** sang **32. ContentProvider auto-init có thể ẩn startup công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Eager initialization phải có lý do
 
 Một SDK analytics không nhất thiết cần fully initialize trước first frame.
@@ -576,8 +516,6 @@ demand-driven lazy
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **32. ContentProvider auto-init có thể ẩn startup công việc (work / 작업)** nối từ **31. Eager initialization phải có lý do** sang **33. App Startup giúp declare initializer dependencies**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. ContentProvider auto-init có thể ẩn startup công việc (work / 작업)
 
 Một thư viện (library / 라이브러리) có thể auto-init qua manifest provider.
@@ -587,8 +525,6 @@ App nhóm (team / 팀) không thấy lời gọi (call / 호출) trong ứng d�
 Forensic cần inspect merged manifest + startup dấu vết (trace / 추적).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **33. App Startup giúp declare initializer dependencies** nối từ **32. ContentProvider auto-init có thể ẩn startup công việc (work / 작업)** sang **34. DI bộ chứa (container / 컨테이너) creation có thể nằm đường găng (critical path / 임계 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. App Startup giúp declare initializer dependencies
 
@@ -600,8 +536,6 @@ Cần vẫn phân loại eager/lazy và đo chi phí (cost / 비용).
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **33. App Startup giúp declare initializer dependencies** đặt đầu vào cho **34. DI bộ chứa (container / 컨테이너) creation có thể nằm đường găng (critical path / 임계 경로)**, rồi **35. Startup I/O trên main luồng thực thi (thread / 스레드) là red flag** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 34. DI bộ chứa (container / 컨테이너) creation có thể nằm đường găng (critical path / 임계 경로)
 
 Large phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), reflection hoặc eager singleton construction có thể làm startup chậm.
@@ -611,8 +545,6 @@ Rà soát (review / 검토) đối tượng (object / 객체) nào thực sự c
 Lazy provider không phải lúc nào xấu; nó có thể chuyển chi phí (cost / 비용) tới đúng tính năng (feature / 기능) usage.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **34. DI bộ chứa (container / 컨테이너) creation có thể nằm đường găng (critical path / 임계 경로)** đặt đầu vào cho **35. Startup I/O trên main luồng thực thi (thread / 스레드) là red flag**, rồi **36. Nhưng “move everything background” cũng không đủ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 35. Startup I/O trên main luồng thực thi (thread / 스레드) là red flag
 
@@ -632,8 +564,6 @@ StrictMode và Perfetto giúp phát hiện blocking công việc (work / 작업)
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **36. Nhưng “move everything background” cũng không đủ** nối từ **35. Startup I/O trên main luồng thực thi (thread / 스레드) là red flag** sang **37. Baseline Profile tối ưu mã (code / 코드) compilation đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Nhưng “move everything background” cũng không đủ
 
 Nếu first screen bắt buộc dữ liệu (data / 데이터) A trước khi meaningful kết xuất (render / 렌더링), dữ liệu (data / 데이터) A vẫn nằm trọng yếu (critical / 중요) người dùng (user / 사용자) đường dẫn (path / 경로) dù chạy background.
@@ -652,8 +582,6 @@ không chỉ đổi luồng thực thi (thread / 스레드).
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **36. Nhưng “move everything background” cũng không đủ** đặt đầu vào cho **37. Baseline Profile tối ưu mã (code / 코드) compilation đường dẫn (path / 경로)**, rồi **38. Macrobenchmark startup cần điều khiển (control / 제어) compilation chế độ (mode / 모드)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 37. Baseline Profile tối ưu mã (code / 코드) compilation đường dẫn (path / 경로)
 
 Profile giúp thời gian chạy (runtime / 런타임) compile/precompile trọng yếu (critical / 중요) methods/classes.
@@ -664,8 +592,6 @@ Benchmark tác động (effect / 효과) thay vì assume.
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **37. Baseline Profile tối ưu mã (code / 코드) compilation đường dẫn (path / 경로)** đặt đầu vào cho **38. Macrobenchmark startup cần điều khiển (control / 제어) compilation chế độ (mode / 모드)**, rồi **39. Release-only issue forensic checklist** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. Macrobenchmark startup cần điều khiển (control / 제어) compilation chế độ (mode / 모드)
 
 Đo cold startup nhiều lần với profile/compilation trạng thái (state / 상태) phù hợp giúp phân biệt trình biên dịch (compiler / 컴파일러) benefit và ứng dụng (application / 애플리케이션) công việc (work / 작업).
@@ -673,8 +599,6 @@ Benchmark tác động (effect / 효과) thay vì assume.
 Benchmark phải stable enough để regression meaningful.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **39. Release-only issue forensic checklist** nối từ **38. Macrobenchmark startup cần điều khiển (control / 제어) compilation chế độ (mode / 모드)** sang **40. Variant-only bug checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Release-only issue forensic checklist
 
@@ -696,8 +620,6 @@ proguard mapping?
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **40. Variant-only bug checklist** nối từ **39. Release-only issue forensic checklist** sang **41. Upgrade forensic nên thay đổi (change / 변경) one axis at a thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Variant-only bug checklist
 Phần này nối mạch Android vừa học với “40. Variant-only bug checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
@@ -714,8 +636,6 @@ feature flag default?
 Always reproduce chính xác (exact / 정확한) variant.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **41. Upgrade forensic nên thay đổi (change / 변경) one axis at a thời gian (time / 시간)** nối từ **40. Variant-only bug checklist** sang **42. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) diff là sản phẩm tạo ra (artifact / 산출물) rà soát (review / 검토) hữu ích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Upgrade forensic nên thay đổi (change / 변경) one axis at a thời gian (time / 시간)
 
@@ -737,8 +657,6 @@ Upgrade theo compatible slices khi có thể, lần ghi nhận (commit / 커밋)
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **42. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) diff là sản phẩm tạo ra (artifact / 산출물) rà soát (review / 검토) hữu ích** nối từ **41. Upgrade forensic nên thay đổi (change / 변경) one axis at a thời gian (time / 시간)** sang **43. AAB khiến installed APK phụ thuộc thiết bị (device / 장치) cấu hình (configuration / 구성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) diff là sản phẩm tạo ra (artifact / 산출물) rà soát (review / 검토) hữu ích
 
 Trước/after toolchain upgrade, compare:
@@ -754,8 +672,6 @@ license/security metadata
 Một indirect cập nhật (update / 업데이트) có thể đổi hành vi thời gian chạy (runtime behavior / 런타임 동작).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **43. AAB khiến installed APK phụ thuộc thiết bị (device / 장치) cấu hình (configuration / 구성)** nối từ **42. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) diff là sản phẩm tạo ra (artifact / 산출물) rà soát (review / 검토) hữu ích** sang **44. sản phẩm tạo ra (artifact / 산출물) provenance nên xuyên từ lần ghi nhận (commit / 커밋) tới installed bản dựng (build / 빌드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. AAB khiến installed APK phụ thuộc thiết bị (device / 장치) cấu hình (configuration / 구성)
 
@@ -774,8 +690,6 @@ Bản phát hành (release / 릴리스) kiểm thử (test / 테스트) nên dù
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **44. sản phẩm tạo ra (artifact / 산출물) provenance nên xuyên từ lần ghi nhận (commit / 커밋) tới installed bản dựng (build / 빌드)** nối từ **43. AAB khiến installed APK phụ thuộc thiết bị (device / 장치) cấu hình (configuration / 구성)** sang **45. bản phát hành (release / 릴리스) gate nên verify sản phẩm tạo ra (artifact / 산출물), không chỉ nguồn (source / 소스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. sản phẩm tạo ra (artifact / 산출물) provenance nên xuyên từ lần ghi nhận (commit / 커밋) tới installed bản dựng (build / 빌드)
 
 Useful fields:
@@ -792,8 +706,6 @@ feature config version
 Không expose secret; mục tiêu là forensic traceability.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **44. sản phẩm tạo ra (artifact / 산출물) provenance nên xuyên từ lần ghi nhận (commit / 커밋) tới installed bản dựng (build / 빌드)** đặt vấn đề; **45. bản phát hành (release / 릴리스) gate nên verify sản phẩm tạo ra (artifact / 산출물), không chỉ nguồn (source / 소스)** đối chiếu bằng chứng, rồi **46. Build/compatibility checklist** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 45. bản phát hành (release / 릴리스) gate nên verify sản phẩm tạo ra (artifact / 산출물), không chỉ nguồn (source / 소스)
 
@@ -814,8 +726,6 @@ Nguồn (source / 소스) kiểm thử (test / 테스트) pass chưa chứng min
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **45. bản phát hành (release / 릴리스) gate nên verify sản phẩm tạo ra (artifact / 산출물), không chỉ nguồn (source / 소스)** đặt vấn đề; **46. Build/compatibility checklist** đối chiếu bằng chứng, rồi **47. Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 46. Build/compatibility checklist
 Phần này nối mạch Android vừa học với “46. Build/compatibility checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
@@ -833,8 +743,6 @@ Phần này nối mạch Android vừa học với “46. Build/compatibility ch
 | quay lui (rollback / 롤백) sản phẩm tạo ra (artifact / 산출물)/dữ liệu (data / 데이터) compatible không? | bản phát hành (release / 릴리스) drill |
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 06 — bản dựng (build / 빌드), tính tương thích (compatibility / 호환성), Startup và bản phát hành (release / 릴리스) Forensics**, **47. Kết luận** tổng hợp từ **46. Build/compatibility checklist** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 47. Kết luận
 

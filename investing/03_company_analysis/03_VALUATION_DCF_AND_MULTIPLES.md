@@ -14,8 +14,6 @@ Hai con số này có thể khác nhau vì giá thị trường còn chịu ản
 
 Do đó, một mô hình tốt nên tạo ra **khoảng giá trị (valuation range)** và các **kịch bản (scenario)** thay vì cố tạo một mức giá mục tiêu chính xác giả tạo.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **2. Định giá là bài toán về kỳ vọng** nối từ **1. Giá thị trường và giá trị nội tại** sang **3. Khung lợi nhuận kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Định giá là bài toán về kỳ vọng
 
 Lợi nhuận của nhà đầu tư không chỉ phụ thuộc doanh nghiệp “tốt” hay “xấu”, mà phụ thuộc kết quả thực tế so với những gì giá hiện tại đã kỳ vọng.
@@ -29,8 +27,6 @@ Giá hiện tại đang giả định điều gì?
 → Kết quả thực tế có thể khác kỳ vọng đó ở đâu?
 → Khoảng cách giữa kỳ vọng và thực tế có đủ lớn để tạo lợi nhuận không?
 ```
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **3. Khung lợi nhuận kỳ vọng** nối từ **2. Định giá là bài toán về kỳ vọng** sang **4. Giá trị hiện tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Khung lợi nhuận kỳ vọng
 
@@ -51,8 +47,6 @@ Vì vậy cần tách ba nguồn:
 - cổ tức và mua lại cổ phiếu ròng;
 - mở rộng hoặc thu hẹp bội số định giá (multiple expansion/compression).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **4. Giá trị hiện tại** nối từ **3. Khung lợi nhuận kỳ vọng** sang **5. Nhất quán giữa danh nghĩa và thực**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Giá trị hiện tại
 
 Công thức nền tảng:
@@ -64,8 +58,6 @@ PV = CF_t / (1 + r)^t
 Trong đó `CF_t` là dòng tiền ở thời điểm `t`, còn `r` là tỷ lệ chiết khấu (discount rate).
 
 Tỷ lệ chiết khấu càng cao thì giá trị hiện tại càng thấp, đặc biệt với dòng tiền nằm xa trong tương lai. Đây là trực giác của **độ dài dòng tiền cổ phiếu (equity duration)**: doanh nghiệp tăng trưởng với phần lớn giá trị nằm ở tương lai xa thường nhạy hơn với thay đổi lãi suất thực và tỷ lệ chiết khấu.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **5. Nhất quán giữa danh nghĩa và thực** nối từ **4. Giá trị hiện tại** sang **6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Nhất quán giữa danh nghĩa và thực
 
@@ -82,8 +74,6 @@ Lạm phát không chỉ ảnh hưởng doanh thu. Nó còn tác động:
 - tỷ lệ chiết khấu.
 
 Do đó không nên chỉ cộng lạm phát vào tăng trưởng doanh thu rồi giữ nguyên mọi giả định khác.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** nối từ **5. Nhất quán giữa danh nghĩa và thực** sang **7. Nợ ròng không đơn giản là nợ trừ tiền mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
@@ -106,8 +96,6 @@ Cầu nối thực tế có thể cần thêm thuê tài chính, thiếu hụt q
 
 Điểm quan trọng là nhìn **bản chất kinh tế** thay vì chỉ dựa tên tài khoản kế toán.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **7. Nợ ròng không đơn giản là nợ trừ tiền mặt** nối từ **6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** sang **8. Dòng tiền tự do cho doanh nghiệp — FCFF**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Nợ ròng không đơn giản là nợ trừ tiền mặt
 
 Không phải toàn bộ tiền mặt đều có thể dùng để trả cho cổ đông. Doanh nghiệp có thể cần một lượng tiền tối thiểu cho vận hành, hoặc có tiền bị hạn chế sử dụng.
@@ -125,8 +113,6 @@ Nghĩa vụ hưu trí
 Quyền lợi cổ đông thiểu số
 Tài sản đầu tư ngoài hoạt động
 ```
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **8. Dòng tiền tự do cho doanh nghiệp — FCFF** nối từ **7. Nợ ròng không đơn giản là nợ trừ tiền mặt** sang **9. Dòng tiền tự do cho cổ đông — FCFE**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Dòng tiền tự do cho doanh nghiệp — FCFF
 
@@ -151,8 +137,6 @@ sản lượng × giá bán × cơ cấu sản phẩm
 
 Không nên chỉ kéo doanh thu bằng một CAGR tùy ý.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **9. Dòng tiền tự do cho cổ đông — FCFE** nối từ **8. Dòng tiền tự do cho doanh nghiệp — FCFF** sang **10. Quy ước giữa năm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Dòng tiền tự do cho cổ đông — FCFE
 
 Một dạng gần đúng:
@@ -170,15 +154,11 @@ FCFE được chiết khấu bằng **chi phí vốn chủ sở hữu (cost of e
 
 FCFE phù hợp hơn khi cơ cấu nợ tương đối ổn định. Nếu đòn bẩy thay đổi mạnh, FCFF thường dễ diễn giải hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **10. Quy ước giữa năm** nối từ **9. Dòng tiền tự do cho cổ đông — FCFE** sang **11. Dự báo doanh thu từ động lực cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Quy ước giữa năm
 
 Dòng tiền thực tế phát sinh xuyên suốt năm chứ không phải toàn bộ vào ngày cuối năm. **Quy ước giữa năm (mid-year convention)** giả định trung bình dòng tiền đến vào giữa kỳ.
 
 Điều quan trọng không phải học thuộc một phép điều chỉnh, mà hiểu thời điểm dòng tiền ảnh hưởng trực tiếp đến giá trị hiện tại.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **11. Dự báo doanh thu từ động lực cơ bản** nối từ **10. Quy ước giữa năm** sang **12. Dự báo biên lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Dự báo doanh thu từ động lực cơ bản
 
@@ -202,8 +182,6 @@ tài sản sinh lãi × chênh lệch lãi suất + phí
 
 Mô hình theo động lực (driver-based model) giúp kịch bản tăng/giảm có nguyên nhân rõ ràng và có thể theo dõi sau đó.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **12. Dự báo biên lợi nhuận** nối từ **11. Dự báo doanh thu từ động lực cơ bản** sang **13. Tăng trưởng cần tái đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Dự báo biên lợi nhuận
 
 Biên gộp có thể thay đổi theo:
@@ -217,8 +195,6 @@ Biên gộp có thể thay đổi theo:
 Biên hoạt động còn phụ thuộc R&D, SG&A và chi phí cố định.
 
 Biên lợi nhuận cực cao thường khó duy trì mãi nếu lợi nhuận hấp dẫn đối thủ. Nếu mô hình giữ biên rất cao dài hạn, cần giải thích lợi thế cạnh tranh nào cho phép điều đó.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **13. Tăng trưởng cần tái đầu tư** nối từ **12. Dự báo biên lợi nhuận** sang **14. ROIC giảm dần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Tăng trưởng cần tái đầu tư
 
@@ -234,8 +210,6 @@ Nếu doanh nghiệp tăng trưởng 20% nhưng lợi nhuận trên vốn tăng 
 
 Tăng trưởng chỉ tạo giá trị khi lợi nhuận trên phần vốn mới đủ cao so với chi phí vốn.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **14. ROIC giảm dần** nối từ **13. Tăng trưởng cần tái đầu tư** sang **15. Tăng trưởng giảm dần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. ROIC giảm dần
 
 Do cạnh tranh, nhiều doanh nghiệp trưởng thành sẽ thấy ROIC vượt trội giảm dần theo thời gian.
@@ -250,8 +224,6 @@ Hay giảm xuống dưới chi phí vốn?
 
 Một DCF giữ ROIC 30% mãi mãi mà không có lý do kinh tế là dấu hiệu định giá quá lạc quan.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **15. Tăng trưởng giảm dần** nối từ **14. ROIC giảm dần** sang **16. Vốn lưu động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Tăng trưởng giảm dần
 
 Tăng trưởng cao không thể kéo dài vô hạn vì:
@@ -262,8 +234,6 @@ Tăng trưởng cao không thể kéo dài vô hạn vì:
 - quy luật số lớn.
 
 Mô hình nên có một giai đoạn chuyển tiếp từ tăng trưởng cao về tăng trưởng trưởng thành. Không nên để tăng trưởng 30% tới năm thứ 5 rồi đột ngột rơi xuống 3% mà không giải thích cơ chế.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **16. Vốn lưu động** nối từ **15. Tăng trưởng giảm dần** sang **17. Capex, khấu hao và chi phí duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Vốn lưu động
 
@@ -278,15 +248,11 @@ Có thể mô hình bằng:
 
 Doanh nghiệp có vốn lưu động âm có thể được khách hàng hoặc nhà cung cấp tài trợ một phần. Nhưng khi tăng trưởng chậm lại, lợi ích này có thể đảo chiều.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **17. Capex, khấu hao và chi phí duy trì** nối từ **16. Vốn lưu động** sang **18. Vốn hóa R&D**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Capex, khấu hao và chi phí duy trì
 
 Trong trạng thái dài hạn ổn định, chi tiêu vốn không thể thấp hơn hao mòn kinh tế mãi mãi.
 
 Doanh nghiệp ít tài sản hữu hình vẫn có thể tái đầu tư rất lớn qua R&D, marketing hay phần mềm. Vì vậy phải nhìn **tái đầu tư kinh tế (economic reinvestment)** chứ không chỉ capex kế toán.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **18. Vốn hóa R&D** nối từ **17. Capex, khấu hao và chi phí duy trì** sang **19. Thù lao bằng cổ phiếu — SBC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Vốn hóa R&D
 
@@ -295,8 +261,6 @@ Doanh nghiệp ít tài sản hữu hình vẫn có thể tái đầu tư rất 
 Nhà phân tích đôi khi vốn hóa R&D để so đầu tư và lợi nhuận phù hợp hơn. Tuy nhiên cần giả định tuổi thọ tài sản và khấu hao hợp lý.
 
 Mục tiêu là phản ánh bản chất kinh tế, không phải làm lợi nhuận đẹp hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **19. Thù lao bằng cổ phiếu — SBC** nối từ **18. Vốn hóa R&D** sang **20. Số cổ phiếu pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Thù lao bằng cổ phiếu — SBC
 
@@ -309,15 +273,11 @@ Nếu cộng SBC trở lại FCF, mô hình phải phản ánh:
 
 Không thể vừa coi SBC là miễn phí vừa bỏ qua pha loãng.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **20. Số cổ phiếu pha loãng** nối từ **19. Thù lao bằng cổ phiếu — SBC** sang **21. Thuế và lỗ thuế chuyển tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Số cổ phiếu pha loãng
 
 Định giá trên mỗi cổ phiếu nên dùng số cổ phiếu pha loãng đầy đủ (fully diluted share count) khi quyền chọn, chứng quyền hoặc trái phiếu chuyển đổi có ý nghĩa kinh tế.
 
 Doanh nghiệp có thể tăng EV nhưng giá trị trên mỗi cổ phiếu không tăng nếu liên tục phát hành thêm cổ phần.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **21. Thuế và lỗ thuế chuyển tiếp** nối từ **20. Số cổ phiếu pha loãng** sang **22. Khoảng dự báo chi tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Thuế và lỗ thuế chuyển tiếp
 
@@ -331,8 +291,6 @@ Thuế suất hiệu dụng có thể khác thuế suất pháp định do:
 
 NOL có thể giảm thuế tương lai nhưng không kéo dài vô hạn. Mô hình phải đưa thuế về mức bình thường khi ưu đãi hết hiệu lực.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **22. Khoảng dự báo chi tiết** nối từ **21. Thuế và lỗ thuế chuyển tiếp** sang **23. Giá trị cuối kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Khoảng dự báo chi tiết
 
 Khoảng dự báo phải đủ dài để doanh nghiệp tiến gần trạng thái kinh tế ổn định.
@@ -340,8 +298,6 @@ Khoảng dự báo phải đủ dài để doanh nghiệp tiến gần trạng t
 Doanh nghiệp tiện ích trưởng thành có thể chỉ cần vài năm. Một nền tảng đang tăng trưởng nhanh có thể cần giai đoạn dài hơn.
 
 Kéo dài mô hình không làm nó chính xác hơn nếu các giả định không còn nền tảng kinh tế.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **23. Giá trị cuối kỳ** nối từ **22. Khoảng dự báo chi tiết** sang **24. Kiểm tra tăng trưởng cuối kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Giá trị cuối kỳ
 
@@ -363,15 +319,11 @@ Biên lợi nhuận
 Chi phí vốn
 ```
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **24. Kiểm tra tăng trưởng cuối kỳ** nối từ **23. Giá trị cuối kỳ** sang **25. Giá trị cuối kỳ bằng bội số thoát**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Kiểm tra tăng trưởng cuối kỳ
 
 Tăng trưởng cuối kỳ không nên cao hơn tăng trưởng danh nghĩa bền vững của nền kinh tế vô hạn trừ khi có lý do đặc biệt.
 
 Nếu tăng trưởng cuối kỳ là 3% và ROIC cuối kỳ là 15%, mô hình phải tái đầu tư đủ vốn để tài trợ mức tăng trưởng đó.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **25. Giá trị cuối kỳ bằng bội số thoát** nối từ **24. Kiểm tra tăng trưởng cuối kỳ** sang **26. WACC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Giá trị cuối kỳ bằng bội số thoát
 
@@ -380,8 +332,6 @@ Một cách khác là dùng bội số cuối kỳ như EV/EBITDA hoặc P/E.
 Cách này không loại bỏ bất định; nó chỉ chuyển bất định sang câu hỏi “doanh nghiệp sẽ được định giá bao nhiêu lần lợi nhuận ở tương lai?”.
 
 Nên đối chiếu phương pháp Gordon với bội số thoát (exit multiple) để phát hiện giả định không nhất quán.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **26. WACC** nối từ **25. Giá trị cuối kỳ bằng bội số thoát** sang **27. Chi phí vốn chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. WACC
 
@@ -402,8 +352,6 @@ WACC phải nhất quán với:
 - đòn bẩy;
 - rủi ro kinh doanh.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **27. Chi phí vốn chủ sở hữu** nối từ **26. WACC** sang **28. Lãi suất phi rủi ro phải phù hợp tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Chi phí vốn chủ sở hữu
 
 Theo CAPM:
@@ -418,8 +366,6 @@ Beta và phần bù rủi ro cổ phiếu đều là ước tính, không phải
 
 Nếu thêm phần bù rủi ro quốc gia hay quy mô nhỏ, cần tránh tính cùng một rủi ro hai lần nếu nó đã được đưa vào dòng tiền hoặc beta.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **28. Lãi suất phi rủi ro phải phù hợp tiền tệ** nối từ **27. Chi phí vốn chủ sở hữu** sang **29. Rủi ro quốc gia**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Lãi suất phi rủi ro phải phù hợp tiền tệ
 
 Dòng tiền KRW danh nghĩa không nên được chiết khấu tùy tiện bằng lãi suất phi rủi ro USD mà bỏ qua khác biệt lạm phát và ngoại hối.
@@ -428,8 +374,6 @@ Với doanh nghiệp đa quốc gia, có thể:
 
 - mô hình từng khu vực;
 - hoặc chuyển đổi dòng tiền bằng một khung tiền tệ nhất quán.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **29. Rủi ro quốc gia** nối từ **28. Lãi suất phi rủi ro phải phù hợp tiền tệ** sang **30. Chi phí nợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Rủi ro quốc gia
 
@@ -443,8 +387,6 @@ Rủi ro quốc gia (country risk) có thể đến từ:
 - quản trị.
 
 Có thể phản ánh bằng kịch bản dòng tiền hoặc phần bù chiết khấu. Không nên đồng thời phạt cùng một rủi ro ở cả hai nơi mà không kiểm soát.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **30. Chi phí nợ** nối từ **29. Rủi ro quốc gia** sang **31. Phản hồi giữa đòn bẩy và giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Chi phí nợ
 
@@ -461,15 +403,11 @@ khả năng tái cấp vốn
 khả năng sử dụng lá chắn thuế
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **31. Phản hồi giữa đòn bẩy và giá trị** nối từ **30. Chi phí nợ** sang **32. Phân tích độ nhạy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Phản hồi giữa đòn bẩy và giá trị
 
 WACC không nhất thiết cố định nếu đòn bẩy thay đổi lớn.
 
 Khi giá trị doanh nghiệp giảm mạnh, chi phí nợ và chi phí vốn chủ sở hữu có thể cùng tăng. Với doanh nghiệp đòn bẩy cao, phương pháp **giá trị hiện tại điều chỉnh (Adjusted Present value, APV)** hoặc phân tích kịch bản có thể rõ hơn một WACC duy nhất.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **32. Phân tích độ nhạy** nối từ **31. Phản hồi giữa đòn bẩy và giá trị** sang **33. Biểu đồ độ nhạy kiểu tornado**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Phân tích độ nhạy
 
@@ -483,8 +421,6 @@ Tối thiểu nên kiểm tra:
 - tỷ lệ tái đầu tư.
 
 Nếu giá trị thay đổi từ 50 lên 150 chỉ vì một thay đổi rất nhỏ trong giả định, chính độ nhạy đó là một thông tin rủi ro quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **33. Biểu đồ độ nhạy kiểu tornado** nối từ **32. Phân tích độ nhạy** sang **34. Phân tích kịch bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Biểu đồ độ nhạy kiểu tornado
 
@@ -503,8 +439,6 @@ Vốn lưu động
 ```
 
 Nó giúp tập trung thời gian nghiên cứu vào biến có tác động lớn thay vì tối ưu những biến ít quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **34. Phân tích kịch bản** nối từ **33. Biểu đồ độ nhạy kiểu tornado** sang **35. Định giá theo xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Phân tích kịch bản
 
@@ -532,8 +466,6 @@ cầu yếu
 
 Sau đó mới chuyển các cơ chế này thành doanh thu, biên lợi nhuận, FCF và giá trị.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **35. Định giá theo xác suất** nối từ **34. Phân tích kịch bản** sang **36. Monte Carlo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Định giá theo xác suất
 
 Khi một doanh nghiệp có nhiều đường đi hợp lý, không nên ép tất cả vào một forecast duy nhất. Định giá theo xác suất buộc người phân tích nói rõ khả năng, giá trị và mức thiệt hại của từng kịch bản.
@@ -546,15 +478,11 @@ Xác suất vẫn là phán đoán. Mục tiêu của phương pháp này là bu
 
 Một kịch bản xác suất thấp nhưng thiệt hại rất lớn vẫn có thể quyết định quy mô vị thế.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **36. Monte Carlo** nối từ **35. Định giá theo xác suất** sang **37. Reverse DCF**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Monte Carlo
 
 Monte Carlo lấy mẫu nhiều biến không chắc chắn từ các phân phối giả định để tạo phân phối giá trị.
 
 Nó hữu ích để hình dung độ bất định, nhưng không tự biến một mô hình yếu thành mô hình tốt. Nếu phân phối đầu vào được đoán sai, đầu ra chỉ tạo cảm giác chính xác giả.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **37. Reverse DCF** nối từ **36. Monte Carlo** sang **38. Reverse DCF và thời gian duy trì lợi thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Reverse DCF
 
@@ -576,8 +504,6 @@ sang:
 
 Đây là một trong những cách tốt nhất để đọc kỳ vọng đã được phản ánh trong giá.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **38. Reverse DCF và thời gian duy trì lợi thế** nối từ **37. Reverse DCF** sang **39. P/E**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 38. Reverse DCF và thời gian duy trì lợi thế
 
 Không chỉ giải một CAGR doanh thu. Có thể giải đồng thời:
@@ -588,8 +514,6 @@ Không chỉ giải một CAGR doanh thu. Có thể giải đồng thời:
 - thời gian duy trì lợi nhuận vượt chi phí vốn.
 
 Một giá thị trường có thể đang giả định lợi thế cạnh tranh tồn tại 15 năm thay vì 5 năm. Đây thường là thông tin có ý nghĩa hơn một P/E đơn lẻ.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **39. P/E** nối từ **38. Reverse DCF và thời gian duy trì lợi thế** sang **40. PEG**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. P/E
 
@@ -603,8 +527,6 @@ P/E kết hợp nhiều yếu tố:
 - chu kỳ.
 
 P/E thấp có thể phản ánh đỉnh lợi nhuận chu kỳ hoặc rủi ro cao. P/E cao có thể hợp lý nếu ROIC và tăng trưởng cao có thể duy trì lâu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **40. PEG** nối từ **39. P/E** sang **41. EV/EBITDA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. PEG
 
@@ -624,8 +546,6 @@ PEG quá đơn giản vì bỏ qua:
 
 Chỉ nên dùng như phép tham khảo nhanh.
 
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **41. EV/EBITDA** nối từ **40. PEG** sang **42. EV/EBIT**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. EV/EBITDA
 
 EV/EBITDA giúp so giá trị hoạt động trước khấu hao, tài trợ và thuế.
@@ -634,15 +554,11 @@ EV/EBITDA giúp so giá trị hoạt động trước khấu hao, tài trợ và
 
 Do đó một doanh nghiệp thâm dụng vốn không mặc nhiên xứng đáng cùng EV/EBITDA với doanh nghiệp ít tài sản.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **42. EV/EBIT** nối từ **41. EV/EBITDA** sang **43. EV/Sales**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. EV/EBIT
 
 EV/EBIT đã trừ khấu hao nên có thể phản ánh hao mòn tài sản tốt hơn khi D&A gần với mức tiêu hao kinh tế.
 
 Tuy nhiên vẫn cần chú ý khấu hao tài sản mua lại và khác biệt kế toán.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **43. EV/Sales** nối từ **42. EV/EBIT** sang **44. P/B**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. EV/Sales
 
@@ -654,8 +570,6 @@ Cần so cùng:
 - giữ chân khách hàng;
 - đơn vị (unit / 단위) economics;
 - nhu cầu tái đầu tư.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **44. P/B** nối từ **43. EV/Sales** sang **45. FCF Yield**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. P/B
 
@@ -669,8 +583,6 @@ ROE bền vững > Cost of Equity
 ```
 
 Nếu ROE thấp hơn chi phí vốn kéo dài, chiết khấu P/B có thể hợp lý.
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **45. FCF Yield** nối từ **44. P/B** sang **46. Lợi suất phân phối cho cổ đông**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. FCF Yield
 
@@ -688,8 +600,6 @@ Cần chuẩn hóa FCF để loại bỏ:
 - vốn lưu động bất thường;
 - cắt capex không bền vững.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **46. Lợi suất phân phối cho cổ đông** nối từ **45. FCF Yield** sang **47. So sánh doanh nghiệp tương đồng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Lợi suất phân phối cho cổ đông
 
 Có thể nhìn:
@@ -701,8 +611,6 @@ cổ tức
 ```
 
 Tuy nhiên mua lại bằng nợ hoặc mua cổ phiếu ở mức giá quá cao vẫn có thể phá hủy giá trị.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **46. Lợi suất phân phối cho cổ đông** đặt tiêu chí; **47. So sánh doanh nghiệp tương đồng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **48. Bội số lịch sử** mở rộng hệ quả.
 
 ## 47. So sánh doanh nghiệp tương đồng
 
@@ -718,15 +626,11 @@ Doanh nghiệp so sánh nên tương đồng về:
 
 Không nên chỉ lấy trung bình bội số. Cần giải thích tại sao doanh nghiệp xứng đáng mức cao hơn hoặc thấp hơn nhóm.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **47. So sánh doanh nghiệp tương đồng** đặt tiêu chí; **48. Bội số lịch sử** dùng tiêu chí đó để kiểm tra ranh giới, rồi **49. Định giá từng phần — SOTP** mở rộng hệ quả.
-
 ## 48. Bội số lịch sử
 
 Khoảng bội số lịch sử là dữ liệu tham khảo, không phải luật giá trị hợp lý.
 
 Lãi suất, mức trưởng thành, lợi thế cạnh tranh và cơ cấu ngành có thể thay đổi. Một doanh nghiệp suy yếu về moat có thể xứng đáng bội số thấp hơn quá khứ dù P/E hiện tại đã dưới trung bình 10 năm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **49. Định giá từng phần — SOTP** nối từ **48. Bội số lịch sử** sang **50. NAV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Định giá từng phần — SOTP
 
@@ -741,8 +645,6 @@ SOTP phù hợp khi doanh nghiệp có các mảng với economics và bội s�
 - chiết khấu công ty nắm giữ.
 
 Không nên gán bội số của doanh nghiệp thuần túy cho từng mảng nếu mảng đó không thể tách độc lập hoặc phụ thuộc lớn vào tập đoàn.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **50. NAV** nối từ **49. Định giá từng phần — SOTP** sang **51. Chi phí thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. NAV
 
@@ -759,23 +661,17 @@ NAV cần điều chỉnh:
 
 Giá trị sổ sách của quỹ đất không bằng giá trị có thể thu hồi nếu pháp lý chưa hoàn tất.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **51. Chi phí thay thế** nối từ **50. NAV** sang **52. Giá trị thanh lý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 51. Chi phí thay thế
 
 Với ngành hàng hóa hoặc thâm dụng vốn, chi phí xây mới công suất tương đương có thể là mốc tham khảo.
 
 Nếu giá trị thị trường cao hơn nhiều chi phí thay thế, công suất mới có thể được xây và kéo lợi nhuận về mức bình thường, trừ khi rào cản gia nhập rất cao.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **52. Giá trị thanh lý** nối từ **51. Chi phí thay thế** sang **53. Ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 52. Giá trị thanh lý
 
 Với doanh nghiệp căng thẳng, cần giảm giá trị phải thu, hàng tồn kho và tài sản cố định theo khả năng bán thực tế, sau đó trừ chi phí đóng cửa và các nghĩa vụ ưu tiên.
 
 Giá trị sổ sách vốn chủ sở hữu có thể không có nhiều ý nghĩa nếu tài sản khó chuyển thành tiền.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **53. Ngân hàng** nối từ **52. Giá trị thanh lý** sang **54. Bảo hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Ngân hàng
 
@@ -791,8 +687,6 @@ Value
 
 ROE bền vững cao hơn chi phí vốn tạo giá trị. Tăng trưởng có thể phá giá trị nếu ROE dưới chi phí vốn.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **54. Bảo hiểm** nối từ **53. Ngân hàng** sang **55. REIT**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. Bảo hiểm
 
 Có thể dùng P/B, ROE, embedded giá trị (value / 값) hoặc appraisal giá trị (value / 값) tùy loại hình.
@@ -804,8 +698,6 @@ Cần chú ý:
 - duration danh mục đầu tư;
 - vốn pháp định;
 - rủi ro thiên tai hoặc bồi thường.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **55. REIT** nối từ **54. Bảo hiểm** sang **56. SaaS và doanh nghiệp tăng trưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. REIT
 
@@ -819,8 +711,6 @@ REIT thường được đánh giá bằng:
 - tăng trưởng giá thuê.
 
 P/E thường kém hữu ích vì khấu hao bất động sản có thể làm lợi nhuận kế toán thấp hơn dòng tiền kinh tế.
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **56. SaaS và doanh nghiệp tăng trưởng** nối từ **55. REIT** sang **57. Doanh nghiệp hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. SaaS và doanh nghiệp tăng trưởng
 
@@ -837,8 +727,6 @@ Cần nhìn:
 
 Tăng trưởng cao nhưng đơn vị (unit / 단위) economics yếu không tự động xứng đáng bội số cao.
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **57. Doanh nghiệp hàng hóa** nối từ **56. SaaS và doanh nghiệp tăng trưởng** sang **58. Biotech và doanh nghiệp giai đoạn sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 57. Doanh nghiệp hàng hóa
 
 Cần phân tích:
@@ -853,8 +741,6 @@ Cần phân tích:
 
 Không nên kéo giá giao ngay đang ở đỉnh chu kỳ vào toàn bộ thời gian dự báo.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **58. Biotech và doanh nghiệp giai đoạn sớm** nối từ **57. Doanh nghiệp hàng hóa** sang **59. Giá trị trên mỗi cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 58. Biotech và doanh nghiệp giai đoạn sớm
 
 Khi kết quả phụ thuộc các mốc nhị phân, nên dùng dòng tiền hoặc kịch bản điều chỉnh xác suất thay vì một DCF duy nhất.
@@ -867,8 +753,6 @@ Các biến quan trọng gồm:
 - pha loãng;
 - runway tiền mặt;
 - đối thủ và chuỗi xử lý (pipeline / 파이프라인).
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **59. Giá trị trên mỗi cổ phiếu** nối từ **58. Biotech và doanh nghiệp giai đoạn sớm** sang **60. Bẫy giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Giá trị trên mỗi cổ phiếu
 
@@ -883,8 +767,6 @@ Enterprise Value
 → Value Per Share
 ```
 
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **59. Giá trị trên mỗi cổ phiếu** đặt tiêu chí; **60. Bẫy giá trị** dùng tiêu chí đó để kiểm tra ranh giới, rồi **61. Biên an toàn** mở rộng hệ quả.
-
 ## 60. Bẫy giá trị
 
 Một cổ phiếu “rẻ” có thể tiếp tục rẻ nếu:
@@ -898,8 +780,6 @@ Một cổ phiếu “rẻ” có thể tiếp tục rẻ nếu:
 - tài sản khó hiện thực hóa.
 
 Do đó mức bội số thấp không phải luận điểm đầu tư tự thân.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **60. Bẫy giá trị** đặt tiêu chí; **61. Biên an toàn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **62. Mẫu đầu ra cho một bài định giá** mở rộng hệ quả.
 
 ## 61. Biên an toàn
 
@@ -918,8 +798,6 @@ rủi ro thanh khoản
 rủi ro quản trị
 độ nhạy định giá
 ```
-
-> **Nối mạch:** Trong **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **62. Mẫu đầu ra cho một bài định giá** nối từ **61. Biên an toàn** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Mẫu đầu ra cho một bài định giá
 
@@ -941,8 +819,6 @@ Một bài định giá hoàn chỉnh nên có:
 13. Biên an toàn
 14. Điều kiện làm luận điểm sai
 ```
-
-> **Nối mạch:** Ở chặng này của **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản**, **Kết luận** tổng hợp từ **62. Mẫu đầu ra cho một bài định giá** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

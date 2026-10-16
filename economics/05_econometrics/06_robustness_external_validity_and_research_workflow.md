@@ -43,8 +43,6 @@ Mỗi robustness check nên map tới threat:
 
 Randomly changing mô hình (model / 모델) without threat mô hình (model / 모델) tạo noise, không tạo credibility.
 
-> **Chuyển mạch:** Sau **3. Robustness phải có lý do**, mỗi kiểm tra đã được gắn với một threat cụ thể; **4. Falsification tests** chuyển từ “kết quả có ổn không” sang “kết quả có xuất hiện ở nơi không nên xuất hiện không”. Passing một placebo chỉ hỗ trợ câu chuyện identification, không thay thế nó.
-
 ## 4. Falsification tests
 
 A strong thiết kế (design / 설계) makes predictions where tác động (effect / 효과) **should not** appear.
@@ -136,8 +134,6 @@ Direct replication repeats closely; conceptual replication tests same cơ chế 
 
 Thất bại (failure / 실패) to replicate can reflect original false positive, contextual heterogeneity, hiện thực (implementation / 구현) differences or underpowered replication.
 
-> **Chuyển mạch:** Replication kiểm tra độ bền của finding trong dữ liệu/thiết kế khác; **16. Bên ngoài (external / 외부) validity** đặt câu hỏi khó hơn: ngay cả khi estimate lặp lại, nó có còn đúng cho population, geography, thời gian và scale mục tiêu không?
-
 ## 16. Bên ngoài (external / 외부) validity
 
 Tác động (effect / 효과) can vary by:
@@ -227,8 +223,6 @@ Effect / Cost
 
 helps compare interventions with same kết quả (outcome / 결과). Cost-benefit requires monetizing broader benefits/costs and phân phối (distribution / 분포) các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Sau khi nối effect với chi phí ở **24. Cost-effectiveness**, phần còn lại phải tách statistical uncertainty khỏi decision uncertainty. **25. Statistical vs quyết định (decision / 결정) bất định (uncertainty / 불확실성)** vì vậy bàn về hành động dưới trade-off, không chỉ về việc interval có bao phủ zero hay không.
-
 ## 25. Statistical vs quyết định (decision / 결정) bất định (uncertainty / 불확실성)
 
 Chính sách (policy / 정책) quyết định (decision / 결정) depends not only confidence interval but asymmetric costs of errors, option giá trị (value / 값), irreversibility and học tập (learning / 학습).
@@ -279,8 +273,6 @@ data/code provenance
 ```
 
 Do not hide null results or inconvenient specifications.
-
-> **Chuyển mạch:** **30. Transparent reporting** biến các giới hạn trước đó thành thông tin mà người đọc có thể kiểm tra. **31. Research workflow** tiếp tục bằng thứ tự thao tác từ câu hỏi đến lưu trữ bằng chứng, để robustness không bị biến thành danh sách kiểm tra tách rời khỏi thiết kế.
 
 ## 31. Research workflow
 

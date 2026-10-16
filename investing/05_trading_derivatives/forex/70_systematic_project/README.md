@@ -37,16 +37,12 @@ Raw Data
 
 Nếu không thể dấu vết (trace / 추적) một P/L observation ngược lại raw dữ liệu (data / 데이터), timestamp, quy tắc (rule / 규칙) và thực thi (execution / 실행) giả định (assumption / 가정), research chưa đủ auditability.
 
-> **Nối mạch:** **Kiến trúc tổng quát** mô tả data, signal, execution và control plane; **Các module** tách từng responsibility trước khi ghi **Deliverables**.
-
 ## Các mô-đun (module / 모듈)
 
 1. [01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) — dữ liệu (data / 데이터) lược đồ (schema / 스키마), bid/ask, timezone, DST, macro vintage, chất lượng (quality / 품질) checks và reproducibility.
 2. [02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md) — deterministic vòng lặp sự kiện (event loop / 이벤트 루프), tín hiệu (signal / 신호) timing, fills, spread/slippage, financing, margin và portfolio accounting.
 3. [03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md](./03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md) — currency-leg aggregation, leverage, rủi ro (risk / 위험) limits, stress tests, factor attribution và trade-level decomposition.
 4. [04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md](./04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md) — paper/small-live progression, reconciliation, drift monitoring, operational controls và retirement rules.
-
-> **Nối mạch:** **Deliverables** biến module boundary thành artifact, test và runbook; **Nguyên tắc thiết kế** dùng evidence đó để khóa invariant.
 
 ## Deliverables
 
@@ -69,8 +65,6 @@ retirement_rule.md
 
 Có thể implement bằng Python, Java, SQL hoặc ngăn xếp (stack / 스택) khác. Ngôn ngữ không quan trọng bằng ngữ nghĩa (semantics / 의미론). Hai hiện thực (implementation / 구현) khác nhau đọc cùng specification phải cho kết quả giống nhau trong tolerance định trước.
 
-> **Nối mạch:** **Nguyên tắc thiết kế** chọn idempotency, observability và failure boundary làm invariant; **Scope boundary** nói rõ project không sở hữu phần nào.
-
 ## Nguyên tắc thiết kế
 
 Research hệ thống (system / 시스템) không được “sửa kết quả” bằng cách chỉnh dữ liệu (data / 데이터)/parameter sau khi nhìn equity curve mà không ghi lại experiment lịch sử (history / 이력).
@@ -91,8 +85,6 @@ result_summary
 ```
 
 Nếu một kết quả (result / 결과) không thể reproduce từ các siêu dữ liệu (metadata / 메타데이터) trên, không dùng nó làm bằng chứng cho edge.
-
-> **Nối mạch:** **Scope boundary** khép README bằng owner, non-goal và link; phần implementation chi tiết quay về module hoặc domain canonical.
 
 ## Phạm vi (scope / 범위) ranh giới (boundary / 경계)
 

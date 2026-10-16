@@ -11,8 +11,6 @@ Economic Lịch sử (history / 이력) & Institutions là lớp cuối của Ec
 3. [Technology, Industrialization & Globalization](./02_technology_industrialization_and_globalization.md) — Malthusian các ràng buộc (constraints / 제약조건들), năng lượng (energy / 에너지), general-purpose technologies, diffusion, factories/management, vận chuyển (transport / 전송), urbanization, structural transformation, trade/toàn cục (global / 전역) giá trị (value / 값) chains và industrial chính sách (policy / 정책).
 4. [Crises, Regime Change & Path Dependence](./03_crises_regime_change_and_path_dependence.md) — leverage/amplification, banking/sovereign/currency crises, fiscal/monetary regimes, reconstruction, Lucas critique, hysteresis, lock-in và historical identification.
 
-> **Chuyển mạch:** **Thứ tự học canonical** đưa từ sự kiện đến institution và incentive; **Trục học** làm rõ causal mechanism, rồi **Ranh giới với Lịch sử** tránh trộn economic explanation với narrative chronology.
-
 ## Trục học (learning spine / 학습 축)
 
 ```text
@@ -26,15 +24,11 @@ Rules + enforcement + distribution of power
 → comparative development
 ```
 
-> **Chuyển mạch:** Ở chặng này của **06 — Economic Lịch sử (history / 이력) & Institutions**, **Trục học (learning spine / 학습 축)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Lịch sử (history / 이력)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Lịch sử (history / 이력)
 
 [World History](../../world_history/README.md) và [Korean History](../../korean_history/README.md) giữ chronology, actors, wars, political chuỗi (sequence / 시퀀스) và historical detail. Mô-đun (module / 모듈) này chỉ lấy trường hợp (case / 사례) khi cần làm rõ economic cơ chế (mechanism / 메커니즘) hoặc kiểm thử (test / 테스트) institutional claim.
 
 Không bản sao (copy / 복사) timeline thành một “economic lịch sử (history / 이력) timeline” thứ hai.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Economic Lịch sử (history / 이력) & Institutions**, **Ranh giới (boundary / 경계) với Lịch sử (history / 이력)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Applied Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với Econometrics
 
@@ -42,19 +36,13 @@ Historical correlation không tự nhân quả (causal / 인과적). Historical 
 
 [Econometrics](../05_econometrics/README.md) cung cấp IV/RDD/DiD/panel/time-series tools; lịch sử (history / 이력) làm các giả định (assumptions / 가정들) khó hơn chứ không miễn trừ chúng.
 
-> **Chuyển mạch:** Trong **06 — Economic Lịch sử (history / 이력) & Institutions**, **Ranh giới (boundary / 경계) với Econometrics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Applied Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết quả cần đạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Applied Economics
 
 [Applied Economics](../04_applied_economics/README.md) hỏi tác động (effect / 효과) của contemporary policies/markets với tường minh (explicit / 명시적) estimands. Economic Lịch sử (history / 이력) & Institutions dùng longer horizons để hiểu institution formation, persistence, regime dependence và why the same chính sách (policy / 정책) can behave differently across contexts.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Economic Lịch sử (history / 이력) & Institutions**, **Ranh giới (boundary / 경계) với Applied Economics** đã nêu tiêu chí phân biệt, còn **Kết quả cần đạt** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Kết quả cần đạt
 
 Sau mô-đun (module / 모듈) này, người học phải có thể phân biệt quy tắc (rule / 규칙) với enforcement; thuộc tính (property / 속성) rights với phân phối (distribution / 분포) of power; trạng thái (state / 상태) sức chứa (capacity / 용량) với trạng thái (state / 상태) benevolence; financial deepening với simply more credit; invention với diffusion; static comparative advantage với động (dynamic / 동적) năng lực (capability / 역량); crisis shock với amplification; persistence với true đường dẫn (path / 경로) dependence; và historical narrative với identified nhân quả (causal / 인과적) tác động (effect / 효과).
-
-> **Chuyển mạch:** **Kết quả cần đạt** nêu năng lực đọc institution và incentive; **Checklist** kiểm tra người học có thể truy nguyên cơ chế từ dữ kiện lịch sử hay chưa.
 
 ## Checklist
 

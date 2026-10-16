@@ -40,8 +40,6 @@ settlement timing
 capital-flow restriction
 ```
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **2. bên ngoài (external / 외부) shock trong 2022** nối từ **1. Regime: managed flexibility, không phải một giá cố định** sang **3. Reserve drawdown và intervention sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. bên ngoài (external / 외부) shock trong 2022
 
 Khi Fed và các central banks lớn thắt chặt, broad USD mạnh lên và chênh lệch lãi suất thay đổi. Với Việt Nam, shock truyền qua:
@@ -56,8 +54,6 @@ global risk-off
 ```
 
 IMF ghi nhận pressure lên exchange tỷ lệ (rate / 비율) tăng trong 2022, trong bối cảnh toàn cục (global / 전역) interest rates tăng mạnh. Đây không phải một shock “chart-only”; nó đồng thời là shock funding và balance-sheet.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **3. Reserve drawdown và intervention sức chứa (capacity / 용량)** nối từ **2. bên ngoài (external / 외부) shock trong 2022** sang **4. Policy-rate dilemma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Reserve drawdown và intervention sức chứa (capacity / 용량)
 
@@ -74,8 +70,6 @@ reserve buffer còn bao nhiêu sau stress?
 
 Intervention có thể mua thời gian, nhưng nếu underlying pressure vẫn tồn tại thì chi phí (cost / 비용) là reserve depletion hoặc phải điều chỉnh chính sách (policy / 정책) mix.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **4. Policy-rate dilemma** nối từ **3. Reserve drawdown và intervention sức chứa (capacity / 용량)** sang **5. Widening the trading band**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Policy-rate dilemma
 
 SBV phải xử lý một sự đánh đổi (trade-off / 트레이드오프):
@@ -91,8 +85,6 @@ cut rates / add liquidity
 ```
 
 IMF ghi nhận SBV tăng các chính sách (policy / 정책) rates tổng cộng 200 basis points trong mùa thu 2022; sau khi inflation và pressure giảm, SBV bắt đầu hạ rates từ tháng 3/2023 để hỗ trợ hoạt động kinh tế. Đây là ví dụ rõ về việc chính sách (policy / 정책) không thể tối ưu một biến duy nhất.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **5. Widening the trading band** nối từ **4. Policy-rate dilemma** sang **6. Domestic financial stress làm FX transmission mạnh hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Widening the trading band
 
@@ -116,8 +108,6 @@ forward/corporate pricing phải cập nhật
 
 Band limit là institutional quy tắc (rule / 규칙); nó không phải guaranteed floor/ceiling cho mọi executable price.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **6. Domestic financial stress làm FX transmission mạnh hơn** nối từ **5. Widening the trading band** sang **7. 2023: pressure giảm nhưng regime không trở thành free float**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Domestic financial stress làm FX transmission mạnh hơn
 
 Exchange-rate pressure diễn ra cùng với stress của real-estate và corporate-bond thị trường (market / 시장), cũng như một deposit run tại một ngân hàng lớn vào tháng 10/2022 theo IMF. Khi confidence giảm, cùng một USD shock có thể truyền mạnh hơn:
@@ -140,8 +130,6 @@ deposit behavior
 import payment demand
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **7. 2023: pressure giảm nhưng regime không trở thành free float** nối từ **6. Domestic financial stress làm FX transmission mạnh hơn** sang **8. nhân quả (causal / 인과적) map**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. 2023: pressure giảm nhưng regime không trở thành free float
 
 IMF 2024 Article IV ghi nhận intervention năm 2023 hạn chế hơn nhiều so với reserve drawdown lớn năm 2022; reserves tăng khoảng `USD 5.6bn` lên `USD 92.3bn` cuối 2023. IMF cũng mô tả regime chuyển từ stabilized sang crawl-like vào giữa 2023.
@@ -155,8 +143,6 @@ stable spot ≠ no latent funding risk
 ```
 
 Thị trường (market / 시장) có thể bình tĩnh hơn nhờ bên ngoài (external / 외부) conditions cải thiện, capital confidence và chính sách (policy / 정책) flexibility; đó là trạng thái (state / 상태) thay đổi (change / 변경) chứ không phải bằng chứng rằng cùng một phản hồi (response / 응답) luôn hiệu quả.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **8. nhân quả (causal / 인과적) map** nối từ **7. 2023: pressure giảm nhưng regime không trở thành free float** sang **9. Balance-sheet applications**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. nhân quả (causal / 인과적) map
 
@@ -181,8 +167,6 @@ Loop B — constraint:
 reserve drawdown + domestic stress → less room for intervention/rate defense
 → expectations change → more precautionary USD demand
 ```
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **9. Balance-sheet applications** nối từ **8. nhân quả (causal / 인과적) map** sang **10. Research exercise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Balance-sheet applications
 
@@ -217,8 +201,6 @@ local asset return
 
 USD asset tăng không đồng nghĩa portfolio return tăng cùng tỷ lệ nếu truy cập (access / 접근), hedge hoặc liquidity khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **10. Research exercise** nối từ **9. Balance-sheet applications** sang **11. So sánh USD/VND với USD/KRW và EUR/USD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Research exercise
 
 Tạo event-study cho 2022–2023:
@@ -247,8 +229,6 @@ reserve rebuilding
 
 Không dùng end-of-year reserve number để reconstruct intraday intervention. Ghi rõ publication lag và dữ liệu (data / 데이터) vintage.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **10. Research exercise** đặt tiêu chí; **11. So sánh USD/VND với USD/KRW và EUR/USD** dùng tiêu chí đó để đối chiếu ranh giới, rồi **12. rủi ro (risk / 위험) checklist** mở rộng hệ quả.
-
 ## 11. So sánh USD/VND với USD/KRW và EUR/USD
 
 | Dimension | EUR/USD | USD/KRW | USD/VND |
@@ -260,8 +240,6 @@ Không dùng end-of-year reserve number để reconstruct intraday intervention.
 | thực thi (execution / 실행) lesson | spread/liquidity across venues | session/NDF/onshore tương tác (interaction / 상호작용) | authorized truy cập (access / 접근), quote, settlement and chính sách (policy / 정책) quy tắc (rule / 규칙) |
 
 Một USD shock giống nhau không tạo ra cùng một USD move hay cùng một hedge kết quả (outcome / 결과).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **11. So sánh USD/VND với USD/KRW và EUR/USD** đặt tiêu chí; **12. rủi ro (risk / 위험) checklist** dùng tiêu chí đó để đối chiếu ranh giới, rồi **13. Sources** mở rộng hệ quả.
 
 ## 12. rủi ro (risk / 위험) checklist
 
@@ -277,8 +255,6 @@ Một USD shock giống nhau không tạo ra cùng một USD move hay cùng mộ
 [ ] Không coi band là guaranteed stop/floor
 [ ] Đánh giá hedge bằng combined cash-flow risk
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 07 — Vietnam 2022–2023: FX-management stress, reserves và chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프)**, **12. rủi ro (risk / 위험) checklist** đặt vấn đề; **13. Sources** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 13. Sources
 

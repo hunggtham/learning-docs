@@ -34,8 +34,6 @@ Công khai (public / 공개) surface phải nhỏ và có chủ ý ngay từ đ�
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **1. API công khai (public API / 공개 API) là đặc tả hợp đồng (contract / 계약), không chỉ là public từ khóa (keyword / 키워드)** đặt vấn đề; **2. nguồn (source / 소스) tính tương thích (compatibility / 호환성) và nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) khác nhau** đối chiếu bằng chứng, rồi **3. Kotlin default argument có ABI implications** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. nguồn (source / 소스) tính tương thích (compatibility / 호환성) và nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) khác nhau
 
 Nguồn (source / 소스) tính tương thích (compatibility / 호환성) hỏi:
@@ -55,8 +53,6 @@ Một thay đổi có thể source-compatible nhưng binary-incompatible hoặc 
 SDK môi trường vận hành (production / 운영 환경) cần hiểu cả hai nếu bên tiêu thụ (consumer / 소비자) có động (dynamic / 동적)/plugin/multi-module phân phối (distribution / 분포) hoặc phụ thuộc (dependency / 의존성) resolution phức tạp.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **2. nguồn (source / 소스) tính tương thích (compatibility / 호환성) và nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) khác nhau** đặt vấn đề; **3. Kotlin default argument có ABI implications** đối chiếu bằng chứng, rồi **4. @JvmName, @JvmField, @JvmStatic thay đổi Java surface** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Kotlin default argument có ABI implications
 
@@ -78,8 +74,6 @@ Nếu SDK cần Java-friendly API, cân nhắc overload tường minh (explicit 
 Đừng assume Kotlin ergonomics tự động map tốt sang Java ABI.
 
 ---
-
-> **Nối mạch:** Default arguments ảnh hưởng ABI; `@JvmName`/`@JvmField`/`@JvmStatic` tiếp theo định hình Java surface, rồi nullability annotations trở thành contract cho Java consumers.
 
 ## 4. `@JvmName`, `@JvmField`, `@JvmStatic` thay đổi Java surface
 
@@ -108,8 +102,6 @@ API ergonomics là part của tính tương thích (compatibility / 호환성) �
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **4. @JvmName, @JvmField, @JvmStatic thay đổi Java surface** nêu quy tắc; **5. Nullability annotation là đặc tả hợp đồng (contract / 계약) với Java bên tiêu thụ (consumer / 소비자)** thử quy tắc trong tình huống, rồi **6. Expose giao diện (interface / 인터페이스), hide hiện thực (implementation / 구현) khi hiện thực (implementation / 구현) có thay đổi (change / 변경) axis lớn** mở rộng hệ quả.
-
 ## 5. Nullability annotation là đặc tả hợp đồng (contract / 계약) với Java bên tiêu thụ (consumer / 소비자)
 
 Kotlin kiểu (type / 타입):
@@ -126,8 +118,6 @@ SDK nên tránh ambiguous nền tảng (platform / 플랫폼) kiểu (type / 타
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **5. Nullability annotation là đặc tả hợp đồng (contract / 계약) với Java bên tiêu thụ (consumer / 소비자)** nêu quy tắc; **6. Expose giao diện (interface / 인터페이스), hide hiện thực (implementation / 구현) khi hiện thực (implementation / 구현) có thay đổi (change / 변경) axis lớn** thử quy tắc trong tình huống, rồi **7. công khai (public / 공개) mô hình (model / 모델) nên độc lập nội bộ (internal / 내부) vận chuyển (transport / 전송) mô hình (model / 모델)** mở rộng hệ quả.
-
 ## 6. Expose giao diện (interface / 인터페이스), hide hiện thực (implementation / 구현) khi hiện thực (implementation / 구현) có thay đổi (change / 변경) axis lớn
 
 Ví dụ:
@@ -143,8 +133,6 @@ Hiện thực (implementation / 구현) mạng (network / 네트워크)/lưu tr�
 Nhưng đừng tạo giao diện (interface / 인터페이스) cho mọi dữ liệu (data / 데이터) lớp (class / 클래스) vô cớ. lớp trừu tượng (abstraction / 추상화) cần bảo vệ một thay đổi (change / 변경) axis cụ thể.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **7. công khai (public / 공개) mô hình (model / 모델) nên độc lập nội bộ (internal / 내부) vận chuyển (transport / 전송) mô hình (model / 모델)** nối từ **6. Expose giao diện (interface / 인터페이스), hide hiện thực (implementation / 구현) khi hiện thực (implementation / 구현) có thay đổi (change / 변경) axis lớn** sang **8. phụ thuộc (dependency / 의존성) leakage mở rộng tính tương thích (compatibility / 호환성) surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. công khai (public / 공개) mô hình (model / 모델) nên độc lập nội bộ (internal / 내부) vận chuyển (transport / 전송) mô hình (model / 모델)
 
@@ -168,8 +156,6 @@ Nội bộ (internal / 내부) lược đồ (schema / 스키마) có thể migr
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **8. phụ thuộc (dependency / 의존성) leakage mở rộng tính tương thích (compatibility / 호환성) surface** nối từ **7. công khai (public / 공개) mô hình (model / 모델) nên độc lập nội bộ (internal / 내부) vận chuyển (transport / 전송) mô hình (model / 모델)** sang **9. api phụ thuộc (dependency / 의존성) có thể leak transitive surface**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. phụ thuộc (dependency / 의존성) leakage mở rộng tính tương thích (compatibility / 호환성) surface
 
 Nếu công khai (public / 공개) phương thức (method / 메서드) trả kiểu (type / 타입) từ third-party thư viện (library / 라이브러리):
@@ -186,8 +172,6 @@ Expose third-party kiểu (type / 타입) chỉ khi đó là intentional tích h
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **9. api phụ thuộc (dependency / 의존성) có thể leak transitive surface** nối từ **8. phụ thuộc (dependency / 의존성) leakage mở rộng tính tương thích (compatibility / 호환성) surface** sang **10. phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) là bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. `api` phụ thuộc (dependency / 의존성) có thể leak transitive surface
 
 Thư viện (library / 라이브러리) dùng Gradle `api(...)` khiến bên tiêu thụ (consumer / 소비자) compile thấy phụ thuộc (dependency / 의존성) đó.
@@ -197,8 +181,6 @@ Thư viện (library / 라이브러리) dùng Gradle `api(...)` khiến bên ti�
 Chọn `api` khi công khai (public / 공개) ABI thực sự cần, không vì bản dựng (build / 빌드) fix nhanh.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **10. phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) là bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전) bài toán (problem / 문제)** nối từ **9. api phụ thuộc (dependency / 의존성) có thể leak transitive surface** sang **11. Shading/relocation đôi khi cần nhưng có chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) là bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전) bài toán (problem / 문제)
 
@@ -216,8 +198,6 @@ SDK nên giảm phụ thuộc (dependency / 의존성) footprint, tránh pin phi
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **11. Shading/relocation đôi khi cần nhưng có chi phí (cost / 비용)** nối từ **10. phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) là bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전) bài toán (problem / 문제)** sang **12. Android tài nguyên (resource / 자원) cũng là công khai (public / 공개) surface**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Shading/relocation đôi khi cần nhưng có chi phí (cost / 비용)
 
 Nếu SDK buộc dùng phụ thuộc (dependency / 의존성) dễ xung đột (conflict / 충돌), có thể relocate gói (package / 패키지) bằng shading.
@@ -231,8 +211,6 @@ Nhưng shading:
 Dùng khi xung đột (conflict / 충돌) rủi ro (risk / 위험) thật, không mặc định.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **11. Shading/relocation đôi khi cần nhưng có chi phí (cost / 비용)** đặt vấn đề; **12. Android tài nguyên (resource / 자원) cũng là công khai (public / 공개) surface** đối chiếu bằng chứng, rồi **13. Manifest contribution phải tối thiểu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Android tài nguyên (resource / 자원) cũng là công khai (public / 공개) surface
 
@@ -257,8 +235,6 @@ my_sdk_*
 là practice hữu ích cho thư viện (library / 라이브러리) lớn.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **12. Android tài nguyên (resource / 자원) cũng là công khai (public / 공개) surface** đặt vấn đề; **13. Manifest contribution phải tối thiểu** đối chiếu bằng chứng, rồi **14. Auto-initialization là bên tiêu thụ (consumer / 소비자) startup debt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Manifest contribution phải tối thiểu
 
@@ -286,8 +262,6 @@ consumer disable/override được không?
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **14. Auto-initialization là bên tiêu thụ (consumer / 소비자) startup debt** nối từ **13. Manifest contribution phải tối thiểu** sang **15. SDK không được assume Activity tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Auto-initialization là bên tiêu thụ (consumer / 소비자) startup debt
 
 SDK dùng ContentProvider để auto-init rất tiện nhưng chạy trên startup đường dẫn (path / 경로) bên tiêu thụ (consumer / 소비자).
@@ -299,8 +273,6 @@ Nếu initialization nặng, mọi app tích hợp đều trả độ trễ (lat
 Nếu auto-init cần thiết, keep công việc (work / 작업) tối thiểu.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **15. SDK không được assume Activity tồn tại** nối từ **14. Auto-initialization là bên tiêu thụ (consumer / 소비자) startup debt** sang **16. ngữ cảnh (context / 맥락) thời gian tồn tại (lifetime / 수명) phải rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. SDK không được assume Activity tồn tại
 
@@ -328,8 +300,6 @@ UI luồng (flow / 흐름) mới nhận Activity/Fragment khi thật sự cần.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **16. ngữ cảnh (context / 맥락) thời gian tồn tại (lifetime / 수명) phải rõ** nối từ **15. SDK không được assume Activity tồn tại** sang **17. Threading đặc tả hợp đồng (contract / 계약) phải document**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. ngữ cảnh (context / 맥락) thời gian tồn tại (lifetime / 수명) phải rõ
 
 Không giữ Activity ngữ cảnh (context / 맥락) trong singleton.
@@ -339,8 +309,6 @@ Nếu SDK máy khách (client / 클라이언트) sống ứng dụng (applicatio
 Nếu cần Activity cho permission/UI, nhận ephemeral tham chiếu (reference / 참조) ở phương thức (method / 메서드) ranh giới (boundary / 경계) và không bộ nhớ đệm (cache / 캐시) lâu dài.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **17. Threading đặc tả hợp đồng (contract / 계약) phải document** nối từ **16. ngữ cảnh (context / 맥락) thời gian tồn tại (lifetime / 수명) phải rõ** sang **18. Suspend API nên main-safe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Threading đặc tả hợp đồng (contract / 계약) phải document
 
@@ -364,8 +332,6 @@ hoặc expose suspend API và để caller quyết định ngữ cảnh (context
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **18. Suspend API nên main-safe** nối từ **17. Threading đặc tả hợp đồng (contract / 계약) phải document** sang **19. Callback cancellation cần tường minh (explicit / 명시적) handle**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Suspend API nên main-safe
 
 SDK công khai (public / 공개) suspend hàm (function / 함수) không nên yêu cầu bên tiêu thụ (consumer / 소비자) nhớ chuyển IO nếu underlying công việc (work / 작업) blocking.
@@ -381,8 +347,6 @@ Threading detail nằm trong SDK.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **19. Callback cancellation cần tường minh (explicit / 명시적) handle** nối từ **18. Suspend API nên main-safe** sang **20. luồng (flow / 흐름) API cần define hot/cold ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Callback cancellation cần tường minh (explicit / 명시적) handle
 
 Nếu SDK expose callback API:
@@ -396,8 +360,6 @@ Bên tiêu thụ (consumer / 소비자) cần cách cancel khi vòng đời (lif
 Không có cancel đường dẫn (path / 경로) dễ tạo stale callback/leak.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **19. Callback cancellation cần tường minh (explicit / 명시적) handle** đặt đầu vào cho **20. luồng (flow / 흐름) API cần define hot/cold ngữ nghĩa (semantics / 의미론)**, rồi **21. Exception kiểu (type / 타입) công khai (public / 공개) trở thành Đặc tả API (API contract / API 계약)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. luồng (flow / 흐름) API cần define hot/cold ngữ nghĩa (semantics / 의미론)
 
@@ -420,8 +382,6 @@ Luồng (flow / 흐름) kiểu (type / 타입) không tự document tài nguyên
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **20. luồng (flow / 흐름) API cần define hot/cold ngữ nghĩa (semantics / 의미론)** đặt đầu vào cho **21. Exception kiểu (type / 타입) công khai (public / 공개) trở thành Đặc tả API (API contract / API 계약)**, rồi **22. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약) phải phân biệt retryable/permanent** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Exception kiểu (type / 타입) công khai (public / 공개) trở thành Đặc tả API (API contract / API 계약)
 
 Nếu SDK throw nội bộ (internal / 내부) Retrofit exception trực tiếp, bên tiêu thụ (consumer / 소비자) có thể bắt `HttpException` và phụ thuộc hiện thực (implementation / 구현).
@@ -437,8 +397,6 @@ sealed interface SdkError {
 ```
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **22. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약) phải phân biệt retryable/permanent** nối từ **21. Exception kiểu (type / 타입) công khai (public / 공개) trở thành Đặc tả API (API contract / API 계약)** sang **23. Logging trong SDK phải respect host privacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약) phải phân biệt retryable/permanent
 
@@ -457,8 +415,6 @@ data class Failure(
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **23. Logging trong SDK phải respect host privacy** nối từ **22. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약) phải phân biệt retryable/permanent** sang **24. Telemetry SDK phải có backpressure/lưu trữ (storage / 저장소) chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Logging trong SDK phải respect host privacy
 
 Không log:
@@ -475,8 +431,6 @@ SDK gỡ lỗi (debug / 디버그) logging nên opt-in và redact.
 Bên tiêu thụ (consumer / 소비자) có privacy/compliance yêu cầu (requirement / 요구사항) riêng; SDK không được âm thầm thu thập vượt đặc tả hợp đồng (contract / 계약).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **24. Telemetry SDK phải có backpressure/lưu trữ (storage / 저장소) chính sách (policy / 정책)** nối từ **23. Logging trong SDK phải respect host privacy** sang **25. SDK phải degrade gracefully khi host misconfigure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Telemetry SDK phải có backpressure/lưu trữ (storage / 저장소) chính sách (policy / 정책)
 
@@ -496,8 +450,6 @@ disk limit
 Không để analytics chiếm disk vô hạn hoặc thử lại (retry / 재시도) làm hao pin.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **25. SDK phải degrade gracefully khi host misconfigure** nối từ **24. Telemetry SDK phải có backpressure/lưu trữ (storage / 저장소) chính sách (policy / 정책)** sang **26. bản địa (native / 네이티브) mã (code / 코드) làm thất bại (failure / 실패) ranh giới (boundary / 경계) nguy hiểm hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. SDK phải degrade gracefully khi host misconfigure
 
@@ -521,8 +473,6 @@ Thư viện (library / 라이브러리) không nên kéo cả app host crash n�
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **25. SDK phải degrade gracefully khi host misconfigure** đặt tiêu chí; **26. bản địa (native / 네이티브) mã (code / 코드) làm thất bại (failure / 실패) ranh giới (boundary / 경계) nguy hiểm hơn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **27. JNI cục bộ (local / 로컬)/toàn cục (global / 전역) tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명) khác nhau** mở rộng hệ quả.
-
 ## 26. bản địa (native / 네이티브) mã (code / 코드) làm thất bại (failure / 실패) ranh giới (boundary / 경계) nguy hiểm hơn
 
 Kotlin exception thường có thể catch.
@@ -542,8 +492,6 @@ exception pending
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **26. bản địa (native / 네이티브) mã (code / 코드) làm thất bại (failure / 실패) ranh giới (boundary / 경계) nguy hiểm hơn** đặt tiêu chí; **27. JNI cục bộ (local / 로컬)/toàn cục (global / 전역) tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명) khác nhau** dùng tiêu chí đó để kiểm tra ranh giới, rồi **28. JNIEnv gắn với luồng thực thi (thread / 스레드)** mở rộng hệ quả.
-
 ## 27. JNI cục bộ (local / 로컬)/toàn cục (global / 전역) tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명) khác nhau
 
 Cục bộ (local / 로컬) tham chiếu (reference / 참조) thường chỉ valid trong bản địa (native / 네이티브) lời gọi (call / 호출)/frame.
@@ -553,8 +501,6 @@ Nếu giữ Java đối tượng (object / 객체) qua lời gọi (call / 호�
 Giữ cục bộ (local / 로컬) ref lâu có thể use-after-lifetime; quên delete toàn cục (global / 전역) ref gây leak.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **28. JNIEnv gắn với luồng thực thi (thread / 스레드)** nối từ **27. JNI cục bộ (local / 로컬)/toàn cục (global / 전역) tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명) khác nhau** sang **29. Java exception từ JNI phải check**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. `JNIEnv*` gắn với luồng thực thi (thread / 스레드)
 
@@ -566,8 +512,6 @@ Luồng thực thi (thread / 스레드) quyền sở hữu (ownership / 소유�
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **29. Java exception từ JNI phải check** nối từ **28. JNIEnv gắn với luồng thực thi (thread / 스레드)** sang **30. bản địa (native / 네이티브) buffer quyền sở hữu (ownership / 소유권) phải tường minh (explicit / 명시적)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Java exception từ JNI phải check
 
 Nếu bản địa (native / 네이티브) gọi Java phương thức (method / 메서드) và Java throw, JNI có pending exception.
@@ -577,8 +521,6 @@ Tiếp tục gọi API khác khi exception pending có thể gây hành vi (beha
 Bản địa (native / 네이티브) cầu nối (bridge / 브리지) nên check/propagate/clear theo đặc tả hợp đồng (contract / 계약) đúng.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, sau nội dung của **29. Java exception từ JNI phải check**, **30. bản địa (native / 네이티브) buffer quyền sở hữu (ownership / 소유권) phải tường minh (explicit / 명시적)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **31. ABI split ảnh hưởng phân phối (distribution / 분포) và testing** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. bản địa (native / 네이티브) buffer quyền sở hữu (ownership / 소유권) phải tường minh (explicit / 명시적)
 
@@ -594,8 +536,6 @@ write/read concurrency?
 Ranh giới (boundary / 경계) docs phải nói rõ thời gian tồn tại (lifetime / 수명).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **31. ABI split ảnh hưởng phân phối (distribution / 분포) và testing** nối từ **30. bản địa (native / 네이티브) buffer quyền sở hữu (ownership / 소유권) phải tường minh (explicit / 명시적)** sang **32. bản địa (native / 네이티브) symbolication là môi trường vận hành (production / 운영 환경) yêu cầu (requirement / 요구사항)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. ABI split ảnh hưởng phân phối (distribution / 분포) và testing
 
@@ -613,8 +553,6 @@ CI/bản phát hành (release / 릴리스) kiểm thử (test / 테스트) cần
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **32. bản địa (native / 네이티브) symbolication là môi trường vận hành (production / 운영 환경) yêu cầu (requirement / 요구사항)** nối từ **31. ABI split ảnh hưởng phân phối (distribution / 분포) và testing** sang **33. Sanitizer hữu ích để bắt bộ nhớ (memory / 메모리) bug trước môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. bản địa (native / 네이티브) symbolication là môi trường vận hành (production / 운영 환경) yêu cầu (requirement / 요구사항)
 
 Crash address:
@@ -628,8 +566,6 @@ không hữu ích nếu không có symbol ánh xạ (mapping / 매핑)/hiện v�
 Bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인) phải archive/upload bản địa (native / 네이티브) symbols theo phiên bản (version / 버전)/bản dựng (build / 빌드) id.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **33. Sanitizer hữu ích để bắt bộ nhớ (memory / 메모리) bug trước môi trường vận hành (production / 운영 환경)** nối từ **32. bản địa (native / 네이티브) symbolication là môi trường vận hành (production / 운영 환경) yêu cầu (requirement / 요구사항)** sang **34. 16 KB page-size tính tương thích (compatibility / 호환성) là bản địa (native / 네이티브) packaging/thời gian chạy (runtime / 런타임) concern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Sanitizer hữu ích để bắt bộ nhớ (memory / 메모리) bug trước môi trường vận hành (production / 운영 환경)
 
@@ -645,8 +581,6 @@ Bản địa (native / 네이티브) bộ nhớ (memory / 메모리) bug hiếm 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **34. 16 KB page-size tính tương thích (compatibility / 호환성) là bản địa (native / 네이티브) packaging/thời gian chạy (runtime / 런타임) concern** nối từ **33. Sanitizer hữu ích để bắt bộ nhớ (memory / 메모리) bug trước môi trường vận hành (production / 운영 환경)** sang **35. bản địa (native / 네이티브) mã (code / 코드) nên được dùng khi lợi ích rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. 16 KB page-size tính tương thích (compatibility / 호환성) là bản địa (native / 네이티브) packaging/thời gian chạy (runtime / 런타임) concern
 
 Hiện đại (modern / 현대적) Android thiết bị (device / 장치) ecosystem có thể dùng page kích thước (size / 크기) khác 4 KB.
@@ -656,8 +590,6 @@ Bản địa (native / 네이티브) thư viện (library / 라이브러리) b�
 Nếu SDK ship prebuilt `.so`, SDK author chịu trách nhiệm kiểm tra nhị phân (binary / 이진) của mình, không đẩy rủi ro (risk / 위험) cho bên tiêu thụ (consumer / 소비자) app.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **35. bản địa (native / 네이티브) mã (code / 코드) nên được dùng khi lợi ích rõ** nối từ **34. 16 KB page-size tính tương thích (compatibility / 호환성) là bản địa (native / 네이티브) packaging/thời gian chạy (runtime / 런타임) concern** sang **36. JNI ranh giới (boundary / 경계) nên coarse-grained**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. bản địa (native / 네이티브) mã (code / 코드) nên được dùng khi lợi ích rõ
 
@@ -675,8 +607,6 @@ Không dùng NDK chỉ để “nhanh hơn” mà chưa benchmark.
 JNI crossing cũng có overhead và độ phức tạp (complexity / 복잡도).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **35. bản địa (native / 네이티브) mã (code / 코드) nên được dùng khi lợi ích rõ** đặt tiêu chí; **36. JNI ranh giới (boundary / 경계) nên coarse-grained** dùng tiêu chí đó để kiểm tra ranh giới, rồi **37. công khai (public / 공개) bản địa (native / 네이티브) ABI và nội bộ (internal / 내부) bản địa (native / 네이티브) ABI khác nhau** mở rộng hệ quả.
 
 ## 36. JNI ranh giới (boundary / 경계) nên coarse-grained
 
@@ -700,8 +630,6 @@ Optimize ranh giới (boundary / 경계) frequency trước micro-optimize hàm 
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **36. JNI ranh giới (boundary / 경계) nên coarse-grained** đặt tiêu chí; **37. công khai (public / 공개) bản địa (native / 네이티브) ABI và nội bộ (internal / 내부) bản địa (native / 네이티브) ABI khác nhau** dùng tiêu chí đó để kiểm tra ranh giới, rồi **38. Deprecation nên có di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)** mở rộng hệ quả.
-
 ## 37. công khai (public / 공개) bản địa (native / 네이티브) ABI và nội bộ (internal / 내부) bản địa (native / 네이티브) ABI khác nhau
 
 Nếu SDK expose C API cho third party, ABI stability trở thành đặc tả hợp đồng (contract / 계약) dài hạn.
@@ -711,8 +639,6 @@ Nếu bản địa (native / 네이티브) chỉ nội bộ (internal / 내부) 
 Giữ bản địa (native / 네이티브) hiện thực (implementation / 구현) private nếu không cần bên ngoài (external / 외부) ABI.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **37. công khai (public / 공개) bản địa (native / 네이티브) ABI và nội bộ (internal / 내부) bản địa (native / 네이티브) ABI khác nhau** đặt đầu vào cho **38. Deprecation nên có di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)**, rồi **39. Removal cần bản phát hành (release / 릴리스) chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. Deprecation nên có di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)
 
@@ -737,8 +663,6 @@ Docs cần giải thích ngữ nghĩa (semantic / 의미적) difference nếu di
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **38. Deprecation nên có di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)** đặt đầu vào cho **39. Removal cần bản phát hành (release / 릴리스) chính sách (policy / 정책)**, rồi **40. Behavioral tính tương thích (compatibility / 호환성) quan trọng không kém signature** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 39. Removal cần bản phát hành (release / 릴리스) chính sách (policy / 정책)
 
 API công khai (public API / 공개 API) không nên deprecated hôm nay, remove ngày mai nếu SDK có broad bên tiêu thụ (consumer / 소비자) cơ sở (base / 기반).
@@ -756,8 +680,6 @@ SemVer chỉ hữu ích khi nhóm (team / 팀) thực sự tôn trọng tính t�
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **40. Behavioral tính tương thích (compatibility / 호환성) quan trọng không kém signature** nối từ **39. Removal cần bản phát hành (release / 릴리스) chính sách (policy / 정책)** sang **41. hiệu năng (performance / 성능) regression của SDK là externalized chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Behavioral tính tương thích (compatibility / 호환성) quan trọng không kém signature
 
 Phương thức (method / 메서드) signature không đổi nhưng hành vi (behavior / 동작) thay:
@@ -774,8 +696,6 @@ Bên tiêu thụ (consumer / 소비자) có thể vỡ dù nhị phân (binary /
 Bản phát hành (release / 릴리스) ghi chú (note / 노트) phải cover hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약).
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **41. hiệu năng (performance / 성능) regression của SDK là externalized chi phí (cost / 비용)** nối từ **40. Behavioral tính tương thích (compatibility / 호환성) quan trọng không kém signature** sang **42. SDK kích thước (size / 크기) ngân sách (budget / 예산) cần nhánh học (track / 트랙) transitive chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. hiệu năng (performance / 성능) regression của SDK là externalized chi phí (cost / 비용)
 
@@ -795,8 +715,6 @@ Consumer-centric hiệu năng (performance / 성능) là part của chất lư�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **42. SDK kích thước (size / 크기) ngân sách (budget / 예산) cần nhánh học (track / 트랙) transitive chi phí (cost / 비용)** nối từ **41. hiệu năng (performance / 성능) regression của SDK là externalized chi phí (cost / 비용)** sang **43. Custom Lint giúp encode tích hợp (integration / 통합) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. SDK kích thước (size / 크기) ngân sách (budget / 예산) cần nhánh học (track / 트랙) transitive chi phí (cost / 비용)
 
 AAR 100 KB nhưng kéo phụ thuộc (dependency / 의존성) 5 MB vẫn làm bên tiêu thụ (consumer / 소비자) sản phẩm tạo ra (artifact / 산출물) lớn.
@@ -804,8 +722,6 @@ AAR 100 KB nhưng kéo phụ thuộc (dependency / 의존성) 5 MB vẫn làm b�
 Measure final bên tiêu thụ (consumer / 소비자) impact, không chỉ tệp (file / 파일) AAR.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **43. Custom Lint giúp encode tích hợp (integration / 통합) quy tắc (rule / 규칙)** nối từ **42. SDK kích thước (size / 크기) ngân sách (budget / 예산) cần nhánh học (track / 트랙) transitive chi phí (cost / 비용)** sang **44. SDK mẫu (sample / 표본) app phải là real bên tiêu thụ (consumer / 소비자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Custom Lint giúp encode tích hợp (integration / 통합) quy tắc (rule / 규칙)
 
@@ -824,8 +740,6 @@ Trình biên dịch (compiler / 컴파일러)/build-time phản hồi (feedback 
 
 ---
 
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **44. SDK mẫu (sample / 표본) app phải là real bên tiêu thụ (consumer / 소비자)** nối từ **43. Custom Lint giúp encode tích hợp (integration / 통합) quy tắc (rule / 규칙)** sang **45. tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) nên compile old bên tiêu thụ (consumer / 소비자) against new SDK**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. SDK mẫu (sample / 표본) app phải là real bên tiêu thụ (consumer / 소비자)
 
 Đừng để mẫu (sample / 표본) mô-đun (module / 모듈) truy cập (access / 접근) nội bộ (internal / 내부) dự án (project / 프로젝트) hiện thực (implementation / 구현) đặc biệt.
@@ -842,8 +756,6 @@ Java/Kotlin API ergonomics
 ```
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **45. tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) nên compile old bên tiêu thụ (consumer / 소비자) against new SDK** nối từ **44. SDK mẫu (sample / 표본) app phải là real bên tiêu thụ (consumer / 소비자)** sang **46. API dump giúp rà soát (review / 검토) accidental công khai (public / 공개) surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) nên compile old bên tiêu thụ (consumer / 소비자) against new SDK
 
@@ -863,8 +775,6 @@ Kotlin consumer test
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **46. API dump giúp rà soát (review / 검토) accidental công khai (public / 공개) surface** nối từ **45. tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) nên compile old bên tiêu thụ (consumer / 소비자) against new SDK** sang **47. Consumer-driven tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. API dump giúp rà soát (review / 검토) accidental công khai (public / 공개) surface
 
 Công cụ (tool / 도구)/API dump cho thấy công khai (public / 공개) declarations thay đổi trong PR.
@@ -880,8 +790,6 @@ third-party type leak không?
 API công khai (public API / 공개 API) rà soát (review / 검토) nên tường minh (explicit / 명시적) như cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) rà soát (review / 검토).
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **47. Consumer-driven tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nối từ **46. API dump giúp rà soát (review / 검토) accidental công khai (public / 공개) surface** sang **48. bảo mật (security / 보안) cập nhật (update / 업데이트) có thể buộc tính tương thích (compatibility / 호환성) sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Consumer-driven tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
@@ -901,8 +809,6 @@ Không thể hỗ trợ (support / 지원) “mọi phiên bản (version / 버�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **48. bảo mật (security / 보안) cập nhật (update / 업데이트) có thể buộc tính tương thích (compatibility / 호환성) sự đánh đổi (trade-off / 트레이드오프)** nối từ **47. Consumer-driven tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sang **49. bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) provenance cho SDK**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 48. bảo mật (security / 보안) cập nhật (update / 업데이트) có thể buộc tính tương thích (compatibility / 호환성) sự đánh đổi (trade-off / 트레이드오프)
 
 Nếu phụ thuộc (dependency / 의존성) có vulnerability nghiêm trọng, SDK có thể cần upgrade breaking phụ thuộc (dependency / 의존성).
@@ -918,8 +824,6 @@ migration urgency
 Bảo mật (security / 보안) patch không nên bị trì hoãn vô hạn chỉ để tránh major phiên bản (version / 버전).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **49. bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) provenance cho SDK** nối từ **48. bảo mật (security / 보안) cập nhật (update / 업데이트) có thể buộc tính tương thích (compatibility / 호환성) sự đánh đổi (trade-off / 트레이드오프)** sang **50. SDK reliability checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) provenance cho SDK
 
@@ -937,8 +841,6 @@ signing/provenance metadata
 Nếu Maven sản phẩm tạo ra (artifact / 산출물) bị sự cố (incident / 인시던트), nhóm (team / 팀) phải reproduce và kiểm tra (audit / 감사) được.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **50. SDK reliability checklist** nối từ **49. bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) provenance cho SDK** sang **51. Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. SDK reliability checklist
 Phần này nối mạch Android vừa học với “50. SDK reliability checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -959,8 +861,6 @@ Phần này nối mạch Android vừa học với “50. SDK reliability checkl
 | sản phẩm tạo ra (artifact / 산출물) reproducible/auditable không? | supply-chain/bản phát hành (release / 릴리스) |
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 07 — SDK Authoring, bản địa (native / 네이티브) ranh giới (boundary / 경계), API Evolution và bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전)**, **51. Kết luận** tổng hợp từ **50. SDK reliability checklist** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 51. Kết luận
 

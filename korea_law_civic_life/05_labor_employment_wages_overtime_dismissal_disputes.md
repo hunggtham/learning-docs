@@ -14,8 +14,6 @@ quyền và nghĩa vụ trong quan hệ lao động (근로관계)
 
 Có visa cho phép làm việc không có nghĩa mọi điều khoản công ty đưa ra đều hợp pháp. Ngược lại, có quyền theo luật lao động cũng không tự động giải quyết vấn đề về tư cách lưu trú. Hai hệ thống cần được kiểm tra riêng.
 
-> **Chuyển mạch:** Employment relationship is distinct from visa label; 근로계약서 records duties and conditions, then wage rules determine what counts as payable work and dispute evidence.
-
 ## 2. Hợp đồng lao động (근로계약서)
 
 Theo FAQ chính thức của Bộ Việc làm và Lao động, người sử dụng lao động phải ghi bằng văn bản các điều kiện lao động quan trọng như tiền lương, thời giờ làm việc theo hợp đồng, ngày nghỉ và kỳ nghỉ; với lao động có thời hạn hoặc bán thời gian còn có các mục bắt buộc bổ sung.
@@ -36,8 +34,6 @@ Khi đọc `근로계약서`, nên xác định ít nhất:
 - `취업규칙`: nội quy lao động có liên quan.
 
 Đừng chỉ nhìn `연봉`. Cần hiểu tổng lương gồm những thành phần nào, khoản nào cố định, khoản nào phụ thuộc giờ làm hoặc điều kiện khác.
-
-> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **3. Tiền lương (임금)** tiếp nhận điểm tựa từ **2. Hợp đồng lao động (근로계약서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thời giờ làm việc và overtime (연장근로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Tiền lương (임금)
 
@@ -60,8 +56,6 @@ Khi kiểm tra bảng lương (`급여명세서`), nên tách:
 
 Nếu có tranh chấp lương, cần lưu `근로계약서`, `급여명세서`, sao kê ngân hàng, lịch làm việc, log chấm công (`출퇴근기록`) và tin nhắn giao việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **4. Thời giờ làm việc và overtime (연장근로)** tiếp nhận điểm tựa từ **3. Tiền lương (임금)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Thời giờ làm việc và overtime (연장근로)
 
 Luật Tiêu chuẩn Lao động (근로기준법) đang có hiệu lực tại thời điểm kiểm tra 2026-09-21 quy định tại Điều 56 rằng overtime thuộc phạm vi luật phải được trả thêm ít nhất 50% `통상임금`; làm việc ban đêm từ 22:00 đến 06:00 cũng có cơ chế phụ trội, và làm việc ngày nghỉ có cấu trúc riêng.
@@ -79,8 +73,6 @@ người đó có thuộc phạm vi áp dụng của điều khoản không?
 
 Đây là lý do thư viện (library / 라이브러리) tập trung vào cơ chế và nguồn tra cứu thay vì một bảng tính duy nhất.
 
-> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** tiếp nhận điểm tựa từ **4. Thời giờ làm việc và overtime (연장근로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. Sa thải (해고) không chỉ là “báo trước 30 ngày”
 
 Một lỗi phổ biến là nghĩ rằng chỉ cần báo trước 30 ngày thì sa thải luôn hợp pháp. Luật tách nhiều vấn đề khác nhau:
@@ -97,8 +89,6 @@ Tại thời điểm kiểm tra, `근로기준법` Điều 26 quy định nguyê
 
 Vì thời hạn tranh chấp quan trọng, khi nhận thông báo sa thải cần ghi chính xác **ngày xảy ra sự việc**, không chỉ giữ bản chụp.
 
-> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** tiếp nhận điểm tựa từ **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Tranh chấp nơi làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau
 
 Sau khi đọc quy tắc sa thải, ta cần phân loại đúng cách quan hệ lao động kết thúc. Tên gọi trong hệ thống HR có thể khác sự kiện thực tế, nên phần này đặt các khả năng cạnh nhau để biết chứng cứ nào cần giữ.
@@ -110,8 +100,6 @@ Sau khi đọc quy tắc sa thải, ta cần phân loại đúng cách quan hệ
 - `합의해지`: hai bên thỏa thuận chấm dứt.
 
 Tên gọi trong HR hệ thống (system / 시스템) không quyết định toàn bộ bản chất. Cần xem sự kiện thực tế và chứng cứ.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **7. Tranh chấp nơi làm việc** tiếp nhận điểm tựa từ **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lao động nước ngoài và bảo hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Tranh chấp nơi làm việc
 
@@ -131,15 +119,11 @@ Có thể liên quan Ủy ban Quan hệ Lao động (노동위원회). Thời h�
 
 Cần kiểm tra định nghĩa, nghĩa vụ của công ty và thủ tục hiện hành theo `근로기준법` và hướng dẫn của Bộ Lao động. Không nên gắn nhãn pháp lý chỉ dựa trên một trải nghiệm khó chịu mà chưa đối chiếu tiêu chí luật.
 
-> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **8. Lao động nước ngoài và bảo hiểm** tiếp nhận điểm tựa từ **7. Tranh chấp nơi làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Workflow tự tra cứu tranh chấp lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Lao động nước ngoài và bảo hiểm
 
 Tư cách visa ảnh hưởng một số chế độ, đặc biệt `고용보험`. Work24 hiện ghi rằng người có F-2, F-5, F-6 thuộc nhóm áp dụng bắt buộc trong phạm vi mô tả của hệ thống; một số visa khác có cơ chế khác. Quy định này có thể thay đổi nên phải kiểm tra `체류자격별 적용` hiện hành.
 
 Với E-9 và H-2 còn có các bảo hiểm chuyên biệt của hệ thống cấp phép lao động nước ngoài như `출국만기보험`, `보증보험`, `귀국비용보험`, `상해보험`. Không nên nhầm chúng với bốn bảo hiểm xã hội chung.
-
-> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **8. Lao động nước ngoài và bảo hiểm** xác định đầu vào; **9. Workflow tự tra cứu tranh chấp lao động** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Workflow tự tra cứu tranh chấp lao động
 
@@ -156,8 +140,6 @@ Khi đã xác định loại tranh chấp, hãy chuyển từ cảm giác “b�
 8. kiểm tra deadline trước khi thương lượng kéo dài
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, cơ chế trong **9. Workflow tự tra cứu tranh chấp lao động** cần được kiểm chứng bằng dấu vết cụ thể; **10. Nguồn chính thức** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **11. Không phải legal advice cá nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. Nguồn chính thức
 
 Các nguồn này là điểm kiểm tra cuối cho luật, thủ tục và hướng dẫn lao động hiện hành. Hãy dùng chúng để xác minh trước khi thương lượng kéo dài hoặc bỏ qua thời hạn khiếu nại.
@@ -168,8 +150,6 @@ Các nguồn này là điểm kiểm tra cuối cho luật, thủ tục và hư�
 - 근로기준법: https://www.law.go.kr/
 - 중앙노동위원회: https://www.nlrc.go.kr/
 - 근로복지공단: https://www.comwel.or.kr/
-
-> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **10. Nguồn chính thức** nêu điều cần giải thích; **11. Không phải legal advice cá nhân** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11. Không phải legal advice cá nhân
 

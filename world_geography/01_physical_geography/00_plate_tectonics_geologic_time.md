@@ -8,8 +8,6 @@ Nhiều đặc điểm địa lý hiện tại không thể giải thích nếu 
 
 Một sai lầm trực giác phổ biến là đánh giá tốc độ nhỏ như “vài centimet mỗi năm” là không đáng kể. Nếu một mảng dịch 5 cm/năm, trong 10 triệu năm khoảng dịch chuyển lý tưởng có thể đạt khoảng 500 km. Trong Earth science, **tốc độ nhỏ × thời gian dài = thay đổi hành tinh**.
 
-> **Nối mạch:** Địa hình và kiến tạo chỉ có nghĩa khi đặt trong thời gian hàng tỷ năm; **Relative dating và absolute dating** phân biệt thứ tự trước–sau với tuổi số. **Radiometric dating là đồng hồ thống kê của nguyên tử** tiếp theo cung cấp cách định lượng tuổi.
-
 ## Relative dating và absolute dating
 
 Địa chất dùng hai cách lớn để đặt sự kiện vào thời gian. **Định tuổi tương đối (relative dating)** xác định cái gì xảy ra trước–sau bằng quan hệ địa tầng, cắt xuyên và hóa thạch. **Định tuổi tuyệt đối/radiometric (absolute or radiometric dating)** dùng phân rã đồng vị để ước lượng tuổi theo năm.
@@ -18,23 +16,17 @@ Nguyên lý **chồng lớp (superposition)** cho rằng trong dãy trầm tích
 
 Các nguyên lý này là lô-gic (logic / 논리) suy luận, không phải mẹo học thuộc. Chúng cho phép reconstruct chuỗi (sequence / 시퀀스) trước khi có con số tuổi chính xác.
 
-> **Nối mạch:** Relative/absolute dating đặt câu hỏi tuổi và thứ tự, còn **Radiometric dating là đồng hồ thống kê của nguyên tử** dùng decay và half-life với bất định. **Geological thời gian (time / 시간) quy mô (scale / 규모) là hierarchy, không phải danh sách tên** tiếp theo tổ chức các tuổi thành cấp độ.
-
 ## Radiometric dating là đồng hồ thống kê của nguyên tử
 
 Một đồng vị phóng xạ phân rã với xác suất đặc trưng, thường mô tả bằng **chu kỳ bán rã (half-life)**. Nếu hệ khoáng vật giữ tương đối kín từ khi hình thành, tỷ lệ đồng vị mẹ–con cho phép suy thời gian.
 
 Không có một isotope phù hợp cho mọi vật liệu và mọi tuổi. Carbon-14 hữu ích cho vật liệu hữu cơ tương đối trẻ; uranium–lead phù hợp khoáng vật cổ hơn rất nhiều. Chọn “đồng hồ” sai có thể làm phép đo vô nghĩa.
 
-> **Nối mạch:** Radiometric ages cần một khung hierarchy để so sánh; **Geological thời gian (time / 시간) quy mô (scale / 규모) là hierarchy, không phải danh sách tên** nối eon–era–period với các biến đổi lớn. **Cấu trúc bên trong Trái Đất: phân lớp theo thành phần và cơ học** tiếp theo giải thích vật chất vận hành qua thời gian ấy.
-
 ## Geological thời gian (time / 시간) quy mô (scale / 규모) là hierarchy, không phải danh sách tên
 
 Lịch sử Trái Đất được chia thành eon, era, period và epoch dựa trên thay đổi địa chất–sinh học lớn và mốc chuẩn. Mục tiêu của người học địa lý không phải thuộc mọi tên, mà hiểu rằng mỗi landscape có **inheritance** từ những giai đoạn rất khác nhau.
 
 Một đồng bằng hiện đại có thể nằm trên basement hàng trăm triệu năm, phủ bởi sediment trẻ vài nghìn năm. Cùng một vị trí chứa nhiều “đồng hồ” chồng lên nhau.
-
-> **Nối mạch:** Geological scale mô tả khi nào, còn **Cấu trúc bên trong Trái Đất: phân lớp theo thành phần và cơ học** mô tả lithosphere, asthenosphere, mantle và core. **Làm sao biết cấu trúc sâu nếu không khoan tới lõi?** tiếp theo đưa bằng chứng địa vật lý vào phần không quan sát trực tiếp.
 
 ## Cấu trúc bên trong Trái Đất: phân lớp theo thành phần và cơ học
 
@@ -44,15 +36,11 @@ Asthenosphere không phải biển magma. Phần lớn mantle là chất rắn, 
 
 Điều này giải quyết nghịch lý trực giác: “đá rắn làm sao chảy?”. Câu trả lời nằm ở nhiệt độ, áp suất và timescale.
 
-> **Nối mạch:** Thành phần và cơ học sâu được suy ra từ seismic waves, gravity và geothermal data; **Làm sao biết cấu trúc sâu nếu không khoan tới lõi?** nối proxy với mô hình. **Plate tectonics là lý thuyết (theory / 이론) hợp nhất** tiếp theo hợp nhất các proxy thành cơ chế chuyển động.
-
 ## Làm sao biết cấu trúc sâu nếu không khoan tới lõi?
 
 **Sóng địa chấn (seismic waves)** truyền khác nhau qua vật liệu. Sóng P đi qua rắn và lỏng; sóng S không truyền qua chất lỏng theo cách tương tự. Thay đổi tốc độ và shadow zone giúp suy ranh giới (boundary / 경계) sâu.
 
 Đây là một **inverse bài toán (problem / 문제)**: ta đo tín hiệu tại bề mặt rồi suy cấu trúc bên trong. Cùng lô-gic (logic / 논리) xuất hiện trong remote sensing, medical imaging và geophysics.
-
-> **Nối mạch:** Proxy sâu giải thích vì sao plate tồn tại như các mảng chuyển động; **Plate tectonics là lý thuyết (theory / 이론) hợp nhất** cần kiểm tra bằng đáy đại dương và từ dư. **Bằng chứng từ đáy đại dương và paleomagnetism** tiếp theo cung cấp dấu vết độc lập.
 
 ## Plate tectonics là lý thuyết (theory / 이론) hợp nhất
 
@@ -62,23 +50,17 @@ Sau này ánh xạ (mapping / 매핑) đáy biển, paleomagnetism, seismicity v
 
 Sức mạnh của lý thuyết (theory / 이론) nằm ở việc giải thích đồng thời earthquake, volcano, mountain belt, ocean ridge, trench và phân phối (distribution / 분포) của nhiều tài nguyên.
 
-> **Nối mạch:** Theory dự đoán seafloor spreading và magnetic stripes; **Bằng chứng từ đáy đại dương và paleomagnetism** kiểm tra dự đoán đó. **Plate không phải cùng một thứ với continent** tiếp theo sửa nhầm lẫn giữa lớp thạch quyển và khối lục địa.
-
 ## Bằng chứng từ đáy đại dương và paleomagnetism
 
 Ocean crust trẻ nhất nằm gần mid-ocean ridge và già dần ra hai phía. Các dải **magnetic anomaly** đối xứng phản ánh lịch sử đảo cực từ được “ghi” khi basalt nguội.
 
 Mẫu này phù hợp với **sea-floor spreading**: crust mới sinh ở ridge rồi dịch ra ngoài. Khi kết hợp với subduction, hệ có chu trình tạo–tái chế lithosphere đại dương.
 
-> **Nối mạch:** Seafloor và paleomagnetism cho thấy crust tái tạo, còn **Plate không phải cùng một thứ với continent** phân biệt oceanic/continental crust với plate lớn hơn. **Vì sao plate chuyển động?** tiếp theo hỏi lực và slab geometry nào làm plate dịch chuyển.
-
 ## Plate không phải cùng một thứ với continent
 
 Một plate có thể chứa cả continental crust và oceanic crust. Ranh giới plate cũng không trùng coastline. Ví dụ earthquake có thể nằm dưới biển hoặc trong continent tùy tectonic setting.
 
 Phân biệt này quan trọng vì bản đồ chính trị, coastline và plate map là ba lớp hoàn toàn khác nhau.
-
-> **Nối mạch:** Plate có thể mang cả continent và oceanic crust; **Vì sao plate chuyển động?** nối basal drag, slab pull và ridge push với chuyển động thực. **Divergent ranh giới (boundary / 경계): tạo crust mới** tiếp theo cho thấy nơi lithosphere tách và crust mới hình thành.
 
 ## Vì sao plate chuyển động?
 
@@ -88,23 +70,17 @@ Slab oceanic lạnh, đặc khi subduct có thể kéo phần plate phía sau. R
 
 Plate tectonics là hệ thống (system / 시스템) động; không có một “motor duy nhất” hoạt động giống nhau khắp nơi.
 
-> **Nối mạch:** Forces giải thích plate motion, còn **Divergent ranh giới (boundary / 경계): tạo crust mới** tạo magma và seafloor mới. **Convergent ranh giới (boundary / 경계): tiêu thụ hoặc làm dày crust** tiếp theo mô tả subduction, collision và mountain building.
-
 ## Divergent ranh giới (boundary / 경계): tạo crust mới
 
 Ở **ranh giới phân kỳ (divergent boundary)**, lithosphere tách ra. Mantle trồi lên, áp suất giảm và partial melting tạo magma. Trong ocean, quá trình tạo mid-ocean ridge; trên continent, rifting có thể tạo basin rồi tiến tới ocean mới nếu tiếp tục.
 
 East African Rift minh họa continental rifting; Atlantic ridge minh họa oceanic spreading.
 
-> **Nối mạch:** Divergence tạo crust, còn **Convergent ranh giới (boundary / 경계): tiêu thụ hoặc làm dày crust** tái chế hoặc làm dày crust qua subduction/collision. **Transform ranh giới (boundary / 경계): chuyển động ngang và elastic strain** tiếp theo chuyển năng lượng thành trượt ngang.
-
 ## Convergent ranh giới (boundary / 경계): tiêu thụ hoặc làm dày crust
 
 Khi oceanic lithosphere gặp plate khác, phần lạnh–đặc có thể **subduct**. Đới subduction tạo trench, earthquake từ nông đến sâu, arc volcanism và mountain building.
 
 Nếu hai continent va nhau, crust lục địa khó chìm sâu vì buoyant hơn; crust dày lên, fold–thrust hệ thống (system / 시스템) phát triển và plateau/mountain belt hình thành. Himalaya là trường hợp (case / 사례) điển hình của continental collision.
-
-> **Nối mạch:** Convergence dồn nén và tạo núi, còn **Transform ranh giới (boundary / 경계): chuyển động ngang và elastic strain** tích lũy elastic strain dọc fault. **Earthquake magnitude khác intensity** tiếp theo phân biệt năng lượng nguồn với mức rung tại nơi ở.
 
 ## Transform ranh giới (boundary / 경계): chuyển động ngang và elastic strain
 
@@ -114,8 +90,6 @@ Khi stress vượt strength/friction, fault trượt nhanh và phát earthquake.
 
 Một fault không cần nằm ngay plate ranh giới (boundary / 경계) mới có earthquake; stress có thể truyền và re-activate fault nội mảng.
 
-> **Nối mạch:** Transform fault cung cấp stress release, còn **Earthquake magnitude khác intensity** tách magnitude của nguồn khỏi intensity phụ thuộc khoảng cách, nền đất và công trình. **Magma hình thành theo nhiều cơ chế** tiếp theo chuyển kiến tạo thành melt.
-
 ## Earthquake magnitude khác intensity
 
 **Magnitude** mô tả quy mô nguồn earthquake; thang moment magnitude liên quan seismic moment và có tính logarithmic. **Intensity** mô tả mức rung/tác động tại địa điểm cụ thể.
@@ -123,8 +97,6 @@ Một fault không cần nằm ngay plate ranh giới (boundary / 경계) mới 
 Cùng một earthquake có một magnitude nhưng nhiều intensity theo không gian, vì khoảng cách, soil, basin hình học (geometry / 기하학) và building phản hồi (response / 응답) khác nhau.
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang [Natural hazards & risk](./07_natural_hazards_risk.md): nguồn (source / 소스) hazard chưa phải mất mát (loss / 손실).
-
-> **Nối mạch:** Earthquake cho thấy stress và fault release; **Magma hình thành theo nhiều cơ chế** phân biệt decompression, flux melting và heat transfer. **Hotspot và plate motion** tiếp theo dùng volcanic chain để đọc chuyển động plate.
 
 ## Magma hình thành theo nhiều cơ chế
 
@@ -134,15 +106,11 @@ Tại mid-ocean ridge, decompression quan trọng. Tại subduction zone, water/
 
 Composition của magma ảnh hưởng viscosity, gas retention và eruption style. Vì vậy volcano kiểu (type / 타입) gắn với tectonic setting nhưng không phải ánh xạ (mapping / 매핑) một-một tuyệt đối.
 
-> **Nối mạch:** Melt mechanism tạo volcano, còn **Hotspot và plate motion** dùng chuỗi núi lửa và tuổi đá để suy ra plate motion tương đối. **Isostasy nối tectonics với geomorphology** tiếp theo giải thích uplift/subsidence sau kiến tạo.
-
 ## Hotspot và plate motion
 
 Một số volcanic chuỗi (chain / 사슬) nằm xa plate ranh giới (boundary / 경계). **Hotspot** có thể liên quan mantle upwelling/plume hoặc tiến trình (process / 프로세스) nội mảng khác. Khi plate di chuyển qua nguồn (source / 소스) tương đối ổn định, tuổi volcano có thể tăng theo chuỗi.
 
 Hawaii là classic trường hợp (case / 사례) cho việc dùng age mẫu (pattern / 패턴) để suy plate motion.
-
-> **Nối mạch:** Hotspot ghi dấu chuyển động, còn **Isostasy nối tectonics với geomorphology** cân bằng tải giữa crust, mantle và erosion. **Rock cycle và plate tectonics** tiếp theo nối uplift, melting, weathering và burial vào vòng đá.
 
 ## Isostasy nối tectonics với geomorphology
 
@@ -152,23 +120,17 @@ Do đó uplift và erosion không phải hai quá trình độc lập. Erosion c
 
 Landscape là sản phẩm coupling giữa **tectonics + climate + rock strength + thời gian (time / 시간)**.
 
-> **Nối mạch:** Isostasy đổi relief và erosion, còn **Rock cycle và plate tectonics** tái chế vật liệu qua magma, sediment và metamorphism. **Tectonics và tài nguyên** tiếp theo đặt vòng đá cạnh ore, hydrocarbon và geothermal resources.
-
 ## Rock cycle và plate tectonics
 
 Igneous, sedimentary và metamorphic rock chuyển đổi thông qua melting, crystallization, weathering, burial và metamorphism. Plate tectonics cung cấp nhiều pathway lớn của **rock cycle**.
 
 Subduction đưa material xuống sâu; uplift đưa rock lên bề mặt; basin nhận sediment; magma tạo igneous body. Vì vậy rock cycle không phải sơ đồ vòng tròn tách khỏi geography.
 
-> **Nối mạch:** Rock cycle tạo và tái phân bố vật liệu; **Tectonics và tài nguyên** giải thích vì sao khoáng sản, basin, geothermal và hydrocarbon có geography không đều. **Tectonics, settlement và economy** tiếp theo nối endowment với dân cư và hạ tầng.
-
 ## Tectonics và tài nguyên
 
 Ore deposit thường gắn với hydrothermal hệ thống (system / 시스템), arc magmatism, rift, sedimentary basin hoặc ancient tectonic setting. Oil–gas cần basin, organic matter, burial, maturation, reservoir và trap.
 
 “Có plate ranh giới (boundary / 경계) = có tài nguyên” là quá đơn giản. Cần lịch sử địa chất cụ thể để tạo, bảo tồn và tập trung tài nguyên (resource / 자원).
-
-> **Nối mạch:** Resources không tự tạo phát triển; **Tectonics, settlement và economy** thêm hazard, accessibility, capital, institutions và corridor để giải thích uneven outcomes. **Mô hình tư duy** tiếp theo cô đọng nền địa chất–xã hội.
 
 ## Tectonics, settlement và economy
 
@@ -177,8 +139,6 @@ Nhiều vùng tectonically active cũng có population density cao vì volcanic 
 Đây là chuỗi (chain / 사슬) quan trọng:
 
 **tectonic setting → relief/tài nguyên (resource / 자원)/hazard → settlement ràng buộc (constraint / 제약조건)/opportunity → hạ tầng (infrastructure / 인프라) chi phí (cost / 비용) → economic mẫu (pattern / 패턴)**.
-
-> **Nối mạch:** **Mô hình tư duy** khép chuỗi geological time → inner structure → plate boundaries → earthquakes/magma → relief/rock cycle → resources → settlement/economy, rồi bàn giao sang owner **Physical Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 

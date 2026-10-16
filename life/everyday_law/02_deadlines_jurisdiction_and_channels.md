@@ -8,15 +8,11 @@ Xác định quốc gia/vùng, nơi giao dịch hoặc sự kiện xảy ra, nơ
 
 Đây là bước phân loại, không phải kết luận. Khi yếu tố xuyên biên giới hoặc quyền lớn, cần nguồn chính thức hoặc tư vấn chuyên môn.
 
-> **Chuyển mạch:** Jurisdiction chọn bộ quy tắc; deadline cho biết quyền lựa chọn phải được dùng trong khoảng thời gian nào.
-
 ## 2. Deadline cần được ghi thành hành động
 
 Không ghi “xử lý sớm”; ghi ngày bắt đầu, sự kiện kích hoạt, ngày hết hạn, kênh nộp và bằng chứng đã nộp. Thời hạn khiếu nại, hoàn tiền, bảo hành, khởi kiện hoặc phản đối có thể khác nhau.
 
 Nếu chưa chắc deadline, liên hệ cơ quan owner sớm và lưu mã tiếp nhận. Một email hỏi thông tin không nhất thiết bảo lưu quyền pháp lý.
-
-> **Chuyển mạch:** Deadline biến kiến thức thành hành động; kênh giải quyết quyết định ai có quyền tiếp nhận, hòa giải, ra quyết định hoặc yêu cầu chuyển tiếp.
 
 ## 3. Chọn kênh theo kết quả mong muốn
 

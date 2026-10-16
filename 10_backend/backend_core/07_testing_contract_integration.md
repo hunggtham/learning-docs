@@ -15,16 +15,12 @@
 Kiểm thử (test / 테스트) không chỉ xác nhận happy đường dẫn (path / 경로). Bao phủ duplicate yêu cầu (request / 요청), hết thời gian chờ (timeout / 타임아웃), partial
 thất bại (failure / 실패), permission ranh giới (boundary / 경계), stale phiên bản (version / 버전), quay lui (rollback / 롤백), thử lại (retry / 재시도) và shutdown.
 
-> **Chuyển mạch:** Việc chọn unit, integration, contract hay E2E phải gắn với ranh giới cần chứng minh. **Hermeticity và dữ liệu** kiểm soát môi trường của từng lớp; khi dữ liệu và clock đã ổn định, ta mới đánh giá được contract evolution.
-
 ## Hermeticity và dữ liệu
 
 Mỗi kiểm thử (test / 테스트) phải biết trạng thái (state / 상태) seed, clock, randomness và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성) nào được
 thay thế. Fake không được tự tạo ngữ nghĩa (semantics / 의미론) khác môi trường vận hành (production / 운영 환경); dùng kiểm thử tích hợp (integration test / 통합 테스트)
 cho truy vấn (query / 쿼리)/giao dịch (transaction / 트랜잭션)/ràng buộc (constraint / 제약조건) mà mock không thể chứng minh. kiểm thử (test / 테스트) dữ liệu (data / 데이터) tối thiểu,
 không dùng credential môi trường vận hành (production / 운영 환경) và không phụ thuộc thứ tự kiểm thử (test / 테스트).
-
-> **Chuyển mạch:** Test hermetic giúp phân biệt lỗi của code với lỗi của fixture, clock hoặc dependency. **Đặc tả hợp đồng (contract / 계약) evolution** dùng nền đó để kiểm tra producer/consumer qua nhiều phiên bản; kết quả cần được ghi thành evidence có thể truy nguyên.
 
 ## Đặc tả hợp đồng (contract / 계약) evolution
 
@@ -33,8 +29,6 @@ thêm/xóa, nullability, enum và status mã (code / 코드). lược đồ (sch
 cũ và mới trong rollout nhiều phiên bản. Property-based kiểm thử (test / 테스트) phù hợp cho parser,
 pagination, idempotency và bất biến (invariant / 불변식) máy trạng thái (state machine / 상태 머신).
 
-> **Chuyển mạch:** Contract evolution chỉ đáng tin khi failure message chỉ rõ input, expected và observed. **Bằng chứng (evidence / 증거) của kiểm thử (test / 테스트)** biến từng lần chạy thành dữ liệu review; từ đó có thể đi sâu vào việc chứng minh invariant thay vì chỉ đếm coverage.
-
 ## Bằng chứng (evidence / 증거) của kiểm thử (test / 테스트)
 
 Thất bại (failure / 실패) message phải nêu đầu vào (input / 입력), expected bất biến (invariant / 불변식) và observed trạng thái (state / 상태). Flaky kiểm thử (test / 테스트)
@@ -42,8 +36,6 @@ là tín hiệu về race, clock, trạng thái dùng chung (shared state / 공�
 nên chỉ tăng thử lại (retry / 재시도) cho kiểm thử (test / 테스트) để che nguyên nhân.
 
 Tham khảo nền xác minh (verification / 확인) và debugging tại [Software Engineering](../../computer_science/09_software_engineering/README.md).
-
-> **Chuyển mạch:** Khi evidence đã nêu rõ trạng thái và invariant, **Đào sâu: kiểm thử (test / 테스트) như bằng chứng của bất biến (invariant / 불변식)** kiểm tra cả negative path, fault injection và eventual consistency. **Bài tập suy luận** sẽ đặt các invariant đó vào một API có duplicate và replay.
 
 ## Đào sâu: kiểm thử (test / 테스트) như bằng chứng của bất biến (invariant / 불변식)
 
@@ -61,15 +53,11 @@ Fault injection có thể drop publish, delay cơ sở dữ liệu (database / �
 `429`, đổi clock hoặc reorder sự kiện (event / 이벤트). Chạy trong môi trường cô lập, có blast radius
 và cleanup rõ. Một kiểm thử (test / 테스트) pass trong happy đường dẫn (path / 경로) không chứng minh khôi phục (recovery / 복구) đúng.
 
-> **Chuyển mạch:** Ở chặng này của **07. Testing, đặc tả hợp đồng (contract / 계약) và tích hợp (integration / 통합)**, **Đào sâu: kiểm thử (test / 테스트) như bằng chứng của bất biến (invariant / 불변식)** nêu điều cần giải thích; **Bài tập suy luận** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hiệu năng (performance / 성능) và bảo mật (security / 보안) regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bài tập suy luận
 
 Viết kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho `POST /orders` gồm duplicate key, concurrent phiên bản (version / 버전) xung đột (conflict / 충돌),
 payment hết thời gian chờ (timeout / 타임아웃) sau lần ghi nhận (commit / 커밋) và worker replay. Chỉ ra kiểm thử (test / 테스트) nào đơn vị (unit / 단위), tích hợp (integration / 통합),
 đặc tả hợp đồng (contract / 계약) hay E2E; giải thích vì sao mock không đủ cho từng bất biến (invariant / 불변식).
-
-> **Chuyển mạch:** Ma trận `POST /orders` cho biết lớp test nào chứng minh từng invariant; **Hiệu năng (performance / 성능) và bảo mật (security / 보안) regression** mở rộng cùng ma trận đó sang p99, pool exhaustion, authorization và abuse mà happy-path không thấy.
 
 ## Hiệu năng (performance / 성능) và bảo mật (security / 보안) regression
 

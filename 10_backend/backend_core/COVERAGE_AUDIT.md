@@ -27,8 +27,6 @@ nhánh học (track / 트랙).
 | API bảo mật (security / 보안) headers/CORS/tỷ lệ (rate / 비율) chính sách (policy / 정책) | `01`/`02` | covered | limiter đặc tả hợp đồng (contract / 계약), CORS ranh giới (boundary / 경계), kiểm tra hợp lệ (validation / 검증), auth |
 | privacy/dữ liệu (data / 데이터) retention/erasure | `02`/`03`/`08` | covered at cốt lõi (core / 핵심) mức (level / 수준) | vòng đời (lifecycle / 생명주기), deletion phạm vi (scope / 범위), redaction và telemetry classification |
 
-> **Chuyển mạch:** Coverage matrix cho biết năng lực nào đã có owner và bằng chứng. **Ranh giới (boundary / 경계) cố ý không duplicate** dùng matrix đó để tránh kéo database, network hoặc runtime semantics vào backend core lần nữa; phần backlog chỉ giữ những khoảng trống còn có owner.
-
 ## Ranh giới (boundary / 경계) cố ý không duplicate
 
 - cơ sở dữ liệu (database / 데이터베이스) internals (MVCC, WAL, indexes, query optimizer) thuộc
@@ -42,8 +40,6 @@ nhánh học (track / 트랙).
 - Java/Python ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) và Spring API thuộc các nhánh học (track / 트랙) hiện thực (implementation / 구현)
   bên cạnh, không trở thành prerequisite ngầm của Backend cốt lõi (core / 핵심).
 
-> **Chuyển mạch:** Khi boundary đã chỉ rõ phần nào thuộc chapter khác, **Backlog có thứ tự** chỉ ưu tiên cập nhật có đơn vị sở hữu và invariant riêng. **Tiêu chí hoàn tất một cập nhật (update / 업데이트)** biến nguyên tắc đó thành điều kiện review có thể kiểm tra.
-
 ## Backlog có thứ tự
 
 1. Bổ sung một thiết kế (design / 설계) worksheet cho cấu hình (configuration / 구성)/secrets vòng đời (lifecycle / 생명주기) nếu các
@@ -52,8 +48,6 @@ nhánh học (track / 트랙).
    cho triển khai (deployment / 배포) và legal ranh giới (boundary / 경계); không kéo topic này vào cốt lõi (core / 핵심) quá sớm.
 3. Chỉ tạo chapter riêng khi các phần trên đủ lớn và có bất biến (invariant / 불변식) khác biệt;
    không tách tệp (file / 파일) chỉ để tăng số lượng.
-
-> **Chuyển mạch:** Tiêu chí hoàn tất yêu cầu owner, failure mode, test, telemetry và link check; đó là ngưỡng để một dòng trong matrix chuyển từ “covered” thành bằng chứng có thể review lại.
 
 ## Tiêu chí hoàn tất một cập nhật (update / 업데이트)
 

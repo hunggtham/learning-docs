@@ -12,16 +12,12 @@ Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đ
 - Đo peak, RMS, frequency, overshoot và settling bằng cùng thời gian (time / 시간)/voltage quy mô (scale / 규모).
 - Không nối earth-referenced ground clip vào nút (node / 노드) floating hoặc high-side nếu chưa phân tích an toàn (safety / 안전).
 
-> **Chuyển mạch:** **1. Oscilloscope** cho dạng sóng và thời gian; **2. Logic analyzer** đọc trạng thái số, rồi **3. Power measurement** kiểm tra nguồn và nhiễu gây sai cả hai phép đo.
-
 ## 2. lô-gic (logic / 논리) analyzer
 
 - Chọn mẫu (sample / 표본) tỷ lệ (rate / 비율) đủ lớn so với fastest edge cần kiểm tra, không chỉ so với bit tỷ lệ (rate / 비율).
 - Ghi giao thức (protocol / 프로토콜) decoder phiên bản (version / 버전) và threshold voltage.
 - Kiểm tra framing, ACK/NACK, hết thời gian chờ (timeout / 타임아웃), repeated start, reset giữa giao dịch (transaction / 트랜잭션) và bus contention.
 - Correlate timestamp với oscilloscope hoặc firmware dấu vết (trace / 추적); hai thiết bị có thể có clock khác nhau.
-
-> **Chuyển mạch:** Ở chặng này của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **2. lô-gic (logic / 논리) analyzer** nêu điều cần giải thích; **3. Power đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. HIL và fault injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Power đo lường (measurement / 측정)
 
@@ -30,8 +26,6 @@ Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đ
 - Dùng shunt/hiện tại (current / 현재) probe có bandwidth và burden phù hợp.
 - Tính cả conversion mất mát (loss / 손실), thermal rise và derating ở ambient khác nhau.
 - Kiểm tra current-limit hành vi (behavior / 동작) và năng lượng (energy / 에너지) còn lại sau fault.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **3. Power đo lường (measurement / 측정)** nêu điều cần giải thích; **4. HIL và fault injection** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. HIL và fault injection
 
@@ -49,8 +43,6 @@ actuator stuck-on/stuck-off
 
 Mỗi kiểm thử (test / 테스트) cần expected safe trạng thái (state / 상태), deadline, fault mã (code / 코드), khôi phục (recovery / 복구) chính sách (policy / 정책) và bằng chứng (evidence / 증거) sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** Trong **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **4. HIL và fault injection** nêu điều cần giải thích; **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. đo lường (measurement / 측정) bản ghi (record / 레코드)
 
 Một bản ghi (record / 레코드) tối thiểu có:
@@ -65,8 +57,6 @@ Một bản ghi (record / 레코드) tối thiểu có:
 | kết quả (result / 결과) | pass/thất bại (fail / 실패), raw tệp (file / 파일), interpretation |
 
 Không sửa waveform bằng smoothing rồi coi đó là raw bằng chứng (evidence / 증거). Nếu có post-processing, giữ raw capture và ghi rõ transform.
-
-> **Chuyển mạch:** **5. Measurement record** biến phép đo thành bằng chứng có thể lặp; **Cầu nối** chỉ cách bàn giao record, điều kiện và sai số sang lần debug sau.
 
 ## Cầu nối (bridge / 브리지)
 

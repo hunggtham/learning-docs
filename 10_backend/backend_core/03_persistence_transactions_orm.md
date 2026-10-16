@@ -18,8 +18,6 @@ Cơ sở dữ liệu (database / 데이터베이스) ràng buộc (constraint / 
 bất biến (invariant / 불변식); ứng dụng (application / 애플리케이션) kiểm tra hợp lệ (validation / 검증) chỉ cải thiện thông báo lỗi. Chọn isolation
 theo anomaly cần ngăn, không theo khẩu hiệu “strongest luôn tốt nhất”.
 
-> **Chuyển mạch:** Trong **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**, trường hợp ở **Từ use trường hợp (case / 사례) đến chuyển tiếp trạng thái (state transition / 상태 전이)** cho thấy quy tắc hoạt động; **ORM ranh giới (boundary / 경계)** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Remote side tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## ORM ranh giới (boundary / 경계)
 
 ORM giúp ánh xạ (mapping / 매핑) đối tượng (object / 객체)/bản ghi (record / 레코드) và quản lý đơn vị (unit / 단위) of công việc (work / 작업), nhưng không che được
@@ -34,8 +32,6 @@ kế hoạch truy vấn (query plan / 쿼리 계획), khóa (lock / 잠금), gia
 Đọc mô hình (model / 모델) bằng DTO/projection khi cần API ổn định. Dùng di chuyển (migration / 마이그레이션) versioned,
 backward-compatible (expand → migrate → contract) cho deploy rolling.
 
-> **Chuyển mạch:** Ở chặng này của **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**, **ORM ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Remote side tác động (effect / 효과)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Đào sâu: giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và thất bại (failure / 실패) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Remote side tác động (effect / 효과)
 
 Không giữ cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) mở trong lúc chờ payment/API khác. Dùng outbox,
@@ -44,8 +40,6 @@ thất bại, phải có cơ chế thử lại (retry / 재시도) và quan sát
 có thể nhìn thấy trạng thái (state / 상태) chưa tồn tại.
 
 Chi tiết ACID, MVCC, WAL và truy vấn (query / 쿼리) thực thi (execution / 실행) thuộc [Data & Databases](../../computer_science/05_data_databases/README.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**, **Remote side tác động (effect / 효과)** đã nêu tiêu chí phân biệt, còn **Đào sâu: giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và thất bại (failure / 실패) ma trận (matrix / 행렬)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bài tập suy luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đào sâu: giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và thất bại (failure / 실패) ma trận (matrix / 행렬)
 
@@ -70,15 +64,11 @@ thành công. Chọn optimistic phiên bản (version / 버전) check khi xung �
 trọng yếu (critical / 중요) section ngắn và xung đột (conflict / 충돌) thường xuyên. Đo khóa (lock / 잠금) wait, deadlock và
 giao dịch (transaction / 트랜잭션) duration thay vì chỉ nhìn thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Trong **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**, **Đào sâu: giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và thất bại (failure / 실패) ma trận (matrix / 행렬)** đã nêu tiêu chí phân biệt, còn **Bài tập suy luận** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết (connection / 연결) pool và read consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bài tập suy luận
 
 Thiết kế di chuyển (migration / 마이그레이션) thêm `status=ARCHIVED` trong rolling deploy: lược đồ (schema / 스키마) expand,
 mã (code / 코드) tương thích, backfill, chỉ mục (index / 인덱스) rollout, đặc tả hợp đồng (contract / 계약) và quay lui (rollback / 롤백) nếu backfill mới
 chạy 30%.
-
-> **Chuyển mạch:** Bài tập rolling deploy đã đặt migration và rollback vào một tình huống có rủi ro thật. **Liên kết (connection / 연결) pool và read consistency** tiếp tục ở lớp vận hành: pool chia sẻ ngân sách concurrency, còn replica tạo ra một consistency contract riêng.
 
 ## Liên kết (connection / 연결) pool và read consistency
 

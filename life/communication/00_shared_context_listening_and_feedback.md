@@ -8,15 +8,11 @@ Người nói có ý định, người nghe có mô hình riêng, còn thông đ
 
 Trước khi nói, xác định người nhận cần biết gì, cần quyết định gì và cần làm gì sau đó. Đây là cách biến “nói cho rõ” thành tiêu chí quan sát được.
 
-> **Chuyển mạch:** Mục tiêu định hình nội dung; bối cảnh chung và kênh quyết định người nhận có thể giải mã nội dung đó đến đâu.
-
 ## 2. Cấu trúc thông điệp và lựa chọn kênh
 
 Một thông điệp công việc thường cần `bối cảnh → vấn đề → đề nghị/quyết định → thời hạn → cách xác nhận`. Tin nhắn ngắn phù hợp việc cần dấu vết; cuộc gọi phù hợp xử lý nhanh nhưng nên ghi lại điểm đã thống nhất; cuộc họp phù hợp vấn đề nhiều bên nhưng cần agenda và kết luận.
 
 Không có kênh “tốt nhất” độc lập với mục tiêu. Kênh càng giàu tín hiệu cảm xúc càng dễ sửa hiểu nhầm trực tiếp, nhưng kênh văn bản lại tạo bằng chứng và cho phép người nhận suy nghĩ.
-
-> **Chuyển mạch:** Kênh và cấu trúc làm giảm nhiễu truyền; lắng nghe và paraphrase kiểm tra xem mô hình của hai bên đã thực sự giao nhau chưa.
 
 ## 3. Lắng nghe để kiểm tra, không chỉ để chờ lượt nói
 

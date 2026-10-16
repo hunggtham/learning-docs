@@ -10,8 +10,6 @@ JavaScript vẫn là JavaScript. Closure, `this`, vòng lặp sự kiện (event
 
 Nếu một bug nằm ở closure hoặc async thứ tự (ordering / 순서), học thêm API WebSquare không giải quyết được. Ngược lại, nếu bug do page đang ở WFrame khác phạm vi (scope / 범위), chỉ biết JavaScript thuần cũng chưa đủ. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) phải xác định đúng tầng trước khi sửa.
 
-> **Nối mạch:** Trong **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **1. WebSquare không phải là “JavaScript có thêm vài API”** đặt vấn đề; **2. Từ nguồn (source / 소스) đến thời gian chạy (runtime / 런타임): XML → W-Pack → Engine → trình duyệt (browser / 브라우저)** đối chiếu bằng chứng, rồi **3. Studio và Engine giải quyết hai nhiệm vụ khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Từ nguồn (source / 소스) đến thời gian chạy (runtime / 런타임): XML → W-Pack → Engine → trình duyệt (browser / 브라우저)
 
 WebSquare Studio cho phép author màn hình dưới dạng XML. XML mô tả thành phần (component / 컴포넌트) cây (tree / 트리), DataCollection, Submission, workflow và script. Trong WebSquare5 SP5, W-Pack có thể chuyển page XML thành JavaScript đặt trong `_wpack_`. trình duyệt (browser / 브라우저) gọi page theo URL, nhưng engine có thể thực sự tải sản phẩm tạo ra (artifact / 산출물) JavaScript đã được bản dựng (build / 빌드) để kết xuất (render / 렌더링) nhanh hơn.
@@ -49,8 +47,6 @@ Browser
 
 Đọc thêm nền XML tại [XML Beginner](../xml/xml_01_beginner_detailed.md). thư viện (library / 라이브러리) này không lặp lại không gian tên (namespace / 네임스페이스), element cây (tree / 트리) hay well-formed XML.
 
-> **Nối mạch:** Ở chặng này của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **2. Từ nguồn (source / 소스) đến thời gian chạy (runtime / 런타임): XML → W-Pack → Engine → trình duyệt (browser / 브라우저)** đặt vấn đề; **3. Studio và Engine giải quyết hai nhiệm vụ khác nhau** đối chiếu bằng chứng, rồi **4. Page WebSquare gồm những lớp gì?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 3. Studio và Engine giải quyết hai nhiệm vụ khác nhau
 
 WebSquare Studio là môi trường phát triển (development environment / 개발 환경). Nó cung cấp thiết kế (design / 설계) view, nguồn (source / 소스) view, palette, thuộc tính (property / 속성) editor, preview, gỡ lỗi (debug / 디버그) hỗ trợ (support / 지원) và tooling để tạo page.
@@ -58,8 +54,6 @@ WebSquare Studio là môi trường phát triển (development environment / 개
 WebSquare Engine là thời gian chạy (runtime / 런타임) chạy ứng dụng. Engine đọc hoặc tải sản phẩm tạo ra (artifact / 산출물) của page, dựng thành phần (component / 컴포넌트), điều phối vòng đời (lifecycle / 생명주기) và cho phép API WebSquare hoạt động trong trình duyệt (browser / 브라우저).
 
 Việc tách hai khái niệm này giúp tránh một lỗi lập luận (reasoning / 추론) phổ biến: “Studio hiển thị đúng” không đồng nghĩa “thời gian chạy (runtime / 런타임) môi trường vận hành (production / 운영 환경) chắc chắn đúng”. Studio có thể dùng cấu hình cục bộ (local / 로컬), tài nguyên (resource / 자원) đường dẫn (path / 경로), engine bản dựng (build / 빌드) hoặc mock khác với môi trường tích hợp. Khi lỗi chỉ xảy ra trên máy chủ (server / 서버), hãy kiểm tra thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) chứ không suy từ màn hình thiết kế (design / 설계).
-
-> **Nối mạch:** Studio tạo/biên tập artifact còn Engine thực thi runtime; Page gom các lớp đó thành lifecycle và scope rõ. Component object tiếp theo phân biệt WebSquare object model với DOM element.
 
 ## 4. Page WebSquare gồm những lớp gì?
 
@@ -94,8 +88,6 @@ Một ví dụ rút gọn có dạng tư duy như sau:
 
 Đừng học thuộc markup này như template. Điều quan trọng là hiểu phụ thuộc (dependency / 의존성): **UI sự kiện (event / 이벤트) → page hàm (function / 함수) → máy khách (client / 클라이언트) mô hình dữ liệu (data model / 데이터 모델) → Submission → máy chủ (server / 서버) → phản hồi (response / 응답) mục tiêu (target / 대상) → bound UI**.
 
-> **Nối mạch:** Page gồm nhiều lớp runtime; component object vì vậy không đồng nhất với DOM element, và ID tiếp theo phải được hiểu theo ownership của page.
-
 ## 5. thành phần (component / 컴포넌트) đối tượng (object / 객체) khác DOM element
 
 Giả sử page có đầu vào (input / 입력) ID `inputName`. mã (code / 코드) có thể gọi:
@@ -117,8 +109,6 @@ Thứ ba, sự kiện (event / 이벤트) được khung phần mềm (framework
 
 Chỉ nên thao tác DOM trực tiếp khi API công khai (public API / 공개 API) không đáp ứng yêu cầu và bạn đã xác nhận đặc tả hợp đồng (contract / 계약), kiểm thử (test / 테스트) regression và upgrade rủi ro (risk / 위험).
 
-> **Nối mạch:** Ở chặng này của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **5. thành phần (component / 컴포넌트) đối tượng (object / 객체) khác DOM element** đặt đầu vào cho **6. ID không chỉ là chuỗi để truy vấn (query / 쿼리) DOM**, rồi **7. scwin: không gian tên (namespace / 네임스페이스) của page hành vi (behavior / 동작)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. ID không chỉ là chuỗi để truy vấn (query / 쿼리) DOM
 
 Trong WebSquare, ID là cách thời gian chạy (runtime / 런타임) định danh thành phần (component / 컴포넌트) trong phạm vi (scope / 범위). Khi phạm vi (scope / 범위)/WFrame được dùng, engine có thể thay đổi ID vật lý ở DOM để tránh collision, trong khi script vẫn truy cập bằng logical ID đã khai báo.
@@ -136,8 +126,6 @@ page Scope identity
 ```
 
 Nếu không phân biệt ba lớp này, nhà phát triển (developer / 개발자) rất dễ gặp bug “console tìm thấy hai id”, “CSS không ăn trong popup”, hoặc “gọi thành phần (component / 컴포넌트) cùng tên nhưng ra màn hình khác”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **6. ID không chỉ là chuỗi để truy vấn (query / 쿼리) DOM** đặt đầu vào cho **7. scwin: không gian tên (namespace / 네임스페이스) của page hành vi (behavior / 동작)**, rồi **8. $p: utility hiểu page phạm vi (scope / 범위)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. `scwin`: không gian tên (namespace / 네임스페이스) của page hành vi (behavior / 동작)
 
@@ -183,8 +171,6 @@ Handler chỉ đóng vai trò adapter từ UI sự kiện (event / 이벤트) sa
 
 Anti-pattern thường thấy là dồn hàng trăm dòng vào `onclick`, vừa đọc giá trị, sửa 10 thành phần (component / 컴포넌트), duyệt grid, gọi nhiều submission và xử lý popup. mã (code / 코드) kiểu đó biến sự kiện (event / 이벤트) thành một “god hàm (function / 함수)”.
 
-> **Nối mạch:** `scwin` giữ page behavior local; `$p` cung cấp utility theo scope, nên lifecycle tiếp theo phải xét đúng page boundary thay vì gọi code trong vacuum.
-
 ## 8. `$p`: utility hiểu page phạm vi (scope / 범위)
 
 WebSquare có họ utility trước đây thường gắn với `$w`; trong phạm vi (scope / 범위) mô hình (model / 모델), các utility page-aware được expose qua `$p`. mô hình tư duy (mental model / 사고 모델) thực dụng là: `$p` đại diện cho các WebSquare thao tác (operation / 연산) cần biết **page hiện tại đang ở phạm vi (scope / 범위) nào**.
@@ -202,8 +188,6 @@ var topScope = $p.top();
 
 Chapter [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_popup_spa.md) sẽ đào sâu `$p.parent()`, `$p.main()`, `$p.top()`, `$p.getWindow()` và dạng thất bại (failure mode / 실패 모드) khi đi sai phạm vi (scope / 범위).
 
-> **Nối mạch:** Ở chặng này của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **8. $p: utility hiểu page phạm vi (scope / 범위)** đặt đầu vào cho **9. Page vòng đời (lifecycle / 생명주기): mã (code / 코드) không chạy trong vacuum**, rồi **10. sự kiện (event / 이벤트) trong WebSquare vẫn dựa trên event-driven programming** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 9. Page vòng đời (lifecycle / 생명주기): mã (code / 코드) không chạy trong vacuum
 
 Một page phải trải qua tải (load / 로드), script initialization, thành phần (component / 컴포넌트) creation/kết xuất (render / 렌더링), dữ liệu (data / 데이터) binding và page events. WebSquare có các cấu hình liên quan đến thứ tự script như `scriptPrecedence`, `postDrawMode` và JavaScript `lazy` hành vi (behavior / 동작). Chính vì vậy mã (code / 코드) chạy “sớm quá” có thể không nhìn thấy thành phần (component / 컴포넌트), còn mã (code / 코드) chạy “muộn quá” có thể gây flash hoặc duplicate yêu cầu (request / 요청).
@@ -217,8 +201,6 @@ Có event/callback chính thức nào biểu diễn readiness không?
 ```
 
 Nếu cần delay vì page con chưa tải (load / 로드), hãy dùng sự kiện (event / 이벤트)/tải (load / 로드) đặc tả hợp đồng (contract / 계약) của WFrame/Tab/Popup tương ứng thay vì đoán thời gian.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **9. Page vòng đời (lifecycle / 생명주기): mã (code / 코드) không chạy trong vacuum** đặt đầu vào cho **10. sự kiện (event / 이벤트) trong WebSquare vẫn dựa trên event-driven programming**, rồi **11. trạng thái (state / 상태) nằm ở đâu?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. sự kiện (event / 이벤트) trong WebSquare vẫn dựa trên event-driven programming
 
@@ -245,8 +227,6 @@ Nếu handler gọi Submission asynchronous, handler không “đứng chờ” 
 
 Đây là cùng một vấn đề async thứ tự (ordering / 순서) được giải thích sâu ở [JavaScript Intermediate](../javascript/javascript_intermediate.md), chỉ khác đối tượng (object / 객체) phát sự kiện (event / 이벤트) là WebSquare thời gian chạy (runtime / 런타임).
 
-> **Nối mạch:** Event-driven programming giải thích tín hiệu đi vào Page; **11** truy tìm state được giữ ở đâu, rồi **12. Binding** cho thấy dữ liệu đổi lập luận và cập nhật giao diện như thế nào.
-
 ## 11. trạng thái (state / 상태) nằm ở đâu?
 
 Một màn hình enterprise có thể có ít nhất bốn loại trạng thái (state / 상태):
@@ -263,8 +243,6 @@ Bug thường xuất hiện khi một giá trị tồn tại ở nhiều nơi nh
 
 Nguyên tắc môi trường vận hành (production / 운영 환경): chọn nguồn chuẩn (source of truth / 정본) theo mục đích. Dữ liệu cần submit nên sống trong DataCollection phù hợp. UI thành phần (component / 컴포넌트) nên phản ánh mô hình (model / 모델) qua binding khi có thể. Biến `scwin` phù hợp cho transient orchestration trạng thái (state / 상태), không nên biến thành một cơ sở dữ liệu (database / 데이터베이스) thu nhỏ.
 
-> **Nối mạch:** Khi đã xác định state và binding, **13. Error taxonomy** phân loại lỗi theo lớp dữ liệu, event hay runtime trước khi chọn cách sửa.
-
 ## 12. Binding thay đổi cách lập luận (reasoning / 추론)
 
 Nếu đầu vào (input / 입력) được bind với DataMap, gọi `inputName.setValue(...)` có thể dẫn đến mô hình (model / 모델) cập nhật (update / 업데이트) theo binding đặc tả hợp đồng (contract / 계약), và mô hình (model / 모델) cập nhật (update / 업데이트) cũng có thể phản ánh ngược ra UI. Vì vậy khi gỡ lỗi (debug / 디버그), không chỉ nhìn thành phần (component / 컴포넌트).
@@ -279,8 +257,6 @@ Event nào được phát khi binding cập nhật?
 ```
 
 Chapter 02 đi sâu vấn đề này.
-
-> **Nối mạch:** Phân loại lỗi làm lộ nơi abstraction của binding bị rò; **14** dùng các điểm rò đó để chọn mức can thiệp phù hợp thay vì vá ngẫu nhiên.
 
 ## 13. lỗi (error / 오류) taxonomy: phân loại trước khi sửa
 
@@ -308,8 +284,6 @@ DataList có data nhưng Grid rỗng
 
 Chẩn đoán tốt là đi theo chuỗi xử lý (pipeline / 파이프라인) và thu bằng chứng (evidence / 증거) ở từng ranh giới (boundary / 경계), không sửa ngẫu nhiên từng API.
 
-> **Nối mạch:** Sau khi nhận diện abstraction leak, **15. Bài tập lập luận** buộc người học truy nguyên symptom → state → binding → runtime bằng một case cụ thể.
-
 ## 14. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) leak là bình thường, nhưng phải biết lúc nào xảy ra
 
 Khung phần mềm (framework / 프레임워크) cố che DOM, AJAX, serialization và frame management để nhà phát triển (developer / 개발자) làm việc ở mức lớp trừu tượng (abstraction / 추상화) cao hơn. Nhưng lớp trừu tượng (abstraction / 추상화) không bao giờ kín hoàn toàn. Khi có hiệu năng (performance / 성능) issue, bảo mật (security / 보안) issue hay browser-specific bug, bạn phải đi xuống tầng thấp hơn.
@@ -326,8 +300,6 @@ JavaScript / browser / HTTP / DOM
 
 Chỉ biết tầng trên thì gỡ lỗi (debug / 디버그) khó. Chỉ biết tầng dưới thì dễ chống lại khung phần mềm (framework / 프레임워크) và tạo mã (code / 코드) fragile. Kỹ năng quan trọng là biết **khi nào nên ở trong công khai (public / 공개) lớp trừu tượng (abstraction / 추상화), khi nào cần quan sát internals, và khi nào tuyệt đối không phụ thuộc internals**.
 
-> **Nối mạch:** Case đã kiểm tra được mental model; **16. Kết nối sang chapter tiếp theo** bàn giao từ Page runtime sang workflow và orchestration, nơi state chịu thêm điều phối.
-
 ## 15. Bài tập lập luận (reasoning / 추론)
 
 Giả sử một page có `inputName`, `dmUser`, `sbmSaveUser` và nút Save. `inputName` bind với `dmUser.name`. Khi người dùng nhập tên và bấm Save, máy chủ (server / 서버) đôi lúc nhận tên cũ.
@@ -342,8 +314,6 @@ Giả sử một page có `inputName`, `dmUser`, `sbmSaveUser` và nút Save. `i
 6. yêu cầu (request / 요청) payload trong mạng (network / 네트워크) tab thực tế chứa giá trị nào?
 
 Bước 6 rất quan trọng. Nếu payload đã đúng mà máy chủ (server / 서버) vẫn lưu sai, lỗi không còn nằm ở WebSquare UI. Nếu payload sai, tiếp tục truy ngược mô hình (model / 모델) và sự kiện (event / 이벤트) thứ tự (ordering / 순서). Đây là cách gỡ lỗi (debug / 디버그) theo bằng chứng (evidence / 증거) thay vì theo cảm giác.
-
-> **Nối mạch:** Chapter này khép ở runtime Page; phần kế tiếp mở rộng cùng mental model sang workflow, data state và error architecture của WebSquare.
 
 ## 16. Kết nối sang chapter tiếp theo
 

@@ -6,19 +6,13 @@
 
 Montenegro có địa hình Dinaric rất dốc, với bờ Adriatic ngắn nhưng chia cắt. Bay of Kotor là một vịnh sâu có hình thái đặc biệt do địa hình núi ngập nước.
 
-> **Nối mạch:** Dinaric relief áp sát Adriatic tạo coast ngắn nhưng dốc, trong khi Podgorica nằm ở lowland nội địa; **karst và nước** giải thích vì sao hai không gian có access và hydrology khác nhau.
-
 ## Nội địa và bờ biển tương phản
 
 Podgorica nằm trong vùng thấp hơn ở nội địa phía nam, trong khi các đô thị du lịch và cảng tập trung ven biển. Địa hình làm hai không gian này kết nối qua số ít hành lang.
 
-> **Nối mạch:** Podgorica, cảng và tourism coast chỉ nối được qua vài corridor xuyên núi; **karst và nước ngầm** làm quản lý supply, sinkhole và flood phức tạp hơn lưu vực mặt. **Mô hình tư duy** sẽ giữ cả bottleneck lẫn resource landscape.
-
 ## Karst và nước
 
 Địa hình karst khiến dòng nước ngầm phức tạp, nhiều hố sụt và hang động; quản lý nước không thể chỉ dựa trên lưu vực mặt.
-
-> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Dinaric mountains–karst → few corridors → Adriatic tourism/ports và groundwater constraints. Đây là điểm bàn giao cho các profile Balkan trong owner World Atlas.
 
 ## Mô hình tư duy
 

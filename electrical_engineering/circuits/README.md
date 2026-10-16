@@ -10,14 +10,10 @@ Nhánh này xây ngôn ngữ nền của kỹ thuật điện: nút (node / 노�
 KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency response → measurement
 ```
 
-> **Chuyển mạch:** **Cốt lõi route** sắp xếp charge, voltage, current và energy; **Cốt lõi chapter** biến route thành mô hình mạch cụ thể, rồi **Cần nắm** nêu prerequisite phải giữ.
-
 ## Cốt lõi (core / 핵심) chapter
 
 - [Circuit analysis and measurement](00_circuit_analysis_and_measurement.md) — KCL/KVL, loading, transient, AC impedance, ADC divider và đo kiểm.
 - [Network theorems and frequency response](01_network_theorems_frequency_response.md) — nodal/mesh, Thevenin/Norton, Bode, sensitivity và tolerance.
-
-> **Chuyển mạch:** **Cần nắm** chốt định luật và phép đo tối thiểu; **Cầu nối** dùng chúng để chuyển từ circuit model sang electronics, signals hoặc power owner.
 
 ## Cần nắm
 
@@ -26,8 +22,6 @@ KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency re
 - AC steady trạng thái (state / 상태), complex impedance, resonance, power factor và three-phase intuition;
 - loading, nguồn (source / 소스) impedance, tolerance, parasitic và lỗi (error / 오류) ngân sách (budget / 예산);
 - multimeter, oscilloscope, probe loading, grounding và safe đo lường (measurement / 측정).
-
-> **Chuyển mạch:** **Cầu nối** khép README bằng cách chỉ rõ circuit concept nào được tái sử dụng ở domain kế tiếp và link về canonical owner tương ứng.
 
 ## Cầu nối (bridge / 브리지)
 

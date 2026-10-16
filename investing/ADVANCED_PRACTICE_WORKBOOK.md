@@ -29,8 +29,6 @@ Danh mục hiện tại:
 - Tiền mặt 5%
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Kiểm tra bảng cân đối kinh tế** nối từ **Bối cảnh** sang **Nhiệm vụ 2 — Tính mức suy giảm có thể chịu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 1 — Kiểm tra bảng cân đối kinh tế
 
 Không được bắt đầu bằng câu hỏi “nên mua ETF nào”. Hãy lập:
@@ -46,8 +44,6 @@ Thời gian tới nghĩa vụ
 
 Sau đó trả lời: nếu cổ phiếu giảm 35% trong sáu tháng và thu nhập mất trong tám tháng, nghĩa vụ 18 tháng có còn được bảo đảm hay không?
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 2 — Tính mức suy giảm có thể chịu** nối từ **Nhiệm vụ 1 — Kiểm tra bảng cân đối kinh tế** sang **Nhiệm vụ 3 — Ma trận căng thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 2 — Tính mức suy giảm có thể chịu
 
 Giả sử phần tiền cho nghĩa vụ 18 tháng không được phép thiếu quá 5%.
@@ -61,8 +57,6 @@ Tài sản nào phải tách sang tầng dài hạn
 ```
 
 Điểm quan trọng là **rủi ro phải đo theo thất bại của mục tiêu**, không theo biến động trung bình của danh mục.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Ma trận căng thẳng** nối từ **Nhiệm vụ 2 — Tính mức suy giảm có thể chịu** sang **Nhiệm vụ 4 — Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 3 — Ma trận căng thẳng
 
@@ -92,8 +86,6 @@ Tài sản nào thực sự đa dạng hóa?
 Quy tắc hành động nào được kích hoạt?
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **Nhiệm vụ 3 — Ma trận căng thẳng** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 4 — Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Không hỏi “nếu cổ phiếu giảm 30% thì sao?”. Hãy hỏi:
@@ -108,8 +100,6 @@ Mất việc 8 tháng
 + cổ phiếu giảm 30%
 + phải bán tài sản trong lúc thanh khoản kém
 ```
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 4 — Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu ra bắt buộc
 
@@ -128,8 +118,6 @@ Kịch bản căng thẳng
 Chu kỳ review
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chấm
 
 Một bài đạt yêu cầu khi quyết định phân bổ có thể giải thích bằng nghĩa vụ và nguồn rủi ro. Nếu lý do chính vẫn là “tài sản này có vẻ sẽ tăng”, bài chưa đạt.
@@ -137,8 +125,6 @@ Một bài đạt yêu cầu khi quyết định phân bổ có thể giải th�
 ---
 
 # Mô-đun (module / 모듈) 2 — Asset Classes: so tài sản bằng cùng một ngôn ngữ
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** nối từ **Tự chấm** sang **Nhiệm vụ 1 — Phân rã nguồn lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bối cảnh
 
@@ -174,8 +160,6 @@ Lợi suất thực hiện tại 2%
 USD tương đối mạnh
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** đặt vấn đề; **Nhiệm vụ 1 — Phân rã nguồn lợi suất** đối chiếu bằng chứng, rồi **Nhiệm vụ 2 — Duration kinh tế** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nhiệm vụ 1 — Phân rã nguồn lợi suất
 
 Với từng tài sản, viết:
@@ -191,8 +175,6 @@ Chi phí triển khai
 
 Không dùng một con số “expected return” chưa giải thích nguồn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Phân rã nguồn lợi suất** đặt vấn đề; **Nhiệm vụ 2 — Duration kinh tế** đối chiếu bằng chứng, rồi **Nhiệm vụ 3 — Trái phiếu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nhiệm vụ 2 — Duration kinh tế
 
 Xếp bốn tài sản theo độ nhạy với:
@@ -207,8 +189,6 @@ Credit spread +200 bp
 
 Giải thích cơ chế chứ không chỉ ghi dấu `+/-`.
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Trái phiếu** nối từ **Nhiệm vụ 2 — Duration kinh tế** sang **Nhiệm vụ 4 — REIT**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 3 — Trái phiếu
 
 Với duration bằng 8, nếu lợi suất tăng 75 bp, ước lượng biến động giá gần đúng:
@@ -218,8 +198,6 @@ Với duration bằng 8, nếu lợi suất tăng 75 bp, ước lượng biến 
 ```
 
 Sau đó cộng carry một năm để xem tổng lợi suất gần đúng. Mục tiêu là hiểu vì sao “yield cao hơn” không đồng nghĩa năm đầu chắc chắn có lợi suất dương.
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — REIT** nối từ **Nhiệm vụ 3 — Trái phiếu** sang **Nhiệm vụ 5 — Portfolio role**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 4 — REIT
 
@@ -232,8 +210,6 @@ Value ≈ NOI / Cap Rate
 ```
 
 Sau đó thảo luận vì sao đòn bẩy 42% làm giá trị vốn chủ sở hữu biến động mạnh hơn giá trị tài sản.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 5 — Portfolio role** nối từ **Nhiệm vụ 4 — REIT** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 5 — Portfolio role
 
@@ -249,8 +225,6 @@ Thanh khoản
 ```
 
 Một tài sản có thể có nhiều vai trò nhưng phải nói rõ điều kiện nào làm vai trò đó thất bại.
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 5 — Portfolio role** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu ra bắt buộc
 
@@ -269,8 +243,6 @@ Regime bất lợi
 Vai trò danh mục
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chấm
 
 Nếu bảng chỉ mô tả đặc điểm sản phẩm mà chưa chỉ ra **cơ chế lợi suất và điều kiện thất bại**, bài chưa đạt.
@@ -278,8 +250,6 @@ Nếu bảng chỉ mô tả đặc điểm sản phẩm mà chưa chỉ ra **cơ
 ---
 
 # Mô-đun (module / 모듈) 3 — Company phân tích (analysis / 분석): từ doanh thu tới giá trị trên mỗi cổ phiếu
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** nối từ **Tự chấm** sang **Nhiệm vụ 1 — Driver cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bối cảnh
 
@@ -300,8 +270,6 @@ Tiền mặt: 100
 Số cổ phiếu pha loãng: 100
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Driver cây (tree / 트리)** nối từ **Bối cảnh** sang **Nhiệm vụ 2 — Cầu nối biên lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 1 — Driver cây (tree / 트리)
 
 Không dự báo doanh thu bằng “+10%”. Hãy xây:
@@ -321,8 +289,6 @@ Base: volume +5%, ASP +2%, margin +100 bp
 Bull: volume +10%, ASP +4%, margin +250 bp
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 2 — Cầu nối biên lợi nhuận** nối từ **Nhiệm vụ 1 — Driver cây (tree / 트리)** sang **Nhiệm vụ 3 — Working capital**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 2 — Cầu nối biên lợi nhuận
 
 Giải thích mỗi thay đổi của gross margin đến từ đâu:
@@ -338,15 +304,11 @@ FX
 
 Nếu bạn chỉ nhập gross margin 43% mà không giải thích, mô hình chưa đạt chuẩn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Working capital** nối từ **Nhiệm vụ 2 — Cầu nối biên lợi nhuận** sang **Nhiệm vụ 4 — Incremental ROIC**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 3 — Working capital
 
 Giả sử doanh thu tăng 10% nhưng phải thu tăng 25% và tồn kho tăng 30%.
 
 Hãy giải thích vì sao lợi nhuận có thể tăng trong khi CFO xấu đi. Sau đó kiểm tra DSO/DIO để xem tăng trưởng có hút tiền bất thường hay không.
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — Incremental ROIC** nối từ **Nhiệm vụ 3 — Working capital** sang **Nhiệm vụ 5 — Reverse DCF**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 4 — Incremental ROIC
 
@@ -358,8 +320,6 @@ Incremental ROIC = 12 / 100 = 12%
 
 Nếu WACC là 9%, tăng trưởng đang tạo giá trị. Sau đó thử kịch bản NOPAT chỉ tăng 6 và giải thích vì sao doanh thu vẫn tăng nhưng giá trị có thể bị phá hủy.
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 5 — Reverse DCF** nối từ **Nhiệm vụ 4 — Incremental ROIC** sang **Nhiệm vụ 6 — Chất lượng lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 5 — Reverse DCF
 
 Không bắt đầu bằng mục tiêu giá. Hãy hỏi:
@@ -367,8 +327,6 @@ Không bắt đầu bằng mục tiêu giá. Hãy hỏi:
 > Giá hiện tại yêu cầu doanh nghiệp tăng trưởng bao nhiêu năm và duy trì ROIC bao lâu?
 
 Thử ít nhất ba tổ hợp `growth × margin × ROIC fade` và ghi tổ hợp nào cần giả định quá lạc quan.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 6 — Chất lượng lợi nhuận** nối từ **Nhiệm vụ 5 — Reverse DCF** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 6 — Chất lượng lợi nhuận
 
@@ -393,8 +351,6 @@ Cần theo dõi
 Rủi ro cao
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 6 — Chất lượng lợi nhuận** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đầu ra bắt buộc
 
 Tạo:
@@ -407,8 +363,6 @@ valuation_sensitivity.md
 thesis_monitoring_log.md
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chấm
 
 Một mô hình đạt yêu cầu khi **thay driver vận hành thì ba báo cáo và định giá tự thay đổi hợp lý**. Nếu chỉ thay EPS trực tiếp, mô hình chưa đủ sâu.
@@ -416,8 +370,6 @@ Một mô hình đạt yêu cầu khi **thay driver vận hành thì ba báo cá
 ---
 
 # Mô-đun (module / 모듈) 4 — Economics: từ dữ liệu tới tái định giá tài sản
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** nối từ **Tự chấm** sang **Nhiệm vụ 1 — Surprise map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bối cảnh
 
@@ -442,8 +394,6 @@ Services ex-housing tăng tốc
 Wage growth vẫn cao
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Surprise map** nối từ **Bối cảnh** sang **Nhiệm vụ 2 — Đường cong**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 1 — Surprise map
 
 Tách:
@@ -457,8 +407,6 @@ Tính dai dẳng
 
 Không được kết luận chỉ bằng `CPI > consensus`.
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 2 — Đường cong** nối từ **Nhiệm vụ 1 — Surprise map** sang **Nhiệm vụ 3 — Truyền dẫn sang doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 2 — Đường cong
 
 Viết hai phản ứng khác nhau:
@@ -469,8 +417,6 @@ B. 10Y tăng mạnh hơn 2Y
 ```
 
 Giải thích A có thể phản ánh tái định giá Fed, còn B có thể chứa phần bù kỳ hạn/tài khóa/lạm phát dài hạn lớn hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Truyền dẫn sang doanh nghiệp** nối từ **Nhiệm vụ 2 — Đường cong** sang **Nhiệm vụ 4 — Kịch bản chính sách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 3 — Truyền dẫn sang doanh nghiệp
 
@@ -490,8 +436,6 @@ Rates
 → earnings
 → valuation
 ```
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — Kịch bản chính sách** nối từ **Nhiệm vụ 3 — Truyền dẫn sang doanh nghiệp** sang **Nhiệm vụ 5 — Nowcast dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 4 — Kịch bản chính sách
 
@@ -516,8 +460,6 @@ Equity earnings
 Valuation multiple
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 5 — Nowcast dashboard** nối từ **Nhiệm vụ 4 — Kịch bản chính sách** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 5 — Nowcast dashboard
 
 Chọn 10 chỉ tiêu thuộc:
@@ -541,8 +483,6 @@ Mỗi chỉ tiêu chấm:
 
 Không lấy tổng điểm như “mô hình chân lý”; dùng nó để theo dõi thay đổi hướng theo thời gian.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 5 — Nowcast dashboard** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đầu ra bắt buộc
 
 Tạo:
@@ -555,8 +495,6 @@ policy_reaction_table.md
 cross_asset_transmission.md
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chấm
 
 Nếu phân tích chỉ nói “tin tốt/tin xấu cho chứng khoán” mà chưa đi qua **kỳ vọng, lãi suất, tín dụng và lợi nhuận**, bài chưa đạt.
@@ -565,15 +503,11 @@ Nếu phân tích chỉ nói “tin tốt/tin xấu cho chứng khoán” mà ch
 
 # Mô-đun (module / 모듈) 5 — Trading & Derivatives: từ giả thuyết tới hệ thống có thể triển khai
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** nối từ **Tự chấm** sang **Nhiệm vụ 1 — Formal specification**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bối cảnh
 
 Giả sử có ý tưởng:
 
 > Sau một cú phá đáy ngắn hạn rồi đóng cửa trở lại trên vùng hỗ trợ, giá có xu hướng hồi trong 10 cây nến tiếp theo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Formal specification** nối từ **Bối cảnh** sang **Nhiệm vụ 2 — độ lệch (bias / 편향) kiểm tra (audit / 감사)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 1 — Formal specification
 
@@ -596,8 +530,6 @@ Cost model
 
 Nếu hai lập trình viên đọc đặc tả mà triển khai khác nhau, đặc tả chưa đạt.
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 2 — độ lệch (bias / 편향) kiểm tra (audit / 감사)** nối từ **Nhiệm vụ 1 — Formal specification** sang **Nhiệm vụ 3 — Expectancy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 2 — độ lệch (bias / 편향) kiểm tra (audit / 감사)
 
 Kiểm tra:
@@ -612,8 +544,6 @@ Multiple testing
 ```
 
 Viết một câu giải thích cho cách mỗi độ lệch (bias / 편향) có thể làm kết quả đẹp giả.
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Expectancy** nối từ **Nhiệm vụ 2 — độ lệch (bias / 편향) kiểm tra (audit / 감사)** sang **Nhiệm vụ 4 — Robustness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 3 — Expectancy
 
@@ -633,8 +563,6 @@ E = 0,42 × 1,8 - 0,58 × 1
 
 Sau đó trừ `0,12R` chi phí trung bình. Hỏi lợi thế còn đủ lớn so với sai số ước lượng hay không.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — Robustness** nối từ **Nhiệm vụ 3 — Expectancy** sang **Nhiệm vụ 5 — Sizing và rủi ro (risk / 위험) of ruin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 4 — Robustness
 
 Thử:
@@ -649,8 +577,6 @@ Tăng chi phí 50%
 
 Mục tiêu không phải giữ Sharpe đẹp, mà xem lô-gic (logic / 논리) có sụp hoàn toàn khi điều kiện thay đổi nhẹ không.
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 5 — Sizing và rủi ro (risk / 위험) of ruin** nối từ **Nhiệm vụ 4 — Robustness** sang **Nhiệm vụ 6 — thực thi (execution / 실행)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 5 — Sizing và rủi ro (risk / 위험) of ruin
 
 So ba mức rủi ro mỗi lệnh:
@@ -662,8 +588,6 @@ So ba mức rủi ro mỗi lệnh:
 ```
 
 Mô phỏng chuỗi 10 lệnh lỗ liên tiếp và tính drawdown. Sau đó giải thích tại sao cùng một edge nhưng sizing khác có thể tạo xác suất sống sót hoàn toàn khác.
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 6 — thực thi (execution / 실행)** nối từ **Nhiệm vụ 5 — Sizing và rủi ro (risk / 위험) of ruin** sang **Nhiệm vụ 7 — Kill switch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 6 — thực thi (execution / 실행)
 
@@ -683,8 +607,6 @@ Missed fill
 
 Sau 50 giao dịch, tính thiếu hụt thực thi (implementation shortfall) để xem lợi thế đang mất ở tín hiệu hay ở thực thi (execution / 실행).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 7 — Kill switch** nối từ **Nhiệm vụ 6 — thực thi (execution / 실행)** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 7 — Kill switch
 
 Định nghĩa điều kiện dừng tự động cho:
@@ -697,8 +619,6 @@ Margin stress
 Slippage bất thường
 Data stale
 ```
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 7 — Kill switch** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu ra bắt buộc
 
@@ -714,8 +634,6 @@ live_monitoring.md
 retirement_rule.md
 ```
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chấm
 
 Nếu chiến lược chỉ được mô tả bằng entry/stop/take-profit mà chưa có dữ liệu, chi phí, sức chứa (capacity / 용량), operational rủi ro (risk / 위험) và tiêu chí dừng, bài chưa đạt.
@@ -723,8 +641,6 @@ Nếu chiến lược chỉ được mô tả bằng entry/stop/take-profit mà 
 ---
 
 # Mô-đun (module / 모듈) 6 — Korea & Vietnam: từ country view tới vị thế cụ thể
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Bối cảnh** nối từ **Tự chấm** sang **Nhiệm vụ 1 — Korea transmission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bối cảnh
 
@@ -737,8 +653,6 @@ Oil +15%
 China manufacturing yếu
 AI capex vẫn tăng
 ```
-
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 1 — Korea transmission** nối từ **Bối cảnh** sang **Nhiệm vụ 2 — Vietnam transmission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 1 — Korea transmission
 
@@ -756,8 +670,6 @@ US rates
 
 Không được kết luận “KRW yếu tốt cho exporter” nếu chưa xét nhu cầu toàn cầu, chi phí nhập khẩu và dòng vốn.
 
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 2 — Vietnam transmission** nối từ **Nhiệm vụ 1 — Korea transmission** sang **Nhiệm vụ 3 — Sector scorecard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 2 — Vietnam transmission
 
 Đi đủ chuỗi:
@@ -773,8 +685,6 @@ USD mạnh
 ```
 
 Sau đó thêm kênh dầu và China để xem shock chồng lấn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 3 — Sector scorecard** nối từ **Nhiệm vụ 2 — Vietnam transmission** sang **Nhiệm vụ 4 — Earnings revision map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 3 — Sector scorecard
 
@@ -793,8 +703,6 @@ Valuation
 
 Không cộng điểm máy móc; bảng dùng để làm rõ nguồn rủi ro.
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 4 — Earnings revision map** nối từ **Nhiệm vụ 3 — Sector scorecard** sang **Nhiệm vụ 5 — Cross-border hiện thực (implementation / 구현)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 4 — Earnings revision map
 
 Với mỗi ngành, ghi:
@@ -809,8 +717,6 @@ Invalidation
 ```
 
 Mục tiêu là phân biệt “câu chuyện tốt” với “kỳ vọng đang được nâng lên thực sự”.
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 5 — Cross-border hiện thực (implementation / 구현)** nối từ **Nhiệm vụ 4 — Earnings revision map** sang **Nhiệm vụ 6 — Position sizing theo thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệm vụ 5 — Cross-border hiện thực (implementation / 구현)
 
@@ -829,8 +735,6 @@ Settlement
 Liquidity
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Nhiệm vụ 6 — Position sizing theo thanh khoản** nối từ **Nhiệm vụ 5 — Cross-border hiện thực (implementation / 구현)** sang **Đầu ra bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệm vụ 6 — Position sizing theo thanh khoản
 
 Không dùng cùng tỷ trọng cho KOSPI large-cap và cổ phiếu Việt Nam có free float thấp.
@@ -845,8 +749,6 @@ FX shock
 Broker/custody contingency
 ```
 
-> **Nối mạch:** Trong **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Đầu ra bắt buộc** nối từ **Nhiệm vụ 6 — Position sizing theo thanh khoản** sang **Tự chấm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đầu ra bắt buộc
 
 Tạo:
@@ -859,8 +761,6 @@ shock_transmission.md
 cross_border_checklist.md
 position_risk_sheet.md
 ```
-
-> **Nối mạch:** Ở chặng này của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang **Rubric tự chấm 5 mức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tự chấm
 
@@ -901,8 +801,6 @@ Một hồ sơ tốt phải cho phép người khác đọc và trả lời đư
 5. Bạn có thể mất bao nhiêu trước khi luận điểm được kiểm chứng?
 6. Thanh khoản và cấu trúc tài khoản có cho phép sống sót tới thời điểm đó không?
 7. Sau kết quả, bạn sẽ phân biệt kỹ năng với may mắn thế nào?
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing**, **Rubric tự chấm 5 mức** nối từ **Tự chấm** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Rubric tự chấm 5 mức
 

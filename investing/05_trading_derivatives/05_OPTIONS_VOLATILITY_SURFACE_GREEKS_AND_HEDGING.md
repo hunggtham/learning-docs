@@ -17,8 +17,6 @@ Giá kỳ hạn chịu ảnh hưởng bởi:
 - chi phí vay tài sản;
 - chi phí lưu kho hoặc lợi ích nắm giữ tùy loại tài sản.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **2. Lợi ích hoặc chi phí nắm giữ** nối từ **1. Giá giao ngay và giá kỳ hạn** sang **3. Độ gần tiền theo giá kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Lợi ích hoặc chi phí nắm giữ
 
 Trước khi đọc option price, cần tách hướng giá khỏi lợi ích/chi phí của việc giữ exposure theo thời gian. Carry có thể làm payoff thực tế khác với biểu đồ spot đơn giản.
@@ -27,15 +25,11 @@ Trước khi đọc option price, cần tách hướng giá khỏi lợi ích/ch
 
 Với chỉ số cổ phiếu, lãi suất và cổ tức ảnh hưởng giá kỳ hạn. Với hàng hóa, chi phí lưu kho và **lợi ích tiện ích (convenience yield)** cũng quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **3. Độ gần tiền theo giá kỳ hạn** nối từ **2. Lợi ích hoặc chi phí nắm giữ** sang **4. Quyền chọn là khoản chi trả phụ thuộc trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Độ gần tiền theo giá kỳ hạn
 
 Khi phân tích chuyên sâu, trạng thái **gần tiền (moneyness)** nên được nhìn so với giá kỳ hạn trong nhiều trường hợp, không chỉ so giá thực hiện với giá giao ngay.
 
 # Phần II — Giá quyền chọn và phân phối xác suất
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **4. Quyền chọn là khoản chi trả phụ thuộc trạng thái** nối từ **3. Độ gần tiền theo giá kỳ hạn** sang **5. Biến động hàm ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Quyền chọn là khoản chi trả phụ thuộc trạng thái
 
@@ -48,8 +42,6 @@ Put  = max(K - S, 0)
 
 Tính phi tuyến này tạo **độ lồi (convexity)**.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **5. Biến động hàm ý** nối từ **4. Quyền chọn là khoản chi trả phụ thuộc trạng thái** sang **6. Biến động thực hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Biến động hàm ý
 
 IV là biến được suy ra từ giá option, không phải một dự báo chắc chắn. Hãy đọc nó như giá thị trường của bất định và risk premium, rồi so với realized volatility cùng kỳ vọng sự kiện.
@@ -57,8 +49,6 @@ IV là biến được suy ra từ giá option, không phải một dự báo ch
 **Biến động hàm ý (implied volatility, IV)** là mức biến động khiến mô hình định giá khớp với giá quyền chọn trên thị trường.
 
 IV không phải dự báo chắc chắn về biến động tương lai; nó là một đầu vào ngược suy ra từ giá.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **6. Biến động thực hiện** nối từ **5. Biến động hàm ý** sang **7. Phần bù rủi ro biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Biến động thực hiện
 
@@ -74,8 +64,6 @@ so với
 Biến động thực hiện trong tương lai
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **7. Phần bù rủi ro biến động** nối từ **6. Biến động thực hiện** sang **8. Delta**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Phần bù rủi ro biến động
 
 Trong nhiều thị trường, người mua bảo hiểm sẵn sàng trả phí cao để bảo vệ rủi ro đuôi. Vì vậy IV trung bình có thể cao hơn biến động thực hiện trung bình.
@@ -86,15 +74,11 @@ Nó không phải “tiền miễn phí”; người bán nhận phí để ch�
 
 # Phần III — Greeks bậc một
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **8. Delta** nối từ **7. Phần bù rủi ro biến động** sang **9. Gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Delta
 
 Delta đo mức giá quyền chọn thay đổi khi giá tài sản cơ sở thay đổi một lượng nhỏ.
 
 Delta cũng thường được dùng như xấp xỉ cho mức phơi nhiễm theo hướng giá, nhưng Delta thay đổi theo giá, thời gian và IV.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **9. Gamma** nối từ **8. Delta** sang **10. Theta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Gamma
 
@@ -107,15 +91,11 @@ Bán quyền chọn → thường Gamma âm
 
 Gamma dương hưởng lợi khi giá di chuyển mạnh hơn kỳ vọng nếu phòng vệ Delta phù hợp. Gamma âm chịu rủi ro khi thị trường chạy mạnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **10. Theta** nối từ **9. Gamma** sang **11. Vega**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Theta
 
 Theta đo tốc độ mất giá trị theo thời gian nếu các yếu tố khác không đổi.
 
 Người mua quyền chọn thường chịu hao mòn giá trị thời gian. Người bán thường thu Theta nhưng đổi lại chịu Gamma và rủi ro đuôi.
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **11. Vega** nối từ **10. Theta** sang **12. Rho**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Vega
 
@@ -123,33 +103,23 @@ Vega đo độ nhạy với thay đổi IV.
 
 Vega dương hưởng lợi khi IV tăng; Vega âm ngược lại.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **12. Rho** nối từ **11. Vega** sang **13. Vanna**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Rho
 
 Rho đo độ nhạy với lãi suất. Với quyền chọn ngắn hạn tác động thường nhỏ hơn Delta hoặc Vega, nhưng với kỳ hạn dài có thể đáng kể.
 
 # Phần IV — Greeks bậc cao
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **13. Vanna** nối từ **12. Rho** sang **14. Vomma / Volga**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Vanna
 
 Vanna mô tả tương tác giữa Delta và biến động, giúp hiểu mức phơi nhiễm theo hướng giá thay đổi khi IV thay đổi.
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **14. Vomma / Volga** nối từ **13. Vanna** sang **15. Charm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Vomma / Volga
 
 Vomma hoặc Volga đo độ cong của giá quyền chọn theo biến động, tức Vega thay đổi ra sao khi IV thay đổi.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **15. Charm** nối từ **14. Vomma / Volga** sang **16. Không dùng một Greek riêng lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Charm
 
 Charm mô tả Delta thay đổi theo thời gian khi giá cơ sở giữ nguyên. Gần đáo hạn, hiệu ứng thời gian có thể tăng mạnh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **16. Không dùng một Greek riêng lẻ** nối từ **15. Charm** sang **17. IV không giống nhau ở mọi giá thực hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Không dùng một Greek riêng lẻ
 
@@ -157,23 +127,17 @@ Greeks là các độ nhạy cục bộ quanh trạng thái hiện tại. Khi th
 
 # Phần V — Nụ cười và độ lệch biến động
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **17. IV không giống nhau ở mọi giá thực hiện** nối từ **16. Không dùng một Greek riêng lẻ** sang **18. Độ lệch ở chỉ số cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. IV không giống nhau ở mọi giá thực hiện
 
 Trong thị trường thật, quyền chọn bán phía dưới và quyền chọn mua phía trên thường có IV khác nhau.
 
 Đường IV theo giá thực hiện tạo **nụ cười biến động (volatility smile)** hoặc **độ lệch biến động (volatility skew)**.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **18. Độ lệch ở chỉ số cổ phiếu** nối từ **17. IV không giống nhau ở mọi giá thực hiện** sang **19. Chênh lệch biến động mua–bán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Độ lệch ở chỉ số cổ phiếu
 
 Chỉ số cổ phiếu thường có IV của quyền chọn bán ngoài tiền cao hơn vùng gần tiền vì nhu cầu bảo hiểm và rủi ro sụp giảm.
 
 Đây thường được gọi là **độ lệch âm (negative skew)**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **19. Chênh lệch biến động mua–bán** nối từ **18. Độ lệch ở chỉ số cổ phiếu** sang **20. Độ cong cánh quyền chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Chênh lệch biến động mua–bán
 
@@ -183,8 +147,6 @@ Risk reversal đặt IV của call và put tương ứng cạnh nhau để đọ
 
 Chỉ số này giúp đọc sự bất đối xứng trong nhu cầu và nhận thức về rủi ro đuôi.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **20. Độ cong cánh quyền chọn** nối từ **19. Chênh lệch biến động mua–bán** sang **21. Biến động theo thời gian đáo hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Độ cong cánh quyền chọn
 
 Curvature/butterfly cho biết bề mặt IV cong thế nào quanh vùng near-the-money và hai cánh. Nó giúp phát hiện nhu cầu tail insurance hoặc pricing bất thường mà một risk reversal không cho thấy.
@@ -193,23 +155,17 @@ Curvature/butterfly cho biết bề mặt IV cong thế nào quanh vùng near-th
 
 # Phần VI — Cấu trúc biến động theo kỳ hạn
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **21. Biến động theo thời gian đáo hạn** nối từ **20. Độ cong cánh quyền chọn** sang **22. Biến động sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Biến động theo thời gian đáo hạn
 
 IV khác nhau giữa các kỳ hạn tạo **cấu trúc kỳ hạn biến động (volatility term structure)**.
 
 Một sự kiện gần có thể làm kỳ hạn ngắn tăng mạnh trong khi kỳ hạn dài ít thay đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **22. Biến động sự kiện** nối từ **21. Biến động theo thời gian đáo hạn** sang **23. Chênh lệch lịch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Biến động sự kiện
 
 Báo cáo lợi nhuận, CPI, FOMC hoặc phán quyết pháp lý có thể tập trung bất định vào một thời điểm cụ thể.
 
 Sau sự kiện, phần IV liên quan bất định đó thường giảm nhanh.
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **23. Chênh lệch lịch** nối từ **22. Biến động sự kiện** sang **24. Bề mặt biến động là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Chênh lệch lịch
 
@@ -220,8 +176,6 @@ Calendar spread tách rủi ro kỳ hạn bằng cách mua/bán option có expir
 Lãi/lỗ phụ thuộc cấu trúc kỳ hạn, đường đi của giá và tương quan Vega/Theta giữa hai chân.
 
 # Phần VII — Bề mặt biến động
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **24. Bề mặt biến động là gì?** nối từ **23. Chênh lệch lịch** sang **25. Hai cách mô tả chuyển động bề mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Bề mặt biến động là gì?
 
@@ -237,8 +191,6 @@ Kỳ hạn
 
 Bề mặt thay đổi liên tục khi giá, dòng lệnh và nhận thức rủi ro thay đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **25. Hai cách mô tả chuyển động bề mặt** nối từ **24. Bề mặt biến động là gì?** sang **26. Biến động của chính biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Hai cách mô tả chuyển động bề mặt
 
 Sticky strike và sticky delta là hai xấp xỉ để dự báo surface di chuyển khi spot đổi. Không cách nào đúng trong mọi regime, nên hedge và scenario phải kiểm tra cả hai giả định.
@@ -246,8 +198,6 @@ Sticky strike và sticky delta là hai xấp xỉ để dự báo surface di chu
 **Bám giá thực hiện (sticky strike)** và **bám Delta (sticky delta)** là hai cách gần đúng để mô tả IV thay đổi khi giá cơ sở di chuyển.
 
 Đây chỉ là mô hình gần đúng; hành vi thật có thể thay đổi theo chế độ.
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **26. Biến động của chính biến động** nối từ **25. Hai cách mô tả chuyển động bề mặt** sang **27. Ý tưởng cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Biến động của chính biến động
 
@@ -258,8 +208,6 @@ Vol-of-vol đo độ bất ổn của chính IV. Nó quan trọng với option d
 Trong khủng hoảng, cả biến động giá và biến động của IV có thể cùng tăng.
 
 # Phần VIII — Giao dịch Gamma có phòng vệ
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **27. Ý tưởng cơ bản** nối từ **26. Biến động của chính biến động** sang **28. Không phải chênh lệch giá miễn phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Ý tưởng cơ bản
 
@@ -275,8 +223,6 @@ Gamma dương
 
 Nếu biến động thực hiện đủ lớn so với phí quyền chọn và chi phí giao dịch, quá trình **giao dịch Gamma (gamma scalping)** có thể bù một phần hao mòn thời gian.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **28. Không phải chênh lệch giá miễn phí** nối từ **27. Ý tưởng cơ bản** sang **29. Delta gần 0 không đồng nghĩa không rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Không phải chênh lệch giá miễn phí
 
 Kết quả phụ thuộc:
@@ -290,8 +236,6 @@ Kết quả phụ thuộc:
 
 # Phần IX — Phòng vệ Delta
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **29. Delta gần 0 không đồng nghĩa không rủi ro** nối từ **28. Không phải chênh lệch giá miễn phí** sang **30. Phòng vệ động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Delta gần 0 không đồng nghĩa không rủi ro
 
 Một vị thế Delta gần 0 vẫn có thể chịu:
@@ -304,35 +248,25 @@ Một vị thế Delta gần 0 vẫn có thể chịu:
 
 Vì vậy “trung hòa Delta” chỉ mô tả một lớp rủi ro tại thời điểm hiện tại.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **30. Phòng vệ động** nối từ **29. Delta gần 0 không đồng nghĩa không rủi ro** sang **31. Thực hiện quyền sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Phòng vệ động
 
 Khi Delta thay đổi, vị thế phòng vệ phải được điều chỉnh. Phòng vệ quá thường làm chi phí tăng; phòng vệ quá ít làm rủi ro theo hướng giá tăng.
 
 # Phần X — Thực hiện quyền, đáo hạn và rủi ro quanh giá thực hiện
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **31. Thực hiện quyền sớm** nối từ **30. Phòng vệ động** sang **32. Rủi ro pin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Thực hiện quyền sớm
 
 Quyền chọn kiểu Mỹ có thể bị thực hiện trước đáo hạn, đặc biệt quanh ngày cổ tức hoặc khi giá trị thời gian còn rất thấp.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **32. Rủi ro pin** nối từ **31. Thực hiện quyền sớm** sang **33. Khoảng nhảy qua đêm hoặc cuối tuần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Rủi ro pin
 
 Nếu giá cơ sở ở sát giá thực hiện khi đáo hạn, trạng thái thực hiện quyền cuối cùng có thể không chắc chắn và tạo vị thế tài sản cơ sở ngoài ý muốn. Đây thường được gọi là **rủi ro pin (pin risk)**.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **33. Khoảng nhảy qua đêm hoặc cuối tuần** nối từ **32. Rủi ro pin** sang **34. Vì sao cần quy đổi?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Khoảng nhảy qua đêm hoặc cuối tuần
 
 Vị thế quyền chọn vẫn chịu rủi ro nhảy giá khi thị trường đóng cửa và không thể tái cân bằng Delta.
 
 # Phần XI — Quy đổi Greeks thành giá trị tiền
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **34. Vì sao cần quy đổi?** nối từ **33. Khoảng nhảy qua đêm hoặc cuối tuần** sang **35. Hệ số hợp đồng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Vì sao cần quy đổi?
 
@@ -347,15 +281,11 @@ Có thể chuyển thành:
 
 Cách này giúp tổng hợp rủi ro danh mục.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **35. Hệ số hợp đồng** nối từ **34. Vì sao cần quy đổi?** sang **36. Tổng hợp theo trạng thái tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Hệ số hợp đồng
 
 Luôn nhân Greek với đúng hệ số hợp đồng và số lượng. Sai hệ số có thể làm ước lượng rủi ro sai hàng chục hoặc hàng trăm lần.
 
 # Phần XII — Danh mục quyền chọn
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **36. Tổng hợp theo trạng thái tương lai** tổng hợp từ **35. Hệ số hợp đồng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **37. Lưới kịch bản** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 36. Tổng hợp theo trạng thái tương lai
 
@@ -369,15 +299,11 @@ IV: giảm mạnh, không đổi, tăng mạnh
 Thời gian: hôm nay / sau một tuần / gần đáo hạn
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **37. Lưới kịch bản** tổng hợp từ **36. Tổng hợp theo trạng thái tương lai** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. Rủi ro tương quan** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 37. Lưới kịch bản
 
 Scenario grid đặt giá, IV, thời gian và các biến liên quan vào cùng một bảng để lộ payoff phi tuyến. Nó giúp kiểm tra các tổ hợp mà một Greek tại một điểm không thể mô tả.
 
 **Lưới kịch bản (scenario grid)** cho thấy tính phi tuyến rõ hơn một Greek duy nhất.
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **38. Rủi ro tương quan** nối từ **37. Lưới kịch bản** sang **39. Mục tiêu của phòng vệ đuôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Rủi ro tương quan
 
@@ -385,35 +311,25 @@ Danh mục quyền chọn nhiều tài sản còn chịu rủi ro tương quan g
 
 # Phần XIII — Phòng vệ rủi ro đuôi
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **39. Mục tiêu của phòng vệ đuôi** nối từ **38. Rủi ro tương quan** sang **40. Chi phí bảo hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Mục tiêu của phòng vệ đuôi
 
 Tail hedge được thiết kế để giảm phân phối lỗ cực đoan và nguy cơ bán cưỡng bức. Chi phí carry thường xuyên cần được đánh giá cùng lợi ích bảo vệ trong nhiều năm và nhiều regime.
 
 **Phòng vệ đuôi (tail hedge)** nhằm giảm tổn thất trong trạng thái cực đoan, không nhất thiết tạo lợi nhuận mỗi tháng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **40. Chi phí bảo hiểm** nối từ **39. Mục tiêu của phòng vệ đuôi** sang **41. Ngân sách phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Chi phí bảo hiểm
 
 Mua quyền chọn bán lặp lại tạo chi phí nắm giữ âm. Đánh giá phòng vệ cần theo nhiều năm và ở cấp toàn danh mục.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **41. Ngân sách phòng vệ** nối từ **40. Chi phí bảo hiểm** sang **42. Chênh lệch quyền chọn bán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. Ngân sách phòng vệ
 
 Có thể định trước tỷ lệ phí quyền chọn hằng năm dành cho bảo vệ. Điều này tránh mua bảo hiểm quá nhiều sau khi IV đã tăng mạnh.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **42. Chênh lệch quyền chọn bán** nối từ **41. Ngân sách phòng vệ** sang **43. Collar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Chênh lệch quyền chọn bán
 
 Put spread đổi một phần vùng bảo vệ sâu lấy premium thấp hơn. Người dùng phải ghi rõ strike bảo vệ, strike bán và mức lỗ còn lại dưới vùng đó.
 
 **Put spread** giảm phí bằng cách bán một quyền chọn bán có giá thực hiện thấp hơn, nhưng mức bảo vệ bị giới hạn khi thị trường giảm cực sâu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **43. Collar** nối từ **42. Chênh lệch quyền chọn bán** sang **44. Biến động giá hàm ý quanh sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Collar
 
@@ -423,15 +339,11 @@ Collar kết hợp long put với short call để tài trợ hedge, vì vậy n
 
 # Phần XIV — Quyền chọn quanh sự kiện
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **44. Biến động giá hàm ý quanh sự kiện** nối từ **43. Collar** sang **45. Sụt IV sau sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Biến động giá hàm ý quanh sự kiện
 
 Thị trường quyền chọn có thể được dùng để ước lượng mức biến động giá mà thị trường đang định giá quanh một sự kiện.
 
 Nếu biến động thực tế nhỏ hơn mức đã được định giá, người mua quyền chọn vẫn có thể lỗ dù đoán đúng hướng.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **45. Sụt IV sau sự kiện** nối từ **44. Biến động giá hàm ý quanh sự kiện** sang **46. Quyền chọn quanh báo cáo lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Sụt IV sau sự kiện
 
@@ -446,29 +358,21 @@ Lợi ích từ hướng giá
 - chi phí thực thi
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **46. Quyền chọn quanh báo cáo lợi nhuận** nối từ **45. Sụt IV sau sự kiện** sang **47. Độ lệch không chỉ là cược hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Quyền chọn quanh báo cáo lợi nhuận
 
 Báo cáo lợi nhuận tạo rủi ro nhảy giá và bất cân xứng thông tin. Kiểm thử chỉ dùng giá đóng cửa ngày trước–sau dễ đánh giá sai giá khớp và động học IV.
 
 # Phần XV — Giao dịch độ lệch biến động
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **47. Độ lệch không chỉ là cược hướng** nối từ **46. Quyền chọn quanh báo cáo lợi nhuận** sang **48. Độ lệch có thể dốc hơn khi căng thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 47. Độ lệch không chỉ là cược hướng
 
 Mua quyền chọn bán đắt và bán quyền chọn mua rẻ có thể là cược vào bất đối xứng phân phối chứ không chỉ quan điểm giảm giá.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **48. Độ lệch có thể dốc hơn khi căng thẳng** nối từ **47. Độ lệch không chỉ là cược hướng** sang **49. Thu Theta và chịu tổn thất đuôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Độ lệch có thể dốc hơn khi căng thẳng
 
 Khi nhu cầu bảo hiểm giảm giá tăng, IV của quyền chọn bán ngoài tiền có thể tăng nhanh hơn IV gần tiền. Khi đó lãi/lỗ của quyền chọn bán hưởng cả Delta và thay đổi độ lệch.
 
 # Phần XVI — Rủi ro bán biến động
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **49. Thu Theta và chịu tổn thất đuôi** nối từ **48. Độ lệch có thể dốc hơn khi căng thẳng** sang **50. Ký quỹ tăng trong khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Thu Theta và chịu tổn thất đuôi
 
@@ -481,8 +385,6 @@ Nhiều khoản lãi nhỏ
 
 Cần kiểm thử các biến động lớn hơn dữ liệu hằng ngày thông thường.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **50. Ký quỹ tăng trong khủng hoảng** nối từ **49. Thu Theta và chịu tổn thất đuôi** sang **51. Dữ liệu quyền chọn phức tạp hơn dữ liệu giao ngay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 50. Ký quỹ tăng trong khủng hoảng
 
 Khi biến động tăng, nhà môi giới hoặc tổ chức bù trừ có thể tăng yêu cầu ký quỹ đúng lúc vị thế bán quyền chọn đang lỗ.
@@ -490,8 +392,6 @@ Khi biến động tăng, nhà môi giới hoặc tổ chức bù trừ có th�
 Rủi ro lãi/lỗ và rủi ro thanh khoản vì vậy xuất hiện đồng thời.
 
 # Phần XVII — Dữ liệu và kiểm thử quyền chọn
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **50. Ký quỹ tăng trong khủng hoảng** đặt vấn đề; **51. Dữ liệu quyền chọn phức tạp hơn dữ liệu giao ngay** đối chiếu bằng chứng, rồi **52. Thiên lệch dùng giá giữa** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 51. Dữ liệu quyền chọn phức tạp hơn dữ liệu giao ngay
 
@@ -506,27 +406,19 @@ Cần xử lý:
 - hệ số hợp đồng;
 - nội suy bề mặt biến động.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **51. Dữ liệu quyền chọn phức tạp hơn dữ liệu giao ngay** đặt vấn đề; **52. Thiên lệch dùng giá giữa** đối chiếu bằng chứng, rồi **53. Chuỗi hợp đồng thay đổi liên tục** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 52. Thiên lệch dùng giá giữa
 
 Kiểm thử dùng điểm giữa bid–ask cho mọi lệnh thường quá lạc quan, đặc biệt với quyền chọn ngoài tiền hoặc ít thanh khoản.
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **52. Thiên lệch dùng giá giữa** đặt đầu vào cho **53. Chuỗi hợp đồng thay đổi liên tục**, rồi **54. Ước lượng IV** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 53. Chuỗi hợp đồng thay đổi liên tục
 
 Chuỗi quyền chọn thay đổi theo ngày. Kiểm thử phải dùng đúng những hợp đồng thực sự tồn tại ở thời điểm lịch sử đó.
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **53. Chuỗi hợp đồng thay đổi liên tục** đặt đầu vào cho **54. Ước lượng IV**, rồi **55. Phòng vệ đúng nhân tố** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 54. Ước lượng IV
 
 Báo giá lỗi có thể tạo IV vô lý. Cần lọc dữ liệu và kiểm tra tính nhất quán với điều kiện không chênh lệch giá.
 
 # Phần XVIII — Phòng vệ thực tế
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **55. Phòng vệ đúng nhân tố** nối từ **54. Ước lượng IV** sang **56. Rủi ro cơ sở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Phòng vệ đúng nhân tố
 
@@ -546,8 +438,6 @@ Rủi ro biến động
 → quyền chọn / công cụ biến động
 ```
 
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **56. Rủi ro cơ sở** nối từ **55. Phòng vệ đúng nhân tố** sang **57. Phòng vệ quá mức**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 56. Rủi ro cơ sở
 
 Basis risk xuất hiện khi công cụ hedge và tài sản cần bảo vệ không di chuyển giống nhau. Nó phải được stress theo regime, maturity, liquidity và event thay vì giả định correlation cố định.
@@ -556,21 +446,15 @@ Basis risk xuất hiện khi công cụ hedge và tài sản cần bảo vệ kh
 
 Ví dụ phòng vệ cổ phiếu bán dẫn Hàn Quốc bằng Nasdaq futures chỉ giảm một phần beta công nghệ toàn cầu, không loại rủi ro riêng của công ty hoặc Hàn Quốc.
 
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **57. Phòng vệ quá mức** nối từ **56. Rủi ro cơ sở** sang **58. Tái cân bằng phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 57. Phòng vệ quá mức
 
 Phòng vệ quá lớn có thể biến danh mục thành vị thế ngược chiều thay vì chỉ giảm rủi ro.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **58. Tái cân bằng phòng vệ** nối từ **57. Phòng vệ quá mức** sang **59. Lãi/lỗ quyền chọn nên được phân rã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Tái cân bằng phòng vệ
 
 Delta hoặc beta thay đổi theo thị trường, vì vậy tỷ lệ phòng vệ phải được đánh giá lại định kỳ hoặc khi trạng thái thay đổi đủ lớn.
 
 # Phần XIX — Phân rã lãi/lỗ
-
-> **Nối mạch:** Trong **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **59. Lãi/lỗ quyền chọn nên được phân rã** nối từ **58. Tái cân bằng phòng vệ** sang **60. Đúng hướng nhưng sai công cụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Lãi/lỗ quyền chọn nên được phân rã
 
@@ -586,8 +470,6 @@ Lãi suất / carry
 Chi phí thực thi
 Phần còn lại
 ```
-
-> **Nối mạch:** Ở chặng này của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **60. Đúng hướng nhưng sai công cụ** nối từ **59. Lãi/lỗ quyền chọn nên được phân rã** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Đúng hướng nhưng sai công cụ
 
@@ -609,8 +491,6 @@ Thanh khoản của hợp đồng thế nào?
 Nếu giá nhảy mạnh, lưới kịch bản cho thấy gì?
 Điều kiện vô hiệu hóa là gì?
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền chọn, bề mặt biến động, Greeks và phòng vệ**, **Kết luận** tổng hợp từ **60. Đúng hướng nhưng sai công cụ** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

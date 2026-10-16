@@ -15,15 +15,11 @@ thiết bị/giao diện
 → result + log
 ```
 
-> **Chuyển mạch:** Sơ đồ luồng giải thích một hành động cần đi qua đâu; để quản lý rủi ro, cần phân biệt dữ liệu nào được thu thập và quyền nào cho phép ai dùng nó.
-
 ## 2. Định danh, xác thực và phân quyền không phải một việc
 
 Định danh trả lời “đây là tài khoản nào”; xác thực kiểm tra “người đang dùng có kiểm soát bằng chứng đăng nhập không”; phân quyền quyết định “tài khoản được làm gì”. Mật khẩu mạnh không bù được việc cấp quyền quá rộng, và xác thực tốt không làm dữ liệu thu thập trở nên vô hại.
 
 Khi đánh giá một dịch vụ, ghi rõ tài khoản owner, phương thức khôi phục, thiết bị tin cậy, quyền của ứng dụng và đường thu hồi quyền. Đây là invariant quan trọng hơn việc nhớ tên một setting.
-
-> **Chuyển mạch:** Sau khi biết ai có quyền, phải theo dữ liệu qua nơi lưu, nơi chia sẻ và nơi sao lưu; đó là ranh giới giữa tiện ích, riêng tư và khả năng phục hồi.
 
 ## 3. Dữ liệu có vòng đời
 
@@ -36,8 +32,6 @@ create → collect → process → share → retain → delete/export
 Mỗi bước có rủi ro khác nhau. Dữ liệu vị trí, danh bạ, ảnh, lịch sử tìm kiếm và thông tin thanh toán không có cùng mức nhạy cảm; ứng dụng cần quyền đọc chưa chắc cần quyền ghi hoặc theo dõi liên tục.
 
 Đọc chính sách quyền riêng tư theo câu hỏi cụ thể: dữ liệu nào, mục đích nào, lưu bao lâu, chia sẻ cho ai, và người dùng có thể xem/xóa/xuất dữ liệu không. Nếu câu trả lời không rõ, đó là bất định cần ghi lại chứ không nên tự suy đoán.
-
-> **Chuyển mạch:** Dữ liệu có vòng đời và chủ thể xử lý; sao lưu và khôi phục kiểm tra điều gì xảy ra khi thiết bị mất, tài khoản bị khóa hoặc dịch vụ ngừng hoạt động.
 
 ## 4. Bảo mật thực dụng và khả năng rời dịch vụ
 

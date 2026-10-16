@@ -28,8 +28,6 @@ Một hedge tốt không được đánh giá bằng việc derivative có lãi 
 3. [03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md](./03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md) — portfolio foreign assets; tách local-asset return khỏi FX return, hedge ratio, hedge carry, rebalance và benchmark mismatch.
 4. [04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md](./04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md) — company/financial institution huy động một currency nhưng cần economic funding ở currency khác; nối debt, FX swap/cross-currency swap, basis, collateral và refinancing rủi ro (risk / 위험).
 
-> **Nối mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) studies** nêu quy tắc; **Không dùng hedge P/L riêng để đánh giá hedge** thử quy tắc trong tình huống, rồi **Các loại rủi ro (risk / 위험) phải tách** mở rộng hệ quả.
-
 ## Không dùng hedge P/L riêng để đánh giá hedge
 
 Ví dụ exporter long economic USD receivable và short USD forward:
@@ -52,8 +50,6 @@ KRW weakens
 
 Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
-> **Nối mạch:** **Không dùng hedge P/L riêng** để tránh đánh giá sai; **Các loại rủi ro phải tách** phân rủi ro translation, transaction và economic trước khi viết **Hedge policy**.
-
 ## Các loại rủi ro (risk / 위험) phải tách
 
 ```text
@@ -71,8 +67,6 @@ Funding / rollover risk
 
 Không một hedge instrument nào xóa tất cả.
 
-> **Nối mạch:** **Hedge policy** biến risk taxonomy thành authority, limit và review cadence; **Kết nối với các phần khác** đưa policy về treasury, accounting và market owners.
-
 ## Hedge chính sách (policy / 정책) trước hedge trade
 
 Trường hợp (case / 사례) nào cũng phải viết chính sách (policy / 정책) trước:
@@ -89,8 +83,6 @@ What is the treatment of over-hedge / under-hedge?
 How is hedge effectiveness measured?
 ```
 
-> **Nối mạch:** **Connections** xác định prerequisite và owner; **Output chuẩn cho mỗi case** ghi lại exposure, decision, hedge instrument và evidence theo cùng format.
-
 ## Kết nối với các phần khác
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
@@ -98,8 +90,6 @@ How is hedge effectiveness measured?
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
-
-> **Nối mạch:** **Output chuẩn** khép case study bằng decision trail và boundary; chi tiết định giá, settlement hoặc accounting quay về canonical owner.
 
 ## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
 

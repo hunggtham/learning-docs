@@ -22,8 +22,6 @@ Mục tiêu không phải nhớ đáp số. Mục tiêu là tạo một procedur
 
 # Part A — 소프트웨어 설계 / 소프트웨어 개발
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)** nối từ **0. Cách dùng** sang **Drill 2 — ngăn xếp (stack / 스택) và postfix expression**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)
 
 Cho control-flow đồ thị (graph / 그래프) có `N = 8` nút (node / 노드) và `E = 10` edge, một connected thành phần (component / 컴포넌트).
@@ -51,8 +49,6 @@ Nghĩa là đồ thị (graph / 그래프) có 4 independent paths trong basis-p
 Nếu đồ thị (graph / 그래프) có nhiều connected thành phần (component / 컴포넌트), phải dùng đúng `P`, không mặc định luôn bằng 1.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 2 — ngăn xếp (stack / 스택) và postfix expression** nối từ **Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)** sang **Drill 3 — BFS và DFS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 2 — ngăn xếp (stack / 스택) và postfix expression
 
@@ -91,8 +87,6 @@ Tính biểu thức postfix:
 Với `-` và `/`, thứ tự pop rất quan trọng. Operand pop đầu tiên là bên phải.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 3 — BFS và DFS** nối từ **Drill 2 — ngăn xếp (stack / 스택) và postfix expression** sang **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 3 — BFS và DFS
 
@@ -140,8 +134,6 @@ BFS dùng frontier theo FIFO nên khám phá theo “tầng (layer / 계층)” 
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing** nối từ **Drill 3 — BFS và DFS** sang **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing
 
 Bảng băm (hash table / 해시 테이블) kích thước (size / 크기) 7, băm (hash / 해시) hàm (function / 함수):
@@ -179,8 +171,6 @@ Tuyến tính (linear / 선형) probing có thể tạo **Primary Clustering —
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)** nối từ **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing** sang **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)
 
 Sorted array:
@@ -206,8 +196,6 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) cần tìm kiếm (searc
 ---
 
 # Part B — 데이터베이스 구축
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)** nối từ **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)** sang **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)
 
@@ -253,8 +241,6 @@ FD `AC → D` không có nghĩa key bắt buộc là `AC`. Vì `A → B → C`, 
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)** nối từ **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)** sang **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)
 
 Quan hệ (relation / 관계):
@@ -294,8 +280,6 @@ Enrollment(StudentId, CourseId, Grade)
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)** nối từ **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)** sang **Drill 9 — GROUP BY, WHERE và HAVING**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)
 
 Quan hệ (relation / 관계):
@@ -334,8 +318,6 @@ Không phải cứ quan hệ (relation / 관계) có foreign key là vi phạm 3
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 9 — GROUP BY, WHERE và HAVING** nối từ **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)** sang **Drill 10 — LEFT phép nối (join / 조인) và NULL**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 9 — GROUP BY, WHERE và HAVING
 
 Bảng (table / 테이블) `orders(customer_id, amount, status)`.
@@ -361,8 +343,6 @@ HAVING SUM(amount) > 1000;
 Đừng dùng `WHERE SUM(amount) > 1000` vì aggregate giá trị (value / 값) chưa tồn tại ở phase lô-gic (logic / 논리) đó.
 
 ---
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 10 — LEFT phép nối (join / 조인) và NULL** nối từ **Drill 9 — GROUP BY, WHERE và HAVING** sang **Drill 11 — xung đột (conflict / 충돌) Serializability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 10 — LEFT phép nối (join / 조인) và NULL
 
@@ -409,8 +389,6 @@ LEFT phép nối (join / 조인) giữ toàn bộ row bên trái. Với customer
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 11 — xung đột (conflict / 충돌) Serializability** nối từ **Drill 10 — LEFT phép nối (join / 조인) và NULL** sang **Drill 12 — Isolation anomaly**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 11 — xung đột (conflict / 충돌) Serializability
 
 Schedule:
@@ -447,8 +425,6 @@ T1 → T2 → T1
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 12 — Isolation anomaly** nối từ **Drill 11 — xung đột (conflict / 충돌) Serializability** sang **Drill 13 — FCFS Scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 12 — Isolation anomaly
 
 T1 đọc balance = 100. T2 cập nhật (update / 업데이트) balance = 50 và lần ghi nhận (commit / 커밋). T1 đọc lại cùng row và thấy 50.
@@ -462,8 +438,6 @@ Nếu T1 chạy cùng predicate `WHERE amount > 1000` và lần hai xuất hiệ
 ---
 
 # Part C — 프로그래밍 언어 활용 / OS / mạng (network / 네트워크)
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 13 — FCFS Scheduling** nối từ **Drill 12 — Isolation anomaly** sang **Drill 14 — SJF Non-preemptive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 13 — FCFS Scheduling
 
@@ -507,8 +481,6 @@ Average turnaround:
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 14 — SJF Non-preemptive** nối từ **Drill 13 — FCFS Scheduling** sang **Drill 15 — Round Robin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 14 — SJF Non-preemptive
 
 Cùng processes trên, tất cả arrive thời gian (time / 시간) 0.
@@ -538,8 +510,6 @@ Average waiting:
 SJF giảm average waiting trong benchmark khi burst thời gian (time / 시간) biết trước, nhưng practical hệ thống (system / 시스템) thường không biết chính xác future CPU burst và có starvation rủi ro (risk / 위험) với long jobs nếu short jobs liên tục đến.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 15 — Round Robin** nối từ **Drill 14 — SJF Non-preemptive** sang **Drill 16 — FIFO Page Replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 15 — Round Robin
 
@@ -589,8 +559,6 @@ Average waiting:
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 16 — FIFO Page Replacement** nối từ **Drill 15 — Round Robin** sang **Drill 17 — LRU Page Replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 16 — FIFO Page Replacement
 
 3 frame, tham chiếu (reference / 참조) string:
@@ -616,8 +584,6 @@ FIFO chỉ quan tâm arrival thứ tự (order / 순서) vào frame, không quan
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 17 — LRU Page Replacement** nối từ **Drill 16 — FIFO Page Replacement** sang **Drill 18 — IPv4 Subnetting /27**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 17 — LRU Page Replacement
 
 Cùng 3 frame và tham chiếu (reference / 참조):
@@ -639,8 +605,6 @@ Khi `5` tới, among 1,3,4 thì 3 là least recently used → replace 3.
 **Page faults cũng = 5 trong chuỗi này**, dù victim khác FIFO. Đừng suy rằng LRU luôn cho ít fault hơn trên mọi short tham chiếu (reference / 참조) string; chính sách (policy / 정책) khác nhau có thể tình cờ cùng count.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 18 — IPv4 Subnetting /27** nối từ **Drill 17 — LRU Page Replacement** sang **Drill 19 — Xác định subnet của host**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 18 — IPv4 Subnetting /27
 
@@ -693,8 +657,6 @@ Broadcast = 192.168.10.31
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 19 — Xác định subnet của host** nối từ **Drill 18 — IPv4 Subnetting /27** sang **Drill 20 — Longest Prefix Match**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 19 — Xác định subnet của host
 
 Host:
@@ -718,8 +680,6 @@ Usable    = 192.168.10.65 ~ 192.168.10.94
 ```
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 20 — Longest Prefix Match** nối từ **Drill 19 — Xác định subnet của host** sang **Drill 21 — C Array và Pointer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 20 — Longest Prefix Match
 
@@ -745,8 +705,6 @@ Nó match /8, /16 và /24. Router chọn tuyến (route / 경로) có prefix dà
 Longest prefix match chọn tuyến (route / 경로) cụ thể nhất trong các tuyến (route / 경로) match, không phải tuyến (route / 경로) xuất hiện đầu tiên trong bảng (table / 테이블).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 21 — C Array và Pointer** nối từ **Drill 20 — Longest Prefix Match** sang **Drill 22 — C Pre/Post Increment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 21 — C Array và Pointer
 
@@ -782,8 +740,6 @@ Pointer arithmetic tăng theo element kích thước (size / 크기) tự độn
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 22 — C Pre/Post Increment** nối từ **Drill 21 — C Array và Pointer** sang **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 22 — C Pre/Post Increment
 
 Mã (code / 코드):
@@ -813,8 +769,6 @@ x=5, y=3, z=5
 Không mở rộng mẹo này sang expressions có undefined/unspecified hành vi (behavior / 동작) trong C. Khi cùng scalar bị modify/read phức tạp trong một expression, phải biết ngôn ngữ (language / 언어) quy tắc (rule / 규칙) chứ không “dấu vết (trace / 추적) theo cảm giác”.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch** nối từ **Drill 22 — C Pre/Post Increment** sang **Drill 24 — Python Alias và Mutability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch
 
@@ -848,8 +802,6 @@ Overloading resolution chủ yếu dùng phương thức (method / 메서드) si
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 24 — Python Alias và Mutability** nối từ **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch** sang **Drill 25 — PERT Expected thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 24 — Python Alias và Mutability
 
 Mã (code / 코드):
@@ -881,8 +833,6 @@ Nhưng shallow bản sao (copy / 복사) không recursively bản sao (copy / �
 
 # Part D — 정보시스템 구축 관리
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 25 — PERT Expected thời gian (time / 시간)** nối từ **Drill 24 — Python Alias và Mutability** sang **Drill 26 — đường găng (critical path / 임계 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 25 — PERT Expected thời gian (time / 시간)
 
 Một activity có:
@@ -912,8 +862,6 @@ TE = (4 + 4*7 + 16) / 6
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 25 — PERT Expected thời gian (time / 시간)** đặt đầu vào cho **Drill 26 — đường găng (critical path / 임계 경로)**, rồi **Drill 27 — RAID sức chứa (capacity / 용량)** mở rộng hệ quả liên quan.
-
 ## Drill 26 — đường găng (critical path / 임계 경로)
 
 Dự án (project / 프로젝트) mạng (network / 네트워크) có hai đường dẫn (path / 경로) độc lập từ start tới finish:
@@ -935,8 +883,6 @@ Path 2 = 4+3   = 7
 Nếu activity trên đường găng (critical path / 임계 경로) delay 1 đơn vị và không có float/slack, dự án (project / 프로젝트) completion cũng delay 1.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 26 — đường găng (critical path / 임계 경로)** đặt đầu vào cho **Drill 27 — RAID sức chứa (capacity / 용량)**, rồi **Drill 28 — RTO và RPO** mở rộng hệ quả liên quan.
 
 ## Drill 27 — RAID sức chứa (capacity / 용량)
 
@@ -984,8 +930,6 @@ RAID là availability/storage-failure cơ chế (mechanism / 메커니즘), **kh
 
 ---
 
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 28 — RTO và RPO** nối từ **Drill 27 — RAID sức chứa (capacity / 용량)** sang **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 28 — RTO và RPO
 
 Nghiệp vụ (business / 비즈니스) yêu cầu (requirement / 요구사항):
@@ -1007,8 +951,6 @@ Nếu backup mỗi 24 giờ, backup chính sách (policy / 정책) đó một m�
 Nếu replication gần real-time nhưng failover cần 4 giờ manual công việc (work / 작업), dữ liệu (data / 데이터) RPO có thể tốt nhưng RTO vẫn không đạt.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)** nối từ **Drill 28 — RTO và RPO** sang **Drill 30 — Deadlock Conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)
 
@@ -1044,8 +986,6 @@ Một hệ thống thật dùng defense in độ sâu (depth / 깊이), nhưng �
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 30 — Deadlock Conditions** nối từ **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)** sang **Drill 31 — Composite chỉ mục (index / 인덱스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 30 — Deadlock Conditions
 
 Bốn Coffman conditions truyền thống:
@@ -1068,8 +1008,6 @@ Deadlock prevention thay đổi điều kiện để deadlock không thể hình
 ---
 
 # Part E — Mixed procedural drills không xem solution ngay
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 31 — Composite chỉ mục (index / 인덱스)** nối từ **Drill 30 — Deadlock Conditions** sang **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 31 — Composite chỉ mục (index / 인덱스)
 
@@ -1101,8 +1039,6 @@ Một starting thiết kế (design / 설계) tự nhiên là `(user_id, created
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)** nối từ **Drill 31 — Composite chỉ mục (index / 인덱스)** sang **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)
 
 Máy khách (client / 클라이언트) gửi yêu cầu (request / 요청) transfer với `request_id = R123`. máy chủ (server / 서버) hết thời gian chờ (timeout / 타임아웃) sau lần ghi nhận (commit / 커밋). máy khách (client / 클라이언트) thử lại (retry / 재시도) cùng `request_id`.
@@ -1119,8 +1055,6 @@ Nếu nghiệp vụ (business / 비즈니스) side tác động (effect / 효과
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)** nối từ **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)** sang **Drill 34 — Subnet thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 33 — CPU vs I/O lập luận (reasoning / 추론)
 
 Một tiến trình (process / 프로세스) chạy mẫu (pattern / 패턴):
@@ -1134,8 +1068,6 @@ Một tiến trình (process / 프로세스) khác chạy CPU burst dài 100ms.
 Tự giải thích tại sao scheduling chính sách (policy / 정책) ảnh hưởng phản hồi (response / 응답)/interactivity khác nhau và vì sao chỉ nhìn tổng CPU thời gian (time / 시간) không đủ để hiểu hệ thống (system / 시스템) hành vi (behavior / 동작).
 
 ---
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 34 — Subnet thiết kế (design / 설계)** nối từ **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)** sang **Drill 35 — Normalization vs hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drill 34 — Subnet thiết kế (design / 설계)
 
@@ -1159,8 +1091,6 @@ Prefix:
 
 ---
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 35 — Normalization vs hiệu năng (performance / 성능)** nối từ **Drill 34 — Subnet thiết kế (design / 설계)** sang **Functional phụ thuộc (dependency / 의존성) / Key**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Drill 35 — Normalization vs hiệu năng (performance / 성능)
 
 Một analytics truy vấn (query / 쿼리) phép nối (join / 조인) 8 bảng normalized và chạy quá chậm. nhóm (team / 팀) đề xuất denormalized summary bảng (table / 테이블).
@@ -1180,8 +1110,6 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 
 # Part F — Procedure templates phải nhớ
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Functional phụ thuộc (dependency / 의존성) / Key** nối từ **Drill 35 — Normalization vs hiệu năng (performance / 성능)** sang **Normalization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Functional phụ thuộc (dependency / 의존성) / Key
 
 ```text
@@ -1191,8 +1119,6 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 4. Thử bỏ từng attribute khỏi X
 5. Không bỏ được nữa → candidate key
 ```
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Normalization** nối từ **Functional phụ thuộc (dependency / 의존성) / Key** sang **SQL Aggregate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Normalization
 
@@ -1205,8 +1131,6 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 6. BCNF: mọi determinant của non-trivial FD phải là superkey
 7. Kiểm lossless join và dependency preservation khi decomposition
 ```
-
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **SQL Aggregate** nối từ **Normalization** sang **Xung đột (conflict / 충돌) Serializability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SQL Aggregate
 
@@ -1222,8 +1146,6 @@ FROM/JOIN
 
 Đây là logical lập luận (reasoning / 추론) mô hình (model / 모델), không khẳng định DBMS physically execute đúng thứ tự đó.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Xung đột (conflict / 충돌) Serializability** nối từ **SQL Aggregate** sang **CPU Scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xung đột (conflict / 충돌) Serializability
 
 ```text
@@ -1233,8 +1155,6 @@ FROM/JOIN
 4. Cycle? yes → not conflict-serializable
 5. Acyclic → topological order cho equivalent serial order
 ```
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **CPU Scheduling** nối từ **Xung đột (conflict / 충돌) Serializability** sang **Page Replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU Scheduling
 
@@ -1246,8 +1166,6 @@ FROM/JOIN
 5. response = first_run - arrival
 ```
 
-> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Page Replacement** nối từ **CPU Scheduling** sang **Subnetting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Page Replacement
 
 ```text
@@ -1257,8 +1175,6 @@ FROM/JOIN
 4. Update policy metadata
 5. Đếm fault sau cùng
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Subnetting** nối từ **Page Replacement** sang **PERT/CPM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Subnetting
 
@@ -1270,8 +1186,6 @@ FROM/JOIN
 5. tìm boundary chứa IP
 6. network / broadcast / usable range
 ```
-
-> **Nối mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **PERT/CPM** nối từ **Subnetting** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## PERT/CPM
 

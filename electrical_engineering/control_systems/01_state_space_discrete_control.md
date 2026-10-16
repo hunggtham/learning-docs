@@ -8,25 +8,17 @@ Transfer hàm (function / 함수) trực quan cho SISO tuyến tính; state-spac
 
 Controllability hỏi đầu vào (input / 입력) có thể đưa trạng thái (state / 상태) tới vùng mong muốn không. khả năng quan sát (observability / 관측 가능성) hỏi đầu ra (output / 출력) đo được có đủ để suy ra trạng thái (state / 상태) không. Không controller nào sửa được một chế độ (mode / 모드) không controllable; không observer nào tạo được thông tin (information / 정보) bị sensor bỏ qua.
 
-> **Chuyển mạch:** Trong **State-Space and Discrete điều khiển (control / 제어) — State-space và điều khiển số**, **1. Controllability và khả năng quan sát (observability / 관측 가능성)** cho ta quy tắc; **2. Discretization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Discrete PID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. Discretization
 
 Plant continuous được mẫu (sample / 표본) với period Ts. Zero-order hold, computational delay và jitter tạo discrete dynamics khác mô hình continuous đơn giản. Ts phải được chọn từ dominant pole, bandwidth và worst-case thực thi (execution / 실행) thời gian (time / 시간).
-
-> **Chuyển mạch:** **2. Discretization** biến mô hình liên tục thành bước thời gian; **3. Discrete PID** dùng mô hình đó để điều khiển, rồi **4. Worked reasoning** kiểm tra deadline actuator.
 
 ## 3. Discrete PID
 
 Integral và derivative cần discretize có chủ đích. Derivative trên đo lường (measurement / 측정) có thể tránh derivative kick khi tham chiếu (reference / 참조) step; integral cần anti-windup và giới hạn numeric. Fixed-point hiện thực (implementation / 구현) phải có scaling và overflow proof.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **State-Space and Discrete điều khiển (control / 제어) — State-space và điều khiển số**, **3. Discrete PID** cho ta quy tắc; **4. Worked lập luận (reasoning / 추론): actuator deadline** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Worked lập luận (reasoning / 추론): actuator deadline
 
 Nếu vòng điều khiển (control loop / 제어 루프) chạy mỗi 1 ms nhưng tác vụ (task / 작업) đôi khi hoàn thành sau 1.4 ms, controller không chỉ “chậm hơn”: nó tạo variable delay và có thể làm phase margin giảm. Giải pháp có thể là giảm mô hình (model / 모델) chi phí (cost / 비용), ưu tiên tác vụ (task / 작업), tăng Ts có kiểm chứng, hoặc thiết kế controller robust với delay; không che bằng thử lại (retry / 재시도).
-
-> **Chuyển mạch:** Trong **State-Space and Discrete điều khiển (control / 제어) — State-space và điều khiển số**, **4. Worked lập luận (reasoning / 추론): actuator deadline** cho ta quy tắc; **5. xác minh (verification / 확인)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. xác minh (verification / 확인)
 
@@ -35,8 +27,6 @@ Nếu vòng điều khiển (control loop / 제어 루프) chạy mỗi 1 ms nh�
 - saturation, sensor dropout và reset giữa vòng lặp (loop / 루프);
 - HIL với timestamp thật;
 - kiểm tra bất biến (invariant / 불변식) an toàn trước khi tối ưu phản hồi (response / 응답).
-
-> **Chuyển mạch:** **5. Verification** xác nhận mô phỏng và giới hạn số; **Cầu nối** ghi lại điều kiện bàn giao sang hệ thống chạy thật.
 
 ## Cầu nối (bridge / 브리지)
 

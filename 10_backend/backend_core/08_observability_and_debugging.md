@@ -12,8 +12,6 @@ Khả năng quan sát (observability / 관측 가능성) không phải bật th�
 thuyết: độ trễ (latency / 지연 시간) tăng ở hàng đợi (queue / 큐) hay cơ sở dữ liệu (database / 데이터베이스), lỗi theo tenant hay toàn hệ thống,
 chỉ hết thời gian chờ (timeout / 타임아웃) hay đã lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Ba tín hiệu chỉ hữu ích khi chúng trả lời được một symptom cụ thể. **Debugging vòng lặp (loop / 루프)** dùng logs, metrics và traces để khoanh boundary đầu tiên bị phá; sau đó **Độ tin cậy (reliability / 신뢰성) signals** chuyển bằng chứng ấy thành tín hiệu vận hành.
-
 ## Debugging vòng lặp (loop / 루프)
 
 1. Viết symptom có mốc thời gian, phạm vi (scope / 범위) và expected hành vi (behavior / 동작).
@@ -26,8 +24,6 @@ Correlation ID cần truyền qua HTTP, job và message; ngữ cảnh dấu vế
 drop ở adapter. chỉ số (metric / 지표) label không được chứa người dùng (user / 사용자) ID/card number vô hạn cardinality.
 Log structured, có severity và sampling; redact secret trước khi serialize.
 
-> **Chuyển mạch:** Sau khi khoanh symptom và boundary, reliability signals cho biết sự cố có lan rộng và có hành động nào sẵn sàng hay không. **Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)** nối các tín hiệu thành chuỗi nguyên nhân thay vì xem dashboard rời rạc.
-
 ## Độ tin cậy (reliability / 신뢰성) signals
 
 Theo dõi availability, độ trễ (latency / 지연 시간) percentile, lỗi (error / 오류) lớp (class / 클래스), saturation, hàng đợi (queue / 큐) age,
@@ -39,8 +35,6 @@ queue) khỏi root-cause fix. Ghi rõ điều gì đã biết, điều gì chưa
 nào làm thay đổi quyết định.
 
 Nền fault tolerance và khả năng quan sát (observability / 관측 가능성) sâu hơn nằm ở [Security & Reliability](../../computer_science/07_security_reliability/README.md).
-
-> **Chuyển mạch:** Causal graph đặt deploy, saturation, latency, timeout và duplicate work trên cùng một đường đi. **Bài tập suy luận** kiểm tra khả năng đọc đường đi đó bằng một p99 tăng nhưng error rate chưa tăng.
 
 ## Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)
 
@@ -68,15 +62,11 @@ Mitigation môi trường vận hành (production / 운영 환경) phải có qu
 traffic, pause bên tiêu thụ (consumer / 소비자), tăng sức chứa (capacity / 용량) hoặc chuyển read-only. Không sửa dữ liệu
 trực tiếp chỉ để dashboard “xanh”.
 
-> **Chuyển mạch:** Bài tập p99 buộc chọn metric/span có giá trị chẩn đoán trước khi timeout xuất hiện. **Health, SLO và privacy-safe telemetry** tiếp tục bằng cách biến chẩn đoán thành probe, budget và dữ liệu được phép lưu.
-
 ## Bài tập suy luận
 
 Một endpoint p99 tăng từ 200 ms lên 2 s nhưng lỗi (error / 오류) tỷ lệ (rate / 비율) chưa tăng. Chọn ba
 chỉ số (metric / 지표)/span cần xem trước, phân biệt queueing với cơ sở dữ liệu (database / 데이터베이스) độ trễ (latency / 지연 시간), và nêu alert
 nào nên kích hoạt trước khi người dùng gặp hết thời gian chờ (timeout / 타임아웃).
-
-> **Chuyển mạch:** Probe, SLO và privacy classification biến kết quả debugging thành điều kiện vận hành có thể kiểm tra. Phần này khép mạch bằng cách nối health/readiness với user-visible outcome và retention có mục đích.
 
 ## Health, SLO và privacy-safe telemetry
 

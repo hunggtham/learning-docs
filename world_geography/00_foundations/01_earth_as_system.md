@@ -10,8 +10,6 @@ Vì vậy **hệ Trái Đất (Earth system / 지구 시스템)** là khung dùn
 
 Các “quyển” thường dùng gồm **khí quyển (atmosphere)**, **thủy quyển (hydrosphere)**, **băng quyển (cryosphere)**, **địa quyển (geosphere)** và **sinh quyển (biosphere)**. Đây là ranh giới phân tích, không phải các hộp kín. Đất chẳng hạn nằm ngay giao diện giữa đá, nước, khí và sự sống.
 
-> **Nối mạch:** Câu hỏi năng lượng–vật chất–lan truyền xác định Earth system như các subsystem ghép nối; **Hai nguồn năng lượng lớn** tiếp theo phân biệt solar forcing với nội nhiệt. **Hệ thống phải có ranh giới** sau đó quyết định ta đang tính phần nào của Trái Đất.
-
 ## Hai nguồn năng lượng lớn
 
 Phần lớn quá trình bề mặt được cấp năng lượng bởi Mặt Trời. Chênh lệch bức xạ theo vĩ độ và mùa tạo độ dốc (gradient / 기울기) nhiệt, rồi độ dốc (gradient / 기울기) áp suất, gió, hoàn lưu đại dương và chu trình nước. Quang hợp biến một phần năng lượng bức xạ thành năng lượng hóa học trong sinh khối.
@@ -20,8 +18,6 @@ Ngược lại, **nội nhiệt Trái Đất (internal heat)** từ năng lượ
 
 Hai động cơ này gặp nhau ở bề mặt. Kiến tạo nâng núi; Mặt Trời cung cấp năng lượng cho mưa và băng; nước và trọng lực xói núi; trầm tích lại được chuyển xuống basin và coast.
 
-> **Nối mạch:** Solar vận hành atmosphere–ocean–water–biosphere, nội nhiệt vận hành tectonics–relief; **Hệ thống phải có ranh giới** tiếp theo kiểm tra các flux đi qua basin, city hay toàn hành tinh. **Stock, luồng (flow / 흐름) và định luật bảo toàn** sau đó lượng hóa phần tích lũy và trao đổi.
-
 ## Hệ thống phải có ranh giới
 
 Không thể tính ngân sách (budget / 예산) nếu chưa xác định **ranh giới hệ thống (system boundary)**. Một lưu vực có thể coi ridge là biên; một thành phố dùng ranh giới hành chính; khí hậu toàn cầu dùng gần toàn bộ hành tinh.
@@ -29,8 +25,6 @@ Không thể tính ngân sách (budget / 예산) nếu chưa xác định **ranh
 Kết luận thay đổi khi đổi biên. Thành phố có thể giảm phát thải trong lãnh thổ bằng cách nhập điện hoặc hàng hóa từ nơi khác, nhưng dấu chân tiêu dùng toàn hệ chưa chắc giảm. Một nông trại “tiết kiệm nước” ở cấp ruộng chưa chắc làm lưu vực có thêm lượng nước tương ứng nếu nước hồi quy trước đó được người khác sử dụng.
 
 Do đó trước mọi phân tích stock–luồng (flow / 흐름) cần hỏi: **hệ đang bao gồm cái gì, loại trừ cái gì, và dòng nào đi qua biên?**
-
-> **Nối mạch:** Boundary quyết định dòng nào được tính, còn **Stock, luồng (flow / 흐름) và định luật bảo toàn** chỉ ra vì sao extraction lớn hơn recharge làm stock giảm dù vẫn còn nước. **Thời gian lưu trú và “trí nhớ” của hệ** tiếp theo giải thích độ trễ của các kho khác nhau.
 
 ## Stock, luồng (flow / 흐름) và định luật bảo toàn
 
@@ -46,15 +40,11 @@ Trong đó \(S\) là stock, \(I\) là dòng vào và \(O\) là dòng ra trong kh
 
 Điểm quan trọng là **trạng thái hiện tại không cho biết quỹ đạo dài hạn**. Một stock lớn có thể che một deficit luồng (flow / 흐름) trong nhiều năm.
 
-> **Nối mạch:** Conservation nói stock đổi bao nhiêu, còn **Thời gian lưu trú và “trí nhớ” của hệ** cho biết đổi nhanh hay chậm ở hơi nước, groundwater, băng và carbon. **Phản hồi (feedback / 피드백): đầu ra (output / 출력) quay lại thay đổi tiến trình (process / 프로세스)** tiếp theo giải thích vì sao cùng độ trễ có thể khuếch đại hoặc giảm shock.
-
 ## Thời gian lưu trú và “trí nhớ” của hệ
 
 Các kho phản ứng với tốc độ khác nhau. Hơi nước khí quyển thường lưu trong thời gian ngắn; nước ngầm sâu, băng lớn, carbon đất hoặc nhiệt đại dương có thể lưu rất lâu. Khái niệm **thời gian lưu trú (residence time)** giúp giải thích vì sao một số hệ phản ứng nhanh với shock, còn hệ khác có độ trễ nhiều thập kỷ hoặc lâu hơn.
 
 Đây là nền tảng để hiểu climate inertia, groundwater depletion và ecological khôi phục (recovery / 복구). Dừng một pressure không luôn làm hệ quay về trạng thái trước ngay lập tức.
-
-> **Nối mạch:** Kho lâu năm tạo inertia, nhưng **Phản hồi (feedback / 피드백): đầu ra (output / 출력) quay lại thay đổi tiến trình (process / 프로세스)** có thể làm ice–albedo hoặc vegetation–water khuếch đại thay đổi. **Coupling: khi hai hệ trở thành một bài toán** tiếp theo mở các vòng đó giữa ocean, atmosphere, soil, glacier và city.
 
 ## Phản hồi (feedback / 피드백): đầu ra (output / 출력) quay lại thay đổi tiến trình (process / 프로세스)
 
@@ -64,15 +54,11 @@ Trong ice–albedo phản hồi (feedback / 피드백), băng giảm làm bề m
 
 Không nên hiểu “positive” là tốt hay “negative” là xấu. Đây chỉ là dấu của vòng phản hồi.
 
-> **Nối mạch:** Feedback đổi flux của một subsystem, còn **Coupling: khi hai hệ trở thành một bài toán** cho thấy flood chẳng thể dự báo bằng rainfall nếu urbanization đã đổi infiltration và drainage. **Cân bằng động không phải trạng thái đứng yên** tiếp theo đặt coupling vào đúng cửa sổ thời gian và scale.
-
 ## Coupling: khi hai hệ trở thành một bài toán
 
 Hai subsystem được **ghép nối (coupled)** khi trạng thái của hệ này ảnh hưởng mạnh tới flux của hệ kia. Ocean–atmosphere coupling tạo ENSO; soil–vegetation coupling ảnh hưởng runoff; glacier–river coupling ảnh hưởng seasonal water; city–atmosphere coupling tạo urban heat island và thay đổi roughness.
 
 Khi coupling mạnh, phân tích một phía riêng lẻ dễ sai. Ví dụ dự báo flood không thể chỉ dùng rainfall nếu urbanization đã thay đổi infiltration và drainage mạng (network / 네트워크).
-
-> **Nối mạch:** Coupled flux có thể vẫn giữ stock trung bình ổn dù vật chất luôn chuyển; **Cân bằng động không phải trạng thái đứng yên** nhắc phải ghi rõ scale và time window. **Threshold, nonlinearity và regime shift** tiếp theo hỏi khi nào cân bằng mất ổn định.
 
 ## Cân bằng động không phải trạng thái đứng yên
 
@@ -80,15 +66,11 @@ Nhiều hệ địa lý ở **cân bằng động (dynamic equilibrium)**: hình
 
 Vì vậy “ổn định” phải luôn đi kèm quy mô (scale / 규모) và thời gian (time / 시간) cửa sổ (window / 윈도우).
 
-> **Nối mạch:** Dynamic equilibrium có margin hữu hạn; **Threshold, nonlinearity và regime shift** giải thích runoff, slope failure và eutrophication tăng đột ngột sau ngưỡng. **Spatial heterogeneity: cùng đầu vào (input / 입력), khác đầu ra (output / 출력)** tiếp theo chỉ ra vì sao ngưỡng không giống nhau ở mọi nơi.
-
 ## Threshold, nonlinearity và regime shift
 
 Nhiều hệ phản ứng không tuyến tính. Soil moisture tăng dần nhưng khi đạt saturation, rainfall bổ sung có thể chuyển nhanh thành runoff. Sườn dốc tích lũy nước và biến dạng rồi mất ổn định sau khi vượt strength threshold. Lake ecosystem có thể chịu nutrient đầu vào (input / 입력) đến một mức rồi chuyển sang trạng thái eutrophic khó đảo ngược.
 
 Khi phản hồi (feedback / 피드백) duy trì trạng thái mới, hệ có thể xuất hiện **chuyển chế độ (regime shift)**. Do đó quản lý hệ thống (system / 시스템) không chỉ tối ưu mức trung bình; cần biết threshold và phần “margin” còn lại trước threshold.
-
-> **Nối mạch:** Ngưỡng phụ thuộc geology, elevation, soil, cover và institution; **Spatial heterogeneity: cùng đầu vào (input / 입력), khác đầu ra (output / 출력)** buộc tín hiệu global phải qua bộ lọc local. **Quy mô (scale / 규모) tương tác (interaction / 상호작용) và cross-scale phản hồi (feedback / 피드백)** tiếp theo theo dõi tín hiệu lan giữa các cấp.
 
 ## Spatial heterogeneity: cùng đầu vào (input / 입력), khác đầu ra (output / 출력)
 
@@ -96,15 +78,11 @@ Trái Đất không đồng nhất về geology, elevation, soil, vegetation, po
 
 Đây là lý do toàn cục (global / 전역) tín hiệu (signal / 신호) luôn phải được “lọc” qua cục bộ (local / 로컬) geography. Climate warming toàn cầu không tạo cùng crop impact, flood rủi ro (risk / 위험) hay năng lượng (energy / 에너지) demand ở mọi nơi.
 
-> **Nối mạch:** Local process có thể tích lũy thành planetary pattern, còn global commodity price có thể đổi land use tại frontier; **Quy mô (scale / 규모) tương tác (interaction / 상호작용) và cross-scale phản hồi (feedback / 피드백)** là lý do phải nghĩ đa quy mô. **Trọng yếu (critical / 중요) zone: nơi các subsystem gặp nhau** tiếp theo đặt tương tác vào soil–water–life interface.
-
 ## Quy mô (scale / 규모) tương tác (interaction / 상호작용) và cross-scale phản hồi (feedback / 피드백)
 
 Tiến trình (process / 프로세스) ở quy mô (scale / 규모) nhỏ có thể tích lũy thành mẫu (pattern / 패턴) lớn; ngược lại tiến trình (process / 프로세스) toàn cầu có thể thay đổi điều kiện cục bộ (local / 로컬). Deforestation trong một patch thay đổi runoff tại chỗ; nếu diễn ra trên diện rộng nó có thể ảnh hưởng moisture recycling. toàn cục (global / 전역) commodity price có thể thay land use ở một frontier; land-use thay đổi (change / 변경) lại tác động carbon và biodiversity.
 
 Địa lý vì vậy cần **tư duy đa quy mô (multi-scale reasoning)**: cục bộ (local / 로컬) cơ chế (mechanism / 메커니즘), regional mạng (network / 네트워크) và planetary ranh giới (boundary / 경계) có thể cùng tồn tại.
-
-> **Nối mạch:** Cross-scale feedback hội tụ ở soil, roots, groundwater và land cover; **Trọng yếu (critical / 중요) zone: nơi các subsystem gặp nhau** là giao diện nối weathering với agriculture và settlement. **Con người là forcing bên ngoài hay một phần của hệ?** tiếp theo hỏi người có nằm trong coupled system ấy không.
 
 ## Trọng yếu (critical / 중요) zone: nơi các subsystem gặp nhau
 
@@ -112,23 +90,17 @@ Từ vegetation canopy xuống groundwater nông thường được gọi là **
 
 Weathering tạo soil; gốc (root / 루트) thay đổi porosity; soil điều chỉnh infiltration; groundwater duy trì baseflow; con người thay land cover và pumping. trọng yếu (critical / 중요) zone giúp nối vật lý (physical / 물리적) geography với human geography bằng một giao diện (interface / 인터페이스) cụ thể.
 
-> **Nối mạch:** Critical zone đã cho thấy người đổi land cover, pumping và nutrient cycle; **Con người là forcing bên ngoài hay một phần của hệ?** biến human activity thành node trong causal graph. **Quan sát và mô hình: không nhầm map với hệ thống (system / 시스템)** tiếp theo kiểm tra graph ấy bằng proxy và model.
-
 ## Con người là forcing bên ngoài hay một phần của hệ?
 
 Trong nhiều mô hình cũ, human activity được đặt như “bên ngoài (external / 외부) forcing”. Trong địa lý hiện đại, con người thường cần được xem là **thành phần nội tại của coupled human–natural hệ thống (system / 시스템)**. Reservoir thay river seasonality; city thay surface năng lượng (energy / 에너지) balance; fertilizer thay nitrogen cycle; trade di chuyển virtual water và embodied carbon giữa các vùng.
 
 Điều này không có nghĩa mọi biến đổi đều do con người. Nó có nghĩa phân tích (analysis / 분석) phải theo dõi cả natural tiến trình (process / 프로세스) và institutional/technological tiến trình (process / 프로세스) trong cùng nhân quả (causal / 인과적) đồ thị (graph / 그래프).
 
-> **Nối mạch:** Human–natural coupling cần observation, proxy và model có uncertainty; **Quan sát và mô hình: không nhầm map với hệ thống (system / 시스템)** giữ rõ model là phép nén cơ chế chứ không phải thực tại. **Từ vật lý (physical / 물리적) geography tới settlement và economy** tiếp theo đưa cơ chế về không gian sống.
-
 ## Quan sát và mô hình: không nhầm map với hệ thống (system / 시스템)
 
 Earth hệ thống (system / 시스템) không được quan sát toàn bộ trực tiếp. Ta ghép station, satellite, radar, GNSS, sediment cốt lõi (core / 핵심), census và mô hình (model / 모델). Mỗi nguồn đo một proxy hoặc subset của thực tại với bất định (uncertainty / 불확실성) riêng.
 
 Mô hình (model / 모델) là phép nén cơ chế (mechanism / 메커니즘) để kiểm tra giả thuyết và scenario. Một mô hình (model / 모델) tốt không cần tái tạo mọi chi tiết; nó phải giữ những tiến trình (process / 프로세스) quan trọng đối với câu hỏi. Nhưng nếu hệ thống (system / 시스템) ranh giới (boundary / 경계), parameter hoặc forcing sai, đầu ra (output / 출력) đẹp vẫn có thể gây hiểu lầm.
-
-> **Nối mạch:** Model chỉ hữu ích khi nối relief, climate, water và resource với settlement, economy và transport; **Từ vật lý (physical / 물리적) geography tới settlement và economy** minh họa chuỗi đó bằng Korea, Japan và Vietnam. **Những hiểu lầm phổ biến** tiếp theo chặn các suy diễn một nguyên nhân.
 
 ## Từ vật lý (physical / 물리적) geography tới settlement và economy
 
@@ -140,8 +112,6 @@ Chuỗi học cốt lõi của thư viện (library / 라이브러리) vì thế
 
 **Earth hệ thống (system / 시스템) → vật lý (physical / 물리적) tiến trình (process / 프로세스) → resources/các ràng buộc (constraints / 제약조건들) → settlement → economy → vận chuyển (transport / 전송) → urban mạng (network / 네트워크) → trade → regional role**.
 
-> **Nối mạch:** Các ngộ nhận về equilibrium, stock, causality và global average đều bỏ qua feedback, lag và heterogeneity; **Những hiểu lầm phổ biến** giữ lại các giới hạn của Earth-system reasoning. **Mô hình tư duy** tiếp theo cô đọng cách đọc hệ.
-
 ## Những hiểu lầm phổ biến
 
 **“Hệ ổn định nghĩa là không thay đổi.”** Sai; động (dynamic / 동적) equilibrium có thể chứa flux rất lớn.
@@ -151,8 +121,6 @@ Chuỗi học cốt lõi của thư viện (library / 라이브러리) vì thế
 **“Một nguyên nhân tạo một kết quả.”** Earth hệ thống (system / 시스템) thường có nhiều phản hồi (feedback / 피드백), lag và pathway.
 
 **“toàn cục (global / 전역) average đủ để hiểu cục bộ (local / 로컬) place.”** Sai; spatial heterogeneity và quy mô (scale / 규모) quyết định translation từ toàn cục (global / 전역) tín hiệu (signal / 신호) sang cục bộ (local / 로컬) kết quả (outcome / 결과).
-
-> **Nối mạch:** **Mô hình tư duy** khép chuỗi boundary → stock/flow → feedback/coupling → threshold → scale/heterogeneity → human coupling, rồi bàn giao sang các file kiến tạo, khí hậu, thủy văn và nexus của owner **World Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 

@@ -27,8 +27,6 @@ Global Macro
 → Monitoring
 ```
 
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **2. Hàn Quốc và Việt Nam khác nhau ở đâu?** nối từ **1. Không phân tích thị trường chỉ bằng chỉ số** sang **3. Hạ tầng thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Hàn Quốc và Việt Nam khác nhau ở đâu?
 
 Hàn Quốc có thị trường vốn lớn hơn, tính quốc tế hóa cao hơn và tỷ trọng các doanh nghiệp xuất khẩu toàn cầu rất lớn.
@@ -38,8 +36,6 @@ Việt Nam có vai trò nổi bật của nhà đầu tư nội địa, ngân h�
 Do đó cùng một Fed shock có thể truyền vào hai thị trường theo kênh khác nhau.
 
 # Phần II — Hàn Quốc
-
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **3. Hạ tầng thị trường** nối từ **2. Hàn Quốc và Việt Nam khác nhau ở đâu?** sang **4. Đặc điểm kinh tế Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hạ tầng thị trường
 
@@ -55,8 +51,6 @@ Các tên quan trọng cần nhận diện gồm:
 
 Mỗi thị trường và sản phẩm có quy tắc giao dịch, settlement và truy cập (access / 접근) riêng; phải kiểm tra specification hiện hành khi giao dịch thật.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **4. Đặc điểm kinh tế Hàn Quốc** nối từ **3. Hạ tầng thị trường** sang **5. KRW**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Đặc điểm kinh tế Hàn Quốc
 
 Hàn Quốc là nền kinh tế:
@@ -67,8 +61,6 @@ Hàn Quốc là nền kinh tế:
 - nhạy với China cycle;
 - nhạy với USD/KRW;
 - có household debt đáng kể.
-
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **5. KRW** nối từ **4. Đặc điểm kinh tế Hàn Quốc** sang **6. BOK**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. KRW
 
@@ -87,8 +79,6 @@ Risk Sentiment
 
 Không nên dùng một biến đơn lẻ để dự đoán USD/KRW.
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **6. BOK** nối từ **5. KRW** sang **7. Semiconductor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. BOK
 
 Bank of Korea (BOK) điều hành chính sách (policy / 정책) tỷ lệ (rate / 비율) trong bối cảnh phải cân bằng:
@@ -100,8 +90,6 @@ Bank of Korea (BOK) điều hành chính sách (policy / 정책) tỷ lệ (rate
 - FX conditions.
 
 Mức chính sách (policy / 정책) tỷ lệ (rate / 비율) hiện tại luôn phải kiểm tra từ BOK khi cần dữ liệu mới nhất.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **7. Semiconductor** nối từ **6. BOK** sang **8. Các ngành Hàn Quốc cần theo dõi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Semiconductor
 
@@ -119,8 +107,6 @@ Global IT / AI Demand
 → Earnings Revisions
 → KOSPI / KRW / Suppliers
 ```
-
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **8. Các ngành Hàn Quốc cần theo dõi** nối từ **7. Semiconductor** sang **9. Hạ tầng thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Các ngành Hàn Quốc cần theo dõi
 
@@ -141,8 +127,6 @@ Ngoài semiconductor:
 
 # Phần III — Việt Nam
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **9. Hạ tầng thị trường** nối từ **8. Các ngành Hàn Quốc cần theo dõi** sang **10. Đặc điểm kinh tế Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Hạ tầng thị trường
 
 Các tên chính:
@@ -158,8 +142,6 @@ Các tên chính:
 
 Chu kỳ thanh toán, biên độ giá, foreign truy cập (access / 접근) và sản phẩm (product / 제품) rules có thể thay đổi nên phải kiểm tra theo HOSE/HNX/VSDC/SSC hoặc nguồn chính thức tương ứng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **10. Đặc điểm kinh tế Việt Nam** nối từ **9. Hạ tầng thị trường** sang **11. SBV và VND**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Đặc điểm kinh tế Việt Nam
 
 Các động lực lớn gồm:
@@ -171,8 +153,6 @@ Các động lực lớn gồm:
 - công khai (public / 공개) investment;
 - household savings;
 - VND stability.
-
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **11. SBV và VND** nối từ **10. Đặc điểm kinh tế Việt Nam** sang **12. Ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. SBV và VND
 
@@ -188,8 +168,6 @@ USD/VND Stability
 
 Vì vậy room nới lỏng trong nước không hoàn toàn độc lập với toàn cục (global / 전역) USD conditions.
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **12. Ngân hàng** nối từ **11. SBV và VND** sang **13. Bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Ngân hàng
 
 Các KPI quan trọng:
@@ -203,8 +181,6 @@ Các KPI quan trọng:
 - credit chi phí (cost / 비용);
 - capital adequacy;
 - thuộc tính (property / 속성) exposure.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **13. Bất động sản** nối từ **12. Ngân hàng** sang **14. Các ngành Việt Nam quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Bất động sản
 
@@ -222,8 +198,6 @@ Legal Status
 ```
 
 Land bank lớn không tự động nghĩa giá trị có thể hiện thực hóa ngay.
-
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **14. Các ngành Việt Nam quan trọng** nối từ **13. Bất động sản** sang **15. toàn cục (global / 전역) sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Các ngành Việt Nam quan trọng
 
@@ -243,8 +217,6 @@ Ngoài bank/thuộc tính (property / 속성):
 
 # Phần IV — So sánh Hàn Quốc và Việt Nam
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **15. toàn cục (global / 전역) sensitivity** nối từ **14. Các ngành Việt Nam quan trọng** sang **16. Fed shock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. toàn cục (global / 전역) sensitivity
 
 Hàn Quốc thường phản ứng nhanh hơn với:
@@ -262,8 +234,6 @@ Việt Nam thường có thêm lớp rất quan trọng từ:
 - property-bank cycle;
 - cục bộ (local / 로컬) regulation.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **16. Fed shock** nối từ **15. toàn cục (global / 전역) sensitivity** sang **17. China shock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Fed shock
 
 Một chuỗi (chain / 사슬) tổng quát:
@@ -279,13 +249,9 @@ US Yields ↑
 
 Cường độ khác nhau tùy từng thị trường.
 
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **17. China shock** nối từ **16. Fed shock** sang **18. Oil shock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. China shock
 
 China slowdown có thể ảnh hưởng Korea qua exports/semiconductors/industrials và ảnh hưởng Vietnam qua trade, manufacturing supply chuỗi (chain / 사슬), commodities và FDI dynamics.
-
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **18. Oil shock** nối từ **17. China shock** sang **19. chỉ mục (index / 인덱스) move không bằng thị trường (market / 시장) breadth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Oil shock
 
@@ -294,8 +260,6 @@ Hàn Quốc là năng lượng (energy / 에너지) importer lớn nên oil shoc
 Việt Nam có cấu trúc năng lượng khác và tác động cần tách theo upstream/downstream, fiscal pricing và inflation.
 
 # Phần V — Dòng vốn và breadth
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **19. chỉ mục (index / 인덱스) move không bằng thị trường (market / 시장) breadth** nối từ **18. Oil shock** sang **20. Foreign luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. chỉ mục (index / 인덱스) move không bằng thị trường (market / 시장) breadth
 
@@ -307,8 +271,6 @@ Theo dõi:
 - volume;
 - sector breadth;
 - equal-weight vs cap-weight nếu có dữ liệu.
-
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **19. chỉ mục (index / 인덱스) move không bằng thị trường (market / 시장) breadth** đặt đầu vào cho **20. Foreign luồng (flow / 흐름)**, rồi **21. Domestic liquidity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Foreign luồng (flow / 흐름)
 
@@ -322,8 +284,6 @@ Dòng vốn có thể đến từ:
 - country allocation;
 - company view.
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **20. Foreign luồng (flow / 흐름)** đặt đầu vào cho **21. Domestic liquidity**, rồi **22. Wrapper không phải underlying** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Domestic liquidity
 
 Ở Việt Nam, domestic deposit tỷ lệ (rate / 비율), margin balance và retail turnover có thể ảnh hưởng mạnh đến thị trường (market / 시장) multiple.
@@ -331,8 +291,6 @@ Dòng vốn có thể đến từ:
 Ở Hàn Quốc, household flows, pension/institutional flows và ETF/futures mechanics cũng đáng chú ý.
 
 # Phần VI — ETF, ETN và derivatives
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **22. Wrapper không phải underlying** nối từ **21. Domestic liquidity** sang **23. Futures**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Wrapper không phải underlying
 
@@ -347,8 +305,6 @@ Economic Exposure
 Hedge Policy
 ```
 
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **23. Futures** nối từ **22. Wrapper không phải underlying** sang **24. Leveraged/inverse products**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Futures
 
 Futures giúp hedge beta hoặc trade chỉ mục (index / 인덱스) nhưng phải hiểu:
@@ -360,8 +316,6 @@ Futures giúp hedge beta hoặc trade chỉ mục (index / 인덱스) nhưng ph�
 - roll;
 - settlement.
 
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **24. Leveraged/inverse products** nối từ **23. Futures** sang **25. Bốn lớp tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Leveraged/inverse products
 
 Daily-reset sản phẩm (product / 제품) có đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
@@ -369,8 +323,6 @@ Daily-reset sản phẩm (product / 제품) có đường dẫn (path / 경로) 
 Không nên ngoại suy `2× daily` thành `2× long-term`.
 
 # Phần VII — Cross-border investing
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **25. Bốn lớp tiền tệ** nối từ **24. Leveraged/inverse products** sang **26. Wrapper và legal claim**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Bốn lớp tiền tệ
 
@@ -383,8 +335,6 @@ Reporting / Home Currency
 Liability Currency
 ```
 
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **26. Wrapper và legal claim** nối từ **25. Bốn lớp tiền tệ** sang **27. Thuế và truy cập (access / 접근)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Wrapper và legal claim
 
 Cùng một exposure có thể mua qua:
@@ -396,8 +346,6 @@ Cùng một exposure có thể mua qua:
 - derivative.
 
 Mỗi wrapper có tax, custody, settlement, liquidity và legal claim khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **27. Thuế và truy cập (access / 접근)** nối từ **26. Wrapper và legal claim** sang **28. Company research**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Thuế và truy cập (access / 접근)
 
@@ -414,8 +362,6 @@ Khi ra quyết định thật phải kiểm tra:
 
 # Phần VIII — Quy trình research
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **28. Company research** nối từ **27. Thuế và truy cập (access / 접근)** sang **29. thị trường (market / 시장) research**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Company research
 
 Sau khi đặt country/sector map, company research đi từ dữ liệu vận hành, bảng cân đối và exposure tiền tệ tới định giá và liquidity-aware sizing. Sơ đồ dưới đây là trình tự đánh giá, không phải danh sách file để đọc rời rạc.
@@ -430,8 +376,6 @@ Business Model
 → Catalyst / Invalidation
 ```
 
-> **Nối mạch:** Trong **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **29. thị trường (market / 시장) research** nối từ **28. Company research** sang **30. nguồn (source / 소스) hierarchy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. thị trường (market / 시장) research
 
 Market research nối dữ liệu vĩ mô, flow, breadth, valuation và access rules thành một thesis có thể review. Hãy dùng sơ đồ để biết câu hỏi nào cần trả lời trước khi chọn cổ phiếu hoặc vị thế xuyên biên giới.
@@ -445,8 +389,6 @@ Macro
 → Earnings
 → Valuation
 ```
-
-> **Nối mạch:** Ở chặng này của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, **29. thị trường (market / 시장) research** đặt vấn đề; **30. nguồn (source / 소스) hierarchy** đối chiếu bằng chứng, rồi **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. nguồn (source / 소스) hierarchy
 
@@ -472,8 +414,6 @@ Official Regulator / Exchange / Central Bank
 - [04_MARKET_RESEARCH_WORKFLOW_DATA_SOURCES_AND_SECTOR_MAPS.md](./04_MARKET_RESEARCH_WORKFLOW_DATA_SOURCES_AND_SECTOR_MAPS.md)
 - [05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md](./05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md)
 - [06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md](./06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam**, các dấu vết trong **30. nguồn (source / 소스) hierarchy** được đọc cùng nhau ở **Kết luận** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

@@ -14,8 +14,6 @@ Microeconomics nghiên cứu cách household, firm và các tổ chức lựa ch
 
 Demand–supply và elasticity không được tách thành một “formula chapter” độc lập vì chúng là ngôn ngữ xuyên suốt bên tiêu thụ (consumer / 소비자), producer, welfare và chính sách (policy / 정책). Người học cần hiểu curve là kết quả của mục tiêu (objective / 목표) + ràng buộc (constraint / 제약조건) + ceteris-paribus các giả định (assumptions / 가정들), không phải hình vẽ tồn tại độc lập.
 
-> **Chuyển mạch:** Canonical order đi từ constraint và choice đến market interaction, welfare và policy; learning outcomes phải giữ nguyên chuỗi reasoning đó thay vì tách thuật ngữ khỏi cơ chế.
-
 ## Trục học (learning spine / 학습 축)
 
 ```text
@@ -35,15 +33,11 @@ Individual objective + constraint
 
 Chuỗi này cố ý đi từ **private quyết định (decision / 결정)** sang **xã hội (social / 사회적) kết quả (outcome / 결과)**. Khi thị trường (market / 시장) thất bại (failure / 실패) xuất hiện, chapter không dừng ở việc nêu tên intervention; phải xác định instrument tác động đúng margin nào, cần thông tin (information / 정보) gì, ai chịu incidence, và thị trường (market / 시장) thất bại (failure / 실패) có thực sự được thay bằng kết quả (outcome / 결과) khả thi tốt hơn hay chỉ đổi sang government/đặc tả hợp đồng (contract / 계약) thất bại (failure / 실패) khác.
 
-> **Chuyển mạch:** **Trục học** sắp xếp concept theo dependency; **Kết quả cần đạt** chuyển từng dependency thành năng lực giải thích, trước khi **Ranh giới với module kế tiếp** chỉ ra owner tiếp theo.
-
 ## Kết quả cần đạt
 
 Sau mô-đun (module / 모듈) này, người học phải có thể viết mục tiêu (objective / 목표) và ràng buộc (constraint / 제약조건) trước khi chọn công thức; suy ra phản ứng cận biên của bên tiêu thụ (consumer / 소비자)/producer; phân biệt movement along curve với curve shift; nối private equilibrium với xã hội (social / 사회적) chi phí (cost / 비용)/benefit; phân tích tax incidence qua elasticity; phân biệt efficiency với equity; nhận diện externality, free-riding, commons, adverse selection, moral hazard và principal–tác nhân (agent / 에이전트) bài toán (problem / 문제); đồng thời chỉ ra giả định (assumption / 가정) nào khiến prediction hoặc chính sách (policy / 정책) conclusion thay đổi.
 
 Người học cũng phải biết khi nào một diagram partial equilibrium là chưa đủ. Nếu chính sách (policy / 정책) ảnh hưởng labor, capital, multiple markets hoặc expectations, cần ghi rõ general-equilibrium effects bị bỏ qua. Nếu claim phụ thuộc nhân quả (causal / 인과적) bằng chứng (evidence / 증거), theoretical cơ chế (mechanism / 메커니즘) phải chuyển tiếp sang Econometrics thay vì dùng một anecdote như bằng chứng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Microeconomics**, **Kết quả cần đạt** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với mô-đun (module / 모듈) kế tiếp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Investing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với mô-đun (module / 모듈) kế tiếp
 
@@ -51,13 +45,9 @@ Mô-đun (module / 모듈) này chủ yếu dùng price-taking baseline. Khi fir
 
 Thông tin (information / 정보) asymmetry và public-goods chapters đã chạm tới incentive tính tương thích (compatibility / 호환성), repeated tương tác (interaction / 상호작용) và cơ chế (mechanism / 메커니즘) thiết kế (design / 설계); đây là cầu nối (bridge / 브리지) tự nhiên sang game lý thuyết (theory / 이론) thay vì một topic rời.
 
-> **Chuyển mạch:** Trong **01 — Microeconomics**, **Ranh giới (boundary / 경계) với mô-đun (module / 모듈) kế tiếp** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Investing** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Mathematics và Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Investing
 
 Company phân tích (analysis / 분석) có thể dùng đơn vị (unit / 단위) economics, pricing power, demand elasticity, incentive đặc tả hợp đồng (contract / 계약) và thông tin (information / 정보) bài toán (problem / 문제), nhưng microeconomics không bắt đầu từ một investment thesis. Chapter ở đây giữ mô hình (model / 모델) tổng quát, các giả định (assumptions / 가정들), comparative statics, welfare và institutional lập luận (reasoning / 추론); ứng dụng vào firm/asset cụ thể thuộc [Investing](../../investing/README.md).
-
-> **Chuyển mạch:** **Ranh giới với Investing** giữ microeconomic mechanism ở đúng owner; **Ranh giới với Mathematics và Econometrics** chỉ phần formalization và identification cần quay về canonical docs.
 
 ## Ranh giới (boundary / 경계) với Mathematics và Econometrics
 

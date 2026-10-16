@@ -16,8 +16,6 @@ Mọi giao dịch phải giữ phương trình này cân bằng. Nếu doanh ngh
 
 Hiểu cơ chế này giúp nối các báo cáo thay vì học từng chỉ tiêu riêng lẻ.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **2. Kế toán dồn tích** nối từ **1. Phương trình kế toán** sang **3. Báo cáo kết quả kinh doanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Kế toán dồn tích
 
 Kế toán dồn tích (accrual accounting) ghi nhận doanh thu và chi phí khi hoạt động kinh tế phát sinh, không nhất thiết khi tiền được nhận hoặc trả.
@@ -30,8 +28,6 @@ Nhà đầu tư phải luôn hỏi:
 Lợi nhuận này đã chuyển thành tiền chưa?
 Nếu chưa, tiền đang nằm ở khoản phải thu, tồn kho hay tài sản nào?
 ```
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **3. Báo cáo kết quả kinh doanh** nối từ **2. Kế toán dồn tích** sang **4. Ghi nhận doanh thu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Báo cáo kết quả kinh doanh
 
@@ -50,8 +46,6 @@ Doanh thu
 
 Mỗi tầng biên lợi nhuận trả lời một câu hỏi kinh tế khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **4. Ghi nhận doanh thu** nối từ **3. Báo cáo kết quả kinh doanh** sang **5. Tăng trưởng doanh thu: sản lượng, giá và cơ cấu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Ghi nhận doanh thu
 
 Doanh thu chỉ nên được ghi nhận khi doanh nghiệp đã đáp ứng điều kiện kế toán đối với hàng hóa hoặc dịch vụ đã chuyển cho khách hàng.
@@ -66,8 +60,6 @@ Có quyền trả lại / rebate / biến phí không?
 ```
 
 Doanh thu kế toán có thể đi trước hoặc đi sau dòng tiền tùy mô hình.
-
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **5. Tăng trưởng doanh thu: sản lượng, giá và cơ cấu** nối từ **4. Ghi nhận doanh thu** sang **6. Doanh thu hữu cơ và doanh thu mua lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Tăng trưởng doanh thu: sản lượng, giá và cơ cấu
 
@@ -86,15 +78,11 @@ Tăng trưởng doanh thu
 
 Tăng trưởng nhờ tăng giá trên nền sản lượng giảm có chất lượng khác tăng trưởng do nhu cầu thực tăng.
 
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **6. Doanh thu hữu cơ và doanh thu mua lại** nối từ **5. Tăng trưởng doanh thu: sản lượng, giá và cơ cấu** sang **7. Giá vốn và lợi nhuận gộp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Doanh thu hữu cơ và doanh thu mua lại
 
 Nếu doanh nghiệp mua nhiều công ty, tăng trưởng báo cáo có thể cao nhưng phần hữu cơ yếu.
 
 Cần tách doanh thu từ hoạt động hiện hữu khỏi doanh thu do M&A để đánh giá động cơ kinh tế thật.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **7. Giá vốn và lợi nhuận gộp** nối từ **6. Doanh thu hữu cơ và doanh thu mua lại** sang **8. SG&A và R&D**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Giá vốn và lợi nhuận gộp
 
@@ -108,15 +96,11 @@ Gross Margin = Gross Profit / Revenue
 
 Biên gộp phản ánh quyền định giá, chi phí đầu vào, cơ cấu sản phẩm, công suất sử dụng và cường độ cạnh tranh.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **8. SG&A và R&D** nối từ **7. Giá vốn và lợi nhuận gộp** sang **9. Operating Leverage**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. SG&A và R&D
 
 Chi phí bán hàng, quản lý và hành chính (SG&A) hỗ trợ hoạt động kinh doanh. R&D đầu tư vào sản phẩm/công nghệ tương lai.
 
 Một doanh nghiệp giảm R&D có thể làm lợi nhuận hiện tại đẹp hơn nhưng làm suy yếu khả năng cạnh tranh tương lai. Vì vậy không phải mọi “cắt chi phí” đều tạo giá trị.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **9. Operating Leverage** nối từ **8. SG&A và R&D** sang **10. EBITDA, EBIT và lợi nhuận ròng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Operating Leverage
 
@@ -126,8 +110,6 @@ Ngược lại khi doanh thu giảm, lợi nhuận có thể giảm rất nhanh.
 
 Bán dẫn, hàng không, phần mềm và công nghiệp có dạng đòn bẩy vận hành khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **10. EBITDA, EBIT và lợi nhuận ròng** nối từ **9. Operating Leverage** sang **11. EPS cơ bản và pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. EBITDA, EBIT và lợi nhuận ròng
 
 EBITDA bỏ qua khấu hao và phân bổ, lãi vay và thuế. EBIT gần hơn với lợi nhuận hoạt động sau khấu hao.
@@ -135,8 +117,6 @@ EBITDA bỏ qua khấu hao và phân bổ, lãi vay và thuế. EBIT gần hơn 
 EBITDA không phải dòng tiền vì doanh nghiệp vẫn phải chi capex và vốn lưu động.
 
 Lợi nhuận ròng còn chịu cấu trúc vốn, thuế và khoản ngoài hoạt động.
-
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **11. EPS cơ bản và pha loãng** nối từ **10. EBITDA, EBIT và lợi nhuận ròng** sang **12. Bảng cân đối kế toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. EPS cơ bản và pha loãng
 
@@ -149,8 +129,6 @@ EPS = Net Income Available to Common / Weighted Average Shares
 EPS pha loãng tính thêm cổ phiếu tiềm năng từ option, RSU, convertible và công cụ khác.
 
 Nếu lợi nhuận tăng 10% nhưng số cổ phiếu pha loãng tăng 8%, giá trị trên mỗi cổ phiếu chỉ tăng rất ít.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **12. Bảng cân đối kế toán** nối từ **11. EPS cơ bản và pha loãng** sang **13. Khoản phải thu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Bảng cân đối kế toán
 
@@ -175,8 +153,6 @@ Vốn chủ sở hữu
 
 Nhà đầu tư nên đọc bảng cân đối như bản đồ về thanh khoản, vốn đã đầu tư và nghĩa vụ tương lai.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **13. Khoản phải thu** nối từ **12. Bảng cân đối kế toán** sang **14. Hàng tồn kho**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Khoản phải thu
 
 Khoản phải thu tăng cùng doanh thu là bình thường, nhưng nếu tăng nhanh hơn nhiều trong thời gian dài cần điều tra.
@@ -189,8 +165,6 @@ DSO ≈ Average Receivables / Revenue × Days
 
 DSO tăng có thể phản ánh điều khoản tín dụng nới lỏng hoặc thu tiền chậm.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **14. Hàng tồn kho** nối từ **13. Khoản phải thu** sang **15. Khoản phải trả**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Hàng tồn kho
 
 Tồn kho có thể gồm nguyên liệu, sản phẩm dở dang và thành phẩm.
@@ -199,15 +173,11 @@ Số ngày tồn kho (DIO) tăng có thể là chuẩn bị cho nhu cầu mạnh
 
 Trong bán dẫn, tồn kho là chỉ báo chu kỳ. Trong bán lẻ, cơ cấu tồn kho và rủi ro giảm giá quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **15. Khoản phải trả** nối từ **14. Hàng tồn kho** sang **16. Chu kỳ chuyển đổi tiền mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Khoản phải trả
 
 Khoản phải trả là tiền còn nợ nhà cung cấp. Kéo dài thời gian trả có thể cải thiện dòng tiền tạm thời nhưng không phải nguồn tiền bền vững vô hạn.
 
 Số ngày phải trả (DPO) tăng mạnh cùng dấu hiệu căng thẳng nhà cung cấp có thể là cảnh báo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **16. Chu kỳ chuyển đổi tiền mặt** nối từ **15. Khoản phải trả** sang **17. Doanh thu chưa thực hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Chu kỳ chuyển đổi tiền mặt
 
@@ -221,15 +191,11 @@ Chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle, CCC) ước lượ
 
 CCC thấp hoặc âm có thể là lợi thế nếu đến từ mô hình kinh doanh thật, ví dụ khách hàng trả trước.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **17. Doanh thu chưa thực hiện** nối từ **16. Chu kỳ chuyển đổi tiền mặt** sang **18. Tài sản cố định và capex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Doanh thu chưa thực hiện
 
 Doanh thu chưa thực hiện (deferred revenue) xuất hiện khi doanh nghiệp đã nhận tiền nhưng chưa đủ điều kiện ghi doanh thu.
 
 Trong SaaS, khoản này có thể là nguồn tài trợ tốt và chỉ báo nhu cầu, nhưng phải hiểu thời hạn hợp đồng và tỷ lệ gia hạn.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **18. Tài sản cố định và capex** nối từ **17. Doanh thu chưa thực hiện** sang **19. Khấu hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Tài sản cố định và capex
 
@@ -237,15 +203,11 @@ Tài sản cố định hữu hình (property, Plant & Equipment, PP&E) tăng kh
 
 Capex tăng có thể là đầu tư tăng trưởng hoặc chỉ là duy trì công suất hiện tại. Hai loại có ý nghĩa kinh tế rất khác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **19. Khấu hao** nối từ **18. Tài sản cố định và capex** sang **20. Tài sản vô hình và goodwill**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Khấu hao
 
 Khấu hao là phân bổ kế toán của chi phí tài sản theo thời gian. Nó không nhất thiết bằng capex duy trì thật.
 
 Máy móc cũ có thể đã khấu hao gần hết nhưng vẫn cần thay mới với chi phí cao hơn. Vì vậy dùng D&A làm proxy cho maintenance capex cần thận trọng.
-
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **20. Tài sản vô hình và goodwill** nối từ **19. Khấu hao** sang **21. Nợ và cấu trúc kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Tài sản vô hình và goodwill
 
@@ -254,8 +216,6 @@ Tài sản vô hình có thể gồm bằng sáng chế, phần mềm, thương 
 Goodwill phát sinh khi giá mua doanh nghiệp vượt giá trị tài sản thuần có thể nhận diện.
 
 Goodwill không tự động xấu, nhưng chuỗi M&A lớn tạo goodwill tăng nhanh có thể che tăng trưởng hữu cơ yếu.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **21. Nợ và cấu trúc kỳ hạn** nối từ **20. Tài sản vô hình và goodwill** sang **22. Hợp đồng thuê**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Nợ và cấu trúc kỳ hạn
 
@@ -272,15 +232,11 @@ Khả năng tái cấp vốn
 
 Một doanh nghiệp có nợ vừa phải nhưng đáo hạn tập trung gần vẫn có rủi ro thanh khoản lớn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **22. Hợp đồng thuê** nối từ **21. Nợ và cấu trúc kỳ hạn** sang **23. Vốn chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Hợp đồng thuê
 
 Nghĩa vụ thuê dài hạn có tính chất giống nợ ở nhiều mô hình kinh doanh. Kế toán hiện đại thường ghi nhận tài sản quyền sử dụng và nghĩa vụ thuê trên bảng cân đối.
 
 Nhà bán lẻ hoặc hãng hàng không có nghĩa vụ thuê lớn cần được đánh giá cùng nợ vay.
-
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **23. Vốn chủ sở hữu** nối từ **22. Hợp đồng thuê** sang **24. Other Comprehensive Income**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Vốn chủ sở hữu
 
@@ -290,15 +246,11 @@ Book giá trị (value / 값) không phải giá trị nội tại; nó chỉ ph
 
 Ngành tài chính dùng book giá trị (value / 값) nhiều hơn các doanh nghiệp dựa trên tài sản vô hình.
 
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **24. Other Comprehensive Income** nối từ **23. Vốn chủ sở hữu** sang **25. Báo cáo lưu chuyển tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Other Comprehensive Income
 
 Thu nhập toàn diện khác (Other Comprehensive Income, OCI) ghi một số thay đổi giá trị chưa đi qua lợi nhuận ròng, ví dụ một số thay đổi chứng khoán hoặc chuyển đổi ngoại tệ.
 
 Nhà đầu tư cần biết khoản lỗ/lãi đang nằm ở đâu trong vốn chủ sở hữu thay vì chỉ nhìn net income.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **25. Báo cáo lưu chuyển tiền tệ** nối từ **24. Other Comprehensive Income** sang **26. Phương pháp gián tiếp của CFO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Báo cáo lưu chuyển tiền tệ
 
@@ -312,8 +264,6 @@ Dòng tiền tài trợ (CFF)
 
 CFO cho biết hoạt động kinh doanh tạo/tiêu tiền ra sao. CFI chứa capex, mua bán doanh nghiệp và đầu tư. CFF chứa vay/trả nợ, phát hành/mua lại cổ phiếu và cổ tức.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **26. Phương pháp gián tiếp của CFO** nối từ **25. Báo cáo lưu chuyển tiền tệ** sang **27. Dòng tiền tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Phương pháp gián tiếp của CFO
 
 CFO thường bắt đầu từ lợi nhuận ròng rồi điều chỉnh:
@@ -325,8 +275,6 @@ CFO thường bắt đầu từ lợi nhuận ròng rồi điều chỉnh:
 ```
 
 Đây là nơi nhà đầu tư thấy vì sao lợi nhuận khác tiền mặt.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **27. Dòng tiền tự do** nối từ **26. Phương pháp gián tiếp của CFO** sang **28. NOPAT và vốn đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Dòng tiền tự do
 
@@ -344,8 +292,6 @@ FCFF ≈ NOPAT + D&A - Capex - ΔNWC
 
 FCFE còn tính dòng nợ ròng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **28. NOPAT và vốn đầu tư** nối từ **27. Dòng tiền tự do** sang **29. Thuế tiền mặt và thuế kế toán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. NOPAT và vốn đầu tư
 
 NOPAT là lợi nhuận hoạt động sau thuế giả định không phụ thuộc cấu trúc nợ. ROIC:
@@ -356,15 +302,11 @@ ROIC = NOPAT / Invested Capital
 
 Đây là cầu nối giữa kế toán và kinh tế doanh nghiệp.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **29. Thuế tiền mặt và thuế kế toán** nối từ **28. NOPAT và vốn đầu tư** sang **30. Thuế hoãn lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Thuế tiền mặt và thuế kế toán
 
 Chi phí thuế trên báo cáo không luôn bằng tiền thuế trả trong kỳ vì có thuế hoãn lại, ưu đãi và chênh lệch thời điểm.
 
 Khi định giá dài hạn, cần hướng tới mức thuế kinh tế bền vững thay vì lấy một năm bất thường.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **30. Thuế hoãn lại** nối từ **29. Thuế tiền mặt và thuế kế toán** sang **31. SBC và pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Thuế hoãn lại
 
@@ -372,23 +314,17 @@ Tài sản/nợ thuế hoãn lại phát sinh khi thời điểm ghi nhận kế
 
 Chúng có thể đảo ngược trong tương lai, nên phải hiểu nguyên nhân thay vì coi như tiền mặt hoặc nợ vay thông thường.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **31. SBC và pha loãng** nối từ **30. Thuế hoãn lại** sang **32. Mua bán sáp nhập và kế toán mua lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. SBC và pha loãng
 
 Chi trả bằng cổ phiếu (Stock-Based Compensation, SBC) là chi phí kinh tế dù không dùng tiền ngay.
 
 Doanh nghiệp có thể cộng SBC lại khi trình bày FCF điều chỉnh, nhưng cổ đông vẫn chịu pha loãng nếu cổ phiếu mới được phát hành.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **32. Mua bán sáp nhập và kế toán mua lại** nối từ **31. SBC và pha loãng** sang **33. Ngoại tệ: giao dịch và chuyển đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Mua bán sáp nhập và kế toán mua lại
 
 M&A có thể làm tài sản vô hình và goodwill tăng; chi phí tái cấu trúc, earn-out và purchase accounting làm so sánh theo thời gian khó hơn.
 
 Cần tách tăng trưởng hữu cơ, tăng trưởng do mua lại và chất lượng vốn đã bỏ ra.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **33. Ngoại tệ: giao dịch và chuyển đổi** nối từ **32. Mua bán sáp nhập và kế toán mua lại** sang **34. Ba báo cáo phải liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Ngoại tệ: giao dịch và chuyển đổi
 
@@ -398,8 +334,6 @@ Doanh nghiệp quốc tế chịu hai lớp FX:
 - tác động chuyển đổi: báo cáo công ty con nước ngoài được quy đổi về đồng tiền báo cáo.
 
 Hai tác động không giống nhau về dòng tiền.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, sau nội dung của **33. Ngoại tệ: giao dịch và chuyển đổi**, **34. Ba báo cáo phải liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **35. Những chỉ số khác nhau theo ngành** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. Ba báo cáo phải liên kết
 
@@ -422,15 +356,11 @@ Cổ tức / Buyback
 
 Nếu mô hình cho tiền âm nhưng vẫn ghi thu nhập lãi tăng, liên kết đang sai.
 
-> **Nối mạch:** Trong **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **35. Những chỉ số khác nhau theo ngành** nối từ **34. Ba báo cáo phải liên kết** sang **36. Checklist đọc báo cáo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Những chỉ số khác nhau theo ngành
 
 Ngân hàng không có vốn lưu động giống công ty công nghiệp. REIT dùng FFO/AFFO. SaaS cần ARR, NRR, churn và SBC. Bán lẻ cần same-store sales, tồn kho và vòng quay.
 
 Không áp một bộ tỷ lệ giống nhau cho mọi ngành.
-
-> **Nối mạch:** Ở chặng này của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **36. Checklist đọc báo cáo** nối từ **35. Những chỉ số khác nhau theo ngành** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Checklist đọc báo cáo
 
@@ -448,8 +378,6 @@ Thuế và khoản bất thường có làm EPS méo không?
 Related parties / goodwill / leases có đáng chú ý không?
 FCF trên mỗi cổ phiếu đang đi hướng nào?
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Báo cáo tài chính và kế toán dành cho nhà đầu tư**, **Kết luận** tổng hợp từ **36. Checklist đọc báo cáo** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

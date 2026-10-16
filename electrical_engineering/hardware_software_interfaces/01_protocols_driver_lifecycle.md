@@ -8,8 +8,6 @@ Register đặc tả hợp đồng (contract / 계약) cần được đặt và
 
 SPI thường không có framing/lỗi (error / 오류) ngữ nghĩa (semantics / 의미론) built-in như CAN; I²C có arbitration và ACK nhưng cần bus khôi phục (recovery / 복구); UART không tự bảo đảm packet ranh giới (boundary / 경계); CAN có arbitration và fault confinement. Chọn bus theo thất bại (failure / 실패) mô hình (model / 모델), không chỉ theo tốc độ danh nghĩa.
 
-> **Chuyển mạch:** **1. Protocol semantics** định nghĩa hành vi quan sát được; **2. Driver state machine** thực thi hành vi đó, rồi **3. ABI/schema compatibility** giữ hợp đồng qua phiên bản.
-
 ## 2. máy trạng thái (state machine / 상태 머신) của driver
 
 Driver nên có trạng thái (state / 상태) rõ:
@@ -18,25 +16,17 @@ Driver nên có trạng thái (state / 상태) rõ:
 
 Mỗi chuyển tiếp (transition / 전이) cần trigger, hết thời gian chờ (timeout / 타임아웃), side tác động (effect / 효과) và observable bằng chứng (evidence / 증거). Một hết thời gian chờ (timeout / 타임아웃) không được tự động thử lại (retry / 재시도) nếu hardware chưa xác nhận command đã dừng.
 
-> **Chuyển mạch:** Khi state machine và ABI đã rõ, **4. Worked reasoning: I²C stuck bus** kiểm tra recovery khi phần cứng giữ đường bus ngoài trạng thái bình thường.
-
 ## 3. ABI, lược đồ (schema / 스키마) và tính tương thích (compatibility / 호환성)
 
 Header/ABI, register lược đồ (schema / 스키마), firmware phiên bản (version / 버전) và calibration dữ liệu (data / 데이터) đều là tính tương thích (compatibility / 호환성) surface. Thay đổi trường dữ liệu (field / 필드) reserved, alignment hoặc endian có thể phá bên tiêu thụ (consumer / 소비자) dù hàm (function / 함수) name không đổi.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Protocols and Driver vòng đời (lifecycle / 생명주기) — giao thức (protocol / 프로토콜) và vòng đời driver**, **3. ABI, lược đồ (schema / 스키마) và tính tương thích (compatibility / 호환성)** cho ta quy tắc; **4. Worked lập luận (reasoning / 추론): I²C stuck bus** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Worked lập luận (reasoning / 추론): I²C stuck bus
 
 Nếu slave giữ SDA low sau reset giữa byte, controller không thể gửi command mới. khôi phục (recovery / 복구) có thể toggle SCL hữu hạn lần, phát STOP, reset peripheral và re-probe. Nếu vẫn thất bại (fail / 실패), driver phải chuyển OFFLINE và báo rõ nguyên nhân thay vì vòng lặp (loop / 루프) thử lại (retry / 재시도) vô hạn.
 
-> **Chuyển mạch:** Trong **Protocols and Driver vòng đời (lifecycle / 생명주기) — giao thức (protocol / 프로토콜) và vòng đời driver**, **4. Worked lập luận (reasoning / 추론): I²C stuck bus** cho ta quy tắc; **5. khả năng quan sát (observability / 관측 가능성)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. khả năng quan sát (observability / 관측 가능성)
 
 Telemetry nên ghi giao dịch (transaction / 트랜잭션) id, bus lỗi (error / 오류), thử lại (retry / 재시도) count, reset cause, firmware/hardware revision và timing. Log một “read failed” không đủ để tái hiện race hoặc power fault.
-
-> **Chuyển mạch:** **Observability** ghi trạng thái, timeout và recovery; **Cầu nối** bàn giao evidence đó cho vòng đời driver và audit tiếp theo.
 
 ## Cầu nối (bridge / 브리지)
 

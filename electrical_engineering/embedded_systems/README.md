@@ -10,14 +10,10 @@ Embedded các hệ thống (systems / 시스템들) là nơi điện tử, timin
 MCU/SoC → clock/reset/power → GPIO/timer/ADC → interrupt/DMA → RTOS/real-time → bring-up → verification
 ```
 
-> **Chuyển mạch:** **Cốt lõi tuyến** nối MCU, runtime, RTOS, timing và verification; **Cốt lõi chapter** giải thích cơ chế, còn **Cần nắm** ghi ràng buộc tài nguyên.
-
 ## Cốt lõi (core / 핵심) chapter
 
 - [MCU runtime and real-time reasoning](00_mcu_runtime_real_time.md) — boot quyền sở hữu (ownership / 소유권), ISR/DMA, WCET, timer wrap, watchdog và bring-up bằng chứng (evidence / 증거).
 - [RTOS scheduling and verification](01_rtos_scheduling_verification.md) — priority inversion, WCET, isolation, HIL và fault injection.
-
-> **Chuyển mạch:** Sau khi nắm runtime và deadline, **Cầu nối** đưa kiến thức vào fault containment, observability và kiểm chứng hệ thống thật.
 
 ## Cần nắm
 
@@ -26,8 +22,6 @@ MCU/SoC → clock/reset/power → GPIO/timer/ADC → interrupt/DMA → RTOS/real
 - deterministic scheduling, deadline, jitter, watchdog và brownout;
 - board bring-up, tín hiệu (signal / 신호) integrity, logging/dấu vết (trace / 추적) và hardware-in-the-loop kiểm thử (test / 테스트);
 - cập nhật (update / 업데이트)/quay lui (rollback / 롤백), secure boot và trường dữ liệu (field / 필드) thất bại (failure / 실패) khôi phục (recovery / 복구).
-
-> **Chuyển mạch:** **Cầu nối** khép README bằng trade-off latency, memory, power và safety, để người học chọn đúng chapter theo failure mode.
 
 ## Cầu nối (bridge / 브리지)
 

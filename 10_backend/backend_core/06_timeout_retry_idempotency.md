@@ -9,16 +9,12 @@ không được mỗi cái tự chờ 2 giây. Truyền deadline/cancellation xu
 dành ngân sách cho serialization, queueing và phản hồi (response / 응답). hết thời gian chờ (timeout / 타임아웃) cần phân biệt
 connect, TLS, pool acquire, read và total deadline khi máy khách (client / 클라이언트) hỗ trợ.
 
-> **Chuyển mạch:** Deadline còn lại quyết định retry còn hợp lý hay không. **Thử lại (retry / 재시도) có điều kiện** lọc lỗi tạm thời, số attempt và backoff trước khi phần **Idempotency** bảo vệ mutation khỏi side effect lặp.
-
 ## Thử lại (retry / 재시도) có điều kiện
 
 Chỉ thử lại (retry / 재시도) lỗi tạm thời, yêu cầu (request / 요청) còn deadline và thao tác (operation / 연산) an toàn để lặp. Không
 thử lại (retry / 재시도) kiểm tra hợp lệ (validation / 검증), permission, nghiệp vụ (business / 비즈니스) xung đột (conflict / 충돌) hoặc mọi `5xx` một cách mù quáng.
 Exponential backoff + jitter và giới hạn attempts ngăn synchronized thử lại (retry / 재시도) storm.
 Mỗi tầng (layer / 계층) không nên thử lại (retry / 재시도) độc lập đến khi tổng số lần nhân lên ngoài dự kiến.
-
-> **Chuyển mạch:** Retry chỉ an toàn khi server nhận diện cùng một mutation. **Idempotency** vì thế cố định key, fingerprint và terminal result; **Quan sát** tiếp theo sẽ phân biệt timeout trước commit với timeout sau commit.
 
 ## Idempotency
 
@@ -35,15 +31,11 @@ Unique ràng buộc (constraint / 제약조건), chuyển tiếp trạng thái (
 vệ lớp cơ sở dữ liệu (database / 데이터베이스)/bên tiêu thụ (consumer / 소비자). Idempotency key không thay thế authorization: cùng key
 nhưng subject/tenant khác phải bị từ chối.
 
-> **Chuyển mạch:** Có idempotency key vẫn chưa cho biết request đang ở đâu trong hệ thống. **Quan sát** ghi attempt, dependency và commit outcome; dữ liệu này là đầu vào để vẽ retry topology và tìm amplification.
-
 ## Quan sát
 
 Ghi attempt number, original yêu cầu (request / 요청) ID, phụ thuộc (dependency / 의존성), hết thời gian chờ (timeout / 타임아웃) reason và final
 kết quả (outcome / 결과). Phân biệt “hết thời gian chờ (timeout / 타임아웃) nhưng máy chủ (server / 서버) đã lần ghi nhận (commit / 커밋)” với “chưa tới máy chủ (server / 서버)”; đây là
 lý do caller phải truy vấn (query / 쿼리) trạng thái trước khi tạo lại side tác động (effect / 효과).
-
-> **Chuyển mạch:** Các attempt đã đo được phải được đặt lên toàn tuyến browser → API → service → provider. **Đào sâu: thử lại (retry / 재시도) topology** làm lộ retry multiplication và unknown result; **Bài tập suy luận** kiểm tra ngân sách deadline bằng con số cụ thể.
 
 ## Đào sâu: thử lại (retry / 재시도) topology
 
@@ -63,15 +55,11 @@ thể an toàn; với mutation, truy vấn (query / 쿼리) status bằng idempo
 tạo thao tác (operation / 연산) mới. API nên cung cấp endpoint status nếu thao tác (operation / 연산) có thể chạy sau
 khi caller mất kết nối.
 
-> **Chuyển mạch:** Retry topology cho thấy deadline bị tiêu hao và attempt bị nhân lên ở đâu. **Bài tập suy luận** biến topology đó thành ngân sách hop cụ thể; sau đó circuit breaker, bulkhead và load shedding sẽ giới hạn blast radius khi ngân sách không còn đủ.
-
 ## Bài tập suy luận
 
 Cho deadline 2 giây, gateway overhead 100 ms, dịch vụ (service / 서비스) A gọi B và B gọi provider.
 Đề xuất ngân sách (budget / 예산) từng hop, connect/read hết thời gian chờ (timeout / 타임아웃), số thử lại (retry / 재시도) tối đa và điều kiện dừng;
 giải thích vì sao tổng hết thời gian chờ (timeout / 타임아웃) không được vượt deadline dù có backoff.
-
-> **Chuyển mạch:** Bài tập deadline cho thấy retry có thể ăn hết capacity dù từng hop “hợp lệ”. **Circuit breaker, bulkhead và tải (load / 로드) shedding** là lớp bảo vệ cuối để giới hạn blast radius khi dependency vẫn suy giảm.
 
 ## Circuit breaker, bulkhead và tải (load / 로드) shedding
 

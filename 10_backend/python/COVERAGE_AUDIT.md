@@ -12,8 +12,6 @@ Kiểm tra (audit / 감사) này kiểm tra toàn bộ chuẩn gốc (canonical 
 
 Mã Python làm bằng chứng nằm trong các ví dụ và bài kiểm thử đi kèm từng Part. `automation/repo_audit.py` chỉ kiểm tra đường dẫn, catalog và liên kết Markdown; nó không sở hữu runtime hay sinh nội dung. Các ví dụ không được sao chép thành một worker dùng chung: chúng chỉ nối cơ chế Python với mã thật và phải được đọc cùng nguồn chính tương ứng.
 
-> **Chuyển mạch:** Vị trí conceptual cho biết repository đang kiểm tra điều gì; **dependency và readability audit** chuyển câu hỏi đó thành bằng chứng về đường phụ thuộc và khả năng đọc. Kết quả được tổng hợp trong coverage matrix.
-
 ## 2. phụ thuộc (dependency / 의존성) và readability kiểm tra (audit / 감사)
 
 Mạch học (learning flow / 학습 흐름) chuẩn gốc (canonical / 정본) là Part 1 → Part 2 → Part 3 → Part 4.
@@ -23,8 +21,6 @@ Part 1 thiết lập thực thi (execution / 실행)/name/đối tượng (objec
 `ENGINEERING_CASE_STUDIES.md` nằm sau bốn part nhưng không phải Part 5. Nó có ranh giới (boundary / 경계) riêng: bốn part dạy cơ chế (mechanism / 메커니즘) theo conceptual phụ thuộc (dependency / 의존성), còn trường hợp (case / 사례) studies luyện đường lập luận (reasoning / 추론) `symptom → invariant → mechanism → evidence → design`.
 
 Mỗi part đủ ngữ cảnh (context / 맥락) để bắt đầu tại đó. Khi prerequisite không hiển nhiên, chapter giải thích lại mô hình tư duy (mental model / 사고 모델) cần thiết hoặc tạo cầu nối (bridge / 브리지) rõ. Không có chapter thuần API danh sách (list / 목록); section được giữ khi nó tạo thêm cơ chế (mechanism / 메커니즘), dạng thất bại (failure mode / 실패 모드), hiệu năng (performance / 성능)/bảo mật (security / 보안) implication hoặc môi trường vận hành (production / 운영 환경) quyết định (decision / 결정).
-
-> **Chuyển mạch:** Coverage matrix gom kết quả dependency/readability thành các năng lực có owner. **Misconception audit** kiểm tra tiếp xem người học có thể dùng đúng mental model hay đang mang theo một hiểu lầm có hệ thống.
 
 ## 3. Coverage ma trận (matrix / 행렬)
 
@@ -121,8 +117,6 @@ Mỗi part đủ ngữ cảnh (context / 맥락) để bắt đầu tại đó. 
 | terminology Việt–Anh–Hàn | `GLOSSARY.md` + chapter callouts | Covered |
 | Pythonic idioms / cấp cao (senior / 시니어) notes | Integrated beside concepts | No duplicate chapter |
 
-> **Chuyển mạch:** Khi matrix đã chỉ ra năng lực, misconception audit nêu rõ chỗ reasoning dễ sai. **Version audit** tiếp theo xác định claim nào phụ thuộc Python release và cần mốc nguồn.
-
 ## 4. Misconception kiểm tra (audit / 감사)
 
 Các mental-model lỗi chính đều có chuẩn gốc (canonical / 정본) treatment:
@@ -140,8 +134,6 @@ Các mental-model lỗi chính đều có chuẩn gốc (canonical / 정본) tre
 Ở trình thông dịch (interpreter / 인터프리터)/bản địa (native / 네이티브) ranh giới (boundary / 경계), subinterpreter không phải tiến trình (process / 프로세스) nhẹ; Python mô-đun (module / 모듈) globals isolate không chứng minh bản địa (native / 네이티브) process-global trạng thái (state / 상태) isolate; hỗ trợ (support / 지원) subinterpreter và hỗ trợ (support / 지원) no-GIL là hai năng lực (capability / 역량) riêng; import bản địa (native / 네이티브) extension có thể làm GIL được enable lại trên free-threaded thời gian chạy (runtime / 런타임) nếu extension không khai báo hỗ trợ (support / 지원) phù hợp.
 
 Ở shutdown/operations, hàng đợi (queue / 큐) empty không đồng nghĩa mọi bên ngoài (external / 외부) side tác động (effect / 효과) đã lần ghi nhận (commit / 커밋); immediate hàng đợi (queue / 큐) shutdown có thể phá normal `join()` work-done bất biến (invariant / 불변식); liveness không đồng nghĩa readiness; tín hiệu (signal / 신호) không phải generic worker interrupt; Ctrl-C cancellation không thể tiến triển tốt nếu vòng lặp sự kiện (event loop / 이벤트 루프) bị CPU vòng lặp (loop / 루프) monopolize; chỉ số (metric / 지표) label high cardinality có thể biến khả năng quan sát (observability / 관측 가능성) thành hiệu năng (performance / 성능)/chi phí (cost / 비용) sự cố (incident / 인시던트).
-
-> **Chuyển mạch:** Version audit khóa các claim theo runtime và tài liệu tương ứng; **Terminology audit** bảo đảm cùng một khái niệm không bị gọi bằng nhiều thuật ngữ làm đứt mạch học.
 
 ## 5. phiên bản (version / 버전) kiểm tra (audit / 감사)
 
@@ -166,8 +158,6 @@ Các volatile facts được đối chiếu với official documentation vào 20
 
 Các facts trên phải được re-check khi baseline đổi sang Python 3.15+.
 
-> **Chuyển mạch:** Terminology audit làm rõ tên gọi trước khi kiểm tra owner. **Boundary và duplicate audit** dùng tên gọi đó để phát hiện nội dung lấn sang chapter hoặc lặp lại nguồn khác.
-
 ## 6. Terminology kiểm tra (audit / 감사)
 
 Giải thích chính dùng tiếng Việt. API, mô-đun (module / 모듈), lớp (class / 클래스), phương thức (method / 메서드), tiêu chuẩn (standard / 표준), command, identifier và mã (code / 코드) giữ nguyên bản gốc. `GLOSSARY.md` là chuẩn gốc (canonical / 정본) ánh xạ (mapping / 매핑) theo format `tiếng Việt (English term / 한국어 용어)` khi Korean ánh xạ (mapping / 매핑) thực sự hữu ích.
@@ -175,8 +165,6 @@ Giải thích chính dùng tiếng Việt. API, mô-đun (module / 모듈), lớ
 Glossary không thay thế explanation. Chapter vẫn phải nói concept tồn tại để giải quyết vấn đề gì, cơ chế (mechanism / 메커니즘) nào tạo hành vi (behavior / 동작) và thất bại (failure / 실패)/hiệu năng (performance / 성능)/bảo mật (security / 보안) implication khi có.
 
 Các deepening pass mới đã bổ sung ánh xạ (mapping / 매핑) cho class-creation hooks, luồng thực thi (thread / 스레드) trạng thái (state / 상태)/per-interpreter trạng thái (state / 상태), scheduler fairness, bounded tính đồng thời (concurrency / 동시성), hàng đợi (queue / 큐) shutdown, chỉ số (metric / 지표) cardinality, readiness/liveness và graceful shutdown; không tạo glossary phụ.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) — Coverage & Final kiểm tra (audit / 감사)**, **6. Terminology kiểm tra (audit / 감사)** đã nêu tiêu chí phân biệt, còn **7. ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Internal-link kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)
 
@@ -187,8 +175,6 @@ Part 4 chỉ đi đủ sâu vào C/bản địa (native / 네이티브) ranh gi�
 `ENGINEERING_CASE_STUDIES.md` chỉ dùng `automation/` như bằng chứng (evidence / 증거)/capstone, không biến framework-specific API thành Python cốt lõi (core / 핵심).
 
 Không có `_v2`, `_final`, `_updated`, `_rewrite`, chapter Pythonic riêng, anti-pattern riêng hoặc cấp cao (senior / 시니어) Notes riêng. Nội dung đúng được consolidate vào bốn chuẩn gốc (canonical / 정본) part.
-
-> **Chuyển mạch:** Trong **Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) — Coverage & Final kiểm tra (audit / 감사)**, **7. ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** đã nêu tiêu chí phân biệt, còn **8. Internal-link kiểm tra (audit / 감사)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. độ sâu (depth / 깊이) kiểm tra (audit / 감사) sau deepening passes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Internal-link kiểm tra (audit / 감사)
 
@@ -202,8 +188,6 @@ Các cross-link quan trọng được giữ:
 
 Python README link tới bốn part, trường hợp (case / 사례) studies, glossary và kiểm tra (audit / 감사) bằng relative paths. gốc (root / 루트) README phải link trực tiếp `10_backend/python/README.md` sau mỗi rebase/squash lên latest `main`.
 
-> **Chuyển mạch:** Internal-link audit chỉ chứng minh đi được tới tài liệu; **depth audit** kiểm tra nội dung đã đủ reasoning sau các lần mở rộng chưa. Sau đó canonical source set xác nhận claim bằng nguồn owner.
-
 ## 9. độ sâu (depth / 깊이) kiểm tra (audit / 감사) sau deepening passes
 
 Part 1 hiện đi từ thực thi (execution / 실행)/evaluation tới binding/quyền sở hữu (ownership / 소유권)/exception ranh giới (boundary / 경계).
@@ -215,8 +199,6 @@ Part 3 nối dự án (project / 프로젝트) kỹ thuật (engineering / 엔�
 Part 4 hiện đi sâu thêm ở những vùng trước đây còn mỏng: descriptor bộ nhớ đệm (cache / 캐시) tính đúng đắn (correctness / 정확성), class-creation thứ tự (ordering / 순서) và `__classcell__`, thời gian chạy (runtime / 런타임) thread-state/free-threaded nuance, bản địa (native / 네이티브) extension năng lực (capability / 역량) declarations, subinterpreter vs process-global bản địa (native / 네이티브) trạng thái (state / 상태), scheduler fairness vs thành phần nguyên thủy (primitive / 기본 요소) fairness, bounded hàng đợi (queue / 큐)/tính đồng thời (concurrency / 동시성), hàng đợi (queue / 큐) shutdown invariants, telemetry cardinality/sampling/thất bại (failure / 실패) chính sách (policy / 정책) và signal-driven graceful shutdown.
 
 Những vùng vẫn chưa cần tách tài liệu riêng: CPython allocator/GC tầng mã nguồn (source-level / 소스 수준) hiện thực (implementation / 구현), tự viết C/Rust extension, low-level asyncio vận chuyển (transport / 전송)/giao thức (protocol / 프로토콜), TLS internals, parser/trình biên dịch (compiler / 컴파일러) construction, OS scheduler internals và framework-specific metaprogramming. Nếu nhu cầu thực tế xuất hiện, ưu tiên cross-link Khoa học máy tính (computer science / 컴퓨터 과학) hoặc mở rộng Part 4 trước; chỉ tách tệp (file / 파일) khi phụ thuộc (dependency / 의존성) riêng đủ lớn.
-
-> **Chuyển mạch:** Khi depth audit đã chỉ ra đoạn cần giữ hoặc viết lại, canonical source set đối chiếu từng claim với tài liệu Python chính thức. Đây là điều kiện cuối trước khi ghi coverage là đã có bằng chứng.
 
 ## 10. chuẩn gốc (canonical / 정본) nguồn (source / 소스) set
 

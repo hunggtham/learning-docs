@@ -35,8 +35,6 @@ Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo �
 
 Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position kích thước (size / 크기) vừa tính không? Giải thích tại sao.
 
-> **Nối mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) A — EUR/USD, account USD** nêu quy tắc; **Trường hợp (case / 사례) B — USD/JPY, account USD** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) C — EUR/GBP, account KRW** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) B — USD/JPY, account USD
 
 ```text
@@ -58,8 +56,6 @@ Pip value in USD
 
 Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip giá trị (value / 값) theo USD thay đổi dù đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) không đổi.
 
-> **Nối mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) B — USD/JPY, account USD** nêu quy tắc; **Trường hợp (case / 사례) C — EUR/GBP, account KRW** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) D — Margin stress** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) C — EUR/GBP, account KRW
 
 ```text
@@ -79,8 +75,6 @@ GBP
 ```
 
 Sau đó giải thích tại sao account return còn phụ thuộc conversion đường dẫn (path / 경로) dù trade thesis ban đầu chỉ là EUR so với GBP.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) C — EUR/GBP, account KRW** nêu quy tắc; **Trường hợp (case / 사례) D — Margin stress** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) E — Portfolio heat** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) D — Margin stress
 
@@ -114,8 +108,6 @@ Effective Gross Leverage
 
 Mục tiêu là thấy margin stress có thể tăng dù chiến lược (strategy / 전략) chưa chạm stop.
 
-> **Nối mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) D — Margin stress** nêu quy tắc; **Trường hợp (case / 사례) E — Portfolio heat** thử quy tắc trong tình huống, rồi **Đầu ra bắt buộc** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) E — Portfolio heat
 
 Bạn đang có:
@@ -137,8 +129,6 @@ USD exposure
 
 Sau đó tạo stress `USD strengthens rapidly` và mô tả vì sao ba vị thế có thể cùng bị adverse move và cùng chịu spread/slippage cao hơn bình thường.
 
-> **Nối mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) E — Portfolio heat** nêu quy tắc; **Đầu ra bắt buộc** thử quy tắc trong tình huống, rồi **Tự chấm** mở rộng hệ quả.
-
 ## Đầu ra bắt buộc
 
 Tạo `fx_position_risk_sheet.md` gồm:
@@ -159,8 +149,6 @@ Effective leverage
 Currency-factor exposure
 Portfolio heat contribution
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Tự chấm
 

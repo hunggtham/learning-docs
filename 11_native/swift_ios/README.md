@@ -10,8 +10,6 @@ Baseline stable hiện hành là **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.
 
 Tài liệu vẫn giữ kiến thức Swift 5.x, UIKit, Combine, cốt lõi (core / 핵심) dữ liệu (data / 데이터) và Objective-C interoperability ở những nơi cần thiết để đọc, migrate và maintain codebase môi trường vận hành (production / 운영 환경) nhiều thế hệ.
 
-> **Nối mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, sau nội dung của **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026**, **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)
 
 Lộ trình bắt buộc là:
@@ -56,8 +54,6 @@ Từ đó tài liệu đi vào version-support chính sách (policy / 정책), S
 
 Sau Master, mục tiêu không phải “thuộc toàn bộ Apple SDK”. Bạn phải có mô hình tư duy (mental model / 사고 모델) đủ mạnh để khi Swift/Xcode/iOS thay đổi, có thể xác định cái gì thực sự đổi, ranh giới (boundary / 경계) nào bị ảnh hưởng, di chuyển (migration / 마이그레이션)/kiểm thử (test / 테스트) nào cần chạy và bản phát hành (release / 릴리스) thế nào để không biến môi trường vận hành (production / 운영 환경) người dùng (user / 사용자) thành di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트).
 
-> **Nối mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** đặt đầu vào cho **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo**, rồi **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo
 
 ### [Production Reference & Completion Guide](05_swift_ios_production_reference.md)
@@ -65,8 +61,6 @@ Sau Master, mục tiêu không phải “thuộc toàn bộ Apple SDK”. Bạn 
 Dùng tệp (file / 파일) này sau Master hoặc khi cần tra cứu một dạng thất bại (failure mode / 실패 모드) xuyên cấp. Nó gom closure thời gian tồn tại (lifetime / 수명)/`@Sendable`, numeric tính đúng đắn (correctness / 정확성), HTTP ngữ nghĩa (semantics / 의미론), tolerant decoding, thử lại (retry / 재시도)/backoff/idempotency, cốt lõi (core / 핵심) dữ liệu (data / 데이터) legacy, background transfer, quyền sở hữu (ownership / 소유권) APIs mới, generated mã (code / 코드), khả năng quan sát (observability / 관측 가능성), bộ nhớ (memory / 메모리) đồ thị (graph / 그래프), extension tiến trình (process / 프로세스) ranh giới (boundary / 경계), supply-chain bảo mật (security / 보안), ADR/phiên bản (version / 버전) ma trận (matrix / 행렬), disaster khôi phục (recovery / 복구), release-artifact testing và Definition of Done theo rủi ro (risk / 위험).
 
 Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình cross-cutting và giả định bạn đã có vocabulary về quyền sở hữu (ownership / 소유권), isolation, trạng thái (state / 상태), vòng đời (lifecycle / 생명주기) và tính tương thích (compatibility / 호환성).
-
-> **Nối mạch:** **Production reference** nêu runtime, signing và distribution constraints; **Dependencies không nên bỏ qua** biến chúng thành prerequisite trước khi chọn **version principles**.
 
 ## Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua
 
@@ -80,8 +74,6 @@ Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình 
 
 **môi trường vận hành (production / 운영 환경) hiện thực (implementation / 구현) trước phiên bản (version / 버전) quản trị (governance / 거버넌스).** Master giả định bạn đã biết hiện thực (implementation / 구현) hoạt động; lúc đó mới đánh giá di chuyển (migration / 마이그레이션), tính tương thích (compatibility / 호환성), rollout và khôi phục (recovery / 복구) có ý nghĩa.
 
-> **Nối mạch:** Khi prerequisite và deployment floor đã rõ, **Version principles** đặt policy tương thích; **Project progression** dùng policy đó để chọn bước xây dựng tiếp theo.
-
 ## Phiên bản (version / 버전) principles
 
 Luôn tách **Xcode phiên bản (version / 버전)**, **Swift trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전)**, **Swift ngôn ngữ (language / 언어) chế độ (mode / 모드)**, **SDK phiên bản (version / 버전)** và **triển khai (deployment / 배포) mục tiêu (target / 대상)**. Một API trình biên dịch (compiler / 컴파일러) biết chưa chắc chạy được trên triển khai (deployment / 배포) mục tiêu (target / 대상) cũ.
@@ -89,8 +81,6 @@ Luôn tách **Xcode phiên bản (version / 버전)**, **Swift trình biên dị
 Thời gian chạy (runtime / 런타임) availability dùng `#available`; compile-time nguồn (source / 소스)/nền tảng (platform / 플랫폼) selection dùng `#if`, `canImport`, `os(...)` hoặc mục tiêu (target / 대상) môi trường (environment / 환경) phù hợp. Với gói (package / 패키지)/thư viện (library / 라이브러리), còn phải theo dõi `swift-tools-version`, phụ thuộc (dependency / 의존성) phiên bản (version / 버전) và API công khai (public API / 공개 API) availability.
 
 Khi tài liệu/blog cũ mâu thuẫn hành vi (behavior / 동작) của toolchain đang dùng, ưu tiên Swift.org/Swift Evolution, Apple nhà phát triển (developer / 개발자) Documentation và Xcode bản phát hành (release / 릴리스) notes chính thức.
-
-> **Nối mạch:** **Project progression** khép route bằng artifact, test và release evidence; phần sâu hơn quay về owner của Swift runtime, UIKit/SwiftUI và Apple platform docs.
 
 ## Dự án (project / 프로젝트) progression đề xuất
 

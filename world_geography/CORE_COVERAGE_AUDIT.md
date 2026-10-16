@@ -12,8 +12,6 @@ Trạng thái dùng ở đây:
 - **độ sâu (depth / 깊이) pass**: vừa được nâng đáng kể; ưu tiên QA/cross-link hơn rewrite toàn bộ.
 - **Solid**: đúng và khá sâu nhưng còn một số cầu nối (bridge / 브리지) quan trọng cần bổ sung.
 
-> **Nối mạch:** Mục đích của audit là xác định nền tảng cần có để đọc địa lý bằng cơ chế và bằng chứng. **Foundations** kiểm tra công cụ về vị trí, quy mô, dữ liệu và hệ Trái Đất trước khi đi vào **Vật lý Geography**.
-
 ## Foundations
 
 Bảng Foundations trả lời câu hỏi: người học đã có đủ công cụ để đọc vị trí, quy mô, dữ liệu và hệ thống Trái Đất chưa? Các dòng dưới đây là bản đồ kiểm tra prerequisite trước khi chuyển sang process vật lý và ứng dụng vùng.
@@ -25,8 +23,6 @@ Bảng Foundations trả lời câu hỏi: người học đã có đủ công c
 | Maps / cartography / projections | **Deep** | Generalization, projection sự đánh đổi (trade-off / 트레이드오프), choropleth, MAUP, classification và web ánh xạ (mapping / 매핑). |
 | GIS / geospatial dữ liệu (data / 데이터) / remote sensing | **Deep** | véc-tơ (vector / 벡터)/raster, topology, spatial predicates/chỉ mục (index / 인덱스), geodesic/mạng (network / 네트워크) distance, observation chuỗi xử lý (pipeline / 파이프라인), kiểm tra hợp lệ (validation / 검증), bất định (uncertainty / 불확실성)/privacy. |
 | Earth các hệ thống (systems / 시스템들) | **độ sâu (depth / 깊이) pass** | hệ thống (system / 시스템) ranh giới (boundary / 경계), stock–luồng (flow / 흐름), residence thời gian (time / 시간), coupled các hệ thống (systems / 시스템들), threshold, cross-scale phản hồi (feedback / 피드백), trọng yếu (critical / 중요) zone và coupled human–natural các hệ thống (systems / 시스템들). |
-
-> **Nối mạch:** Khi nền tảng đã đủ để đo vị trí và hệ thống, audit theo dõi các process vật lý tạo relief, khí hậu, nước, sinh thái và hazard. **Human Geography** tiếp theo hỏi những process đó đi vào dân cư, di chuyển và sản xuất như thế nào.
 
 ## Vật lý (physical / 물리적) Geography
 
@@ -55,8 +51,6 @@ Các chapter riêng lẻ đã sâu; khoảng trống tiếp theo nằm ở **c�
 
 Mục tiêu của pass sau không phải tăng độ dài từng tệp (file / 파일) mà làm prerequisite/ứng dụng (application / 애플리케이션) links rõ hơn.
 
-> **Nối mạch:** Human Geography biến điều kiện vật lý thành phân bố dân cư, đô thị, ngành, hạ tầng và bất bình đẳng, đồng thời kiểm tra vai trò của thể chế. **Regional Geography** đặt chuỗi cơ chế ấy vào từng không gian cụ thể.
-
 ## Human Geography
 
 Phần Human Geography kiểm tra cách các process tự nhiên đi vào dân cư, di chuyển, đô thị, sản xuất và bất bình đẳng. Mục tiêu của bảng là phát hiện những cầu nối còn thiếu giữa physical constraint và kết quả xã hội.
@@ -81,8 +75,6 @@ Agriculture, năng lượng (energy / 에너지)/resources và development khôn
 **tài nguyên (resource / 자원) cơ sở (base / 기반) → hạ tầng (infrastructure / 인프라)/năng lượng (energy / 에너지) → productivity → processing/giá trị (value / 값) capture → vận chuyển (transport / 전송)/trade → city/household truy cập (access / 접근) → inequality/resilience**.
 
 Pass tiếp theo nên kiểm tra trùng lặp, thêm quantitative examples khi thật sự giúp lập luận (reasoning / 추론) và giữ cross-links hai chiều.
-
-> **Nối mạch:** Region chapter phải giữ nguyên chuỗi vật lý–settlement–economy–transport–trade và chỉ ra điểm khác biệt theo địa hình, lịch sử và thể chế. **Earth Geography** quay lại các process hành tinh làm nền cho mọi region.
 
 ## Regional Geography
 
@@ -119,13 +111,9 @@ Global Systems vượt qua biên giới từng quốc gia để theo dõi dòng 
 | Sustainability | **Deep** | Stock–luồng (flow / 흐름), hệ thống (system / 시스템) ranh giới (boundary / 경계), externalities, LCA, circularity limits, rebound, resilience/quản trị (governance / 거버넌스). |
 | toàn cục (global / 전역) trade networks | **Deep** | môi trường vận hành (production / 운영 환경) tiers, ports/hinterlands, inventory, finance, tài nguyên (resource / 자원) conversion, city networks, systemic rủi ro (risk / 위험) và Korea–Vietnam ứng dụng (application / 애플리케이션). |
 
-> **Nối mạch:** Earth Geography chuẩn hóa các reference system, relief, hoàn lưu và dấu chân con người để các so sánh vùng không bị lệch nền. **World Atlas** dùng nền đó cho các case được chọn lọc, không thay thế coverage cốt lõi.
-
 ## Earth / toàn cục (global / 전역) Geography
 
 Geodesy, rotation/orbit/seasons, continental–ocean cấu trúc (structure / 구조), toàn cục (global / 전역) relief, planetary circulation, gravity/geoid/magnetic trường dữ liệu (field / 필드), tham chiếu (reference / 참조) các hệ thống (systems / 시스템들) và human footprint đều có chuẩn gốc (canonical / 정본) chapters. Recent độ sâu (depth / 깊이) pass đã cân bằng `continents/ocean basins`, `global relief` và `global circulation` với phần cốt lõi (core / 핵심) khác.
-
-> **Nối mạch:** Atlas chỉ có giá trị khi case giữ được cơ chế, bằng chứng và ranh giới đã kiểm tra ở các lớp trước. **Khoảng trống tiếp theo** vì vậy ưu tiên cross-link và profile đủ sâu thay vì tăng số file.
 
 ## World Atlas
 
@@ -143,8 +131,6 @@ High-value học tập (learning / 학습) profiles hiện gồm:
 Australia, Brazil và Malaysia vừa được promote từ compact tham chiếu (reference / 참조) thành học tập (learning / 학습) profiles. Không tạo tệp (file / 파일) mới trong batch này.
 
 Thailand và Philippines vẫn là **Planned/tham chiếu (reference / 참조)** cho tới khi có thể viết full học tập (learning / 학습) profile; không nâng bằng skeleton.
-
-> **Nối mạch:** Khoảng trống được ghi như các nhiệm vụ có owner và tiêu chí kiểm chứng: nối process vật lý, nối population–urban–development, QA region và làm sạch atlas. Đây là backlog để quay lại README, không phải lời khẳng định coverage đã hoàn tất.
 
 ## Khoảng trống tiếp theo
 

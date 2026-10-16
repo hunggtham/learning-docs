@@ -20,8 +20,6 @@ Ngân sách (budget / 예산) ràng buộc (constraint / 제약조건) không n�
 
 Ví dụ, nếu `m = 100`, `p_x = 10` và `p_y = 20`, household mua tối đa 10 đơn vị `x` hoặc 5 đơn vị `y`, hoặc một phối hợp nằm giữa. Độ dốc `-p_x/p_y = -0.5` nghĩa là để mua thêm 1 đơn vị `x`, household phải bỏ 0.5 đơn vị `y` khi đã dùng hết ngân sách. Đây là sự đánh đổi (trade-off / 트레이드오프) mà **thị trường** áp đặt; nó chưa nói household thích bundle nào.
 
-> **Chuyển mạch:** Budget constraint giới hạn feasible set; preferences/utility mô tả thứ tự lựa chọn, còn optimal choice tìm điểm giao giữa objective và constraint.
-
 ## 2. Preferences, utility và indifference curve
 
 Preference biểu diễn thứ tự mà bên tiêu thụ (consumer / 소비자) gán cho các bundles. Utility là biểu diễn (representation / 표현) tiện dụng của thứ tự đó; utility cao hơn không nhất thiết là “hạnh phúc nhiều hơn” theo đơn vị cardinal có thể so sánh giữa người với người.
@@ -37,8 +35,6 @@ Indifference curve nối các bundles đem lại cùng utility. Độ dốc củ
 
 MRS là sự đánh đổi (trade-off / 트레이드오프) chủ quan của bên tiêu thụ (consumer / 소비자); `p_x/p_y` là sự đánh đổi (trade-off / 트레이드오프) do giá thị trường tạo ra. Khi hai sự đánh đổi (trade-off / 트레이드오프) bằng nhau, bên tiêu thụ (consumer / 소비자) không còn lý do đổi một bundle rất nhỏ theo hướng này hay hướng kia. Utility ở đây là cách biểu diễn thứ tự ưu tiên, không phải thước đo khách quan để so sánh hạnh phúc giữa hai người.
 
-> **Chuyển mạch:** Ở chặng này của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **3. Optimal choice là tiếp điểm giữa mục tiêu (objective / 목표) và ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **2. Preferences, utility và indifference curve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Price thay đổi (change / 변경) tạo income tác động (effect / 효과) và substitution tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Optimal choice là tiếp điểm giữa mục tiêu (objective / 목표) và ràng buộc (constraint / 제약조건)
 
 Trong nghiệm nội bộ, bên tiêu thụ (consumer / 소비자) chọn bundle thỏa:
@@ -53,8 +49,6 @@ Trực giác: willingness to trade ở biên phải bằng thị trường (mark
 
 Điều kiện tiếp điểm không áp dụng máy móc khi có corner solution, perfect substitutes, perfect complements, discrete choice, fixed chi phí (cost / 비용) hoặc non-convex preferences. Khi đó phải kiểm tra toàn bộ ranh giới (boundary / 경계) của feasible set.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **4. Price thay đổi (change / 변경) tạo income tác động (effect / 효과) và substitution tác động (effect / 효과)** tiếp nhận điểm tựa từ **3. Optimal choice là tiếp điểm giữa mục tiêu (objective / 목표) và ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Từ lựa chọn cá nhân tới đường cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Price thay đổi (change / 변경) tạo income tác động (effect / 효과) và substitution tác động (effect / 효과)
 
 Khi giá `x` giảm, bên tiêu thụ (consumer / 소비자) có hai phản ứng:
@@ -63,8 +57,6 @@ Khi giá `x` giảm, bên tiêu thụ (consumer / 소비자) có hai phản ứn
 2. **Income tác động (effect / 효과)**: cùng một thu nhập danh nghĩa mua được nhiều sức mua hơn; hướng tác động phụ thuộc việc `x` là normal good hay inferior good.
 
 Với normal good, hai hiệu ứng thường cùng làm lượng cầu tăng khi giá giảm. Với inferior good, income tác động (effect / 효과) có thể ngược chiều. Chỉ trong trường hợp đặc biệt, hiệu ứng ngược chiều đủ mạnh mới tạo Giffen hành vi (behavior / 동작); không nên suy ra mọi hàng hóa inferior đều là Giffen goods.
-
-> **Chuyển mạch:** Trong **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **5. Từ lựa chọn cá nhân tới đường cầu** tiếp nhận điểm tựa từ **4. Price thay đổi (change / 변경) tạo income tác động (effect / 효과) và substitution tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Producer bắt đầu từ technology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Từ lựa chọn cá nhân tới đường cầu
 
@@ -80,8 +72,6 @@ Elasticity là cục bộ (local / 로컬) hoặc theo một khoảng giá cụ 
 
 Nói đơn giản, elasticity hỏi “giá đổi 1% thì lượng cầu đổi khoảng bao nhiêu %?”. Nếu người mua dễ tìm hàng thay thế hoặc dễ trì hoãn mua, cầu thường co giãn hơn. Nếu hàng hóa thiết yếu và khó thay thế trong ngắn hạn, cầu thường kém co giãn hơn; nhưng đây là kết luận theo bối cảnh, không phải tính chất bất biến của sản phẩm.
 
-> **Chuyển mạch:** Ở chặng này của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **6. Producer bắt đầu từ technology** tiếp nhận điểm tựa từ **5. Từ lựa chọn cá nhân tới đường cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. chi phí (cost / 비용): fixed, variable, average và marginal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Producer bắt đầu từ technology
 
 Firm biến inputs thành đầu ra (output / 출력) qua môi trường vận hành (production / 운영 환경) hàm (function / 함수):
@@ -95,8 +85,6 @@ q = f(K, L, A, ...)
 Trong ngắn hạn, ít nhất một đầu vào (input / 입력) bị cố định. Trong dài hạn, firm có thể điều chỉnh tất cả inputs, thay đổi quy mô plant và chọn technology. Vì vậy short-run chi phí (cost / 비용) curve không thể đọc như long-run chi phí (cost / 비용) curve.
 
 “Ngắn hạn” không nhất thiết là vài ngày và “dài hạn” không nhất thiết là nhiều năm. Đây là tên cho khả năng điều chỉnh: nhà hàng có thể đổi số ca làm ngay, nhưng chưa thể mở rộng bếp trong tuần này. Cùng một doanh nghiệp có thể ở short run đối với mặt bằng nhưng ở long run đối với nhân công.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **7. chi phí (cost / 비용): fixed, variable, average và marginal** tiếp nhận điểm tựa từ **6. Producer bắt đầu từ technology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Profit maximization và supply** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. chi phí (cost / 비용): fixed, variable, average và marginal
 
@@ -114,8 +102,6 @@ ATC(q) = TC(q) / q
 Marginal chi phí (cost / 비용) có thể tăng vì diminishing marginal sản phẩm (product / 제품) của đầu vào (input / 입력) biến đổi. Average chi phí (cost / 비용) có thể giảm khi fixed chi phí (cost / 비용) được phân bổ trên nhiều đơn vị, nhưng diseconomies of quy mô (scale / 규모) hoặc coordination chi phí (cost / 비용) có thể làm nó tăng lại.
 
 `MC` trả lời “sản xuất thêm một đơn vị làm tổng chi phí tăng bao nhiêu?”, còn `ATC` trả lời “mỗi đơn vị đang gánh trung bình bao nhiêu chi phí?”. Khi `MC < ATC`, đơn vị mới kéo chi phí trung bình xuống; khi `MC > ATC`, nó kéo chi phí trung bình lên. Đây là lý do `MC` thường cắt `ATC` tại điểm thấp nhất của `ATC`.
-
-> **Chuyển mạch:** Trong **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **8. Profit maximization và supply** tiếp nhận điểm tựa từ **7. chi phí (cost / 비용): fixed, variable, average và marginal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Từ private equilibrium tới xã hội (social / 사회적) kết quả (outcome / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Profit maximization và supply
 
@@ -135,8 +121,6 @@ P = MR = MC
 
 Đường cung cá nhân không phải toàn bộ MC curve. Trong cạnh tranh hoàn hảo, short-run supply thường là phần MC nằm trên minimum AVC; nhưng thị trường (market / 시장) power, adjustment chi phí (cost / 비용), inventory và strategic hành vi (behavior / 동작) làm ánh xạ (mapping / 매핑) này thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **9. Từ private equilibrium tới xã hội (social / 사회적) kết quả (outcome / 결과)** tiếp nhận điểm tựa từ **8. Profit maximization và supply** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Checklist mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Từ private equilibrium tới xã hội (social / 사회적) kết quả (outcome / 결과)
 
 Nếu producer hoặc bên tiêu thụ (consumer / 소비자) không chịu toàn bộ chi phí (cost / 비용)/benefit do giao dịch tạo ra, private equilibrium có thể lệch khỏi xã hội (social / 사회적) optimum.
@@ -149,8 +133,6 @@ social marginal benefit = private marginal benefit + external benefit
 Externality, công khai (public / 공개) good và asymmetric thông tin (information / 정보) tạo lý do để phân tích thị trường (market / 시장) thất bại (failure / 실패). Nhưng “có thị trường (market / 시장) thất bại (failure / 실패)” không tự động chứng minh một can thiệp cụ thể tốt hơn laissez-faire; cần tính chính sách (policy / 정책) hiện thực (implementation / 구현) chi phí (cost / 비용), government thất bại (failure / 실패), incidence và phản ứng hành vi.
 
 Ví dụ, nhà máy có thể chỉ tính chi phí điện, nguyên liệu và nhân công, trong khi người dân quanh đó chịu thêm chi phí bệnh tật. Private equilibrium khi ấy tạo đầu ra (output / 출력) cao hơn mức tối ưu xã hội. Thuế, tiêu chuẩn hoặc giấy phép phát thải có thể giúp, nhưng hiệu quả còn phụ thuộc việc đo lường, thực thi và doanh nghiệp chuyển chi phí sang giá hoặc tiền lương ra sao.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**, **10. Checklist mô hình** tiếp nhận điểm tựa từ **9. Từ private equilibrium tới xã hội (social / 사회적) kết quả (outcome / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. Checklist mô hình
 

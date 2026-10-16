@@ -40,8 +40,6 @@ Underlying US asset
 + USD/KRW
 ```
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **2. Return decomposition** nối từ **1. Unhedged foreign asset** sang **3. Example unhedged**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Return decomposition
 
 Approximate simple-return decomposition:
@@ -67,8 +65,6 @@ R_KRW
 = R_asset + R_fx + R_asset × R_fx
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **2. Return decomposition** nêu quy tắc; **3. Example unhedged** thử quy tắc trong tình huống, rồi **4. Opposite scenario** mở rộng hệ quả.
-
 ## 3. Example unhedged
 
 US asset rises 10% in USD.
@@ -84,8 +80,6 @@ Approximate KRW return:
 
 Cục bộ (local / 로컬) asset gained 10%, but currency nearly erased kết quả (result / 결과) for KRW investor.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **3. Example unhedged** nêu quy tắc; **4. Opposite scenario** thử quy tắc trong tình huống, rồi **5. Full currency hedge concept** mở rộng hệ quả.
-
 ## 4. Opposite scenario
 
 US asset falls 5%, but USD strengthens 12% vs KRW:
@@ -98,8 +92,6 @@ US asset falls 5%, but USD strengthens 12% vs KRW:
 Investor can gain in KRW despite cục bộ (local / 로컬) asset mất mát (loss / 손실).
 
 This is why local-market hiệu năng (performance / 성능) is not investor return.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **5. Full currency hedge concept** nối từ **4. Opposite scenario** sang **6. Hedge ratio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Full currency hedge concept
 
@@ -117,8 +109,6 @@ Goal:
 ```text
 reduce sensitivity of KRW portfolio value to USD/KRW
 ```
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **6. Hedge ratio** nối từ **5. Full currency hedge concept** sang **7. Asset giá trị (value / 값) drift creates hedge mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Hedge ratio
 
@@ -138,8 +128,6 @@ Examples:
 ```
 
 “100%” is still approximate because asset giá trị (value / 값) changes between rebalances.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **7. Asset giá trị (value / 값) drift creates hedge mismatch** nối từ **6. Hedge ratio** sang **8. Rebalancing hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Asset giá trị (value / 값) drift creates hedge mismatch
 
@@ -165,8 +153,6 @@ Now portfolio has residual:
 
 This is **hedge drift**.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **8. Rebalancing hedge** nối từ **7. Asset giá trị (value / 값) drift creates hedge mismatch** sang **9. Hedge ratio is a strategic allocation quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Rebalancing hedge
 
 Chính sách (policy / 정책) might rebalance:
@@ -178,8 +164,6 @@ when hedge ratio leaves tolerance band
 ```
 
 More frequent rebalancing reduces drift but increases turnover/chi phí (cost / 비용).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **9. Hedge ratio is a strategic allocation quyết định (decision / 결정)** nối từ **8. Rebalancing hedge** sang **10. Liability currency matters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Hedge ratio is a strategic allocation quyết định (decision / 결정)
 
@@ -199,15 +183,11 @@ Risk tolerance
 
 not only short-term FX forecast.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **10. Liability currency matters** nối từ **9. Hedge ratio is a strategic allocation quyết định (decision / 결정)** sang **11. Bonds vs equities**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Liability currency matters
 
 A Korean pension with KRW liabilities may giá trị (value / 값) KRW stability more than a toàn cục (global / 전역) investor with USD liabilities.
 
 Same foreign asset can have different optimal hedge chính sách (policy / 정책) depending on liabilities.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **11. Bonds vs equities** nối từ **10. Liability currency matters** sang **12. Hedge carry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bonds vs equities
 
@@ -224,8 +204,6 @@ Unhedged currency can dominate bond portfolio rủi ro (risk / 위험).
 
 For equities, cục bộ (local / 로컬) asset volatility is larger, so relative contribution differs.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **12. Hedge carry** nối từ **11. Bonds vs equities** sang **13. Hedged return approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Hedge carry
 
 Forward hedge return includes forward points.
@@ -233,8 +211,6 @@ Forward hedge return includes forward points.
 A Korean investor hedging USD back to KRW may face positive or negative carry depending on relative rates/basis.
 
 Do not treat hedge return as simply `-spot FX return`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **13. Hedged return approximation** nối từ **12. Hedge carry** sang **14. Forward points vs spot view**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Hedged return approximation
 
@@ -250,8 +226,6 @@ Hedged Portfolio Return
 
 Currency spot tác động (effect / 효과) is largely offset, not perfectly eliminated.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **14. Forward points vs spot view** nối từ **13. Hedged return approximation** sang **15. Benchmark consistency**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Forward points vs spot view
 
 A 100% currency hedge can underperform unhedged portfolio when USD rises strongly.
@@ -259,8 +233,6 @@ A 100% currency hedge can underperform unhedged portfolio when USD rises strongl
 That does not imply hedge failed.
 
 The benchmark/mục tiêu (objective / 목표) determines evaluation.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **15. Benchmark consistency** nối từ **14. Forward points vs spot view** sang **16. Active vs strategic currency position**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Benchmark consistency
 
@@ -274,8 +246,6 @@ Even if asset selection matches benchmark.
 
 Conversely, hedging a benchmark that is unhedged creates active FX position.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **16. Active vs strategic currency position** nối từ **15. Benchmark consistency** sang **17. Currency overlay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Active vs strategic currency position
 
 Separate:
@@ -287,8 +257,6 @@ Tactical currency overlay
 ```
 
 If manager changes hedge ratio based on FX view, that active quyết định (decision / 결정) should be attributed separately.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **17. Currency overlay** nối từ **16. Active vs strategic currency position** sang **18. Netting across portfolios**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Currency overlay
 
@@ -305,8 +273,6 @@ consistent execution
 
 But it introduces quản trị (governance / 거버넌스) and attribution độ phức tạp (complexity / 복잡도).
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **18. Netting across portfolios** nối từ **17. Currency overlay** sang **19. Cross hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Netting across portfolios
 
 Portfolio A long USD 100m.
@@ -321,8 +287,6 @@ net USD exposure = 70m
 
 Centralized hedge can reduce gross transactions if mandates allow.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **19. Cross hedge** nối từ **18. Netting across portfolios** sang **20. NDF hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Cross hedge
 
 If direct hedge thị trường (market / 시장) is illiquid, manager may hedge with correlated currency.
@@ -335,8 +299,6 @@ illiquid EM currency exposure
 ```
 
 This creates **basis rủi ro (risk / 위험)** because correlation is imperfect and regime-dependent.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **20. NDF hedge** nối từ **19. Cross hedge** sang **21. Rolling forwards**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. NDF hedge
 
@@ -353,8 +315,6 @@ capital-control/access constraints
 
 NDF return can differ from onshore spot move.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **21. Rolling forwards** nối từ **20. NDF hedge** sang **22. Roll rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Rolling forwards
 
 If fund holds asset indefinitely but forward matures every 1–3 months:
@@ -367,8 +327,6 @@ hedge tenor = short
 Hedge must roll repeatedly.
 
 Long-run kết quả (result / 결과) depends on chuỗi (sequence / 시퀀스) of forward points and roll thực thi (execution / 실행).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **22. Roll rủi ro (risk / 위험)** nối từ **21. Rolling forwards** sang **23. Collateral and variation margin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Roll rủi ro (risk / 위험)
 
@@ -390,8 +348,6 @@ liquidity declines
 
 So hedge that reduced spot FX rủi ro (risk / 위험) can introduce funding/liquidity rủi ro (risk / 위험).
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **23. Collateral and variation margin** nối từ **22. Roll rủi ro (risk / 위험)** sang **24. Example collateral mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Collateral and variation margin
 
 Depending instrument/CSA/clearing cấu trúc (structure / 구조), hedge can require collateral when marked against fund.
@@ -404,8 +360,6 @@ while derivative loses and requires cash collateral now
 ```
 
 Economic hedge can still create short-term liquidity need.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **23. Collateral and variation margin** nêu quy tắc; **24. Example collateral mismatch** thử quy tắc trong tình huống, rồi **25. Hedge ratio and liquidity buffer** mở rộng hệ quả.
 
 ## 24. Example collateral mismatch
 
@@ -426,8 +380,6 @@ liquidity mismatch
 
 can matter even though combined net worth is protected.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **24. Example collateral mismatch** nêu quy tắc; **25. Hedge ratio and liquidity buffer** thử quy tắc trong tình huống, rồi **26. Currency-asset correlation** mở rộng hệ quả.
-
 ## 25. Hedge ratio and liquidity buffer
 
 A 100% hedge may require larger collateral buffer than 50% hedge.
@@ -441,8 +393,6 @@ liquidity requirement
 ```
 
 not just volatility tối ưu hóa (optimization / 최적화).
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **26. Currency-asset correlation** nối từ **25. Hedge ratio and liquidity buffer** sang **27. Correlation is not stable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Currency-asset correlation
 
@@ -458,23 +408,17 @@ currency risk is not always pure uncompensated noise
 
 Its tương tác (interaction / 상호작용) with asset return matters.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **27. Correlation is not stable** nối từ **26. Currency-asset correlation** sang **28. Safe-haven currencies**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Correlation is not stable
 
 A currency that hedged equity drawdowns historically may not do so next crisis.
 
 Stress-test multiple correlation regimes.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **28. Safe-haven currencies** nối từ **27. Correlation is not stable** sang **29. Multi-currency portfolio**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Safe-haven currencies
 
 JPY, CHF, USD can behave differently across crises depending funding and shock nguồn (source / 소스).
 
 Do not hard-code “safe haven” into hedge chính sách (policy / 정책) without scenario phân tích (analysis / 분석).
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **29. Multi-currency portfolio** nối từ **28. Safe-haven currencies** sang **30. Trading currency vs economic currency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Multi-currency portfolio
 
@@ -491,8 +435,6 @@ Need currency exposure by underlying economic currency, not listing venue only.
 
 A US-listed ETF can own non-USD assets.
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **30. Trading currency vs economic currency** nối từ **29. Multi-currency portfolio** sang **31. Look-through độ sâu (depth / 깊이)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Trading currency vs economic currency
 
 Ticker trades in USD does not imply portfolio exposure is USD only.
@@ -505,8 +447,6 @@ Underlying company revenues/assets = multiple currencies
 ```
 
 Direct portfolio FX hedge usually targets fund NAV currency exposure according to fund mechanics, not every corporate revenue exposure inside holdings.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **31. Look-through độ sâu (depth / 깊이)** nối từ **30. Trading currency vs economic currency** sang **32. Share-class hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Look-through độ sâu (depth / 깊이)
 
@@ -523,15 +463,11 @@ Each mức (level / 수준) answers different question.
 
 Do not mix them.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **32. Share-class hedge** nối từ **31. Look-through độ sâu (depth / 깊이)** sang **33. Hedge effectiveness chỉ số (metric / 지표)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Share-class hedge
 
 Some funds offer currency-hedged share classes.
 
 Investor must understand hedge typically targets share-class currency exposure, not all economic FX exposure of underlying companies.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **33. Hedge effectiveness chỉ số (metric / 지표)** nối từ **32. Share-class hedge** sang **34. Cash inflow/outflow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Hedge effectiveness chỉ số (metric / 지표)
 
@@ -554,8 +490,6 @@ basis
 cash flows
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **33. Hedge effectiveness chỉ số (metric / 지표)** đặt đầu vào cho **34. Cash inflow/outflow**, rồi **35. Thị trường (market / 시장) move between NAV and hedge thực thi (execution / 실행)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 34. Cash inflow/outflow
 
 Subscriptions/redemptions thay đổi (change / 변경) foreign asset exposure.
@@ -568,8 +502,6 @@ fund becomes over/under-hedged
 
 Cash-flow forecasting matters.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **34. Cash inflow/outflow** đặt đầu vào cho **35. Thị trường (market / 시장) move between NAV and hedge thực thi (execution / 실행)**, rồi **36. Time-zone challenge** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 35. Thị trường (market / 시장) move between NAV and hedge thực thi (execution / 실행)
 
 If NAV is measured at one cutoff but hedge rebalances later:
@@ -579,8 +511,6 @@ timing basis
 ```
 
 can create tracking lỗi (error / 오류).
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **36. Time-zone challenge** nối từ **35. Thị trường (market / 시장) move between NAV and hedge thực thi (execution / 실행)** sang **37. Weekend gap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Time-zone challenge
 
@@ -592,15 +522,11 @@ Define consistent exposure snapshot and hedge-rebalance timestamp.
 
 This is a point-in-time các hệ thống (systems / 시스템들) bài toán (problem / 문제).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **37. Weekend gap** nối từ **36. Time-zone challenge** sang **38. Stress scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Weekend gap
 
 Foreign asset thị trường (market / 시장) may close while FX or another thị trường (market / 시장) reprices at different times.
 
 Hedge and asset liquidity are not synchronized perfectly.
-
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **38. Stress scenario** nối từ **37. Weekend gap** sang **39. Partial hedge scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Stress scenario
 
@@ -627,8 +553,6 @@ Net portfolio P/L
 Liquidity buffer
 ```
 
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **39. Partial hedge scenario** nối từ **38. Stress scenario** sang **40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Partial hedge scenario
 
 Compare 0%, 50%, 100% USD hedge across:
@@ -642,8 +566,6 @@ USD -15%
 with cục bộ (local / 로컬) asset +10%/-10% combinations.
 
 Observe that hedge ratio changes phân phối (distribution / 분포), not absolute “chất lượng (quality / 품질)”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** nối từ **39. Partial hedge scenario** sang **41. Attribution report**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
@@ -661,8 +583,6 @@ Regulatory/tax/accounting constraints
 
 No universal hedge ratio.
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **41. Attribution report** nối từ **40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** sang **42. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 41. Attribution report
 
 ```text
@@ -676,8 +596,6 @@ Collateral/funding cost
 Tactical overlay P/L
 Net investor return
 ```
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **42. What not to learn** nối từ **41. Attribution report** sang **43. Trường hợp (case / 사례) outputs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. What not to learn
 
@@ -706,8 +624,6 @@ Currency hedge must be evaluated relative to liabilities,
 benchmark, asset behavior, carry and liquidity constraints.
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **42. What not to learn** nêu quy tắc; **43. Trường hợp (case / 사례) outputs** thử quy tắc trong tình huống, rồi **44. Rà soát (review / 검토) questions** mở rộng hệ quả.
-
 ## 43. Trường hợp (case / 사례) outputs
 
 Create:
@@ -722,8 +638,6 @@ currency_attribution_report.md
 benchmark_tracking_report.md
 ```
 
-> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **43. Trường hợp (case / 사례) outputs** nêu quy tắc; **44. Rà soát (review / 검토) questions** thử quy tắc trong tình huống, rồi **Nội bộ (internal / 내부) links** mở rộng hệ quả.
-
 ## 44. Rà soát (review / 검토) questions
 
 Explain:
@@ -735,8 +649,6 @@ Explain:
 5. Why collateral creates liquidity rủi ro (risk / 위험) even for economically hedged portfolio.
 6. Why benchmark currency treatment matters.
 7. Why listing/trading currency is not always economic exposure.
-
-> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — Toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio**, **Nội bộ (internal / 내부) links** nối từ **44. Rà soát (review / 검토) questions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

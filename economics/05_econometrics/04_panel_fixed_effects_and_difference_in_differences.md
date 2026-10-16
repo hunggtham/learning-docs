@@ -95,8 +95,6 @@ First differencing also removes time-invariant đơn vị (unit / 단위) effect
 
 With many periods, FE and FD differ in efficiency and phản hồi (response / 응답) to serial correlation.
 
-> **Chuyển mạch:** Sau **9. First differences**, ta đã có các cách loại bỏ phần cố định của đơn vị; nhưng đó chưa phải counterfactual cho một chính sách. **10. Difference-in-Differences idea** ghép thay đổi trước–sau của nhóm điều trị với thay đổi của nhóm đối chứng, nên câu hỏi kế tiếp là parallel trends chứ không phải thêm FE một cách máy móc.
-
 ## 10. Difference-in-Differences idea
 
 Suppose one group receives chính sách (policy / 정책) and another does not. Compare before-after thay đổi (change / 변경) in treated to before-after thay đổi (change / 변경) in điều khiển (control / 제어):
@@ -152,8 +150,6 @@ Y_it = α_i + λ_t + Σ_k β_k 1[event time = k] + u_it
 Pre-treatment coefficients diagnose trends/anticipation; post coefficients show dynamics.
 
 Tham chiếu (reference / 참조) period must be omitted.
-
-> **Chuyển mạch:** Event-study giúp nhìn động học và pre-trends, nhưng khi thời điểm áp dụng khác nhau giữa các đơn vị, nhóm đã điều trị có thể bị dùng nhầm làm đối chứng. **15. Staggered adoption bài toán (problem / 문제)** vì vậy kiểm tra lại chính cách TWFE tạo comparison trước khi diễn giải một hệ số tổng hợp.
 
 ## 15. Staggered adoption bài toán (problem / 문제)
 
@@ -218,8 +214,6 @@ It makes counterfactual transparent but requires good donor pool and long enough
 Poor pre-treatment fit weakens credibility. Donor contamination, interpolation outside convex hull or structural breaks also matter.
 
 Placebo-in-space/thời gian (time / 시간) helps assess unusual post-treatment divergence.
-
-> **Chuyển mạch:** Synthetic control làm counterfactual minh bạch hơn khi số đơn vị điều trị ít, nhưng vẫn phụ thuộc donor pool và fit trước điều trị. **25. Interactive fixed effects** mở rộng mô hình khi các shock ẩn tác động khác nhau theo đơn vị; sau đó **26. Clustered suy luận (inference / 추론) in DiD** kiểm tra uncertainty có khớp với mức assignment hay không.
 
 ## 25. Interactive fixed effects
 

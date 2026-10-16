@@ -26,8 +26,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | dãy byte (byte sequence / 바이트 시퀀스) | nhị phân (binary / 이진) dữ liệu (data / 데이터) như `bytes`; cần encoding/decoding khi chuyển với văn bản (text / 텍스트). |
 | luồng điều khiển (control flow / 제어 흐름) | Quy tắc quyết định statement/expression nào được thực thi tiếp theo. |
 
-> **Chuyển mạch:** Trong **Python Glossary — Việt / English / 한국어**, **Thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)** nêu điều cần giải thích; **Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
@@ -43,8 +41,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | lan truyền ngoại lệ (exception propagation / 예외 전파) | Cơ chế exception đi ngược ngăn xếp lời gọi (call stack / 호출 스택) cho tới handler phù hợp. |
 | mô-đun (module / 모듈) | đơn vị (unit / 단위) import/thực thi (execution / 실행) tạo mô-đun (module / 모듈) không gian tên (namespace / 네임스페이스). |
 | gói (package / 패키지) | Cấu trúc tổ chức mô-đun (module / 모듈) trong import không gian tên (namespace / 네임스페이스). |
-
-> **Chuyển mạch:** Từ function, scope và error, glossary mở rộng sang object model, protocol và typing để giải thích contract của giá trị. Sau đó I/O và standard library đưa các thuật ngữ ấy vào behavior có thể quan sát.
 
 ## Mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing
 
@@ -79,8 +75,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | thu hẹp kiểu (type narrowing / 타입 좁히기) | Dùng bằng chứng (evidence / 증거) thời gian chạy (runtime / 런타임)/điều khiển (control / 제어) luồng (flow / 흐름) để giảm tập kiểu (type / 타입) khả dĩ mà static checker đang xét. |
 | predicate kiểu (`TypeIs`/`TypeGuard` / 타입 판별 함수) | hàm (function / 함수) boolean cung cấp bằng chứng narrowing cho kiểu (type / 타입) checker; hiện thực (implementation / 구현) phải khớp đặc tả hợp đồng (contract / 계약) đã khai báo. |
 
-> **Chuyển mạch:** I/O và standard library cho thấy thuật ngữ hoạt động trong code và resource lifecycle ra sao. Phần dự án, packaging, testing và runtime tiếp theo đặt chúng vào một đơn vị triển khai.
-
 ## I/O và standard-library kỹ thuật (engineering / 엔지니어링)
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
@@ -94,8 +88,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | biểu thức chính quy (regular expression / 정규 표현식) | Ngôn ngữ mẫu (pattern / 패턴) dùng để khớp chuỗi theo grammar giới hạn. |
 | ghi nhật ký (logging / 로깅) | Ghi ngữ nghĩa (semantic / 의미적) events/ngữ cảnh (context / 맥락) để quan sát và điều tra hệ thống. |
 | tiến trình con (subprocess / 하위 프로세스) | tiến trình (process / 프로세스) được ứng dụng (application / 애플리케이션) tạo và điều khiển qua OS ranh giới (boundary / 경계). |
-
-> **Chuyển mạch:** Project, packaging, testing và runtime gom các thuật ngữ thành lifecycle của một ứng dụng. Concurrency và production tiếp theo kiểm tra lifecycle đó dưới tải, lỗi và giới hạn tài nguyên.
 
 ## Dự án (project / 프로젝트), packaging, testing và thời gian chạy (runtime / 런타임)
 
@@ -123,8 +115,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | hiện thực (implementation / 구현) | Chương trình thực thi Python, ví dụ CPython, PyPy. |
 | trạng thái luồng Python (thread state / 파이썬 스레드 상태) | thời gian chạy (runtime / 런타임) trạng thái (state / 상태) gắn luồng thực thi (thread / 스레드) đang sử dụng Python C API; vẫn cần thiết cả khi chạy free-threaded bản dựng (build / 빌드). |
 | trạng thái theo trình thông dịch (interpreter / 인터프리터) | trạng thái (state / 상태) tách theo trình thông dịch (interpreter / 인터프리터) thay vì dùng singleton process-global trạng thái (state / 상태), quan trọng với subinterpreter/bản địa (native / 네이티브) extension. |
-
-> **Chuyển mạch:** Concurrency và production cho thấy thuật ngữ nào ảnh hưởng trực tiếp tới saturation, shutdown và observability. Phần **Cách dùng** chốt lại bằng ví dụ ngắn để người học tra cứu đúng ngữ cảnh.
 
 ## Tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경)
 
@@ -155,8 +145,6 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 | còn sống (liveness / 생존 상태) | Tín hiệu tiến trình (process / 프로세스) còn khả năng tiến triển; không đồng nghĩa đã sẵn sàng phục vụ. |
 | tắt graceful (graceful shutdown / 정상 종료) | giao thức (protocol / 프로토콜) ngừng nhận công việc (work / 작업) mới, drain/cancel theo chính sách (policy / 정책), đóng tài nguyên (resource / 자원) và exit trong deadline. |
 | giao diện nhị phân ứng dụng (ABI, Application Binary Interface / 애플리케이션 바이너리 인터페이스) | đặc tả hợp đồng (contract / 계약) nhị phân quyết định tính tương thích (compatibility / 호환성) của bản địa (native / 네이티브) extension/wheel với thời gian chạy (runtime / 런타임)/nền tảng (platform / 플랫폼). |
-
-> **Chuyển mạch:** Các ví dụ Cách dùng kiểm tra thuật ngữ trong câu hoàn chỉnh và chỉ ra khi nào nên quay về chapter owner. Đây là điểm kết thúc của glossary, không thay thế phần giải thích chuyên sâu.
 
 ## Cách dùng
 

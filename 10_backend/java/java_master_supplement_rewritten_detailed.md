@@ -10,8 +10,6 @@
 >
 > Baseline phiên bản (version / 버전) của supplement này là **Java 25 LTS** với awareness tới **Java 26**, là bản phát hành (release / 릴리스) mới nhất tại thời điểm cập nhật. Java 26 là non-LTS; Java 25 là LTS hiện tại. Các preview/incubator APIs được đánh dấu rõ để tránh nhầm với API final.
 
-> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed**, **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”** xác định đầu vào; **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)
 
 Master Supplement chỉ nên đọc sau [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md). Đây không phải “Part 3 nhưng nhiều API hơn”; nó là phần bù cho low-level thời gian chạy (runtime / 런타임), khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링) và hiện đại (modern / 현대적) JDK internals. Nếu một chủ đề application-level đã được giải thích đủ ở ba phần trước, tệp (file / 파일) này không lặp lại chỉ để tăng số lượng nội dung.
@@ -2823,8 +2821,6 @@ jar tf
 and inspect actual sản phẩm tạo ra (artifact / 산출물).
 
 ---
-
-> **Chuyển mạch:** Vị trí của Master Supplement xác định prerequisite và phạm vi phiên bản cần giữ. Phần **Java 8 → 11 → 17 → 21** giải thích vì sao các thay đổi runtime và API cũ vẫn ảnh hưởng quyết định hiện tại, rồi bàn giao sang các case vận hành.
 
 ## Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26
 

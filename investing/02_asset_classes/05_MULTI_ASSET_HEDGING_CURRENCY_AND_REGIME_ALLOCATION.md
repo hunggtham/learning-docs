@@ -21,8 +21,6 @@ Biến động
 
 Một danh mục có mười sản phẩm nhưng tất cả cùng hưởng lợi khi lợi suất thực giảm vẫn có thể rất tập trung.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **2. Khung tăng trưởng–lạm phát** nối từ **1. Đa tài sản không đồng nghĩa mua nhiều sản phẩm** sang **3. Chế độ kinh tế là một phân phối xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Khung tăng trưởng–lạm phát
 
 Có thể bắt đầu bằng hai trục tăng trưởng và lạm phát:
@@ -33,8 +31,6 @@ Có thể bắt đầu bằng hai trục tăng trưởng và lạm phát:
 - tăng trưởng giảm, lạm phát cao: đình lạm thường khó cho cả cổ phiếu và trái phiếu dài hạn.
 
 Đây không phải luật cơ học. Định giá ban đầu, vị thế thị trường, phản ứng chính sách và nguyên nhân cú sốc có thể làm kết quả khác lý thuyết.
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **3. Chế độ kinh tế là một phân phối xác suất** nối từ **2. Khung tăng trưởng–lạm phát** sang **4. Rủi ro thời hạn tồn tại ở nhiều nhóm tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Chế độ kinh tế là một phân phối xác suất
 
@@ -50,8 +46,6 @@ Khủng hoảng tín dụng
 
 Phân bổ bền vững không phụ thuộc hoàn toàn vào một dự báo duy nhất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **4. Rủi ro thời hạn tồn tại ở nhiều nhóm tài sản** nối từ **3. Chế độ kinh tế là một phân phối xác suất** sang **5. Tín dụng và cổ phiếu liên kết qua cấu trúc vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Rủi ro thời hạn tồn tại ở nhiều nhóm tài sản
 
 Sau khi phân loại chế độ kinh tế, ta cần nhìn độ nhạy với tỷ lệ chiết khấu xuyên nhiều asset class. Duration không chỉ là nhãn của trái phiếu; nó mô tả khoảng cách tới dòng tiền và cách một cú sốc lãi suất truyền vào giá.
@@ -60,23 +54,17 @@ Sau khi phân loại chế độ kinh tế, ta cần nhìn độ nhạy với t�
 
 Danh mục chứa trái phiếu Kho bạc dài hạn và cổ phiếu tăng trưởng đắt có thể trông đa dạng nhưng cùng chịu tổn thất khi lợi suất thực tăng mạnh.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, sau nội dung của **4. Rủi ro thời hạn tồn tại ở nhiều nhóm tài sản**, **5. Tín dụng và cổ phiếu liên kết qua cấu trúc vốn** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **6. Tiền mặt mang giá trị của quyền lựa chọn** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 5. Tín dụng và cổ phiếu liên kết qua cấu trúc vốn
 
 Trái phiếu lợi suất cao, khoản vay đòn bẩy, tín dụng tư nhân và cổ phiếu đều chịu áp lực khi giá trị doanh nghiệp giảm và khả năng tái cấp vốn xấu đi.
 
 Trong khủng hoảng, **chênh lệch tín dụng (credit spread)** có thể mở rộng trước khi lợi nhuận doanh nghiệp giảm rõ ràng. Tín dụng vì vậy là cầu nối quan trọng giữa kinh tế vĩ mô và cổ phiếu.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **6. Tiền mặt mang giá trị của quyền lựa chọn** nối từ **5. Tín dụng và cổ phiếu liên kết qua cấu trúc vốn** sang **7. Bốn loại tiền tệ cần phân biệt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Tiền mặt mang giá trị của quyền lựa chọn
 
 Tiền mặt có thanh khoản cao và rủi ro thời hạn rất thấp. Nó giúp tránh bán cưỡng bức và tạo khả năng tái cân bằng khi thị trường căng thẳng.
 
 Đổi lại, tiền mặt chịu mất sức mua do lạm phát và chi phí cơ hội. Tỷ trọng tiền mặt nên gắn với nghĩa vụ và lãi suất ngắn hạn thực tế.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **7. Bốn loại tiền tệ cần phân biệt** nối từ **6. Tiền mặt mang giá trị của quyền lựa chọn** sang **8. Phân rã lợi suất ngoại tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Bốn loại tiền tệ cần phân biệt
 
@@ -91,8 +79,6 @@ Trong đầu tư xuyên biên giới nên tách:
 
 ETF niêm yết bằng KRW không có nghĩa tài sản USD bên trong đã mất rủi ro USD.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **8. Phân rã lợi suất ngoại tệ** nối từ **7. Bốn loại tiền tệ cần phân biệt** sang **9. Tiền tệ cũng có thể tạo đa dạng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Phân rã lợi suất ngoại tệ
 
 Khi tài sản và nhà đầu tư dùng hai đồng tiền khác nhau, kết quả phải được tách thành lợi suất tài sản địa phương và lợi suất tỷ giá. Công thức dưới đây giúp thấy khi nào FX khuếch đại, bù trừ hoặc che khuất hiệu quả tài sản cơ sở.
@@ -106,15 +92,11 @@ Lợi suất theo đồng tiền gốc
 
 Nhà đầu tư KRW mua cổ phiếu Mỹ chịu đồng thời biến động của tài sản bằng USD và USD/KRW. Tỷ giá có thể khuếch đại hoặc bù bớt kết quả của tài sản.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **9. Tiền tệ cũng có thể tạo đa dạng hóa** nối từ **8. Phân rã lợi suất ngoại tệ** sang **10. Phòng vệ và không phòng vệ tỷ giá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Tiền tệ cũng có thể tạo đa dạng hóa
 
 USD đôi khi mạnh khi thị trường toàn cầu giảm khẩu vị rủi ro và có thể bù một phần tổn thất của tài sản KRW. Nhưng nếu nghĩa vụ tương lai là KRW, nắm USD quá lớn vẫn tạo lệch tiền tệ.
 
 Vì vậy nên đánh giá rủi ro ở cấp bảng cân đối tổng thể của nhà đầu tư, không chỉ trong tài khoản chứng khoán.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **10. Phòng vệ và không phòng vệ tỷ giá** nối từ **9. Tiền tệ cũng có thể tạo đa dạng hóa** sang **11. Điểm kỳ hạn và cơ sở hoán đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Phòng vệ và không phòng vệ tỷ giá
 
@@ -129,8 +111,6 @@ Phòng vệ không miễn phí. Chi phí kinh tế phụ thuộc:
 
 Không phòng vệ cũng không luôn “rủi ro hơn”, vì tiền tệ nước ngoài có thể đóng vai trò đa dạng hóa ở một số giai đoạn.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **11. Điểm kỳ hạn và cơ sở hoán đổi** nối từ **10. Phòng vệ và không phòng vệ tỷ giá** sang **12. Tỷ lệ phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Điểm kỳ hạn và cơ sở hoán đổi
 
 Phần này giải thích vì sao chi phí hedge không thể lấy đơn giản từ chênh lệch lãi suất niêm yết. Forward points và cross-currency basis phản ánh cả nhu cầu vốn, thanh khoản và giới hạn bảng cân đối của trung gian.
@@ -140,8 +120,6 @@ Phần này giải thích vì sao chi phí hedge không thể lấy đơn giản
 Do đó chi phí phòng vệ không phải một khoản phí cố định.
 
 Kết luận này dẫn tới câu hỏi tiếp theo: nếu chi phí và mục tiêu bảo vệ thay đổi, tỷ lệ hedge nên được đặt theo quy tắc nào?
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **12. Tỷ lệ phòng vệ** nối từ **11. Điểm kỳ hạn và cơ sở hoán đổi** sang **13. Phòng vệ chiến lược và phòng vệ động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Tỷ lệ phòng vệ
 
@@ -157,8 +135,6 @@ Tỷ lệ phòng vệ nên phụ thuộc:
 
 Nghĩa vụ ngắn hạn bằng KRW thường cần mức khớp tiền tệ cao hơn tài sản tăng trưởng dài hạn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **13. Phòng vệ chiến lược và phòng vệ động** nối từ **12. Tỷ lệ phòng vệ** sang **14. Phòng vệ beta bằng hợp đồng tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Phòng vệ chiến lược và phòng vệ động
 
 Trước khi chọn hedge cố định hay thay đổi theo thị trường, cần hiểu trade-off giữa sự ổn định và rủi ro mô hình/timing. Phần này đặt hai cách tiếp cận vào cùng một khung quyết định.
@@ -168,8 +144,6 @@ Trước khi chọn hedge cố định hay thay đổi theo thị trường, c�
 Phòng vệ động thêm rủi ro mô hình, chi phí giao dịch và rủi ro chọn sai thời điểm. Nếu không có lợi thế rõ, quy tắc đơn giản thường dễ duy trì hơn.
 
 Khi quy tắc đã rõ, ta mới có thể đo hedge có thực sự giảm rủi ro cần bảo vệ hay chỉ tạo một exposure mới.
-
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **14. Phòng vệ beta bằng hợp đồng tương lai** nối từ **13. Phòng vệ chiến lược và phòng vệ động** sang **15. Phòng vệ bằng quyền chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Phòng vệ beta bằng hợp đồng tương lai
 
@@ -183,15 +157,11 @@ Số hợp đồng
 
 Beta thay đổi theo thời gian và cấu trúc ngành tạo **rủi ro cơ sở (basis risk)**. Vị thế phòng vệ phải được theo dõi chứ không thể đặt rồi quên.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **15. Phòng vệ bằng quyền chọn** nối từ **14. Phòng vệ beta bằng hợp đồng tương lai** sang **16. Ngân sách phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Phòng vệ bằng quyền chọn
 
 Quyền chọn bán bảo vệ (protective put) cho phép giữ phần tăng giá nhưng phải trả phí quyền chọn. Collar giảm chi phí bằng cách bán quyền chọn mua, đổi lại giới hạn phần tăng. Put spread giảm chi phí nhưng chỉ bảo vệ trong một vùng giá.
 
 Không có bảo hiểm miễn phí; luôn tồn tại đánh đổi giữa chi phí, mức bảo vệ và khả năng tham gia đà tăng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **16. Ngân sách phòng vệ** nối từ **15. Phòng vệ bằng quyền chọn** sang **17. Hiệu quả phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Ngân sách phòng vệ
 
@@ -206,8 +176,6 @@ Khi nào tái tục hoặc giảm phòng vệ?
 
 Không nên đánh giá công cụ phòng vệ chỉ bằng lãi/lỗ riêng của nó. Mục tiêu chính là cải thiện phân phối kết quả của toàn danh mục.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **17. Hiệu quả phòng vệ** nối từ **16. Ngân sách phòng vệ** sang **18. Bảo vệ rủi ro đuôi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Hiệu quả phòng vệ
 
 Hiệu quả phòng vệ không được đo bằng lãi/lỗ riêng của hedge. Câu hỏi đúng là công cụ có làm phân phối kết quả của toàn danh mục bớt xấu trong trạng thái cần bảo vệ hay không.
@@ -218,8 +186,6 @@ Một công cụ có tương quan cao trong thời bình nhưng mất tương qu
 
 Vì vậy, hedge effectiveness phải được kiểm tra theo regime và stress, không chỉ theo tương quan trung bình.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **18. Bảo vệ rủi ro đuôi** nối từ **17. Hiệu quả phòng vệ** sang **19. Phòng vệ lạm phát phải xác định loại lạm phát**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Bảo vệ rủi ro đuôi
 
 Tail hedge là lớp bảo hiểm cho các trạng thái hiếm nhưng gây tổn thất lớn. Nó thường có carry âm trong ngày bình thường, nên cần được đánh giá bằng khả năng giảm bán cưỡng bức và bảo vệ mục tiêu chứ không bằng P/L riêng từng tháng.
@@ -229,8 +195,6 @@ Tail hedge là lớp bảo hiểm cho các trạng thái hiếm nhưng gây tổ
 Giá trị của nó nằm ở khả năng giảm bán cưỡng bức, yêu cầu bổ sung ký quỹ và sai lầm hành vi khi thị trường giảm sâu.
 
 Sau khi phân biệt hedge thường xuyên và hedge đuôi, ta quay lại câu hỏi vai trò của risk parity và các phương pháp phân bổ theo đóng góp rủi ro.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **19. Phòng vệ lạm phát phải xác định loại lạm phát** nối từ **18. Bảo vệ rủi ro đuôi** sang **20. Phòng vệ giảm phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Phòng vệ lạm phát phải xác định loại lạm phát
 
@@ -245,15 +209,11 @@ Cú sốc kéo dài bao lâu?
 Tài sản đã phản ánh bao nhiêu kỳ vọng?
 ```
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **20. Phòng vệ giảm phát** nối từ **19. Phòng vệ lạm phát phải xác định loại lạm phát** sang **21. Hàng hóa trong danh mục đa tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Phòng vệ giảm phát
 
 Trong suy thoái giảm phát với uy tín chính phủ ổn định, tiền mặt và trái phiếu chính phủ chất lượng cao thường hữu ích vì lãi suất giảm và sức mua của tiền danh nghĩa tăng tương đối.
 
 Nếu giảm phát đi cùng khủng hoảng chủ quyền hoặc khủng hoảng tiền tệ, kết quả có thể khác.
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **21. Hàng hóa trong danh mục đa tài sản** nối từ **20. Phòng vệ giảm phát** sang **22. Vàng trong danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Hàng hóa trong danh mục đa tài sản
 
@@ -266,23 +226,17 @@ Lợi suất từ hợp đồng tương lai hàng hóa phụ thuộc:
 
 Do đó lợi suất quỹ hàng hóa không nhất thiết giống biến động giá giao ngay.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **22. Vàng trong danh mục** nối từ **21. Hàng hóa trong danh mục đa tài sản** sang **23. REIT và bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Vàng trong danh mục
 
 Vàng có thể đa dạng hóa rủi ro tiền tệ, địa chính trị và lợi suất thực. Nhưng trong giai đoạn đầu của khủng hoảng thanh khoản, vàng vẫn có thể bị bán để tạo tiền mặt.
 
 Vai trò của vàng nên được đánh giá qua nhiều chế độ, không phải một vài ngày giao dịch.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **23. REIT và bất động sản** nối từ **22. Vàng trong danh mục** sang **24. Danh mục 60/40**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. REIT và bất động sản
 
 REIT có thể hưởng lợi từ tăng tiền thuê nhưng chịu rủi ro tỷ lệ vốn hóa và tái cấp vốn. Lạm phát cao không tự động có lợi nếu lãi suất tăng nhanh hơn thu nhập hoạt động ròng.
 
 Dữ liệu (data / 데이터) center, logistics, văn phòng, nhà ở và bán lẻ có cấu trúc nhu cầu khác nhau nên không nên gom tất cả bất động sản thành một nhóm đồng nhất.
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **24. Danh mục 60/40** nối từ **23. REIT và bất động sản** sang **25. Phân bổ ngang bằng rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Danh mục 60/40
 
@@ -291,8 +245,6 @@ Danh mục 60/40 dùng cổ phiếu cho tăng trưởng và trái phiếu cho th
 Nó hoạt động tốt hơn khi tương quan cổ phiếu–trái phiếu thấp hoặc âm. Trong cú sốc lạm phát, hai nhóm có thể cùng giảm.
 
 Bài học không phải “60/40 đã chết”, mà là tương quan phụ thuộc chế độ và mức lợi suất ban đầu rất quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **25. Phân bổ ngang bằng rủi ro** nối từ **24. Danh mục 60/40** sang **26. Đóng góp rủi ro biên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Phân bổ ngang bằng rủi ro
 
@@ -304,8 +256,6 @@ Risk parity thay đổi góc nhìn từ tỷ trọng vốn sang phần rủi ro 
 
 Để hiểu vì sao một vị thế nhỏ vẫn có thể làm rủi ro tăng nhiều, ta dùng marginal contribution to risk.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **26. Đóng góp rủi ro biên** nối từ **25. Phân bổ ngang bằng rủi ro** sang **27. Tỷ lệ đa dạng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Đóng góp rủi ro biên
 
 MCTR là phép hỏi cận biên: thêm một lượng rất nhỏ tài sản này vào danh mục làm volatility hoặc risk budget thay đổi bao nhiêu. Nó giúp phân biệt tỷ trọng nhìn thấy với rủi ro thực sự được thêm vào.
@@ -315,8 +265,6 @@ MCTR là phép hỏi cận biên: thêm một lượng rất nhỏ tài sản n�
 Từ đó có thể tính đóng góp rủi ro của từng tài sản hoặc từng nhân tố thay vì chỉ nhìn tỷ trọng vốn.
 
 Khi đã biết đóng góp cận biên, ta có thể điều chỉnh quy mô theo volatility mục tiêu nhưng phải đặt giới hạn để tránh mua cao/bán thấp theo cơ học.
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **27. Tỷ lệ đa dạng hóa** nối từ **26. Đóng góp rủi ro biên** sang **28. Phân bổ theo độ biến động mục tiêu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Tỷ lệ đa dạng hóa
 
@@ -330,8 +278,6 @@ Tỷ lệ đa dạng hóa
 
 Tỷ lệ cao hơn có thể cho thấy lợi ích đa dạng hóa lớn hơn, nhưng không phản ánh đầy đủ rủi ro đuôi và thanh khoản.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **28. Phân bổ theo độ biến động mục tiêu** nối từ **27. Tỷ lệ đa dạng hóa** sang **29. Carry và trend**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Phân bổ theo độ biến động mục tiêu
 
 Volatility targeting điều chỉnh exposure theo mức biến động quan sát được. Ưu điểm là giảm quy mô khi rủi ro tăng; nhược điểm là có thể phản ứng muộn và tạo giao dịch thuận chu kỳ.
@@ -344,8 +290,6 @@ Cần giới hạn đòn bẩy, mức sàn/trần và kiểm thử căng thẳng
 
 Carry và trend là hai nguồn lợi suất khác nhau; phần kế tiếp đặt chúng cạnh nhau để thấy điều kiện thuận lợi và điểm dễ đảo chiều.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **29. Carry và trend** nối từ **28. Phân bổ theo độ biến động mục tiêu** sang **30. Tương quan không ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Carry và trend
 
 Carry kiếm lợi từ cấu trúc lợi suất hiện tại, còn trend dựa vào sự tiếp diễn của chuyển động giá. Cả hai cần được đọc cùng chi phí, thanh khoản và regime vì không có nguồn lợi suất nào miễn phí.
@@ -357,8 +301,6 @@ Carry kiếm lợi từ việc nắm tài sản có cấu trúc lợi suất thu
 Hai chiến lược không nên được coi là “lợi suất miễn phí”.
 
 Sau khi phân biệt nguồn lợi suất, hãy kiểm tra tương quan của chúng có ổn định hay cùng tăng trong khủng hoảng hay không.
-
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **30. Tương quan không ổn định** nối từ **29. Carry và trend** sang **31. Đa dạng hóa theo nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Tương quan không ổn định
 
@@ -373,8 +315,6 @@ Kịch bản căng thẳng
 Mức phơi nhiễm nhân tố
 Rủi ro thanh khoản
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **31. Đa dạng hóa theo nhân tố** nối từ **30. Tương quan không ổn định** sang **32. Tối ưu hóa danh mục dễ bị bất ổn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Đa dạng hóa theo nhân tố
 
@@ -391,8 +331,6 @@ Hai tài sản khác tên vẫn có thể chung nhân tố. Ví dụ cổ phiế
 - thanh khoản;
 - biến động.
 
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **32. Tối ưu hóa danh mục dễ bị bất ổn** nối từ **31. Đa dạng hóa theo nhân tố** sang **33. Tối ưu hóa bền vững**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Tối ưu hóa danh mục dễ bị bất ổn
 
 Mô hình trung bình–phương sai có thể cho trọng số cực đoan nếu đầu vào lợi suất kỳ vọng và tương quan chỉ thay đổi một chút.
@@ -405,21 +343,15 @@ Các cách làm bền hơn gồm:
 - phân bổ theo rủi ro;
 - kiểm thử nhiều kịch bản.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **33. Tối ưu hóa bền vững** nối từ **32. Tối ưu hóa danh mục dễ bị bất ổn** sang **34. Định giá là lớp phủ, không phải tín hiệu thời điểm hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Tối ưu hóa bền vững
 
 Tối ưu hóa bền vững (robust optimization) chấp nhận rằng đầu vào không chính xác. Thay vì tìm danh mục tối ưu duy nhất, nó tìm cấu trúc vẫn hợp lý khi giả định thay đổi trong một vùng.
 
 Mục tiêu là giảm lỗi do “tối ưu hóa quá mức trên số liệu lịch sử”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **34. Định giá là lớp phủ, không phải tín hiệu thời điểm hoàn hảo** nối từ **33. Tối ưu hóa bền vững** sang **35. Phân bổ chiến lược và phân bổ chiến thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Định giá là lớp phủ, không phải tín hiệu thời điểm hoàn hảo
 
 Tài sản rẻ có thể tiếp tục rẻ rất lâu. Định giá hữu ích hơn để điều chỉnh lợi suất kỳ vọng dài hạn và mức độ chấp nhận rủi ro, không phải để đoán chính xác tháng đảo chiều.
-
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **35. Phân bổ chiến lược và phân bổ chiến thuật** nối từ **34. Định giá là lớp phủ, không phải tín hiệu thời điểm hoàn hảo** sang **36. Tái cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Phân bổ chiến lược và phân bổ chiến thuật
 
@@ -427,23 +359,17 @@ Phân bổ chiến lược đặt cấu trúc dài hạn. Phân bổ chiến thu
 
 Nếu không có quy tắc và biên độ rõ, phân bổ chiến thuật dễ biến thành đuổi theo thị trường.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **36. Tái cân bằng** nối từ **35. Phân bổ chiến lược và phân bổ chiến thuật** sang **37. “Lợi ích tái cân bằng” không phải phép màu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Tái cân bằng
 
 Tái cân bằng có thể dùng lịch hoặc dải sai lệch.
 
 Một phương pháp thực tế là ưu tiên dùng dòng tiền mới để đưa danh mục về mục tiêu trước khi bán tài sản, giúp giảm chi phí và thuế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **37. “Lợi ích tái cân bằng” không phải phép màu** nối từ **36. Tái cân bằng** sang **38. Thứ bậc thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. “Lợi ích tái cân bằng” không phải phép màu
 
 Tái cân bằng có thể tạo lợi ích khi tài sản biến động và có xu hướng quay về tương đối, nhưng có thể gây hại trong xu hướng kéo dài mạnh.
 
 Vai trò cốt lõi của tái cân bằng là quản trị rủi ro và giữ cấu trúc danh mục, không phải bảo đảm lợi nhuận vượt trội.
-
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **38. Thứ bậc thanh khoản** nối từ **37. “Lợi ích tái cân bằng” không phải phép màu** sang **39. Rủi ro làm mượt giá tài sản tư nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Thứ bậc thanh khoản
 
@@ -458,23 +384,17 @@ Tài sản khóa vốn / tư nhân
 
 Nghĩa vụ ngắn hạn không nên phụ thuộc việc bán tài sản tư nhân ở giá giả định.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **39. Rủi ro làm mượt giá tài sản tư nhân** nối từ **38. Thứ bậc thanh khoản** sang **40. Kết hợp với bảng cân đối hộ gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Rủi ro làm mượt giá tài sản tư nhân
 
 Tài sản tư nhân được định giá ít thường xuyên nên độ biến động báo cáo có thể thấp giả tạo. Khi điều chỉnh về giá thị trường, tương quan thực với cổ phiếu hoặc tín dụng có thể cao hơn số liệu công bố.
 
 Do đó không nên coi độ biến động thấp trên báo cáo là bằng chứng đa dạng hóa mạnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **40. Kết hợp với bảng cân đối hộ gia đình** nối từ **39. Rủi ro làm mượt giá tài sản tư nhân** sang **41. Kiểm thử ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Kết hợp với bảng cân đối hộ gia đình
 
 Danh mục đầu tư không tồn tại tách khỏi lương, nhà ở, nợ và nghĩa vụ tương lai.
 
 Người làm việc trong ngành công nghệ đã có vốn con người nhạy với công nghệ. Nếu đồng thời nắm quá nhiều cổ phiếu công nghệ, mức tập trung kinh tế lớn hơn tỷ trọng tài khoản cho thấy.
-
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **41. Kiểm thử ngược** nối từ **40. Kết hợp với bảng cân đối hộ gia đình** sang **42. Phân rã kết quả danh mục đa tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Kiểm thử ngược
 
@@ -493,8 +413,6 @@ USD/KRW tăng mạnh
 
 Nếu cùng một cú sốc tác động cả tài sản và thu nhập, khả năng chịu rủi ro thấp hơn đánh giá chỉ từ danh mục.
 
-> **Nối mạch:** Ở chặng này của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **42. Phân rã kết quả danh mục đa tài sản** nối từ **41. Kiểm thử ngược** sang **43. Quy trình quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 42. Phân rã kết quả danh mục đa tài sản
 
 Sau một giai đoạn, nên tách kết quả theo:
@@ -511,8 +429,6 @@ Tái cân bằng
 
 Nếu danh mục thắng chỉ vì USD tăng, cần phân biệt điều đó với khả năng lựa chọn tài sản.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **42. Phân rã kết quả danh mục đa tài sản** đặt đầu vào cho **43. Quy trình quyết định**, rồi **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 43. Quy trình quyết định
 
 Trước khi thay đổi phân bổ, hãy trả lời:
@@ -524,8 +440,6 @@ Thay đổi này giảm rủi ro hay chỉ phản ánh dự báo?
 Chi phí giao dịch / thuế / phòng vệ là bao nhiêu?
 Nếu dự báo sai, danh mục còn sống được không?
 ```
-
-> **Nối mạch:** Trong **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế**, **Kết luận** tổng hợp từ **43. Quy trình quyết định** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

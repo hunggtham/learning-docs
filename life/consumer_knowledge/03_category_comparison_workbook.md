@@ -18,8 +18,6 @@ criterion → measurement → source → condition → uncertainty → consequen
 
 Mỗi hàng phải chỉ ra bằng chứng và điều kiện. Review chỉ ra trải nghiệm; test định lượng; warranty và service network cho biết rủi ro sau mua. Không điền điểm khi dữ liệu không tương thích.
 
-> **Chuyển mạch:** Ma trận giúp so sánh minh bạch; bước cuối là sensitivity: nếu một giả định đổi, quyết định có còn giữ không?
-
 ## 3. Quyết định và cập nhật
 
 Viết kết luận theo dạng “chọn A khi…, chọn B khi…, chưa đủ dữ liệu ở…”. Ghi ngày, phiên bản, giá và nguồn. Khi product refresh, policy đổi hoặc nhu cầu đổi, chạy lại những hàng nhạy nhất thay vì sửa một con số trong bảng cũ.

@@ -13,8 +13,6 @@ Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không �
 5. [Fiscal Policy & Business Cycles](./04_fiscal_policy_and_business_cycles.md) — multipliers, automatic stabilizers, trạng thái (state / 상태) dependence, debt dynamics, fiscal không gian (space / 공간), inventory/financial accelerators, RBC/New Keynesian perspectives và fiscal–monetary tương tác (interaction / 상호작용).
 6. [Open Economy, Exchange Rates & Crises](./05_open_economy_exchange_rates_and_crises.md) — balance of payments, `CA = S − I`, nominal/real FX, PPP, interest parity, trilemma, capital flows, currency/maturity mismatch, sudden stops và crisis mechanisms.
 
-> **Chuyển mạch:** Macro spine đi từ measurement sang growth, labor/inflation, money, fiscal policy và open economy; outcomes phải giữ chuỗi stock–flow và mechanism này.
-
 ## Trục học (learning spine / 학습 축)
 
 ```text
@@ -29,15 +27,11 @@ Measurement / accounting identities
 
 Mô-đun (module / 모듈) cố ý bắt đầu bằng đo lường (measurement / 측정) vì macro rất dễ nhầm định danh (identity / 식별자) với lý thuyết (theory / 이론). `S = I + NX`, government ngân sách (budget / 예산) ràng buộc (constraint / 제약조건) hay balance-of-payments equality là accounting structures; chúng không tự nói direction of causality. Nhân quả (causal / 인과적) interpretation phải đi qua behavioral các giả định (assumptions / 가정들), institutional regime và bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Macro outcomes should show measurement, mechanism and policy transmission; the boundary with investing economics keeps aggregate claims separate from asset-pricing decisions.
-
 ## Kết quả cần đạt
 
 Sau mô-đun (module / 모듈) này, người học phải có thể phân biệt stock/luồng (flow / 흐름), nominal/real, gross/net và aggregate/per-capita; đọc GDP/inflation/unemployment mà không bỏ revisions hoặc denominator effects; giải thích vì sao capital accumulation khác productivity growth; tách frictional/structural/cyclical unemployment; đọc inflation qua demand, supply, expectations và markups; dựng balance-sheet lô-gic (logic / 논리) của banks và central bank; đánh giá fiscal multiplier theo trạng thái (state / 상태)/regime; phân tích debt dynamics qua primary balance và `r − g`; đồng thời đọc hiện tại (current / 현재) account, exchange tỷ lệ (rate / 비율) và capital flows qua bên ngoài (external / 외부) balance-sheet exposures thay vì một headline ratio.
 
 Người học cũng phải biết bất định (uncertainty / 불확실성) nằm ở đâu. Potential đầu ra (output / 출력), neutral tỷ lệ (rate / 비율), NAIRU và expected inflation đều không quan sát trực tiếp; chúng là model-dependent estimates. Không dùng một điểm (point / 지점) estimate như fact tuyệt đối.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Macroeconomics**, **Kết quả cần đạt** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Investing Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với Investing Economics
 
@@ -45,21 +39,15 @@ Người học cũng phải biết bất định (uncertainty / 불확실성) n�
 
 Quy tắc là **cross-link, không duplicate**. Khi Investing cần giải thích nguyên lý chung, link về chapter chuẩn gốc (canonical / 정본) tại đây; khi Economics cần market-specific monitoring hoặc investment interpretation, link sang Investing.
 
-> **Chuyển mạch:** Trong **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Investing Economics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Econometrics
 
 Macro mô hình (model / 모델) tạo predictions nhưng nhiều biến endogenous cùng lúc. Ví dụ tỷ lệ (rate / 비율) hike thường xảy ra khi inflation/outlook đã thay đổi, nên correlation giữa tỷ lệ (rate / 비율) và inflation không đo nhân quả (causal / 인과적) tác động (effect / 효과) của chính sách (policy / 정책). Fiscal spending cũng phản ứng với recession, exchange tỷ lệ (rate / 비율) phản ứng với both domestic and toàn cục (global / 전역) shocks.
 
 Vì vậy bước tiếp theo là [Econometrics](../README.md#learning-route-và-coverage-target): đo lường (measurement / 측정) → identification → regression → experiments/quasi-experiments → IV/DiD/panel/thời gian (time / 시간) series. Macro bằng chứng (evidence / 증거) cần đặc biệt chú ý simultaneity, expectations, regime changes và real-time dữ liệu (data / 데이터) revisions.
 
-> **Chuyển mạch:** Ở chặng này của **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Econometrics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Checklist khi đọc một macro claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)
 
 Labor, công khai (public / 공개) finance, trade, development và industrial organization sẽ dùng macro các ràng buộc (constraints / 제약조건들) nhưng cần micro foundations và nhân quả (causal / 인과적) bằng chứng (evidence / 증거) riêng. Economic Lịch sử (history / 이력) & Institutions sẽ dùng macro chuỗi (sequence / 시퀀스) để so sánh growth, crises, monetary regimes và trạng thái (state / 상태) sức chứa (capacity / 용량) qua thời gian; không duplicate chronology từ World Lịch sử (history / 이력).
-
-> **Chuyển mạch:** Boundary with applied economics/history separates aggregate mechanism from domain evidence; the macro-claim checklist then tests unit, horizon, identification and policy channel.
 
 ## Checklist khi đọc một macro claim
 

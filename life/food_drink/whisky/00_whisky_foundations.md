@@ -18,8 +18,6 @@ Với lúa mạch, quá trình tạo malt (malting / 맥아 제조) cho hạt n�
 
 Điểm này rất quan trọng vì nó tạo cầu nối trực tiếp sang bia: trước khi whisky được chưng cất, một phần quá trình của nó có quan hệ gần với việc tạo ra một chất lỏng lên men từ ngũ cốc.
 
-> **Chuyển mạch:** Ngũ cốc chỉ trở thành nguyên liệu men dùng được sau malt và đường hóa; phần lên men tiếp theo tạo rượu cùng các hợp chất hương nhưng chưa tạo whisky hoàn chỉnh.
-
 ## 2. Lên men tạo rượu nhưng chưa tạo whisky hoàn chỉnh
 
 Trong quá trình lên men (fermentation / 발효), men (yeast / 효모) chuyển hóa đường và tạo ethanol, carbon dioxide cùng nhiều hợp chất phụ. Những hợp chất phụ này góp phần tạo mùi trái cây, hoa, ngũ cốc hoặc những đặc tính khác tùy nguyên liệu, chủng men và điều kiện lên men.
@@ -27,8 +25,6 @@ Trong quá trình lên men (fermentation / 발효), men (yeast / 효모) chuyể
 Điều quan trọng là ethanol không phải toàn bộ câu chuyện. Nếu mục tiêu chỉ là tạo ethanol tinh khiết nhất có thể, rất nhiều đặc tính tạo nên phong cách của whisky sẽ mất đi. Nhà sản xuất phải kiểm soát cả lượng ethanol lẫn tập hợp các hợp chất hương vị đi cùng nó.
 
 Sau lên men, chất lỏng vẫn có nồng độ cồn tương đối thấp. Muốn tạo rượu mạnh, ta cần bước tiếp theo: chưng cất.
-
-> **Chuyển mạch:** Lên men tạo nền hóa học cho rượu, còn chưng cất vừa tăng nồng độ vừa chọn lọc thành phần; vì vậy không thể coi nó chỉ là bước “làm mạnh hơn”.
 
 ## 3. Chưng cất không đơn giản là “làm rượu mạnh hơn”
 
@@ -38,8 +34,6 @@ Chưng cất (distillation / 증류) khai thác sự khác nhau về tính bay h
 
 Trong chưng cất theo mẻ, người vận hành thường phải quan tâm đến các phần xuất hiện ở những giai đoạn khác nhau của dòng chưng cất. Phần được giữ để trở thành rượu nền cần cân bằng giữa độ sạch và những hợp chất tạo đặc tính. Chính lựa chọn này góp phần giải thích tại sao hai nhà máy dùng nguyên liệu gần giống nhau vẫn có thể tạo ra rượu nền khác nhau.
 
-> **Chuyển mạch:** Rượu nền đã được chọn lọc nhưng hương vị chưa dừng ở thiết bị chưng cất; thùng gỗ, oxy và môi trường tiếp tục biến đổi nó trong giai đoạn trưởng thành.
-
 ## 4. Thùng gỗ làm gì với whisky?
 
 Sau chưng cất, nhiều loại whisky được đưa vào thùng để trưởng thành (maturation / 숙성). Trong thời gian này, rượu tương tác với gỗ, oxy và môi trường xung quanh. Nó có thể chiết xuất các hợp chất từ gỗ, một số hợp chất biến đổi hoặc phản ứng với nhau, đồng thời một phần chất lỏng bay hơi qua thùng.
@@ -47,8 +41,6 @@ Sau chưng cất, nhiều loại whisky được đưa vào thùng để trưở
 Vì vậy câu “whisky càng lâu năm càng ngon” không phải một quy luật vật lý. Thời gian là một biến quan trọng, nhưng loại thùng, lịch sử sử dụng thùng, khí hậu, vị trí lưu trữ và đặc tính của rượu nền cũng quyết định kết quả. Quá ít thời gian có thể khiến rượu chưa tích hợp tốt; quá nhiều ảnh hưởng của gỗ cũng có thể lấn át những đặc tính khác.
 
 Từ đây ta có thể hiểu vì sao các cụm như thùng bourbon cũ, thùng sherry, thùng mới cháy mặt trong hay hoàn thiện trong thùng khác lại được nhắc nhiều trên nhãn whisky: **thùng không chỉ là vật chứa**.
-
-> **Chuyển mạch:** Thùng giải thích một lớp hương và màu, nhưng các nhãn Scotch, Bourbon, Single Malt và Blended lại phân loại theo những trục pháp lý hoặc sản xuất khác nhau.
 
 ## 5. `Single Malt`, `Blended`, `Scotch`, `Bourbon` không nằm trên cùng một trục
 
@@ -61,8 +53,6 @@ Một nguyên nhân khiến người mới dễ nhầm là các từ trên trả
 Do đó không nên vẽ một cây duy nhất kiểu `Whisky → Scotch → Single Malt → Bourbon`. Các khái niệm có nhiều trục: **quốc gia/quy định**, **nguyên liệu**, **phương pháp sản xuất**, **nguồn nhà chưng cất**, **phối trộn** và **quá trình trưởng thành**.
 
 Chapter tiếp theo của nhánh whisky nên tách riêng các trục này rồi xây lại hệ phân loại một cách có hệ thống. Khi đó những cái tên thường thấy trên chai sẽ trở thành kết quả của quy tắc thay vì một danh sách cần học thuộc.
-
-> **Chuyển mạch:** Khi đã tách được các trục phân loại, người uống mới có thể nối chúng với mùi, vị và hậu vị mà không biến tasting note thành bằng chứng giả về thành phần.
 
 ## 6. Khi uống whisky, ta đang cảm nhận những lớp nào?
 

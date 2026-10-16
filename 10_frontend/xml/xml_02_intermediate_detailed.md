@@ -10,8 +10,6 @@ Phần Intermediate được viết theo đúng luồng (flow / 흐름) đó đ�
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **Không gian tên (namespace / 네임스페이스), DTD, XML lược đồ (schema / 스키마), XPath và các mô hình Parser** đặt đầu vào cho **1. Vấn đề name collision và lý do XML không gian tên (namespace / 네임스페이스) xuất hiện**, rồi **2. Prefix chỉ là alias, không phải định danh (identity / 식별자) thật** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 1. Vấn đề name collision và lý do XML không gian tên (namespace / 네임스페이스) xuất hiện
 
 Giả sử hệ thống của bạn cần kết hợp dữ liệu từ hai lĩnh vực (domain / 도메인). Một lĩnh vực (domain / 도메인) nói về HTML-like document và một lĩnh vực (domain / 도메인) nói về furniture inventory. Cả hai đều dùng element tên `table`:
@@ -48,8 +46,6 @@ Bây giờ hai element có cục bộ (local / 로컬) name giống nhau nhưng 
 
 ---
 
-> **Nối mạch:** Namespace giải quyết collision bằng expanded name; prefix chỉ là alias trong serialization. Phần expanded name tiếp theo cố định identity để parser và application cùng hiểu một element.
-
 ## 2. Prefix chỉ là alias, không phải định danh (identity / 식별자) thật
 
 Đây là một trong những kiến thức quan trọng nhất của XML.
@@ -78,8 +74,6 @@ Một XML serializer thậm chí có thể đọc đầu vào (input / 입력) p
 
 ---
 
-> **Nối mạch:** Prefix chỉ là lexical alias; expanded name mới là `{namespace URI, local name}`, và default namespace tiếp theo áp dụng theo element context.
-
 ## 3. Expanded name
 
 Expanded name là mô hình tư duy (mental model / 사고 모델) bạn nên dùng mọi lúc khi gặp không gian tên (namespace / 네임스페이스).
@@ -103,8 +97,6 @@ Khi bảo mật (security / 보안) hoặc lô-gic nghiệp vụ (business logic
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **4. Default không gian tên (namespace / 네임스페이스)** nối từ **3. Expanded name** sang **5. Default không gian tên (namespace / 네임스페이스) không áp dụng cho unprefixed attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Default không gian tên (namespace / 네임스페이스)
 
 Nếu không muốn viết prefix lặp lại, XML cho phép default không gian tên (namespace / 네임스페이스):
@@ -122,8 +114,6 @@ Trong subtree này, các unprefixed elements `catalog`, `book`, `title` thuộc 
 Điều này làm XML dễ đọc hơn, nhưng cũng gây một trong những bug XPath phổ biến nhất: nhà phát triển (developer / 개발자) thấy nguồn (source / 소스) không có prefix nên tưởng element “không không gian tên (namespace / 네임스페이스)”. Thực tế chúng đang nằm trong default không gian tên (namespace / 네임스페이스).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **5. Default không gian tên (namespace / 네임스페이스) không áp dụng cho unprefixed attributes** nối từ **4. Default không gian tên (namespace / 네임스페이스)** sang **6. không gian tên (namespace / 네임스페이스) phạm vi (scope / 범위) và redeclaration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Default không gian tên (namespace / 네임스페이스) không áp dụng cho unprefixed attributes
 
@@ -160,8 +150,6 @@ Bây giờ `app:id` thuộc không gian tên (namespace / 네임스페이스) `h
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **6. không gian tên (namespace / 네임스페이스) phạm vi (scope / 범위) và redeclaration** nối từ **5. Default không gian tên (namespace / 네임스페이스) không áp dụng cho unprefixed attributes** sang **7. không gian tên (namespace / 네임스페이스) URI có bắt buộc phải mở được như URL không?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. không gian tên (namespace / 네임스페이스) phạm vi (scope / 범위) và redeclaration
 
 Không gian tên (namespace / 네임스페이스) prefix binding có phạm vi (scope / 범위).
@@ -181,8 +169,6 @@ Không gian tên (namespace / 네임스페이스) prefix binding có phạm vi (
 Vì vậy không được scan một tệp (file / 파일) rồi kết luận “prefix `p` luôn nghĩa urn:a”. Binding phải được resolve theo ngữ cảnh (context / 맥락).
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **7. không gian tên (namespace / 네임스페이스) URI có bắt buộc phải mở được như URL không?** nối từ **6. không gian tên (namespace / 네임스페이스) phạm vi (scope / 범위) và redeclaration** sang **8. Prefix xml**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. không gian tên (namespace / 네임스페이스) URI có bắt buộc phải mở được như URL không?
 
@@ -204,8 +190,6 @@ Một sai lầm phổ biến là nghĩ rằng `xmlns="https://example.com/order"
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **8. Prefix xml** nối từ **7. không gian tên (namespace / 네임스페이스) URI có bắt buộc phải mở được như URL không?** sang **9. Tại sao chỉ well-formed vẫn chưa đủ?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Prefix `xml`
 
 Prefix `xml` được dành sẵn cho XML không gian tên (namespace / 네임스페이스) chuẩn và dùng trong:
@@ -220,8 +204,6 @@ xml:id
 Bạn không được tự redefine `xml` sang không gian tên (namespace / 네임스페이스) của mình.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **9. Tại sao chỉ well-formed vẫn chưa đủ?** nối từ **8. Prefix xml** sang **10. DTD là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Tại sao chỉ well-formed vẫn chưa đủ?
 
@@ -241,8 +223,6 @@ Nhưng ứng dụng (application / 애플리케이션) có thể yêu cầu `ord
 ---
 
 # DTD
-
-> **Nối mạch:** Trong **XML — Intermediate**, **10. DTD là gì?** nối từ **9. Tại sao chỉ well-formed vẫn chưa đủ?** sang **11. nội bộ (internal / 내부) DTD và bên ngoài (external / 외부) DTD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. DTD là gì?
 
@@ -275,8 +255,6 @@ DTD nói rằng `note` phải chứa `to`, sau đó `from`, sau đó `body`.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **11. nội bộ (internal / 내부) DTD và bên ngoài (external / 외부) DTD** nối từ **10. DTD là gì?** sang **12. ELEMENT declaration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. nội bộ (internal / 내부) DTD và bên ngoài (external / 외부) DTD
 
 DTD có thể nằm trong chính document:
@@ -297,8 +275,6 @@ Bên ngoài (external / 외부) DTD rất quan trọng về bảo mật (securit
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **12. ELEMENT declaration** nối từ **11. nội bộ (internal / 내부) DTD và bên ngoài (external / 외부) DTD** sang **13. Cardinality trong DTD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. `ELEMENT` declaration
 
 DTD có thể định nghĩa child chuỗi (sequence / 시퀀스):
@@ -312,8 +288,6 @@ DTD có thể định nghĩa child chuỗi (sequence / 시퀀스):
 Nếu thứ tự (order / 순서) đảo lại, document có thể invalid theo DTD dù vẫn well-formed.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **13. Cardinality trong DTD** nối từ **12. ELEMENT declaration** sang **14. Choice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Cardinality trong DTD
 
@@ -341,8 +315,6 @@ nghĩa là phone optional.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **14. Choice** nối từ **13. Cardinality trong DTD** sang **15. #PCDATA**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Choice
 XML content model đã phân biệt element và text; `choice` tiếp theo giới hạn các nhánh hợp lệ trong một vị trí.
 
@@ -353,8 +325,6 @@ XML content model đã phân biệt element và text; `choice` tiếp theo giớ
 nghĩa là contact chứa một trong hai branch.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **15. #PCDATA** nối từ **14. Choice** sang **16. ATTLIST**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. `#PCDATA`
 `choice` mô hình hóa alternative branch; `#PCDATA` tiếp theo làm rõ text node nào được phép xuất hiện trong content model.
@@ -375,8 +345,6 @@ cho phép văn bản (text / 텍스트) xen `em` và `strong`.
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **16. ATTLIST** nối từ **15. #PCDATA** sang **17. Entities trong DTD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. `ATTLIST`
 
 DTD có thể định nghĩa attributes:
@@ -392,8 +360,6 @@ DTD có thể định nghĩa attributes:
 Các từ khóa thường gặp gồm `#REQUIRED`, `#IMPLIED` và `#FIXED`.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **17. Entities trong DTD** nối từ **16. ATTLIST** sang **18. Vì sao DTD không đủ cho nhiều hệ thống enterprise?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Entities trong DTD
 
@@ -415,8 +381,6 @@ Thực thể (entity / 엔터티) hệ thống (system / 시스템) rất mạnh
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **18. Vì sao DTD không đủ cho nhiều hệ thống enterprise?** nối từ **17. Entities trong DTD** sang **19. XSD là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Vì sao DTD không đủ cho nhiều hệ thống enterprise?
 
 DTD có khả năng mô tả cấu trúc (structure / 구조) nhưng hệ kiểu (type system / 타입 시스템) hạn chế, không gian tên (namespace / 네임스페이스) tích hợp (integration / 통합) không tự nhiên và cú pháp (syntax / 문법) riêng. Khi cần decimal, dateTime, typed attributes, reusable complex kiểu (type / 타입) hoặc advanced các ràng buộc (constraints / 제약조건들), XSD thường phù hợp hơn.
@@ -426,8 +390,6 @@ DTD vẫn tồn tại trong nhiều publishing/document các hệ thống (syste
 ---
 
 # XML lược đồ (schema / 스키마) / XSD
-
-> **Nối mạch:** Trong **XML — Intermediate**, **19. XSD là gì?** nối từ **18. Vì sao DTD không đủ cho nhiều hệ thống enterprise?** sang **20. Built-in dữ liệu (data / 데이터) types**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. XSD là gì?
 
@@ -451,8 +413,6 @@ Không gian tên (namespace / 네임스페이스) `http://www.w3.org/2001/XMLSch
 XSD không chỉ nói element nào được nằm ở đâu. Nó còn có hệ thống dữ liệu (data / 데이터) types, reusable types, restrictions, không gian tên (namespace / 네임스페이스) tích hợp (integration / 통합) và định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **19. XSD là gì?** đặt vấn đề; **20. Built-in dữ liệu (data / 데이터) types** đối chiếu bằng chứng, rồi **21. Simple kiểu (type / 타입) và complex kiểu (type / 타입)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Built-in dữ liệu (data / 데이터) types
 
@@ -483,8 +443,6 @@ Bây giờ `price` không còn chỉ là arbitrary văn bản (text / 텍스트)
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **20. Built-in dữ liệu (data / 데이터) types** đặt vấn đề; **21. Simple kiểu (type / 타입) và complex kiểu (type / 타입)** đối chiếu bằng chứng, rồi **22. xs:sequence** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Simple kiểu (type / 타입) và complex kiểu (type / 타입)
 
 Một simple element có thể khai báo trực tiếp:
@@ -512,8 +470,6 @@ Complex kiểu (type / 타입) dùng khi element có children hoặc attributes:
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **22. xs:sequence** nối từ **21. Simple kiểu (type / 타입) và complex kiểu (type / 타입)** sang **23. xs:choice**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. `xs:sequence`
 
 `xs:sequence` nói rằng child elements phải xuất hiện theo thứ tự.
@@ -540,8 +496,6 @@ Nếu đổi `email` trước `name`, có thể invalid.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **23. xs:choice** nối từ **22. xs:sequence** sang **24. xs:all**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. `xs:choice`
 `#PCDATA` đặt boundary cho text content; `xs:choice` chuyển cùng ý tưởng alternative sang XSD type system và validation.
 
@@ -558,8 +512,6 @@ Choice rất hữu ích cho union-like structures nhưng nếu nested choice qu�
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **24. xs:all** nối từ **23. xs:choice** sang **25. minOccurs và maxOccurs**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. `xs:all`
 
 `xs:all` được dùng khi một nhóm elements có thể xuất hiện với thứ tự (order / 순서) linh hoạt hơn `sequence`, trong các ràng buộc (constraints / 제약조건들) mà XSD phiên bản (version / 버전) quy định.
@@ -567,8 +519,6 @@ Choice rất hữu ích cho union-like structures nhưng nếu nested choice qu�
 Điểm quan trọng là đừng nghĩ `xs:all` nghĩa “bất kỳ thứ gì, bao nhiêu lần cũng được”. Nó vẫn có quy tắc (rule / 규칙) về children và occurrence. Nếu cần repeating arbitrary structures, bạn phải đọc đúng XSD mô hình (model / 모델) thay vì suy từ tên `all`.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **25. minOccurs và maxOccurs** nối từ **24. xs:all** sang **26. XSD attribute declaration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. `minOccurs` và `maxOccurs`
 `xs:choice` mô tả các nhánh schema; `minOccurs` và `maxOccurs` tiếp theo định lượng số lần mỗi particle được phép xuất hiện.
@@ -588,8 +538,6 @@ Nếu không ghi, nhiều declarations mặc định 1 occurrence.
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **26. XSD attribute declaration** nối từ **25. minOccurs và maxOccurs** sang **27. Restriction và facets**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. XSD attribute declaration
 Occurrence constraints đặt cardinality cho element; XSD attribute declaration tiếp theo mô tả metadata nằm trên element thay vì child content.
 
@@ -605,8 +553,6 @@ Occurrence constraints đặt cardinality cho element; XSD attribute declaration
 Các cases khác có thể là optional hoặc prohibited tùy ngữ cảnh (context / 맥락).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **27. Restriction và facets** nối từ **26. XSD attribute declaration** sang **28. Enumeration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Restriction và facets
 
@@ -641,8 +587,6 @@ Facets là cách XSD biến generic kiểu (type / 타입) thành domain-specifi
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **28. Enumeration** nối từ **27. Restriction và facets** sang **29. Pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Enumeration
 Attribute declaration bổ sung contract ngoài element content; enumeration tiếp theo giới hạn giá trị vào một tập có tên.
 
@@ -662,8 +606,6 @@ Nhưng hãy nhớ rằng thêm hoặc xóa enum giá trị (value / 값) có th�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **29. Pattern** nối từ **28. Enumeration** sang **30. Named kiểu (type / 타입) và anonymous kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Pattern
 Enumeration kiểm soát vocabulary hữu hạn; pattern tiếp theo mở rộng validation bằng quy tắc lexical thay vì liệt kê từng giá trị.
 
@@ -676,8 +618,6 @@ Mẫu (pattern / 패턴) trong XML lược đồ (schema / 스키마) dùng rege
 Nếu mẫu (pattern / 패턴) là business-critical, đọc rules của XSD regex và kiểm thử (test / 테스트) bằng đúng lược đồ (schema / 스키마) processor.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **30. Named kiểu (type / 타입) và anonymous kiểu (type / 타입)** nối từ **29. Pattern** sang **31. targetNamespace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Named kiểu (type / 타입) và anonymous kiểu (type / 타입)
 
@@ -713,8 +653,6 @@ Việc chọn kiểu nào là một phần của lược đồ (schema / 스키�
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **31. targetNamespace** nối từ **30. Named kiểu (type / 타입) và anonymous kiểu (type / 타입)** sang **32. elementFormDefault**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. `targetNamespace`
 
 Một lược đồ (schema / 스키마) thường định nghĩa vocabulary trong một không gian tên (namespace / 네임스페이스) cụ thể:
@@ -731,8 +669,6 @@ Một lược đồ (schema / 스키마) thường định nghĩa vocabulary tro
 Nếu hiểu sai `targetNamespace`, bạn sẽ gặp lỗi kiểu lược đồ (schema / 스키마) nói `order` tồn tại nhưng validator báo “cannot find declaration” vì instance element không ở không gian tên (namespace / 네임스페이스) đúng.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **32. elementFormDefault** nối từ **31. targetNamespace** sang **33. xs:include và xs:import**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. `elementFormDefault`
 
@@ -755,8 +691,6 @@ namespace declarations của instance
 ```
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **33. xs:include và xs:import** nối từ **32. elementFormDefault** sang **34. xsi:schemaLocation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. `xs:include` và `xs:import`
 
@@ -785,8 +719,6 @@ Dù thực tế XSD có thêm details, mô hình tư duy (mental model / 사고 
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **34. xsi:schemaLocation** nối từ **33. xs:include và xs:import** sang **35. xsi:noNamespaceSchemaLocation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. `xsi:schemaLocation`
 
 XML instance có thể chứa lược đồ (schema / 스키마) location hints:
@@ -806,8 +738,6 @@ XML instance có thể chứa lược đồ (schema / 스키마) location hints:
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **35. xsi:noNamespaceSchemaLocation** nối từ **34. xsi:schemaLocation** sang **36. xsi:nil**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. `xsi:noNamespaceSchemaLocation`
 
 Nếu vocabulary không có không gian tên (namespace / 네임스페이스), instance có thể dùng:
@@ -819,8 +749,6 @@ xsi:noNamespaceSchemaLocation="note.xsd"
 Nó vẫn là lược đồ (schema / 스키마) location hint, không biến untrusted URL thành trusted phụ thuộc (dependency / 의존성).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **36. xsi:nil** nối từ **35. xsi:noNamespaceSchemaLocation** sang **37. XPath là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. `xsi:nil`
 
@@ -852,8 +780,6 @@ Nil, empty và missing có thể có nghiệp vụ (business / 비즈니스) mea
 
 # XPath
 
-> **Nối mạch:** Trong **XML — Intermediate**, **36. xsi:nil** đặt đầu vào cho **37. XPath là gì?**, rồi **38. Absolute path** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 37. XPath là gì?
 
 XPath là ngôn ngữ expression/truy vấn (query / 쿼리) dùng để chọn hoặc tính toán dựa trên XML/XDM.
@@ -884,8 +810,6 @@ Bạn nên hình dung XPath như “đường đi + điều kiện” trên cây
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **37. XPath là gì?** đặt đầu vào cho **38. Absolute path**, rồi **39. //** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. Absolute path
 XML tree và namespace đã rõ; absolute XPath path bắt đầu truy vấn từ root context để kết quả không phụ thuộc vị trí tương đối.
 
@@ -896,8 +820,6 @@ XML tree và namespace đã rõ; absolute XPath path bắt đầu truy vấn t�
 đi từ document/gốc (root / 루트) ngữ cảnh (context / 맥락) tới `library`, sau đó child `book`.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **38. Absolute path** đặt đầu vào cho **39. //**, rồi **40. Attribute selection** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. `//`
 Absolute path cố định root-to-node route; `//` nới truy vấn thành descendant search nhưng cần kiểm soát scope và cost.
@@ -912,8 +834,6 @@ Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (que
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **40. Attribute selection** nối từ **39. //** sang **41. Predicate**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Attribute selection
 `//` tìm descendant theo nhiều mức; attribute selection thu hẹp kết quả vào metadata thay vì node content.
 
@@ -924,8 +844,6 @@ Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (que
 chọn `id` attributes.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **41. Predicate** nối từ **40. Attribute selection** sang **42. Position**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Predicate
 Attribute selection cho biết query đang đọc metadata nào; predicate tiếp theo thêm điều kiện lọc dựa trên value hoặc node relationship.
@@ -939,8 +857,6 @@ chọn book có attribute id bằng `2`.
 Predicate có thể dùng expression phức tạp hơn, không chỉ attribute equality.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **42. Position** nối từ **41. Predicate** sang **43. text()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Position
 Predicate lọc node theo điều kiện; position tiếp theo chọn thứ tự hoặc vị trí trong node set, không phải business identity.
@@ -960,8 +876,6 @@ chọn last book.
 Khi dùng position với `//` hoặc grouped expressions, ngữ cảnh (context / 맥락) có thể khác điều bạn nghĩ. Đây là lý do cấp cao (senior / 시니어) XPath cần hiểu expression evaluation thay vì chỉ ghi nhớ cú pháp (syntax / 문법).
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **43. text()** nối từ **42. Position** sang **44. Wildcard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. `text()`
 Position phụ thuộc thứ tự của kết quả hiện tại; `text()` chuyển truy vấn từ element/attribute sang text node cụ thể.
@@ -986,8 +900,6 @@ String-value của `p` có thể là `"Hello world!"` theo XPath mô hình dữ 
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **44. Wildcard** nối từ **43. text()** sang **45. Các XPath functions thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Wildcard
 `text()` lấy text node, còn wildcard mở rộng name test khi schema hoặc namespace không cần chỉ rõ tên element.
 
@@ -1006,8 +918,6 @@ có thể chọn rất rộng các attributes.
 Wildcard useful nhưng làm truy vấn (query / 쿼리) ít tường minh (explicit / 명시적) hơn, nên chỉ dùng khi vocabulary thực sự cần generic handling.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **44. Wildcard** đặt đầu vào cho **45. Các XPath functions thường gặp**, rồi **46. Default không gian tên (namespace / 네임스페이스) và bug XPath nổi tiếng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 45. Các XPath functions thường gặp
 
@@ -1034,8 +944,6 @@ Ngoài ra còn có `string()`, `position()`, `last()`, `name()`, `local-name()`,
 Chính xác (exact / 정확한) set phụ thuộc XPath phiên bản (version / 버전). Phần cấp cao (senior / 시니어)/Master sẽ chuyển từ XPath 1.0 mô hình tư duy (mental model / 사고 모델) sang XPath 3.x/XDM.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **45. Các XPath functions thường gặp** đặt đầu vào cho **46. Default không gian tên (namespace / 네임스페이스) và bug XPath nổi tiếng**, rồi **47. Vì sao phải có nhiều loại parser?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 46. Default không gian tên (namespace / 네임스페이스) và bug XPath nổi tiếng
 
@@ -1077,8 +985,6 @@ Prefix `b` không cần xuất hiện trong nguồn (source / 소스) XML. Nó c
 
 # Parser các mô hình (models / 모델들)
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **46. Default không gian tên (namespace / 네임스페이스) và bug XPath nổi tiếng** đặt đầu vào cho **47. Vì sao phải có nhiều loại parser?**, rồi **48. DOM** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 47. Vì sao phải có nhiều loại parser?
 
 Một tệp (file / 파일) XML 20 KB và một tệp (file / 파일) XML 10 GB có cùng cú pháp, nhưng cách xử lý tối ưu khác hoàn toàn.
@@ -1088,8 +994,6 @@ Nếu tải (load / 로드) 10 GB thành DOM cây (tree / 트리), bộ nhớ (m
 Ba mô hình bạn nên biết là DOM, SAX và StAX.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **48. DOM** nối từ **47. Vì sao phải có nhiều loại parser?** sang **49. SAX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. DOM
 
@@ -1114,8 +1018,6 @@ DOM rất dễ dùng với XML nhỏ và vừa.
 Nhược điểm là bộ nhớ (memory / 메모리) chi phí (cost / 비용). Mỗi element không chỉ chiếm bytes của nguồn (source / 소스); còn có đối tượng (object / 객체) overhead, strings, pointers, không gian tên (namespace / 네임스페이스) siêu dữ liệu (metadata / 메타데이터) và child collections.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **49. SAX** nối từ **48. DOM** sang **50. StAX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. SAX
 
@@ -1145,8 +1047,6 @@ Ví dụ khi đọc:
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **50. StAX** nối từ **49. SAX** sang **51. Chọn DOM, SAX hay StAX**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 50. StAX
 
 StAX là streaming pull parser phổ biến trong Java ecosystem.
@@ -1165,8 +1065,6 @@ while (reader.hasNext()) {
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **51. Chọn DOM, SAX hay StAX** nối từ **50. StAX** sang **52. Java DOM cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 51. Chọn DOM, SAX hay StAX
 
 Nếu XML nhỏ hoặc vừa và bạn cần random truy cập (access / 접근), XPath hoặc mutation, DOM thường đơn giản nhất.
@@ -1178,8 +1076,6 @@ Trong Java nghiệp vụ (business / 비즈니스) ứng dụng (application / �
 Không nên chọn parser chỉ theo “cái nào nhanh nhất”. Hãy chọn theo truy cập (access / 접근) mẫu (pattern / 패턴) và bộ nhớ (memory / 메모리) yêu cầu (requirement / 요구사항).
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **52. Java DOM cơ bản** nối từ **51. Chọn DOM, SAX hay StAX** sang **53. Java XPath cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Java DOM cơ bản
 
@@ -1204,8 +1100,6 @@ Tuy nhiên đoạn mã (code / 코드) này chưa phải secure parser cấu hì
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **52. Java DOM cơ bản** đặt đầu vào cho **53. Java XPath cơ bản**, rồi **54. Serialization** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 53. Java XPath cơ bản
 Wildcard giúp query linh hoạt nhưng làm scope rộng hơn; Java XPath cơ bản tiếp theo đưa các expression này vào API và lifecycle của một chương trình.
 
@@ -1225,8 +1119,6 @@ Với namespaced XML, bạn cần `NamespaceContext` hoặc cơ chế tương đ
 Không hardcode prefix nguồn (source / 소스) làm nghiệp vụ (business / 비즈니스) định danh (identity / 식별자).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **53. Java XPath cơ bản** đặt đầu vào cho **54. Serialization**, rồi **55. Marshal và unmarshal** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 54. Serialization
 
@@ -1248,8 +1140,6 @@ Nếu đầu ra (output / 출력) có cryptographic yêu cầu (requirement / �
 Một XML serializer được thiết kế đúng tốt hơn nhiều so với nối string thủ công.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **55. Marshal và unmarshal** nối từ **54. Serialization** sang **56. lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) nằm ở đâu trong luồng (flow / 흐름)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Marshal và unmarshal
 
@@ -1276,8 +1166,6 @@ Vì vậy cấp cao (senior / 시니어) không nên nghĩ “có JAXB thì khô
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **55. Marshal và unmarshal** đặt đầu vào cho **56. lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) nằm ở đâu trong luồng (flow / 흐름)?**, rồi **57. Lỗi “lược đồ (schema / 스키마) không tìm thấy declaration”** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 56. lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) nằm ở đâu trong luồng (flow / 흐름)?
 
 Một inbound XML luồng (flow / 흐름) đơn giản có thể là:
@@ -1296,8 +1184,6 @@ XSD kiểm tra structural/kiểu (type / 타입) rules. Nó không thay lô-gic 
 Ví dụ lược đồ (schema / 스키마) có thể nói `amount` là decimal dương, nhưng không biết người dùng (user / 사용자) hiện tại có quyền transfer số tiền đó hay không. Authorization vẫn thuộc ứng dụng (application / 애플리케이션).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **56. lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) nằm ở đâu trong luồng (flow / 흐름)?** đặt đầu vào cho **57. Lỗi “lược đồ (schema / 스키마) không tìm thấy declaration”**, rồi **58. Anti-pattern: trust schemaLocation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 57. Lỗi “lược đồ (schema / 스키마) không tìm thấy declaration”
 
@@ -1331,8 +1217,6 @@ schema source
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **58. Anti-pattern: trust schemaLocation** nối từ **57. Lỗi “lược đồ (schema / 스키마) không tìm thấy declaration”** sang **59. Anti-pattern: DOM cho tệp (file / 파일) khổng lồ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 58. Anti-pattern: trust `schemaLocation`
 
 Nếu untrusted XML nói:
@@ -1348,8 +1232,6 @@ và parser/validator tự fetch URL đó, attacker có thể ảnh hưởng truy
 Môi trường vận hành (production / 운영 환경) ứng dụng (application / 애플리케이션) nên chủ động chọn lược đồ (schema / 스키마) trusted, dùng cục bộ (local / 로컬) registry hoặc resolver. Instance hint không nên tự trở thành authority.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **59. Anti-pattern: DOM cho tệp (file / 파일) khổng lồ** nối từ **58. Anti-pattern: trust schemaLocation** sang **60. Anti-pattern: XPath // ở mọi nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Anti-pattern: DOM cho tệp (file / 파일) khổng lồ
 
@@ -1368,8 +1250,6 @@ Khi dữ liệu (data / 데이터) có cấu trúc (structure / 구조) kiểu:
 streaming parser là lựa chọn tự nhiên.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **59. Anti-pattern: DOM cho tệp (file / 파일) khổng lồ** đặt đầu vào cho **60. Anti-pattern: XPath // ở mọi nơi**, rồi **61. Bài tập tổng hợp Intermediate** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 60. Anti-pattern: XPath `//` ở mọi nơi
 
@@ -1392,8 +1272,6 @@ thường an toàn và dễ rà soát (review / 검토) hơn.
 Đặc biệt trong security-sensitive mã (code / 코드), truy vấn (query / 쿼리) broad có thể chọn wrong nút (node / 노드).
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **61. Bài tập tổng hợp Intermediate** tổng hợp từ **60. Anti-pattern: XPath // ở mọi nơi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **62. mô hình tư duy (mental model / 사고 모델) sau Intermediate** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 61. Bài tập tổng hợp Intermediate
 
@@ -1437,8 +1315,6 @@ Nếu tệp (file / 파일) có 5 triệu `item`, StAX hoặc SAX thường hợ
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **62. mô hình tư duy (mental model / 사고 모델) sau Intermediate** tổng hợp từ **61. Bài tập tổng hợp Intermediate** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **63. xmlns="": reset default không gian tên (namespace / 네임스페이스) trong subtree** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 62. mô hình tư duy (mental model / 사고 모델) sau Intermediate
 
 Sau phần này, XML processing luồng (flow / 흐름) của bạn nên mở rộng thành:
@@ -1463,8 +1339,6 @@ Bạn cũng phải hiểu rằng không gian tên (namespace / 네임스페이�
 
 # PHẦN BỔ SUNG SAU kiểm tra (audit / 감사) — kiểm tra hợp lệ (validation / 검증), không gian tên (namespace / 네임스페이스) VÀ PARSER Ở MỨC THỰC CHIẾN
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **63. xmlns="": reset default không gian tên (namespace / 네임스페이스) trong subtree** tổng hợp từ **62. mô hình tư duy (mental model / 사고 모델) sau Intermediate** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **64. attributeFormDefault và cục bộ (local / 로컬) attributes** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 63. `xmlns=""`: reset default không gian tên (namespace / 네임스페이스) trong subtree
 
 Default không gian tên (namespace / 네임스페이스) có phạm vi (scope / 범위) và có thể được reset. Ví dụ:
@@ -1484,8 +1358,6 @@ Default không gian tên (namespace / 네임스페이스) có phạm vi (scope /
 Đây là một nguồn (source / 소스) bug rất khó nhìn bằng mắt vì cục bộ (local / 로컬) names vẫn giống nhau. Khi DOM/XPath/lược đồ (schema / 스키마) báo không match, hãy inspect không gian tên (namespace / 네임스페이스) URI thực thay vì chỉ nhìn tag văn bản (text / 텍스트).
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **64. attributeFormDefault và cục bộ (local / 로컬) attributes** nối từ **63. xmlns="": reset default không gian tên (namespace / 네임스페이스) trong subtree** sang **65. toàn cục (global / 전역) element và cục bộ (local / 로컬) element không chỉ khác vị trí trong tệp (file / 파일) XSD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. `attributeFormDefault` và cục bộ (local / 로컬) attributes
 
@@ -1511,8 +1383,6 @@ Hai forms có expanded-name khác nhau. Khi validator báo attribute “không �
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **65. toàn cục (global / 전역) element và cục bộ (local / 로컬) element không chỉ khác vị trí trong tệp (file / 파일) XSD** nối từ **64. attributeFormDefault và cục bộ (local / 로컬) attributes** sang **66. XPath có static ngữ cảnh (context / 맥락) và động (dynamic / 동적) ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 65. toàn cục (global / 전역) element và cục bộ (local / 로컬) element không chỉ khác vị trí trong tệp (file / 파일) XSD
 
 Element được khai báo trực tiếp dưới `xs:schema` là toàn cục (global / 전역) declaration và có thể được tham chiếu (reference / 참조)/reuse theo lược đồ (schema / 스키마) rules. Element nằm trong `complexType`/mô hình (model / 모델) group thường là cục bộ (local / 로컬) declaration.
@@ -1522,8 +1392,6 @@ Element được khai báo trực tiếp dưới `xs:schema` là toàn cục (gl
 Cấp cao (senior / 시니어) lược đồ (schema / 스키마) reading vì vậy nên đi từ gốc (root / 루트)/toàn cục (global / 전역) declarations rồi follow kiểu (type / 타입)/tham chiếu (reference / 참조) đồ thị (graph / 그래프), không đọc XSD như một tệp (file / 파일) XML tuyến tính từ trên xuống.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **65. toàn cục (global / 전역) element và cục bộ (local / 로컬) element không chỉ khác vị trí trong tệp (file / 파일) XSD** đặt đầu vào cho **66. XPath có static ngữ cảnh (context / 맥락) và động (dynamic / 동적) ngữ cảnh (context / 맥락)**, rồi **67. local-name() không phải cách chữa không gian tên (namespace / 네임스페이스) đúng mặc định** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 66. XPath có static ngữ cảnh (context / 맥락) và động (dynamic / 동적) ngữ cảnh (context / 맥락)
 
@@ -1543,8 +1411,6 @@ Khi gỡ lỗi (debug / 디버그) XPath, đừng chỉ hỏi “expression đú
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **66. XPath có static ngữ cảnh (context / 맥락) và động (dynamic / 동적) ngữ cảnh (context / 맥락)** đặt đầu vào cho **67. local-name() không phải cách chữa không gian tên (namespace / 네임스페이스) đúng mặc định**, rồi **68. SAX characters() có thể được gọi nhiều lần cho một đoạn văn bản (text / 텍스트)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 67. `local-name()` không phải cách chữa không gian tên (namespace / 네임스페이스) đúng mặc định
 
 Nhà phát triển (developer / 개발자) đôi khi gặp default-namespace bug rồi viết:
@@ -1558,8 +1424,6 @@ Expression này có thể làm truy vấn (query / 쿼리) trả kết quả (re
 Trong generic tooling, `local-name()` có use trường hợp (case / 사례) thật. Nhưng nghiệp vụ (business / 비즈니스)/bảo mật (security / 보안) truy vấn (query / 쿼리) nên bind không gian tên (namespace / 네임스페이스) URI đúng và dùng qualified XPath. “Làm cho truy vấn (query / 쿼리) chạy” không đồng nghĩa “truy vấn (query / 쿼리) đúng ngữ nghĩa (semantic / 의미적)”.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **68. SAX characters() có thể được gọi nhiều lần cho một đoạn văn bản (text / 텍스트)** nối từ **67. local-name() không phải cách chữa không gian tên (namespace / 네임스페이스) đúng mặc định** sang **69. StAX sự kiện (event / 이벤트) mô hình (model / 모델) và namespace-aware reading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. SAX `characters()` có thể được gọi nhiều lần cho một đoạn văn bản (text / 텍스트)
 
@@ -1577,8 +1441,6 @@ Handler đúng thường accumulate văn bản (text / 텍스트) trong `StringB
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **69. StAX sự kiện (event / 이벤트) mô hình (model / 모델) và namespace-aware reading** nối từ **68. SAX characters() có thể được gọi nhiều lần cho một đoạn văn bản (text / 텍스트)** sang **70. XSD kiểm tra hợp lệ (validation / 검증) trong Java: SchemaFactory → Schema → Validator**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 69. StAX sự kiện (event / 이벤트) mô hình (model / 모델) và namespace-aware reading
 
 Với StAX, ứng dụng (application / 애플리케이션) chủ động pull events như `START_ELEMENT`, `CHARACTERS`, `END_ELEMENT`. Khi gặp `START_ELEMENT`, hãy đọc `QName`/không gian tên (namespace / 네임스페이스) URI/cục bộ (local / 로컬) part thay vì chỉ `getLocalName()` nếu vocabulary có không gian tên (namespace / 네임스페이스).
@@ -1588,8 +1450,6 @@ Văn bản (text / 텍스트) cũng có thể cần accumulate qua nhiều chara
 Streaming mã (code / 코드) có ít bộ nhớ (memory / 메모리) nhưng đổi lại bạn phải quản lý trạng thái (state / 상태) chính xác hơn DOM.
 
 ---
-
-> **Nối mạch:** Trong **XML — Intermediate**, **70. XSD kiểm tra hợp lệ (validation / 검증) trong Java: SchemaFactory → Schema → Validator** nối từ **69. StAX sự kiện (event / 이벤트) mô hình (model / 모델) và namespace-aware reading** sang **71. kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) mô hình (model / 모델): warning, lỗi (error / 오류), fatal lỗi (error / 오류) và line/column**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. XSD kiểm tra hợp lệ (validation / 검증) trong Java: `SchemaFactory` → `Schema` → `Validator`
 
@@ -1613,8 +1473,6 @@ Môi trường vận hành (production / 운영 환경) mã (code / 코드) còn
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **71. kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) mô hình (model / 모델): warning, lỗi (error / 오류), fatal lỗi (error / 오류) và line/column** nối từ **70. XSD kiểm tra hợp lệ (validation / 검증) trong Java: SchemaFactory → Schema → Validator** sang **72. kiểm tra hợp lệ (validation / 검증) không nên bị trộn với nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 71. kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) mô hình (model / 모델): warning, lỗi (error / 오류), fatal lỗi (error / 오류) và line/column
 
 XML APIs thường expose lỗi kèm locator thông tin (information / 정보) như line và column. Với SAX-style `ErrorHandler`, bạn có các mức như warning, lỗi (error / 오류) và fatal lỗi (error / 오류) theo parser/validator ngữ nghĩa (semantics / 의미론).
@@ -1631,8 +1489,6 @@ XSD_VALIDATION_ERROR at /order/item[3]/price
 để nhà phát triển (developer / 개발자) không mất thời gian tìm lỗi lược đồ (schema / 스키마) trong khi document còn chưa well-formed. Với sensitive payload, log ngữ cảnh (context / 맥락) vừa đủ chứ không dump toàn document.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **72. kiểm tra hợp lệ (validation / 검증) không nên bị trộn với nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증)** nối từ **71. kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) mô hình (model / 모델): warning, lỗi (error / 오류), fatal lỗi (error / 오류) và line/column** sang **73. Validate trước ánh xạ (mapping / 매핑) hay validate trong lúc ánh xạ (mapping / 매핑)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. kiểm tra hợp lệ (validation / 검증) không nên bị trộn với nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증)
 
@@ -1654,8 +1510,6 @@ Phân tầng làm lỗi (error / 오류) message rõ hơn, kiểm thử (test / 
 
 ---
 
-> **Nối mạch:** Trong **XML — Intermediate**, **73. Validate trước ánh xạ (mapping / 매핑) hay validate trong lúc ánh xạ (mapping / 매핑)?** nối từ **72. kiểm tra hợp lệ (validation / 검증) không nên bị trộn với nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증)** sang **74. kiểm thử (test / 테스트) XML parser/validator bằng negative cases, không chỉ happy đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 73. Validate trước ánh xạ (mapping / 매핑) hay validate trong lúc ánh xạ (mapping / 매핑)?
 
 Không có một chuỗi xử lý (pipeline / 파이프라인) duy nhất cho mọi thư viện (library / 라이브러리). Có hệ thống parse/validate rồi mới unmarshal; có binding khung phần mềm (framework / 프레임워크) tích hợp lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) trong unmarshal; có streaming chuỗi xử lý (pipeline / 파이프라인) validate và consume gần như cùng lúc.
@@ -1666,8 +1520,6 @@ Với tệp (file / 파일) cực lớn, việc bản dựng (build / 빌드) DO
 
 ---
 
-> **Nối mạch:** Ở chặng này của **XML — Intermediate**, **73. Validate trước ánh xạ (mapping / 매핑) hay validate trong lúc ánh xạ (mapping / 매핑)?** nêu quy tắc; **74. kiểm thử (test / 테스트) XML parser/validator bằng negative cases, không chỉ happy đường dẫn (path / 경로)** thử quy tắc trong tình huống, rồi **75. mô hình tư duy (mental model / 사고 모델) Intermediate sau kiểm tra (audit / 감사)** mở rộng hệ quả.
-
 ## 74. kiểm thử (test / 테스트) XML parser/validator bằng negative cases, không chỉ happy đường dẫn (path / 경로)
 
 Một bộ kiểm thử (test suite / 테스트 스위트) tốt không chỉ có một tệp (file / 파일) valid. Hãy có fixtures cho wrong không gian tên (namespace / 네임스페이스), missing required element, wrong thứ tự (order / 순서), invalid datatype, nil/empty/missing, duplicate ID, unexpected extension, malformed XML, huge văn bản (text / 텍스트) nút (node / 노드), deep nesting và external-entity payload.
@@ -1675,8 +1527,6 @@ Một bộ kiểm thử (test suite / 테스트 스위트) tốt không chỉ c�
 Mục tiêu không phải “kiểm thử (test / 테스트) XML tiêu chuẩn (standard / 표준)”, mà là verify **chính xác (exact / 정확한) parser + chính xác (exact / 정확한) cấu hình (configuration / 구성) + chính xác (exact / 정확한) lược đồ (schema / 스키마) phiên bản (version / 버전)** của ứng dụng (application / 애플리케이션) xử lý ranh giới (boundary / 경계) như bạn nghĩ. Parser defaults và hiện thực (implementation / 구현) phiên bản (version / 버전) khác nhau có thể thay hành vi (behavior / 동작) bảo mật (security / 보안)/hiệu năng (performance / 성능).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Intermediate**, **74. kiểm thử (test / 테스트) XML parser/validator bằng negative cases, không chỉ happy đường dẫn (path / 경로)** cho ta quy tắc; **75. mô hình tư duy (mental model / 사고 모델) Intermediate sau kiểm tra (audit / 감사)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 75. mô hình tư duy (mental model / 사고 모델) Intermediate sau kiểm tra (audit / 감사)
 

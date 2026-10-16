@@ -8,8 +8,6 @@
 >
 > Các tư duy kiểu cấp cao (senior / 시니어), lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구), mẫu lập trình (programming pattern / 프로그래밍 패턴) và mẫu thiết kế (design pattern / 디자인 패턴) được hòa vào nội dung. Khi một mẫu (pattern / 패턴) được nhắc tên, nó được giải thích cùng sự đánh đổi (trade-off / 트레이드오프) và dạng thất bại (failure mode / 실패 모드) thay vì xuất hiện như một checklist để học thuộc.
 
-> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**, **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** xác định đầu vào; **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)
 
 Part 3 giả định bạn đã đọc [Java Part 2 — Intermediate](./java_part2_intermediate_rewritten_detailed.md). Mục tiêu là đưa kiến thức Java sang môi trường vận hành (production / 운영 환경): Java bộ nhớ (memory / 메모리) mô hình (model / 모델) sâu hơn, luồng thực thi (thread / 스레드)/executor saturation, JVM/JIT/GC, profiling, cơ sở dữ liệu (database / 데이터베이스)/HTTP tài nguyên (resource / 자원) boundaries, API tính tương thích (compatibility / 호환성) và sự cố (incident / 인시던트) debugging. Những internals quá thấp như AQS, VarHandle, agents, Class-File API và FFM được để cho [Java Master Supplement](./java_master_supplement_rewritten_detailed.md) để không làm hỏng mạch học (learning flow / 학습 흐름).
@@ -1304,8 +1302,6 @@ Run continuous low-overhead recording where chính sách (policy / 정책) allow
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**, cơ chế trong **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** cần được kiểm chứng bằng dấu vết cụ thể; **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck
 
 Profiling không phải mở một profiler rồi nhìn flame đồ thị (graph / 그래프) cho mọi vấn đề. Trước hết hãy phân loại symptom. Nếu CPU cao, CPU sampling/JFR là điểm bắt đầu tốt. Nếu CPU thấp nhưng độ trễ (latency / 지연 시간) cao, hãy nhìn luồng thực thi (thread / 스레드) states, socket/DB waits, connection-pool acquisition, tranh chấp khóa (lock contention / 잠금 경합) và phân tán (distributed / 분산) dấu vết (trace / 추적). Nếu GC CPU/pause cao, cần allocation profile, live-set/vùng nhớ động (heap / 힙) occupancy và GC events. Nếu RSS tăng nhưng vùng nhớ động (heap / 힙) ổn, vùng nhớ động (heap / 힙) profiler một mình không đủ; phải xét direct buffers, luồng thực thi (thread / 스레드) stacks, metaspace và bản địa (native / 네이티브) bộ nhớ (memory / 메모리).
@@ -2498,8 +2494,6 @@ Don't only thay đổi (change / 변경) `<java.version>`.
 Run tests, phụ thuộc (dependency / 의존성) tính tương thích (compatibility / 호환성), hiệu năng (performance / 성능) baseline, GC/JFR, startup, bộ chứa (container / 컨테이너) bộ nhớ (memory / 메모리) and deprecated/nội bộ (internal / 내부) API scans.
 
 ---
-
-> **Chuyển mạch:** Profiling chỉ có ý nghĩa khi chọn evidence theo bottleneck; phần phiên bản Java đặt kết quả đó vào các thay đổi runtime từ 8 đến 21. Hai khối này cùng dẫn tới quyết định vận hành có thể kiểm chứng, không phải danh sách release note.
 
 ## Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer
 

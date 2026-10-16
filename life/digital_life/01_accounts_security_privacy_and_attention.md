@@ -14,15 +14,11 @@ Năm lớp dưới đây không phải danh sách thuật ngữ rời; mỗi l�
 
 Một ứng dụng có thể bảo mật tài khoản nhưng vẫn dùng thông báo để tối đa hóa thời gian sử dụng; một dịch vụ có thể riêng tư hơn nhưng khôi phục kém. Phân loại đúng giúp chọn biện pháp đúng.
 
-> **Chuyển mạch:** Khi tài sản đã tách, thiết kế phòng vệ phải đi theo failure mode: xác thực và recovery cho quyền, mã hóa và phân quyền cho bí mật, audit cho toàn vẹn, giảm thu thập và giới hạn lưu trữ cho riêng tư, còn setting và thói quen cho sự chú ý.
-
 ## 2. Account recovery là một phần của bảo mật
 
 Mật khẩu mạnh không đủ nếu email khôi phục, số điện thoại hoặc thiết bị tin cậy bị chiếm. Hãy lập bản đồ đường khôi phục và hỏi: nếu mất thiết bị chính, còn kênh nào; nếu mất email, ai có thể đổi mật khẩu; nếu tài khoản bị khóa, dữ liệu có bản sao ngoài dịch vụ không?
 
 Xác thực nhiều yếu tố giảm một số rủi ro nhưng không loại bỏ phishing, lộ session hoặc cấp quyền cho ứng dụng độc hại. Biện pháp phải đặt tại điểm failure tương ứng.
-
-> **Chuyển mạch:** Quyền truy cập cần recovery; riêng tư cần data minimization, giới hạn retention và kiểm tra bên thứ ba nhận dữ liệu.
 
 ## 3. Quản lý chú ý cũng là quản lý hệ thống
 

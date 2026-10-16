@@ -37,8 +37,6 @@ Retirement criteria
 
 Nếu chiến lược (strategy / 전략) spec vẫn thay đổi mỗi tuần theo recent P/L, forward kiểm thử (test / 테스트) không còn independent kiểm tra hợp lệ (validation / 검증).
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **2. Paper/demo phase có mục tiêu gì?** nối từ **1. Promotion gate từ backtest sang forward kiểm thử (test / 테스트)** sang **3. Small-live phase**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Paper/demo phase có mục tiêu gì?
 
 Paper/demo không chủ yếu để chứng minh profitability.
@@ -57,8 +55,6 @@ Reconciliation
 ```
 
 Demo thực thi (execution / 실행) có thể optimistic hơn live, nên không dùng demo slippage làm final chi phí (cost / 비용) estimate.
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **3. Small-live phase** nối từ **2. Paper/demo phase có mục tiêu gì?** sang **4. Quy mô (scale / 규모) only by bằng chứng (evidence / 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Small-live phase
 
@@ -79,8 +75,6 @@ platform incidents
 
 Mục tiêu là calibrate **backtest-to-live gap**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **3. Small-live phase** đặt vấn đề; **4. Quy mô (scale / 규모) only by bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **5. Live trạng thái (state / 상태) must be authoritative** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 4. Quy mô (scale / 규모) only by bằng chứng (evidence / 증거)
 
 Quy mô (scale / 규모) gate có thể yêu cầu:
@@ -94,8 +88,6 @@ strategy behavior consistent with expected distribution
 ```
 
 Không quy mô (scale / 규모) chỉ vì vài trade đầu thắng.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **4. Quy mô (scale / 규모) only by bằng chứng (evidence / 증거)** đặt vấn đề; **5. Live trạng thái (state / 상태) must be authoritative** đối chiếu bằng chứng, rồi **6. Reconciliation vòng lặp (loop / 루프)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Live trạng thái (state / 상태) must be authoritative
 
@@ -113,8 +105,6 @@ External Authoritative State
 
 Nếu khác, không assume nội bộ (internal / 내부) hệ thống (system / 시스템) đúng.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **6. Reconciliation vòng lặp (loop / 루프)** nối từ **5. Live trạng thái (state / 상태) must be authoritative** sang **7. Unknown trạng thái (state / 상태) is a real trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Reconciliation vòng lặp (loop / 루프)
 
 Regularly compare:
@@ -131,8 +121,6 @@ margin
 ```
 
 Mismatch becomes tường minh (explicit / 명시적) sự cố (incident / 인시던트).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **7. Unknown trạng thái (state / 상태) is a real trạng thái (state / 상태)** nối từ **6. Reconciliation vòng lặp (loop / 루프)** sang **8. Idempotency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Unknown trạng thái (state / 상태) is a real trạng thái (state / 상태)
 
@@ -153,8 +141,6 @@ ORDER_STATE_UNKNOWN
 
 then truy vấn (query / 쿼리) broker/thứ tự (order / 순서) lịch sử (history / 이력) before hành động (action / 동작).
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **8. Idempotency** nối từ **7. Unknown trạng thái (state / 상태) is a real trạng thái (state / 상태)** sang **9. Duplicate-order prevention**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Idempotency
 
 If API supports máy khách (client / 클라이언트) thứ tự (order / 순서) ID, generate stable unique ID.
@@ -170,8 +156,6 @@ same intent
 
 where supported.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **9. Duplicate-order prevention** nối từ **8. Idempotency** sang **10. Heartbeat**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Duplicate-order prevention
 
 Nhánh học (track / 트랙):
@@ -186,8 +170,6 @@ intended_quantity
 
 Before new send, check whether same intent already has active/filled thứ tự (order / 순서).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **10. Heartbeat** nối từ **9. Duplicate-order prevention** sang **11. Stale-data detection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Heartbeat
 
 Hệ thống (system / 시스템) needs liveness tín hiệu (signal / 신호) for:
@@ -201,8 +183,6 @@ clock synchronization
 ```
 
 Missing heartbeat should trigger degraded trạng thái (state / 상태), not silent continuation.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **11. Stale-data detection** nối từ **10. Heartbeat** sang **12. Clock synchronization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Stale-data detection
 
@@ -222,8 +202,6 @@ block new risk
 
 and decide whether existing positions require manual/automated safe hành động (action / 동작).
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **12. Clock synchronization** nối từ **11. Stale-data detection** sang **13. Data-quality kill điều kiện (condition / 조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Clock synchronization
 
 Event-driven các hệ thống (systems / 시스템들) need synchronized clocks.
@@ -239,8 +217,6 @@ session filters
 reconciliation
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **13. Data-quality kill điều kiện (condition / 조건)** nối từ **12. Clock synchronization** sang **14. Pre-trade kill switch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Data-quality kill điều kiện (condition / 조건)
 
 Examples:
@@ -254,8 +230,6 @@ macro event feed delayed
 ```
 
 Do not trade through unknown dữ liệu (data / 데이터) trạng thái (state / 상태) by default.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **14. Pre-trade kill switch** nối từ **13. Data-quality kill điều kiện (condition / 조건)** sang **15. Daily mất mát (loss / 손실) limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Pre-trade kill switch
 
@@ -273,8 +247,6 @@ CLOSE_ALL
 HALTED
 ```
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **14. Pre-trade kill switch** đặt tiêu chí; **15. Daily mất mát (loss / 손실) limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. Drawdown limit** mở rộng hệ quả.
-
 ## 15. Daily mất mát (loss / 손실) limit
 
 A daily mất mát (loss / 손실) limit is operational guardrail, not proof chiến lược (strategy / 전략) is bad.
@@ -288,8 +260,6 @@ review state
 
 Do not automatically increase kích thước (size / 크기) to recover.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **15. Daily mất mát (loss / 손실) limit** đặt tiêu chí; **16. Drawdown limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Gross leverage limit** mở rộng hệ quả.
-
 ## 16. Drawdown limit
 
 Portfolio drawdown threshold can trigger:
@@ -302,8 +272,6 @@ full research review
 
 Threshold should reflect expected phân phối (distribution / 분포) and bất định (uncertainty / 불확실성).
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **16. Drawdown limit** đặt tiêu chí; **17. Gross leverage limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **18. Currency-factor limit** mở rộng hệ quả.
-
 ## 17. Gross leverage limit
 
 Monitor continuously:
@@ -314,8 +282,6 @@ Gross Leverage = Σ|notional| / equity
 
 Equity drop can cause leverage limit breach without any new thứ tự (order / 순서).
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **17. Gross leverage limit** đặt tiêu chí; **18. Currency-factor limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **19. Margin utilization limit** mở rộng hệ quả.
-
 ## 18. Currency-factor limit
 
 If USD short exposure exceeds cap because several strategies align:
@@ -325,8 +291,6 @@ block additional USD-short risk
 ```
 
 even if each chiến lược (strategy / 전략) individually remains within position limit.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **18. Currency-factor limit** đặt tiêu chí; **19. Margin utilization limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **20. Margin-policy thay đổi (change / 변경)** mở rộng hệ quả.
 
 ## 19. Margin utilization limit
 
@@ -342,8 +306,6 @@ free_margin
 margin_level
 ```
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **19. Margin utilization limit** đặt tiêu chí; **20. Margin-policy thay đổi (change / 변경)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **21. Slippage drift** mở rộng hệ quả.
-
 ## 20. Margin-policy thay đổi (change / 변경)
 
 Broker may thay đổi (change / 변경) requirements.
@@ -354,8 +316,6 @@ On notification or detected thay đổi (change / 변경):
 recompute all projected margins
 stress before accepting new positions
 ```
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **21. Slippage drift** nối từ **20. Margin-policy thay đổi (change / 변경)** sang **22. Spread drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Slippage drift
 
@@ -374,8 +334,6 @@ by event flag
 
 Persistent deterioration may erase edge before gross P/L reveals it clearly.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **22. Spread drift** nối từ **21. Slippage drift** sang **23. Rejection-rate monitoring**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Spread drift
 
 Nhánh học (track / 트랙) live spread phân phối (distribution / 분포) against backtest dữ liệu (data / 데이터).
@@ -385,8 +343,6 @@ If live spread materially worse:
 ```text
 estimated net expectancy must be recomputed
 ```
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **23. Rejection-rate monitoring** nối từ **22. Spread drift** sang **24. Fill-rate monitoring for limits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Rejection-rate monitoring
 
@@ -401,8 +357,6 @@ broker restrictions
 
 Do not treat rejected thứ tự (order / 순서) as zero-cost missing observation.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **23. Rejection-rate monitoring** đặt tiêu chí; **24. Fill-rate monitoring for limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **25. Hiện thực (implementation / 구현) shortfall dashboard** mở rộng hệ quả.
-
 ## 24. Fill-rate monitoring for limits
 
 Limit-order chiến lược (strategy / 전략) may look profitable if backtest assumes fills too easily.
@@ -416,8 +370,6 @@ actual fill rate
 ```
 
 by thị trường (market / 시장) regime.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **24. Fill-rate monitoring for limits** đặt tiêu chí; **25. Hiện thực (implementation / 구현) shortfall dashboard** dùng tiêu chí đó để kiểm tra ranh giới, rồi **26. P/L reconciliation** mở rộng hệ quả.
 
 ## 25. Hiện thực (implementation / 구현) shortfall dashboard
 
@@ -436,8 +388,6 @@ Financing
 
 Aggregate to see where edge leaks.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **26. P/L reconciliation** nối từ **25. Hiện thực (implementation / 구현) shortfall dashboard** sang **27. Chiến lược (strategy / 전략) expected phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. P/L reconciliation
 
 Daily:
@@ -454,8 +404,6 @@ Opening Equity
 
 Differences beyond rounding threshold become sự cố (incident / 인시던트).
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **27. Chiến lược (strategy / 전략) expected phân phối (distribution / 분포)** nối từ **26. P/L reconciliation** sang **28. Hiệu năng (performance / 성능) drift**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Chiến lược (strategy / 전략) expected phân phối (distribution / 분포)
 
 Before live, freeze expected ranges for:
@@ -471,8 +419,6 @@ max losing streak distribution
 ```
 
 Use ranges, not one chính xác (exact / 정확한) forecast.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **28. Hiệu năng (performance / 성능) drift** nối từ **27. Chiến lược (strategy / 전략) expected phân phối (distribution / 분포)** sang **29. Tính năng (feature / 기능) drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Hiệu năng (performance / 성능) drift
 
@@ -491,8 +437,6 @@ regime mix
 
 Avoid overreacting to noise.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **29. Tính năng (feature / 기능) drift** nối từ **28. Hiệu năng (performance / 성능) drift** sang **30. Regime drift**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Tính năng (feature / 기능) drift
 
 If tín hiệu (signal / 신호) tính năng (feature / 기능) phân phối (distribution / 분포) shifts far from huấn luyện (training / 학습) lịch sử (history / 이력):
@@ -502,8 +446,6 @@ strategy may be extrapolating
 ```
 
 Monitor quantiles/phạm vi (range / 범위)/out-of-distribution flags.
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **30. Regime drift** nối từ **29. Tính năng (feature / 기능) drift** sang **31. Data-source drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Regime drift
 
@@ -521,8 +463,6 @@ trend strength
 liquidity/spread state
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **30. Regime drift** đặt vấn đề; **31. Data-source drift** đối chiếu bằng chứng, rồi **32. Mô hình (model / 모델) versioning** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 31. Data-source drift
 
 Vendor can thay đổi (change / 변경) methodology or symbol ánh xạ (mapping / 매핑).
@@ -538,8 +478,6 @@ missing fields
 
 Mô hình (model / 모델) drift may actually be dữ liệu (data / 데이터) drift.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **31. Data-source drift** đặt vấn đề; **32. Mô hình (model / 모델) versioning** đối chiếu bằng chứng, rồi **33. Controlled cấu hình (configuration / 구성) changes** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 32. Mô hình (model / 모델) versioning
 
 Every live thứ tự (order / 순서) should map to:
@@ -551,8 +489,6 @@ risk_model_version
 ```
 
 If cấu hình (config / 설정) changes intraday, preserve chính xác (exact / 정확한) effective thời gian (time / 시간).
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **33. Controlled cấu hình (configuration / 구성) changes** nối từ **32. Mô hình (model / 모델) versioning** sang **34. Secret management**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Controlled cấu hình (configuration / 구성) changes
 
@@ -571,8 +507,6 @@ approval if applicable
 
 For personal hệ thống (system / 시스템), “who” may be one person; kiểm tra (audit / 감사) still matters.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **34. Secret management** nối từ **33. Controlled cấu hình (configuration / 구성) changes** sang **35. Withdrawal permission**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Secret management
 
 API keys must not be committed to repo or logs.
@@ -587,15 +521,11 @@ live credentials
 
 Use least privilege if provider supports it.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **35. Withdrawal permission** nối từ **34. Secret management** sang **36. Môi trường (environment / 환경) separation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Withdrawal permission
 
 Trading API generally should not need withdrawal permission.
 
 If provider offers permission scopes, avoid unnecessary fund-transfer năng lực (capability / 역량).
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **36. Môi trường (environment / 환경) separation** nối từ **35. Withdrawal permission** sang **37. Tường minh (explicit / 명시적) live flag is not enough**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Môi trường (environment / 환경) separation
 
@@ -610,15 +540,11 @@ LIVE_SCALED
 
 Do not let research notebook accidentally send live orders.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **37. Tường minh (explicit / 명시적) live flag is not enough** nối từ **36. Môi trường (environment / 환경) separation** sang **38. Max thứ tự (order / 순서) kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Tường minh (explicit / 명시적) live flag is not enough
 
 Prefer separate credentials/endpoints/accounts over one Boolean `LIVE=true` where possible.
 
 Reduce catastrophic operator lỗi (error / 오류).
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **38. Max thứ tự (order / 순서) kích thước (size / 크기)** nối từ **37. Tường minh (explicit / 명시적) live flag is not enough** sang **39. Price sanity check**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Max thứ tự (order / 순서) kích thước (size / 크기)
 
@@ -632,15 +558,11 @@ independent of chiến lược (strategy / 전략) calculation.
 
 This catches đơn vị (unit / 단위) bugs such as 10,000 vs 1,000,000.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **39. Price sanity check** nối từ **38. Max thứ tự (order / 순서) kích thước (size / 크기)** sang **40. Position sanity check**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Price sanity check
 
 Reject thứ tự (order / 순서) if proposed price/tham chiếu (reference / 참조) deviates excessively from hiện tại (current / 현재) validated thị trường (market / 시장) trạng thái (state / 상태).
 
 Avoid sending nonsensical orders after stale/decimal bug.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **40. Position sanity check** nối từ **39. Price sanity check** sang **41. Tỷ lệ (rate / 비율) limiting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Position sanity check
 
@@ -654,8 +576,6 @@ must stay within hard an toàn (safety / 안전) bound even if chiến lược (
 
 Defense in độ sâu (depth / 깊이) matters.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **40. Position sanity check** đặt tiêu chí; **41. Tỷ lệ (rate / 비율) limiting** dùng tiêu chí đó để kiểm tra ranh giới, rồi **42. Kill switch trigger categories** mở rộng hệ quả.
-
 ## 41. Tỷ lệ (rate / 비율) limiting
 
 Cap:
@@ -667,8 +587,6 @@ retries/order
 ```
 
 Prevents runaway loops.
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **41. Tỷ lệ (rate / 비율) limiting** đặt tiêu chí; **42. Kill switch trigger categories** dùng tiêu chí đó để kiểm tra ranh giới, rồi **43. Kill switch hành động (action / 동작) must be predefined** mở rộng hệ quả.
 
 ## 42. Kill switch trigger categories
 
@@ -707,8 +625,6 @@ unknown positions
 process instability
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **43. Kill switch hành động (action / 동작) must be predefined** nối từ **42. Kill switch trigger categories** sang **44. Avoid blind close-all**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 43. Kill switch hành động (action / 동작) must be predefined
 
 Trigger without hành động (action / 동작) is incomplete.
@@ -724,8 +640,6 @@ notify human?
 require manual resume?
 ```
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **44. Avoid blind close-all** nối từ **43. Kill switch hành động (action / 동작) must be predefined** sang **45. Manual override**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Avoid blind close-all
 
 In some crisis states, thị trường (market / 시장) orders to close all may create worse mất mát (loss / 손실) than controlled reduction.
@@ -739,8 +653,6 @@ NO_NEW_RISK
 + reconcile
 + assess executable liquidity
 ```
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **45. Manual override** nối từ **44. Avoid blind close-all** sang **46. Broker outage plan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Manual override
 
@@ -756,8 +668,6 @@ time
 
 Avoid repeated emotional pause/resume based only on recent P/L.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **46. Broker outage plan** nối từ **45. Manual override** sang **47. Internet/thiết bị (device / 장치) thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Broker outage plan
 
 Know:
@@ -772,8 +682,6 @@ emergency contact
 
 Do not promise tools that provider does not offer; document actual account options.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **47. Internet/thiết bị (device / 장치) thất bại (failure / 실패)** nối từ **46. Broker outage plan** sang **48. Tiến trình (process / 프로세스) supervision**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 47. Internet/thiết bị (device / 장치) thất bại (failure / 실패)
 
 For cục bộ (local / 로컬) personal hệ thống (system / 시스템), plan:
@@ -786,8 +694,6 @@ process crash
 
 Use broker-side protective orders where appropriate, but remember stop thực thi (execution / 실행) is not guaranteed price.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **47. Internet/thiết bị (device / 장치) thất bại (failure / 실패)** đặt đầu vào cho **48. Tiến trình (process / 프로세스) supervision**, rồi **49. Checkpoint trạng thái (state / 상태)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 48. Tiến trình (process / 프로세스) supervision
 
 Trọng yếu (critical / 중요) services need restart/alert chính sách (policy / 정책).
@@ -795,8 +701,6 @@ Trọng yếu (critical / 중요) services need restart/alert chính sách (poli
 But automatic restart after crash must first reconcile bên ngoài (external / 외부) trạng thái (state / 상태).
 
 Never restart and assume no orders filled during downtime.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **48. Tiến trình (process / 프로세스) supervision** đặt đầu vào cho **49. Checkpoint trạng thái (state / 상태)**, rồi **50. Alert severity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 49. Checkpoint trạng thái (state / 상태)
 
@@ -812,8 +716,6 @@ risk snapshot
 
 After restart, compare with broker before continuing.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **50. Alert severity** nối từ **49. Checkpoint trạng thái (state / 상태)** sang **51. Monitoring dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 50. Alert severity
 
 Example:
@@ -826,8 +728,6 @@ HALT
 ```
 
 Not every warning should wake operator; trọng yếu (critical / 중요) trạng thái (state / 상태) should be unmistakable.
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **51. Monitoring dashboard** nối từ **50. Alert severity** sang **52. Research vs môi trường vận hành (production / 운영 환경) metrics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Monitoring dashboard
 
@@ -848,8 +748,6 @@ Today's costs
 Slippage vs model
 Active kill-switch state
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **52. Research vs môi trường vận hành (production / 운영 환경) metrics** nối từ **51. Monitoring dashboard** sang **53. Promotion from small-live to scaled**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Research vs môi trường vận hành (production / 운영 환경) metrics
 
@@ -873,8 +771,6 @@ data freshness
 
 A profitable mô hình (model / 모델) with unreliable môi trường vận hành (production / 운영 환경) chuỗi xử lý (pipeline / 파이프라인) is not deployable.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **53. Promotion from small-live to scaled** nối từ **52. Research vs môi trường vận hành (production / 운영 환경) metrics** sang **54. Scaling changes chiến lược (strategy / 전략) hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 53. Promotion from small-live to scaled
 
 Require bằng chứng (evidence / 증거) such as:
@@ -889,8 +785,6 @@ No material unexplained P/L
 
 Quy mô (scale / 규모) gradually.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **54. Scaling changes chiến lược (strategy / 전략) hành vi (behavior / 동작)** nối từ **53. Promotion from small-live to scaled** sang **55. Sức chứa (capacity / 용량) monitoring**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 54. Scaling changes chiến lược (strategy / 전략) hành vi (behavior / 동작)
 
 Larger kích thước (size / 크기) can cause:
@@ -904,8 +798,6 @@ capacity limit
 
 Do not assume small-live thực thi (execution / 실행) scales linearly.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **55. Sức chứa (capacity / 용량) monitoring** nối từ **54. Scaling changes chiến lược (strategy / 전략) hành vi (behavior / 동작)** sang **56. Pause quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 55. Sức chứa (capacity / 용량) monitoring
 
 As kích thước (size / 크기) grows, nhánh học (track / 트랙):
@@ -917,8 +809,6 @@ slippage vs size
 ```
 
 Stop scaling when marginal hiện thực (implementation / 구현) chi phí (cost / 비용) consumes expected edge.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **56. Pause quy tắc (rule / 규칙)** nối từ **55. Sức chứa (capacity / 용량) monitoring** sang **57. Retirement quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Pause quy tắc (rule / 규칙)
 
@@ -935,8 +825,6 @@ regulatory/product term change
 
 Pause is research trạng thái (state / 상태), not punishment.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **57. Retirement quy tắc (rule / 규칙)** nối từ **56. Pause quy tắc (rule / 규칙)** sang **58. Do not retire only because drawdown hurts**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 57. Retirement quy tắc (rule / 규칙)
 
 Predefine retirement conditions before chiến lược (strategy / 전략) loses money.
@@ -951,8 +839,6 @@ market access/product changes
 risk exceeds mandate
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **58. Do not retire only because drawdown hurts** nối từ **57. Retirement quy tắc (rule / 규칙)** sang **59. Chiến lược (strategy / 전략) post-mortem**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 58. Do not retire only because drawdown hurts
 
 Drawdown may be within expected phân phối (distribution / 분포).
@@ -960,8 +846,6 @@ Drawdown may be within expected phân phối (distribution / 분포).
 Compare actual hành vi (behavior / 동작) with pre-defined expectation.
 
 Likewise, do not keep chiến lược (strategy / 전략) just because “it always comes back”.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **59. Chiến lược (strategy / 전략) post-mortem** nối từ **58. Do not retire only because drawdown hurts** sang **60. Sự cố (incident / 인시던트) post-mortem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Chiến lược (strategy / 전략) post-mortem
 
@@ -979,8 +863,6 @@ Operational incidents
 Decision errors
 Conclusion
 ```
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **60. Sự cố (incident / 인시던트) post-mortem** nối từ **59. Chiến lược (strategy / 전략) post-mortem** sang **61. Experiment/live linkage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Sự cố (incident / 인시던트) post-mortem
 
@@ -1000,8 +882,6 @@ Test added
 
 No blame ngôn ngữ (language / 언어) needed; focus hệ thống (system / 시스템) mechanics.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **61. Experiment/live linkage** nối từ **60. Sự cố (incident / 인시던트) post-mortem** sang **62. Forward-test report**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 61. Experiment/live linkage
 
 Every live chiến lược (strategy / 전략) phiên bản (version / 버전) should điểm (point / 지점) to research experiment approved for triển khai (deployment / 배포).
@@ -1013,8 +893,6 @@ live_strategy_version
 ```
 
 This closes research-to-production lineage.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **62. Forward-test report** nối từ **61. Experiment/live linkage** sang **63. Backtest-to-live gap classification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Forward-test report
 
@@ -1037,8 +915,6 @@ P/L distribution
 fill rate
 ```
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **63. Backtest-to-live gap classification** nối từ **62. Forward-test report** sang **64. Operational rehearsal**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 63. Backtest-to-live gap classification
 
 When live differs, categorize:
@@ -1056,8 +932,6 @@ Unknown
 
 Avoid changing mô hình (model / 모델) until gap is understood.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **64. Operational rehearsal** nối từ **63. Backtest-to-live gap classification** sang **65. Khôi phục (recovery / 복구) criterion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 64. Operational rehearsal
 
 Before scaling, intentionally kiểm thử (test / 테스트):
@@ -1074,8 +948,6 @@ kill switch
 
 A điều khiển (control / 제어) not rehearsed may thất bại (fail / 실패) when needed.
 
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **65. Khôi phục (recovery / 복구) criterion** nối từ **64. Operational rehearsal** sang **66. Weekend/reopen plan**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 65. Khôi phục (recovery / 복구) criterion
 
 After HALT, resumption requires checklist:
@@ -1088,8 +960,6 @@ Risk within limits
 Root cause understood enough
 System tests pass
 ```
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **66. Weekend/reopen plan** nối từ **65. Khôi phục (recovery / 복구) criterion** sang **67. Scheduled-event chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Weekend/reopen plan
 
@@ -1106,8 +976,6 @@ must be tường minh (explicit / 명시적).
 
 If no weekend holding, verify hệ thống (system / 시스템) actually closes before provider schedule with enough liquidity buffer.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **67. Scheduled-event chế độ (mode / 모드)** nối từ **66. Weekend/reopen plan** sang **68. Regulation/product-term monitoring**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 67. Scheduled-event chế độ (mode / 모드)
 
 Before CPI/FOMC/BOK-type events, rủi ro (risk / 위험) chính sách (policy / 정책) may:
@@ -1119,8 +987,6 @@ widen modeled cost assumptions
 ```
 
 only if chiến lược (strategy / 전략) spec says so. Do not improvise sự kiện (event / 이벤트) rules live.
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **68. Regulation/product-term monitoring** nối từ **67. Scheduled-event chế độ (mode / 모드)** sang **69. Monitoring retention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Regulation/product-term monitoring
 
@@ -1138,8 +1004,6 @@ broker legal entity
 
 Especially for Korea/Vietnam-specific ngữ cảnh (context / 맥락), verify hiện tại (current / 현재) official rules.
 
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **69. Monitoring retention** nối từ **68. Regulation/product-term monitoring** sang **70. Completion criteria**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 69. Monitoring retention
 
 Store logs long enough to investigate:
@@ -1155,8 +1019,6 @@ incident
 
 Avoid sensitive secret/đơn vị từ (token / 토큰) logging.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **70. Completion criteria** nối từ **69. Monitoring retention** sang **Deliverables**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 70. Completion criteria
 
 Dự án (project / 프로젝트) is not complete until you can demonstrate:
@@ -1170,8 +1032,6 @@ System records live implementation shortfall
 System can enter safe state
 System has pre-defined promotion/pause/retirement rules
 ```
-
-> **Nối mạch:** Trong **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **Deliverables** nối từ **70. Completion criteria** sang **Kết thúc dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deliverables
 
@@ -1188,8 +1048,6 @@ incident_runbook.md
 strategy_retirement_rule.md
 forward_test_report.md
 ```
-
-> **Nối mạch:** Ở chặng này của **04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX**, **Kết thúc dự án (project / 프로젝트)** nối từ **Deliverables** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết thúc dự án (project / 프로젝트)
 

@@ -49,8 +49,6 @@ nghĩa là:
 
 Nếu `A/B` tăng, A mạnh lên tương đối với B. Nếu `A/B` giảm, A yếu đi tương đối với B.
 
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **2. Long và short một currency pair nghĩa là gì?** nối từ **1. Cơ sở (base / 기반) currency và quote currency** sang **3. Bid và ask**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Long và short một currency pair nghĩa là gì?
 
 ### Long EUR/USD
@@ -77,8 +75,6 @@ Bạn có lợi nếu EUR giảm giá tương đối so với USD.
 
 Đây là lý do mọi FX position đều chứa **hai currency exposures**. Nói “tôi long EUR” khi thực tế long EUR/USD là chưa đầy đủ; bạn long EUR **against USD**.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **3. Bid và ask** nối từ **2. Long và short một currency pair nghĩa là gì?** sang **4. Spread**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Bid và ask
 
 Một quote executable có hai phía, ví dụ:
@@ -104,8 +100,6 @@ Sell / open short → thường khớp gần Bid
 ```
 
 Nếu ngay lập tức đóng position mà thị trường (market / 시장) không thay đổi, bạn thường chịu spread.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **4. Spread** nối từ **3. Bid và ask** sang **5. Pip là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Spread
 
@@ -137,8 +131,6 @@ commission
 ```
 
 Vì vậy một chiến lược (strategy / 전략) gross-profitable có thể net-unprofitable sau chi phí.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **5. Pip là gì?** nối từ **4. Spread** sang **6. Lot là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Pip là gì?
 
@@ -184,8 +176,6 @@ decimal cuối cùng `0.00001` tương ứng 1/10 pip theo convention phổ bi�
 
 Không nên hard-code convention mà không kiểm tra đặc tả hợp đồng (contract / 계약) specification, đặc biệt với exotic pair hoặc sản phẩm (product / 제품) khác FX spot convention.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **6. Lot là gì?** nối từ **5. Pip là gì?** sang **7. Notional là exposure, không phải số tiền ký quỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Lot là gì?
 
 Trong retail FX, **lot** thường là cách biểu diễn trade kích thước (size / 크기) theo số units của cơ sở (base / 기반) currency.
@@ -206,8 +196,6 @@ Ví dụ:
 ```
 
 Nhưng `lot` là **đặc tả hợp đồng (contract / 계약) convention**, không phải định luật tự nhiên. Broker hoặc instrument khác có thể dùng đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) khác. Luôn đọc specification.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **7. Notional là exposure, không phải số tiền ký quỹ** nối từ **6. Lot là gì?** sang **8. Công thức P/L cơ bản khi quote currency là currency bạn muốn tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Notional là exposure, không phải số tiền ký quỹ
 
@@ -233,8 +221,6 @@ quy đổi theo USD tại thời điểm đó xấp xỉ:
 ```
 
 Nếu broker chỉ yêu cầu margin vài nghìn USD, exposure vẫn là khoảng 112.000 USD. Margin không biến position thành một investment nhỏ hơn; nó chỉ cho phép collateral nhỏ hơn notional.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **8. Công thức P/L cơ bản khi quote currency là currency bạn muốn tính** nối từ **7. Notional là exposure, không phải số tiền ký quỹ** sang **9. Ví dụ EUR/USD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Công thức P/L cơ bản khi quote currency là currency bạn muốn tính
 
@@ -265,8 +251,6 @@ P/L_B = Signed_Q × (Exit - Entry)
 ```
 
 với `Signed_Q > 0` cho long và `< 0` cho short.
-
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **8. Công thức P/L cơ bản khi quote currency là currency bạn muốn tính** nêu quy tắc; **9. Ví dụ EUR/USD** thử quy tắc trong tình huống, rồi **10. Pip giá trị (value / 값) được suy ra, không cần học thuộc** mở rộng hệ quả.
 
 ## 9. Ví dụ EUR/USD
 
@@ -307,8 +291,6 @@ Pip Value
 
 50 pips × 10 USD = 500 USD.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **9. Ví dụ EUR/USD** nêu quy tắc; **10. Pip giá trị (value / 값) được suy ra, không cần học thuộc** thử quy tắc trong tình huống, rồi **11. JPY pair: vì sao pip giá trị (value / 값) khác?** mở rộng hệ quả.
-
 ## 10. Pip giá trị (value / 값) được suy ra, không cần học thuộc
 
 Với pair `A/B`:
@@ -333,8 +315,6 @@ Ví dụ `100,000 GBP` trên GBP/USD:
 ```
 
 Điểm quan trọng là pip giá trị (value / 값) phụ thuộc trade kích thước (size / 크기) và quote convention.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **11. JPY pair: vì sao pip giá trị (value / 값) khác?** nối từ **10. Pip giá trị (value / 값) được suy ra, không cần học thuộc** sang **12. Khi account currency khác quote currency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. JPY pair: vì sao pip giá trị (value / 값) khác?
 
@@ -370,8 +350,6 @@ thì:
 
 Pip giá trị (value / 값) theo USD do đó thay đổi khi USD/JPY thay đổi. Đây là lý do không nên học thuộc “1 lot luôn = 10 USD/pip”. Điều đó chỉ đúng cho một số cấu trúc pair/account currency nhất định.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **12. Khi account currency khác quote currency** nối từ **11. JPY pair: vì sao pip giá trị (value / 값) khác?** sang **13. Cross currency pair**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Khi account currency khác quote currency
 
 Giả sử account bằng KRW nhưng trade EUR/USD.
@@ -402,8 +380,6 @@ Instrument P/L currency
 
 Nếu account currency khác cả cơ sở (base / 기반) lẫn quote, đừng bỏ qua bước conversion.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **13. Cross currency pair** nối từ **12. Khi account currency khác quote currency** sang **14. Khi nào chia thay vì nhân?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Cross currency pair
 
 Một **cross** là pair không dùng USD trực tiếp, ví dụ EUR/JPY hay EUR/GBP.
@@ -427,8 +403,6 @@ EUR/JPY
 ```
 
 Thực tế executable cross phải xử lý bid/ask đúng phía, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và venue differences. Nhưng phép nhân này cho thấy cross tỷ lệ (rate / 비율) không phải một con số tách rời khỏi hệ thống FX.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **14. Khi nào chia thay vì nhân?** nối từ **13. Cross currency pair** sang **15. Đơn vị (unit / 단위) phân tích (analysis / 분석) giúp tránh nhầm công thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Khi nào chia thay vì nhân?
 
@@ -466,8 +440,6 @@ Cách tốt nhất không phải học công thức nhân/chia, mà kiểm tra �
 USD cancels out
 ```
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **14. Khi nào chia thay vì nhân?** đặt tiêu chí; **15. Đơn vị (unit / 단위) phân tích (analysis / 분석) giúp tránh nhầm công thức** dùng tiêu chí đó để đối chiếu ranh giới, rồi **16. Direct quote và indirect quote** mở rộng hệ quả.
-
 ## 15. Đơn vị (unit / 단위) phân tích (analysis / 분석) giúp tránh nhầm công thức
 
 Viết quote như fraction của units:
@@ -488,8 +460,6 @@ USD bị triệt tiêu, còn lại JPY per EUR → chính là EUR/JPY quote.
 
 Cách đơn vị (unit / 단위) phân tích (analysis / 분석) này đáng tin hơn học thuộc mnemonic.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **15. Đơn vị (unit / 단위) phân tích (analysis / 분석) giúp tránh nhầm công thức** đặt tiêu chí; **16. Direct quote và indirect quote** dùng tiêu chí đó để đối chiếu ranh giới, rồi **17. Percentage return và pip move không phải cùng một thứ** mở rộng hệ quả.
-
 ## 16. Direct quote và indirect quote
 
 Khái niệm direct/indirect phụ thuộc home currency của người quan sát.
@@ -504,8 +474,6 @@ USD/KRW
 là cách trực tiếp biểu diễn một USD trị giá bao nhiêu KRW.
 
 Trong tài liệu quốc tế, các pair conventions đã được thị trường (market / 시장) tiêu chuẩn (standard / 표준) hóa theo ticker, nên khi trading tốt hơn hết đọc cơ sở (base / 기반)/quote rõ ràng thay vì phụ thuộc vào từ “direct” có thể gây nhầm theo viewpoint.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **17. Percentage return và pip move không phải cùng một thứ** nối từ **16. Direct quote và indirect quote** sang **18. Price return của pair và return của currency không hoàn toàn đối xứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Percentage return và pip move không phải cùng một thứ
 
@@ -525,8 +493,6 @@ là `100 pips`, nhưng percentage move gần:
 USD/JPY đi `100 pips` nghĩa là thay đổi `1.00` JPY, nhưng percentage move còn tùy starting mức (level / 수준).
 
 Do đó so volatility giữa pair chỉ bằng số pip có thể gây sai. Percentage return hoặc normalized volatility thường phù hợp hơn cho cross-asset/rủi ro (risk / 위험) phân tích (analysis / 분석).
-
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **18. Price return của pair và return của currency không hoàn toàn đối xứng** nối từ **17. Percentage return và pip move không phải cùng một thứ** sang **19. Gross P/L khác net P/L**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Price return của pair và return của currency không hoàn toàn đối xứng
 
@@ -556,8 +522,6 @@ ln(A/B return) = -ln(B/A return)
 
 Điều này quan trọng ở phần quantitative research sau này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **19. Gross P/L khác net P/L** nối từ **18. Price return của pair và return của currency không hoàn toàn đối xứng** sang **20. Rollover / financing làm P/L thay đổi theo thời gian giữ lệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Gross P/L khác net P/L
 
 Ví dụ chiến lược (strategy / 전략) tạo gross profit:
@@ -584,8 +548,6 @@ Net:
 
 Một backtest bỏ chi phí (cost / 비용) đang mô hình hóa một thị trường không tồn tại.
 
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **20. Rollover / financing làm P/L thay đổi theo thời gian giữ lệnh** nối từ **19. Gross P/L khác net P/L** sang **21. XAU/USD không phải currency pair theo nghĩa giống EUR/USD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Rollover / financing làm P/L thay đổi theo thời gian giữ lệnh
 
 Leveraged FX position giữ qua rollover có thể phát sinh financing debit hoặc credit tùy sản phẩm (product / 제품), currency-rate relationship và broker terms.
@@ -608,8 +570,6 @@ vì retail financing còn phụ thuộc:
 
 Luôn đọc swap/financing specification thực tế.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **21. XAU/USD không phải currency pair theo nghĩa giống EUR/USD** nối từ **20. Rollover / financing làm P/L thay đổi theo thời gian giữ lệnh** sang **22. Từ lot đến rủi ro (risk / 위험): còn thiếu stop distance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. XAU/USD không phải currency pair theo nghĩa giống EUR/USD
 
 Retail nền tảng (platform / 플랫폼) thường đặt `XAU/USD` cạnh Forex pairs. XAU là mã (code / 코드) cho gold, nên:
@@ -628,8 +588,6 @@ XAU/USD
 cho XAU/USD.
 
 Cần kiểm tra đặc tả hợp đồng (contract / 계약) kích thước (size / 크기), tick kích thước (size / 크기), margin, financing và price nguồn (source / 소스) riêng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **22. Từ lot đến rủi ro (risk / 위험): còn thiếu stop distance** nối từ **21. XAU/USD không phải currency pair theo nghĩa giống EUR/USD** sang **23. Công thức sizing từ allowed mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Từ lot đến rủi ro (risk / 위험): còn thiếu stop distance
 
@@ -664,8 +622,6 @@ position size
 ```
 
 Đây là cầu nối sang chương leverage và position sizing.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **23. Công thức sizing từ allowed mất mát (loss / 손실)** nối từ **22. Từ lot đến rủi ro (risk / 위험): còn thiếu stop distance** sang **24. Slippage phá vỡ giả định (assumption / 가정) “stop = chính xác (exact / 정확한) mất mát (loss / 손실)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Công thức sizing từ allowed mất mát (loss / 손실)
 
@@ -723,8 +679,6 @@ Broker offers 1:100 leverage
 → maximize lot size
 ```
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **24. Slippage phá vỡ giả định (assumption / 가정) “stop = chính xác (exact / 정확한) mất mát (loss / 손실)”** nối từ **23. Công thức sizing từ allowed mất mát (loss / 손실)** sang **25. Portfolio exposure có thể ẩn sau nhiều pair**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Slippage phá vỡ giả định (assumption / 가정) “stop = chính xác (exact / 정확한) mất mát (loss / 손실)”
 
 Nếu stop ở 25 pips, expected mất mát (loss / 손실) theo sizing có thể là 100 USD. Nhưng stop thứ tự (order / 순서) không bảo đảm fill đúng trigger price trong mọi thị trường (market / 시장) điều kiện (condition / 조건).
@@ -739,8 +693,6 @@ actual fill = 40 pips away
 Actual mất mát (loss / 손실) khi đó lớn hơn modeled mất mát (loss / 손실).
 
 Vì vậy rủi ro (risk / 위험) sizing phải có an toàn (safety / 안전) margin cho instrument/sự kiện (event / 이벤트) regime phù hợp, và không được coi stop-loss là hard guarantee.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **25. Portfolio exposure có thể ẩn sau nhiều pair** nối từ **24. Slippage phá vỡ giả định (assumption / 가정) “stop = chính xác (exact / 정확한) mất mát (loss / 손실)”** sang **26. Một cách ghi position rõ ràng hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Portfolio exposure có thể ẩn sau nhiều pair
 
@@ -763,8 +715,6 @@ Rủi ro (risk / 위험) không nên tính đơn giản:
 vì positions có thể cùng chịu USD factor shock.
 
 Cần phân rã exposure theo currencies/factors.
-
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **26. Một cách ghi position rõ ràng hơn** nối từ **25. Portfolio exposure có thể ẩn sau nhiều pair** sang **27. Những nhầm lẫn cần loại bỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Một cách ghi position rõ ràng hơn
 
@@ -791,8 +741,6 @@ Account currency: USD
 
 Journal như vậy nối trade notation với actual economic exposure.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **26. Một cách ghi position rõ ràng hơn** đặt tiêu chí; **27. Những nhầm lẫn cần loại bỏ** dùng tiêu chí đó để đối chiếu ranh giới, rồi **28. Ví dụ tính P/L** mở rộng hệ quả.
-
 ## 27. Những nhầm lẫn cần loại bỏ
 
 ### “1 lot = 100.000 USD”
@@ -814,8 +762,6 @@ Không đúng nếu chưa sizing position dựa trên account rủi ro (risk / �
 ### “100 pips trên mọi pair có cùng economic rủi ro (risk / 위험)”
 
 Sai. Pip kích thước (size / 크기), pip giá trị (value / 값), volatility và percentage move khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **27. Những nhầm lẫn cần loại bỏ** đặt tiêu chí; **28. Ví dụ tính P/L** dùng tiêu chí đó để đối chiếu ranh giới, rồi **29. Checklist trước khi sang leverage/margin** mở rộng hệ quả.
 
 ## 28. Ví dụ tính P/L
 
@@ -851,8 +797,6 @@ Base units ≈ 5 / 0.0001 = 50,000 EUR
 
 Approximate kích thước (size / 크기) = 0.5 tiêu chuẩn (standard / 표준) lot theo convention 100.000 units.
 
-> **Nối mạch:** Trong **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **29. Checklist trước khi sang leverage/margin** nối từ **28. Ví dụ tính P/L** sang **Nối sang chương tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Checklist trước khi sang leverage/margin
 
 Bạn nên tự tính được:
@@ -870,15 +814,11 @@ Bạn nên tự tính được:
 
 Nếu calculator là cách duy nhất bạn biết để có đáp án, nên luyện lại mechanics.
 
-> **Nối mạch:** Ở chặng này của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, **Nối sang chương tiếp theo** nối từ **29. Checklist trước khi sang leverage/margin** sang **Liên kết liên quan**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nối sang chương tiếp theo
 
 Pip và lot cho biết **position thay đổi P/L bao nhiêu khi price move**. Nhưng chúng chưa trả lời vì sao account có thể kiểm soát notional lớn hơn vốn, khi nào margin lời gọi (call / 호출)/stop-out xảy ra và mức leverage nào đang ẩn trong danh mục.
 
 → [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Quotes, pips, lots và cơ chế P/L trong Forex**, sau nội dung của **Nối sang chương tiếp theo**, **Liên kết liên quan** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết liên quan
 

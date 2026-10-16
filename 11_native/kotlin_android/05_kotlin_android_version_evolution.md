@@ -241,8 +241,6 @@ và đây là cấu hình hoàn toàn có nghĩa.
 
 ---
 
-> **Nối mạch:** Phân biệt release, language/API version và toolchain trước khi đọc timeline; JVM IR mặc định tiếp theo là một consequence cần gắn với compiler generation cụ thể.
-
 ## 2. Timeline tổng quan Kotlin
 
 Bảng dưới không cố liệt kê mọi bug-fix bản phát hành (release / 릴리스). Nó tập trung vào những bản phát hành (release / 릴리스) làm thay đổi cách đọc hoặc viết mã (code / 코드).
@@ -381,8 +379,6 @@ Vì vậy di chuyển (migration / 마이그레이션) Kotlin không chỉ cần
 
 Kotlin 1.5 là một bản phát hành (release / 릴리스) rất quan trọng đối với Android/JVM.
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **7.1 JVM IR backend trở thành mặc định** nối từ **2. Timeline tổng quan Kotlin** sang **7.2 Sealed giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7.1 JVM IR backend trở thành mặc định
 
 Trước 1.5, JVM trình biên dịch (compiler / 컴파일러) dùng backend cũ theo default.
@@ -399,8 +395,6 @@ Từ Kotlin 1.5, IR backend trở thành stable/default.
 - R8/proguard hành vi (behavior / 동작) trong một số dự án (project / 프로젝트) legacy.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **7.2 Sealed giao diện (interface / 인터페이스)** nối từ **7.1 JVM IR backend trở thành mặc định** sang **7.3 giá trị (value / 값) lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 Sealed giao diện (interface / 인터페이스)
 
@@ -421,8 +415,6 @@ data class Error(val message: String) : UiState
 Dự án (project / 프로젝트) cũ có thể dùng `sealed class` ở những nơi hiện nay giao diện (interface / 인터페이스) phù hợp hơn.
 
 ---
-
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **7.3 giá trị (value / 값) lớp (class / 클래스)** nối từ **7.2 Sealed giao diện (interface / 인터페이스)** sang **7.4 JVM records**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.3 giá trị (value / 값) lớp (class / 클래스)
 
@@ -445,8 +437,6 @@ value class    → modern naming
 ```
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **7.4 JVM records** nối từ **7.3 giá trị (value / 값) lớp (class / 클래스)** sang **11.1 Enum.entries**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.4 JVM records
 
@@ -564,8 +554,6 @@ Kotlin 1.9 là thế hệ cuối rất phổ biến trước Kotlin 2.x.
 
 Nhiều môi trường vận hành (production / 운영 환경) Android codebase hiện nay vẫn có lịch sử từ 1.9.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **11.1 Enum.entries** nối từ **7.4 JVM records** sang **11.2 data object**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11.1 `Enum.entries`
 
 Legacy:
@@ -584,8 +572,6 @@ Color.entries
 
 ---
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **11.2 data object** nối từ **11.1 Enum.entries** sang **11.3 Open-ended phạm vi (range / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11.2 `data object`
 
 Legacy sealed trạng thái (state / 상태) thường viết:
@@ -603,8 +589,6 @@ data object Loading : UiState
 `data object` tạo hành vi (behavior / 동작) `toString`/`equals`/`hashCode` đối xứng hơn với `data class` trong sealed hierarchy.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **11.3 Open-ended phạm vi (range / 범위)** nối từ **11.2 data object** sang **11.4 K2 Beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11.3 Open-ended phạm vi (range / 범위)
 
@@ -626,8 +610,6 @@ cả hai đều có thể gặp trong codebase.
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **11.4 K2 Beta** nối từ **11.3 Open-ended phạm vi (range / 범위)** sang **11.5 Kotlin Multiplatform stable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11.4 K2 Beta
 
 K2 tiến từ Alpha sang Beta trong thế hệ 1.9.
@@ -635,8 +617,6 @@ K2 tiến từ Alpha sang Beta trong thế hệ 1.9.
 Điều này báo hiệu Kotlin 2.0 sắp đổi trình biên dịch (compiler / 컴파일러) frontend mặc định.
 
 ---
-
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **11.5 Kotlin Multiplatform stable** nối từ **11.4 K2 Beta** sang **12.1 K2 trở thành trình biên dịch (compiler / 컴파일러) chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11.5 Kotlin Multiplatform stable
 
@@ -653,8 +633,6 @@ Kotlin 2.0.0 phát hành ngày 2024-05-21 và đánh dấu K2 trình biên dịc
 Đây là mốc lớn nhất kể từ Kotlin 1.0 nếu nhìn từ trình biên dịch (compiler / 컴파일러) kiến trúc (architecture / 아키텍처).
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **12.1 K2 trở thành trình biên dịch (compiler / 컴파일러) chính** nối từ **11.5 Kotlin Multiplatform stable** sang **12.2 Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12.1 K2 trở thành trình biên dịch (compiler / 컴파일러) chính
 
@@ -683,8 +661,6 @@ binary compatibility của internal libraries
 ```
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **12.2 Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository** nối từ **12.1 K2 trở thành trình biên dịch (compiler / 컴파일러) chính** sang **13.1 kapt và K2**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12.2 Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository
 
@@ -783,8 +759,6 @@ Deprecated
 
 ---
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **13.1 kapt và K2** nối từ **12.2 Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository** sang **14.1 kotlinOptions {} chuyển sang compilerOptions {}**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13.1 kapt và K2
 
 Kotlin 2.1.20 đưa K2 hiện thực (implementation / 구현) của kapt thành mặc định.
@@ -804,8 +778,6 @@ Không phải vì kapt lập tức “không dùng được”, mà vì KSP thư
 Kotlin 2.2 tiếp tục ổn định các tính năng (feature / 기능) từ 2.1.
 
 Một số thay đổi đáng nhớ khi đọc Gradle script:
-
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **14.1 kotlinOptions {} chuyển sang compilerOptions {}** nối từ **13.1 kapt và K2** sang **14.2 Không giữ ngôn ngữ (language / 언어) mức (level / 수준) quá cũ vô hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14.1 `kotlinOptions {}` chuyển sang `compilerOptions {}`
 
@@ -833,8 +805,6 @@ kotlin {
 Trong Kotlin 2.2, DSL `kotlinOptions {}` cũ đã bị nâng deprecation mức (level / 수준) mạnh và nên migrate sang `compilerOptions {}`.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **14.2 Không giữ ngôn ngữ (language / 언어) mức (level / 수준) quá cũ vô hạn** nối từ **14.1 kotlinOptions {} chuyển sang compilerOptions {}** sang **16.1 ngữ cảnh (context / 맥락) parameters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14.2 Không giữ ngôn ngữ (language / 언어) mức (level / 수준) quá cũ vô hạn
 
@@ -903,8 +873,6 @@ Các điểm nổi bật của 2.4 generation:
 
 ---
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **16.1 ngữ cảnh (context / 맥락) parameters** nối từ **14.2 Không giữ ngôn ngữ (language / 언어) mức (level / 수준) quá cũ vô hạn** sang **16.2 tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) stable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16.1 ngữ cảnh (context / 맥락) parameters
 
 Ngữ cảnh (context / 맥락) parameters giúp truyền phụ thuộc (dependency / 의존성)/ngữ cảnh (context / 맥락) theo lexical ngữ cảnh (context / 맥락) mà không buộc đưa mọi thứ thành parameter trực tiếp hoặc toàn cục (global / 전역) singleton.
@@ -924,8 +892,6 @@ Nên xem ngữ cảnh (context / 맥락) parameters như một ngôn ngữ (lang
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **16.1 ngữ cảnh (context / 맥락) parameters** đặt vấn đề; **16.2 tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) stable** đối chiếu bằng chứng, rồi **16.3 when compilation qua invokedynamic** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16.2 tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) stable
 
 Hiện đại (modern / 현대적) mã (code / 코드) có thể giảm boilerplate trong một số API dạng mutable-inside/read-only-outside.
@@ -939,8 +905,6 @@ Tuy nhiên đừng migrate mọi `_state` chỉ vì cú pháp (syntax / 문법) 
 - mức quen thuộc của nhà phát triển (developer / 개발자).
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **16.2 tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) stable** đặt vấn đề; **16.3 when compilation qua invokedynamic** đối chiếu bằng chứng, rồi **18.1 Compose trình biên dịch (compiler / 컴파일러)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16.3 `when` compilation qua `invokedynamic`
 
@@ -982,8 +946,6 @@ Không nên nói K1 là “trình biên dịch (compiler / 컴파일러) sai” 
 
 Compose có ít nhất ba phiên bản (version / 버전) concern khác nhau.
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **18.1 Compose trình biên dịch (compiler / 컴파일러)** nối từ **16.3 when compilation qua invokedynamic** sang **18.2 Compose UI libraries**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18.1 Compose trình biên dịch (compiler / 컴파일러)
 
 Khối minh họa dưới đây đặt Compose compiler vào ma trận version và plugin. Hãy xác định dependency nào phải lockstep, dependency nào chỉ là compatibility mapping và bằng chứng build nào xác nhận kết luận.
@@ -1018,8 +980,6 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **18.2 Compose UI libraries** nối từ **18.1 Compose trình biên dịch (compiler / 컴파일러)** sang **18.3 Compose và compileSdk**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18.2 Compose UI libraries
 
 Compose UI thời gian chạy (runtime / 런타임)/foundation/material libraries không dùng Kotlin phiên bản (version / 버전) number.
@@ -1043,8 +1003,6 @@ Compose BOM 2026.09.00
 ba con số này có thể đồng thời tồn tại và không mâu thuẫn.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **18.3 Compose và compileSdk** nối từ **18.2 Compose UI libraries** sang **Bước 1 — chụp baseline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18.3 Compose và `compileSdk`
 
@@ -1161,8 +1119,6 @@ Cấp cao (senior / 시니어) engineer không rewrite mã (code / 코드) chỉ
 
 Một upgrade Kotlin môi trường vận hành (production / 운영 환경) nên theo chuỗi xử lý (pipeline / 파이프라인).
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 1 — chụp baseline** nối từ **18.3 Compose và compileSdk** sang **Bước 2 — đọc tính tương thích (compatibility / 호환성)/bản phát hành (release / 릴리스) notes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bước 1 — chụp baseline
 
 Trước upgrade ghi lại:
@@ -1186,8 +1142,6 @@ Nếu không có baseline, khi bản dựng (build / 빌드) hỏng sẽ không 
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 2 — đọc tính tương thích (compatibility / 호환성)/bản phát hành (release / 릴리스) notes** nối từ **Bước 1 — chụp baseline** sang **Bước 3 — upgrade trình biên dịch (compiler / 컴파일러)/toolchain trước khi đổi nguồn (source / 소스) style**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bước 2 — đọc tính tương thích (compatibility / 호환성)/bản phát hành (release / 릴리스) notes
 
 Không chỉ đọc “What's New”.
@@ -1206,8 +1160,6 @@ JVM target changes
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 2 — đọc tính tương thích (compatibility / 호환성)/bản phát hành (release / 릴리스) notes** đặt vấn đề; **Bước 3 — upgrade trình biên dịch (compiler / 컴파일러)/toolchain trước khi đổi nguồn (source / 소스) style** đối chiếu bằng chứng, rồi **Bước 4 — compile tất cả variants** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Bước 3 — upgrade trình biên dịch (compiler / 컴파일러)/toolchain trước khi đổi nguồn (source / 소스) style
 
 Tránh cùng một PR vừa:
@@ -1225,8 +1177,6 @@ Nếu lỗi xảy ra, quá nhiều biến thay đổi đồng thời.
 Tách di chuyển (migration / 마이그레이션) theo axis giúp forensic debugging dễ hơn.
 
 ---
-
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 3 — upgrade trình biên dịch (compiler / 컴파일러)/toolchain trước khi đổi nguồn (source / 소스) style** đặt vấn đề; **Bước 4 — compile tất cả variants** đối chiếu bằng chứng, rồi **Bước 5 — kiểm thử (test / 테스트) generated-code ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bước 4 — compile tất cả variants
 
@@ -1247,8 +1197,6 @@ Rất nhiều R8/trình biên dịch (compiler / 컴파일러) plugin issue ch�
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 4 — compile tất cả variants** đặt tiêu chí; **Bước 5 — kiểm thử (test / 테스트) generated-code ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Bước 6 — kiểm thử (test / 테스트) nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) nếu publish thư viện (library / 라이브러리)** mở rộng hệ quả.
-
 ## Bước 5 — kiểm thử (test / 테스트) generated-code ranh giới (boundary / 경계)
 
 Kiểm tra:
@@ -1265,8 +1213,6 @@ Kiểm tra:
 Trình biên dịch (compiler / 컴파일러) upgrade có thể làm lỗi xuất hiện ở generated mã (code / 코드) trước khi handwritten nguồn (source / 소스) có vấn đề.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Bước 5 — kiểm thử (test / 테스트) generated-code ranh giới (boundary / 경계)** đặt tiêu chí; **Bước 6 — kiểm thử (test / 테스트) nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) nếu publish thư viện (library / 라이브러리)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Dự án (project / 프로젝트) rất cũ** mở rộng hệ quả.
 
 ## Bước 6 — kiểm thử (test / 테스트) nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) nếu publish thư viện (library / 라이브러리)
 
@@ -1542,8 +1488,6 @@ Chỉ cần fingerprint này đã giúp ước lượng dự án (project / 프�
 
 # 32. Cách đọc nhanh mã (code / 코드) theo generation
 
-> **Nối mạch:** Trong **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Dự án (project / 프로젝트) rất cũ** nối từ **Bước 6 — kiểm thử (test / 테스트) nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) nếu publish thư viện (library / 라이브러리)** sang **Dự án (project / 프로젝트) transitional**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dự án (project / 프로젝트) rất cũ
 
 Dấu hiệu:
@@ -1564,8 +1508,6 @@ Không được rewrite ngay. Trước hết xác định kiểm thử (test / �
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Dự án (project / 프로젝트) transitional** nối từ **Dự án (project / 프로젝트) rất cũ** sang **Dự án (project / 프로젝트) hiện đại (modern / 현대적)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dự án (project / 프로젝트) transitional
 
 Dấu hiệu:
@@ -1583,8 +1525,6 @@ ViewModel modern nhưng navigation cũ
 Di chuyển (migration / 마이그레이션) nên incremental.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới**, **Dự án (project / 프로젝트) hiện đại (modern / 현대적)** nối từ **Dự án (project / 프로젝트) transitional** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dự án (project / 프로젝트) hiện đại (modern / 현대적)
 

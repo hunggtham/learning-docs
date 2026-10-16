@@ -42,8 +42,6 @@ Residual uncertainty
 
 Không dùng một sự kiện (event / 이벤트) lịch sử làm bằng chứng rằng cùng price mẫu (pattern / 패턴) sẽ lặp lại.
 
-> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** nêu quy tắc; **2. trường hợp (case / 사례) universe** thử quy tắc trong tình huống, rồi **3. Regime comparison ma trận (matrix / 행렬)** mở rộng hệ quả.
-
 ## 2. trường hợp (case / 사례) universe
 
 Dùng đủ bảy trường hợp (case / 사례):
@@ -59,8 +57,6 @@ Dùng đủ bảy trường hợp (case / 사례):
 ```
 
 Nếu bỏ một trường hợp (case / 사례), phải ghi rõ vì sao cơ chế (mechanism / 메커니즘) của nó không liên quan đến câu hỏi nghiên cứu.
-
-> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **2. trường hợp (case / 사례) universe** nêu quy tắc; **3. Regime comparison ma trận (matrix / 행렬)** thử quy tắc trong tình huống, rồi **4. Vulnerability–trigger–amplifier decomposition** mở rộng hệ quả.
 
 ## 3. Regime comparison ma trận (matrix / 행렬)
 
@@ -90,8 +86,6 @@ Korea 2008 USD shortage
 ≠ Global 2020 dash for cash
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **4. Vulnerability–trigger–amplifier decomposition** nối từ **3. Regime comparison ma trận (matrix / 행렬)** sang **5. Same shock, different regime**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Vulnerability–trigger–amplifier decomposition
 
 Với mỗi trường hợp (case / 사례), viết đúng ba câu:
@@ -111,8 +105,6 @@ Amplifier: basis widening and collateral demand forced more USD buying.
 ```
 
 Không dùng trigger để thay thế vulnerability. Một tỷ lệ (rate / 비율) quyết định (decision / 결정) có thể là trigger, nhưng fragility thường đã tồn tại trước headline.
-
-> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **5. Same shock, different regime** nối từ **4. Vulnerability–trigger–amplifier decomposition** sang **6. Balance-sheet transmission dấu vết (trace / 추적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Same shock, different regime
 
@@ -150,8 +142,6 @@ main falsifier
 
 Không ép tất cả pairs đi cùng hướng. JPY có thể phản ứng khác tùy tỷ lệ (rate / 비율) divergence hay carry unwind; VND có thể chuyển adjustment sang reserve, band, liquidity hoặc quote availability.
 
-> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **6. Balance-sheet transmission dấu vết (trace / 추적)** nối từ **5. Same shock, different regime** sang **7. Policy-tool map**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Balance-sheet transmission dấu vết (trace / 추적)
 
 Chọn bốn actors:
@@ -185,8 +175,6 @@ B. spot moves less, but funding/collateral market freezes
 
 Mục tiêu là chứng minh rằng điều kiện (condition / 조건) B có thể nguy hiểm hơn dù chart spot ít dramatic hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **7. Policy-tool map** nối từ **6. Balance-sheet transmission dấu vết (trace / 추적)** sang **8. Cross-regime monitoring dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Policy-tool map
 
 So sánh:
@@ -213,8 +201,6 @@ Với từng công cụ (tool / 도구), ghi:
 | thất bại (failure / 실패) điều kiện (condition / 조건) | khi nào công cụ (tool / 도구) không còn đủ? |
 
 Không đánh giá chính sách (policy / 정책) chỉ bằng spot close cuối ngày.
-
-> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **8. Cross-regime monitoring dashboard** nối từ **7. Policy-tool map** sang **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cross-regime monitoring dashboard
 
@@ -247,8 +233,6 @@ what it does not measure
 
 Một dashboard có nhiều series nhưng không ghi thông tin (information / 정보) thời gian (time / 시간) vẫn không đạt point-in-time tiêu chuẩn (standard / 표준).
 
-> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **8. Cross-regime monitoring dashboard** sang **10. Counterfactual kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Không hỏi “scenario xấu nhất hợp lý là gì?” trước. Hãy bắt đầu từ thất bại (failure / 실패) điều kiện (condition / 조건):
@@ -273,8 +257,6 @@ liquidity haircut required
 
 Tạo ít nhất một reverse stress không cần spot move cực lớn. Điều này kiểm tra xem funding và collateral có đang bị bỏ quên hay không.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **10. Counterfactual kiểm thử (test / 테스트)** nối từ **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **11. quyết định (decision / 결정) memo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Counterfactual kiểm thử (test / 테스트)
 
 Với ba trường hợp (case / 사례) bất kỳ, thay một điều kiện lịch sử:
@@ -298,8 +280,6 @@ observable nào sẽ báo regime khác đi?
 
 Counterfactual không nhằm viết lại lịch sử; nó kiểm tra bạn có hiểu nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘) hay chỉ nhớ kết quả (outcome / 결과).
 
-> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **11. quyết định (decision / 결정) memo** nối từ **10. Counterfactual kiểm thử (test / 테스트)** sang **12. Scoring rubric**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. quyết định (decision / 결정) memo
 
 Viết memo tối đa hai trang:
@@ -318,8 +298,6 @@ Invalidation and kill condition
 
 Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” hoặc “central bank sẽ can thiệp”. Phải nêu nút (node / 노드) nào giống, nút (node / 노드) nào khác và dữ liệu nào xác nhận.
 
-> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **12. Scoring rubric** nối từ **11. quyết định (decision / 결정) memo** sang **13. Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Scoring rubric
 
 | Criterion | Weight | thất bại (failure / 실패) example |
@@ -332,8 +310,6 @@ Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” ho�
 | vô hiệu hóa (invalidation / 무효화) | 10% | thesis không có điều kiện sai |
 
 Điểm đạt tối thiểu là `80/100`, đồng thời không được thất bại (fail / 실패) cơ chế (mechanism / 메커니즘) separation hoặc point-in-time bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **13. Đọc tiếp** nối từ **12. Scoring rubric** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 13. Đọc tiếp
 

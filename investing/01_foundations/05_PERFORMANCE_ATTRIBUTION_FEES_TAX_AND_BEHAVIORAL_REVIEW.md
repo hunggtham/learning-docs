@@ -20,8 +20,6 @@ Lợi suất trước hay sau phí/thuế
 
 Không thay benchmark sau khi đã biết kết quả.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **2. Lợi suất tuyệt đối và lợi suất chủ động** nối từ **1. Kết quả đầu tư phải được đặt cạnh mục tiêu** sang **3. Time-Weighted Return và Money-Weighted Return**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Lợi suất tuyệt đối và lợi suất chủ động
 
 Lợi suất tuyệt đối là lợi suất của chính danh mục. Lợi suất chủ động (active return) là phần chênh so với benchmark:
@@ -32,8 +30,6 @@ Active Return = Portfolio Return - Benchmark Return
 
 Nếu danh mục tăng 8% nhưng benchmark tăng 12%, lợi suất tuyệt đối dương nhưng lợi suất chủ động âm.
 
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **3. Time-Weighted Return và Money-Weighted Return** nối từ **2. Lợi suất tuyệt đối và lợi suất chủ động** sang **4. Phân rã theo phân bổ và lựa chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Time-Weighted Return và Money-Weighted Return
 
 Time-Weighted Return (TWR) đánh giá chiến lược không phụ thuộc thời điểm dòng tiền của nhà đầu tư.
@@ -41,8 +37,6 @@ Time-Weighted Return (TWR) đánh giá chiến lược không phụ thuộc th�
 Money-Weighted Return (MWR/IRR) phản ánh trải nghiệm thực vì tính cả thời điểm nạp/rút tiền.
 
 Nếu nhà đầu tư đổ nhiều tiền vào sau khi thị trường tăng và rút sau khi giảm, MWR có thể kém xa TWR của cùng quỹ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **4. Phân rã theo phân bổ và lựa chọn** nối từ **3. Time-Weighted Return và Money-Weighted Return** sang **5. Phân rã theo nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phân rã theo phân bổ và lựa chọn
 
@@ -58,8 +52,6 @@ Phân bổ trả lời: bạn tăng/giảm tỷ trọng đúng nhóm tài sản 
 
 Lựa chọn trả lời: trong cùng nhóm, bạn chọn chứng khoán tốt hơn benchmark chưa?
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **5. Phân rã theo nhân tố** nối từ **4. Phân rã theo phân bổ và lựa chọn** sang **6. Phân rã tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Phân rã theo nhân tố
 
 Một danh mục có thể vượt benchmark vì mang nhiều beta giá trị, động lượng, vốn hóa nhỏ, chất lượng hoặc duration.
@@ -72,8 +64,6 @@ Bao nhiêu là alpha còn lại sau khi đã tính nhân tố?
 ```
 
 Nếu toàn bộ phần vượt trội đến từ một nhân tố quen thuộc, không nên gọi tất cả là kỹ năng lựa chọn chứng khoán.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **6. Phân rã tiền tệ** nối từ **5. Phân rã theo nhân tố** sang **7. Phân rã thu nhập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Phân rã tiền tệ
 
@@ -94,8 +84,6 @@ Tương tác giữa hai phần
 
 Điều này đặc biệt quan trọng khi so quỹ có phòng vệ và không phòng vệ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **7. Phân rã thu nhập** nối từ **6. Phân rã tiền tệ** sang **8. Phí quản lý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Phân rã thu nhập
 
 Tổng lợi suất có thể đến từ:
@@ -111,8 +99,6 @@ Thay đổi định giá
 
 Nhà đầu tư cần biết phần nào có thể lặp lại. Một năm tốt do hệ số định giá mở rộng không giống một năm tốt do dòng tiền/cổ tức tăng.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **8. Phí quản lý** nối từ **7. Phân rã thu nhập** sang **9. Chênh lệch mua bán và trượt giá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Phí quản lý
 
 Phí nhỏ nhưng kéo dài nhiều năm có tác động lớn do ghép lãi.
@@ -121,8 +107,6 @@ Sự khác biệt 0,5% mỗi năm giữa hai sản phẩm có thể trở thành
 
 Nhưng phí thấp không tự động tốt nếu sản phẩm bám chỉ số kém, spread rộng hoặc cấu trúc thuế bất lợi.
 
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **9. Chênh lệch mua bán và trượt giá** nối từ **8. Phí quản lý** sang **10. hiện thực (implementation / 구현) Shortfall**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Chênh lệch mua bán và trượt giá
 
 Chi phí thực thi gồm chênh lệch mua bán, phí môi giới, trượt giá và tác động thị trường.
@@ -130,8 +114,6 @@ Chi phí thực thi gồm chênh lệch mua bán, phí môi giới, trượt gi�
 Một chiến lược có lợi thế trước chi phí 30 điểm cơ bản mỗi giao dịch nhưng mất 25 điểm cơ bản cho thực thi chỉ còn rất ít biên an toàn.
 
 Cần đo chi phí thực tế theo quy mô, thời điểm và điều kiện thanh khoản.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **10. hiện thực (implementation / 구현) Shortfall** nối từ **9. Chênh lệch mua bán và trượt giá** sang **11. Chi phí vốn và vay chứng khoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. hiện thực (implementation / 구현) Shortfall
 
@@ -150,8 +132,6 @@ Chi phí cơ hội
 
 Nếu chiến lược tốt trên giấy nhưng kém khi triển khai, đây thường là nơi cần kiểm tra đầu tiên.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **11. Chi phí vốn và vay chứng khoán** nối từ **10. hiện thực (implementation / 구현) Shortfall** sang **12. Thuế kéo lùi lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Chi phí vốn và vay chứng khoán
 
 Vị thế dùng đòn bẩy, CFD, short hoặc phái sinh có thể chịu chi phí vốn.
@@ -159,8 +139,6 @@ Vị thế dùng đòn bẩy, CFD, short hoặc phái sinh có thể chịu chi 
 Bán khống còn có phí vay chứng khoán và rủi ro phí tăng đột biến.
 
 Một giao dịch đúng hướng nhưng giữ lâu có thể bị carry âm làm mất phần lớn lợi nhuận.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **12. Thuế kéo lùi lợi suất** nối từ **11. Chi phí vốn và vay chứng khoán** sang **13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Thuế kéo lùi lợi suất
 
@@ -176,15 +154,11 @@ Tài khoản ưu đãi thuế
 
 Vì quy định thay đổi theo quốc gia và thời điểm, thư viện chỉ giữ lô-gic (logic / 논리). Trước quyết định thật cần kiểm tra nguồn chính thức.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được** nối từ **12. Thuế kéo lùi lợi suất** sang **14. Turnover là một biến kinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được
 
 Hai chiến lược cùng lợi suất trước thuế có thể khác lớn về kết quả sau thuế nếu một chiến lược quay vòng nhiều và tạo thu nhập chịu thuế thường xuyên.
 
 Đối với mục tiêu dài hạn, trì hoãn thuế có thể có giá trị nhờ tiếp tục ghép lãi trên phần chưa nộp.
-
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **14. Turnover là một biến kinh tế** nối từ **13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được** sang **15. Phân rã theo quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Turnover là một biến kinh tế
 
@@ -202,8 +176,6 @@ Lợi thế gộp
 
 Nếu lợi thế ròng rất nhỏ, chiến lược khó bền vững khi quy mô tăng hoặc thanh khoản xấu đi.
 
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **15. Phân rã theo quyết định** nối từ **14. Turnover là một biến kinh tế** sang **16. Phân rã luận điểm đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Phân rã theo quyết định
 
 Ngoài phân rã theo tài sản, có thể phân rã theo loại quyết định:
@@ -220,8 +192,6 @@ Thoát vị thế
 
 Điều này giúp phát hiện ví dụ: ý tưởng phân tích thường đúng nhưng sizing quá lớn làm kết quả xấu.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **16. Phân rã luận điểm đầu tư** nối từ **15. Phân rã theo quyết định** sang **17. Điều chỉnh dự báo và hiệu chỉnh xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Phân rã luận điểm đầu tư
 
 Mỗi vị thế chủ động nên có cây nguyên nhân:
@@ -236,8 +206,6 @@ Chất xúc tác
 
 Khi kết quả khác dự kiến, phải xác định nút (node / 노드) nào sai. Không nên kết luận chung chung “thị trường vô lý”.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **17. Điều chỉnh dự báo và hiệu chỉnh xác suất** nối từ **16. Phân rã luận điểm đầu tư** sang **18. kết quả (outcome / 결과) độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Điều chỉnh dự báo và hiệu chỉnh xác suất
 
 Nếu thường xuyên dự báo xác suất 70% nhưng chỉ đúng khoảng 50%, bạn đang quá tự tin.
@@ -245,8 +213,6 @@ Nếu thường xuyên dự báo xác suất 70% nhưng chỉ đúng khoảng 50
 Ghi lại xác suất trước sự kiện và so với kết quả qua nhiều quyết định giúp cải thiện hiệu chỉnh (calibration).
 
 Mục tiêu không phải đúng mọi lần mà là xác suất được ước lượng hợp lý.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **18. kết quả (outcome / 결과) độ lệch (bias / 편향)** nối từ **17. Điều chỉnh dự báo và hiệu chỉnh xác suất** sang **19. Hindsight độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. kết quả (outcome / 결과) độ lệch (bias / 편향)
 
@@ -264,15 +230,11 @@ Quy trình có được tuân thủ không?
 
 Sau đó mới dùng kết quả để cập nhật.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **19. Hindsight độ lệch (bias / 편향)** nối từ **18. kết quả (outcome / 결과) độ lệch (bias / 편향)** sang **20. hành vi (behavior / 동작) Gap**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Hindsight độ lệch (bias / 편향)
 
 Sau khi sự kiện xảy ra, não dễ nghĩ “rõ ràng phải thế”. Điều này làm ta học sai vì xóa mất bất định đã tồn tại trước quyết định.
 
 Nhật ký ex-ante nên được khóa hoặc lưu phiên bản để có thể xem lại mình thực sự biết gì tại thời điểm đó.
-
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **20. hành vi (behavior / 동작) Gap** nối từ **19. Hindsight độ lệch (bias / 편향)** sang **21. Nhật ký quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. hành vi (behavior / 동작) Gap
 
@@ -281,8 +243,6 @@ Khoảng cách hành vi (behavior gap) là chênh lệch giữa lợi suất s�
 Một quỹ tốt không giúp ích nếu người dùng liên tục mua ở đỉnh và bán ở đáy.
 
 Thiết kế danh mục phải phù hợp tâm lý thực của người sở hữu, không phải “phiên bản lý tưởng” của họ.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **21. Nhật ký quyết định** nối từ **20. hành vi (behavior / 동작) Gap** sang **22. Đánh giá hàng tháng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Nhật ký quyết định
 
@@ -302,8 +262,6 @@ Chất xúc tác
 
 Sau quyết định, không sửa phần cũ. Chỉ thêm kết quả và đánh giá để tránh viết lại lịch sử.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **22. Đánh giá hàng tháng** nối từ **21. Nhật ký quyết định** sang **23. Đánh giá hàng quý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Đánh giá hàng tháng
 
 Đánh giá tháng nên ngắn và thiên về vận hành:
@@ -319,8 +277,6 @@ Sự kiện cần theo dõi
 
 Không nên biến mỗi tháng thành lý do thay đổi toàn bộ chiến lược dài hạn.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **23. Đánh giá hàng quý** nối từ **22. Đánh giá hàng tháng** sang **24. Kiểm toán danh mục hàng năm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Đánh giá hàng quý
 
 Hàng quý có thể đi sâu hơn:
@@ -335,8 +291,6 @@ Chất lượng thực thi
 ```
 
 Đây là nhịp phù hợp để kiểm tra liệu các giả định kinh tế của danh mục còn đúng hay không.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **24. Kiểm toán danh mục hàng năm** nối từ **23. Đánh giá hàng quý** sang **25. Khi nào nên thay chiến lược?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Kiểm toán danh mục hàng năm
 
@@ -357,8 +311,6 @@ Quy trình ra quyết định
 
 Mục tiêu là thay đổi khi cuộc sống hoặc cấu trúc thị trường thay đổi thật sự, không phải theo biến động ngắn hạn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **25. Khi nào nên thay chiến lược?** nối từ **24. Kiểm toán danh mục hàng năm** sang **26. Benchmark phải phù hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Khi nào nên thay chiến lược?
 
 Nên xem xét thay đổi khi:
@@ -373,15 +325,11 @@ Mục tiêu / nghĩa vụ cá nhân thay đổi
 
 Không nên đổi chỉ vì một giai đoạn ngắn hoạt động kém nhưng vẫn nằm trong phân phối dự kiến.
 
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **26. Benchmark phải phù hợp** nối từ **25. Khi nào nên thay chiến lược?** sang **27. Phân rã lợi suất trái phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Benchmark phải phù hợp
 
 Benchmark nên phản ánh tập cơ hội đầu tư và có thể đầu tư được.
 
 Danh mục cổ phiếu Hàn Quốc không nên so với tiền gửi để tuyên bố “alpha”. Danh mục đa tài sản cũng không nên chỉ so với một chỉ số cổ phiếu nếu mục tiêu và rủi ro khác hẳn.
-
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **27. Phân rã lợi suất trái phiếu** nối từ **26. Benchmark phải phù hợp** sang **28. Phân rã lợi suất cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Phân rã lợi suất trái phiếu
 
@@ -399,8 +347,6 @@ FX
 
 Điều này giúp biết “trái phiếu lời” vì income, vì duration hay vì spread nén lại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **28. Phân rã lợi suất cổ phiếu** nối từ **27. Phân rã lợi suất trái phiếu** sang **29. Phân rã quỹ ETF**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Phân rã lợi suất cổ phiếu
 
 Một trực giác đơn giản:
@@ -414,8 +360,6 @@ Lợi suất cổ phiếu
 ```
 
 Trong ngắn hạn hệ số định giá có thể chi phối; dài hạn tăng trưởng lợi nhuận trên mỗi cổ phiếu quan trọng hơn.
-
-> **Nối mạch:** Trong **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **29. Phân rã quỹ ETF** nối từ **28. Phân rã lợi suất cổ phiếu** sang **30. Attribution không phải để tự khen hoặc tự trách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Phân rã quỹ ETF
 
@@ -433,15 +377,11 @@ Spread / Premium / Discount khi giao dịch
 
 Không chỉ nhìn expense ratio.
 
-> **Nối mạch:** Ở chặng này của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **30. Attribution không phải để tự khen hoặc tự trách** nối từ **29. Phân rã quỹ ETF** sang **31. Vòng phản hồi hoàn chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Attribution không phải để tự khen hoặc tự trách
 
 Mục tiêu của phân rã kết quả không phải tìm một câu chuyện dễ chịu, mà tìm biến nào thật sự tạo ra lợi suất và biến nào đang làm quy trình rò rỉ.
 
 Nếu phần lớn kết quả đến từ beta thị trường, hãy thừa nhận. Nếu ý tưởng đúng nhưng chi phí thực thi quá cao, sửa thực thi. Nếu sizing sai, sửa ngân sách rủi ro.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi**, **31. Vòng phản hồi hoàn chỉnh** nối từ **30. Attribution không phải để tự khen hoặc tự trách** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 31. Vòng phản hồi hoàn chỉnh
 

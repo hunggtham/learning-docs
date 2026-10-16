@@ -14,8 +14,6 @@
 4. [Systematic Reviews & Evidence Synthesis](./03_systematic_reviews_and_evidence_synthesis.md) — protocols, tìm kiếm (search / 검색)/screening, rủi ro (risk / 위험) of độ lệch (bias / 편향), meta-analysis, heterogeneity, publication độ lệch (bias / 편향), qualitative synthesis và bằng chứng (evidence / 증거) certainty.
 5. [Mixed Methods, Ethics, Reproducibility & Open Science](./04_mixed_methods_ethics_reproducibility_and_open_science.md) — tích hợp (integration / 통합) designs, consent/privacy, preregistration, reproducible pipelines, replication, dữ liệu (data / 데이터)/mã (code / 코드) sharing, reporting và AI-assisted research boundaries.
 
-> **Chuyển mạch:** **Thứ tự học canonical** đi từ câu hỏi, design đến inference; **Trục học** làm rõ dependency, rồi **Ranh giới với Econometrics** giữ phần identification ở đúng owner.
-
 ## Trục học (learning spine / 학습 축)
 
 ```text
@@ -33,8 +31,6 @@ Research problem
 
 Phương thức (method / 메서드) choice comes after question. A survey, RCT, interview, trường hợp (case / 사례) study or meta-analysis is not inherently “stronger” independent of what is being asked.
 
-> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Philosophy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Econometrics
 
 [Econometrics](../economics/05_econometrics/README.md) owns quantitative estimators and statistical/nhân quả (causal / 인과적) identification in độ sâu (depth / 깊이): OLS, experiments, IV, RDD, DiD, panel, thời gian (time / 시간) series, suy luận (inference / 추론) and robustness.
@@ -43,21 +39,15 @@ Research Methods owns broader thiết kế (design / 설계) lô-gic (logic / �
 
 Cross-link instead of duplicating equations/estimator derivations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Econometrics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Philosophy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với Philosophy
 
 [Philosophy](../philosophy/README.md) handles epistemology, philosophy of science, explanation, causation and normative questions at a foundational mức (level / 수준). Research Methods turns those questions into operational research decisions.
-
-> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Philosophy** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng (evidence / 증거) categories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied
 
 Psychology, Sociology, Economics, Lịch sử (history / 이력), Education, Nghiệp vụ (business / 비즈니스) or Kỹ thuật (engineering / 엔지니어링) research should reuse this lĩnh vực (domain / 도메인) for dùng chung (common / 공통) methodology and keep domain-specific đo lường (measurement / 측정)/thiết kế (design / 설계) examples in their own libraries.
 
 A lĩnh vực (domain / 도메인) chapter should not re-explain generic sampling, interview coding or systematic-review mechanics unless a special lĩnh vực (domain / 도메인) ràng buộc (constraint / 제약조건) changes them.
-
-> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** đã nêu tiêu chí phân biệt, còn **Bằng chứng (evidence / 증거) categories** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) categories
 
@@ -73,8 +63,6 @@ Synthesized / literature-level
 ```
 
 Do not upgrade category during writing. A participant explanation is not automatically nhân quả (causal / 인과적) bằng chứng (evidence / 증거); a predictive mô hình (model / 모델) is not automatically explanatory; a statistically significant association is not automatically nhân quả (causal / 인과적).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bằng chứng (evidence / 증거) categories** nêu điều cần giải thích; **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)
 
@@ -94,8 +82,6 @@ uncertainty and limits
 reproducibility materials
 ```
 
-> **Chuyển mạch:** **Quality contract** quy định evidence tối thiểu của một nghiên cứu; **Connections** nối contract đó với causal inference, measurement và reproducibility.
-
 ## Connections
 
 - [Mathematics](../mathematics/README.md): xác suất (probability / 확률)/statistics foundation.
@@ -104,8 +90,6 @@ reproducibility materials
 - [Psychology](../psychology/README.md): psychometrics, experiments, behavioral đo lường (measurement / 측정).
 - [World History](../world_history/README.md): archival/historical bằng chứng (evidence / 증거) and nguồn (source / 소스) criticism.
 - [Computer Science](../computer_science/README.md): dữ liệu (data / 데이터) pipelines, computation, reproducibility and AI-assisted workflows.
-
-> **Chuyển mạch:** **Mục tiêu cuối** khép route bằng khả năng thiết kế, đọc và giới hạn một claim; khi cần formal detail, quay về owner canonical tương ứng.
 
 ## Mục tiêu cuối
 

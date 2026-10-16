@@ -6,19 +6,13 @@
 
 Jersey là đảo lớn nhất Channel Islands, nằm gần bờ Normandy. Bờ biển có tidal phạm vi (range / 범위) lớn, đặc biệt ở phía đông và nam, làm diện tích bãi triều thay đổi mạnh theo giờ.
 
-> **Nối mạch:** Island và tidal range làm diện tích sử dụng biến động theo giờ; **đất khan hiếm và chuyên môn hóa** đẩy Jersey tới nông nghiệp cường độ cao, tourism và dịch vụ giá trị lớn. **Kết nối** tiếp theo đo khả năng duy trì functional region rộng hơn đảo.
-
 ## Đất khan hiếm và chuyên môn hóa
 
 Quy mô nhỏ thúc đẩy sử dụng đất cường độ cao và các hoạt động có giá trị lớn trên diện tích nhỏ. Nông nghiệp chuyên canh, du lịch và dịch vụ đều phản ánh ràng buộc này.
 
-> **Nối mạch:** Specialization cần phà, hàng không và lịch vận tải đáng tin; **kết nối** vì vậy là một phần của production và access, không chỉ phương tiện. **Mô hình tư duy** sẽ gom land scarcity, tides và cross-Channel network.
-
 ## Kết nối
 
 Phà và hàng không nối đảo với Britain và continental Europe. Một đảo nhỏ vì vậy có thể có **functional geography** rộng hơn nhiều so với diện tích hành chính.
-
-> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Channel island–tidal range → land scarcity/specialization → ferry–air access và functional geography. Đây là điểm bàn giao cho các island profiles trong owner World Atlas.
 
 ## Mô hình tư duy
 

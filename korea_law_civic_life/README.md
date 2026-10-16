@@ -16,8 +16,6 @@ Thư viện đi từ cấu trúc nền tảng của nhà nước và pháp luậ
 
 Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví dụ **hợp đồng lao động (근로계약서)**, **tiền đặt cọc thuê nhà (보증금)**, **thông báo hành chính (통지서)**, **xử lý hành chính (처분)**, **khiếu nại hành chính (행정심판)**.
 
-> **Chuyển mạch:** **Phạm vi** xác định domain pháp luật và civic life; **Bản đồ nội dung** sắp xếp statute, institution và đời sống thành route, rồi **Cách dùng thư viện** chỉ cách tra cứu.
-
 ## Bản đồ nội dung
 
 1. [Phương pháp đọc và chính sách nguồn](00_reading_method_and_source_policy.md)
@@ -36,21 +34,15 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 14. [Glossary Việt–Hàn–Anh](GLOSSARY.md)
 15. [Nguồn chính thức](SOURCES.md)
 
-> **Chuyển mạch:** **Cách dùng thư viện** hướng người đọc từ câu hỏi đến source và ngày hiệu lực; **Nguyên tắc trung lập civic/political** đặt giới hạn cho cách diễn giải.
-
 ## Cách dùng thư viện
 
 Đừng bắt đầu bằng câu hỏi “tôi phải làm gì?” mà hãy bắt đầu bằng bốn câu: **vấn đề thuộc lĩnh vực nào → cơ quan nào phụ trách → văn bản pháp lý hoặc hướng dẫn nào đang có hiệu lực → thủ tục cụ thể hiện hành là gì?**. Cách này tránh một lỗi rất phổ biến: đọc một blog cũ, một câu trả lời cộng đồng hoặc một video đúng ở thời điểm trước rồi áp dụng như quy định hiện tại.
 
 Khi một vấn đề có thể làm thay đổi quyền, nghĩa vụ, tiền bạc hoặc tình trạng cư trú của cá nhân, tài liệu này chỉ đóng vai trò **bản đồ**. Hãy kiểm tra văn bản đang có hiệu lực trên `국가법령정보센터`, hướng dẫn của cơ quan có thẩm quyền và, nếu cần, sử dụng tư vấn chuyên môn phù hợp.
 
-> **Chuyển mạch:** **Trung lập civic/political** giữ distinction giữa rule, interpretation và opinion; **Liên kết với thư viện khác** đưa phần chuyên môn về đúng owner.
-
 ## Nguyên tắc trung lập civic/political
 
 Các phần về Quốc hội, Tổng thống, Chính phủ, tòa án, chính quyền địa phương và quyền công dân chỉ mô tả **cấu trúc, thẩm quyền, quy trình và nguồn pháp lý**. Thư viện không xếp hạng đảng phái, ứng viên, chính sách hay đưa ra lựa chọn chính trị.
-
-> **Chuyển mạch:** **Liên kết với các thư viện khác** khép README bằng source owner và boundary; claim pháp lý chi tiết phải quay về canonical law chapter.
 
 ## Liên kết với các thư viện (library / 라이브러리) khác
 

@@ -24,8 +24,6 @@ Tùy thành phần (component / 컴포넌트)/cấu hình (config / 설정)/bả
 
 Một đối tượng (object / 객체) tồn tại không đồng nghĩa UI của nó đã kết xuất (render / 렌더링). Một page kết xuất (render / 렌더링) xong không đồng nghĩa dữ liệu nghiệp vụ đã tải (load / 로드) xong.
 
-> **Nối mạch:** Một page có nhiều readiness milestones; onpageload chỉ là một mốc, còn WFrame tiếp theo phân tán lifecycle và cần signal rõ cho từng vùng UI.
-
 ## 2. `onpageload` không có nghĩa toàn nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) đã ready
 
 Mẫu (pattern / 패턴) phổ biến:
@@ -47,8 +45,6 @@ child onpageload đã chạy
 
 Nếu parent cần “child ready with initial dữ liệu (data / 데이터)”, child nên có tường minh (explicit / 명시적) readiness đặc tả hợp đồng (contract / 계약) ở sau Submission success.
 
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **2. onpageload không có nghĩa toàn nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) đã ready** đặt đầu vào cho **3. WFrame tạo phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기) trong cùng trình duyệt (browser / 브라우저)**, rồi **4. setTimeout không phải vòng đời (lifecycle / 생명주기) API** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 3. WFrame tạo phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기) trong cùng trình duyệt (browser / 브라우저)
 
 Một shell page có thể chứa WFrame A; A chứa TabControl; một tab chứa WFrame B; B gọi Submission. Mỗi tầng (layer / 계층) có vòng đời (lifecycle / 생명주기) riêng.
@@ -67,8 +63,6 @@ shell ready
 
 Khi bug chỉ xuất hiện “đôi lúc”, hãy vẽ timeline này trước khi thêm `setTimeout`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **3. WFrame tạo phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기) trong cùng trình duyệt (browser / 브라우저)** đặt đầu vào cho **4. setTimeout không phải vòng đời (lifecycle / 생명주기) API**, rồi **5. tải (load / 로드), preload và kết xuất (render / 렌더링) là ba chi phí khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 4. `setTimeout` không phải vòng đời (lifecycle / 생명주기) API
 
 Anti-pattern:
@@ -84,8 +78,6 @@ setTimeout(function () {
 
 Đúng hướng là dùng sự kiện (event / 이벤트)/callback/readiness đặc tả hợp đồng (contract / 계약) mà thành phần (component / 컴포넌트)/bản dựng (build / 빌드) hỗ trợ.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **4. setTimeout không phải vòng đời (lifecycle / 생명주기) API** đặt đầu vào cho **5. tải (load / 로드), preload và kết xuất (render / 렌더링) là ba chi phí khác nhau**, rồi **6. TabControl alwaysDraw** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 5. tải (load / 로드), preload và kết xuất (render / 렌더링) là ba chi phí khác nhau
 
 Một page có thể tải nguồn (source / 소스)/script trước nhưng chưa kết xuất (render / 렌더링) UI. Điều này tạo ba nhóm chi phí (cost / 비용):
@@ -99,8 +91,6 @@ DOM/layout/paint/render
 Tối ưu phải biết bottleneck nằm ở nhóm nào.
 
 Nếu mạng (network / 네트워크) chậm, lazy kết xuất (render / 렌더링) không sửa bandwidth. Nếu DOM quá lớn, preload nguồn (source / 소스) không giải quyết kết xuất (render / 렌더링) chi phí (cost / 비용).
-
-> **Nối mạch:** Load, preload và render là ba chi phí riêng; TabControl `alwaysDraw` quyết định vùng nào trả chi phí render sớm thay vì lazy.
 
 ## 6. TabControl `alwaysDraw`
 
@@ -120,8 +110,6 @@ alwaysDraw=false
 
 Không có giá trị “luôn đúng”. Quyết định phụ thuộc số tab, thành phần (component / 컴포넌트) độ phức tạp (complexity / 복잡도), initial dữ liệu (data / 데이터) và tương tác (interaction / 상호작용) xác suất (probability / 확률).
 
-> **Nối mạch:** `alwaysDraw` quyết định eager rendering ở host; `frameMode="wframe"` tiếp theo tách page content và lifecycle để lazy-load có boundary rõ.
-
 ## 7. `frameMode="wframe"` và lazy page content
 
 Với tab content dùng WFrame và `alwaysDraw=false`, page của tab chưa chọn có thể chưa được tải/kết xuất (render / 렌더링) cho đến khi người dùng (user / 사용자) mở tab.
@@ -136,8 +124,6 @@ Không nên đặt business dependency bắt buộc vào side effect của tab l
 
 Nếu main page cần dữ liệu chung, dữ liệu đó không nên được khởi tạo tình cờ trong một tab optional.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **8. frameMode="wframePreload" tạo trạng thái trung gian rất quan trọng** nối từ **7. frameMode="wframe" và lazy page content** sang **9. Thiết kế hàm (function / 함수) theo readiness yêu cầu (requirement / 요구사항)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. `frameMode="wframePreload"` tạo trạng thái trung gian rất quan trọng
 
 Official guide mô tả `wframePreload` có thể tải script và tạo đối tượng (object / 객체) trước khi tab được kết xuất (render / 렌더링). DataCollection và `scwin` có thể truy cập được, nhưng mã (code / 코드) đụng trực tiếp UI thành phần (component / 컴포넌트) có thể lỗi vì thành phần (component / 컴포넌트) chưa kết xuất (render / 렌더링) hoàn chỉnh; `onpageload` của tab chưa nhất thiết chạy ở preload stage.
@@ -149,8 +135,6 @@ object-ready ≠ render-ready
 ```
 
 Nếu hàm (function / 함수) có thể được gọi ở preload stage, hàm (function / 함수) đó nên tách pure/dữ liệu (data / 데이터) lô-gic (logic / 논리) khỏi UI manipulation.
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **9. Thiết kế hàm (function / 함수) theo readiness yêu cầu (requirement / 요구사항)** nối từ **8. frameMode="wframePreload" tạo trạng thái trung gian rất quan trọng** sang **10. Lazy loading thay đổi vị trí độ trễ (latency / 지연 시간), không xóa độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Thiết kế hàm (function / 함수) theo readiness yêu cầu (requirement / 요구사항)
 
@@ -183,8 +167,6 @@ scwin.loadInitialData = function () {
 
 Tên hàm (function / 함수) biểu diễn prerequisite, giảm việc gọi sai vòng đời (lifecycle / 생명주기) stage.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **10. Lazy loading thay đổi vị trí độ trễ (latency / 지연 시간), không xóa độ trễ (latency / 지연 시간)** nối từ **9. Thiết kế hàm (function / 함수) theo readiness yêu cầu (requirement / 요구사항)** sang **11. Preload là speculation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Lazy loading thay đổi vị trí độ trễ (latency / 지연 시간), không xóa độ trễ (latency / 지연 시간)
 
 Nếu một tab nặng mất 800 ms để tải (load / 로드)/kết xuất (render / 렌더링), lazy loading có thể làm initial page nhanh hơn nhưng người dùng (user / 사용자) chịu 800 ms khi mở tab lần đầu.
@@ -199,8 +181,6 @@ resource có thể preload khi browser idle không?
 
 Không nên gọi mọi lazy chiến lược (strategy / 전략) là “hiệu năng (performance / 성능) improvement” nếu chỉ di chuyển chi phí (cost / 비용) đến tương tác (interaction / 상호작용) đường găng (critical path / 임계 경로).
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **11. Preload là speculation** nối từ **10. Lazy loading thay đổi vị trí độ trễ (latency / 지연 시간), không xóa độ trễ (latency / 지연 시간)** sang **12. Rendering chi phí (cost / 비용) tăng theo số đối tượng (object / 객체)/DOM**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Preload là speculation
 
 Preload có lợi khi xác suất người dùng (user / 사용자) dùng tài nguyên (resource / 자원) cao và chi phí (cost / 비용) mạng (network / 네트워크) đáng kể. Nó lãng phí khi preload nhiều tab người dùng (user / 사용자) không dùng.
@@ -212,8 +192,6 @@ expected benefit ≈ probability of use × saved latency - preload cost
 ```
 
 Không cần tính chính xác bằng công thức; chỉ cần lập luận (reasoning / 추론) theo xác suất và chi phí (cost / 비용) thay vì bật preload mặc định.
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **12. Rendering chi phí (cost / 비용) tăng theo số đối tượng (object / 객체)/DOM** nối từ **11. Preload là speculation** sang **13. Grid virtual/bản địa (native / 네이티브) và visibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Rendering chi phí (cost / 비용) tăng theo số đối tượng (object / 객체)/DOM
 
@@ -231,8 +209,6 @@ heap retained size
 
 Đừng chỉ đo HTTP phản hồi (response / 응답).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **13. Grid virtual/bản địa (native / 네이티브) và visibility** nối từ **12. Rendering chi phí (cost / 비용) tăng theo số đối tượng (object / 객체)/DOM** sang **14. khả năng tiếp cận (accessibility / 접근성) có thể tăng kết xuất (render / 렌더링) footprint**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Grid virtual/bản địa (native / 네이티브) và visibility
 
 Grid renderer có thể tối ưu bằng chỉ kết xuất (render / 렌더링) phần visible hoặc dùng chế độ (mode / 모드) khác tùy bản dựng (build / 빌드)/thuộc tính (property / 속성). sự đánh đổi (trade-off / 트레이드오프) thường là:
@@ -244,8 +220,6 @@ nhưng lifecycle/scroll/render behavior phức tạp hơn
 
 Mã (code / 코드) không nên dựa vào giả định mọi row luôn tồn tại thành DOM nút (node / 노드). Hãy thao tác bằng DataList/Grid API công khai (public API / 공개 API).
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **14. khả năng tiếp cận (accessibility / 접근성) có thể tăng kết xuất (render / 렌더링) footprint** nối từ **13. Grid virtual/bản địa (native / 네이티브) và visibility** sang **15. phạm vi (scope / 범위) giúp cleanup nhưng không cứu được tham chiếu (reference / 참조) toàn cục (global / 전역)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. khả năng tiếp cận (accessibility / 접근성) có thể tăng kết xuất (render / 렌더링) footprint
 
 Một số khả năng tiếp cận (accessibility / 접근성) chế độ (mode / 모드) cần nhiều ngữ nghĩa (semantic / 의미적) DOM hơn. Nếu đồng thời cấu hình `visibleRowNum="all"` với hàng nghìn row, chi phí (cost / 비용) có thể tăng đáng kể.
@@ -253,8 +227,6 @@ Một số khả năng tiếp cận (accessibility / 접근성) chế độ (mod
 Fix đúng không phải mặc định tắt khả năng tiếp cận (accessibility / 접근성); hãy giảm dataset/kết xuất (render / 렌더링) footprint và đo.
 
 Xem [09 — Forms, Validation, Internationalization & Accessibility](09_forms_validation_i18n_accessibility.md).
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, sau nội dung của **14. khả năng tiếp cận (accessibility / 접근성) có thể tăng kết xuất (render / 렌더링) footprint**, **15. phạm vi (scope / 범위) giúp cleanup nhưng không cứu được tham chiếu (reference / 참조) toàn cục (global / 전역)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **16. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) phải có đơn vị sở hữu (owner / 오너)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. phạm vi (scope / 범위) giúp cleanup nhưng không cứu được tham chiếu (reference / 참조) toàn cục (global / 전역)
 
@@ -269,8 +241,6 @@ window.lastDetailScope = $p.getWindow("detailFrame");
 thì page unload không đảm bảo đối tượng (object / 객체) đồ thị (graph / 그래프) được garbage collect vì vẫn còn reachable từ toàn cục (global / 전역) gốc (root / 루트).
 
 Garbage collection tuân theo reachability, không theo ý định nhà phát triển (developer / 개발자).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **15. phạm vi (scope / 범위) giúp cleanup nhưng không cứu được tham chiếu (reference / 참조) toàn cục (global / 전역)** đặt vấn đề; **16. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) phải có đơn vị sở hữu (owner / 오너)** đối chiếu bằng chứng, rồi **17. Timer leak trong SPA** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) phải có đơn vị sở hữu (owner / 오너)
 
@@ -296,8 +266,6 @@ Ai giải phóng/hủy nó?
 
 Nếu câu thứ hai không có đáp án, leak rủi ro (risk / 위험) cao.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **16. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) phải có đơn vị sở hữu (owner / 오너)** đặt vấn đề; **17. Timer leak trong SPA** đối chiếu bằng chứng, rồi **18. sự kiện (event / 이벤트) listener leak** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 17. Timer leak trong SPA
 
 Ví dụ:
@@ -317,8 +285,6 @@ scwin.timer = null;
 
 Tên vòng đời (lifecycle / 생명주기) callback unload cụ thể phải kiểm tra theo dự án (project / 프로젝트)/bản dựng (build / 빌드). mô hình tư duy (mental model / 사고 모델) là cleanup cùng quyền sở hữu (ownership / 소유권) ranh giới (boundary / 경계).
 
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **18. sự kiện (event / 이벤트) listener leak** nối từ **17. Timer leak trong SPA** sang **19. Pending Submission khi page đóng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. sự kiện (event / 이벤트) listener leak
 
 Listener gắn trực tiếp lên đối tượng (object / 객체) sống lâu như `window`/`document` đặc biệt nguy hiểm.
@@ -330,8 +296,6 @@ window.addEventListener("resize", scwin.onResize);
 Page đóng nhưng `window` vẫn sống. Nếu không remove listener, hàm (function / 함수) tham chiếu (reference / 참조) giữ page trạng thái (state / 상태).
 
 Ưu tiên sự kiện (event / 이벤트) API/thành phần (component / 컴포넌트) vòng đời (lifecycle / 생명주기) của WebSquare khi có thể; nếu tự đăng ký trình duyệt (browser / 브라우저) sự kiện (event / 이벤트), tự unregister.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **19. Pending Submission khi page đóng** nối từ **18. sự kiện (event / 이벤트) listener leak** sang **20. yêu cầu (request / 요청) generation/đơn vị từ (token / 토큰)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Pending Submission khi page đóng
 
@@ -346,8 +310,6 @@ apply result vào shared owner nếu owner vẫn sống
 ```
 
 Không nên để callback mù quáng chạm thành phần (component / 컴포넌트) cũ.
-
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **20. yêu cầu (request / 요청) generation/đơn vị từ (token / 토큰)** nối từ **19. Pending Submission khi page đóng** sang **21. Debounce và latest-intent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. yêu cầu (request / 요청) generation/đơn vị từ (token / 토큰)
 
@@ -365,8 +327,6 @@ scwin.search = function () {
 
 Với Submission đối tượng (object / 객체) cụ thể, hiện thực (implementation / 구현) callback cần phù hợp API dự án (project / 프로젝트). mô hình tư duy (mental model / 사고 모델) là **kết quả (result / 결과) chỉ hợp lệ với generation đã tạo nó**.
 
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **21. Debounce và latest-intent** nối từ **20. yêu cầu (request / 요청) generation/đơn vị từ (token / 토큰)** sang **22. Lazy script và thực thi (execution / 실행) thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Debounce và latest-intent
 
 Autocomplete/search-as-you-type có thể phát nhiều yêu cầu (request / 요청). Nếu yêu cầu (request / 요청) cũ về sau yêu cầu (request / 요청) mới, UI có thể hiển thị kết quả cũ.
@@ -380,23 +340,17 @@ latest-intent guard → ngăn stale response ghi đè state mới
 
 Chỉ debounce không loại bỏ race hoàn toàn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **22. Lazy script và thực thi (execution / 실행) thứ tự (ordering / 순서)** nối từ **21. Debounce và latest-intent** sang **23. scriptLoading.merge và khả năng quan sát (observability / 관측 가능성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Lazy script và thực thi (execution / 실행) thứ tự (ordering / 순서)
 
 WebSquare/WFrame cấu hình (config / 설정) có các option liên quan lazy script, sync chế độ (mode / 모드) và phạm vi (scope / 범위). Official WFrame guide lưu ý một số cấu hình `mode="sync"`, `scope="true"` để bảo đảm hành vi (behavior / 동작)/thực thi (execution / 실행) thứ tự (order / 순서) trong multi-WFrame kiến trúc (architecture / 아키텍처) của các generation tương ứng.
 
 Không bản sao (copy / 복사) cấu hình (config / 설정) từ dự án (project / 프로젝트) khác mà không hiểu bản dựng (build / 빌드). Một cấu hình (config / 설정) từng là workaround ở SP cũ có thể không còn là recommendation hiện tại.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **23. scriptLoading.merge và khả năng quan sát (observability / 관측 가능성)** nối từ **22. Lazy script và thực thi (execution / 실행) thứ tự (ordering / 순서)** sang **24. W-Pack và bộ nhớ đệm (cache / 캐시) tạo nhiều sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. `scriptLoading.merge` và khả năng quan sát (observability / 관측 가능성)
 
 Máy khách (client / 클라이언트) cấu hình (config / 설정) có option liên quan cách script WFrame/PageInherit được eval/merge. Các tối ưu hóa (optimization / 최적화) kiểu merge có thể thay đổi dấu vết ngăn xếp (stack trace / 스택 트레이스)/nguồn (source / 소스) visibility và timing.
 
 Khi gỡ lỗi (debug / 디버그) issue chỉ môi trường vận hành (production / 운영 환경) xảy ra, hãy so sánh cấu hình (config / 설정) dev/prod trước khi kết luận mã nguồn (source code / 소스 코드) khác.
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **24. W-Pack và bộ nhớ đệm (cache / 캐시) tạo nhiều sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자)** nối từ **23. scriptLoading.merge và khả năng quan sát (observability / 관측 가능성)** sang **25. Page reload không đồng nghĩa engine reload**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. W-Pack và bộ nhớ đệm (cache / 캐시) tạo nhiều sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자)
 
@@ -414,8 +368,6 @@ Nếu nhà phát triển (developer / 개발자) sửa XML nhưng trình duyệt
 
 Gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경) phải xác định sản phẩm tạo ra (artifact / 산출물) thật được tải qua mạng (network / 네트워크)/bản đồ mã nguồn (source map / 소스 맵)/băm (hash / 해시)/bản dựng (build / 빌드) siêu dữ liệu (metadata / 메타데이터).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **25. Page reload không đồng nghĩa engine reload** nối từ **24. W-Pack và bộ nhớ đệm (cache / 캐시) tạo nhiều sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자)** sang **26. Tab caching và stale trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Page reload không đồng nghĩa engine reload
 
 Trong SPA, thay WFrame `src` có thể tạo page instance mới trong cùng engine shell. toàn cục (global / 전역) engine/dùng chung (common / 공통) trạng thái (state / 상태) vẫn còn.
@@ -426,8 +378,6 @@ Do đó bug “reload page con là hết” có thể khác “reload trình duy
 Nếu browser reload mới fix → nghi global/common/cache/lifetime state.
 Nếu đổi page con fix → nghi page-local state.
 ```
-
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **26. Tab caching và stale trạng thái (state / 상태)** nối từ **25. Page reload không đồng nghĩa engine reload** sang **27. Warm bộ nhớ đệm (cache / 캐시) che hiệu năng (performance / 성능) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Tab caching và stale trạng thái (state / 상태)
 
@@ -445,8 +395,6 @@ close/destroy
 
 Nếu nghiệp vụ (business / 비즈니스) cần refresh mỗi lần active, gắn vào activation đặc tả hợp đồng (contract / 계약), không dựa vào creation callback.
 
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **27. Warm bộ nhớ đệm (cache / 캐시) che hiệu năng (performance / 성능) bài toán (problem / 문제)** nối từ **26. Tab caching và stale trạng thái (state / 상태)** sang **28. bộ nhớ (memory / 메모리) kiểm thử (test / 테스트) cần lặp vòng đời (lifecycle / 생명주기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Warm bộ nhớ đệm (cache / 캐시) che hiệu năng (performance / 성능) bài toán (problem / 문제)
 
 Development thường kiểm thử (test / 테스트) lần thứ hai khi trình duyệt (browser / 브라우저) đã bộ nhớ đệm (cache / 캐시) script và API dữ liệu (data / 데이터) nhỏ. người dùng (user / 사용자) first visit có cold bộ nhớ đệm (cache / 캐시).
@@ -462,8 +410,6 @@ repeated navigation 20–50 lần
 ```
 
 Một screen chỉ nhanh ở warm bộ nhớ đệm (cache / 캐시) chưa đủ production-ready.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **27. Warm bộ nhớ đệm (cache / 캐시) che hiệu năng (performance / 성능) bài toán (problem / 문제)** đặt đầu vào cho **28. bộ nhớ (memory / 메모리) kiểm thử (test / 테스트) cần lặp vòng đời (lifecycle / 생명주기)**, rồi **29. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo screen** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. bộ nhớ (memory / 메모리) kiểm thử (test / 테스트) cần lặp vòng đời (lifecycle / 생명주기)
 
@@ -481,8 +427,6 @@ compare retained objects
 
 Nếu retained phạm vi (scope / 범위)/listener/count tăng gần tuyến tính theo lần mở, hypothesis leak mạnh hơn.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **28. bộ nhớ (memory / 메모리) kiểm thử (test / 테스트) cần lặp vòng đời (lifecycle / 생명주기)** đặt đầu vào cho **29. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo screen**, rồi **30. Không optimize bằng private engine API** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 29. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo screen
 
 Thay vì “màn hình phải nhanh”, đặt ngân sách (budget / 예산) có thể đo:
@@ -496,8 +440,6 @@ heap growth after 30 navigation cycles
 ```
 
 Con số cụ thể phụ thuộc sản phẩm (product / 제품)/thiết bị (device / 장치)/mạng (network / 네트워크). Giá trị của ngân sách (budget / 예산) là tạo regression tín hiệu (signal / 신호).
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **30. Không optimize bằng private engine API** nối từ **29. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo screen** sang **31. kết xuất (render / 렌더링) storm do sự kiện (event / 이벤트)/binding chuỗi (chain / 사슬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Không optimize bằng private engine API
 
@@ -517,8 +459,6 @@ public API
 
 trước micro-hack internals.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **30. Không optimize bằng private engine API** đặt đầu vào cho **31. kết xuất (render / 렌더링) storm do sự kiện (event / 이벤트)/binding chuỗi (chain / 사슬)**, rồi **32. Batch mutation khi API hỗ trợ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 31. kết xuất (render / 렌더링) storm do sự kiện (event / 이벤트)/binding chuỗi (chain / 사슬)
 
 Một người dùng (user / 사용자) hành động (action / 동작) có thể:
@@ -535,8 +475,6 @@ set model
 Nếu handler viết thiếu guard, sự kiện (event / 이벤트) chuỗi (chain / 사슬) có thể lặp hoặc redraw nhiều lần.
 
 Khi profile thấy scripting/kết xuất (render / 렌더링) spike, vẽ chuỗi nhân quả (causal chain / 인과 사슬) của trạng thái (state / 상태) mutation thay vì tối ưu từng hàm (function / 함수) độc lập.
-
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **31. kết xuất (render / 렌더링) storm do sự kiện (event / 이벤트)/binding chuỗi (chain / 사슬)** đặt đầu vào cho **32. Batch mutation khi API hỗ trợ**, rồi **33. Hidden UI vẫn có thể có chi phí (cost / 비용)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Batch mutation khi API hỗ trợ
 
@@ -556,15 +494,11 @@ N model mutations + 1 render synchronization
 
 Nhưng không dùng undocumented suspend-render hack; kiểm tra API công khai (public API / 공개 API).
 
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **33. Hidden UI vẫn có thể có chi phí (cost / 비용)** nối từ **32. Batch mutation khi API hỗ trợ** sang **34. trường hợp (case / 사례) study: dashboard 12 tab**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Hidden UI vẫn có thể có chi phí (cost / 비용)
 
 `display:none` hoặc tab chưa visible không nhất thiết nghĩa thành phần (component / 컴포넌트) chưa được instantiate hoặc dữ liệu (data / 데이터) không tải (load / 로드). chi phí (cost / 비용) phụ thuộc vòng đời (lifecycle / 생명주기)/kết xuất (render / 렌더링) chiến lược (strategy / 전략).
 
 Đừng tối ưu bằng cách “ẩn” 20 Grid rồi nghĩ startup nhẹ đi. Đo mạng (network / 네트워크), đối tượng (object / 객체) creation và DOM.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **33. Hidden UI vẫn có thể có chi phí (cost / 비용)** nêu quy tắc; **34. trường hợp (case / 사례) study: dashboard 12 tab** thử quy tắc trong tình huống, rồi **35. trường hợp (case / 사례) study: child đối tượng (object / 객체) tồn tại nhưng phương thức (method / 메서드) lỗi** mở rộng hệ quả.
 
 ## 34. trường hợp (case / 사례) study: dashboard 12 tab
 
@@ -583,8 +517,6 @@ cleanup listener/timer khi tab destroy
 
 Nhưng nếu tab B cung cấp dữ liệu (data / 데이터) bắt buộc cho header chung, dữ liệu (data / 데이터) đó phải chuyển lên đơn vị sở hữu (owner / 오너) chung thay vì trông chờ tab B lazy chạy.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **34. trường hợp (case / 사례) study: dashboard 12 tab** nêu quy tắc; **35. trường hợp (case / 사례) study: child đối tượng (object / 객체) tồn tại nhưng phương thức (method / 메서드) lỗi** thử quy tắc trong tình huống, rồi **36. vòng đời (lifecycle / 생명주기) máy trạng thái (state machine / 상태 머신) nên nghĩ thế nào** mở rộng hệ quả.
-
 ## 35. trường hợp (case / 사례) study: child đối tượng (object / 객체) tồn tại nhưng phương thức (method / 메서드) lỗi
 
 Với preload, `scwin` child có thể tồn tại. Parent gọi `child.scwin.calculate()` thành công nếu hàm (function / 함수) chỉ dùng DataMap. Sau đó refactor hàm (function / 함수) thêm `grid1.redraw()` và bắt đầu lỗi trước khi tab kết xuất (render / 렌더링).
@@ -592,8 +524,6 @@ Với preload, `scwin` child có thể tồn tại. Parent gọi `child.scwin.ca
 Nguyên nhân gốc (root cause / 근본 원인) không phải “Grid API flaky”. đặc tả hợp đồng (contract / 계약) của hàm (function / 함수) đã thay đổi từ data-ready sang render-ready nhưng caller không biết.
 
 Fix tốt là tách hàm (function / 함수) hoặc encode readiness yêu cầu (requirement / 요구사항) rõ.
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **35. trường hợp (case / 사례) study: child đối tượng (object / 객체) tồn tại nhưng phương thức (method / 메서드) lỗi** nêu quy tắc; **36. vòng đời (lifecycle / 생명주기) máy trạng thái (state machine / 상태 머신) nên nghĩ thế nào** thử quy tắc trong tình huống, rồi **37. môi trường vận hành (production / 운영 환경) debugging thứ tự (order / 순서)** mở rộng hệ quả.
 
 ## 36. vòng đời (lifecycle / 생명주기) máy trạng thái (state machine / 상태 머신) nên nghĩ thế nào
 
@@ -612,8 +542,6 @@ CREATED
 
 Không nhất thiết implement enum thật. Nhưng khi bug timing xảy ra, xác định thao tác (operation / 연산) hợp lệ ở trạng thái (state / 상태) nào giúp tìm lỗi nhanh hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **36. vòng đời (lifecycle / 생명주기) máy trạng thái (state machine / 상태 머신) nên nghĩ thế nào** đặt đầu vào cho **37. môi trường vận hành (production / 운영 환경) debugging thứ tự (order / 순서)**, rồi **38. liên kết (connection / 연결) với chapter khác** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 37. môi trường vận hành (production / 운영 환경) debugging thứ tự (order / 순서)
 
 Khi “tab đôi lúc trắng”, kiểm tra theo thứ tự:
@@ -631,8 +559,6 @@ CSS/layout có làm nội dung invisible không?
 
 Mỗi bước có bằng chứng (evidence / 증거) khác nhau. Không bắt đầu bằng random `redraw()`.
 
-> **Nối mạch:** Trong **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **38. liên kết (connection / 연결) với chapter khác** nối từ **37. môi trường vận hành (production / 운영 환경) debugging thứ tự (order / 순서)** sang **Nguồn chính thức nên đối chiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 38. liên kết (connection / 연결) với chapter khác
 
 Phạm vi (scope / 범위)/WFrame topology: [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_popup_spa.md).
@@ -642,8 +568,6 @@ Grid rendering và large dataset: [05 — GridView, CRUD & Enterprise Screen Pat
 Bộ nhớ (memory / 메모리)/bằng chứng hiệu năng (performance evidence / 성능 증거): [06 — Debugging, Performance, Security & Production](06_debugging_performance_security.md).
 
 Reusable UDC/động (dynamic / 동적) thành phần (component / 컴포넌트) quyền sở hữu (ownership / 소유권): [08 — Reusable Architecture, UDC & Common Modules](08_reusable_architecture_udc_common_modules.md).
-
-> **Nối mạch:** Ở chặng này của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**, **38. liên kết (connection / 연결) với chapter khác** đã nêu tiêu chí phân biệt, còn **Nguồn chính thức nên đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn chính thức nên đối chiếu
 

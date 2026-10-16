@@ -8,8 +8,6 @@
 
 Tải sử dụng là lượng nhiệt, điện, nước hoặc không khí mà không gian cần xử lý. Cùng một điều hòa có thể phù hợp với phòng nhỏ nhưng không đủ cho phòng có tải nhiệt lớn, cách nhiệt kém hoặc cửa mở liên tục.
 
-> **Chuyển mạch:** Tải và ranh giới cho biết hệ thống phải đáp ứng điều gì; lớp vỏ nhà quyết định bao nhiêu năng lượng và ẩm đi qua trước khi thiết bị can thiệp.
-
 ## 2. Vỏ nhà điều khiển trao đổi với môi trường
 
 Tường, mái, cửa, kính, khe hở và lớp cách nhiệt tạo thành ranh giới giữa trong và ngoài. Nhiệt truyền qua vật liệu, bức xạ qua kính, không khí rò qua khe, còn hơi ẩm có thể di chuyển và ngưng tụ ở bề mặt lạnh. Vì vậy tăng công suất máy không luôn giải quyết được nguyên nhân.
@@ -17,8 +15,6 @@ Tường, mái, cửa, kính, khe hở và lớp cách nhiệt tạo thành ranh
 Một giải pháp tốt phải nói rõ nó giảm tải bằng cách nào: giảm truyền nhiệt, giảm rò khí, che bức xạ, kiểm soát ẩm hay thay đổi hành vi sử dụng. Mỗi cách có chi phí, giới hạn và rủi ro ngưng tụ khác nhau.
 
 Một [home energy evaluation của U.S. Department of Energy](https://www.energy.gov/energysaver/why-energy-efficiency-matters) cũng bắt đầu bằng việc xác định nhà tiêu thụ năng lượng ở đâu trước khi chọn biện pháp. Đây là ví dụ về thứ tự reasoning, không phải tiêu chuẩn thay thế quy định xây dựng hoặc khí hậu địa phương.
-
-> **Chuyển mạch:** Vỏ nhà quyết định tải nền; các hệ thống điện, nước, nhiệt và không khí xử lý phần tải còn lại, nên phải đọc chúng theo luồng vào–ra và điểm có thể hỏng.
 
 ## 3. Đọc hệ thống theo dòng và trạng thái
 
@@ -35,8 +31,6 @@ nguồn vào
 Điện có nguồn, tải, dây dẫn, bảo vệ và điểm nối; nước có áp suất, đường ống, van, thoát và rò; HVAC có nguồn nhiệt, môi chất hoặc không khí, trao đổi nhiệt và thoát nước ngưng. Sơ đồ này giúp tìm vị trí mà năng lượng hoặc dòng vật chất bị giới hạn.
 
 Không tự suy ra an toàn từ việc thiết bị vẫn chạy. Một dây nóng, mùi khét, nước rò gần điện, khí thải trong phòng hoặc nấm mốc lan rộng là failure mode cần dừng thao tác và gọi người có chuyên môn.
-
-> **Chuyển mạch:** Khi đã thấy dòng và trạng thái, bảo trì trở thành việc giữ hệ thống trong vùng vận hành an toàn thay vì chỉ sửa khi hỏng.
 
 ## 4. Bảo trì là quản lý rủi ro theo thời gian
 

@@ -26,8 +26,6 @@ Mỗi lớp chặn một loại lỗi khác nhau.
 
 Ví dụ `allowChar="0-9"` có thể ngăn nhiều ký tự không phải số được gõ vào đầu vào (input / 입력), nhưng nó không chứng minh giá trị là một employee number hợp lệ. `dataType="number"` có thể giúp parsing và format, nhưng không chứng minh số nằm trong nghiệp vụ (business / 비즈니스) phạm vi (range / 범위). máy chủ (server / 서버) vẫn phải kiểm tra.
 
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **1. chuỗi xử lý (pipeline / 파이프라인) của dữ liệu nhập** đặt vấn đề; **2. đầu vào (input / 입력) filtering không phải kiểm tra hợp lệ (validation / 검증) hoàn chỉnh** đối chiếu bằng chứng, rồi **3. Parsing, biểu diễn (representation / 표현) và lĩnh vực (domain / 도메인) giá trị (value / 값)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. đầu vào (input / 입력) filtering không phải kiểm tra hợp lệ (validation / 검증) hoàn chỉnh
 
 WebSquare hỗ trợ các thuộc tính (property / 속성) kiểm soát đầu vào (input / 입력) như `allowChar`, `ignoreChar`, `dataType` tùy thành phần (component / 컴포넌트)/bản dựng (build / 빌드). Đây là guard ở mức tương tác (interaction / 상호작용).
@@ -53,8 +51,6 @@ browser/autofill tùy environment
 
 Vì vậy không nên suy luận “người dùng (user / 사용자) không gõ được ký tự X” đồng nghĩa mô hình (model / 모델) không bao giờ có X.
 
-> **Nối mạch:** Input filtering chỉ giảm dữ liệu rác; parsing và domain representation tiếp theo biến chuỗi đầu vào thành giá trị có nghĩa trước khi chạy validation nhiều cấp.
-
 ## 3. Parsing, biểu diễn (representation / 표현) và lĩnh vực (domain / 도메인) giá trị (value / 값)
 
 Một trường dữ liệu (field / 필드) ngày tháng có ít nhất ba biểu diễn (representation / 표현):
@@ -79,8 +75,6 @@ server numeric type: decimal/integer theo domain
 
 Không gửi display string nếu máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) thực sự cần numeric giá trị (value / 값).
 
-> **Nối mạch:** Parsing đã tạo domain value; validation nhiều cấp tiếp theo phân biệt lỗi cú pháp, lỗi nghiệp vụ và lỗi cross-field trước khi phản hồi cho người dùng.
-
 ## 4. kiểm tra hợp lệ (validation / 검증) có nhiều cấp
 
 Một trường dữ liệu (field / 필드) `amount` có thể đi qua các cấp:
@@ -98,8 +92,6 @@ Một trường dữ liệu (field / 필드) `amount` có thể đi qua các c�
 **Persistence bất biến (invariant / 불변식)**: unique key hoặc foreign key còn đúng tại thời điểm lần ghi nhận (commit / 커밋) không?
 
 UI chỉ có đủ ngữ cảnh (context / 맥락) cho một phần trong số này.
-
-> **Nối mạch:** Client validation tối ưu feedback latency nhưng không phải authority; required chỉ kiểm tra presence, còn meaningfulness cần rule và domain owner rõ.
 
 ## 5. máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검증) phục vụ phản hồi (feedback / 피드백) nhanh
 
@@ -124,8 +116,6 @@ scwin.save = function () {
 
 Máy chủ (server / 서버) vẫn validate payload lại độc lập.
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **6. Required không đồng nghĩa meaningful** nối từ **5. máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검증) phục vụ phản hồi (feedback / 피드백) nhanh** sang **7. Cross-field quy tắc (rule / 규칙) nên có một đơn vị sở hữu (owner / 오너) rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Required không đồng nghĩa meaningful
 
 Một trường dữ liệu (field / 필드) có giá trị (value / 값) không có nghĩa giá trị (value / 값) hợp lệ.
@@ -141,8 +131,6 @@ Ví dụ:
 có thể vượt qua kiểm tra non-empty nhưng vô nghĩa theo lĩnh vực (domain / 도메인).
 
 Do đó validator nên nói bằng lĩnh vực (domain / 도메인) ngôn ngữ (language / 언어): `isValidEmployeeId`, `isValidDateRange`, `canSubmitApproval`, thay vì chỉ `notEmpty` ở mọi nơi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, sau nội dung của **6. Required không đồng nghĩa meaningful**, **7. Cross-field quy tắc (rule / 규칙) nên có một đơn vị sở hữu (owner / 오너) rõ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. lỗi (error / 오류) message phải gắn với hành động sửa được** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Cross-field quy tắc (rule / 규칙) nên có một đơn vị sở hữu (owner / 오너) rõ
 
@@ -165,8 +153,6 @@ scwin.validateSearchPeriod = function () {
 ```
 
 Sự kiện (event / 이벤트) handler có thể gọi nó để phản hồi (feedback / 피드백) sớm; save/tìm kiếm (search / 검색) orchestration cũng gọi cùng quy tắc (rule / 규칙) trước yêu cầu (request / 요청).
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **8. lỗi (error / 오류) message phải gắn với hành động sửa được** nối từ **7. Cross-field quy tắc (rule / 규칙) nên có một đơn vị sở hữu (owner / 오너) rõ** sang **9. Focus management sau kiểm tra hợp lệ (validation / 검증)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. lỗi (error / 오류) message phải gắn với hành động sửa được
 
@@ -192,8 +178,6 @@ User sửa thế nào?
 
 Không nên lộ dấu vết ngăn xếp (stack trace / 스택 트레이스), endpoint nội bộ hoặc raw máy chủ (server / 서버) exception cho người dùng (user / 사용자).
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **9. Focus management sau kiểm tra hợp lệ (validation / 검증)** nối từ **8. lỗi (error / 오류) message phải gắn với hành động sửa được** sang **10. Tab thứ tự (order / 순서) là một phần tương tác (interaction / 상호작용) kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Focus management sau kiểm tra hợp lệ (validation / 검증)
 
 Khi form dài, chỉ alert lỗi nhưng không đưa focus về trường dữ liệu (field / 필드) sai làm người dùng (user / 사용자) mất thời gian tìm.
@@ -207,8 +191,6 @@ collect validation result
 ```
 
 Nhưng focus phải tôn trọng thành phần (component / 컴포넌트) vòng đời (lifecycle / 생명주기). Nếu trường dữ liệu (field / 필드) nằm trong tab chưa kết xuất (render / 렌더링), cố focus ngay có thể thất bại (fail / 실패). Khi đó cần activate/kết xuất (render / 렌더링) bộ chứa (container / 컨테이너) trước rồi focus.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **10. Tab thứ tự (order / 순서) là một phần tương tác (interaction / 상호작용) kiến trúc (architecture / 아키텍처)** nối từ **9. Focus management sau kiểm tra hợp lệ (validation / 검증)** sang **11. readOnly, disabled, hidden có ngữ nghĩa (semantics / 의미론) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Tab thứ tự (order / 순서) là một phần tương tác (interaction / 상호작용) kiến trúc (architecture / 아키텍처)
 
@@ -224,8 +206,6 @@ Popup open/close có trả focus hợp lý không
 Disabled/hidden component có bị focus nhầm không
 ```
 
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **11. readOnly, disabled, hidden có ngữ nghĩa (semantics / 의미론) khác nhau** nối từ **10. Tab thứ tự (order / 순서) là một phần tương tác (interaction / 상호작용) kiến trúc (architecture / 아키텍처)** sang **12. Permission phải thay đổi năng lực (capability / 역량), không chỉ decoration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. readOnly, disabled, hidden có ngữ nghĩa (semantics / 의미론) khác nhau
 
 Các trạng thái UI này không nên được xem là synonym.
@@ -237,8 +217,6 @@ Các trạng thái UI này không nên được xem là synonym.
 `hidden` nghĩa không hiển thị nhưng giá trị (value / 값)/mô hình (model / 모델) vẫn có thể tồn tại.
 
 Không thuộc tính (property / 속성) nào trong ba thuộc tính (property / 속성) này tạo authorization ranh giới (boundary / 경계). người dùng (user / 사용자) có thể sửa yêu cầu (request / 요청) hoặc chạy script máy khách (client / 클라이언트).
-
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **12. Permission phải thay đổi năng lực (capability / 역량), không chỉ decoration** nối từ **11. readOnly, disabled, hidden có ngữ nghĩa (semantics / 의미론) khác nhau** sang **13. Internationalization không chỉ là dịch label**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Permission phải thay đổi năng lực (capability / 역량), không chỉ decoration
 
@@ -252,8 +230,6 @@ server permission = security enforcement
 ```
 
 Một hidden button không bảo vệ API.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **12. Permission phải thay đổi năng lực (capability / 역량), không chỉ decoration** nêu quy tắc; **13. Internationalization không chỉ là dịch label** thử quy tắc trong tình huống, rồi **14. Stable locale key** mở rộng hệ quả.
 
 ## 13. Internationalization không chỉ là dịch label
 
@@ -271,8 +247,6 @@ message grammar
 ```
 
 WebSquare5 hỗ trợ ngôn ngữ (language / 언어) pack và các thuộc tính (property / 속성) như `useLocale`, `localeRef` ở những thành phần (component / 컴포넌트) tương ứng. Đây là cơ chế (mechanism / 메커니즘) ánh xạ (mapping / 매핑) key → localized văn bản (text / 텍스트), nhưng lĩnh vực (domain / 도메인) thiết kế (design / 설계) vẫn phải dùng stable ngữ nghĩa (semantic / 의미적) keys.
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **13. Internationalization không chỉ là dịch label** nêu quy tắc; **14. Stable locale key** thử quy tắc trong tình huống, rồi **15. useLanguagePack và thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성)** mở rộng hệ quả.
 
 ## 14. Stable locale key
 
@@ -294,8 +268,6 @@ button.search
 
 Key mô tả meaning, translation tệp (file / 파일) mô tả wording.
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **15. useLanguagePack và thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성)** nối từ **14. Stable locale key** sang **16. Missing translation là data-quality bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. `useLanguagePack` và thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성)
 
 Theo SP5 official guide, máy khách (client / 클라이언트) cấu hình (configuration / 구성) có thể bật ngôn ngữ (language / 언어) pack và map ngôn ngữ (language / 언어) mã (code / 코드) tới tệp (file / 파일) tài nguyên (resource / 자원). thành phần (component / 컴포넌트) hỗ trợ locale có thể dùng `localeRef` để lấy văn bản (text / 텍스트).
@@ -311,8 +283,6 @@ runtime language decision
 
 Nếu văn bản (text / 텍스트) không đổi khi switch ngôn ngữ (language / 언어), gỡ lỗi (debug / 디버그) theo chuỗi xử lý (pipeline / 파이프라인) này thay vì sửa thành phần (component / 컴포넌트) ngẫu nhiên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **16. Missing translation là data-quality bài toán (problem / 문제)** nối từ **15. useLanguagePack và thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성)** sang **17. văn bản (text / 텍스트) expansion và bố cục (layout / 레이아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Missing translation là data-quality bài toán (problem / 문제)
 
 Khi locale key không tồn tại, hành vi (behavior / 동작) fallback phụ thuộc cấu hình (config / 설정)/thành phần (component / 컴포넌트)/bản dựng (build / 빌드). môi trường vận hành (production / 운영 환경) nên phát hiện missing key sớm hơn người dùng (user / 사용자).
@@ -326,8 +296,6 @@ report missing/unused keys
 ```
 
 Nếu dự án (project / 프로젝트) không có automation, ít nhất regression kiểm thử (test / 테스트) các screen quan trọng ở mọi supported ngôn ngữ (language / 언어).
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **17. văn bản (text / 텍스트) expansion và bố cục (layout / 레이아웃)** nối từ **16. Missing translation là data-quality bài toán (problem / 문제)** sang **18. khả năng tiếp cận (accessibility / 접근성) là năng lực (capability / 역량) của người dùng (user / 사용자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. văn bản (text / 텍스트) expansion và bố cục (layout / 레이아웃)
 
@@ -347,8 +315,6 @@ placeholder
 
 I18n là một đầu vào (input / 입력) cho bố cục (layout / 레이아웃) kiến trúc (architecture / 아키텍처).
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **18. khả năng tiếp cận (accessibility / 접근성) là năng lực (capability / 역량) của người dùng (user / 사용자)** nối từ **17. văn bản (text / 텍스트) expansion và bố cục (layout / 레이아웃)** sang **19. Grid khả năng tiếp cận (accessibility / 접근성) có hiệu năng (performance / 성능) sự đánh đổi (trade-off / 트레이드오프) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. khả năng tiếp cận (accessibility / 접근성) là năng lực (capability / 역량) của người dùng (user / 사용자)
 
 Khả năng truy cập (accessibility / 접근성) nghĩa người dùng có thể thao tác và hiểu screen bằng nhiều phương thức khác nhau, không chỉ mouse + visual display.
@@ -366,8 +332,6 @@ error identification
 
 WebSquare thành phần (component / 컴포넌트) cung cấp một phần ngữ nghĩa (semantics / 의미론); nhà phát triển (developer / 개발자) vẫn phải cấu hình và kiểm thử (test / 테스트).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **19. Grid khả năng tiếp cận (accessibility / 접근성) có hiệu năng (performance / 성능) sự đánh đổi (trade-off / 트레이드오프) thật** nối từ **18. khả năng tiếp cận (accessibility / 접근성) là năng lực (capability / 역량) của người dùng (user / 사용자)** sang **20. Label và ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Grid khả năng tiếp cận (accessibility / 접근성) có hiệu năng (performance / 성능) sự đánh đổi (trade-off / 트레이드오프) thật
 
 Official WebSquare guide lưu ý các option liên quan Grid khả năng tiếp cận (accessibility / 접근성) như `senseReader` có thể làm tăng DOM/bộ nhớ (memory / 메모리) chi phí (cost / 비용), đặc biệt khi đồng thời hiển thị số lượng row lớn. Đây là ví dụ quan trọng: khả năng tiếp cận (accessibility / 접근성) và hiệu năng (performance / 성능) không nên bị đặt thành hai mục tiêu đối nghịch kiểu “chọn một”.
@@ -383,23 +347,17 @@ không render hàng chục nghìn row cùng lúc
 
 Không nên tắt khả năng tiếp cận (accessibility / 접근성) chỉ vì screen được thiết kế với dataset phi thực tế.
 
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **19. Grid khả năng tiếp cận (accessibility / 접근성) có hiệu năng (performance / 성능) sự đánh đổi (trade-off / 트레이드오프) thật** nêu quy tắc; **20. Label và ngữ cảnh (context / 맥락)** thử quy tắc trong tình huống, rồi **21. lỗi (error / 오류) khả năng tiếp cận (accessibility / 접근성)** mở rộng hệ quả.
-
 ## 20. Label và ngữ cảnh (context / 맥락)
 
 Một đầu vào (input / 입력) chỉ có placeholder không phải lúc nào cũng cung cấp ngữ nghĩa (semantic / 의미적) label ổn định. Placeholder biến mất khi người dùng (user / 사용자) nhập và có thể khó đọc.
 
 Form quan trọng nên có label/ngữ cảnh (context / 맥락) rõ. Với Grid, header phải diễn đạt meaning của column, không chỉ viết abbreviation nội bộ mà người dùng (user / 사용자) không hiểu.
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **20. Label và ngữ cảnh (context / 맥락)** nêu quy tắc; **21. lỗi (error / 오류) khả năng tiếp cận (accessibility / 접근성)** thử quy tắc trong tình huống, rồi **22. Không chỉnh DOM private để thêm khả năng tiếp cận (accessibility / 접근성) nếu API công khai (public API / 공개 API) có sẵn** mở rộng hệ quả.
-
 ## 21. lỗi (error / 오류) khả năng tiếp cận (accessibility / 접근성)
 
 Nếu kiểm tra hợp lệ (validation / 검증) chỉ đổi border thành đỏ, người dùng (user / 사용자) không phân biệt màu hoặc screen reader có thể không biết có lỗi.
 
 Tối thiểu lỗi (error / 오류) trạng thái (state / 상태) nên có văn bản (text / 텍스트) message và focus/điều hướng (navigation / 내비게이션) chiến lược (strategy / 전략). Nếu thành phần (component / 컴포넌트)/bản dựng (build / 빌드) hỗ trợ khả năng tiếp cận (accessibility / 접근성) attribute tương ứng, dùng theo official API thay vì DOM hack.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **22. Không chỉnh DOM private để thêm khả năng tiếp cận (accessibility / 접근성) nếu API công khai (public API / 공개 API) có sẵn** nối từ **21. lỗi (error / 오류) khả năng tiếp cận (accessibility / 접근성)** sang **23. đầu vào (input / 입력) phương thức (method / 메서드) và Korean/Vietnamese văn bản (text / 텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Không chỉnh DOM private để thêm khả năng tiếp cận (accessibility / 접근성) nếu API công khai (public API / 공개 API) có sẵn
 
@@ -415,8 +373,6 @@ supported class/style hook
 
 DOM manipulation chỉ là last resort có regression bằng chứng (evidence / 증거).
 
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **23. đầu vào (input / 입력) phương thức (method / 메서드) và Korean/Vietnamese văn bản (text / 텍스트)** nối từ **22. Không chỉnh DOM private để thêm khả năng tiếp cận (accessibility / 접근성) nếu API công khai (public API / 공개 API) có sẵn** sang **24. Paste và normalization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. đầu vào (input / 입력) phương thức (method / 메서드) và Korean/Vietnamese văn bản (text / 텍스트)
 
 IME (Input Method Editor) làm key sự kiện (event / 이벤트) không luôn tương ứng một ký tự hoàn chỉnh. Đặc biệt Korean composition ghép jamo thành syllable, nên filtering dựa quá thấp vào keycode có thể phá đầu vào (input / 입력).
@@ -424,8 +380,6 @@ IME (Input Method Editor) làm key sự kiện (event / 이벤트) không luôn 
 Official guide cũng lưu ý mẫu (pattern / 패턴) Korean cần hiểu phạm vi (range / 범위) syllable hoàn chỉnh thay vì suy từ English alphabet hành vi (behavior / 동작).
 
 Quy tắc (rule / 규칙): dùng component-level supported đầu vào (input / 입력) điều khiển (control / 제어) và validate final giá trị (value / 값); đừng tự viết keydown filter naïve nếu không cần.
-
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **24. Paste và normalization** nối từ **23. đầu vào (input / 입력) phương thức (method / 메서드) và Korean/Vietnamese văn bản (text / 텍스트)** sang **25. Date/thời gian (time / 시간) và timezone ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Paste và normalization
 
@@ -443,8 +397,6 @@ Nếu nghiệp vụ (business / 비즈니스) key strict, normalize có chủ đ
 
 Ví dụ phone có thể strip formatting, nhưng password không được tự trim mù quáng nếu whitespace là hợp lệ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **24. Paste và normalization** đặt tiêu chí; **25. Date/thời gian (time / 시간) và timezone ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **26. Number và floating-point** mở rộng hệ quả.
-
 ## 25. Date/thời gian (time / 시간) và timezone ranh giới (boundary / 경계)
 
 Nếu app chỉ xử lý cục bộ (local / 로컬) nghiệp vụ (business / 비즈니스) date, gửi `YYYY-MM-DD` có thể đủ. Nếu xử lý timestamp, phải xác định timezone/offset.
@@ -453,8 +405,6 @@ UI hiển thị `2026-09-22 09:00` không đủ để biết timestamp thật n�
 
 WebSquare chỉ là máy khách (client / 클라이언트) tầng (layer / 계층); timezone đặc tả hợp đồng (contract / 계약) phải đồng bộ với máy chủ (server / 서버)/API.
 
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **25. Date/thời gian (time / 시간) và timezone ranh giới (boundary / 경계)** đặt tiêu chí; **26. Number và floating-point** dùng tiêu chí đó để kiểm tra ranh giới, rồi **27. Form trạng thái (state / 상태) sau Submission lỗi (error / 오류)** mở rộng hệ quả.
-
 ## 26. Number và floating-point
 
 JavaScript number có floating-point ngữ nghĩa (semantics / 의미론). Với tiền tệ, không nên làm nghiệp vụ (business / 비즈니스) settlement dựa vào phép tính máy khách (client / 클라이언트) rồi coi là authoritative.
@@ -462,8 +412,6 @@ JavaScript number có floating-point ngữ nghĩa (semantics / 의미론). Với
 Máy khách (client / 클라이언트) có thể tính preview; máy chủ (server / 서버) nên dùng numeric/decimal mô hình (model / 모델) phù hợp và kiểm tra lại.
 
 Xem chuẩn gốc (canonical / 정본) JavaScript docs để hiểu floating-point; WebSquare không thay đổi ngữ nghĩa (semantics / 의미론) này.
-
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **27. Form trạng thái (state / 상태) sau Submission lỗi (error / 오류)** nối từ **26. Number và floating-point** sang **28. Double submit và focus phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Form trạng thái (state / 상태) sau Submission lỗi (error / 오류)
 
@@ -478,8 +426,6 @@ success → commit/reset row status theo contract
 ```
 
 Không gom mọi callback vào `reload()`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **28. Double submit và focus phản hồi (feedback / 피드백)** nối từ **27. Form trạng thái (state / 상태) sau Submission lỗi (error / 오류)** sang **29. tệp (file / 파일) upload là trust ranh giới (boundary / 경계) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Double submit và focus phản hồi (feedback / 피드백)
 
@@ -496,8 +442,6 @@ idle
 ```
 
 Nếu button bị disabled trước kiểm tra hợp lệ (validation / 검증) rồi kiểm tra hợp lệ (validation / 검증) thất bại (fail / 실패) mà không re-enable, screen bị stuck.
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **28. Double submit và focus phản hồi (feedback / 피드백)** đặt tiêu chí; **29. tệp (file / 파일) upload là trust ranh giới (boundary / 경계) lớn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **30. Excel import/export là dữ liệu (data / 데이터) ranh giới (boundary / 경계)** mở rộng hệ quả.
 
 ## 29. tệp (file / 파일) upload là trust ranh giới (boundary / 경계) lớn
 
@@ -517,8 +461,6 @@ authorization
 
 Máy khách (client / 클라이언트) accept/filter chỉ cải thiện UX.
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **29. tệp (file / 파일) upload là trust ranh giới (boundary / 경계) lớn** đặt tiêu chí; **30. Excel import/export là dữ liệu (data / 데이터) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **31. Localization của máy chủ (server / 서버) message** mở rộng hệ quả.
-
 ## 30. Excel import/export là dữ liệu (data / 데이터) ranh giới (boundary / 경계)
 
 Grid Excel tính năng (feature / 기능) tiện cho enterprise workflow nhưng tạo thêm trường hợp biên (edge case / 경계 사례):
@@ -535,8 +477,6 @@ permission/sensitive export
 
 Nếu import 10.000 row, kiểm tra hợp lệ (validation / 검증) từng cell bằng UI callback không nhất thiết là kiến trúc (architecture / 아키텍처) tốt. Có thể cần server-side batch kiểm tra hợp lệ (validation / 검증) và trả structured lỗi (error / 오류) danh sách (list / 목록).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **30. Excel import/export là dữ liệu (data / 데이터) ranh giới (boundary / 경계)** đặt tiêu chí; **31. Localization của máy chủ (server / 서버) message** dùng tiêu chí đó để kiểm tra ranh giới, rồi **32. cấp cao (senior / 시니어) checklist cho một form môi trường vận hành (production / 운영 환경)** mở rộng hệ quả.
-
 ## 31. Localization của máy chủ (server / 서버) message
 
 Có hai chiến lược (strategy / 전략) phổ biến.
@@ -548,8 +488,6 @@ Hoặc máy chủ (server / 서버) trả stable lỗi (error / 오류) mã (cod
 Chiến lược (strategy / 전략) thứ hai giúp máy khách (client / 클라이언트) consistency nhưng cần đặc tả hợp đồng (contract / 계약) versioning. chiến lược (strategy / 전략) đầu đơn giản hơn nhưng máy chủ (server / 서버) phải biết locale và UI khó format field-specific message nếu payload nghèo.
 
 Điều quan trọng là chọn rõ, không trộn tùy endpoint.
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **32. cấp cao (senior / 시니어) checklist cho một form môi trường vận hành (production / 운영 환경)** nối từ **31. Localization của máy chủ (server / 서버) message** sang **33. trường hợp (case / 사례) study: form chuyển khoản nội bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. cấp cao (senior / 시니어) checklist cho một form môi trường vận hành (production / 운영 환경)
 
@@ -568,15 +506,11 @@ readOnly/hidden có bị hiểu nhầm thành security không?
 large Grid + accessibility option đã đo performance chưa?
 ```
 
-> **Nối mạch:** Ở chặng này của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **32. cấp cao (senior / 시니어) checklist cho một form môi trường vận hành (production / 운영 환경)** nêu quy tắc; **33. trường hợp (case / 사례) study: form chuyển khoản nội bộ** thử quy tắc trong tình huống, rồi **34. liên kết (connection / 연결) với thư viện (library / 라이브러리)** mở rộng hệ quả.
-
 ## 33. trường hợp (case / 사례) study: form chuyển khoản nội bộ
 
 Người dùng (user / 사용자) nhập account, amount và memo. đầu vào (input / 입력) thành phần (component / 컴포넌트) có thể giới hạn amount theo numeric biểu diễn (representation / 표현) và hiển thị separator. DataMap giữ chuẩn gốc (canonical / 정본) amount. máy khách (client / 클라이언트) kiểm tra required, amount > 0 và một số limit UX-known. Khi Submit, máy chủ (server / 서버) xác thực account tồn tại, người dùng (user / 사용자) được phép chuyển, balance đủ, limit theo chính sách (policy / 정책) hiện tại và giao dịch (transaction / 트랜잭션) bất biến (invariant / 불변식). Nếu máy chủ (server / 서버) trả lỗi (error / 오류) mã (code / 코드) `LIMIT_EXCEEDED`, máy khách (client / 클라이언트) map sang localized message và focus amount. Nếu success, UI hiển thị tham chiếu (reference / 참조) ID từ máy chủ (server / 서버).
 
 Điểm chính: mỗi tầng (layer / 계층) chỉ làm điều nó có đủ authority để chứng minh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **33. trường hợp (case / 사례) study: form chuyển khoản nội bộ** nêu quy tắc; **34. liên kết (connection / 연결) với thư viện (library / 라이브러리)** thử quy tắc trong tình huống, rồi **Nguồn chính thức nên đối chiếu** mở rộng hệ quả.
 
 ## 34. liên kết (connection / 연결) với thư viện (library / 라이브러리)
 
@@ -587,8 +521,6 @@ Submission và trust ranh giới (boundary / 경계): [03 — DataCollection & S
 Grid hiệu năng (performance / 성능)/bảo mật (security / 보안): [05 — GridView, CRUD & Enterprise Screen Patterns](05_gridview_crud_patterns.md) và [06 — Debugging, Performance, Security & Production](06_debugging_performance_security.md).
 
 JavaScript number, string, Unicode và trình duyệt (browser / 브라우저) hành vi (behavior / 동작) được giữ ở chuẩn gốc (canonical / 정본) JavaScript nhánh học (track / 트랙).
-
-> **Nối mạch:** Trong **09 — Forms, kiểm tra hợp lệ (validation / 검증), Internationalization & khả năng tiếp cận (accessibility / 접근성)**, **34. liên kết (connection / 연결) với thư viện (library / 라이브러리)** đã nêu tiêu chí phân biệt, còn **Nguồn chính thức nên đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn chính thức nên đối chiếu
 

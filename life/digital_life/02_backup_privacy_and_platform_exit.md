@@ -8,15 +8,11 @@ Một bản sao chỉ là backup khi biết bản sao chứa gì, được tạo
 
 Dùng nhiều lớp cho dữ liệu quan trọng, tách tài khoản/quyền, mã hóa khi phù hợp và kiểm tra restore định kỳ. Ghi lại dependency như mã khôi phục, khóa mã hóa hoặc thiết bị xác thực.
 
-> **Chuyển mạch:** Khả năng khôi phục giảm rủi ro mất dữ liệu; khả năng export và chuyển dịch vụ giảm rủi ro bị khóa vào một nền tảng.
-
 ## 2. Privacy là kiểm soát vòng đời dữ liệu
 
 Tắt quyền không cần thiết, giảm dữ liệu thu thập và đặt thời hạn lưu là các biện pháp khác nhau. Xóa ứng dụng chưa chắc xóa dữ liệu máy chủ; xóa tài khoản chưa chắc xóa bản sao pháp lý hoặc backup ngay lập tức.
 
 Đọc privacy notice theo dữ liệu, mục đích, bên nhận, retention và quyền truy cập/xóa/export. Nếu cần quyết định rủi ro, ghi điều chưa rõ và hỏi owner dịch vụ.
-
-> **Chuyển mạch:** Privacy cần biết dữ liệu đi đâu; platform exit cần biết dữ liệu có ở định dạng dùng được, liên hệ nào bị phụ thuộc và chi phí chuyển đổi là gì.
 
 ## 3. Exit plan là một invariant vận hành
 

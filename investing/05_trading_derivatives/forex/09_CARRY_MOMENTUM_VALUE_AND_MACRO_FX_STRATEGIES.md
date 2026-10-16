@@ -30,8 +30,6 @@ Family-level thinking giúp hỏi:
 - regimes nào thuận lợi/bất lợi;
 - hiện thực (implementation / 구현) nào robust.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **2. Carry** nối từ **1. Chiến lược (strategy / 전략) family khác setup đơn lẻ** sang **3. Carry không phải free interest**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Carry
 
 Carry chiến lược (strategy / 전략) trong FX khai thác chênh lệch yield/financing giữa currencies.
@@ -54,8 +52,6 @@ Total Return
 
 Carry chỉ profitable nếu adverse spot move không xóa financing advantage.
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **3. Carry không phải free interest** nối từ **2. Carry** sang **4. Forward discount/premium và carry tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Carry không phải free interest
 
 High yield có thể phản ánh:
@@ -70,8 +66,6 @@ Do đó carry portfolios có thể kiếm nhỏ đều rồi mất mạnh trong 
 
 Rủi ro (risk / 위험) chỉ số (metric / 지표) cần chú ý skew/tail, không chỉ Sharpe.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **4. Forward discount/premium và carry tín hiệu (signal / 신호)** nối từ **3. Carry không phải free interest** sang **5. Momentum / trend following**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Forward discount/premium và carry tín hiệu (signal / 신호)
 
 Institutional research thường dùng forward points hoặc interest differential thay vì retail swap quote thô.
@@ -84,8 +78,6 @@ academic carry signal
 ```
 
 Backtest hiện thực (implementation / 구현) phải dùng instrument-specific financing.
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **5. Momentum / trend following** nối từ **4. Forward discount/premium và carry tín hiệu (signal / 신호)** sang **6. Time-series vs cross-sectional momentum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Momentum / trend following
 
@@ -110,8 +102,6 @@ Hiện thực (implementation / 구현) có thể dùng:
 - breakout;
 - moving-average trend.
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **6. Time-series vs cross-sectional momentum** nối từ **5. Momentum / trend following** sang **7. Trend chiến lược (strategy / 전략) thường có profile khác carry**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Time-series vs cross-sectional momentum
 
 ### Time-series
@@ -134,8 +124,6 @@ Short weakest group
 
 Hai cách có exposure và portfolio dynamics khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **7. Trend chiến lược (strategy / 전략) thường có profile khác carry** nối từ **6. Time-series vs cross-sectional momentum** sang **8. Giá trị (value / 값) trong FX**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Trend chiến lược (strategy / 전략) thường có profile khác carry
 
 Trend following thường có:
@@ -150,8 +138,6 @@ Carry thường có thể có:
 
 Kết hợp chiến lược (strategy / 전략) families cần nhìn correlation trong stress, không chỉ full-sample correlation.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **8. Giá trị (value / 값) trong FX** nối từ **7. Trend chiến lược (strategy / 전략) thường có profile khác carry** sang **9. Purchasing Power Parity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Giá trị (value / 값) trong FX
 
 FX giá trị (value / 값) cố ước lượng currency “cheap/expensive” so với fundamental anchor.
@@ -159,8 +145,6 @@ FX giá trị (value / 값) cố ước lượng currency “cheap/expensive” 
 Một anchor phổ biến trong academic discussion là purchasing power parity (PPP), nhưng FX giá trị (value / 값) có thể dùng nhiều các mô hình (models / 모델들) khác.
 
 Giá trị (value / 값) thường có horizon dài hơn intraday technical setup.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **9. Purchasing Power Parity** nối từ **8. Giá trị (value / 값) trong FX** sang **10. Real exchange tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Purchasing Power Parity
 
@@ -184,8 +168,6 @@ Nhưng PPP deviations có thể tồn tại nhiều năm vì:
 
 Do đó PPP không phải short-term timing mô hình (model / 모델).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **10. Real exchange tỷ lệ (rate / 비율)** nối từ **9. Purchasing Power Parity** sang **11. BEER / FEER-like thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Real exchange tỷ lệ (rate / 비율)
 
 A simplified real exchange-rate concept combines nominal FX với relative price levels.
@@ -193,8 +175,6 @@ A simplified real exchange-rate concept combines nominal FX với relative price
 Giá trị (value / 값) chiến lược (strategy / 전략) có thể rank currencies theo deviation của real exchange tỷ lệ (rate / 비율) khỏi long-run tham chiếu (reference / 참조).
 
 Nhưng “mean” có thể shift structurally. Stationarity phải được tested, không assumed.
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **11. BEER / FEER-like thinking** nối từ **10. Real exchange tỷ lệ (rate / 비율)** sang **12. Macro directional chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. BEER / FEER-like thinking
 
@@ -207,8 +187,6 @@ Behavioral/equilibrium exchange-rate frameworks có thể relate FX valuation t�
 - fiscal/bên ngoài (external / 외부) balance.
 
 Mô hình (model / 모델) choice tạo mô hình (model / 모델) rủi ro (risk / 위험) lớn. Không nên có một “fair giá trị (value / 값)” với false precision.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **12. Macro directional chiến lược (strategy / 전략)** nối từ **11. BEER / FEER-like thinking** sang **13. Event-driven chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Macro directional chiến lược (strategy / 전략)
 
@@ -226,8 +204,6 @@ risk regime
 
 Vì vậy macro trader thường cần catalyst hoặc price confirmation.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **13. Event-driven chiến lược (strategy / 전략)** nối từ **12. Macro directional chiến lược (strategy / 전략)** sang **14. Mean reversion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Event-driven chiến lược (strategy / 전략)
 
 Sự kiện (event / 이벤트) chiến lược (strategy / 전략) tập trung quanh scheduled/unscheduled releases.
@@ -242,8 +218,6 @@ Có thể nghiên cứu:
 
 Mỗi hypothesis cần timestamp resolution phù hợp.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **14. Mean reversion** nối từ **13. Event-driven chiến lược (strategy / 전략)** sang **15. Relative-value / cross chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Mean reversion
 
 Mean-reversion chiến lược (strategy / 전략) giả định displacement hiện tại tạm thời và price sẽ quay về tham chiếu (reference / 참조).
@@ -256,8 +230,6 @@ Possible mechanisms:
 - fixing/rebalancing luồng (flow / 흐름).
 
 Rủi ro chính: temporary move thực ra là beginning của new trend/regime.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **15. Relative-value / cross chiến lược (strategy / 전략)** nối từ **14. Mean reversion** sang **16. Dollar-neutral không đồng nghĩa risk-neutral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Relative-value / cross chiến lược (strategy / 전략)
 
@@ -272,8 +244,6 @@ chọn B để isolate factor tốt hơn.
 
 Ví dụ nếu thesis là Europe outperform Japan, EUR/JPY có thể express thesis trực tiếp hơn EUR/USD nếu USD factor không liên quan — nhưng instrument/liquidity/rủi ro (risk / 위험) vẫn phải đánh giá.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **16. Dollar-neutral không đồng nghĩa risk-neutral** nối từ **15. Relative-value / cross chiến lược (strategy / 전략)** sang **17. Statistical relative giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Dollar-neutral không đồng nghĩa risk-neutral
 
 Một basket có net USD exposure gần zero vẫn có:
@@ -284,8 +254,6 @@ Một basket có net USD exposure gần zero vẫn có:
 - liquidity rủi ro (risk / 위험).
 
 Neutrality luôn phải nói neutral đối với factor nào.
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **17. Statistical relative giá trị (value / 값)** nối từ **16. Dollar-neutral không đồng nghĩa risk-neutral** sang **18. Volatility chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Statistical relative giá trị (value / 값)
 
@@ -298,8 +266,6 @@ Nhưng correlation cao không đủ. Cần kiểm tra:
 - structural breaks;
 - thực thi (execution / 실행) chi phí (cost / 비용).
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **18. Volatility chiến lược (strategy / 전략)** nối từ **17. Statistical relative giá trị (value / 값)** sang **19. Hedging chiến lược (strategy / 전략) khác alpha chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Volatility chiến lược (strategy / 전략)
 
 FX options cho phép chiến lược (strategy / 전략) trên volatility thay vì chỉ direction:
@@ -311,8 +277,6 @@ FX options cho phép chiến lược (strategy / 전략) trên volatility thay v
 - carry from option premium.
 
 Đây là separate rủi ro (risk / 위험) dimension và được học sâu ở chapter 14.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **19. Hedging chiến lược (strategy / 전략) khác alpha chiến lược (strategy / 전략)** nối từ **18. Volatility chiến lược (strategy / 전략)** sang **20. Tín hiệu (signal / 신호) combination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Hedging chiến lược (strategy / 전략) khác alpha chiến lược (strategy / 전략)
 
@@ -330,8 +294,6 @@ liquidity
 
 Không nên gọi hedge “thất bại” chỉ vì position hedge mất tiền khi underlying exposure tăng giá.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **20. Tín hiệu (signal / 신호) combination** nối từ **19. Hedging chiến lược (strategy / 전략) khác alpha chiến lược (strategy / 전략)** sang **21. Composite score**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Tín hiệu (signal / 신호) combination
 
 Có thể combine:
@@ -346,8 +308,6 @@ Macro regime
 Nhưng combination cần tránh double counting.
 
 Ví dụ high-yield currency có thể đồng thời đang trong uptrend; carry và momentum signals correlated trong một regime.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **21. Composite score** nối từ **20. Tín hiệu (signal / 신호) combination** sang **22. Ranking vs absolute tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Composite score
 
@@ -366,8 +326,6 @@ Nên kiểm thử (test / 테스트):
 - walk-forward weights;
 - sensitivity to normalization.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **22. Ranking vs absolute tín hiệu (signal / 신호)** nối từ **21. Composite score** sang **23. Volatility scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Ranking vs absolute tín hiệu (signal / 신호)
 
 Cross-sectional strategies thường rank currencies:
@@ -379,8 +337,6 @@ Bottom quantile → short
 
 Điều này tạo relative portfolio nhưng có turnover và concentration implications.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **23. Volatility scaling** nối từ **22. Ranking vs absolute tín hiệu (signal / 신호)** sang **24. Rủi ro (risk / 위험) parity không tạo alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Volatility scaling
 
 Để rủi ro (risk / 위험) across pairs comparable, position kích thước (size / 크기) có thể quy mô (scale / 규모) inversely với volatility:
@@ -391,15 +347,11 @@ Weight_i ∝ Signal_i / Volatility_i
 
 Nhưng volatility estimate lags shocks. Stress cap vẫn cần.
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **24. Rủi ro (risk / 위험) parity không tạo alpha** nối từ **23. Volatility scaling** sang **25. Currency basket exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Rủi ro (risk / 위험) parity không tạo alpha
 
 Equalizing rủi ro (risk / 위험) contribution chỉ là portfolio construction. Nó không làm signals có positive expectancy.
 
 Alpha hypothesis và rủi ro (risk / 위험) allocation phải tách riêng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **25. Currency basket exposure** nối từ **24. Rủi ro (risk / 위험) parity không tạo alpha** sang **26. Carry + momentum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Currency basket exposure
 
@@ -416,8 +368,6 @@ Short USD/JPY
 có concentrated short-USD factor.
 
 Portfolio optimizer phải nhìn factor/currency ma trận (matrix / 행렬), không chỉ ticket weights.
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **26. Carry + momentum** nối từ **25. Currency basket exposure** sang **27. Giá trị (value / 값) + momentum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Carry + momentum
 
@@ -438,8 +388,6 @@ Sau đó so phân phối (distribution / 분포) net of chi phí (cost / 비용)
 
 Không assume combination better trước kiểm thử (test / 테스트).
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **27. Giá trị (value / 값) + momentum** nối từ **26. Carry + momentum** sang **28. Regime-conditioned chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Giá trị (value / 값) + momentum
 
 Giá trị (value / 값) có thể bắt falling knife; momentum có thể buy expensive currency.
@@ -447,8 +395,6 @@ Giá trị (value / 값) có thể bắt falling knife; momentum có thể buy e
 Combination đôi khi dùng momentum làm timing filter cho long-horizon giá trị (value / 값).
 
 Nhưng filter có thể làm giảm cỡ mẫu (sample size / 표본 크기) và tăng data-mining rủi ro (risk / 위험).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **28. Regime-conditioned chiến lược (strategy / 전략)** nối từ **27. Giá trị (value / 값) + momentum** sang **29. Chiến lược (strategy / 전략) turnover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Regime-conditioned chiến lược (strategy / 전략)
 
@@ -461,8 +407,6 @@ liquidity normal
 ```
 
 Conditioning phải có economic reason và được xác định trước, nếu không rất dễ overfit.
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **29. Chiến lược (strategy / 전략) turnover** nối từ **28. Regime-conditioned chiến lược (strategy / 전략)** sang **30. Sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Chiến lược (strategy / 전략) turnover
 
@@ -477,8 +421,6 @@ có thể ăn phần lớn gross alpha.
 
 Tín hiệu (signal / 신호) frequency cao chưa chắc tốt nếu edge per trade nhỏ.
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **30. Sức chứa (capacity / 용량)** nối từ **29. Chiến lược (strategy / 전략) turnover** sang **31. Crowding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Sức chứa (capacity / 용량)
 
 Retail major-FX chiến lược (strategy / 전략) thường có sức chứa (capacity / 용량) lớn so với account nhỏ, nhưng không nên bỏ concept.
@@ -491,8 +433,6 @@ Sức chứa (capacity / 용량) giảm khi:
 - sự kiện (event / 이벤트) thực thi (execution / 실행);
 - exotic/offshore instruments.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **31. Crowding** nối từ **30. Sức chứa (capacity / 용량)** sang **32. Structural break**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Crowding
 
 Một chiến lược (strategy / 전략) widely known như carry/momentum có thể bị crowded.
@@ -504,8 +444,6 @@ Crowding có thể:
 - worsen crash rủi ro (risk / 위험).
 
 Không dễ đo trực tiếp, nên positioning/liquidity proxies chỉ là partial thông tin (information / 정보).
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **32. Structural break** nối từ **31. Crowding** sang **33. Chiến lược (strategy / 전략) decay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Structural break
 
@@ -522,8 +460,6 @@ Một chiến lược (strategy / 전략) profitable 1990–2010 không tự đ�
 
 Kiểm tra hợp lệ (validation / 검증) phải span multiple regimes và emphasize recent relevance without discarding lịch sử (history / 이력) arbitrarily.
 
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **33. Chiến lược (strategy / 전략) decay** nối từ **32. Structural break** sang **34. Attribution by return nguồn (source / 소스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Chiến lược (strategy / 전략) decay
 
 Sau triển khai (deployment / 배포), edge có thể giảm vì:
@@ -535,8 +471,6 @@ Sau triển khai (deployment / 배포), edge có thể giảm vì:
 - hiện thực (implementation / 구현) drift.
 
 Monitoring cần compare live phân phối (distribution / 분포) với research các giả định (assumptions / 가정들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **33. Chiến lược (strategy / 전략) decay** đặt vấn đề; **34. Attribution by return nguồn (source / 소스)** đối chiếu bằng chứng, rồi **35. Benchmark** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. Attribution by return nguồn (source / 소스)
 
@@ -553,8 +487,6 @@ Currency conversion
 
 Nếu không, trader có thể tưởng tín hiệu (signal / 신호) kiếm tiền trong khi actual return chủ yếu đến từ carry hoặc broad USD beta.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **34. Attribution by return nguồn (source / 소스)** đặt vấn đề; **35. Benchmark** đối chiếu bằng chứng, rồi **36. Chiến lược (strategy / 전략) specification template** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 35. Benchmark
 
 Chiến lược (strategy / 전략) cần benchmark phù hợp:
@@ -565,8 +497,6 @@ Chiến lược (strategy / 전략) cần benchmark phù hợp:
 - equal-risk baseline.
 
 Một complex mô hình (model / 모델) chỉ có giá trị (value / 값) nếu vượt simple baseline sau chi phí (cost / 비용) và độ phức tạp (complexity / 복잡도) penalty.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **36. Chiến lược (strategy / 전략) specification template** nối từ **35. Benchmark** sang **37. Không đánh giá bằng win tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Chiến lược (strategy / 전략) specification template
 
@@ -605,8 +535,6 @@ Kill criteria:
 Conditions for research review or shutdown.
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **37. Không đánh giá bằng win tỷ lệ (rate / 비율)** nối từ **36. Chiến lược (strategy / 전략) specification template** sang **38. Không chọn chiến lược (strategy / 전략) vì backtest đẹp nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Không đánh giá bằng win tỷ lệ (rate / 비율)
 
 Carry/trend/giá trị (value / 값) có payoff distributions khác nhau.
@@ -625,15 +553,11 @@ Cần nhìn:
 
 Win tỷ lệ (rate / 비율) alone gần như không đủ.
 
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **38. Không chọn chiến lược (strategy / 전략) vì backtest đẹp nhất** nối từ **37. Không đánh giá bằng win tỷ lệ (rate / 비율)** sang **39. Checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 38. Không chọn chiến lược (strategy / 전략) vì backtest đẹp nhất
 
 Nếu thử 100 chiến lược (strategy / 전략) families/settings rồi chọn top Sharpe, estimate bị selection độ lệch (bias / 편향).
 
 Chapter 10 sẽ đi sâu cách backtest point-in-time, multiple testing và robustness.
-
-> **Nối mạch:** Ở chặng này của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **39. Checklist** nối từ **38. Không chọn chiến lược (strategy / 전략) vì backtest đẹp nhất** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Checklist
 
@@ -650,13 +574,9 @@ Bạn cần phân biệt được:
 9. Chiến lược (strategy / 전략) family và parameterized hiện thực (implementation / 구현).
 10. Vì sao attribution quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **Đọc tiếp** nối từ **39. Checklist** sang **Nội bộ (internal / 내부) links**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đọc tiếp
 
 → [10 — Backtesting and point-in-time FX data](./10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
-
-> **Nối mạch:** Trong **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies**, **Nội bộ (internal / 내부) links** nối từ **Đọc tiếp** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

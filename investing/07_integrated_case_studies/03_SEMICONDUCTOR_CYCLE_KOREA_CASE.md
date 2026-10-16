@@ -20,8 +20,6 @@ Nhu cầu cuối
 
 Mỗi mắt xích có chu kỳ khác nhau. Nhà sản xuất bộ nhớ chịu cơ chế giá giống hàng hóa hơn; nhà cung cấp thiết bị phụ thuộc capex; nhà cung cấp vật liệu phụ thuộc số wafer bắt đầu sản xuất và công suất sử dụng; doanh nghiệp fabless phụ thuộc thiết kế được khách hàng lựa chọn và nhu cầu cuối.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **1. Bắt đầu từ chuỗi giá trị** đặt đầu vào cho **2. Nhu cầu không đồng nhất**, rồi **3. Nhu cầu bit và doanh thu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Nhu cầu không đồng nhất
 
 “Nhu cầu chip” phải được tách theo thị trường cuối:
@@ -38,8 +36,6 @@ Công nghiệp
 
 Nhu cầu AI/HBM có thể rất mạnh trong khi PC hoặc smartphone chỉ phục hồi yếu. Doanh thu bán dẫn tổng thể có thể che mất sự phân hóa này.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **3. Nhu cầu bit và doanh thu** nối từ **2. Nhu cầu không đồng nhất** sang **4. Chu kỳ tồn kho**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Nhu cầu bit và doanh thu
 
 Với bộ nhớ:
@@ -51,8 +47,6 @@ Doanh thu ≈ Số bit giao hàng × Giá bán bình quân (ASP)
 Nhu cầu bit tăng nhưng ASP giảm mạnh vẫn có thể gây áp lực doanh thu. Ngược lại, kỷ luật nguồn cung có thể làm ASP tăng dù nhu cầu đơn vị chỉ tăng vừa phải.
 
 Vì vậy chỉ nhìn tăng trưởng lượng giao hàng là chưa đủ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **4. Chu kỳ tồn kho** nối từ **3. Nhu cầu bit và doanh thu** sang **5. Chỉ báo dẫn dắt và chỉ báo trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Chu kỳ tồn kho
 
@@ -68,8 +62,6 @@ Tồn kho khách hàng
 Nếu nhu cầu cuối yếu nhưng khách hàng đang giảm tồn kho, lượng giao hàng của nhà sản xuất có thể giảm mạnh hơn nhu cầu cuối. Khi quá trình giảm tồn kho kết thúc, lượng giao hàng có thể phục hồi trước khi nhu cầu cuối thật sự bùng nổ.
 
 Chu kỳ tồn kho vì vậy thường tạo điểm đảo chiều sớm hơn GDP hoặc lợi nhuận kế toán.
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **5. Chỉ báo dẫn dắt và chỉ báo trễ** nối từ **4. Chu kỳ tồn kho** sang **6. ASP và kỷ luật nguồn cung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chỉ báo dẫn dắt và chỉ báo trễ
 
@@ -88,8 +80,6 @@ Hướng dẫn capex của hyperscaler
 
 Chỉ báo trễ gồm doanh thu quý đã báo cáo, biên lợi nhuận gộp và EPS. Giá cổ phiếu thường phản ứng với chỉ báo dẫn dắt trước dữ liệu kế toán.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **5. Chỉ báo dẫn dắt và chỉ báo trễ** đặt vấn đề; **6. ASP và kỷ luật nguồn cung** đối chiếu bằng chứng, rồi **7. HBM khác bộ nhớ hàng hóa truyền thống thế nào?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. ASP và kỷ luật nguồn cung
 
 Chu kỳ bộ nhớ thường biến động mạnh vì các nhà sản xuất cùng tăng công suất khi giá tốt.
@@ -102,15 +92,11 @@ Tăng trưởng nhu cầu so với tăng trưởng nguồn cung hiệu dụng
 
 Nguồn cung hiệu dụng không chỉ là số wafer. Yield, chuyển đổi quy trình, cơ cấu sản phẩm và nút thắt đóng gói đều ảnh hưởng lượng sản phẩm bán được.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **6. ASP và kỷ luật nguồn cung** đặt vấn đề; **7. HBM khác bộ nhớ hàng hóa truyền thống thế nào?** đối chiếu bằng chứng, rồi **8. Thay đổi cơ cấu sản phẩm** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 7. HBM khác bộ nhớ hàng hóa truyền thống thế nào?
 
 HBM có đặc điểm kinh tế khác DRAM phổ thông vì chu kỳ chứng nhận dài hơn, đóng gói tiên tiến quan trọng hơn, độ phức tạp yield/bonding cao hơn, khách hàng tập trung hơn, thế hệ sản phẩm thay nhanh và công suất phân bổ bị giới hạn.
 
 Biên lợi nhuận HBM cao có thể cùng tồn tại với bộ nhớ phổ thông yếu, nhưng khả năng duy trì phụ thuộc cạnh tranh, yield và việc được khách hàng chứng nhận.
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **8. Thay đổi cơ cấu sản phẩm** nối từ **7. HBM khác bộ nhớ hàng hóa truyền thống thế nào?** sang **9. Công suất sử dụng và đòn bẩy vận hành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Thay đổi cơ cấu sản phẩm
 
@@ -125,8 +111,6 @@ Chi phí đầu vào thấp hơn
 ```
 
 Nếu biên lợi nhuận tăng chủ yếu nhờ tỷ trọng HBM trong khi bộ nhớ phổ thông vẫn yếu, nên mô hình hai phần riêng biệt thay vì dùng một biên lợi nhuận chung.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **9. Công suất sử dụng và đòn bẩy vận hành** nối từ **8. Thay đổi cơ cấu sản phẩm** sang **10. Capex vừa là tín hiệu vừa là nguồn cung tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Công suất sử dụng và đòn bẩy vận hành
 
@@ -147,8 +131,6 @@ Tồn kho bình thường hóa
 
 Đây là lý do lợi nhuận có thể đảo chiều rất mạnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **9. Công suất sử dụng và đòn bẩy vận hành** đặt vấn đề; **10. Capex vừa là tín hiệu vừa là nguồn cung tương lai** đối chiếu bằng chứng, rồi **11. Nhà cung cấp thiết bị** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 10. Capex vừa là tín hiệu vừa là nguồn cung tương lai
 
 Capex tăng vừa thể hiện niềm tin vào nhu cầu, vừa tạo thêm nguồn cung trong tương lai.
@@ -163,23 +145,17 @@ NHƯNG
 
 Do đó cần tách tác động ngắn hạn và dài hạn.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **10. Capex vừa là tín hiệu vừa là nguồn cung tương lai** đặt vấn đề; **11. Nhà cung cấp thiết bị** đối chiếu bằng chứng, rồi **12. Nhà cung cấp vật liệu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 11. Nhà cung cấp thiết bị
 
 Lợi nhuận nhà cung cấp thiết bị thường đi trước quá trình mở rộng công suất của nhà sản xuất. Mức phơi nhiễm khác nhau theo công đoạn như lắng đọng, khắc, quang khắc, kiểm tra, đóng gói và kiểm thử.
 
 Chuyển đổi công nghệ có thể làm số bước xử lý tăng ngay cả khi số wafer không tăng tương ứng.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **12. Nhà cung cấp vật liệu** nối từ **11. Nhà cung cấp thiết bị** sang **13. Đóng gói tiên tiến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Nhà cung cấp vật liệu
 
 Nhu cầu vật liệu thường gắn với công suất sử dụng và số wafer bắt đầu sản xuất hơn là capex thiết bị. Khi fab chạy nhiều hơn, hóa chất, khí, wafer và vật liệu tiêu hao nhận lợi ích lặp lại.
 
 Tuy nhiên cần kiểm tra mức tập trung khách hàng và độ phụ thuộc vào quy trình chứng nhận.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **13. Đóng gói tiên tiến** nối từ **12. Nhà cung cấp vật liệu** sang **14. Tập trung khách hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Đóng gói tiên tiến
 
@@ -198,15 +174,11 @@ Thiết bị đóng gói
 
 Không phải mọi doanh nghiệp được gắn nhãn “AI semiconductor” đều có hàm lượng giá trị giống nhau trong mỗi hệ thống.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **14. Tập trung khách hàng** nối từ **13. Đóng gói tiên tiến** sang **15. Kênh KRW**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Tập trung khách hàng
 
 Chuỗi HBM/AI thường tập trung quanh một số hyperscaler hoặc nhà cung cấp GPU lớn. Nhu cầu mạnh từ một khách hàng có thể tạo tăng trưởng rất nhanh nhưng cũng làm tăng quyền thương lượng và rủi ro chứng nhận.
 
 Mức tập trung khách hàng phải xuất hiện trong cả kịch bản tích cực lẫn tiêu cực.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **15. Kênh KRW** nối từ **14. Tập trung khách hàng** sang **16. Dữ liệu xuất khẩu Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Kênh KRW
 
@@ -222,8 +194,6 @@ Chương trình phòng vệ
 
 Không nên dùng USD/KRW như một hệ số nhân lợi nhuận cố định.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **15. Kênh KRW** đặt vấn đề; **16. Dữ liệu xuất khẩu Hàn Quốc** đối chiếu bằng chứng, rồi **17. Capex AI là động lực thượng nguồn** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16. Dữ liệu xuất khẩu Hàn Quốc
 
 Xuất khẩu bán dẫn là kiểm tra vĩ mô tần suất cao hữu ích. Tuy nhiên tăng trưởng giá trị xuất khẩu danh nghĩa nên được tách giữa giá và sản lượng khi có thể.
@@ -231,8 +201,6 @@ Xuất khẩu bán dẫn là kiểm tra vĩ mô tần suất cao hữu ích. Tuy
 Tăng xuất khẩu do ASP phục hồi khác với tăng xuất khẩu do nhu cầu đơn vị tăng. Độ bền của hai động lực cũng khác nhau.
 
 Đọc thêm: [Korea Market Playbook](../06_markets_korea_vietnam/01_KOREA_MARKET_PLAYBOOK.md).
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **16. Dữ liệu xuất khẩu Hàn Quốc** đặt vấn đề; **17. Capex AI là động lực thượng nguồn** đối chiếu bằng chứng, rồi **18. Chất lượng nhu cầu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Capex AI là động lực thượng nguồn
 
@@ -247,15 +215,11 @@ Hàm lượng HBM trên mỗi bộ tăng tốc là bao nhiêu?
 Đây là xây tồn kho hay triển khai cho nhu cầu cuối?
 ```
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **17. Capex AI là động lực thượng nguồn** đặt vấn đề; **18. Chất lượng nhu cầu** đối chiếu bằng chứng, rồi **19. Chu kỳ điều chỉnh dự báo lợi nhuận** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. Chất lượng nhu cầu
 
 Nhu cầu chất lượng cao hơn khi được hỗ trợ bởi công suất sử dụng bền vững, tải công việc (workload / 워크로드) có khả năng tạo doanh thu, dòng tiền của khách hàng và cơ sở khách hàng mở rộng.
 
 Nhu cầu chất lượng thấp hơn nếu phần lớn là tích trữ tồn kho, xây công suất nhờ trợ cấp hoặc đơn hàng đầu cơ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **19. Chu kỳ điều chỉnh dự báo lợi nhuận** nối từ **18. Chất lượng nhu cầu** sang **20. Bẫy P/E ở đỉnh lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Chu kỳ điều chỉnh dự báo lợi nhuận
 
@@ -270,8 +234,6 @@ ASP / Đơn hàng cải thiện
 ```
 
 Độ rộng điều chỉnh dự báo trên toàn ngành cho biết chu kỳ có đang mở rộng ra ngoài một doanh nghiệp dẫn đầu hay không.
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **19. Chu kỳ điều chỉnh dự báo lợi nhuận** đặt tiêu chí; **20. Bẫy P/E ở đỉnh lợi nhuận** dùng tiêu chí đó để kiểm tra ranh giới, rồi **21. Bẫy P/E ở đáy lợi nhuận** mở rộng hệ quả.
 
 ## 20. Bẫy P/E ở đỉnh lợi nhuận
 
@@ -290,15 +252,11 @@ P/E chuẩn hóa = 12,5x
 
 P/E thấp trên lợi nhuận đỉnh có thể là cảnh báo cuối chu kỳ chứ không phải món hời.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **20. Bẫy P/E ở đỉnh lợi nhuận** đặt tiêu chí; **21. Bẫy P/E ở đáy lợi nhuận** dùng tiêu chí đó để kiểm tra ranh giới, rồi **22. Mô hình kịch bản** mở rộng hệ quả.
-
 ## 21. Bẫy P/E ở đáy lợi nhuận
 
 Ở đáy chu kỳ, EPS có thể sụt mạnh khiến P/E rất cao hoặc mất ý nghĩa, trong khi giá cổ phiếu đã tạo đáy vì thị trường kỳ vọng phục hồi.
 
 Nên dùng lợi nhuận chuẩn hóa, biên lợi nhuận giữa chu kỳ, động lực cung–cầu và xu hướng điều chỉnh dự báo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **21. Bẫy P/E ở đáy lợi nhuận** đặt tiêu chí; **22. Mô hình kịch bản** dùng tiêu chí đó để kiểm tra ranh giới, rồi **23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau** mở rộng hệ quả.
 
 ## 22. Mô hình kịch bản
 
@@ -341,8 +299,6 @@ Phần bù HBM co lại
 
 Mỗi kịch bản phải được chuyển thành doanh thu, biên lợi nhuận, capex, FCF và định giá.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau** nối từ **22. Mô hình kịch bản** sang **24. Chất lượng bảng cân đối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau
 
 Chu kỳ bán dẫn truyền qua chuỗi cung ứng theo độ trễ khác nhau. Phân biệt các mắt xích giúp ta không dùng đỉnh lợi nhuận của nhà sản xuất để suy ra mọi nhà cung cấp đã ở cùng một pha.
@@ -357,15 +313,11 @@ Cuối chu kỳ → Rủi ro dư cung
 
 Cùng một chu kỳ không đồng nghĩa mọi mắt xích đạt đỉnh cùng lúc.
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **24. Chất lượng bảng cân đối** nối từ **23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau** sang **25. Phân bổ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Chất lượng bảng cân đối
 
 Khả năng sống sót qua chu kỳ phụ thuộc tiền mặt ròng/nợ, cam kết capex, chính sách cổ tức/mua lại cổ phiếu, lịch đáo hạn nợ, vốn lưu động và rủi ro giảm giá tồn kho.
 
 Bảng cân đối mạnh cho phép doanh nghiệp duy trì capex chiến lược trong suy giảm và có thể giành thị phần.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **25. Phân bổ vốn** nối từ **24. Chất lượng bảng cân đối** sang **26. Chất lượng kế toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Phân bổ vốn
 
@@ -378,15 +330,11 @@ Doanh nghiệp bán dẫn phải đánh đổi khó khăn:
 
 ROIC tăng thêm qua nhiều chu kỳ quan trọng hơn tỷ lệ capex của riêng một năm.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **26. Chất lượng kế toán** nối từ **25. Phân bổ vốn** sang **27. Ma trận định giá theo chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Chất lượng kế toán
 
 Cần theo dõi định giá và giảm giá tồn kho, lịch khấu hao, chi phí phát triển được vốn hóa, mức tập trung khách hàng, capex so với khấu hao, trợ cấp chính phủ và khoản phải thu khi nhu cầu suy yếu.
 
 Đọc thêm: [Chất lượng lợi nhuận và phân tích điều tra](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **27. Ma trận định giá theo chu kỳ** nối từ **26. Chất lượng kế toán** sang **28. Mức phơi nhiễm nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Ma trận định giá theo chu kỳ
 
@@ -399,8 +347,6 @@ Giữa chu kỳ + Hệ số chuẩn hóa hợp lý
 ```
 
 Định giá phải được đọc cùng giai đoạn chu kỳ, không chỉ so P/E hiện tại với lịch sử.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **28. Mức phơi nhiễm nhân tố** nối từ **27. Ma trận định giá theo chu kỳ** sang **29. Dòng vốn và ảnh hưởng chỉ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Mức phơi nhiễm nhân tố
 
@@ -419,15 +365,11 @@ Dòng vốn nước ngoài
 
 Danh mục nắm cả ETF công nghệ toàn cầu và ETF bán dẫn Hàn Quốc có thể tập trung hơn số lượng mã gợi ý.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **29. Dòng vốn và ảnh hưởng chỉ số** nối từ **28. Mức phơi nhiễm nhân tố** sang **30. Cú sốc lãi suất Mỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Dòng vốn và ảnh hưởng chỉ số
 
 Các doanh nghiệp bán dẫn lớn có trọng số đáng kể trong chỉ số Hàn Quốc. Dòng vốn nước ngoài, phòng vệ futures và dòng ETF toàn cầu có thể khuếch đại biến động cơ bản.
 
 Giá cổ phiếu vì vậy có thể được phân rã thành điều chỉnh lợi nhuận, thay đổi hệ số định giá, tỷ giá, dòng vốn thụ động và vị thế thị trường.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **30. Cú sốc lãi suất Mỹ** nối từ **29. Dòng vốn và ảnh hưởng chỉ số** sang **31. Suy giảm Trung Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Cú sốc lãi suất Mỹ
 
@@ -440,19 +382,13 @@ P/E giảm
 
 Giá cổ phiếu phụ thuộc tác động nào lớn hơn. Đây là lý do phải nối vĩ mô với phân tích doanh nghiệp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **31. Suy giảm Trung Quốc** nối từ **30. Cú sốc lãi suất Mỹ** sang **32. Hạn chế xuất khẩu công nghệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 31. Suy giảm Trung Quốc
 
 Trung Quốc ảnh hưởng nhu cầu cuối, sản xuất, chuỗi cung ứng điện tử và chính sách hạn chế công nghệ. Mức độ ảnh hưởng khác nhau theo doanh thu từ Trung Quốc, vị trí nhà máy, cơ cấu khách hàng và nút công nghệ của từng doanh nghiệp.
 
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **32. Hạn chế xuất khẩu công nghệ** nối từ **31. Suy giảm Trung Quốc** sang **33. Quy mô vị thế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Hạn chế xuất khẩu công nghệ
 
 Kiểm soát công nghệ có thể hạn chế doanh số thiết bị/chip, buộc thiết kế lại sản phẩm hoặc thúc đẩy cạnh tranh nội địa hóa. Rủi ro chính sách không chỉ là doanh thu hôm nay mà còn là quy mô thị trường và quyết định capex tương lai.
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **33. Quy mô vị thế** nối từ **32. Hạn chế xuất khẩu công nghệ** sang **34. Chọn công cụ phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Quy mô vị thế
 
@@ -460,15 +396,11 @@ Quy mô nên phản ánh bất định chu kỳ, rủi ro khách hàng lớn, tr
 
 Luận điểm bán dẫn có độ tin cậy cao vẫn có thể chỉ phù hợp với tỷ trọng vừa phải nếu danh mục đã tập trung mạnh vào công nghệ toàn cầu và duration.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **34. Chọn công cụ phòng vệ** nối từ **33. Quy mô vị thế** sang **35. Bảng theo dõi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Chọn công cụ phòng vệ
 
 Nếu lo beta thị trường Hàn Quốc, futures KOSPI có thể hữu ích nhưng vẫn để lại rủi ro riêng của ngành bán dẫn. Nếu lo USD/KRW, phòng vệ FX chỉ giảm thành phần tiền tệ. Nếu lo hệ số định giá công nghệ toàn cầu, dùng Nasdaq hoặc ETF công nghệ sẽ tạo rủi ro cơ sở.
 
 Công cụ phòng vệ phải khớp nhân tố cần giảm.
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **35. Bảng theo dõi** nối từ **34. Chọn công cụ phòng vệ** sang **36. Điều kiện vô hiệu hóa luận điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Bảng theo dõi
 
@@ -488,23 +420,17 @@ USD/KRW
 Định giá so với lợi nhuận chuẩn hóa
 ```
 
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **36. Điều kiện vô hiệu hóa luận điểm** nối từ **35. Bảng theo dõi** sang **37. Phân rã sau báo cáo lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Điều kiện vô hiệu hóa luận điểm
 
 Luận điểm phục hồi có thể sai nếu tồn kho khách hàng tăng trở lại, công suất mới vượt nhu cầu, doanh nghiệp mất chứng nhận/thị phần HBM, ASP đảo chiều trước khi công suất sử dụng bình thường hóa, bùng nổ capex báo hiệu dư cung tương lai hoặc tài trợ capex làm bảng cân đối xấu đi.
 
 Giá giảm đơn thuần không phải điều kiện vô hiệu hóa nếu cơ chế cốt lõi chưa thay đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **37. Phân rã sau báo cáo lợi nhuận** nối từ **36. Điều kiện vô hiệu hóa luận điểm** sang **38. Mẫu nghiên cứu dùng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Phân rã sau báo cáo lợi nhuận
 
 Sau earnings, cần tách doanh thu, ASP, bit shipment, cơ cấu sản phẩm, biên lợi nhuận gộp, tồn kho, capex, hướng dẫn, điều chỉnh đồng thuận và phản ứng giá so với kỳ vọng đã nằm trong giá.
 
 Doanh nghiệp có thể vượt EPS nhưng giá vẫn giảm nếu hướng dẫn HBM/capex tương lai thấp hơn kỳ vọng rất cao của thị trường.
-
-> **Nối mạch:** Trong **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **38. Mẫu nghiên cứu dùng lại** nối từ **37. Phân rã sau báo cáo lợi nhuận** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Mẫu nghiên cứu dùng lại
 
@@ -525,8 +451,6 @@ Nhu cầu cuối
 → Định giá chuẩn hóa
 → Vị thế / Phòng vệ
 ```
-
-> **Nối mạch:** Ở chặng này của **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá**, **Kết luận** tổng hợp từ **38. Mẫu nghiên cứu dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

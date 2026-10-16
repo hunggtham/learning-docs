@@ -44,8 +44,6 @@ Xe lai (hybrid electric vehicle, HEV / 하이브리드 자동차) kết hợp đ
 
 Điểm cần giữ lại không phải bốn chữ viết tắt mà là câu hỏi: **năng lượng nằm ở đâu, thiết bị nào biến nó thành mô-men và hệ thống quyết định dùng nguồn nào khi xe vận hành?**
 
-> **Chuyển mạch:** Kiến trúc nguồn năng lượng cho biết xe tạo mô-men ra sao; để hiểu cảm giác vận hành, cần tách mô-men khỏi công suất và xem chúng thay đổi thế nào theo vòng tua.
-
 ## 3. Horsepower và torque không phải hai cách nói cùng một thứ
 
 Mô-men xoắn (torque / 토크) mô tả xu hướng của lực làm vật quay. Công suất (power / 출력) mô tả tốc độ thực hiện công. Trong hệ quay, công suất liên hệ với mô-men và tốc độ quay; vì vậy nói một động cơ có mô-men lớn nhưng không xét vùng vòng tua chưa đủ để suy ra toàn bộ khả năng tăng tốc.
@@ -54,23 +52,17 @@ Mã lực (horsepower / 마력) là một đơn vị thường dùng để biể
 
 Hộp số còn thay đổi quan hệ giữa tốc độ quay và mô-men truyền tới bánh xe. Do đó muốn hiểu cảm giác tăng tốc phải nhìn cả đường cong công suất/mô-men, tỷ số truyền, khối lượng xe, độ bám lốp và điều kiện vận hành chứ không chỉ so hai con số quảng cáo.
 
-> **Chuyển mạch:** Công suất và mô-men chỉ mô tả nguồn lực; drivetrain quyết định lực đó được phân phối tới cầu nào và biến thành traction trên mặt đường ra sao.
-
 ## 4. FWD, RWD, AWD và 4WD nói về nơi lực được đưa tới
 
 Dẫn động cầu trước (front-wheel drive, FWD / 전륜구동) đưa lực chủ yếu tới bánh trước; dẫn động cầu sau (rear-wheel drive, RWD / 후륜구동) đưa lực tới bánh sau. Dẫn động bốn bánh toàn thời gian hoặc có khả năng phân phối lực giữa hai cầu thường được gọi bằng các hệ thuật ngữ AWD/4WD, nhưng kiến trúc thực tế khác nhau theo hệ thống và nhà sản xuất.
 
 Điều quan trọng là drivetrain không tự tạo thêm năng lượng. Nó **phân phối và biến đổi cách mô-men từ nguồn động lực đến mặt đường**. Điều này ảnh hưởng traction, packaging, hiệu suất, khối lượng và đặc tính điều khiển của xe.
 
-> **Chuyển mạch:** Nơi truyền lực giải thích một phần khả năng bám và điều khiển, nhưng không mô tả hình thái không gian; sedan, hatchback, SUV và coupe là một trục kiến trúc khác.
-
 ## 5. Sedan, hatchback, SUV và coupe chủ yếu nói về kiến trúc thân xe
 
 Những từ này không phải cấp độ “tốt hơn/xấu hơn”. Chúng mô tả cách bố trí thân xe và không gian theo các truyền thống thiết kế khác nhau. Một SUV có thể dùng FWD hoặc AWD; một sedan có thể dùng động cơ xăng, hybrid hoặc điện. Vì vậy không nên trộn `SUV`, `AWD` và `Hybrid` thành các lựa chọn trên cùng một trục.
 
 Đây chính là pattern đã thấy ở whisky: nhiều nhãn trên sản phẩm thuộc **những chiều phân loại khác nhau**.
-
-> **Chuyển mạch:** Khi đã tách drivetrain khỏi thân xe, người học có thể đọc toàn bộ hệ thống theo thứ tự từ năng lượng tới an toàn, rồi mới dùng specification hoặc thương hiệu để so sánh.
 
 ## 6. Bản đồ học xe hơi
 

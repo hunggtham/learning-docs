@@ -187,8 +187,6 @@ consumer compiler có support không?
 
 ---
 
-> **Nối mạch:** Version là tập contract, không chỉ bytecode; “chạy được” chưa chứng minh metadata, ABI, target hoặc compiler-plugin compatibility, nên toolchain evidence phải được truy vết riêng.
-
 ## 4.1 Vì sao “bytecode chạy được” chưa đủ?
 
 Java trình biên dịch (compiler / 컴파일러) có thể nhìn bytecode theo một đặc tả hợp đồng (contract / 계약) khác Kotlin trình biên dịch (compiler / 컴파일러).
@@ -258,8 +256,6 @@ JDK chạy Gradle
 Dùng JDK 21 để chạy Gradle không có nghĩa đầu ra (output / 출력) bytecode tự động phải mục tiêu (target / 대상) JVM 21.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **6.1 Toolchain giúp gì?** nối từ **4.1 Vì sao “bytecode chạy được” chưa đủ?** sang **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6.1 Toolchain giúp gì?
 
@@ -397,8 +393,6 @@ Compose UI libraries vẫn được quản lý theo bản phát hành (release /
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** nối từ **6.1 Toolchain giúp gì?** sang **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)
 
 BOM chỉ quản lý tập phiên bản (version / 버전) tương thích cho Compose libraries.
@@ -416,8 +410,6 @@ BOM không tự thêm `ui`, `material3` hay trình biên dịch (compiler / 컴�
 Đây là một dạng thất bại (failure mode / 실패 모드) phổ biến khi nhà phát triển (developer / 개발자) hiểu BOM như phụ thuộc (dependency / 의존성) bundle thay vì **phiên bản (version / 버전) alignment đặc tả hợp đồng (contract / 계약)**.
 
 ---
-
-> **Nối mạch:** Trong **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** nối từ **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** sang **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới
 
@@ -459,8 +451,6 @@ kapt → KSP
 chỉ vì KSP mới hơn. Processor phải thực sự hỗ trợ KSP và hành vi (behavior / 동작) generated mã (code / 코드) cần kiểm thử (test / 테스트) lại.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** đã nêu tiêu chí phân biệt, còn **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)
 

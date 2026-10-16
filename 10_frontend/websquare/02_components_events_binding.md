@@ -18,8 +18,6 @@ Cách này khác với việc tìm DOM bên trong thành phần (component / 컴
 
 Một cấp cao (senior / 시니어) ghi chú (note / 노트) quan trọng là: **API công khai (public API / 공개 API) là ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계)**. Nếu một yêu cầu có thể giải quyết bằng API công khai (public API / 공개 API), ưu tiên nó. Chỉ xuống DOM khi thật sự cần và phải coi đó là phụ thuộc (dependency / 의존성) có upgrade rủi ro (risk / 위험).
 
-> **Nối mạch:** Component API là contract còn DOM là implementation detail; giá trị display/value làm lộ nơi hai lớp có thể khác nhau. Event handler tiếp theo làm adapter tường minh giữa UI event và domain action.
-
 ## 2. Giá trị thật và giá trị hiển thị không phải lúc nào cũng giống nhau
 
 Đầu vào (input / 입력) có thể áp dụng format ngày, số, tiền tệ hoặc mask. Khi đó người dùng nhìn thấy một chuỗi đã format nhưng khung phần mềm (framework / 프레임워크) có thể giữ actual giá trị (value / 값) khác.
@@ -35,8 +33,6 @@ text nằm trong một DOM node cụ thể
 ```
 
 Nếu API có `getValue()` và một API khác trả display-formatted giá trị (value / 값), hãy chọn theo đặc tả hợp đồng (contract / 계약) dữ liệu. máy chủ (server / 서버) thường nên nhận normalized giá trị (value / 값), không phải chuỗi trình bày cho người dùng.
-
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **2. Giá trị thật và giá trị hiển thị không phải lúc nào cũng giống nhau** đặt tiêu chí; **3. sự kiện (event / 이벤트) handler nên là ranh giới (boundary / 경계) adapter** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. sự kiện (event / 이벤트) trước và sau thay đổi có ngữ nghĩa (semantics / 의미론) khác nhau** mở rộng hệ quả.
 
 ## 3. sự kiện (event / 이벤트) handler nên là ranh giới (boundary / 경계) adapter
 
@@ -77,8 +73,6 @@ scwin.btnSearch_onclick = function () {
 
 Khi một sự kiện (event / 이벤트) handler trở thành nơi mọi thứ xảy ra, coupling giữa UI và nghiệp vụ (business / 비즈니스) luồng (flow / 흐름) tăng rất nhanh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **3. sự kiện (event / 이벤트) handler nên là ranh giới (boundary / 경계) adapter** đặt tiêu chí; **4. sự kiện (event / 이벤트) trước và sau thay đổi có ngữ nghĩa (semantics / 의미론) khác nhau** dùng tiêu chí đó để kiểm tra ranh giới, rồi **5. Binding: nối UI với mô hình (model / 모델)** mở rộng hệ quả.
-
 ## 4. sự kiện (event / 이벤트) trước và sau thay đổi có ngữ nghĩa (semantics / 의미론) khác nhau
 
 Nhiều thành phần (component / 컴포넌트)/dữ liệu (data / 데이터) đối tượng (object / 객체) có sự kiện (event / 이벤트) dạng “before thay đổi (change / 변경)” và “after thay đổi (change / 변경)”. Đây không chỉ là khác tên. sự kiện (event / 이벤트) trước thay đổi thường cho phép kiểm tra hoặc chặn mutation; sự kiện (event / 이벤트) sau thay đổi phù hợp để phản ứng sau khi trạng thái (state / 상태) đã đổi.
@@ -104,8 +98,6 @@ before-change event
 
 Nếu kiểm tra hợp lệ (validation / 검증) cần ngăn dữ liệu invalid vào mô hình (model / 모델), before-event thường phù hợp hơn. Nếu lô-gic (logic / 논리) cần tính lại tổng sau khi giá trị (value / 값) đã được lần ghi nhận (commit / 커밋), after-event phù hợp hơn.
 
-> **Nối mạch:** Event semantics xác định thời điểm trước/sau change; binding tiếp theo nối UI với model, nên source of truth phải được chọn để tránh duplicated state.
-
 ## 5. Binding: nối UI với mô hình (model / 모델)
 
 Binding là cơ chế làm cho thành phần (component / 컴포넌트) đọc/ghi dữ liệu qua DataCollection thay vì mỗi thành phần (component / 컴포넌트) giữ một bản sao dữ liệu độc lập.
@@ -127,8 +119,6 @@ DataMap key
 ```
 
 Nếu GridView bind với DataList, GridView là view còn DataList là mô hình dữ liệu (data model / 데이터 모델). Đây là distinction rất quan trọng. Khi cần sửa nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터), ưu tiên lập luận (reasoning / 추론) trên DataList; khi cần đổi cách hiển thị, ưu tiên GridView.
-
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **5. Binding: nối UI với mô hình (model / 모델)** đặt vấn đề; **6. nguồn chuẩn (source of truth / 정본) và duplicated trạng thái (state / 상태)** đối chiếu bằng chứng, rồi **7. kiểm tra hợp lệ (validation / 검증) có nhiều tầng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. nguồn chuẩn (source of truth / 정본) và duplicated trạng thái (state / 상태)
 
@@ -153,8 +143,6 @@ UI presentation state → component
 Transient orchestration state → scwin
 Persistent business truth → server
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **6. nguồn chuẩn (source of truth / 정본) và duplicated trạng thái (state / 상태)** đặt vấn đề; **7. kiểm tra hợp lệ (validation / 검증) có nhiều tầng** đối chiếu bằng chứng, rồi **8. readOnly, disabled, hidden không đồng nghĩa authorization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. kiểm tra hợp lệ (validation / 검증) có nhiều tầng
 
@@ -187,8 +175,6 @@ scwin.validateSearch = function () {
 
 Máy chủ (server / 서버) vẫn phải validate đầu vào (input / 입력) thật sự nhận được.
 
-> **Nối mạch:** Validation nhiều tầng bảo vệ input nhưng không cấp quyền; `readOnly`/`disabled`/`hidden` chỉ là UI hints, vì vậy naming tiếp theo phải làm rõ contract và ownership.
-
 ## 8. `readOnly`, `disabled`, `hidden` không đồng nghĩa authorization
 
 Một trường dữ liệu (field / 필드) `readOnly` chỉ ngăn người dùng (user / 사용자) sửa qua UI thông thường. `disabled` chỉ thay tương tác (interaction / 상호작용) của thành phần (component / 컴포넌트). `hidden` chỉ làm nó không hiển thị.
@@ -203,8 +189,6 @@ Server authorization = security control
 ```
 
 Đây là nguyên tắc web bảo mật (security / 보안) chung, không riêng WebSquare.
-
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **9. Naming là một phần của maintainability** nối từ **8. readOnly, disabled, hidden không đồng nghĩa authorization** sang **10. thành phần (component / 컴포넌트) chuyển tiếp trạng thái (state transition / 상태 전이) thay vì imperative chaos**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Naming là một phần của maintainability
 
@@ -226,8 +210,6 @@ sbmSaveUser
 
 Tên nên cho biết **loại đối tượng (object / 객체) + vai trò nghiệp vụ**. Khi dấu vết ngăn xếp (stack trace / 스택 트레이스) hoặc log chỉ có ID, tên tốt giúp giảm ngữ cảnh (context / 맥락) switching.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **10. thành phần (component / 컴포넌트) chuyển tiếp trạng thái (state transition / 상태 전이) thay vì imperative chaos** nối từ **9. Naming là một phần của maintainability** sang **11. vòng lặp sự kiện (event loop / 이벤트 루프) và duplicate click**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. thành phần (component / 컴포넌트) chuyển tiếp trạng thái (state transition / 상태 전이) thay vì imperative chaos
 
 Một màn hình thường có chế độ (mode / 모드) như `VIEW`, `CREATE`, `EDIT`, `SAVING`. Anti-pattern là rải `setReadOnly`, `show`, `hide`, `setDisabled` khắp nhiều handler.
@@ -245,8 +227,6 @@ scwin.setMode = function (mode) {
 ```
 
 Giá trị thực sự ở đây không phải hàm (function / 함수) nhỏ hơn, mà là **UI trở thành máy trạng thái (state machine / 상태 머신) có tên**. Khi bug xảy ra, bạn hỏi “page đang ở chế độ (mode / 모드) nào?” thay vì “handler nào vừa thay thuộc tính (property / 속성) gì?”.
-
-> **Nối mạch:** Trong **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **11. vòng lặp sự kiện (event loop / 이벤트 루프) và duplicate click** nối từ **10. thành phần (component / 컴포넌트) chuyển tiếp trạng thái (state transition / 상태 전이) thay vì imperative chaos** sang **12. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) có thể phát sự kiện (event / 이벤트) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. vòng lặp sự kiện (event loop / 이벤트 루프) và duplicate click
 
@@ -273,8 +253,6 @@ scwin.sbmSaveUser_submitdone = function () {
 
 Môi trường vận hành (production / 운영 환경) mã (code / 코드) còn cần reset flag ở lỗi (error / 오류) đường dẫn (path / 경로). Với thao tác (operation / 연산) không idempotent, máy chủ (server / 서버) cũng phải có protection phù hợp; máy khách (client / 클라이언트) guard chỉ giảm duplicate tương tác (interaction / 상호작용), không thể là guarantee duy nhất.
 
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **12. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) có thể phát sự kiện (event / 이벤트) khác nhau** nối từ **11. vòng lặp sự kiện (event loop / 이벤트 루프) và duplicate click** sang **13. Binding vòng lặp (loop / 루프) và side tác động (effect / 효과) cascade**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) có thể phát sự kiện (event / 이벤트) khác nhau
 
 Khung phần mềm (framework / 프레임워크) UI thường phân biệt thay đổi do người dùng (user / 사용자) thao tác và thay đổi bằng API. Ví dụ trong dòng WebSquare mới, `setValue()` có thể kích hoạt một số sự kiện (event / 이벤트) nhưng không kích hoạt sự kiện (event / 이벤트) dành riêng cho view/người dùng (user / 사용자) tương tác (interaction / 상호작용).
@@ -293,8 +271,6 @@ scwin.applyCustomer = function (customer) {
 
 Thay vì hy vọng chuỗi sự kiện (event / 이벤트) side tác động (effect / 효과) tự chạy đúng khi set nhiều trường dữ liệu (field / 필드).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **13. Binding vòng lặp (loop / 루프) và side tác động (effect / 효과) cascade** nối từ **12. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) có thể phát sự kiện (event / 이벤트) khác nhau** sang **14. thành phần (component / 컴포넌트) coupling giữa page**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Binding vòng lặp (loop / 루프) và side tác động (effect / 효과) cascade
 
 Nếu A thay đổi (change / 변경) cập nhật B, B thay đổi (change / 변경) cập nhật C, C thay đổi (change / 변경) lại cập nhật A, bạn đã tạo vòng phản hồi (feedback loop / 피드백 루프). khung phần mềm (framework / 프레임워크) có thể suppress một số sự kiện (event / 이벤트) nhưng không nên dựa vào hành vi (behavior / 동작) ngầm.
@@ -310,8 +286,6 @@ UI rendering
 ```
 
 Nếu bắt buộc two-way binding, side tác động (effect / 효과) không nên quay lại ghi (write / 쓰기) nguồn (source / 소스) mà không có guard.
-
-> **Nối mạch:** Trong **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **14. thành phần (component / 컴포넌트) coupling giữa page** nối từ **13. Binding vòng lặp (loop / 루프) và side tác động (effect / 효과) cascade** sang **15. CSS và thành phần (component / 컴포넌트) internals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. thành phần (component / 컴포넌트) coupling giữa page
 
@@ -337,8 +311,6 @@ $p.parent().scwin.setStatus("DONE");
 
 Tốt hơn nữa trong luồng (flow / 흐름) phức tạp là truyền callback đặc tả hợp đồng (contract / 계약) hoặc dữ liệu (data / 데이터)/kết quả (result / 결과) đặc tả hợp đồng (contract / 계약) rõ ràng. Chapter phạm vi (scope / 범위) sẽ nói kỹ hơn.
 
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **15. CSS và thành phần (component / 컴포넌트) internals** nối từ **14. thành phần (component / 컴포넌트) coupling giữa page** sang **16. sự kiện (event / 이벤트) delegation không phải lúc nào cũng cần tự viết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. CSS và thành phần (component / 컴포넌트) internals
 
 Khi phạm vi (scope / 범위)/WFrame được dùng, engine có thể biến đổi DOM ID. Vì vậy CSS dựa lớp (class / 클래스) thường bền hơn CSS dựa vật lý (physical / 물리적) ID. Ngoài ra thành phần (component / 컴포넌트) có thể kết xuất (render / 렌더링) nested cấu trúc (structure / 구조), nên selector quá sâu như:
@@ -351,15 +323,11 @@ rất fragile.
 
 Ưu tiên ngữ nghĩa (semantic / 의미적) lớp (class / 클래스) do ứng dụng (application / 애플리케이션) kiểm soát. Nếu cần style vùng nội bộ (internal / 내부) thành phần (component / 컴포넌트), ghi rõ đây là phụ thuộc (dependency / 의존성) vào renderer phiên bản (version / 버전) và có visual regression kiểm thử (test / 테스트) sau engine upgrade.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **16. sự kiện (event / 이벤트) delegation không phải lúc nào cũng cần tự viết** nối từ **15. CSS và thành phần (component / 컴포넌트) internals** sang **17. dữ liệu (data / 데이터) binding và GridView: preview cho chapter sau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. sự kiện (event / 이벤트) delegation không phải lúc nào cũng cần tự viết
 
 Trong JavaScript thuần, sự kiện (event / 이벤트) delegation thường giúp xử lý nhiều nút (node / 노드) động. Trong WebSquare, thành phần (component / 컴포넌트) khung phần mềm (framework / 프레임워크) đã quản lý sự kiện (event / 이벤트) tầng (layer / 계층) cho nhiều UI đối tượng (object / 객체). Đừng tự thêm một toàn cục (global / 전역) DOM listener chỉ vì quen mẫu (pattern / 패턴) từ vanilla JS nếu thành phần (component / 컴포넌트) sự kiện (event / 이벤트) đã cung cấp đặc tả hợp đồng (contract / 계약) tốt hơn.
 
 Mỗi tầng (layer / 계층) listener bổ sung có thể gây double handling, khó dấu vết (trace / 추적) stopPropagation và bypass phạm vi (scope / 범위) ngữ nghĩa (semantics / 의미론).
-
-> **Nối mạch:** Trong **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **16. sự kiện (event / 이벤트) delegation không phải lúc nào cũng cần tự viết** đặt vấn đề; **17. dữ liệu (data / 데이터) binding và GridView: preview cho chapter sau** đối chiếu bằng chứng, rồi **18. Debugging checklist cho thành phần (component / 컴포넌트)/sự kiện (event / 이벤트)/binding** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. dữ liệu (data / 데이터) binding và GridView: preview cho chapter sau
 
@@ -372,8 +340,6 @@ var row = dlUser.getRowJSON(0);
 ```
 
 Điều quan trọng là GridView không phải nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) store. Nếu Grid chỉ là view của `dlUser`, mã (code / 코드) save nên lập luận (reasoning / 추론) trên `dlUser` và row status của nó.
-
-> **Nối mạch:** Ở chặng này của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **17. dữ liệu (data / 데이터) binding và GridView: preview cho chapter sau** đặt vấn đề; **18. Debugging checklist cho thành phần (component / 컴포넌트)/sự kiện (event / 이벤트)/binding** đối chiếu bằng chứng, rồi **19. cấp cao (senior / 시니어) rà soát (review / 검토) questions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Debugging checklist cho thành phần (component / 컴포넌트)/sự kiện (event / 이벤트)/binding
 
@@ -392,8 +358,6 @@ Khi UI không phản ứng đúng, đi theo chuỗi xử lý (pipeline / 파이�
 
 Đặt breakpoint ở handler, inspect thành phần (component / 컴포넌트) API giá trị (value / 값) và DataCollection giá trị (value / 값) cùng lúc. Đừng chỉ nhìn UI.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **19. cấp cao (senior / 시니어) rà soát (review / 검토) questions** nối từ **18. Debugging checklist cho thành phần (component / 컴포넌트)/sự kiện (event / 이벤트)/binding** sang **20. Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. cấp cao (senior / 시니어) rà soát (review / 검토) questions
 
 Khi rà soát (review / 검토) một màn hình, hãy hỏi:
@@ -411,8 +375,6 @@ Khi rà soát (review / 검토) một màn hình, hãy hỏi:
 “Page con có phụ thuộc ID của page cha quá nhiều không?”
 
 Nếu trả lời được những câu này, bạn đang rà soát (review / 검토) kiến trúc (architecture / 아키텍처) chứ không chỉ cú pháp (syntax / 문법).
-
-> **Nối mạch:** Trong **02 — Components, Events & dữ liệu (data / 데이터) Binding**, **20. Kết nối** nối từ **19. cấp cao (senior / 시니어) rà soát (review / 검토) questions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 20. Kết nối
 

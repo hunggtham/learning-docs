@@ -13,8 +13,6 @@ Folder này dùng kiến thức vật lý (physical / 물리적) + human geograp
 5. [Environment & Sustainability](./04_environment_sustainability.md): hệ thống (system / 시스템) ranh giới (boundary / 경계), externality, LCA, circularity và resilience.
 6. [Global Trade Networks](./05_global_trade_networks.md): synthesis của môi trường vận hành (production / 운영 환경), resources, vận chuyển (transport / 전송), finance, inventory, cities và systemic shocks.
 
-> **Nối mạch:** Sáu chapter đi từ climate và nexus tới chokepoint, cities, sustainability và trade; **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** gom chúng vào stock–flow–node–corridor–dependency–feedback. **Cross-links quan trọng** tiếp theo trả từng cơ chế về owner vật lý, nhân văn và khu vực.
-
 ## Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)
 
 Mỗi toàn cục (global / 전역) hệ thống (system / 시스템) nên được đọc như:
@@ -24,8 +22,6 @@ Mỗi toàn cục (global / 전역) hệ thống (system / 시스템) nên đư�
 Một climate shock có thể giảm water; water shortage ảnh hưởng food/năng lượng (energy / 에너지); năng lượng (energy / 에너지) shortage ảnh hưởng môi trường vận hành (production / 운영 환경); môi trường vận hành (production / 운영 환경) disruption đi qua cổng (port / 포트)/trade mạng (network / 네트워크); price và employment shock truyền tới city/household.
 
 Đó là lý do các chapter này không nên đọc như chủ đề rời.
-
-> **Nối mạch:** **Cross-links quan trọng** khép README bằng các prerequisite Earth/physical/human và World Atlas, để hệ vượt biên giới luôn quay về owner canonical thay vì đứng như chủ đề rời.
 
 ## Cross-links quan trọng
 

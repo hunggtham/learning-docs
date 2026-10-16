@@ -10,15 +10,11 @@ Trung Á được tổ chức bởi một chuỗi quan hệ mạnh:
 
 Khoảng cách lớn tới đại dương làm climate khô hơn và làm trade phụ thuộc vào các nước trung chuyển. Ngược lại, vị trí giữa East Asia, Russia, West Asia và South Asia tạo tiềm năng corridor rất lớn nếu hạ tầng, border tiến trình (process / 프로세스) và political coordination đủ tốt.
 
-> **Nối mạch:** Thesis đặt Trung Á giữa nội lục khô, núi cao, lưu vực kín và hành lang xuyên lục địa. **Continentality: xa biển làm mùa mạnh hơn** giải thích nền nhiệt và mùa vụ trước khi theo dòng nước từ núi xuống hạ lưu.
-
 ## Continentality: xa biển làm mùa mạnh hơn
 
 Xa ocean làm **tính lục địa (continentality)** tăng: mùa hè có thể nóng, mùa đông rất lạnh và biên độ nhiệt năm lớn. Moisture supply hạn chế làm steppe và desert chiếm diện tích rộng.
 
 Nhưng “khô” không đồng nghĩa “không có water”. Nước phân bố rất không đều theo relief. Mountain phía đông và đông nam giữ snow/glacier và tạo headwater cho lowland basin. Vì vậy map rainfall alone không giải thích settlement.
-
-> **Nối mạch:** Continentality làm mùa nóng–lạnh và nhu cầu nước biến động mạnh; núi lại giữ tuyết và băng cung cấp nước không đều cho upstream–downstream. **Mountain water tower và upstream–downstream phụ thuộc (dependency / 의존성)** nối khí hậu nội lục với quyền phân bổ nước.
 
 ## Mountain water tower và upstream–downstream phụ thuộc (dependency / 의존성)
 
@@ -28,8 +24,6 @@ Climate warming có thể làm snowmelt đến sớm hơn. Glacier retreat đôi
 
 Vì river basin vượt national border, water bảo mật (security / 보안) là vấn đề mạng (network / 네트워크) chứ không phải chỉ cục bộ (local / 로컬) hydrology.
 
-> **Nối mạch:** Trong endorheic basin, nước không ra biển nên muối và chất hòa tan tích tụ khi bốc hơi; quyết định upstream có thể đổi cả hạ lưu. **Aral Sea: stock–luồng (flow / 흐름) và sai lầm quy mô (scale / 규모)** là trường hợp để phân biệt tồn lượng hồ với các dòng vào–ra.
-
 ## Endorheic basin và vì sao salt accumulation quan trọng
 
 Nhiều basin Trung Á là **lưu vực nội lưu (endorheic basin)**: water không chảy ra ocean mà kết thúc ở lake, wetland hoặc evaporates.
@@ -38,8 +32,6 @@ Trong basin kiểu này, salt và dissolved material có xu hướng tích tụ.
 
 Điều này giải thích vì sao water quantity và water chất lượng (quality / 품질) phải được quản lý cùng nhau.
 
-> **Nối mạch:** Aral Sea cho thấy một stock lớn vẫn có thể suy giảm nhanh nếu dòng cấp bị chuyển hướng; quy mô hồ không thay thế được kế toán dòng chảy. **Irrigated oasis và settlement geography** tiếp theo xem nước tưới tạo ra các điểm dân cư và sản xuất như thế nào.
-
 ## Aral Sea: stock–luồng (flow / 흐름) và sai lầm quy mô (scale / 규모)
 
 Aral Sea là trường hợp (case / 사례) kinh điển của việc diversion river quy mô lớn cho irrigation làm inflow vào terminal lake giảm mạnh. Khi inflow thấp hơn evaporation trong thời gian dài, lake stock co lại.
@@ -47,8 +39,6 @@ Aral Sea là trường hợp (case / 사례) kinh điển của việc diversion
 Hậu quả lan qua nhiều tầng (layer / 계층): salinity tăng, fishery suy giảm, exposed lakebed tạo dust, cục bộ (local / 로컬) climate và health burden thay đổi.
 
 Bài học không phải “irrigation luôn xấu”. Bài học là **farm-scale benefit có thể trở thành basin-scale mất mát (loss / 손실)** nếu chỉ tối ưu upstream withdrawal mà không account downstream stock.
-
-> **Nối mạch:** Oasis được hình thành nơi nước có thể dẫn vào đất khô, tạo nông nghiệp, thị trấn và mạng thương mại. **Steppe, pastoralism và mobility** đối chiếu mô hình định cư tưới tiêu với sinh kế du mục trên không gian rộng.
 
 ## Irrigated oasis và settlement geography
 
@@ -60,15 +50,11 @@ Một oasis city tồn tại nhờ kết hợp water truy cập (access / 접근
 
 **water concentration → settlement concentration → economic concentration → higher competition for water**.
 
-> **Nối mạch:** Steppe cần mobility để phân tán rủi ro cỏ và nước, còn oasis phụ thuộc hạ tầng cố định; cả hai đều bị giới hạn bởi chi phí tiếp cận. **Tài nguyên (resource / 자원) geography: mỏ không đồng nghĩa thị trường (market / 시장) truy cập (access / 접근)** đặt cùng câu hỏi đó vào mỏ và thị trường.
-
 ## Steppe, pastoralism và mobility
 
 Dryland steppe không phải “đất trống”. **Chăn thả di động (mobile pastoralism)** dùng spatial mobility để theo seasonal pasture và water.
 
 Khi border, fence, sedentarization hoặc land conversion làm movement bị hạn chế, cùng một herd kích thước (size / 크기) có thể tạo pressure lớn hơn lên cục bộ (local / 로컬) pasture. Mobility vì thế là một resource-management cơ chế (mechanism / 메커니즘) chứ không chỉ lifestyle.
-
-> **Nối mạch:** Mỏ nằm xa biển và thị trường không tự tạo ra giá trị; cần đường, điện, vốn và thỏa thuận transit. **Chuỗi xử lý (pipeline / 파이프라인) geography và lock-in** theo dõi cách hạ tầng chuyên biệt biến một tuyến thành phụ thuộc dài hạn.
 
 ## Tài nguyên (resource / 자원) geography: mỏ không đồng nghĩa thị trường (market / 시장) truy cập (access / 접근)
 
@@ -76,15 +62,11 @@ Trung Á có oil, gas, uranium, copper và nhiều mineral khác. Nhưng **tài 
 
 Landlocked hydrocarbon producer thường cần chuỗi xử lý (pipeline / 파이프라인) qua nước khác hoặc rail tới terminal. Vì vậy transit trạng thái (state / 상태) có thể trở thành mắt xích chiến lược.
 
-> **Nối mạch:** Pipeline và nhà máy xử lý làm giảm một số chi phí nhưng khóa hướng dòng, tiêu chuẩn và đối tác; thay đổi tuyến trở nên đắt. **Rail corridor và interoperability** mở rộng bài toán sang mạng đường sắt cần phối hợp khổ ray, biên giới và lịch chạy.
-
 ## Chuỗi xử lý (pipeline / 파이프라인) geography và lock-in
 
 Chuỗi xử lý (pipeline / 파이프라인) có fixed tuyến (route / 경로) và capital chi phí (cost / 비용) lớn. Một khi xây xong, nó tạo **đường dẫn (path / 경로) dependence**: trường dữ liệu (field / 필드), processing plant và trade đặc tả hợp đồng (contract / 계약) có xu hướng tổ chức quanh tuyến đó.
 
 Đa dạng hóa tuyến (route / 경로) làm tăng resilience nhưng cũng tốn vốn. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa efficiency và redundancy giống trong supply-chain mạng (network / 네트워크).
-
-> **Nối mạch:** Rail corridor chỉ hoạt động khi các hệ thống kỹ thuật và thủ tục tương thích qua nhiều nước. **Urban hệ thống (system / 시스템): capital, industrial nút (node / 노드) và secondary city** tiếp theo xem corridor phân bố chức năng đô thị và node công nghiệp ra sao.
 
 ## Rail corridor và interoperability
 
@@ -94,15 +76,11 @@ Rail hiệu năng (performance / 성능) còn phụ thuộc gauge, border inspec
 
 Vì vậy nên đo **effective distance** bằng thời gian (time / 시간)/chi phí (cost / 비용)/độ tin cậy (reliability / 신뢰성) thay vì kilomet.
 
-> **Nối mạch:** Vốn và dịch vụ thường tập trung ở thủ đô, còn secondary city và node công nghiệp bám theo corridor; cấu trúc đó ảnh hưởng cả nông nghiệp. **Agriculture, cotton và water–năng lượng (energy / 에너지) nexus** nối hệ đô thị với nhu cầu nước, điện và đất.
-
 ## Urban hệ thống (system / 시스템): capital, industrial nút (node / 노드) và secondary city
 
 Major city thường xuất hiện tại piedmont, river crossing, historic trade nút (node / 노드) hoặc administrative center. Soviet-era planning để lại industrial city và vận chuyển (transport / 전송) mạng (network / 네트워크) có đường dẫn (path / 경로) dependence mạnh.
 
 Sau đó thị trường (market / 시장) chuyển tiếp (transition / 전이), di chuyển (migration / 마이그레이션) và national capital concentration làm urban hierarchy thay đổi. Một số capital thu hút disproportionate dịch vụ (service / 서비스), finance và construction, trong khi mono-industrial city dễ tổn thương khi commodity cycle đổi.
-
-> **Nối mạch:** Cotton và tưới tiêu cho thấy một sản phẩm có thể kéo theo nước, điện, lao động và xuất khẩu; đô thị và nông nghiệp cạnh tranh cùng hạ tầng. **Climate rủi ro (risk / 위험) và compound stress** xem khi nóng, khô, lũ và giá năng lượng xảy ra cùng lúc.
 
 ## Agriculture, cotton và water–năng lượng (energy / 에너지) nexus
 
@@ -112,23 +90,17 @@ Irrigated crop có thể tạo export giá trị (value / 값) nhưng cũng tiê
 
 Đây là Water–Food–năng lượng (energy / 에너지) Nexus rất rõ: **bản phát hành (release / 릴리스) timing** có thể quan trọng ngang với annual volume.
 
-> **Nối mạch:** Compound stress làm lộ phụ thuộc chéo giữa nước, năng lượng, nông nghiệp, đô thị và corridor; một cú sốc có thể khuếch đại qua mạng. **Korea–Vietnam và Central Asia** đem khung phụ thuộc đó vào một liên kết so sánh liên vùng.
-
 ## Climate rủi ro (risk / 위험) và compound stress
 
 Drought, heat, glacier retreat và land degradation có thể xảy ra cùng lúc. Khi water shortage trùng high electricity demand và crop-sensitive period, impact lớn hơn tổng từng stress riêng lẻ.
 
 Regional planning cần nhìn **compound rủi ro (risk / 위험)**, không chỉ hazard trung bình.
 
-> **Nối mạch:** Korea–Vietnam và Trung Á khác nhau về biển, khí hậu và thể chế nhưng cùng cho thấy corridor, logistics và nguồn lực chỉ có ý nghĩa trong mạng cụ thể. **Dùng chung (common / 공통) misconceptions** kiểm tra những cách giản lược Trung Á thành “vùng trống” hay “chỉ có dầu khí”.
-
 ## Korea–Vietnam và Central Asia
 
 Đối với Korea và Vietnam, Trung Á quan trọng chủ yếu qua năng lượng (energy / 에너지)/mineral supply, Eurasian logistics và thị trường (market / 시장) diversification. Nhưng land corridor không thay thế hoàn toàn maritime trade vì sức chứa (capacity / 용량) và chi phí (cost / 비용) cấu trúc (structure / 구조) khác.
 
 So sánh này giúp hiểu một nguyên tắc lớn: Korea/Vietnam có lợi thế cổng (port / 포트) truy cập (access / 접근); Central Asia phải “mua connectivity” qua rail, chuỗi xử lý (pipeline / 파이프라인) và diplomatic transit agreement.
-
-> **Nối mạch:** Sau khi sửa các hiểu lầm về nội lục, water tower, Aral, steppe và tài nguyên, còn lại chuỗi nước–settlement–corridor–đô thị–rủi ro khí hậu. **Mô hình tư duy** cô đọng chuỗi này để đọc các quốc gia Trung Á theo cùng một khung.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -137,8 +109,6 @@ So sánh này giúp hiểu một nguyên tắc lớn: Korea/Vietnam có lợi th
 “Desert = không có economy” sai; dryland có mining, pastoralism, solar potential và irrigated oasis.
 
 “Corridor đi qua lãnh thổ = chắc chắn hưởng lợi” cũng sai. giá trị (value / 값) capture phụ thuộc terminal, logistics dịch vụ (service / 서비스), cục bộ (local / 로컬) industry và quản trị (governance / 거버넌스) chứ không chỉ train chạy ngang qua.
-
-> **Nối mạch:** **Mô hình tư duy** khép chuỗi continentality → núi và dòng nước → endorheic basin, Aral và oasis → steppe, tài nguyên, pipeline và rail → đô thị, cotton, nexus và compound stress. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang Tây Á, hệ thống toàn cầu hoặc atlas.
 
 ## Mô hình tư duy
 

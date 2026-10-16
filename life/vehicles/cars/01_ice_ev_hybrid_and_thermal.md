@@ -8,15 +8,11 @@
 
 Turbo, tỷ số nén và điều khiển van thay đổi lượng khí/năng lượng có thể xử lý; chúng không tạo năng lượng miễn phí và thường kéo theo yêu cầu về nhiệt, bôi trơn và bảo trì.
 
-> **Chuyển mạch:** ICE có chuỗi biến đổi nhiều bước và nguồn năng lượng liên tục; motor điện đổi điện thành mô-men với đặc tính điều khiển khác, nhưng pin và nhiệt trở thành ràng buộc trung tâm.
-
 ## 2. EV và hybrid phân phối công việc
 
 BEV lưu năng lượng trong pin, dùng inverter và motor để tạo mô-men; tái sinh khi giảm tốc có thể trả một phần năng lượng về pin. HEV ghép ICE và hệ điện để tối ưu vùng vận hành; PHEV thêm sạc ngoài và có thể dùng điện cho một phần hành trình.
 
 So sánh không chỉ bằng “xăng hay điện”. Hãy xét nguồn điện/nhiên liệu, hành trình, thời gian sạc, nhiệt độ, tải, hạ tầng và chi phí thay thế pin/linh kiện.
-
-> **Chuyển mạch:** Kiến trúc powertrain quyết định đường năng lượng; hệ quản lý nhiệt quyết định khả năng duy trì hiệu năng và tuổi thọ khi môi trường hoặc tải thay đổi.
 
 ## 3. Nhiệt là giới hạn chung
 
