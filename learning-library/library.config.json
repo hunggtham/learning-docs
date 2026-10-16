@@ -23,6 +23,13 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "cert/컴퓨터활용능력",
+      "displayPrefix": "cert/컴퓨터활용능력",
+      "category": "cert",
+      "language": "vi-ko",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend/python",
       "category": "Python",
       "language": "vi-en",

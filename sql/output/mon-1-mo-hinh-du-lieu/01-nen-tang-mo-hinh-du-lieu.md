@@ -871,3 +871,12 @@ Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: khái ni�
 **좋은 데이터 모델은 중복, 비유연성, 비일관성을 줄이고 데이터 품질과 데이터 독립성을 유지한다.**
 
 Một mô hình dữ liệu tốt làm giảm trùng lặp, không linh hoạt và không nhất quán, đồng thời duy trì chất lượng và tính độc lập dữ liệu.
+
+---
+
+## 12. Nối mạch sang Bài 02: ERD, Entity, Thuộc tính, Quan hệ và Định danh
+
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 01 đã xác lập khung nền tảng của mô hình hóa dữ liệu: 3 cấp độ (khái niệm, logic, vật lý) và các nguyên lý loại bỏ dư thừa, bất nhất để duy trì tính độc lập dữ liệu.
+> - **Đang giải quyết gì:** Làm thế nào để cụ thể hóa các yêu cầu nghiệp vụ trừu tượng thành các khối kiến trúc dữ liệu trực quan mà con người và hệ thống đều hiểu chung một nghĩa?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 02 — ERD, Entity, Attribute, Relationship và Identifier](./02-erd-entity-attribute-relationship-identifier.md) để hiện thực hóa mô hình dữ liệu qua 4 thành phần trụ cột cấu thành nên một sơ đồ thực thể liên kết (ERD) hoàn chỉnh và chuẩn hóa.

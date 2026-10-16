@@ -1,60 +1,41 @@
 <!-- lecture-contract: v2 -->
 # SQL cơ bản: SELECT, hàm, lọc, nhóm và sắp xếp
 
-> **Mục tiêu:** SELECT, WHERE, hàm, GROUP BY/HAVING và ORDER BY.
-
-Để học **SQL cơ bản: SELECT, hàm, lọc, nhóm và sắp xếp** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến select, where, hàm, group by/having và order by. thành cách đọc có thể áp dụng.
-
-> **Mục tiêu:** SELECT, WHERE, hàm, GROUP BY/HAVING và ORDER BY.
-
-Để học **SQL cơ bản: SELECT, hàm, lọc, nhóm và sắp xếp** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
-
+> **Mục tiêu:** Nắm vững cấu trúc câu lệnh `SELECT`, mệnh đề lọc `WHERE`, hàm một hàng, gom nhóm `GROUP BY/HAVING` và sắp xếp `ORDER BY`.
+>
 > **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 24–42.
 >
-> **Cách học:** Đây là nền cho mọi bài tiếp theo: `JOIN` mở rộng `FROM`, subquery mở rộng biểu thức/điều kiện, còn hàm cửa sổ (window function / 윈도우 함수) mở rộng việc tính trên các hàng đã chọn.
+> **Mạch kiến thức:** Bài học này là nền tảng cho toàn bộ Môn 2: `JOIN` sẽ mở rộng mệnh đề `FROM`, subquery mở rộng biểu thức và điều kiện lọc, còn window function mở rộng việc tính toán trên các cửa sổ dòng dữ liệu.
 
-Ta bắt đầu với **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)**. Hãy xác định mục đích của khái niệm này trước, rồi mới đọc định nghĩa, ví dụ SQL hoặc bảng so sánh bên dưới.
+---
 
-Ta bắt đầu **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)
-
-Nội dung dưới **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+### 1. 관계형 데이터베이스 (Relational Database) — Cơ sở dữ liệu quan hệ
 
 > **KR:** 관계형 데이터베이스는 데이터를 테이블로 저장하고 SQL 문장으로 관리한다.
 
-RDB (Relational Database) (cơ sở dữ liệu quan hệ) lưu dữ liệu thành bảng (table / 테이블) (Table) (bảng). Một bảng (table / 테이블) có column/attribute (Column/Attribute) (cột/thuộc tính) và row/tuple/bản ghi (record / 레코드); `PRIMARY KEY` (Primary Key) (khóa chính) nhận diện hàng, còn `FOREIGN KEY` (Foreign Key) (khóa ngoại) liên kết bảng. DBMS (Database Management System) (hệ quản trị CSDL) quản lý dữ liệu, phục hồi hỏng hóc và thực thi SQL.
+Cơ sở dữ liệu quan hệ (RDB) lưu trữ dữ liệu dưới dạng bảng (table / 테이블). Một bảng bao gồm các cột thuộc tính (column / attribute) và các hàng bản ghi (row / record / tuple). Trong đó:
+- `PRIMARY KEY` (Khóa chính): Đảm bảo tính duy nhất để nhận diện từng hàng trong bảng.
+- `FOREIGN KEY` (Khóa ngoại): Liên kết giữa các bảng và đảm bảo tính toàn vẹn tham chiếu.
+- Hệ quản trị CSDL (DBMS): Chịu trách nhiệm lưu trữ, phục hồi khi có sự cố và thực thi các câu lệnh SQL tối ưu.
 
-Vừa rồi ta đã khép **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 2. SQL 문장의 종류 — Các nhóm câu lệnh SQL (DML, DDL, DCL, TCL)
 
-Vậy ta đã có tiêu chí để đọc **1. 관계형 데이터베이스 (Relational Database) (cơ sở dữ liệu quan hệ)**. Bây giờ chuyển sang **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+Từ cấu trúc bảng và ràng buộc của RDB, để tương tác với dữ liệu ta sử dụng ngôn ngữ SQL được chuẩn hóa thành 4 nhóm lệnh chuyên biệt theo vai trò:
 
-Ta bắt đầu **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)
-
-Nội dung dưới **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-| 한국어 (English) (Tiếng Việt) | Lệnh chính | Vai trò |
+| Phân loại (Korean / English) | Lệnh chính | Vai trò nghiệp vụ |
 | --- | --- | --- |
-| 데이터 조작어 (DML) (thao tác dữ liệu) | `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `MERGE` | Đọc/thay đổi hàng. |
-| 데이터 정의어 (DDL) (định nghĩa dữ liệu) | `CREATE`, `ALTER`, `DROP`, `TRUNCATE` | Tạo/thay đổi cấu trúc; auto-commit theo PDF. |
-| 데이터 제어어 (DCL) (điều khiển dữ liệu) | `GRANT`, `REVOKE` | Cấp/thu hồi quyền. |
-| 트랜잭션 제어어 (TCL) (điều khiển giao dịch) | `COMMIT`, `ROLLBACK`, `SAVEPOINT` | Kiểm soát kết quả DML. |
+| **데이터 조작어 (DML)** | `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `MERGE` | Đọc và thao tác thay đổi dữ liệu hàng. |
+| **데이터 정의어 (DDL)** | `CREATE`, `ALTER`, `DROP`, `TRUNCATE` | Định nghĩa hoặc thay đổi cấu trúc đối tượng (auto-commit). |
+| **데이터 제어어 (DCL)** | `GRANT`, `REVOKE` | Quản lý và phân quyền truy cập cho người dùng. |
+| **트랜잭션 제어어 (TCL)** | `COMMIT`, `ROLLBACK`, `SAVEPOINT` | Kiểm soát kết quả DML (xác nhận hoặc hoàn tác giao dịch). |
 
-Vừa rồi ta đã khép **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 3. SELECT 문의 구조 — Cấu trúc câu lệnh SELECT và thứ tự thực thi
 
-Vậy ta đã có tiêu chí để đọc **2. SQL 문장의 종류 (DML/DDL/DCL/TCL) (các nhóm câu lệnh SQL)**. Bây giờ chuyển sang **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)
-
-Nội dung dưới **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+Trong 4 nhóm lệnh, `SELECT` (DML) là trọng tâm hàng đầu của đề thi SQLD. Cú pháp viết và thứ tự thực thi logic thực tế có sự khác biệt rõ rệt mà người học cần phân biệt:
 
 ```sql
 SELECT [ALL | DISTINCT] select_expression [AS alias]
@@ -65,90 +46,91 @@ HAVING group_condition
 ORDER BY sort_expression [ASC | DESC];
 ```
 
-> **KR:** 작성 순서와 논리적 실행 순서는 다르며, 논리적 순서는 FROM → WHERE → GROUP BY → HAVING → SELECT → thứ tự (order / 순서) BY이다.
+> **KR:** 작성 순서와 논리적 실행 순서는 다르며, 논리적 순서는 FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY이다.
 
-Ta viết `SELECT` trước nhưng DB lô-gic (logic / 논리) xử lý từ `FROM` (tạo tập hàng) → `WHERE` (lọc hàng) → `GROUP BY` (nhóm) → `HAVING` (lọc nhóm) → `SELECT` (chọn/biểu diễn cột) → `ORDER BY` (sắp xếp kết quả). Thứ tự này giải thích vì sao alias (Alias) (bí danh) thường dùng được trong `ORDER BY` nhưng không dùng được trong `WHERE`/`HAVING`.
+- **Thứ tự thực thi logic của DBMS:**
+  1. `FROM`: Xác định bảng nguồn và nạp tập dữ liệu.
+  2. `WHERE`: Lọc từng hàng theo điều kiện trước khi gom nhóm.
+  3. `GROUP BY`: Gom các hàng thỏa mãn thành các nhóm con.
+  4. `HAVING`: Lọc các nhóm dựa trên điều kiện của hàm tổng hợp.
+  5. `SELECT`: Chọn các cột cần hiển thị và tính toán biểu thức.
+  6. `ORDER BY`: Sắp xếp tập kết quả cuối cùng.
 
-`ALL` (All) (giữ mọi dòng) là mặc định; `DISTINCT` (Distinct) (loại dòng trùng theo danh sách chọn) chỉ để khử trùng kết quả, không thay thế cho thiết kế dữ liệu đúng. Oracle không dùng `AS` cho bảng (table / 테이블) alias (bí danh bảng), còn column alias có thể cần dấu `"` nếu chứa khoảng trắng/ký tự đặc biệt.
+> **Điểm thi then chốt:** Vì `SELECT` thực thi sau `WHERE` và `GROUP BY`, bí danh cột (column alias) được đặt trong mệnh đề `SELECT` **không thể** được sử dụng trong `WHERE` hay `HAVING`, nhưng **có thể** dùng được trong `ORDER BY`.
 
-Vừa rồi ta đã khép **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+Về tùy chọn: `ALL` là giá trị mặc định (giữ mọi dòng); `DISTINCT` loại bỏ dòng trùng lặp trong danh sách chọn. Trong Oracle, không sử dụng từ khóa `AS` cho bí danh bảng (table alias); còn bí danh cột có thể dùng `"` nếu chứa khoảng trắng hoặc ký tự đặc biệt.
 
-Khi gom phần **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+---
 
-Vậy ta đã có tiêu chí để đọc **3. SELECT 문의 구조 (SELECT statement structure) (cấu trúc câu SELECT)**. Bây giờ chuyển sang **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+### 4. WHERE 절 — Mệnh đề lọc hàng
 
-Ta bắt đầu **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)
-
-Nội dung dưới **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+Sau khi `FROM` xác định bảng nguồn, mệnh đề `WHERE` lập tức lọc các hàng dữ liệu thô trước khi đưa vào tính toán tổng hợp:
 
 > **KR:** WHERE 절은 테이블의 데이터 중 원하는 조건에 맞는 데이터만 조회하기 위해 사용한다.
 
-`WHERE` lọc từng row trước khi tạo nhóm; vì vậy không đặt aggregate hàm (function / 함수) trực tiếp ở đây. Dùng `HAVING` cho điều kiện trên kết quả nhóm. Các toán tử quan trọng là `=`, `>`, `>=`, `<`, `<=`, `BETWEEN A AND B`, `IN`, `LIKE`, `IS NULL`, `AND`, `OR`, `NOT`.
+- `WHERE` lọc từng hàng (row-level) độc lập; do đó **tuyệt đối không được đặt trực tiếp hàm tổng hợp (aggregate function)** vào mệnh đề `WHERE` (phải dùng `HAVING`).
+- Các toán tử thông dụng: `=`, `>`, `>=`, `<`, `<=`, `BETWEEN A AND B`, `IN`, `LIKE`, `IS NULL`, `AND`, `OR`, `NOT`.
 
 ```sql
-WHERE price BETWEEN 15000 AND 20000       -- gồm cả hai đầu mút
-WHERE deptno IN (10, 20, 30)              -- thuộc danh sách
-WHERE name LIKE 'S%'                      -- bắt đầu bằng S
-WHERE position IS NULL                    -- NULL không so sánh bằng =
+WHERE price BETWEEN 15000 AND 20000       -- Bao gồm cả 2 giá trị đầu mút (15000 và 20000)
+WHERE deptno IN (10, 20, 30)              -- Thuộc một trong các giá trị của danh sách
+WHERE name LIKE 'S%'                      -- Bắt đầu bằng chữ 'S' (% đại diện cho 0 hoặc nhiều ký tự)
+WHERE position IS NULL                    -- Giá trị NULL bắt buộc so sánh bằng IS NULL, không dùng dấu =
 ```
 
-`LIKE` (Like) (khớp mẫu) dùng `%` cho 0 hoặc nhiều ký tự và `_` cho đúng 1 ký tự. `NULL` (Null) (giá trị chưa biết/không có) với phép so sánh cho kết quả unknown (không xác định), nên không qua được `WHERE`; phải dùng `IS NULL`/`IS NOT NULL`. Ưu tiên toán tử là `()` → `NOT` → so sánh/SQL operator → `AND` → `OR`; dùng ngoặc để ý định không mơ hồ.
+> **Lưu ý về NULL và thứ tự ưu tiên toán tử:**
+> Phép so sánh với `NULL` luôn trả về trạng thái `UNKNOWN`, khiến điều kiện không thỏa mãn `WHERE`. Thứ tự ưu tiên khi đánh giá điều kiện logic: `()` → `NOT` → Phép so sánh/toán tử SQL → `AND` → `OR`. Nên luôn dùng dấu ngoặc đơn để bảo đảm logic rõ ràng.
 
-Vừa rồi ta đã khép **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **5. 단일행 함수 (Single-Row Function) (hàm một hàng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 5. 단일행 함수 — Hàm một hàng (Single-Row Function)
 
-Vậy ta đã có tiêu chí để đọc **4. WHERE 절 (WHERE clause) (mệnh đề lọc hàng)**. Bây giờ chuyển sang **5. 단일행 함수 (Single-Row Function) (hàm một hàng)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. 단일행 함수 (Single-Row Function) (hàm một hàng)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 5. 단일행 함수 (Single-Row Function) (hàm một hàng)
-
-Nội dung dưới **5. 단일행 함수 (Single-Row Function) (hàm một hàng)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+Trong quá trình lọc ở `WHERE` hoặc định dạng ở `SELECT`, SQL cung cấp các hàm một hàng xử lý độc lập trên từng bản ghi:
 
 > **KR:** 단일행 함수는 하나의 행 값에 대해 하나의 결과를 반환한다.
 
-Hàm một hàng biến đổi từng hàng độc lập, nên có thể dùng ở `SELECT`, `WHERE`, `ORDER BY` và lồng hàm. Nhóm số học: `ABS`, `SIGN`, `CEIL`, `FLOOR`, `MOD`, `ROUND`, `TRUNCATE`, `POWER`, `SQRT`; nhóm chuỗi Oracle: `LOWER`, `UPPER`, `SUBSTR`, `INSTR`, `LENGTH`, `TRIM`, `LPAD`, `RPAD`, `REPLACE`, `TRANSLATE`; nhóm ngày: `SYSDATE`, `CURRENT_DATE`, `EXTRACT`, `ADD_MONTHS`, `MONTHS_BETWEEN`, `LAST_DAY`, `NEXT_DAY`; nhóm chuyển đổi: `TO_NUMBER`, `TO_CHAR`, `TO_DATE`, `CAST`, `CONVERT`.
+Hàm một hàng trả về đúng 1 kết quả cho mỗi hàng đầu vào, do đó có thể đặt linh hoạt ở `SELECT`, `WHERE`, `ORDER BY` và lồng nhau nhiều cấp:
+- **Nhóm số học:** `ABS`, `SIGN`, `CEIL`, `FLOOR`, `MOD`, `ROUND`, `TRUNC`, `POWER`, `SQRT`.
+- **Nhóm chuỗi ký tự (Oracle):** `LOWER`, `UPPER`, `SUBSTR`, `INSTR`, `LENGTH`, `TRIM`, `LPAD`, `RPAD`, `REPLACE`, `TRANSLATE`.
+- **Nhóm ngày tháng:** `SYSDATE`, `CURRENT_DATE`, `EXTRACT`, `ADD_MONTHS`, `MONTHS_BETWEEN`, `LAST_DAY`, `NEXT_DAY`.
+- **Nhóm chuyển đổi kiểu:** `TO_NUMBER`, `TO_CHAR`, `TO_DATE`, `CAST`, `CONVERT`.
 
 > **KR:** DBMS마다 함수명과 날짜 출력 형식은 다를 수 있다.
+> Cần lưu ý sự khác biệt giữa các hệ quản trị: SQL Server dùng `GETDATE()` thay cho `SYSDATE`, `DATEPART` thay cho `EXTRACT`, `DATEDIFF` thay cho `MONTHS_BETWEEN`, và `SUBSTRING`/`LEN`/`CHARINDEX` tương ứng với `SUBSTR`/`LENGTH`/`INSTR` của Oracle.
 
-Ví dụ PDF: SQL máy chủ (server / 서버) dùng `GETDATE()` tương ứng `SYSDATE`, `DATEPART` tương ứng `EXTRACT`, `DATEDIFF` tương ứng `MONTHS_BETWEEN` theo đơn vị phù hợp; `SUBSTR`/`LENGTH`/`INSTR` có tên thường gặp là `SUBSTRING`/`LEN`/`CHARINDEX`. Khi đề không chỉ rõ DBMS, hãy chú ý cú pháp đang dùng thay vì áp tên hàm của DBMS khác.
+---
 
-Vừa rồi ta đã khép **5. 단일행 함수 (Single-Row Function) (hàm một hàng)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+### 6. 집계 함수와 NULL — Hàm tổng hợp và cơ chế xử lý NULL
 
-Khi gom phần **5. 단일행 함수 (Single-Row Function) (hàm một hàng)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. 단일행 함수 (Single-Row Function) (hàm một hàng)**. Bây giờ chuyển sang **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)
-
-Nội dung dưới **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+Khác với hàm một hàng, hàm tổng hợp (hàm nhiều hàng) nhận vào một tập hợp nhiều hàng để trả về một giá trị tóm tắt duy nhất:
 
 > **KR:** 집계 함수는 여러 행을 하나의 결과값으로 반환하며, NULL 값은 0으로 계산되는 것이 아니라 무시된다.
 
-`COUNT(*)` đếm mọi hàng; `COUNT(column)` chỉ đếm hàng có giá trị khác `NULL`; `SUM`, `AVG`, `MIN`, `MAX`, `STDDEV`, `VARIANCE` tổng hợp giá trị không NULL. `AVG(sal)` không phải trung bình của toàn bộ hàng nếu `sal` có NULL; nếu muốn coi NULL là 0, dùng `AVG(NVL(sal, 0))` theo mục tiêu đề bài.
+- `COUNT(*)`: Đếm toàn bộ số hàng (bao gồm cả các hàng có giá trị NULL).
+- `COUNT(column)`: Chỉ đếm các hàng có giá trị khác `NULL`.
+- `SUM`, `AVG`, `MIN`, `MAX`, `STDDEV`, `VARIANCE`: Tự động bỏ qua (ignore) các giá trị `NULL`.
+  *Lưu ý đề thi:* `AVG(sal)` chỉ tính trung bình trên các nhân viên có lương thực tế. Nếu muốn gán nhân viên chưa có lương là 0 để tính trung bình toàn công ty, bắt buộc phải dùng `AVG(NVL(sal, 0))`.
 
-`NVL(a,b)` (Oracle), `ISNULL(a,b)` (SQL Server) thay NULL; `NVL2`, `NULLIF`, `COALESCE` xử lý biến thể; `CASE`/`DECODE` tạo nhánh điều kiện. `CASE` đơn giản so một expression với các giá trị (value / 값), còn searched `CASE` kiểm tra từng điều kiện (condition / 조건).
+- **Hàm xử lý giá trị NULL và rẽ nhánh điều kiện:**
+  - `NVL(a, b)` (Oracle) / `ISNULL(a, b)` (SQL Server): Nếu `a` là NULL thì lấy `b`.
+  - `NVL2(a, b, c)`: Nếu `a` không NULL lấy `b`, ngược lại lấy `c`.
+  - `NULLIF(a, b)`: Nếu `a = b` thì trả về NULL, khác nhau trả về `a`.
+  - `COALESCE(a, b, c, ...)`: Trả về giá trị đầu tiên khác NULL trong danh sách.
+  - `CASE` / `DECODE`: Phân nhánh logic có điều kiện.
 
-Vừa rồi ta đã khép **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **7. GROUP BY và HAVING** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 7. GROUP BY và HAVING — Gom nhóm và lọc điều kiện trên nhóm
 
-Vậy ta đã có tiêu chí để đọc **6. 집계 함수와 NULL (Aggregate Function and NULL) (hàm tổng hợp và NULL)**. Bây giờ chuyển sang **7. GROUP BY và HAVING**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. GROUP BY và HAVING** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 7. GROUP BY và HAVING
-
-Nội dung dưới **7. GROUP BY và HAVING** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+Khi cần thống kê số liệu theo từng phòng ban, danh mục sản phẩm hay khu vực, ta kết hợp hàm tổng hợp với mệnh đề gom nhóm:
 
 > **KR:** GROUP BY는 데이터를 소그룹으로 분류하여 통계 정보를 얻고, HAVING은 그룹화된 결과에 조건을 적용한다.
 
-Sau `GROUP BY`, chỉ được chọn cột nhóm hoặc biểu thức aggregate, vì mỗi nhóm trả về đúng một hàng. `WHERE` giảm số hàng trước nhóm để hiệu năng tốt hơn; `HAVING` giữ/bỏ cả nhóm sau khi aggregate. `GROUP BY` không tự sắp xếp; muốn thứ tự ổn định dùng `ORDER BY`.
+- Sau khi áp dụng `GROUP BY`, trong mệnh đề `SELECT` **chỉ được phép chứa các cột nằm trong `GROUP BY` hoặc các biểu thức hàm tổng hợp**.
+- **Phân biệt `WHERE` và `HAVING`:**
+  - `WHERE`: Lọc từng hàng trước khi gom nhóm để tối ưu hiệu năng tính toán.
+  - `HAVING`: Lọc tập nhóm sau khi hàm tổng hợp đã hoàn tất tính toán.
+  - `GROUP BY` không tự động sắp xếp kết quả; nếu cần thứ tự xác định phải dùng `ORDER BY`.
 
 ```sql
 SELECT deptno, COUNT(*) AS employee_count, AVG(sal) AS avg_sal
@@ -159,24 +141,26 @@ HAVING AVG(sal) > 2500
 ORDER BY avg_sal DESC;
 ```
 
-Vừa rồi ta đã khép **7. GROUP BY và HAVING** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **8. ORDER BY (Order By) (sắp xếp)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **7. GROUP BY và HAVING** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 8. ORDER BY — Sắp xếp tập kết quả cuối cùng
 
-Vậy ta đã có tiêu chí để đọc **7. GROUP BY và HAVING**. Bây giờ chuyển sang **8. ORDER BY (Order By) (sắp xếp)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+Mệnh đề thực thi sau cùng trong chu trình xử lý truy vấn là `ORDER BY`, định hình thứ tự hiển thị dữ liệu cho người dùng:
 
-Ta bắt đầu **8. ORDER BY (Order By) (sắp xếp)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+> **KR:** ORDER BY는 결과 집합의 정렬 기준을 명시하며 기본값은 ASC이다.
 
-#### 8. ORDER BY (Order By) (sắp xếp)
+- `ASC` (Tăng dần - mặc định) và `DESC` (Giảm dần).
+- Khi sắp xếp theo nhiều cột, thứ tự từ trái qua phải thể hiện mức độ ưu tiên.
+- **Xử lý NULL khi sắp xếp trong đề thi:**
+  - **Oracle:** Mặc định xem `NULL` là giá trị lớn nhất (ở cuối khi `ASC`, ở đầu khi `DESC`). Cho phép chỉ định tường minh bằng `NULLS FIRST` hoặc `NULLS LAST`.
+  - **SQL Server:** Mặc định xem `NULL` là giá trị nhỏ nhất (ở đầu khi `ASC`).
+- Nếu truy vấn có `GROUP BY`, mệnh đề `ORDER BY` chỉ được tham chiếu đến các cột có mặt trong `SELECT` hoặc các hàm tổng hợp hợp lệ.
 
-Nội dung dưới **8. ORDER BY (Order By) (sắp xếp)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+---
 
-> **KR:** thứ tự (order / 순서) BY는 결과 집합의 정렬 기준을 명시하며 기본값은 ASC이다.
+## 9. Nối mạch sang Bài tiếp theo: JOIN và liên kết bảng
 
-`ASC` (Ascending) (tăng dần) là mặc định, `DESC` (Descending) (giảm dần) đảo thứ tự. Khi nhiều cột, cột bên trái là tiêu chí ưu tiên cao hơn; cột sau chỉ phân xử các hàng hòa ở cột trước. Theo PDF, Oracle mặc định xếp `NULL` cuối ở ASC và SQL Server xếp NULL đầu; Oracle cho `NULLS FIRST`/`NULLS LAST` để chỉ định rõ. Sau `GROUP BY`, chỉ dùng trong `ORDER BY` các cột hiện có trong kết quả `SELECT`.
-
-Như vậy, **8. ORDER BY (Order By) (sắp xếp)** cần được nhớ bằng quan hệ giữa dữ liệu đầu vào, quy tắc xử lý và kết quả đầu ra. Khi ôn lại, hãy tự diễn đạt quan hệ đó rồi dùng nó làm điểm tựa cho section kế tiếp.
-
-Khi gom phần **8. ORDER BY (Order By) (sắp xếp)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Như vậy, **8. ORDER BY (Order By) (sắp xếp)** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 00 đã trang bị toàn bộ cú pháp cơ bản và thứ tự thực thi logic của câu lệnh `SELECT` đơn lẻ trên một bảng dữ liệu.
+> - **Đang giải quyết gì:** Trong cơ sở dữ liệu quan hệ thực tế, thông tin nghiệp vụ luôn bị phân tán trên nhiều bảng chuẩn hóa khác nhau. Làm thế nào để kết hợp các bảng này lại một cách chính xác theo khóa chính và khóa ngoại?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 01 — JOIN](./01-join.md) để mở rộng mệnh đề `FROM` với các kỹ thuật liên kết bảng chuẩn ANSI (`INNER JOIN`, `LEFT/RIGHT OUTER JOIN`, `FULL OUTER JOIN`, `CROSS JOIN`, `NATURAL JOIN`).
