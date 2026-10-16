@@ -24,7 +24,7 @@ Kỳ thi thực hành 1급 không kiểm tra đơn lẻ một ứng dụng mà �
 ### Tiêu chuẩn công nhận đỗ (합격 기준)
 
 * **Điều kiện tiên quyết:** Thí sinh bắt buộc phải đạt **tối thiểu 70/100 điểm ở CẢ HAI MÔN THI**.
-* **Nguyên tắc loại trừ tuyệt đối (과락):** 
+* **Nguyên tắc loại trừ tuyệt đối (과락):**
   * Nếu môn Excel đạt 100 điểm tuyệt đối nhưng môn Access chỉ đạt 69 điểm, kết quả chung cuộc vẫn là **Không đạt (불합격)**.
   * Không áp dụng cơ chế bù điểm trung bình cộng giữa hai môn.
   * Không bảo lưu kết quả từng môn thực hành. Nếu trượt, thí sinh phải đăng ký thi lại toàn bộ cả 2 môn trong kỳ thi tiếp theo.
@@ -99,5 +99,5 @@ MÔN ACCESS (Mục tiêu: 80 – 85 điểm)
 ### Nguyên tắc sống còn trong phòng thi
 
 1. **Phần mềm chấm điểm không có cảm xúc:** Bất kỳ thao tác dư thừa nào làm sai cấu trúc bảng tính hoặc làm đổi tên trường CSDL đều bị trừ điểm tối đa. Làm đúng và đủ theo từng câu chữ của đề bài, không tự ý sáng tạo hay thêm định dạng ngoài yêu cầu.
-2. **Kỷ luật thời gian nghiêm ngặt:** Nếu một câu tính toán mảng trong Excel hoặc một câu truy vấn Crosstab trong Access vượt quá 3 phút mà chưa tìm ra hướng giải, lập tức đánh dấu bỏ qua để chuyển sang câu tiếp theo. 
+2. **Kỷ luật thời gian nghiêm ngặt:** Nếu một câu tính toán mảng trong Excel hoặc một câu truy vấn Crosstab trong Access vượt quá 3 phút mà chưa tìm ra hướng giải, lập tức đánh dấu bỏ qua để chuyển sang câu tiếp theo.
 3. **Thứ tự thao tác mang tính quyết định:** Trình tự làm bài tối ưu và các kỹ thuật đối soát chi tiết được đúc kết toàn diện tại chuyên mục [90 — 실전 모의고사 및 오류 복구 전략](./90-실전-모의고사-및-오류-복구-전략.md).

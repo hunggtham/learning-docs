@@ -43,16 +43,16 @@ Sự khác biệt giữa cấp độ 1 (1급) và cấp độ 2 (2급) thể hi�
 
 Bộ tài liệu được biên soạn đồng bộ, phân chia theo từng môn thi và khép lại bằng chiến lược tối ưu điểm số:
 
-1. **[01 — 컴퓨터 일반 (Tin học đại cương & Kiến trúc hệ thống)](./01-컴퓨터-일반.md)**  
+1. **[01 — 컴퓨터 일반 (Tin học đại cương & Kiến trúc hệ thống)](./01-컴퓨터-일반.md)**
    Hệ thống hóa toàn bộ phần cứng, kiến trúc CPU, phân cấp bộ nhớ, cơ chế hệ điều hành Windows, mạng truyền thông và an toàn thông tin.
 
-2. **[02 — 스프레드시트 일반 (Bảng tính đại cương & Excel nâng cao)](./02-스프레드시트-일반.md)**  
+2. **[02 — 스프레드시트 일반 (Bảng tính đại cương & Excel nâng cao)](./02-스프레드시트-일반.md)**
    Phân tích cơ chế công thức mảng, cú pháp định dạng số chuyên sâu, nhóm hàm tài chính và tra cứu ma trận, công cụ phân tích What-If và nền tảng lập trình VBA.
 
-3. **[03 — 데이터베이스 일반 (Cơ sở dữ liệu đại cương & Microsoft Access)](./03-데이터베이스-일반.md)**  
+3. **[03 — 데이터베이스 일반 (Cơ sở dữ liệu đại cương & Microsoft Access)](./03-데이터베이스-일반.md)**
    Bao quát toàn diện mô hình RDBMS, quy trình chuẩn hóa dữ liệu, thiết kế bảng và biểu thức ràng buộc trong Access, cú pháp SQL chuẩn, và kiến trúc Form/Report.
 
-4. **[90 — 필기 문제풀이 전략 (Chiến lược giải đề & phân loại bẫy KCCI)](./90-필기-문제풀이-전략.md)**  
+4. **[90 — 필기 문제풀이 전략 (Chiến lược giải đề & phân loại bẫy KCCI)](./90-필기-문제풀이-전략.md)**
    Cung cấp sơ đồ phân bổ thời gian thực chiến 60 phút, nguyên tắc né bẫy đề thi kinh điển của KCCI, và phương pháp loại trừ phương án trắc nghiệm theo tư duy logic.
 
 ---

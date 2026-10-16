@@ -1,7 +1,7 @@
 # 컴퓨터활용능력 (1급 & 2급) — Coverage Audit
 
-> **Mục đích:** Đảm bảo toàn bộ phạm vi xuất đề (출제기준 2024–2026) của kỳ thi Quốc gia Tin học văn phòng KCCI (대한상공회의소) được giảng dạy đầy đủ và chuyên sâu, phân biệt rõ ràng giữa "tệp tài liệu tồn tại" và "nội dung bao phủ 100% syllabus".  
-> **Phiên bản chuẩn khảo thí:** 2024–2026 출제기준 / Windows 10 & Microsoft Office LTSC 2021 (giao diện tiếng Hàn).  
+> **Mục đích:** Đảm bảo toàn bộ phạm vi xuất đề (출제기준 2024–2026) của kỳ thi Quốc gia Tin học văn phòng KCCI (대한상공회의소) được giảng dạy đầy đủ và chuyên sâu, phân biệt rõ ràng giữa "tệp tài liệu tồn tại" và "nội dung bao phủ 100% syllabus".
+> **Phiên bản chuẩn khảo thí:** 2024–2026 출제기준 / Windows 10 & Microsoft Office LTSC 2021 (giao diện tiếng Hàn).
 > **Trạng thái quy ước:** FULL (Bao phủ 100%) / PARTIAL (Bao phủ một phần) / MISSING (Chưa có) / VERIFY_OFFICIAL (Theo dõi chuẩn mới).
 
 ---

@@ -1,6 +1,6 @@
 # 컴퓨터활용능력 2급 실기 — Mục lục & Lộ trình thực hành Excel
 
-Phần thi thực hành (실기) là môn **스프레드시트 실무 (Thực hành bảng tính Excel)** với thời gian làm bài **40 phút**. Thang điểm tối đa là **100 điểm**, điểm đỗ yêu cầu đạt từ **70 điểm trở lên**. Bài thi được chấm điểm tự động bằng phần mềm, trong đó nhiều nội dung áp dụng quy tắc chấm nhị phân (chỉ có trọn vẹn điểm hoặc 0 điểm). 
+Phần thi thực hành (실기) là môn **스프레드시트 실무 (Thực hành bảng tính Excel)** với thời gian làm bài **40 phút**. Thang điểm tối đa là **100 điểm**, điểm đỗ yêu cầu đạt từ **70 điểm trở lên**. Bài thi được chấm điểm tự động bằng phần mềm, trong đó nhiều nội dung áp dụng quy tắc chấm nhị phân (chỉ có trọn vẹn điểm hoặc 0 điểm).
 
 Tài liệu này được sắp xếp theo cấu trúc đề thi thực tế và cẩm nang thao tác chuẩn xác, giúp người học vừa nắm vững bản chất kỹ thuật vừa tuyệt đối tránh các lỗi thao tác dẫn đến bị trừ điểm.
 

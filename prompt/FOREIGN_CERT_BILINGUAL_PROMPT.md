@@ -19,9 +19,9 @@ Mục tiêu cốt lõi: Đảm bảo người học khi vào phòng thi **nhận
 ### 1.2. Mẫu định dạng chuẩn (Canonical Patterns)
 
 - **Thuật ngữ & Từ khóa (Keywords):**
-  - Mẫu thi tiếng Hàn: `한국어 (English/Acronym) — Giải thích kỹ thuật tiếng Việt`  
+  - Mẫu thi tiếng Hàn: `한국어 (English/Acronym) — Giải thích kỹ thuật tiếng Việt`
     *Ví dụ:* `참조무결성 (Referential Integrity) — Ràng buộc toàn vẹn tham chiếu: Giá trị khóa ngoại phải tồn tại ở khóa chính hoặc mang giá trị NULL.`
-  - Mẫu thi tiếng Anh: `English (Korean nếu có) — Giải thích kỹ thuật tiếng Việt`  
+  - Mẫu thi tiếng Anh: `English (Korean nếu có) — Giải thích kỹ thuật tiếng Việt`
     *Ví dụ:* `Deadlock (교착 상태) — Trạng thái khóa chết: Hai hay nhiều tiến trình chờ đợi tài nguyên do nhau nắm giữ vô hạn định.`
 
 - **Khái niệm & Điểm thi trọng tâm (Core Exam Principles):**
