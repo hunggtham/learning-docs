@@ -1,212 +1,125 @@
 <!-- lecture-contract: v2 -->
 # Constraints, View và các đối tượng hỗ trợ
 
-> **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
-
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Constraints, view và các đối tượng hỗ trợ**. Route đi từ integrity rules → PK/FK/UNIQUE/CHECK → views → sequences/synonyms → dependency and write behavior, để cấu trúc bảo vệ dữ liệu xuyên câu lệnh.
-
-Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Mục đích của bài là biến pk/fk/unique/check, view, sequence và synonym. thành cách đọc có thể áp dụng.
-
-> **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
-
-Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
-
+> **Mục tiêu:** Nắm vững 5 loại ràng buộc toàn vẹn dữ liệu (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, `CHECK`), cơ chế hoạt động của `VIEW`, bộ sinh số tự động `SEQUENCE` và bí danh đối tượng `SYNONYM`.
+>
 > **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 95–100.
 >
-> **Liên kết bài trước:** DDL tạo cấu trúc; ràng buộc (constraint / 제약조건) bảo đảm dữ liệu đi vào cấu trúc đó vẫn đúng quy tắc nghiệp vụ. Điều này hiện thực hóa consistency (Consistency) (tính nhất quán) trong ACID đã học.
+> **Mạch kiến thức:** Bài trước đã hướng dẫn khởi tạo bảng (DDL). Bài này giải quyết câu hỏi: *Làm thế nào để bảo vệ tính toàn vẹn nghiệp vụ của dữ liệu và tối ưu hóa việc truy cập an toàn qua các đối tượng hỗ trợ?*
 
-Ta bắt đầu với **1. 제약 조건 (Constraint) (ràng buộc)**. Hãy xác định mục đích của khái niệm này trước, rồi mới đọc định nghĩa, ví dụ SQL hoặc bảng so sánh bên dưới.
+---
 
-Ta bắt đầu **1. 제약 조건 (Constraint) (ràng buộc)** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+### 1. 제약 조건 (Constraints) — Cơ chế bảo vệ tính toàn vẹn dữ liệu
 
-#### 1. 제약 조건 (Constraint) (ràng buộc)
+> **KR:** 제약 조건은 데이터의 무결성을 유지하기 위해 특정 컬럼에 설정하는 제약이며, 테이블에 부적절한 데이터가 입력되는 것을 방지하는 안전장치이다.
 
-Nội dung dưới **1. 제약 조건 (Constraint) (ràng buộc)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** 제약 조건은 데이터의 무결성을 유지하기 위해 특정 컬럼에 설정하는 제약이며 테이블에 데이터가 올바르게 들어오도록 거는 장치이다.
-
-Ràng buộc (constraint / 제약조건) bảo vệ integrity (Integrity) (tính toàn vẹn): ví dụ mã sinh viên không được `NULL` và không được trùng. Có thể khai báo khi `CREATE TABLE`, khi thêm cột, hoặc thêm ràng buộc (constraint / 제약조건) cho cột sẵn có. Đặt tên ràng buộc (constraint / 제약조건) giúp xem lỗi, sửa/xóa ràng buộc (constraint / 제약조건) và đọc DDL dễ hơn.
+Ràng buộc (Constraints) là các quy tắc logic được áp đặt trực tiếp lên các cột trong bảng nhằm đảm bảo **tính toàn vẹn dữ liệu (Data Integrity)**:
+- Có thể khai báo ngay lúc `CREATE TABLE` (cấp cột hoặc cấp bảng) hoặc bổ sung sau bằng `ALTER TABLE ... ADD CONSTRAINT`.
+- Việc đặt tên tường minh cho ràng buộc (ví dụ: `CONSTRAINT pk_emp PRIMARY KEY`) giúp định vị chính xác lỗi khi bị vi phạm và thuận tiện cho việc bảo trì.
 
 ```sql
-CREATE TABLE table_name (
-  column1 data_type [DEFAULT value]
-    [CONSTRAINT constraint_name] constraint_type,
-  ...
+-- Khai báo khi tạo bảng
+CREATE TABLE emp (
+    empno NUMBER CONSTRAINT pk_emp PRIMARY KEY,
+    ename VARCHAR2(20) NOT NULL,
+    sal NUMBER CONSTRAINT ck_sal CHECK (sal > 0)
 );
 
-ALTER TABLE table_name
-ADD CONSTRAINT constraint_name constraint_type (column_name);
+-- Thêm ràng buộc sau khi bảng đã tồn tại
+ALTER TABLE emp ADD CONSTRAINT fk_emp_dept FOREIGN KEY (deptno) REFERENCES dept(deptno);
 
-ALTER TABLE table_name
-DROP CONSTRAINT constraint_name;
+-- Xóa ràng buộc
+ALTER TABLE emp DROP CONSTRAINT ck_sal;
 ```
 
-Vừa rồi ta đã khép **1. 제약 조건 (Constraint) (ràng buộc)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **2. PRIMARY KEY (Primary Key) (khóa chính)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **1. 제약 조건 (Constraint) (ràng buộc)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 2. Các loại ràng buộc cốt lõi trong đề thi SQLD
 
-Vậy ta đã có tiêu chí để đọc **1. 제약 조건 (Constraint) (ràng buộc)**. Bây giờ chuyển sang **2. PRIMARY KEY (Primary Key) (khóa chính)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+| Ràng buộc (Korean / English) | Định nghĩa & Tính chất kỹ thuật | Bẫy đề thi then chốt |
+| --- | --- | --- |
+| **`PRIMARY KEY`** (Khóa chính) | Định danh duy nhất từng hàng trong bảng. Bắt buộc thỏa mãn đồng thời: **Không trùng lặp (Unique) và Không được rỗng (Not Null)**. | Mỗi bảng **chỉ có duy nhất 1 khóa chính**, nhưng khóa chính đó có thể gồm nhiều cột ghép lại (Composite Key). Khi tạo PK, hệ thống tự động sinh ra một `Unique Index`. |
+| **`UNIQUE`** (Duy nhất) | Đảm bảo giá trị cột không bị trùng lặp giữa các hàng. | **Cho phép chứa giá trị `NULL`** (và có thể chứa nhiều giá trị `NULL` vì trong SQL, `NULL` không bằng `NULL`). Cũng tự động sinh `Unique Index`. |
+| **`NOT NULL`** (Không rỗng) | Không cho phép cột mang giá trị `NULL`. | Đây là ràng buộc duy nhất được kế thừa khi nhân bản bảng bằng lệnh `CTAS`. |
+| **`CHECK`** (Kiểm tra miền giá trị) | Giới hạn miền giá trị được phép nhập vào cột theo biểu thức logic (ví dụ: `sal >= 1000` hoặc `gender IN ('M', 'F')`). | Biểu thức `CHECK` không được chứa hàm trả về giá trị biến thiên theo thời gian (như `SYSDATE`) hoặc truy vấn con (Subquery). |
+| **`FOREIGN KEY`** (Khóa ngoại) | Liên kết cột của bảng con với cột khóa chính (`PK`) hoặc `UNIQUE` của bảng cha để duy trì tính toàn vẹn tham chiếu. | Giá trị khóa ngoại phải **tồn tại ở bảng cha hoặc mang giá trị `NULL`**. |
 
-Ta bắt đầu **2. PRIMARY KEY (Primary Key) (khóa chính)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+---
 
-#### 2. PRIMARY KEY (Primary Key) (khóa chính)
+### 3. Khóa ngoại và hành vi tham chiếu (Referential Actions)
 
-Nội dung dưới **2. PRIMARY KEY (Primary Key) (khóa chính)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+> **KR:** FOREIGN KEY는 자식 테이블에 생성하며, 부모 테이블의 참조 컬럼은 반드시 PK 또는 UNIQUE KEY여야 한다. 자식 테이블에 데이터가 남아있는 경우 부모 데이터의 무단 삭제는 차단된다.
 
-> **KR:** PRIMARY KEY는 행 데이터를 고유하게 구분하는 식별자이고 중복과 NULL을 허용하지 않는다.
+Khi dữ liệu ở bảng cha bị xóa hoặc cập nhật, khóa ngoại sẽ kích hoạt một trong các hành vi tham chiếu sau:
 
-`PRIMARY KEY` (Primary Key) (khóa chính) nhận diện duy nhất một hàng, tương đương `UNIQUE` + `NOT NULL`. DBMS tự tạo unique chỉ mục (index / 인덱스) (Unique Index) (chỉ mục duy nhất) khi tạo PK. Mỗi bảng chỉ có một PK, nhưng PK đó có thể là composite key (Composite Key) (khóa ghép) gồm nhiều cột. PK không có default; đừng nhầm CTAS sao chép `NOT NULL` với việc sao chép PK — CTAS không sao chép PK.
+| Tùy chọn tham chiếu | Cú pháp ANSI / Oracle | Hành vi khi bản ghi cha bị xóa (`DELETE`) |
+| --- | --- | --- |
+| **Xóa dây chuyền** | `ON DELETE CASCADE` | Tự động **xóa toàn bộ các bản ghi con** đang trỏ tới bản ghi cha vừa bị xóa. |
+| **Gán giá trị NULL** | `ON DELETE SET NULL` | Cập nhật cột khóa ngoại ở các bản ghi con thành `NULL` (cột con bắt buộc phải cho phép NULL). |
+| **Chặn đứng thao tác** | `RESTRICT` / `NO ACTION` | **Ngăn chặn việc xóa bản ghi cha** nếu vẫn còn bất kỳ bản ghi con nào đang tham chiếu tới (mặc định nếu không khai báo). |
 
-```sql
-CONSTRAINT pk_name PRIMARY KEY (column1, column2)
-```
+---
 
-Vừa rồi ta đã khép **2. PRIMARY KEY (Primary Key) (khóa chính)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **3. UNIQUE, NOT NULL và CHECK** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+### 4. VIEW (Khung nhìn / Bảng ảo)
 
-Khi gom phần **2. PRIMARY KEY (Primary Key) (khóa chính)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **2. PRIMARY KEY (Primary Key) (khóa chính)**. Bây giờ chuyển sang **3. UNIQUE, NOT NULL và CHECK**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **3. UNIQUE, NOT NULL và CHECK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 3. UNIQUE, NOT NULL và CHECK
-
-Nội dung dưới **3. UNIQUE, NOT NULL và CHECK** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** UNIQUE는 중복을 허용하지 않고 NULL은 허용하며, NOT NULL은 NULL 값을 허용하지 않는다.
-
-`UNIQUE` (Unique) (duy nhất) ngăn giá trị trùng nhưng cho phép `NULL` theo nội dung PDF; nó cũng tạo unique chỉ mục (index / 인덱스). `NOT NULL` (Not Null) (không rỗng) là thuộc tính cột và là ràng buộc (constraint / 제약조건) duy nhất được CTAS kế thừa. `CHECK` (Check) (kiểm tra miền giá trị) giới hạn trực tiếp giá trị hợp lệ theo điều kiện, chẳng hạn lương phải dương.
+> **KR:** VIEW는 별도의 물리적 저장공간을 가지지 않고 SELECT 쿼리 정의만을 저장하는 가상 테이블(Virtual Table)이다.
 
 ```sql
-CREATE TABLE test (
-  id NUMBER,
-  name VARCHAR2(10) UNIQUE
-);
-
-ALTER TABLE emp1
-ADD CONSTRAINT emp_sal_ck CHECK (sal > 0);
-```
-
-Vừa rồi ta đã khép **3. UNIQUE, NOT NULL và CHECK** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
-
-Khi gom phần **3. UNIQUE, NOT NULL và CHECK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **3. UNIQUE, NOT NULL và CHECK**. Bây giờ chuyển sang **4. FOREIGN KEY (Foreign Key) (khóa ngoại)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 4. FOREIGN KEY (Foreign Key) (khóa ngoại)
-
-Nội dung dưới **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** FOREIGN KEY는 자식 테이블에 생성하며 부모 테이블의 참조 컬럼은 PK 또는 UNIQUE KEY를 가져야 한다.
-
-FK được tạo ở child bảng (table / 테이블) (Child Table) (bảng con) và tham chiếu tham chiếu (reference / 참조) key (Reference Key) (cột được tham chiếu) của parent bảng (table / 테이블) (Parent Table) (bảng cha). Cột đích phải là PK hoặc UNIQUE. FK có thể `NULL` và một bảng có thể có nhiều FK. Điều này liên hệ với bài mô hình dữ liệu: quan hệ giữa thực thể (entity / 엔터티) cha/con được cưỡng chế ở tầng dữ liệu, không chỉ tồn tại trên ERD.
-
-```sql
-CREATE TABLE emp1 (
-  empno NUMBER PRIMARY KEY,
-  deptno NUMBER,
-  CONSTRAINT emp_fk FOREIGN KEY (deptno)
-    REFERENCES dept1(deptno)
-);
-```
-
-> **KR:** 자식 테이블에는 부모가 가진 값만 INSERT와 cập nhật (update / 업데이트)할 수 있고, 자식이 있는 부모는 삭제와 값 변경이 불가능하다.
-
-Ở bảng con, INSERT/cập nhật (update / 업데이트) FK chỉ dùng giá trị đang tồn tại ở bảng cha (hoặc NULL nếu cột cho phép). Xóa hàng con không bị FK cản; nhưng không thể xóa hoặc đổi khóa ở hàng cha khi vẫn có hàng con tham chiếu, trừ khi dùng referential hành động (action / 동작) (Referential Action) (hành động tham chiếu) phù hợp.
-
-| 한국어 (English) (Tiếng Việt) | Khi xóa cha |
-| --- | --- |
-| 연쇄 (ON DELETE CASCADE) (xóa dây chuyền) | Xóa luôn hàng con. |
-| 널 설정 (ON DELETE SET NULL) (đặt NULL) | Đặt FK của hàng con thành NULL; cột con phải cho phép NULL. |
-| 제한 (RESTRICT) (hạn chế) | Chỉ cho xóa cha khi không còn con tham chiếu. |
-| 동작 없음 (NO ACTION) (không hành động) | Không thực hiện thao tác vi phạm toàn vẹn tham chiếu. |
-
-PDF còn nêu insert hành động (action / 동작) (Insert Action) (hành động khi chèn): `Automatic` (tự động tạo cha rồi chèn con), `Set Null` (đặt FK con NULL), `Set Default` (đặt default), `Dependent` (chỉ chèn con khi cha đã có), `No Action` (không chấp nhận thao tác vi phạm). Khi làm bài SQLD, trước hết đọc xem đề nói đến xóa/sửa cha hay chèn/sửa con, vì hướng tác động khác nhau.
-
-Vừa rồi ta đã khép **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **5. VIEW (View) (khung nhìn)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
-
-Khi gom phần **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **4. FOREIGN KEY (Foreign Key) (khóa ngoại)**. Bây giờ chuyển sang **5. VIEW (View) (khung nhìn)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **5. VIEW (View) (khung nhìn)** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 5. VIEW (View) (khung nhìn)
-
-Nội dung dưới **5. VIEW (View) (khung nhìn)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** VIEW는 저장공간을 가지지 않지만 테이블처럼 조회 및 수정 가능한 객체이며 가상 테이블이라고도 한다.
-
-View là virtual bảng (table / 테이블) (Virtual Table) (bảng ảo): nó lưu định nghĩa truy vấn chứ thông thường không giữ dữ liệu vật lý. Simple view (Simple View) (view đơn giản) lấy từ một bảng, còn complex view (Complex View) (view phức hợp) được tạo bằng phép nối (join / 조인) từ hai bảng trở lên. Khi truy vấn view, DB thực thi lại truy vấn định nghĩa nên dữ liệu gốc thay đổi sẽ phản ánh trong kết quả view.
-
-```sql
-CREATE [OR REPLACE] VIEW view_name AS
-SELECT ...;
-
-DROP VIEW view_name;
-```
-
-> **KR:** 뷰는 독립성, 편리성, 보안성의 장점이 있고 정의 변경, 삽입·삭제·갱신 연산, 인덱스 구성에는 제약이 있다.
-
-View giúp độc lập chương trình với thay đổi cấu trúc, tái sử dụng truy vấn phức tạp và che cột nhạy cảm như lương. View có thể được dùng làm nền để định nghĩa view khác; xóa bảng gốc làm view dựa trên nó không còn dùng được. PDF nhấn mạnh hạn chế về thay đổi định nghĩa, DML và chỉ mục (index / 인덱스); hãy xem view như một lớp trình bày/bảo vệ truy vấn chứ không phải bản sao dữ liệu mặc định.
-
-```sql
-CREATE VIEW v_emp_dept AS
+CREATE [OR REPLACE] VIEW v_emp_dept AS
 SELECT e.empno, e.ename, e.deptno, d.dname
-FROM emp e, dept d
-WHERE e.deptno = d.deptno;
+FROM emp e
+JOIN dept d ON e.deptno = d.deptno;
 ```
 
-Vừa rồi ta đã khép **5. VIEW (View) (khung nhìn)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+- **Ưu điểm của VIEW:**
+  1. **Tính độc lập (Independence):** Ứng dụng độc lập với sự thay đổi của cấu trúc bảng nền tảng.
+  2. **Tính tiện lợi (Convenience):** Tái sử dụng các câu lệnh truy vấn phức tạp nhiều bảng.
+  3. **Tính bảo mật (Security):** Che giấu các cột nhạy cảm (như lương nhân viên, mật khẩu) đối với một số nhóm người dùng.
+- **Hạn chế trong đề thi:**
+  - View không có vùng nhớ lưu dữ liệu riêng biệt (dữ liệu nằm ở bảng gốc).
+  - Không thể tạo Index trực tiếp trên View thông thường (trừ Materialized View / Indexed View).
+  - Thao tác DML (`INSERT`, `UPDATE`, `DELETE`) trên View bị hạn chế nghiêm ngặt, đặc biệt đối với Complex View có chứa `JOIN`, `GROUP BY`, `DISTINCT` hoặc các hàm tổng hợp.
 
-Khi gom phần **5. VIEW (View) (khung nhìn)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+---
 
-Vậy ta đã có tiêu chí để đọc **5. VIEW (View) (khung nhìn)**. Bây giờ chuyển sang **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+### 5. SEQUENCE (Bộ sinh số tự động)
 
-Ta bắt đầu **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 6. SEQUENCE (Sequence) (bộ sinh số tuần tự)
-
-Nội dung dưới **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** chuỗi (sequence / 시퀀스)는 자동으로 연속적인 숫자를 부여해주는 객체이다.
-
-Chuỗi (sequence / 시퀀스) tạo số liên tiếp, thường dùng làm giá trị khóa nhân tạo. `INCREMENT BY` là bước tăng, `START WITH` là giá trị đầu, `MAXVALUE`/`MINVALUE` là giới hạn, `CYCLE`/`NOCYCLE` quyết định có quay vòng không và `CACHE N` là số giá trị đệm trước trong bộ nhớ (mặc định PDF nêu 20). chuỗi (sequence / 시퀀스) tạo số, không tự bảo đảm uniqueness trong mọi tình huống; PK mới là ràng buộc bảo đảm không trùng.
+> **KR:** SEQUENCE는 고유한 일련번호를 자동으로 생성하는 객체이며 주로 기본키(PK) 인조 식별자 생성에 사용된다.
 
 ```sql
-CREATE SEQUENCE seq_name
-  INCREMENT BY 1
-  START WITH 1
-  MAXVALUE 9999
-  NOCYCLE
-  CACHE 20;
+CREATE SEQUENCE emp_seq
+    START WITH 1001       -- Giá trị bắt đầu
+    INCREMENT BY 1        -- Bước nhảy mỗi lần gọi
+    MAXVALUE 999999       -- Giá trị tối đa
+    NOCYCLE               -- Không quay vòng lặp lại
+    CACHE 20;             -- Cấp phát trước 20 số vào RAM để tối ưu tốc độ
 ```
 
-Vừa rồi ta đã khép **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+- **Sử dụng trong câu lệnh SQL:**
+  - `emp_seq.NEXTVAL`: Cấp phát và trả về giá trị số tiếp theo.
+  - `emp_seq.CURRVAL`: Trả về giá trị hiện tại vừa được cấp phát trong phiên làm việc (`Session`). Bắt buộc phải gọi `NEXTVAL` ít nhất một lần trước khi có thể gọi `CURRVAL`.
 
-Khi gom phần **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+---
 
-Vậy ta đã có tiêu chí để đọc **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)**. Bây giờ chuyển sang **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+### 6. SYNONYM (Bí danh đối tượng)
 
-Ta bắt đầu **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)
-
-Nội dung dưới **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** SYNONYM은 테이블 별칭을 생성하는 객체이다.
-
-Synonym là bí danh cho đối tượng (object / 객체), giúp không phải ghi lặp `owner.table_name`, ví dụ dùng `EMP` thay cho `SCOTT.EMP` khi đã có quyền. `PUBLIC` (Public) (công khai) cho mọi người dùng; private synonym (bí danh riêng) chỉ người tạo sử dụng. `OR REPLACE` thay thế synonym trùng tên; synonym công khai (public / 공개) phải được xóa theo cách công khai (public / 공개).
+> **KR:** SYNONYM은 특정 데이터베이스 객체에 대해 별칭을 부여하는 객체로, 객체의 실제 소유자(Owner)와 물리적 위치를 숨겨 보안성을 높이고 SQL 작성을 단순화한다.
 
 ```sql
-CREATE [OR REPLACE] [PUBLIC] SYNONYM emp
-FOR scott.emp;
+-- Tạo bí danh riêng (Private Synonym)
+CREATE SYNONYM emp FOR hr.employees;
+
+-- Tạo bí danh công khai dùng cho toàn hệ thống (Cần quyền DBA)
+CREATE PUBLIC SYNONYM all_emp FOR hr.employees;
 ```
 
-Như vậy, **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** cần được nhớ bằng quan hệ giữa dữ liệu đầu vào, quy tắc xử lý và kết quả đầu ra. Khi ôn lại, hãy tự diễn đạt quan hệ đó rồi dùng nó làm điểm tựa cho section kế tiếp.
+- **Lợi ích:** Người dùng chỉ cần viết `SELECT * FROM emp` thay vì phải chỉ định tường minh tên chủ sở hữu `SELECT * FROM hr.employees`. Khi cấu trúc phân vùng hoặc tài khoản quản trị thay đổi, chỉ cần cập nhật lại định nghĩa của Synonym mà không cần sửa mã nguồn ứng dụng.
 
-Khi gom phần **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+---
 
-Như vậy, **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+## 7. Nối mạch sang Bài tiếp theo: DCL, quyền và Role
+
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 11 đã phân tích trọn vẹn cách thiết lập các ràng buộc bảo vệ dữ liệu và hệ thống đối tượng hỗ trợ (`VIEW`, `SEQUENCE`, `SYNONYM`).
+> - **Đang giải quyết gì:** Trong một môi trường doanh nghiệp có hàng trăm lập trình viên và nhân viên phân tích, ai được phép truy cập, ai được chỉnh sửa các bảng và đối tượng này? Làm thế nào để kiểm soát an ninh dữ liệu tập trung?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 12 — DCL, quyền và Role](./12-dcl-quyen-va-role.md) để nắm vững cơ chế cấp quyền (`GRANT`), thu hồi quyền (`REVOKE`), quản trị nhóm quyền (`ROLE`) và các bẫy đề thi về `WITH GRANT OPTION` vs `WITH ADMIN OPTION`.

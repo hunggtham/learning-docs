@@ -1,158 +1,110 @@
 <!-- lecture-contract: v2 -->
-# TCL và Transaction
+# TCL và Transaction (Giao dịch)
 
-> **Mục tiêu:** ACID, COMMIT, ROLLBACK, SAVEPOINT và khác biệt Oracle/SQL Server.
-
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TCL và transaction**. Route đi từ DML mutation → transaction boundary → ACID/isolation → COMMIT/ROLLBACK/SAVEPOINT → engine-specific behavior, để tính nguyên tử nối với trạng thái thực tế.
-
-Để học **TCL và Transaction** như một mạch suy luận, trước hết hãy giữ câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Mục đích của bài là biến acid, commit, rollback, savepoint và khác biệt oracle/sql server. thành cách đọc có thể áp dụng.
-
-> **Mục tiêu:** ACID, COMMIT, ROLLBACK, SAVEPOINT và khác biệt Oracle/SQL Server.
-
-Để học **TCL và Transaction** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
-
+> **Mục tiêu:** Nắm vững bản chất giao dịch, 4 thuộc tính ACID, cơ chế hoạt động của `COMMIT`, `ROLLBACK`, `SAVEPOINT` và sự khác biệt giữa Oracle và SQL Server trong đề thi SQLD.
+>
 > **Phạm vi tham khảo:** PDF *2024 개정판 SQLD 개념정리*, trang 87–89.
 >
-> **Liên kết bài trước:** DML thay đổi dữ liệu; TCL quyết định khi nào các thay đổi đó trở thành dữ liệu chính thức hoặc bị hủy.
+> **Mạch kiến thức:** Bài trước đã phân tích các thao tác biến đổi dữ liệu (DML). Bài này giải quyết câu hỏi: *Làm thế nào để các thay đổi đó được xác nhận vĩnh viễn hoặc khôi phục an toàn khi có sự cố?*
 
-Ta bắt đầu với **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)**. Hãy xác định mục đích của khái niệm này trước, rồi mới đọc định nghĩa, ví dụ SQL hoặc bảng so sánh bên dưới.
+---
 
-Ta bắt đầu **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)
-
-Nội dung dưới **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** TCL은 lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT를 포함하며 DML에 의해 조작된 결과를 작업단위(트랜잭션)별로 제어한다.
-
-TCL gồm `COMMIT` (Commit) (xác nhận lưu), `ROLLBACK` (Rollback) (hoàn tác) và `SAVEPOINT` (Savepoint) (điểm lưu tạm). Nó không trực tiếp thêm/sửa/xóa hàng, mà kiểm soát các thay đổi do DML tạo ra theo đơn vị giao dịch (transaction / 트랜잭션) (Transaction) (giao dịch).
-
-Vừa rồi ta đã khép **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **2. 트랜잭션 (Transaction) (giao dịch)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
-
-Khi gom phần **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **1. TCL (Transaction Control Language) (ngôn ngữ điều khiển giao dịch)**. Bây giờ chuyển sang **2. 트랜잭션 (Transaction) (giao dịch)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **2. 트랜잭션 (Transaction) (giao dịch)** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 2. 트랜잭션 (Transaction) (giao dịch)
-
-Nội dung dưới **2. 트랜잭션 (Transaction) (giao dịch)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+### 1. 트랜잭션 (Transaction) — Đơn vị công việc logic
 
 > **KR:** 트랜잭션은 데이터베이스의 논리적 연산단위이며 분할할 수 없는 최소의 단위이다.
 
-Giao dịch (transaction / 트랜잭션) là một đơn vị công việc lô-gic (logic / 논리), không thể tách nhỏ khi xét tính đúng đắn. Ví dụ chuyển tiền cần cả việc trừ ở tài khoản A lẫn cộng ở tài khoản B thành công; nếu một bước thất bại, cả hai phải trở về trạng thái cũ. Đây là nguyên tắc `ALL OR NOTHING` (all-or-nothing) (tất cả hoặc không gì cả).
+Giao dịch (Transaction) là một đơn vị công việc logic không thể phân chia (`All or Nothing`). Mọi thao tác bên trong một transaction hoặc phải cùng thành công trọn vẹn, hoặc phải cùng bị hủy bỏ hoàn toàn để đưa cơ sở dữ liệu về trạng thái ban đầu.
+- **Tình huống nghiệp vụ kinh điển:** Chuyển tiền giữa hai tài khoản ngân hàng:
+  1. Trừ tiền ở Tài khoản A (`UPDATE account SET balance = balance - 100 WHERE id = 'A'`).
+  2. Cộng tiền ở Tài khoản B (`UPDATE account SET balance = balance + 100 WHERE id = 'B'`).
+  Nếu bước 1 thành công nhưng bước 2 bị lỗi hệ thống, toàn bộ tiến trình bắt buộc phải được khôi phục lại trạng thái cũ (`ROLLBACK`).
 
-Vừa rồi ta đã khép **2. 트랜잭션 (Transaction) (giao dịch)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **2. 트랜잭션 (Transaction) (giao dịch)** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 2. 트랜잭션의 4대 특성 (ACID) — 4 thuộc tính cốt lõi của giao dịch
 
-Vậy ta đã có tiêu chí để đọc **2. 트랜잭션 (Transaction) (giao dịch)**. Bây giờ chuyển sang **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+Để đảm bảo tính toàn vẹn và độ tin cậy của dữ liệu khi có nhiều người dùng đồng thời truy cập, mỗi giao dịch phải thỏa mãn 4 tiêu chí ACID:
 
-Ta bắt đầu **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)
-
-Nội dung dưới **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-| 한국어 (English) (Tiếng Việt) | Giải thích |
+| Thuộc tính (Korean / English) | Bản chất kỹ thuật & Tiêu chí nhận diện đề thi |
 | --- | --- |
-| 원자성 (Atomicity) (tính nguyên tử) | Toàn bộ thao tác trong giao dịch (transaction / 트랜잭션) đều thành công hoặc không thao tác nào được áp dụng. |
-| 일관성 (Consistency) (tính nhất quán) | Nếu DB hợp lệ trước giao dịch (transaction / 트랜잭션) thì sau giao dịch (transaction / 트랜잭션) cũng phải hợp lệ; không được phá vỡ ràng buộc và quy tắc dữ liệu. |
-| 고립성 (Isolation) (tính cô lập) | giao dịch (transaction / 트랜잭션) đang chạy không được chịu ảnh hưởng làm tạo ra kết quả sai do giao dịch (transaction / 트랜잭션) khác. |
-| 지속성 (Durability) (tính bền vững) | Khi giao dịch (transaction / 트랜잭션) đã thành công, dữ liệu đã cập nhật được lưu bền vững. |
+| **원자성 (Atomicity - Tính nguyên tử)** | Mọi thao tác trong giao dịch phải hoàn tất 100% hoặc không có thao tác nào được ghi nhận (`All or Nothing`). |
+| **일관성 (Consistency - Tính nhất quán)** | Giao dịch phải đưa cơ sở dữ liệu từ trạng thái hợp lệ này sang trạng thái hợp lệ khác, không vi phạm bất kỳ ràng buộc (PK, FK, CHECK) nào. |
+| **고립성 (Isolation - Tính cô lập)** | Các giao dịch chạy đồng thời không được can thiệp lẫn nhau. Trạng thái trung gian chưa commit của một giao dịch không được làm sai lệch kết quả giao dịch khác. |
+| **지속성 (Durability - Tính bền vững)** | Một khi giao dịch đã `COMMIT` thành công, các thay đổi dữ liệu sẽ được lưu trữ vĩnh viễn trong CSDL ngay cả khi hệ thống gặp sự cố mất điện hay sập máy chủ. |
 
-Vừa rồi ta đã khép **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **4. COMMIT (Commit) (xác nhận lưu)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 3. TCL (Transaction Control Language) — Ngôn ngữ điều khiển giao dịch
 
-Vậy ta đã có tiêu chí để đọc **3. 트랜잭션의 특징 (ACID) (đặc tính giao dịch)**. Bây giờ chuyển sang **4. COMMIT (Commit) (xác nhận lưu)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+> **KR:** TCL은 COMMIT, ROLLBACK, SAVEPOINT를 포함하며 DML에 의해 조작된 결과를 작업단위(트랜잭션)별로 제어한다.
 
-Ta bắt đầu **4. COMMIT (Commit) (xác nhận lưu)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+TCL không trực tiếp thay đổi nội dung bảng mà chịu trách nhiệm xác nhận hoặc hoàn tác các thay đổi do DML tạo ra:
+- **`COMMIT` (Xác nhận lưu):** Đóng gói và ghi vĩnh viễn các thay đổi DML vào đĩa từ.
+- **`ROLLBACK` (Hoàn tác):** Hủy bỏ các thao tác DML chưa commit, đưa dữ liệu về trạng thái commit gần nhất hoặc điểm lưu tạm.
+- **`SAVEPOINT` (Điểm lưu tạm):** Đánh dấu các mốc trung gian bên trong giao dịch để có thể rollback cục bộ từng phần mà không hủy toàn bộ giao dịch.
 
-#### 4. COMMIT (Commit) (xác nhận lưu)
+---
 
-Nội dung dưới **4. COMMIT (Commit) (xác nhận lưu)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+### 4. COMMIT과 ROLLBACK의 동작 메커니즘 — Cơ chế thực thi
 
-> **KR:** lần ghi nhận (commit / 커밋)은 올바르게 반영된 데이터를 데이터베이스에 반영시키는 명령어이며, lần ghi nhận (commit / 커밋) 이전에 수행된 DML은 모두 저장되어 되돌릴 수 없다.
+> **KR:** COMMIT 이전에는 메모리(버퍼)에만 임시 반영된 상태이며, ROLLBACK을 통해 언제든 취소할 수 있다. 하지만 COMMIT 이후에는 영구 저장되어 이전 상태로 되돌릴 수 없다.
 
-`COMMIT` kết thúc giao dịch (transaction / 트랜잭션) hiện tại và làm các DML trước đó trở thành bền vững. Sau `COMMIT`, không thể dùng `ROLLBACK` để quay lại những thay đổi đó. Vì vậy, trước khi lần ghi nhận (commit / 커밋) một `UPDATE` hoặc `DELETE` diện rộng, cần kiểm tra điều kiện `WHERE` và số hàng chịu ảnh hưởng.
+- **Trạng thái trước khi `COMMIT`:**
+  - Dữ liệu thay đổi chỉ mới nằm trong bộ nhớ đệm (Buffer Cache).
+  - Người thực hiện truy vấn có thể nhìn thấy dữ liệu mới; các người dùng khác (`Session` khác) vẫn chỉ nhìn thấy dữ liệu cũ trước khi sửa.
+  - Các hàng dữ liệu đang bị khóa (`Lock`) để ngăn phiên làm việc khác sửa đổi đồng thời.
+- **Trạng thái sau khi `COMMIT`:**
+  - Dữ liệu được ghi bền vững vào cơ sở dữ liệu.
+  - Tất cả người dùng khác đều nhìn thấy kết quả mới nhất.
+  - Các khóa tài nguyên (`Lock`) được giải phóng hoàn toàn.
 
-Vừa rồi ta đã khép **4. COMMIT (Commit) (xác nhận lưu)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **5. Oracle và SQL Server: transaction/auto-commit** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+---
 
-Khi gom phần **4. COMMIT (Commit) (xác nhận lưu)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+### 5. DBMS 엔진별 트랜잭션 모드 차이 (Oracle vs SQL Server)
 
-Vậy ta đã có tiêu chí để đọc **4. COMMIT (Commit) (xác nhận lưu)**. Bây giờ chuyển sang **5. Oracle và SQL Server: transaction/auto-commit**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+Đề thi SQLD thường xuyên kiểm tra sự khác biệt về chế độ giao dịch mặc định giữa Oracle và SQL Server:
 
-Ta bắt đầu **5. Oracle và SQL Server: transaction/auto-commit** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+| Tiêu chí đối chiếu | Oracle | SQL Server |
+| --- | --- | --- |
+| **Chế độ mặc định DML** | **Không auto-commit** (phải gõ lệnh `COMMIT` hoặc `ROLLBACK` rõ ràng). | **Mặc định AUTO-COMMIT** (mỗi câu lệnh DML tự động commit ngay lập tức). |
+| **Mở giao dịch nhiều lệnh** | Tự động mở giao dịch khi gặp câu lệnh DML đầu tiên. | Bắt buộc phải khai báo tường minh: `BEGIN TRANSACTION;`. |
+| **Lệnh DDL (`CREATE`, `ALTER`, `DROP`)** | **Tự động Auto-Commit** (ngay trước và sau câu lệnh DDL). | **Không auto-commit** (câu lệnh DDL có thể được rollback nếu nằm trong transaction). |
 
-#### 5. Oracle và SQL Server: transaction/auto-commit
+> **Cảnh báo bẫy đề thi:** Trong Oracle, nếu bạn thực hiện một loạt lệnh `INSERT`, sau đó chạy một lệnh `CREATE TABLE ...`, thì toàn bộ các lệnh `INSERT` trước đó **sẽ tự động bị commit vĩnh viễn** do lệnh DDL tự kích hoạt commit ngầm định!
 
-Nội dung dưới **5. Oracle và SQL Server: transaction/auto-commit** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
+---
 
-> **KR:** ORACLE은 DML 시 사용자가 lần ghi nhận (commit / 커밋) 또는 quay lui (rollback / 롤백)을 수행해야 하며, SQL máy chủ (server / 서버)는 기본적으로 AUTO lần ghi nhận (commit / 커밋) 모드이다.
+### 6. SAVEPOINT와 부분 롤백 (Partial Rollback)
 
-Theo nội dung PDF, Oracle cần người dùng `COMMIT`/`ROLLBACK` để kết thúc giao dịch (transaction / 트랜잭션) DML. SQL máy chủ (server / 서버) mặc định auto-commit (tự xác nhận từng lệnh); nếu muốn kiểm soát nhiều lệnh thành một giao dịch (transaction / 트랜잭션), phải mở giao dịch (transaction / 트랜잭션) rõ ràng. PDF cũng lưu ý DDL của Oracle auto-commit (từ Oracle 23c có thể cấu hình khác) và SQL máy chủ (server / 서버) có thể cấu hình auto-commit.
+> **KR:** SAVEPOINT는 트랜잭션의 특정 지점에 이름을 지정하여, 해당 지점까지만 부분적으로 롤백할 수 있도록 지원한다.
 
-Vừa rồi ta đã khép **5. Oracle và SQL Server: transaction/auto-commit** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **6. ROLLBACK (Rollback) (hoàn tác)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
-
-Khi gom phần **5. Oracle và SQL Server: transaction/auto-commit** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **5. Oracle và SQL Server: transaction/auto-commit**. Bây giờ chuyển sang **6. ROLLBACK (Rollback) (hoàn tác)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **6. ROLLBACK (Rollback) (hoàn tác)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 6. ROLLBACK (Rollback) (hoàn tác)
-
-Nội dung dưới **6. ROLLBACK (Rollback) (hoàn tác)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** quay lui (rollback / 롤백)은 테이블 내 입력, 수정, 삭제 데이터의 변경을 취소하고 최종 lần ghi nhận (commit / 커밋) 지점, 변경 전 또는 특정 SAVEPOINT 지점으로 원복한다.
-
-`ROLLBACK` hủy các thay đổi DML chưa lần ghi nhận (commit / 커밋). Có thể quay về lần `COMMIT` cuối cùng hoặc về một `SAVEPOINT` được đặt sau lần lần ghi nhận (commit / 커밋) đó. Vì DDL và `TRUNCATE` là auto-commit theo nội dung PDF, chúng không được hoàn tác bằng quay lui (rollback / 롤백) thông thường.
-
-```sql
--- Oracle
-UPDATE player SET price = 2800
-WHERE drink = '아메리카노';
-ROLLBACK;
-
--- SQL Server: cần transaction rõ ràng khi không dùng auto-commit
-BEGIN TRANSACTION;
-UPDATE player SET price = 2800
-WHERE drink = '아메리카노';
-ROLLBACK;
-```
-
-Vừa rồi ta đã khép **6. ROLLBACK (Rollback) (hoàn tác)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
-
-Khi gom phần **6. ROLLBACK (Rollback) (hoàn tác)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
-
-Vậy ta đã có tiêu chí để đọc **6. ROLLBACK (Rollback) (hoàn tác)**. Bây giờ chuyển sang **7. SAVEPOINT (Savepoint) (điểm lưu tạm)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
-
-Ta bắt đầu **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
-
-#### 7. SAVEPOINT (Savepoint) (điểm lưu tạm)
-
-Nội dung dưới **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
-
-> **KR:** SAVEPOINT는 트랜잭션 전체가 아니라 현 시점에서 SAVEPOINT까지 트랜잭션의 일부만 롤백할 수 있게 한다.
-
-`SAVEPOINT` đánh dấu một vị trí trong giao dịch (transaction / 트랜잭션) để có thể hoàn tác một phần sau đó. Có thể tạo nhiều savepoint; nếu đặt lại cùng tên, savepoint mới nhất mang tên đó có hiệu lực. Không thể quay lui (rollback / 롤백) vượt qua `COMMIT`.
+Khi một giao dịch dài có nhiều bước phức tạp, `SAVEPOINT` cho phép khôi phục lại một bước cụ thể mà không làm mất công sức của các bước trước đó:
 
 ```sql
--- Oracle
-SAVEPOINT a;
-ROLLBACK TO a;
+-- Cú pháp trong Oracle
+INSERT INTO emp (empno, ename) VALUES (9001, 'KIM');
+SAVEPOINT sp1;
 
--- SQL Server
-SAVE TRANSACTION a;
-ROLLBACK TRANSACTION a;
+UPDATE emp SET sal = 5000 WHERE empno = 9001;
+SAVEPOINT sp2;
+
+DELETE FROM emp WHERE empno = 9001;
+
+-- Quay lui từng phần
+ROLLBACK TO sp2;    -- Chỉ hủy lệnh DELETE; lệnh UPDATE và INSERT vẫn tồn tại
+ROLLBACK TO sp1;    -- Hủy tiếp lệnh UPDATE; lệnh INSERT vẫn tồn tại
+ROLLBACK;           -- Hủy toàn bộ giao dịch, kể cả lệnh INSERT đầu tiên
 ```
 
-Với chuỗi `INSERT` → `SAVEPOINT SVPT_A` → `UPDATE` → `SAVEPOINT SVPT_B` → `DELETE`: `ROLLBACK TO SVPT_B` chỉ hủy DELETE; `ROLLBACK TO SVPT_A` hủy UPDATE và DELETE; `ROLLBACK` hủy cả INSERT chưa commit. Cách suy luận này nối trực tiếp với nguyên tắc atomicity (Atomicity) (tính nguyên tử): savepoint chia đường quay lui trong một transaction, không chia nhỏ tính đúng đắn của transaction đã commit.
+*Lưu ý đề thi:*
+- Nếu đặt 2 `SAVEPOINT` trùng tên, điểm lưu tạm tạo sau sẽ ghi đè lên điểm tạo trước.
+- Không thể `ROLLBACK TO SAVEPOINT` sau khi đã thực thi lệnh `COMMIT`.
 
-Như vậy, **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** cần được nhớ bằng quan hệ giữa dữ liệu đầu vào, quy tắc xử lý và kết quả đầu ra. Khi ôn lại, hãy tự diễn đạt quan hệ đó rồi dùng nó làm điểm tựa cho section kế tiếp.
+---
 
-Khi gom phần **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+## 7. Nối mạch sang Bài tiếp theo: DDL và định nghĩa bảng
 
-Như vậy, **7. SAVEPOINT (Savepoint) (điểm lưu tạm)** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+> **Mạch nối (Bridge):**
+> - **Từ đâu (Kiến thức nền):** Bài 09 đã hoàn thiện cơ chế kiểm soát giao dịch, tính toàn vẹn dữ liệu (ACID) và vòng đời của dữ liệu bản ghi khi thao tác DML.
+> - **Đang giải quyết gì:** Để các bản ghi có thể tồn tại và chịu sự chi phối của các quy tắc toàn vẹn, trước tiên cấu trúc bảng, kiểu dữ liệu và dung lượng lưu trữ phải được định hình như thế nào trong cơ sở dữ liệu?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 10 — DDL và định nghĩa bảng](./10-ddl-va-dinh-nghia-bang.md) để học cách kiến tạo và hiệu chỉnh cấu trúc bảng bằng các lệnh `CREATE TABLE`, `ALTER TABLE`, `DROP`, `TRUNCATE` và quy tắc tự động commit ngầm định.
