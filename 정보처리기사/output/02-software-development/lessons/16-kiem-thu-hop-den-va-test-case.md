@@ -1,116 +1,116 @@
-# Môn 2 · Bài 16 — Kiểm thử hộp đen và kỹ thuật thiết kế Test Case
+# 블랙박스 테스트와 테스트 케이스 설계 (Kiểm thử hộp đen và thiết kế Test Case)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ chủ đề của **Môn 2 — 소프트웨어 개발 (Software Development)**. Nếu như [Bài 15: Kiểm thử hộp trắng và độ bao phủ kiểm thử](15-kiem-thu-hop-trang-va-coverage.md) tập trung vào cấu trúc giải thuật và luồng điều khiển bên trong mã nguồn, thì bài học này chuyển sang nửa đối trọng còn lại: **명세 기반 테스트 (Kiểm thử dựa trên đặc tả)**, tức **블랙박스 테스트 (Black-Box Testing)**. Bài học trang bị toàn bộ các kỹ thuật thiết kế ca kiểm thử hộp đen kinh điển và quy chuẩn soạn thảo tài liệu Test Case, Test Scenario theo tiêu chuẩn quốc tế ISO/IEC/IEEE 29119-3.
+## 학습 목표
+- Nắm vững định nghĩa và đặc trưng của Kiểm thử hộp đen (`블랙박스 테스트 / Black-Box Testing` / `명세 기반 테스트`): kiểm thử dựa trên đặc tả yêu cầu, không nhìn mã nguồn, chủ yếu áp dụng ở cấp độ tích hợp (`통합`), hệ thống (`시스템`) và nghiệm thu (`인수`).
+- Phân biệt và áp dụng thành thạo các kỹ thuật thiết kế ca kiểm thử hộp đen chuẩn thi: Phân vùng tương đương (`동치 분할`), Phân tích giá trị biên (`경계값 분석`), Đồ thị nguyên nhân - kết quả (`원인-효과 그래프`), Bảng quyết định (`의사결정 테이블`), Kiểm thử chuyển trạng thái (`상태 전이`), Đoán lỗi (`오류 예측`), Pairwise (`페어와이즈`) và Kiểm tra so sánh (`비교 검사`).
+- Nắm vững quy chuẩn tài liệu kiểm thử theo tiêu chuẩn quốc tế ISO/IEC/IEEE 29119-3: các thành phần của một Test Case (`테스트 케이스`) và phân biệt với Test Scenario (`테스트 시나리오`).
+- Hiểu rõ vai trò của Ma trận truy xuất nguồn gốc yêu cầu (`RTM - Requirements Traceability Matrix`) nhằm bảo đảm 100% yêu cầu được bao phủ bởi ca kiểm thử.
 
-> **Phạm vi nguồn:** Hợp nhất và chuẩn hóa nội dung từ các bài học cũ `52-bai-hoc.md` (phần Black-box), `56-bai-hoc.md` và `65-bai-hoc.md` (tương ứng với các mục 15, 35, 130 & 131 trong tài liệu chuẩn gốc). Toàn bộ ví dụ bài toán phân vùng biên và bảng quyết định được đối chiếu với các dạng câu hỏi thực chiến của HRDK.
+## 핵심 키워드
+- 블랙박스 테스트 (Kiểm thử hộp đen / Black-Box / 명세 기반 / Opaque-box)
+- 동치 분할 (Phân vùng tương đương / Equivalence Partitioning / 유효·무효 동치 클래스)
+- 경계값 분석 (Phân tích giá trị biên / Boundary Value Analysis / min-1, min, min+1, max-1, max, max+1)
+- 원인-효과 그래프 (Đồ thị nguyên nhân - kết quả / Cause-Effect Graphing / 의사결정 테이블)
+- 오류 예측 (Đoán lỗi / Error Guessing / kinh nghiệm và trực giác kiểm thử viên)
+- 테스트 케이스 & 테스트 시나리오 (Test Case & Test Scenario / ISO/IEC/IEEE 29119-3)
+- RTM (Requirements Traceability Matrix / 추적 매트릭스 / 100% 요구사항 검증)
 
-> **Mạch kiến thức:** Làm thế nào để kiểm thử một hệ thống khi ta không được phép (hoặc không thể) đọc mã nguồn? Bài học này giải quyết ba vấn đề kỹ thuật: (1) Làm sao chia miền dữ liệu thành các lớp tương đương và chọn các điểm biên nhạy cảm nhất ($min, max$) để tối ưu số lượng test case? (2) Khi nào cần dùng đồ thị nguyên nhân - kết quả và bảng quyết định để mô hình hóa logic nghiệp vụ phức tạp? (3) Một bản mô tả ca kiểm thử (Test Case) và kịch bản kiểm thử (Test Scenario) chuẩn mực quốc tế gồm những thành phần nào để bảo đảm ma trận truy xuất nguồn gốc (RTM)?
+## 선행·연결 개념
+- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [15-kiem-thu-hop-trang-va-coverage.md](15-kiem-thu-hop-trang-va-coverage.md), chúng ta đã khảo sát các kỹ thuật kiểm thử hộp trắng dựa trên cấu trúc logic và mã nguồn nội bộ.
+- **Đang giải quyết gì (Current Problem):** Bài học này giải quyết việc thiết kế ca kiểm thử khi không đọc mã nguồn, tối ưu hóa không gian dữ liệu kiểm thử qua phân vùng tương đương và giá trị biên, mô hình hóa quy tắc nghiệp vụ phức tạp và chuẩn hóa tài liệu ca kiểm thử theo ISO/IEC/IEEE 29119-3.
+- **Dùng đi đâu (Forward Handoff):** Sau khi có bộ ca kiểm thử chức năng, bàn giao trực tiếp sang [17-v-model-kiem-thu-tich-hop-va-oracle.md](17-v-model-kiem-thu-tich-hop-va-oracle.md) để phân bổ vào các giai đoạn phát triển theo mô hình chữ V và thiết lập cơ chế thẩm định kết quả bằng Test Oracle.
 
----
-
-## 1. 블랙박스 테스트의 개념과 특징 — Khái niệm và đặc điểm kiểm thử hộp đen
-
-**블랙박스 테스트는 소프트웨어의 내부 구조나 작동 원리를 모르는 상태에서 요구사항 명세서를 기반으로 기능이 정상적으로 동작하는지 검증하는 방법이다.**
-
-Kiểm thử hộp đen (Black-Box Testing, còn gọi là Functional Testing — Kiểm thử chức năng hay Opaque-Box Testing) là phương pháp kiểm thử mà kiểm thử viên xem hệ thống như một "chiếc hộp đen bí ẩn", hoàn toàn không nhìn thấy và không cần quan tâm đến cấu trúc mã nguồn bên trong. Thay vào đó, kiểm thử viên tập trung đưa các tập dữ liệu đầu vào (Input) hợp lệ lẫn bất hợp lệ và quan sát xem kết quả đầu ra (Output) có đáp ứng đúng như bản đặc tả yêu cầu chức năng (SRS) hay không.
-
-### Đặc trưng bản chất
-- **Đối tượng kiểm tra:** Giao diện bên ngoài (UI/API), các tính năng nghiệp vụ, dữ liệu nhập xuất và khả năng xử lý lỗi ngoại lệ.
-- **Thời điểm áp dụng:** Được áp dụng chủ yếu ở các tầng cao như **통합 테스트 (Integration Test)**, **시스템 테스트 (System Test)** và **인수 테스트 (Acceptance Test)**.
-- **Mục tiêu chính:** Phát hiện các tính năng bị lập trình viên bỏ sót (omission faults), lỗi tương tác giao diện người dùng, sai lệch định dạng dữ liệu vào/ra và các lỗi nghiệp vụ không đúng như khách hàng mong đợi.
-
----
-
-## 2. 블랙박스 테스트 케이스 설계 기법 — Các kỹ thuật thiết kế ca kiểm thử hộp đen
-
-Đề thi Kỹ sư Xử lý Thông tin thường xuyên kiểm tra việc nhận diện định nghĩa và áp dụng vào bài tập tình huống thực tế của các kỹ thuật kiểm thử hộp đen sau:
-
-### 2.1. 동치(동등) 분할 (Equivalence Partitioning — Phân vùng tương đương)
-- **Cơ chế:** Chia toàn bộ miền giá trị dữ liệu đầu vào của một trường thành các phân vùng logic gọi là **동치 클래스 (Equivalence Classes — Lớp tương đương)**:
-  - **유효 동치 클래스 (Valid Equivalence Class):** Miền giá trị hợp lệ mà hệ thống phải chấp nhận và xử lý đúng nghiệp vụ.
-  - **무효 동치 클래스 (Invalid Equivalence Class):** Miền giá trị không hợp lệ mà hệ thống phải từ chối và đưa ra thông báo lỗi phù hợp.
-- **Nguyên tắc chọn mẫu:** Giả định rằng mọi giá trị trong cùng một lớp tương đương sẽ được chương trình xử lý giống hệt nhau. Do đó, **chỉ cần chọn duy nhất 1 giá trị đại diện từ mỗi lớp** để lập ca kiểm thử, giúp giảm thiểu tối đa số lượng test case mà vẫn đảm bảo độ bao phủ.
-- **Ví dụ thực tế trong đề:**
-  - Quy tắc: "Điểm thi của sinh viên là số nguyên từ 0 đến 100".
-  - Ta chia thành 3 lớp tương đương:
-    1. Lớp không hợp lệ 1: $\text{Điểm} < 0 \rightarrow$ Chọn giá trị đại diện: `-5`
-    2. Lớp hợp lệ: $0 \le \text{Điểm} \le 100 \rightarrow$ Chọn giá trị đại diện: `75`
-    3. Lớp không hợp lệ 2: $\text{Điểm} > 100 \rightarrow$ Chọn giá trị đại diện: `120`
-  - Chỉ cần 3 Test Cases để bao phủ toàn bộ miền dữ liệu của trường này.
-
-### 2.2. 경계값 분석 (Boundary Value Analysis — Phân tích giá trị biên)
-- **Cơ chế:** Kinh nghiệm kỹ nghệ phần mềm chứng minh rằng: **Phần lớn lỗi lập trình xảy ra tại các đường ranh giới của điều kiện** (do lập trình viên dùng nhầm toán tử so sánh, ví dụ dùng `>` thay vì `>=`, hoặc `<` thay vì `<=`, lỗi lệch 1 đơn vị Off-by-one). Kỹ thuật này tập trung chọn các giá trị nằm ngay sát hai đầu mép biên để kiểm tra.
-- **Quy tắc chọn điểm biên:**
-  - **Phương pháp 2 điểm biên (Robustness cơ bản):** Chọn giá trị ngay tại biên ($min, max$) và giá trị ngoài biên không hợp lệ ($min - 1, max + 1$).
-  - **Phương pháp 3 điểm biên (Standard BVA):** Với mỗi đường biên, chọn 3 giá trị: sát bên trong ($min + 1$), ngay tại biên ($min$), và sát bên ngoài ($min - 1$).
-- **Ví dụ thực tế trong đề:**
-  - Với điều kiện $0 \le \text{Điểm} \le 100$:
-  - Tại biên dưới ($0$): Chọn `-1` (ngoài biên), `0` (ngay biên), `1` (trong biên).
-  - Tại biên trên ($100$): Chọn `99` (trong biên), `100` (ngay biên), `101` (ngoài biên).
-  - Bộ giá trị kiểm thử tối ưu: $\mathbf{\{-1, 0, 1, 99, 100, 101\}}$.
-
-### 2.3. 원인-효과 그래프 (Cause-Effect Graphing — Đồ thị nguyên nhân - kết quả)
-- **Cơ chế:** Khi hành vi của hệ thống phụ thuộc vào sự kết hợp phức tạp của nhiều điều kiện đầu vào đồng thời, việc phân vùng đơn lẻ không còn hiệu quả. Kỹ thuật này sử dụng các ký hiệu logic Boolean:
-  - **원인 (Causes — Nguyên nhân):** Đại diện cho các điều kiện dữ liệu đầu vào.
-  - **효과 (Effects — Kết quả):** Đại diện cho các hành vi hoặc trạng thái đầu ra của hệ thống.
-  - Các toán tử logic liên kết: `AND`, `OR`, `NOT`, cùng các ràng buộc loại trừ (`E` - Exclusive, `I` - Inclusive, `O` - One and only one, `R` - Requires).
-- **Quy trình chuyển đổi:** Đồ thị nguyên nhân - kết quả sau khi vẽ sẽ được chuyển đổi trực tiếp thành **의사결정 테이블 (Decision Table — Bảng quyết định)** để từ đó viết ra các ca kiểm thử cụ thể.
-
-### 2.4. Các kỹ thuật kiểm thử hộp đen khác
-- **의사결정 테이블 테스팅 (Decision Table Testing):** Lập bảng gồm hàng Điều kiện (Conditions) và hàng Hành động (Actions), mỗi cột biểu diễn một quy tắc nghiệp vụ (Rule) độc lập để kiểm tra.
-- **상태 전이 테스팅 (State Transition Testing — Kiểm thử chuyển trạng thái):** Mô hình hóa hệ thống bằng máy trạng thái hữu hạn (FSM). Thiết kế ca kiểm thử để kiểm tra xem khi có sự kiện (Event) tác động, hệ thống có chuyển đúng từ Trạng thái A sang Trạng thái B hay không (rất phổ biến trong kiểm thử máy rút tiền ATM, quy trình đặt vé).
-- **오류 예측 (Error Guessing — Đoán lỗi):** Hoàn toàn không dựa trên công thức toán học mà dựa vào **trực giác, sự nhạy cảm và kinh nghiệm tích lũy của kiểm thử viên** để phán đoán các tình huống bất thường mà lập trình viên dễ quên (ví dụ: chia cho số 0, nhập chuỗi rỗng `""`, nhập ký tự xuống dòng, chèn mã SQL Injection).
-- **페어와이즈 테스팅 (Pairwise Testing — Kiểm thử cặp):** Dựa trên thực nghiệm chỉ ra rằng phần lớn lỗi phát sinh từ sự tương tác giữa 2 yếu tố bất kỳ. Thay vì thử mọi tổ hợp $N$ yếu tố, kỹ thuật này chỉ cần bảo đảm mọi cặp 2 yếu tố đều được kiểm tra cùng nhau ít nhất một lần, giúp giảm số lượng test case từ hàng nghìn xuống vài chục.
-- **비교 검사 (Comparison Testing — Kiểm tra so sánh):** Nạp cùng một tập dữ liệu đầu vào vào hai hoặc nhiều phiên bản phần mềm độc lập để đối chiếu xem kết quả có đồng nhất 100% hay không.
+## 읽는 방법
+- Đọc TẦNG A để nắm vững định nghĩa cốt lõi, bảng tổng hợp 8 kỹ thuật thiết kế ca kiểm thử hộp đen, bảng cấu trúc chuẩn của Test Case theo ISO 29119-3, và bảng phân biệt Test Case vs Test Scenario.
+- Đọc TẦNG B để hiểu sâu cơ chế chọn điểm biên 2 điểm vs 3 điểm, quy trình chuyển đổi từ Cause-Effect Graph sang Decision Table, và cơ chế truy xuất nguồn gốc RTM.
 
 ---
 
-## 3. 테스트 케이스 및 테스트 시나리오 — Thiết kế tài liệu ca kiểm thử chuẩn quốc tế
+## 블랙박스 테스트와 테스트 케이스 설계
 
-Theo tiêu chuẩn quốc tế **ISO/IEC/IEEE 29119-3**, tài liệu kiểm thử phải được thiết kế có cấu trúc và có thể định lượng, nhằm bảo đảm khả năng lặp lại và bàn giao công việc giữa các kỹ sư.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-### 3.1. Cấu trúc chuẩn của một Test Case (테스트 케이스)
+#### 1. Khái niệm và đặc điểm kiểm thử hộp đen (블랙박스 테스트)
+- **Định nghĩa:**
+  - [한국어]: **블랙박스 테스트는 소프트웨어의 내부 구조나 작동 원리를 모르는 상태에서 요구사항 명세서를 기반으로 기능이 정상적으로 동작하는지 검증하는 방법이다.**
+  - [Tiếng Việt]: Kiểm thử hộp đen là phương pháp kiểm thử mà kiểm thử viên hoàn toàn không nhìn thấy mã nguồn bên trong, tập trung kiểm tra chức năng dựa trên tài liệu đặc tả yêu cầu bằng cách đưa dữ liệu đầu vào (Input) và đối chiếu kết quả đầu ra (Output).
+- **Đối tượng kiểm tra:** Giao diện bên ngoài (UI/API), các tính năng nghiệp vụ, định dạng nhập/xuất và khả năng xử lý ngoại lệ.
+- **Cấp độ áp dụng:** Áp dụng chủ yếu ở các tầng cao như **통합 테스트 (Integration Test)**, **시스템 테스트 (System Test)** và **인수 테스트 (Acceptance Test)**.
+- **Mục tiêu chính:** Phát hiện các tính năng bị lập trình viên bỏ sót (omission faults), lỗi giao diện, sai lệch đặc tả nghiệp vụ.
 
-Bản mô tả ca kiểm thử (Test Case) là tài liệu kỹ thuật xác định một tập hợp các giá trị đầu vào, điều kiện thực thi và kết quả kỳ vọng cho một mục tiêu kiểm tra đơn lẻ.
+#### 2. Bảng tổng hợp các kỹ thuật thiết kế ca kiểm thử hộp đen chuẩn thi
+| Kỹ thuật kiểm thử | Tên tiếng Hàn & Anh | Cơ chế cốt lõi | Dấu hiệu nhận diện đề thi |
+| :--- | :--- | :--- | :--- |
+| **Phân vùng tương đương** | **동치 분할 (Equivalence Partitioning)** | Chia miền đầu vào thành các lớp hợp lệ (유효) và không hợp lệ (무효), chọn **1 giá trị đại diện** cho mỗi lớp | *동치 클래스, 대표값, 유효/무효* |
+| **Phân tích giá trị biên** | **경계값 분석 (Boundary Value Analysis)** | Tập trung chọn các giá trị tại biên và sát mép biên ($min-1, min, min+1, max-1, max, max+1$) | *경계값, 경계 부근 오류 집중, 1 단위 차이* |
+| **Đồ thị nguyên nhân - kết quả** | **원인-효과 그래프 (Cause-Effect Graphing)** | Dùng logic Boolean (AND, OR, NOT) liên kết nguyên nhân (Input) và kết quả (Output), chuyển thành Bảng quyết định | *입력 조건(원인), 출력 반응(효과), 불리언 로직* |
+| **Bảng quyết định** | **의사결정 테이블 (Decision Table)** | Lập bảng điều kiện và hành động, mỗi cột biểu diễn một quy tắc nghiệp vụ (Rule) độc lập | *조건과 동작의 조합, 복잡한 논리 규칙* |
+| **Kiểm thử chuyển trạng thái** | **상태 전이 테스팅 (State Transition)** | Dựa trên máy trạng thái hữu hạn (FSM) kiểm tra việc chuyển trạng thái khi có sự kiện tác động | *이벤트, 상태 전이, FSM, ATM/주문 프로세스* |
+| **Đoán lỗi** | **오류 예측 (Error Guessing)** | Không dựa trên quy tắc toán học; dựa hoàn toàn vào **kinh nghiệm và trực giác của kiểm thử viên** | *테스터의 경험과 감각, 직관적 추측* |
+| **Kiểm thử cặp** | **페어와이즈 (Pairwise Testing)** | Bảo đảm mọi cặp 2 yếu tố bất kỳ đều được kết hợp kiểm tra cùng nhau ít nhất 1 lần | *2개 요소 조합, 테스트 케이스 수 대폭 감축* |
+| **Kiểm tra so sánh** | **비교 검사 (Comparison Testing)** | Nạp cùng dữ liệu đầu vào vào nhiều phiên bản phần mềm độc lập để đối chiếu tính đồng nhất | *동일한 입력, 여러 버전 출력 비교* |
 
+#### 3. Bảng cấu trúc chuẩn của Test Case (ISO/IEC/IEEE 29119-3)
 | Thành phần cấu tạo | Tên tiếng Hàn & Anh | Ý nghĩa và Quy chuẩn nội dung |
 | :--- | :--- | :--- |
 | **Mã định danh** | **테스트 식별자 (Test ID)** | Mã duy nhất để phân loại và truy vết (ví dụ: `TC_AUTH_LOGIN_001`) |
 | **Hạng mục kiểm tra** | **테스트 항목 (Test Item)** | Tên chức năng hoặc module được kiểm tra (ví dụ: Đăng nhập hệ thống) |
 | **Điều kiện tiên quyết** | **환경 설정 / 전제 조건 (Pre-conditions)** | Trạng thái bắt buộc của hệ thống trước khi bắt đầu test (ví dụ: Đã có tài khoản kích hoạt) |
 | **Dữ liệu đầu vào** | **입력 명세 (Input Specification)** | Các tham số cụ thể truyền vào (ví dụ: `Username = "admin"`, `Password = "1234"`) |
-| **Kết quả kỳ vọng** | **출력 명세 / 기대 결과 (Expected Result)** | Hành vi và giá trị hệ thống phải trả về (ví dụ: Hiển thị thông báo "Mật khẩu sai", không được vào Dashboard) |
+| **Kết quả kỳ vọng** | **출력 명세 / 기대 결과 (Expected Result)** | Hành vi và giá trị hệ thống phải trả về (ví dụ: Hiển thị thông báo "Mật khẩu sai") |
 | **Thủ tục thực hiện** | **특수 절차 요구 (Special Procedures)** | Các thao tác môi trường đặc thù (ví dụ: Rút dây mạng trong lúc bấm Đăng nhập) |
 | **Quan hệ phụ thuộc** | **의존성 기술 (Inter-case Dependencies)** | Chỉ rõ Test Case này có bắt buộc phải chạy sau Test Case nào khác không |
 
-### 3.2. Phân biệt Test Case vs Test Scenario
-
+#### 4. Phân biệt Test Case vs Test Scenario
 | Tiêu chí | 테스트 케이스 (Test Case) | 테스트 시나리오 (Test Scenario) |
 | :--- | :--- | :--- |
 | **Bản chất** | **Phép thử đơn lẻ cho một trường hợp cụ thể** | **Kịch bản chuỗi hành vi liên hoàn của người dùng** |
-| **Độ chi tiết** | Cực kỳ chi tiết: từng tham số đầu vào, từng thông báo lỗi mong đợi | Mô tả luồng nghiệp vụ ở mức tổng quan |
+| **Độ chi tiết** | Cực kỳ chi tiết: từng tham số đầu vào, từng kết quả mong đợi | Mô tả luồng nghiệp vụ ở mức tổng quan |
 | **Mối quan hệ** | **Nhiều Test Case kết hợp lại tạo thành một Test Scenario** | Là tài liệu khung định hướng để suy ra tập hợp các Test Case |
-| **Ví dụ minh họa** | Kiểm tra trường Mật khẩu để trống có hiện chữ đỏ "Vui lòng nhập mật khẩu" hay không | Kịch bản mua hàng: Đăng nhập $\rightarrow$ Tìm kiếm sản phẩm $\rightarrow$ Thêm giỏ hàng $\rightarrow$ Thanh toán qua cổng VNPay |
+| **Ví dụ minh họa** | Kiểm tra trường Mật khẩu để trống có hiện cảnh báo lỗi hay không | Kịch bản mua hàng: Đăng nhập $\rightarrow$ Tìm kiếm sản phẩm $\rightarrow$ Thêm giỏ hàng $\rightarrow$ Thanh toán |
 
-### 3.3. Ma trận truy xuất nguồn gốc kiểm thử (RTM - Requirements Traceability Matrix)
+#### 5. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+- **Bẫy 1: Số lượng mẫu trong Phân vùng tương đương (동치 분할):** Trong mỗi lớp tương đương, **chỉ cần chọn đúng 1 giá trị đại diện**. Nếu đề bài bảo phải chọn tất cả các giá trị là SAI.
+- **Bẫy 2: Điểm biên trong Boundary Value Analysis (경계값 분석):** Phần lớn lỗi xảy ra ở ranh giới điều kiện do lỗi lệch 1 đơn vị (Off-by-one, nhầm `<` và `<=`). Khi điều kiện là $0 \le x \le 100$, bộ giá trị biên chuẩn 3 điểm là $\{-1, 0, 1, 99, 100, 101\}$.
+- **Bẫy 3: Đặc trưng của Error Guessing (오류 예측):** Khi đề hỏi "Kỹ thuật kiểm thử nào dựa vào kinh nghiệm, trực giác và sự nhạy cảm của kiểm thử viên thay vì công thức toán học?" $\rightarrow$ Chọn ngay **오류 예측 (Error Guessing)**.
+- **Bẫy 4: Vai trò của RTM:** Ma trận truy xuất nguồn gốc (Requirements Traceability Matrix) liên kết mỗi Test Case về tài liệu SRS để bảo đảm **100% yêu cầu nghiệp vụ đều được kiểm thử**, không bỏ sót tính năng.
+
+---
+
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
+
+#### 1. Chi tiết cơ chế & ví dụ bài tập tính toán
+- **Ví dụ Phân vùng tương đương (동치 분할):**
+  - Quy tắc: "Điểm thi của sinh viên là số nguyên từ 0 đến 100".
+  - Ta chia thành 3 lớp tương đương:
+    1. Lớp không hợp lệ 1: $\text{Điểm} < 0 \rightarrow$ Chọn đại diện: `-5`
+    2. Lớp hợp lệ: $0 \le \text{Điểm} \le 100 \rightarrow$ Chọn đại diện: `75`
+    3. Lớp không hợp lệ 2: $\text{Điểm} > 100 \rightarrow$ Chọn đại diện: `120`
+  - Chỉ cần 3 Test Cases để bao phủ toàn bộ miền dữ liệu của trường này.
+- **Ví dụ Phân tích giá trị biên (경계값 분석):**
+  - Với điều kiện $0 \le \text{Điểm} \le 100$:
+    - Tại biên dưới ($0$): Chọn `-1` (ngoài biên), `0` (ngay biên), `1` (trong biên).
+    - Tại biên trên ($100$): Chọn `99` (trong biên), `100` (ngay biên), `101` (ngoài biên).
+  - Bộ giá trị kiểm thử tối ưu: $\mathbf{\{-1, 0, 1, 99, 100, 101\}}$.
+
+#### 2. Đồ thị nguyên nhân - kết quả (Cause-Effect Graphing) sang Bảng quyết định
+- **Cơ chế:** Khi hành vi của hệ thống phụ thuộc vào sự kết hợp phức tạp của nhiều điều kiện đầu vào đồng thời, đồ thị nguyên nhân - kết quả sử dụng các ký hiệu logic:
+  - **원인 (Causes — Nguyên nhân):** Đại diện cho các điều kiện dữ liệu đầu vào.
+  - **효과 (Effects — Kết quả):** Đại diện cho các hành vi hoặc trạng thái đầu ra của hệ thống.
+  - Các toán tử logic liên kết: `AND`, `OR`, `NOT`.
+  - Các ràng buộc loại trừ giữa các nguyên nhân: `E` (Exclusive - loại trừ lẫn nhau, tối đa 1 cái True), `I` (Inclusive - ít nhất 1 cái True), `O` (One and only one - đúng 1 cái True), `R` (Requires - nếu A True thì B bắt buộc True).
+- Đồ thị sau khi vẽ sẽ được chuyển đổi trực tiếp thành **의사결정 테이블 (Decision Table)** để sinh ra các Test Case hoàn chỉnh.
+
+#### 3. Ma trận truy xuất nguồn gốc kiểm thử (RTM - Requirements Traceability Matrix)
 - Trong các dự án phần mềm chuyên nghiệp, mỗi Test Case bắt buộc phải được liên kết ngược về tài liệu Yêu cầu (Software Requirements Specification - SRS).
 - **Mục đích:** Bảo đảm **100% yêu cầu nghiệp vụ của khách hàng đều có ít nhất một Test Case bao phủ**, không để lọt bất kỳ tính năng nào chưa được kiểm tra trước khi bàn giao sản phẩm.
 
 ---
 
-## 4. Nối mạch kiến thức sang bài tiếp theo
-
-Sau khi đã nắm vững các kỹ thuật kiểm tra bên trong mã nguồn ([Bài 15: Kiểm thử hộp trắng](15-kiem-thu-hop-trang-va-coverage.md)) và các kỹ thuật thiết kế ca kiểm thử chức năng bên ngoài ([Bài 16: Kiểm thử hộp đen](16-kiem-thu-hop-den-va-test-case.md)), câu hỏi tiếp theo của kỹ nghệ phần mềm là: **Các bài kiểm thử này được phân bổ vào các giai đoạn phát triển như thế nào, và làm sao máy tính biết được một ca kiểm thử chạy ra kết quả là ĐÚNG hay SAI?**
-
-Để trả lời trọn vẹn câu hỏi đó, chúng ta sẽ chuyển sang **[Bài 17: Cấp độ kiểm thử V-Model, kiểm thử tích hợp và Test Oracle](17-v-model-kiem-thu-tich-hop-va-oracle.md)**, nơi ta sẽ khảo sát mô hình V-Model đối ứng, các kỹ thuật tích hợp hạ thấu (Stub) / thượng thăng (Driver) và cơ chế thẩm định kết quả bằng Test Oracle.
-
----
-
-## 5. 복습 체크리스트 (Checklist ôn tập)
-
+### 복습 체크리스트
 - [ ] Định nghĩa Black-Box Testing là kiểm thử chức năng dựa trên đặc tả yêu cầu, không nhìn mã nguồn.
 - [ ] Phân biệt 유효 동치 클래스 (Lớp hợp lệ) và 무효 동치 클래스 (Lớp không hợp lệ) trong kỹ thuật 동치 분할 (Equivalence Partitioning).
-- [ ] Áp dụng đúng kỹ thuật 경계값 분석 (Boundary Value Analysis): Chọn các giá trị ngay tại biên, sát dưới biên và sát trên biên ($min-1, min, min+1$).
+- [ ] Áp dụng đúng kỹ thuật 경계값 분석 (Boundary Value Analysis): Chọn các giá trị ngay tại biên, sát dưới biên và sát trên biên ($min-1, min, min+1, max-1, max, max+1$).
 - [ ] Nhớ đồ thị nguyên nhân - kết quả (Cause-Effect Graphing) sử dụng logic Boolean để chuyển thành Bảng quyết định (Decision Table).
 - [ ] Nhận diện kỹ thuật 오류 예측 (Error Guessing) dựa hoàn toàn vào kinh nghiệm và trực giác của kiểm thử viên.
 - [ ] Kể tên tiêu chuẩn quốc tế về tài liệu kiểm thử: ISO/IEC/IEEE 29119-3.

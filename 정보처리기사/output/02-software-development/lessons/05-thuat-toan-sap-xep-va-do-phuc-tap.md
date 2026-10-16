@@ -1,134 +1,47 @@
-# Môn 2 · Bài 05 — Độ phức tạp thuật toán và kỹ thuật sắp xếp
+# 알고리즘 시간 복잡도와 정렬 기술 (Độ phức tạp thuật toán và kỹ thuật sắp xếp)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ chủ đề của **Môn 2 — 소프트웨어 개발 (Software Development)**. Sau khi đã làm chủ các cấu trúc dữ liệu từ tuyến tính ([Bài 01](01-cau-truc-du-lieu-tuyen-tinh.md), [Bài 02](02-ky-phap-bieu-thuc-va-stack.md)) đến phi tuyến ([Bài 03](03-cay-va-duyet-cay-nhi-phan.md), [Bài 04](04-do-thi-va-bieu-dien-do-thi.md)), bài học này bước sang trọng tâm tính toán lớn nhất của Chương 1: **Thời gian thực thi và Thuật toán sắp xếp dữ liệu (정렬 알고리즘 — Sorting Algorithms)**. Bài học trang bị toàn diện lý thuyết độ phức tạp Big-O, 4 kỹ thuật thiết kế giải thuật và phân tích chi tiết 8 thuật toán sắp xếp kinh điển luôn xuất hiện trong các bài toán truy vết (Trace) của đề thi trắc nghiệm.
+## 학습 목표
+- Nắm vững 3 ký pháp tiệm cận toán học: Big-O (`최악 / Worst-case`), Big-$\Omega$ (`최선 / Best-case`), Big-$\Theta$ (`평균 / Average-case`) và thuộc lòng chuỗi thứ bậc tăng trưởng thời gian: $O(1) \lt O(\log n) \lt O(n) \lt O(n \log n) \lt O(n^2) \lt O(2^n) \lt O(n!)$.
+- Phân biệt 4 kỹ thuật thiết kế giải thuật: Chia để trị (`분할 정복`), Quy hoạch động (`동적 계획법`), Thuật toán tham lam (`탐욕법`), và Quay lui (`백트래킹`).
+- Phân biệt sắp xếp nội bộ (`내부 정렬`) vs sắp xếp ngoài (`외부 정렬`), và phân loại triệt để thuật toán ổn định (`안정 정렬`) vs không ổn định (`불안정 정렬`).
+- Phân tích chi tiết cơ chế hoạt động, độ phức tạp và vết lặp vòng 1 (`1회전`) của 8 thuật toán kinh điển: Insertion, Selection, Bubble, Shell, Quick, Merge, Heap, Radix Sort.
+- Nắm vững các bẫy đề thi: nguyên nhân thoái hóa xuống $O(n^2)$ của Quick Sort khi dữ liệu đã sắp xếp sẵn; hai thuật toán luôn bảo đảm $O(n \log n)$ trong mọi trường hợp (Merge Sort và Heap Sort).
 
-> **Phạm vi nguồn:** Hợp nhất và chuẩn hóa nội dung từ 13 bài học cũ: `14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 73, 91-bai-hoc.md` (tương ứng với các mục 6, 18, 31, 027, 028, 081 ~ 086-1 trong tài liệu chuẩn gốc). Toàn bộ bảng ma trận độ phức tạp và các bài toán trace vòng lặp (1회전, 2회전) được chuẩn hóa theo chuẩn khảo thí HRDK.
+## 핵심 키워드
+- 시간 복잡도 (Độ phức tạp thời gian / Time Complexity / Big-O 표기법)
+- 알고리즘 설계 (Kỹ thuật thiết kế: 분할 정복, 동적 계획법, 탐욕법, 백트래킹)
+- 내부 정렬 vs 외부 정렬 (Internal Sort vs External Sort)
+- 안정 정렬 vs 불안정 정렬 (Stable Sort vs Unstable Sort)
+- O(n²) 정렬 (삽입 정렬 Insertion, 선택 정렬 Selection, 버블 정렬 Bubble)
+- O(n log n) 정렬 (퀵 정렬 Quick, 합병 정렬 Merge, 힙 정렬 Heap)
+- 기수 정렬 (Radix Sort / 큐 Bucket 활용 / 비비교 정렬)
 
-> **Mạch kiến thức:** Bài học giải quyết ba bài toán cốt lõi trong tối ưu hóa hiệu năng phần mềm: (1) Ký pháp tiệm cận Big-O, $\Omega$, $\Theta$ đánh giá thời gian chạy của chương trình như thế nào và chuỗi tăng trưởng thời gian được sắp xếp ra sao? (2) Tám thuật toán sắp xếp (Bubble, Selection, Insertion, Shell, Quick, Heap, Merge, Radix) vận hành theo cơ chế nào và kết quả mảng sau vòng 1 (1회전) được xác định ra sao? (3) Tại sao Quick Sort có tốc độ trung bình nhanh nhất nhưng lại thoái hóa xuống $O(n^2)$ khi mảng đã sắp xếp sẵn, và những thuật toán nào luôn bảo đảm $O(n \log n)$ trong mọi trường hợp?
+## 선행·연결 개념
+- **Từ đâu (Origin / Prerequisite):** Ở các bài học trước ([01](01-cau-truc-du-lieu-tuyen-tinh.md), [02](02-ky-phap-bieu-thuc-va-stack.md), [03](03-cay-va-duyet-cay-nhi-phan.md), [04](04-do-thi-va-bieu-dien-do-thi.md)), chúng ta đã làm chủ các cấu trúc dữ liệu nền tảng từ tuyến tính đến phi tuyến trong bộ nhớ.
+- **Đang giải quyết gì (Current Problem):** Bài học này giải quyết bài toán cốt lõi nhất về hiệu năng: đo lường thời gian thực thi bằng ký pháp tiệm cận Big-O và tối ưu hóa việc sắp xếp dữ liệu có thứ tự thông qua 8 thuật toán kinh điển.
+- **Dùng đi đâu (Forward Handoff):** Khi mảng dữ liệu đã được sắp xếp trật tự, ta có thể áp dụng thuật toán tìm kiếm nhị phân với thời gian kỷ lục $O(\log n)$, bàn giao trực tiếp sang [06-thuat-toan-tim-kiem-va-bang-bam.md](06-thuat-toan-tim-kiem-va-bang-bam.md).
+
+## 읽는 방법
+- Đọc TẦNG A để thuộc lòng bảng ma trận so sánh 8 thuật toán (thời gian, không gian, tính ổn định) và các bẫy trace vòng 1 (Selection chốt min ở đầu, Bubble chốt max ở cuối).
+- Đọc TẦNG B để hiểu sâu bản chất toán học của phân vùng Pivot trong Quick Sort, cơ chế Heapify trong Heap Sort và quy tắc nạp Bucket của Radix Sort.
 
 ---
 
-## 1. 알고리즘 시간 복잡도와 설계 기법 — Độ phức tạp và Kỹ thuật thiết kế thuật toán
+## 알고리즘 시간 복잡도와 정렬 기술
 
-**알고리즘의 효율성은 시간 복잡도(Time Complexity)와 공간 복잡도(Space Complexity)로 측정되며, 주로 입력 크기 $n$에 대한 실행 시간의 증가율을 나타내는 빅오(Big-O) 표기법을 사용한다.**
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-### 1.1. Ba ký pháp tiệm cận toán học
-1. **빅오 표기법 (Big-O Notation — $O$):** Biểu diễn **cận trên (Upper Bound)** của thời gian chạy, tức là thời gian thực thi trong **trường hợp xấu nhất (최악 — Worst Case)**. Đây là thước đo tiêu chuẩn được sử dụng rộng rãi nhất trong kỹ nghệ phần mềm để đảm bảo hệ thống không bị vượt quá giới hạn thời gian cho phép.
-2. **빅오메가 표기법 (Big-$\Omega$ Notation — $\Omega$):** Biểu diễn **cận dưới (Lower Bound)**, tức là thời gian trong **trường hợp tốt nhất (최선 — Best Case)**.
-3. **빅세타 표기법 (Big-$\Theta$ Notation — $\Theta$):** Biểu diễn **cận chặt (Tight Bound)**, tức là thuật toán có cận trên và cận dưới tiệm cận cùng một bậc hàm số (trường hợp trung bình).
-
-### 1.2. Chuỗi thứ bậc tăng trưởng thời gian Big-O
-Khi kích thước dữ liệu đầu vào $n$ tăng dần đến vô cùng, tốc độ tiêu tốn thời gian của các thuật toán bùng nổ theo thứ tự tăng dần sau:
-
+#### 1. Chuỗi thứ bậc tăng trưởng thời gian Big-O
 $$O(1) \lt O(\log n) \lt O(n) \lt O(n \log n) \lt O(n^2) \lt O(n^3) \lt O(2^n) \lt O(n!)$$
+- $O(1)$: Thao tác tức thì (Push/Pop Stack, truy cập mảng bằng index).
+- $O(\log n)$: Tìm kiếm nhị phân (Binary Search).
+- $O(n)$: Tìm kiếm tuần tự, duyệt 1 vòng lặp qua mảng.
+- $O(n \log n)$: Chuẩn mực tối ưu sắp xếp so sánh (Merge, Heap, Quick trung bình).
+- $O(n^2)$: Vòng lặp lồng 2 lớp (Bubble, Selection, Insertion).
+- $O(2^n), O(n!)$: Bùng nổ tổ hợp (Tháp Hà Nội, TSP vét cạn).
 
-- **$O(1)$ (상수형 — Hằng số):** Thao tác tức thì không phụ thuộc vào $n$ (Push/Pop Stack, truy cập mảng bằng chỉ số `A[i]`).
-- **$O(\log n)$ (로그형 — Logarit):** Tìm kiếm nhị phân (Binary Search). Cứ mỗi bước thì không gian tìm kiếm giảm đi một nửa.
-- **$O(n)$ (선형 — Tuyến tính):** Tìm kiếm tuần tự, duyệt một vòng lặp qua mảng.
-- **$O(n \log n)$ (선형로그형):** Chuẩn mực tối ưu cho các thuật toán sắp xếp so sánh (Merge Sort, Heap Sort, Quick Sort trung bình).
-- **$O(n^2)$ (2차형 — Bậc hai):** Vòng lặp lồng 2 lớp (Bubble, Selection, Insertion Sort).
-- **$O(2^n)$ & $O(n!)$ (지수 및 팩토리얼 — Hàm mũ và Giai thừa):** Bùng nổ tổ hợp khủng khiếp, không khả thi trong thực tế khi $n$ lớn (Bài toán Tháp Hà Nội, Người du lịch TSP vét cạn).
-
-### 1.3. Bốn kỹ thuật thiết kế giải thuật nền tảng
-- **분할 정복 (Divide and Conquer — Chia để trị):** Chia bài toán lớn thành các bài toán con độc lập cùng dạng, giải quyết đệ quy từng bài toán con rồi gộp kết quả lại (Quick Sort, Merge Sort, Binary Search).
-- **동적 계획법 (Dynamic Programming — Quy hoạch động):** Áp dụng cho các bài toán có tính chất gối nhau (Overlapping Subproblems); lưu trữ kết quả của các bài toán con vào bảng ghi nhớ (**메모이제이션 — Memoization**) để tái sử dụng mà không phải tính lại (Dãy Fibonacci, Floyd-Warshall, Knapsack 0/1).
-- **탐욕법 (Greedy Algorithm — Thuật toán tham lam):** Tại mỗi bước quyết định, luôn chọn phương án tối ưu cục bộ tốt nhất trước mắt với hy vọng dẫn đến lời giải tối ưu toàn cục (Thuật toán tìm cây khung Kruskal, Prim, Tìm đường đi ngắn nhất Dijkstra).
-- **백트래킹 (Backtracking — Quay lui):** Thử từng phương án theo chiều sâu (DFS), nếu gặp ngõ cụt vi phạm điều kiện ràng buộc thì quay lui lại bước trước để thử nhánh khác (Bài toán 8 quân hậu N-Queens, Giải mê cung).
-
----
-
-## 2. 정렬 알고리즘의 분류 — Phân loại thuật toán sắp xếp
-
-Thuật toán sắp xếp (Sorting Algorithms) đưa một tập hợp các phần tử về một trật tự xác định (tăng dần hoặc giảm dần).
-
-### Phân loại theo không gian lưu trữ:
-- **내부 정렬 (Internal Sort — Sắp xếp nội bộ):** Toàn bộ dữ liệu được nạp vào bộ nhớ chính (RAM) để sắp xếp. Tốc độ rất nhanh nhưng bị giới hạn bởi dung lượng RAM (gồm cả 8 thuật toán dưới đây).
-- **외부 정렬 (External Sort — Sắp xếp ngoài):** Dữ liệu quá khổng lồ không thể nạp hết vào RAM, phải lưu trữ trên đĩa cứng/băng từ và nạp từng phần vào RAM để hòa trộn (ví dụ: 2-Way Merge Sort, K-Way Merge Sort).
-
-### Phân loại theo tính ổn định (정렬의 안정성 — Stability):
-- **안정 정렬 (Stable Sort — Sắp xếp ổn định):** Bảo tồn nguyên vẹn thứ tự tương đối ban đầu của các phần tử có giá trị khóa bằng nhau (Gồm: **삽입 정렬, 버블 정렬, 합병 정렬, 기수 정렬**).
-- **불안정 정렬 (Unstable Sort — Sắp xếp không ổn định):** Có thể làm xáo trộn thứ tự tương đối của các phần tử có cùng giá trị khóa (Gồm: **선택 정렬, 퀵 정렬, 힙 정렬, 셸 정렬**).
-
----
-
-## 3. Nhóm thuật toán sắp xếp cơ bản $O(n^2)$
-
-Nhóm này sử dụng hai vòng lặp lồng nhau, thao tác đơn giản nhưng hiệu năng kém khi số lượng phần tử $n$ lớn.
-
-### 3.1. 삽입 정렬 (Insertion Sort — Sắp xếp chèn)
-- **Cơ chế:** Bắt đầu từ phần tử thứ 2 ($i = 1$), so sánh ngược về phía trước để tìm vị trí thích hợp và **chèn phần tử đó vào dãy con đã có thứ tự**.
-- **Đặc điểm đề thi:**
-  - Nếu mảng ban đầu **gần như đã được sắp xếp tăng dần sẵn**, Insertion Sort đạt tốc độ kỷ lục là **$O(n)$** (chỉ tốn 1 lần so sánh cho mỗi phần tử).
-  - Là thuật toán **ổn định (Stable)**.
-- **Trace vòng 1 (1회전):** Cho dãy `[8, 5, 6, 2, 4]`.
-  - Bốc số thứ hai là `5`, so với `8` $\rightarrow$ chèn `5` lên trước `8`.
-  - Kết thúc 1 vòng: `[5, 8, 6, 2, 4]`.
-
-### 3.2. 선택 정렬 (Selection Sort — Sắp xếp chọn)
-- **Cơ chế:** Quét toàn bộ các phần tử chưa chốt, **tìm ra phần tử có giá trị nhỏ nhất (Min)** rồi hoán đổi vị trí của nó với phần tử đầu tiên của dãy chưa chốt.
-- **Đặc điểm đề thi:**
-  - **Chốt cố định phần tử nhỏ nhất ở ĐẦU mảng sau mỗi vòng.**
-  - Thời gian thực thi luôn là **$O(n^2)$ trong mọi trường hợp** (bất kể mảng ban đầu thế nào vẫn phải quét hết để tìm min).
-  - Là thuật toán **không ổn định (Unstable)**.
-- **Trace vòng 1 (1회전):** Cho dãy `[8, 5, 6, 2, 4]`.
-  - Quét toàn mảng, tìm thấy số nhỏ nhất là `2` (tại index 3).
-  - Hoán đổi số `2` với số `8` ở vị trí đầu tiên.
-  - Kết thúc 1 vòng: `[2, 5, 6, 8, 4]` (Số 2 chốt cứng ở đầu).
-
-### 3.3. 버블 정렬 (Bubble Sort — Sắp xếp nổi bọt)
-- **Cơ chế:** Duyệt từ đầu đến cuối mảng, **so sánh từng cặp phần tử liền kề nhau** (`A[j]` và `A[j+1]`). Nếu phần tử đứng trước lớn hơn phần tử đứng sau thì hoán đổi chỗ, làm cho phần tử lớn nhất dần dần "nổi bọt" trôi về tận cùng đáy mảng.
-- **Đặc điểm đề thi:**
-  - **Chốt cố định phần tử lớn nhất ở CUỐI mảng sau mỗi vòng.**
-  - Là thuật toán **ổn định (Stable)**.
-  - Có thể cải tiến bằng cờ hiệu `flag`: nếu qua 1 vòng mà không có phép hoán đổi nào xảy ra thì dừng sớm, đạt $O(n)$.
-- **Trace vòng 1 (1회전):** Cho dãy `[8, 5, 6, 2, 4]`.
-  - So (8, 5) $\rightarrow$ đổi: `[5, 8, 6, 2, 4]`
-  - So (8, 6) $\rightarrow$ đổi: `[5, 6, 8, 2, 4]`
-  - So (8, 2) $\rightarrow$ đổi: `[5, 6, 2, 8, 4]`
-  - So (8, 4) $\rightarrow$ đổi: `[5, 6, 2, 4, 8]`
-  - Kết thúc 1 vòng: `[5, 6, 2, 4, 8]` (Số 8 to nhất chốt cứng ở cuối).
-
----
-
-## 4. Nhóm thuật toán sắp xếp nâng cao $O(n \log n)$
-
-### 4.1. 셸 정렬 (Shell Sort — Sắp xếp Shell)
-- **Cơ chế:** Do Donald Shell đề xuất nhằm khắc phục nhược điểm dịch chuyển từng bước 1 của Insertion Sort. Thuật toán chia danh sách thành các nhóm con gồm các phần tử cách nhau một khoảng bước nhảy (**간격 — Gap**), áp dụng Insertion Sort cho từng nhóm, sau đó giảm dần khoảng cách Gap (thường chia đôi: $h = \lfloor h/2 \rfloor$) cho đến khi $\text{Gap} = 1$.
-- **Độ phức tạp:** Trung bình đạt $O(n^{1.25}) \sim O(n^{1.5})$; trường hợp xấu nhất là $O(n^2)$. Là thuật toán **không ổn định (Unstable)**.
-
-### 4.2. 퀵 정렬 (Quick Sort — Sắp xếp nhanh)
-- **Cơ chế:** Áp dụng chiến lược Chia để trị (Divide and Conquer). Chọn một phần tử làm chốt (**피벗 — Pivot**). Phân vùng mảng sao cho tất cả các phần tử nhỏ hơn Pivot nằm về bên trái, tất cả các phần tử lớn hơn Pivot nằm về bên phải. Sau đó gọi đệ quy sắp xếp hai mảng con độc lập.
-- **Ưu điểm lớn nhất:** Có tốc độ thực thi trong trường hợp trung bình **nhanh nhất** trong các thuật toán so sánh: $\mathbf{O(n \log n)}$.
-- **⚠️ Bẫy đề thi kinh điển (Hiện tượng thoái hóa):**
-  - Khi mảng đầu vào **đã được sắp xếp tăng dần hoặc giảm dần sẵn**, nếu chọn Pivot là phần tử đầu mảng hoặc cuối mảng, mảng sẽ bị phân vùng lệch tuyệt đối ($0$ phần tử và $n-1$ phần tử). Lúc này cây đệ quy bị suy biến thành danh sách liên kết và thời gian chạy **tụt dốc thảm hại xuống mức tồi tệ nhất là $\mathbf{O(n^2)}$**!
-  - Khắc phục: Chọn Pivot ngẫu nhiên hoặc chọn trung vị của 3 phần tử (Median-of-three).
-- **Tính chất:** Không ổn định (Unstable), không gian ngăn xếp đệ quy $O(\log n)$.
-
-### 4.3. 2-Way 합병 정렬 (Merge Sort — Sắp xếp hòa trộn)
-- **Cơ chế:** Áp dụng triết lý Chia để trị: Liên tục chia đôi mảng ra làm 2 nửa cho đến khi thu được các mảng con chỉ chứa 1 phần tử. Sau đó, **hòa trộn (Merge) từng cặp 2 mảng con đã có thứ tự lại với nhau thành 1 mảng lớn hơn** có thứ tự.
-- **Ưu điểm lớn nhất chuẩn đề thi:**
-  - **Luôn luôn bảo đảm thời gian $\mathbf{O(n \log n)}$ trong mọi trường hợp** (kể cả tốt nhất, trung bình lẫn xấu nhất).
-  - Là thuật toán **ổn định (Stable)**.
-- **Nhược điểm:** Đòi hỏi phải cấp phát thêm một mảng bộ nhớ phụ có kích thước đúng bằng mảng ban đầu $\mathbf{O(n)}$ để phục vụ việc hòa trộn dữ liệu.
-
-### 4.4. 힙 정렬 (Heap Sort — Sắp xếp vun đống)
-- **Cơ chế:** Dựa trên cấu trúc dữ liệu **Cây nhị phân hoàn chỉnh (Complete Binary Tree)**. Xây dựng cây thành **최대 힙 (Max-Heap)** — nơi giá trị nút cha luôn lớn hơn hoặc bằng các nút con (nút Root chứa giá trị lớn nhất). Lần lượt hoán đổi nút Root với nút cuối mảng, thu hẹp kích thước Heap và vun đống lại (**Heapify**).
-- **Đặc điểm đề thi:**
-  - **Luôn luôn bảo đảm thời gian $\mathbf{O(n \log n)}$ trong mọi trường hợp** giống như Merge Sort.
-  - Khắc phục được nhược điểm của Merge Sort: **Không tốn thêm mảng phụ**, sắp xếp trực tiếp trên mảng gốc (**In-place Sort** với không gian phụ $O(1)$).
-  - Là thuật toán **không ổn định (Unstable)**.
-
-### 4.5. 기수 정렬 (Radix Sort / Bucket Sort — Sắp xếp theo cơ số)
-- **Cơ chế:** Là thuật toán sắp xếp phân phối **hoàn toàn không dùng phép so sánh khóa**. Thuật toán sử dụng 10 thùng Hàng đợi (**큐 — Queue / Bucket**) tương ứng với các chữ số từ `0` đến `9`. Lần lượt phân loại các số vào các thùng theo từng hàng chữ số: bắt đầu từ hàng đơn vị (LSD — Least Significant Digit), rồi hàng chục, hàng trăm...
-- **Độ phức tạp:** Thời gian chạy là **$O(d \cdot n)$** (với $d$ là số chữ số lớn nhất). Rất nhanh khi số chữ số $d$ nhỏ, là thuật toán **ổn định (Stable)**.
-
----
-
-## 5. Bảng ma trận so sánh tổng hợp toàn diện các thuật toán sắp xếp
-
-Đây là bảng kiến thức quyết định để trả lời chính xác mọi câu hỏi trắc nghiệm về độ phức tạp và tính ổn định:
-
-| Thuật toán sắp xếp | Tên tiếng Hàn | Thời gian Tốt nhất (Best) | Thời gian Trung bình (Avg) | Thời gian Xấu nhất (Worst) | Không gian phụ | Tính ổn định (Stability) |
+#### 2. Bảng ma trận so sánh toàn diện 8 thuật toán sắp xếp
+| Thuật toán sắp xếp | Tên tiếng Hàn | Tốt nhất (Best) | Trung bình (Avg) | Xấu nhất (Worst) | Không gian phụ | Tính ổn định |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | **선택 정렬 (Selection)** | Sắp xếp chọn | $O(n^2)$ | $O(n^2)$ | $\mathbf{O(n^2)}$ | $O(1)$ | **Không ổn định (Unstable)** |
 | **버블 정렬 (Bubble)** | Sắp xếp nổi bọt | $O(n)$ *(dùng cờ)* | $O(n^2)$ | $\mathbf{O(n^2)}$ | $O(1)$ | **Ổn định (Stable)** |
@@ -137,26 +50,54 @@ Nhóm này sử dụng hai vòng lặp lồng nhau, thao tác đơn giản nhưn
 | **퀵 정렬 (Quick)** | Sắp xếp nhanh | $O(n \log n)$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n^2)}$ *(thoái hóa)* | $O(\log n)$ | **Không ổn định (Unstable)** |
 | **합병 정렬 (Merge)** | Sắp xếp trộn | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n)}$ *(mảng phụ)* | **Ổn định (Stable)** |
 | **힙 정렬 (Heap)** | Sắp xếp vun đống | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(n \log n)}$ | $\mathbf{O(1)}$ *(in-place)* | **Không ổn định (Unstable)** |
-| **기수 정렬 (Radix)** | Sắp xếp theo cơ số | $O(d \cdot n)$ | $O(d \cdot n)$ | $\mathbf{O(d \cdot n)}$ | $O(n + k)$ | **Ổn định (Stable)** |
+| **기수 정렬 (Radix)** | Sắp xếp cơ số | $O(d \cdot n)$ | $O(d \cdot n)$ | $\mathbf{O(d \cdot n)}$ | $O(n + k)$ | **Ổn định (Stable)** |
+
+#### 3. Phân biệt tính ổn định (정렬의 안정성)
+- **Thuật toán ổn định (Stable Sort):** Giữ nguyên trật tự tương đối ban đầu của các phần tử có giá trị khóa bằng nhau: **삽입 (Insertion), 버블 (Bubble), 합병 (Merge), 기수 (Radix)**.
+- **Thuật toán không ổn định (Unstable Sort):** Có thể làm thay đổi trật tự ban đầu của các khóa bằng nhau: **선택 (Selection), 퀵 (Quick), 힙 (Heap), 셸 (Shell)**.
+
+#### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+- **Bẫy 1: Hiện tượng thoái hóa của Quick Sort:**
+  - Khi mảng đầu vào **đã được sắp xếp sẵn (tăng dần hoặc giảm dần)**, nếu chọn Pivot ở đầu hoặc cuối mảng thì Quick Sort bị thoái hóa xuống **$O(n^2)$**.
+- **Bẫy 2: So sánh Merge Sort vs Heap Sort:**
+  - Cả hai đều luôn đạt $O(n \log n)$ trong mọi trường hợp.
+  - Merge Sort tốn thêm mảng phụ $O(n)$ và là Stable Sort.
+  - Heap Sort sắp xếp tại chỗ $O(1)$ (In-place) và là Unstable Sort.
+- **Bẫy 3: Trace vòng 1 (1회전):**
+  - **Selection Sort:** Tìm phần tử nhỏ nhất chốt cứng ở **ĐẦU mảng**.
+  - **Bubble Sort:** So sánh cặp liền kề, đẩy phần tử lớn nhất chốt cứng ở **CUỐI mảng**.
+  - **Insertion Sort:** Bốc phần tử thứ 2 chèn vào vị trí thích hợp của dãy con đứng trước nó.
+- **Bẫy 4: Insertion Sort xếp sẵn:** Khi dữ liệu đã gần như có thứ tự tăng dần sẵn, Insertion Sort chạy cực nhanh với thời gian $O(n)$.
 
 ---
 
-## 6. Nối mạch kiến thức sang bài tiếp theo
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-Khi dữ liệu đã được sắp xếp trật tự bằng các thuật toán tối ưu $O(n \log n)$, một lợi ích kỹ thuật to lớn mở ra: thay vì phải tìm kiếm tuần tự chậm chạp tốn $O(n)$, chúng ta có thể áp dụng thuật toán tìm kiếm nhị phân với thời gian kỷ lục $O(\log n)$.
+#### 1. Bốn kỹ thuật thiết kế giải thuật nền tảng
+- **분할 정복 (Divide and Conquer):** Chia nhỏ bài toán thành các bài toán con độc lập cùng cấu trúc, giải đệ quy rồi hợp nhất kết quả (Merge Sort, Quick Sort, Binary Search).
+- **동적 계획법 (Dynamic Programming):** Áp dụng cho bài toán có các bài toán con gối nhau (`Overlapping Subproblems`); lưu kết quả vào bảng nhớ (`Memoization`) để không phải tính lại (Dãy Fibonacci, Knapsack 0/1, Floyd-Warshall).
+- **탐욕법 (Greedy Algorithm):** Luôn chọn phương án tối ưu cục bộ trước mắt tại mỗi bước để hướng đến lời giải toàn cục (Kruskal, Prim, Dijkstra).
+- **백트래킹 (Backtracking):** Tìm kiếm theo chiều sâu (DFS), khi chạm nhánh cụt vi phạm ràng buộc thì quay lui lại bước trước (Bài toán 8 quân hậu N-Queens, Mê cung).
 
-Chúng ta sẽ chuyển sang **[Bài 06: Thuật toán tìm kiếm và bảng băm](06-thuat-toan-tim-kiem-va-bang-bam.md)** để nghiên cứu thuật toán tìm kiếm nhị phân (Binary Search), cấu trúc lưu trữ bảng băm (Hashing) và các kỹ thuật giải quyết xung đột (Collision Resolution) để đạt tốc độ tra cứu $O(1)$.
+#### 2. Cơ chế sắp xếp vun đống (Heap Sort)
+- Dựa trên cấu trúc Cây nhị phân hoàn chỉnh (Complete Binary Tree).
+- Tạo **최대 힙 (Max-Heap)**: Nút cha luôn lớn hơn hoặc bằng các nút con, nút gốc Root chứa giá trị lớn nhất toàn cây.
+- Lần lượt hoán đổi nút Root với phần tử cuối cùng của mảng, giảm kích thước heap đi 1 và gọi hàm `Heapify` để tái cân bằng cây trong thời gian $O(\log n)$.
+
+#### 3. Cơ chế sắp xếp cơ số (Radix Sort)
+- Không sử dụng phép so sánh khóa trực tiếp.
+- Sử dụng 10 thùng Hàng đợi (`큐 / Bucket`) tương ứng với các chữ số từ `0` đến `9`.
+- Quét các số theo từng hàng chữ số từ hàng đơn vị (LSD - Least Significant Digit) đến hàng chục, hàng trăm; phân phối vào các Bucket rồi nối lại theo trật tự FIFO.
 
 ---
 
-## 7. 복습 체크리스트 (Checklist ôn tập)
-
+### 복습 체크리스트
 - [ ] Thuộc lòng chuỗi thứ bậc Big-O: $O(1) \lt O(\log n) \lt O(n) \lt O(n \log n) \lt O(n^2) \lt O(2^n) \lt O(n!)$.
-- [ ] Phân biệt được 4 kỹ thuật: Chia để trị (Quick/Merge), Quy hoạch động (Fibonacci/DP), Tham lam (Kruskal/Prim), Quay lui (N-Queens).
-- [ ] Phân biệt được đặc điểm trace sau vòng 1: Selection chốt min ở đầu, Bubble chốt max ở cuối.
+- [ ] Phân biệt 4 kỹ thuật thiết kế: Chia để trị, Quy hoạch động, Tham lam, Quay lui.
+- [ ] Phân biệt đặc điểm trace sau vòng 1: Selection chốt min ở đầu, Bubble chốt max ở cuối.
 - [ ] Nhớ Insertion Sort đạt $O(n)$ khi mảng ban đầu gần như đã xếp sẵn.
-- [ ] Giải thích nguyên nhân Quick Sort bị tụt xuống $O(n^2)$ khi dữ liệu đã có thứ tự sẵn.
-- [ ] Nhớ Merge Sort và Heap Sort luôn đạt $O(n \log n)$ trong mọi trường hợp.
+- [ ] Giải thích nguyên nhân Quick Sort bị thoái hóa xuống $O(n^2)$ khi dữ liệu đã có thứ tự sẵn.
+- [ ] Nhớ Merge Sort và Heap Sort luôn bảo đảm $O(n \log n)$ trong mọi trường hợp.
 - [ ] Phân biệt: Merge Sort tốn bộ nhớ phụ $O(n)$ và là Stable; Heap Sort in-place $O(1)$ và là Unstable.
 - [ ] Nhớ Radix Sort dùng hàng đợi Queue để sắp xếp theo chữ số không cần so sánh khóa.
-- [ ] Phân loại chính xác danh sách các thuật toán Stable (Insertion, Bubble, Merge, Radix) và Unstable (Selection, Quick, Heap, Shell).
+- [ ] Phân loại chính xác các thuật toán Stable (Insertion, Bubble, Merge, Radix) và Unstable (Selection, Quick, Heap, Shell).

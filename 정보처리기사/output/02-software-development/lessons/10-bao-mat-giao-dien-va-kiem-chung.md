@@ -1,137 +1,85 @@
-# 10. Bảo mật giao diện và công cụ kiểm chứng (인터페이스 보안 및 검증 도구)
+# 인터페이스 보안 및 검증 도구 (Bảo mật giao diện và công cụ kiểm chứng)
 
-## 1. Tổng quan và Phân vùng bảo mật giao diện
+## 학습 목표
+- Nắm vững 3 giao thức bảo mật đường truyền theo tầng mạng OSI: IPSec (`네트워크 계층 L3`), SSL/TLS (`전송 계층 L4/L5`), và S-HTTP (`응용 계층 L7`).
+- Phân tích 3 thành phần của bộ giao thức IPSec: AH (`인증 헤더` - tính toàn vẹn/xác thực, không mã hóa), ESP (`암호화 페이로드` - mã hóa bảo mật), và IKE (`키 교환`).
+- So sánh hai chế độ hoạt động của IPSec: Chế độ truyền dẫn (`전송 모드` - Host-to-Host, không tạo New IP Header) vs Chế độ đường hầm (`터널 모드` - Gateway-to-Gateway qua VPN, tạo New IP Header).
+- Hiểu rõ nguyên lý hoạt động của công cụ kiểm tra tính toàn vẹn Tripwire (`트립와이어`): so sánh mã băm (MD5, SHA) của tệp tin hệ thống để phát hiện cửa sau (`백도어 / Backdoor`).
+- Nhận diện chính xác 5 công cụ kiểm chứng triển khai giao diện: xUnit (kiểm thử đơn vị), STAF (môi trường phân tán), FitNesse (giao diện Web/Wiki), NTAF (Naver = FitNesse + STAF), và watir (Ruby).
 
-Trong kiến trúc phần mềm hiện đại, các module và hệ thống con không hoạt động độc lập mà liên tục trao đổi dữ liệu qua các điểm giao tiếp (Interface / API). Việc bảo vệ dữ liệu truyền thông và đảm bảo các giao diện hoạt động chính xác theo đặc tả kỹ thuật là yêu cầu sống còn.
+## 핵심 키워드
+- 인터페이스 보안 (Bảo mật giao diện / Interface Security)
+- 보안 프로토콜 (IPSec L3, SSL/TLS L4/L5 HTTPS 443, S-HTTP L7)
+- IPSec 구성 요소 (AH 무결성·인증·비암호화, ESP 기밀성·암호화, IKE)
+- IPSec 동작 모드 (전송 모드 Transport Host-to-Host vs 터널 모드 Tunnel New IP Header)
+- 트립와이어 (Tripwire / 무결성 검사 HIDS / 해시 값 비교 / 백도어 탐지)
+- 구현 검증 도구 (xUnit 단위테스트, STAF 분산환경, FitNesse 웹/Wiki, NTAF 네이버, watir 루비)
 
-Bảo mật giao diện được phân chia theo các tầng mô hình mạng OSI:
-- **Tầng mạng (Network Layer - L3):** Bảo vệ toàn bộ gói tin IP ở mức hệ điều hành thông qua **IPSec**, tạo kênh truyền bảo mật cho mọi ứng dụng chạy phía trên mà không đòi hỏi sửa đổi mã nguồn ứng dụng.
-- **Tầng giao vận / phiên (Transport / Session Layer - L4/L5):** Bảo vệ luồng dữ liệu TCP bằng **SSL/TLS**, phổ biến nhất trong các giao dịch web an toàn (HTTPS).
-- **Tầng ứng dụng (Application Layer - L7):** Bảo vệ chi tiết từng bức điện hoặc thông điệp HTTP riêng lẻ thông qua **S-HTTP**.
+## 선행·연결 개념
+- **Từ đâu (Origin / Prerequisite):** Ở bài học trước [09-tich-hop-he-thong-eai-esb.md](09-tich-hop-he-thong-eai-esb.md), chúng ta đã khảo sát các kiến trúc tích hợp hệ thống doanh nghiệp qua EAI/ESB và định dạng dữ liệu mở JSON/XML.
+- **Đang giải quyết gì (Current Problem):** Khi các giao diện API kết nối qua mạng diện rộng, dữ liệu đối mặt với nguy cơ bị nghe lén, giả mạo và lỗi sai lệch chức năng. Bài học này giải quyết việc thiết lập các giao thức mã hóa đường truyền (IPSec, SSL/TLS), công cụ kiểm tra tính toàn vẹn chống backdoor (Tripwire) và bộ khung kiểm chứng giao diện tự động.
+- **Dùng đi đâu (Forward Handoff):** Sau khi các giao diện được bảo mật và kiểm chứng hoàn tất, sản phẩm sẵn sàng bước vào khâu phân phối và bảo vệ bản quyền số thương mại tại [11-dong-goi-phan-mem-va-drm.md](11-dong-goi-phan-mem-va-drm.md).
 
-Song song với việc mã hóa luồng truyền, hệ thống đòi hỏi các cơ chế kiểm tra tính toàn vẹn tệp tin máy chủ (như **Tripwire**) để phát hiện xâm nhập/cài cắm cửa sau (Backdoor), và các bộ khung kiểm thử tự động (**xUnit, STAF, FitNesse, NTAF, watir**) để kiểm chứng tính sẵn sàng và chính xác của giao diện trước và sau khi triển khai.
-
-> [!NOTE]
-> **Ranh giới môn học (Subject Boundary):** Bài học này tập trung vào các giao thức bảo mật và công cụ kiểm chứng dưới góc độ kết nối giao diện phần mềm trong Môn 2 (소프트웨어 개발). Các thuật toán mật mã học chi tiết (RSA, AES, SHA...), hạ tầng khóa công khai PKI và các hình thức tấn công mạng chuyên sâu được trình bày toàn diện trong Môn 5 (정보시스템 구축관리).
+## 읽는 방법
+- Đọc TẦNG A để nắm chắc bảng nhận diện 3 giao thức mạng, sự khác nhau giữa AH vs ESP, hai chế độ Transport vs Tunnel của IPSec, vai trò của Tripwire và bảng đối chiếu 5 công cụ test tự động.
+- Đọc TẦNG B để hiểu sâu quy trình 3 pha của Tripwire và vai trò giám sát hiệu năng của công cụ APM.
 
 ---
 
-## 2. Giao thức bảo mật giao diện mạng (네트워크 영역 보안 프로토콜)
+## 인터페이스 보안 및 검증 도구
 
-Kỳ thi kỹ sư xử lý thông tin đặc biệt nhấn mạnh sự phân loại tầng hoạt động và cơ chế bảo vệ của 3 giao thức: **IPSec**, **SSL/TLS**, và **S-HTTP**.
+### TẦNG A – GHI CHÚ NÉN (ÔN / ĐI THI)
 
-### 2.1. So sánh 3 giao thức bảo mật đường truyền
-
+#### 1. Bảng so sánh 3 giao thức bảo mật đường truyền
 | Giao thức | Tầng OSI đối ứng | Cơ chế hoạt động cốt lõi | Phạm vi ứng dụng thực tế |
 | :--- | :--- | :--- | :--- |
-| **IPSec (IP Security)** | **Tầng mạng (L3 - Network)** | Mã hóa và xác thực trực tiếp tại mức gói tin IP bằng giao thức **AH** và **ESP** | Mạng riêng ảo **VPN**, kết nối an toàn giữa các văn phòng/chi nhánh |
-| **SSL / TLS** | **Tầng giao vận (L4/L5 - Transport)** | Dùng mã hóa bất đối xứng để bắt tay trao đổi khóa, sau đó dùng mã hóa đối xứng truyền dữ liệu tốc độ cao | Web an toàn (**HTTPS / Port 443**), truyền file/mail an toàn (FTPS, SMTPS) |
-| **S-HTTP** | **Tầng ứng dụng (L7 - Application)** | Chỉ mã hóa nội dung của thông điệp HTTP cụ thể giữa Client và Server, không mã hóa toàn bộ kênh truyền | Kiểm soát bảo mật chi tiết từng thông điệp riêng lẻ (ít dùng hơn SSL/TLS) |
+| **IPSec (IP Security)** | **Tầng mạng (L3 - Network)** | Mã hóa và xác thực trực tiếp tại mức gói tin IP qua **AH** và **ESP** | Mạng riêng ảo **VPN**, kết nối mạng an toàn giữa các chi nhánh |
+| **SSL / TLS** | **Tầng giao vận (L4/L5 - Transport)** | Bắt tay khóa bất đối xứng, truyền dữ liệu tốc độ cao bằng mã hóa đối xứng | Web an toàn (**HTTPS / Port 443**), email an toàn (FTPS, SMTPS) |
+| **S-HTTP** | **Tầng ứng dụng (L7 - Application)**| Chỉ mã hóa nội dung thông điệp HTTP cụ thể, không mã hóa toàn kênh | Kiểm soát bảo mật chi tiết từng thông điệp riêng lẻ |
 
-### 2.2. Chi tiết bộ giao thức IPSec (IP Security Architecture)
+#### 2. Đối chiếu 2 chế độ hoạt động của IPSec
+| Chế độ hoạt động | Phạm vi mã hóa (Encrypted Area) | New IP Header | Ngữ cảnh ứng dụng |
+| :--- | :--- | :---: | :--- |
+| **전송 모드 (Transport Mode)** | Chỉ mã hóa **Payload (Dữ liệu)**; giữ nguyên IP Header gốc | **Không tạo** | Giao tiếp trực tiếp giữa 2 máy chủ trạm (**Host-to-Host**) |
+| **터널 모드 (Tunnel Mode)** | Mã hóa **toàn bộ gói tin IP gốc** (cả IP Header cũ và Payload) | **Tạo mới** | Kết nối giữa 2 cổng mạng an toàn qua VPN (**Gateway-to-Gateway**) |
 
-IPSec hoạt động ở Tầng 3 (Network Layer) và được cấu thành từ 3 giao thức thành phần:
-1. **AH (Authentication Header):**
-   - Đảm bảo **tính toàn vẹn dữ liệu (Data Integrity)** và **xác thực nguồn gốc (Authentication)**.
-   - Hỗ trợ chống phát lại gói tin (**Anti-replay**).
-   - **Bẫy đề thi:** AH **KHÔNG** cung cấp tính năng bảo mật bí mật (Confidentiality / Encryption) — AH không mã hóa nội dung dữ liệu (Payload).
-2. **ESP (Encapsulating Security Payload):**
-   - Cung cấp đồng thời cả **mã hóa bảo mật bí mật (Confidentiality)**, **xác thực nguồn gốc** và **tính toàn vẹn dữ liệu**.
-3. **IKE (Internet Key Exchange):**
-   - Giao thức tự động thiết lập liên kết bảo mật (SA - Security Association) và thương lượng, trao đổi khóa mật mã giữa hai thiết bị truyền thông.
-
-### 2.3. Hai chế độ hoạt động của IPSec: 전송 모드 vs 터널 모드
-
-| Chế độ hoạt động | Phạm vi mã hóa (Encrypted Area) | Cấu trúc IP Header mới | Ngữ cảnh ứng dụng |
-| :--- | :--- | :--- | :--- |
-| **전송 모드 (Transport Mode)** | Chỉ mã hóa **Payload (Dữ liệu)**; giữ nguyên IP Header gốc | **Không tạo** IP Header mới | Giao tiếp trực tiếp giữa 2 máy chủ trạm (**Host-to-Host**) |
-| **터널 모드 (Tunnel Mode)** | Mã hóa **toàn bộ gói tin IP gốc** (cả IP Header cũ và Payload) | **Tạo thêm** New IP Header ở bên ngoài | Kết nối giữa hai cổng mạng an toàn qua VPN (**Gateway-to-Gateway**) |
-
-- Trong chế độ **전송 모드 (Transport Mode)**, địa chỉ IP nguồn và đích ban đầu hiển thị công khai trên gói tin, do đó chỉ phù hợp khi hai trạm đầu cuối trực tiếp cấu hình mã hóa cho nhau.
-- Trong chế độ **터널 모드 (Tunnel Mode)**, gói tin gốc được bảo vệ hoàn toàn và gói trong một gói tin IP hoàn toàn mới, giúp che giấu cấu trúc mạng nội bộ khi truyền qua môi trường Internet công cộng giữa hai Gateway/Router VPN.
-
----
-
-## 3. Công cụ kiểm tra toàn vẹn hệ thống: Tripwire (트립와이어)
-
-Bên cạnh bảo mật đường truyền, việc bảo vệ tính toàn vẹn của các tệp cấu hình và mã nguồn dịch vụ giao diện trên máy chủ là yếu tố then chốt nhằm ngăn ngừa cửa sau (Backdoor).
-
-### 3.1. Khái niệm và nguyên lý hoạt động
-
-- **트립와이어 (Tripwire)** là công cụ kiểm tra tính toàn vẹn dữ liệu hệ thống (**무결성 검사 도구 - Data Integrity Checker**), hoạt động như một hệ thống phát hiện xâm nhập dựa trên máy chủ (**HIDS - Host-based Intrusion Detection System**).
-- **Cơ chế bẫy dây (Tripwire Metaphor):** Tương tự như sợi dây bẫy báo động khi kẻ trộm đột nhập, Tripwire tính toán và lưu trữ chữ ký số / mã băm mật mã (**Hash / Checksum: MD5, SHA**) của tất cả các tệp nhị phân hệ thống (`/bin`, `/sbin`), tệp cấu hình (`/etc`) và thư viện dùng chung ngay sau khi cài đặt hệ thống sạch.
-
-### 3.2. Quy trình vận hành 3 pha của Tripwire
-
-```
-[Hệ thống sạch ban đầu]
-       │
-       ▼
-[Pha 1: Tạo Baseline DB] ──► Lưu giá trị băm (MD5/SHA), kích thước, inode, permission vào DB an toàn
-       │
-       ▼
-[Pha 2: Quét định kỳ]    ──► Tính toán lại mã băm hiện tại của các file hệ thống
-       │
-       ▼
-[Pha 3: So sánh & Cảnh báo]
-       ├─ Không đổi ──► Hệ thống an toàn
-       └─ Sai lệch 1 bit ──► Cảnh báo xâm nhập! Phát hiện Backdoor hoặc sửa đổi file trái phép
-```
-
-1. **Tạo lập cơ sở dữ liệu mẫu (Baseline DB Creation):** Quét toàn bộ danh mục chỉ định và lưu mã băm an toàn vào cơ sở dữ liệu mã hóa đặt tại vùng lưu trữ chỉ đọc (Read-Only).
-2. **Quét định kỳ (Periodic Scanning):** Chạy tiến trình ngầm định kỳ để đọc lại nội dung tệp và tính toán giá trị băm tức thời.
-3. **Báo cáo sai lệch (Discrepancy Reporting):** Nếu phát hiện bất kỳ sự thay đổi nào về kích thước, ngày hiệu chỉnh, quyền hạn hoặc giá trị băm, hệ thống lập tức ghi nhật ký và kích hoạt cảnh báo cho quản trị viên.
-
-> [!WARNING]
-> **Điểm mấu chốt trong đề thi:** Tripwire là công cụ phát hiện xâm nhập bị động (**Detection**) bằng cách so sánh **mã băm (해시 값 비교)** nhằm tìm kiếm **cửa sau (백도어 탐지)** hoặc tệp cấu hình bị biến đổi trái phép. Tripwire **không** phải là tường lửa (Firewall) và **không** tự động ngăn chặn gói tin mạng.
-
----
-
-## 4. Công cụ kiểm chứng triển khai giao diện (인터페이스 구현 검증 도구)
-
-Sau khi xây dựng các giao diện (API, RPC, Web Service), đội ngũ phát triển phải sử dụng các bộ khung kiểm thử tự động để xác minh tính tương thích, độ ổn định và tính sẵn sàng của hệ thống.
-
-### 4.1. Bảng đối chiếu 5 công cụ kiểm chứng trọng tâm
-
+#### 3. Bảng đối chiếu 5 công cụ kiểm chứng giao diện (인터페이스 검증 도구)
 | Tên công cụ | Nền tảng / Đặc tính | Cơ chế kỹ thuật trọng tâm | Từ khóa nhận diện đề thi |
 | :--- | :--- | :--- | :--- |
-| **xUnit** | Đa ngôn ngữ (Java, C++, C#...) | Khung kiểm thử đơn vị (**단위 테스트 프레임워크**) tự động hóa việc thực thi và lập báo cáo kết quả | **단위 테스트**, JUnit, CppUnit, NUnit |
-| **STAF** | Đa nền tảng (C/S, Daemon) | Khung tự động hóa kiểm thử hướng dịch vụ trong **môi trường phân tán (분산 환경)**; hỗ trợ tái sử dụng thành phần | **서비스 호출**, **컴포넌트 재사용**, **분산 환경** |
-| **FitNesse** | Nền tảng Web / Wiki | Khung kiểm thử chấp nhận trực quan; thiết kế và hiển thị kịch bản kiểm thử dưới dạng **bảng biểu trên Web** | **웹 기반**, **Wiki 기반**, 케이스 테이블 작성 |
-| **NTAF** | Do NHN (Naver) phát triển | Giải pháp tích hợp: kết hợp giao diện Web/Wiki thân thiện của **FitNesse** với năng lực kiểm thử phân tán của **STAF** | **FitNesse + STAF 결합**, **NHN(네이버)** |
-| **watir** | Dựa trên **Ruby** | Khung kiểm thử tự động hóa tương tác trình duyệt ứng dụng Web dựa trên ngôn ngữ lập trình Ruby | **Ruby 기반**, 웹 애플리케이션 테스트 |
+| **xUnit** | Đa ngôn ngữ (Java, C++, C#...) | Khung kiểm thử đơn vị (**단위 테스트 프레임워크**) tự động hóa | **단위 테스트**, JUnit, CppUnit, NUnit |
+| **STAF** | Đa nền tảng (C/S, Daemon) | Khung tự động hóa kiểm thử trong **môi trường phân tán (분산 환경)** | **서비스 호출**, **컴포넌트 재사용**, **분산 환경** |
+| **FitNesse** | Nền tảng Web / Wiki | Khung kiểm thử chấp nhận; thiết kế kịch bản dạng **bảng biểu trên Web** | **웹 기반**, **Wiki 기반**, 케이스 테이블 |
+| **NTAF** | Do NHN (Naver) phát triển | Giải pháp tích hợp: kết hợp giao diện Web của **FitNesse** với **STAF** | **FitNesse + STAF 결합**, **NHN(네이버)** |
+| **watir** | Dựa trên **Ruby** | Khung kiểm thử tự động hóa tương tác trình duyệt ứng dụng Web bằng Ruby | **Ruby 기반**, 웹 애플리케이션 테스트 |
 
-### 4.2. Mẹo ghi nhớ nhận diện từ khóa thi (Mnemonic Matching)
-
-- **xUnit:** Thấy tiền tố ngôn ngữ gắn với Unit (Java $\rightarrow$ JUnit, C++ $\rightarrow$ CppUnit, C# $\rightarrow$ NUnit) $\rightarrow$ Khung kiểm thử đơn vị tiêu chuẩn.
-- **STAF:** Thấy chữ **분산 환경 (Môi trường phân tán)** và **컴포넌트 재사용 (Tái sử dụng component)** $\rightarrow$ Chọn STAF.
-- **FitNesse:** Thấy chữ **웹 기반 (Dựa trên Web)** và **Wiki (위키)** $\rightarrow$ Chọn FitNesse.
-- **NTAF:** Thấy chữ viết tắt của **Naver** hoặc công thức **FitNesse + STAF** $\rightarrow$ Chọn NTAF.
-- **watir:** Thấy ngôn ngữ **Ruby** để kiểm thử Web $\rightarrow$ Chọn watir.
-
-### 4.3. Giám sát giao diện qua APM (Application Performance Monitoring)
-
-Trong môi trường vận hành thực tế, việc kiểm tra giao diện không chỉ dừng lại ở chức năng gửi/nhận thành công mà còn bao gồm kiểm tra hiệu năng và độ trễ giao diện.
-- **APM (Application Performance Monitoring / Management):** Công cụ giám sát hiệu năng ứng dụng theo thời gian thực (như Scouter, Jennifer, Datadog), giúp phát hiện tắc nghẽn tài nguyên (Bottleneck), lỗi hết kết nối (Connection Pool Exhaustion) và độ trễ gọi API từ xa giữa các hệ thống con.
+#### 4. Bẫy đề thi trắc nghiệm kinh điển (기출 함정 포인트)
+- **Bẫy 1: Thành phần AH trong IPSec:** Khẳng định "AH mã hóa dữ liệu Payload để chống nghe lén" $\rightarrow$ **SAI**. AH chỉ cung cấp tính xác thực (Authentication) và tính toàn vẹn (Integrity), **AH không mã hóa dữ liệu**. Muốn mã hóa bảo mật bí mật (Confidentiality) phải dùng **ESP**.
+- **Bẫy 2: Chế độ Tunnel Mode:** Kết nối VPN giữa 2 Gateway chi nhánh bắt buộc dùng **터널 모드 (Tunnel Mode)** và tạo thêm **New IP Header** đóng gói bên ngoài.
+- **Bẫy 3: Công cụ phát hiện Backdoor:** Công cụ kiểm tra tính toàn vẹn (`무결성 검사`) dựa trên so sánh mã băm (MD5, SHA) để tìm kiếm cửa sau (`백도어`) là **트립와이어 (Tripwire)**.
+- **Bẫy 4: Công cụ của Naver:** Thấy công thức **FitNesse + STAF** $\rightarrow$ Chọn ngay **NTAF**.
 
 ---
 
-## 5. Câu hỏi ôn tập và bẫy đề thi thực tế
+### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-1. **IPSec Transport Mode vs Tunnel Mode:**
-   - *Câu hỏi:* Khi thiết lập mạng riêng ảo VPN kết nối giữa 2 Gateway chi nhánh công ty, chế độ nào của IPSec được sử dụng và cấu trúc gói tin thay đổi như thế nào?
-   - *Đáp án chuẩn thi:* Sử dụng **터널 모드 (Tunnel Mode)**. Toàn bộ gói tin IP ban đầu (gồm cả Header cũ và Payload) được mã hóa hoàn toàn, và một **New IP Header** mới được đóng gói bên ngoài.
-2. **Thành phần AH trong IPSec:**
-   - *Bẫy đề thi:* "Giao thức AH trong IPSec mã hóa dữ liệu người dùng để chống nghe trộm." $\rightarrow$ **SAI**. AH chỉ cung cấp tính xác thực (Authentication) và toàn vẹn (Integrity). Muốn mã hóa bảo mật bí mật (Confidentiality), phải dùng **ESP**.
-3. **Phát hiện Backdoor bằng Tripwire:**
-   - *Câu hỏi:* Công cụ nào dưới đây được sử dụng làm **무결성 검사 도구 (Công cụ kiểm tra tính toàn vẹn)** nhằm phát hiện việc cài cắm **백도어 (Backdoor)** hoặc sửa đổi trái phép các tệp cấu hình hệ điều hành dựa trên việc so sánh mã băm?
-   - *Đáp án chuẩn thi:* **트립와이어 (Tripwire)**.
-4. **Nhận diện công cụ NTAF:**
-   - *Câu hỏi:* Khung kiểm thử tự động do tập đoàn NHN (Naver) phát triển dựa trên sự kết hợp giữa FitNesse và STAF có tên là gì?
-   - *Đáp án chuẩn thi:* **NTAF (Naver Test Automation Framework)**.
+#### 1. Quy trình 3 pha vận hành của Tripwire
+```
+[Hệ thống sạch ban đầu] ──► [Pha 1: Tạo Baseline DB] (Lưu mã băm SHA/MD5, Inode, Permission vào DB an toàn)
+                                     │
+                            [Pha 2: Quét định kỳ] (Tính lại mã băm hiện tại của các file hệ thống)
+                                     │
+                            [Pha 3: So sánh & Cảnh báo] (Sai lệch 1 bit ==> Báo động phát hiện Backdoor)
+```
+- Tripwire là hệ thống phát hiện xâm nhập trên máy chủ (HIDS). Nó không phải là Tường lửa (Firewall) và không tự động chặn gói tin mạng, mà tập trung giám sát sự thay đổi trái phép của tệp tin.
+
+#### 2. Giám sát giao diện qua APM (Application Performance Monitoring)
+- APM (như Scouter, Jennifer, Pinpoint) giám sát hiệu năng giao diện theo thời gian thực: đo lường thời gian đáp ứng API, tỷ lệ lỗi HTTP 5xx, và phát hiện sớm hiện tượng cạn kiệt Connection Pool giữa các phân hệ.
 
 ---
 
-## 6. Liên kết bài học tiếp theo
-
-Sau khi hoàn thiện thiết kế module, giao thức truyền thông liên hệ thống và các công cụ bảo mật/kiểm chứng, quy trình phát triển phần mềm bước vào giai đoạn đóng gói bản phát hành thương mại và quản lý bản quyền số. Tiếp tục với **[11-dong-goi-phan-mem-va-drm.md](11-dong-goi-phan-mem-va-drm.md)** để nắm vững quy trình đóng gói phần mềm và kiến trúc bảo vệ bản quyền số DRM.
+### 복습 체크리스트
+- [ ] Phân biệt tầng OSI của 3 giao thức: IPSec (L3), SSL/TLS (L4/L5), S-HTTP (L7).
+- [ ] Phân biệt rõ thành phần AH (xác thực/toàn vẹn, không mã hóa) và ESP (mã hóa bảo mật) trong IPSec.
+- [ ] Phân biệt 전송 모드 (Host-to-Host, không IP header mới) và 터널 모드 (Gateway-to-Gateway, có New IP Header).
+- [ ] Định nghĩa Tripwire là công cụ kiểm tra toàn vẹn so sánh mã băm để phát hiện Backdoor.
+- [ ] Nhớ từ khóa 5 công cụ test: xUnit (단위), STAF (분산), FitNesse (웹/Wiki), NTAF (Naver), watir (Ruby).
