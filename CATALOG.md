@@ -389,8 +389,6 @@ Supporting
 └── Templates
 ```
 
-> **Chuyển mạch:** Trong **Repository catalog**, **Metadata contract** tiếp nhận điểm tựa từ **Cây domain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Economics: core-domain complete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Metadata contract
 
 Mỗi entry trong YAML front matter có các field tối thiểu:
@@ -403,15 +401,11 @@ Mỗi entry trong YAML front matter có các field tối thiểu:
 
 Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong file này. Không rename/move hàng loạt folder nếu chưa có kế hoạch cập nhật internal links.
 
-> **Chuyển mạch:** Ở chặng này của **Repository catalog**, **7. Economics: core-domain complete** tiếp nhận điểm tựa từ **Metadata contract** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Research Methods: cross-domain methodology foundation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. Economics: core-domain complete
 
 [`economics/`](economics/README.md) hiện có full canonical route từ Foundations → Microeconomics → Market Structure & Game Theory → Macroeconomics → Econometrics → Applied Economics → Economic History & Institutions. Applied layer bao phủ labor, public economics, trade, development và industrial organization; historical/institutional layer bao phủ state capacity, finance/fiscal states, industrialization/globalization và crises/path dependence.
 
 Economics giữ explicit boundaries: theory không thay evidence, accounting identity không thay causal theory, estimator không thay identification strategy, causal estimate không tự trở thành policy recommendation. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ market/application layer về macro data, liquidity, transmission, crisis cases và nowcasting; World/Korean History giữ chronology; Korea Business giữ Korean company/institution cases.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **8. Research Methods: cross-domain methodology foundation** tiếp nhận điểm tựa từ **7. Economics: core-domain complete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Sociology: social structure and institutions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Research Methods: cross-domain methodology foundation
 
@@ -419,15 +413,11 @@ Economics giữ explicit boundaries: theory không thay evidence, accounting ide
 
 Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này.
 
-> **Chuyển mạch:** Trong **Repository catalog**, **9. Sociology: social structure and institutions** tiếp nhận điểm tựa từ **8. Research Methods: cross-domain methodology foundation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. P3 — Electrical / Electronics / Control** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Sociology: social structure and institutions
 
 [`sociology/`](sociology/README.md) giữ canonical sociological mechanisms từ agency/structure, culture/socialization/identity và deviance đến groups/networks/organizations, stratification/mobility, family/education/work/media/civic institutions và population/urbanization/social change. Generic methodology được cross-link sang Research Methods; individual cognition/behavior sang Psychology; markets/incentives sang Economics; chronology sang History.
 
 Domain được tổ chức theo levels và mechanisms thay vì các “vấn đề xã hội” rời rạc, nhằm giúp người đọc phân biệt individual attribute với relational/institutional explanations.
-
-> **Chuyển mạch:** Ở chặng này của **Repository catalog**, **10. P3 — Electrical / Electronics / Control** tiếp nhận điểm tựa từ **9. Sociology: social structure and institutions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Domain entrypoints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. P3 — Electrical / Electronics / Control
 
@@ -461,10 +451,6 @@ Physics
 
 Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **Domain entrypoints** tiếp nhận điểm tựa từ **10. P3 — Electrical / Electronics / Control** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## Domain entrypoints
 
 Các link entrypoint đầy đủ nằm trong YAML ở đầu file để máy đọc được; README root chỉ là phần giới thiệu ngắn. Đây là catalog cấp repository, không thay thế README chuyên sâu của từng library.
-
-> **Bàn giao:** Sau **Domain entrypoints**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
