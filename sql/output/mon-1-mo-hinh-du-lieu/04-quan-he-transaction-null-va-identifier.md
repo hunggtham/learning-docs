@@ -2175,42 +2175,193 @@ hay do hệ thống tạo?
 
 ---
 
-## ⭐ NOTE ÔN SQLD — Phần cần thuộc
+## 31. Bảng đối chiếu kỹ thuật chuyên sâu (Ôn thi SQLD)
+
+### 31.1. Ma trận so sánh xử lý NULL: Oracle Database vs Microsoft SQL Server
+
+| Tiêu chí so sánh | Oracle Database | Microsoft SQL Server | Tiêu chuẩn ANSI SQL |
+| :--- | :--- | :--- | :--- |
+| **Xử lý chuỗi rỗng `''`** | Tự động coi là `NULL` | Coi là chuỗi có độ dài bằng 0 (khác `NULL`) | Chuỗi độ dài 0 khác `NULL` |
+| **Hàm thay thế NULL riêng** | `NVL(cột, giá_trị_thay_thế)` | `ISNULL(cột, giá_trị_thay_thế)` | Không chuẩn hóa hàm riêng |
+| **Hàm chuẩn ANSI đa tham số** | `COALESCE(c1, c2, ...)` | `COALESCE(c1, c2, ...)` | Chuẩn hóa ANSI (`COALESCE`) |
+| **Hàm trả về NULL nếu bằng nhau** | `NULLIF(c1, c2)` | `NULLIF(c1, c2)` | Chuẩn hóa ANSI (`NULLIF`) |
+| **Hàm giải mã mở rộng NULL** | `NVL2(c, val_not_null, val_null)` | `CASE WHEN c IS NOT NULL ...` | Dùng biểu thức `CASE WHEN` |
+| **Thứ tự sắp xếp `ORDER BY ASC`** | `NULL` xếp ở CUỐI (`NULLS LAST`) | `NULL` xếp ở ĐẦU (`NULLS FIRST`) | Cho phép chỉ định qua cấu hình |
+| **Thứ tự sắp xếp `ORDER BY DESC`** | `NULL` xếp ở ĐẦU (`NULLS FIRST`) | `NULL` xếp ở CUỐI (`NULLS LAST`) | Cho phép chỉ định qua cấu hình |
+
+> [!CAUTION]
+> **Cạm bẫy chuỗi rỗng giữa Oracle và SQL Server:**
+> - Trong Oracle: `SELECT 1 FROM DUAL WHERE '' IS NULL;` $\rightarrow$ Trả về `1` (TRUE).
+> - Trong SQL Server: `SELECT 1 WHERE '' IS NULL;` $\rightarrow$ Không trả về dòng nào (FALSE, vì chuỗi rỗng không phải NULL).
+
+---
+
+### 31.2. Ma trận so sánh bản chất định danh: Khóa tự nhiên vs Khóa nhân tạo
+
+| Tiêu chí đối chiếu | Bản chất / Khóa tự nhiên (본질식별자 - Natural Key) | Nhân tạo / Khóa đại diện (인조식별자 - Surrogate Key) |
+| :--- | :--- | :--- |
+| **Nguồn gốc sinh ra** | Xuất phát từ nghiệp vụ thực tế ngoài đời thực (`학번`, `주민등록번호`, `사업자번호`). | Hệ thống tự động phát sinh nhân tạo (`시퀀스 Sequence`, `AUTO_INCREMENT`, `UUID`). |
+| **Độ phức tạp của khóa** | Thường là khóa phức hợp gồm nhiều cột kết hợp (`주문번호 + 상품번호 + 일련번호`). | Luôn là khóa đơn nhất gồm 1 cột số nguyên tăng dần (`주문상세ID`). |
+| **Bảo đảm toàn vẹn nghiệp vụ** | Ngăn chặn trùng lặp nghiệp vụ ngay tại tầng ràng buộc Primary Key. | Dễ lọt dữ liệu trùng lặp nếu lập trình viên quên đặt ràng buộc `UNIQUE` bổ sung. |
+| **Chi phí lưu trữ chỉ mục** | Tận dụng ngay bộ chỉ mục của khóa chính PK, không tốn thêm index phụ. | Tốn thêm dung lượng tạo Unique Index bổ sung trên tập thuộc tính nghiệp vụ tự nhiên. |
+| **Năng suất lập trình (Dev)** | Viết câu lệnh SQL JOIN và WHERE dài dòng, phức tạp do phải nối chuỗi cột. | Rất thuận tiện và nhanh chóng; câu lệnh JOIN chỉ cần so khớp 1 cột ID duy nhất. |
+| **Khuyến nghị áp dụng** | Bảng danh mục cơ bản, bảng tra cứu nghiệp vụ ổn định, bảng có khóa tự nhiên đơn. | Bảng lịch sử giao dịch lớn, bảng có khóa tự nhiên gồm quá nhiều cột phức hợp. |
+
+---
+
+## 32. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+### Cạm bẫy 1: Sai lầm so sánh logic với giá trị NULL
+- **Bẫy đề thi:** Viết câu lệnh `SELECT * FROM EMP WHERE COMM = NULL;` và hỏi số bản ghi trả về.
+- **Cách phá bẫy:** Mọi phép so sánh bằng toán tử thông thường (`=`, `!=`, `<>`, `<`, `>`, `<=`, `>=`) với `NULL` đều trả về giá trị logic **UNKNOWN** (không phải TRUE, cũng không phải FALSE). Mệnh đề `WHERE` chỉ chấp nhận các bản ghi có điều kiện đánh giá là TRUE. Do đó, câu lệnh trên **luôn luôn không trả về bất kỳ bản ghi nào**, ngay cả khi trong bảng có nhiều dòng chứa giá trị NULL. Để lọc NULL, bắt buộc phải dùng cú pháp: `WHERE COMM IS NULL` hoặc `WHERE COMM IS NOT NULL`.
+
+### Cạm bẫy 2: Cách tính trung bình của hàm `AVG()` khi cột chứa giá trị NULL
+- **Bẫy đề thi:** Cho cột `BONUS` có 4 dòng với các giá trị: `100`, `200`, `NULL`, `300`. Đề thi khẳng định kết quả của `AVG(BONUS)` bằng `(100 + 200 + 300) / 4 = 150`.
+- **Cách phá bẫy:** SAI HOÀN TOÀN. Mọi hàm tập hợp (Aggregate Functions: `SUM`, `AVG`, `MIN`, `MAX`, `COUNT(cột)`) đều **TỰ ĐỘNG BỎ QUA GIÁ TRỊ NULL** trong quá trình tính toán.
+  - Tổng: `SUM(BONUS) = 100 + 200 + 300 = 600`.
+  - Số dòng tính toán: `COUNT(BONUS) = 3` (dòng chứa NULL bị loại trừ).
+  - Giá trị trung bình: `AVG(BONUS) = 600 / 3 = 200`.
+  - Chỉ khi sử dụng hàm thay thế `NVL`: `AVG(NVL(BONUS, 0))` thì giá trị mới là `600 / 4 = 150`.
+
+### Cạm bẫy 3: Phép toán số học chứa giá trị NULL
+- **Bẫy đề thi:** Tính giá trị biểu thức `SALARY + COMM` khi `SALARY = 3000` và `COMM = NULL`. Đề bài đưa ra đáp án `3000`.
+- **Cách phá bẫy:** SAI. Bất kỳ phép toán số học nào (`+`, `-`, `*`, `/`) thực hiện với `NULL` đều **trả về kết quả là NULL** (vì cộng, trừ một số với một giá trị không xác định sẽ cho ra một kết quả không xác định). Do đó: `3000 + NULL = NULL`. Muốn ra `3000`, bắt buộc phải viết: `SALARY + NVL(COMM, 0)`.
+
+### Cạm bẫy 4: Mối quan hệ bắt buộc (Mandatory) trong ERD và phạm vi Transaction
+- **Bẫy đề thi:** Cho sơ đồ ERD có quan hệ 1:N với tính bắt buộc ở cả hai đầu giữa `ĐƠN_HÀNG` và `CHI_TIẾT_ĐƠN_HÀNG`. Đề bài hỏi có thể tách việc tạo đơn hàng và chi tiết đơn hàng thành 2 Transaction độc lập với 2 lệnh COMMIT riêng biệt không.
+- **Cách phá bẫy:** KHÔNG THỂ. Mối quan hệ bắt buộc ở cả hai phía thể hiện tính phụ thuộc toàn vẹn không thể tách rời của nghiệp vụ. Toàn bộ thao tác thêm mới Đơn hàng và các Chi tiết đơn hàng **phải nằm trọn vẹn trong cùng 1 Transaction duy nhất** để bảo đảm tính Nguyên tử (Atomicity - All or Nothing). Việc COMMIT một nửa sẽ tạo ra dữ liệu rác mồ côi vi phạm ràng buộc nghiệp vụ.
+
+### Cạm bẫy 5: Nhược điểm chí tử của Khóa nhân tạo (Surrogate Key)
+- **Bẫy đề thi:** Cho rằng *"Việc áp dụng khóa nhân tạo tự tăng (Sequence/Identity) làm Khóa chính luôn đảm bảo dữ liệu không bao giờ bị trùng lặp"*.
+- **Cách phá bẫy:** SAI. Khóa nhân tạo chỉ đảm bảo tính duy nhất về mặt kỹ thuật cho riêng cột số ID đó. Về mặt nghiệp vụ, nếu người dùng vô tình bấm gửi 2 lần, hệ thống sẽ tự động cấp 2 số ID khác nhau (ví dụ: ID=101 và ID=102) cho cùng một nội dung giao dịch của cùng một khách hàng! Để ngăn chặn thảm họa dữ liệu trùng lặp này, khi dùng Surrogate Key, nhà thiết kế **bắt buộc phải tạo thêm một ràng buộc UNIQUE trên tập các thuộc tính tự nhiên gốc (Natural Key attributes)**.
+
+---
+
+## 33. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Xử lý NULL trong các hàm tổng hợp SQL)
+**Đề bài:** Cho bảng dữ liệu `NHAN_VIEN` với các bản ghi như sau:
 
 ```
-[TRANSACTION]
-
-트랜잭션
-= 업무 처리를 위한 논리적 작업 단위
-= Logical Unit of Work
-
-Atomicity
-= All or Nothing
-
-Consistency
-= DB의 일관성 유지
-
-Isolation
-= 다른 Transaction의 중간 결과 접근 제한
-
-Durability
-= COMMIT된 결과는 지속적으로 유지
++--------+----------+-------+
+| EMP_ID | HO_TEN   | BONUS |
++--------+----------+-------+
+| 1001   | Kim      | 300   |
+| 1002   | Lee      | NULL  |
+| 1003   | Park     | 500   |
+| 1004   | Choi     | NULL  |
+| 1005   | Jung     | 400   |
++--------+----------+-------+
 ```
 
+Xét các câu lệnh SQL dưới đây, kết quả nào sau đây là **ĐÚNG**?
+
+A. `SELECT COUNT(BONUS) FROM NHAN_VIEN;` trả về kết quả là `5`.
+B. `SELECT AVG(BONUS) FROM NHAN_VIEN;` trả về kết quả là `240`.
+C. `SELECT SUM(BONUS) / COUNT(*) FROM NHAN_VIEN;` trả về kết quả là `400`.
+D. `SELECT AVG(NVL(BONUS, 0)) FROM NHAN_VIEN;` trả về kết quả là `240`.
+
+**Đáp án đúng:** **D**
+
+**Giải thích chi tiết:**
+- **Phương án D đúng:** Hàm `NVL(BONUS, 0)` thay thế 2 giá trị NULL bằng số 0, tập giá trị trở thành: `{300, 0, 500, 0, 400}`. Khi đó hàm `AVG` tính trên toàn bộ 5 dòng: `(300 + 0 + 500 + 0 + 400) / 5 = 1200 / 5 = 240`.
+- **Phương án A sai:** `COUNT(BONUS)` tự động bỏ qua NULL, chỉ đếm các dòng có giá trị thực nên kết quả là `3`.
+- **Phương án B sai:** `AVG(BONUS)` chỉ tính trên các dòng không NULL: `(300 + 500 + 400) / 3 = 1200 / 3 = 400`.
+- **Phương án C sai:** `SUM(BONUS) = 1200`, còn `COUNT(*)` đếm toàn bộ số dòng kể cả dòng có chứa NULL nên `COUNT(*) = 5`. Kết quả phép chia: `1200 / 5 = 240` (chứ không phải 400).
+
+---
+
+### Câu 2 (Bốn đặc tính ACID của Transaction trong mô hình dữ liệu)
+**Đề bài:** Trong hệ thống ngân hàng, một thao tác chuyển khoản giữa hai tài khoản đòi hỏi: (1) Trừ tiền tài khoản người gửi, (2) Cộng tiền tài khoản người nhận, và (3) Ghi nhật ký giao dịch. Đặc tính nào của Transaction bảo đảm rằng nếu bước (2) bị lỗi do mất điện, hệ thống sẽ tự động khôi phục (ROLLBACK) trạng thái số dư người gửi về nguyên trạng như trước khi giao dịch bắt đầu?
+
+A. Tính nhất quán (Consistency / 일관성)
+B. Tính nguyên tử (Atomicity / 원자성)
+C. Tính cô lập (Isolation / 격리성)
+D. Tính bền vững (Durability / 지속성)
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Tính nguyên tử (`원자성` - Atomicity) tuân thủ nguyên tắc "All or Nothing" (Tất cả hoặc không gì cả). Transaction là đơn vị tác vụ logic nhỏ nhất không thể phân chia. Nếu một trong các thao tác con thất bại, toàn bộ Transaction phải được hủy bỏ và quay lui về trạng thái ban đầu, ngăn chặn tình trạng tiền đã bị trừ ở người gửi nhưng người nhận chưa nhận được.
+- **Phương án A sai:** Tính nhất quán bảo đảm các quy tắc toàn vẹn (ví dụ: tổng tiền trong ngân hàng không tự sinh ra hay mất đi) được giữ vững trước và sau giao dịch.
+- **Phương án C sai:** Tính cô lập ngăn không cho các giao dịch khác nhìn thấy số dư thay đổi dở dang khi chưa COMMIT.
+- **Phương án D sai:** Tính bền vững bảo đảm sau khi đã COMMIT thành công thì dữ liệu được ghi nhận vĩnh viễn trên đĩa cứng.
+
+---
+
+### Câu 3 (So sánh Khóa tự nhiên vs Khóa nhân tạo trong thiết kế CSDL)
+**Đề bài:** Xét việc thiết kế bảng `ORDER_DETAIL (CHI_TIẾT_ĐƠN_HÀNG)`. Thay vì sử dụng Khóa chính tự nhiên phức hợp gồm `(ORDER_ID, ITEM_SEQ)`, nhà thiết kế quyết định bổ sung cột `ORDER_DETAIL_ID NUMBER` tự tăng làm Khóa chính đơn nhất. Nhận định nào sau đây là **CHÍNH XÁC** về ưu/nhược điểm của giải pháp này?
+
+A. Giúp triệt tiêu hoàn toàn khả năng người dùng vô tình đặt trùng một sản phẩm hai lần trong cùng một đơn hàng mà không cần thêm bất kỳ ràng buộc nào.
+B. Giúp đơn giản hóa cấu trúc khóa chính, giảm số cột cần kết nối trong mệnh đề JOIN khi liên kết với các bảng hậu duệ, nhưng cần bổ sung ràng buộc UNIQUE trên các thuộc tính nghiệp vụ để chống trùng lặp dữ liệu.
+C. Làm giảm dung lượng lưu trữ của cơ sở dữ liệu do không cần duy trì bất kỳ chỉ mục Index nào trên bảng.
+D. Bắt buộc tất cả các câu lệnh truy vấn WHERE phải tìm kiếm thông qua cột `ORDER_DETAIL_ID`, làm mất khả năng tìm kiếm theo `ORDER_ID`.
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Đây là phân tích toàn diện chuẩn xác theo K-Data SQLD. Khóa nhân tạo (`인조식별자` / Surrogate Key) đơn giản hóa PK thành 1 cột số nguyên, giúp việc viết SQL JOIN ở các bảng cấp dưới ngắn gọn hơn rất nhiều. Tuy nhiên, nó đánh mất khả năng bảo vệ tính duy nhất về mặt nghiệp vụ của bộ đôi `(ORDER_ID, ITEM_SEQ)`. Do đó, người thiết kế bắt buộc phải thiết lập thêm ràng buộc `UNIQUE (ORDER_ID, ITEM_SEQ)` để bảo đảm toàn vẹn dữ liệu.
+- **Phương án A sai:** Khóa tự tăng không thể ngăn trùng lặp nghiệp vụ nếu không có ràng buộc UNIQUE bổ sung.
+- **Phương án C sai:** Tốn thêm dung lượng vì phải tạo thêm chỉ mục UNIQUE Index phụ cho bộ thuộc tính tự nhiên.
+- **Phương án D sai:** Người dùng hoàn toàn có thể tìm kiếm theo bất kỳ cột nào trong mệnh đề WHERE.
+
+---
+
+### Câu 4 (Toán tử và biểu thức điều kiện với giá trị NULL)
+**Đề bài:** Cho câu lệnh SQL sau thực thi trên hệ quản trị cơ sở dữ liệu Oracle:
+
+```sql
+SELECT CASE
+         WHEN NULL = NULL THEN 'EQUAL'
+         WHEN NULL IS NULL THEN 'IS_NULL'
+         ELSE 'UNKNOWN'
+       END AS RESULT
+FROM DUAL;
 ```
-[NULL]
 
-NULL
-≠ 0
-≠ blank
-= unknown / undefined / absence
+Kết quả trả về của cột `RESULT` là gì?
 
-NULL + number → NULL
+A. `EQUAL`
+B. `IS_NULL`
+C. `UNKNOWN`
+D. Câu lệnh báo lỗi cú pháp do không thể so sánh `NULL = NULL`
 
-NULL = NULL → UNKNOWN
-NULL IS NULL → TRUE
+**Đáp án đúng:** **B**
 
-COUNT(*)   → 모든 행
-COUNT(col) → NULL 제외
+**Giải thích chi tiết:**
+- **Phương án B đúng:**
+  - Nhánh 1: Biểu thức `NULL = NULL` được bộ máy SQL đánh giá là **UNKNOWN** (không phải TRUE). Vì không phải TRUE nên biểu thức CASE bỏ qua nhánh này và xét tiếp nhánh thứ 2.
+  - Nhánh 2: Biểu thức `NULL IS NULL` được đánh giá là **TRUE** một cách tuyệt đối (vì NULL đúng là sự vắng mặt của giá trị).
+  - Do đó, câu lệnh lập tức trả về chuỗi ký tự `'IS_NULL'`.
+- **Phương án A sai:** Vì `NULL = NULL` không bao giờ bằng TRUE.
+- **Phương án C sai:** Vì nhánh 2 đã thỏa mãn TRUE nên không đi vào nhánh ELSE.
+- **Phương án D sai:** Cú pháp SQL hoàn toàn hợp lệ, không phát sinh lỗi biên dịch.
 
-SUM/AVG/MAX/MIN
+---
+
+## 34. TỔNG KẾT TOÀN DIỆN MÔN 1 (데이터 모델링의 이해)
+
+Trải qua 4 bài học chuyên sâu của Môn 1, bạn đã nắm vững toàn bộ khung năng lực lý thuyết và thực hành theo chuẩn kỳ thi SQLD của K-Data:
+
+```
+                                  KIẾN TRÚC MÔN 1 (SQLD K-DATA)
+                                                │
+         ┌──────────────────────┬───────────────┴───────────────┬──────────────────────┐
+         ↓                      ↓                               ↓                      ↓
+     [Bài 01]                [Bài 02]                        [Bài 03]               [Bài 04]
+NỀN TẢNG MÔ HÌNH HÓA      CẤU TRÚC ERD & 4 TRỤ CỘT     CHUẨN HÓA & HIỆU NĂNG     QUAN HỆ & TRANSACTION
+- 3 Đặc trưng (추상/단순/명확) - Entity: 유무형 vs 발생시점   - 3 Dị thường (삽입/삭제/갱신)  - Quan hệ & JOIN Key
+- 3 Góc nhìn (What/How/CRUD)  - Attribute: 기본/설계/파생     - 6 Dạng chuẩn (1NF~5NF)  - Self JOIN & Loại trừ lẫn nhau
+- 3 Cấp độ (Khái niệm/Logic/Vật lý) - Relationship: 식별 vs 비식별 - Khẩu quyết: 도부이결다조   - ACID & Khung Transaction
+- ANSI/SPARC 3 tầng     - Identifier: 주/보조/내/외     - Đánh giá SELECT 2 mặt   - NULL & Ma trận Oracle/SQL Server
+- Độc lập Logic & Vật lý- 6 Bước vẽ ERD chuẩn K-Data   - Phi chuẩn hóa & Partition - Khóa Tự nhiên vs Nhân tạo
+```
+
+---
+
+## 35. NỐI MẠCH SANG MÔN 2: SQL CƠ BẢN VÀ ỨNG DỤNG (SQL 기본 및 활용)
+
+> **Mạch nối chuyển giao phân môn (Bridge to Subject 2):**
+> - **Từ đâu (Hành trang đã có từ Môn 1):** Bạn đã thấu suốt toàn bộ bản chất cấu trúc cơ sở dữ liệu: từ cách phân tích nghiệp vụ, lập ERD, tối ưu hóa qua chuẩn hóa (1NF $\sim$ BCNF), kỹ thuật kiểm soát Transaction (ACID) đến bản chất toán học của giá trị NULL và sự kế thừa khóa.
+> - **Đang giải quyết gì:** Khi mô hình dữ liệu logic đã được hiện thực hóa thành các bảng vật lý trong DBMS, làm thế nào để khai thác, truy vấn, biến đổi và quản trị dữ liệu một cách tối ưu nhất bằng ngôn ngữ SQL chuẩn?
+> - **Dùng đi đâu:** Bước sang **Môn 2 — SQL Cơ bản và Ứng dụng** (bắt đầu từ [Môn 2 Bài 00: Cú pháp SELECT, Hàm và Lọc dữ liệu](../mon-2-sql-co-ban-va-ung-dung/00-sql-select-ham-va-loc.md) và [Môn 2 Bài 01: Các phép JOIN chuyên sâu](../mon-2-sql-co-ban-va-ung-dung/01-join.md)) để trực tiếp viết các câu lệnh SELECT, JOIN nhiều bảng, Subquery lồng nhau, Window Functions và các hàm tổng hợp nâng cao để chinh phục trọn vẹn điểm số trong kỳ thi SQLD.

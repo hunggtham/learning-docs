@@ -1687,6 +1687,300 @@ Row đứng đầu → `0`.
 Phần này nối mạch SQL với “⑪ CUME_DIST”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
-cumulative rows
----------------
-total rows
+cumulative rows (số dòng có giá trị <= giá trị hiện tại)
+---------------------------------------------------------
+total rows (tổng số dòng trong partition)
+```
+
+- Giá trị trả về: $0 < \text{CUME\_DIST} \le 1$.
+- Dòng đầu tiên **không bao giờ bằng 0**.
+- Dòng cuối cùng luôn bằng 1.
+- Nếu có nhiều dòng đồng hạng (tie), tất cả các dòng đồng hạng đều nhận giá trị xác suất tích lũy lớn nhất của nhóm đồng hạng đó.
+
+#### ⑫ RATIO_TO_REPORT
+Phần này nối mạch SQL với “⑫ RATIO_TO_REPORT”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+giá trị của dòng hiện tại
+--------------------------
+SUM(giá trị) trong partition
+```
+
+- Trả về tỷ trọng đóng góp của dòng hiện tại so với tổng của partition (giá trị từ 0 đến 1).
+- Lưu ý: Đây là hàm đặc thù rất nổi tiếng trong Oracle SQL.
+
+---
+
+## 34. So sánh bộ ba hàm xếp hạng: RANK vs DENSE_RANK vs ROW_NUMBER
+
+Giả sử có bảng điểm thi của 5 sinh viên với số điểm: `100, 90, 90, 80, 70`.
+
+```text
++--------+-------+---------------+--------------------+--------------------+
+| Sinh viên | Điểm | RANK()        | DENSE_RANK()       | ROW_NUMBER()       |
++--------+-------+---------------+--------------------+--------------------+
+| A      |   100 | 1             | 1                  | 1                  |
+| B      |    90 | 2 (đồng hạng) | 2 (đồng hạng)      | 2 (thứ tự vật lý)  |
+| C      |    90 | 2 (đồng hạng) | 2 (đồng hạng)      | 3 (thứ tự vật lý)  |
+| D      |    80 | 4 (nhảy bậc!) | 3 (liên tục!)      | 4                  |
+| E      |    70 | 5             | 4                  | 5                  |
++--------+-------+---------------+--------------------+--------------------+
+```
+
+- **`RANK()`:** Đồng hạng thì nhận cùng thứ hạng, nhưng thứ hạng kế tiếp **bị nhảy cóc** (1 $\rightarrow$ 2 $\rightarrow$ 2 $\rightarrow$ 4).
+- **`DENSE_RANK()`:** Đồng hạng nhận cùng thứ hạng, nhưng thứ hạng kế tiếp **liên tục không nhảy cóc** (1 $\rightarrow$ 2 $\rightarrow$ 2 $\rightarrow$ 3).
+- **`ROW_NUMBER()`:** Luôn gán số nguyên liên tục duy nhất tăng dần (1 $\rightarrow$ 2 $\rightarrow$ 3 $\rightarrow$ 4 $\rightarrow$ 5), không quan tâm giá trị có bằng nhau hay không.
+
+---
+
+## 35. So sánh khung cửa sổ vật lý ROWS vs logic RANGE khi có giá trị trùng lặp
+
+Xét bảng dữ liệu có 4 nhân viên với mức lương: `1000, 2000, 2000, 3000`.
+
+```sql
+SELECT EMPNO, SAL,
+       SUM(SAL) OVER(ORDER BY SAL ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS SUM_ROWS,
+       SUM(SAL) OVER(ORDER BY SAL RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS SUM_RANGE
+FROM EMP;
+```
+
+#### Kết quả thực tế (ASCII Table):
+
+```text
++-------+------+----------+-----------+----------------------------------------------+
+| EMPNO | SAL  | SUM_ROWS | SUM_RANGE | Giải thích cơ chế                            |
++-------+------+----------+-----------+----------------------------------------------+
+|     1 | 1000 |     1000 |      1000 | Dòng đầu tiên                                |
+|     2 | 2000 |     3000 |      5000 | ROWS: 1000+2000=3000                         |
+|     3 | 2000 |     5000 |      5000 | RANGE: Gộp toàn bộ đồng hạng (1000+2000+2000)|
+|     4 | 3000 |     8000 |      8000 | 5000 + 3000 = 8000                           |
++-------+------+----------+-----------+----------------------------------------------+
+```
+
+> **Điểm mấu chốt:** Khi có `ORDER BY` mà không khai báo tường minh khung cửa sổ, DBMS mặc định dùng `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. Do đó, tại dòng thứ 2 (SAL = 2000), kết quả sẽ gộp luôn dòng thứ 3 (cũng có SAL = 2000) tạo thành `5000`!
+
+---
+
+## 36. Bảng ma trận so sánh Oracle vs SQL Server về Window Functions
+
+| Nhóm hàm / Tính năng | Oracle Database | Microsoft SQL Server | Điểm khác biệt & Bẫy thi SQLD |
+| :--- | :--- | :--- | :--- |
+| **Xếp hạng:** `RANK`, `DENSE_RANK`, `ROW_NUMBER` | Hỗ trợ chuẩn ANSI | Hỗ trợ chuẩn ANSI | Cả hai DBMS hoàn toàn giống nhau về cú pháp và logic trả về. |
+| **Chia nhóm:** `NTILE(n)` | Hỗ trợ chuẩn ANSI | Hỗ trợ chuẩn ANSI | Phân chia đều các hàng; phần dư được chia lần lượt từ nhóm 1 trở đi. |
+| **Khung cửa sổ:** `ROWS` | Hỗ trợ đầy đủ | Hỗ trợ đầy đủ (từ SQL Server 2012+) | Khung vật lý theo số dòng cố định. |
+| **Khung cửa sổ:** `RANGE` | Hỗ trợ đầy đủ | Giới hạn: Chỉ hỗ trợ `UNBOUNDED` và `CURRENT ROW` | Cả hai đều lấy `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` làm mặc định khi có `ORDER BY`. |
+| **Điều hướng:** `LAG`, `LEAD` | Hỗ trợ đầy đủ (từ Oracle 8i+) | Hỗ trợ đầy đủ (từ SQL Server 2012+) | Cú pháp: `LAG(col, offset, default_val) OVER(...)`. |
+| **Đầu / Cuối:** `FIRST_VALUE`, `LAST_VALUE` | Hỗ trợ chuẩn ANSI | Hỗ trợ (từ SQL Server 2012+) | `LAST_VALUE` đòi hỏi phải mở rộng khung cửa sổ đến `UNBOUNDED FOLLOWING`. |
+| **Tỷ trọng:** `RATIO_TO_REPORT` | **Có sẵn (Hàm tích hợp cực mạnh)** | **Không có sẵn** (phải tự tính bằng `val * 1.0 / SUM(val) OVER()`) | Xuất hiện rất nhiều trong đề thi Oracle SQLD. |
+| **Phân phối:** `CUME_DIST`, `PERCENT_RANK` | Hỗ trợ chuẩn ANSI | Hỗ trợ (từ SQL Server 2012+) | Cả hai đều trả về kết quả số thực từ 0 đến 1. |
+
+---
+
+## 37. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+> [!WARNING]
+> Dưới đây là 5 cạm bẫy chết người về Window Functions trong đề thi SQLD:
+
+### Cạm bẫy 1: Cạm bẫy `LAST_VALUE` với khung cửa sổ mặc định
+- **Tình huống:** Người dùng muốn tìm mức lương cao nhất trong phòng ban nên viết:
+  ```sql
+  SELECT ENAME, SAL, LAST_VALUE(SAL) OVER(PARTITION BY DEPTNO ORDER BY SAL) AS MAX_SAL
+  FROM EMP;
+  ```
+- **Bẫy sai:** Nghĩ rằng `LAST_VALUE` sẽ trả về người có mức lương cao nhất trong phòng ban.
+- **Thực tế:** Do có `ORDER BY SAL` mà không chỉ định khung cửa sổ, hệ thống tự động áp dụng mặc định: `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`.
+- **Hậu quả:** Khung cửa sổ chỉ mở rộng đến đúng **dòng hiện tại**! Do đó, `LAST_VALUE(SAL)` trả về chính mức lương của dòng hiện tại (hoặc giá trị của bạn đồng hạng cuối cùng nếu có trùng điểm), hoàn toàn không lấy được cuối partition!
+- **Cách viết đúng chuẩn:**
+  ```sql
+  LAST_VALUE(SAL) OVER(
+      PARTITION BY DEPTNO
+      ORDER BY SAL
+      ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+  )
+  ```
+
+### Cạm bẫy 2: Dùng Window Function trực tiếp trong mệnh đề `WHERE` hoặc `HAVING`
+- **Tình huống:** Viết truy vấn lấy Top 3 nhân viên lương cao nhất:
+  ```sql
+  -- LỖI CÚ PHÁP: ORA-30483: Window functions are not allowed here!
+  SELECT ENAME, SAL
+  FROM EMP
+  WHERE RANK() OVER(ORDER BY SAL DESC) <= 3;
+  ```
+- **Bản chất kỹ thuật:** Trong thứ tự xử lý logic của câu lệnh SQL:
+  `FROM` $\rightarrow$ `WHERE` $\rightarrow$ `GROUP BY` $\rightarrow$ `HAVING` $\rightarrow$ `SELECT (Window Functions)` $\rightarrow$ `ORDER BY`.
+  Mệnh đề `WHERE` được lọc **trước** khi Window Function được tính toán trong `SELECT`!
+- **Giải pháp:** Bắt buộc phải bọc Window Function vào **Inline View** hoặc **CTE (WITH clause)** rồi mới lọc ở ngoài:
+  ```sql
+  SELECT ENAME, SAL
+  FROM (
+      SELECT ENAME, SAL, RANK() OVER(ORDER BY SAL DESC) AS RNK
+      FROM EMP
+  )
+  WHERE RNK <= 3;
+  ```
+
+### Cạm bẫy 3: Phân biệt giá trị đầu tiên của `PERCENT_RANK` vs `CUME_DIST`
+- Công thức `PERCENT_RANK`: $\frac{\text{RANK} - 1}{N - 1}$. Dòng đầu tiên có $\text{RANK} = 1$, do đó: $\frac{1 - 1}{N - 1} = 0$.
+  $\rightarrow$ **`PERCENT_RANK` của dòng đầu tiên luôn luôn bằng 0!**
+- Công thức `CUME_DIST`: $\frac{\text{Số dòng có giá trị} \le \text{giá trị hiện tại}}{N}$. Dòng đầu tiên có ít nhất 1 dòng thỏa mãn, do đó giá trị tối thiểu là $\frac{1}{N} > 0$.
+  $\rightarrow$ **`CUME_DIST` của dòng đầu tiên tuyệt đối không bao giờ bằng 0!**
+
+### Cạm bẫy 4: Thuật toán chia nhóm của `NTILE(n)` khi không chia hết
+- Nếu bảng có $M$ dòng chia thành $N$ nhóm: Mỗi nhóm cơ bản có $\lfloor M / N \rfloor$ dòng. Số dư $R = M \pmod N$ sẽ được phân bổ **mỗi nhóm 1 dòng, bắt đầu từ nhóm 1 trở đi**.
+- **Ví dụ:** Có 14 dòng chia `NTILE(4)`:
+  - $14 / 4 = 3$ dư $2$.
+  - Nhóm 1 nhận thêm 1: $3 + 1 = 4$ dòng.
+  - Nhóm 2 nhận thêm 1: $3 + 1 = 4$ dòng.
+  - Nhóm 3 nhận $3$ dòng.
+  - Nhóm 4 nhận $3$ dòng.
+  $\rightarrow$ Kết quả phân bổ: `4, 4, 3, 3` (tuyệt đối không phải `3, 3, 4, 4` hay `4, 3, 4, 3`).
+
+### Cạm bẫy 5: Giá trị mặc định của `LAG` và `LEAD` khi trỏ ra ngoài biên
+- `LAG(col)` trên dòng đầu tiên hoặc `LEAD(col)` trên dòng cuối cùng sẽ trả về `NULL` nếu không khai báo tham số thứ 3.
+- Cú pháp an toàn: `LAG(SAL, 1, 0) OVER(...)` $\rightarrow$ Nếu vượt biên, tự động trả về giá trị `0` thay vì `NULL`.
+
+---
+
+## 38. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1: Xác định kết quả xếp hạng khi có điểm đồng hạng (Độ khó: Dễ)
+Bảng điểm thi `TB_SCORE` có cột điểm số `SCORE` của 6 thí sinh như sau: `100, 95, 95, 90, 85, 85`.
+Xét câu lệnh SQL sau:
+
+```sql
+SELECT SCORE,
+       RANK() OVER(ORDER BY SCORE DESC) AS R1,
+       DENSE_RANK() OVER(ORDER BY SCORE DESC) AS R2,
+       ROW_NUMBER() OVER(ORDER BY SCORE DESC) AS R3
+FROM TB_SCORE;
+```
+
+Tại thí sinh có mức điểm `SCORE = 90`, giá trị của `(R1, R2, R3)` lần lượt là bao nhiêu?
+
+A. `(4, 3, 4)`
+B. `(3, 3, 4)`
+C. `(4, 4, 4)`
+D. `(3, 2, 4)`
+
+> **Đáp án chính xác:** **A**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - Điểm số sắp xếp giảm dần:
+>   - Điểm 100 (1 người): `RANK = 1`, `DENSE_RANK = 1`, `ROW_NUMBER = 1`.
+>   - Điểm 95 (2 người): Cả hai đều có `RANK = 2`, `DENSE_RANK = 2`; `ROW_NUMBER` lần lượt là `2` và `3`.
+>   - Điểm 90 (1 người tiếp theo):
+>     - `RANK()`: Do trước đó có 2 người xếp hạng 2 nên thứ hạng bị nhảy cóc bỏ qua số 3, nhảy thẳng lên **4**.
+>     - `DENSE_RANK()`: Thứ hạng không nhảy cóc, tiếp nối liền kề là **3**.
+>     - `ROW_NUMBER()`: Tiếp tục đếm dòng thứ **4**.
+> - Vì vậy tại `SCORE = 90`, bộ giá trị `(R1, R2, R3)` chính là `(4, 3, 4)`.
+> - **Lựa chọn A:** Hoàn toàn chính xác.
+> - **Lựa chọn B sai:** Nhầm rằng RANK không nhảy cóc.
+> - **Lựa chọn C sai:** Nhầm rằng DENSE_RANK nhảy cóc như RANK.
+> - **Lựa chọn D sai:** Nhầm lẫn thứ tự đánh số của DENSE_RANK.
+
+---
+
+### Câu 2: Cạm bẫy khung cửa sổ mặc định của LAST_VALUE (Độ khó: Cao)
+Xét bảng nhân viên `EMP` có 3 nhân viên trong phòng ban 10 với mức lương được sắp xếp tăng dần:
+`MILLER (1300), CLARK (2450), KING (5000)`.
+Người dùng thực thi câu truy vấn sau:
+
+```sql
+SELECT ENAME, SAL,
+       LAST_VALUE(SAL) OVER(ORDER BY SAL) AS LV_SAL
+FROM EMP
+WHERE DEPTNO = 10;
+```
+
+Giá trị của cột `LV_SAL` hiển thị tại dòng của nhân viên `CLARK` là bao nhiêu?
+
+A. `5000`
+B. `2450`
+C. `1300`
+D. `NULL`
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích bẫy:** Đây là bẫy kinh điển số 1 của hàm `LAST_VALUE`.
+> - Khi mệnh đề `OVER()` có `ORDER BY` nhưng không chỉ định mệnh đề `ROWS/RANGE`, Oracle sẽ tự động kích hoạt khung cửa sổ mặc định:
+>   `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`.
+> - Điều này có nghĩa là tại bất kỳ dòng nào, khung cửa sổ tính toán chỉ kéo dài từ dòng đầu tiên đến **đúng dòng hiện tại** (`CURRENT ROW`).
+> - Tại dòng của `CLARK (2450)`:
+>   - Khung cửa sổ chỉ bao gồm 2 dòng: `MILLER (1300)` và `CLARK (2450)`.
+>   - Do đó, giá trị cuối cùng (`LAST_VALUE`) của khung cửa sổ này chính là **2450**!
+> - Nhân viên `KING (5000)` nằm ở phía sau nên chưa lọt vào khung cửa sổ tính toán của dòng `CLARK`.
+> - **Lựa chọn B:** Hoàn toàn chính xác (2450).
+> - **Lựa chọn A sai:** Bẫy thường gặp của người học tưởng rằng LAST_VALUE tự động quét tới cuối bảng để lấy mức lương cao nhất (5000).
+
+---
+
+### Câu 3: Thuật toán chia nhóm NTILE khi có phần dư (Độ khó: Trung bình)
+Bảng `TB_STUDENT` có tổng cộng 11 sinh viên. Người quản trị muốn phân loại sinh viên thành 3 nhóm học lực bằng câu lệnh sau:
+
+```sql
+SELECT STUDENT_ID,
+       NTILE(3) OVER(ORDER BY SCORE DESC) AS GROUP_NUM
+FROM TB_STUDENT;
+```
+
+Số lượng sinh viên thuộc các nhóm `1, 2, 3` lần lượt là bao nhiêu?
+
+A. Nhóm 1 có 3 người, Nhóm 2 có 4 người, Nhóm 3 có 4 người.
+B. Nhóm 1 có 4 người, Nhóm 2 có 3 người, Nhóm 3 có 4 người.
+C. Nhóm 1 có 4 người, Nhóm 2 có 4 người, Nhóm 3 có 3 người.
+D. Nhóm 1 có 3 người, Nhóm 2 có 3 người, Nhóm 3 có 5 người.
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - Phép chia: $11 / 3 = 3$ dư $2$.
+> - Theo chuẩn thuật toán ANSI SQL của `NTILE`:
+>   - Ban đầu mỗi nhóm được chia tối thiểu 3 sinh viên.
+>   - Số dư 2 sinh viên sẽ được phân bổ ưu tiên lần lượt cho các nhóm từ đầu tiên:
+>     - Nhóm 1 nhận thêm 1 $\rightarrow 3 + 1 = 4$ sinh viên.
+>     - Nhóm 2 nhận thêm 1 $\rightarrow 3 + 1 = 4$ sinh viên.
+>     - Nhóm 3 không nhận thêm $\rightarrow 3$ sinh viên.
+> - Kết quả phân bổ chính xác: `Nhóm 1 = 4, Nhóm 2 = 4, Nhóm 3 = 3`.
+> - **Lựa chọn C:** Hoàn toàn chính xác.
+> - **Lựa chọn A, B, D sai:** Vi phạm quy tắc phân bổ phần dư từ nhóm đầu tiên.
+
+---
+
+### Câu 4: Tính toán giá trị PERCENT_RANK và CUME_DIST (Độ khó: Trung bình)
+Bảng `TB_DATA` gồm 4 dòng dữ liệu có giá trị cột `VAL` lần lượt là: `10, 20, 20, 30`.
+Thực thi câu truy vấn sau:
+
+```sql
+SELECT VAL,
+       PERCENT_RANK() OVER(ORDER BY VAL) AS PR,
+       CUME_DIST() OVER(ORDER BY VAL) AS CD
+FROM TB_DATA;
+```
+
+Tại dòng thứ 2 (dòng đầu tiên có `VAL = 20`), cặp giá trị `(PR, CD)` hiển thị là bao nhiêu?
+
+A. `PR = 0.333, CD = 0.500`
+B. `PR = 0.333, CD = 0.750`
+C. `PR = 0.250, CD = 0.750`
+D. `PR = 0.500, CD = 0.500`
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - Tổng số dòng $N = 4$.
+> - Dãy giá trị đã sắp xếp:
+>   - Dòng 1: `VAL = 10` $\rightarrow \text{RANK} = 1$.
+>   - Dòng 2: `VAL = 20` $\rightarrow \text{RANK} = 2$.
+>   - Dòng 3: `VAL = 20` $\rightarrow \text{RANK} = 2$.
+>   - Dòng 4: `VAL = 30` $\rightarrow \text{RANK} = 4$.
+> - **Tính `PERCENT_RANK` tại dòng `VAL = 20`:**
+>   $$\text{PR} = \frac{\text{RANK} - 1}{N - 1} = \frac{2 - 1}{4 - 1} = \frac{1}{3} \approx 0.333$$
+> - **Tính `CUME_DIST` tại dòng `VAL = 20`:**
+>   - Đếm số dòng có giá trị $\le 20$: có 3 dòng (gồm dòng 10, dòng 20 thứ nhất, dòng 20 thứ hai).
+>   $$\text{CD} = \frac{\text{Số dòng} \le 20}{N} = \frac{3}{4} = 0.750$$
+> - Cặp giá trị thu được là: `PR = 0.333, CD = 0.750`.
+> - **Lựa chọn B:** Hoàn toàn chính xác.
+> - **Lựa chọn A sai:** Nhầm tưởng CUME_DIST chỉ đếm đến dòng thứ 2 (bỏ qua dòng đồng hạng thứ 3).
+> - **Lựa chọn C, D sai:** Tính sai công thức mẫu số hoặc bậc xếp hạng của PERCENT_RANK.

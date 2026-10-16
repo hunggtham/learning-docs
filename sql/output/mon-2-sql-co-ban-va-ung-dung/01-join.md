@@ -829,32 +829,29 @@ NON-EQUI JOIN
 
 ---
 
-## 15. NATURAL JOIN
+## 15. NATURAL JOIN (네추럴 조인)
 
-NATURAL JOIN là loại rất dễ xuất hiện trong lý thuyết SQLD.
+NATURAL JOIN là loại cú pháp chuẩn ANSI rất hay xuất hiện trong các câu hỏi bẫy cú pháp của SQLD.
 
-Ví dụ:
+**KR:** NATURAL JOIN은 두 테이블에서 이름과 데이터 타입이 같은 모든 컬럼을 기준으로 EQUI JOIN을 자동으로 수행한다.
+**VI:** NATURAL JOIN tự động tìm **tất cả các cột có cùng tên và cùng kiểu dữ liệu** giữa hai bảng để thực hiện EQUI JOIN.
 
-```text
-EMPLOYEES
-----------------
-EMP_ID
-NAME
-DEPT_ID
-
-DEPARTMENTS
-----------------
-DEPT_ID
-DEPT_NAME
-```
-
-Hai bảng có column cùng tên:
+Ví dụ hai bảng:
 
 ```text
-DEPT_ID
+EMPLOYEES (사원 테이블)
+-----------------------
+EMP_ID   (NUMBER)
+NAME     (VARCHAR2)
+DEPT_ID  (NUMBER)
+
+DEPARTMENTS (부서 테이블)
+-----------------------
+DEPT_ID   (NUMBER)
+DEPT_NAME (VARCHAR2)
 ```
 
-Nếu viết:
+Hai bảng có cột chung duy nhất là `DEPT_ID` (cùng tên, cùng kiểu `NUMBER`):
 
 ```sql
 SELECT *
@@ -862,264 +859,192 @@ FROM employees
 NATURAL JOIN departments;
 ```
 
-SQL tự tìm các column có:
+SQL tự động hiểu và ghép dòng theo điều kiện `employees.DEPT_ID = departments.DEPT_ID`.
 
-```text
-cùng tên
-```
+### ⚠️ Cạm bẫy thi cử SQLD số 1: TUYỆT ĐỐI KHÔNG DÙNG ALIAS TRƯỚC CỘT JOIN
 
-và dùng chúng để JOIN.
-
-Trong trường hợp này tương đương gần như:
+Đây là bẫy phổ biến nhất trong đề thi:
+- Trong `NATURAL JOIN`, các cột dùng làm khóa join trở thành **cột chung sở hữu bởi cả hai bảng**.
+- Do đó, trong mệnh đề `SELECT`, `WHERE`, hoặc bất kỳ đâu, **tuyệt đối không được gắn tiền tố tên bảng hoặc alias** vào cột join.
 
 ```sql
-SELECT *
+-- ❌ SAI (Gây lỗi ORA-25155: column used in NATURAL JOIN cannot have qualifier)
+SELECT e.emp_id, e.name, e.dept_id, d.dept_name
 FROM employees e
-JOIN departments d
-    ON e.dept_id = d.dept_id;
+NATURAL JOIN departments d;
+
+-- ✅ ĐÚNG (Cột dept_id không được có tiền tố e. hay d.)
+SELECT e.emp_id, e.name, dept_id, d.dept_name
+FROM employees e
+NATURAL JOIN departments d;
 ```
+
+### ⚠️ Cạm bẫy thi cử SQLD số 2: Thứ tự cột khi dùng SELECT *
+
+Khi thực hiện `SELECT *` với `NATURAL JOIN`:
+1. Cột chung (cột tham gia join) luôn **xuất hiện đầu tiên** và chỉ xuất hiện **đúng 1 lần** (không bị lặp lại 2 lần như INNER JOIN thông thường).
+2. Tiếp theo là các cột còn lại của bảng thứ nhất (bảng bên trái).
+3. Cuối cùng là các cột còn lại của bảng thứ hai (bảng bên phải).
 
 ---
 
-## 16. Tại sao NATURAL JOIN nguy hiểm?
+## 16. Tại sao NATURAL JOIN nguy hiểm trong thực tế?
 
-Giả sử ban đầu:
-
-```text
-EMPLOYEES
-EMP_ID
-NAME
-DEPT_ID
-
-DEPARTMENTS
-DEPT_ID
-DEPT_NAME
-```
-
-NATURAL JOIN dựa trên:
+Giả sử ban đầu hệ thống chỉ có `DEPT_ID` cùng tên giữa 2 bảng:
 
 ```text
-DEPT_ID
+EMPLOYEES:   EMP_ID, NAME, DEPT_ID
+DEPARTMENTS: DEPT_ID, DEPT_NAME
 ```
 
-Sau này developer thêm column:
+NATURAL JOIN join chính xác theo `DEPT_ID`. Nhưng sau đó, DBA bổ sung cột `UPD_DATE` (ngày cập nhật) hoặc `LOC_ID` vào cả hai bảng:
 
 ```text
-EMPLOYEES
-----------------
-EMP_ID
-NAME
-DEPT_ID
-LOCATION_ID
-
-DEPARTMENTS
-----------------
-DEPT_ID
-DEPT_NAME
-LOCATION_ID
+EMPLOYEES:   EMP_ID, NAME, DEPT_ID, LOC_ID
+DEPARTMENTS: DEPT_ID, DEPT_NAME, LOC_ID
 ```
 
-Bây giờ NATURAL JOIN có thể tự JOIN dựa trên **cả các cột cùng tên thích hợp**, khiến ý nghĩa query thay đổi ngoài dự kiến.
+Lúc này, `NATURAL JOIN` sẽ tự động chuyển thành:
 
-Vì thế trong code production, thường nên viết điều kiện JOIN rõ ràng hơn.
+```sql
+WHERE employees.DEPT_ID = departments.DEPT_ID
+  AND employees.LOC_ID = departments.LOC_ID
+```
+
+Hệ quả:
+- Ý nghĩa nghiệp vụ bị thay đổi hoàn toàn ngoài dự kiến.
+- Số lượng bản ghi trả về có thể đột ngột giảm xuống 0 (vì `LOC_ID` của nhân viên có thể khác `LOC_ID` của phòng ban).
+- Nếu hai cột cùng tên nhưng **khác kiểu dữ liệu** (ví dụ một bên `VARCHAR2`, một bên `NUMBER`), Oracle sẽ báo lỗi không thực thi được.
 
 ---
 
-## 17. USING — khi hai bảng JOIN bằng column cùng tên
+## 17. USING — Cú pháp chỉ định chính xác cột JOIN cùng tên
 
-Nếu:
-
-```text
-employees.department_id
-
-departments.department_id
-```
-
-cùng tên `department_id`, có thể viết:
+Mệnh đề `USING` ra đời để khắc phục sự nguy hiểm của `NATURAL JOIN`. Khi hai bảng có nhiều cột cùng tên, nhưng ta chỉ muốn join theo một (hoặc một số) cột nhất định:
 
 ```sql
-SELECT *
-FROM employees
-JOIN departments
-USING (department_id);
-```
-
-thay vì:
-
-```sql
-SELECT *
+SELECT emp_id, name, dept_id, dept_name
 FROM employees e
 JOIN departments d
-ON e.department_id = d.department_id;
+USING (dept_id);
 ```
 
-Khác biệt về tư duy:
+### ⚠️ Các quy tắc bất di bất dịch của USING trong đề thi SQLD
 
-```text
-NATURAL JOIN
-→ SQL tự quyết định column cùng tên
+1. **Bắt buộc phải có dấu ngoặc đơn `( )`**:
+   - `USING (dept_id)` → Hợp lệ.
+   - `USING dept_id` → LỖI CÚ PHÁP (Syntax Error).
+2. **CẤM dùng Alias / Table Prefix trước cột trong USING**:
+   - Tương tự NATURAL JOIN, cột trong danh sách `USING` trở thành cột chung.
+   - Trong `SELECT`, nếu viết `e.dept_id` hoặc `d.dept_id` sẽ báo lỗi `ORA-25154: column part of USING clause cannot have qualifier`.
+   - Phải viết trần: `SELECT dept_id ...`.
+3. **CẤM dùng đồng thời `USING` và `ON`**:
+   - Trong cùng một mệnh đề JOIN của hai bảng, chỉ được chọn hoặc dùng `ON`, hoặc dùng `USING`. Không được kết hợp cả hai.
 
-USING(department_id)
-→ Tôi chỉ rõ column muốn dùng
+### So sánh mức độ kiểm soát giữa ON, USING và NATURAL JOIN
 
-ON e.department_id = d.department_id
-→ Tôi viết điều kiện cụ thể
-```
-
-Mức độ kiểm soát:
-
-```text
-NATURAL JOIN
-     ↓ ít explicit
-
-USING
-     ↓
-
-ON
-     ↓ rõ ràng nhất
-```
+| Tiêu chí | NATURAL JOIN | USING (cột) | ON điều kiện |
+| :--- | :--- | :--- | :--- |
+| **Cột JOIN** | Tự động quét mọi cột cùng tên & kiểu | Chỉ định cụ thể danh sách cột cùng tên | Tự do chỉ định bất kỳ cột nào |
+| **Tên cột 2 bảng** | Bắt buộc phải trùng tên | Bắt buộc phải trùng tên | Có thể trùng hoặc khác tên |
+| **Dấu ngoặc đơn** | Không có | Bắt buộc: `(col1, col2)` | Tùy chọn: `ON (e.id = d.id)` |
+| **Alias trong SELECT** | **CẤM** dùng alias trên cột join | **CẤM** dùng alias trên cột join | **BẮT BUỘC** hoặc nên dùng alias để tránh nhập nhằng |
+| **Mức độ khuyên dùng** | Thấp nhất (rủi ro cao) | Trung bình | Cao nhất (chuẩn mực dự án) |
 
 ---
 
 ## 18. ANSI JOIN và Oracle Old-Style JOIN
 
-Đây là phần rất quan trọng khi học Oracle/SQLD.
+Đề thi SQLD thường xuyên yêu cầu chuyển đổi qua lại giữa cú pháp chuẩn ANSI (ANSI Standard SQL: 1999) và cú pháp truyền thống của Oracle.
 
-### ANSI JOIN
-
-Ví dụ:
-
+### Cú pháp ANSI Standard JOIN
 ```sql
-SELECT e.employee_name,
-       d.department_name
+SELECT e.name, d.dept_name
 FROM employees e
-JOIN departments d
-    ON e.department_id = d.department_id;
+INNER JOIN departments d
+   ON e.dept_id = d.dept_id;
 ```
 
-Đây là cú pháp ANSI/ISO SQL.
+### Cú pháp Oracle Old-Style (Non-ANSI)
+```sql
+SELECT e.name, d.dept_name
+FROM employees e,
+     departments d
+WHERE e.dept_id = d.dept_id;
+```
+Ở cú pháp Oracle cũ, các bảng liệt kê ngăn cách bởi dấu phẩy trong `FROM`, và điều kiện kết nối được đặt chung với điều kiện lọc trong `WHERE`.
 
 ---
 
-### Oracle old-style
+## 19. Oracle `(+)` Outer Join — Bản chất và 4 Cấm kỵ sống còn
 
-Oracle truyền thống có thể viết:
+Trong cú pháp Oracle cũ, toán tử Outer Join được ký hiệu bằng `(+)`.
 
-```sql
-SELECT e.employee_name,
-       d.department_name
-FROM employees e,
-     departments d
-WHERE e.department_id = d.department_id;
-```
+### Bản chất của ký hiệu `(+)`
 
-Hai câu trên về logic là INNER JOIN tương đương.
-
-```text
-ANSI
-
-FROM A
-JOIN B
-ON A.id = B.id
-```
-
-vs.
-
-```text
-Oracle old style
-
-FROM A, B
-WHERE A.id = B.id
-```
-
----
-
-## 19. Oracle `(+)` Outer Join
-
-Trong cú pháp Oracle cũ, outer join dùng:
+**KR:** `(+)` 기호는 데이터가 부족한(NULL로 보충되어야 하는) 쪽에 붙인다.
+**VI:** Dấu `(+)` luôn được đặt ở phía **thiếu dữ liệu** (phía cần được điền thêm các dòng NULL để ghép với bảng đầy đủ).
 
 ```sql
-(+)
-```
-
-Ví dụ ANSI:
-
-```sql
-SELECT *
+-- ANSI: Giữ toàn bộ EMPLOYEES, DEPARTMENTS thiếu thì điền NULL
+SELECT e.name, d.dept_name
 FROM employees e
-LEFT JOIN departments d
-    ON e.department_id = d.department_id;
+LEFT OUTER JOIN departments d
+   ON e.dept_id = d.dept_id;
+
+-- Oracle Old-Style tương đương:
+SELECT e.name, d.dept_name
+FROM employees e, departments d
+WHERE e.dept_id = d.dept_id(+);
 ```
 
-Oracle old syntax:
+#### Mẹo ghi nhớ vị trí dấu `(+)`
+- Phía có `(+)` = Phía yếu thế hơn = Phía bị thiếu dòng = Phía nhận thêm giá trị NULL.
+- Phía KHÔNG có `(+)` = Phía chủ đạo = Bảng được giữ lại toàn bộ (Master table).
+- `A.id = B.id(+)` → Giữ A (A LEFT JOIN B).
+- `A.id(+) = B.id` → Giữ B (A RIGHT JOIN B hoặc B LEFT JOIN A).
 
-```sql
-SELECT *
-FROM employees e,
-     departments d
-WHERE e.department_id = d.department_id(+);
-```
+### 🚨 4 CẤM KỴ SỐNG CÒN CỦA TOÁN TỬ `(+)` TRONG ĐỀ THI SQLD
 
-Chỗ `(+)` rất dễ gây nhầm.
+1. **CẤM đặt `(+)` ở cả hai vế (Không thể mô phỏng FULL OUTER JOIN):**
+   ```sql
+   -- ❌ LỖI ORA-01468: a predicate may reference only one outer-joined table
+   SELECT *
+   FROM employees e, departments d
+   WHERE e.dept_id(+) = d.dept_id(+);
+   ```
+   Để thực hiện FULL OUTER JOIN trong cú pháp Oracle cũ, bắt buộc phải dùng phép hợp `UNION`: lấy `LEFT OUTER JOIN` rồi `UNION` với `RIGHT OUTER JOIN`.
 
-Hãy hiểu:
+2. **CẤM dùng `(+)` với toán tử `IN` hoặc `OR`:**
+   ```sql
+   -- ❌ LỖI ORA-01719: outer join operator (+) not allowed in operand of OR or IN
+   WHERE e.dept_id = d.dept_id(+)
+      OR e.salary > 5000;
 
-```sql
-e.department_id = d.department_id(+)
-```
+   WHERE e.dept_id(+) IN (10, 20, 30);
+   ```
 
-`departments` là phía có thể **thiếu dữ liệu**.
+3. **CẤM dùng `(+)` kết hợp với Subquery trong điều kiện nối:**
+   ```sql
+   -- ❌ LỖI CÚ PHÁP
+   WHERE e.dept_id = (SELECT dept_id FROM departments WHERE ...)(+);
+   ```
 
-Tức là:
+4. **Quy tắc bảo toàn Outer Join: Mọi điều kiện lọc bảng phụ đều PHẢI có `(+)`:**
+   Nếu đã Outer Join với bảng `departments d`, thì bất kỳ điều kiện lọc nào áp lên bảng `d` trong mệnh đề `WHERE` cũng phải kèm `(+)`. Nếu quên `(+)`, câu lệnh sẽ bị suy thoái thành INNER JOIN!
+   ```sql
+   -- ❌ SUY THOÁI THÀNH INNER JOIN (Mất hết nhân viên chưa có phòng ban vì NULL = 'SEOUL' trả về UNKNOWN)
+   SELECT e.name, d.dept_name
+   FROM employees e, departments d
+   WHERE e.dept_id = d.dept_id(+)
+     AND d.loc = 'SEOUL';
 
-```text
-employees phải giữ
-departments có thể không có
-```
-
-→ LEFT JOIN.
-
-#### Mẹo nhớ `(+)`
-
-Đừng nghĩ:
-
-> `(+)` = bên được giữ.
-
-Mà nghĩ:
-
-> **`(+)` = bên được phép thiếu / cần NULL bổ sung.**
-
-Ví dụ:
-
-```sql
-A.id = B.id(+)
-```
-
-→ B được phép không tồn tại
-
-→ giữ A
-
-→
-
-```sql
-A LEFT JOIN B
-```
-
-Ngược lại:
-
-```sql
-A.id(+) = B.id
-```
-
-→ A được phép thiếu
-
-→ giữ B
-
-→
-
-```sql
-A RIGHT JOIN B
-```
+   -- ✅ ĐÚNG CHUẨN OUTER JOIN (Vẫn giữ nhân viên không có phòng ban)
+   SELECT e.name, d.dept_name
+   FROM employees e, departments d
+   WHERE e.dept_id = d.dept_id(+)
+     AND d.loc(+) = 'SEOUL';
+   ```
 
 ---
 
@@ -1516,3 +1441,200 @@ A.id = B.id(+)
 ```
 
 Nếu trả lời được 5 câu này thì INNER/OUTER JOIN gần như không còn khó nữa.
+
+---
+
+## 26. Semi-Join (세미 조인) vs Anti-Join (안티 조인)
+
+Trong tối ưu hóa truy vấn và đề thi SQLD, hai dạng join logic này xuất hiện rất nhiều dưới hình thức toán tử `EXISTS` và `IN`.
+
+### 26.1 Semi-Join (세미 조인)
+
+**KR:** 세미 조인은 서브쿼리에 존재하는지만 확인하고, 메인 쿼리의 행을 중복 없이 한 번만 반환하는 조인이다.
+**VI:** Semi-Join kiểm tra sự **tồn tại** của dữ liệu ở bảng phụ; nếu có ít nhất 1 dòng tương ứng thì dòng của bảng chính được giữ lại và **không bao giờ bị nhân đôi số dòng**.
+
+Khác biệt cốt tử với INNER JOIN:
+- Nếu bảng `DEPARTMENTS` có 1 phòng ban nối với `EMPLOYEES` có 10 nhân viên (quan hệ 1 - N):
+  - Khi dùng `INNER JOIN`: Bảng phòng ban sẽ bị lặp lại thành 10 dòng kết quả.
+  - Khi dùng `Semi-Join` (`EXISTS` / `IN`): Mỗi phòng ban chỉ xuất hiện **đúng 1 lần** trong kết quả, dù nó có bao nhiêu nhân viên đi chăng nữa.
+
+```sql
+-- Semi-Join bằng EXISTS: Tìm các phòng ban có ít nhất 1 nhân viên
+SELECT d.dept_id, d.dept_name
+FROM departments d
+WHERE EXISTS (
+    SELECT 1
+    FROM employees e
+    WHERE e.dept_id = d.dept_id
+);
+```
+
+### 26.2 Anti-Join (안티 조인)
+
+**KR:** 안티 조인은 서브쿼리의 조건에 만족하지 않는 행만 메인 쿼리에서 추출하는 조인이다.
+**VI:** Anti-Join lấy các dòng từ bảng chính mà **không có bất kỳ bản ghi khớp nào** trong bảng phụ.
+
+```sql
+-- Anti-Join bằng NOT EXISTS: Tìm các phòng ban chưa có nhân viên nào
+SELECT d.dept_id, d.dept_name
+FROM departments d
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM employees e
+    WHERE e.dept_id = d.dept_id
+);
+```
+
+---
+
+## 27. Bảng ma trận so sánh ANSI JOIN vs Oracle Old-Style vs SQL Server
+
+| Tính năng / Loại JOIN | Chuẩn ANSI SQL (SQL:1999) | Oracle Truyền thống (Old-Style) | Microsoft SQL Server |
+| :--- | :--- | :--- | :--- |
+| **INNER JOIN** | `A INNER JOIN B ON A.id = B.id` | `FROM A, B WHERE A.id = B.id` | Hỗ trợ chuẩn ANSI và kiểu cũ |
+| **LEFT OUTER JOIN** | `A LEFT JOIN B ON A.id = B.id` | `WHERE A.id = B.id(+)` | `A LEFT JOIN B ON A.id = B.id` (Không hỗ trợ `(+)`) |
+| **RIGHT OUTER JOIN** | `A RIGHT JOIN B ON A.id = B.id` | `WHERE A.id(+) = B.id` | `A RIGHT JOIN B ON A.id = B.id` |
+| **FULL OUTER JOIN** | `A FULL OUTER JOIN B ON A.id = B.id` | **KHÔNG HỖ TRỢ** bằng `(+)` (Phải dùng UNION giữa LEFT và RIGHT) | `A FULL OUTER JOIN B ON A.id = B.id` |
+| **CROSS JOIN** | `A CROSS JOIN B` | `FROM A, B` (Không có điều kiện WHERE) | Hỗ trợ cả hai cú pháp |
+| **NATURAL JOIN** | `A NATURAL JOIN B` | Hỗ trợ chuẩn ANSI | **KHÔNG HỖ TRỢ** từ khóa `NATURAL JOIN` |
+| **Mệnh đề USING** | `JOIN B USING (col_name)` | Hỗ trợ chuẩn ANSI | **KHÔNG HỖ TRỢ** mệnh đề `USING` |
+| **Điều kiện Non-EQUI** | `ON (A.val BETWEEN B.low AND B.high)` | `WHERE A.val BETWEEN B.low AND B.high` | Hỗ trợ tương đương ANSI |
+
+---
+
+## 28. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+1. **Bẫy tiền tố bảng (Table Qualifier) trong NATURAL JOIN:**
+   - Cấm dùng: `SELECT e.dept_id FROM emp e NATURAL JOIN dept d` → Lỗi `ORA-25155`.
+   - Phải viết: `SELECT dept_id ...`.
+2. **Bẫy tiền tố bảng trong mệnh đề USING:**
+   - Cấm dùng: `SELECT e.dept_id FROM emp e JOIN dept d USING (dept_id)` → Lỗi `ORA-25154`.
+   - Mệnh đề `USING` bắt buộc phải có dấu ngoặc: `USING (dept_id)`.
+3. **Bẫy 4 Cấm của ký hiệu `(+)` trong Oracle:**
+   - Cấm đặt `(+)` ở cả 2 vế của phép so sánh (Không tạo được FULL OUTER JOIN).
+   - Cấm dùng `(+)` kết hợp với toán tử `OR` hoặc `IN` (`ORA-01719`).
+   - Mọi điều kiện lọc cột của bảng outer-joined trong `WHERE` đều bắt buộc phải có `(+)`, nếu không Outer Join sẽ suy thoái thành Inner Join.
+4. **Bẫy số dòng của CROSS JOIN (Cartesian Product):**
+   - Bảng A có N dòng, bảng B có M dòng. Kết quả CROSS JOIN luôn có đúng `N × M` dòng.
+   - Quên điều kiện JOIN trong cú pháp Oracle cũ (`FROM A, B;`) sẽ vô tình tạo ra CROSS JOIN.
+5. **Bẫy vị trí điều kiện lọc: ON vs WHERE trong LEFT OUTER JOIN:**
+   - Điều kiện đặt trong `ON`: Lọc các dòng của bảng phụ trước khi ghép; dòng bảng chính không match vẫn được giữ lại (bảng phụ điền NULL).
+   - Điều kiện đặt trong `WHERE`: Lọc trên tập kết quả sau khi ghép; các dòng bảng chính có giá trị NULL ở bảng phụ sẽ bị loại bỏ hoàn toàn, biến câu lệnh thành INNER JOIN.
+
+---
+
+## 29. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Độ khó: Trung bình — Bẫy cú pháp NATURAL JOIN)
+Cho hai bảng `EMP` (chứa các cột: `EMPNO`, `ENAME`, `DEPTNO`) và `DEPT` (chứa các cột: `DEPTNO`, `DNAME`). Câu lệnh SQL nào dưới đây sẽ gây lỗi biên dịch khi thực thi trên Oracle Database?
+
+A.
+```sql
+SELECT EMPNO, ENAME, DEPTNO, DNAME
+FROM EMP NATURAL JOIN DEPT;
+```
+B.
+```sql
+SELECT E.EMPNO, E.ENAME, DEPTNO, D.DNAME
+FROM EMP E NATURAL JOIN DEPT D;
+```
+C.
+```sql
+SELECT E.EMPNO, E.ENAME, E.DEPTNO, D.DNAME
+FROM EMP E NATURAL JOIN DEPT D;
+```
+D.
+```sql
+SELECT E.EMPNO, E.ENAME, D.DNAME
+FROM EMP E JOIN DEPT D USING (DEPTNO);
+```
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- **Đáp án C là câu lệnh gây lỗi:** Trong `NATURAL JOIN`, cột dùng làm điều kiện kết nối (`DEPTNO`) trở thành thuộc tính chung, cấm tuyệt đối không được có tiền tố tên bảng hoặc alias (`E.DEPTNO` hay `D.DEPTNO`). Khi thực thi sẽ phát sinh lỗi `ORA-25155: column used in NATURAL JOIN cannot have qualifier`.
+- **Đáp án A hợp lệ:** Không dùng alias cho bất kỳ cột nào, `DEPTNO` đứng độc lập.
+- **Đáp án B hợp lệ:** Các cột riêng biệt của từng bảng (`EMPNO`, `ENAME`, `DNAME`) được phép có alias, riêng cột chung `DEPTNO` không có alias.
+- **Đáp án D hợp lệ:** Cú pháp `USING (DEPTNO)` chuẩn xác, cột trong `SELECT` không có qualifier trên `DEPTNO`.
+
+---
+
+### Câu 2 (Độ khó: Khá — Cạm bẫy Oracle `(+)` và suy thoái Outer Join)
+Cho bảng `TB_CUSTOMER` (10 khách hàng) và `TB_ORDER` (5 đơn hàng, trong đó chỉ có 4 khách hàng có đơn hàng). Xét câu lệnh SQL sau trên Oracle:
+
+```sql
+SELECT C.CUST_ID, C.CUST_NAME, O.ORDER_ID, O.AMOUNT
+FROM TB_CUSTOMER C, TB_ORDER O
+WHERE C.CUST_ID = O.CUST_ID(+)
+  AND O.AMOUNT > 100000;
+```
+
+Kết quả của câu truy vấn trên sẽ như thế nào?
+
+A. Trả về toàn bộ 10 khách hàng; các khách hàng không có đơn hàng hoặc có đơn hàng `<= 100000` sẽ hiển thị `ORDER_ID` và `AMOUNT` là NULL.
+B. Chỉ trả về các khách hàng có đơn hàng với số tiền `AMOUNT > 100000` (các khách hàng chưa từng mua hàng bị loại bỏ hoàn toàn).
+C. Trả về lỗi thực thi vì không thể dùng điều kiện so sánh `>` trên bảng có dấu `(+)`.
+D. Trả về đúng 10 dòng dữ liệu nhưng cột `AMOUNT` được tính theo hàm gộp.
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- Mặc dù điều kiện join `C.CUST_ID = O.CUST_ID(+)` là LEFT OUTER JOIN (giữ toàn bộ khách hàng), nhưng điều kiện lọc `AND O.AMOUNT > 100000` lại **thiếu dấu `(+)`** (`O.AMOUNT(+) > 100000`).
+- Đối với những khách hàng không có đơn hàng, giá trị `O.AMOUNT` sinh ra từ Outer Join là `NULL`.
+- Khi đưa vào mệnh đề `WHERE`, biểu thức `NULL > 100000` trả về giá trị logic `UNKNOWN` (coi như FALSE), khiến tất cả các dòng khách hàng này bị loại bỏ khỏi kết quả cuối cùng.
+- Hiện tượng này gọi là **suy thoái Outer Join thành Inner Join (Outer Join Degeneration)**. Do đó chỉ có khách hàng thỏa mãn `AMOUNT > 100000` mới được hiển thị.
+
+---
+
+### Câu 3 (Độ khó: Khá — Phân biệt Semi-Join vs Inner Join)
+Phát biểu nào sau đây là **ĐÚNG NHẤT** khi so sánh giữa `INNER JOIN` và `SEMI-JOIN` (sử dụng toán tử `EXISTS`)?
+
+A. `SEMI-JOIN` luôn trả về nhiều dòng hơn hoặc bằng số dòng của `INNER JOIN` đối với cùng một tập dữ liệu.
+B. Nếu bảng bên phải có quan hệ 1 - Nhiều (1:N) với bảng bên trái, `INNER JOIN` sẽ làm nhân bản các dòng của bảng bên trái, trong khi `SEMI-JOIN` chỉ trả về mỗi dòng của bảng bên trái tối đa một lần.
+C. `SEMI-JOIN` cho phép truy xuất tất cả các cột của bảng phụ trong mệnh đề `SELECT` của câu truy vấn chính.
+D. Trong SQL chuẩn ANSI, toán tử `CROSS JOIN` chính là một dạng đặc biệt của `SEMI-JOIN`.
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- **Đáp án B chính xác tuyệt đối:** Khi bảng phụ (bên phải) có nhiều bản ghi thỏa mãn điều kiện join với 1 bản ghi của bảng chính (bên trái), `INNER JOIN` sẽ ghép cặp tạo thành nhiều dòng kết quả (nhân đôi/nhân ba số dòng). Ngược lại, `SEMI-JOIN` chỉ quan tâm đến việc "có tồn tại ít nhất 1 dòng hay không", ngay khi tìm thấy nó sẽ dừng quét cho bản ghi đó, bảo đảm mỗi dòng bảng chính chỉ xuất hiện duy nhất 1 lần.
+- **Đáp án A sai:** Semi-join trả về số dòng ít hơn hoặc bằng Inner Join.
+- **Đáp án C sai:** Mệnh đề `SELECT` chính không thể nhìn thấy hoặc truy xuất các cột từ bảng nằm bên trong subquery `EXISTS`.
+- **Đáp án D sai:** `CROSS JOIN` là tích Đề-các (Cartesian product), hoàn toàn không liên quan đến cơ chế Semi-join.
+
+---
+
+### Câu 4 (Độ khó: Nâng cao — Các quy tắc hạn chế của toán tử `(+)`)
+Trong hệ quản trị cơ sở dữ liệu Oracle, câu lệnh SQL nào dưới đây là **HỢP LỆ** và thực thi thành công không bị báo lỗi?
+
+A.
+```sql
+SELECT A.ID, B.VAL
+FROM TAB_A A, TAB_B B
+WHERE A.ID(+) = B.ID(+);
+```
+B.
+```sql
+SELECT A.ID, B.VAL
+FROM TAB_A A, TAB_B B
+WHERE A.ID = B.ID(+)
+   OR A.STATUS = 'ACTIVE';
+```
+C.
+```sql
+SELECT A.ID, B.VAL
+FROM TAB_A A, TAB_B B
+WHERE A.ID = B.ID(+)
+  AND B.CODE(+) = 'KR';
+```
+D.
+```sql
+SELECT A.ID, B.VAL
+FROM TAB_A A, TAB_B B
+WHERE A.ID = B.ID(+)
+  AND B.CODE(+) IN ('KR', 'US', 'JP');
+```
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- **Đáp án C HỢP LỆ:** Cú pháp LEFT OUTER JOIN chuẩn của Oracle cũ, điều kiện lọc bổ sung trên bảng phụ có kèm dấu `(+)` chính xác (`B.CODE(+) = 'KR'`).
+- **Đáp án A SAI:** Lỗi `ORA-01468: a predicate may reference only one outer-joined table` vì cấm đặt dấu `(+)` ở cả hai vế (không thể mô phỏng FULL OUTER JOIN theo cách này).
+- **Đáp án B SAI:** Lỗi `ORA-01719: outer join operator (+) not allowed in operand of OR or IN` vì Oracle cấm kết hợp điều kiện có dấu `(+)` với toán tử `OR`.
+- **Đáp án D SAI:** Lỗi `ORA-01719: outer join operator (+) not allowed in operand of OR or IN` vì Oracle cấm dùng dấu `(+)` đi kèm với toán tử `IN`. Muốn lọc nhiều giá trị trên bảng outer-joined, phải dùng cú pháp ANSI JOIN (`ON A.ID = B.ID AND B.CODE IN ('KR', 'US', 'JP')`).

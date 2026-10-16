@@ -588,14 +588,158 @@ Phi chuẩn hóa là kỹ thuật mô hình hóa có chủ đích chấp nhận 
 
 ---
 
-## KẾT LUẬN GHI NHỚ CUỐI BÀI
+## 15. Hiệu năng của Chuẩn hóa: Tác động hai chiều đối với truy vấn SELECT
+
+Một trong những sai lầm phổ biến nhất của người học SQLD là mặc định rằng: *"Chuẩn hóa luôn luôn làm suy giảm tốc độ của câu lệnh truy vấn SELECT do phải thực hiện nhiều phép JOIN"*.
+
+Thực tế theo giáo trình K-Data SQLD, **Chuẩn hóa tác động hai chiều lên hiệu năng truy vấn SELECT**:
+
+```
+                       HIỆU NĂNG CỦA CHUẨN HÓA (정규화의 성능)
+                                  │
+         ┌────────────────────────┴────────────────────────┐
+         ↓                                                 ↓
+Ghi dữ liệu (DML)                                Đọc dữ liệu (SELECT)
+- INSERT / UPDATE / DELETE nhanh hơn              - Hai mặt tùy thuộc vào điều kiện truy vấn:
+- Triệt tiêu dữ liệu trùng lặp                   + GIẢM HIỆU NĂNG: Khi cần JOIN nhiều bảng
+- Triệt tiêu bất thường Anomaly                  + TĂNG HIỆU NĂNG: Khi truy vấn trên bảng hẹp
+```
+
+### 15.1. Trường hợp Chuẩn hóa làm GIẢM hiệu năng SELECT
+- Khi một báo cáo nghiệp vụ đòi hỏi hiển thị đồng thời thông tin của nhiều thực thể (ví dụ: Mã sinh viên, Tên sinh viên, Tên môn học, Điểm số, Tên khoa, Tên giảng viên).
+- Trước khi chuẩn hóa: Mọi dữ liệu nằm chung trong 1 bảng rộng duy nhất $\rightarrow$ Truy vấn trực tiếp không cần JOIN.
+- Sau khi chuẩn hóa: Bảng bị phân tách thành `SINH_VIEN`, `MON_HOC`, `DANG_KY`, `KHOA`, `GIANG_VIEN` $\rightarrow$ Câu lệnh SELECT buộc phải thực hiện 4-5 phép JOIN liên tiếp, tiêu tốn tài nguyên CPU và bộ nhớ đệm.
+
+### 15.2. Trường hợp Chuẩn hóa làm TĂNG hiệu năng SELECT (Bẫy thi cốt lõi!)
+Xét tình huống nghiệp vụ: Hệ thống trường đại học cần tra cứu danh sách *"Sinh viên năm thứ 3"*.
+
+- **Trước khi chuẩn hóa (Bảng gộp chung `DANG_KY_HOC`):**
+  - Giả sử trường có 10,000 sinh viên, mỗi sinh viên đăng ký trung bình 50 môn học trong toàn khóa $\rightarrow$ Bảng gộp chứa tới **500,000 bản ghi**.
+  - Khi chạy câu lệnh `SELECT DISTINCT HOC_VIEN_ID, HO_TEN FROM DANG_KY_HOC WHERE NAM_HOC = 3;`, DBMS buộc phải thực hiện Full Table Scan quét qua toàn bộ 500,000 dòng dữ liệu kèm chi phí lọc `DISTINCT` trên bộ nhớ.
+- **Sau khi chuẩn hóa (Tách thành `SINH_VIEN` và `KET_QUA_HOC`):**
+  - Bảng `SINH_VIEN` chỉ lưu trữ đúng thông tin cá nhân của 10,000 sinh viên (dung lượng nhỏ gọn, kích thước bản ghi hẹp).
+  - Câu lệnh `SELECT HOC_VIEN_ID, HO_TEN FROM SINH_VIEN WHERE NAM_HOC = 3;` **chỉ quét qua bảng 10,000 dòng**, nạp được nhiều bản ghi hơn vào mỗi khối đĩa I/O (Buffer Block), tốc độ thực thi nhanh hơn gấp hàng chục lần mà không cần thao tác lọc trùng lặp!
+
+---
+
+## 16. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+### Cạm bẫy 1: Khẳng định "Chuẩn hóa chỉ làm giảm hiệu năng của câu lệnh SELECT"
+- **Bẫy đề thi:** Đề bài đưa ra nhận định: *"Chuẩn hóa dữ liệu chỉ mang lại lợi ích cho các thao tác INSERT, UPDATE, DELETE và luôn làm giảm tốc độ của tất cả các câu lệnh SELECT"*.
+- **Cách phá bẫy:** SAI. Như đã phân tích ở mục 15, khi câu lệnh SELECT có điều kiện lọc trên một tập con thuộc tính đã được tách thành bảng độc lập, kích thước bảng nhỏ hơn rất nhiều so với bảng gộp ban đầu, giúp giảm số khối I/O đọc từ đĩa và tăng tốc độ truy vấn đáng kể.
+
+### Cạm bẫy 2: Đánh đồng "Phi chuẩn hóa (반정규화)" với "Chưa chuẩn hóa (비정규화)"
+- **Bẫy đề thi:** Coi việc không áp dụng chuẩn hóa ngay từ đầu và phi chuẩn hóa là cùng một bản chất.
+- **Cách phá bẫy:**
+  - **비정규화 (Unnormalized / Chưa chuẩn hóa):** Mô hình dữ liệu thô ban đầu, chưa từng được xử lý để triệt tiêu các phụ thuộc hàm và trùng lặp.
+  - **반정규화 (Denormalization / Phi chuẩn hóa):** Là kỹ thuật có chủ đích điều chỉnh một mô hình đã hoàn thành chuẩn hóa một cách bài bản, nhằm đánh đổi một phần tính toàn vẹn dữ liệu để tối ưu tốc độ đọc và giảm tải số lần JOIN khi hệ thống chịu tải nặng.
+
+### Cạm bẫy 3: Nhảy cóc thực hiện Phi chuẩn hóa ngay khi gặp nghẽn hiệu năng
+- **Bẫy đề thi:** Câu hỏi tình huống: *"Khi hệ thống gặp vấn đề chậm trễ do truy vấn JOIN nhiều bảng, hành động đầu tiên cần làm là gộp bảng hoặc thêm cột trùng lặp"*.
+- **Cách phá bẫy:** SAI. Quy trình chuẩn giải quyết bài toán hiệu năng theo giáo trình K-Data:
+  1. Tối ưu lại câu lệnh SQL (SQL Tuning).
+  2. Tạo hoặc cấu trúc lại chỉ mục Index (Index Tuning).
+  3. Cân nhắc gom cụm dữ liệu (Clustering) hoặc sử dụng View / Materialized View.
+  4. Chỉ khi tất cả các giải pháp kỹ thuật trên không đáp ứng được SLA hiệu năng thì mới tiến hành Phi chuẩn hóa (반정규화).
+
+### Cạm bẫy 4: Nhầm lẫn điều kiện xảy ra vi phạm 2NF và 3NF
+- **Bẫy đề thi:** Đưa ra một bảng có Khóa chính đơn (Single Column Primary Key) và hỏi xem bảng đó có thể vi phạm Dạng chuẩn 2 (2NF) hay không.
+- **Cách phá bẫy:**
+  - Vi phạm 2NF là vi phạm **Phụ thuộc hàm bộ phận (부분함수종속)**, tức là một thuộc tính thường chỉ phụ thuộc vào một phần của khóa chính.
+  - Điều này **CHỈ CÓ THỂ XẢY RA KHI KHÓA CHÍNH LÀ KHÓA PHỨC HỢP (Composite PK gồm từ 2 cột trở lên)**!
+  - Nếu một bảng có Khóa chính gồm 1 cột duy nhất, bảng đó **tự động thỏa mãn Dạng chuẩn 2 (2NF)** và chỉ cần kiểm tra xem có vi phạm 3NF (phụ thuộc bắc cầu) hay không.
+
+### Cạm bẫy 5: Nhận diện chuẩn BCNF (Boyce-Codd Normal Form)
+- **Bẫy đề thi:** Khẳng định một bảng đã đạt 3NF thì chắc chắn đã đạt BCNF.
+- **Cách phá bẫy:** SAI. BCNF là phiên bản thắt chặt của 3NF. BCNF đòi hỏi **mọi thuộc tính quyết định (Determinant - vế trái của phụ thuộc hàm $X \rightarrow Y$) đều phải là Khóa ứng viên (Candidate Key)**. Nếu một thuộc tính thường hoặc một phần của khóa phụ lại đóng vai trò quyết định một thuộc tính khác nằm trong khóa chính thì bảng đó đạt 3NF nhưng vi phạm BCNF.
+
+---
+
+## 17. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Ba dị thường dữ liệu do chưa chuẩn hóa)
+**Đề bài:** Bảng `COURSE_ENROLLMENT (과목코드, 과목명, 학번, 학생명, 연락처)` có Khóa chính phức hợp là `(과목코드, 학번)`. Nhận định nào sau đây là **ĐÚNG** khi phân tích các hiện tượng dị thường dữ liệu (데이터 이상) của bảng trên?
+
+A. Khi xóa thông tin đăng ký môn học của một sinh viên duy nhất học môn đó, toàn bộ thông tin về tên môn học cũng bị xóa mất — Đây là Dị thường cập nhật (갱신 이상).
+B. Muốn thêm một sinh viên mới vừa nhập học vào cơ sở dữ liệu nhưng sinh viên đó chưa đăng ký môn học nào thì không thể thêm được do `과목코드` thuộc Khóa chính không thể nhận giá trị NULL — Đây là Dị thường chèn (삽입 이상).
+C. Khi sinh viên thay đổi số điện thoại, việc chỉ cập nhật ở một số dòng mà bỏ sót các dòng khác dẫn đến mâu thuẫn dữ liệu — Đây là Dị thường xóa (삭제 이상).
+D. Quá trình chuẩn hóa dữ liệu chỉ nhằm mục đích tiết kiệm tối đa dung lượng ổ cứng chứ không có tác dụng loại bỏ các hiện tượng dị thường trên.
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Đây là định nghĩa chuẩn xác về Dị thường chèn (`삽입 이상` - Insertion Anomaly). Vì khóa chính là `(과목코드, 학번)` nên theo quy tắc toàn vẹn thực thể (Entity Integrity), không một cột nào trong PK được phép nhận NULL. Do đó, một sinh viên mới chưa học môn nào sẽ không thể được lưu trữ độc lập vào bảng này.
+- **Phương án A sai:** Hiện tượng vô tình làm mất thông tin môn học khi xóa bản ghi đăng ký là Dị thường xóa (`삭제 이상` - Deletion Anomaly), không phải 갱신 이상.
+- **Phương án C sai:** Hiện tượng mâu thuẫn dữ liệu khi sửa đổi không đồng bộ là Dị thường cập nhật (`갱신 이상` - Update Anomaly), không phải 삭제 이상.
+- **Phương án D sai:** Mục tiêu cốt lõi của chuẩn hóa là triệt tiêu dị thường (Anomalies) và đảm bảo tính nhất quán dữ liệu, tiết kiệm bộ nhớ chỉ là hệ quả phụ.
+
+---
+
+### Câu 2 (Quy trình xác định các dạng chuẩn 1NF $\sim$ BCNF)
+**Đề bài:** Cho bảng `STUDENT_ACADEMIC (학번, 과목코드, 성적, 지도교수, 지도교수연구실)` với các phụ thuộc hàm sau:
+1. `(학번, 과목코드) → 성적`
+2. `학번 → 지도교수`
+3. `지도교수 → 지도교수연구실`
+
+Biết rằng Khóa chính của bảng là `(학번, 과목코드)`. Bảng trên đang dừng lại ở dạng chuẩn nào và vi phạm dạng chuẩn nào tiếp theo?
+
+A. Thỏa mãn 1NF, vi phạm 2NF
+B. Thỏa mãn 2NF, vi phạm 3NF
+C. Thỏa mãn 3NF, vi phạm BCNF
+D. Đã đạt dạng chuẩn BCNF
+
+**Đáp án đúng:** **A**
+
+**Giải thích chi tiết:**
+- **Phương án A đúng:**
+  - Bảng đã có các giá trị nguyên tử đơn nhất nên thỏa mãn 1NF.
+  - Tuy nhiên, Khóa chính là `(학번, 과목코드)`, mà thuộc tính `지도교수` chỉ phụ thuộc vào một phần của khóa chính là `학번` (Phụ thuộc hàm: `학번 → 지도교수`).
+  - Đây chính là hiện tượng **Phụ thuộc hàm bộ phận (부분함수종속)**. Do đó, bảng vi phạm Dạng chuẩn 2 (2NF). Để đạt 2NF, ta phải tách thuộc tính `지도교수` ra khỏi bảng này.
+
+---
+
+### Câu 3 (Mối quan hệ giữa Chuẩn hóa và Hiệu năng truy vấn)
+**Đề bài:** Xét các phát biểu sau đây về mối tương quan giữa Chuẩn hóa dữ liệu (정규화) và Hiệu năng hệ thống (성능), phát biểu nào sau đây là **CHÍNH XÁC NHẤT**?
+
+A. Chuẩn hóa dữ liệu luôn luôn làm giảm tốc độ thực thi của mọi câu lệnh SQL trong cơ sở dữ liệu do phát sinh chi phí phân rã bảng.
+B. Chuẩn hóa giúp tăng tốc độ của các thao tác INSERT, UPDATE, DELETE nhưng chắc chắn làm chậm toàn bộ các câu lệnh SELECT trong mọi hoàn cảnh.
+C. Chuẩn hóa có thể giúp câu lệnh SELECT thực thi nhanh hơn trong trường hợp truy vấn lọc dữ liệu trên một bảng con có kích thước nhỏ gọn sau khi đã được phân tách.
+D. Chuẩn hóa dữ liệu chỉ mang ý nghĩa lý thuyết trong thiết kế học thuật và không cần áp dụng trong các hệ thống cơ sở dữ liệu doanh nghiệp lớn.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C đúng:** Đây là phát biểu chuẩn xác theo giáo trình K-Data SQLD. Sau khi chuẩn hóa, bảng dữ liệu lớn ban đầu được tách thành các bảng chuyên biệt nhỏ hơn. Khi người dùng thực hiện câu lệnh SELECT với điều kiện lọc trên một thực thể cụ thể, DBMS chỉ cần quét trên bảng con nhỏ gọn đó thay vì quét toàn bộ bảng khổng lồ chưa chuẩn hóa, giúp giảm số khối I/O đĩa và tăng tốc độ xử lý rõ rệt.
+- **Phương án A và B sai:** Vì khẳng định mang tính tuyệt đối ("luôn luôn làm giảm", "chắc chắn làm chậm trong mọi hoàn cảnh").
+- **Phương án D sai:** Chuẩn hóa là nền tảng sống còn của mô hình hóa dữ liệu quan hệ chuyên nghiệp.
+
+---
+
+### Câu 4 (Chiến lược Phi chuẩn hóa & Thứ tự ưu tiên xử lý)
+**Đề bài:** Khi một hệ thống cơ sở dữ liệu gặp vấn đề suy giảm hiệu năng do phải thực hiện nhiều phép JOIN phức tạp giữa các bảng đã chuẩn hóa, quy trình xử lý nào sau đây là **ĐÚNG ĐẮN NHẤT** trước khi quyết định thực hiện Phi chuẩn hóa (반정규화)?
+
+A. Lập tức hợp nhất toàn bộ các bảng con vào bảng cha để giảm thiểu số lượng bảng trong hệ thống.
+B. Chuyển đổi toàn bộ quan hệ xác định (식별자 관계) thành quan hệ không xác định (비식별자 관계).
+C. Tiến hành rà soát tối ưu hóa câu lệnh SQL, bổ sung chỉ mục Index hoặc cân nhắc sử dụng View trước khi quyết định sửa đổi cấu trúc bảng bằng phi chuẩn hóa.
+D. Xóa bỏ toàn bộ các ràng buộc khóa ngoại (Foreign Key) và khóa chính (Primary Key) để tăng tốc độ ghi dữ liệu.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C đúng:** Theo quy tắc chuẩn hóa hiệu năng của K-Data: Phi chuẩn hóa là giải pháp kỹ thuật can thiệp vào cấu trúc bảng và chấp nhận đánh đổi tính toàn vẹn dữ liệu. Vì vậy, trước khi thực hiện phi chuẩn hóa, nhà thiết kế bắt buộc phải rà soát các giải pháp thay thế ít rủi ro hơn: Tối ưu lại câu lệnh SQL, bổ sung chỉ mục Index thích hợp, hoặc ứng dụng Clustering / Materialized View.
+- **Phương án A sai:** Hợp nhất vội vã làm gia tăng dữ liệu trùng lặp và gây lỗi dị thường.
+- **Phương án B và D sai:** Xóa bỏ khóa hoặc đổi quan hệ tùy tiện phá hủy tính toàn vẹn dữ liệu và không phải là giải pháp chuẩn tắc.
+
+---
+
+## 18. KẾT LUẬN GHI NHỚ CUỐI BÀI
 
 ### 1. Chuỗi khẩu quyết Chuẩn hóa kinh điển
 ```
 도 → 부 → 이 → 결 → 다 → 조
 (Do → Bu → I → Gyeol → Da → Jo)
 ```
-- **도 (Domain / 1NF):** Tất cả các thuộc tính phải mang giá trị nguyên tử (원자값).
+- **도 (Domain / 1NF):** Tất cả các thuộc tính phải mang giá trị nguyên tử đơn nhất (원자값).
 - **부 (Partial / 2NF):** Loại bỏ phụ thuộc hàm bộ phận (부분 함수 종속 제거); toàn bộ thuộc tính không khóa phải phụ thuộc vào toàn bộ PK.
 - **이 (Transitive / 3NF):** Loại bỏ phụ thuộc hàm bắc cầu (이행 함수 종속 제거); $X \rightarrow Y$ và $Y \rightarrow Z$ thì tách $Z$ thành bảng riêng.
 - **결 (Determinant / BCNF):** Mọi thuộc tính quyết định (Determinant) đều phải là Khóa ứng viên (후보키).
@@ -606,16 +750,16 @@ Phi chuẩn hóa là kỹ thuật mô hình hóa có chủ đích chấp nhận 
 
 | Tiêu chí | Chuẩn hóa (정규화) | Phi chuẩn hóa (반정규화) |
 | :--- | :--- | :--- |
-| **Mục tiêu chính** | Loại bỏ trùng lặp, bảo đảm tính toàn vẹn dữ liệu. | Tăng tốc độ truy vấn đọc (SELECT), giảm số lần JOIN. |
-| **Hiệu năng SELECT** | Có thể giảm khi phải JOIN qua quá nhiều bảng. | Tăng tốc rõ rệt do dữ liệu đã được gộp hoặc tính sẵn. |
-| **Hiệu năng INSERT/UPDATE/DELETE** | Nhanh và nhất quán do mỗi dữ liệu chỉ lưu một nơi. | Chậm hơn do phải cập nhật đồng thời nhiều cột/bảng trùng lặp. |
-| **Thời điểm thực hiện** | Bắt buộc thực hiện ở giai đoạn thiết kế logic. | Chỉ thực hiện có chọn lọc khi kiểm thử hiệu năng gặp nghẽn. |
+| **Mục tiêu chính** | Loại bỏ trùng lặp, triệt tiêu bất thường (Anomaly), bảo đảm tính toàn vẹn. | Tăng tốc độ truy vấn đọc (SELECT), giảm số lần JOIN khi chịu tải lớn. |
+| **Hiệu năng SELECT** | Tăng tốc khi quét bảng hẹp; giảm tốc khi phải JOIN qua quá nhiều bảng. | Tăng tốc rõ rệt do dữ liệu đã được gộp hoặc tính sẵn giá trị. |
+| **Hiệu năng DML (Ghi)** | Nhanh và nhất quán do mỗi dữ liệu chỉ lưu một nơi duy nhất. | Chậm hơn do phải cập nhật đồng thời nhiều cột/bảng trùng lặp. |
+| **Thời điểm thực hiện** | Bắt buộc thực hiện ở giai đoạn thiết kế logic (논리적 모델링). | Chỉ thực hiện có chọn lọc sau khi các giải pháp SQL/Index không đáp ứng. |
 
 ---
 
-## NỐI MẠCH SANG BÀI 04
+## 19. Nối mạch sang Bài 04: Quan hệ, Transaction, NULL và Identifier
 
 > **Mạch nối (Bridge):**
-> - **Từ đâu (Kiến thức nền):** Bài 03 đã hoàn thiện bức tranh tối ưu hóa mô hình dữ liệu: từ các bước chuẩn hóa triệt tiêu bất thường (1NF $\sim$ 5NF), kỹ thuật phi chuẩn hóa có kiểm soát đến phân vùng bảng Partitioning.
-> - **Đang giải quyết gì:** Trong quá trình vận hành cơ sở dữ liệu thực tế, các thao tác nghiệp vụ được nhóm thành các đơn vị giao dịch (Transaction) như thế nào? Giá trị NULL được đối xử ra sao trong các phép toán SQL và cách khóa ngoại lan truyền qua các mối quan hệ xác định vs không xác định?
-> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 04 — Quan hệ, Transaction, NULL và Identifier](./04-quan-he-transaction-null-va-identifier.md) để nắm vững các thuộc tính ACID của Transaction, bản chất 3 giá trị logic của NULL và sự lan truyền khóa nhận diện.
+> - **Từ đâu (Kiến thức nền):** Bài 03 đã hoàn thiện bức tranh tối ưu hóa mô hình dữ liệu: từ các bước chuẩn hóa triệt tiêu bất thường (1NF $\sim$ 5NF), phân tích hiệu năng hai chiều đến kỹ thuật phi chuẩn hóa có kiểm soát và phân vùng bảng Partitioning.
+> - **Đang giải quyết gì:** Trong quá trình vận hành cơ sở dữ liệu thực tế, các thao tác nghiệp vụ được nhóm thành các đơn vị giao dịch (Transaction) như thế nào? Giá trị NULL được đối xử ra sao trong các phép toán SQL và cách lựa chọn giữa Khóa tự nhiên (Natural Key) vs Khóa nhân tạo (Surrogate Key)?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 04 — Quan hệ, Transaction, NULL và Identifier](./04-quan-he-transaction-null-va-identifier.md) để nắm vững 4 đặc tính ACID của Transaction, bản chất 3 giá trị logic của NULL trong các hàm tổng hợp và chiến lược thiết kế bản chất định danh.

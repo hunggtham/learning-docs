@@ -275,6 +275,14 @@ Làm rõ là loại bỏ các quy tắc nghiệp vụ mơ hồ và định nghĩ
 
 Khi việc làm rõ được thực hiện, nhà phát triển và người dùng có thể hiểu cùng một quy tắc nghiệp vụ.
 
+#### Bảng đối chiếu 3 đặc trưng mô hình hóa & Cạm bẫy thuật ngữ đề thi
+
+| Đặc trưng chuẩn (ĐÚNG) | Ý nghĩa nghiệp vụ | Thuật ngữ gây nhiễu đề thi (SAI) | Lý do sai |
+| :--- | :--- | :--- | :--- |
+| **추상화 (Abstraction)** | Lược bỏ chi tiết vụn vặt, chỉ giữ lại bản chất cốt lõi | **구체화 (Concretization)** | Mô hình hóa không ghi lại toàn bộ chi tiết cụ thể của đời thực |
+| **단순화 (Simplification)** | Biểu diễn quy tắc phức tạp bằng ký pháp chuẩn hóa, dễ hiểu | **복잡화 (Complication)** | Mục tiêu mô hình là giảm độ phức tạp, không làm rắc rối thêm |
+| **명확화 (Clarity)** | Triệt tiêu sự mơ hồ, bảo đảm mọi người hiểu duy nhất 1 nghĩa | **일반화 (Generalization)** | Đề thi hay đưa 일반화 để đánh lừa vì nghe có vẻ hợp lý nhưng không thuộc 3 đặc trưng |
+
 ---
 
 ## 4. Các góc nhìn của mô hình hóa
@@ -719,6 +727,47 @@ Mô hình hóa vật lý tập trung vào Index và phương thức lưu trữ.
 
 ---
 
+## 8.1. Ba yếu tố cấu thành của mô hình hóa dữ liệu (데이터 모델링의 3대 요소)
+
+Mô hình hóa dữ liệu phân rã thế giới thực thành 3 yếu tố cấu thành cốt lõi:
+
+1. **Things (어떤 것 / 대상):** Đối tượng nghiệp vụ mà hệ thống cần quản lý (ví dụ: Sinh viên, Khách hàng, Sản phẩm).
+2. **Attributes (성격 / 특성):** Các tính chất, đặc điểm mô tả đối tượng đó (ví dụ: Tên, Mã số, Đơn giá).
+3. **Relationships (연관 / 관계):** Mối liên kết, tương tác qua lại giữa các đối tượng (ví dụ: Sinh viên "đăng ký" Môn học, Khách hàng "đặt" Đơn hàng).
+
+#### Bảng đối chiếu khái niệm Tập hợp (복수·집합 개념) vs Cá thể (개별·단수 개념)
+
+Đây là bảng kiến thức then chốt thường xuyên xuất hiện trong các câu hỏi phân loại của kỳ thi SQLD:
+
+| Yếu tố cấu thành | Khái niệm Tập hợp (복수/집합 개념) - Type/Class | Khái niệm Cá thể (개별/단수 개념) - Instance/Occurrence |
+| :--- | :--- | :--- |
+| **Đối tượng (Things)** | **엔터티 타입 (Entity Type)** hoặc **엔터티 (Entity)** | **엔터티 인스턴스 (Instance)** hoặc **어커런스 (Occurrence)** |
+| **Mối liên hệ (Relationships)** | **관계 (Relationship)** | **페어링 (Pairing)** |
+| **Đặc tính (Attributes)** | **속성 (Attribute)** | **속성값 (Attribute Value)** |
+
+> [!IMPORTANT]
+> **Điểm thi cốt lõi (핵심 출제 포인트):**
+> - **관계 (Relationship):** Là tập hợp của tất cả các mối liên hệ giữa các thực thể ở mức độ lớp (Class/Type).
+> - **페어링 (Pairing):** Là mối liên hệ cụ thể giữa một cá thể (Instance) này với một cá thể (Instance) khác.
+> - *Ví dụ:* "Khách hàng mua Hàng hóa" là **관계 (Relationship)**. "Khách hàng Nguyễn Văn A mua Điện thoại iPhone 16 lúc 10:00" là **페어링 (Pairing)**.
+
+---
+
+## 8.2. Sáu yếu tố của một mô hình dữ liệu tốt (좋은 데이터 모델의 요소)
+
+Theo giáo trình chuẩn SQLD (K-Data), một mô hình dữ liệu được đánh giá là xuất sắc khi đáp ứng đủ 6 tiêu chí:
+
+| Tiêu chí (Hàn / Việt) | Định nghĩa chuẩn K-Data | Hậu quả nếu vi phạm |
+| :--- | :--- | :--- |
+| **완전성 (Completeness / Tính toàn diện)** | Định nghĩa đầy đủ tất cả dữ liệu cần thiết để vận hành nghiệp vụ. | Hệ thống thiếu dữ liệu xử lý, nghiệp vụ bị tắc nghẽn hoặc sai lệch. |
+| **중복 배제 (Non-redundancy / Loại bỏ trùng lặp)** | Một sự thật chỉ được lưu duy nhất một lần trong toàn bộ CSDL (ngoại trừ Foreign Key). | Dẫn đến dị thường cập nhật (Update Anomaly), dữ liệu mâu thuẫn giữa các bảng. |
+| **업무 규칙 (Business Rules / Phản ánh quy tắc)** | Mọi ràng buộc nghiệp vụ (Not Null, Unique, Check, Cardinality) phải được mô hình hóa rõ ràng. | Dữ liệu rác lọt vào CSDL, người dùng vi phạm quy trình vận hành. |
+| **데이터 재사용 (Data Reusability / Khả năng tái sử dụng)** | Dữ liệu được tổ chức độc lập để nhiều ứng dụng và phòng ban có thể tái sử dụng lâu dài. | Dữ liệu bị cô lập theo từng ứng dụng (như thời File System), chi phí tích hợp cao. |
+| **의사소통 (Communication / Ngôn ngữ giao tiếp)** | Đóng vai trò là ngôn ngữ trao đổi chung, thống nhất giữa Business, Developer và DBA. | Lập trình viên hiểu sai nghiệp vụ, xây dựng tính năng không đúng yêu cầu. |
+| **통합성 (Integration / Tính tích hợp toàn cục)** | Cùng một dữ liệu chỉ được định nghĩa một lần trên quy mô toàn doanh nghiệp. | Phát sinh các bảng "đảo dữ liệu" (Data Silo) rời rạc, khó tổng hợp báo cáo. |
+
+---
+
 ## 9. Kiến trúc 3 tầng lược đồ ANSI/SPARC (ANSI/SPARC 3단계 스키마 구조)
 
 Để đảm bảo tính độc lập dữ liệu và che giấu sự phức tạp của việc lưu trữ vật lý đối với người dùng, tổ chức ANSI/X3/SPARC đã chuẩn hóa kiến trúc cơ sở dữ liệu thành **3 tầng lược đồ (3단계 스키마 구조)**:
@@ -814,26 +863,134 @@ Cấu trúc lưu trữ đĩa thay đổi
 
 ---
 
-## 12. Tóm tắt toàn bộ bài học
+## 12. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
 
-1. **Định nghĩa:** Mô hình hóa dữ liệu là quá trình trừu tượng hóa, đơn giản hóa và làm rõ thế giới thực phức tạp thành cấu trúc cơ sở dữ liệu.
-2. **3 Góc nhìn mô hình hóa:**
-   - Góc nhìn dữ liệu (**데이터 관점 - What**): Dữ liệu cần quản lý là gì? (ERD).
-   - Góc nhìn quy trình (**프로세스 관점 - How**): Dữ liệu được xử lý như thế nào? (DFD).
-   - Góc nhìn tương tác (**상호작용 관점**): Quy trình tác động làm thay đổi dữ liệu ra sao? (CRUD Matrix).
-3. **3 Cấp độ mô hình hóa:**
-   - **개념적 모델링 (Khái niệm):** Xác định các Entity cốt lõi và mối quan hệ nghiệp vụ, lập ERD cấp cao.
-   - **논리적 모델링 (Logic):** Xác định Bảng, Cột, Khóa chính/Khóa ngoại và thực hiện chuẩn hóa (Normalization).
-   - **물리적 모델링 (Vật lý):** Thiết lập kiểu dữ liệu thực tế, Index, Partition và phương thức lưu trữ tối ưu hiệu năng.
-4. **Kiến trúc 3 lược đồ ANSI/SPARC:**
-   - 외부 스키마 (External - Người dùng) $\leftrightarrow$ [논리적 사상] $\leftrightarrow$ 개념 스키마 (Conceptual - Tổng thể) $\leftrightarrow$ [물리적 사상] $\leftrightarrow$ 내부 스키마 (Internal - Vật lý).
-   - Bảo đảm 2 cấp độ độc lập: **논리적 독립성** (Độc lập logic) và **물리적 독립성** (Độc lập vật lý).
+Trong kỳ thi SQLD Môn 1, các câu hỏi về nền tảng mô hình hóa dữ liệu thường giăng bẫy thí sinh ở các khía cạnh sau:
+
+### Cạm bẫy 1: Hoán đổi thuật ngữ 3 đặc trưng mô hình hóa (추상화, 단순화, 명확화)
+- **Bẫy đề thi:** Đề bài đưa ra phát biểu như: *"Mô hình hóa dữ liệu là quá trình cụ thể hóa (구체화) và phức tạp hóa (복잡화) thế giới thực nhằm phản ánh toàn diện mọi chi tiết nghiệp vụ"* hoặc *"Đặc trưng của mô hình hóa là trừu tượng hóa, đơn giản hóa và tổng quát hóa (일반화)"*.
+- **Cách phá bẫy:** 3 đặc trưng duy nhất được chuẩn hóa bởi K-Data là **추상화 (Abstraction)**, **단순화 (Simplification)**, **명확화 (Clarity)**. Mọi từ ngữ khác như `구체화` (Cụ thể hóa - SAI), `복잡화` (Phức tạp hóa - SAI), `일반화` (Tổng quát hóa - SAI) đều là phương án gây nhiễu!
+
+### Cạm bẫy 2: Nhầm lẫn giữa "Mô hình khái niệm" và "Mô hình logic"
+- **Bẫy đề thi:** Khẳng định rằng *"Mô hình hóa khái niệm là giai đoạn áp dụng chuẩn hóa (Normalization) để triệt tiêu trùng lặp"* hoặc *"Mô hình hóa logic có mức độ trừu tượng cao nhất"*.
+- **Cách phá bẫy:**
+  - Mức độ trừu tượng cao nhất: **개념적 데이터 모델링 (Mô hình khái niệm)**.
+  - Giai đoạn thực hiện Chuẩn hóa (정규화), xác định chi tiết Khóa chính (PK), Khóa ngoại (FK), Thuộc tính (Attribute): **논리적 데이터 모델링 (Mô hình logic)**.
+  - Giai đoạn tính toán hiệu năng bộ nhớ đệm, Tablespace, Index vật lý: **물리적 데이터 모델링 (Mô hình vật lý)**.
+
+### Cạm bẫy 3: Đánh đồng giữa "관계 (Relationship)" và "페어링 (Pairing)"
+- **Bẫy đề thi:** Cho rằng *"Một quan hệ (Relationship) chỉ tồn tại giữa hai bản ghi (Instance) cụ thể"*.
+- **Cách phá bẫy:**
+  - Mối liên hệ giữa 2 bản ghi/cá thể cụ thể gọi là **페어링 (Pairing)**.
+  - **관계 (Relationship)** là khái niệm tập hợp, biểu diễn tập hợp của toàn bộ các 페어링 giữa hai Thực thể (Entity Type).
+
+### Cạm bẫy 4: Đảo chéo 2 cơ chế ánh xạ ANSI/SPARC và Tính độc lập dữ liệu
+- **Bẫy đề thi:** *"Ánh xạ 외부/개념 사상 đảm bảo tính độc lập dữ liệu vật lý (물리적 독립성)"* hoặc *"Khi thay đổi cấu trúc bảng trong 개념 스키마, người dùng bên ngoài buộc phải thay đổi theo"*.
+- **Cách phá bẫy:**
+  - **외부/개념 사상 (Logical Mapping):** Đảm bảo **논리적 데이터 독립성 (Độc lập logic)**. Thay đổi 개념 스키마 (thêm cột, thêm bảng) thì 외부 스키마 (View của người dùng) vẫn giữ nguyên không đổi.
+  - **개념/내부 사상 (Physical Mapping):** Đảm bảo **물리적 데이터 독립성 (Độc lập vật lý)**. Thay đổi 내부 스키마 (chia lại Partition, thêm Index, đổi loại đĩa SSD) thì 개념 스키마 và ứng dụng hoàn toàn không bị ảnh hưởng.
 
 ---
 
-## 13. Nối mạch sang Bài 02: ERD, Entity, Thuộc tính, Quan hệ và Định danh
+## 13. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Đặc trưng & Vấn đề cần tránh khi mô hình hóa)
+**Đề bài:** Trong các phát biểu dưới đây về đặc trưng và các vấn đề cần lưu ý khi thực hiện mô hình hóa dữ liệu (데이터 모델링), phát biểu nào sau đây là **SAI**?
+
+A. Mô hình hóa dữ liệu hướng tới 3 đặc trưng cốt lõi: trừu tượng hóa (추상화), đơn giản hóa (단순화) và làm rõ (명확화).
+B. Vấn đề không linh hoạt (비유연성) xảy ra khi định nghĩa dữ liệu bị gắn chặt với quy trình xử lý, khiến mô hình phải thay đổi liên tục khi có biến động nghiệp vụ nhỏ.
+C. Để nâng cao độ chính xác, mô hình hóa dữ liệu cần cụ thể hóa (구체화) tối đa tất cả các chi tiết phát sinh ngoài thế giới thực vào cơ sở dữ liệu.
+D. Vấn đề không nhất quán (비일관성) phát sinh khi mối quan hệ và các ràng buộc toàn vẹn giữa các dữ liệu không được định nghĩa một cách chặt chẽ.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C sai** (và là đáp án cần chọn): Bản chất của mô hình hóa là trừu tượng hóa (추상화 - loại bỏ chi tiết vụn vặt ngoài lề, chỉ giữ lại bản chất nghiệp vụ cần quản lý), chứ không phải là "cụ thể hóa" (구체화) mọi chi tiết đời thực. Đưa quá nhiều chi tiết thừa vào sẽ làm mô hình cồng kềnh, vi phạm nguyên tắc đơn giản hóa và tốn kém chi phí lưu trữ.
+- **Phương án A đúng:** 3 đặc trưng chuẩn K-Data là 추상화, 단순화, 명확화.
+- **Phương án B đúng:** Đây là định nghĩa chuẩn xác về tính không linh hoạt (비유연성 - Inflexibility).
+- **Phương án D đúng:** Đây là định nghĩa chuẩn xác về tính không nhất quán (비일관성 - Inconsistency).
+
+---
+
+### Câu 2 (Ba yếu tố cấu thành & Cặp khái niệm Tập hợp vs Đơn lẻ)
+**Đề bài:** Bảng nào dưới đây phân loại **CHÍNH XÁC** mối tương quan giữa khái niệm Tập hợp (복수·집합 개념) và khái niệm Cá thể (개별·단수 개념) trong 3 yếu tố cấu thành của mô hình dữ liệu?
+
+A. Đối tượng: 엔터티 (Entity) — 속성 (Attribute)
+B. Mối liên hệ: 페어링 (Pairing) — 관계 (Relationship)
+C. Mối liên hệ: 관계 (Relationship) — 페어링 (Pairing)
+D. Đặc tính: 속성값 (Attribute Value) — 속성 (Attribute)
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C đúng:** Khái niệm tập hợp (복수 개념) của yếu tố mối liên hệ là `관계 (Relationship)`, và khái niệm cá thể đơn lẻ (단수 개념) tương ứng là `페어링 (Pairing)`. Quan hệ là tập hợp của các pairing giữa các instance.
+- **Phương án A sai:** Cả hai đều không biểu diễn cặp tập hợp - cá thể của Đối tượng (Đối tượng phải là 엔터티 vs 인스턴스).
+- **Phương án B sai:** Bị đảo ngược thứ tự (페어링 là cá thể, 관계 mới là tập hợp).
+- **Phương án D sai:** Bị đảo ngược thứ tự (속성 là tập hợp, 속성값 mới là cá thể đơn lẻ).
+
+---
+
+### Câu 3 (Cấp độ mô hình hóa & Chuẩn hóa dữ liệu)
+**Đề bài:** Xét các phát biểu sau về 3 cấp độ mô hình hóa dữ liệu (개념적, 논리적, 물리적 모델링), phát biểu nào sau đây là **ĐÚNG**?
+
+A. Mô hình hóa khái niệm (개념적 모델링) có mức độ trừu tượng thấp nhất vì nó phải xác định cụ thể kiểu dữ liệu vật lý của từng cột.
+B. Quá trình chuẩn hóa dữ liệu (정규화 - Normalization) là hoạt động trọng tâm được thực hiện chủ yếu trong giai đoạn mô hình hóa logic (논리적 모델링).
+C. Thiết lập chỉ mục (Index), phân vùng bảng (Partitioning) và cấp phát Tablespace được hoàn thiện trong giai đoạn mô hình hóa logic.
+D. Mô hình hóa vật lý (물리적 모델링) hoàn toàn độc lập với hệ quản trị cơ sở dữ liệu (DBMS) được lựa chọn triển khai.
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Chuẩn hóa (정규화) là hoạt động đại diện, mang tính cốt lõi của giai đoạn mô hình hóa logic (논리적 모델링) nhằm loại bỏ trùng lặp và đảm bảo tính nhất quán dữ liệu trước khi chuyển giao xuống tầng vật lý.
+- **Phương án A sai:** Mô hình hóa khái niệm có mức độ trừu tượng **cao nhất** (추상화 수준이 가장 높음), không xét đến kiểu dữ liệu vật lý.
+- **Phương án C sai:** Index, Partitioning và Tablespace là các yếu tố kỹ thuật thuộc giai đoạn mô hình hóa vật lý (물리적 모델링).
+- **Phương án D sai:** Mô hình hóa vật lý phụ thuộc chặt chẽ vào đặc tính của DBMS cụ thể (Oracle, SQL Server, PostgreSQL, MySQL,...).
+
+---
+
+### Câu 4 (Kiến trúc 3 tầng ANSI/SPARC & Tính độc lập dữ liệu)
+**Đề bài:** Trong kiến trúc 3 tầng lược đồ ANSI/SPARC, cơ chế nào bảo đảm **Tính độc lập dữ liệu logic (논리적 데이터 독립성)**?
+
+A. Ánh xạ giữa Lược đồ khái niệm và Lược đồ nội bộ (개념/내부 사상)
+B. Ánh xạ giữa Lược đồ ngoài và Lược đồ khái niệm (외부/개념 사상)
+C. Khả năng tự động tối ưu hóa của trình biên dịch SQL (Cost-Based Optimizer)
+D. Việc phân vùng bảng vật lý (Table Partitioning) trên các ổ đĩa độc lập
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Ánh xạ ngoài/khái niệm (`외부/개념 사상` - Logical Mapping) kết nối khung nhìn người dùng (`외부 스키마`) với cấu trúc toàn cục của tổ chức (`개념 스키마`). Khi cấu trúc logic toàn cục thay đổi (thêm cột mới, mở rộng quan hệ), ta chỉ cần cập nhật ánh xạ này mà không cần sửa đổi chương trình ứng dụng hay màn hình người dùng, bảo đảm tính độc lập logic.
+- **Phương án A sai:** Ánh xạ khái niệm/nội bộ (`개념/내부 사상` - Physical Mapping) bảo đảm tính độc lập dữ liệu vật lý (물리적 데이터 독립성).
+- **Phương án C và D sai:** Đây là các tính năng và kỹ thuật vận hành DBMS, không phải là cơ chế ánh xạ chuẩn kiến trúc ANSI/SPARC.
+
+---
+
+## 14. Tóm tắt toàn bộ bài học
+
+1. **Bản chất mô hình hóa:** Là quá trình trừu tượng hóa (**추상화**), đơn giản hóa (**단순화**) và làm rõ (**명확화**) thế giới thực thành cấu trúc cơ sở dữ liệu. Cần tránh 3 lỗi hiểm nghèo: Trùng lặp (**중복**), Không linh hoạt (**비유연성**) và Không nhất quán (**비일관성**).
+2. **3 Góc nhìn (3 관점):**
+   - **데이터 관점 (What):** Quản lý dữ liệu gì? Mô hình hóa đối tượng và mối liên kết (ERD).
+   - **프로세스 관점 (How):** Dữ liệu được luân chuyển, xử lý theo trình tự nào? (DFD, Process Flow).
+   - **상호작용 관점 (Interaction):** Quy trình xử lý tác động thay đổi dữ liệu ra sao? (CRUD Matrix).
+3. **3 Yếu tố cấu thành & Cặp phạm trù đối ngẫu:**
+   - Things: Thực thể (**엔터티 타입 - Class**) vs Cá thể (**인스턴스 - Occurrence**).
+   - Relationships: Quan hệ tổng thể (**관계 - Relationship**) vs Ghép cặp cá thể (**페어링 - Pairing**).
+   - Attributes: Thuộc tính (**속성 - Attribute**) vs Giá trị thuộc tính (**속성값 - Value**).
+4. **6 Yếu tố mô hình tốt:** Hoàn thiện (**완전성**), Bỏ trùng lặp (**중복 배제**), Quy tắc nghiệp vụ (**업무 규칙**), Tái sử dụng (**데이터 재사용**), Giao tiếp thống nhất (**의사소통**), Tích hợp toàn cục (**통합성**).
+5. **3 Cấp độ trừu tượng:**
+   - **개념적 모델링:** Trừu tượng hóa cao nhất, trích xuất Entity cốt lõi toàn doanh nghiệp.
+   - **논리적 모델링:** Chuyển sang bảng, xác định PK/FK/Attribute và thực hiện chuẩn hóa (정규화).
+   - **물리적 모델링:** Gắn với DBMS cụ thể, thiết kế Index, Partitioning và cấu trúc lưu trữ.
+6. **Kiến trúc 3 tầng ANSI/SPARC & 2 Cấp độ độc lập dữ liệu:**
+   - `외부 스키마 (User View)` $\leftrightarrow$ [논리적 사상] $\leftrightarrow$ `개념 스키마 (Global Logic)` $\leftrightarrow$ [물리적 사상] $\leftrightarrow$ `내부 스키마 (Physical Storage)`.
+   - **논리적 독립성:** 개념 thay đổi $\rightarrow$ 외부/ứng dụng không đổi.
+   - **물리적 독립성:** 내부 thay đổi $\rightarrow$ 개념/외부/ứng dụng không đổi.
+
+---
+
+## 15. Nối mạch sang Bài 02: ERD, Entity, Thuộc tính, Quan hệ và Định danh
 
 > **Mạch nối (Bridge):**
-> - **Từ đâu (Kiến thức nền):** Bài 01 đã xác lập khung nền tảng của mô hình hóa dữ liệu: 3 góc nhìn (What, How, CRUD), 3 cấp độ (khái niệm, logic, vật lý) và kiến trúc 3 tầng lược đồ ANSI/SPARC bảo đảm tính độc lập dữ liệu.
-> - **Đang giải quyết gì:** Làm thế nào để cụ thể hóa các yêu cầu nghiệp vụ trừu tượng thành các khối kiến trúc dữ liệu trực quan mà con người và hệ thống đều hiểu chung một nghĩa?
-> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 02 — ERD, Entity, Attribute, Relationship và Identifier](./02-erd-entity-attribute-relationship-identifier.md) để hiện thực hóa mô hình dữ liệu qua 4 thành phần trụ cột cấu thành nên một sơ đồ thực thể liên kết (ERD) hoàn chỉnh và chuẩn hóa.
+> - **Từ đâu (Kiến thức nền):** Bài 01 đã xác lập khung nền tảng của mô hình hóa dữ liệu: 3 đặc trưng, 3 góc nhìn (What, How, CRUD), 3 cấp độ (khái niệm, logic, vật lý), 3 yếu tố cấu thành và kiến trúc 3 tầng lược đồ ANSI/SPARC bảo đảm tính độc lập dữ liệu.
+> - **Đang giải quyết gì:** Làm thế nào để phân rã các yêu cầu nghiệp vụ thực tế thành 4 thành phần trụ cột cấu thành nên một sơ đồ thực thể liên kết (ERD) hoàn chỉnh và chuẩn hóa?
+> - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 02 — ERD, Entity, Attribute, Relationship và Identifier](./02-erd-entity-attribute-relationship-identifier.md) để phân loại chi tiết Thực thể (Entity theo hình thái và thời điểm phát sinh), Thuộc tính (Attribute cơ bản, thiết kế, phái sinh), Quan hệ (Identifying vs Non-identifying) và Định danh (Natural vs Surrogate).

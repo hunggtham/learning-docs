@@ -719,22 +719,41 @@ ROLLUP(DNAME, JOB, MGR)
 ()
 ```
 
-#### Có composite column
-Phần này nối mạch SQL với “Có composite column”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+#### Có composite column dạng ROLLUP(A, (B, C))
+Phần này nối mạch SQL với “Có composite column dạng ROLLUP(A, (B, C))”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
-ROLLUP(DNAME, (JOB,MGR))
+ROLLUP(DNAME, (JOB, MGR))
 ```
 
-→
+Coi `(JOB, MGR)` là một khối thống nhất $Y$. Số đối số thực tế là $N = 2$ (gồm `DNAME` và `(JOB, MGR)`), do đó tạo ra $N + 1 = 3$ cấp aggregation:
 
 ```text
-(DNAME, JOB, MGR)
-(DNAME)
-()
+1. (DNAME, JOB, MGR) -- Chi tiết theo DNAME và cặp (JOB, MGR)
+2. (DNAME)           -- Tổng phụ theo DNAME (JOB và MGR hiển thị NULL)
+3. ()                -- Tổng toàn thể Grand Total (Tất cả hiển thị NULL)
 ```
 
-`JOB + MGR` được coi như **một package**.
+`JOB + MGR` được coi như **một package**, tuyệt đối **không có** cấp `(DNAME, JOB)`.
+
+#### Có composite column dạng ROLLUP((A, B), C)
+Phần này nối mạch SQL với “Có composite column dạng ROLLUP((A, B), C)”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```sql
+ROLLUP((DNAME, JOB), MGR)
+```
+
+Coi `(DNAME, JOB)` là một khối thống nhất $X$. Số đối số là $N = 2$ (gồm `(DNAME, JOB)` và `MGR`), do đó cũng tạo ra $N + 1 = 3$ cấp aggregation:
+
+```text
+1. (DNAME, JOB, MGR) -- Chi tiết từng phòng ban, công việc và người quản lý
+2. (DNAME, JOB)      -- Tổng phụ theo cặp (DNAME, JOB) (MGR hiển thị NULL)
+3. ()                -- Tổng toàn thể Grand Total (Tất cả hiển thị NULL)
+```
+
+> **Điểm thi trọng tâm:**
+> - Trong `ROLLUP((A, B), C)`, hoàn toàn **KHÔNG CÓ** dòng tổng phụ chỉ gom theo `(A)` riêng biệt! Cặp `(A, B)` luôn đi liền với nhau hoặc cùng biến mất ở mức tổng toàn thể `()`.
+> - Tương đương cú pháp: `GROUPING SETS ( ((A, B), C), ((A, B)), () )`.
 
 ---
 
@@ -863,6 +882,60 @@ DECODE(
 Hai cách nhằm mục đích tương tự.
 
 Trong Oracle, `DECODE` rất hay xuất hiện trong đề SQLD.
+
+---
+
+## 15.1. GROUPING_ID() — Mã hóa nhị phân các cấp độ tổng gộp ⭐⭐⭐
+
+**KR:** `GROUPING_ID`는 여러 `GROUPING` 함수의 반환값을 결합하여 2진수 비트열(Bit Vector)로 변환한 뒤 이를 10진수 정수로 반환하는 함수이다.
+**VI:** `GROUPING_ID` là hàm gộp kết quả của nhiều hàm `GROUPING` thành một vector bit nhị phân rồi chuyển đổi thành số nguyên thập phân tương ứng.
+
+Khi truy vấn có nhiều cột gom nhóm, việc kiểm tra từng điều kiện `GROUPING(col1) = 1 AND GROUPING(col2) = 1` trong mệnh đề `HAVING` hoặc `ORDER BY` sẽ rất rườm rà. `GROUPING_ID(A, B)` giải quyết triệt để vấn đề này:
+
+$$\text{GROUPING\_ID}(A, B) = \text{GROUPING}(A) \times 2^1 + \text{GROUPING}(B) \times 2^0$$
+
+#### Bảng giá trị chuyển đổi GROUPING_ID(DNAME, JOB)
+
+| Cấp độ tổng hợp | GROUPING(DNAME) | GROUPING(JOB) | Chuỗi bit nhị phân | Kết quả GROUPING_ID(DNAME, JOB) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Chi tiết (DNAME, JOB)** | 0 | 0 | `00` | **0** |
+| **Tổng phụ theo DNAME (DNAME)** | 0 | 1 | `01` | **1** |
+| **Tổng phụ theo JOB (JOB)** | 1 | 0 | `10` | **2** |
+| **Tổng toàn thể Grand Total ()** | 1 | 1 | `11` | **3** |
+
+#### Ví dụ truy vấn thực chiến:
+
+```sql
+SELECT DNAME,
+       JOB,
+       COUNT(*) AS EMP_CNT,
+       SUM(SAL) AS TOTAL_SAL,
+       GROUPING(DNAME) AS G_DNAME,
+       GROUPING(JOB)   AS G_JOB,
+       GROUPING_ID(DNAME, JOB) AS GID
+FROM EMP
+GROUP BY CUBE(DNAME, JOB)
+ORDER BY GID, DNAME;
+```
+
+#### Kết quả thực tế (ASCII Table):
+
+```text
++------------+-----------+---------+-----------+---------+-------+-----+
+| DNAME      | JOB       | EMP_CNT | TOTAL_SAL | G_DNAME | G_JOB | GID |
++------------+-----------+---------+-----------+---------+-------+-----+
+| ACCOUNTING | CLERK     |       1 |      1300 |       0 |     0 |   0 |
+| ACCOUNTING | MANAGER   |       1 |      2450 |       0 |     0 |   0 |
+| RESEARCH   | ANALYST   |       2 |      6000 |       0 |     0 |   0 |
+| ACCOUNTING | NULL      |       2 |      3750 |       0 |     1 |   1 |
+| RESEARCH   | NULL      |       2 |      6000 |       0 |     1 |   1 |
+| NULL       | CLERK     |       1 |      1300 |       1 |     0 |   2 |
+| NULL       | MANAGER   |       1 |      2450 |       1 |     0 |   2 |
+| NULL       | NULL      |       4 |      9750 |       1 |     1 |   3 |
++------------+-----------+---------+-----------+---------+-------+-----+
+```
+
+> **Mẹo thi SQLD:** Muốn lọc chỉ lấy dòng tổng phụ theo từng phòng ban và tổng toàn thể, ta chỉ cần viết: `HAVING GROUPING_ID(DNAME, JOB) IN (1, 3)`.
 
 ---
 
@@ -1551,3 +1624,208 @@ Và câu quyết định:
 > **ROLLUP = 계층 / hierarchy**
 > **CUBE = 모든 조합 / all combinations**
 > **GROUPING SETS = 내가 지정 / exactly what I specify**
+
+---
+
+## 30. Bảng ma trận so sánh Oracle vs SQL Server về hàm nhóm (Group Functions)
+
+| Tiêu chí kỹ thuật | Oracle Database | Microsoft SQL Server | Điểm khác biệt & Bẫy thi SQLD |
+| :--- | :--- | :--- | :--- |
+| **Cú pháp ANSI ROLLUP** | `GROUP BY ROLLUP(A, B)` | `GROUP BY ROLLUP(A, B)` | Cả hai đều tuân thủ đầy đủ chuẩn ANSI SQL:1999+. |
+| **Cú pháp ANSI CUBE** | `GROUP BY CUBE(A, B)` | `GROUP BY CUBE(A, B)` | Cả hai đều hỗ trợ đầy đủ chuẩn ANSI. |
+| **Cú pháp ANSI GROUPING SETS** | `GROUP BY GROUPING SETS(...)` | `GROUP BY GROUPING SETS(...)` | Chuẩn ANSI tương thích 100% trên cả hai DBMS. |
+| **Cú pháp cũ (Non-ANSI)** | Không hỗ trợ cú pháp `WITH ROLLUP` | Hỗ trợ `GROUP BY A, B WITH ROLLUP` (cú pháp cũ của T-SQL, hiện đã deprecated) | Đề thi SQLD ưu tiên cú pháp chuẩn ANSI `GROUP BY ROLLUP(A, B)`. |
+| **Cột kết hợp (Composite)** | `ROLLUP((A, B), C)` | `ROLLUP((A, B), C)` | Cả hai đều hỗ trợ gom nhóm cột bằng cặp ngoặc đơn `()`. |
+| **Hàm GROUPING** | `GROUPING(col)` (trả về 0 hoặc 1) | `GROUPING(col)` (trả về 0 hoặc 1) | Hoàn toàn tương đồng: trả về 1 khi là dòng tổng gộp (Subtotal/Total). |
+| **Hàm GROUPING_ID** | `GROUPING_ID(col1, col2)` | `GROUPING_ID(col1, col2)` | Cả hai đều tính bitmask nhị phân chuyển đổi thành số nguyên thập phân. |
+| **Hàm GROUPING_ID cú pháp cũ** | Không có hàm `GROUPING()` đa tham số | Trước SQL Server 2008 dùng hàm `GROUPING_ID()`, cú pháp `GROUPING(col)` chỉ nhận 1 tham số | Không dùng `GROUPING(A, B)` trực tiếp, phải dùng `GROUPING_ID(A, B)`. |
+
+---
+
+## 31. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+> [!WARNING]
+> Dưới đây là 5 cạm bẫy kinh điển trong các kỳ thi SQLD liên quan đến Hàm nhóm (Group Functions):
+
+### Cạm bẫy 1: Nhầm lẫn bản chất của hàm `GROUPING(col)` khi dữ liệu gốc có giá trị `NULL`
+- **Tình huống:** Bảng dữ liệu gốc có một nhân viên chưa được xếp việc (`JOB` mang giá trị `NULL`). Khi chạy `GROUP BY ROLLUP(JOB)`, dòng hiển thị mức chi tiết của nhân viên này sẽ có `JOB = NULL`.
+- **Hỏi:** Tại dòng mức chi tiết này, hàm `GROUPING(JOB)` trả về 0 hay 1?
+- **Bẫy sai:** Nghĩ rằng cứ thấy cột có giá trị `NULL` là `GROUPING` sẽ trả về `1`.
+- **Đúng chuẩn:** `GROUPING(JOB)` **trả về 0**!
+  - `GROUPING(col) = 0`: Cột tham gia vào cấp độ gom nhóm của dòng hiện tại (dù giá trị dữ liệu thật sự trong bảng có là NULL).
+  - `GROUPING(col) = 1`: Dòng hiện tại là dòng Subtotal / Grand Total do hệ thống tự sinh ra, cột này bị loại khỏi cấp độ gom nhóm.
+
+### Cạm bẫy 2: Số mức tổng gộp khi có cột kết hợp (Composite Column)
+- Với $N$ cột thông thường, `ROLLUP` sinh ra $N + 1$ mức. Nhưng khi có cặp ngoặc đơn `ROLLUP((A, B), C)`, số phần tử gom nhóm thực tế chỉ là $2$ (gồm khối `(A, B)` và cột `C`), do đó chỉ sinh ra $2 + 1 = 3$ mức:
+  1. `((A, B), C)`
+  2. `((A, B))`
+  3. `()`
+- **Bẫy thi:** Đề bài lừa rằng có 4 mức hoặc có mức gom riêng theo `(A)`. Nhớ rằng khối `(A, B)` bên trong ngoặc đơn không bao giờ bị tách rời!
+
+### Cạm bẫy 3: `GROUPING SETS` không tự động tạo dòng tổng toàn thể (Grand Total)
+- Cả `ROLLUP` và `CUBE` luôn tự động bổ sung dòng Grand Total `()`.
+- Nhưng `GROUPING SETS(A, B)` **tuyệt đối không** có Grand Total! Nó chỉ tính riêng rẽ 2 mức: nhóm theo `(A)` và nhóm theo `(B)`.
+- Muốn có Grand Total trong `GROUPING SETS`, người viết bắt buộc phải thêm cặp ngoặc rỗng `()`: `GROUPING SETS(A, B, ())`.
+
+### Cạm bẫy 4: Đổi thứ tự tham số trong `ROLLUP` vs `CUBE`
+- `ROLLUP(A, B)` tạo ra các nhóm: `(A, B)`, `(A)`, `()`.
+- `ROLLUP(B, A)` tạo ra các nhóm: `(B, A)`, `(B)`, `()`.
+  $\rightarrow$ **Thứ tự tham số trong ROLLUP làm thay đổi hoàn toàn kết quả tổng phụ (cấu trúc phân cấp)!**
+- Ngược lại, `CUBE(A, B)` và `CUBE(B, A)` đều tạo ra 4 nhóm: `(A, B)`, `(A)`, `(B)`, `()`.
+  $\rightarrow$ **Thứ tự tham số trong CUBE không làm thay đổi các tập hợp gom nhóm (quan hệ bình đẳng)!**
+
+### Cạm bẫy 5: Rollup từng phần (Partial Rollup)
+- Khi viết: `GROUP BY A, ROLLUP(B)`
+- Cột `A` nằm độc lập bên ngoài, nên nó luôn luôn hiện diện trong mọi mức tổng hợp!
+- Các mức tạo ra:
+  - Ghép `A` với `B`: tạo mức `(A, B)`.
+  - Ghép `A` với `()`: tạo mức `(A)`.
+- **Bẫy thi:** Truy vấn `GROUP BY A, ROLLUP(B)` **KHÔNG HỀ sinh ra Grand Total `()`** vì cột `A` luôn cố định tham gia vào mọi dòng kết quả!
+
+---
+
+## 32. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1: Xác định tập hợp gom nhóm tương đương (Độ khó: Trung bình)
+Cho câu lệnh SQL sau thực thi trên hệ quản trị cơ sở dữ liệu Oracle:
+
+```sql
+SELECT DEPTNO, JOB, MGR, SUM(SAL) AS TOTAL_SAL
+FROM EMP
+GROUP BY ROLLUP((DEPTNO, JOB), MGR);
+```
+
+Mệnh đề `GROUP BY` nào dưới đây sử dụng `GROUPING SETS` mang lại kết quả gom nhóm hoàn toàn tương đương?
+
+A. `GROUP BY GROUPING SETS ((DEPTNO, JOB, MGR), (DEPTNO, JOB), (DEPTNO), ())`
+B. `GROUP BY GROUPING SETS ((DEPTNO, JOB, MGR), (DEPTNO, JOB), ())`
+C. `GROUP BY GROUPING SETS ((DEPTNO, JOB, MGR), (JOB, MGR), ())`
+D. `GROUP BY GROUPING SETS ((DEPTNO, JOB), (MGR), ())`
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích đề bài:** Mệnh đề `ROLLUP((DEPTNO, JOB), MGR)` chứa cặp cột kết hợp `(DEPTNO, JOB)` đóng vai trò là một phần tử thứ nhất, và `MGR` là phần tử thứ hai. Số đối số thực tế là $N = 2$.
+> - Quy tắc ROLLUP cắt tỉa từ phải sang trái:
+>   1. Toàn bộ đối số: `((DEPTNO, JOB), MGR)` $\rightarrow$ Tập nhóm `(DEPTNO, JOB, MGR)`.
+>   2. Bỏ `MGR`: còn lại `((DEPTNO, JOB))` $\rightarrow$ Tập nhóm `(DEPTNO, JOB)`.
+>   3. Bỏ nốt phần tử cuối: còn lại `()` $\rightarrow$ Tổng toàn thể Grand Total.
+> - **Lựa chọn B:** Chính xác, gồm đúng 3 tập hợp `((DEPTNO, JOB, MGR), (DEPTNO, JOB), ())`.
+> - **Lựa chọn A sai:** Chứa thêm tập `(DEPTNO)`, nhưng `(DEPTNO, JOB)` là khối kết hợp nên không bao giờ bị tách để tính riêng `DEPTNO`.
+> - **Lựa chọn C sai:** Chứa tập `(JOB, MGR)` không tồn tại trong cấu trúc phân cấp từ trái sang phải của ROLLUP.
+> - **Lựa chọn D sai:** Thiếu tập hợp đầy đủ `(DEPTNO, JOB, MGR)`.
+
+---
+
+### Câu 2: Phân biệt giá trị NULL thật và dòng tổng hợp qua GROUPING (Độ khó: Cao)
+Xét bảng `TB_SALES` có cấu trúc và dữ liệu như sau:
+
+```text
++---------+----------+--------+
+| PROD_ID | CUST_ID  | AMOUNT |
++---------+----------+--------+
+| P1      | C100     |    500 |
+| P1      | NULL     |    300 |
+| P2      | C200     |    400 |
++---------+----------+--------+
+```
+
+Người dùng thực thi câu lệnh SQL sau:
+
+```sql
+SELECT PROD_ID,
+       CUST_ID,
+       SUM(AMOUNT) AS SUM_AMT,
+       GROUPING(CUST_ID) AS G_CUST
+FROM TB_SALES
+GROUP BY ROLLUP(PROD_ID, CUST_ID)
+ORDER BY PROD_ID, CUST_ID;
+```
+
+Dòng kết quả tương ứng với `PROD_ID = 'P1'` mà có `CUST_ID` hiển thị giá trị `NULL` sẽ có bao nhiêu dòng và giá trị cột `G_CUST` tương ứng là gì?
+
+A. Chỉ có 1 dòng duy nhất và có `G_CUST = 1`.
+B. Chỉ có 1 dòng duy nhất và có `G_CUST = 0`.
+C. Có 2 dòng: một dòng có `G_CUST = 0` (dữ liệu thật) và một dòng có `G_CUST = 1` (tổng phụ của P1).
+D. Có 2 dòng: cả hai dòng đều có `G_CUST = 1`.
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích cơ chế:**
+>   - Bảng nguồn có 1 bản ghi thật sự mang giá trị `CUST_ID IS NULL` với `AMOUNT = 300` thuộc `PROD_ID = 'P1'`. Khi gom nhóm chi tiết theo `(PROD_ID, CUST_ID)`, dòng này được tạo ra và cột `CUST_ID` tham gia vào cấp độ gom nhóm, vì vậy `GROUPING(CUST_ID)` trả về **0**.
+>   - Ngoài ra, `ROLLUP(PROD_ID, CUST_ID)` tự động tạo thêm một dòng tổng phụ cho từng sản phẩm `(PROD_ID)`. Tại dòng tổng phụ của sản phẩm `P1`, tổng doanh số là $500 + 300 = 800$, giá trị cột `CUST_ID` được hệ thống hiển thị là `NULL` do bị gộp, và hàm `GROUPING(CUST_ID)` trả về **1**.
+> - Do đó, với `PROD_ID = 'P1'`, có đúng 2 dòng xuất hiện `CUST_ID` là `NULL`:
+>   - Dòng 1: `PROD_ID = 'P1'`, `CUST_ID = NULL`, `SUM_AMT = 300`, `G_CUST = 0`.
+>   - Dòng 2: `PROD_ID = 'P1'`, `CUST_ID = NULL`, `SUM_AMT = 800`, `G_CUST = 1`.
+> - **Lựa chọn C:** Khẳng định chính xác bản chất khác biệt giữa NULL dữ liệu thật và NULL do tổng hợp.
+> - **Lựa chọn A, B, D sai:** Đều ngộ nhận về số dòng hoặc đánh đồng giá trị trả về của hàm GROUPING.
+
+---
+
+### Câu 3: Tính toán giá trị GROUPING_ID (Độ khó: Trung bình)
+Cho câu lệnh SQL sau:
+
+```sql
+SELECT DNAME,
+       JOB,
+       SUM(SAL) AS TOTAL_SAL,
+       GROUPING_ID(DNAME, JOB) AS GID
+FROM EMP
+GROUP BY CUBE(DNAME, JOB)
+HAVING GROUPING_ID(DNAME, JOB) = 2;
+```
+
+Dòng dữ liệu được trả về bởi mệnh đề `HAVING GROUPING_ID(DNAME, JOB) = 2` đại diện cho mức tổng hợp nào?
+
+A. Mức chi tiết từng phòng ban và từng công việc `(DNAME, JOB)`.
+B. Mức tổng phụ theo từng phòng ban `(DNAME)`.
+C. Mức tổng phụ theo từng công việc `(JOB)`.
+D. Mức tổng toàn thể của toàn bộ công ty `()`.
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích công thức:**
+>   $$\text{GROUPING\_ID}(DNAME, JOB) = \text{GROUPING}(DNAME) \times 2 + \text{GROUPING}(JOB) \times 1$$
+> - Để giá trị $\text{GID} = 2$, trong hệ nhị phân giá trị này tương ứng với chuỗi bit `10`:
+>   - $\text{GROUPING}(DNAME) = 1$ (cột `DNAME` bị loại khỏi nhóm, tức là subtotal không phân theo phòng ban).
+>   - $\text{GROUPING}(JOB) = 0$ (cột `JOB` tham gia gom nhóm).
+> - Điều này có nghĩa dòng kết quả đang gom nhóm độc lập theo từng chức vụ công việc `(JOB)`.
+> - **Lựa chọn C:** Hoàn toàn chính xác.
+> - **Lựa chọn A sai:** Mức chi tiết có bit `00` $\rightarrow \text{GID} = 0$.
+> - **Lựa chọn B sai:** Mức tổng phụ theo DNAME có bit `01` $\rightarrow \text{GID} = 1$.
+> - **Lựa chọn D sai:** Mức tổng toàn thể có bit `11` $\rightarrow \text{GID} = 3$.
+
+---
+
+### Câu 4: Phân biệt Rollup từng phần - Partial Rollup (Độ khó: Dễ)
+Nhà phân tích dữ liệu thực thi câu lệnh SQL sau:
+
+```sql
+SELECT REGION, CHANNEL, SUM(REVENUE) AS TOTAL_REV
+FROM SALES
+GROUP BY REGION, ROLLUP(CHANNEL);
+```
+
+Giả sử bảng `SALES` có 3 vùng (`REGION`) và 2 kênh bán hàng lẻ (`CHANNEL`). Hỏi câu truy vấn trên sẽ trả về tổng cộng bao nhiêu dòng kết quả (giả sử tất cả các tổ hợp đều có dữ liệu)?
+
+A. 6 dòng
+B. 9 dòng
+C. 10 dòng
+D. 12 dòng
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích cơ chế:** Mệnh đề `GROUP BY REGION, ROLLUP(CHANNEL)` là Rollup từng phần.
+> - `ROLLUP(CHANNEL)` với $N = 1$ tạo ra $1 + 1 = 2$ mức: `(CHANNEL)` và `()`.
+> - Kết hợp với `REGION` cố định ở ngoài:
+>   - Mức 1: `(REGION, CHANNEL)` $\rightarrow$ Có 3 vùng $\times$ 2 kênh = 6 dòng chi tiết.
+>   - Mức 2: `(REGION, ())` tức `(REGION)` $\rightarrow$ Tổng phụ theo từng vùng = 3 dòng.
+> - Truy vấn này **không tạo ra Grand Total** `()` vì `REGION` luôn tham gia bắt buộc.
+> - Tổng số dòng kết quả = $6 + 3 = 9$ dòng.
+> - **Lựa chọn B:** Hoàn toàn chính xác ($9$ dòng).
+> - **Lựa chọn C sai:** Bẫy cộng thêm 1 dòng Grand Total ($9 + 1 = 10$).
+> - **Lựa chọn A sai:** Chỉ tính mức chi tiết mà quên mất các dòng tổng phụ theo vùng.
+> - **Lựa chọn D sai:** Nhầm lẫn với CUBE toàn phần ($3 \times 2 + 3 + 2 + 1 = 12$).

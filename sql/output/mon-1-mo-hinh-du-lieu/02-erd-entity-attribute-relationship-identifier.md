@@ -828,6 +828,17 @@ Một Customer có thể chưa từng tạo Order.
 
 Khi đó phía `CUSTOMER` có thể có số lượng Order bằng 0.
 
+#### Bảng tổng hợp 6 bước lập ERD chuẩn K-Data (ERD 작성 6단계 요약)
+
+| Thứ tự bước | Tên bước (Tiếng Hàn) | Thao tác kỹ thuật cốt lõi | Lưu ý thi cử trọng điểm (출제 포인트) |
+| :---: | :--- | :--- | :--- |
+| **Bước 1** | **엔터티를 그린다** | Trích xuất và vẽ các hộp thực thể từ yêu cầu nghiệp vụ. | Xác định đúng danh từ nghiệp vụ, không vẽ thuộc tính thành entity. |
+| **Bước 2** | **엔터티를 적절하게 배치한다** | Bố trí thực thể hợp lý, tránh giao cắt đường quan hệ. | **Entity quan trọng nhất luôn đặt ở góc trên bên trái (왼쪽 상단)**. |
+| **Bước 3** | **엔터티 간 관계를 설정한다** | Nối dây quan hệ giữa các thực thể có liên kết. | **Ưu tiên thiết lập quan hệ định danh (식별자 관계 우선)**, hạn chế tối đa vòng lặp (Cycle 방지). |
+| **Bước 4** | **관계명을 기술한다** | Ghi nhãn tên cho mối quan hệ. | **Dùng động từ thì hiện tại (현재형 동사)**; tránh các từ quá chung chung như "quản lý", "liên quan". |
+| **Bước 5** | **관계차수(Cardinality) 기술** | Xác định tỷ lệ số lượng bản ghi: 1:1, 1:N, M:N. | Chen dùng số `1..N`, IE dùng ký hiệu chân quạ (까마귀발). |
+| **Bước 6** | **필수/선택 여부 기술** | Xác định tính bắt buộc (Mandatory) hay tùy chọn (Optional). | Ký pháp IE dùng vạch đứng `|` cho bắt buộc, vòng tròn `O` cho tùy chọn. |
+
 ---
 
 ## 15. ERD 표기법 - Các ký pháp ERD
@@ -4408,9 +4419,119 @@ Một Employee thuộc một Department.
 
 ---
 
-## NỐI MẠCH SANG BÀI 03
+## 18. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+Trong kỳ thi chứng chỉ SQLD Môn 1, các câu hỏi về ERD, Entity, Attribute, Relationship và Identifier chiếm tỷ trọng điểm số rất lớn và thường xuyên cài cắm các bẫy khái niệm tinh vi:
+
+### Cạm bẫy 1: Đánh tráo tiêu chí phân loại Thực thể (유무형 vs 발생시점)
+- **Bẫy đề thi:** Khẳng định: *"사건 엔터티 (Thực thể sự kiện) là thực thể được phân loại theo thời điểm phát sinh (발생시점)"* hoặc *"중심 엔터티 (Thực thể trung tâm) là phân loại theo hình thái hữu hình/vô hình (유무형)"*.
+- **Cách phá bẫy:**
+  - Phân loại theo hình thái hữu vô (**유무형에 따른 분류**): 유형 (Tangible - Hữu hình), 개념 (Conceptual - Khái niệm), 사건 (Event - Sự kiện).
+  - Phân loại theo thời điểm phát sinh (**발생시점에 따른 분류**): 기본/키 (Basic/Key - Cơ bản), 중심 (Main - Trung tâm), 행위 (Active/Action - Hành vi).
+
+### Cạm bẫy 2: Điều kiện tối thiểu về số lượng Instance của một Entity
+- **Bẫy đề thi:** Cho rằng *"Một đối tượng quản lý chỉ có duy nhất 1 bản ghi (ví dụ: bảng THÔNG_TIN_DOANH_NGHIỆP chứa duy nhất 1 dòng cấu hình công ty) vẫn cấu thành một Entity chuẩn mực trong ERD"*.
+- **Cách phá bẫy:** Một trong những đặc trưng bắt buộc của Entity là **phải chứa từ 2 bản ghi/cá thể trở lên (영속적으로 존재하는 2개 이상의 인스턴스 집합)**. Đối tượng chỉ có 1 bản ghi duy nhất không đủ điều kiện cấu thành Entity trong mô hình dữ liệu quan hệ; thông tin đó thường được xử lý như cấu hình hệ thống (System Configuration) hoặc hằng số.
+
+### Cạm bẫy 3: Phân biệt thuộc tính cơ bản (기본 속성) vs thuộc tính thiết kế (설계 속성)
+- **Bẫy đề thi:** Xếp các cột mã định danh hoặc trạng thái nghiệp vụ như `사원코드`, `주문상태코드`, `우편번호` vào nhóm "기본 속성 (Thuộc tính cơ bản)".
+- **Cách phá bẫy:**
+  - **기본 속성 (Thuộc tính cơ bản):** Thông tin tự nhiên vốn có của sự vật từ thế giới thực (ví dụ: `사원명`, `제품명`, `생년월일`, `단가`).
+  - **설계 속성 (Thuộc tính thiết kế):** Thuộc tính không có sẵn trong tự nhiên mà do nhà phân tích/thiết kế định nghĩa thêm để chuẩn hóa quy trình quản trị dữ liệu (ví dụ: `사원코드`, `주문상태코드`, `결제방식코드`).
+  - **파생 속성 (Thuộc tính phái sinh):** Giá trị được tính toán từ các thuộc tính khác (ví dụ: `총결제금액`, `평균점수`).
+
+### Cạm bẫy 4: Ký hiệu và hậu quả của việc lạm dụng Quan hệ xác định (식별자 관계)
+- **Bẫy đề thi:** *"Ký pháp IE biểu diễn quan hệ xác định bằng đường nét đứt (점선)"* hoặc *"Càng chuyển nhiều quan hệ sang 식별자 관계 thì câu lệnh SQL truy vấn càng ngắn gọn, dễ viết"*.
+- **Cách phá bẫy:**
+  - Ký pháp: 식별자 관계 dùng **nét liền (실선)**; 비식별자 관계 dùng **nét đứt (점선)**.
+  - Hậu quả: Khi sử dụng quan hệ xác định, khóa chính của cha được nạp vào khóa chính của con. Qua nhiều tầng phân cấp (Cha $\rightarrow$ Con $\rightarrow$ Cháu $\rightarrow$ Chắt), khóa chính của bảng hậu duệ trở thành khóa phức hợp (Composite Key) gồm hàng loạt cột. Hậu quả là câu lệnh SQL JOIN và WHERE phải so khớp quá nhiều điều kiện, làm tăng độ phức tạp của mã nguồn và giảm sút năng suất phát triển.
+
+### Cạm bẫy 5: Nhầm lẫn về Thực thể cô lập (고립 엔터티 - Isolated Entity)
+- **Bẫy đề thi:** *"Trong mô hình ERD, mọi thực thể bắt buộc phải có quan hệ với ít nhất một thực thể khác mà không có bất kỳ ngoại lệ nào"*.
+- **Cách phá bẫy:** Về nguyên tắc, thực thể phải có ít nhất 1 mối quan hệ; thực thể không có quan hệ là 고립 엔터티 (dấu hiệu sai sót thiết kế). TUY NHIÊN, **có 3 ngoại lệ được chấp nhận không cần nối quan hệ**:
+  1. 통계성 엔터티 (Bảng thống kê tổng hợp số liệu định kỳ).
+  2. 코드성 엔터티 (Bảng danh mục mã dùng chung cho toàn hệ thống).
+  3. Bảng nội bộ hệ thống phục vụ kỹ thuật (Transaction Log, Audit Trail).
+
+---
+
+## 19. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Quy trình lập ERD & Nguyên tắc bố trí thực thể)
+**Đề bài:** Trong quy trình 6 bước lập sơ đồ thực thể liên kết (ERD 작성 절차) theo chuẩn K-Data, phát biểu nào sau đây là **ĐÚNG**?
+
+A. Khi bố trí các thực thể (엔터티 배치), thực thể trung tâm và quan trọng nhất nên được ưu tiên đặt ở góc dưới cùng bên phải của sơ đồ.
+B. Khi thiết lập mối quan hệ giữa các thực thể, nên ưu tiên thiết lập quan hệ không xác định (비식별자 관계) trước quan hệ xác định.
+C. Tên của mối quan hệ (관계명) nên được mô tả bằng động từ ở thì hiện tại (현재형 동사) và tránh dùng các từ ngữ quá chung chung.
+D. Quan hệ vòng lặp tuần hoàn (순환 관계 - Cycle) cần được khuyến khích tạo ra tối đa để tăng tính liên kết dữ liệu giữa các thực thể.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C đúng:** Quy tắc chuẩn đặt tên quan hệ (Bước 4) yêu cầu dùng động từ thì hiện tại (`현재형 동사`) biểu thị hành vi nghiệp vụ rõ ràng (như `주문한다`, `수강한다`), hạn chế các từ quá chung chung (`관리한다`, `관련된다`).
+- **Phương án A sai:** Thực thể quan trọng nhất luôn được ưu tiên đặt ở góc trên bên trái (`왼쪽 상단`), các thực thể khác bố trí xoay quanh theo luồng từ trái sang phải, từ trên xuống dưới để tối ưu tầm nhìn.
+- **Phương án B sai:** Quy trình chuẩn yêu cầu ưu tiên thiết lập quan hệ xác định (`식별자 관계를 우선 설정`).
+- **Phương án D sai:** Cần hạn chế tối đa quan hệ vòng tuần hoàn (`가급적 Cycle 관계 발생 방지`) vì nó gây phức tạp khi thao tác INSERT/DELETE và dễ dẫn đến deadlock hoặc lỗi toàn vẹn.
+
+---
+
+### Câu 2 (Phân loại Thực thể theo hình thái & Thời điểm phát sinh)
+**Đề bài:** Bảng nào dưới đây phân loại **ĐÚNG** các thực thể theo Tiêu chí hình thái (유무형) và Tiêu chí thời điểm phát sinh (발생시점)?
+
+A. Theo hình thái: 유형 엔터티, 개념 엔터티, 중심 엔터티
+B. Theo thời điểm phát sinh: 기본 엔터티, 중심 엔터티, 행위 엔터티
+C. Theo hình thái: 기본 엔터티, 개념 엔터티, 사건 엔터티
+D. Theo thời điểm phát sinh: 유형 엔터티, 중심 엔터티, 행위 엔터티
+
+**Đáp án đúng:** **B**
+
+**Giải thích chi tiết:**
+- **Phương án B đúng:** Phân loại theo thời điểm phát sinh (발생시점) gồm 3 loại: 기본 엔터티 (Thực thể cơ bản/nguồn), 중심 엔터티 (Thực thể trung tâm), và 행위 엔터티 (Thực thể hành vi/giao dịch).
+- **Phương án A, C, D sai:** Bị trộn lẫn giữa hai tiêu chí:
+  - Phân loại theo hình thái (유무형): 유형 (Hữu hình), 개념 (Khái niệm), 사건 (Sự kiện).
+  - Phân loại theo thời điểm phát sinh (발생시점): 기본, 중심, 행위.
+
+---
+
+### Câu 3 (Phân loại Thuộc tính & Rủi ro thuộc tính phái sinh)
+**Đề bài:** Trong các phát biểu sau về thuộc tính (속성 - Attribute) trong mô hình dữ liệu, phát biểu nào sau đây là **SAI**?
+
+A. Thuộc tính phái sinh (파생 속성) là thuộc tính có giá trị được tính toán hoặc suy diễn từ các thuộc tính khác, giúp tăng tốc độ truy vấn nhưng làm tăng nguy cơ bất nhất dữ liệu.
+B. Thuộc tính thiết kế (설계 속성) là các thuộc tính không có sẵn trong nghiệp vụ ban đầu mà do người thiết kế định nghĩa thêm phục vụ quản lý hệ thống, ví dụ như mã trạng thái đơn hàng.
+C. Để nâng cao tính tiện dụng, một thuộc tính có thể lưu trữ đồng thời nhiều giá trị khác nhau (다중값 속성) trong cùng một ô dữ liệu mà không cần tách thành bảng mới.
+D. Tập hợp tất cả các giá trị hợp lệ mà một thuộc tính có thể nhận được gọi là miền giá trị (도메인 - Domain) của thuộc tính đó.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C sai** (và là đáp án cần chọn): Trong mô hình dữ liệu quan hệ chuẩn hóa (1NF), mỗi thuộc tính bắt buộc phải mang **giá trị nguyên tử đơn nhất (원자값 - Atomic Value)**. Một thuộc tính chứa nhiều giá trị (다중값 속성 - Multi-valued Attribute) vi phạm nguyên tắc chuẩn hóa 1NF và bắt buộc phải được tách riêng thành một Thực thể mới kết nối qua quan hệ 1:N.
+- **Phương án A đúng:** Thuộc tính phái sinh (`파생 속성`, ví dụ `총결제금액`) giúp câu lệnh SELECT không cần tính toán lại `SUM()`, nhưng khi dữ liệu gốc thay đổi mà quên cập nhật cột phái sinh thì sẽ gây dị thường mâu thuẫn số liệu.
+- **Phương án B đúng:** Đây là định nghĩa chuẩn của thuộc tính thiết kế (`설계 속성`).
+- **Phương án D đúng:** Miền giá trị (`도메인 - Domain`) xác định kiểu dữ liệu, độ dài và các ràng buộc hợp lệ của thuộc tính.
+
+---
+
+### Câu 4 (Quan hệ xác định vs Quan hệ không xác định)
+**Đề bài:** Xét hai bảng `DEPARTMENT (부서)` và `EMPLOYEE (사원)`. Khi chuyển giao khóa ngoại, phát biểu nào sau đây phân biệt **CHÍNH XÁC** giữa Quan hệ xác định (식별자 관계) và Quan hệ không xác định (비식별자 관계)?
+
+A. Trong quan hệ xác định, khóa chính của bảng cha được nạp vào bảng con như một thuộc tính thông thường và được biểu diễn bằng đường nét đứt (점선).
+B. Trong quan hệ không xác định, bảng con không thể tồn tại độc lập nếu thiếu bản ghi tương ứng của bảng cha.
+C. Trong quan hệ xác định, khóa chính của bảng cha trở thành một phần cấu thành nên khóa chính (PK) của bảng con, được biểu diễn bằng đường nét liền (실선).
+D. Quan hệ xác định luôn giúp đơn giản hóa cấu trúc khóa và giảm thiểu số lượng điều kiện kết nối trong mệnh đề JOIN của câu lệnh SQL.
+
+**Đáp án đúng:** **C**
+
+**Giải thích chi tiết:**
+- **Phương án C đúng:** Đây là bản chất cốt lõi của Quan hệ xác định (식별자 관계 - Identifying Relationship): Khóa chính của bảng cha (Parent PK) kế thừa trực tiếp vào cấu trúc khóa chính của bảng con (Child PK), tạo nên mối phụ thuộc sống còn (Weak Entity) và được ký hiệu bằng **đường nét liền (실선)** trong sơ đồ ERD.
+- **Phương án A sai:** Mô tả này thuộc về quan hệ không xác định (`비식별자 관계`), trong đó khóa cha chỉ vào bảng con dưới dạng thuộc tính thường (FK thường) và vẽ bằng đường nét đứt (`점선`).
+- **Phương án B sai:** Trong quan hệ không xác định, quan hệ giữa cha và con lỏng lẻo hơn, con có thể tồn tại độc lập hoặc mang giá trị NULL ở khóa ngoại (tùy chọn).
+- **Phương án D sai:** Lạm dụng quan hệ xác định làm khóa chính bảng con phình to, khiến câu lệnh SQL JOIN trở nên phức tạp hơn chứ không hề đơn giản hóa.
+
+---
+
+## 20. Nối mạch sang Bài 03: Mô hình dữ liệu hướng hiệu năng và chuẩn hóa
 
 > **Mạch nối (Bridge):**
-> - **Từ đâu (Kiến thức nền):** Bài 02 đã trang bị toàn bộ 4 khối kiến trúc cơ bản cấu thành ERD: Entity, Attribute, Relationship (Identifying vs Non-identifying) và Identifier (Natural vs Surrogate).
-> - **Đang giải quyết gì:** Khi đã có một mô hình dữ liệu logic hoàn chỉnh với nhiều bảng và quan hệ, làm thế nào để đảm bảo hệ thống không bị dị thường khi thêm/sửa/xóa dữ liệu và duy trì hiệu năng truy vấn tối ưu khi khối lượng giao dịch tăng vọt?
+> - **Từ đâu (Kiến thức nền):** Bài 02 đã trang bị toàn bộ 4 khối kiến trúc cơ bản cấu thành ERD: Entity (phân loại theo hình thái & phát sinh), Attribute (cơ bản, thiết kế, phái sinh), Relationship (Identifying vs Non-identifying) và Identifier (Natural vs Surrogate).
+> - **Đang giải quyết gì:** Khi đã có một mô hình dữ liệu logic hoàn chỉnh với nhiều bảng và quan hệ, làm thế nào để đảm bảo hệ thống không bị dị thường (Anomaly) khi thêm/sửa/xóa dữ liệu và duy trì hiệu năng truy vấn tối ưu khi khối lượng giao dịch tăng vọt?
 > - **Dùng đi đâu:** Chuyển tiếp trực tiếp sang [Bài 03 — Mô hình dữ liệu hướng hiệu năng và chuẩn hóa](./03-mo-hinh-du-lieu-huong-hieu-nang-va-chuan-hoa.md) để làm chủ quy trình Chuẩn hóa dữ liệu (1NF $\sim$ 5NF), các mẫu kỹ thuật Phi chuẩn hóa (Denormalization: Gộp/Tách bảng, Thêm cột tính sẵn) và Phân vùng bảng (Partitioning).

@@ -1,50 +1,17 @@
-# Subquery
+# Subquery (서브쿼리 — Truy vấn con)
 
-→ NULL 제외
+Trong kiến trúc truy vấn SQL và kỳ thi chứng chỉ SQLD, **Subquery (서브쿼리)** là một trong những chủ đề xuất hiện với tần suất dày đặc nhất và có nhiều dạng câu hỏi bẫy tư duy nhất.
 
-AVG(col)
-= SUM(col) / COUNT(col)
+> **Subquery = Một câu lệnh SQL nằm lồng bên trong một câu lệnh SQL khác.**
 
-전체 행을 기준으로 나누려면
-= SUM(col) / COUNT(*)
-```
+Để làm chủ Subquery trong bài thi SQLD, bạn cần nắm vững 3 trục phân loại:
+1. **Theo vị trí xuất hiện:** Mệnh đề `SELECT` (Scalar Subquery), mệnh đề `FROM` (Inline View), mệnh đề `WHERE` / `HAVING` (Nested Subquery).
+2. **Theo mối quan hệ với Main Query:** Non-correlated Subquery (비연관 서브쿼리 - Độc lập) vs Correlated Subquery (연관 서브쿼리 - Tương quan).
+3. **Theo cấu trúc kết quả trả về:** Single-row (단일행), Multi-row (다중행), Multi-column (다중컬럼).
 
-```
-[IDENTIFIER]
+---
 
-본질식별자
-= 업무에서 자연스럽게 존재
-= Natural / Business Identifier
-
-인조식별자
-= 시스템에서 인위적으로 생성
-= Surrogate Identifier
-= Sequence / Auto-generated ID 등
-```
-
-Và **một câu để nhớ toàn bộ phần 인조식별자**:
-
-> **인조식별자는 PK를 단순하게 만들어 개발은 편리하지만, 업무적으로 유일해야 하는 값의 중복까지 자동으로 막아주는 것은 아니다.**
-Surrogate key làm PK đơn giản và giúp phát triển thuận tiện, nhưng **không tự động bảo vệ tính duy nhất của business key**.
->
-
-Ví dụ điển hình:
-
-```
-PK = ORDER_DETAIL_ID
-
-nhưng business rule:
-(ORDER_ID, PRODUCT_ID) phải unique
-
-→ cần UNIQUE(ORDER_ID, PRODUCT_ID)
-  nếu nghiệp vụ thực sự yêu cầu không trùng.
-```
-
-Đây chính là mối liên hệ quan trọng nhất giữa **PK – 본질식별자 – 인조식별자 – UNIQUE – 데이터 무결성** mà đề SQLD có thể biến thành câu hỏi đánh lừa.
-
-Mình sẽ tiếp tục đúng format học SQLD đã thống nhất: **bám sát nội dung ảnh → 1 ý tiếng Hàn + 1 ý tiếng Việt → giải thích keyword ngay tại chỗ → sau đó mở rộng phần dễ nhầm/dễ ra thi → cuối bài có `📌 NOTE 시험` để ôn nhanh.**
-
-## 제1절 서브쿼리 — Subquery
+## 제1절 서브쿼리 개요 — Tổng quan về Subquery
 
 ### 1. 서브쿼리란 무엇인가? — Subquery là gì?
 
@@ -566,10 +533,10 @@ chỉ cần:
 
 ## 11. 다중컬럼 서브쿼리 — Multi-column Subquery
 
-**다중컬럼 서브쿼리는 여러 컬럼을 동시에 반환한다.**
-→ Multi-column subquery trả về nhiều cột cùng lúc.
+**KR:** 다중컬럼 서브쿼리는 서브쿼리가 비교하는 컬럼이 둘 이상인 서브쿼리이다.
+**VI:** Multi-column subquery trả về **tổ hợp nhiều cột cùng lúc** để so sánh đồng thời với các cột ở Main query.
 
-Ví dụ trong ảnh:
+Ví dụ kinh điển:
 
 ```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
@@ -581,7 +548,7 @@ WHERE (DEPTNO, SAL) IN (
 );
 ```
 
-Subquery có thể tạo:
+Subquery trả về danh sách các cặp `(DEPTNO, MAX(SAL))`:
 
 ```text
 DEPTNO | MAX(SAL)
@@ -591,32 +558,34 @@ DEPTNO | MAX(SAL)
 30     | 3500
 ```
 
-Main query kiểm tra theo **cặp giá trị**:
+Main query kiểm tra theo **từng bộ giá trị (tuple matching)**:
+- Nhân viên phòng 10 có lương 5000 → Khớp điều kiện → Giữ lại.
+- Nhân viên phòng 10 có lương 3000 → Không khớp → Bỏ qua.
+- Nhân viên phòng 20 có lương 4000 → Khớp điều kiện → Giữ lại.
 
-```text
-(DEPTNO, SAL)
-```
+Mục tiêu nghiệp vụ:
+> "Tìm những nhân viên có mức lương cao nhất trong từng phòng ban của họ."
 
-Ví dụ:
-
-```text
-(10,5000) → match
-(10,3000) → không
-(20,4000) → match
-```
-
-Mục tiêu của câu SQL:
-
-> Tìm nhân viên có mức lương cao nhất của từng department.
+### ⚠️ Điểm khác biệt quan trọng giữa Oracle và SQL Server
+- **Oracle Database:** Hỗ trợ đầy đủ cú pháp đa cột dạng tuple: `WHERE (col1, col2) IN (SELECT col1, col2 FROM ...)`.
+- **Microsoft SQL Server:** **KHÔNG HỖ TRỢ** cú pháp đa cột `(col1, col2) IN (...)`. Trong SQL Server, nếu viết như vậy sẽ báo lỗi cú pháp. Để đạt được kết quả tương đương, trên SQL Server bắt buộc phải chuyển sang dùng `INNER JOIN` với Inline View hoặc dùng `EXISTS` với Correlated Subquery:
+  ```sql
+  -- Cú pháp thay thế trên SQL Server:
+  SELECT e.EMPNO, e.ENAME, e.SAL, e.DEPTNO
+  FROM EMP e
+  INNER JOIN (
+      SELECT DEPTNO, MAX(SAL) AS MAX_SAL
+      FROM EMP
+      GROUP BY DEPTNO
+  ) m ON e.DEPTNO = m.DEPTNO AND e.SAL = m.MAX_SAL;
+  ```
 
 ---
 
 ## 12. 스칼라 서브쿼리 — Scalar Subquery
 
-Đây là phần trọng tâm của ảnh.
-
-**스칼라 서브쿼리는 SELECT 절에서 하나의 값처럼 사용되는 서브쿼리이다.**
-→ Scalar Subquery là subquery được sử dụng giống như **một giá trị đơn**.
+**KR:** 스칼라 서브쿼리는 SELECT 절에 위치하여 마치 하나의 컬럼이나 표현식처럼 단일 값을 반환하는 서브쿼리이다.
+**VI:** Scalar Subquery nằm trong mệnh đề `SELECT`, đóng vai trò như **một cột hoặc một giá trị đơn (scalar value)**.
 
 Ví dụ:
 
@@ -632,49 +601,31 @@ SELECT p.id,
 FROM paintings p;
 ```
 
-Hãy nhìn nó như một column:
-
-```text
-p.id
-p.name
-p.price
-[SUBQUERY] → artist_name
-```
-
-Kết quả:
-
-```text
-id   name       price      artist_name
-101  숲과 나    1100000    이지현
-102  밤의 도시   1350000    이지현
-103  파도        470000     황현석
-...
-```
-
 ---
 
-## 13. Tại sao Scalar Subquery phải trả về 1 giá trị?
+## 13. Tại sao Scalar Subquery chỉ được trả về 1 giá trị? (Bẫy ORA-01427)
 
-**스칼라 서브쿼리는 하나의 컬럼 위치에서 사용되므로 단일 값을 반환해야 한다.**
-→ Vì scalar subquery chiếm vị trí của **một ô**, nên nó phải trả về một giá trị scalar.
-
-Ví dụ một row của kết quả:
+**KR:** 스칼라 서브쿼리는 하나의 행, 하나의 컬럼(1 Row 1 Column)만 반환해야 한다.
+**VI:** Scalar Subquery chiếm vị trí của **đúng một ô (cell)** trên một dòng kết quả, do đó nó **bắt buộc phải trả về tối đa 1 dòng và đúng 1 cột**.
 
 ```text
-101 | 숲과 나 | 1,100,000 | ???
+id   | name       | price     | artist_name (1 CELL DUY NHẤT)
+-----+------------+-----------+------------------------------
+101  | 숲과 나    | 1100000   | [Giá trị đơn từ Subquery]
 ```
 
-Vị trí `???` chỉ là **một cell**.
+### 🚨 Hai kịch bản thực thi sống còn trong đề thi SQLD
 
-Do đó subquery không thể trả:
+1. **Trường hợp Subquery trả về 0 dòng (Không tìm thấy dòng nào thỏa mãn):**
+   - **Hành vi:** Hệ thống **KHÔNG BÁO LỖI**, mà tự động điền giá trị `NULL` vào ô đó.
+   - Hành vi này hoàn toàn tương đồng với cơ chế của `LEFT OUTER JOIN`.
+2. **Trường hợp Subquery trả về từ 2 dòng trở lên:**
+   - **Hành vi:** Hệ thống **LẬP TỨC PHÁT SINH LỖI THỜI GIAN CHẠY (Runtime Error)**!
+   - Trong Oracle, lỗi này có mã hiệu kinh điển: `ORA-01427: single-row subquery returns more than one row`.
+   - Trong SQL Server, lỗi tương đương: `Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression.`
 
-```text
-이지현
-황현석
-박성진
-```
-
-vào cùng một cell.
+> **Quy tắc vàng thi cử:**
+> Nếu đề thi cho một câu truy vấn có Scalar Subquery mà không có điều kiện lọc khóa chính/duy nhất (hoặc không dùng hàm gom nhóm như `MAX`, `MIN`), dẫn đến khả năng bảng con trả về nhiều hơn 1 dòng cho một bản ghi của bảng chính → **Kết quả là phát sinh Lỗi (Error), chứ không phải trả về dữ liệu!**
 
 ---
 
@@ -1409,3 +1360,283 @@ NOT EXISTS
 giữ:
 
 ```text
+B
+D
+```
+
+Toán tử `NOT EXISTS` cực kỳ hữu ích cho bài toán nghiệp vụ kinh điển:
+> "Tìm những thực thể ở bảng A **hoàn toàn không có** bất kỳ dữ liệu phát sinh nào ở bảng B" (ví dụ: Tìm khách hàng chưa từng phát sinh đơn hàng, tìm sinh viên chưa đăng ký môn học nào).
+
+---
+
+## 29. Khóa ngoại ghép (Composite Key) trong Correlated Subquery
+
+Khi một bảng sử dụng khóa chính gồm nhiều cột (Composite Primary Key), correlated subquery bắt buộc phải liên kết **đầy đủ tất cả các cột thành phần của khóa**.
+
+Ví dụ bảng chi tiết đơn hàng:
+
+```sql
+CREATE TABLE order_items (
+    order_id   INT,
+    product_id INT,
+    quantity   INT,
+    price      DECIMAL(10,2),
+    PRIMARY KEY(order_id, product_id)
+);
+```
+
+Khóa chính là cặp `(order_id, product_id)`. Nếu correlated subquery muốn kiểm tra trạng thái của đúng một dòng chi tiết đơn hàng:
+
+```sql
+-- ✅ ĐÚNG: Liên kết đủ cả 2 cột khóa
+WHERE b.order_id = a.order_id
+  AND b.product_id = a.product_id
+
+-- ❌ SAI: Chỉ liên kết 1 cột khóa
+WHERE b.order_id = a.order_id
+```
+
+Nếu chỉ nối theo `order_id`, một đơn hàng có thể chứa nhiều sản phẩm khác nhau, subquery sẽ trả về nhiều dòng ngoài dự kiến và gây sai lệch toàn bộ logic tính toán.
+
+> **Quy tắc thi cử:**
+> Khi kiểm tra liên kết bảng có khóa ghép N cột, điều kiện tương quan trong Subquery bắt buộc phải xuất hiện đủ N cột liên kết.
+
+---
+
+## 30. Cạm bẫy kinh điển số 1 của Subquery: NOT IN chứa NULL vs NOT EXISTS
+
+Đây là **câu hỏi phân loại học sinh giỏi** có tần suất xuất hiện cực cao trong kỳ thi SQLD.
+
+### Bản chất toán học của NOT IN
+
+Xét hai bảng:
+- Bảng `EMP` có các nhân viên thuộc phòng ban `DEPTNO = 10, 20, 30`.
+- Bảng `DEPT` có danh sách `DEPTNO` gồm: `10, 20, NULL`.
+
+Nếu thực hiện truy vấn:
+
+```sql
+SELECT EMPNO, ENAME, DEPTNO
+FROM EMP
+WHERE DEPTNO NOT IN (
+    SELECT DEPTNO
+    FROM DEPT
+);
+```
+
+#### Quá trình biên dịch logic 3 giá trị (Three-Valued Logic):
+Biểu thức `DEPTNO NOT IN (10, 20, NULL)` được hệ quản trị CSDL mở rộng thành phép toán logic `AND` liên tiếp:
+
+```sql
+WHERE (DEPTNO <> 10) AND (DEPTNO <> 20) AND (DEPTNO <> NULL)
+```
+
+Theo quy tắc toán tử so sánh với `NULL` trong SQL:
+- Bất kỳ phép so sánh nào với `NULL` (`= NULL`, `<> NULL`, `> NULL`) đều **luôn trả về giá trị logic UNKNOWN**.
+- Bảng chân trị phép `AND` với `UNKNOWN`:
+  - `TRUE AND UNKNOWN` → `UNKNOWN`
+  - `FALSE AND UNKNOWN` → `FALSE`
+- Thử kiểm tra từng giá trị `DEPTNO`:
+  - Với nhân viên có `DEPTNO = 10`: `(10 <> 10) AND ...` = `FALSE AND ...` → **FALSE**.
+  - Với nhân viên có `DEPTNO = 30`: `(30 <> 10) AND (30 <> 20) AND (30 <> NULL)` = `TRUE AND TRUE AND UNKNOWN` → **UNKNOWN**.
+
+Mệnh đề `WHERE` chỉ chấp nhận và trả về những dòng có kết quả đánh giá là **TRUE**. Kết quả `UNKNOWN` không thỏa mãn!
+
+> 🚨 **HỆ QUẢ KINH HOÀNG:**
+> Khi danh sách kết quả của Subquery bên trong toán tử `NOT IN` **chứa dù chỉ một giá trị NULL**, toàn bộ câu truy vấn chính sẽ **KHÔNG TRẢ VỀ BẤT KỲ DÒNG NÀO (0 rows)**!
+
+### Tại sao NOT EXISTS lại an toàn tuyệt đối trước giá trị NULL?
+
+Xét câu truy vấn tương đương sử dụng `NOT EXISTS`:
+
+```sql
+SELECT E.EMPNO, E.ENAME, E.DEPTNO
+FROM EMP E
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM DEPT D
+    WHERE D.DEPTNO = E.DEPTNO
+);
+```
+
+Cơ chế hoạt động của `EXISTS / NOT EXISTS`:
+1. `EXISTS` chỉ kiểm tra **sự tồn tại của dòng (Row Count > 0)**, nó không quan tâm giá trị cột trả về là gì.
+2. Khi xét nhân viên có `DEPTNO = 30`:
+   - So sánh `D.DEPTNO = 30` trên bảng `DEPT`:
+     - Dòng có `DEPTNO = 10` → `FALSE`.
+     - Dòng có `DEPTNO = 20` → `FALSE`.
+     - Dòng có `DEPTNO = NULL` → `NULL = 30` → `UNKNOWN`.
+   - Vì không có dòng nào đánh giá là `TRUE`, subquery trả về **0 dòng**.
+3. Vì subquery trả về 0 dòng, điều kiện `NOT EXISTS` đánh giá thành **TRUE**!
+4. Nhân viên có `DEPTNO = 30` được đưa vào kết quả một cách chính xác!
+
+| Tiêu chí | `NOT IN` | `NOT EXISTS` |
+| :--- | :--- | :--- |
+| **Gặp NULL trong tập Subquery** | Toàn bộ câu truy vấn trả về **RỖNG (0 dòng)** | **Hoạt động chính xác**, bỏ qua NULL |
+| **Bản chất kiểm tra** | So sánh từng giá trị (`<> ALL`) | Kiểm tra số lượng dòng tồn tại |
+| **Khuyên dùng trong dự án & đề thi** | Nguy hiểm nếu cột có thể chứa NULL | An toàn, tối ưu hiệu năng tốt |
+
+---
+
+## 31. Sơ đồ tổng hợp toàn bộ cấu trúc Subquery
+
+```text
+                                SUBQUERY (서브쿼리)
+                                        │
+        ┌───────────────────────────────┼───────────────────────────────┐
+        │                               │                               │
+  Theo Vị trí                      Theo Kết quả                    Theo Tương quan
+  (구문 위치)                       (반환 데이터 형태)               (상관 관계)
+        │                               │                               │
+  ┌─────┼─────┐                   ┌─────┼─────┐                   ┌─────┴─────┐
+  │     │     │                   │     │     │                   │           │
+SELECT FROM WHERE/HAVING        1 dòng Nhiều Nhiều              Không phụ  Phụ thuộc
+  │     │     │                 (단일행) dòng  cột               thuộc Outer Outer row
+  │     │     │                   │   (다중행) (다중컬럼)         (비연관)    (연관)
+Scalar Inline Nested              │     │       │                 │           │
+Sub-   View   Subquery            │     │       │                 Độc lập     Chạy lại
+query                             │     │       │                 1 lần duy   theo từng
+                                  │     │       └─ (col1,col2)IN  nhất        dòng của
+                                  │     │          (Oracle OK,                Main query
+                                  │     │          SQL Server NO)
+                                  │     │
+                                  │     └─ IN, ANY/SOME, ALL, EXISTS
+                                  │
+                                  └─ =, <>, >, >=, <, <=
+```
+
+---
+
+## 32. Bảng ma trận so sánh Subquery giữa Oracle và SQL Server
+
+| Tính năng Subquery | Oracle Database | Microsoft SQL Server |
+| :--- | :--- | :--- |
+| **Scalar Subquery trong SELECT** | Hỗ trợ đầy đủ; trả > 1 dòng báo lỗi `ORA-01427` | Hỗ trợ đầy đủ; trả > 1 dòng báo lỗi Runtime |
+| **Inline View trong FROM** | Bắt buộc hoặc tùy chọn Alias | **BẮT BUỘC** phải đặt Alias cho Inline View |
+| **Multi-Column Subquery `(A, B) IN`** | **HỖ TRỢ ĐẦY ĐỦ** cú pháp tuple | **KHÔNG HỖ TRỢ** (phải viết bằng JOIN/EXISTS) |
+| **Correlated Subquery trong UPDATE** | Hỗ trợ trong mệnh đề `SET` | Hỗ trợ trong `SET` hoặc cú pháp `UPDATE ... FROM` |
+| **NOT IN có chứa NULL** | Đều trả về 0 dòng (Chuẩn ANSI SQL) | Đều trả về 0 dòng (Chuẩn ANSI SQL) |
+| **Toán tử EXISTS / NOT EXISTS** | Tối ưu hóa Semi-join / Anti-join tự động | Tối ưu hóa Semi-join / Anti-join tự động |
+
+---
+
+## 33. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+1. **Bẫy Scalar Subquery trả về nhiều dòng (`ORA-01427`):**
+   - Scalar Subquery chỉ được phép trả về duy nhất 1 ô dữ liệu (1 hàng, 1 cột).
+   - Nếu trả về 0 hàng → Trả về `NULL` (không lỗi).
+   - Nếu trả về $\ge 2$ hàng → LẬP TỨC BÁO LỖI RUNTIME.
+2. **Bẫy `NOT IN` chứa giá trị `NULL`:**
+   - Trong Subquery, nếu danh sách con chứa giá trị `NULL`, toán tử `NOT IN` sẽ khiến câu query chính không trả về bất kỳ dòng nào.
+   - Giải pháp: dùng `WHERE col IS NOT NULL` trong subquery hoặc thay thế bằng `NOT EXISTS`.
+3. **Bẫy dùng toán tử đơn dòng cho Subquery đa dòng:**
+   - Nếu subquery có khả năng trả về nhiều hơn 1 dòng mà dùng toán tử so sánh đơn (`=`, `>`, `<`) → Báo lỗi runtime. Bắt buộc phải dùng toán tử đa dòng (`IN`, `ANY`, `ALL`, `EXISTS`).
+4. **Bẫy mệnh đề ORDER BY trong Subquery:**
+   - Theo chuẩn SQL truyền thống, mệnh đề `ORDER BY` không được phép xuất hiện trong Subquery của mệnh đề `WHERE` hoặc Scalar Subquery (chỉ được dùng trong Inline View khi phục vụ phân trang Top-N hoặc ROWNUM).
+5. **Bẫy Alias của Inline View trong SQL Server:**
+   - Trong SQL Server, mọi Inline View trong mệnh đề `FROM` bắt buộc phải có Alias (`FROM (SELECT ...) AS T`). Nếu thiếu alias sẽ bị lỗi cú pháp.
+
+---
+
+## 34. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Độ khó: Trung bình — Bẫy giá trị NULL trong NOT IN)
+Cho bảng `DEPARTMENT` gồm 3 dòng dữ liệu:
+- Dòng 1: `DEPTNO = 10`
+- Dòng 2: `DEPTNO = 20`
+- Dòng 3: `DEPTNO = NULL`
+
+Và bảng `EMPLOYEE` gồm 5 nhân viên có `DEPTNO` lần lượt là `10, 20, 30, 40, NULL`.
+Xét câu lệnh SQL sau:
+
+```sql
+SELECT COUNT(*) AS CNT
+FROM EMPLOYEE
+WHERE DEPTNO NOT IN (
+    SELECT DEPTNO
+    FROM DEPARTMENT
+);
+```
+
+Kết quả hiển thị của cột `CNT` là bao nhiêu?
+
+A. 0
+B. 2
+C. 3
+D. Báo lỗi cú pháp do không thể chứa NULL trong tập hợp IN
+
+**Đáp án đúng:** **A**
+**Giải thích chi tiết:**
+- Tập hợp do Subquery trả về là `{10, 20, NULL}`.
+- Mệnh đề lọc trở thành: `WHERE DEPTNO <> 10 AND DEPTNO <> 20 AND DEPTNO <> NULL`.
+- Vì phép so sánh bất kỳ với `NULL` (`DEPTNO <> NULL`) luôn trả về giá trị chân lý `UNKNOWN`, và phép toán logic `AND` có chứa `UNKNOWN` không bao giờ cho kết quả `TRUE`.
+- Do không có dòng nào trong bảng `EMPLOYEE` thỏa mãn điều kiện `WHERE` để được chọn, số lượng dòng thỏa mãn là 0. Hàm `COUNT(*)` đếm số dòng thỏa mãn sẽ trả về kết quả là `0`.
+
+---
+
+### Câu 2 (Độ khó: Khá — Cạm bẫy Scalar Subquery ORA-01427)
+Xét lược đồ dữ liệu gồm bảng `CUSTOMER` (Khách hàng) và `ORDERS` (Đơn hàng). Mỗi khách hàng có thể có 0, 1 hoặc nhiều đơn hàng. Câu lệnh SQL nào dưới đây có nguy cơ **phát sinh lỗi thời gian chạy (Runtime Error: ORA-01427)** cao nhất?
+
+A.
+```sql
+SELECT C.CUST_ID,
+       (SELECT COUNT(*) FROM ORDERS O WHERE O.CUST_ID = C.CUST_ID) AS ORDER_COUNT
+FROM CUSTOMER C;
+```
+B.
+```sql
+SELECT C.CUST_ID,
+       (SELECT MAX(O.ORDER_DATE) FROM ORDERS O WHERE O.CUST_ID = C.CUST_ID) AS LAST_ORDER
+FROM CUSTOMER C;
+```
+C.
+```sql
+SELECT C.CUST_ID,
+       (SELECT O.ORDER_ID FROM ORDERS O WHERE O.CUST_ID = C.CUST_ID) AS ORDER_ID
+FROM CUSTOMER C;
+```
+D.
+```sql
+SELECT C.CUST_ID
+FROM CUSTOMER C
+WHERE EXISTS (SELECT 1 FROM ORDERS O WHERE O.CUST_ID = C.CUST_ID);
+```
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- **Đáp án C là câu lệnh gây lỗi:** Ở đây `(SELECT O.ORDER_ID FROM ORDERS O WHERE O.CUST_ID = C.CUST_ID)` là một Scalar Subquery trong mệnh đề `SELECT`. Vì một khách hàng có thể có nhiều đơn hàng (`1 : N`), câu lệnh subquery này sẽ trả về $\ge 2$ dòng đối với khách hàng có từ 2 đơn hàng trở lên. Khi đó hệ quản trị CSDL Oracle sẽ ngay lập tức ngắt truy vấn và báo lỗi `ORA-01427: single-row subquery returns more than one row`.
+- **Đáp án A an toàn:** `COUNT(*)` là hàm tập hợp luôn trả về đúng 1 giá trị số nguyên (0 hoặc số lượng đơn).
+- **Đáp án B an toàn:** `MAX(ORDER_DATE)` là hàm tập hợp luôn trả về đúng 1 giá trị ngày lớn nhất (hoặc NULL nếu khách hàng không có đơn hàng nào).
+- **Đáp án D an toàn:** Mệnh đề `EXISTS` trong `WHERE` chấp nhận subquery trả về bao nhiêu dòng cũng được, chỉ kiểm tra sự tồn tại.
+
+---
+
+### Câu 3 (Độ khó: Khá — Phân tích toán tử đa dòng ANY và ALL)
+Cho bảng `SALARY_TBL` có các mức lương: `1000, 2000, 3000`. Câu lệnh SQL nào dưới đây sẽ trả về kết quả tương đương với điều kiện `WHERE SAL > 3000`?
+
+A. `WHERE SAL > ANY (SELECT SAL FROM SALARY_TBL)`
+B. `WHERE SAL > ALL (SELECT SAL FROM SALARY_TBL)`
+C. `WHERE SAL >= ALL (SELECT SAL FROM SALARY_TBL)`
+D. `WHERE SAL = ANY (SELECT SAL FROM SALARY_TBL)`
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- `> ALL (tập hợp)` có nghĩa là phải **lớn hơn tất cả** các giá trị trong tập hợp, tương đương với việc phải **lớn hơn giá trị lớn nhất (MAX)** của tập hợp đó: `> MAX(1000, 2000, 3000) = > 3000`. Do đó đáp án B hoàn toàn chính xác.
+- **Đáp án A:** `> ANY (tập hợp)` có nghĩa là chỉ cần lớn hơn ít nhất một giá trị, tương đương `> MIN(1000, 2000, 3000) = > 1000`.
+- **Đáp án C:** `>= ALL (tập hợp)` tương đương `>= 3000` (giữ lại cả giá trị 3000).
+- **Đáp án D:** `= ANY (tập hợp)` chính là toán tử `IN (1000, 2000, 3000)`.
+
+---
+
+### Câu 4 (Độ khó: Nâng cao — Đa cột Subquery và tính tương thích DBMS)
+Phát biểu nào sau đây là **SAI** khi nói về Subquery trong SQL?
+
+A. Subquery trong mệnh đề `HAVING` được sử dụng để so sánh kết quả gom nhóm với một giá trị tính toán từ một tập hợp dữ liệu khác.
+B. Trong Oracle, câu lệnh `WHERE (DEPTNO, JOB) IN (SELECT DEPTNO, JOB FROM EMP_BACKUP)` là cú pháp hợp lệ, nhưng cú pháp so sánh đa cột dạng tuple này không được Microsoft SQL Server hỗ trợ trực tiếp.
+C. Khi Scalar Subquery không tìm thấy bất kỳ dòng nào thỏa mãn điều kiện, toàn bộ câu truy vấn chính sẽ phát sinh lỗi `ORA-01403: no data found`.
+D. Mệnh đề `ORDER BY` trong Inline View (mệnh đề `FROM`) là hoàn toàn hợp lệ và thường xuyên được sử dụng để phục vụ các truy vấn Top-N và phân trang.
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- **Phát biểu C là SAI:** Khi Scalar Subquery trả về 0 dòng dữ liệu, hệ thống không báo lỗi mà tự động gán giá trị `NULL` cho ô kết quả đó (hoạt động tương tự cơ chế LEFT OUTER JOIN). Lỗi `ORA-01427` chỉ phát sinh khi subquery trả về nhiều hơn 1 dòng dữ liệu.
+- Các phát biểu A, B, D đều hoàn toàn chính xác theo chuẩn lý thuyết và thực tiễn của kỳ thi SQLD.

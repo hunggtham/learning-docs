@@ -1730,3 +1730,221 @@ Và với `PRIOR`, chỉ cần nhớ một nguyên tắc:
 > **Đừng học thuộc PRIOR = cha hay PRIOR = con. Hãy lấy giá trị của biểu thức có PRIOR ở current row, rồi dùng giá trị đó tìm row tiếp theo ở phía còn lại của dấu `=`.**
 
 Nếu áp dụng cách này, kể cả đề SQLD đảo vị trí `PRIOR` hoặc đổi tên column, bạn vẫn tự suy ra được hướng đi đúng.
+
+---
+
+## 39. Bảng ma trận so sánh Oracle vs SQL Server về Hierarchical Query
+
+| Khía cạnh kỹ thuật | Oracle Database | Microsoft SQL Server (Recursive CTE) | Điểm thi trọng tâm SQLD |
+| :--- | :--- | :--- | :--- |
+| **Cú pháp cơ bản** | `START WITH ... CONNECT BY PRIOR ...` | `WITH cte AS (Anchor Query UNION ALL Recursive Query) SELECT ...` | Oracle dùng mệnh đề chuyên dụng; SQL Server dùng đệ quy CTE chuẩn ANSI. |
+| **Điểm khởi đầu (Root)** | Mệnh đề `START WITH <condition>` | Anchor Member (truy vấn neo trước `UNION ALL`) | Đều xác định tập bản ghi gốc có cấp độ ban đầu. |
+| **Cột ảo độ sâu (Depth)** | Pseudocolumn **`LEVEL`** (bắt đầu từ 1) | Tự định nghĩa: `1 AS LVL` và `c.LVL + 1` | Đề thi Oracle luôn hỏi giá trị của pseudocolumn `LEVEL`. |
+| **Duyệt xuôi (Top-down)** | `CONNECT BY PRIOR EMPNO = MGR` | `JOIN cte ON emp.MGR = cte.EMPNO` | Gốc là sếp cao nhất, duyệt dần xuống nhân viên cấp dưới. |
+| **Duyệt ngược (Bottom-up)** | `CONNECT BY PRIOR MGR = EMPNO` | `JOIN cte ON emp.EMPNO = cte.MGR` | Gốc là nhân viên cấp dưới, duyệt ngược lên ban giám đốc. |
+| **Xử lý vòng lặp (Cycle)** | Mệnh đề `NOCYCLE`, cột `CONNECT_BY_ISCYCLE` | `OPTION (MAXRECURSION n)` | Oracle cho phép bỏ qua cạnh lặp bằng `NOCYCLE` và đánh dấu 1 bằng `CONNECT_BY_ISCYCLE`. |
+| **Nút lá (Leaf node)** | Pseudocolumn **`CONNECT_BY_ISLEAF`** (1: lá, 0: không) | Tự tính qua `NOT EXISTS` hoặc `LEFT JOIN` | Bắt nhanh các nhân viên không quản lý ai bằng `WHERE CONNECT_BY_ISLEAF = 1`. |
+| **Gốc của cây (Root node)** | Toán tử **`CONNECT_BY_ROOT col`** | Lưu giá trị từ Anchor Query truyền xuống | Lấy mã hoặc tên của sếp tổng cao nhất cho từng nhân viên. |
+| **Đường dẫn phân cấp** | Hàm **`SYS_CONNECT_BY_PATH(col, '/')`** | Tự cộng dồn chuỗi: `CAST(c.path + '/' + e.name AS VARCHAR)` | Trả về chuỗi đường dẫn từ Root đến dòng hiện tại (ví dụ: `/PRESIDENT/MANAGER/CLERK`). |
+| **Sắp xếp giữ dáng cây** | Mệnh đề **`ORDER SIBLINGS BY col`** | Tự tạo cột SortKey đệ quy để `ORDER BY` | Giữ nguyên thứ bậc cha-con, chỉ sắp xếp các nút anh em cùng cha. |
+
+---
+
+## 40. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+> [!WARNING]
+> Dưới đây là 5 cạm bẫy thi cử kinh điển về Truy vấn phân cấp (Hierarchical Query) trong SQLD:
+
+### Cạm bẫy 1: Sự khác biệt chí mạng giữa điều kiện trong `WHERE` vs `CONNECT BY`
+Đây là câu hỏi phân loại học sinh giỏi kinh điển nhất trong đề thi SQLD:
+- **Nếu điều kiện đặt trong `CONNECT BY`:**
+  ```sql
+  CONNECT BY PRIOR EMPNO = MGR AND DEPTNO != 20
+  ```
+  $\rightarrow$ **CẮT TỈA CẢ CÀNH CÂY (Subtree Pruning):** Nhánh nào có phòng ban 20 sẽ bị chặn đứng ngay lập tức; toàn bộ các nhân viên cấp dưới (con, cháu, chắt) của nhánh đó đều bị loại bỏ hoàn toàn khỏi cây phân cấp!
+- **Nếu điều kiện đặt trong `WHERE`:**
+  ```sql
+  CONNECT BY PRIOR EMPNO = MGR
+  WHERE DEPTNO != 20
+  ```
+  $\rightarrow$ **CHỈ LỌC BỎ RIÊNG BẢN GHI ĐÓ (Node Filtering):** Hệ thống dựng xong toàn bộ cây phân cấp đầy đủ rồi mới quét qua `WHERE`. Chỉ những cá nhân thuộc phòng 20 bị ẩn đi; các nhân viên cấp dưới của người đó (nếu thuộc phòng ban khác) **vẫn xuất hiện bình thường** trong kết quả truy vấn!
+
+### Cạm bẫy 2: Chiều duyệt cây của toán tử `PRIOR` (Top-down vs Bottom-up)
+- **Duyệt xuôi (Top-down / 순방향):**
+  - Cú pháp: `CONNECT BY PRIOR EMPNO = MGR` hoặc `CONNECT BY MGR = PRIOR EMPNO` (vị trí từ khóa `PRIOR` quyết định, không phải vị trí đứng trước hay sau dấu `=`).
+  - Ý nghĩa: Giá trị `EMPNO` của dòng cha hiện tại được so với giá trị `MGR` của dòng con kế tiếp. Duyệt từ Giám đốc (Root) xuống Nhân viên (Leaf).
+- **Duyệt ngược (Bottom-up / 역방향):**
+  - Cú pháp: `CONNECT BY PRIOR MGR = EMPNO` hoặc `CONNECT BY EMPNO = PRIOR MGR`.
+  - Ý nghĩa: Giá trị `MGR` của dòng con hiện tại được so với giá trị `EMPNO` của dòng cha kế tiếp. Duyệt từ Nhân viên (Leaf) ngược lên Giám đốc (Root).
+
+### Cạm bẫy 3: Dùng `ORDER BY` thông thường làm phá vỡ hình cây
+- Khi truy vấn phân cấp, kết quả mặc định được trả về theo chiều sâu (Depth-First Search) để giữ mối quan hệ gia phả: Cha $\rightarrow$ Con $\rightarrow$ Cháu.
+- Nếu bạn thêm `ORDER BY ENAME ASC`, hệ thống sẽ gom tất cả các dòng lại và xếp theo chữ cái A-Z, **cấu trúc cây phân cấp bị phá vỡ hoàn toàn**!
+- Muốn sắp xếp danh sách nhân viên cấp dưới của cùng một người quản lý theo tên hoặc lương mà vẫn giữ nguyên phân cấp cây, bắt buộc phải dùng:
+  ```sql
+  ORDER SIBLINGS BY ENAME ASC;
+  ```
+
+### Cạm bẫy 4: Ký tự phân cách trong `SYS_CONNECT_BY_PATH`
+- Hàm `SYS_CONNECT_BY_PATH(column, delimiter)` có 2 quy tắc bắt buộc:
+  1. Ký tự phân cách `delimiter` phải là một chuỗi ký tự hằng số (ví dụ: `'/'`, `','`, `'-'`).
+  2. Ký tự phân cách **tuyệt đối không được xuất hiện** bên trong dữ liệu của chính cột `column`. Nếu cột `ENAME` có chứa ký tự `'/'`, Oracle sẽ ném lỗi ngay: `ORA-30004: when using SYS_CONNECT_BY_PATH function, cannot have separator in column value`.
+
+### Cạm bẫy 5: Vòng lặp đệ quy vô tận và từ khóa `NOCYCLE`
+- Trong thực tế, dữ liệu có thể bị lỗi tham chiếu vòng (ví dụ: A là sếp của B, B là sếp của C, C lại được gán sếp là A).
+- Khi chạy truy vấn phân cấp, Oracle sẽ báo lỗi ngay lập tức: `ORA-01436: CONNECT BY loop in user data`.
+- **Giải pháp thi cử:**
+  - Bổ sung từ khóa `NOCYCLE` ngay sau `CONNECT BY`: `CONNECT BY NOCYCLE PRIOR ...`.
+  - Kết hợp sử dụng cột ảo `CONNECT_BY_ISCYCLE` để phát hiện đúng bản ghi gây ra vòng lặp (trả về 1 tại bản ghi có con trỏ vòng lại tổ tiên, các bản ghi khác trả về 0).
+
+---
+
+## 41. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1: Phân biệt điều kiện trong WHERE vs CONNECT BY (Độ khó: Cao)
+Xét bảng tổ chức nhân sự `EMP` có cây gia phả như sau:
+- Tổng giám đốc: `KING` (EMPNO: 100, MGR: NULL)
+  - Trưởng phòng: `JONES` (EMPNO: 200, MGR: 100, DEPTNO: 20)
+    - Nhân viên: `SCOTT` (EMPNO: 300, MGR: 200, DEPTNO: 10)
+    - Nhân viên: `FORD` (EMPNO: 400, MGR: 200, DEPTNO: 20)
+  - Trưởng phòng: `BLAKE` (EMPNO: 500, MGR: 100, DEPTNO: 30)
+
+Xét 2 câu lệnh SQL sau:
+
+```sql
+-- Câu lệnh Q1:
+SELECT ENAME, LEVEL
+FROM EMP
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR AND DEPTNO != 20;
+
+-- Câu lệnh Q2:
+SELECT ENAME, LEVEL
+FROM EMP
+WHERE DEPTNO != 20
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR;
+```
+
+Hỏi số lượng dòng kết quả trả về của Q1 và Q2 lần lượt là bao nhiêu?
+
+A. Q1 trả về 2 dòng, Q2 trả về 3 dòng.
+B. Q1 trả về 3 dòng, Q2 trả về 3 dòng.
+C. Q1 trả về 2 dòng, Q2 trả về 4 dòng.
+D. Q1 trả về 4 dòng, Q2 trả về 2 dòng.
+
+> **Đáp án chính xác:** **A**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích Q1 (Điều kiện `DEPTNO != 20` nằm trong `CONNECT BY`):**
+>   - Gốc là `KING` (thỏa mãn `START WITH`).
+>   - Nhánh `JONES`: Vì `JONES` có `DEPTNO = 20`, điều kiện trong `CONNECT BY` ngay lập tức ngăn chặn việc mở rộng sang nút `JONES`. Toàn bộ nhánh con cháu bên dưới `JONES` (gồm cả `SCOTT` và `FORD`) đều bị cắt tỉa hoàn toàn!
+>   - Nhánh `BLAKE`: `DEPTNO = 30` thỏa mãn nên được đưa vào cây.
+>   - Kết quả Q1 gồm 2 người: `KING`, `BLAKE` $\rightarrow$ **2 dòng**.
+> - **Phân tích Q2 (Điều kiện `DEPTNO != 20` nằm trong `WHERE`):**
+>   - Đầu tiên, Oracle dựng toàn bộ cây 5 người: `KING`, `JONES`, `SCOTT`, `FORD`, `BLAKE`.
+>   - Sau đó, mệnh đề `WHERE DEPTNO != 20` lọc bỏ những người có phòng 20 (loại `JONES` và `FORD`).
+>   - Bản ghi `SCOTT` (thuộc phòng 10) vẫn thỏa mãn điều kiện `WHERE` nên được giữ lại, cùng với `KING` và `BLAKE`.
+>   - Kết quả Q2 gồm 3 người: `KING`, `SCOTT`, `BLAKE` $\rightarrow$ **3 dòng**.
+> - Vì vậy số dòng trả về của Q1 và Q2 lần lượt là 2 và 3.
+> - **Lựa chọn A:** Hoàn toàn chính xác.
+> - **Lựa chọn B, C, D sai:** Đánh đồng cơ chế cắt tỉa cành cây của CONNECT BY với cơ chế lọc dòng sau cùng của WHERE.
+
+---
+
+### Câu 2: Xác định chiều duyệt và giá trị pseudocolumn LEVEL (Độ khó: Trung bình)
+Cho bảng nhân viên `EMP` có quan hệ báo cáo công việc:
+
+```text
++-------+--------+------+
+| EMPNO | ENAME  | MGR  |
++-------+--------+------+
+|  7839 | KING   | NULL |
+|  7566 | JONES  | 7839 |
+|  7788 | SCOTT  | 7566 |
+|  7876 | ADAMS  | 7788 |
++-------+--------+------+
+```
+
+Người dùng thực thi câu lệnh SQL sau:
+
+```sql
+SELECT ENAME, LEVEL
+FROM EMP
+START WITH ENAME = 'SCOTT'
+CONNECT BY PRIOR MGR = EMPNO;
+```
+
+Dòng kết quả có `LEVEL = 3` sẽ hiển thị nhân viên nào?
+
+A. ADAMS
+B. JONES
+C. KING
+D. Không có dòng nào có LEVEL = 3
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích chiều duyệt:**
+>   - Mệnh đề `START WITH ENAME = 'SCOTT'` xác định nút gốc của truy vấn là `SCOTT` $\rightarrow \text{LEVEL} = 1$.
+>   - Điều kiện `CONNECT BY PRIOR MGR = EMPNO`:
+>     - Dòng hiện tại là `SCOTT` có `MGR = 7566`.
+>     - Toán tử `PRIOR` đứng trước `MGR` nghĩa là: Lấy giá trị `MGR` của dòng hiện tại (7566) đem so sánh với `EMPNO` của dòng kế tiếp.
+>     - Dòng có `EMPNO = 7566` chính là `JONES` $\rightarrow \text{LEVEL} = 2$.
+>   - Tại dòng `JONES`: có `MGR = 7839`. Dòng kế tiếp có `EMPNO = 7839` chính là `KING` $\rightarrow \text{LEVEL} = 3$.
+> - Đây là chiều duyệt ngược từ dưới lên trên (Bottom-up).
+> - Tại `LEVEL = 3`, nhân viên hiển thị chính là `KING`.
+> - **Lựa chọn C:** Hoàn toàn chính xác.
+> - **Lựa chọn A sai:** Nhầm chiều duyệt xuôi xuống `ADAMS`.
+> - **Lựa chọn B sai:** `JONES` ở cấp độ `LEVEL = 2`.
+> - **Lựa chọn D sai:** Truy vấn duyệt thành công tới KING nên có LEVEL = 3.
+
+---
+
+### Câu 3: Sắp xếp phân cấp với ORDER SIBLINGS BY (Độ khó: Dễ)
+Phát biểu nào sau đây là **ĐÚNG** khi nói về mệnh đề sắp xếp trong truy vấn phân cấp của Oracle?
+
+A. Mệnh đề `ORDER BY` tiêu chuẩn vẫn duy trì hoàn hảo quan hệ cha - con của cây phân cấp.
+B. Mệnh đề `ORDER SIBLINGS BY` chỉ sắp xếp các nút anh em có cùng một nút cha trực tiếp mà không phá vỡ cấu trúc thứ bậc cây.
+C. Mệnh đề `ORDER SIBLINGS BY` chỉ áp dụng được trên cột kiểu số học, không dùng được trên kiểu chuỗi ký tự.
+D. Khi dùng `ORDER SIBLINGS BY`, pseudocolumn `LEVEL` sẽ tự động bị đặt lại bằng 1 cho tất cả các hàng.
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Lựa chọn B đúng:** Bản chất của `ORDER SIBLINGS BY` là sắp xếp nội bộ giữa các nút cùng cấp (cùng cha), giúp dữ liệu được tổ chức gọn gàng mà không làm đảo lộn cấu trúc cây.
+> - **Lựa chọn A sai:** Dùng `ORDER BY` thông thường sẽ phá hủy hoàn toàn thứ tự hiển thị phân cấp của cây.
+> - **Lựa chọn C sai:** `ORDER SIBLINGS BY` áp dụng tốt cho mọi kiểu dữ liệu (số, chuỗi, ngày tháng).
+> - **Lựa chọn D sai:** Sắp xếp không hề làm thay đổi giá trị của pseudocolumn `LEVEL`.
+
+---
+
+### Câu 4: Ứng dụng các hàm và cột ảo phân cấp (Độ khó: Trung bình)
+Xét câu lệnh SQL sau thực thi trên Oracle:
+
+```sql
+SELECT SYS_CONNECT_BY_PATH(ENAME, '/') AS PATH,
+       CONNECT_BY_ROOT ENAME AS ROOT_NAME
+FROM EMP
+WHERE CONNECT_BY_ISLEAF = 1
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR;
+```
+
+Mục đích nghiệp vụ chính xác của câu truy vấn trên là gì?
+
+A. Liệt kê toàn bộ các cấp quản lý từ gốc xuống đến nhân viên cấp trung.
+B. Chỉ lấy các nhân viên ở nút lá (nhân viên không quản lý bất kỳ ai), kèm đường dẫn phân cấp từ sếp cao nhất và tên của sếp cao nhất đó.
+C. Tìm các nhân viên gây ra hiện tượng lặp chu trình trong sơ đồ tổ chức.
+D. Đếm tổng số nhân viên dưới quyền của từng giám đốc bộ phận.
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích từng thành phần:**
+>   - `WHERE CONNECT_BY_ISLEAF = 1`: Chỉ chọn các nút lá (Leaf node), tức là những nhân viên không có cấp dưới nào.
+>   - `SYS_CONNECT_BY_PATH(ENAME, '/')`: Hiển thị toàn bộ chuỗi đường dẫn từ Root xuyên qua các cấp trung gian đến nhân viên hiện tại (ví dụ: `/KING/JONES/SCOTT`).
+>   - `CONNECT_BY_ROOT ENAME`: Trả về tên của sếp cao nhất ở gốc cây (tức `KING`).
+> - Kết hợp lại, câu truy vấn dùng để báo cáo danh sách toàn bộ nhân viên thực thi trực tiếp ở cấp thấp nhất kèm chuỗi lãnh đạo tương ứng.
+> - **Lựa chọn B:** Hoàn toàn chính xác.
+> - **Lựa chọn A, C, D sai:** Đều diễn giải sai lệch mục đích của các hàm và điều kiện lọc.

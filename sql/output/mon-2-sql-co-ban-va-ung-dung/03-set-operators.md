@@ -1,602 +1,408 @@
-# Set Operators
+# Set Operators (집합 연산자 — Toán tử tập hợp)
 
-B
-D
-```
+Trong SQL, các toán tử tập hợp (**Set Operators — 집합 연산자**) cho phép kết hợp kết quả của hai hoặc nhiều câu lệnh `SELECT` độc lập thành một tập kết quả duy nhất.
 
-Nó rất hữu ích cho bài toán:
-
-> "Tìm những đối tượng **không có** quan hệ/dữ liệu tương ứng."
-
----
-
-## 29. Một lỗi dễ ra thi: Composite Key trong correlated subquery
-
-Ảnh cho bảng:
-
-```sql
-CREATE TABLE order_items (
-    order_id   INT,
-    product_id INT,
-    quantity   INT,
-    price      DECIMAL(10,2),
-    PRIMARY KEY(order_id, product_id)
-);
-```
-
-Primary Key gồm:
+> **Khác biệt cốt tử giữa JOIN và Set Operator:**
+> - **JOIN (조인):** Ghép nối các bảng theo **chiều ngang (Horizontal Combine)** dựa trên điều kiện quan hệ cột (Column Relationship). Kết quả trả về sẽ mở rộng thêm số lượng cột.
+> - **Set Operator (집합 연산자):** Ghép nối các tập kết quả theo **chiều dọc (Vertical Combine)**. Kết quả trả về tăng thêm số dòng, trong khi số lượng cột giữ nguyên theo cấu trúc của câu lệnh `SELECT` đầu tiên.
 
 ```text
-(order_id, product_id)
-```
-
-Nếu correlated subquery muốn xác định đúng một `order_item`, phải liên kết đủ:
-
-```sql
-WHERE b.order_id = a.order_id
-AND   b.product_id = a.product_id
-```
-
-Nếu chỉ:
-
-```sql
-WHERE b.order_id = a.order_id
-```
-
-thì một order có thể có nhiều product.
-
-→ Không xác định đúng row.
-
-#### 📌 Quy tắc
-Phần này nối mạch SQL với “📌 Quy tắc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-Khóa ghép gồm N cột
-→ khi cần xác định chính xác row, thường phải xét đủ các cột cần thiết của khóa/quan hệ.
+       JOIN (Ghép ngang)                 Set Operator (Ghép dọc)
+ ┌─────────┬─────────┐              ┌─────────────────────────┐
+ │ Bảng A  │ Bảng B  │              │    SELECT Kết quả A     │
+ │ (Cột 1) │ (Cột 2) │              ├─────────────────────────┤
+ └─────────┴─────────┘              │  UNION / INTERSECT ...  │
+                                    ├─────────────────────────┤
+                                    │    SELECT Kết quả B     │
+                                    └─────────────────────────┘
 ```
 
 ---
 
-## 제2절 집합 연산자 — Set Operators
+## 1. Bốn toán tử tập hợp cốt lõi (4대 집합 연산자)
 
-Bây giờ sang phần thứ hai trong ảnh.
-
-Set Operator kết hợp **kết quả của các SELECT**, không phải JOIN column theo chiều ngang.
-
-Có 4 loại chính:
+Trong chuẩn ANSI SQL và kỳ thi SQLD, có 4 toán tử tập hợp quan trọng:
 
 ```text
-UNION
-UNION ALL
-INTERSECT
-MINUS / EXCEPT
+1. UNION      : Hợp tập hợp (Khử trùng lặp, có phát sinh sắp xếp)
+2. UNION ALL  : Hợp tập hợp (Giữ nguyên trùng lặp, KHÔNG sắp xếp, tốc độ cao)
+3. INTERSECT  : Giao tập hợp (Chỉ lấy phần tử chung, khử trùng lặp)
+4. MINUS      : Hiệu tập hợp (Oracle: lấy tập A trừ tập B, khử trùng lặp)
+   (EXCEPT)   : Hiệu tập hợp (SQL Server / PostgreSQL tương đương với MINUS)
+```
+
+Giả sử ta có hai tập dữ liệu đơn giản:
+- Tập hợp $A = \{1, 2, 3\}$
+- Tập hợp $B = \{2, 3, 4\}$
+
+```text
+A UNION B       → {1, 2, 3, 4}       (Gộp chung, phần tử 2 và 3 bị loại bớt 1 bản sao)
+A UNION ALL B   → {1, 2, 3, 2, 3, 4} (Ghép nối trực tiếp, giữ nguyên 2 và 3 lặp lại)
+A INTERSECT B   → {2, 3}             (Chỉ giữ lại các phần tử cùng xuất hiện ở cả hai)
+A MINUS B       → {1}                (Lấy các phần tử có trong A nhưng KHÔNG có trong B)
+B MINUS A       → {4}                (Lấy các phần tử có trong B nhưng KHÔNG có trong A)
 ```
 
 ---
 
-## 30. JOIN và Set Operator khác nhau như thế nào?
+## 2. Chi tiết từng toán tử tập hợp
 
-Đây là cách hiểu cực nhanh.
+### 2.1 UNION (합집합 — Hợp tập hợp khử trùng lặp)
 
-JOIN:
+**KR:** UNION은 여러 개의 SELECT 문의 결과를 결합하여 중복된 행을 제거하고 단일 결과 집합으로 반환한다.
+**VI:** `UNION` hợp nhất kết quả của các câu lệnh `SELECT`, tự động **loại bỏ các dòng trùng lặp (Deduplication)** và ngầm thực hiện thao tác **sắp xếp (Sort)** các dòng dữ liệu.
 
-```text
-Table A       Table B
-
-A columns  +  B columns
-      → ghép ngang →
-```
-
-Set Operator:
-
-```text
-SELECT result A
-      ↓
-SELECT result B
-      ↓
-ghép dọc
-```
-
-Ví dụ:
-
-```text
-R1
-
-1
-2
-3
-
-R2
-
-3
-4
-5
-```
-
-Set operator xử lý hai tập này.
-
----
-
-## 31. UNION
-
-**UNION은 두 SELECT 결과를 합치고 중복을 제거한다.**
-→ UNION hợp hai tập kết quả và **loại duplicate**.
-
-```text
-R1 = {1,2,3}
-R2 = {3,4,5}
-```
+Ví dụ hai bảng diễn viên trong phim Sweet Home:
 
 ```sql
-R1
-UNION
-R2
-```
-
-kết quả:
-
-```text
-1
-2
-3
-4
-5
-```
-
-`3` chỉ xuất hiện một lần.
-
-Ví dụ ảnh:
-
-```sql
-SELECT 배우명, 본명
-FROM sweethome1
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON1
 
 UNION
 
-SELECT 배우명, 본명
-FROM sweethome2;
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON2;
 ```
 
-→ lấy diễn viên của season 1 và season 2, nhưng người trùng chỉ xuất hiện một lần.
+Quy trình xử lý của CSDL:
+1. Thực thi câu lệnh `SELECT` thứ nhất.
+2. Thực thi câu lệnh `SELECT` thứ hai.
+3. Ghép hai tập dữ liệu lại với nhau.
+4. Thực hiện thuật toán sắp xếp (`Sort Unique` hoặc `Hash Unique`) để tìm và loại bỏ tất cả các dòng trùng lặp hoàn toàn trên mọi cột.
 
 ---
 
-## 32. UNION ALL
+### 2.2 UNION ALL (합집합 — Hợp tập hợp giữ nguyên trùng lặp)
 
-**UNION ALL은 중복을 제거하지 않고 모든 행을 반환한다.**
-→ UNION ALL giữ nguyên duplicate.
+**KR:** UNION ALL은 중복된 행을 제거하지 않고, 정렬 작업 없이 모든 결과를 단순히 합쳐서 반환한다.
+**VI:** `UNION ALL` kết hợp toàn bộ kết quả của các câu `SELECT`, **giữ nguyên toàn bộ các dòng trùng lặp** và **HOÀN TOÀN KHÔNG thực hiện thao tác sắp xếp**.
 
-```text
-R1 = {1,2,3}
-R2 = {3,4,5}
-```
-
-kết quả:
-
-```text
-1
-2
-3
-3
-4
-5
-```
-
-#### UNION vs UNION ALL
-Phần này nối mạch SQL với “UNION vs UNION ALL”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-UNION
-→ duplicate 제거
-→ cần xử lý loại trùng
+```sql
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON1
 
 UNION ALL
-→ duplicate 유지
-→ không cần loại trùng
+
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON2;
 ```
 
-Vì vậy khi **biết chắc không cần loại duplicate**, `UNION ALL` thường tránh được công việc deduplication không cần thiết.
+Nếu diễn viên Song Kang đóng ở cả mùa 1 và mùa 2, tên của anh ấy sẽ xuất hiện **2 lần** trong kết quả cuối cùng.
+
+#### ⚡ Phân tích hiệu năng chuyên sâu: UNION vs UNION ALL
+
+| Tiêu chí | UNION | UNION ALL |
+| :--- | :--- | :--- |
+| **Loại bỏ trùng lặp** | CÓ (Deduplicated) | KHÔNG (Keeps Duplicates) |
+| **Thao tác ngầm (Internal Operation)** | Phát sinh `SORT UNIQUE` hoặc `HASH UNIQUE` | Không có (Chỉ đơn giản là `APPEND`) |
+| **Tài nguyên tiêu tốn** | Tốn CPU và bộ nhớ tạm (PGA / Temp Tablespace) | Tiết kiệm tối đa CPU và bộ nhớ |
+| **Tốc độ thực thi** | Chậm hơn đối với tập dữ liệu lớn | Cực nhanh (High Performance) |
+| **Khuyên dùng trong thực tế** | Chỉ dùng khi bắt buộc phải loại bỏ trùng lặp | Ưu tiên dùng khi tập dữ liệu không giao nhau hoặc cần giữ vết |
 
 ---
 
-## 33. INTERSECT — Giao tập hợp
+### 2.3 INTERSECT (교집합 — Giao tập hợp)
 
-**INTERSECT는 두 결과에 공통으로 존재하는 행만 반환한다.**
-→ INTERSECT chỉ trả các row tồn tại trong **cả hai tập**.
-
-```text
-A = {1,2,3}
-B = {2,3,4}
-```
-
-```text
-A INTERSECT B
-
-= {2,3}
-```
-
-Có thể nhớ:
-
-```text
-INTERSECT
-= AND
-= phần giao
-```
-
-Trong ảnh:
+**KR:** INTERSECT는 여러 SELECT 문의 결과에서 공통으로 존재하는 행만 중복을 제거하여 반환한다.
+**VI:** `INTERSECT` trả về các dòng **đồng thời xuất hiện trong tất cả các tập kết quả**, tự động loại bỏ trùng lặp và sắp xếp.
 
 ```sql
-SELECT 배우명, 본명
-FROM sweethome1
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON1
 
 INTERSECT
 
-SELECT 배우명, 본명
-FROM sweethome2;
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON2;
 ```
 
-→ diễn viên xuất hiện ở **cả season 1 và season 2**.
+Kết quả: Chỉ những diễn viên tham gia đóng ở **cả mùa 1 VÀ mùa 2** mới được hiển thị.
 
 ---
 
-## 34. MINUS / EXCEPT — Hiệu tập hợp
+### 2.4 MINUS / EXCEPT (차집합 — Hiệu tập hợp)
 
-Trong Oracle:
+**KR:** MINUS(Oracle) 또는 EXCEPT(SQL Server)는 첫 번째 SELECT 문의 결과에서 두 번째 SELECT 문의 결과에 포함된 행을 제외한 결과를 반환한다.
+**VI:** `MINUS` (trong Oracle) hoặc `EXCEPT` (trong SQL Server) trả về các dòng **chỉ có trong kết quả thứ nhất mà không tồn tại trong kết quả thứ hai**, tự động loại bỏ trùng lặp.
 
 ```sql
+-- Tìm các diễn viên chỉ đóng ở Season 1 mà không tiếp tục đóng ở Season 2
+-- Cú pháp Oracle:
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON1
 MINUS
-```
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON2;
 
-Trong một số DBMS khác:
-
-```sql
+-- Cú pháp Microsoft SQL Server tương đương:
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON1
 EXCEPT
+SELECT ACTOR_NAME, REAL_NAME
+FROM SWEET_HOME_SEASON2;
 ```
 
-**차집합은 첫 번째 결과에는 존재하지만 두 번째 결과에는 존재하지 않는 행을 반환한다.**
-→ Hiệu tập hợp trả row có trong tập đầu nhưng không có trong tập sau.
+#### 🚨 Cạm bẫy tính bất đối xứng của phép Hiệu tập hợp:
+Phép cộng tập hợp có tính giao hoán ($A \cup B = B \cup A$), nhưng phép trừ tập hợp **KHÔNG CÓ TÍNH GIAO HOÁN**:
+$$A - B \ne B - A$$
+- `A MINUS B`: Lấy những gì thuộc riêng về A.
+- `B MINUS A`: Lấy những gì thuộc riêng về B.
+
+---
+
+## 3. Xử lý giá trị NULL trong Toán tử tập hợp
+
+Đây là một điểm kiến thức rất đặc biệt trong chuẩn SQL mà đề thi SQLD thường dùng để thử thách thí sinh:
+
+> **Quy tắc xử lý NULL trong Set Operators:**
+> Trong các phép so sánh thông thường (`=`, `<>`, `IN`), `NULL` so sánh với `NULL` sẽ cho kết quả là `UNKNOWN`.
+> **TUY NHIÊN, trong các toán tử tập hợp (`UNION`, `INTERSECT`, `MINUS`), hệ quản trị CSDL coi các giá trị NULL là HOÀN TOÀN BẰNG NHAU (`NULL = NULL`)!**
 
 Ví dụ:
+- Bảng A có dòng: `(10, NULL)`
+- Bảng B có dòng: `(10, NULL)`
 
-```text
-A = {1,2,3}
-B = {2,3,4}
-```
-
-thì:
-
-```text
-A MINUS B
-= {1}
-```
-
-Nhưng:
-
-```text
-B MINUS A
-= {4}
-```
-
-Do đó:
-
-```text
-A - B ≠ B - A
-```
-
-Đây là điểm rất hay thi.
-
-#### Mẹo nhớ
-Phần này nối mạch SQL với “Mẹo nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-MINUS
-= lấy bên TRÊN
-  trừ bên DƯỚI
-```
+Khi thực thi:
+1. `SELECT * FROM A UNION SELECT * FROM B;`
+   → Hai dòng `(10, NULL)` được xem là **trùng lặp hoàn toàn**, kết quả chỉ trả về **1 dòng** `(10, NULL)`.
+2. `SELECT * FROM A INTERSECT SELECT * FROM B;`
+   → Dòng `(10, NULL)` xuất hiện ở cả hai bảng nên được coi là phần tử chung, kết quả trả về **1 dòng** `(10, NULL)`.
+3. `SELECT * FROM A MINUS SELECT * FROM B;`
+   → Dòng `(10, NULL)` ở bảng A bị dòng `(10, NULL)` ở bảng B triệt tiêu hoàn toàn, kết quả trả về **0 dòng**.
 
 ---
 
-## 35. Điều kiện sử dụng Set Operator
+## 4. Bốn quy tắc vàng bắt buộc khi sử dụng Set Operators
 
-Ảnh yêu cầu nhớ:
+Để câu lệnh sử dụng toán tử tập hợp có thể biên dịch và thực thi thành công, bắt buộc phải tuân thủ nghiêm ngặt 4 quy tắc sau:
 
-**두 SELECT 문의 컬럼 수가 같아야 한다.**
-→ Hai SELECT phải có **cùng số lượng column**.
-
-Ví dụ hợp lệ:
+### Quy tắc 1: Số lượng cột phải bằng nhau tuyệt đối
+Mọi câu lệnh `SELECT` tham gia vào phép toán tập hợp phải trả về **cùng một số lượng cột**. Nếu một câu `SELECT` có 2 cột mà câu kia có 3 cột, hệ thống sẽ phát sinh lỗi biên dịch ngay lập tức:
+- Trong Oracle: `ORA-01789: query block has incorrect number of result columns`.
 
 ```sql
-SELECT id, name
-FROM A
-
+-- ❌ LỖI ORA-01789 (Câu trên có 2 cột, câu dưới có 3 cột)
+SELECT EMPNO, ENAME FROM EMP
 UNION
+SELECT DEPTNO, DNAME, LOC FROM DEPT;
 
-SELECT code, title
-FROM B;
-```
-
-2 column ↔ 2 column.
-
----
-
-**각 위치의 데이터 타입은 서로 호환 가능해야 한다.**
-→ Data type của các column ở cùng vị trí phải tương thích.
-
-Tức là:
-
-```text
-SELECT
-   col1, col2
-     ↕     ↕
-   col1, col2
-SELECT
-```
-
-Không phải so sánh theo tên.
-
-Mà là:
-
-```text
-column 1 ↔ column 1
-column 2 ↔ column 2
-```
-
----
-
-## 36. Tên column kết quả lấy từ SELECT đầu tiên
-
-Ảnh nhấn mạnh:
-
-**전체 집합의 컬럼명과 데이터 타입은 첫 번째 집합에 의해 결정된다.**
-→ Tên cột hiển thị của kết quả set operation chủ yếu dựa vào SELECT đầu tiên; kiểu dữ liệu phải tương thích giữa các nhánh.
-
-Ví dụ:
-
-```sql
-SELECT empno AS id,
-       ename AS name
-FROM emp
-
+-- ✅ ĐÚNG (Cùng có 2 cột)
+SELECT EMPNO, ENAME FROM EMP
 UNION
-
-SELECT deptno,
-       dname
-FROM dept;
-```
-
-Tên output:
-
-```text
-ID
-NAME
-```
-
-không phải:
-
-```text
-DEPTNO
-DNAME
+SELECT DEPTNO, DNAME FROM DEPT;
 ```
 
 ---
 
-## 37. ORDER BY với Set Operator
-
-Ảnh có câu rất quan trọng:
-
-**개별 SELECT 문에는 ORDER BY를 사용할 수 없고 전체 집합 결과의 마지막에 사용한다.**
-→ Trong dạng set query thông thường, `ORDER BY` được đặt ở **cuối toàn bộ phép tập hợp**, không đặt trực tiếp sau từng SELECT thành phần.
-
-Sai dạng cơ bản:
+### Quy tắc 2: Kiểu dữ liệu tại vị trí tương ứng phải tương thích
+Kiểu dữ liệu của các cột tại cùng một vị trí thứ tự từ trái sang phải phải tương thích với nhau (Data Type Compatibility).
+- Cột 1 của SELECT 1 phải tương thích với Cột 1 của SELECT 2.
+- Cột 2 của SELECT 1 phải tương thích với Cột 2 của SELECT 2.
+- **Không yêu cầu tên cột phải giống nhau**, nhưng kiểu dữ liệu không được xung đột (ví dụ không thể ghép kiểu `NUMBER` với kiểu `DATE`).
 
 ```sql
-SELECT ...
-FROM A
-ORDER BY ...
-
+-- ❌ LỖI ORA-01790: expression must have same datatype as corresponding expression
+SELECT ENAME, HIREDATE FROM EMP   -- Cột 2 là DATE
 UNION
-
-SELECT ...
-FROM B
-ORDER BY ...;
-```
-
-Đúng:
-
-```sql
-SELECT ...
-FROM A
-
-UNION
-
-SELECT ...
-FROM B
-
-ORDER BY ...;
-```
-
-Tức là:
-
-```text
-SELECT A
-   │
- UNION
-   │
-SELECT B
-   │
-ORDER BY
-   ↓
-sort FINAL RESULT
+SELECT DNAME, DEPTNO FROM DEPT;   -- Cột 2 là NUMBER
 ```
 
 ---
 
-## 38. GROUP BY thì sao?
-
-Ảnh ghi:
-
-```text
-ORDER BY ❌
-GROUP BY ⭕
-```
-
-Ý nghĩa:
-
-Mỗi SELECT thành phần vẫn có thể tự `GROUP BY`:
+### Quy tắc 3: Tên cột hiển thị luôn lấy theo câu SELECT đầu tiên
+Tiêu đề cột (Column Header / Alias) của toàn bộ tập kết quả cuối cùng **luôn luôn được quyết định bởi câu lệnh SELECT đầu tiên**. Mọi bí danh (Alias) được đặt ở câu lệnh `SELECT` thứ hai trở đi đều bị bỏ qua (Ignored).
 
 ```sql
-SELECT DEPTNO, COUNT(*)
+SELECT EMPNO AS NHAN_VIEN_ID, ENAME AS HO_TEN
 FROM EMP
-GROUP BY DEPTNO
+UNION
+SELECT DEPTNO AS PHONG_BAN_ID, DNAME AS TEN_PHONG
+FROM DEPT;
+```
+
+Bảng kết quả trả về sẽ có 2 cột hiển thị là: `NHAN_VIEN_ID` và `HO_TEN` (không phải `PHONG_BAN_ID` hay `TEN_PHONG`).
+
+---
+
+### Quy tắc 4: Mệnh đề ORDER BY chỉ được đặt duy nhất ở CUỐI CÙNG
+- **CẤM:** Không được phép đặt mệnh đề `ORDER BY` ở từng câu lệnh `SELECT` thành phần.
+- **ĐÚNG:** Mệnh đề `ORDER BY` chỉ được phép xuất hiện **đúng 1 lần ở cuối cùng** của toàn bộ câu lệnh hợp kết quả.
+- **Tên cột trong ORDER BY:** Chỉ được phép sử dụng **tên cột hoặc alias của câu SELECT đầu tiên**, hoặc sử dụng **chỉ số thứ tự cột (Column Position Index: 1, 2, ...)**. Nếu dùng alias của câu SELECT thứ hai sẽ báo lỗi.
+
+```sql
+-- ❌ SAI (Đặt ORDER BY ở giữa các SELECT gây lỗi cú pháp ORA-00933)
+SELECT EMPNO, ENAME FROM EMP ORDER BY ENAME
+UNION
+SELECT DEPTNO, DNAME FROM DEPT;
+
+-- ❌ SAI (Dùng tên cột chỉ có ở SELECT thứ 2 trong ORDER BY)
+SELECT EMPNO AS ID, ENAME FROM EMP
+UNION
+SELECT DEPTNO, DNAME FROM DEPT
+ORDER BY DNAME;
+
+-- ✅ ĐÚNG (Dùng alias của SELECT đầu tiên)
+SELECT EMPNO AS ID, ENAME FROM EMP
+UNION
+SELECT DEPTNO, DNAME FROM DEPT
+ORDER BY ID;
+
+-- ✅ ĐÚNG (Dùng vị trí cột 1, 2)
+SELECT EMPNO, ENAME FROM EMP
+UNION
+SELECT DEPTNO, DNAME FROM DEPT
+ORDER BY 1, 2;
+```
+
+> **Lưu ý về GROUP BY:**
+> Trái ngược với `ORDER BY`, mệnh đề `GROUP BY` là logic xử lý nội bộ của từng câu truy vấn, do đó mỗi câu `SELECT` thành phần **hoàn toàn có quyền tự sử dụng GROUP BY riêng** của mình trước khi đưa kết quả vào phép toán tập hợp!
+
+---
+
+## 5. Bảng ma trận so sánh toàn diện các Toán tử tập hợp
+
+| Tiêu chí | UNION | UNION ALL | INTERSECT | MINUS / EXCEPT |
+| :--- | :--- | :--- | :--- | :--- |
+| **Ý nghĩa toán học** | $A \cup B$ | $A \cup B$ | $A \cap B$ | $A - B$ |
+| **Khử trùng lặp (Deduplication)** | **CÓ** | **KHÔNG** | **CÓ** | **CÓ** |
+| **Phát sinh Sắp xếp ngầm (Sort)** | **CÓ** | **KHÔNG** | **CÓ** | **CÓ** |
+| **Tốc độ / Hiệu năng** | Trung bình | **Rất cao (Nhanh nhất)** | Trung bình | Trung bình |
+| **Tính giao hoán ($A \text{ op } B = B \text{ op } A$)** | CÓ | CÓ | CÓ | **KHÔNG** |
+| **Cú pháp Oracle** | `UNION` | `UNION ALL` | `INTERSECT` | `MINUS` |
+| **Cú pháp SQL Server** | `UNION` | `UNION ALL` | `INTERSECT` | `EXCEPT` |
+| **Xử lý giá trị NULL** | Coi NULL = NULL | Giữ mọi dòng NULL | Coi NULL = NULL | Coi NULL = NULL |
+
+---
+
+## 6. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+1. **Bẫy vị trí mệnh đề ORDER BY:**
+   - Đề thi thường lừa đặt `ORDER BY` ngay sau câu `SELECT` đầu tiên → Đây là lỗi cú pháp! `ORDER BY` chỉ được đặt ở cuối cùng.
+2. **Bẫy tên cột trong mệnh đề ORDER BY:**
+   - Cố tình dùng alias của câu SELECT thứ hai để sort kết quả cuối cùng → Lỗi không tìm thấy cột. Bắt buộc phải dùng tên cột của SELECT thứ nhất hoặc vị trí 1, 2, ...
+3. **Bẫy số lượng cột và kiểu dữ liệu:**
+   - Các nhánh SELECT phải có số cột bằng nhau tuyệt đối.
+   - Các cột đối ứng phải cùng họ kiểu dữ liệu (Numeric với Numeric, Character với Character).
+4. **Bẫy khác biệt giữa MINUS và EXCEPT:**
+   - Trong đề thi kiểm tra cú pháp Oracle: từ khóa là `MINUS`.
+   - Trong đề thi kiểm tra cú pháp SQL Server: từ khóa là `EXCEPT`. Nếu dùng `MINUS` trên SQL Server sẽ bị báo lỗi không nhận diện từ khóa.
+5. **Bẫy UNION vs UNION ALL khi tính tổng số dòng:**
+   - Cho bảng A có 5 dòng (chứa giá trị: 1, 2, 2, 3, 4).
+   - Bảng B có 4 dòng (chứa giá trị: 2, 3, 4, 5).
+   - Hỏi số dòng trả về của `UNION`: Tập duy nhất là $\{1, 2, 3, 4, 5\} \rightarrow$ **5 dòng**.
+   - Hỏi số dòng trả về của `UNION ALL`: Tổng số dòng là $5 + 4 =$ **9 dòng**.
+
+---
+
+## 7. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Độ khó: Dễ — Quy tắc tên cột và ORDER BY)
+Xét đoạn mã SQL sau thực thi trên hệ quản trị cơ sở dữ liệu Oracle:
+
+```sql
+SELECT EMPNO AS CODE, ENAME AS FULL_NAME, SAL
+FROM EMP
+WHERE DEPTNO = 10
 
 UNION
 
-SELECT DEPTNO, COUNT(*)
-FROM OLD_EMP
-GROUP BY DEPTNO;
+SELECT DEPTNO AS D_CODE, DNAME AS DEPT_NAME, NULL
+FROM DEPT
+WHERE DEPTNO = 20
+
+ORDER BY DEPT_NAME;
 ```
 
-Vì `GROUP BY` là logic nội bộ của từng SELECT.
+Kết quả của câu lệnh trên là gì?
 
-Còn `ORDER BY` thường dùng để sắp xếp **kết quả cuối cùng**.
+A. Câu lệnh thực thi thành công và sắp xếp kết quả theo tên phòng ban `DEPT_NAME`.
+B. Phát sinh lỗi thực thi vì cột `DEPT_NAME` không phải là tên cột của câu lệnh SELECT đầu tiên.
+C. Phát sinh lỗi vì kiểu dữ liệu của `SAL` (kiểu số) và `NULL` không tương thích với nhau.
+D. Câu lệnh tự động đổi tên cột kết quả thành `D_CODE` và `DEPT_NAME`.
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- Theo quy tắc của Set Operators, tiêu đề cột của tập kết quả cuối cùng được xác định bởi câu lệnh `SELECT` đầu tiên (`CODE`, `FULL_NAME`, `SAL`).
+- Tên bí danh `DEPT_NAME` chỉ xuất hiện ở câu `SELECT` thứ hai, do đó hệ thống không nhận diện được định danh `DEPT_NAME` khi thực hiện `ORDER BY` ở cấp độ toàn cục. Muốn sắp xếp theo cột thứ hai, phải viết là `ORDER BY FULL_NAME` hoặc `ORDER BY 2`.
+- `NULL` có thể tương thích với mọi kiểu dữ liệu nên đáp án C không chính xác.
 
 ---
 
-## 39. Tổng hợp toàn bộ Subquery bằng một sơ đồ
-Phần này nối mạch SQL với “39. Tổng hợp toàn bộ Subquery bằng một sơ đồ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+### Câu 2 (Độ khó: Trung bình — Tính toán số dòng giữa UNION và UNION ALL)
+Cho bảng `TAB_A` và `TAB_B` có cấu trúc và dữ liệu như sau:
+- `TAB_A` (Cột `VAL` kiểu số): có 5 dòng với các giá trị: `10, 20, 20, 30, NULL`.
+- `TAB_B` (Cột `VAL` kiểu số): có 4 dòng với các giá trị: `20, 30, 40, NULL`.
 
-```text
-                    SUBQUERY
-                       │
-        ┌──────────────┴──────────────┐
-        │                             │
-   Theo vị trí                    Theo kết quả
-        │                             │
- ┌──────┼──────┐              ┌──────┼─────────┐
- │      │      │              │      │         │
-SELECT FROM   WHERE         1 row  N rows   N columns
- │      │      │
-Scalar Inline Nested
-       View
-```
+Xét hai câu truy vấn:
+- Truy vấn 1: `SELECT VAL FROM TAB_A UNION SELECT VAL FROM TAB_B;`
+- Truy vấn 2: `SELECT VAL FROM TAB_A UNION ALL SELECT VAL FROM TAB_B;`
 
-Một cách phân loại khác:
+Số lượng dòng kết quả trả về của Truy vấn 1 và Truy vấn 2 lần lượt là bao nhiêu?
 
-```text
-Theo phụ thuộc Main Query
+A. Truy vấn 1: 5 dòng; Truy vấn 2: 9 dòng
+B. Truy vấn 1: 4 dòng; Truy vấn 2: 7 dòng
+C. Truy vấn 1: 5 dòng; Truy vấn 2: 7 dòng
+D. Truy vấn 1: 6 dòng; Truy vấn 2: 9 dòng
 
-Subquery
-├── 비연관 / Uncorrelated
-│      └── không dùng column main query
-│
-└── 연관 / Correlated
-       └── dùng column main query
-```
-
-Hai hệ phân loại này **không loại trừ nhau**.
-
-Ví dụ:
-
-```sql
-SELECT ...,
-       (
-          SELECT ...
-          WHERE x.id = main.id
-       )
-FROM ...
-```
-
-có thể đồng thời là:
-
-```text
-Scalar Subquery
-+
-Correlated Subquery
-```
-
-Vì:
-
-* `Scalar` mô tả **hình dạng/vị trí kết quả**.
-* `Correlated` mô tả **quan hệ phụ thuộc với main query**.
-
-Đây là chỗ rất nhiều người học nhầm.
+**Đáp án đúng:** **A**
+**Giải thích chi tiết:**
+- **Với Truy vấn 1 (UNION):**
+  - Gộp tất cả các giá trị lại: `10, 20, 20, 30, NULL` và `20, 30, 40, NULL`.
+  - Tiến hành khử trùng lặp:
+    - Giá trị `10` xuất hiện 1 lần.
+    - Giá trị `20` xuất hiện ở cả hai bảng → chỉ lấy 1 lần.
+    - Giá trị `30` xuất hiện ở cả hai bảng → chỉ lấy 1 lần.
+    - Giá trị `40` xuất hiện 1 lần.
+    - Giá trị `NULL` xuất hiện ở cả hai bảng → Set Operators coi các giá trị NULL bằng nhau và chỉ giữ lại **1 lần duy nhất**!
+  - Tập kết quả duy nhất gồm: `{10, 20, 30, 40, NULL}` $\rightarrow$ **Đúng 5 dòng**.
+- **Với Truy vấn 2 (UNION ALL):**
+  - Không khử trùng lặp, chỉ việc nối thêm tất cả các dòng: $5 + 4 = $ **9 dòng**.
 
 ---
 
-## 40. 📌 NOTE 시험 — phần phải nhớ trước khi thi
+### Câu 3 (Độ khó: Khá — Cạm bẫy bất đối xứng của phép trừ MINUS / EXCEPT)
+Cho hai tập dữ liệu kết quả:
+- Tập hợp $X = \{1, 2, 2, 3\}$
+- Tập hợp $Y = \{2, 3, 3, 4\}$
 
-#### ⭐ Subquery
-Phần này nối mạch SQL với “⭐ Subquery”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-서브쿼리
-= SQL 안의 SQL
-= query nằm trong query
-```
-
-#### ⭐ Theo vị trí
-Phần này nối mạch SQL với “⭐ Theo vị trí”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-SELECT → Scalar Subquery
-FROM   → Inline View
-WHERE/HAVING → Nested Subquery
-```
-
-#### ⭐ Scalar
-Phần này nối mạch SQL với “⭐ Scalar”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-Scalar = ONE VALUE
-```
-
-Nếu không match:
-
-```text
-→ NULL
-```
-
-Nếu trả quá nhiều row khi ngữ cảnh yêu cầu một giá trị:
-
-```text
-→ ERROR
-```
-
-#### ⭐ Single-row
-Phần này nối mạch SQL với “⭐ Single-row”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-=, <>, >, >=, <, <=
-```
-
-#### ⭐ Multi-row
-Phần này nối mạch SQL với “⭐ Multi-row”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-IN
-ANY
-ALL
-EXISTS
-```
-
-#### ⭐ ANY / ALL
-Phần này nối mạch SQL với “⭐ ANY / ALL”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-> ANY → > MIN
-< ANY → < MAX
-
-> ALL → > MAX
-< ALL → < MIN
-```
-
-#### ⭐ Correlated
-
-Nhìn thấy kiểu:
-
+Xét biểu thức tập hợp sau trong Oracle Database:
 ```sql
-Subquery:
-WHERE E1.DEPTNO = E2.DEPTNO
+SELECT VAL FROM TAB_X MINUS SELECT VAL FROM TAB_Y
+```
+và
+```sql
+SELECT VAL FROM TAB_Y MINUS SELECT VAL FROM TAB_X
 ```
 
-trong đó `E1` thuộc outer/main query →
+Kết quả của hai câu lệnh trên lần lượt là gì?
+
+A. Câu 1 trả về `{1}`; Câu 2 trả về `{4}`
+B. Câu 1 trả về `{1, 2}`; Câu 2 trả về `{3, 4}`
+C. Cả hai câu đều trả về `{1, 4}`
+D. Câu 1 trả về `{1, 2, 2}`; Câu 2 trả về `{3, 3, 4}`
+
+**Đáp án đúng:** **A**
+**Giải thích chi tiết:**
+- Toán tử `MINUS` (hoặc `EXCEPT`) luôn thực hiện thao tác khử trùng lặp trên cả hai tập hợp trước khi trừ.
+- Tập $X$ sau khi khử trùng lặp: $\{1, 2, 3\}$.
+- Tập $Y$ sau khi khử trùng lặp: $\{2, 3, 4\}$.
+- `X MINUS Y`: Lấy phần tử thuộc $X$ mà không có trong $Y$: $\{1, 2, 3\} \setminus \{2, 3, 4\} = \{1\}$.
+- `Y MINUS X`: Lấy phần tử thuộc $Y$ mà không có trong $X$: $\{2, 3, 4\} \setminus \{1, 2, 3\} = \{4\}$.
+- Do đó Câu 1 trả về `{1}` và Câu 2 trả về `{4}`. Phép trừ tập hợp không có tính chất giao hoán.
+
+---
+
+### Câu 4 (Độ khó: Nâng cao — Phát biểu chuẩn mực về Set Operators)
+Phát biểu nào sau đây là **CHÍNH XÁC NHẤT** khi nói về các toán tử tập hợp trong hệ quản trị CSDL quan hệ?
+
+A. Trong mệnh đề `ORDER BY` ở cuối toàn bộ câu lệnh Set Operator, bắt buộc phải dùng tên cột nguyên bản của bảng dữ liệu, không được phép sử dụng số thứ tự của cột.
+B. Toán tử `UNION ALL` thực hiện ghép nối dữ liệu mà không cần thông qua phân đoạn sắp xếp (Sort Operation), do đó luôn tiêu tốn ít tài nguyên bộ nhớ và có tốc độ xử lý nhanh hơn `UNION`.
+C. Các câu lệnh `SELECT` thành phần trong phép toán tập hợp tuyệt đối không được chứa mệnh đề `WHERE` hoặc `GROUP BY`.
+D. Khi sử dụng `INTERSECT`, nếu dòng dữ liệu chứa giá trị `NULL` ở cả hai bảng thì dòng đó sẽ bị loại bỏ hoàn toàn vì `NULL` không bao giờ bằng `NULL`.
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- **Đáp án B chính xác:** `UNION ALL` chỉ đơn giản nối tiếp các khối dữ liệu (cơ chế Append) mà không cần thực hiện `Sort Unique` hay `Hash Unique` trong bộ nhớ PGA/Temp, do đó tiết kiệm tài nguyên CPU, I/O và cho tốc độ vượt trội.
+- **Đáp án A sai:** Trong `ORDER BY`, hoàn toàn được phép sử dụng số thứ tự cột (ví dụ `ORDER BY 1, 2`).
+- **Đáp án C sai:** Từng câu lệnh `SELECT` thành phần hoàn toàn có thể tự do chứa các mệnh đề `WHERE`, `GROUP BY`, `HAVING` nội bộ.
+- **Đáp án D sai:** Trong Set Operators, các giá trị `NULL` được đối xử như nhau (`NULL = NULL`), nên dòng có giá trị `NULL` ở cả hai bảng vẫn được giữ lại trong kết quả của `INTERSECT`.

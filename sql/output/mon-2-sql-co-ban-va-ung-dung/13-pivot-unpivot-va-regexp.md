@@ -215,9 +215,220 @@ FROM dual;
 
 ---
 
-## 6. Nối mạch sang Bài tiếp theo: SQL Style Guide và viết truy vấn sạch
+## 6. Bảng ma trận so sánh Oracle vs SQL Server về PIVOT, UNPIVOT và REGEXP
+
+| Khía cạnh kỹ thuật | Oracle Database | Microsoft SQL Server | Điểm khác biệt thi cử SQLD |
+| :--- | :--- | :--- | :--- |
+| **Cú pháp PIVOT cơ bản** | `PIVOT (SUM(sal) FOR deptno IN (10, 20))` | `PIVOT (SUM(sal) FOR deptno IN ([10], [20]))` | SQL Server yêu cầu dấu ngoặc vuông `[ ]` bao quanh giá trị số làm tên cột mới. |
+| **PIVOT nhiều cột kết hợp** | Hỗ trợ: `FOR (col1, col2) IN ((v1, v2), ...)` | **Không hỗ trợ** (phải tự ghép chuỗi các cột trước khi PIVOT) | Oracle cho phép xoay đồng thời nhiều thuộc tính vào các cột mới. |
+| **PIVOT nhiều hàm tổng hợp** | Hỗ trợ: `PIVOT (SUM(sal) AS s, COUNT(*) AS c FOR ...)` | **Không hỗ trợ** nhiều hàm trong cùng 1 khối PIVOT | Oracle tự động sinh tên cột kết hợp `<alias_giá_trị>_<alias_hàm>`. |
+| **Xử lý NULL trong UNPIVOT** | Hỗ trợ: `INCLUDE NULLS` và `EXCLUDE NULLS` | Chỉ hỗ trợ `EXCLUDE NULLS` (muốn lấy NULL phải dùng `CROSS APPLY`) | Bẫy lý thuyết cực kỳ phổ biến trong các đề thi Oracle SQLD. |
+| **Hàm biểu thức chính quy** | Tích hợp sẵn 5 hàm chuẩn POSIX: `REGEXP_LIKE`, `REGEXP_SUBSTR`, `REGEXP_REPLACE`, `REGEXP_INSTR`, `REGEXP_COUNT` | **Không có hàm REGEXP tích hợp sẵn** (chỉ có toán tử `LIKE` với `[ ]` hoặc CLR/Python) | Đề thi SQLD ra phần biểu thức chính quy dựa hoàn toàn trên cú pháp hàm của Oracle. |
+| **Tính phân biệt hoa thường REGEXP** | Mặc định phân biệt hoa thường (`'c'`) | Phụ thuộc vào Collation của CSDL | Oracle dùng tham số `'i'` để bật chế độ không phân biệt hoa thường. |
+
+---
+
+## 7. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+> [!WARNING]
+> Dưới đây là 5 cạm bẫy thường gặp nhất trong đề thi về PIVOT, UNPIVOT và Regular Expression:
+
+### Cạm bẫy 1: Cột "dư thừa" làm hỏng cơ chế gom nhóm ngầm định (Implicit GROUP BY) của PIVOT
+- Trong cú pháp PIVOT:
+  ```sql
+  -- LỖI THIẾT KẾ TRẦM TRỌNG:
+  SELECT *
+  FROM emp
+  PIVOT (SUM(sal) FOR deptno IN (10, 20, 30));
+  ```
+- **Bản chất kỹ thuật:** Trong bảng `emp`, các cột như `EMPNO` (khóa chính), `ENAME`, `HIREDATE` không nằm trong hàm `SUM()` và cũng không nằm trong `FOR deptno`. Do đó, Oracle sẽ **ngầm gom nhóm theo toàn bộ các cột này**! Vì mỗi nhân viên có một `EMPNO` riêng biệt duy nhất, bảng kết quả sẽ không gom nhóm thành từng chức vụ, mà mỗi nhân viên nằm trên một dòng riêng lẻ, làm mất hoàn toàn ý nghĩa tổng hợp xoay trục!
+- **Giải pháp bắt buộc:** Luôn sử dụng Inline View để chỉ chiếu đúng các cột cần thiết (`job`, `deptno`, `sal`) trước khi đưa vào mệnh đề `PIVOT`.
+
+### Cạm bẫy 2: Cố tình dùng Subquery động bên trong mệnh đề `IN (...)` của PIVOT
+- Rất nhiều lập trình viên muốn lấy danh sách phòng ban động nên viết:
+  ```sql
+  -- LỖI CÚ PHÁP: ORA-00936: missing expression!
+  PIVOT (SUM(sal) FOR deptno IN (SELECT deptno FROM dept))
+  ```
+- Chuẩn ANSI và Oracle quy định danh sách giá trị trong mệnh đề `IN` của PIVOT **bắt buộc phải là các hằng số tĩnh (Literal Values)** được liệt kê tường minh. (Ngoại lệ duy nhất là truy vấn XML PIVOT `PIVOT XML (...)`, nhưng kết quả trả về dạng chuỗi tài liệu XML chứ không phải các cột bảng thông thường).
+
+### Cạm bẫy 3: UNPIVOT ngầm định loại bỏ hoàn toàn các ô có giá trị NULL
+- Chế độ mặc định của mệnh đề `UNPIVOT` là **`EXCLUDE NULLS`**.
+- Nếu bảng dạng ngang có ô dữ liệu mang giá trị `NULL` (ví dụ phòng 30 không có doanh số), khi biến đổi sang dạng dọc, dòng của phòng 30 sẽ bị **hủy bỏ hoàn toàn** khỏi tập kết quả!
+- Nếu đề bài yêu cầu: *"Bảo toàn nguyên vẹn số lượng bản ghi tương ứng với toàn bộ các ô của ma trận ngang kể cả ô trống"*, đáp án bắt buộc phải chọn cú pháp có chứa từ khóa **`INCLUDE NULLS`**.
+
+### Cạm bẫy 4: Chỉ số đánh số (1-based index) và tham số trích xuất `subexpr` trong `REGEXP_SUBSTR`
+- Trong hàm `REGEXP_SUBSTR(source, pattern, position, occurrence, match_param, subexpr)`:
+  - Tất cả các vị trí ký tự và thứ tự xuất hiện đều bắt đầu từ **1** (không phải 0).
+  - Tham số `subexpr`:
+    - `0`: Trả về toàn bộ đoạn chuỗi khớp với mẫu.
+    - `1`: Chỉ trích xuất chuỗi con nằm trong **nhóm ngoặc đơn thứ nhất `( )`**.
+    - `2`: Chỉ trích xuất chuỗi con nằm trong nhóm ngoặc đơn thứ hai `( )`.
+
+### Cạm bẫy 5: Khác biệt giữa `REGEXP_INSTR` với tùy chọn `return_opt` (0 vs 1)
+- `REGEXP_INSTR('ABC123XYZ', '\d+', 1, 1, 0)`: Trả về **4** (vị trí ký tự đầu tiên của chuỗi số, tức chữ số `'1'`).
+- `REGEXP_INSTR('ABC123XYZ', '\d+', 1, 1, 1)`: Trả về **7** (vị trí ký tự ngay sau vị trí kết thúc của chuỗi số, tức chữ cái `'X'`).
+- Thí sinh rất dễ nhầm lẫn kết quả trả về giữa `return_opt = 0` (bắt đầu) và `return_opt = 1` (kế tiếp sau kết thúc).
+
+---
+
+## 8. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1: Cơ chế gom nhóm ngầm định của mệnh đề PIVOT (Độ khó: Trung bình)
+Bảng `SALES_DATA` có 4 cột: `YEAR`, `QUARTER`, `REGION`, `AMOUNT`. Người phân tích muốn xoay trục dữ liệu để tạo báo cáo doanh số tổng theo từng quý (`QUARTER`) cho mỗi `YEAR`.
+
+Câu truy vấn nào dưới đây mang lại **KẾT QUẢ ĐÚNG ĐẮN VÀ TỔNG HỢP GỌN NHẤT**?
+
+A.
+```sql
+SELECT * FROM SALES_DATA
+PIVOT (SUM(AMOUNT) FOR QUARTER IN ('Q1' AS Q1, 'Q2' AS Q2, 'Q3' AS Q3, 'Q4' AS Q4));
+```
+
+B.
+```sql
+SELECT * FROM (
+    SELECT YEAR, QUARTER, AMOUNT
+    FROM SALES_DATA
+)
+PIVOT (SUM(AMOUNT) FOR QUARTER IN ('Q1' AS Q1, 'Q2' AS Q2, 'Q3' AS Q3, 'Q4' AS Q4));
+```
+
+C.
+```sql
+SELECT * FROM SALES_DATA
+PIVOT (AMOUNT FOR QUARTER IN ('Q1', 'Q2', 'Q3', 'Q4'));
+```
+
+D.
+```sql
+SELECT YEAR, QUARTER, SUM(AMOUNT)
+FROM SALES_DATA
+PIVOT (SUM(AMOUNT) FOR QUARTER IN (SELECT DISTINCT QUARTER FROM SALES_DATA));
+```
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Lựa chọn B đúng:** Sử dụng Inline View để chỉ lấy 3 cột: `YEAR`, `QUARTER`, `AMOUNT`. Trong đó `AMOUNT` nằm trong hàm `SUM()`, `QUARTER` nằm trong mệnh đề `FOR`, nên Oracle chỉ gom nhóm theo cột duy nhất còn lại là `YEAR`. Kết quả mỗi năm sẽ hiển thị đúng trên 1 dòng với 4 cột quý doanh số.
+> - **Lựa chọn A sai:** Khi dùng trực tiếp `SALES_DATA`, cột `REGION` không được tổng hợp cũng không nằm trong `FOR`, nên hệ thống ngầm gom nhóm theo `(YEAR, REGION)`. Kết quả bị phân mảnh thành nhiều dòng cho từng vùng thay vì gom chung theo năm.
+> - **Lựa chọn C sai:** Cú pháp PIVOT bắt buộc phải có hàm tổng hợp, viết `AMOUNT` trần trụi sẽ báo lỗi cú pháp.
+> - **Lựa chọn D sai:** Mệnh đề `IN` của PIVOT không chấp nhận truy vấn con `(SELECT DISTINCT ...)`.
+
+---
+
+### Câu 2: Hành vi xử lý giá trị NULL trong mệnh đề UNPIVOT (Độ khó: Dễ)
+Xét bảng ngang `WIDE_SALES` có cấu trúc và dữ liệu của 1 dòng như sau:
+
+```text
++------+------+------+------+
+| YEAR |  Q1  |  Q2  |  Q3  |
++------+------+------+------+
+| 2026 |  100 | NULL |  300 |
++------+------+------+------+
+```
+
+Người dùng thực thi câu lệnh SQL sau:
+
+```sql
+SELECT YEAR, QUARTER, REVENUE
+FROM WIDE_SALES
+UNPIVOT (
+    REVENUE FOR QUARTER IN (Q1 AS 'Q1', Q2 AS 'Q2', Q3 AS 'Q3')
+);
+```
+
+Hỏi câu truy vấn trên sẽ trả về bao nhiêu dòng dữ liệu từ dòng bản ghi trên?
+
+A. 1 dòng
+B. 2 dòng
+C. 3 dòng
+D. Báo lỗi vì có giá trị NULL không thể UNPIVOT
+
+> **Đáp án chính xác:** **B**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - Mệnh đề `UNPIVOT` khi không khai báo tường minh tùy chọn sẽ mặc định kích hoạt chế độ **`EXCLUDE NULLS`**.
+> - Do cột `Q2` mang giá trị `NULL`, dòng dữ liệu tương ứng với quý `Q2` sẽ tự động bị loại bỏ khỏi kết quả đầu ra.
+> - Kết quả chỉ trả về 2 dòng cho `Q1 (100)` và `Q3 (300)`.
+> - **Lựa chọn B:** Hoàn toàn chính xác (2 dòng).
+> - **Lựa chọn C sai:** Chỉ trả về 3 dòng nếu viết rõ `UNPIVOT INCLUDE NULLS`.
+> - **Lựa chọn A, D sai:** Suy diễn sai quy tắc xử lý dữ liệu của UNPIVOT.
+
+---
+
+### Câu 3: Trích xuất chuỗi con với REGEXP_SUBSTR và subexpr (Độ khó: Trung bình)
+Cho câu lệnh SQL thực thi trong Oracle:
+
+```sql
+SELECT REGEXP_SUBSTR('ORDER_2026_PROD_9988', '([[:alpha:]]+)_([[:digit:]]+)', 1, 1, 'i', 2) AS RESULT
+FROM DUAL;
+```
+
+Kết quả hiển thị của cột `RESULT` là gì?
+
+A. `ORDER_2026`
+B. `ORDER`
+C. `2026`
+D. `PROD`
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - **Phân tích biểu thức:**
+>   - Chuỗi nguồn: `'ORDER_2026_PROD_9988'`.
+>   - Mẫu tìm kiếm: `'([[:alpha:]]+)_([[:digit:]]+)'`.
+>     - Nhóm ngoặc đơn số 1 `([[:alpha:]]+)`: khớp với một hoặc nhiều chữ cái $\rightarrow$ khớp `'ORDER'`.
+>     - Ký tự gạch dưới `_`.
+>     - Nhóm ngoặc đơn số 2 `([[:digit:]]+)`: khớp với một hoặc nhiều chữ số $\rightarrow$ khớp `'2026'`.
+>   - Toàn bộ đoạn khớp (subexpr = 0) là `'ORDER_2026'`.
+>   - Tham số cuối cùng `subexpr = 2`: Yêu cầu trích xuất nội dung của **nhóm ngoặc đơn thứ 2**.
+> - Do đó, kết quả trả về chính xác là chuỗi `'2026'`.
+> - **Lựa chọn C:** Hoàn toàn chính xác.
+> - **Lựa chọn A sai:** Kết quả nếu `subexpr = 0` (hoặc không truyền).
+> - **Lựa chọn B sai:** Kết quả nếu `subexpr = 1`.
+> - **Lựa chọn D sai:** Thuộc lần xuất hiện khớp thứ 2 (occurrence = 2).
+
+---
+
+### Câu 4: Nhận diện vị trí ký tự bằng REGEXP_INSTR (Độ khó: Trung bình)
+Xét câu lệnh SQL sau:
+
+```sql
+SELECT REGEXP_INSTR('User: scott_tiger', '[[:alpha:]]+', 1, 2, 0) AS POS
+FROM DUAL;
+```
+
+Giá trị số trả về của cột `POS` là bao nhiêu?
+
+A. 1
+B. 5
+C. 7
+D. 12
+
+> **Đáp án chính xác:** **C**
+>
+> **Giải thích chi tiết từng lựa chọn:**
+> - Chuỗi nguồn: `'User: scott_tiger'` (độ dài 17 ký tự).
+> - Mẫu regex: `'[[:alpha:]]+'` (chuỗi các chữ cái liên tiếp).
+> - Phân tích các lần xuất hiện (`occurrence`):
+>   - Lần 1: Chuỗi `'User'` (bắt đầu tại vị trí 1, kết thúc tại vị trí 4).
+>   - Vị trí 5 là dấu hai chấm `':'`, vị trí 6 là khoảng trắng `' '`.
+>   - Lần 2: Chuỗi `'scott'` (bắt đầu tại vị trí 7, kết thúc tại vị trí 11).
+> - Tham số:
+>   - `position = 1`: Bắt đầu quét từ đầu chuỗi.
+>   - `occurrence = 2`: Lấy lần xuất hiện khớp mẫu thứ hai (tức chuỗi `'scott'`).
+>   - `return_opt = 0`: Trả về vị trí ký tự **bắt đầu** của chuỗi khớp.
+> - Chữ cái `'s'` của chuỗi `'scott'` nằm ở vị trí thứ **7** trong chuỗi nguồn.
+> - **Lựa chọn C:** Hoàn toàn chính xác (7).
+> - **Lựa chọn A sai:** Vị trí của lần xuất hiện thứ nhất (`'User'`).
+> - **Lựa chọn B, D sai:** Đếm sai chỉ mục ký tự.
+
+---
+
+## 9. Nối mạch sang Bài tiếp theo: SQL Style Guide và viết truy vấn sạch
 
 > **Mạch nối (Bridge):**
-> - **Từ đâu (Kiến thức nền):** Bài 13 đã hoàn tất toàn bộ các kỹ thuật biến đổi trục dữ liệu nâng cao (`PIVOT`/`UNPIVOT`) và bộ hàm biểu thức chính quy `REGEXP_*`.
+> - **Từ đâu (Kiến thức nền):** Bài 13 đã hoàn tất toàn bộ các kỹ thuật biến đổi trục dữ liệu nâng cao (`PIVOT`/`UNPIVOT`), kiểm soát `INCLUDE NULLS` vs `EXCLUDE NULLS` và bộ 5 hàm biểu thức chính quy `REGEXP_*`.
 > - **Đang giải quyết gì:** Trong môi trường dự án doanh nghiệp lớn (Enterprise) và pipeline tích hợp AI, làm thế nào để quy chuẩn hóa mã SQL, đặt tên alias chuẩn mực, thụt lề mệnh đề `WHERE` rõ ràng và đặc biệt là phòng tránh các bẫy Anti-patterns làm vô hiệu hóa Index?
 > - **Dùng đi đâu:** Bàn giao trực tiếp sang [Bài 14 — SQL Style Guide và SQL dễ đọc cho pipeline AI](./14-sql-style-guide.md) để đúc kết toàn diện các quy chuẩn viết SQL chuyên nghiệp chuẩn Enterprise.

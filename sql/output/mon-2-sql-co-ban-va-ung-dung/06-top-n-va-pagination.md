@@ -1,48 +1,12 @@
-# TOP-N và Pagination
+# TOP-N và Pagination (TOP-N 쿼리와 페이징 처리)
 
-```
+Trong phát triển ứng dụng cơ sở dữ liệu và kỳ thi chứng chỉ SQLD, **TOP-N Query** và **Phân trang (Pagination / 페이징 처리)** là chủ đề kỹ thuật cực kỳ quan trọng, thường xuyên xuất hiện trong các câu hỏi tình huống thực tế và bẫy thứ tự thực thi.
 
-Range:
-
-```text
-0 < x ≤ 1
-```
-
-Row cuối → `1`.
-
-#### ⑫ RATIO_TO_REPORT
-Phần này nối mạch SQL với “⑫ RATIO_TO_REPORT”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-current value
--------------
-partition SUM
-```
-
-Tổng ratio ≈ `1`.
+> **Mục tiêu cốt lõi:**
+> 1. Trích xuất chính xác N bản ghi đứng đầu hoặc đứng cuối theo một tiêu chí sắp xếp cụ thể (ví dụ: Top 3 nhân viên lương cao nhất, Top 5 sinh viên điểm cao nhất).
+> 2. Chia tập dữ liệu lớn thành từng trang (Paging: Page 1, Page 2, ...) để tối ưu thời gian phản hồi và tài nguyên mạng.
 
 ---
-
-### 🧠 Một dòng để nhớ toàn bộ chương
-Phần này nối mạch SQL với “🧠 Một dòng để nhớ toàn bộ chương”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
-
-```text
-PARTITION BY = chia nhóm nhưng giữ row
-ORDER BY     = xác định thứ tự tính
-ROWS         = tính theo từng row
-RANGE        = tính theo giá trị/peer
-LAG          = trước
-LEAD         = sau
-FIRST_VALUE  = đầu frame
-LAST_VALUE   = cuối frame
-NTILE        = chia N nhóm
-RATIO        = giá trị / tổng
-PERCENT_RANK = vị trí xếp hạng %
-CUME_DIST    = tỷ lệ tích lũy
-```
-
-**Đặc biệt nếu đề SQLD cho `SUM(...) OVER(ORDER BY ...)` có giá trị ORDER BY trùng nhau, hoặc cho `LAST_VALUE(...)`, đừng tính ngay. Việc đầu tiên phải làm là xác định `ROWS/RANGE` và window frame trước.** Đây là hai bẫy lớn nhất trong nhóm kiến thức ở các trang này.
-Tiếp tục **제5절 TOP N 쿼리 — TOP-N Query**. Phần này nhìn có vẻ đơn giản nhưng SQLD rất thích hỏi bẫy về **`ROWNUM` + `ORDER BY`**, **vì sao `ROWNUM > 1` không chạy**, và sự khác nhau giữa **ROWNUM / RANK / FETCH / TOP**.
 
 ## 1. TOP-N Query là gì?
 
@@ -1550,5 +1514,232 @@ Tie cùng hạng, rank sau bị skip.
 
 ---
 
-### ⑧ FETCH
-Phần này nối mạch SQL với “⑧ FETCH”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+### ⑧ FETCH (Chuẩn ANSI SQL:2008 & Oracle 12c+)
+
+Cú pháp chuẩn hóa quốc tế, trực quan và không cần lồng Inline View:
+
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+ORDER BY SAL DESC
+OFFSET 0 ROWS FETCH FIRST 3 ROWS ONLY;
+```
+
+Nếu muốn lấy cả các nhân viên có cùng mức lương bằng với người thứ 3 (đồng hạng):
+
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+ORDER BY SAL DESC
+FETCH FIRST 3 ROWS WITH TIES;
+```
+
+---
+
+### ⑨ Microsoft SQL Server TOP N
+
+Trong SQL Server, từ khóa `TOP` được đặt ngay sau `SELECT`:
+
+```sql
+SELECT TOP (3) WITH TIES EMPNO, ENAME, SAL
+FROM EMP
+ORDER BY SAL DESC;
+```
+
+- Bắt buộc phải có `ORDER BY` nếu dùng `WITH TIES`.
+- Nếu không có `ORDER BY`, `TOP (N)` sẽ lấy N dòng bất kỳ theo thứ tự vật lý của bảng.
+
+---
+
+## 39. Bảng ma trận so sánh toàn diện 4 cơ chế TOP-N & Pagination
+
+| Tiêu chí | Oracle ROWNUM | SQL Server TOP | OFFSET - FETCH Clause | Window Function (`ROW_NUMBER / RANK`) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Chuẩn SQL** | Cú pháp riêng của Oracle | Cú pháp riêng của MS SQL | **Chuẩn ANSI SQL:2008** | **Chuẩn ANSI SQL:2003** |
+| **Hệ quản trị hỗ trợ** | Oracle (mọi phiên bản) | MS SQL Server, Sybase | Oracle 12c+, SQL Server 2012+, PostgreSQL | Hầu hết mọi RDBMS hiện đại |
+| **Yêu cầu Subquery** | Bắt buộc (để sort trước hoặc lấy khoảng giữa) | Không cần cho Top-N đơn giản | **Không cần Subquery** | Bắt buộc Inline View để lọc điều kiện |
+| **Xử lý đồng hạng (Ties)** | Không hỗ trợ tự động (phải tự code logic) | Hỗ trợ bằng `WITH TIES` | Hỗ trợ bằng `WITH TIES` | Hỗ trợ tự nhiên qua hàm `RANK()` |
+| **Phân trang (Pagination)** | Phức tạp (Cần Inline View 2 tầng) | Khá phức tạp trước SQL Server 2012 | Cực kỳ đơn giản: `OFFSET n ROWS FETCH NEXT m ROWS` | Rất linh hoạt: `WHERE RN BETWEEN start AND end` |
+| **Thứ tự thực thi** | Gán ROWNUM trước `ORDER BY` | Xử lý sau khi `ORDER BY` hoàn tất | Xử lý ở bước cuối cùng sau `ORDER BY` | Tính toán sau `WHERE/GROUP BY`, trước `ORDER BY` |
+
+---
+
+## 40. Cạm bẫy thi cử trọng điểm (출제 함정 & 오답 노트)
+
+1. **Bẫy thứ tự thực thi: ROWNUM gán TRƯỚC khi ORDER BY:**
+   - Cú pháp: `SELECT * FROM EMP WHERE ROWNUM <= 3 ORDER BY SAL DESC;`
+   - Bản chất: Oracle lọc lấy 3 dòng bất kỳ từ bảng `EMP` thỏa mãn WHERE, sau đó mới sắp xếp 3 dòng đó theo `SAL DESC`. Đây **KHÔNG PHẢI** là Top 3 người lương cao nhất toàn công ty!
+   - Cách sửa đúng: Phải đưa `ORDER BY` vào trong Inline View trước: `SELECT * FROM (SELECT * FROM EMP ORDER BY SAL DESC) WHERE ROWNUM <= 3;`.
+2. **Bẫy so sánh ROWNUM: `ROWNUM = 2` hoặc `ROWNUM > 1` KHÔNG BAO GIỜ có kết quả:**
+   - `ROWNUM` là số thứ tự động được gán từ số `1`.
+   - Khi dòng ứng viên đầu tiên được đọc lên, nó được tạm gán `ROWNUM = 1`.
+   - Nếu điều kiện là `WHERE ROWNUM > 1` (hoặc `ROWNUM = 2`), dòng này không thỏa mãn điều kiện và bị loại bỏ ngay lập tức.
+   - Khi dòng tiếp theo được đọc lên, nó lại được thử gán là `ROWNUM = 1` và lại tiếp tục bị loại bỏ.
+   - Quá trình này lặp lại cho đến hết bảng, dẫn đến **không có bất kỳ dòng nào được trả về** (0 rows), dù không phát sinh lỗi cú pháp!
+   - Muốn lấy từ dòng thứ 2 trở đi, bắt buộc phải đặt Alias cho ROWNUM trong Inline View (`SELECT ROWNUM AS RN ...`) rồi mới lọc ở tầng ngoài: `WHERE RN > 1`.
+3. **Bẫy cú pháp `WITH TIES` mà thiếu `ORDER BY`:**
+   - Cả `FETCH FIRST n ROWS WITH TIES` lẫn `TOP (n) WITH TIES` đều **bắt buộc phải có mệnh đề `ORDER BY`**. Nếu thiếu `ORDER BY`, CSDL sẽ báo lỗi cú pháp ngay lập tức vì không có tiêu chí xác định giá trị đồng hạng.
+4. **Bẫy ổn định của phân trang (Pagination Determinism):**
+   - Khi viết query phân trang với `OFFSET/FETCH` hoặc `ROWNUM`, nếu cột trong `ORDER BY` có giá trị trùng lặp (ví dụ `ORDER BY SAL DESC`), thứ tự giữa các bản ghi cùng lương là không xác định. Khi người dùng chuyển từ Page 1 sang Page 2, có thể một bản ghi sẽ xuất hiện lại 2 lần hoặc bị bỏ sót hoàn toàn!
+   - Giải pháp: Luôn thêm Khóa chính (`EMPNO`, `ID`) vào cuối mệnh đề `ORDER BY` để đảm bảo tính duy nhất tuyệt đối (`ORDER BY SAL DESC, EMPNO ASC`).
+
+---
+
+## 41. Câu hỏi trắc nghiệm thi thử mô phỏng (실전 기출 변형 문제 & 정답 해설)
+
+### Câu 1 (Độ khó: Dễ — Cơ chế gán số thứ tự giả ROWNUM)
+Cho bảng `TB_EMP` gồm 100 nhân viên. Xét câu lệnh SQL sau thực thi trên Oracle Database:
+
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM TB_EMP
+WHERE ROWNUM = 2;
+```
+
+Kết quả của câu lệnh truy vấn trên sẽ là gì?
+
+A. Trả về đúng 1 dòng dữ liệu của nhân viên đứng ở vị trí thứ hai trong bảng.
+B. Trả về lỗi biên dịch vì toán tử `=` không được phép sử dụng với giả cột `ROWNUM`.
+C. Không trả về bất kỳ dòng dữ liệu nào (0 rows).
+D. Trả về 2 dòng đầu tiên của bảng `TB_EMP`.
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- `ROWNUM` là số thứ tự giả lập được gán tuần tự bắt đầu từ 1 cho mỗi dòng thỏa mãn điều kiện lọc.
+- Khi dòng đầu tiên được duyệt, hệ thống gán tạm `ROWNUM = 1`. Kiểm tra điều kiện `WHERE ROWNUM = 2` thấy không thỏa mãn (1 = 2 là FALSE), do đó dòng này bị loại bỏ.
+- Dòng tiếp theo được duyệt lại trở thành ứng viên đầu tiên và tiếp tục nhận giá trị `ROWNUM = 1`, lại không thỏa mãn điều kiện `ROWNUM = 2` và bị loại bỏ tiếp.
+- Kết quả là toàn bộ các dòng đều bị loại bỏ, câu truy vấn kết thúc thành công và **trả về 0 dòng kết quả**.
+- Toán tử `=` hoàn toàn hợp lệ với ROWNUM nhưng chỉ khi so sánh với giá trị 1 (`WHERE ROWNUM = 1`).
+
+---
+
+### Câu 2 (Độ khó: Trung bình — Thứ tự thực thi giữa ROWNUM và ORDER BY)
+Người lập trình muốn lấy thông tin của 3 nhân viên có mức lương cao nhất trong bảng `EMP`. Câu lệnh SQL nào dưới đây đáp ứng **CHÍNH XÁC NHẤT** yêu cầu nghiệp vụ trên trong Oracle Database?
+
+A.
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+WHERE ROWNUM <= 3
+ORDER BY SAL DESC;
+```
+B.
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM (
+    SELECT EMPNO, ENAME, SAL
+    FROM EMP
+    ORDER BY SAL DESC
+)
+WHERE ROWNUM <= 3;
+```
+C.
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+WHERE ROWNUM < 4 AND SAL = (SELECT MAX(SAL) FROM EMP);
+```
+D.
+```sql
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+ORDER BY SAL DESC
+WHERE ROWNUM <= 3;
+```
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- **Đáp án B chính xác:** Bắt buộc phải sắp xếp toàn bộ bảng theo `SAL DESC` trong Inline View (tầng con) trước, sau đó ở tầng ngoài mới áp dụng `WHERE ROWNUM <= 3` để cắt lấy đúng 3 dòng đầu tiên có lương cao nhất.
+- **Đáp án A SAI (Cạm bẫy kinh điển):** Mệnh đề `WHERE` được thực thi trước `ORDER BY`. Do đó Oracle sẽ lấy ngẫu nhiên 3 dòng đầu tiên của bảng `EMP`, sau đó mới sắp xếp 3 dòng này giảm dần theo lương.
+- **Đáp án C sai:** Chỉ lấy những ai có mức lương bằng lương cao nhất toàn công ty (`MAX(SAL)`).
+- **Đáp án D sai cú pháp:** Mệnh đề `WHERE` không thể đứng sau mệnh đề `ORDER BY`.
+
+---
+
+### Câu 3 (Độ khó: Khá — Cú pháp hiện đại FETCH FIRST n ROWS WITH TIES)
+Bảng `EXAM_RESULT` có điểm số của các thí sinh như sau:
+- Thí sinh A: 100 điểm
+- Thí sinh B: 95 điểm
+- Thí sinh C: 90 điểm
+- Thí sinh D: 90 điểm
+- Thí sinh E: 85 điểm
+
+Xét câu lệnh SQL sau thực thi trên Oracle 12c trở lên:
+
+```sql
+SELECT CANDIDATE_NAME, SCORE
+FROM EXAM_RESULT
+ORDER BY SCORE DESC
+FETCH FIRST 3 ROWS WITH TIES;
+```
+
+Số lượng dòng kết quả và danh sách thí sinh được trả về là gì?
+
+A. Trả về đúng 3 dòng gồm: Thí sinh A, B, C.
+B. Trả về 4 dòng gồm: Thí sinh A, B, C, D.
+C. Trả về 5 dòng gồm tất cả các thí sinh vì có điểm số trùng nhau.
+D. Báo lỗi cú pháp vì mệnh đề `FETCH` chỉ chấp nhận tùy chọn `ONLY`.
+
+**Đáp án đúng:** **B**
+**Giải thích chi tiết:**
+- Khi sắp xếp theo `SCORE DESC`:
+  - Vị trí 1: Thí sinh A (100)
+  - Vị trí 2: Thí sinh B (95)
+  - Vị trí 3: Thí sinh C (90)
+  - Thí sinh D có điểm số là 90, **bằng điểm với thí sinh ở vị trí thứ 3 (Thí sinh C)**.
+- Từ khóa `WITH TIES` quy định rằng: nếu các bản ghi tiếp theo có giá trị cột sắp xếp trùng với bản ghi cuối cùng của ngưỡng Top-N (ở đây là vị trí thứ 3), thì các bản ghi đồng hạng đó **bắt buộc phải được đưa thêm vào kết quả**.
+- Do đó, cả Thí sinh D cũng được trả về, tổng cộng kết quả có **đúng 4 dòng** (Thí sinh A, B, C, D).
+
+---
+
+### Câu 4 (Độ khó: Nâng cao — Phân trang với ROWNUM trên Oracle cổ điển)
+Khi thực hiện phân trang hiển thị từ dòng thứ 11 đến dòng thứ 20 (Trang 2, mỗi trang 10 dòng) theo mức lương giảm dần trên Oracle phiên bản cũ (trước 12c), cấu trúc truy vấn nào dưới đây là **CHUẨN XÁC VÀ TỐI ƯU NHẤT**?
+
+A.
+```sql
+SELECT *
+FROM EMP
+WHERE ROWNUM BETWEEN 11 AND 20
+ORDER BY SAL DESC;
+```
+B.
+```sql
+SELECT *
+FROM (
+    SELECT EMP.*, ROWNUM AS RN
+    FROM EMP
+    ORDER BY SAL DESC
+)
+WHERE RN BETWEEN 11 AND 20;
+```
+C.
+```sql
+SELECT *
+FROM (
+    SELECT A.*, ROWNUM AS RN
+    FROM (
+        SELECT *
+        FROM EMP
+        ORDER BY SAL DESC
+    ) A
+    WHERE ROWNUM <= 20
+)
+WHERE RN >= 11;
+```
+D.
+```sql
+SELECT *
+FROM EMP
+ORDER BY SAL DESC
+OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
+```
+
+**Đáp án đúng:** **C**
+**Giải thích chi tiết:**
+- **Đáp án C là cấu trúc chuẩn kinh điển 2 tầng:**
+  - Tầng 1 (trong cùng): `ORDER BY SAL DESC` để sắp xếp dữ liệu chính xác.
+  - Tầng 2 (ở giữa): Đánh số `ROWNUM AS RN` và chặn trên `WHERE ROWNUM <= 20` (giúp Optimizer của Oracle dừng quét sớm - Stopkey Optimization, không cần quét toàn bộ bảng).
+  - Tầng 3 (ngoài cùng): Lọc chặn dưới `WHERE RN >= 11`.
+- **Đáp án A sai:** `WHERE ROWNUM BETWEEN 11 AND 20` không bao giờ trả về dữ liệu (do ROWNUM bắt đầu từ 1).
+- **Đáp án B sai:** `ROWNUM` được gán đồng thời trong cùng tầng với `ORDER BY`, dẫn đến việc gán số thứ tự trước khi sắp xếp, gây sai lệch toàn bộ thứ hạng lương.
+- **Đáp án D:** Mặc dù cú pháp này hoàn toàn đúng trên Oracle 12c+, nhưng câu hỏi yêu cầu **trên Oracle phiên bản cũ (trước 12c)**, do đó cú pháp `OFFSET/FETCH` sẽ bị báo lỗi không hỗ trợ cú pháp.
