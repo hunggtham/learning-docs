@@ -222,12 +222,57 @@ function markdownToHtml(markdown) {
     usedIds.set(base, next);
     return next === 1 ? base : `${base}-${next}`;
   };
-  for (const line of blocks) {
+  const isSeparator = str => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?$/.test(str ? str.trim() : '');
+  const parseRow = str => {
+    let s = str.trim();
+    if (s.startsWith('|')) s = s.slice(1);
+    if (s.endsWith('|')) s = s.slice(0, -1);
+    return s.split('|').map(cell => cell.trim());
+  };
+  for (let i = 0; i < blocks.length; i++) {
+    const line = blocks[i];
     if (line.startsWith('```')) { if (inCode) html += `<pre><code>${code.join('\n')}</code></pre>`; inCode = !inCode; code = []; continue; }
     if (inCode) { code.push(line); continue; }
+    if (line.includes('|') && i + 1 < blocks.length && isSeparator(blocks[i + 1])) {
+      if (inList) { html += '</ul>'; inList = false; }
+      const headers = parseRow(line);
+      const aligns = parseRow(blocks[i + 1]).map(col => {
+        const l = col.startsWith(':'), r = col.endsWith(':');
+        return l && r ? 'center' : r ? 'right' : l ? 'left' : '';
+      });
+      i++;
+      let tableHtml = '<div class="table-wrap"><table class="markdown-table"><thead><tr>';
+      tableHtml += headers.map((h, idx) => `<th${aligns[idx] ? ` style="text-align:${aligns[idx]}"` : ''}>${inline(h)}</th>`).join('');
+      tableHtml += '</tr></thead><tbody>';
+      while (i + 1 < blocks.length) {
+        const nextLine = blocks[i + 1];
+        if (nextLine.trim() && nextLine.includes('|') && !nextLine.startsWith('```') && !nextLine.startsWith('#')) {
+          i++;
+          const cells = parseRow(blocks[i]);
+          tableHtml += '<tr>';
+          tableHtml += cells.map((c, idx) => `<td${aligns[idx] ? ` style="text-align:${aligns[idx]}"` : ''}>${inline(c)}</td>`).join('');
+          tableHtml += '</tr>';
+        } else {
+          break;
+        }
+      }
+      tableHtml += '</tbody></table></div>';
+      html += tableHtml;
+      continue;
+    }
     const heading = line.match(/^(#{1,3})\s+(.+)/);
-    if (heading) { const text = heading[2]; const id = headingId(text); html += `<h${heading[1].length} id="${id}">${inline(text)}</h${heading[1].length}>`; continue; }
-    if (/^[-*+]\s+/.test(line)) { if (!inList) { html += '<ul>'; inList = true; } html += `<li>${inline(line.replace(/^[-*+]\s+/, ''))}</li>`; continue; }
+    if (heading) {
+      if (inList) { html += '</ul>'; inList = false; }
+      const text = heading[2];
+      const id = headingId(text);
+      html += `<h${heading[1].length} id="${id}">${inline(text)}</h${heading[1].length}>`;
+      continue;
+    }
+    if (/^[-*+]\s+/.test(line)) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      html += `<li>${inline(line.replace(/^[-*+]\s+/, ''))}</li>`;
+      continue;
+    }
     if (inList) { html += '</ul>'; inList = false; }
     if (line.startsWith('&gt; ')) html += `<blockquote>${inline(line.slice(5))}</blockquote>`;
     else if (line.trim()) html += `<p>${inline(line)}</p>`;

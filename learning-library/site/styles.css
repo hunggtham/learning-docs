@@ -162,8 +162,16 @@ button { -webkit-tap-highlight-color:transparent; }
 .markdown code { padding:1px 4px; border-radius:3px; background:var(--accent-soft); font-family:ui-monospace,monospace; font-size:.86em; }
 .markdown pre code { padding:0; background:transparent; }
 .markdown blockquote { margin-left:0; padding:4px 18px; border-left:3px solid var(--accent); color:var(--muted); }
-.markdown table { display:block; overflow:auto; border-collapse:collapse; }
-.markdown th,.markdown td { padding:8px 10px; border:1px solid var(--line); }
+.table-wrap { width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1.5em 0; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+.table-wrap::-webkit-scrollbar { height:6px; }
+.table-wrap::-webkit-scrollbar-thumb { background:var(--line); border-radius:3px; }
+.markdown table { width:100%; min-width:480px; border-collapse:collapse; font-size:.92rem; line-height:1.5; margin:0; }
+.markdown th { padding:10px 14px; background:color-mix(in srgb,var(--accent-soft) 40%,var(--panel)); color:var(--ink); font-weight:600; text-align:left; border-bottom:2px solid var(--line); border-right:1px solid var(--line); white-space:nowrap; }
+.markdown th:last-child { border-right:none; }
+.markdown td { padding:10px 14px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); color:var(--ink); vertical-align:top; }
+.markdown td:last-child { border-right:none; }
+.markdown tr:last-child td { border-bottom:none; }
+.markdown tbody tr:hover { background:color-mix(in srgb,var(--accent-soft) 18%,transparent); }
 .pdf-frame { width:100%; height:calc(100dvh - 190px); min-height:660px; border:1px solid var(--line); border-radius:12px; background:#555; }
 .reader-actions { display:flex; flex-wrap:wrap; gap:20px; }
 .open-file { margin-top:12px; }
