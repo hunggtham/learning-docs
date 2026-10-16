@@ -52,8 +52,8 @@
 
 | Tiêu chuẩn VPN | Tầng mạng hoạt động | Đặc điểm kiến trúc & Giao thức thành phần |
 | :--- | :---: | :--- |
-| **IPsec VPN** | **Tầng 3 (Network Layer)** | - Hoạt động độc lập với ứng dụng; bảo vệ toàn bộ lưu lượng IP đi qua mạng.<br>- **Giao thức AH (Authentication Header):** Xác thực nguồn gốc và bảo vệ tính toàn vẹn của gói tin; **KHÔNG mã hóa dữ liệu**.<br>- **Giao thức ESP (Encapsulating Security Payload):** Mã hóa Payload bảo vệ tính bí mật, đồng thời hỗ trợ xác thực và toàn vẹn.<br>- **Giao thức IKE (Internet Key Exchange):** Tự động thương lượng thuật toán và trao đổi khóa bảo mật. |
-| **SSL/TLS VPN** | **Tầng 4 ~ 7 (Transport/App)** | - Hoạt động trên giao thức HTTPS; người dùng chỉ cần sử dụng trình duyệt web tiêu chuẩn để truy cập ứng dụng nội bộ mà **không cần cài đặt phần mềm Client chuyên dụng**.<br>- Cấu hình linh hoạt, dễ dàng vượt qua tường lửa NAT. |
+| **IPsec VPN** | **Tầng 3 (Network Layer)** | Hoạt động độc lập ứng dụng ở L3. Giao thức AH xác thực toàn vẹn (không mã hóa), ESP vừa mã hóa vừa xác thực, IKE tự động thương lượng và trao đổi khóa bí mật. |
+| **SSL/TLS VPN** | **Tầng 4 ~ 7 (Transport/App)** | Hoạt động qua giao thức HTTPS; người dùng truy cập trực tiếp qua trình duyệt web mà không cần cài đặt phần mềm Client chuyên dụng, dễ vượt tường lửa NAT. |
 
 - **Hai chế độ hoạt động của IPsec:**
   - **전송 모드 (Transport Mode):** Chỉ mã hóa phần dữ liệu (Payload) của gói tin IP, giữ nguyên Header IP gốc. Phù hợp cho giao tiếp trực tiếp giữa máy trạm và máy trạm (Host-to-Host).
@@ -63,17 +63,17 @@
 
 | Giải pháp | Tên tiếng Hàn & Anh | Cơ chế hoạt động & Phạm vi bảo vệ |
 | :--- | :--- | :--- |
-| **Tường lửa** | **방화벽 (Firewall)** | Kiểm soát và lọc lưu lượng ra vào hệ thống dựa trên tập các quy tắc bảo mật (Security Rules).<br>- **Lọc gói tin (Packet Filter):** Kiểm tra IP, Port, cờ TCP ở L3/L4; tốc độ nhanh nhưng không lưu trạng thái.<br>- **Kiểm tra trạng thái (Stateful Inspection):** Lưu vết bảng trạng thái phiên (State Table); chỉ mở cổng cho các gói tin phản hồi hợp lệ từ bên ngoài đi vào.<br>- **Proxy / Gateway:** Hoạt động ở L7; đóng vai trò trung gian phân tích sâu nội dung ứng dụng. |
-| **Hệ thống phát hiện xâm nhập** | **IDS (Intrusion Detection System)** | Giám sát lưu lượng mạng hoặc máy chủ trong thời gian thực; khi phát hiện hành vi tấn công hoặc vi phạm chính sách, IDS sẽ **ghi log và gửi cảnh báo (Alert)** cho quản trị viên. IDS hoạt động ở chế độ thụ động (Passive/Sniffing), không làm nghẽn đường truyền mạng. |
-| **Hệ thống ngăn chặn xâm nhập** | **IPS (Intrusion Prevention System)** | Được lắp đặt trực tiếp trên luồng truyền dữ liệu (**Inline Mode**). Khi phát hiện gói tin tấn công, IPS **chủ động chặn đứng (Block/Drop)** gói tin độc hại và ngắt ngay kết nối TCP thời gian thực trước khi đòn tấn công chạm tới máy chủ đích. |
-| **Tường lửa ứng dụng Web** | **WAF (Web Application Firewall)** | Hoạt động chuyên sâu ở tầng ứng dụng (L7); phân tích sâu các bản tin HTTP/HTTPS để phát hiện và ngăn chặn các đòn tấn công web phổ biến như SQL Injection, XSS, CSRF, File Upload độc hại. |
+| **Tường lửa** | **방화벽 (Firewall)** | Kiểm soát và lọc gói tin theo Security Rules (Packet Filter ở L3/L4, Stateful Inspection kiểm tra bảng trạng thái phiên, Proxy Gateway ở L7). |
+| **Hệ thống phát hiện xâm nhập** | **IDS (Intrusion Detection System)** | Giám sát lưu lượng thụ động (Passive/Port Mirroring); khi phát hiện xâm nhập sẽ ghi log và phát cảnh báo (Alert) tới quản trị viên mà không làm nghẽn mạng. |
+| **Hệ thống ngăn chặn xâm nhập** | **IPS (Intrusion Prevention System)** | Lắp đặt trực tiếp trên luồng truyền dữ liệu (Inline Mode); chủ động chặn đứng (Block/Drop) gói tin độc hại và ngắt phiên kết nối theo thời gian thực. |
+| **Tường lửa ứng dụng Web** | **WAF (Web Application Firewall)** | Hoạt động chuyên sâu ở tầng L7; phân tích sâu bản tin HTTP/HTTPS để ngăn chặn SQL Injection, XSS, CSRF, File Upload độc hại. |
 
 #### 3. Hai cơ chế phát hiện xâm nhập cốt lõi của IDS/IPS
 
 | Cơ chế phát hiện | Tên tiếng Hàn & Anh | Bản chất nguyên lý & Ưu nhược điểm đề thi |
 | :--- | :--- | :--- |
-| **Phát hiện theo chữ ký mẫu** | **오용 탐지 (Misuse / Signature)** | - So sánh lưu lượng với cơ sở dữ liệu các mẫu tấn công đã biết từ trước (Attack Signatures).<br>- **Ưu điểm:** Độ chính xác rất cao, **tỷ lệ báo động sai (False Positive / 오탐률) cực thấp**.<br>- **Nhược điểm:** **Hoàn toàn bất lực trước các cuộc tấn công mới chưa từng được ghi nhận (Zero-Day Attack)**; đòi hỏi phải liên tục cập nhật kho chữ ký. |
-| **Phát hiện bất thường theo hành vi** | **이상 탐지 (Anomaly / Behavior)** | - Thiết lập một đường cơ sở hành vi bình thường của hệ thống (Normal Baseline); bất kỳ hoạt động nào sai lệch đáng kể so với mức bình thường sẽ bị coi là tấn công.<br>- **Ưu điểm:** **Có khả năng phát hiện các cuộc tấn công mới chưa từng biết (Zero-Day Attack)**.<br>- **Nhược điểm:** **Tỷ lệ báo động sai (False Positive) rất cao**; các hoạt động hợp lệ đột xuất cũng có thể bị chặn nhầm. |
+| **Phát hiện theo chữ ký mẫu** | **오용 탐지 (Misuse / Signature)** | So sánh lưu lượng với kho chữ ký mẫu đã biết; tỷ lệ báo động sai (False Positive) cực thấp, nhưng bất lực trước đòn tấn công mới (Zero-Day). |
+| **Phát hiện bất thường theo hành vi** | **이상 탐지 (Anomaly / Behavior)** | So sánh với đường cơ sở hành vi bình thường (Baseline); phát hiện được đòn tấn công mới (Zero-Day), nhưng tỷ lệ báo động sai (False Positive) rất cao. |
 
 #### 4. Hệ điều hành bảo mật (Secure OS)
 - **개념 (Khái niệm):** Hệ điều hành được tích hợp thêm **Nhân bảo mật (보안 커널 - Security Kernel)** bên trong nhân hệ thống, cung cấp cơ chế Kiểm soát truy cập bắt buộc (MAC), bảo vệ tính toàn vẹn của tệp tin nhị phân và ngăn chặn người dùng có quyền quản trị tối cao (Root) lạm dụng quyền lực.
@@ -91,14 +91,98 @@
 | **`/var/log/wtmp`** | **Nhị phân** (Binary) | Lưu lịch sử **tất cả các phiên đăng nhập và đăng xuất thành công** từ trước đến nay, kèm thời gian hệ thống khởi động lại (Reboot). | **`last`** |
 | **`/var/log/btmp`** | **Nhị phân** (Binary) | Lưu lịch sử **tất cả các lần đăng nhập THẤT BẠI** (sai mật khẩu, sai tài khoản). Là bằng chứng then chốt để phát hiện đòn tấn công Brute Force. | **`lastb`** |
 | **`/var/log/lastlog`** | **Nhị phân** (Binary) | Lưu lại thông tin về **lần đăng nhập thành công gần đây nhất của từng tài khoản người dùng** trong hệ thống. | **`lastlog`** |
-| **`/var/log/secure`**<br>(Ubuntu: `auth.log`) | **Văn bản thuần** (Text) | Lưu toàn bộ các sự kiện xác thực hệ thống: đăng nhập từ xa qua dịch vụ SSH, chuyển quyền quản trị qua lệnh `su`, thực thi lệnh đặc quyền `sudo`. | `cat`, `tail`, `grep` |
+| **`/var/log/secure`** (Ubuntu: `auth.log`) | **Văn bản thuần** (Text) | Lưu toàn bộ các sự kiện xác thực hệ thống: đăng nhập từ xa qua dịch vụ SSH, chuyển quyền quản trị qua lệnh `su`, thực thi lệnh đặc quyền `sudo`. | `cat`, `tail`, `grep` |
 | **`/var/log/messages`** | **Văn bản thuần** (Text) | Tệp nhật ký hệ thống chung ghi lại các thông báo cảnh báo và hoạt động của Kernel và các dịch vụ nền tảng hệ thống. | `cat`, `tail`, `grep` |
 
 ---
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Sự khác biệt giữa chế độ Promiscuous Mode và Port Mirroring
+#### 1. Sơ đồ phân cấp bố trí thiết bị an ninh mạng (Defense-in-Depth Architecture)
+Mô hình phòng thủ mạng theo chiều sâu tiêu chuẩn quốc tế phân chia mạng doanh nghiệp thành các vùng độc lập với các thiết bị an ninh được bố trí tại các vị trí chiến lược:
+
+```text
+  [ INTERNET - MẠNG CÔNG CỘNG KHÔNG TIN CẬY ]
+                     |
+                     v
+             +---------------+
+             |  Edge Router  |  (Lọc gói tin thô ban đầu bằng Access Control List - ACL)
+             +---------------+
+                     |
+                     v
+             +---------------+
+             |  External FW  |  (Tường lửa ngoại vi: Chỉ mở các Port dịch vụ công khai 80, 443, 25, 53)
+             +---------------+
+                     |
+         +-----------+-----------+
+         |                       |
+         v                       v
+  [ VÙNG ĐỆM DMZ ]        [ LUỒNG ĐI VÀO MẠNG NỘI BỘ ]
+  (Demilitarized Zone)           |
+         |                       v
+         |               +---------------+
+         |               |  Internal FW  |  (Tường lửa nội bộ: Chặn đứng mọi lưu lượng khởi tạo từ DMZ)
+         |               +---------------+
+         |                       |
+         |                       v
+         |               +---------------+
+         |               |      IPS      |  (Inline Mode: Nối tiếp trên dây, chặn DROP gói tin độc hại)
+         |               +---------------+
+         |                       |
+         |                       v
+         |               +---------------+
+         |               |  Core Switch  | ===== (Port Mirroring / SPAN) =====> [ NIDS (Passive) ]
+         |               +---------------+                                      (Ghi log & Cảnh báo SOC)
+         |                       |
+         |       +---------------+---------------+
+         |       |                               |
+         |       v                               v
+         | [ MẠNG NỘI BỘ (LAN) ]       [ MÁY CHỦ BẢO MẬT CAO ]
+         | (Máy trạm Workstations)     (Database Server, Active Directory, Secure OS)
+         |
+         v
+  [ CÁC MÁY CHỦ CÔNG KHAI TRONG DMZ ]
+  +-------------------------------------------------------+
+  |  +--------------------+       +--------------------+  |
+  |  |    WAF (Web FW)    |       |     DNS Server     |  |
+  |  +--------------------+       +--------------------+  |
+  |            |                                          |
+  |            v                  +--------------------+  |
+  |  +--------------------+       |    Mail Server     |  |
+  |  |  Web App Server    |       +--------------------+  |
+  |  +--------------------+                               |
+  +-------------------------------------------------------+
+```
+
+- **Phân tích kỹ thuật các thành phần phòng thủ cốt lõi:**
+  - **1. Firewall (방화벽 — Tường lửa mạng):**
+    - Kiểm soát luồng lưu lượng L3/L4 giữa các vùng mạng dựa trên địa chỉ IP nguồn/đích, Cổng dịch vụ (Port), và bảng trạng thái kết nối (State Table).
+    - Áp dụng nguyên tắc **Default Deny**: Mọi lưu lượng không được cho phép rõ ràng trong chính sách sẽ mặc định bị từ chối.
+  - **2. DMZ (Demilitarized Zone — Vùng đệm phi quân sự):**
+    - Là vùng mạng trung gian cách ly giữa Internet và mạng nội bộ tin cậy (LAN).
+    - Đặt các máy chủ cung cấp dịch vụ ra bên ngoài: Web Server, Mail Server, DNS Server, Proxy.
+    - **Nguyên tắc an toàn sống còn:** Máy chủ trong DMZ **tuyệt đối không được phép chủ động khởi tạo kết nối vào mạng nội bộ (Internal LAN)**. Nếu máy chủ web trong DMZ bị tin tặc chiếm quyền điều khiển, kẻ tấn công vẫn bị Tường lửa nội bộ chặn lại, không thể tiến vào thâm nhập CSDL doanh nghiệp.
+  - **3. WAF (Web Application Firewall — Tường lửa ứng dụng Web):**
+    - Được triển khai ngay phía trước Web Server trong vùng DMZ.
+    - Phân tích chuyên sâu ở tầng ứng dụng (L7), kiểm tra toàn bộ Payload HTTP/HTTPS để phát hiện các lỗ hổng OWASP Top 10 (SQL Injection, Cross-Site Scripting XSS, File Inclusion, Command Injection) mà Firewall thông thường ở L3/L4 không thể đọc hiểu được.
+  - **4. IPS (Intrusion Prevention System — Ngăn chặn xâm nhập):**
+    - Lắp đặt theo chế độ **Inline (nối tiếp trực tiếp trên đường truyền)** tại vị trí trước khi luồng dữ liệu tiến vào mạng nội bộ.
+    - Khi phát hiện gói tin chứa chữ ký tấn công hoặc hành vi dị thường, IPS chủ động DROP (hủy) gói tin ngay lập tức và reset phiên kết nối TCP, bảo vệ máy chủ đích trước khi đòn tấn công kịp tiếp cận.
+  - **5. IDS (Intrusion Detection System — Phát hiện xâm nhập):**
+    - Lắp đặt theo chế độ **Passive (thụ động / ngoài luồng)** thông qua cổng SPAN / Port Mirroring của Switch trung tâm.
+    - Thu thập bản sao lưu lượng để phân tích thống kê chuyên sâu và phát tín hiệu cảnh báo (Alert) tới trung tâm vận hành giám sát an ninh (SOC) mà hoàn toàn không gây trễ hoặc nghẽn đường truyền mạng chính.
+
+- **Bảng đối chiếu tổng hợp 5 thành phần kiến trúc an ninh:**
+
+| Thành phần | Vị trí bố trí tiêu chuẩn | Chế độ kết nối | Tầng OSI | Hành động xử lý chính |
+| :--- | :--- | :---: | :---: | :--- |
+| **Firewall** | Ranh giới Internet - DMZ và DMZ - LAN | Inline | L3 / L4 / L7 | Chấp nhận (Allow) hoặc Từ chối (Deny/Drop) theo IP/Port/State. |
+| **DMZ** | Vùng cách ly giữa External FW và Internal FW | Subnet riêng | L2 ~ L7 | Cách ly máy chủ công khai, ngăn chặn tấn công lan truyền vào LAN. |
+| **WAF** | Phía trước các máy chủ Web trong DMZ | Inline / Reverse Proxy | L7 (Application) | Phân tích sâu HTTP/HTTPS, chặn SQL Injection, XSS, CSRF. |
+| **IPS** | Trước các phân vùng mạng nội bộ quan trọng | Inline | L3 ~ L7 | Phát hiện và chủ động chặn đứng (Drop/Block) gói tin thời gian thực. |
+| **IDS** | Cổng Mirroring của Switch trung tâm | Passive (Sniffing) | L3 ~ L7 | Giám sát thụ động, ghi nhận nhật ký và gửi cảnh báo (Alert). |
+
+#### 2. Sự khác biệt giữa chế độ Promiscuous Mode và Port Mirroring
 - **Promiscuous Mode:** Chế độ của card mạng (NIC) cho phép nó tiếp nhận và chuyển lên hệ điều hành tất cả các khung dữ liệu đi qua dây cáp, bất kể địa chỉ MAC đích có thuộc về card mạng đó hay không. Được các công cụ Sniffing (Wireshark, tcpdump) sử dụng.
 - **Port Mirroring (SPAN - Switched Port Analyzer):** Tính năng trên thiết bị chuyển mạch Switch chuyên dụng, sao chép toàn bộ lưu lượng mạng đi qua một hoặc nhiều cổng mục tiêu rồi chuyển hướng sang cổng giám sát kết nối với thiết bị **NIDS (Network IDS)** để phân tích an ninh mà không làm gián đoạn lưu lượng mạng gốc.
 
@@ -113,3 +197,4 @@
   - 이상 탐지 (Anomaly): Dựa trên đường cơ sở bình thường, phát hiện được Zero-Day, tỷ lệ báo sai cao.
 - [ ] Thuộc lòng 4 tệp log nhị phân Linux: `utmp` (đang đăng nhập - `who`), `wtmp` (đăng nhập thành công - `last`), `btmp` (đăng nhập thất bại - `lastb`), `lastlog` (lần đăng nhập cuối - `lastlog`).
 - [ ] Nhớ tệp log xác thực SSH: `/var/log/secure` (RedHat/CentOS) hoặc `/var/log/auth.log` (Ubuntu/Debian).
+- [ ] Nắm vững kiến trúc mạng phân vùng chuyên sâu: Firewall lọc L3/L4, DMZ cách ly máy chủ công cộng, WAF bảo vệ web L7, IPS chặn Inline, IDS giám sát Passive.

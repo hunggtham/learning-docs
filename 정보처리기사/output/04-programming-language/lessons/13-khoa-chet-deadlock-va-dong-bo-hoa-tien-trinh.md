@@ -80,7 +80,92 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Minh họa nguyên lý giải thuật Peterson cho 2 tiến trình ($P_0$ và $P_1$):
+#### 1. Sơ đồ ASCII 4 điều kiện bế tắc của Coffman (상점비환):
+
+Năm 1971, Edward G. Coffman Jr. chứng minh rằng bế tắc hệ thống chỉ xảy ra khi và chỉ khi cả 4 điều kiện sau đồng thời xuất hiện:
+
+```text
++--------------------------------------------------------------------------+
+|              4 ĐIỀU KIỆN COFFMAN DẪN ĐẾN KHÓA CHẾT (DEADLOCK)            |
++--------------------------------------------------------------------------+
+| 1. 상호 배제 (Mutual Exclusion)                                          |
+|    Tài nguyên R1 không thể chia sẻ: Tại một thời điểm chỉ 1 tiến trình   |
+|    được phép sử dụng.                                                    |
+|    [Tiến trình P1] <====== [Tài nguyên R1] ======X [Tiến trình P2]       |
++--------------------------------------------------------------------------+
+| 2. 점유와 대기 (Hold and Wait)                                           |
+|    P1 đang nắm giữ ít nhất 1 tài nguyên R1, đồng thời yêu cầu cấp phát   |
+|    thêm tài nguyên R2 mới mà tài nguyên này đang bị P2 chiếm giữ.        |
+|    [Tiến trình P1] ===== Đang giữ =====> [Tài nguyên R1]                 |
+|           |                                                              |
+|           +======== Đang chờ đợi =====> [Tài nguyên R2]                  |
++--------------------------------------------------------------------------+
+| 3. 비선점 (Non-preemption)                                               |
+|    Hệ điều hành không thể cưỡng chế tước đoạt tài nguyên R2 từ P2.       |
+|    Chỉ khi P2 tự nguyện giải phóng thì R2 mới được cấp cho tiến trình    |
+|    khác.                                                                 |
++--------------------------------------------------------------------------+
+| 4. 환형 대기 (Circular Wait)                                             |
+|    Tồn tại chuỗi chờ đợi khép kín hình vòng tròn:                        |
+|           ( P1 ) ---- Yêu cầu cấp phát ----> [ R2 ]                      |
+|             ^                                   |                        |
+|             |                                   v                        |
+|           [ R1 ] <--- Yêu cầu cấp phát ----- ( P2 )                      |
+|    Trong đó: P1 đang giữ R1, P2 đang giữ R2.                             |
++--------------------------------------------------------------------------+
+```
+
+*Nguyên lý cốt lõi:* Cả 4 điều kiện này là **điều kiện cần**. Do đó, chỉ cần **triệt tiêu bất kỳ 1 trong 4 điều kiện** là ngăn chặn (Prevention) được Deadlock hoàn toàn.
+
+#### 2. Sơ đồ Đồ thị Cấp phát Tài nguyên (Resource Allocation Graph - RAG):
+
+Đồ thị RAG là công cụ đồ thị toán học dùng trong chiến lược **Phát hiện bế tắc (탐지 - Detection)**:
+- **Nút tiến trình:** Biểu diễn bằng hình tròn `( Pi )`.
+- **Nút tài nguyên:** Biểu diễn bằng hình chữ nhật `[ Rj ]`, bên trong chứa các chấm `*` đại diện cho số lượng bản sao (Instances).
+- **Cạnh yêu cầu (Request Edge):** `( Pi ) ---> [ Rj ]` (Tiến trình đang chờ cấp phát tài nguyên $R_j$).
+- **Cạnh cấp phát (Assignment Edge):** `[ Rj ] ---> ( Pi )` (Tài nguyên $R_j$ đã được gán cho tiến trình $P_i$).
+
+```text
+[TRƯỜNG HỢP 1: Tài nguyên đơn bản sao (Single-instance) -> CÓ CHU TRÌNH LÀ DEADLOCK CHẮC CHẮN]
+
+       ( P1 ) ---------------- Yêu cầu -------------> [ R1 (*) ]
+         ^                                                |
+         |                                           Đã cấp phát
+    Đã cấp phát                                           |
+         |                                                v
+      [ R2 (*) ] <------------ Yêu cầu -------------- ( P2 )
+
+   * Giải thích: Chu trình (P1 -> R1 -> P2 -> R2 -> P1) khép kín.
+     Vì R1 và R2 chỉ có 1 instance duy nhất, P1 và P2 khóa cứng vĩnh viễn -> DEADLOCK!
+```
+
+```text
+[TRƯỜNG HỢP 2: Tài nguyên đa bản sao (Multi-instance) -> CÓ CHU TRÌNH NHƯNG KHÔNG DEADLOCK]
+
+       ( P1 ) ---------------- Yêu cầu -------------> [ R1 (* *) ] <--- Đã cấp --- ( P3 )
+         ^                                                |
+         |                                           Đã cấp phát
+    Đã cấp phát                                           |
+         |                                                v
+      [ R2 (* *) ] <---------- Yêu cầu -------------- ( P2 )
+         ^
+         |
+    Đã cấp phát
+         |
+       ( P4 )
+
+   * Giải thích:
+     - Xuất hiện chu trình khép kín giữa P1, R1, P2, R2.
+     - TUY NHIÊN, R1 và R2 có 2 bản sao. Instance thứ hai của R1 đang cấp cho P3, và của R2 cấp cho P4.
+     - P3 và P4 không bị nghẽn (không chờ ai). Khi P3 hoàn tất trả lại R1, R1 được trao cho P1.
+     - Chu trình bị phá vỡ -> HỆ THỐNG AN TOÀN, KHÔNG BỊ DEADLOCK!
+```
+
+*Quy tắc vàng HRDK:*
+- Nếu tài nguyên chỉ có **1 instance**: Tồn tại chu trình $\Leftrightarrow$ Bế tắc (Deadlock).
+- Nếu tài nguyên có **nhiều instance**: Tồn tại chu trình là điều kiện cần nhưng **chưa đủ** để kết luận bế tắc.
+
+#### 3. Minh họa nguyên lý giải thuật Peterson cho 2 tiến trình ($P_0$ và $P_1$):
 ```c
 // Các biến chia sẻ chung
 boolean flag[2] = {false, false}; // Cờ thể hiện nguyện vọng muốn vào miền găng
@@ -108,7 +193,7 @@ void process_i(int i, int j) {
 }
 ```
 
-#### 2. Cấu trúc nguyên tử của hai hàm Semaphore ($P$ và $V$):
+#### 4. Cấu trúc nguyên tử của hai hàm Semaphore ($P$ và $V$):
 ```c
 struct Semaphore {
     int count;
@@ -134,7 +219,7 @@ void V(Semaphore S) {
 }
 ```
 
-#### 3. Bảng phân tích trạng thái an toàn trong Thuật toán Banker:
+#### 5. Bảng phân tích trạng thái an toàn trong Thuật toán Banker:
 Giả sử hệ thống có 3 loại tài nguyên và 3 tiến trình $P_1, P_2, P_3$:
 - **Tài nguyên có sẵn (Available):** Số lượng tài nguyên chưa cấp phát mà OS đang nắm giữ.
 - **Yêu cầu tối đa (Max):** Nhu cầu cực đại mà mỗi tiến trình có thể đòi hỏi.

@@ -79,7 +79,7 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Bài toán trắc nghiệm tính toán chia mạng con Subnetting chuẩn đề thi HRDK:
+#### 1. Bài toán trắc nghiệm tính toán chia mạng con CIDR `/26` (`255.255.255.192`):
 - **Đề bài:** Cho một dải địa chỉ mạng Class C: `192.168.10.0/24`. Người quản trị mạng muốn chia mạng này thành các mạng con nhỏ hơn bằng cách sử dụng Subnet Mask là `255.255.255.192`. Hỏi:
   1. Có bao nhiêu mạng con được tạo ra?
   2. Mỗi mạng con có tối đa bao nhiêu địa chỉ IP có thể gán được cho máy tính (Host khả dụng)?
@@ -102,13 +102,72 @@
     - Mạng con 3: Bắt đầu từ `192.168.10.128`, Broadcast là `192.168.10.191`.
     - Mạng con 4: Bắt đầu từ `192.168.10.192`, Broadcast là `192.168.10.255`.
 
-- **Bảng tổng hợp đáp án bài toán:**
+- **Bảng tổng hợp đáp án bài toán `/26`:**
 
 | Câu hỏi kiểm tra | Giá trị tính toán |
 | :--- | :---: |
 | **Số mạng con tạo được** | **4 mạng con** |
 | **Số Host khả dụng mỗi mạng** | **62 máy tính** |
 | **Địa chỉ Broadcast mạng con 1** | **`192.168.10.63`** |
+
+#### 2. Bài toán trắc nghiệm tính toán chia mạng con CIDR `/27` (`255.255.255.224`):
+- **Đề bài:** Một máy chủ được cấp địa chỉ IP là `192.168.1.100` với ký hiệu CIDR là `/27`. Hãy xác định:
+  1. Subnet Mask tương ứng ở dạng số thập phân có chấm.
+  2. Địa chỉ mạng (Network ID) chứa máy chủ trên.
+  3. Địa chỉ quảng bá (Broadcast ID) của mạng con đó.
+  4. Dải địa chỉ IP khả dụng gán được cho các thiết bị trong mạng con đó.
+
+- **Phân tích từng bước chi tiết:**
+  - **Bước 1: Xác định Subnet Mask từ prefix `/27`:**
+    - Ký hiệu `/27` biểu thị có đúng 27 bit 1 liên tục từ trái sang phải, 5 bit 0 còn lại dành cho Host:
+      $$\text{Mask Nhị phân: } \underbrace{11111111}_{255} . \underbrace{11111111}_{255} . \underbrace{11111111}_{255} . \underbrace{\mathbf{111}00000}_{\mathbf{224}}$$
+    - Giá trị thập phân của octet thứ 4: $128 + 64 + 32 = \mathbf{224}$.
+    - **Subnet Mask là: `255.255.255.224`**.
+  - **Bước 2: Tìm Network ID bằng phép toán Bitwise AND:**
+    - Router xác định Network ID bằng cách thực hiện phép nhân logic (AND) giữa IP của máy và Subnet Mask trên từng bit của octet thứ 4:
+      - Octet 4 của IP (`100`): $100 = 01100100_2$
+      - Octet 4 của Mask (`224`): $224 = 11100000_2$
+      - Phép toán AND từng bit:
+        ```text
+          0 1 1 0 0 1 0 0  (IP: 100)
+        & 1 1 1 0 0 0 0 0  (Mask: 224)
+        -----------------
+          0 1 1 0 0 0 0 0  (Kết quả: 64 + 32 = 96)
+        ```
+    - **Địa chỉ mạng (Network ID) là: `192.168.1.96`**.
+  - **Bước 3: Xác định Broadcast ID của mạng con:**
+    - Bước nhảy giữa các mạng con là: $2^{\text{Host bits}} = 2^5 = 32$.
+    - Mạng con kế tiếp bắt đầu tại: $96 + 32 = 128$ (`192.168.1.128`).
+    - Địa chỉ Broadcast là địa chỉ ngay liền trước mạng con kế tiếp: $128 - 1 = \mathbf{127}$.
+    - **Địa chỉ Broadcast là: `192.168.1.127`** (Tương ứng 5 bit host toàn 1: $01111111_2$).
+  - **Bước 4: Dải IP khả dụng (Usable Host Range):**
+    - IP đầu tiên: $\text{Network ID} + 1 = 96 + 1 = \mathbf{192.168.1.97}$.
+    - IP cuối cùng: $\text{Broadcast ID} - 1 = 127 - 1 = \mathbf{192.168.1.126}$.
+    - Tổng số host khả dụng: $2^5 - 2 = 32 - 2 = \mathbf{30\text{ máy}}$.
+
+- **Bảng phân chia toàn diện 8 mạng con của dải `/27`:**
+
+| Mạng con (Subnet) | Địa chỉ mạng (Network ID) | Dải IP khả dụng cho Host | Địa chỉ Broadcast |
+| :---: | :--- | :--- | :--- |
+| **Subnet 0** | `192.168.1.0/27` | `192.168.1.1` ~ `192.168.1.30` | `192.168.1.31` |
+| **Subnet 1** | `192.168.1.32/27` | `192.168.1.33` ~ `192.168.1.62` | `192.168.1.63` |
+| **Subnet 2** | `192.168.1.64/27` | `192.168.1.65` ~ `192.168.1.94` | `192.168.1.95` |
+| **Subnet 3** *(Chứa IP 100)* | **`192.168.1.96/27`** | **`192.168.1.97` ~ `192.168.1.126`** | **`192.168.1.127`** |
+| **Subnet 4** | `192.168.1.128/27` | `192.168.1.129` ~ `192.168.1.158` | `192.168.1.159` |
+| **Subnet 5** | `192.168.1.160/27` | `192.168.1.161` ~ `192.168.1.190` | `192.168.1.191` |
+| **Subnet 6** | `192.168.1.192/27` | `192.168.1.193` ~ `192.168.1.222` | `192.168.1.223` |
+| **Subnet 7** | `192.168.1.224/27` | `192.168.1.225` ~ `192.168.1.254` | `192.168.1.255` |
+
+#### 3. Bảng quy đổi nhanh CIDR sang Subnet Mask và số Host khả dụng:
+
+| Ký hiệu CIDR | Octet cuối nhị phân | Subnet Mask thập phân | Bước nhảy (Block Size) | Số mạng con (/24) | Số Host khả dụng |
+| :---: | :---: | :--- | :---: | :---: | :---: |
+| **`/25`** | `10000000` | `255.255.255.128` | 128 | 2 | $128 - 2 = \mathbf{126}$ |
+| **`/26`** | `11000000` | `255.255.255.192` | 64 | 4 | $64 - 2 = \mathbf{62}$ |
+| **`/27`** | `11100000` | `255.255.255.224` | 32 | 8 | $32 - 2 = \mathbf{30}$ |
+| **`/28`** | `11110000` | `255.255.255.240` | 16 | 16 | $16 - 2 = \mathbf{14}$ |
+| **`/29`** | `11111000` | `255.255.255.248` | 8 | 32 | $8 - 2 = \mathbf{6}$ |
+| **`/30`** | `11111100` | `255.255.255.252` | 4 | 64 | $4 - 2 = \mathbf{2}$ (Nối Router) |
 
 ---
 

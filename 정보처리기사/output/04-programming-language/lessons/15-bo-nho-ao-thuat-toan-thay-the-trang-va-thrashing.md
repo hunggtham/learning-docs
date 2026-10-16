@@ -63,8 +63,8 @@
 
 | Loại hình cục bộ | Bản chất nguyên lý | Hiện tượng mã nguồn đại diện trong đề thi |
 | :--- | :--- | :--- |
-| **Cục bộ thời gian**<br>(시간 구역성 - Temporal) | Một ô nhớ vừa được truy xuất có xu hướng cao **sẽ được truy xuất lặp lại nhiều lần** trong tương lai gần. | • Vòng lặp `for`, `while`.<br>• Biến đếm tích lũy (`count++`, `sum`).<br>• Ngăn xếp cuộc gọi hàm (Call Stack). |
-| **Cục bộ không gian**<br>(공간 구역성 - Spatial) | Các ô nhớ **nằm liền kề sát cạnh ô nhớ vừa truy xuất** có xu hướng cao sẽ được truy xuất kế tiếp. | • Duyệt tuần tự mảng 1 chiều, 2 chiều.<br>• Các câu lệnh thực thi tuần tự trong chương trình. |
+| **Cục bộ thời gian** (시간 구역성 - Temporal) | Một ô nhớ vừa được truy xuất có xu hướng cao **sẽ được truy xuất lặp lại nhiều lần** trong tương lai gần. | Vòng lặp `for`, `while`; biến đếm tích lũy (`count++`, `sum`); ngăn xếp cuộc gọi hàm (Call Stack). |
+| **Cục bộ không gian** (공간 구역성 - Spatial) | Các ô nhớ **nằm liền kề sát cạnh ô nhớ vừa truy xuất** có xu hướng cao sẽ được truy xuất kế tiếp. | Duyệt tuần tự mảng 1 chiều, 2 chiều; các câu lệnh thực thi tuần tự trong chương trình. |
 
 - **4. Hiện tượng Thrashing (스래싱) và giải pháp phòng ngừa:**
   - **Khái niệm:** Trạng thái hệ thống tốn phần lớn thời gian cho việc đọc/ghi tráo đổi trang giữa RAM và đĩa cứng (Paging I/O) thay vì thực thi chỉ thị của CPU, khiến hiệu suất CPU giảm đột ngột về gần bằng 0.
@@ -84,31 +84,81 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Bài toán trắc nghiệm lần vết lỗi trang (Page Fault Trace) chuẩn đề thi:
-- **Đề bài:** Cho chuỗi tham chiếu trang: `1, 2, 3, 1, 2, 4, 1, 2, 5`. Hệ thống có **3 khung trang (Page Frames)** ban đầu đều trống. Hỏi có bao nhiêu lần xảy ra lỗi trang (Page Fault) khi áp dụng thuật toán **LRU (Least Recently Used)**?
+#### 1. Minh chứng Nghịch lý Belady (Belady's Anomaly) trên giải thuật FIFO:
 
-*Bảng lần vết trạng thái 3 khung trang qua từng bước:*
+Nghịch lý Belady là hiện tượng xảy ra trên một số thuật toán thay thế trang (điển hình là FIFO): Khi **tăng số khung trang (Frame) được cấp phát**, số lần phát sinh lỗi trang (Page Fault) **lại tăng lên thay vì giảm đi**.
 
-| Chuỗi tham chiếu | $1$ | $2$ | $3$ | $1$ | $2$ | $4$ | $1$ | $2$ | $5$ |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Khung trang 1** | **1** | 1 | 1 | 1 | 1 | **4** | 4 | 4 | **5** |
-| **Khung trang 2** | — | **2** | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
-| **Khung trang 3** | — | — | **3** | 3 | 3 | 3 | **1** | 1 | 1 |
-| **Xảy ra Lỗi trang?**| **Có (F)**| **Có (F)**| **Có (F)**| Không | Không | **Có (F)**| **Có (F)**| Không | **Có (F)**|
+Cho chuỗi tham chiếu chuẩn của László Bélady (1969): `1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5` (12 lượt truy xuất).
 
-- **Chi tiết các bước thay thế:**
-  - Bước 1, 2, 3: Nạp 1, 2, 3 vào khung trống $\rightarrow$ 3 lần lỗi trang ban đầu (Cold Fault).
-  - Bước 4, 5: Trang 1 và 2 đã có sẵn $\rightarrow$ Không lỗi trang; cập nhật 1 và 2 là vừa dùng gần nhất (trang 3 trở thành lâu nhất chưa dùng).
-  - Bước 6: Cần trang 4. Trong {1, 2, 3}, trang 3 là lâu nhất chưa dùng $\rightarrow$ **Thay trang 3 bằng 4** (Lỗi trang lần 4).
-  - Bước 7: Cần trang 1. Trong {1, 2, 4}, trang 1 vừa dùng ở bước 4, trang 2 ở bước 5, trang 4 ở bước 6. Khung 1 chứa 4, khung 2 chứa 2, khung 3 chứa 3 cũ $\rightarrow$ **Thay trang 4/1 theo timestamp** $\rightarrow$ Lỗi trang lần 5.
-  - Bước 9: Cần trang 5 $\rightarrow$ Lỗi trang lần 6.
-- **Tổng số lần lỗi trang:** **6 lần**.
+##### Trường hợp A: Cấp phát 3 Khung trang (FIFO với 3 Frames)
 
-#### 2. Đồ thị mối quan hệ giữa Mức độ đa nhiệm và Hiệu suất CPU:
+| Chuỗi | 1 | 2 | 3 | 4 | 1 | 2 | 5 | 1 | 2 | 3 | 4 | 5 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Frame 1** | **1** | 1 | 1 | **4** | 4 | 4 | **5** | 5 | 5 | 5 | 5 | 5 |
+| **Frame 2** | — | **2** | 2 | 2 | **1** | 1 | 1 | 1 | 1 | **3** | 3 | 3 |
+| **Frame 3** | — | — | **3** | 3 | 3 | **2** | 2 | 2 | 2 | 2 | **4** | 4 |
+| **Kết quả** | **F** | **F** | **F** | **F** | **F** | **F** | **F** | H | H | **F** | **F** | H |
+
+- Tổng số lần Lỗi trang (Page Fault - F): **9 lần** (Số lần trúng - H: 3 lần).
+
+##### Trường hợp B: Cấp phát 4 Khung trang (FIFO với 4 Frames)
+
+| Chuỗi | 1 | 2 | 3 | 4 | 1 | 2 | 5 | 1 | 2 | 3 | 4 | 5 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Frame 1** | **1** | 1 | 1 | 1 | 1 | 1 | **5** | 5 | 5 | 5 | **4** | 4 |
+| **Frame 2** | — | **2** | 2 | 2 | 2 | 2 | 2 | **1** | 1 | 1 | 1 | **5** |
+| **Frame 3** | — | — | **3** | 3 | 3 | 3 | 3 | 3 | **2** | 2 | 2 | 2 |
+| **Frame 4** | — | — | — | **4** | 4 | 4 | 4 | 4 | 4 | **3** | 3 | 3 |
+| **Kết quả** | **F** | **F** | **F** | **F** | H | H | **F** | **F** | **F** | **F** | **F** | **F** |
+
+- Tổng số lần Lỗi trang (Page Fault - F): **10 lần** (Số lần trúng - H: 2 lần).
+- **Kết luận:** Tăng khung trang từ 3 lên 4 khiến Page Fault tăng từ 9 lên 10. Nguyên nhân vì FIFO không phải là **Thuật toán ngăn xếp (Stack Algorithm)**: tập hợp trang trong $m$ khung không chứa tập con của $m-1$ khung.
+
+#### 2. Bảng lần vết giải thuật LRU (Least Recently Used) và tính miễn nhiễm Belady:
+
+Cùng chuỗi tham chiếu `1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5` với **3 Khung trang** áp dụng LRU:
+
+| Chuỗi | 1 | 2 | 3 | 4 | 1 | 2 | 5 | 1 | 2 | 3 | 4 | 5 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Frame 1** | **1** | 1 | 1 | **4** | **1** | 1 | **5** | 5 | 5 | **3** | **4** | 4 |
+| **Frame 2** | — | **2** | 2 | 2 | 2 | **2** | 2 | 2 | 2 | 2 | 2 | **5** |
+| **Frame 3** | — | — | **3** | 3 | 3 | 3 | **1** | 1 | 1 | 1 | 1 | 1 |
+| **Kết quả** | **F** | **F** | **F** | **F** | **F** | H | **F** | H | H | **F** | **F** | **F** |
+
+- Với 3 frames, LRU sinh ra **10 lỗi trang**. Nhưng khi tăng lên 4 frames, LRU chỉ sinh ra **8 lỗi trang** (giảm đều đặn).
+- **Quy tắc thi cử:** LRU và OPT là các **Thuật toán ngăn xếp (스택 알고리즘 - Stack Algorithms)** nên **tuyệt đối không bao giờ mắc nghịch lý Belady**.
+
+#### 3. Bảng lần vết giải thuật LFU (Least Frequently Used):
+
+LFU dựa trên số lần (tần suất) một trang được gọi trong quá khứ. Trang có bộ đếm tần số nhỏ nhất sẽ bị loại. Nếu tần số bằng nhau, áp dụng luật hòa FIFO (trang nạp trước bị thay trước).
+
+Cho chuỗi tham chiếu: `1, 2, 3, 4, 2, 1, 5` với **3 Khung trang**:
+- Bước 1: Nạp 1 $\rightarrow$ Frame: {1:1}, Lỗi trang F.
+- Bước 2: Nạp 2 $\rightarrow$ Frame: {1:1, 2:1}, Lỗi trang F.
+- Bước 3: Nạp 3 $\rightarrow$ Frame: {1:1, 2:1, 3:1}, Lỗi trang F.
+- Bước 4: Yêu cầu 4 $\rightarrow$ Cả 1, 2, 3 đều có tần số = 1. Xét FIFO: 1 nạp sớm nhất $\rightarrow$ **Thay trang 1 bằng 4** (Frame: {4:1, 2:1, 3:1}), Lỗi trang F.
+- Bước 5: Yêu cầu 2 $\rightarrow$ Trang 2 đã có sẵn (Hit H) $\rightarrow$ Tần số trang 2 tăng lên 2 (Frame: {4:1, 2:2, 3:1}).
+- Bước 6: Yêu cầu 1 $\rightarrow$ Cần thay trang. Tần số: 4 có 1, 3 có 1, 2 có 2. Trong hai trang có tần số nhỏ nhất {4, 3}, trang 3 vào trước trang 4 $\rightarrow$ **Thay trang 3 bằng 1** (Frame: {4:1, 2:2, 1:1}), Lỗi trang F.
+- Bước 7: Yêu cầu 5 $\rightarrow$ Cần thay trang. Tần số: 4 có 1, 1 có 1, 2 có 2. Giữa {4, 1}, trang 4 vào trước $\rightarrow$ **Thay trang 4 bằng 5** (Frame: {5:1, 2:2, 1:1}), Lỗi trang F.
+
+#### 4. Bảng phân loại 4 lớp ưu tiên trong giải thuật NUR (Not Used Recently):
+
+NUR sử dụng 2 bit phần cứng kết hợp cho mỗi trang:
+- **Bit tham chiếu ($r$ - Reference bit):** Đặt bằng 1 khi trang được đọc hoặc ghi; đặt bằng 0 định kỳ bởi đồng hồ hệ thống.
+- **Bit sửa đổi ($m$ - Modified/Dirty bit):** Đặt bằng 1 khi nội dung trang bị thay đổi (cần ghi lại đĩa khi tráo ra); đặt bằng 0 khi nạp vào.
+
+| Lớp ưu tiên | Cặp bit $(r, m)$ | Trạng thái kỹ thuật | Đánh giá thay thế |
+| :---: | :---: | :--- | :--- |
+| **Cấp độ 1** | **$(0, 0)$** | Gần đây không tham chiếu, không bị sửa đổi. | **Ưu tiên thay thế số 1** (Tốt nhất vì không tốn I/O ghi đĩa). |
+| **Cấp độ 2** | **$(0, 1)$** | Gần đây không tham chiếu, nhưng đã bị sửa đổi. | Ưu tiên thay thế số 2 (Phải ghi đĩa trước khi thay). |
+| **Cấp độ 3** | **$(1, 0)$** | Gần đây có tham chiếu, không bị sửa đổi. | Ưu tiên thay thế số 3 (Trang đang tích cực đọc). |
+| **Cấp độ 4** | **$(1, 1)$** | Gần đây có tham chiếu, và đã bị sửa đổi. | **Ưu tiên thay thế cuối cùng** (Trang đang hoạt động rất mạnh). |
+
+#### 5. Đồ thị mối quan hệ giữa Mức độ đa nhiệm và Hiệu suất CPU (Thrashing Point):
 $$\text{Hiệu suất CPU} \uparrow \text{ Tăng dần đến điểm tới hạn } \longrightarrow \mathbf{\text{Điểm gãy gục (Thrashing Point)}} \longrightarrow \downarrow \text{ Rơi thẳng đứng}$$
 
-- Khi tăng số tiến trình đa nhiệm, ban đầu hiệu suất CPU tăng tuyến tính.
-- Nhưng khi vượt quá ngưỡng dung lượng RAM chịu tải, hệ điều hành rơi vào điểm Thrashing $\rightarrow$ CPU chỉ bận rộn chờ I/O nạp trang, hiệu suất rơi tự do về 0.
+- Khi tăng số tiến trình đa nhiệm, ban đầu hiệu suất CPU tăng tuyến tính vì tận dụng tốt thời gian rảnh rỗi.
+- Khi vượt quá ngưỡng dung lượng RAM chịu tải, hệ điều hành rơi vào điểm Thrashing $\rightarrow$ CPU chỉ bận rộn chờ I/O nạp trang, hiệu suất rơi tự do về 0.
 
 ---
 

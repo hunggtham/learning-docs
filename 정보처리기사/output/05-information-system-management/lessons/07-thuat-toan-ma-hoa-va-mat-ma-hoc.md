@@ -106,12 +106,127 @@ Mật mã khối chia dữ liệu thành các khối có kích thước cố đ�
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Cơ chế Mã hóa lai (Hybrid Cryptosystem) trong thực tế
+#### 1. Cơ chế Mã hóa lai (Hybrid Cryptosystem) trong thực tế
 Vì mật mã đối xứng nhanh nhưng khó phân phối khóa, còn mật mã bất đối xứng an toàn nhưng tốc độ rất chậm, các giao thức bảo mật thực tế (như HTTPS/TLS, SSH, PGP) luôn kết hợp cả hai thành **Hệ thống mã hóa lai**:
 1. Bên gửi tạo ngẫu nhiên một khóa đối xứng tạm thời gọi là **Khóa phiên (Session Key)**.
 2. Dữ liệu lớn được mã hóa nhanh chóng bằng khóa phiên này thông qua thuật toán đối xứng (như AES-256).
 3. Khóa phiên nhỏ (256 bit) được mã hóa an toàn bằng **Public Key của bên nhận** thông qua thuật toán bất đối xứng (như RSA hoặc ECC) rồi gửi kèm dữ liệu.
 4. Bên nhận dùng **Private Key của mình** để giải mã lấy khóa phiên, sau đó dùng khóa phiên để giải mã toàn bộ khối dữ liệu lớn.
+
+#### 2. Sơ đồ 5 chế độ hoạt động của mật mã khối (Block Cipher Modes)
+
+##### A. Chế độ ECB (Electronic Codebook) & CBC (Cipher Block Chaining)
+
+```text
+  [ Chế độ ECB - Mã hóa từng khối độc lập ]
+     Bản rõ P_1                 Bản rõ P_2                 Bản rõ P_n
+         |                          |                          |
+         v                          v                          v
+   +-----------+              +-----------+              +-----------+
+   |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K
+   +-----------+              +-----------+              +-----------+
+         |                          |                          |
+         v                          v                          v
+     Bản mã C_1                 Bản mã C_2                 Bản mã C_n
+
+  [ Chế độ CBC - Xâu chuỗi khối qua phép XOR và Vector khởi tạo IV ]
+     Bản rõ P_1                 Bản rõ P_2                 Bản rõ P_n
+         |                          |                          |
+    IV ->(+)                   C_1 ->(+)                 C_{n-1}->(+)
+         |                          |                          |
+         v                          v                          v
+   +-----------+              +-----------+              +-----------+
+   |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K
+   +-----------+              +-----------+              +-----------+
+         |                          |                          |
+         +---------\                +---------\                |
+         v          v               v          v               v
+     Bản mã C_1    (Tới P_2)    Bản mã C_2    (Tới P_n)    Bản mã C_n
+```
+
+##### B. Chế độ OFB (Output Feedback) & CTR (Counter Mode)
+
+```text
+  [ Chế độ OFB - Sinh dòng khóa Keystream độc lập với bản rõ ]
+     Vector IV
+         |
+         v
+   +-----------+
+   |  Mã hóa   |<-- Khóa K
+   +-----------+
+         |----------------------------------\
+         v                                   v
+   Keystream K_1                       +-----------+
+         |                             |  Mã hóa   |<-- Khóa K
+         v                             +-----------+
+    (+) <--- Bản rõ P_1                      |
+     |                                       v
+     v                                 Keystream K_2
+  Bản mã C_1                                 |
+                                             v
+                                        (+) <--- Bản rõ P_2
+                                         |
+                                         v
+                                      Bản mã C_2
+
+  [ Chế độ CTR - Mã hóa giá trị bộ đếm tăng dần, song song hóa 100% ]
+     Nonce || Ctr 1             Nonce || Ctr 2             Nonce || Ctr n
+           |                          |                          |
+           v                          v                          v
+     +-----------+              +-----------+              +-----------+
+     |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K    |  Mã hóa   |<-- Khóa K
+     +-----------+              +-----------+              +-----------+
+           |                          |                          |
+           v                          v                          v
+     (+) <--- Bản rõ P_1        (+) <--- Bản rõ P_2        (+) <--- Bản rõ P_n
+           |                          |                          |
+           v                          v                          v
+       Bản mã C_1                 Bản mã C_2                 Bản mã C_n
+```
+
+- **Bảng đối chiếu kỹ thuật giữa 5 chế độ vận hành khối:**
+
+| Chế độ | Mã hóa song song | Giải mã song song | Lan truyền lỗi (Error Propagation) | Ứng dụng thực tế |
+| :--- | :---: | :---: | :--- | :--- |
+| **ECB** | **Có** | **Có** | Lỗi 1 khối mã chỉ ảnh hưởng 1 khối rõ tương ứng | Mã hóa khóa ngắn, dữ liệu ngẫu nhiên. |
+| **CBC** | **Không** | **Có** | Lỗi 1 bit trên $C_1$ làm hỏng toàn bộ $P_1$ và 1 bit ở $P_2$ | IPsec VPN, TLS/SSL, mã hóa tệp tin chuẩn. |
+| **CFB** | **Không** | **Có** | Lỗi lan truyền sang một số khối kế tiếp | Truyền luồng ký tự mạng thời gian thực. |
+| **OFB** | **Không** | **Không** | **Không lan truyền** (lỗi 1 bit mã chỉ sai đúng 1 bit rõ) | Truyền tín hiệu vệ tinh, video qua kênh nhiễu. |
+| **CTR** | **Có** | **Có** | **Không lan truyền** (cho phép truy cập ngẫu nhiên) | Hệ thống đa nhân CPU, AES-GCM, lưu trữ tốc độ cao. |
+
+#### 3. Cơ chế cấu trúc hàm băm lặp Merkle-Damgård (MD5 & SHA-256)
+Hầu hết các hàm băm một chiều an toàn (MD5, SHA-1, SHA-256) đều hoạt động dựa trên cấu trúc lặp Merkle-Damgård để xử lý thông điệp có chiều dài tùy ý thành chuỗi băm có kích thước cố định:
+
+```text
+  Thông điệp đầu vào M (chiều dài bất kỳ)
+         |
+         v
+  [ Đệm Padding: Thêm bit 1, các bit 0, và 64 bit biểu diễn độ dài gốc ]
+         |
+         v
+  Chia thành chuỗi các khối có kích thước cố định 512 bit: M_1, M_2, ..., M_n
+         |
+         +--------------------+--------------------+
+         |                    |                    |
+         v                    v                    v
+    Khối M_1 (512b)      Khối M_2 (512b)      Khối M_n (512b)
+         |                    |                    |
+         v                    v                    v
+IV -> [Hàm nén f] -------> [Hàm nén f] -------> [Hàm nén f] ----> Mã băm Hash Digest
+(H_0)    |           H_1      |           H_2      |           H_n   (128b / 256b)
+         v                    v                    v
+```
+
+- **Bảng phân tích so sánh kỹ thuật giữa MD5 và SHA-256:**
+
+| Tiêu chuẩn so sánh | MD5 (Message Digest Algorithm 5) | SHA-256 (Secure Hash Algorithm 256-bit) |
+| :--- | :--- | :--- |
+| **Tổ chức thiết kế** | Ronald Rivest (1991) | Cơ quan An ninh Quốc gia Mỹ NSA / NIST (2001) |
+| **Kích thước khối dữ liệu** | 512 bit | 512 bit |
+| **Kích thước chuỗi băm** | **128 bit (16 bytes, 32 ký tự Hex)** | **256 bit (32 bytes, 64 ký tự Hex)** |
+| **Số bước tính toán** | 4 vòng $\times$ 16 bước = 64 bước | 64 vòng lặp tuần tự |
+| **Thanh ghi trạng thái** | 4 biến 32-bit: $A, B, C, D$ | 8 biến 32-bit: $A, B, C, D, E, F, G, H$ |
+| **Mức độ an toàn đề thi** | **Đã bị phá vỡ hoàn toàn**; dễ dàng tạo ra hai tệp khác nhau có cùng mã băm (Collision Attack). | **An toàn tuyệt đối**; chuẩn bắt buộc trong chính phủ, ngân hàng, SSL và Blockchain. |
 
 ---
 
@@ -122,4 +237,6 @@ Vì mật mã đối xứng nhanh nhưng khó phân phối khóa, còn mật mã
 - [ ] Nhớ cơ sở toán học: RSA dựa trên phân tích thừa số nguyên tố (소인수분해); ECC dựa trên logarit rời rạc đường cong elip (타원곡선 이산대수).
 - [ ] Nắm vững ưu điểm của ECC: Khóa ngắn hơn nhiều so với RSA ở cùng cấp độ bảo mật, tiết kiệm tài nguyên di động.
 - [ ] Phân biệt chế độ khối: ECB là yếu nhất; CBC dùng IV và xâu chuỗi XOR.
+- [ ] Nắm vững 5 chế độ khối: ECB (độc lập), CBC (xâu chuỗi IV), CFB/OFB (luồng), CTR (bộ đếm song song).
+- [ ] So sánh hàm băm: MD5 (128 bit, đã bị bẻ khóa va chạm) vs SHA-256 (256 bit, cấu trúc Merkle-Damgård an toàn).
 - [ ] Khắc ghi quy tắc chữ ký số: Ký bằng Private Key của người gửi, Xác minh bằng Public Key của người gửi.

@@ -53,16 +53,16 @@
 
 | Loại hình bắt tay | Các bước truyền tín hiệu cờ (Flags) | Ý nghĩa nghiệp vụ mạng |
 | :--- | :--- | :--- |
-| **Bắt tay 3 bước**<br>(3-Way Handshake:<br>**Thiết lập kết nối**) | 1. Client $\rightarrow$ Server: **SYN** ($seq = x$)<br>2. Server $\rightarrow$ Client: **SYN + ACK** ($seq = y, ack = x + 1$)<br>3. Client $\rightarrow$ Server: **ACK** ($seq = x + 1, ack = y + 1$) | Đồng bộ hóa số thứ tự (Sequence Number) ban đầu giữa hai máy tính; xác nhận cả 2 chiều gửi/nhận đều hoạt động bình thường. |
-| **Bắt tay 4 bước**<br>(4-Way Handshake:<br>**Giải phóng kết nối**) | 1. Client $\rightarrow$ Server: **FIN**<br>2. Server $\rightarrow$ Client: **ACK** (chờ xử lý nốt dữ liệu dở dang)<br>3. Server $\rightarrow$ Client: **FIN** (sẵn sàng đóng kết nối)<br>4. Client $\rightarrow$ Server: **ACK** $\rightarrow$ Kết thúc hoàn toàn. | Đảm bảo cả hai phía đã hoàn tất việc truyền gửi toàn bộ dữ liệu trong bộ đệm trước khi giải phóng cổng kết nối. |
+| **Bắt tay 3 bước** (3-Way Handshake: Thiết lập kết nối) | 1. Client $\rightarrow$ Server: **SYN** ($seq = x$); 2. Server $\rightarrow$ Client: **SYN + ACK** ($seq = y, ack = x + 1$); 3. Client $\rightarrow$ Server: **ACK** ($seq = x + 1, ack = y + 1$) | Đồng bộ hóa số thứ tự (Sequence Number) ban đầu giữa hai máy tính; xác nhận cả 2 chiều gửi/nhận đều hoạt động bình thường. |
+| **Bắt tay 4 bước** (4-Way Handshake: Giải phóng kết nối) | 1. Client $\rightarrow$ Server: **FIN**; 2. Server $\rightarrow$ Client: **ACK** (chờ xử lý nốt dữ liệu dở dang); 3. Server $\rightarrow$ Client: **FIN** (sẵn sàng đóng kết nối); 4. Client $\rightarrow$ Server: **ACK** $\rightarrow$ Kết thúc hoàn toàn. | Đảm bảo cả hai phía đã hoàn tất việc truyền gửi toàn bộ dữ liệu trong bộ đệm trước khi giải phóng cổng kết nối. |
 
 - **3. Bảng 3 cơ chế kiểm soát cốt lõi của TCP:**
 
 | Cơ chế kiểm soát | Thuật toán đại diện | Bản chất kỹ thuật chuẩn đề thi |
 | :--- | :--- | :--- |
-| **1. Kiểm soát luồng**<br>(흐름 제어 - Flow Control)| **Sliding Window (슬라이딩 윈도우)** | Đồng bộ tốc độ giữa bên gửi (quá nhanh) và bên nhận (chậm). Bên nhận gửi kèm thông số **Window Size** để báo cho bên gửi biết dung lượng bộ đệm còn trống. |
-| **2. Kiểm soát tắc nghẽn**<br>(혼잡 제어 - Congestion) | **Slow Start (느린 시작)** | Điều chỉnh tốc độ truyền tùy theo tình trạng chịu tải của toàn mạng. Ban đầu gửi 1 gói, tăng theo hàm mũ ($1 \rightarrow 2 \rightarrow 4 \rightarrow 8$) đến ngưỡng **ssthresh**, sau đó tăng tuyến tính ($+1$). |
-| **3. Kiểm soát lỗi**<br>(오류 제어 - Error Control) | **ARQ (Automatic Repeat Request)** | Tự động phát hiện gói lỗi qua Checksum và gửi yêu cầu truyền lại: Stop-and-Wait ARQ, Go-Back-N ARQ, Selective Repeat ARQ. |
+| **1. Kiểm soát luồng** (흐름 제어 - Flow Control) | **Sliding Window (슬라이딩 윈도우)** | Đồng bộ tốc độ giữa bên gửi (quá nhanh) và bên nhận (chậm). Bên nhận gửi kèm thông số **Window Size** để báo cho bên gửi biết dung lượng bộ đệm còn trống. |
+| **2. Kiểm soát tắc nghẽn** (혼잡 제어 - Congestion) | **Slow Start (느린 시작)** | Điều chỉnh tốc độ truyền tùy theo tình trạng chịu tải của toàn mạng. Ban đầu gửi 1 gói, tăng theo hàm mũ ($1 \rightarrow 2 \rightarrow 4 \rightarrow 8$) đến ngưỡng **ssthresh**, sau đó tăng tuyến tính ($+1$). |
+| **3. Kiểm soát lỗi** (오류 제어 - Error Control) | **ARQ (Automatic Repeat Request)** | Tự động phát hiện gói lỗi qua Checksum và gửi yêu cầu truyền lại: Stop-and-Wait ARQ, Go-Back-N ARQ, Selective Repeat ARQ. |
 
 - **주의/함정 (Bẫy đề thi):**
   - **Kích thước Header của UDP:** Header của UDP cực kỳ đơn giản và luôn cố định đúng **8 Byte** (gồm 4 trường: Cổng nguồn 2B, Cổng đích 2B, Độ dài 2B, Checksum 2B).
@@ -77,17 +77,57 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Sơ đồ chi tiết chu trình 3-Way Handshake của TCP:
-$$\begin{array}{ccc}
-\mathbf{Client} & & \mathbf{Server} \\
-\text{[CLOSED]} & & \text{[LISTEN]} \\
-| & \xrightarrow{\quad \mathbf{SYN} \text{ (seq = 100)} \quad} & | \quad \text{Nhận SYN, gửi phản hồi} \\
-\text{[SYN\_SENT]} & \xleftarrow{\quad \mathbf{SYN+ACK} \text{ (seq = 300, ack = 101)} \quad} & \text{[SYN\_RCVD]} \\
-\text{Xác nhận kết nối} & \xrightarrow{\quad \mathbf{ACK} \text{ (seq = 101, ack = 301)} \quad} & | \\
-\mathbf{\text{[ESTABLISHED]}} & & \mathbf{\text{[ESTABLISHED]}}
-\end{array}$$
+#### 1. Sơ đồ ASCII Chu trình Thiết lập Kết nối: TCP 3-Way Handshake:
 
-#### 2. Lần vết thuật toán Khởi động chậm (Slow Start) trong kiểm soát tắc nghẽn:
+```text
+       Client (Phía chủ động mở)                       Server (Phía lắng nghe)
+      [ Trạng thái: CLOSED ]                           [ Trạng thái: LISTEN ]
+                |                                                 |
+                | --------- (Bước 1) SYN: seq = x --------------> | [ SYN_RCVD ]
+         [ SYN_SENT ]                                             |
+                |                                                 |
+                | <--- (Bước 2) SYN + ACK: seq = y, ack = x + 1 - |
+      [ ESTABLISHED ]                                             |
+                |                                                 |
+                | --------- (Bước 3) ACK: seq = x + 1, ack = y + 1 ->
+                |                                                 | [ ESTABLISHED ]
+                v                                                 v
+  <==================== ĐƯỜNG TRUYỀN DỮ LIỆU SONG CÔNG TOÀN PHẦN (FULL-DUPLEX) ====================>
+```
+
+*Phân tích chi tiết từng bước trao đổi cờ và số thứ tự:*
+1. **Bước 1 (Client $\rightarrow$ Server):** Client gửi gói tin có cờ `SYN = 1`, mang số thứ tự ngẫu nhiên ban đầu $seq = x$. Client chuyển sang trạng thái `SYN_SENT`.
+2. **Bước 2 (Server $\rightarrow$ Client):** Server nhận `SYN`, gửi lại gói tin mang cả hai cờ: `SYN = 1` với số thứ tự riêng của Server $seq = y$, và `ACK = 1` với số xác nhận $ack = x + 1$ (báo cho Client biết Server đã nhận được $x$ và đang chờ nhận byte $x + 1$). Server chuyển sang trạng thái `SYN_RCVD`.
+3. **Bước 3 (Client $\rightarrow$ Server):** Client nhận được `SYN+ACK`, chuyển ngay sang trạng thái `ESTABLISHED`. Client gửi tiếp gói `ACK = 1` mang $seq = x + 1$ và $ack = y + 1$. Server nhận được gói này cũng chuyển sang `ESTABLISHED`. Kết nối mở thành công!
+
+#### 2. Sơ đồ ASCII Chu trình Đóng Kết nối: TCP 4-Way Handshake:
+
+```text
+       Client (Phía chủ động đóng)                     Server (Phía bị động đóng)
+     [ Trạng thái: ESTABLISHED ]                       [ Trạng thái: ESTABLISHED ]
+                |                                                 |
+                | ---------- (Bước 1) FIN: seq = u -------------> | [ CLOSE_WAIT ]
+        [ FIN_WAIT_1 ]                                            | (Server truyền nốt
+                |                                                 |  dữ liệu dở dang)
+                | <--------- (Bước 2) ACK: ack = u + 1 ---------- |
+        [ FIN_WAIT_2 ]                                            |
+                |                                                 |
+                | <--- (Bước 3) FIN: seq = v, ack = u + 1 ------- | [ LAST_ACK ]
+                |                                                 |
+                | ---------- (Bước 4) ACK: ack = v + 1 ---------> |
+        [ TIME_WAIT ]                                             |
+       (Chờ 2 * MSL)                                              v
+                |                                              [ CLOSED ]
+                v
+            [ CLOSED ]
+```
+
+*Phân tích vai trò then chốt của trạng thái `TIME_WAIT` trên Client:*
+- Sau khi gửi `ACK` ở Bước 4, Client **không đóng ngay** mà chuyển sang trạng thái `TIME_WAIT` và duy trì bộ đếm thời gian bằng **$2 \times \text{MSL}$** (Maximum Segment Lifetime, thường là 2 đến 4 phút).
+- **Ý nghĩa 1 (Phòng ngừa rơi gói ACK cuối):** Nếu gói `ACK` ở Bước 4 bị thất lạc trên mạng, Server sẽ hết thời gian chờ (Timeout) và gửi lại gói `FIN` (Bước 3). Client ở trạng thái `TIME_WAIT` sẽ nhận lại được `FIN` này và gửi lại `ACK`, đảm bảo Server đóng kết nối thành công.
+- **Ý nghĩa 2 (Tránh nhiễu kết nối mới):** Đảm bảo tất cả các gói tin cũ bị trễ trên đường truyền của phiên này hoàn toàn biến mất trước khi một kết nối mới có thể tái sử dụng cùng cặp địa chỉ IP và Port đó.
+
+#### 3. Lần vết thuật toán Khởi động chậm (Slow Start) trong kiểm soát tắc nghẽn:
 - Giả sử ngưỡng chuyển đổi tắc nghẽn (Slow Start Threshold - `ssthresh`) được cấu hình là **`16 MSS`** (Maximum Segment Size).
   - Chu kỳ 1: Gửi 1 MSS.
   - Chu kỳ 2: Gửi 2 MSS (tăng gấp đôi $2^1$).
@@ -96,7 +136,7 @@ $$\begin{array}{ccc}
   - Chu kỳ 5: Gửi 16 MSS (chạm ngưỡng `ssthresh`).
   - Chu kỳ 6 trở đi: Chuyển sang giai đoạn **Tránh tắc nghẽn (Congestion Avoidance)**, chỉ tăng tuyến tính mỗi chu kỳ thêm 1 MSS: $17 \rightarrow 18 \rightarrow 19$...
 
-#### 3. Bảng đối chiếu số hiệu cổng dịch vụ chuẩn (Well-known Ports) thường gặp:
+#### 4. Bảng đối chiếu số hiệu cổng dịch vụ chuẩn (Well-known Ports) thường gặp:
 
 | Cổng mạng (Port) | Giao thức tầng 4 | Dịch vụ ứng dụng tương ứng |
 | :---: | :---: | :--- |

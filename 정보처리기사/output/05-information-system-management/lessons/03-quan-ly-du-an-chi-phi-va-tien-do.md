@@ -54,8 +54,8 @@
 
 | Nhóm phương pháp | Tên tiếng Hàn & Anh | Cơ chế hoạt động & Đại diện tiêu biểu |
 | :--- | :--- | :--- |
-| **Tiếp cận từ trên xuống** | **하향식 산정 (Top-Down)** | Ước lượng tổng ngân sách dựa trên kinh nghiệm lịch sử của các dự án tương tự trước đây, sau đó phân bổ ngược xuống từng phân hệ con.<br>- **전문가 감정 기법 (Expert Judgement):** Nhờ 2-3 chuyên gia lão luyện phán đoán; ưu điểm nhanh nhưng mang nặng tính chủ quan.<br>- **델파이 기법 (Delphi Technique):** Các chuyên gia ước tính **ẩn danh (익명)** qua nhiều vòng khảo sát, người điều phối tổng hợp kết quả để loại bỏ sự chi phối của cá nhân uy thế nhất. |
-| **Tiếp cận từ dưới lên** | **상향식 산정 (Bottom-Up)** | Chia nhỏ hệ thống thành các tác vụ/module đơn vị, tính toán chi phí chi tiết từng phần rồi cộng dồn lại.<br>- **LOC 기법:** Đếm dòng mã nguồn.<br>- **Mô hình toán học:** COCOMO, Putnam, Function Point (FP). |
+| **Tiếp cận từ trên xuống** | **하향식 산정 (Top-Down)** | Ước lượng tổng ngân sách từ kinh nghiệm lịch sử, sau đó phân bổ xuống phân hệ con: Chuyên gia thẩm định (전문가 감정) và Phương pháp Delphi ẩn danh (델파이 기법). |
+| **Tiếp cận từ dưới lên** | **상향식 산정 (Bottom-Up)** | Chia nhỏ hệ thống thành các tác vụ đơn vị, tính chi tiết từng phần rồi cộng dồn: Kỹ thuật LOC, Mô hình COCOMO, Mô hình Putnam, Điểm chức năng (FP). |
 
 #### 3. Công thức tính toán định lượng theo LOC (Lines of Code)
 - **Công số nỗ lực (Effort / Man-Month):**
@@ -99,8 +99,8 @@
 | Công cụ | Tên tiếng Hàn & Anh | Cơ chế vận hành & Đặc điểm nhận diện |
 | :--- | :--- | :--- |
 | **Biểu đồ Gantt** | **간트 차트 (Gantt Chart)** | Biểu đồ thanh ngang biểu diễn lịch trình từng tác vụ theo thời gian; trực quan dễ xem nhưng khó thấy quan hệ ràng buộc phụ thuộc phức tạp giữa các tác vụ. |
-| **Sơ đồ PERT** | **PERT (3점 추정법)** | Áp dụng cho dự án mới **chưa có tiền lệ (bất định cao)**. Ước lượng thời gian kỳ vọng trung bình $t_e$ theo 3 kịch bản:<br>$$t_e = \frac{O + 4M + P}{6}$$<br>($O$: Lạc quan - Optimistic, $M$: Khả dĩ nhất - Most Likely, $P$: Bi quan - Pessimistic). |
-| **Phương pháp CPM** | **CPM (Critical Path Method)** | Áp dụng cho dự án **đã có tiền lệ**, thời gian từng tác vụ là xác định. Tập trung tìm **Đường găng (Critical Path)**. |
+| **Sơ đồ PERT** | **PERT (3점 추정법)** | Áp dụng cho dự án mới chưa có tiền lệ (bất định cao). Ước lượng thời gian kỳ vọng trung bình: $t_e = (O + 4M + P)/6$ với $O$ là lạc quan, $M$ là khả dĩ nhất, $P$ là bi quan. |
+| **Phương pháp CPM** | **CPM (Critical Path Method)** | Áp dụng cho dự án đã có tiền lệ, thời gian từng tác vụ là xác định. Tập trung tìm Đường găng (Critical Path). |
 
 - **임계 경로 (Critical Path — Đường găng):**
   - **핵심 원리 (Nguyên tắc cốt lõi):**
@@ -113,7 +113,7 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Bài toán ví dụ tính toán Man-Month và Thời gian dự án
+#### 1. Bài toán ví dụ tính toán Man-Month và Thời gian dự án
 - **Đề bài mẫu:** Dự án có quy mô dự kiến $30,000\text{ LOC}$. Năng suất lập trình viên là $1,000\text{ LOC/tháng}$. Nếu công ty bố trí $5$ nhân sự tham gia dự án, hãy tính:
   1. Công số nỗ lực (Effort).
   2. Thời gian phát triển dự án.
@@ -121,10 +121,118 @@
   1. $\text{Effort} = \frac{30,000}{1,000} = 30\text{ Man-Months}$ (cần 30 tháng công).
   2. $\text{Thời gian} = \frac{30\text{ MM}}{5\text{ người}} = 6\text{ tháng}$.
 
-#### Bài toán ví dụ tính thời gian kỳ vọng PERT
+#### 2. Chi tiết công thức toán học mô hình COCOMO (Barry Boehm)
+Mô hình COCOMO cơ bản (Basic COCOMO) ước tính công số nỗ lực (Effort) theo đơn vị $MM$ (Man-Month) và thời gian phát triển $TDEV$ (tháng) dựa trên quy mô dòng mã lệnh giao hàng $KDSI$ (Kilo Delivered Source Instructions, $1\text{ KDSI} = 1,000\text{ LOC}$):
+$$\text{Effort (MM)} = a \times (\text{KDSI})^b$$
+$$\text{TDEV (tháng)} = c \times (\text{Effort})^d$$
+
+Hệ số thực nghiệm $(a, b, c, d)$ phụ thuộc vào 3 chế độ phát triển (Modes):
+
+| Chế độ COCOMO | Tên tiếng Hàn & Ranh giới quy mô | Công thức nỗ lực (Effort) | Công thức thời gian (TDEV) | Đặc trưng môi trường phát triển |
+| :--- | :--- | :--- | :--- | :--- |
+| **Organic** | **조직형** ($\le 50\text{ KDSI}$) | $\text{MM} = 2.4 \times (\text{KDSI})^{1.05}$ | $\text{TDEV} = 2.5 \times (\text{MM})^{0.38}$ | Dự án nhỏ, đội ngũ giàu kinh nghiệm, môi trường quen thuộc, yêu cầu ổn định. |
+| **Semi-Detached** | **반분리형** ($50 \sim 300\text{ KDSI}$) | $\text{MM} = 3.0 \times (\text{KDSI})^{1.12}$ | $\text{TDEV} = 2.5 \times (\text{MM})^{0.35}$ | Dự án trung bình, nhân lực hỗn hợp kinh nghiệm, tiện ích hệ thống, DBMS, trình thông dịch. |
+| **Embedded** | **내장형** ($> 300\text{ KDSI}$) | $\text{MM} = 3.6 \times (\text{KDSI})^{1.20}$ | $\text{TDEV} = 2.5 \times (\text{MM})^{0.32}$ | Hệ thống thời gian thực, điều khiển nhúng, hàng không, quân sự, ràng buộc phần cứng khắt khe. |
+
+- **Ý nghĩa của số mũ $b$ ($1.05 \rightarrow 1.12 \rightarrow 1.20$):**
+  - Số mũ $b > 1$ phản ánh hiện tượng quy mô bất lợi (Diseconomies of Scale): khi hệ thống càng phình to và chuyển dần sang dạng Embedded, chi phí giao tiếp, quản lý phối hợp giữa các nhóm tăng theo hàm số mũ, khiến công số nỗ lực tăng vọt so với mức tăng tuyến tính của dòng code.
+- **Ví dụ tính toán số liệu cụ thể:**
+  - Giả sử một dự án thuộc chế độ Organic có quy mô $30\text{ KDSI}$ ($30,000$ dòng code).
+  - Ước tính công số nỗ lực: $\text{Effort} = 2.4 \times (30)^{1.05} \approx 2.4 \times 35.65 \approx 85.56\text{ Man-Months}$.
+  - Thời gian hoàn thành: $\text{TDEV} = 2.5 \times (85.56)^{0.38} \approx 2.5 \times 5.42 \approx 13.55\text{ tháng}$.
+  - Số nhân lực trung bình cần bố trí: $\text{Staff} = \frac{\text{Effort}}{\text{TDEV}} = \frac{85.56}{13.55} \approx 6.3\text{ người}$.
+
+#### 3. Mô hình Putnam và đường cong phân bố nhân lực Rayleigh-Norden
+Mô hình Putnam dựa trên nghiên cứu thực nghiệm của Peter Norden và Lawrence Putnam về sự biến thiên của nhân lực trong toàn bộ vòng đời phát triển phần mềm:
+- **Phương trình phần mềm Putnam (Putnam Software Equation):**
+  $$S = C_k \times K^{1/3} \times t_d^{4/3}$$
+  - $S$: Quy mô mã nguồn (số dòng lệnh giao hàng - Source Statements).
+  - $C_k$: Hệ số công nghệ phản ánh môi trường phát triển (Technology Constant / State of Technology).
+  - $K$: Tổng nỗ lực cho toàn bộ vòng đời dự án (tính bằng Man-Year hoặc Man-Month).
+  - $t_d$: Thời gian phát triển dự án (tính bằng năm).
+- **Phân bố nhân lực $y(t)$ theo đường cong Rayleigh:**
+  $$y(t) = \frac{K}{t_d^2} \cdot t \cdot e^{-\frac{t^2}{2t_d^2}}$$
+
+```text
+  Nỗ lực nhân sự (Effort / Staffing)
+    ^
+    |                       [ĐỈNH NHÂN LỰC - PEAK EFFORT]
+    |                          (Kiểm thử tích hợp & Hệ thống)
+    |                                   /\
+    |          (Lập trình mã hóa)      /  \
+    |                  /\             /    \
+    |                 /  \___________/      \
+    |  (Thiết kế)    /                       \        (Vận hành & Bảo trì)
+    |       /\      /                         \
+    | _____/  \____/                           \________________________
+    +--------------------------------------------------------------------> Thời gian (t)
+    0               t_d (Bàn giao sản phẩm)           Vòng đời khai thác
+```
+
+- **Quy luật đề thi cần nhớ:**
+  - Nỗ lực của dự án không bao giờ dàn đều hình chữ nhật mà khởi đầu chậm ở khâu phân tích/thiết kế, tăng mạnh và **đạt đỉnh (Peak)** tại giai đoạn kiểm thử tích hợp (Integration Testing), sau đó giảm nhanh khi bàn giao và kéo dài đuôi ở giai đoạn vận hành bảo trì.
+  - Công cụ phần mềm thương mại tiêu biểu của mô hình Putnam là **SLIM (Software Life-cycle Management)**.
+
+#### 4. Bài toán ví dụ tính thời gian kỳ vọng PERT
 - **Đề bài mẫu:** Một tác vụ phân tích cơ sở dữ liệu có: Thời gian lạc quan $O = 4\text{ ngày}$, Thời gian khả dĩ nhất $M = 7\text{ ngày}$, Thời gian bi quan $P = 16\text{ ngày}$. Hãy tính thời gian kỳ vọng hoàn thành tác vụ $t_e$.
 - **Lời giải:**
   $$t_e = \frac{O + 4M + P}{6} = \frac{4 + (4 \times 7) + 16}{6} = \frac{4 + 28 + 16}{6} = \frac{48}{6} = 8\text{ ngày}$$
+
+#### 5. Sơ đồ mạng CPM/PERT và thuật toán xác định Đường găng (Critical Path)
+Phương pháp CPM (Critical Path Method) sử dụng sơ đồ mạng công việc (Activity-on-Node hoặc Activity-on-Arrow) để quản lý phụ thuộc và thời gian:
+
+- **Các đại lượng thời gian trong nút công việc:**
+  - $ES$ (Earliest Start): Thời điểm bắt đầu sớm nhất có thể của công việc.
+  - $EF$ (Earliest Finish): Thời điểm kết thúc sớm nhất: $EF = ES + \text{Duration}$.
+  - $LS$ (Latest Start): Thời điểm bắt đầu muộn nhất để không làm trễ dự án: $LS = LF - \text{Duration}$.
+  - $LF$ (Latest Finish): Thời điểm kết thúc muộn nhất có thể.
+  - $\text{Total Float}$ (Độ dự trữ toàn phần / 여유 시간): $\text{Float} = LS - ES = LF - EF$.
+
+- **Sơ đồ mạng mẫu minh họa:**
+
+```text
+                      +-------------------+            +--------------------+
+                      |    Tác vụ B       |            |     Tác vụ D       |
+                      |  Thiết kế CSDL    | ---------> | Lập trình Backend  |
+                      | Thời lượng: 4 ngày|            | Thời lượng: 5 ngày |
+                      +-------------------+            +--------------------+
+                             ^                                    \
+                            /                                      \
++---------------+   +-------------------+                           v   +-----------------+
+|   Bắt đầu     |-->|    Tác vụ A       |                            -->|     Tác vụ F    |--> [ Kết thúc ]
+|   (Node 1)    |   | Phân tích Yêu cầu |                               |Kiểm thử tích hợp|     (Node 6)
+|  Ngày thứ 0   |   | Thời lượng: 3 ngày|                            -->|Thời lượng: 4 ngày|     (Ngày 16)
++---------------+   +-------------------+                           /   +-----------------+
+                            \                                      /
+                             v                                    /
+                      +-------------------+            +--------------------+
+                      |    Tác vụ C       |            |     Tác vụ E       |
+                      | Thiết kế Giao diện| ---------> | Lập trình Frontend |
+                      | Thời lượng: 2 ngày|            | Thời lượng: 3 ngày |
+                      +-------------------+            +--------------------+
+```
+
+- **Phân tích tất cả các đường đi (Paths) từ Bắt đầu đến Kết thúc:**
+  - **Đường đi 1:** $\text{Bắt đầu} \rightarrow A \rightarrow B \rightarrow D \rightarrow F \rightarrow \text{Kết thúc}$
+    $$\text{Tổng thời gian} = 3 + 4 + 5 + 4 = 16\text{ ngày}$$
+  - **Đường đi 2:** $\text{Bắt đầu} \rightarrow A \rightarrow C \rightarrow E \rightarrow F \rightarrow \text{Kết thúc}$
+    $$\text{Tổng thời gian} = 3 + 2 + 3 + 4 = 12\text{ ngày}$$
+
+- **Bảng tính toán chi tiết Forward Pass và Backward Pass:**
+
+| Tác vụ | Thời lượng (D) | Bắt đầu sớm ($ES$) | Kết thúc sớm ($EF$) | Kết thúc muộn ($LF$) | Bắt đầu muộn ($LS$) | Độ dự trữ ($\text{Float}$) | Vị trí đường găng |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **A** | 3 ngày | 0 | 3 | 3 | 0 | $0 - 0 = 0$ | **Thuộc đường găng (Critical)** |
+| **B** | 4 ngày | 3 | 7 | 7 | 3 | $3 - 3 = 0$ | **Thuộc đường găng (Critical)** |
+| **C** | 2 ngày | 3 | 5 | 9 | 7 | $7 - 3 = 4$ | Nhánh phụ (Dự trữ 4 ngày) |
+| **D** | 5 ngày | 7 | 12 | 12 | 7 | $7 - 7 = 0$ | **Thuộc đường găng (Critical)** |
+| **E** | 3 ngày | 5 | 8 | 12 | 9 | $9 - 5 = 4$ | Nhánh phụ (Dự trữ 4 ngày) |
+| **F** | 4 ngày | 12 | 16 | 16 | 12 | $12 - 12 = 0$ | **Thuộc đường găng (Critical)** |
+
+- **Kết luận giải đề thi:**
+  - **Đường găng (임계 경로 - Critical Path):** Là chuỗi $A \rightarrow B \rightarrow D \rightarrow F$ với tổng thời gian dài nhất là **$16\text{ ngày}$**.
+  - **Thời gian hoàn thành dự án tối thiểu:** Bằng đúng độ dài đường găng là **$16\text{ ngày}$**.
+  - **Đặc điểm sống còn:** Mọi công việc trên đường găng đều có $\text{Float} = 0$. Các tác vụ $C$ và $E$ có thể trễ tối đa $4\text{ ngày}$ mà không làm ảnh hưởng đến ngày nghiệm thu của toàn dự án.
 
 ---
 

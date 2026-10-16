@@ -197,6 +197,83 @@ Khi cầm trên tay tài liệu đặc tả SRS, kỹ sư kiểm tra tính đạ
 4. **검증 가능성 (Verifiability - Tính kiểm chứng được):** Có thể viết được bài test để kiểm tra xem yêu cầu này pass hay fail không?
 5. **추적성 (Traceability - Tính truy xuất được):** Mỗi dòng yêu cầu có mã định danh duy nhất (ID) để nối sang tài liệu thiết kế và Test Case không?
 
+#### 3. Sơ đồ đối chiếu trực quan 4 ký hiệu DFD (DeMarco vs Gane/Sarson)
+
+##### A. Bảng sơ đồ ASCII so sánh ký hiệu Yourdon/DeMarco vs Gane/Sarson
+```
+┌─────────────────┬───────────────────────────────┬───────────────────────────────┐
+│ Thành phần DFD  │ Yourdon & DeMarco (Cổ điển)   │ Gane & Sarson (Hiện đại)      │
+├─────────────────┼───────────────────────────────┼───────────────────────────────┤
+│ 1. 프로세스      │          ,--------.           │     ┌───────────────────┐     │
+│    (Process)    │        /   1.0    \         │     │ 1.0               │     │
+│                 │       | 주문 접수  |         │     ├───────────────────┤     │
+│                 │        \          /         │     │     주문 접수     │     │
+│                 │          `--------'         │     └───────────────────┘     │
+│                 │        [Hình tròn]          │   [Chữ nhật bo tròn góc]      │
+├─────────────────┼───────────────────────────────┼───────────────────────────────┤
+│ 2. 자료 흐름     │          주문 요청            │          주문 요청            │
+│    (Data Flow)  │   ─────────────────────►      │   ─────────────────────►      │
+│                 │      [Mũi tên có tên]         │      [Mũi tên có tên]         │
+├─────────────────┼───────────────────────────────┼───────────────────────────────┤
+│ 3. 자료 저장소    │   ═════════════════════════   │     ┌───┬───────────────      │
+│   (Data Store)  │          D1 고객 정보          │     │D1 │   고객 정보         │
+│                 │   ═════════════════════════   │     └───┴───────────────      │
+│                 │   [Hai đường song song]       │   [Chữ nhật hở cạnh phải]     │
+├─────────────────┼───────────────────────────────┼───────────────────────────────┤
+│ 4. 단말         │     ┌───────────────────┐     │     ┌───────────────────┐     │
+│   (Terminator/  │     │                   │     │     │                   ││    │
+│    External)    │     │      고객         │     │     │      고객         ││    │
+│                 │     │                   │     │     │                   ││    │
+│                 │     └───────────────────┘     │     └───────────────────┘│    │
+│                 │      [Hình chữ nhật]          │   [Chữ nhật đổ bóng 3D] │    │
+└─────────────────┴───────────────────────────────┴───────────────────────────────┘
+```
+
+##### B. Quy tắc bảo toàn dữ liệu và 3 lỗi vi phạm kinh điển (Data Conservation Flaws)
+Trong phân tích DFD, dữ liệu không thể tự sinh ra hoặc biến mất. Mọi luồng dữ liệu vào phải được xử lý để sinh ra dữ liệu ra tương xứng:
+1. **블랙홀 (Black Hole - Hố đen):**
+   - **Hiện tượng:** Một Process chỉ có các luồng dữ liệu đi vào (`Input`) mà hoàn toàn không có bất kỳ luồng dữ liệu nào đi ra (`Output`).
+   - **Bản chất lỗi:** Dữ liệu bị đưa vào và "biến mất" mà không phục vụ mục đích xử lý nào.
+2. **미라클 / 화이트홀 (Miracle / White Hole - Điều kỳ diệu):**
+   - **Hiện tượng:** Một Process tự phát sinh ra các luồng dữ liệu đi ra (`Output`) mà không hề có bất kỳ luồng dữ liệu nào đi vào (`Input`).
+   - **Bản chất lỗi:** Không có nguyên liệu đầu vào nhưng lại đòi hỏi sản phẩm đầu ra (vi phạm định luật bảo toàn).
+3. **그레이홀 (Grey Hole - Hố xám):**
+   - **Hiện tượng:** Process có cả luồng vào và luồng ra, nhưng luồng vào không đủ thông tin hoặc không liên quan ngữ nghĩa để tạo ra luồng ra (ví dụ: Đầu vào là `Mã nhân viên`, đầu ra là `Báo cáo doanh số bán hàng quý`).
+
+##### C. Các kết nối bất hợp lệ bị cấm trong DFD
+- ❌ **External Entity $\longleftrightarrow$ External Entity:** Hai thực thể ngoài không bao giờ nối trực tiếp với nhau (hệ thống không quản lý giao tiếp ngoài biên).
+- ❌ **External Entity $\longleftrightarrow$ Data Store:** Thực thể bên ngoài không được phép đọc/ghi trực tiếp vào CSDL mà bắt buộc phải thông qua một Process trung gian.
+- ❌ **Data Store $\longleftrightarrow$ Data Store:** Dữ liệu không thể tự nhảy từ bảng này sang bảng khác mà phải có Process đọc từ kho A, biến đổi và lưu sang kho B.
+
+---
+
+#### 4. Phân tích chuyên sâu Từ điển dữ liệu (Data Dictionary - DD)
+
+##### A. Bảng tổng hợp 6 ký hiệu toán tử chuẩn trong đề thi
+Từ điển dữ liệu (`자료 사전 - DD`) đóng vai trò là "siêu dữ liệu" (`메타데이터 - Meta-data`), định nghĩa cấu trúc chi tiết của mọi luồng dữ liệu xuất hiện trong DFD:
+
+| Ký hiệu toán tử | Tên tiếng Hàn & Anh | Ý nghĩa cú pháp kỹ thuật | Quy tắc logic tương đương |
+|:---:|:---|:---|:---|
+| `=` | `정의 (Definition)` | Được định nghĩa là / Bao gồm các thành phần | Phép gán cấu trúc (`is composed of`) |
+| `+` | `연결 (Concatenation)` | Ghép nối tuần tự các phần tử dữ liệu | Phép logic `AND` (bắt buộc cùng xuất hiện) |
+| `( )` | `생략 (Optional)` | Thành phần tùy chọn, có thể có hoặc vắng mặt | Tương đương lực lượng $0 \le n \le 1$ |
+| `{ }` | `반복 (Iteration)` | Thành phần lặp lại nhiều lần ($m\{...\}n$) | Vòng lặp từ $m$ đến $n$ lần (mặc định: $0 \le n \le \infty$) |
+| `[ \| ]` | `선택 (Selection)` | Lựa chọn duy nhất một trong các nhánh | Phép logic `OR` (các phương án ngăn cách bằng `\|`) |
+| `* *` | `설명 / 주석 (Comment)` | Lời ghi chú kỹ thuật, diễn giải bổ sung | Không ảnh hưởng đến cấu trúc trường dữ liệu |
+
+##### B. Ví dụ giải phẫu một cấu trúc dữ liệu thực tế
+Xét mô hình đặc tả đơn đặt hàng thương mại điện tử bằng Data Dictionary:
+```text
+주문서 = 주문번호 + 주문일자 + 고객정보 + 1{주문항목}N + (할인쿠폰코드) + 결제수단 + *배송메모*
+```
+Phân rã chi tiết từng thành phần:
+- `고객정보 = 고객ID + 고객성명 + 연락처 + (배송지주소)`: Một khách hàng gồm ID, họ tên, số điện thoại bắt buộc (`+`), địa chỉ có thể chưa nhập (`()`).
+- `주문항목 = 상품코드 + 상품명 + 수량 + 단가 + 금액`: Mỗi mặt hàng gồm mã, tên, số lượng, giá và tổng tiền.
+- `1{주문항목}N`: Một đơn hàng phải có tối thiểu 1 mặt hàng và tối đa $N$ mặt hàng (thể hiện giới hạn lặp $m$ và $n$).
+- `(할인쿠폰코드)`: Khách hàng có thể áp dụng mã giảm giá hoặc không áp dụng.
+- `결제수단 = [ 신용카드 | 계좌이체 | 가상계좌 | 간편결제 ]`: Người dùng bắt buộc phải chọn chính xác 1 trong 4 hình thức thanh toán (`[]`).
+- `*배송메모*`: Lời chú thích hướng dẫn giao hàng dành riêng cho shipper, là trường văn bản chú giải (`**`).
+
 ---
 
 ### 복습 체크리스트

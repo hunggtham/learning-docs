@@ -72,7 +72,106 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Lần vết chi tiết con trỏ và phép toán số học con trỏ trong C:
+#### 1. Sơ đồ ô nhớ ASCII minh họa con trỏ `*ptr` và toán tử địa chỉ `&val`:
+
+Khi khai báo biến số nguyên `int val = 42;` và con trỏ `int *ptr = &val;`, Hệ điều hành cấp phát các ô nhớ trong RAM như sau:
+
+```text
++---------------+-------------------+------------------------+
+| Tên biến      | Địa chỉ ô nhớ RAM | Giá trị lưu trong ô nhớ|
++---------------+-------------------+------------------------+
+| val           | 0x1000 (4 Byte)   | 42                     |
++---------------+-------------------+------------------------+
+        ^
+        | trỏ tới (&val = 0x1000)
++---------------+-------------------+------------------------+
+| ptr           | 0x2000 (4/8 Byte) | 0x1000                 |
++---------------+-------------------+------------------------+
+```
+
+Bảng giải nghĩa hành vi các toán tử trên ô nhớ:
+- `val`: Giá trị nội dung của biến `val` $\rightarrow$ `42`.
+- `&val`: Toán tử địa chỉ lấy nơi cư trú của `val` $\rightarrow$ `0x1000`.
+- `ptr`: Giá trị chứa trong biến con trỏ `ptr` $\rightarrow$ `0x1000` (địa chỉ của `val`).
+- `&ptr`: Địa chỉ ô nhớ của chính biến `ptr` trên Stack $\rightarrow$ `0x2000`.
+- `*ptr`: Toán tử giải tham chiếu, tìm đến địa chỉ `0x1000` và đọc giá trị $\rightarrow$ `42`.
+
+#### 2. Sơ đồ ô nhớ ASCII cho con trỏ cấp hai (Double Pointer `**pptr`):
+
+Con trỏ cấp hai là biến con trỏ lưu trữ địa chỉ của một biến con trỏ khác:
+
+```text
++---------------+-------------------+------------------------+
+| Tên biến      | Địa chỉ ô nhớ RAM | Giá trị lưu trong ô nhớ|
++---------------+-------------------+------------------------+
+| val           | 0x1000            | 100                    |
++---------------+-------------------+------------------------+
+        ^
+        | Giải tham chiếu cấp 1 (*ptr = val)
++---------------+-------------------+------------------------+
+| ptr           | 0x2000            | 0x1000 (&val)          |
++---------------+-------------------+------------------------+
+        ^
+        | Giải tham chiếu cấp 2 (**pptr = *ptr = val)
++---------------+-------------------+------------------------+
+| pptr          | 0x3000            | 0x2000 (&ptr)          |
++---------------+-------------------+------------------------+
+```
+
+Đoạn mã kiểm chứng và lần vết:
+```c
+#include <stdio.h>
+
+int main() {
+    int val = 100;
+    int *ptr = &val;    // ptr lưu 0x1000
+    int **pptr = &ptr;  // pptr lưu 0x2000
+
+    printf("val = %d\n", val);         // 100
+    printf("*ptr = %d\n", *ptr);       // 100 (đọc ô 0x1000)
+    printf("**pptr = %d\n", **pptr);   // 100 (đọc ô 0x2000 -> đọc tiếp ô 0x1000)
+
+    // Thao tác sửa dữ liệu qua con trỏ cấp 2
+    **pptr = 200;
+    printf("val sau khi **pptr = 200: %d\n", val); // In ra: 200
+    return 0;
+}
+```
+
+#### 3. Sơ đồ ô nhớ Mảng hai chiều và quan hệ đại số con trỏ trong C:
+
+Khai báo: `int arr[2][3] = {{10, 20, 30}, {40, 50, 60}};`
+Trong bộ nhớ vật lý, mảng hai chiều không lưu dạng ma trận lưới mà được trải phẳng liên tục theo thứ tự ưu tiên hàng (Row-Major Order):
+
+```text
+Địa chỉ RAM:  0x1000    0x1004    0x1008    0x100C    0x1010    0x1014
+Phần tử:     arr[0][0] arr[0][1] arr[0][2] arr[1][0] arr[1][1] arr[1][2]
+Giá trị:     [  10   ] [  20   ] [  30   ] [  40   ] [  50   ] [  60   ]
+Phân hàng:   |-------- Hàng 0 (arr[0]) --------|-------- Hàng 1 (arr[1]) --------|
+```
+
+Quy tắc chuyển đổi đại số con trỏ chuẩn thi cử:
+- `arr`: Địa chỉ bắt đầu của toàn mảng và cũng là địa chỉ hàng 0 (`0x1000`).
+- `arr + 1`: Nhảy qua toàn bộ 1 hàng (gồm 3 số `int` = $3 \times 4 = 12$ Byte) $\rightarrow$ Địa chỉ hàng 1 là `0x100C`.
+- `*(arr + i)`: Tương đương `arr[i]`, là địa chỉ của phần tử đầu tiên thuộc hàng $i$.
+- `*(arr + i) + j`: Tương đương `&arr[i][j]`, là địa chỉ của phần tử tại hàng $i$, cột $j$.
+- `*(*(arr + i) + j)`: Tương đương `arr[i][j]`, giải tham chiếu hai lần để lấy giá trị số nguyên tại hàng $i$, cột $j$.
+
+#### 4. Đối chiếu cấu trúc ô nhớ: Mảng con trỏ vs Con trỏ mảng:
+
+```text
+[1] Mảng con trỏ: int *p[3]; (3 con trỏ riêng biệt)
+    p[0] (0x2000) ----> [ Ô nhớ A: 10 ]
+    p[1] (0x2004) ----> [ Ô nhớ B: 20 ]
+    p[2] (0x2008) ----> [ Ô nhớ C: 30 ]
+    * Kích thước mảng p: 3 con trỏ x 4 Byte = 12 Byte (trên hệ 32-bit).
+
+[2] Con trỏ mảng: int (*p)[3]; (Duy nhất 1 biến con trỏ p)
+    p (0x3000) ----> [ Mảng 3 int: {10, 20, 30} ] (0x1000 ~ 0x100B)
+    * Phép toán p + 1: Tăng đúng 12 Byte (bước nhảy bằng cả kích thước mảng 3 int).
+```
+
+#### 5. Lần vết chi tiết con trỏ và phép toán số học con trỏ trong C:
 ```c
 #include <stdio.h>
 
@@ -95,7 +194,7 @@ int main() {
 }
 ```
 
-#### 2. Minh họa Cấu trúc Struct và truy xuất con trỏ (`.` vs `->`):
+#### 6. Minh họa Cấu trúc Struct và truy xuất con trỏ (`.` vs `->`):
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -131,28 +230,6 @@ int main() {
     return 0;
 }
 ```
-
-#### 3. Bảng lần vết bài toán con trỏ cấp hai (Double Pointer `**pp`):
-```c
-#include <stdio.h>
-
-int main() {
-    int a = 100;
-    int *p = &a;    // p lưu địa chỉ của a
-    int **pp = &p;  // pp lưu địa chỉ của p
-
-    printf("a = %d\n", a);      // 100
-    printf("*p = %d\n", *p);    // Giải tham chiếu cấp 1 -> 100
-    printf("**pp = %d\n", **pp);// Giải tham chiếu cấp 2 -> 100
-
-    **pp = 200; // Sửa giá trị của a thông qua con trỏ kép
-    printf("a sau khi sua = %d\n", a); // In ra: 200
-    return 0;
-}
-```
-
-*Sơ đồ ánh xạ bộ nhớ:*
-$$\text{pp (Địa chỉ 0x3000)} \xrightarrow{\text{trỏ tới}} \text{p (Địa chỉ 0x2000)} \xrightarrow{\text{trỏ tới}} \text{a (Địa chỉ 0x1000, Giá trị: 200)}$$
 
 ---
 

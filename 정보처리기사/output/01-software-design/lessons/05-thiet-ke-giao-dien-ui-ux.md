@@ -56,10 +56,10 @@
 
 | Nguyên tắc | Tên tiếng Hàn & Tiếng Anh | Định nghĩa chuẩn xác đề thi |
 |:---|:---|:---|
-| **Tính trực quan** | `직관성 (Intuitiveness)` | [Hàn/Anh]: `누구나 쉽게 이해하고 사용할 수 있어야 한다.`<br>[Tiếng Việt]: Người dùng nhìn vào là **hiểu ngay cách sử dụng một cách tự nhiên** mà không cần phải đọc tài liệu hướng dẫn dày đặc hay qua đào tạo phức tạp. |
-| **Tính hữu hiệu** | `유효성 (Effectiveness)` | [Hàn/Anh]: `사용자의 목적을 정확하고 완전하게 달성할 수 있어야 한다.`<br>[Tiếng Việt]: Giúp người dùng **đạt được chính xác và trọn vẹn mục đích nghiệp vụ** của mình mà không gặp phải rào cản hay lỗi sai hệ thống. |
-| **Tính dễ học** | `학습성 (Learnability)` | [Hàn/Anh]: `누구나 쉽게 배우고 익힐 수 있어야 한다.`<br>[Tiếng Việt]: Bất kỳ ai cũng có thể **dễ dàng học và thuần thục cách thao tác trong thời gian ngắn**, đồng thời duy trì được trí nhớ thao tác sau một thời gian dài không sử dụng. |
-| **Tính linh hoạt** | `유연성 (Flexibility)` | [Hàn/Anh]: `사용자의 요구사항을 최대한 수용하며 오류를 방지하고 제어할 수 있어야 한다.`<br>[Tiếng Việt]: Có khả năng **thích ứng linh hoạt với nhiều đối tượng người dùng** (từ người mới bắt đầu đến chuyên gia qua hệ thống phím tắt), đồng thời có cơ chế bao dung và xử lý lỗi mềm dẻo (Undo/Redo). |
+| **Tính trực quan** | `직관성 (Intuitiveness)` | **[Hàn/Anh]:** `누구나 쉽게 이해하고 사용할 수 있어야 한다.` — **[Tiếng Việt]:** Người dùng nhìn vào là **hiểu ngay cách sử dụng một cách tự nhiên** mà không cần phải đọc tài liệu hướng dẫn dày đặc hay qua đào tạo phức tạp. |
+| **Tính hữu hiệu** | `유효성 (Effectiveness)` | **[Hàn/Anh]:** `사용자의 목적을 정확하고 완전하게 달성할 수 있어야 한다.` — **[Tiếng Việt]:** Giúp người dùng **đạt được chính xác và trọn vẹn mục đích nghiệp vụ** của mình mà không gặp phải rào cản hay lỗi sai hệ thống. |
+| **Tính dễ học** | `학습성 (Learnability)` | **[Hàn/Anh]:** `누구나 쉽게 배우고 익힐 수 있어야 한다.` — **[Tiếng Việt]:** Bất kỳ ai cũng có thể **dễ dàng học và thuần thục cách thao tác trong thời gian ngắn**, đồng thời duy trì được trí nhớ thao tác sau một thời gian dài không sử dụng. |
+| **Tính linh hoạt** | `유연성 (Flexibility)` | **[Hàn/Anh]:** `사용자의 요구사항을 최대한 수용하며 오류를 방지하고 제어할 수 있어야 한다.` — **[Tiếng Việt]:** Có khả năng **thích ứng linh hoạt với nhiều đối tượng người dùng** (từ người mới bắt đầu đến chuyên gia qua hệ thống phím tắt), đồng thời có cơ chế bao dung và xử lý lỗi mềm dẻo (Undo/Redo). |
 
 ---
 
@@ -124,6 +124,84 @@ Theo tiêu chuẩn quốc tế ISO 9241-11, tính khả dụng của một giao 
 2. **운용의 용이성 (Operable - Dễ vận hành):** Mọi chức năng trên màn hình phải điều khiển được hoàn toàn bằng **Bàn phím (Keyboard Navigation)** mà không bắt buộc phải có chuột.
 3. **이해의 용이성 (Understandable - Dễ hiểu):** Bố cục và cơ chế điều hướng trang web phải nhất quán; thông báo lỗi phải chỉ rõ vị trí và cách khắc phục.
 4. **견고성 (Robust - Tính bền vững):** Mã HTML phải đạt chuẩn kỹ thuật W3C để các công nghệ hỗ trợ (Screen Reader) có thể phân tích cú pháp chính xác.
+
+#### 3. Sơ đồ ma trận 4 Nguyên tắc vàng UI (직관성·유효성·학습성·유연성)
+
+##### A. Sơ đồ ASCII cấu trúc 4 trụ cột tương tác người - máy
+```
+               ┌───────────────────────────────────────────────────┐
+               │         UI 4대 기본 원칙 (4 Nguyên tắc vàng UI)    │
+               │               (Mẹo: 직 - 유 - 학 - 유)             │
+               └─────────────────────────┬─────────────────────────┘
+                                         │
+         ┌───────────────────────┬───────┴───────┬───────────────────────┐
+         ▼                       ▼               ▼                       ▼
+   ┌───────────┐           ┌───────────┐   ┌───────────┐           ┌───────────┐
+   │  직관성   │           │  유효성   │   │  학습성   │           │  유연성   │
+   │(Intuitive)│           │(Effective)│   │(Learnable)│           │(Flexible) │
+   ├───────────┤           ├───────────┤   ├───────────┤           ├───────────┤
+   │ 누구나    │           │ 목적을    │   │ 쉽게      │           │ 오류 방지 │
+   │ 쉽게 이해 │           │ 정확/완전 │   │ 배우고    │           │ 및 제어   │
+   │           │           │ 달성      │   │ 익힘      │           │ 요구 수용 │
+   ├───────────┤           ├───────────┤   ├───────────┤           ├───────────┤
+   │ Nhìn là   │           │ Đạt mục   │   │ Học nhanh │           │ Bao dung  │
+   │ hiểu ngay │           │ tiêu trọn │   │ nhớ lâu,  │           │ sai sót,  │
+   │ không cần │           │ vẹn không │   │ giao diện │           │ phím tắt  │
+   │ đào tạo   │           │ sai lệch  │   │ nhất quán │           │ linh hoạt │
+   └───────────┘           └───────────┘   └───────────┘           └───────────┘
+```
+
+##### B. Ma trận đối chiếu tình huống thực tế và bẫy trắc nghiệm
+| Nguyên tắc UI | Tình huống thiết kế đạt chuẩn (Best Practice) | Tình huống vi phạm điển hình (Bad Design) |
+|:---|:---|:---|
+| **직관성 (Intuitiveness)** | Biểu tượng kính lúp đại diện cho ô Tìm kiếm; nút giỏ hàng đại diện cho thanh toán; nút màu đỏ cảnh báo thao tác Xóa dữ liệu. | Nút "Lưu file" nhưng lại vẽ biểu tượng hình chiếc kéo; icon không gợi liên tưởng tới hành vi thực tế. |
+| **유효성 (Effectiveness)** | Form thanh toán xác thực thẻ thành công và xuất hóa đơn đúng số tiền; người dùng hoàn thành giao dịch mà không gặp lỗi nghẽn. | Bấm nút "Đặt mua" nhưng hệ thống trừ tiền mà không ghi nhận đơn hàng hoặc báo lỗi không rõ nguyên nhân. |
+| **학습성 (Learnability)** | Mọi trang con trong website đều đặt thanh menu điều hướng ở cạnh trên cùng và logo ở góc trên bên trái; thao tác quen thuộc từ trang trước dùng ngay cho trang sau. | Trang chủ đặt nút menu ở trên cùng, nhưng vào trang chi tiết sản phẩm lại giấu nút menu xuống đáy góc phải khiến người dùng phải học lại cách dùng. |
+| **유연성 (Flexibility)** | Cho phép người dùng mới bấm chuột vào menu, đồng thời cung cấp tổ hợp phím tắt (Ctrl+S, Ctrl+Z) cho người dùng thành thạo; có nút "Hoàn tác" (Undo) khi lỡ xóa nhầm. | Bắt buộc mọi đối tượng chỉ được thao tác qua một luồng duy nhất; lỡ bấm nút xóa là mất vĩnh viễn không thể khôi phục lại dữ liệu. |
+
+---
+
+#### 4. Quy trình thiết kế UI 3 bước chuẩn kỹ nghệ phần mềm
+
+##### A. Sơ đồ ASCII quy trình thiết kế giao diện khép kín
+```
+┌────────────────────────────────┐
+│ 1단계: 사용자 요구사항 확인      │
+│ (User Research & Analysis)     │
+└───────────────┬────────────────┘
+                │ • Khảo sát nhu cầu người dùng (Survey, Interview)
+                │ • Xây dựng chân dung người dùng đại diện (페르소나 - Persona)
+                │ • Xác định bối cảnh sử dụng & kịch bản người dùng (User Scenario)
+                ▼
+┌────────────────────────────────┐
+│ 2단계: UI 설계 및 문서화        │
+│ (UI Architecture & Design)     │
+└───────────────┬────────────────┘
+                │ • Thiết kế cấu trúc thông tin (정보 구조 - IA) & Cây chức năng
+                │ • Vẽ khung xương màn hình (와이어프레임 - Wireframe)
+                │ • Thiết kế kịch bản chi tiết (스토리보드 - Storyboard)
+                │ • Ban hành Quy tắc giao diện chung (UI 공통 규칙)
+                ▼
+┌────────────────────────────────┐
+│ 3단계: UI 구현 및 사용성 평가   │
+│ (Implementation & Evaluation)  │
+└────────────────────────────────┘
+                  • Tạo bản mẫu tương tác động (프로토타입 - Prototype)
+                  • Thử nghiệm với người dùng thật (사용성 테스트 - Usability Test)
+                  • Thu thập chỉ số hoàn thành (Effectiveness, Efficiency, CSAT)
+                  • Tinh chỉnh vòng lặp trước khi bàn giao cho đội lập trình
+```
+
+##### B. Chi tiết 3 bước thiết kế UI trong chuẩn đề thi
+1. **1단계: 사용자 요구사항 확인 및 분석 (Xác nhận & Phân tích yêu cầu người dùng):**
+   - **Xây dựng 페르소나 (Persona):** Tạo lập một nhân vật giả định mang đầy đủ các đặc tính nhân khẩu học, thói quen thao tác, mục tiêu và rào cản tâm lý đại diện cho nhóm người dùng mục tiêu.
+   - **Lập 사용자 여정 맵 (Customer Journey Map):** Lược đồ từng bước trải nghiệm của người dùng từ khi mở ứng dụng đến khi hoàn tất tác vụ cốt lõi, giúp phát hiện các điểm nghẽn trải nghiệm (Pain Points).
+2. **2단계: UI 아키텍처 및 화면 설계 (Thiết kế Kiến trúc UI & Màn hình):**
+   - **Cấu trúc thông tin (`정보 구조 - IA / Information Architecture`):** Phân loại và tổ chức nội dung hệ thống thành dạng cây phân cấp (Tree Structure) logic, giúp người dùng dễ dàng định hướng vị trí hiện tại.
+   - **Soạn thảo UI 시나리오 문서 (UI Scenario Document):** Là tài liệu bàn giao kỹ thuật hoàn chỉnh gồm Wireframe/Mockup kết hợp mô tả kịch bản (Description) cho từng nút bấm, trường hợp ngoại lệ (Exception Case) và luồng điều hướng màn hình.
+3. **3단계: UI 구현 및 사용성 평가 (Hiện thực hóa UI & Đánh giá khả dụng):**
+   - **Tạo bản mẫu (`프로토타입 - Prototype`):** Chuyển giao kịch bản Storyboard thành bản mẫu tương tác chạy thử (Interactive Mockup/Code) để khách hàng và lập trình viên trải nghiệm trước.
+   - **Kiểm thử khả dụng (`사용성 평가 - Usability Testing`):** Mời nhóm người dùng đại diện thực hiện các kịch bản thực tế, ghi lại thời gian hoàn tất tác vụ (Efficiency) và tỷ lệ lỗi sai (Effectiveness) để hoàn thiện bản thiết kế cuối cùng trước khi lập trình diện rộng.
 
 ---
 

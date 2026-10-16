@@ -47,9 +47,9 @@ ISO/IEC 12207 là tiêu chuẩn quốc tế quy định toàn diện các hoạt
 
 | Nhóm tiến trình | Tên tiếng Hàn & Anh | Các tiến trình thành phần chi tiết |
 | :--- | :--- | :--- |
-| **Tiến trình cơ bản** | **기본 생명 주기 (Primary Processes)** | 5 tiến trình cốt lõi tạo ra và vận hành sản phẩm:<br>1. **획득 (Acquisition):** Xác định nhu cầu, đấu thầu, mua sắm.<br>2. **공급 (Supply):** Cung cấp giải pháp, bàn giao cho khách hàng.<br>3. **개발 (Development):** Phân tích, thiết kế, viết mã, kiểm thử.<br>4. **운영 (Operation):** Cài đặt và vận hành trong môi trường thực tế.<br>5. **유지보수 (Maintenance):** Sửa lỗi, thích ứng, nâng cấp. |
-| **Tiến trình hỗ trợ** | **지원 생명 주기 (Supporting Processes)** | Hỗ trợ tiến trình cơ bản nhằm đảm bảo chất lượng:<br>- **문서화 (Documentation):** Lập tài liệu vòng đời.<br>- **형상 관리 (Configuration Management):** Quản lý phiên bản.<br>- **품질 보증 (Quality Assurance - QA):** Đảm bảo chất lượng độc lập.<br>- **검증 (Verification) & 확인 (Validation):** Kiểm tra đặc tả và kiểm tra người dùng.<br>- **합동 검토 (Joint Review), 감사 (Audit), 문제 해결 (Problem Resolution)**. |
-| **Tiến trình tổ chức** | **조직 생명 주기 (Organizational Processes)** | Xây dựng năng lực nền tảng cho toàn bộ doanh nghiệp:<br>- **관리 (Management):** Quản lý danh mục và điều hành dự án.<br>- **기반 구조 (Infrastructure):** Thiết lập môi trường phần cứng, mạng, công cụ.<br>- **훈련 (Training):** Đào tạo kỹ năng cho nhân sự.<br>- **개선 (Improvement):** Đánh giá và cải tiến quy trình công ty. |
+| **Tiến trình cơ bản** | **기본 생명 주기 (Primary Processes)** | 5 tiến trình cốt lõi tạo ra và vận hành sản phẩm: Mua sắm (획득), Cung cấp (공급), Phát triển (개발), Vận hành (운영), Bảo trì (유지보수). |
+| **Tiến trình hỗ trợ** | **지원 생명 주기 (Supporting Processes)** | Các hoạt động phụ trợ độc lập: Lập tài liệu (문서화), Quản lý cấu hình (형상 관리), Đảm bảo chất lượng (품질 보증), Kiểm tra đặc tả (검증), Kiểm tra người dùng (확인), Đánh giá liên tịch (합동 검토), Kiểm toán (감사), Xử lý sự cố (문제 해결). |
+| **Tiến trình tổ chức** | **조직 생명 주기 (Organizational Processes)** | Hoạt động xây dựng năng lực cấp doanh nghiệp: Quản lý (관리), Hạ tầng cơ sở (기반 구조), Đào tạo kỹ năng (훈련), Cải tiến quy trình (개선). |
 
 #### 2. Tiêu chuẩn chất lượng sản phẩm phần mềm (ISO/IEC 9126 & ISO/IEC 25010)
 - **ISO/IEC 9126 — 6 đặc tính chất lượng truyền thống:**
@@ -66,11 +66,11 @@ CMMI do Viện Công nghệ Phần mềm Mỹ (SEI) phát triển, đánh giá n
 
 | Cấp độ | Tên tiếng Hàn & Anh | Đặc trưng nhận diện cốt lõi trong đề thi |
 | :---: | :--- | :--- |
-| **Level 1** | **초기 (Initial)** | - **Quy trình hỗn loạn, tự phát**, không có chuẩn mực.<br>- Thành công hoàn toàn phụ thuộc vào năng lực của **cá nhân anh hùng (영웅적 개인)**; không thể dự báo trước về chi phí và chất lượng. |
-| **Level 2** | **관리 (Managed)** | - Đã thiết lập quy trình quản lý cơ bản ở **cấp độ dự án riêng lẻ** (Project-level).<br>- Quản lý được yêu cầu, chi phí, tiến độ; **có thể lặp lại thành công** ở các dự án tương tự. |
-| **Level 3** | **정의 (Defined)** | - Quy trình được chuẩn hóa và văn bản hóa ở **cấp độ toàn bộ tổ chức/công ty** (Organizational-level).<br>- Có tài liệu hướng dẫn quy chuẩn, công cụ hỗ trợ và chương trình đào tạo thống nhất. |
-| **Level 4** | **정량적 관리 (Quantitatively Managed)** | - Quy trình và chất lượng sản phẩm được **đo lường bằng số liệu thống kê định lượng** (통계적, 정량적 측정).<br>- Dự báo được tỷ lệ phát sinh lỗi và kiểm soát dung sai chất lượng một cách khoa học. |
-| **Level 5** | **최적화 (Optimizing)** | - Quy trình **liên tục được đổi mới và cải tiến** (지속적인 프로세스 개선) dựa trên phân tích số liệu định lượng và chủ động áp dụng các công nghệ tiên tiến. |
+| **Level 1** | **초기 (Initial)** | Quy trình hỗn loạn, tự phát, không chuẩn mực; thành công phụ thuộc hoàn toàn vào nỗ lực của cá nhân anh hùng (영웅적 개인). Không thể dự báo chi phí và chất lượng. |
+| **Level 2** | **관리 (Managed)** | Thiết lập quy trình quản lý cơ bản ở cấp độ từng dự án riêng lẻ (Project-level); kiểm soát được yêu cầu, chi phí, tiến độ; có khả năng lặp lại thành công cho các dự án tương tự. |
+| **Level 3** | **정의 (Defined)** | Quy trình được chuẩn hóa và văn bản hóa ở cấp toàn bộ tổ chức/công ty (Organizational-level); có tài liệu quy chuẩn, công cụ hỗ trợ và chương trình đào tạo thống nhất. |
+| **Level 4** | **정량적 관리 (Quantitatively Managed)** | Quy trình và chất lượng sản phẩm được đo lường bằng số liệu thống kê định lượng (통계적, 정량적 측정); dự báo được tỷ lệ phát sinh lỗi và kiểm soát dung sai chất lượng. |
+| **Level 5** | **최적화 (Optimizing)** | Quy trình liên tục được đổi mới và cải tiến (지속적인 프로세스 개선) dựa trên phân tích số liệu định lượng và chủ động áp dụng công nghệ mới. |
 
 #### 4. Tiêu chuẩn đánh giá năng lực quy trình SPICE (ISO/IEC 15504)
 SPICE là tiêu chuẩn quốc tế dùng để đánh giá và cải tiến năng lực của các tiến trình phần mềm, gồm 6 mức năng lực (Capability Levels):
@@ -85,7 +85,89 @@ SPICE là tiêu chuẩn quốc tế dùng để đánh giá và cải tiến nă
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Phân biệt Kiểm tra đặc tả (Verification) và Kiểm tra người dùng (Validation)
+#### 1. Biểu đồ hình tháp 5 cấp độ trưởng thành CMMI (초-관-정-정-최)
+Mô hình CMMI biểu diễn theo giai đoạn (Staged Representation) phân cấp độ trưởng thành năng lực của toàn bộ doanh nghiệp theo cấu trúc hình tháp bậc thang từ thấp lên cao:
+
+```text
+                       /=========================================\
+                      /           Level 5: 최적화 (Optimizing)    \
+                     /    Liên tục cải tiến quy trình & công nghệ  \
+                    /===============================================\
+                   /       Level 4: 정량적 관리 (Quantitatively)     \
+                  /      Kiểm soát quy trình bằng số liệu thống kê   \
+                 /=====================================================\
+                /                 Level 3: 정의 (Defined)                \
+               /         Quy trình chuẩn hóa cấp toàn bộ tổ chức/công ty   \
+              /=============================================================\
+             /                   Level 2: 관리 (Managed)                      \
+            /          Quản lý quy trình ở cấp độ từng dự án riêng lẻ           \
+           /===================================================================\
+          /                     Level 1: 초기 (Initial)                          \
+         /      Hỗn loạn, không quy trình chuẩn, dựa vào cá nhân anh hùng         \
+        /=========================================================================\
+```
+
+- **Phân tích kỹ thuật và bẫy đề thi theo từng tầng tháp:**
+  - **Level 1 (초기 - Initial):** Không có chuẩn mực. Nếu lập trình viên giỏi rời đi, dự án lập tức thất bại. Chi phí và thời gian luôn bị vượt trần.
+  - **Level 2 (관리 - Managed):** Trọng tâm là quản trị dự án (Project Management). Đã kiểm soát được phạm vi yêu cầu (REQM), lập kế hoạch (PP), theo dõi tiến độ (PMC), quản lý cấu hình (CM). Có thể lặp lại thành công ở dự án tương tự, nhưng mỗi dự án vẫn có thể làm việc theo cách riêng.
+  - **Level 3 (정의 - Defined):** Toàn công ty thống nhất dùng chung một bộ quy trình chuẩn (Standard Process). Có bộ phận đảm bảo chất lượng độc lập, tài liệu hướng dẫn kỹ thuật chi tiết và chương trình đào tạo nội bộ bài bản.
+  - **Level 4 (정량적 관리 - Quantitatively Managed):** Áp dụng kỹ thuật kiểm soát quy trình bằng thống kê (SPC - Statistical Process Control). Đo lường năng suất, mật độ lỗi trên từng KLOC và dự báo được chất lượng sản phẩm bằng con số cụ thể.
+  - **Level 5 (최적화 - Optimizing):** Doanh nghiệp chủ động phân tích nguyên nhân gốc rễ của sai lỗi (Causal Analysis) và đầu tư thử nghiệm các công nghệ, công cụ mới để liên tục tối ưu hóa quy trình.
+
+#### 2. Hai cách tiếp cận biểu diễn trong CMMI (Staged vs Continuous)
+- **Mô hình theo giai đoạn (Staged Representation):**
+  - Đánh giá toàn diện tổ chức theo **5 mức độ trưởng thành (Maturity Levels 1 ~ 5)**.
+  - Doanh nghiệp phải đạt tất cả các mục tiêu của mức hiện tại mới được công nhận lên mức kế tiếp.
+- **Mô hình liên tục (Continuous Representation):**
+  - Đánh giá năng lực của **từng lĩnh vực quy trình riêng lẻ (Capability Levels 0 ~ 3)**:
+    - Level 0 (Incomplete): Chưa hoàn thành.
+    - Level 1 (Performed): Đã thực hiện.
+    - Level 2 (Managed): Đã quản lý.
+    - Level 3 (Defined): Đã định nghĩa chuẩn hóa.
+  - Giúp doanh nghiệp linh hoạt tập trung cải thiện trước các quy trình đang là điểm nghẽn mà không cần nâng cấp đồng loạt.
+
+#### 3. Bộ tiêu chuẩn SPICE (ISO/IEC 15504) và Kiến trúc 2 chiều
+SPICE (Software Process Improvement and Capability dEtermination) là khung đánh giá năng lực tiến trình quốc tế do ISO/IEC ban hành:
+
+- **Sơ đồ kiến trúc 2 chiều của SPICE:**
+
+```text
++---------------------------------------------------------------------------------------+
+|                 MÔ HÌNH 2 CHIỀU CỦA TIÊU CHUẨN SPICE (ISO/IEC 15504)                  |
++---------------------------------------------------------------------------------------+
+| [ CHIỀU NĂNG LỰC - Capability Dimension ]                                             |
+| Level 5: 최적화 (Optimizing)    -> PA 5.1 (Cải tiến liên tục), PA 5.2 (Tối ưu hóa)     |
+| Level 4: 예측 (Predictable)     -> PA 4.1 (Đo lường định lượng), PA 4.2 (Kiểm soát)    |
+| Level 3: 확립 (Established)     -> PA 3.1 (Định nghĩa quy trình), PA 3.2 (Triển khai)  |
+| Level 2: 관리 (Managed)         -> PA 2.1 (Quản lý thực thi), PA 2.2 (Sản phẩm đầu ra)|
+| Level 1: 수행 (Performed)       -> PA 1.1 (Thực thi tiến trình tạo ra kết quả)        |
+| Level 0: 불완전 (Incomplete)    -> Không thực hiện hoặc không đạt được mục tiêu cơ bản|
++---------------------------------------------------------------------------------------+
+                                           ^
+                                           |  Đánh giá chéo từng tiến trình
+                                           v
++---------------------------------------------------------------------------------------+
+| [ CHIỀU TIẾN TRÌNH - Process Dimension ] (Kế thừa từ chuẩn ISO/IEC 12207)             |
+| 1. CUS: Nhóm khách hàng - Nhà cung cấp (Customer - Supplier Process Category)         |
+| 2. ENG: Nhóm kỹ thuật công nghệ phần mềm (Engineering Process Category)               |
+| 3. SUP: Nhóm hỗ trợ đảm bảo chất lượng (Support Process Category)                     |
+| 4. MAN: Nhóm quản lý dự án và nhân lực (Management Process Category)                  |
+| 5. ORG: Nhóm tổ chức và hạ tầng doanh nghiệp (Organization Process Category)          |
++---------------------------------------------------------------------------------------+
+```
+
+- **Bảng đối chiếu tương đương giữa cấp độ CMMI và SPICE:**
+
+| Cấp độ | CMMI (Staged Maturity Level) | SPICE / ISO 15504 (Capability Level) | Đặc trưng cốt lõi |
+| :---: | :--- | :--- | :--- |
+| **0** | *(Không có)* | **Level 0: 불완전 (Incomplete)** | Tiến trình thất bại, không tạo ra sản phẩm. |
+| **1** | **Level 1: 초기 (Initial)** | **Level 1: 수행 (Performed)** | Đạt mục tiêu cơ bản, dựa vào nỗ lực cá nhân. |
+| **2** | **Level 2: 관리 (Managed)** | **Level 2: 관리 (Managed)** | Quản lý tốt ở cấp dự án đơn lẻ, có thể lặp lại. |
+| **3** | **Level 3: 정의 (Defined)** | **Level 3: 확립 (Established)** | Quy trình chuẩn hóa thành văn bản cấp toàn công ty. |
+| **4** | **Level 4: 정량적 관리 (Quantitatively)** | **Level 4: 예측 (Predictable)** | Kiểm soát và dự báo bằng số liệu thống kê định lượng. |
+| **5** | **Level 5: 최적화 (Optimizing)** | **Level 5: 최적화 (Optimizing)** | Liên tục cải tiến và tối ưu hóa công nghệ quy trình. |
+
+#### 4. Phân biệt Kiểm tra đặc tả (Verification) và Kiểm tra người dùng (Validation)
 Trong nhóm tiến trình hỗ trợ của ISO/IEC 12207:
 - **검증 (Verification - "Xây dựng sản phẩm có đúng quy chuẩn không?"):**
   - Kiểm tra xem sản phẩm đầu ra của một giai đoạn có đáp ứng đúng tài liệu đặc tả yêu cầu đã đề ra ở giai đoạn trước đó hay không.
@@ -94,7 +176,7 @@ Trong nhóm tiến trình hỗ trợ của ISO/IEC 12207:
   - Kiểm tra xem sản phẩm cuối cùng sau khi hoàn thiện có đáp ứng đúng mục đích sử dụng thực tế và nhu cầu nghiệp vụ của khách hàng/người dùng cuối hay không.
   - Mang tính chất nghiệp vụ thực tế (Real-world user validation).
 
-#### So sánh ranh giới giữa CMMI Level 2 và Level 3
+#### 5. So sánh ranh giới giữa CMMI Level 2 và Level 3
 - **Bẫy đề thi kinh điển:** Sự khác biệt sống còn giữa Level 2 và Level 3 nằm ở phạm vi áp dụng quy trình:
   - Nếu câu hỏi nhấn mạnh quy trình được quản lý ở **từng dự án cụ thể (프로젝트별)** $\rightarrow$ Chọn **Level 2 (관리 - Managed)**.
   - Nếu câu hỏi nhấn mạnh quy trình được chuẩn hóa ở **cấp toàn bộ tổ chức (조직 차원의 표준화)** $\rightarrow$ Chọn **Level 3 (정의 - Defined)**.
@@ -107,3 +189,4 @@ Trong nhóm tiến trình hỗ trợ của ISO/IEC 12207:
 - [ ] Thuộc lòng 5 cấp độ CMMI theo khẩu quyết: **초-관-정-정-최** (초기, 관리, 정의, 정량적 관리, 최적화).
 - [ ] Phân biệt được ranh giới CMMI: Level 2 là cấp dự án, Level 3 là chuẩn hóa cấp toàn công ty.
 - [ ] Nhớ 6 cấp độ năng lực SPICE: Level 0 (불완전) $\rightarrow$ Level 5 (최적화).
+- [ ] Nắm vững kiến trúc 2 chiều của SPICE: Chiều quy trình (CUS, ENG, SUP, MAN, ORG) và Chiều năng lực (Level 0-5).

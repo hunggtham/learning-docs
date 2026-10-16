@@ -60,12 +60,12 @@
 
 | Tên đòn tấn công | Tên tiếng Hàn | Cơ chế kỹ thuật chi tiết | Biện pháp phòng vệ chuẩn |
 | :--- | :--- | :--- | :--- |
-| **SYN Flooding** | **SYN 플러딩** | Lợi dụng cơ chế bắt tay 3 bước của TCP. Kẻ tấn công gửi liên tiếp các gói tin `SYN` với địa chỉ IP nguồn giả mạo. Máy chủ nạn nhân cấp phát bộ nhớ, gửi lại `SYN+ACK` và chờ đợi phản hồi `ACK`. Do IP giả mạo không bao giờ gửi lại `ACK`, hàng đợi kết nối nửa mở (**Backlog Queue**) bị lấp đầy hoàn toàn, làm máy chủ từ chối mọi kết nối hợp lệ mới. | - Thu ngắn thời gian chờ Timeout.<br>- Tăng kích thước Backlog Queue.<br>- Kích hoạt tính năng **SYN Cookie** trên hệ điều hành. |
-| **Smurfing** | **스머핑** | Kẻ tấn công gửi gói tin `ICMP Echo Request` (Ping) với **địa chỉ IP nguồn giả mạo chính là địa chỉ IP của máy chủ nạn nhân** tới **địa chỉ Quảng bá (Directed Broadcast)** của một mạng trung gian. Toàn bộ hàng trăm máy tính trong mạng trung gian đồng loạt gửi gói tin trả lời `ICMP Echo Reply` về máy nạn nhân, làm sập đường truyền mạng. | Cấu hình Router chặn các gói tin Broadcast từ ngoài vào (`no ip directed-broadcast`), tắt phản hồi ICMP trên thiết bị. |
+| **SYN Flooding** | **SYN 플러딩** | Lợi dụng cơ chế bắt tay 3 bước của TCP. Kẻ tấn công gửi liên tiếp các gói tin `SYN` với địa chỉ IP nguồn giả mạo. Máy chủ nạn nhân cấp phát bộ nhớ, gửi lại `SYN+ACK` và chờ đợi phản hồi `ACK`. Do IP giả mạo không bao giờ gửi lại `ACK`, hàng đợi kết nối nửa mở (**Backlog Queue**) bị lấp đầy hoàn toàn, làm máy chủ từ chối mọi kết nối hợp lệ mới. | Thu ngắn Timeout, tăng kích thước Backlog Queue, kích hoạt tính năng SYN Cookie trên hệ điều hành. |
+| **Smurfing** | **스머핑** | Kẻ tấn công gửi gói tin `ICMP Echo Request` (Ping) với **địa chỉ IP nguồn giả mạo chính là địa chỉ IP của máy chủ nạn nhân** tới **địa chỉ Quảng bá (Directed Broadcast)** của một mạng trung gian. Toàn bộ hàng trăm máy tính trong mạng trung gian đồng loạt gửi gói tin trả lời `ICMP Echo Reply` về máy nạn nhân, làm sập đường truyền mạng. | Cấu hình Router chặn các gói tin Broadcast từ ngoài vào (lệnh `no ip directed-broadcast`), tắt phản hồi ICMP trên thiết bị. |
 | **Ping of Death** | **죽음의 핑** | Giao thức IP giới hạn kích thước tối đa của một gói tin là $65,535\text{ bytes}$. Kẻ tấn công dùng lệnh Ping chia nhỏ một gói tin có dung lượng khổng lồ thành nhiều mảnh (Fragments). Khi máy nạn nhân thực hiện tái lắp ghép (Reassembly) các mảnh này, bộ nhớ đệm hệ điều hành bị tràn, làm treo máy hoặc khởi động lại đột ngột. | Cấu hình tường lửa lọc bỏ các gói tin ICMP có kích thước phân mảnh bất thường, vá lỗi hệ điều hành. |
 | **TearDrop** | **티어드롭** | Khi truyền gói tin lớn qua mạng, IP chia nhỏ gói tin và dùng trường **Fragment Offset** để ghi lại vị trí ghép nối. Kẻ tấn công cố tình thay đổi trường này để các mảnh bị **chồng lấn lên nhau (Overlapping)**. Quá trình tái lắp ghép trên máy nạn nhân gặp lỗi logic không xử lý được, gây cạn kiệt tài nguyên CPU và làm sập máy chủ. | Cập nhật bản vá hệ điều hành kiểm tra tính hợp lệ của trường Offset trước khi tái lắp ghép. |
 | **Land Attack** | **랜드 어택** | Kẻ tấn công gửi gói tin TCP `SYN` có **địa chỉ IP nguồn và IP đích giống hệt nhau** (đồng thời Port nguồn = Port đích), đều trỏ về địa chỉ IP của nạn nhân. Máy nạn nhân nhận gói tin và tự động gửi gói tin trả lời lại cho chính mình, tạo thành vòng lặp vô tận làm tê liệt hoàn toàn CPU và RAM. | Cấu hình tường lửa chặn ngay các gói tin có địa chỉ IP nguồn trùng với địa chỉ IP nội bộ của hệ thống. |
-| **HTTP GET Flooding** | **HTTP GET 플러딩 (CC Attack)** | Tấn công tầng ứng dụng (L7). Kẻ tấn công gửi liên tục các yêu cầu HTTP GET hợp lệ đòi truy xuất các trang web có nội dung nặng hoặc truy vấn CSDL phức tạp, làm cạn kiệt tài nguyên xử lý của Web Server mà không cần dùng băng thông quá lớn. | Sử dụng thiết bị tường lửa ứng dụng web (**WAF**), chặn theo tần suất yêu cầu (Rate Limiting), dùng Captcha. |
+| **HTTP GET Flooding** | **HTTP GET 플러딩 (CC Attack)** | Tấn công tầng ứng dụng (L7). Kẻ tấn công gửi liên tục các yêu cầu HTTP GET hợp lệ đòi truy xuất các trang web có nội dung nặng hoặc truy vấn CSDL phức tạp, làm cạn kiệt tài nguyên xử lý của Web Server mà không cần dùng băng thông quá lớn. | Sử dụng thiết bị tường lửa ứng dụng web (WAF), giới hạn tần suất yêu cầu (Rate Limiting), kiểm tra mã Captcha. |
 
 #### 3. Các kỹ thuật tấn công nghe lén, giả mạo và chuyển mạch
 - **스니핑 (Sniffing — Nghe lén):**
@@ -95,7 +95,112 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### Cơ chế hoạt động của kỹ thuật phòng thủ SYN Cookie
+#### 1. Sơ đồ giải phẫu các đòn tấn công mạng kinh điển
+
+##### A. Tấn công SYN Flooding (Làm tràn hàng đợi kết nối nửa mở)
+
+```text
+  [ BẮT TAY 3 BƯỚC TCP BÌNH THƯỜNG ]
+     Client                                                   Server
+       |                          SYN                           |
+       | -----------------------------------------------------> | [ Cấp phát TCB & đưa vào ]
+       |                                                        | [ Backlog Queue nửa mở   ]
+       |                        SYN + ACK                       |
+       | <----------------------------------------------------- |
+       |                           ACK                          |
+       | -----------------------------------------------------> | [ Kết nối ESTABLISHED     ]
+       |                                                        | [ Giải phóng Backlog Queue]
+
+  [ ĐÒN TẤN CÔNG SYN FLOODING ]
+    Attacker (IP giả mạo)                                     Target Server
+       |                    SYN (Src: 1.1.1.1)                  |
+       | =====================================================> | [ Cấp phát TCB nửa mở 1  ]
+       |                    SYN (Src: 2.2.2.2)                  | [ Hàng đợi Backlog       ]
+       | =====================================================> | [ dần bị lấp đầy...      ]
+       |                    SYN (Src: 3.3.3.3)                  | [                        ]
+       | =====================================================> | [ BACKLOG QUEUE ĐẦY 100% ]
+       |                                                        |
+       |      SYN + ACK gửi đi các IP ma (Chờ vô vọng)          |
+       | < - - - - - - - - - - - - - - - - - - - - - - - - - -  |
+       |                                                        |
+     User hợp lệ                  SYN                           |
+       | -----------------------------------------------------> | [ BỊ TỪ CHỐI / DROP ]
+       |                    (Server bị tê liệt)                 | (Availability = 0)
+```
+
+##### B. Tấn công Smurf Attack (Khuếch đại ICMP qua Directed Broadcast)
+
+```text
+                 +-------------------------------------------------------------+
+                 | Mạng khuếch đại trung gian (Amplifier Subnet: 192.168.1.0/24)|
+                 |                                                             |
+                 |               +---> Host 1 (192.168.1.2) ---+               |
+                 |               |                             |               |
+   Attacker      |               +---> Host 2 (192.168.1.3) ---+               |
+      |          |               |                             |               |
+      | ICMP Echo Request        +---> Host 3 (192.168.1.4) ---+               |
+      | (Src: 10.0.0.99 [Victim] |                             |               |
+      |  Dst: 192.168.1.255)     +---> ...                     +---------------+
+      +------------------------->|                                     |
+                                 +---> Host 254 (192.168.1.254)+       |
+                                                               |       | Hàng trăm gói tin
+                                                               |       | ICMP Echo Reply
+                                                               v       v dồn về nạn nhân!
+                                                        +-----------------------------+
+                                                        |  Nạn nhân (Victim Server)   |
+                                                        |       IP: 10.0.0.99         |
+                                                        | [ ĐƯỜNG TRUYỀN BỊ NGHẼN SẬP]|
+                                                        +-----------------------------+
+```
+
+##### C. Tấn công TearDrop (Cố tình làm chồng lấn Fragment Offset)
+
+```text
+  [ PHÂN MẢNH IP BÌNH THƯỜNG (NORMAL FRAGMENTATION) ]
+  Gói tin IP gốc: 2,000 bytes (MTU = 1,024 bytes)
+  +----------------------+----------------------+
+  | Mảnh 1 (Offset: 0)   | Mảnh 2 (Offset: 1000)|
+  | Size: 1,000 bytes    | Size: 1,000 bytes    |
+  | Byte: 0 ~ 999        | Byte: 1000 ~ 1999    |
+  +----------------------+----------------------+
+  ==> Tái lắp ghép (Reassembly) tại máy nhận: Khớp nối hoàn hảo, không lỗi.
+
+  [ ĐÒN TẤN CÔNG TEARDROP (OVERLAPPING OFFSET) ]
+  Kẻ tấn công can thiệp tiêu đề IP của các mảnh gói tin:
+  +--------------------------------+
+  | Mảnh 1: Offset = 0, Size = 1000|
+  | Byte: 0 ~ 999                  |
+  +--------------------------------+
+             +----------------------------------+
+             | Mảnh 2: Offset = 600, Size = 1000|  <-- Cố tình ghi đè lệch Offset!
+             | Byte: 600 ~ 1599                 |
+             +----------------------------------+
+             <-------- VÙNG CHỒNG LẤN --------->
+                       (Bytes 600 ~ 999)
+```
+- Khi máy nạn nhân thực hiện tái lắp ghép, nó tính toán độ dài mảnh dữ liệu mới: $\text{Length} = \text{End} - \text{Offset}$. Khi Offset bị lệch lùi lại, bộ đệm sao chép dữ liệu bị lỗi số âm (Integer Underflow), làm hỏng bộ nhớ Kernel dẫn đến hệ điều hành bị Crash hoặc khởi động lại đột ngột.
+
+##### D. Tấn công Land Attack (Vòng lặp tự gửi cho chính mình: Source IP = Dest IP)
+
+```text
+                 Gói tin TCP SYN độc hại
+   Attacker ---------------------------------------------> [ Máy chủ Nạn nhân (Victim) ]
+              IP Nguồn (Src IP): 192.168.1.100              |  IP: 192.168.1.100
+              Cổng Nguồn (Port): 80                         |  Port: 80
+              IP Đích (Dst IP):  192.168.1.100              |
+              Cổng Đích (Port):  80                         |
+                                                            v
+                                            Máy tự gửi SYN + ACK lại cho chính mình!
+                                            +--------------------------------------+
+                                            | Src: 192.168.1.100 -> Dst: 192.168.1.100 |
+                                            |       ^                      |       |
+                                            |       +----------------------+       |
+                                            |      VÒNG LẶP VÔ TẬN (LOOP)          |
+                                            |   CPU 100% -> HẾT BỘ NHỚ -> TREO MÁY |
+                                            +--------------------------------------+
+```
+
+#### 2. Cơ chế hoạt động của kỹ thuật phòng thủ SYN Cookie
 Khi máy chủ web đối mặt với cuộc tấn công SYN Flooding khổng lồ:
 1. Thông thường, máy chủ phải cấp phát một vùng nhớ nhỏ trong hàng đợi **Backlog Queue** để lưu trạng thái kết nối nửa mở (Half-open connection).
 2. Khi bật **SYN Cookie**, máy chủ sẽ **KHÔNG cấp phát bộ nhớ** cho kết nối khi nhận được gói tin `SYN`.
@@ -116,3 +221,4 @@ Khi máy chủ web đối mặt với cuộc tấn công SYN Flooding khổng l�
 - [ ] Nắm được cơ chế Switch Jamming: Làm tràn bảng MAC buộc Switch phát tán lưu lượng như Hub.
 - [ ] Phân biệt 3 đòn tấn công Bluetooth: Bluebugging (chiếm quyền), Bluesnarfing (trộm dữ liệu), Bluejacking (gửi tin rác).
 - [ ] Hiểu rõ kỹ thuật SYN Cookie: Ngăn chặn SYN Flooding bằng cách không cấp phát bộ nhớ cho kết nối nửa mở.
+- [ ] Nhận diện cơ chế giải phẫu 4 đòn DoS: SYN Flood (Backlog queue), Smurf (Broadcast reply dồn), TearDrop (Offset chồng lấn), Land Attack (Src IP = Dst IP).

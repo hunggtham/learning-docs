@@ -180,6 +180,110 @@
   - `<<boundary>>`: Đại diện cho lớp giao tiếp ở biên giới hệ thống (Giao diện màn hình, cổng giao tiếp API).
   - `<<control>>`: Đại diện cho lớp điều phối luồng logic nghiệp vụ nằm giữa Boundary và Entity (tương tự Controller trong mô hình MVC).
 
+#### 3. Biểu đồ ASCII trực quan 6 mối quan hệ UML (UML 6대 관계)
+
+##### A. Biểu đồ ký hiệu hình học chuẩn xác của 6 mối quan hệ
+```
+1. 의존 관계 (Dependency) - Sử dụng tạm thời (Ngắn hạn):
+   ┌─────────┐                                 ┌─────────┐
+   │ Client  │ - - - - - - - - - - - - - - - ->│ Service │
+   └─────────┘    [Đường nét đứt mũi tên nhọn]  └─────────┘
+   * Client nhận Service làm tham số cục bộ trong một hàm (operation).
+
+2. 연관 관계 (Association) - Liên kết ngữ nghĩa (Dài hạn):
+   ┌─────────┐ 1                             * ┌─────────┐
+   │ Teacher │────────────────────────────────>│ Student │
+   └─────────┘    [Đường nét liền có/không tên] └─────────┘
+   * Teacher giữ biến thuộc tính tham chiếu lâu dài tới danh sách Student.
+
+3. 일반화 관계 (Generalization) - Kế thừa (Inheritance / Is-a):
+   ┌──────────┐                                ┌──────────┐
+   │   Car    │───────────────────────────────▷│ Vehicle  │
+   └──────────┘  [Đường nét liền Tam giác rỗng] └──────────┘
+   * Lớp con Car trỏ mũi tên tam giác rỗng về Lớp cha Vehicle.
+
+4. 실체화 관계 (Realization) - Cài đặt giao diện (Interface / Can-do):
+   ┌──────────┐                                ┌───────────────┐
+   │ ArrayList│ - - - - - - - - - - - - - - - ▷│<<interface>> │
+   └──────────┘  [Đường nét đứt Tam giác rỗng] │     List      │
+   * Lớp cụ thể ArrayList cam kết hiện thực hóa toàn bộ hàm của List.
+
+5. 집약 관계 (Aggregation / Gom cụm) - Has-a Độc lập vòng đời:
+   ┌──────────┐                                ┌──────────┐
+   │ Computer │◇───────────────────────────────│  Mouse   │
+   └──────────┘   [Nét liền Hình thoi rỗng]    └──────────┘
+   * Computer bị hủy, đối tượng Mouse tách rời vẫn tồn tại nguyên vẹn.
+
+6. 합성 관계 (Composition / Hợp thành) - Gắn liền sinh tử:
+   ┌──────────┐                                ┌──────────┐
+   │  House   │◆───────────────────────────────│   Room   │
+   └──────────┘   [Nét liền Hình thoi đặc]     └──────────┘
+   * House bị phá hủy, tất cả các Room bên trong bị tiêu hủy theo.
+```
+
+##### B. Ma trận so sánh mức độ kết dính (Coupling Degree) & Vòng đời giữa 6 mối quan hệ
+Mức độ phụ thuộc kỹ thuật tăng dần từ yếu đến mạnh nhất:
+$$\text{의존 (Dependency)} < \text{연관 (Association)} < \text{집약 (Aggregation)} < \text{합성 (Composition)} < \text{실체화/일반화 (Realization/Generalization)}$$
+
+| Mối quan hệ UML | Ký hiệu hình học | Bản chất liên kết mã nguồn | Mối liên hệ vòng đời (Lifecycle) |
+|:---|:---:|:---|:---|
+| **의존 (Dependency)** | `- - - >` | Tham số phương thức hoặc biến cục bộ (`Method param`) | Tạm thời (Chỉ tồn tại trong thời gian hàm thực thi) |
+| **연관 (Association)** | `───►` | Biến thành viên (`Field / Member variable`) | Lâu dài (Gắn với thể hiện của đối tượng sở hữu) |
+| **집약 (Aggregation)** | `◇───` | Nhận đối tượng từ bên ngoài qua Constructor (`DI`) | Độc lập (Toàn thể mất, Thành phần vẫn sống) |
+| **합성 (Composition)** | `◆───` | Khởi tạo đối tượng trực tiếp bên trong Constructor | Ràng buộc sinh tử (Toàn thể mất, Thành phần bị hủy) |
+| **일반화 (Generalization)** | `───▷` | Kế thừa trực tiếp qua từ khóa `extends` | Khăng khít tối đa (Kế thừa toàn bộ cấu trúc & hành vi) |
+| **실체화 (Realization)** | `- - ▷` | Cài đặt hợp đồng qua từ khóa `implements` | Ràng buộc hợp đồng (Phải viết mã cho mọi hàm trừu tượng) |
+
+---
+
+#### 4. Sơ đồ thời gian Biểu đồ tuần tự (Sequence Diagram Chronological ASCII Diagram)
+
+##### A. Sơ đồ ASCII mô phỏng luồng xác thực đăng nhập thời gian thực
+Trục hoành biểu diễn các đối tượng tham gia; trục tung biểu diễn dòng thời gian chảy từ trên xuống dưới:
+```
+  Actor            :LoginUI         :AuthService        :UserDB
+    │                  │                  │                │
+    │  1. Nhập ID/Pass │                  │                │
+    │ ────────────────►│                  │                │
+    │                  │  2. authenticate()                │
+    │                  │ ────────────────►┌──┐             │
+    │                  │ (Sync Message)   │  │             │
+    │                  │ [Mũi tên đặc]    │  │ 3. findUser()
+    │                  │                  │  │────────────►┌──┐
+    │                  │                  │  │ (Sync Call) │  │
+    │                  │                  │  │             │  │[DB Query]
+    │                  │                  │  │ 4. userData │  │
+    │                  │                  │  │< - - - - - -└──┘
+    │                  │                  │  │(Return Msg)   │
+    │                  │                  │  │[Nét đứt]      │
+    │                  │                  │  │             │
+    │                  │                  │  │ 5. Ghi log kiểm toán (Async)
+    │                  │                  │  │ ───────────────────────> :AuditLogger
+    │                  │                  │  │ (Asynchronous Message)
+    │                  │                  │  │ [Mũi tên nhọn hở, không chờ]
+    │                  │  6. loginSuccess │  │             │
+    │                  │< - - - - - - - - └──┘             │
+    │  7. Hiển thị Home│ (Return Msg)     │                │
+    │<─────────────────│                  │                │
+    │                  │                  │                │
+   [Actor]          [Lifeline]        [Activation]     [Lifeline]
+```
+
+##### B. Giải phẫu 4 yếu tố cốt lõi trong đề thi Sequence Diagram
+1. **생명선 (Lifeline - Đường sinh mệnh):**
+   - Đường nét đứt thẳng đứng xuất phát từ đáy của hình hộp đối tượng.
+   - Thể hiện sự tồn tại của đối tượng qua các giai đoạn trong kịch bản. Nếu đối tượng bị hủy giữa chừng, đường Lifeline kết thúc bằng một dấu chữ `X` lớn (`객체 소멸 - Object Destruction`).
+2. **실행 상자 (Activation Bar / Execution Specification):**
+   - Cột hình chữ nhật hẹp nằm dọc đè lên đường Lifeline.
+   - Đại diện cho khoảng thời gian đối tượng **đang chiếm dụng CPU** để thực thi mã lệnh hoặc chờ kết quả từ lời gọi hàm khác.
+3. **Phân biệt 3 loại thông điệp (Message Types) trọng điểm thi:**
+   - **동기 메시지 (Synchronous Message):** Vẽ bằng **mũi tên tam giác đặc tô đen (`──►`)**. Đối tượng gọi rơi vào trạng thái chờ (Blocked), không làm gì khác cho đến khi nhận được kết quả trả về.
+   - **비동기 메시지 (Asynchronous Message):** Vẽ bằng **mũi tên nhọn nét đơn (`──>`)**. Đối tượng gọi đẩy thông điệp đi rồi lập tức tiếp tục tác vụ của mình mà không cần chờ đợi bên nhận phản hồi (Non-blocking / Event-driven).
+   - **응답 메시지 (Return / Reply Message):** Vẽ bằng **đường nét đứt có mũi tên nhọn (`< - - -`)**. Biểu thị dữ liệu hoặc quyền điều khiển được trao ngược lại cho đối tượng gọi sau khi hoàn thành thông điệp đồng bộ.
+4. **Tự gọi (Self-Message / Reflexive Call):**
+   - Mũi tên uốn cong xuất phát từ một Activation Box và quay trở lại chính Activation Box đó.
+   - Biểu thị việc đối tượng tự gọi một phương thức nội bộ của chính mình (ví dụ: Hàm đệ quy hoặc hàm tính toán private).
+
 ---
 
 ### 복습 체크리스트

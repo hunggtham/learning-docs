@@ -81,101 +81,176 @@
 
 ### TẦNG B – GHI CHÚ BỔ SUNG (HIỂU SÂU)
 
-#### 1. Lần vết chương trình Kế thừa, Overriding và Đa hình trong Java:
-```java
-// Lớp cha
-class Parent {
-    int x = 10;
+#### 1. Lần vết thứ tự gọi Constructor trong kế thừa đa tầng (`super()` tường minh và ngầm định):
 
-    void display() {
-        System.out.println("Parent display, x = " + x);
+Trong Java, khi một đối tượng thuộc lớp con được khởi tạo bằng toán tử `new`, chuỗi hàm tạo (Constructor Chaining) bắt buộc phải thực thi từ gốc cây kế thừa (`java.lang.Object`) xuống đến lớp con.
+
+```java
+// Lớp cụ (GrandParent)
+class GrandParent {
+    GrandParent() {
+        System.out.print("GP ");
     }
 }
 
-// Lớp con kế thừa từ Parent
+// Lớp cha (Parent) kế thừa GrandParent
+class Parent extends GrandParent {
+    int value;
+
+    // Constructor có tham số
+    Parent(int value) {
+        // Trình biên dịch tự chèn super(); gọi GrandParent()
+        this.value = value;
+        System.out.print("P(" + value + ") ");
+    }
+}
+
+// Lớp con (Child) kế thừa Parent
 class Child extends Parent {
-    int x = 20; // Che mờ biến x của cha
-
-    // Ghi đè (Overriding) phương thức display
-    @Override
-    void display() {
-        System.out.println("Child display, x = " + x + ", super.x = " + super.x);
-    }
-
-    void childOnly() {
-        System.out.println("Phuong thuc rieng cua Child");
-    }
-}
-
-public class PolymorphismDemo {
-    public static void main(String[] args) {
-        // Đa hình: Khai báo kiểu cha nhưng trỏ tới đối tượng con
-        Parent p = new Child();
-
-        // BẪY THI: Phương thức được gọi dựa trên ĐỐI TƯỢNG THỰC TẾ TRÊN HEAP (Child)
-        p.display(); // In ra: Child display, x = 20, super.x = 10
-
-        // BẪY THI VỀ BIẾN: Thuộc tính không có đa hình, truy xuất biến phụ thuộc KIỂU KHAI BÁO (Parent)
-        System.out.println("p.x = " + p.x); // In ra: p.x = 10 (chứ không phải 20!)
-    }
-}
-```
-
-#### 2. Minh họa Nạp chồng phương thức (Method Overloading):
-```java
-class MathUtils {
-    // 1. Hàm cộng 2 số nguyên
-    int add(int a, int b) {
-        return a + b;
-    }
-
-    // 2. Overloading: Khác số lượng tham số (3 số nguyên)
-    int add(int a, int b, int c) {
-        return a + b + c;
-    }
-
-    // 3. Overloading: Khác kiểu dữ liệu tham số (2 số thực)
-    double add(double a, double b) {
-        return a + b;
-    }
-}
-```
-
-#### 3. Bảng lần vết khởi tạo thứ tự Constructor (`super()` ngầm định):
-Đoạn mã:
-```java
-class A {
-    public A() {
-        System.out.print("A ");
-    }
-}
-class B extends A {
-    public B() {
-        // Trình biên dịch tự động chèn super(); gọi constructor của A trước
-        System.out.print("B ");
-    }
-}
-class C extends B {
-    public C() {
-        // Tự động gọi constructor của B trước
+    // Constructor của lớp con
+    Child() {
+        // BẮT BUỘC gọi tường minh super(10) ở dòng đầu tiên
+        // vì Parent không có constructor rỗng mặc định
+        super(10);
         System.out.print("C ");
     }
+
+    Child(int x) {
+        this(); // Gọi constructor Child() không tham số
+        System.out.print("C(" + x + ") ");
+    }
 }
 
-public class Test {
+public class ConstructorChainDemo {
     public static void main(String[] args) {
-        C obj = new C();
+        System.out.print("Khoi tao obj1: ");
+        Child obj1 = new Child();
+        System.out.println();
+
+        System.out.print("Khoi tao obj2: ");
+        Child obj2 = new Child(99);
+        System.out.println();
     }
 }
 ```
 
-*Trình tự thực thi:*
-1. Lệnh `new C()` kích hoạt constructor của `C`.
-2. Do có kế thừa, `C` gọi `super()` của `B` trước $\rightarrow$ `B` lại gọi `super()` của `A` trước.
-3. Constructor của `A` in ra: **`A`**.
-4. Quay trở về `B`, in tiếp: **`B`**.
-5. Cuối cùng constructor của `C` mới in: **`C`**.
-- **Kết quả in ra màn hình:** **`A B C `**.
+Bảng lần vết trạng thái Call Stack và kết quả:
+- **Khởi tạo `Child obj1 = new Child();`:**
+  1. `Child()` được đẩy vào Call Stack $\rightarrow$ gặp `super(10)`.
+  2. `Parent(10)` được đẩy vào Call Stack $\rightarrow$ gặp `super()` ngầm định.
+  3. `GrandParent()` được đẩy vào Call Stack $\rightarrow$ in ra: **`GP `**, hoàn tất và pop khỏi stack.
+  4. `Parent(10)` gán `this.value = 10` $\rightarrow$ in ra: **`P(10) `**, hoàn tất và pop khỏi stack.
+  5. `Child()` tiếp tục thực thi phần thân $\rightarrow$ in ra: **`C `**, hoàn tất.
+  - **Kết quả dòng 1:** `Khoi tao obj1: GP P(10) C `
+- **Khởi tạo `Child obj2 = new Child(99);`:**
+  1. `Child(99)` gọi `this()`, kích hoạt toàn bộ chu trình trên để in `GP P(10) C `.
+  2. Sau đó `Child(99)` in thêm: **`C(99) `**.
+  - **Kết quả dòng 2:** `Khoi tao obj2: GP P(10) C C(99) `
+
+#### 2. Cơ chế Ép kiểu đối tượng: Upcasting vs Downcasting và phòng vệ `instanceof`:
+
+```java
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks: Gau gau!");
+    }
+
+    void fetch() {
+        System.out.println("Dog fetches the ball!");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Cat meows: Meo meo!");
+    }
+}
+
+public class CastingDemo {
+    public static void main(String[] args) {
+        // --- 1. UPCASTING (Ép kiểu lên): Con -> Cha ---
+        // Hoàn toàn tự động, an toàn 100% tại compile-time
+        Animal a = new Dog(); // Upcasting ngầm định
+        a.makeSound(); // In ra: Dog barks: Gau gau! (Đa hình Runtime qua Dog)
+        // a.fetch(); // LỖI BIÊN DỊCH: Kiểu khai báo Animal không có phương thức fetch()
+
+        // --- 2. DOWNCASTING (Ép kiểu xuống): Cha -> Con ---
+        // Phải ép kiểu tường minh với dấu ngoặc (Dog)
+        Dog d = (Dog) a; // Hợp lệ vì đối tượng thực tế trên Heap chính là Dog
+        d.fetch(); // In ra: Dog fetches the ball!
+
+        // --- 3. BẪY THI: Run-time ClassCastException ---
+        Animal a2 = new Cat(); // a2 thực chất là Cat trên Heap
+        // Dog d2 = (Dog) a2; // BIÊN DỊCH THÀNH CÔNG nhưng RUNTIME NÉM java.lang.ClassCastException!
+
+        // --- 4. GIẢI PHÁP PHÒNG VỆ AN TOÀN VỚI instanceof ---
+        if (a2 instanceof Dog) {
+            Dog dSafe = (Dog) a2;
+            dSafe.fetch();
+        } else {
+            System.out.println("Doi tuong a2 khong phai la Dog, bo qua ep kieu an toan!");
+        }
+    }
+}
+```
+
+Bảng đối chiếu Upcasting vs Downcasting:
+- **Upcasting:** Chuyển kiểu từ Lớp con $\rightarrow$ Lớp cha. Cú pháp ngầm định (`Animal a = new Dog()`). An toàn tuyệt đối, phục vụ tính Đa hình.
+- **Downcasting:** Chuyển kiểu từ Lớp cha $\rightarrow$ Lớp con. Cú pháp tường minh (`Dog d = (Dog) a`). Tiềm ẩn nguy cơ ném ngoại lệ `ClassCastException` nếu kiểu thực tế trên Heap không khớp. Bắt buộc dùng toán tử `instanceof` kiểm tra trước khi ép kiểu.
+
+#### 3. Phân biệt chuyên sâu: Nạp chồng (Overloading) vs Ghi đè (Overriding):
+
+```text
++-----------------------+----------------------------------+----------------------------------+
+| Tiêu chí phân biệt    | Nạp chồng (Overloading)          | Ghi đè (Overriding)              |
++-----------------------+----------------------------------+----------------------------------+
+| Phạm vi xuất hiện     | Trong cùng một Lớp (Class)       | Giữa hai Lớp có quan hệ Kế thừa  |
+| Tên phương thức       | Bắt buộc GIỐNG HỆT               | Bắt buộc GIỐNG HỆT               |
+| Danh sách tham số     | BẮT BUỘC PHẢI KHÁC NHAU          | BẮT BUỘC PHẢI GIỐNG HỆT NHAU     |
+| Kiểu dữ liệu trả về   | Tùy ý (Không ảnh hưởng)          | Giống hệt hoặc kiểu con hiệp biến|
+| Cấp độ truy cập       | Tùy ý (Không ảnh hưởng)          | Không được thu hẹp quyền truy cập|
+| Thời điểm liên kết    | Liên kết tĩnh (Compile-time)     | Liên kết động (Runtime qua vtable|
++-----------------------+----------------------------------+----------------------------------+
+```
+
+Ví dụ minh họa tính chất Liên kết tĩnh vs Đa hình ghi đè:
+```java
+class Calculator {
+    // Overloading: Phân giải dựa trên tham số truyền vào lúc biên dịch
+    int multiply(int a, int b) { return a * b; }
+    double multiply(double a, double b) { return a * b; }
+}
+
+class SuperBase {
+    void show() { System.out.println("SuperBase show"); }
+}
+
+class SubDerived extends SuperBase {
+    // Overriding: Ghi đè hoàn toàn hành vi của lớp cha
+    @Override
+    void show() { System.out.println("SubDerived overridden show"); }
+}
+
+public class BindingTest {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.multiply(3, 4));     // Gọi multiply(int, int) -> 12
+        System.out.println(calc.multiply(2.5, 4.0)); // Gọi multiply(double, double) -> 10.0
+
+        SuperBase ref = new SubDerived();
+        // Dynamic Method Dispatch: Dù ref kiểu SuperBase, JVM vẫn gọi SubDerived.show()
+        ref.show(); // In ra: SubDerived overridden show
+    }
+}
+```
 
 ---
 

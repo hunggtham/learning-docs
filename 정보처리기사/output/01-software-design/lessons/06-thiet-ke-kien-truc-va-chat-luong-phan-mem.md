@@ -45,7 +45,7 @@
 |:---|:---|:---|
 | **Tên gọi tương đương** | **아키텍처 설계 (Thiết kế kiến trúc)**, 예비 설계 (Thiết kế sơ bộ) | **모듈 상세 설계 (Thiết kế chi tiết module)** |
 | **Phạm vi đối tượng** | Toàn bộ khung hệ thống ở mức vĩ mô | Chi tiết từng module cụ thể ở mức vi mô |
-| **Nội dung thiết kế** | • Cấu trúc kiến trúc tổng thể hệ thống<br>• Phân chia các subsystem và cơ sở dữ liệu<br>• Cấu trúc giao diện liên kết hệ thống | • Logic và thuật toán nội bộ bên trong từng module<br>• Cấu trúc dữ liệu nội bộ của module<br>• Định dạng tham số hàm và câu lệnh code cụ thể |
+| **Nội dung thiết kế** | • Cấu trúc kiến trúc tổng thể; Phân chia subsystem và cơ sở dữ liệu; Cấu trúc giao diện liên kết hệ thống | • Logic và thuật toán nội bộ từng module; Cấu trúc dữ liệu nội bộ; Định dạng tham số hàm và mã lệnh cụ thể |
 | **Bẫy nhận diện** | Gắn với từ khóa: **Kiến trúc (아키텍처), Cấu trúc tổng thể (전체 구조)** | Gắn với từ khóa: **Thuật toán (알고리즘), Logic nội bộ (내부 로직)** |
 
 ---
@@ -93,13 +93,13 @@
 
 | Architectural Pattern | Bản chất kỹ thuật & Cơ chế hoạt động | Tình huống ứng dụng thực tế |
 |:---|:---|:---|
-| **Layered Pattern<br>(Mẫu phân tầng)** | Chia hệ thống thành các tầng phân cấp độc lập nằm chồng lên nhau (thường là 3-4 tầng: Presentation $\rightarrow$ Business $\rightarrow$ Data). **Mỗi tầng chỉ tương tác với tầng liền kề dưới nó**. Tăng tính độc lập và khả năng bảo trì. | Ứng dụng Web doanh nghiệp, hệ điều hành (OS). |
-| **Pipe-Filter Pattern<br>(Đường ống - Bộ lọc)** | Dữ liệu di chuyển liên tục qua một chuỗi các **bộ lọc (Filter)** độc lập thông qua các **kênh truyền (Pipe)**. Mỗi Filter nhận dữ liệu, biến đổi và đẩy ra Pipe mà không cần biết Filter trước và sau là ai. | Dòng lệnh Unix (`ps \| grep \| awk`), xử lý hình ảnh, xử lý luồng dữ liệu (ETL / Streaming). |
-| **MVC Pattern<br>(Model-View-Controller)** | Tách biệt hoàn toàn thành 3 thành phần:<br>• **Model**: Quản lý dữ liệu và logic nghiệp vụ cốt lõi.<br>• **View**: Hiển thị dữ liệu lên màn hình cho người dùng.<br>• **Controller**: Tiếp nhận thao tác người dùng, điều phối cập nhật Model và View. | Ứng dụng Web hiện đại (Spring MVC, Django, Angular). |
-| **Client-Server Pattern<br>(Máy khách - Máy chủ)** | Một Server trung tâm cung cấp tài nguyên/dịch vụ; nhiều Client gửi yêu cầu và nhận kết quả từ Server. | Trình duyệt Web và Máy chủ Web, Email. |
-| **Master-Slave Pattern<br>(Chủ - Tớ)** | Một nút Master phân chia bài toán thành nhiều phần việc nhỏ và giao cho các nút Slave thực thi song song, sau đó Master tổng hợp kết quả cuối cùng. | Tính toán song song, hệ thống CSDL Master-Slave (Replication). |
-| **Broker Pattern<br>(Môi giới)** | Thành phần **Broker** đứng ở giữa làm cầu nối điều phối liên lạc giữa Client và Server khi Client không biết vị trí vật lý cụ thể của Server. | Hệ thống phân tán, kiến trúc hướng dịch vụ (CORBA, Message Broker). |
-| **Blackboard Pattern<br>(Bảng đen)** | Các mô-đun chuyên gia độc lập (Knowledge Sources) cùng đọc và ghi các giải pháp trung gian lên một vùng nhớ chia sẻ chung gọi là **Bảng đen (Blackboard)** để cùng giải quyết một bài toán phức tạp chưa có thuật toán tất định. | Nhận dạng tiếng nói, AI tri thức chuyên gia, thị giác máy tính. |
+| **Layered Pattern (Mẫu phân tầng)** | Chia hệ thống thành các tầng phân cấp độc lập nằm chồng lên nhau (thường là 3-4 tầng: Presentation $\rightarrow$ Business $\rightarrow$ Data). **Mỗi tầng chỉ tương tác với tầng liền kề dưới nó**. Tăng tính độc lập và khả năng bảo trì. | Ứng dụng Web doanh nghiệp, hệ điều hành (OS). |
+| **Pipe-Filter Pattern (Đường ống - Bộ lọc)** | Dữ liệu di chuyển liên tục qua một chuỗi các **bộ lọc (Filter)** độc lập thông qua các **kênh truyền (Pipe)**. Mỗi Filter nhận dữ liệu, biến đổi và đẩy ra Pipe mà không cần biết Filter trước và sau là ai. | Dòng lệnh Unix (`ps \| grep \| awk`), xử lý hình ảnh, xử lý luồng dữ liệu (ETL / Streaming). |
+| **MVC Pattern (Model-View-Controller)** | Tách biệt hoàn toàn thành 3 thành phần: • **Model**: Quản lý dữ liệu và logic nghiệp vụ; • **View**: Hiển thị dữ liệu lên màn hình; • **Controller**: Tiếp nhận thao tác người dùng, điều phối Model và View. | Ứng dụng Web hiện đại (Spring MVC, Django, Angular). |
+| **Client-Server Pattern (Máy khách - Máy chủ)** | Một Server trung tâm cung cấp tài nguyên/dịch vụ; nhiều Client gửi yêu cầu và nhận kết quả từ Server. | Trình duyệt Web và Máy chủ Web, Email. |
+| **Master-Slave Pattern (Chủ - Tớ)** | Một nút Master phân chia bài toán thành nhiều phần việc nhỏ và giao cho các nút Slave thực thi song song, sau đó Master tổng hợp kết quả cuối cùng. | Tính toán song song, hệ thống CSDL Master-Slave (Replication). |
+| **Broker Pattern (Môi giới)** | Thành phần **Broker** đứng ở giữa làm cầu nối điều phối liên lạc giữa Client và Server khi Client không biết vị trí vật lý cụ thể của Server. | Hệ thống phân tán, kiến trúc hướng dịch vụ (CORBA, Message Broker). |
+| **Blackboard Pattern (Bảng đen)** | Các mô-đun chuyên gia độc lập (Knowledge Sources) cùng đọc và ghi các giải pháp trung gian lên một vùng nhớ chia sẻ chung gọi là **Bảng đen (Blackboard)** để cùng giải quyết một bài toán phức tạp chưa có thuật toán tất định. | Nhận dạng tiếng nói, AI tri thức chuyên gia, thị giác máy tính. |
 
 ---
 
@@ -166,6 +166,68 @@
 #### 2. So sánh chuyên sâu: Pipe-Filter Pattern vs Layered Pattern
 - **Layered Pattern:** Phân chia theo cấp độ trừu tượng nghiệp vụ. Tầng trên phục vụ nghiệp vụ mức cao, tầng dưới phục vụ hạ tầng mức thấp. Có sự ràng buộc về mặt phụ thuộc phân cấp (Top-down dependency).
 - **Pipe-Filter Pattern:** Phân chia theo dòng chảy của luồng dữ liệu (Data Stream). Không có khái niệm tầng trên tầng dưới; mỗi Filter là một tiến trình độc lập hoàn toàn có thể chạy song song đa luồng. Bộ lọc Filter chỉ cần đọc dữ liệu từ đầu vào của Pipe, xử lý và đẩy ra Pipe tiếp theo, rất phù hợp cho xử lý video, âm thanh, hay tính toán khoa học dữ liệu lớn.
+
+#### 3. Sơ đồ phân loại 6 đặc tính chất lượng phần mềm ISO/IEC 9126
+
+##### A. Sơ đồ cây ASCII phân cấp 6 đặc tính lớn và 21 đặc tính con
+```
+                      ┌─────────────────────────────────────────────────────────┐
+                      │      ISO/IEC 9126 소프트웨어 품질 특성 (6대 품질 특성)   │
+                      │           (Mẹo thần chú: 기 - 신 - 사 - 효 - 유 - 이)    │
+                      └────────────────────────────┬────────────────────────────┘
+                                                   │
+    ┌──────────────┬──────────────┬────────────────┼──────────────┬──────────────┐
+    ▼              ▼              ▼                ▼              ▼              ▼
+┌────────┐     ┌────────┐     ┌────────┐       ┌────────┐     ┌────────┐     ┌────────┐
+│ 기능성 │     │ 신뢰성 │     │ 사용성 │       │ 효율성 │     │유지보수│     │ 이식성 │
+│(Funct.)│     │(Rel.)  │     │(Usab.) │       │(Eff.)  │     │(Maint.)│     │(Port.) │
+└───┬────┘     └───┬────┘     └───┬────┘       └───┬────┘     └───┬────┘     └───┬────┘
+    │              │              │                │              │              │
+    ├─ 적절성      ├─ 성숙성      ├─ 이해성        ├─ 시간반응성  ├─ 분석성      ├─ 적용성
+    ├─ 정밀성      ├─ 결함허용성  ├─ 학습성        └─ 자원활용성  ├─ 변경성      ├─ 설치성
+    ├─ 상호운용성  └─ 회복성      ├─ 운용성                       ├─ 안정성      ├─ 공존성
+    ├─ 보안성 ★                  └─ 친근성                       └─ 시험성      └─ 대체성
+    └─ 준수성                                                                    └─ 준수성
+```
+
+##### B. Giải phẫu chi tiết 6 nhóm đặc tính theo chuẩn đề thi
+1. **기능성 (Functionality — Tính chức năng):** Phần mềm có đáp ứng đầy đủ và chuẩn xác các nhu cầu nghiệp vụ được người dùng ủy thác hay không:
+   - `적절성 (Suitability)`: Cung cấp đúng và đủ bộ chức năng phù hợp cho các tác vụ nghiệp vụ mục tiêu.
+   - `정밀성 / 정확성 (Accuracy)`: Đưa ra kết quả tính toán, xử lý dữ liệu với độ chính xác tuyệt đối như cam kết.
+   - `상호운용성 (Interoperability)`: Khả năng tương tác, bắt tay trao đổi dữ liệu mượt mà với các hệ thống phần mềm khác.
+   - `보안성 (Security - ★ Bẫy đề thi)`: Khả năng ngăn chặn sự truy cập, can thiệp hoặc sửa đổi dữ liệu trái phép từ bên ngoài (Lưu ý: Đề thi thường bẫy Security thuộc nhóm nào trong ISO 9126 $\rightarrow$ Thuộc về **기능성**).
+   - `준수성 (Compliance)`: Tuân thủ các quy định pháp lý, điều lệ chuyên ngành và tiêu chuẩn kỹ thuật hiện hành.
+2. **신뢰성 (Reliability — Độ tin cậy):** Khả năng duy trì mức hiệu năng ổn định trong những điều kiện vận hành xác định qua thời gian:
+   - `성숙성 (Maturity)`: Khả năng phần mềm tránh được các trạng thái đổ vỡ, ngừng hoạt động do lỗi tiềm ẩn trong mã nguồn.
+   - `결함 허용성 (Fault Tolerance)`: Khả năng tiếp tục duy trì hoạt động ở mức chấp nhận được ngay cả khi phát sinh lỗi phần mềm hoặc sự cố phần cứng.
+   - `회복성 (Recoverability)`: Khả năng khôi phục nhanh chóng trạng thái làm việc và phục hồi dữ liệu bị ảnh hưởng trực tiếp sau khi xảy ra sự cố sập hệ thống.
+3. **사용성 (Usability — Tính khả dụng):** Mức độ tiện lợi, dễ dàng mà người dùng cảm nhận được khi tiếp cận và thao tác:
+   - `이해성 (Understandability)`: Người dùng dễ dàng nhận biết phần mềm có phù hợp với nhu cầu của mình không và hiểu được phương thức vận hành.
+   - `학습성 (Learnability)`: Người dùng có thể học và thành thạo các thao tác sử dụng trong khoảng thời gian ngắn nhất.
+   - `운용성 (Operability)`: Người dùng có thể dễ dàng kiểm soát, điều khiển và vận hành các tính năng mà không bị nhầm lẫn.
+   - `친근성 / 매력성 (Attractiveness)`: Giao diện được thiết kế thẩm mỹ, thân thiện và tạo cảm giác tích cực cho người sử dụng.
+4. **효율성 (Efficiency — Tính hiệu quả):** Mối tương quan giữa mức độ hoàn thành nhiệm vụ và lượng tài nguyên bị tiêu hao:
+   - `시간 반응성 (Time Behaviour)`: Thời gian phản hồi (`Response Time`), thời gian xử lý và lưu lượng giao dịch (`Throughput`) khi thực thi tác vụ.
+   - `자원 활용성 (Resource Utilization)`: Lượng tài nguyên phần cứng (CPU, dung lượng bộ nhớ RAM, lưu lượng băng thông mạng, dung lượng đĩa) bị tiêu tốn.
+5. **유지보수성 (Maintainability — Khả năng bảo trì):** Mức độ dễ dàng khi kỹ sư phần mềm cần can thiệp để sửa lỗi, nâng cấp hoặc tối ưu hóa:
+   - `분석성 (Analyzability)`: Khả năng nhanh chóng chẩn đoán các khuyết tật, nguyên nhân hỏng hóc hoặc xác định chính xác các đoạn code cần sửa đổi.
+   - `변경성 (Changeability)`: Khả năng thực hiện các sửa đổi mã nguồn một cách dễ dàng mà không làm phát sinh xung đột nội bộ.
+   - `안정성 (Stability)`: Nguy cơ phát sinh các hiệu ứng phụ bất ngờ (`Side Effects`) sau khi thay đổi mã nguồn được giữ ở mức thấp nhất.
+   - `시험성 (Testability)`: Khả năng dễ dàng thiết lập và thực thi các kịch bản kiểm thử để xác thực tính đúng đắn của phần mềm sau khi sửa đổi.
+6. **이식성 (Portability — Khả năng chuyển giao):** Khả năng chuyển phần mềm sang vận hành trên các môi trường nền tảng khác:
+   - `적용성 / 적응성 (Adaptability)`: Khả năng thích nghi mượt mà với các môi trường phần cứng hoặc hệ điều hành khác nhau mà không cần sửa code.
+   - `설치성 (Installability)`: Khả năng cài đặt thành công và thuận tiện vào môi trường đích định trước.
+   - `공존성 (Co-existence)`: Khả năng cùng tồn tại và chia sẻ tài nguyên chung một cách hòa bình với các phần mềm độc lập khác trên cùng một máy chủ.
+   - `대체성 (Replaceability)`: Khả năng thay thế một phần mềm tương tự khác trong cùng môi trường vận hành mà không làm gián đoạn nghiệp vụ.
+
+---
+
+#### 4. Bảng so sánh tiến hóa kiến trúc chất lượng: ISO/IEC 9126 vs ISO/IEC 25010
+
+| Tiêu chuẩn quốc tế | Năm ban hành | Số lượng đặc tính lớn | Xử lý đặc tính Bảo mật (보안성) | Xử lý đặc tính Tương thích (호환성) |
+|:---|:---:|:---:|:---|:---|
+| **ISO/IEC 9126** | 1991 (Sửa đổi 2001) | **6 đại đặc tính** (기-신-사-효-유-이) | Nằm ẩn bên trong nhóm **기능성 (Tính chức năng)** | Nằm phân tán ở `상호운용성` (기능성) và `공존성` (이식성) |
+| **ISO/IEC 25010** | 2011 (Chuẩn SQuaRE) | **8 đại đặc tính** (기-신-사-효-유-이 + 보안, 호환) | Tách riêng thành **Đại đặc tính độc lập (Security)** với 5 khía cạnh con | Tách riêng thành **Đại đặc tính độc lập (Compatibility)** gồm Co-existence và Interoperability |
 
 ---
 
