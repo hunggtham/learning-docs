@@ -311,10 +311,6 @@ domains:
     related: [korean_culture, korea_law_civic_life]
 
 supporting:
-  - id: dev_everyday
-    path: dev_everyday/
-    status: support
-    scope: Personal developer notes and local workflow configuration; not a canonical knowledge library.
   - id: study_planner
     path: planner/
     status: support
